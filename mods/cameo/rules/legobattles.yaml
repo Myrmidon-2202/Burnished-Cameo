@@ -1,0 +1,2233 @@
+World:
+	FactionCA@legobattlesastro:
+		Name: Earth
+		InternalName: legobattlesastro
+		Game: Lego Battles
+		Side: Factions
+		Description: Earth faction from Lego Battles
+	# FactionCA@legobattlesalien:
+	# 	Name: Alien
+	# 	InternalName: legobattlesalien
+	# 	Game: Lego Battles
+	# 	Side: Factions
+	# 	Description: Alien faction from Lego Battles
+
+	####################################################################################################
+	#		Astro
+	####################################################################################################
+	
+	StartingUnits@mcvonlyastro:
+		Class: none
+		ClassName: MCV Only
+		Factions: legobattlesastro
+		BaseActor: lego_astro_mcv
+	
+	StartingUnits@defaultastro:
+		Class: light
+		ClassName: Light Support
+		Factions: legobattlesastro
+		BaseActor: lego_astro_mcv
+		SupportActors: legobattles_ghost
+	
+	StartingUnits@heavyastro:
+		Class: heavy
+		ClassName: Heavy Support
+		Factions: legobattlesastro
+		BaseActor: lego_astro_mcv
+		SupportActors: legobattles_ghost,legobattles_ghost
+
+	# MPStartUnits@mcvonlyalien:
+	# 	Class: none
+	# 	ClassName: MCV Only
+	# 	Factions: legobattlesastro
+	# 	BaseActor: lego_astro_mcv
+	
+	# MPStartUnits@defaultalien:
+	# 	Class: light
+	# 	ClassName: Light Support
+	# 	Factions: legobattlesastro
+	# 	BaseActor: lego_astro_mcv
+	# 	SupportActors: legobattles_ghost
+	
+	# MPStartUnits@heavyalien:
+	# 	Class: heavy
+	# 	ClassName: Heavy Support
+	# 	Factions: legobattlesastro
+	# 	BaseActor: lego_astro_mcv
+	# 	SupportActors: legobattles_ghost,legobattles_ghost
+
+# Player:
+# 	ExternalCondition@BuildingsOwned:
+# 		Condition: BuildingsOwned
+# 	ProvidesPrerequisite@BuildingsOwned:
+# 		Prerequisite: allowsMCV
+# 		RequiresCondition: BuildingsOwned < 5
+# 	ClassicProductionQueue@RABUILDINGASTRO:
+# 		Type: RABuilding
+# 		DisplayOrder: 0
+# 		Group: Building
+# 		LowPowerModifier: 200
+# 		ReadyAudio: ConstructionComplete
+# 		BlockedAudio: NoBuild
+# 		LimitedAudio: BuildingInProgress
+# 		QueuedAudio: Training
+# 		OnHoldAudio: OnHold
+# 		CancelledAudio: Cancelled
+# 		SpeedUp: True
+# 		BuildTimeSpeedReduction: 100, 50, 33, 25, 20, 17, 14, 12, 11, 10
+# 	ClassicProductionQueue@RADEFENCEASTRO:
+# 		Type: RADefence
+# 		DisplayOrder: 1
+# 		Group: Defence
+# 		LowPowerModifier: 300
+# 		ReadyAudio: ConstructionComplete
+# 		BlockedAudio: NoBuild
+# 		LimitedAudio: BuildingInProgress
+# 		QueuedAudio: Training
+# 		OnHoldAudio: OnHold
+# 		CancelledAudio: Cancelled
+# 		SpeedUp: True
+# 		BuildTimeSpeedReduction: 100, 50, 33, 25, 20, 17, 14, 12, 11, 10
+# 	ClassicProductionQueue@RAINFANTRYTASTRO:
+# 		Type: RAInfantry
+# 		DisplayOrder: 2
+# 		Group: Infantry
+# 		LowPowerModifier: 300
+# 		ReadyAudio: UnitReady
+# 		BlockedAudio: NoBuild
+# 		LimitedAudio: BuildingInProgress
+# 		QueuedAudio: Training
+# 		OnHoldAudio: OnHold
+# 		CancelledAudio: Cancelled
+# 		SpeedUp: True
+# 		BuildTimeSpeedReduction: 100, 50, 33, 25, 20, 17, 14, 12, 11, 10
+# 	ClassicProductionQueue@RAVEHICLEASTRO:
+# 		Type: RAVehicle
+# 		DisplayOrder: 2
+# 		Group: Vehicle
+# 		LowPowerModifier: 300
+# 		ReadyAudio: UnitReady
+# 		BlockedAudio: NoBuild
+# 		LimitedAudio: BuildingInProgress
+# 		QueuedAudio: Training
+# 		OnHoldAudio: OnHold
+# 		CancelledAudio: Cancelled
+# 		SpeedUp: True
+# 		BuildTimeSpeedReduction: 100, 50, 33, 25, 20, 17, 14, 12, 11, 10
+# 	ClassicProductionQueue@RAAIRCRAFTASTRO:
+# 		Type: RAAircraft
+# 		DisplayOrder: 2
+# 		Group: Aircraft
+# 		LowPowerModifier: 300
+# 		ReadyAudio: UnitReady
+# 		BlockedAudio: NoBuild
+# 		LimitedAudio: BuildingInProgress
+# 		QueuedAudio: Training
+# 		OnHoldAudio: OnHold
+# 		CancelledAudio: Cancelled
+# 		SpeedUp: True
+# 		BuildTimeSpeedReduction: 100, 50, 33, 25, 20, 17, 14, 12, 11, 10
+# 	ClassicProductionQueue@RANAVALASTRO:
+# 		Type: RANAVAL
+# 		DisplayOrder: 2
+# 		Group: Naval
+# 		LowPowerModifier: 300
+# 		ReadyAudio: UnitReady
+# 		BlockedAudio: NoBuild
+# 		LimitedAudio: BuildingInProgress
+# 		QueuedAudio: Training
+# 		OnHoldAudio: OnHold
+# 		CancelledAudio: Cancelled
+# 		SpeedUp: True
+# 		BuildTimeSpeedReduction: 100, 50, 33, 25, 20, 17, 14, 12, 11, 10
+
+
+
+	# ProvidesPrerequisite@faction_alien:
+	# 	Prerequisite: faction_alien
+	# 	Factions: Alien
+	# ClassicProductionQueue@RABUILDINGALIEN:
+	# 	Type: RABuilding.alien
+	# 	DisplayOrder: 0
+	# 	Group: Building
+	# 	LowPowerModifier: 200
+	# 	ReadyAudio: ConstructionComplete
+	# 	BlockedAudio: NoBuild
+	# 	LimitedAudio: BuildingInProgress
+	# 	QueuedAudio: Training
+	# 	OnHoldAudio: OnHold
+	# 	CancelledAudio: Cancelled
+	# 	SpeedUp: True
+	# 	BuildTimeSpeedReduction: 100, 50, 33, 25, 20, 17, 14, 12, 11, 10
+	# ClassicProductionQueue@RADEFENCEALIEN:
+	# 	Type: RADefence.alien
+	# 	DisplayOrder: 1
+	# 	Group: Defence
+	# 	LowPowerModifier: 300
+	# 	ReadyAudio: ConstructionComplete
+	# 	BlockedAudio: NoBuild
+	# 	LimitedAudio: BuildingInProgress
+	# 	QueuedAudio: Training
+	# 	OnHoldAudio: OnHold
+	# 	CancelledAudio: Cancelled
+	# 	SpeedUp: True
+	# 	BuildTimeSpeedReduction: 100, 50, 33, 25, 20, 17, 14, 12, 11, 10
+	# ClassicProductionQueue@RAINFANTRYTALIEN:
+	# 	Type: RAInfantry
+	# 	DisplayOrder: 2
+	# 	Group: Infantry
+	# 	LowPowerModifier: 300
+	# 	ReadyAudio: UnitReady
+	# 	BlockedAudio: NoBuild
+	# 	LimitedAudio: BuildingInProgress
+	# 	QueuedAudio: Training
+	# 	OnHoldAudio: OnHold
+	# 	CancelledAudio: Cancelled
+	# 	SpeedUp: True
+	# 	BuildTimeSpeedReduction: 100, 50, 33, 25, 20, 17, 14, 12, 11, 10
+	# ClassicProductionQueue@RAVEHICLEALIEN:
+	# 	Type: RAVehicle.alien
+	# 	DisplayOrder: 2
+	# 	Group: Vehicle
+	# 	LowPowerModifier: 300
+	# 	ReadyAudio: UnitReady
+	# 	BlockedAudio: NoBuild
+	# 	LimitedAudio: BuildingInProgress
+	# 	QueuedAudio: Training
+	# 	OnHoldAudio: OnHold
+	# 	CancelledAudio: Cancelled
+	# 	SpeedUp: True
+	# 	BuildTimeSpeedReduction: 100, 50, 33, 25, 20, 17, 14, 12, 11, 10
+	# ClassicProductionQueue@RAAIRCRAFTALIEN:
+	# 	Type: RAAircraft.alien
+	# 	DisplayOrder: 2
+	# 	Group: Aircraft
+	# 	LowPowerModifier: 300
+	# 	ReadyAudio: UnitReady
+	# 	BlockedAudio: NoBuild
+	# 	LimitedAudio: BuildingInProgress
+	# 	QueuedAudio: Training
+	# 	OnHoldAudio: OnHold
+	# 	CancelledAudio: Cancelled
+	# 	SpeedUp: True
+	# 	BuildTimeSpeedReduction: 100, 50, 33, 25, 20, 17, 14, 12, 11, 10
+	# ClassicProductionQueue@RANAVALALIEN:
+	# 	Type: RANAVAL.alien
+	# 	DisplayOrder: 2
+	# 	Group: Naval
+	# 	LowPowerModifier: 300
+	# 	ReadyAudio: UnitReady
+	# 	BlockedAudio: NoBuild
+	# 	LimitedAudio: BuildingInProgress
+	# 	QueuedAudio: Training
+	# 	OnHoldAudio: OnHold
+	# 	CancelledAudio: Cancelled
+	# 	SpeedUp: True
+	# 	BuildTimeSpeedReduction: 100, 50, 33, 25, 20, 17, 14, 12, 11, 10
+
+	####################################################################################################
+	#		LEGO
+	####################################################################################################	
+
+^LEGOFourStateDeploy:
+	### This simulates a Master Slave JK Flip Flop via conditions.
+	## This allows us to have four deploy states.
+	## The deploy toggle on and off is used as the clock signal here.
+	## The commented out FF1_INPUTS stuff are always true, so no need to actually include them.
+	
+	## Input and Clock
+	#GrantCondition@FF1_INPUTS:
+	#	Condition: cond_FF1_INPUTS
+	GrantConditionOnDeploy@Clock:
+		DeployedCondition: FSD_cond_CLK
+	
+	### First Half ###
+	GrantCondition@FF1_NAND1:
+		Condition: FSD_cond_FF1_NAND1
+		RequiresCondition: !(FSD_cond_CLK && FSD_cond_FF1_NAND8)
+	GrantCondition@FF1_NAND2:
+		Condition: FSD_cond_FF1_NAND2
+		RequiresCondition: !(FSD_cond_CLK && FSD_cond_FF1_NAND7)
+	GrantCondition@FF1_NAND3:
+		Condition: FSD_cond_FF1_NAND3
+		RequiresCondition: !(FSD_cond_FF1_NAND1 && FSD_cond_FF1_NAND4)
+	GrantCondition@FF1_NAND4:
+		Condition: FSD_cond_FF1_NAND4
+		RequiresCondition: !(FSD_cond_FF1_NAND2 && FSD_cond_FF1_NAND3)
+	### Second Half ###
+	GrantCondition@FF1_NAND5:
+		Condition: FSD_cond_FF1_NAND5
+		RequiresCondition: !(FSD_cond_FF1_NAND3 && !FSD_cond_CLK)
+	GrantCondition@FF1_NAND6:
+		Condition: FSD_cond_FF1_NAND6
+		RequiresCondition: !(FSD_cond_FF1_NAND4 && !FSD_cond_CLK)
+	GrantCondition@FF1_NAND7:
+		Condition: FSD_cond_FF1_NAND7
+		RequiresCondition: !(FSD_cond_FF1_NAND5 && FSD_cond_FF1_NAND8)
+	GrantCondition@FF1_NAND8:
+		Condition: FSD_cond_FF1_NAND8
+		RequiresCondition: !(FSD_cond_FF1_NAND6 && FSD_cond_FF1_NAND7)
+
+	### Final Conditions ###
+	GrantCondition@Cond1:
+		Condition: FSD_cond_1
+		RequiresCondition: !FSD_cond_CLK && FSD_cond_FF1_NAND8
+	GrantCondition@Cond2:
+		Condition: FSD_cond_2
+		RequiresCondition: FSD_cond_CLK && FSD_cond_FF1_NAND8
+	GrantCondition@Cond3:
+		Condition: FSD_cond_3
+		RequiresCondition: !FSD_cond_CLK && !FSD_cond_FF1_NAND8
+	GrantCondition@Cond4:
+		Condition: FSD_cond_4
+		RequiresCondition: FSD_cond_CLK && !FSD_cond_FF1_NAND8
+
+	####################################################################################################
+	#		Lego Heal & Buff Spells 
+	####################################################################################################
+
+^PropagandaSelfHeal:
+	GrantConditionOnPrerequisite@upsubliminal:
+		Condition: upsubliminal
+		Prerequisites: upsubliminal
+	ExternalCondition@PROPAGANDA:
+		Condition: propaganda
+		TotalCap: 1
+	ChangesHealth@PROPAGANDA1:
+		Step: 500
+		Delay: 25
+		HealIfBelow: 150
+		DamageCooldown: 0
+		RequiresCondition: propaganda && damaged
+	ChangesHealth@PROPAGANDA2:
+		Step: 500
+		Delay: 25
+		HealIfBelow: 150
+		DamageCooldown: 0
+		RequiresCondition: propaganda && upsubliminal && damaged
+	ReloadDelayMultiplier@PROPAGANDA1:
+		Modifier: 80
+		RequiresCondition: propaganda
+	ReloadDelayMultiplier@PROPAGANDA2:
+		Modifier: 80
+		RequiresCondition: propaganda && upsubliminal
+	WithDecoration@PROPAGANDAHEAL:
+		Image: pips
+		Sequence: pip-heal
+		ReferencePoint: Top, Right
+		RequiresCondition: propaganda
+		BlinkInterval: 32
+		BlinkPattern: On, Off
+	GrantCondition@PROPPSI:
+		Condition: prevent-mindcontrol
+		RequiresCondition: propaganda
+	GrantConditionOnPrerequisite@usabombardament:
+		Condition: usabombardament
+		Prerequisites: usabombardament
+	GrantConditionOnPrerequisite@usasearchndestroy:
+		Condition: usasearchndestroy
+		Prerequisites: usasearchndestroy
+	GrantConditionOnPrerequisite@usaholdtheline:
+		Condition: usaholdtheline
+		Prerequisites: usaholdtheline
+	DamageMultiplier@usaholdtheline:
+		RequiresCondition: usaholdtheline
+		Modifier: 90
+	FirepowerMultiplier@usabombardament:
+		RequiresCondition: usabombardament
+		Modifier: 120
+	RangeMultiplier@usasearchndestroy:
+		Modifier: 120
+		RequiresCondition: usasearchndestroy
+
+^PropagandaSelfHeallego:
+	ExternalCondition@PROPAGANDA:
+		Condition: propaganda
+		TotalCap: 0
+	ChangesHealth@PROPAGANDA1:
+		Step: 500
+		Delay: 25
+		HealIfBelow: 150
+		DamageCooldown: 0
+		RequiresCondition: propaganda && damaged
+	WithDecoration@PROPAGANDAHEAL:
+		Image: pips
+		Sequence: pip-heal
+		ReferencePoint: Top, Right
+		RequiresCondition: propaganda
+		BlinkInterval: 32
+		BlinkPattern: On, Off
+	###LEGO BATTLES BUFFS###
+	SpeedMultiplier@SPEEDBUFF:
+		RequiresCondition: FSD_cond_2 && speedbuff 
+		Modifier: 200
+	DamageMultiplier@DEFENSEBUFF:
+		RequiresCondition: FSD_cond_1 && defensebuff && propaganda
+		Modifier: 50
+	DamageMultiplier@DAMAGEBUFF:
+		RequiresCondition: FSD_cond_2 && damagebuff && propaganda
+		Modifier: 200
+	RevealsShroudMultiplier@TRACKBUFF:
+		RequiresCondition: FSD_cond_3 && trackbuff && propaganda
+		Modifier: 200
+
+
+	####################################################################################################
+	#		INHERITABLES - BUILDING
+	####################################################################################################		
+^lego_airunit:
+	Inherits: ^Helicopter
+	Inherits@ANNOUNCE: ^AnnounceOnBuild
+	Inherits@EXT: ^ExternalConditions
+	Inherits@PROPAGANDA: ^PropagandaSelfHeal
+	-SpawnActorOnDeath:
+	#-Explodes:
+	RevealsShroud:
+		Range: 9c0
+		Type: GroundPosition
+	Selectable:
+		DecorationBounds: 120, 96
+	WithDeathAnimation:
+		UseDeathTypeSuffix: false
+	DeathSounds:
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+
+^lego_transport:
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	Valued:
+		Cost: 350
+	Buildable:
+		BuildPaletteOrder: 10
+	Aircraft:
+		InitialFacing: 224
+		TurnSpeed: 7
+		Speed: 165
+		IdealSeparation: 1c0
+		RepulsionSpeed: 10
+	DamageMultiplier@DamageReduction:
+		Modifier: 88
+	Health:
+		HP: 32400
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 9c0
+		Type: GroundPosition
+	Selectable:
+		DecorationBounds: 60,48
+	Cargo:
+		Types: Infantry, Hacker, Fremen, Vehicle
+		MaxWeight: 8
+		PipCount: 8
+		AfterLoadDelay: 0
+		BeforeUnloadDelay: 0
+		AfterUnloadDelay: 0
+		LoadedCondition: loaded
+	FireWarheadsOnDeath:
+		Weapon: HeliExplode
+		EmptyWeapon: HeliExplode
+	Power:
+		Amount: -20
+	DetectCloaked:
+		CloakTypes: Cloak, Underwater
+		Range: 9c0
+	RenderDetectionCircle:
+	
+^legovehicle:
+	Inherits: ^Vehicle
+	Inherits@ANNOUNCE: ^AnnounceOnBuild
+	Inherits@EXT: ^ExternalConditions
+	Mobile:
+		TurnSpeed: 512
+	DeathSounds:
+	#-Explodes:
+	AttackFrontal:
+	WithMoveAnimation:
+		MoveSequence: run
+	WithAttackAnimation:
+		Sequence: shoot
+	WithDeathAnimation:
+		DeathSequence: die
+		UseDeathTypeSuffix: false
+	Selectable:
+		DecorationBounds: 60,48
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+
+^lego_tank:
+	Inherits@VEHICLE: ^legovehicle
+	Inherits@EXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Valued:
+		Cost: 750
+	Buildable:
+		BuildPaletteOrder: 40
+		BuildDuration: 400
+		BuildDurationModifier: 100
+	RevealsShroud:
+		Range: 5c0
+	Mobile:
+		Speed: 40
+	Armor:
+		Type: None
+	DamageMultiplier@DamageReduction:
+		Modifier: 88
+	FirepowerMultiplier@FirepowerIncrease:
+		Modifier: 111
+	Health:
+		HP: 22000
+	#Power:
+	#	Amount: -2
+	FireWarheadsOnDeath:
+		Weapon: wc2visualexplode
+		EmptyWeapon: wc2visualexplode
+	GrantConditionOnAttack@CatapultCooldown:
+		Condition: cond_catapult_cooldown
+		RevokeDelay: 34
+	Mobile:
+		PauseOnCondition: cond_catapult_cooldown || disabled || stickyfoam
+
+^lego_building:
+	Inherits: ^BaseBuilding
+	Inherits@shape: ^2x2Shape
+	StoresResources:
+		PipColor: Green
+		PipCount: 5
+		Capacity: 500
+	Valued:
+		Cost: 500
+	Buildable:
+		BuildPaletteOrder: 11
+		BuildDuration: 160
+		BuildDurationModifier: 100
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+		LocalCenterOffset: 0,0,0
+	Health:
+		HP: 65000
+	RevealsShroud:
+		Range: 4c0
+	Power:
+		Amount: 0
+	ScalePowerWithHealth:
+	ProvidesPrerequisite@buildingname:
+	### AI Stuff ###
+	#GrantConditionOnBotOwner@AIPowerBoost:
+	#	Condition: wc2_cond_bot_owner
+	#	Bots: easiest, easy, medium, hard, brutal, challenger, unbeatable, cameogod, airforce, defenseai
+	#GrantTimedCondition@AIPowerBoost:
+	#	Condition: wc2_cond_ai_power_boost
+	#	Duration: 2000
+	#	RequiresCondition: wc2_cond_bot_owner
+	#PowerMultiplier@AIPowerBoost:
+	#	Modifier: 300
+	#	RequiresCondition: wc2_cond_ai_power_boost
+	# WithTextDecoration:
+	# 	Text: Power Boost
+	# 	RequiresCondition: wc2_cond_ai_power_boost
+
+^lego_barracks:
+	Inherits@shape: ^3x3Shape
+	Inherits: ^BaseBuilding
+	Valued:
+		Cost: 800
+	Buildable:
+		BuildPaletteOrder: 20
+		BuildDuration: 200
+		BuildDurationModifier: 100
+	Building:
+		Footprint: xxx xxx xxx
+		Dimensions: 3,3
+		LocalCenterOffset: -32,-32,0
+	DamageMultiplier@DamageReduction:
+		Modifier: 88
+	Health:
+		HP: 80000
+	RevealsShroud:
+		Range: 5c0
+	RallyPoint:
+	Exit@1:
+		SpawnOffset: -2048,-1024,0
+		ExitCell: -1,0
+	Exit@2:
+		SpawnOffset: -2048,0,0
+		ExitCell: -1,1
+	Exit@3:
+		SpawnOffset: -2048,1024,0
+		ExitCell: -1,2
+	GrantExternalConditionToProduced:
+		Condition: produced
+	Power:
+		Amount: 0
+	ProvidesPrerequisite@buildingname:
+	ProvidesPrerequisite@barracks:
+		Prerequisite: barracks
+	Production@NORMAL:
+		RequiresCondition: !classicproductionqueues
+	Production@CLASSICPRODUCTIONQUEUES:
+		RequiresCondition: classicproductionqueues
+	ProductionQueue:
+		DisplayOrder: 2
+		Group: Infantry
+		LowPowerModifier: 9999
+		ReadyAudio: UnitReady
+		BlockedAudio: NoBuild
+		LimitedAudio: BuildingInProgress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar@NORMAL:
+		RequiresCondition: !classicproductionqueues
+	ProductionBar@CLASSICPRODUCTIONQUEUES:
+		RequiresCondition: classicproductionqueues
+	
+
+^lego_vehiclefactory:
+	Inherits@shape: ^3x3Shape
+	Inherits: ^BaseBuilding
+	Valued:
+		Cost: 800
+	Buildable:
+		BuildPaletteOrder: 20
+		BuildDuration: 200
+		BuildDurationModifier: 100
+	Building:
+		Footprint: xxx xxx xxx
+		Dimensions: 3,3
+		LocalCenterOffset: -32,-32,0
+	DamageMultiplier@DamageReduction:
+		Modifier: 88
+	Health:
+		HP: 80000
+	RevealsShroud:
+		Range: 5c0
+	RallyPoint:
+	Exit@1:
+		SpawnOffset: -2048,-1024,0
+		ExitCell: -1,0
+	Exit@2:
+		SpawnOffset: -2048,0,0
+		ExitCell: -1,1
+	Exit@3:
+		SpawnOffset: -2048,1024,0
+		ExitCell: -1,2
+	GrantExternalConditionToProduced:
+		Condition: produced
+	Power:
+		Amount: 0
+	ProvidesPrerequisite@buildingname:
+	ProvidesPrerequisite@vehiclefactory:
+		Prerequisite: vehiclefactory
+	Production@NORMAL:
+		RequiresCondition: !classicproductionqueues
+	Production@CLASSICPRODUCTIONQUEUES:
+		RequiresCondition: classicproductionqueues
+	ProductionQueue:
+		DisplayOrder: 2
+		Group: Vehicle
+		LowPowerModifier: 9999
+		ReadyAudio: UnitReady
+		BlockedAudio: NoBuild
+		LimitedAudio: BuildingInProgress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar@NORMAL:
+		RequiresCondition: !classicproductionqueues
+	ProductionBar@CLASSICPRODUCTIONQUEUES:
+		RequiresCondition: classicproductionqueues
+
+^lego_tower:
+	Inherits@shape: ^2x2Shape
+	Valued:
+		Cost: 800
+	Buildable:
+		BuildPaletteOrder: 20
+		BuildDuration: 1500
+		BuildDurationModifier: 15
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	DamageMultiplier@DamageReduction:
+		Modifier: 88
+	FirepowerMultiplier@FirepowerIncrease:
+		Modifier: 111
+	Health:
+		HP: 60000
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 10c0
+	Power:
+		Amount: 0
+	DetectCloaked:
+		DetectionTypes: Cloak, Underwater
+		Range: 9c0
+	ProvidesPrerequisite@buildingname:
+
+	####################################################################################################
+	#		INHERITABLES - Units
+	####################################################################################################		
+
+^LBWorker:
+	Harvester:
+		PipCount: 3
+		Capacity: 6
+		BaleLoadDelay: 3
+		BaleUnloadDelay: 0
+		BaleUnloadAmount: 2
+		FullyLoadedSpeed: 100
+		MaxUnloadQueue: 9
+	WithHarvestAnimation:
+	WithDockingAnimation:
+	Power:
+		Amount: -5	
+
+^lego_mage:
+	Inherits@FOURSTATEDEPLOY: ^LEGOFourStateDeploy
+	Inherits@EXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	Inherits@MC: ^MCImmune
+	Valued:
+		Cost: 600
+	Buildable:
+		BuildPaletteOrder: 10
+		BuildDuration: 340
+		BuildDurationModifier: 100
+	DamageMultiplier@DamageReduction:
+		Modifier: 88
+	FirepowerMultiplier@FirepowerIncrease:
+		Modifier: 111
+	Health:
+		HP: 12000
+	Armor:
+		Type: None
+	Mobile:
+		Speed: 65
+	#Food
+	Power:
+		Amount: -2
+	RevealsShroud:
+		Range: 8c0
+	DetectCloaked:
+		Range: 6c0
+
+^lego_mcv:
+	Inherits@mcv: ^MCV
+	Valued:
+		Cost: 3000
+	Buildable:
+		BuildPaletteOrder: 10
+		BuildDuration: 750
+		BuildDurationModifier: 100
+	Selectable:
+		Priority: 4
+		DecorationBounds: 36,36
+	Mobile:
+		Speed: 95
+	DamageMultiplier@DamageReduction:
+		Modifier: 88
+	Health:
+		HP: 30000
+	Armor:
+		Type: None
+	RevealsShroud:
+		Range: 7c0
+	SelectionDecorations:
+	RenderSprites:
+		Scale: 1.3
+
+	####################################################################################################
+	#		Astro - BUILDINGS
+	####################################################################################################
+
+
+ASTRO_CONYARD:
+	# GrantExternalConditionToOwner@BuildingsOwned:
+	# 	Condition: BuildingsOwned
+	Inherits: ^BaseBuilding
+	Inherits@shape: ^2x2Shape
+	#Inherits@CPQWP: ^CPQCondition
+	#Inherits@ai: ^AIConyardCash
+	Inherits@conyard: ^Conyard
+	Selectable:
+		Bounds: 64,64
+	HitShape:
+		TargetableOffsets: 630,299,0
+	Valued:
+		Cost: 3000
+	Tooltip:
+		Name: Eagle Command
+	ProvidesPrerequisite:
+	Building:
+		Footprint: xx xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+		Description: Earth HQ unit./n Constructs buildings./n Hero units are healed by it.
+	Transforms:
+		IntoActor: lego_astro_mcv
+		Offset: 1,1
+		Facing: 432
+	DamageMultiplier@DamageReduction:
+		Modifier: 88
+	Health:
+		HP: 200000
+	RevealsShroud:
+		Range: 4c0
+	RallyPoint:
+	Exit@1:
+		SpawnOffset: -426,85,0
+		ExitCell: 0,1
+	Exit@2:
+		SpawnOffset: 298,298,0
+		ExitCell: 1,1
+	Power:
+		Amount: 50
+	SpawnActorsOnSell:
+		ActorTypes: astro_builder
+	ScalePowerWithHealth:
+	BaseBuilding:
+	Production@NORMAL:
+		Produces: Building, Defence
+        PauseOnCondition: lowpower
+        RequiresCondition: !classicproductionqueues
+  	Production@CLASSICPRODUCTIONQUEUES:
+		Produces: RABuilding, RADefence
+        PauseOnCondition: lowpower
+        RequiresCondition: classicproductionqueues      
+	ProductionBar@Building:
+		ProductionType: Building
+        RequiresCondition: !classicproductionqueues
+    ProductionBar@RABuilding:
+		ProductionType: RABuilding
+        RequiresCondition: classicproductionqueues    
+	ProductionBar@Defence:
+		ProductionType: Defence
+        RequiresCondition: !classicproductionqueues      
+    ProductionBar@RADefence:
+		ProductionType: RADefence
+        RequiresCondition: classicproductionqueues  
+	ProductionQueue@Building:
+		Type: Building
+		DisplayOrder: 0
+		Group: Building
+		LowPowerModifier: 200
+		ReadyAudio: ConstructionComplete
+		BlockedAudio: NoBuild
+		LimitedAudio: BuildingInProgress
+		QueuedAudio: Building
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionQueue@Defence:
+		Type: Defence
+		DisplayOrder: 1
+		Group: Defence
+		LowPowerModifier: 200
+		ReadyAudio: UnitReady
+		BlockedAudio: NoBuild
+		LimitedAudio: BuildingInProgress
+		QueuedAudio: Building
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProvidesRadar:
+	BaseProvider:
+		Cooldown: 75
+		Range: 14c0
+	AutoTarget:
+		ScanRadius: 5
+		InitialStance: AttackAnything
+	AutoTargetPriority@DEFAULT:
+		ValidTargets: LHEROtarget
+	AttackOmni:
+		PauseOnCondition: disabled
+	Armament: 
+		Weapon: HQHEROHEAL
+		TargetStances: Ally
+		ForceTargetStances: None
+		PauseOnCondition: healed && !injured
+	BaseBuilding:
+	Voiced:
+		VoiceSet: astroconyardvoice
+	Refinery:
+		# DockAngle: 112
+		# DockOffset: 1,2
+		# IsDragRequired: False
+		# DragOffset: -554,512,0
+		# DragLength: 12
+		# TickRate: 15
+	DockHost:
+		DockAngle: 112
+		DockOffset: 0, 2c512, 0
+		IsDragRequired: False
+		DragOffset: -554,512,0
+		DragLength: 12
+		TickRate: 15
+	StoresResources:
+		PipColor: Green
+		PipCount: 10
+		Capacity: 1000
+	ProvidesPrerequisite@buildingname:
+	WithProductionOverlay@Legomen:
+		RequiresCondition: !build-incomplete
+		Queues: Defence
+		Sequence: lego_production_overlay_human
+		
+ASTRO_BIODOME:
+	Inherits@template: ^lego_building
+	Inherits@shape: ^2x2Shape
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Biodome
+	Buildable:
+		Queue: Building, RABuilding
+		Prerequisites: ~astro_conyard
+		BuildPaletteOrder: 10
+		BuildDuration: 160
+		BuildDurationModifier: 100
+		Description: Generator, build to keep producing units.
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+		LocalCenterOffset: 0,0,0
+	Health:
+		HP: 65000
+	Power:
+		Amount: 300
+	Voiced:
+		VoiceSet: biodomevoice
+	ProvidesPrerequisite:
+		Prerequisite: ASTRO_BIODOME
+
+
+ASTRO_HARVESTER:
+	Inherits@template: ^lego_building
+	Inherits@shape: ^2x2Shape
+	#Inherits@CPQWP: ^CPQCondition 
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Harvester
+	Buildable:
+		Queue: Building, RABuilding
+		Prerequisites: ~astro_conyard
+		BuildPaletteOrder: 30
+		BuildDuration: 160
+		BuildDurationModifier: 100
+		Description: Dropoff structure./nIncreases builder ore yield.
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+		LocalCenterOffset: 0,0,0
+	Refinery:
+		DockAngle: 112
+		DockOffset: 1,2 
+		IsDragRequired: False
+		DragOffset: -554,512,0
+		DragLength: 12
+		TickRate: 15
+	DockHost:
+		DockAngle: 112
+		DockOffset: 0, 2c512, 0
+		IsDragRequired: False
+		DragOffset: -554,512,0
+		DragLength: 12
+		TickRate: 15
+	StoresResources:
+		PipColor: Green
+		PipCount: 5
+		Capacity: 1000
+	ResourcePurifier:
+		Modifier: 5
+	Health:
+		HP: 65000
+	Voiced:
+		VoiceSet: eharvestervoice
+
+ASTRO_WELLCAP:
+	Inherits@template: ^lego_building
+	Inherits@shape: ^2x2Shape
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Well Cap
+	Buildable:
+		Queue: Building, RABuilding
+		Prerequisites: ~astro_conyard
+		BuildPaletteOrder: 40
+		BuildDuration: 120
+		BuildDurationModifier: 100
+		Description: Generates income.
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+		LocalCenterOffset: 0,0,0
+	Health:
+		HP: 65000
+	CashTrickler:
+		Amount: 300
+		DisplayDuration: 30
+		Interval: 200
+	Voiced:
+		VoiceSet: ewellcapvoice
+
+ASTRO_BARRACKS:
+	Inherits@template: ^lego_barracks
+	Inherits@shape: ^2x2Shape
+	Tooltip:
+		Name: Barracks
+	Valued:
+		Cost: 800
+	Buildable:
+		Queue: Building, RABuilding
+		Description: Trains Astro infantry.
+		Prerequisites: ~astro_conyard
+	Production@NORMAL:
+		Produces: Infantry
+	Production@CLASSICPRODUCTIONQUEUES:
+		Produces: RAInfantry
+	ProductionQueue:
+		Type: Infantry
+	ProductionBar@NORMAL:
+		ProductionType: Infantry
+	ProductionBar@CLASSICPRODUCTIONQUEUES:
+		ProductionType: RAInfantry
+	SpawnActorsOnSell:
+		ActorTypes: astro_trooper
+	WithProductionOverlay@Legomen:
+		RequiresCondition: !build-incomplete
+		Queues: Infantry
+		Sequence: lego_production_overlay_human
+	Voiced:
+		VoiceSet: astrobarracksvoice
+	ProvidesPrerequisite:
+		Prerequisite: ASTRO_BARRACKS
+
+ASTRO_VEHICLEFACTORY:
+	Inherits@template: ^lego_building
+	Inherits@factory: ^lego_vehiclefactory
+	Inherits@shape: ^2x2Shape
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: Special Factory
+	Buildable:
+		Queue: Building, RABuilding
+		Prerequisites: ~astro_conyard, ~ASTRO_BIODOME, ~ASTRO_BARRACKS
+		BuildPaletteOrder: 50
+		BuildDuration: 160
+		BuildDurationModifier: 100
+		Description: Trains Astro special units.
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+		LocalCenterOffset: 0,0,0
+	Production@NORMAL:
+		Produces: Vehicle
+	Production@CLASSICPRODUCTIONQUEUES:
+		Produces: Vehicle
+	ProductionQueue:
+		Type: Vehicle
+	ProductionBar@NORMAL:
+		ProductionType: Vehicle
+	ProductionBar@CLASSICPRODUCTIONQUEUES:
+		ProductionType: RAVehicle
+	WithProductionOverlay@Legospecial:
+		RequiresCondition: !build-incomplete
+		Queues: Vehicle
+		Sequence: lego_production_overlay_brick
+		Palette: player
+		IsPlayerPalette: True
+	SpawnActorsOnSell:
+		ActorTypes: astro_trooper
+	Health:
+		HP: 65000
+	Voiced:
+		VoiceSet: astrospecialfactoryvoice
+
+# ASTRO_SHIPYARD:
+# 	Inherits@template: ^lego_building
+# 	Inherits@shape: ^2x2Shape
+# 	Valued:
+# 		Cost: 500
+# 	Tooltip:
+# 		Name: Shipyard
+# 	Buildable:
+# 		Queue: Building, RABuilding
+# 		BuildPaletteOrder: 60
+# 		BuildDuration: 160
+# 		BuildDurationModifier: 100
+# 	Building:
+# 		Footprint: xx xx
+# 		Dimensions: 2,2
+# 		LocalCenterOffset: 0,0,0
+#	WithProductionOverlay@Legospecial:
+#		RequiresCondition: !build-incomplete
+#		Queues: Vehicles
+#		Sequence: lego_production_overlay_brick
+# 	Health:
+# 		HP: 65000
+
+astro_tower:
+	Inherits: ^Defense
+	Inherits@lego_tower: ^lego_tower
+	# Don't declare AutoTarget stuff before AttackBase stuff or an annoying bug with WithSpriteBody will occur.
+	#Inherits@AUTOTARGET: ^AutoTargetAll
+	Tooltip:
+		Name: Astro Tower
+	Buildable:
+		Prerequisites: ~astro_conyard
+		Queue: Defence, RADefence
+		Description: Upgradable defense building\nDetector
+	Voiced:
+		VoiceSet: astrotowervoice
+	Armament@PRIMARY:
+		Weapon: legoranged
+		RequiresCondition: !astrotower2upg && !astrotower3upg
+	Armament@AA:
+		Weapon: legorangedaa
+		RequiresCondition: !astrotower2upg && !astrotower3upg
+	Armament@guardtower:
+		Weapon: specialrangedstar
+		RequiresCondition: astrotower2upg && !astrotower3upg
+	Armament@guardtoweraa:
+		Weapon: specialrangedstar
+		RequiresCondition: astrotower2upg && !astrotower3upg
+	Armament@g3tower:
+		Weapon: astroplasmaglob
+		RequiresCondition: astrotower2upg && astrotower3upg
+	Armament@3toweraa:
+		Weapon: astroplasmaglob
+		RequiresCondition: astrotower2upg && astrotower3upg
+	AttackOmni:
+		PauseOnCondition: disabled
+	WithRangeCircle:
+		Range: 3072
+		# RequiresCondition: astrotower2upg
+	Inherits@AUTOTARGET: ^AutoTargetAll
+	### Upgrade stuff ###
+	WithSpriteBody:
+		RequiresCondition: !astrotowerupg && !astrotower2upg
+		Sequence: astro_tower
+	Production@guardtower:
+		Produces: Towerupgrade
+		RequiresCondition: !astrotower2upg && !astrotower3upg
+	ProductionBar@guardtower:
+		ProductionType: Towerupgrade
+		RequiresCondition: !astrotower2upg && !astrotower3upg
+	ProductionQueue@guardtower:
+		Type: Towerupgrade
+		DisplayOrder: 0
+		Group: Addon
+		LowPowerModifier: 200
+		QueueLimit: 1
+		ItemLimit: 1
+		RequiresCondition: !astrotower2upg && !astrotower3upg
+	GrantConditionOnProduction@guardtower:
+		Condition: astrotower2upg
+		Actors: astro_tower2
+	WithSpriteBody@guardtower:
+		Sequence: astro_tower2
+		RequiresCondition: astrotower2upg && !astrotower3upg
+	DamageMultiplier@guardtower:
+		Modifier: 77
+		RequiresCondition: astrotower2upg
+	###
+	Production@3tower:
+		Produces: Towerupgrade2
+		RequiresCondition: astrotower2upg && !astrotower3upg
+	ProductionBar@3tower:
+		ProductionType: Towerupgrade2
+	ProductionQueue@3tower:
+		Type: Towerupgrade2
+		DisplayOrder: 0
+		Group: Addon
+		LowPowerModifier: 200
+		QueueLimit: 1
+		ItemLimit: 1
+	GrantConditionOnProduction@3tower:
+		Condition: astrotower3upg
+		Actors: astro_tower3
+	WithSpriteBody@3tower:
+		Sequence: astro_tower3
+		RequiresCondition: astrotower3upg
+	DamageMultiplier@3tower:
+		Modifier: 87
+		RequiresCondition: astrotower3upg
+	RenderSprites:
+		Scale: 0.8
+	ActorPreviewPlaceBuildingPreview:
+		Palette: player
+	Building:
+		BuildSounds: wc2_constrct.aud
+
+astro_tower2:
+	Tooltip:
+		Name: Astro Tower II
+	Buildable:
+		BuildPaletteOrder: 1
+		RequiresCondition: !astrotower2upg && !astrotower3upg
+		Prerequisites: ~astro_conyard
+		Queue: Towerupgrade
+		BuildDuration: 3500
+		BuildDurationModifier: 12
+		Description: Upgraded guard tower, attacks land, sea, and air.
+	Valued:
+		Cost: 800
+	Interactable:
+	AlwaysVisible:
+	KillsSelf:
+		RemoveInstead: true
+	RenderSprites:
+		Scale: 0.8
+	ProvidesPrerequisite@buildingname:
+
+astro_tower3:
+	Tooltip:
+		Name: Astro Tower III
+	Buildable:
+		BuildPaletteOrder: 1
+		Prerequisites: ~astro_conyard
+		RequiresCondition: astrotower2upg && !astrotower3upg
+		Queue: Towerupgrade2
+		BuildDuration: 3500
+		BuildDurationModifier: 12
+		Description: Further upgraded Guard tower, attacks land, sea, and air.
+	Valued:
+		Cost: 800
+	Interactable:
+	AlwaysVisible:
+	KillsSelf:
+		RemoveInstead: true
+	RenderSprites:
+		Scale: 0.8
+	ProvidesPrerequisite@buildingname:
+
+####################################################################################################
+#		Alien - BUILDINGS
+####################################################################################################
+
+# ALIEN_BASE:
+# 	Inherits: ^ASTRO_CONYARD
+# 	Tooltip:
+# 		Name: Crater Base
+
+####################################################################################################
+#		ASTRO - INFANTRY
+####################################################################################################
+
+lego_astro_mcv:
+	Inherits@LEGOINFANTRY: ^Soldier
+	Inherits@LegoTemplate: ^lego_mcv
+	Buildable:
+		Queue: Defence, RADefence
+		Description: Transforms into an Eagle Command.
+		Prerequisites ~astro_conyard
+	Tooltip:
+		Name: Mobile Construction Vehicle (Astro)
+	Transforms:
+		IntoActor: astro_conyard
+		Offset: -1,-1
+		Facing: 108
+		TransformSounds:
+	Voiced:
+		VoiceSet: buildervoice
+	# Animation stuff
+	WithInfantryBody:
+		-IdleSequences: idle1,idle2,idle3,idle4
+
+
+lego_astro_mcv.bot:
+	Inherits: lego_astro_mcv
+	Buildable:
+		BuildPaletteOrder: 100
+		BuildLimit: 1
+		Prerequisites: ~techlevel.medium, ~botplayer, allowsMCV, ~astro_conyard
+	RenderSprites:
+		Image: lego_astro_mcv
+
+ASTRO_BUILDER:
+	Inherits: ^Soldier
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@selection: ^SelectableEconomicUnit
+	Inherits@harv: ^Harvester	
+	Inherits@worker: ^LBWorker
+	AutoTargetPriority@Repair:
+		ValidTargets: Repair, Repairing
+		ValidStances: Ally
+		Priority: 2
+	Tooltip:
+		Name: Builder
+	Buildable:
+		Queue: Defence, RADefence, Infantry.X_Infantry
+		Prerequisites: ~astro_conyard
+		BuildPaletteOrder: 5
+		BuildDuration: 250
+		Description: Basic Harvester. Can repair.
+	StoresResources:
+		Capacity: 5
+	Armament@repair:
+		Name: repair
+		Weapon: builderrepair
+		TargetStances: Ally
+		ForceTargetStances: Ally
+		LocalOffset: 240,160,240
+	Armament@primary:
+		Weapon: troopermelee
+		ForceTargetStances: Enemy, Neutral
+	Captures:
+		CaptureTypes: building, tech
+		PlayerExperience: 500
+		CaptureDelay: 375
+		ConsumedByCapture: False
+		EnterCursor: ability
+		EnterBlockedCursor: move-blocked
+	Valued:
+		Cost: 50
+	Mobile:
+		Speed: 50
+	RenderSprites:
+		Scale: 0.8
+	Health:
+		HP: 95000
+	ReloadDelayMultiplier@cow:
+		Modifier: 60
+	AttackFrontal:
+		Armaments: primary,repair
+	-DamagedByTerrain:
+	WithHarvesterSpriteBody:
+		ImageByFullness: astro_builder, astro_builder
+	WithInfantryBody:
+		DefaultAttackSequence: harvest
+		-IdleSequences: idle1,idle2,idle3,idle4
+	WithDeathAnimation:
+		UseDeathTypeSuffix: false
+	Voiced:
+		VoiceSet: buildervoice
+
+ASTRO_TROOPER:
+	Inherits@Soldier: ^Soldier
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Tooltip:
+		Name: Trooper
+	Buildable:
+		Queue: Infantry, RAInfantry, Infantry.X_Infantry
+		BuildPaletteOrder: 1
+		BuildDuration: 100
+		Prerequisites: ~astro_barracks
+		Description: Basic Melee Infantry     
+	Armament:
+		Weapon: troopermelee
+	Valued:
+		Cost: 100
+	Mobile:
+		Speed: 30
+	RenderSprites:
+		Scale: 0.8
+	Health:
+		HP: 20000
+	ReloadDelayMultiplier@cow:
+		Modifier: 60
+	Voiced:
+		VoiceSet: troopervoice
+	WithInfantryBody:
+		-IdleSequences: idle1,idle2,idle3,idle4
+	Power:
+		Amount: -5
+	WithDeathAnimation:
+		UseDeathTypeSuffix: false
+
+ASTRO_GRIPLEY:
+	Inherits@Soldier: ^Soldier
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Tooltip:
+		Name: Gripley
+	Buildable:
+		Queue: Infantry, RAInfantry, Infantry.X_Infantry
+		BuildPaletteOrder: 4
+		BuildDuration: 300
+		Prerequisites: ~astro_barracks
+		Description: Heavy Melee Infantry    
+	Armament:
+		Weapon: cavalrymelee
+	Valued:
+		Cost: 350   
+	Mobile:
+		Speed: 30  
+	RenderSprites:
+		Scale: 0.8
+	Health:
+		HP: 30000
+	ReloadDelayMultiplier@cow:
+		Modifier: 60
+	Power:
+		Amount: -5
+	Voiced:
+		VoiceSet: gripleyvoice
+	WithInfantryBody:
+		-IdleSequences: idle1,idle2,idle3,idle4
+	WithDeathAnimation:
+		UseDeathTypeSuffix: false
+
+ASTRO_COMMANDO:
+	Inherits@Soldier: ^Soldier
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Tooltip:
+		Name: Commando
+	Buildable:
+		Queue: Infantry, RAInfantry, Infantry.X_Infantry
+		BuildPaletteOrder: 2
+		BuildDuration: 250
+		Prerequisites: ~astro_barracks
+		Description: Basic Ranged Infantry    
+	Armament:
+		Weapon: legoranged
+	Armament@aa:  
+		Weapon: legorangedAA
+	Valued:
+		Cost: 150   
+	Mobile:
+		Speed: 30  
+	RenderSprites:
+		Scale: 0.8
+	Health:
+		HP: 18000             
+	ReloadDelayMultiplier@cow:
+		Modifier: 60
+	Power:
+		Amount: -5
+	Voiced:
+		VoiceSet: ecommandovoice
+	WithInfantryBody:
+		-IdleSequences: idle1,idle2,idle3,idle4
+	WithDeathAnimation:
+		UseDeathTypeSuffix: false
+
+ASTRO_SPACE_POLICE:
+	Inherits@Soldier: ^Soldier
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Tooltip:
+		Name: Space Police
+	Buildable:
+		Queue: Infantry, RAInfantry, Infantry.X_Infantry
+		BuildPaletteOrder: 3
+		BuildDuration: 350
+		Prerequisites: ~astro_barracks
+		Description: Harrying Ranged Infantry.    
+	Armament:
+		Weapon: legoranged
+	Armament@aa:  
+		Weapon: legorangedAA
+	Valued:
+		Cost: 500   
+	Mobile:
+		Speed: 60  
+	RenderSprites:
+		Scale: 0.8
+	Health:
+		HP: 95000             
+	ReloadDelayMultiplier@cow:
+		Modifier: 60
+	Power:
+		Amount: -5
+	Voiced:
+		VoiceSet: policevoice
+	WithInfantryBody:
+		-IdleSequences: idle1,idle2,idle3,idle4
+	WithDeathAnimation:
+		UseDeathTypeSuffix: false
+
+ASTRO_GEMMA:
+	Inherits@Soldier: ^Soldier
+	Inherits: ^PropagandaSelfHeallego
+	Inherits@LEGOMAGETemplate: ^lego_mage
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Tooltip:
+		Name: Gemma
+	Buildable:
+		Queue: Defence, RADefence, Infantry.X_Infantry
+		BuildPaletteOrder: 60
+		BuildDuration: 250
+		Prerequisites: ~astro_conyard
+		Description: Astro Girlboss Hero
+		BuildLimit: 1
+	Armament:
+		Weapon: legoheroranged
+	Valued:
+		Cost: 500   
+	Mobile:
+		Speed: 30  
+	RenderSprites:
+		Scale: 0.8
+	Health:
+		HP: 100000
+	GrantConditionOnDamageState@INJURED:
+		ValidDamageStates: Heavy, Critical, Medium, Light
+		Condition: injured
+	GrantConditionOnDamageState@HEALED:
+		ValidDamageStates: Undamaged
+		Condition: healed
+	ReloadDelayMultiplier@cow:
+		Modifier: 60
+	ProximityExternalCondition@PROPAGANDA:
+		Range: 6c0
+		Condition: propaganda
+		RequiresCondition: !disabled
+	WithRangeCircle:
+		Range: 6c0
+		Type: propaganda
+		RequiresCondition: !disabled
+	Power:
+		Amount: -10
+	Voiced:
+		VoiceSet: gemmavoice
+	Targetable@LEGOHERO:
+		TargetTypes: LHEROtarget
+	WithInfantryBody:
+		-IdleSequences: idle1,idle2,idle3,idle4
+	WithDeathAnimation:
+		UseDeathTypeSuffix: false
+	#Spells
+	AttackFrontal:
+		Armaments: primary, defense, speed, legoemp, spacelaser
+	AutoTargetPriority@DEFAULT:
+		RequiresCondition: !stance-attackanything && !assault-move && !FSD_cond_2
+	AutoTargetPriority@ATTACKANYTHING:
+		RequiresCondition: (stance-attackanything || assault-move) && !FSD_cond_2
+	AutoTargetPriority@ATTACKANYTHING_HASTE:
+		RequiresCondition: (stance-attackanything || assault-move) && FSD_cond_2
+		ValidTargets: haste_target
+		InvalidTargets: NoAutoTarget
+	Armament:
+		Weapon: legoheroranged
+		FireDelay: 7
+		RequiresCondition: (FSD_cond_1 && !wc2_cond_bot_owner) || (FSD_cond_1_AI && wc2_cond_bot_owner) || (FSD_cond_2) || (FSD_cond_3) || (FSD_cond_4)
+	Armament@DEFENSE:
+		Name: defense
+		Weapon: legoheroranged
+		FireDelay: 7
+		TargetStances: Enemy
+		GrantCondition: 
+			Condition: defensebuff
+		RequiresCondition: FSD_cond_2
+		PauseOnCondition: mana < 10
+	# Armament@DEATHCOILSCATTER1:
+	# 	Weapon: wc2deathknightDeathCoilScatter_Left
+	# 	FireDelay: 7
+	# 	RequiresCondition: (FSD_cond_1 && !wc2_cond_bot_owner) || (FSD_cond_1_AI && wc2_cond_bot_owner)
+	# 	PauseOnCondition: mana < 100
+	# Armament@DEATHCOILSCATTER2:
+	# 	Weapon: wc2deathknightDeathCoilScatter_Right
+	# 	FireDelay: 7
+	# 	RequiresCondition: (FSD_cond_1 && !wc2_cond_bot_owner) || (FSD_cond_1_AI && wc2_cond_bot_owner)
+	# 	PauseOnCondition: mana < 100
+	Armament@SPEED:
+		Name: speed
+		Weapon: legoheroranged
+		FireDelay: 7
+		TargetStances: Enemy
+		GrantCondition: 
+			Condition: speedbuff
+		RequiresCondition: FSD_cond_2
+		PauseOnCondition: mana < 10
+	Armament@LEGOEMP:
+		Name: legoemp
+		Weapon: legoemp
+		FireDelay: 7
+		RequiresCondition: FSD_cond_3
+		PauseOnCondition: mana < 25
+	Armament@SPACELASER:
+		Name: spacelaser
+		Weapon: spacelaser
+		FireDelay: 7
+		RequiresCondition: FSD_cond_4
+		PauseOnCondition: mana < 50
+	# "Mana" (AmmoPool)
+	GrantConditionOnAttack@DEFENSE:
+		Condition: cond_defense_drain
+		ArmamentNames: deathcoil
+		MaximumInstances: 1
+		RevokeDelay: 2
+	GrantConditionOnAttack@SPEED:
+		Condition: cond_speed_drain
+		ArmamentNames: speed
+		MaximumInstances: 1
+		RevokeDelay: 2
+	GrantConditionOnAttack@LEGOEMP:
+		Condition: cond_legoemp_drain
+		ArmamentNames: legoemp
+		MaximumInstances: 1
+		RevokeDelay: 2
+	GrantConditionOnAttack@SPACELASER:
+		Condition: cond_spacelaser_drain
+		ArmamentNames: spacelaser
+		MaximumInstances: 1
+		RevokeDelay: 2
+	AmmoPool:
+		Armaments:
+		Ammo: 255
+		PipCount: 10
+		AmmoCondition: mana
+	ReloadAmmoPool@PassiveRegen:
+		Delay: 10
+		Count: 1
+		ShowSelectionBar: false
+	ReloadAmmoPool@DEFENSE:
+		Delay: 1
+		Count: -100
+		RequiresCondition: cond_defense_drain
+	ReloadAmmoPool@HASTE:
+		Delay: 1
+		Count: -50
+		RequiresCondition: cond_speed_drain
+	ReloadAmmoPool@LEGOEMP:
+		Delay: 1
+		Count: -25
+		RequiresCondition: cond_legoemp_drain
+	ReloadAmmoPool@SPACELASER:
+		Delay: 1
+		Count: -50
+		RequiresCondition: cond_spacelaser_drain
+	
+	### Visual indicator of mode ###
+	WithDecoration@Mode_Deathcoil:
+		Sequence: deathcoil_status_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_1
+	WithDecoration@Mode_Haste:
+		Sequence: haste_status_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_2 
+	WithDecoration@Mode_DeathAndDecay:
+		Sequence: deathanddecay_status_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_3
+	WithDecoration@Mode_Spacelaser:
+		Sequence: raisedead_status_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_4
+	
+	### Starting spell randomizer for AI.
+	GrantConditionOnBotOwner@wc2magebotcontrol:
+		Condition: wc2_cond_bot_owner
+		Bots: easiest, easy, medium, hard, brutal, challenger, unbeatable, cameogod, airforce, defenseai
+	GrantRandomCondition@wc2magebotcontrol:
+		Conditions: FSD_cond_1_AI, FSD_cond_2_AI, FSD_cond_3_AI, FSD_cond_4_AI
+	# FSD_Cond_1 is always granted at start due to the four state deploy.
+	GrantCondition@Cond2AI:
+		Condition: FSD_cond_2
+		RequiresCondition: wc2_cond_bot_owner && FSD_cond_2_AI
+	GrantCondition@Cond3AI:
+		Condition: FSD_cond_3
+		RequiresCondition: wc2_cond_bot_owner && FSD_cond_3_AI
+	GrantCondition@Cond4AI:
+		Condition: FSD_cond_4
+		RequiresCondition: wc2_cond_bot_owner && FSD_cond_4_AI
+
+	
+
+ASTRO_SPACE_POLICE_CAPTAIN:
+	Inherits@Soldier: ^Soldier
+	Inherits@LEGOMAGETemplate: ^lego_mage
+	Inherits: ^PropagandaSelfHeallego
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Tooltip:
+		Name: Space Police Captain
+	Buildable:
+		Queue: Defence, RADefence, Infantry.X_Infantry
+		BuildPaletteOrder: 60
+		BuildDuration: 250
+		Prerequisites: ~astro_conyard 
+		Description: Harrying Ranged Hero.
+		BuildLimit: 1    
+	Armament:
+		Weapon: legoheroranged
+	Valued:
+		Cost: 500   
+	Mobile:
+		Speed: 60  
+	RenderSprites:
+		Scale: 0.8
+	Health:
+		HP: 100000             
+	ReloadDelayMultiplier@cow:
+		Modifier: 60
+	Power:
+		Amount: -10
+	Voiced:
+		VoiceSet: captainvoice
+	Targetable@LEGOHERO:
+		TargetTypes: LHEROtarget
+	ProximityExternalCondition@PROPAGANDA:
+		Range: 6c0
+		Condition: propaganda
+		RequiresCondition: !disabled
+	WithRangeCircle:
+		Range: 6c0
+		Type: propaganda
+		RequiresCondition: !disabled
+	WithInfantryBody:
+		-IdleSequences: idle1,idle2,idle3,idle4
+	WithDeathAnimation:
+		UseDeathTypeSuffix: false
+
+	#Spells
+	AttackFrontal:
+		Armaments: primary, defense, damage, tracking, spacelaser
+	AutoTargetPriority@DEFAULT:
+		RequiresCondition: !stance-attackanything && !assault-move && !FSD_cond_2
+	AutoTargetPriority@ATTACKANYTHING:
+		RequiresCondition: (stance-attackanything || assault-move) && !FSD_cond_2
+	AutoTargetPriority@ATTACKANYTHING_HASTE:
+		RequiresCondition: (stance-attackanything || assault-move) && FSD_cond_2
+		ValidTargets: haste_target
+		InvalidTargets: NoAutoTarget
+	Armament:
+		Weapon: legoheroranged
+		FireDelay: 7
+		RequiresCondition: (FSD_cond_1 && !wc2_cond_bot_owner) || (FSD_cond_1_AI && wc2_cond_bot_owner) || (FSD_cond_2) || (FSD_cond_3) || (FSD_cond_4)
+	Armament@DEFENSE:
+		Name: defense
+		Weapon: legoheroranged
+		FireDelay: 7
+		TargetStances: Ally
+		GrantCondition: 
+			Condition: defensebuff
+		RequiresCondition: FSD_cond_2
+		PauseOnCondition: mana < 10
+	# Armament@DEATHCOILSCATTER1:
+	# 	Weapon: wc2deathknightDeathCoilScatter_Left
+	# 	FireDelay: 7
+	# 	RequiresCondition: (FSD_cond_1 && !wc2_cond_bot_owner) || (FSD_cond_1_AI && wc2_cond_bot_owner)
+	# 	PauseOnCondition: mana < 100
+	# Armament@DEATHCOILSCATTER2:
+	# 	Weapon: wc2deathknightDeathCoilScatter_Right
+	# 	FireDelay: 7
+	# 	RequiresCondition: (FSD_cond_1 && !wc2_cond_bot_owner) || (FSD_cond_1_AI && wc2_cond_bot_owner)
+	# 	PauseOnCondition: mana < 100
+	Armament@DAMAGE:
+		Name: damage
+		Weapon: legoheroranged
+		FireDelay: 7
+		TargetStances: Ally
+		GrantCondition: 
+			Condition: damagebuff
+		RequiresCondition: FSD_cond_2
+		PauseOnCondition: mana < 10
+	Armament@TRACKBUFF:
+		Name: tracking
+		Weapon: legoheroranged
+		FireDelay: 7
+		RequiresCondition: FSD_cond_3
+		GrantCondition: 
+			Condition: trackbuff
+		PauseOnCondition: mana < 25
+	Armament@SPACELASER:
+		Name: spacelaser
+		Weapon: spacelaser
+		FireDelay: 7
+		RequiresCondition: FSD_cond_4
+		PauseOnCondition: mana < 50
+	# "Mana" (AmmoPool)
+	GrantConditionOnAttack@DEFENSE:
+		Condition: cond_defense_drain
+		ArmamentNames: deathcoil
+		MaximumInstances: 1
+		RevokeDelay: 2
+	GrantConditionOnAttack@DAMAGE:
+		Condition: cond_damage_drain
+		ArmamentNames: damage
+		MaximumInstances: 1
+		RevokeDelay: 2
+	GrantConditionOnAttack@TRACKBUFF:
+		Condition: cond_track_drain
+		ArmamentNames: legoheroranged
+		MaximumInstances: 1
+		RevokeDelay: 2
+	GrantConditionOnAttack@SPACELASER:
+		Condition: cond_spacelaser_drain
+		ArmamentNames: spacelaser
+		MaximumInstances: 1
+		RevokeDelay: 2
+	AmmoPool:
+		Armaments:
+		Ammo: 255
+		PipCount: 10
+		AmmoCondition: mana
+	ReloadAmmoPool@PassiveRegen:
+		Delay: 10
+		Count: 1
+		ShowSelectionBar: false
+	ReloadAmmoPool@DEFENSE:
+		Delay: 1
+		Count: -100
+		RequiresCondition: cond_defense_drain
+	ReloadAmmoPool@DAMAGE:
+		Delay: 1
+		Count: -50
+		RequiresCondition: cond_damage_drain
+	ReloadAmmoPool@TRACKBUFF:
+		Delay: 1
+		Count: -25
+		RequiresCondition: cond_track_drain
+	ReloadAmmoPool@SPACELASER:
+		Delay: 1
+		Count: -50
+		RequiresCondition: cond_spacelaser_drain
+	
+	### Visual indicator of mode ###
+	WithDecoration@Mode_Deathcoil:
+		Sequence: deathcoil_status_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_1
+	WithDecoration@Mode_Haste:
+		Sequence: haste_status_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_2 
+	WithDecoration@Mode_DeathAndDecay:
+		Sequence: deathanddecay_status_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_3
+	WithDecoration@Mode_Spacelaser:
+		Sequence: raisedead_status_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_4
+	
+	### Starting spell randomizer for AI.
+	GrantConditionOnBotOwner@wc2magebotcontrol:
+		Condition: wc2_cond_bot_owner
+		Bots: easiest, easy, medium, hard, brutal, challenger, unbeatable, cameogod, airforce, defenseai
+	GrantRandomCondition@wc2magebotcontrol:
+		Conditions: FSD_cond_1_AI, FSD_cond_2_AI, FSD_cond_3_AI, FSD_cond_4_AI
+	# FSD_Cond_1 is always granted at start due to the four state deploy.
+	GrantCondition@Cond2AI:
+		Condition: FSD_cond_2
+		RequiresCondition: wc2_cond_bot_owner && FSD_cond_2_AI
+	GrantCondition@Cond3AI:
+		Condition: FSD_cond_3
+		RequiresCondition: wc2_cond_bot_owner && FSD_cond_3_AI
+	GrantCondition@Cond4AI:
+		Condition: FSD_cond_4
+		RequiresCondition: wc2_cond_bot_owner && FSD_cond_4_AI
+
+ASTRO_BIFF:
+	Inherits@Soldier: ^Soldier
+	Inherits: ^PropagandaSelfHeallego
+	Inherits@LEGOMAGETemplate: ^lego_mage
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Tooltip:
+		Name: Biff
+	Buildable:
+		Queue: Defence, RADefence, Infantry.X_Infantry
+		BuildPaletteOrder: 60
+		BuildDuration: 250
+		Prerequisites: ~astro_conyard
+		Description: Stalwart Melee Hero.
+		BuildLimit: 1    
+	Valued:
+		Cost: 500   
+	Mobile:
+		Speed: 60  
+	RenderSprites:
+		Scale: 0.8
+	Health:
+		HP: 100000             
+	ReloadDelayMultiplier@cow:
+		Modifier: 60
+	Power:
+		Amount: -10
+	Voiced:
+		VoiceSet: biffvoice
+	Targetable@LEGOHERO:
+		TargetTypes: LHEROtarget
+	ProximityExternalCondition@PROPAGANDA:
+		Range: 6c0
+		Condition: propaganda
+		RequiresCondition: !disabled
+	WithRangeCircle:
+		Range: 6c0
+		Type: propaganda
+		RequiresCondition: !disabled
+	WithInfantryBody:
+		-IdleSequences: idle1,idle2,idle3,idle4
+	WithDeathAnimation:
+		UseDeathTypeSuffix: false
+	#Spells
+	AttackFrontal:
+		Armaments: primary, defense, speed, legoemp, spacelaser
+	AutoTargetPriority@DEFAULT:
+		RequiresCondition: !stance-attackanything && !assault-move && !FSD_cond_2
+	AutoTargetPriority@ATTACKANYTHING:
+		RequiresCondition: (stance-attackanything || assault-move) && !FSD_cond_2
+	AutoTargetPriority@ATTACKANYTHING_HASTE:
+		RequiresCondition: (stance-attackanything || assault-move) && FSD_cond_2
+		ValidTargets: haste_target
+		InvalidTargets: NoAutoTarget
+	Armament:
+		Weapon: heromelee
+		FireDelay: 7
+		RequiresCondition: (FSD_cond_1 && !wc2_cond_bot_owner) || (FSD_cond_1_AI && wc2_cond_bot_owner) || (FSD_cond_2) 
+	Armament@DEFENSE:
+		Name: defense
+		Weapon: heromelee
+		FireDelay: 7
+		TargetStances: Enemy
+		GrantCondition: 
+			Condition: defensebuff
+		RequiresCondition: FSD_cond_2
+		PauseOnCondition: mana < 10
+	# Armament@DEATHCOILSCATTER1:
+	# 	Weapon: wc2deathknightDeathCoilScatter_Left
+	# 	FireDelay: 7
+	# 	RequiresCondition: (FSD_cond_1 && !wc2_cond_bot_owner) || (FSD_cond_1_AI && wc2_cond_bot_owner)
+	# 	PauseOnCondition: mana < 100
+	# Armament@DEATHCOILSCATTER2:
+	# 	Weapon: wc2deathknightDeathCoilScatter_Right
+	# 	FireDelay: 7
+	# 	RequiresCondition: (FSD_cond_1 && !wc2_cond_bot_owner) || (FSD_cond_1_AI && wc2_cond_bot_owner)
+	# 	PauseOnCondition: mana < 100
+	Armament@SPEED:
+		Name: speed
+		Weapon: heromelee
+		FireDelay: 7
+		TargetStances: Enemy
+		GrantCondition: 
+			Condition: speedbuff
+		RequiresCondition: FSD_cond_2
+		PauseOnCondition: mana < 10
+	Armament@LEGOEMP:
+		Name: legoemp
+		Weapon: legoemp
+		FireDelay: 7
+		RequiresCondition: FSD_cond_3
+		PauseOnCondition: mana < 25
+	Armament@SPACELASER:
+		Name: spacelaser
+		Weapon: spacelaser
+		FireDelay: 7
+		RequiresCondition: FSD_cond_4
+		PauseOnCondition: mana < 50
+	# "Mana" (AmmoPool)
+	GrantConditionOnAttack@DEFENSE:
+		Condition: cond_defense_drain
+		ArmamentNames: deathcoil
+		MaximumInstances: 1
+		RevokeDelay: 2
+	GrantConditionOnAttack@SPEED:
+		Condition: cond_speed_drain
+		ArmamentNames: speed
+		MaximumInstances: 1
+		RevokeDelay: 2
+	GrantConditionOnAttack@LEGOEMP:
+		Condition: cond_legoemp_drain
+		ArmamentNames: legoemp
+		MaximumInstances: 1
+		RevokeDelay: 2
+	GrantConditionOnAttack@SPACELASER:
+		Condition: cond_spacelaser_drain
+		ArmamentNames: spacelaser
+		MaximumInstances: 1
+		RevokeDelay: 2
+	AmmoPool:
+		Armaments:
+		Ammo: 255
+		PipCount: 10
+		AmmoCondition: mana
+	ReloadAmmoPool@PassiveRegen:
+		Delay: 10
+		Count: 1
+		ShowSelectionBar: false
+	ReloadAmmoPool@DEFENSE:
+		Delay: 1
+		Count: -100
+		RequiresCondition: cond_defense_drain
+	ReloadAmmoPool@HASTE:
+		Delay: 1
+		Count: -50
+		RequiresCondition: cond_speed_drain
+	ReloadAmmoPool@LEGOEMP:
+		Delay: 1
+		Count: -25
+		RequiresCondition: cond_legoemp_drain
+	ReloadAmmoPool@SPACELASER:
+		Delay: 1
+		Count: -50
+		RequiresCondition: cond_spacelaser_drain
+	
+	### Visual indicator of mode ###
+	WithDecoration@Mode_Deathcoil:
+		Sequence: deathcoil_status_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_1
+	WithDecoration@Mode_Haste:
+		Sequence: haste_status_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_2 
+	WithDecoration@Mode_DeathAndDecay:
+		Sequence: deathanddecay_status_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_3
+	WithDecoration@Mode_Spacelaser:
+		Sequence: raisedead_status_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_4
+	
+	### Starting spell randomizer for AI.
+	GrantConditionOnBotOwner@wc2magebotcontrol:
+		Condition: wc2_cond_bot_owner
+		Bots: easiest, easy, medium, hard, brutal, challenger, unbeatable, cameogod, airforce, defenseai
+	GrantRandomCondition@wc2magebotcontrol:
+		Conditions: FSD_cond_1_AI, FSD_cond_2_AI, FSD_cond_3_AI, FSD_cond_4_AI
+	# FSD_Cond_1 is always granted at start due to the four state deploy.
+	GrantCondition@Cond2AI:
+		Condition: FSD_cond_2
+		RequiresCondition: wc2_cond_bot_owner && FSD_cond_2_AI
+	GrantCondition@Cond3AI:
+		Condition: FSD_cond_3
+		RequiresCondition: wc2_cond_bot_owner && FSD_cond_3_AI
+	GrantCondition@Cond4AI:
+		Condition: FSD_cond_4
+		RequiresCondition: wc2_cond_bot_owner && FSD_cond_4_AI
+
+
+LEGOBATTLES_GHOST:
+	Inherits@Soldier: ^Soldier
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Tooltip:
+		Name: Ghost
+	Buildable:
+		Queue: Infantry.X_Infantry
+		BuildPaletteOrder: 60
+		BuildDurationModifier: 50
+		Prerequisites: 
+		Description: Spooky.    
+	Armament:
+		Weapon: heromelee
+	Valued:
+		Cost: 1000   
+	Mobile:
+		Speed: 30  
+	RenderSprites:
+		Scale: 0.8
+	Health:
+		HP: 95000             
+	ReloadDelayMultiplier@cow:
+		Modifier: 60
+	Voiced:
+		VoiceSet: DRZombieVoice
+	WithInfantryBody:
+		-IdleSequences: idle1,idle2,idle3,idle4
+	WithDeathAnimation:
+		UseDeathTypeSuffix: false
+
+####################################################################################################
+#		ASTRO - VEHICLES
+####################################################################################################
+
+ASTRO_CLAW_TANK:
+	Inherits@LEGOTankTRACKED: ^Walker
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	# Inherits@fix: ^Repairable
+	# Inherits@2: ^IronCurtainable
+	# Inherits@rad: ^VehicleRadiation
+	# Inherits@EMP: ^UnitDisable
+	# Inherits@mag: ^Magnefreezable
+	# Inherits@heal: ^MachineShopRepairable
+	# Inherits@driver-dead: ^AffectedByDriverKill
+	# Inherits@salvage: ^GenericSalvageBonus
+	# Inherits@emergencyrepair: ^EmergencyRepairable
+	# Inherits@chrono: ^Chronoshiftable
+  # Inherits@instablow: ^Instant_Kill_Vehicle
+  # Inherits@unstableeffect: ^UnstableEffect
+  # Inherits@base-reveal: ^Base-reveal
+  # Inherits@LeechEggLayable: ^LeechEggLayable
+  # Inherits@Xmassetting: ^Xmas_setting
+  # Inherits@casinoupgrade: ^CasinoUpgradeable
+	Inherits@PROPAGANDA: ^PropagandaSelfHeal
+	Crushable:
+		WarnProbability: 0
+		CrushClasses: vehicle
+		RequiresCondition: !invulnerability
+	CaptureManager:
+		BeingCapturedCondition: being-captured
+	Capturable:
+		Types: vehicle
+		ValidStances: Enemy, Neutral
+		RequiresCondition: !untargetable
+	-Huntable:
+	Selectable:
+		Bounds: 128,128
+		DecorationBounds: 128,128
+	Tooltip:
+		Name: Claw Tank
+	Buildable:
+		Queue: Vehicle, RAInfantry, Infantry.X_Infantry
+		BuildPaletteOrder: 60
+		BuildDurationModifier: 50
+		Prerequisites: ~astro_vehiclefactory
+		Description: Assault vehicle.
+	Power:
+		Amount: -20
+	Health:
+		HP: 90000   
+	Armament:
+		Weapon: specialrangedAA
+	Armor:
+		Type: Medium
+	AttackFrontal:
+		FacingTolerance: 2
+		PauseOnCondition: disabled
+	Valued:
+		Cost: 700   
+	Mobile:
+		Speed: 30
+		SharesCell: False
+	RevealsShroud:
+		Range: 9c0
+		Type: GroundPosition
+	RenderSprites:
+		Scale: 2
+	Health:
+		HP: 95000             
+	ReloadDelayMultiplier@cow:
+		Modifier: 60
+	Voiced:
+		VoiceSet: clawtankvoice
+	WithInfantryBody:
+	WithDeathAnimation:
+		UseDeathTypeSuffix: false
+
+####################################################################################################
+#		ASTRO - AIR
+####################################################################################################
+
+astro_transport:
+	Inherits@LEGOAirUnit: ^lego_airunit
+	Inherits@LEGOTemplate: ^lego_transport
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Tooltip:
+		Name: Astro Transport
+	Armament:
+		Weapon: legoranged
+	Armament@aa:  
+		Weapon: legorangedAA
+	Valued:
+		Cost: 600
+	Health:
+		HP: 80000   
+	Armor:
+		Type: Medium
+	AttackFrontal:
+		FacingTolerance: 2
+		PauseOnCondition: disabled
+	Buildable:
+		Prerequisites: ~astro_vehiclefactory
+		Queue: Vehicle
+		Description: Flying transport unit.\nDetector.
+	Power:
+		Amount: -20
+	Voiced:
+		VoiceSet: astrotransportvoice
+
+astro_special_starfighter:
+	Inherits@LEGOAirUnit: ^lego_airunit
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Tooltip:
+		Name: Starfighter
+	Valued:
+		Cost: 600
+	Health:
+		HP: 95000   
+	Armament:
+		Weapon: specialrangedAA
+	Armor:
+		Type: Medium
+	AttackFrontal:
+		FacingTolerance: 2
+		PauseOnCondition: disabled
+	Aircraft:
+		InitialFacing: 224
+		TurnSpeed: 7
+		Speed: 165
+		IdealSeparation: 1c0
+		RepulsionSpeed: 10
+	Buildable:
+		Prerequisites: ~astro_vehiclefactory
+		Queue: Vehicle
+		Description: Medium Flying unit.\nDetector.
+	Power:
+		Amount: -30
+	Voiced:
+		VoiceSet: starfightervoice
+
+astro_space_police_cruiser:
+	Inherits@LEGOAirUnit: ^lego_airunit
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Tooltip:
+		Name: Space Police Cruiser
+	Valued:
+		Cost: 700
+	Health:
+		HP: 97000   
+	Armament:
+		Weapon: specialrangedstar
+	Armor:
+		Type: Medium
+	AttackFrontal:
+		FacingTolerance: 2
+		PauseOnCondition: disabled
+	Aircraft:
+		InitialFacing: 224
+		TurnSpeed: 7
+		Speed: 165
+		IdealSeparation: 1c0
+		RepulsionSpeed: 10
+	Buildable:
+		Prerequisites: ~astro_vehiclefactory
+		Queue: Vehicle
+		Description: Flying Patrol unit.\nDetector.
+	Power:
+		Amount: -40
+	DetectCloaked:
+		CloakTypes: Cloak, Underwater
+		Range: 9c0
+	RenderDetectionCircle:
+	Voiced:
+		VoiceSet: spacepolicecruiservoice
+	RenderSprites:
+		Scale: 0.7
+
+astro_starship2:
+	Inherits@LEGOAirUnit: ^lego_airunit
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Tooltip:
+		Name: Starship 2
+	Valued:
+		Cost: 900
+	Health:
+		HP: 100000   
+	Armament:
+		Weapon: specialrangedAA2
+	Armor:
+		Type: Heavy
+	AttackFrontal:
+		FacingTolerance: 2
+		PauseOnCondition: disabled
+	Aircraft:
+		InitialFacing: 224
+		TurnSpeed: 7
+		Speed: 165
+		IdealSeparation: 1c0
+		RepulsionSpeed: 10
+	Buildable:
+		Prerequisites: ~astro_vehiclefactory
+		Queue: Vehicle
+		Description: Heavy Flying unit.
+	Power:
+		Amount: -50
+	RenderSprites:
+		Image: astro_starship2
+	Voiced:
+		VoiceSet: starship2voice	

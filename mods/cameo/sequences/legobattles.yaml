@@ -1,0 +1,1094 @@
+####################################################################################################
+#		INHERITABLES
+####################################################################################################
+
+^lego_status_icons:
+	Defaults:
+		Scale: 1.2
+	bloodlust_status_icon:
+		Filename: wc2_icons_statuses.png
+		Start: 0
+	haste_status_icon:
+		Filename: wc2_icons_statuses.png
+		Start: 1
+	slow_status_icon:
+		Filename: wc2_icons_statuses.png
+		Start: 2
+	invisibility_status_icon:
+		Filename: wc2_icons_statuses.png
+		Start: 3
+	unholyarmor_status_icon:
+		Filename: wc2_icons_statuses.png
+		Start: 4
+	fireball_status_icon:
+		Filename: wc2_icons_statuses.png
+		Start: 5
+	blizzard_status_icon:
+		Filename: wc2_icons_statuses.png
+		Start: 6
+	polymorph_status_icon:
+		Filename: wc2_icons_statuses.png
+		Start: 7
+	deathcoil_status_icon:
+		Filename: wc2_icons_statuses.png
+		Start: 8
+	deathanddecay_status_icon:
+		Filename: wc2_icons_statuses.png
+		Start: 9
+	raisedead_status_icon:
+		Filename: wc2_icons_statuses.png
+		Start: 10
+	holyvision_status_icon:
+		Filename: wc2_icons_statuses.png
+		Start: 11
+	healing_status_icon:
+		Filename: wc2_icons_statuses.png
+		Start: 12
+	exorcism_status_icon:
+		Filename: wc2_icons_statuses.png
+		Start: 13
+	locked_status_icon:
+		Filename: wc2_icons_statuses.png
+		Start: 14
+	runes_status_icon:
+		Filename: wc2_icons_statuses.png
+		Start: 15
+	eyeofkilrogg_status_icon:
+		Filename: wc2_icons_statuses.png
+		Start: 16
+
+####################################################################################################
+#		ASTRO - BUILDINGS
+####################################################################################################
+
+astro_conyard:
+	Defaults:
+		Filename: legobattles_astro_buildings.shp
+		Scale: 2.0
+	idle: legobattles_astro_buildings
+		Start: 0
+		Length: 1
+	damaged-idle: legobattles_astro_buildings
+		Start: 0
+		Length: 1
+	make: legobattles_astro_buildings
+		Start: 0
+		Length: 1
+	dead: legobattles_astro_buildings
+		Start: 0
+		Length: 1
+	lego_production_overlay_human: 
+		Filename: lego_production_overlay_human.shp
+		Length: 10
+		Offset: 14,12,0
+	icon: astro_cameos.png
+		Filename: astro_cameos.png
+		Start: 0
+		AddExtension: False
+
+astro_biodome:
+	Defaults:
+		Filename: legobattles_astro_buildings.shp
+		Scale: 2.0
+	idle: legobattles_astro_buildings
+		Start: 1
+	damaged-idle: legobattles_astro_buildings
+		Start: 1
+	make: legobattles_astro_buildings
+		Start: 1
+	dead: legobattles_astro_buildings
+		Start: 1
+	icon: astro_cameos.png
+		Filename: astro_cameos.png
+		Start: 1
+		AddExtension: False
+
+astro_harvester:
+	Defaults:
+		Filename: legobattles_astro_buildings.shp
+		Scale: 2.0
+	idle: legobattles_astro_buildings
+		Start: 6
+	damaged-idle: legobattles_astro_buildings
+		Start: 6
+	make: legobattles_astro_buildings
+		Start: 6
+	dead: legobattles_astro_buildings
+		Start: 6
+	icon: astro_cameos.png
+		Filename: astro_cameos.png
+		Start: 2
+		AddExtension: False
+
+astro_wellcap:
+	Defaults:
+		Filename: legobattles_astro_buildings.shp
+		Scale: 2.0
+	idle: legobattles_astro_buildings
+		Start: 2
+	damaged-idle: legobattles_astro_buildings
+		Start: 2
+	make: legobattles_astro_buildings
+		Start: 2
+	dead: legobattles_astro_buildings
+		Start: 2
+	icon: astro_cameos.png
+		Filename: astro_cameos.png
+		Start: 3
+		AddExtension: False
+
+astro_barracks:
+	Defaults:
+		Filename: legobattles_astro_buildings.shp
+		Scale: 2.0
+	idle: legobattles_astro_buildings
+		Start: 3
+	damaged-idle: legobattles_astro_buildings
+		Start: 3
+	make: legobattles_astro_buildings
+		Start: 3
+	dead: legobattles_astro_buildings
+		Start: 3
+	lego_production_overlay_human: 
+		Filename: lego_production_overlay_human.shp
+		Length: 10
+		Offset: 7,6,0
+	icon: astro_cameos.png
+		Filename: astro_cameos.png
+		Start: 4
+		AddExtension: False
+
+astro_vehiclefactory:
+	Defaults:
+		Filename: legobattles_astro_buildings.shp
+		Scale: 2.0
+	idle: legobattles_astro_buildings
+		Start: 5
+	damaged-idle: legobattles_astro_buildings
+		Start: 5
+	make: legobattles_astro_buildings
+		Start: 5
+	dead: legobattles_astro_buildings
+		Start: 5
+	lego_production_overlay_brick: 
+		Filename: lego_production_overlay_brick.shp
+		Length: 10
+		Offset: 7,6,0
+	icon: astro_cameos.png
+		Filename: astro_cameos.png
+		Start: 5
+		AddExtension: False
+
+astro_shipyard:
+	Defaults:
+		Filename: legobattles_astro_buildings.shp
+	idle: legobattles_astro_buildings
+		Start: 4
+	damaged-idle: legobattles_astro_buildings
+		Start: 4
+	make: legobattles_astro_buildings
+		Start: 4
+	dead: legobattles_astro_buildings
+		Start: 4
+	lego_production_overlay_brick: lego_production_overlay_brick:
+		Length: 10
+		Offset: 7,6,0
+	icon: astro_cameos.png
+		Filename: astro_cameos.png
+		Start: 6
+		AddExtension: False
+
+astro_tower:
+	Defaults:
+		Filename: legobattles_astro_buildings.shp
+		Scale: 2.0
+		AddExtension: False
+	idle: legobattles_astro_buildings.shp
+		Start: 7
+	make: legobattles_astro_buildings.shp
+		Start: 7
+	dead: legobattles_astro_buildings.shp
+		Start: 7
+	icon: astro_cameos.png
+		Filename: astro_cameos.png
+		Start: 7
+	astro_tower: legobattles_astro_buildings.shp
+		Start: 7
+	astro_tower2: legobattles_astro_buildings.shp
+		Start: 8
+	astro_tower3: legobattles_astro_buildings.shp
+	 	Start: 9
+
+
+astro_tower2:
+	Defaults:
+		Filename: legobattles_astro_buildings.shp
+		Scale: 2.0
+		AddExtension: False
+	idle: legobattles_astro_buildings.shp
+		Start: 8
+	make: legobattles_astro_buildings.shp
+		Start: 8
+	dead: legobattles_astro_buildings.shp
+		Start: 8
+	icon: astro_cameos.png
+		Filename: astro_cameos.png
+		Start: 8
+		AddExtension: False
+
+
+astro_tower3:
+	Defaults:
+		Filename: legobattles_astro_buildings.shp
+		Scale: 2.0
+		AddExtension: False
+	idle: legobattles_astro_buildings.shp
+		Start: 9
+	make: legobattles_astro_buildings.shp
+		Start: 9
+	dead: legobattles_astro_buildings.shp
+		Start: 9
+	icon: astro_cameos.png
+		Filename: astro_cameos.png
+		Start: 9
+		AddExtension: False
+
+####################################################################################################
+#		Alien - BUILDINGS
+####################################################################################################
+# alien_base:
+# 	idle: legobattles_astro_buildings
+# 		Start: 0
+# 	damaged-idle: legobattles_astro_buildings
+# 		Start: 0
+# 	make: legobattles_astro_buildings
+# 		Start: 0
+# 	dead: legobattles_astro_buildings
+# 		Start: 0
+# 	lego_production_overlay_human: lego_production_overlay_human
+# 		Length: 10
+# 		Offset: 14,12,0
+# 	icon: astro_cameos.png
+# 		Start: 0
+# 		AddExtension: False
+####################################################################################################
+#		ASTRO - INFANTRY
+####################################################################################################
+
+# ^legoinfantry:
+	WithDeathAnimation:
+# 		UseDeathTypeSuffix: false
+# 		CrushedSequence: die
+
+astro_builder:
+	#inherits: ^legoinfantry
+	Defaults:
+		Filename: astro_builder.shp
+		Scale: 2.0
+	stand: 
+		Facings: -8
+		Combine:
+			astro_builder00: 
+				Filename: astro_builder.shp
+				Length: 5
+				Frames: 0,1,2,3,4
+			astro_builder01: 
+				Filename: astro_builder.shp
+				Length: 3
+				Frames: 3,2,1
+				FlipX: true
+	idle: invisibleitem
+	run: 
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			astro_builder1: 
+				Filename: astro_builder.shp
+				Length: 25
+				Frames:  5,6,7,8,9, 10,11,12,13,14, 15,16,17,18,19, 20,21,22,23,24, 25,26,27,28,29
+			astro_builder2: 
+				Filename: astro_builder.shp
+				Length: 15
+				Frames: 24,23,22,21,20, 19,18,17,16,15, 14,13,12,11,10
+				FlipX: true
+	harvest:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			astro_builder3: 
+				Filename: astro_builder.shp
+				Length: 25
+				Frames: 30,31,32,33,34, 35,36,37,38,39, 40,41,42,43,44, 45,46,47,48,49, 50,51,52,53,54
+			astro_builder4: 
+				Filename: astro_builder.shp
+				Length: 15
+				Frames: 49,48,47,46,45, 44,43,42,41,40, 39,38,37,36,35
+				FlipX: true
+	dock:
+		Facings: -8
+		Combine:
+			astro_builder5: 
+				Filename: astro_builder.shp
+				Length: 5
+				Frames: 0,1,2,3,4
+			astro_builder6: 
+				Filename: astro_builder.shp
+				Length: 3
+				Frames: 3,2,1
+				FlipX: true
+	dock-loop: 
+		Facings: -8
+		Combine:
+			astro_builder7: 
+				Filename: astro_builder.shp
+				Length: 5
+				Frames: 0,1,2,3,4
+			astro_builder8: 
+				Filename: astro_builder.shp
+				Length: 3
+				Frames: 3,2,1
+				FlipX: true
+	die:
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 1
+	die-crushed:
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 1
+	icon: astro_cameos.png
+		Filename: astro_cameos.png
+		Start: 16
+		AddExtension: False
+
+lego_astro_mcv:
+	#inherits: ^legoinfantry
+	defaults:
+		Filename: astro_builder.shp
+		Scale: 2.0
+	stand:
+		Facings: -8
+		Combine:
+			astro_buildermcv1:
+				Filename: astro_builder.shp
+				Length: 5
+				Frames: 0,1,2,3,4
+			astro_buildermcv2:
+				Filename: astro_builder.shp
+				Length: 3
+				Frames: 3,2,1
+				FlipX: true
+	idle: 
+		Filename: astro_builder.shp
+		Start: 0
+		Length: 1
+	run:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			astro_buildermcv3:
+				Filename: astro_builder.shp
+				Length: 25
+				Frames:  5,6,7,8,9, 10,11,12,13,14, 15,16,17,18,19, 20,21,22,23,24, 25,26,27,28,29
+			astro_buildermcv4:
+				Filename: astro_builder.shp
+				Length: 15
+				Frames: 24,23,22,21,20, 19,18,17,16,15, 14,13,12,11,10
+				FlipX: true
+	die: astro_builder
+		Filename: astro_builder.shp
+		Start: 0
+		Length: 7
+	die-crushed: astro_builder
+		Filename: astro_builder.shp
+		Start: 0
+		Length: 7
+	icon: astro_cameos.png
+		Filename: astro_cameos.png
+		Start: 10
+		AddExtension: False
+
+astro_trooper:
+	#inherits: ^legoinfantry
+	defaults:
+		Filename: astro_trooper.shp
+		Scale: 2.0
+	stand:
+		Facings: -8
+		Combine:
+			astro_trooperwal1:
+				Filename: astro_trooper.shp
+				Length: 5
+				Frames: 0,5,10,15,20
+			astro_trooperwal2:
+				Filename: astro_trooper.shp
+				Length: 3
+				Frames: 15,10,5
+				FlipX: true
+	run:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			astro_trooperrun1:
+				Filename: astro_trooper.shp
+				Length: 25
+				Frames: 0,1,2,3,4, 5,6,7,8,9, 10,11,12,13,14, 15,16,17,18,19, 20,21,22,23,24
+			astro_trooperrun2:
+				Filename: astro_trooper.shp
+				Length: 15
+				Frames: 19,18,17,16,15, 14,13,12,11,10, 9,8,7,6,5
+				FlipX: true
+	shoot:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			astro_trooperhit1:
+				Filename: astro_trooper.shp
+				Length: 25
+				Frames: 25,26,27,28,29, 30,31,32,33,34, 35,36,37,38,39, 40,41,42,43,44, 45,46,47,48,49
+			astro_trooperhit2:
+				Filename: astro_trooper.shp
+				Length: 15
+				Frames: 44,43,42,41,40, 39,38,37,36,35, 34,33,32,31,30
+				FlipX: true
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	die-crushed: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: astro_cameos.png
+		Filename: astro_cameos.png
+		Start: 17
+		AddExtension: False
+
+astro_gripley:
+	#inherits: ^legoinfantry
+	defaults:
+		Filename: astro_gripley.shp
+		Scale: 2.0
+	stand:
+		Facings: -8
+		Combine:
+			astro_gripleywal1:
+				Filename: astro_gripley.shp
+				Length: 5
+				Frames: 0,3,6,9,12
+			astro_gripleywal2:
+				Filename: astro_gripley.shp
+				Length: 3
+				Frames: 9,6,3
+				FlipX: true
+	run:
+		Facings: -8
+		Length: 3
+		Tick: 100
+		Combine:
+			astro_gripleyrun1:
+				Filename: astro_gripley.shp
+				Length: 15
+				Frames: 0,1,2, 3,4,5, 6,7,8, 9,10,11, 12,13,14
+			astro_gripleyrun2:
+				Filename: astro_gripley.shp
+				Length: 9
+				Frames: 11,10,9, 8,7,6, 5,4,3
+				FlipX: true
+	shoot:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			astro_gripleyhit1:
+				Filename: astro_gripley.shp
+				Length: 25
+				Frames: 15,16,17,18,19, 20,21,22,23,24, 25,26,27,28,29, 30,31,32,33,34, 35,36,37,38,39
+			astro_gripleyhit2:
+				Filename: astro_gripley.shp
+				Length: 15
+				Frames: 34,33,32,31,30, 29,28,27,26,25, 24,23,22,21,20
+				FlipX: true
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	die-crushed: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: astro_cameos.png
+		Filename: astro_cameos.png
+		Start: 18
+		AddExtension: False
+
+astro_commando:
+	#inherits: ^legoinfantry
+	defaults:
+		Filename: astro_commando.shp
+		Scale: 2.0
+	stand:
+		Facings: -8
+		Combine:
+			astro_commandowal1:
+				Filename: astro_commando.shp
+				Length: 5
+				Frames: 0,5,10,15,20
+			astro_commandowal2:
+				Filename: astro_commando.shp
+				Length: 3
+				Frames: 15,10,5
+				FlipX: true
+	run:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			astro_commandorun1:
+				Filename: astro_commando.shp
+				Length: 25
+				Frames: 0,1,2,3,4, 5,6,7,8,9, 10,11,12,13,14, 15,16,17,18,19, 20,21,22,23,24
+			astro_commandorun2:
+				Filename: astro_commando.shp
+				Length: 15
+				Frames: 19,18,17,16,15, 14,13,12,11,10, 9,8,7,6,5
+				FlipX: true
+	shoot:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			astro_commandohit1:
+				Filename: astro_commando.shp
+				Length: 25
+				Frames: 25,26,27,28,29, 30,31,32,33,34, 35,36,37,38,39, 40,41,42,43,44, 45,46,47,48,49
+			astro_commandohit2:
+				Filename: astro_commando.shp
+				Length: 15
+				Frames: 44,43,42,41,40, 39,38,37,36,35, 34,33,32,31,30
+				FlipX: true
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	die-crushed: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: astro_cameos.png
+		Filename: astro_cameos.png
+		Start: 19
+		AddExtension: False
+
+astro_space_police:
+	#inherits: ^legoinfantry
+	defaults:
+		Filename: astro_space_police.shp
+		Scale: 2.0
+	stand:
+		Facings: -8
+		Combine:
+			astro_space_policewal1:
+				Filename: astro_space_police.shp
+				Length: 5
+				Frames: 0,5,10,15,20
+			astro_space_policewal2:
+				Filename: astro_space_police.shp
+				Length: 3
+				Frames: 15,10,5
+				FlipX: true
+	run:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			astro_space_policerun1:
+				Filename: astro_space_police.shp
+				Length: 25
+				Frames: 0,1,2,3,4, 5,6,7,8,9, 10,11,12,13,14, 15,16,17,18,19, 20,21,22,23,24
+			astro_space_policerun2:
+				Filename: astro_space_police.shp
+				Length: 15
+				Frames: 19,18,17,16,15, 14,13,12,11,10, 9,8,7,6,5
+				FlipX: true
+	shoot:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			astro_space_policehit1:
+				Filename: astro_space_police.shp
+				Length: 25
+				Frames: 25,26,27,28,29, 30,31,32,33,34, 35,36,37,38,39, 40,41,42,43,44, 45,46,47,48,49
+			astro_space_policehit2:
+				Filename: astro_space_police.shp
+				Length: 15
+				Frames: 44,43,42,41,40, 39,38,37,36,35, 34,33,32,31,30
+				FlipX: true
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	die-crushed: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: astro_cameos.png
+		Filename: astro_cameos.png
+		Start: 20
+		AddExtension: False
+
+
+astro_gemma:
+	#inherits: ^legoinfantry	
+	# Inherits@status: ^lego_status_icons
+	defaults:
+		Filename: astro_gemma.shp
+		Scale: 2.0
+	stand:
+		Facings: -8
+		Combine:
+			astro_gemmawal1:
+				Filename: astro_gemma.shp
+				Length: 5
+				Frames: 0,5,10,15,20
+			astro_gemmawal2:
+				Filename: astro_gemma.shp
+				Length: 3
+				Frames: 15,10,5
+				FlipX: true
+	run:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			astro_gemmarun1: astro_gemma
+				Filename: astro_gemma.shp
+				Length: 25
+				Frames: 0,1,2,3,4, 5,6,7,8,9, 10,11,12,13,14, 15,16,17,18,19, 20,21,22,23,24
+			astro_gemmarun2: astro_gemma
+				Filename: astro_gemma.shp
+				Length: 15
+				Frames: 19,18,17,16,15, 14,13,12,11,10, 9,8,7,6,5
+				FlipX: true
+	shoot:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			astro_gemmahit1:
+				Filename: astro_gemma.shp
+				Length: 25
+				Frames: 25,26,27,28,29, 30,31,32,33,34, 35,36,37,38,39, 40,41,42,43,44, 45,46,47,48,49
+			astro_gemmahit2:
+				Filename: astro_gemma.shp
+				Length: 15
+				Frames: 44,43,42,41,40, 39,38,37,36,35, 34,33,32,31,30
+				FlipX: true
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	die-crushed: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: astro_cameos.png
+		Filename: astro_cameos.png
+		Start: 21
+		AddExtension: False
+	haste_status_icon: wc2_icons_statuses.png
+		Filename: wc2_icons_statuses.png
+		Start: 1
+		AddExtension: False
+	deathcoil_status_icon: wc2_icons_statuses.png
+		Filename: wc2_icons_statuses.png
+		Offset: 16,16
+		Start: 8
+		AddExtension: False
+	deathanddecay_status_icon: wc2_icons_statuses.png
+		Filename: wc2_icons_statuses.png
+		Start: 9
+		AddExtension: False
+	raisedead_status_icon: wc2_icons_statuses.png
+		Filename: wc2_icons_statuses.png
+		Start: 10
+		AddExtension: False
+	locked_status_icon: wc2_icons_statuses.png
+		Filename: wc2_icons_statuses.png
+		Start: 14
+		AddExtension: False
+
+
+astro_space_police_captain:
+	#inherits: ^legoinfantry
+	defaults:
+		Filename: astro_space_police_captain.shp
+		Scale: 2.0
+	stand:
+		Facings: -8
+		Combine:
+			astro_space_police_captainwal1: astro_space_police_captain
+				Filename: astro_space_police_captain.shp
+				Length: 5
+				Frames: 0,5,10,15,20
+			astro_space_police_captaiwal2: astro_space_police_captain
+				Filename: astro_space_police_captain.shp
+				Length: 3
+				Frames: 15,10,5
+				FlipX: true
+	run:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			astro_space_police_captainrun1: astro_space_police_captain
+				Filename: astro_space_police_captain.shp
+				Length: 25
+				Frames: 0,1,2,3,4, 5,6,7,8,9, 10,11,12,13,14, 15,16,17,18,19, 20,21,22,23,24
+			astro_space_police_captainrun2: astro_space_police_captain
+				Filename: astro_space_police_captain.shp
+				Length: 15
+				Frames: 19,18,17,16,15, 14,13,12,11,10, 9,8,7,6,5
+				FlipX: true
+	shoot:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			astro_space_police_captainhit1: astro_space_police_captain
+				Filename: astro_space_police_captain.shp
+				Length: 25
+				Frames: 25,26,27,28,29, 30,31,32,33,34, 35,36,37,38,39, 40,41,42,43,44, 45,46,47,48,49
+			astro_space_police_captainhit2: astro_space_police_captain
+				Filename: astro_space_police_captain.shp
+				Length: 15
+				Frames: 44,43,42,41,40, 39,38,37,36,35, 34,33,32,31,30
+				FlipX: true
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	die-crushed: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: astro_cameos.png
+		Filename: astro_cameos.png
+		Start: 22
+		AddExtension: False
+	haste_status_icon: wc2_icons_statuses.png
+		Filename: wc2_icons_statuses.png
+		Start: 1
+		AddExtension: False
+	deathcoil_status_icon: wc2_icons_statuses.png
+		Filename: wc2_icons_statuses.png
+		Offset: 16,16
+		Start: 8
+		AddExtension: False
+	deathanddecay_status_icon: wc2_icons_statuses.png
+		Filename: wc2_icons_statuses.png
+		Start: 9
+		AddExtension: False
+	raisedead_status_icon: wc2_icons_statuses.png
+		Filename: wc2_icons_statuses.png
+		Start: 10
+		AddExtension: False
+	locked_status_icon: wc2_icons_statuses.png
+		Filename: wc2_icons_statuses.png
+		Start: 14
+		AddExtension: False
+
+astro_biff:
+	#inherits: ^legoinfantry
+	defaults:
+		Filename: astro_biff.shp
+		Scale: 2.0
+	stand:
+		Facings: -8
+		Combine:
+			astro_biffwal1: astro_biff
+				Filename: astro_biff.shp
+				Length: 5
+				Frames: 0,5,10,15,20
+			astro_biffwal2: astro_biff
+				Filename: astro_biff.shp
+				Length: 3
+				Frames: 15,10,5
+				FlipX: true
+	run:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			astro_biffrun1: astro_biff
+				Filename: astro_biff.shp
+				Length: 25
+				Frames: 0,1,2,3,4, 5,6,7,8,9, 10,11,12,13,14, 15,16,17,18,19, 20,21,22,23,24
+			astro_biffrun2: astro_biff
+				Filename: astro_biff.shp
+				Length: 15
+				Frames: 19,18,17,16,15, 14,13,12,11,10, 9,8,7,6,5
+				FlipX: true
+	shoot:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			astro_biffhit1: astro_biff
+				Filename: astro_biff.shp
+				Length: 25
+				Frames: 25,26,27,28,29, 30,31,32,33,34, 35,36,37,38,39, 40,41,42,43,44, 45,46,47,48,49
+			astro_biffhit2: astro_biff
+				Filename: astro_biff.shp
+				Length: 15
+				Frames: 44,43,42,41,40, 39,38,37,36,35, 34,33,32,31,30
+				FlipX: true
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	die-crushed: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: astro_cameos.png
+		Filename: astro_cameos.png
+		Start: 23
+		AddExtension: False
+	haste_status_icon: wc2_icons_statuses.png
+		Filename: wc2_icons_statuses.png
+		Start: 1
+		AddExtension: False
+	deathcoil_status_icon: wc2_icons_statuses.png
+		Filename: wc2_icons_statuses.png
+		Offset: 16,16
+		Start: 8
+		AddExtension: False
+	deathanddecay_status_icon: wc2_icons_statuses.png
+		Filename: wc2_icons_statuses.png
+		Start: 9
+		AddExtension: False
+	raisedead_status_icon: wc2_icons_statuses.png
+		Filename: wc2_icons_statuses.png
+		Start: 10
+		AddExtension: False
+	locked_status_icon: wc2_icons_statuses.png
+		Filename: wc2_icons_statuses.png
+		Start: 14
+		AddExtension: False
+
+
+legobattles_ghost:
+	#inherits: ^legoinfantry
+	defaults: 	
+		Filename: legobattles_ghost.shp
+		Scale: 2.0
+	stand:
+		Facings: -8
+		Combine:
+			legobattles_ghostwal1: legobattles_ghost
+				Filename: legobattles_ghost.shp
+				Length: 5
+				Frames: 0,6,12,18,24
+			legobattles_ghostwal2: legobattles_ghost
+				Filename: legobattles_ghost.shp
+				Length: 3
+				Frames: 18,12,6
+				FlipX: true
+	run:
+		Facings: -8
+		Length: 6
+		Tick: 100
+		Combine:
+			legobattles_ghostrun1: legobattles_ghost
+				Filename: legobattles_ghost.shp
+				Length: 30
+				Frames: 0,1,2,3,4,5, 6,7,8,9,10,11, 12,13,14,15,16,17, 18,19,20,21,22,23, 24,25,26,27,28,29
+			legobattles_ghostrun2: legobattles_ghost
+				Filename: legobattles_ghost.shp
+				Length: 18
+				Frames: 23,22,21,20,19,18, 17,16,15,14,13,12, 11,10,9,8,7,6
+				FlipX: true
+	shoot:
+		Facings: -8
+		Length: 6
+		Tick: 100
+		Combine:
+			legobattles_ghosthit1: legobattles_ghost
+				Filename: legobattles_ghost.shp
+				Length: 30
+				Frames: 30,31,32,33,34,35, 36,37,38,39,40,41, 42,43,44,45,46,47, 48,49,50,51,52,53, 54,55,56,57,58,59
+			legobattles_ghosthit2: legobattles_ghost
+				Filename: legobattles_ghost.shp
+				Length: 18
+				Frames: 53,52,51,50,49,48, 47,46,45,44,43,42, 41,40,39,38,37,36
+				FlipX: true
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	die-crushed: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: cameo_legobattles_ghost.shp
+		Filename: cameo_legobattles_ghost.shp
+		AddExtension: False
+
+####################################################################################################
+#		ASTRO - VEHICLE
+####################################################################################################
+
+astro_claw_tank:
+	#inherits: ^legoinfantry
+	defaults:
+		Filename: astro_claw_tank.shp
+		Scale: 2.0
+	stand:
+		Filename: astro_claw_tank.shp
+		Frames: 0,7,14,21,28,35,42,49
+		Length: 1
+		Facings: -8
+	run:
+		Filename: astro_claw_tank.shp
+		Start: 0
+		Facings: -8
+		Length: 7
+	muzzle: gunfire2
+		Filename: gunfire2.shp
+		Length: 2
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	die-crushed: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: astro_cameos.png
+		Filename: astro_cameos.png
+		Start: 24
+		AddExtension: False
+
+####################################################################################################
+#		ASTRO - AIR
+####################################################################################################
+
+astro_transport:
+	idle:
+		Filename: astro_transport.shp
+		Facings: -16
+		Scale: 2.0
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: astro_cameos.png
+		Filename: astro_cameos.png
+		Start: 35
+		AddExtension: False
+
+astro_special_starfighter:
+	idle:
+		Filename: astro_special_starfighter.shp
+		Facings: -16
+		Scale: 2.0
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: astro_cameos.png
+		Filename: astro_cameos.png
+		Start: 32
+		AddExtension: False
+
+astro_space_police_cruiser:
+	idle:
+		Filename: astro_space_police_cruiser.shp
+		Facings: -16
+		Scale: 2.0
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: astro_cameos.png
+		Filename: astro_cameos.png
+		Start: 33
+		AddExtension: False
+
+astro_starship2:
+	idle:
+		Filename: astro_starship2.shp	
+		Facings: -16
+		Scale: 2.0
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: astro_cameos.png
+		Filename: astro_cameos.png
+		Start: 34
+		AddExtension: False
+
+####################################################################################################
+#		ASTRO - Projectiles
+####################################################################################################
+
+
+astro_laser:
+	idle:
+		Filename: astro_laser.shp
+		Facings: -16
+
+astro_lolipop:
+	idle:
+		Filename: astro_lolipop.shp
+		Facings: -16
+		Scale: 2.0
+
+lego_flaming_star:
+	idle:
+		Filename: lego_flaming_star.shp
+	anim: lego_flaming_star
+		Filename: lego_flaming_star.shp
+		start: 0
+		length: 8
+
+lego_plasma_ball:
+	idle:
+		Filename: lego_plasma_ball.shp
+	anim: lego_plasma_ball
+		Filename: lego_plasma_ball.shp
+		start: 0
+		length: 8
+
+lego_emp_star:
+	idle:
+		Filename: lego_emp_star.shp
+	anim: lego_emp_star
+		Filename: lego_emp_star.shp
+		start: 0
+		length: 8
+
+
+####################################################################################################
+#		ASTRO - Misc
+####################################################################################################
+
+explosion:
+	Defaults:
+		Length: *
+		ZOffset: 2047
+	earthspacelaser: earthspacelaser
+		Length: *
+		Offset: 0, -78
+		ZOffset: 1023
+
+
+

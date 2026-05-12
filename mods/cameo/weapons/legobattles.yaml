@@ -1,0 +1,407 @@
+^legomelee:
+	Warhead@1Dam: SpreadDamage
+		Delay: 8
+	Warhead@1: CreateEffect
+		Delay: 8
+
+troopermelee:
+	Inherits: ^legomelee
+	ReloadDelay: 20
+	Range: 1c512
+	Projectile: InstantHit
+	Report: trooper_attack.wav
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 4025
+		ValidTargets: Ground, Air
+		Versus:
+			None: 150
+			Wood: 50
+			Light: 100
+			Medium: 80
+			Heavy: 60
+			Concrete: 40
+		DamageTypes: DefaultDeath 
+	Warhead@Percentage: HealthPercentageDamage
+		Damage: 2
+		Spread: 128
+		Delay: 5
+		DamageTypes: Prone100Percent, TriggerProne, FireDeath, Incendiary
+		ValidTargets: Ground, Air
+		Versus:
+			None: 150
+			Wood: 50
+			Light: 100
+			Medium: 80
+			Heavy: 60
+			Concrete: 40
+
+HQHEROHEAL:
+	ReloadDelay: 15
+	Range: 5c512
+	ValidTargets: LHEROtarget
+	Report: castle_healing.wav
+	Projectile: LaserZap
+		Color: FFDF00
+	Warhead@1Dam: SpreadDamage
+		Spread: 213
+		Damage: -8000
+		ValidStances: Ally
+		ValidTargets: LHEROtarget
+
+builderrepair:
+	ReloadDelay: 5
+	Range: 1c512
+	ValidTargets: Repairing, Repair
+	Projectile: LaserZap
+		Color: 8888FF
+	Warhead@1Dam: SpreadDamage
+		Spread: 213
+		Damage: -1000
+		ValidStances: Ally
+		ValidTargets: Repairing, Repair
+	Warhead@2Defuse: DetachDelayedWeapon
+		Types: ivanbomb
+		ValidTargets: ivanattached
+		ValidStances: Ally
+
+legorangedAA:
+	ReloadDelay: 40
+	Range: 8c512
+	Report: commando_attack.wav
+	ValidTargets: Air
+	Projectile: Bullet
+		Speed: 0c850
+		Image: astro_laser
+		Palette: player
+		IsPlayerPalette: true
+	Warhead@1Dam: TargetDamage
+		Spread: 150
+		Damage: 1500
+		ValidTargets: Air
+		Versus:
+			None: 150
+			Wood: 40
+			Light: 100
+			Medium: 80
+			Heavy: 60
+			Concrete: 20
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath         
+	Warhead@2Eff: CreateEffect
+	Warhead@Percentage: HealthPercentageDamage
+		Damage: 2
+		Spread: 150
+		Delay: 5
+		DamageTypes: Prone100Percent, TriggerProne, FireDeath, Incendiary
+		ValidTargets: Air
+		Versus:
+			None: 150
+			Wood: 40
+			Light: 100
+			Medium: 80
+			Heavy: 60
+			Concrete: 20
+
+legoranged:
+	Inherits: legorangedAA
+	ReloadDelay: 40
+	Range: 8c512
+	Report: commando_attack.wav
+	ValidTargets: Ground
+	Warhead@1Dam: TargetDamage
+		ValidTargets: Ground
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath         
+	Warhead@2Eff: CreateEffect
+	Warhead@Percentage: HealthPercentageDamage
+		DamageTypes: Prone100Percent, TriggerProne, FireDeath, Incendiary
+		ValidTargets: Ground
+
+specialrangedAA:
+	ReloadDelay: 60
+	Range: 10c512
+	Report: earth_ship_attack.wav
+	Projectile: Bullet
+		Speed: 0c650
+		Image: astro_lolipop
+		Palette: player
+		IsPlayerPalette: true
+	Warhead@1Dam: TargetDamage
+		Spread: 150
+		Damage: 6000
+		ValidTargets: Ground
+		Versus:
+			None: 150
+			Wood: 60
+			Light: 100
+			Medium: 80
+			Heavy: 70
+			Concrete: 60
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath         
+	Warhead@2Eff: CreateEffect
+	Warhead@Percentage: HealthPercentageDamage
+		Damage: 2
+		Spread: 550
+		Delay: 5
+		DamageTypes: Prone100Percent, TriggerProne, FireDeath, Incendiary
+		ValidTargets: Ground, Air
+		Versus:
+			None: 150
+			Wood: 60
+			Light: 100
+			Medium: 80
+			Heavy: 60
+			Concrete: 60
+
+specialrangedAA2:
+	ReloadDelay: 60
+	Range: 9c512
+	Report: earth_ship_attack.wav
+	Projectile: Bullet
+		Speed: 0c650
+		Image: astro_lolipop
+		RangeLimit: 15c0
+		Palette: player
+		IsPlayerPalette: true
+	Warhead@1Dam: TargetDamage
+		Spread: 300
+		Damage: 10000
+		ValidTargets: Ground
+		Versus:
+			None: 150
+			Wood: 60
+			Light: 100
+			Medium: 80
+			Heavy: 70
+			Concrete: 60
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath         
+	Warhead@2Eff: CreateEffect
+	Warhead@Percentage: HealthPercentageDamage
+		Damage: 10
+		Spread: 550
+		Delay: 5
+		DamageTypes: Prone100Percent, TriggerProne, FireDeath, Incendiary
+		ValidTargets: Ground
+		Versus:
+			None: 150
+			Wood: 60
+			Light: 100
+			Medium: 80
+			Heavy: 60
+			Concrete: 60
+
+specialrangedstar:
+	ReloadDelay: 60
+	Range: 9c512
+	Report: earth_ship_attack.wav
+	Projectile: Bullet
+		Speed: 0c650
+		Image: lego_flaming_star
+		Sequences: anim
+		RangeLimit: 15c0
+		Palette: player
+		IsPlayerPalette: true
+	Warhead@1Dam: TargetDamage
+		Spread: 500
+		Damage: 10000
+		Versus:
+			None: 150
+			Wood: 60
+			Light: 100
+			Medium: 80
+			Heavy: 70
+			Concrete: 60
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath         
+	Warhead@2Eff: CreateEffect
+	Warhead@Percentage: HealthPercentageDamage
+		Damage: 10
+		Spread: 550
+		Delay: 5
+		DamageTypes: Prone100Percent, TriggerProne, FireDeath, Incendiary
+		Versus:
+			None: 150
+			Wood: 60
+			Light: 100
+			Medium: 80
+			Heavy: 60
+			Concrete: 60
+
+astroplasmaglob:
+	ReloadDelay: 60
+	Range: 10c512
+	Report: earth_ship_attack.wav
+	Projectile: Bullet
+		Speed: 0c650
+		Image: lego_plasma_ball
+		RangeLimit: 15c0
+		Sequences: anim
+		Palette: player
+		IsPlayerPalette: true
+	Warhead@1Dam: TargetDamage
+		Spread: 700
+		Damage: 15000
+		Versus:
+			None: 150
+			Wood: 60
+			Light: 100
+			Medium: 80
+			Heavy: 70
+			Concrete: 60
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath         
+	Warhead@2Eff: CreateEffect
+	Warhead@Percentage: HealthPercentageDamage
+		Damage: 10
+		Spread: 550
+		Delay: 5
+		DamageTypes: Prone100Percent, TriggerProne, FireDeath, Incendiary
+		Versus:
+			None: 150
+			Wood: 60
+			Light: 100
+			Medium: 80
+			Heavy: 60
+			Concrete: 60
+
+cavalrymelee:
+	Inherits: ^legomelee
+	ReloadDelay: 50
+	Range: 1c512
+	Projectile: InstantHit
+	Report: gripley_attack.wav
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 8025
+		ValidTargets: Ground
+		Versus:
+			None: 150
+			Wood: 50
+			Light: 100
+			Medium: 80
+			Heavy: 60
+			Concrete: 40
+		DamageTypes: DefaultDeath 
+	Warhead@Percentage: HealthPercentageDamage
+		Damage: 2
+		Spread: 128
+		Delay: 5
+		DamageTypes: Prone100Percent, TriggerProne, FireDeath, Incendiary
+		ValidTargets: Ground
+		Versus:
+			None: 150
+			Wood: 50
+			Light: 100
+			Medium: 80
+			Heavy: 60
+			Concrete: 40
+
+legoheroranged:
+	Inherits: legoranged
+	ReloadDelay: 40
+	Range: 8c512
+	Report: commando_attack.wav
+	Warhead@1Dam: TargetDamage
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath         
+	Warhead@2Eff: CreateEffect
+	Warhead@Percentage: HealthPercentageDamage
+		DamageTypes: Prone100Percent, TriggerProne, FireDeath, Incendiary
+		ValidTargets: Ground
+
+heromelee:
+	Inherits: ^legomelee
+	ReloadDelay: 40
+	Range: 1c512
+	Projectile: InstantHit
+	Report: biff_attack.wav
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 7025
+		Versus:
+			None: 150
+			Wood: 50
+			Light: 100
+			Medium: 80
+			Heavy: 60
+			Concrete: 40
+		DamageTypes: DefaultDeath 
+	Warhead@Percentage: HealthPercentageDamage
+		Damage: 2
+		Spread: 128
+		Delay: 5
+		DamageTypes: Prone100Percent, TriggerProne, FireDeath, Incendiary
+		Versus:
+			None: 150
+			Wood: 70
+			Light: 100
+			Medium: 90
+			Heavy: 70
+			Concrete: 40
+
+spacelaser:
+	Range: 7c512
+	Report: space_laser.wav
+	Projectile: InstantHit
+	ValidTargets: Ground, Air, Trees
+	Warhead@1Dam_impact: SpreadDamage
+		Range: 0, 1c1, 2c1, 2c512
+		Damage: 10000
+		Falloff: 1000, 1000, 250, 100
+		ValidTargets: Ground, Air, Trees
+		AffectsParent: True
+		DamageTypes: Prone50Percent, TriggerProne, FireDeath, Incendiary
+	Warhead@2Smu_impact: LeaveSmudge
+		SmudgeType: Scorch
+		InvalidTargets: Vehicle, Structure, Wall, Husk, Trees, Creep
+	Warhead@3Smu_area: LeaveSmudge
+		SmudgeType: Scorch
+		InvalidTargets: Vehicle, Structure, Wall, Husk, Trees, Creep
+		Size: 1
+		Delay: 3
+	Warhead@4laserblast: CreateEffect
+		Explosions: earthspacelaser
+	Warhead@5Smu_area2: LeaveSmudge
+		SmudgeType: Scorch
+		InvalidTargets: Vehicle, Structure, Wall, Husk, Trees, Creep
+		Size: 2,1
+		Delay: 6
+
+empstar:
+	ReloadDelay: 60
+	Range: 9c512
+	Report: emp.wav
+	Projectile: Bullet
+		Speed: 0c250
+		Image: lego_emp_star
+		Sequences: anim
+		RangeLimit: 15c0
+		Palette: player
+		IsPlayerPalette: true        
+	Warhead@1Con: GrantExternalCondition
+		Condition: empdisable
+		ValidTargets: Vehicle, Cyborg, Structure
+		Duration: 25
+		Range: 1c512
+
+legoemp:
+	ReloadDelay: 60
+	Range: 9c512
+	Report: earth_ship_attack.wav
+	Projectile: InstantHit
+	Warhead@1Dam: TargetDamage
+		Spread: 500
+		Damage: 10000
+		Versus:
+			None: 150
+			Wood: 60
+			Light: 100
+			Medium: 80
+			Heavy: 70
+			Concrete: 60
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath         
+	Warhead@1Con: GrantExternalCondition
+		Condition: empdisable
+		ValidTargets: Vehicle, Cyborg, Structure
+		Duration: 25
+		Range: 1c512
+	Warhead@3cluster: FireCluster
+		Weapon: empstar
+		Dimensions: 10,10
+		Footprint: X_____________X  X_____________X X_____________X X_____________X X_____________XX_____________XX_____________XX_____________XX_____________XX_____________XX_____________XX_____________XX_____________XX_____________XX_____________XX_____________XX_____________X X_____________X X_____________X 

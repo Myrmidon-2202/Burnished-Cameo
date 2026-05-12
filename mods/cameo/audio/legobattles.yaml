@@ -1,0 +1,241 @@
+#################################################################
+#  Astro Structures
+#################################################################
+
+astroconyardvoice:
+	VolumeModifier: 1.7
+	DefaultVariant: .wav
+	Voices:
+		Select: earth_fortress
+		Die: lego_struc_break
+		Action: blank
+
+astrobarracksvoice:
+	VolumeModifier: 1.7
+	DefaultVariant: .wav
+	Voices:
+		Select: earth_barracks
+		Die: lego_struc_break
+
+biodomevoice:
+	VolumeModifier: 1.7
+	DefaultVariant: .wav
+	Voices:
+		Select: earth_bio
+
+eharvestervoice:
+	VolumeModifier: 1.7
+	DefaultVariant: .wav
+	Voices:
+		Select: earth_harvester
+
+ewellcapvoice:
+	VolumeModifier: 1.7
+	DefaultVariant: .wav
+	Voices:
+		Select: mars_mine
+
+astrospecialfactoryvoice:
+	VolumeModifier: 1.7
+	DefaultVariant: .wav
+	Voices:
+		Select: mars_special_factory
+
+astrotowervoice:
+	VolumeModifier: 1.7
+	DefaultVariant: .wav
+	Voices:
+		Select: earth_tower
+		Action: earth_tower
+
+
+#################################################################
+#  Astro Units
+#################################################################
+
+buildervoice:
+	VolumeModifier: 1.7
+	DefaultVariant: .wav
+	Voices:
+		Select: earth_builder_select
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: earth_builder_select
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank
+
+troopervoice:
+	VolumeModifier: 1.7
+	DefaultVariant: .wav
+	Voices:
+		Select: earth_trooper_select
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: earth_trooper_select
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank
+
+ecommandovoice:
+	VolumeModifier: 1.7
+	DefaultVariant: .wav
+	Voices:
+		Select: ecommando_select
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: ecommando_select
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank
+
+gripleyvoice:
+	VolumeModifier: 1.7
+	DefaultVariant: .wav
+	Voices:
+		Select: gripley_select
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: gripley_select
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank
+
+gemmavoice:
+	VolumeModifier: 1.7
+	DefaultVariant: .wav
+	Voices:
+		Select: gemma_select
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: gemma_select
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank
+
+policevoice:
+	VolumeModifier: 1.7
+	DefaultVariant: .wav
+	Voices:
+		Select: space_police
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: space_police
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank
+
+biffvoice:
+	VolumeModifier: 1.7
+	DefaultVariant: .wav
+	Voices:
+		Select: biff_select
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: biff_select
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank
+
+captainvoice:
+	VolumeModifier: 1.7
+	DefaultVariant: .wav
+	Voices:
+		Select: space_police_capt
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: space_police_capt
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank
+
+clawtankvoice:
+	VolumeModifier: 1.7
+	DefaultVariant: .wav
+	Voices:
+		Select: claw_tank_select
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: claw_tank_select
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank
+
+astrotransportvoice:
+	VolumeModifier: 1.7
+	DefaultVariant: .wav
+	Voices:
+		Select: astro_transport_ship
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: astro_transport_ship
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank
+
+starfightervoice:
+	VolumeModifier: 1.7
+	DefaultVariant: .wav
+	Voices:
+		Select: astro_transport_ship
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: astro_transport_ship
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank
+
+spacepolicecruiservoice:
+	VolumeModifier: 1.7
+	DefaultVariant: .wav
+	Voices:
+		Select: space_police_cruiser
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: space_police_cruiser
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank
+
+starship2voice:
+	VolumeModifier: 1.7
+	DefaultVariant: .wav
+	Voices:
+		Select: starship_select
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: starship_select
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank
+
+#################################################################
+#  Astro SFX
+#################################################################
+

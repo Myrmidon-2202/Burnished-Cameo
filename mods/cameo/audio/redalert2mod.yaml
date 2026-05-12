@@ -1,0 +1,668 @@
+AsianAllianceVehicleVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: aa_lynxsel1, aa_lynxsel2, aa_lynxsel3
+		Move: aa_lynxmov1, aa_lynxmov2, aa_lynxmov3
+		Action: aa_lynxmov1, aa_lynxmov2, aa_lynxmov3
+		Attack: vaa_lynxatt1, aa_lynxatt2, aa_lynxatt3
+
+AsianDroneVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: aa_droneminersel1
+		Move: aa_droneminermov1
+		Action: aa_droneminermov1
+		Attack: aa_droneminermov1
+
+AsianCrocVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: aa_croc1, gallsela, gallselb
+		Move: aa_croc2, gallmova, gallmovb
+		Action: aa_croc2, gallmova, gallmovb
+		Attack: aa_croc2, gallmova, gallmovb
+		Feedback: aa_croc2
+		Die: aa_crocdie, galldiea
+		Zapped: igenzapa
+		Burned: igenmela, igenmelb, igenmelc
+		Poisoned: igenmela, igenmelb, igenmelc
+
+AsianAllianceHotwizerVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: aa_how_sel1, aa_how_sel2, aa_how_sel3
+		Move: aa_how_mov3, aa_how_mov4, aa_how_mov5, aa_how_mov2, aa_how_mov1
+		Action: aa_how_mov3, aa_how_mov4, aa_how_mov5, aa_how_mov2, aa_how_mov1
+		Attack: aa_how_atk3, aa_how_atk4, aa_how_atk5, aa_how_atk2, aa_how_atk1, aa_how_atk6
+
+AsianAllianceViperVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: aa_viper_sel1, aa_viper_sel2, aa_viper_sel3, aa_viper_sel4
+		Move: aa_viper_mov1, aa_viper_mov2, aa_viper_atk1
+		Action: aa_viper_mov1, aa_viper_mov2, aa_viper_atk1
+		Attack: aa_viper_atk1, aa_viper_atk2, aa_viper_atk3, aa_viper_atk4
+
+AsianAllianceOilTruckVoice:
+	DefaultVariant: .wav
+	Voices:
+		Build: aa_oilt_atk5
+		Select: aa_oilt_sel1, aa_oilt_sel2
+		Move: aa_oilt_mov1, aa_oilt_mov2, aa_oilt_mov3, aa_oilt_mov4, aa_oilt_mov5, aa_oilt_mov6
+		Action: aa_oilt_mov1, aa_oilt_mov2, aa_oilt_mov3, aa_oilt_mov4, aa_oilt_mov5, aa_oilt_mov6
+		Attack: aa_oilt_atk1, aa_oilt_atk2, aa_oilt_atk3, aa_oilt_atk4, aa_oilt_atk5, aa_oilt_atk6
+		Die: aa_oilt_die1, aa_oilt_die2
+
+AsianQuasarVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: aa_quasa_sel1, aa_quasa_sel2
+		Move: aa_quasa_mov1, aa_quasa_mov2, aa_quasa_mov3, aa_quasa_mov4, aa_quasa_mov5
+		Action: aa_quasa_mov1, aa_quasa_mov2, aa_quasa_mov3, aa_quasa_mov4, aa_quasa_mov5
+		Attack: aa_quasa_atk1, aa_quasa_atk2, aa_quasa_atk3, aa_quasa_atk4
+
+AsianPlasmaVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: aa_plastnk_sel1, aa_plastnk_sel2, aa_plastnk_sel3
+		Move: aa_plastnk_mov3, aa_plastnk_mov2, aa_plastnk_mov1
+		Action: aa_plastnk_mov3, aa_plastnk_mov2, aa_plastnk_mov1
+		Attack: aa_plastnk_atk1, aa_plastnk_atk2, aa_plastnk_atk3, aa_plastnk_atk4
+
+AsianKamiVoice:
+	Inherits: ^InfantryDeath
+	Voices:
+		Select: aa_kami_sel2, aa_kami_sel3, aa_kami_sel4, aa_kami_sel1
+		Move: aa_kami_mov1, aa_kami_mov2, aa_kami_mov3, aa_kami_mov4
+		Action: aa_kami_mov1, aa_kami_mov2, aa_kami_mov3, aa_kami_mov4
+		Attack: aa_kami_atk1, aa_kami_atk2
+		Die: aa_kami_die1, aa_kami_die2
+
+AsianSamuVoice:
+	Inherits: ^InfantryDeath
+	Voices:
+		Select: aa_samu_sel1, aa_samu_sel2, aa_samu_sel3, aa_samu_sel4, aa_samu_sel5, aa_samu_sel6
+		Move: aa_samu_mov1, aa_samu_mov2, aa_samu_mov3, aa_samu_mov4
+		Action: aa_samu_mov1, aa_samu_mov2, aa_samu_mov3, aa_samu_mov4
+		Attack: aa_samu_atk8, aa_samu_atk7, aa_samu_atk6, aa_samu_atk5, aa_samu_atk4, aa_samu_atk3, aa_samu_atk2, aa_samu_atk1
+		Die: aa_samu_die1, aa_samu_die2, aa_samu_die3, aa_samu_die4
+
+AsianMaidVoice:
+	Inherits: ^InfantryDeath
+	Voices:
+		Select: aa_arch_sel1, aa_arch_sel2, aa_arch_sel3, aa_arch_sel4, aa_arch_sel5
+		Move: aa_arch_mov1, aa_arch_mov2, aa_arch_mov3, aa_arch_mov4
+		Action: aa_arch_mov1, aa_arch_mov2, aa_arch_mov3, aa_arch_mov4
+		Attack: aa_arch_atk6, aa_arch_atk5, aa_arch_atk4, aa_arch_atk3, aa_arch_atk2, aa_arch_atk1
+		Die: aa_arch_die1, aa_arch_die2, aa_arch_die3, aa_arch_die4
+
+AsianShinobiVoice:
+	Inherits: ^InfantryDeath
+	Voices:
+		Select: aa_ninj_sel1, aa_ninj_sel2, aa_ninj_sel3
+		Move: aa_ninj_mov1, aa_ninj_mov2, aa_ninj_mov3, aa_ninj_mov4
+		Action: aa_ninj_mov1, aa_ninj_mov2, aa_ninj_mov3, aa_ninj_mov4
+		Attack: aa_ninj_mov1, aa_ninj_mov2, aa_ninj_mov3, aa_ninj_mov4
+		Die: aa_ninj_die1, aa_ninj_die2, aa_ninj_die3
+AsianFlametroopVoice:
+	Inherits: ^InfantryDeath
+	Voices:
+		Select: aa_flamt_sel1, aa_flamt_sel2, aa_flamt_sel3
+		Move: aa_flamt_mov1, aa_flamt_mov2, aa_flamt_mov3, aa_flamt_mov4
+		Action: aa_flamt_mov1, aa_flamt_mov2, aa_flamt_mov3, aa_flamt_mov4
+		Attack: aa_flamt_atk7, aa_flamt_atk8, aa_flamt_atk1, aa_flamt_atk2, aa_flamt_atk4, aa_flamt_atk3, aa_flamt_atk5, aa_flamt_atk6
+		Die: aa_kami_die1, aa_kami_die2
+AsianAllianceRobotVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: aa_robo_sel1, aa_robo_sel2, aa_robo_sel3
+		Move: aa_robo_mov1, aa_robo_mov2, aa_robo_mov3
+		Action: aa_robo_mov1, aa_robo_mov2, aa_robo_mov3
+		Attack: aa_robo_atk1, aa_robo_atk2, aa_robo_atk3
+AsianTsunamiVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: aa_tsunami_s1, aa_tsunami_s2
+		Move: aa_tsunami_m1, aa_tsunami_m2, aa_tsunami_m3, aa_tsunami_m4
+		Action: aa_tsunami_m1, aa_tsunami_m2, aa_tsunami_m3, aa_tsunami_m4
+		Attack: aa_tsunami_a1, aa_tsunami_a2, aa_tsunami_a3, aa_tsunami_a4, aa_tsunami_a5
+
+AsianShipVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: , aa_ship_s1, , aa_ship_s2, , aa_ship_s3
+		Move: aa_ship_m1, aa_ship_m2, aa_ship_m3, aa_ship_m4, aa_ship_m6, aa_ship_m5
+		Action: aa_ship_m1, aa_ship_m2, aa_ship_m3, aa_ship_m4, aa_ship_m6, aa_ship_m5
+		Attack: aa_ship_a1, aa_ship_a2, aa_ship_a3, aa_ship_a4, aa_ship_a5
+
+SteelCloneVoice:
+	Inherits: ^InfantryDeath
+	Voices:
+		Select: steel_cloneselect_a, steel_cloneselect_b, steel_cloneselect_c, steel_cloneselect_d
+		Move: steel_clonemove_a, steel_clonemove_b, steel_clonemove_c, steel_clonemove_d
+		Action: steel_clonemove_a, steel_clonemove_b, steel_clonemove_c, steel_clonemove_d
+		Attack: steel_cloneatk_a, steel_cloneatk_b
+		Deploy: steel_cloneatk_a, steel_cloneatk_b
+		Die: FEngiDiea, FEngiDieb
+SteelSentinelVoice:
+	Inherits: ^InfantryDeath
+	Voices:
+		Select: sentselect_a, sentselect_b, sentselect_c, sentselect_d
+		Move: sentimove_a, sentimove_b, sentimove_c, sentimove_d
+		Action: sentimove_a, sentimove_b, sentimove_c, sentimove_d
+		Attack: sentiatk_a, sentiatk_b, sentiatk_c
+		Deploy: sentselect_a, sentselect_b, sentselect_c, sentselect_d
+		Die: FEngiDiea, FEngiDieb
+SteelTCUVoice:
+	Inherits: ^InfantryDeath
+	Voices:
+		Select: tcuSelecta, tcuSelectb, tcuSelectc
+		Move: tcuMovea, tcuMoveb, tcuMovec
+		Action: tcuMovea, tcuMoveb, tcuMovec
+		Attack: tcuRetreata, tcuRetreatb
+		Deploy: sentselect_a, sentselect_b, sentselect_c, sentselect_d
+		Die: tcuDiea, tcuDieb
+SteelSkaterVoice:
+	Inherits: ^InfantryDeath
+	DefaultVariant: .wav
+	Voices:
+		Select: trusterselect_a, trusterselect_b, trusterselect_c
+		Move: trustermove_a, trustermove_b, trustermove_c
+		Action: trustermove_a, trustermove_b, trustermove_c
+		Attack: trusteratk_a, trusteratk_b
+		Die: FEngiDiea, FEngiDieb
+SteelEngVoice:
+	Inherits: ^InfantryDeath
+	Voices:
+		Select: FEngiSelecta, FEngiSelectb, FEngiSelectc
+		Move: FEngiMovea, FEngiMoveb, FEngiMovec
+		Action: FEngiMovea, FEngiMoveb, FEngiMovec
+		Attack: FEngiCapturea, FEngiCaptureb
+		Capture: FEngiCapturea, FEngiCaptureb
+		Feedback: FEngiRetreata ,FEngiRetreatb
+		Die: FEngiDiea, FEngiDieb
+
+SteelAircraftVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: twisSelecta, twisSelectb, twisSelectc
+		Move: twisMovea, twisMoveb, twisMovec
+		Action: twisMovea, twisMoveb, twisMovec
+		Attack: twisAtka, twisAtkb, twisAtkc
+		Die: aa_kami_die1, aa_kami_die2
+SteelMakoVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: makoselect_d, makoselect_a, makoselect_b, makoselect_c
+		Move: makomove_d, makomove_a, makomove_b, makomove_c
+		Action: makomove_d, makomove_a, makomove_b, makomove_c
+		Attack: makoatk_a, makoatk_b
+SteelQuantumTankVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: qutnkselect_a, qutnkselect_b, qutnkselect_c
+		Move: qutnkmove_a, qutnkmove_b, qutnkmove_c, qutnkmove_d
+		Action: qutnkmove_a, qutnkmove_b, qutnkmove_c, qutnkmove_d
+		Attack: qutnkatk_a, qutnkatk_b, qutnkatk_c
+SteelConsortiumTankVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: qtnkselect_a, qtnkselect_b, qtnkselect_c, qtnkselect_d
+		Move: qtnkmove_a, qtnkmove_b, qtnkmove_c, qtnkmove_d
+		Action: qtnkmove_a, qtnkmove_b, qtnkmove_c, qtnkmove_d
+		Attack: qtnkatk_b, qtnkatk_a
+SteelInspectorVoice:
+	DefaultVariant: .wav
+	Voices:
+		Build: inspecselect_b
+		Select: inspecselect_b, inspecselect_a, inspecselect_c, inspecselect_d
+		Move: inspecmove_a, inspecmove_b, inspecmove_c, inspecmove_d
+		Action: inspecmove_a, inspecmove_b, inspecmove_c, inspecmove_d
+		Attack: inspecatk_a, inspecatk_b, inspecatk_c, inspecatk_d
+		Die: inspecatk_a, inspecatk_b, inspecatk_c, inspecatk_d
+		Burned: inspecatk_a, inspecatk_b, inspecatk_c, inspecatk_d
+		Zapped: inspecatk_a, inspecatk_b, inspecatk_c, inspecatk_d
+		Poisoned: inspecatk_a, inspecatk_b, inspecatk_c, inspecatk_d
+SteelEmpressVoice:
+	DefaultVariant: .aud
+	Voices:
+		Build: empreatke
+		Select: empreselecta, empreselectb, empreselectc, empreselectd
+		Move: empremovea, empremoveb, empremovec, empremoved
+		Action: empremovea, empremoveb, empremovec, empremoved
+		Attack: empreatka, empreatkb, empreatkc, empreatkd
+		Die: empresound
+		Burned: empresound
+		Zapped: empresound
+		Poisoned: empresound
+
+SteelPowerTankVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: potnkselect_a, potnkselect_b, potnkselect_c, potnkselect_d
+		Move: potnkmove_a, potnkmove_b, potnkmove_c, potnkmove_d
+		Action: potnkmove_a, potnkmove_b, potnkmove_c, potnkmove_d
+		Attack: potnkattack_a, potnkattack_b, potnkattack_c, potnkattack_d
+
+SteelConsortiumMCVVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: FmcvSelecta, FmcvSelectb, FmcvSelectc
+		Move: FmcvMovea, FmcvMoveb, FmcvMovec
+		Action: FmcvMovea, FmcvMoveb, FmcvMovec
+		Attack: FmcvMovea, FmcvMoveb, FmcvMovec
+		Deploy: FmcvDeploy
+NaxiBarracksVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: nax_barracks
+		Action:
+NaxiAirfieldVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: nax_airfield
+		Action:
+NaxiWeaponFactoryVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: nax_weap
+		Action:
+
+NaxiTankVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: gtanksa, gtanksb, gtanksc
+		Move: gtankac, gtankmb, gtankmc
+		Action: gtankac, gtankmb, gtankmc
+		Attack: gtankaa, gtankab, gtankac
+NaxiBigTankVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: nax_gvtrtsl1, nax_gvtrtsl2, nax_gvtrtsl3
+		Move: nax_gvtrtrl0, nax_gvtrtrl1, nax_gvtrtrl2
+		Action: nax_gvtrtrl0, nax_gvtrtrl1, nax_gvtrtrl2
+		Attack: nax_gvtrtrl3, nax_gvtrtal0
+NaxiArtyVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: nax_gvfarsl0, nax_gvfarsl1, nax_gvfarsl2, nax_gvfarsl3
+		Move: nax_gvfarrl0, nax_gvfarrl1, nax_gvfarrl2, nax_gvfarrl3
+		Action: nax_gvfarrl0, nax_gvfarrl1, nax_gvfarrl2, nax_gvfarrl3
+		Attack: nax_gvfarrl0, nax_gvfarrl1, nax_gvfarrl2, nax_gvfarrl3
+NaxiMCVVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: nax_gvfg1sl0, nax_gvfg1sl1, nax_gvfg1sl2
+		Move: nax_gvfg1rl0, nax_gvfg1rl1, nax_gvfg1rl2
+		Action: nax_gvfg1rl0, nax_gvfg1rl1, nax_gvfg1rl2
+		Attack: nax_gvfg1rl0, nax_gvfg1rl1, nax_gvfg1rl2
+
+NaxiFlakVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: nax_gvflksl0, nax_gvflksl1, nax_gvflksl3, nax_gvflksl4
+		Move: nax_gvflkrl0, nax_gvflkrl1, nax_gvflkrl4, nax_gvflkrl5
+		Action: nax_gvflkrl0, nax_gvflkrl1, nax_gvflkrl4, nax_gvflkrl5
+		Attack: nax_gvflkrl0, nax_gvflkrl1, nax_gvflkrl4, nax_gvflkrl5
+
+
+NaxiTroopVoice:
+	Inherits: ^InfantryDeath
+	Voices:
+		Select: ginfsa, ginfsb
+		Move: ginfma, iginfmb, ginfmc
+		Action: ginfma, iginfmb, ginfmc
+		Attack: ginfaa, ginfab, ginfac
+		Deploy: ginfsa
+		Feedback: ginffa
+		Die: nax_death1, nax_death2, nax_death3, nax_death4
+NaxiSoldatVoice:
+	Inherits: ^InfantryDeath
+	VolumeModifier: 1.8
+	Voices:
+		Select: g_H_VSEL1, g_H_VSEL2, g_H_VSEL3
+		Move: g_H_VCONF3, g_H_VCONF2, g_H_VCONF1
+		Action: g_H_VCONF3, g_H_VCONF2, g_H_VCONF1
+		Attack: g_H_VCONF3, g_H_VCONF2, g_H_VCONF1
+		Deploy: g_H_VCONF3, g_H_VCONF2, g_H_VCONF1
+		Die: soldat_d1, soldat_d2, nax_death1, nax_death2, nax_death3, nax_death4, nax_wilhelm, nax_wolfdeath1
+NaxiSSVoice:
+	Inherits: ^InfantryDeath
+	Voices:
+		Select: sergeant_s1, sergeant_s2, mg42_c1
+		Move: sergeant_c1, sergeant_c2
+		Action: sergeant_c1, sergeant_c2
+		Attack: sergeant_sp
+		Deploy: sergeant_c1, sergeant_c2
+		Feedback: nax_meingut
+		Die: sergeant_d1, sergeant_d2, nax_death1, nax_death2, nax_death3, nax_death4, nax_leben
+
+NaxiUFOVoice:
+	Inherits: ^InfantryDeath
+	VolumeModifier: 1.0
+	Voices:
+		Select: nax_gvgemrl1, nax_gvgemrl2, nax_gvgemrl3, nax_gvgemrl4, nax_gvgemrl5
+		Move: nax_gvgemrl1, nax_gvgemrl2, nax_gvgemrl3, nax_gvgemrl4
+		Action: nax_gvgemrl1, nax_gvgemrl2, nax_gvgemrl3, nax_gvgemrl4
+		Attack: nax_gvgemrl1, nax_gvgemrl2, nax_gvgemrl3, nax_gvgemrl4
+		Deploy: nax_gvgemrl1, nax_gvgemrl2, nax_gvgemrl3, nax_gvgemrl4
+		Die: nax_aliendie1, nax_aliendie2
+NaxiUFOBigVoice:
+	Inherits: ^InfantryDeath
+	VolumeModifier: 1.0
+	Voices:
+		Select: nax_gvskysl0, nax_gvskysl2, nax_gvskyal4
+		Move: nax_gvskyrl0, nax_gvskyrl1, nax_gvskyrl2, nax_gvskyrl3
+		Action: nax_gvskyrl0, nax_gvskyrl1, nax_gvskyrl2, nax_gvskyrl3
+		Attack: nax_gvskyrl0, nax_gvskyrl1, nax_gvskyrl2, nax_gvskyrl3
+		Deploy: nax_gvskyrl0, nax_gvskyrl1, nax_gvskyrl2, nax_gvskyrl3
+		Die: sergeant_d1, sergeant_d2
+NaxiPiercerUFOVoice:
+	Inherits: ^InfantryDeath
+	VolumeModifier: 1.0
+	Voices:
+		Select: nax_gvrearl1, nax_gvrearl2, nax_gvrearl3, nax_gvrearl4
+		Move: nax_gvrearl1, nax_gvrearl2, nax_gvrearl3, nax_gvrearl4
+		Action: nax_gvrearl1, nax_gvrearl2, nax_gvrearl3, nax_gvrearl4
+		Attack: nax_gvrearl1, nax_gvrearl2, nax_gvrearl3, nax_gvrearl4
+		Deploy: nax_gvrearl1, nax_gvrearl2, nax_gvrearl3, nax_gvrearl4
+		Die: sergeant_d1, sergeant_d2
+NaxiEngVoice:
+	Inherits: ^InfantryDeath
+	VolumeModifier: 1.8
+	Voices:
+		Select: g_A_VSEL1, g_A_VSEL2, g_A_VSEL3
+		Move: g_A_VCONF3, g_A_VCONF2, g_A_VCONF1
+		Action: g_A_VCONF3, g_A_VCONF2, g_A_VCONF1
+		Attack: g_A_VCONF3, g_A_VCONF2, g_A_VCONF1
+		Deploy: g_A_VCONF3, g_A_VCONF2, g_A_VCONF1
+		Die: soldat_d1, soldat_d2, nax_death1, nax_death2, nax_death3, nax_death4, nax_wilhelm, nax_wolfdeath1
+
+NaxiFemVoice:
+	Inherits: ^InfantryDeath
+	VolumeModifier: 1.8
+	Voices:
+		Select: nax_gvsnpsl0
+		Move: nax_gvsnprl0
+		Action: nax_gvsnprl0
+		Attack: nax_gvsnprl0
+		Deploy: nax_gvsnprl0
+		Die: itandia, itandib, itandic, itapdia, itapdib, itapdic, itapdid, itapdie
+
+NaxiRobotVoice:
+	Inherits: ^InfantryDeath
+	VolumeModifier: 1.8
+	Voices:
+		Select: nax_robot_sel03, nax_robot_sel02, nax_robot_sel01
+		Move: nax_robot_walk
+		Action: nax_robot_walk
+		Attack: nax_robot_walk
+		Deploy: nax_robot_walk
+		Die: soldat_d1, soldat_d2
+NaxiLunarTankVoice:
+	Inherits: ^InfantryDeath
+	VolumeModifier: 1.8
+	Voices:
+		Select: nax_gvtctsl0, nax_gvtctsl1, nax_gvtctsl2
+		Move: nax_gvtctrl0, nax_gvtctal2, nax_gvtctrl2, nax_gvtctrl3
+		Action: nax_gvtctrl0, nax_gvtctal2, nax_gvtctrl2, nax_gvtctrl3
+		Attack: nax_gvtctrl0, nax_gvtctal2, nax_gvtctrl2, nax_gvtctrl3
+		Deploy: nax_gvtctrl0, nax_gvtctal2, nax_gvtctrl2, nax_gvtctrl3
+		Die: soldat_d1, soldat_d2
+
+NaxiLunarCoreVoice:
+	Inherits: ^InfantryDeath
+	VolumeModifier: 1.8
+	Voices:
+		Select: nax_lunartank_sel01
+		Move: nax_lunartank_mov01
+		Action: nax_lunartank_mov01
+		Attack: nax_lunartank_atk1
+		Deploy: nax_lunartank_mov01
+		Die: soldat_d1, soldat_d2
+
+NaxiLunarGrilleVoice:
+	Inherits: ^InfantryDeath
+	VolumeModifier: 1.8
+	Voices:
+		Select: nax_lunargrill_sel01
+		Move: nax_lunartank_mov01
+		Action: nax_lunartank_mov01
+		Attack: nax_lunartank_atk1
+		Deploy: nax_lunartank_mov01
+		Die: soldat_d1, soldat_d2
+NaxiZombie:
+	Inherits: ^InfantryDeath
+	VolumeModifier: 1.8
+	Voices:
+		Select: nax_zsel1, nax_zsel2
+		Move: nax_zmove1, nax_zmove2
+		Action: nax_zmove1, nax_zmove2
+		Attack: nax_zmove1, nax_zmove2
+		Deploy: nax_zmove1, nax_zmove2
+		Die: nax_zdie1
+NaxiZombieTank:
+	Inherits: ^InfantryDeath
+	VolumeModifier: 1.8
+	Voices:
+		Select: nax_zombietankvo1
+		Move: nax_zombietankvo2
+		Action: nax_zombietankvo2
+		Attack: nax_zombietankvo2
+		Deploy: nax_zombietankvo2
+		Die: nax_zdie1
+
+NaxiUbermenVoice:
+	Inherits: ^InfantryDeath
+	Voices:
+		Select: nax_gvextal3, nax_gvextsl1, nax_gvextsl2
+		Move: nax_gvextsl0, nax_gvextsl1, nax_gvextsl2
+		Action: nax_gvextsl0, nax_gvextsl1, nax_gvextsl2
+		Attack: nax_gvextsl0, nax_gvextsl1, nax_gvextsl2
+		Deploy: nax_gvextsl0, nax_gvextsl1, nax_gvextsl2
+		Die: FEngiDiea, FEngiDieb
+NaxiLunarTroopVoice:
+	Inherits: ^InfantryDeath
+	Voices:
+		Select: nax_gvig1sl0, nax_gvig1sl1, nax_gvig1sl2, nax_gvig1sl3
+		Move: nax_gvig1rl0, nax_gvig1rl1, nax_gvig1rl2, nax_gvig1rl6
+		Action: nax_gvig1rl0, nax_gvig1rl1, nax_gvig1rl2, nax_gvig1rl6
+		Attack: nax_gvig1rl0, nax_gvig1rl1, nax_gvig1rl2, nax_gvig1rl6
+		Deploy: nax_gvig1rl0, nax_gvig1rl1, nax_gvig1rl2, nax_gvig1rl6
+		Die: FEngiDiea, FEngiDieb
+NaxiLunarCrystalVoice:
+	Inherits: ^InfantryDeath
+	Voices:
+		Select: nax_gvhossl0, nax_gvhossl1
+		Move: nax_gvhosrl0, nax_gvhosrl2, nax_gvhosal0
+		Action: nax_gvhosrl0, nax_gvhosrl2, nax_gvhosal0
+		Attack: nax_gvhosrl0, nax_gvhosrl2, nax_gvhosal0
+		Deploy: nax_gvhosrl0, nax_gvhosrl2, nax_gvhosal0
+		Die: FEngiDiea, FEngiDieb
+NaxiAircraftVoice:
+	Inherits: ^InfantryDeath
+	Voices:
+		Select: nax_gvfg3sl0, nax_gvfg3sl1, nax_gvfg3sl2, nax_gvfg3sl3
+		Move: nax_gvfg3rl0, nax_gvfg3rl1, nax_gvfg3rl2, nax_gvfg3rl4
+		Action: nax_gvfg3rl0, nax_gvfg3rl1, nax_gvfg3rl2, nax_gvfg3rl4
+		Attack: nax_gvfg3al0, nax_gvfg3rl3
+		Deploy: nax_gvfg3rl0, nax_gvfg3rl1, nax_gvfg3rl2, nax_gvfg3rl4
+		Die: FEngiDiea, FEngiDieb
+
+
+NaxiMageVoice:
+	Inherits: ^InfantryDeath
+	VolumeModifier: 1.8
+	Voices:
+		Select: nax_gvampsl1, nax_gvampsl2, nax_gvampsl3
+		Move: nax_gvampal0, nax_gvamprl0, nax_gvamprl2
+		Action: nax_gvampal0, nax_gvamprl0, nax_gvamprl2
+		Attack: nax_gvampal0, nax_gvamprl0, nax_gvamprl2
+		Deploy: nax_gvampal0, nax_gvamprl0, nax_gvamprl2
+		Die: soldat_d1, soldat_d2
+LatinMCVVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: latin_gvfg1sl0, latin_gvfg1sl1, latin_gvfg1sl2
+		Move: latin_gvfg1rl0, latin_gvfg1rl1, latin_gvfg1rl3
+		Action: latin_gvfg1rl0, latin_gvfg1rl1, latin_gvfg1rl3
+		Attack: latin_gvfg1rl0, latin_gvfg1rl1, latin_gvfg1rl3
+
+LatinSoldierVoice:
+	Inherits: ^InfantryDeath
+	Voices:
+		Select: latin_gvfg2sl0, latin_gvfg2sl1, latin_gvfg2sl2, latin_gvfg2sl3
+		Move: latin_gvfg2rl0, latin_gvfg2rl1, latin_gvfg2rl4, latin_gvfg2rl2
+		Action: latin_gvfg2rl0, latin_gvfg2rl1, latin_gvfg2rl4, latin_gvfg2rl2
+		Attack: latin_gvfg2rl0, latin_gvfg2rl1, latin_gvfg2rl4, latin_gvfg2rl2, latin_gvflksl4
+		Die: sergeant_d1, sergeant_d2
+
+LatinRamboVoice:
+	Inherits: ^InfantryDeath
+	Voices:
+		Select: latin_gvmrcsl0, latin_gvmrcsl1, latin_gvmrcsl2, latin_gvmrcsl3
+		Move: latin_gvmrcrl0, latin_gvmrcrl1, latin_gvmrcrl2
+		Action: latin_gvmrcrl0, latin_gvmrcrl1, latin_gvmrcrl2
+		Attack: latin_gvmrcrl0, latin_gvmrcrl1, latin_gvmrcrl2, latin_gvmrcrl4
+		Die: sergeant_d1, sergeant_d2
+
+LatinSCUDVoice:
+	Inherits: ^InfantryDeath
+	Voices:
+		Select: latin_gvsabal0, latin_gvsabal2
+		Move: latin_gvsabal3
+		Action: latin_gvsabal3
+		Attack: latin_gvsabal1
+
+LatinHarvVoice:
+	Inherits: ^InfantryDeath
+	Voices:
+		Select: 315chatasel1
+		Move: 315chatamov1,315chatamov2,315chatamov3,315chatamov4,315chatamov5,315chatamov6,315chatamov7
+		Action: 315chatamov1,315chatamov2,315chatamov3,315chatamov4,315chatamov5,315chatamov6,315chatamov7
+		Attack: 315chatamov1,315chatamov2,315chatamov3,315chatamov4,315chatamov5,315chatamov6,315chatamov7
+
+LatinEngVoice:
+	Inherits: ^InfantryDeath
+	Voices:
+		Select: latin_gvmedsl3, latin_gvmedsl2, latin_gvmedsl0
+		Move: latin_gvmedrl0, latin_gvmedrl1, latin_gvmedrl2
+		Action: latin_gvmedrl0, latin_gvmedrl1, latin_gvmedrl2
+		Attack: latin_gvmedrl0, latin_gvmedrl1, latin_gvmedrl2
+		Feedback: latin_gvmedsl1
+		Die: ienydia, ienydib, ienydic, ienydid
+
+LatinTankVoice:
+	Inherits: ^InfantryDeath
+	Voices:
+		Select: latin_gvfarsl0, latin_gvfarsl1, latin_gvfarsl2, latin_gvfarsl3
+		Move: latin_gvfarrl1, latin_gvfarrl0, latin_gvfarrl3
+		Action: latin_gvfarrl1, latin_gvfarrl0, latin_gvfarrl3
+		Attack: latin_gvfarrl2, latin_gvfarrl1, latin_gvfarrl0, latin_gvfarrl3
+
+LatinHeavyTankVoice:
+	Inherits: ^InfantryDeath
+	Voices:
+		Select: latin_gvtrtal0, latin_gvtrtsl1, latin_gvtrtsl2, latin_gvtrtsl3
+		Move: latin_gvtrtrl1, latin_gvtrtrl2, latin_gvtrtrl3
+		Action: latin_gvtrtrl1, latin_gvtrtrl2, latin_gvtrtrl3
+		Attack: latin_gvtrtrl1, latin_gvtrtrl2, latin_gvtrtrl3, latin_gvtrtrl0
+
+LatinArtyVoice:
+	Inherits: ^InfantryDeath
+	Voices:
+		Select: latin_gvswvsl1, latin_gvswvsl2, latin_gvswvsl3
+		Move: latin_gvswvrl1, latin_gvswvrl3, latin_gvswvrl0
+		Action: latin_gvswvrl1, latin_gvswvrl3, latin_gvswvrl0
+		Attack: latin_gvswvrl1, latin_gvswvrl3, latin_gvswvrl0
+
+LatinNarcoVoice:
+	Inherits: ^InfantryDeath
+	Voices:
+		Select: narco1,narco2,narco3
+		Action: narcom2,narcom1
+		Attack: narcom2,narcom1
+		Move: narcom2,narcom1
+		Die: sergeant_d1, sergeant_d2
+
+LatinNarcoVVoice:
+	Inherits: ^InfantryDeath
+	Voices:
+		Select: vnarcom1,vnarcom2
+		Action: vnarcom3,vnarcom2,vnarcom1,vnarcom4
+		Attack: vnarcom3,vnarcom2,vnarcom1,vnarcom4
+		Move: vnarcom3,vnarcom2,vnarcom1,vnarcom4
+		Die: sergeant_d1, sergeant_d2
+
+LatinMigVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: latin_gvfg3sl3, latin_gvfg3sl2, latin_gvfg3sl1, latin_gvfg3sl0
+		Move: latin_gvfg3rl0, latin_gvfg3rl2, latin_gvfg3rl3
+		Action: latin_gvfg3rl0, latin_gvfg3rl2, latin_gvfg3rl3
+		Attack: latin_gvfg3rl1
+LatinMonkeyDie:
+	DefaultVariant: .wav
+	Voices:
+		Select: monke_sel1, monke_sel2, gchisela, gchiselb
+		Move: gchimov1, gchimov2, gchiamba, gchiambb, gchiambc
+		Action: monke_sel1, monke_sel1, monke_sel3
+		Attack: gchiatta, gchiattb, gchiattc
+		Feedback: gchifeaa, gchifeab
+		Die: monke_hurt1, gchidiea, gchidieb
+		Zapped: igenzapa
+		Burned: igenmela, igenmelb, igenmelc
+		Poisoned: igenmela, igenmelb, igenmelc
+
+FutureRobotVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: herc1_s1, herc1_s2, herc1_s3, herc1_s4, herc1_s5, herc1_s6
+		Move: herc1_c1, herc1_c2, herc1_c3, herc1_c4, herc1_c5, herc1_c6
+		Action: herc1_c1, herc1_c2, herc1_c3, herc1_c4, herc1_c5, herc1_c6
+		Attack: herc1_a1, herc1_a2, herc1_a3, herc1_a4, herc1_a5, herc1_a6
+
+FutureAnthenaVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: AUAthen_VoiSelecta, AUAthen_VoiSelectb, AUAthen_VoiSelectc, AUAthen_VoiSelectd, AUAthen_VoiSelectf, AUAthen_VoiSelecte, AUAthen_VoiSelectg
+		Move: AUAthen_VoiMovea, AUAthen_VoiMoveb, AUAthen_VoiMovec, AUAthen_VoiMoved, AUAthen_VoiMovef, AUAthen_VoiMovee, AUAthen_VoiMoveh, AUAthen_VoiMovei
+		Action: AUAthen_VoiMovea, AUAthen_VoiMoveb, AUAthen_VoiMovec, AUAthen_VoiMoved, AUAthen_VoiMovef, AUAthen_VoiMovee, AUAthen_VoiMoveh, AUAthen_VoiMovei
+		Attack: AUAthen_VoiAttacka, AUAthen_VoiAttackb, AUAthen_VoiAttackc, AUAthen_VoiAttackd, AUAthen_VoiAttackf, AUAthen_VoiAttacke
+		Build: AUAthen_VoiCreatea, AUAthen_VoiCreateb
+
+FutureACVVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: AURipti_VoiSelecta, AURipti_VoiSelectb, AURipti_VoiSelectc, AURipti_VoiSelectd, AURipti_VoiSelectf, AURipti_VoiSelecte, AURipti_VoiSelectg
+		Move: AURipti_VoiMovea, AURipti_VoiMoveb, AURipti_VoiMovec, AURipti_VoiMoved, AURipti_VoiMovef, AURipti_VoiMovee, AURipti_VoiMoveh, AURipti_VoiMovei
+		Action: AURipti_VoiMovea, AURipti_VoiMoveb, AURipti_VoiMovec, AURipti_VoiMoved, AURipti_VoiMovef, AURipti_VoiMovee, AURipti_VoiMoveh, AURipti_VoiMovei
+		Attack: AURipti_VoiAttacka, AURipti_VoiAttackb, AURipti_VoiAttackc, AURipti_VoiAttackd, AURipti_VoiAttackf, AURipti_VoiAttacke, AURipti_VoiAttackg
+		Build: AURipti_VoiCreatea, AURipti_VoiCreateb
+
+FutureIFVVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: AUIFV_VoiSelecta, AUIFV_VoiSelectb, AUIFV_VoiSelectc, AUIFV_VoiSelectd, AUIFV_VoiSelectf
+		Move: AUIFV_VoiMovea, AUIFV_VoiMoveb, AUIFV_VoiMovec, AUIFV_VoiMoved, AUIFV_VoiMovef, AUIFV_VoiMovee, AUIFV_VoiMoveh, AUIFV_VoiMoveg
+		Action: AUIFV_VoiMovea, AUIFV_VoiMoveb, AUIFV_VoiMovec, AUIFV_VoiMoved, AUIFV_VoiMovef, AUIFV_VoiMovee, AUIFV_VoiMoveh, AUIFV_VoiMoveg
+		Attack: AUIFV_VoiAttacka, AUIFV_VoiAttackb, AUIFV_VoiAttackc, AUIFV_VoiAttackd, AUIFV_VoiAttackf, AUIFV_VoiAttacke, AUIFV_VoiAttackg
+		Build: AUIFV_VoiCreatea, AUIFV_VoiCreateb
+
+FutureGuardianVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: AUGuard_VoiSelecta, AUGuard_VoiSelectb, AUGuard_VoiSelectc, AUGuard_VoiSelectd, AUGuard_VoiSelectf, AUGuard_VoiSelecte
+		Move: AUGuard_VoiMovea, AUGuard_VoiMoveb, AUGuard_VoiMovec, AUGuard_VoiMoved, AUGuard_VoiMovef, AUGuard_VoiMovee, AUGuard_VoiMoveh, AUGuard_VoiMoveg, AUGuard_VoiMoveh, AUGuard_VoiMovei
+		Action: AUGuard_VoiMovea, AUGuard_VoiMoveb, AUGuard_VoiMovec, AUGuard_VoiMoved, AUGuard_VoiMovef, AUGuard_VoiMovee, AUGuard_VoiMoveh, AUGuard_VoiMoveg, AUGuard_VoiMoveh, AUGuard_VoiMovei
+		Attack: AUGuard_VoiAttacka, AUGuard_VoiAttackb, AUGuard_VoiAttackc, AUGuard_VoiAttackd, AUGuard_VoiAttackf, AUGuard_VoiAttacke, AUGuard_VoiAttackg
+		Build: AUGuard_VoiCreatea, AUGuard_VoiCreateb
+
+FutureCoilerVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: JUStrik_selecta
+		Move: JUStrik_movStartc
+		Action: JUStrik_movStartc
+		Attack: JUStrik_movStartc
+		Build: JUStrik_selecta
