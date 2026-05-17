@@ -921,7 +921,6 @@
 
 ^InfantryBuffs:
 	Inherits@GlobalBuffs: ^GlobalBuffs
-	Inherits@upgrade: ^AdvancedGuerillaTactics
 	ChangesHealth@SelfHealing:
 		Step: 10
 		Delay: 2
@@ -939,7 +938,6 @@
 
 ^TankBuffs:
 	Inherits@VehicleBuffs: ^VehicleBuffs
-	Inherits@upgrade: ^LightWeightArmorPlating
 	Inherits@upgrade: ^SovietSteel
 	DamageMultiplier@TankBuffs:
 		Modifier: 80
@@ -1238,8 +1236,6 @@
 	Inherits@EXT: ^ExternalConditions
 	Inherits@detect: ^GenericGroundDetector
 	Inherits@VehicleBuffs: ^VehicleBuffs
-	Inherits@upgrade: ^LightWeightArmorPlating
-	Inherits@upgrade: ^AdvancedGuerillaTactics
 	Armor:
 		Type: Scout
 	RevealsShroud:
@@ -1257,8 +1253,6 @@
 	Inherits@EXT: ^ExternalConditions
 	Inherits@detect: ^GenericAllDetector
 	Inherits@VehicleBuffs: ^VehicleBuffs
-	Inherits@upgrade: ^LightWeightArmorPlating
-	Inherits@upgrade: ^AdvancedGuerillaTactics
 	Armor:
 		Type: Light
 	RevealsShroud:
@@ -1347,7 +1341,6 @@
 	Inherits@EXPERIENCE: ^GainsExperienceVehicle
 	Inherits@EXT: ^ExternalConditions
 	Inherits@VehicleBuffs: ^VehicleBuffs
-	Inherits@upgrade: ^AdvancedGuerillaTactics
 	FirepowerMultiplier@FireSupportBuff:
 		Modifier: 150
 	Armor:
