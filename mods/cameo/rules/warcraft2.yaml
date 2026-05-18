@@ -1045,8 +1045,8 @@ WC2 SPELL/STATUS EFFECT INHERITABLES
 	ProvidesPrerequisite@buildingname:
 	ProvidesPrerequisite@barracks:
 		Prerequisite: barracks
-	ParallelProductionQueue@INFANTRY:
-		LowPowerModifier: 10000
+	# ParallelProductionQueue@INFANTRY:
+	# 	LowPowerModifier: 10000
 
 ^wc2_lumber_mill:
 	Inherits@ref: ^Refinery
@@ -1140,8 +1140,8 @@ WC2 SPELL/STATUS EFFECT INHERITABLES
 	ProvidesPrerequisite@buildingname:
 	GrantExternalConditionToProduced:
 		Condition: produced
-	ParallelProductionQueue@VEHICLE:
-		LowPowerModifier: 10000
+	# ParallelProductionQueue@VEHICLE:
+	# 	LowPowerModifier: 10000
 
 ^wc2_stables:
 	Inherits@shape: ^3x3Shape
@@ -1232,8 +1232,8 @@ WC2 SPELL/STATUS EFFECT INHERITABLES
 		Condition: produced
 	ProvidesPrerequisite@barracks:
 		Prerequisite: barracks
-	ParallelProductionQueue@INFANTRY:
-		LowPowerModifier: 10000
+	# ParallelProductionQueue@INFANTRY:
+	# 	LowPowerModifier: 10000
 
 ^wc2_nest:
 	Inherits@hpad: ^IsAircraftFactory
@@ -1253,8 +1253,8 @@ WC2 SPELL/STATUS EFFECT INHERITABLES
 	ProvidesPrerequisite@buildingname:
 	GrantExternalConditionToProduced:
 		Condition: produced
-	ParallelProductionQueue@AIRCRAFT:
-		LowPowerModifier: 10000
+	# ParallelProductionQueue@AIRCRAFT:
+	# 	LowPowerModifier: 10000
 
 ^wc2_shipyard:
 	Inherits@shipyard: ^IsShipyard
@@ -1276,8 +1276,8 @@ WC2 SPELL/STATUS EFFECT INHERITABLES
 	Targetable:
 		TargetTypes: Ground, Water, C4, Structure
 	ProvidesPrerequisite@buildingname:
-	ParallelProductionQueue@NAVAL:
-		LowPowerModifier: 10000
+	# ParallelProductionQueue@NAVAL:
+	# 	LowPowerModifier: 10000
 
 ^wc2_foundry:
 	Inherits@shape: ^3x3Shape

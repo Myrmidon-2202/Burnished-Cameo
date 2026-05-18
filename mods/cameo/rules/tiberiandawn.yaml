@@ -173,7 +173,6 @@ World:
 
 E1.GDI:
 	Inherits: ^E1
-	
 	Inherits@decoration: ^GDIRankDecoration
 	Tooltip:
 		Name: GDI Minigunner
@@ -218,7 +217,7 @@ E1.NOD:
 	Buildable:
 		BuildPaletteOrder: 10
 		Prerequisites: ~hand
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.NOD, RAInfantry.NOD
 		Description: actor-e1.description
 	Armament@PRIMARY: ##########
 		Weapon: M16

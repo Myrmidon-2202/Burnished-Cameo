@@ -6380,7 +6380,7 @@ CPQDEBUGDUMMY:
 		QueuedAudio: Building
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
-		InfiniteBuildLimit: 10
+		# InfiniteBuildLimit: 10
 	ProductionQueue@Defense:
 		Type: Defence
 		DisplayOrder: 1
@@ -6392,7 +6392,7 @@ CPQDEBUGDUMMY:
 		QueuedAudio: Building
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
-		InfiniteBuildLimit: 10
+		# InfiniteBuildLimit: 10
 	ProductionBar@BUILDING:
 		ProductionType: Building
 		RequiresCondition: !classicproductionqueues
@@ -6519,7 +6519,7 @@ CPQDEBUGDUMMY:
 		Produces: RAInfantry, Soldier
 		RequiresCondition: classicproductionqueues
 		PauseOnCondition: disabled
-	ParallelProductionQueue@INFANTRY:
+	ProductionQueue@INFANTRY:
 		Type: Infantry
 		DisplayOrder: 2
 		Group: Infantry
@@ -6530,7 +6530,7 @@ CPQDEBUGDUMMY:
 		QueuedAudio: Training
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
-		InfiniteBuildLimit: 10
+		# InfiniteBuildLimit: 10
 	ProductionBar@INFANTRY:
 		ProductionType: Infantry
 		RequiresCondition: !classicproductionqueues
@@ -6590,7 +6590,7 @@ CPQDEBUGDUMMY:
 		RequiresCondition: classicproductionqueues
 	Production:
 		Produces: Dog
-	ParallelProductionQueue@INFANTRY:
+	ProductionQueue@INFANTRY:
 		Type: Dog
 		DisplayOrder: 2
 		Group: Infantry
@@ -6601,7 +6601,7 @@ CPQDEBUGDUMMY:
 		QueuedAudio: Training
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
-		InfiniteBuildLimit: 10
+		# InfiniteBuildLimit: 10
 	Exit@0:
 		RequiresCondition: !being-captured
 		SpawnOffset: -280,400,0
@@ -6656,7 +6656,7 @@ CPQDEBUGDUMMY:
 		Produces: RAVehicle
 		RequiresCondition: classicproductionqueues
 		PauseOnCondition: disabled
-	ParallelProductionQueue@VEHICLE:
+	ProductionQueue@VEHICLE:
 		Type: Vehicle
 		DisplayOrder: 3
 		Group: Vehicle
@@ -6667,7 +6667,7 @@ CPQDEBUGDUMMY:
 		QueuedAudio: Training
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
-		InfiniteBuildLimit: 10
+		# InfiniteBuildLimit: 10
 	ProductionBar@VEHICLE:
 		ProductionType: Vehicle
 		RequiresCondition: !classicproductionqueues
@@ -6744,7 +6744,7 @@ CPQDEBUGDUMMY:
 		Produces: RAAircraft
 		RequiresCondition: classicproductionqueues
 		PauseOnCondition: disabled
-	ParallelProductionQueue@AIRCRAFT:
+	ProductionQueue@AIRCRAFT:
 		Type: Aircraft
 		DisplayOrder: 4
 		Group: Aircraft
@@ -6755,7 +6755,7 @@ CPQDEBUGDUMMY:
 		QueuedAudio: Training
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
-		InfiniteBuildLimit: 10
+		# InfiniteBuildLimit: 10
 	ProductionBar@AIRCRAFT:
 		ProductionType: Aircraft
 		RequiresCondition: !classicproductionqueues
@@ -6830,7 +6830,7 @@ CPQDEBUGDUMMY:
 	Production@CLASSICPRODUCTIONQUEUES:
 		Produces: RANaval
 		RequiresCondition: classicproductionqueues
-	ParallelProductionQueue@NAVAL:
+	ProductionQueue@NAVAL:
 		Type: Naval
 		DisplayOrder: 5
 		Group: Ship
@@ -6841,7 +6841,7 @@ CPQDEBUGDUMMY:
 		QueuedAudio: Training
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
-		InfiniteBuildLimit: 10
+		# InfiniteBuildLimit: 10
 	ProductionBar@NAVAL:
 		ProductionType: Naval
 		RequiresCondition: !classicproductionqueues

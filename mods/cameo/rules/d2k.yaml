@@ -1743,8 +1743,8 @@ heavy_factory.ixian:
 		Prerequisites: ~construction_yard.ixian, refinery.atreides
 		Description: template-factory.description
 		IconPalette: player
-	ParallelProductionQueue@VEHICLE:
-		BuildDurationModifier: 75
+	# ParallelProductionQueue@VEHICLE:
+	# 	BuildDurationModifier: 75
 	ProvidesPrerequisite@missiletank:
 		Prerequisite: heavy.missile_tank
 	# ProvidesPrerequisite@upgrade_heavy:
@@ -1760,8 +1760,8 @@ heavy_factory.ordos:
 		Prerequisites: ~construction_yard.ordos, refinery.ordos
 		Description: template-factory.description
 		IconPalette: player
-	ParallelProductionQueue@VEHICLE:
-		BuildDurationModifier: 75
+	# ParallelProductionQueue@VEHICLE:
+	# 	BuildDurationModifier: 75
 
 repair_pad.ixian:
 	Inherits: ^D2KBuilding
@@ -2189,7 +2189,7 @@ starport.ixian:
 		ActorType: frigate
 		PauseOnCondition: lowpower
 		RequiresCondition: classicproductionqueues
-	ParallelProductionQueue@VEHICLE:
+	ProductionQueue@VEHICLE:
 		Type: Vehicle
 		DisplayOrder: 3
 		Group: Vehicle

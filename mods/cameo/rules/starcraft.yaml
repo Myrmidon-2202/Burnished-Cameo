@@ -828,8 +828,8 @@ SCBARRACKS:
 		Dimensions: 3,3
 		LocalCenterOffset: 0,-512,0
 		BuildSounds: tscupd00.aud
-	ParallelProductionQueue@INFANTRY:
-		LowPowerModifier: 10000
+	# ParallelProductionQueue@INFANTRY:
+	# 	LowPowerModifier: 10000
 	ProductionCostMultiplier@terran:
 		Multiplier: 125
 	ProductionTimeMultiplier@terran:
@@ -1147,8 +1147,8 @@ SCFACTORY:
 		Dimensions: 3,3
 		LocalCenterOffset: 0,-512,0
 		BuildSounds: tscupd00.aud
-	ParallelProductionQueue@VEHICLE:
-		LowPowerModifier: 10000
+	# ParallelProductionQueue@VEHICLE:
+	# 	LowPowerModifier: 10000
 	ProductionCostMultiplier@terran:
 		Multiplier: 125
 	ProductionTimeMultiplier@terran:
@@ -1234,8 +1234,8 @@ SCSTARPORT:
 		Dimensions: 3,3
 		LocalCenterOffset: 0,-512,0
 		BuildSounds: tscupd00.aud
-	ParallelProductionQueue@AIRCRAFT:
-		LowPowerModifier: 10000
+	# ParallelProductionQueue@AIRCRAFT:
+	# 	LowPowerModifier: 10000
 	Selectable:
 		Bounds: 3072, 2048
 		DecorationBounds: 3300, 2448, 0, 0
@@ -1574,8 +1574,8 @@ SCGATEWAY:
 		Dimensions: 3,3
 		LocalCenterOffset: 0,-512,0
 		BuildSounds: pshbld03.aud
-	ParallelProductionQueue@INFANTRY:
-		LowPowerModifier: 10000
+	# ParallelProductionQueue@INFANTRY:
+	# 	LowPowerModifier: 10000
 	ProductionCostMultiplier@protoss:
 		Multiplier: 125
 	ProductionTimeMultiplier@protoss:
@@ -1813,8 +1813,8 @@ SCROBOTICSFACILITY:
 		Dimensions: 3,3
 		LocalCenterOffset: 0,-512,0
 		BuildSounds: pshbld03.aud
-	ParallelProductionQueue@VEHICLE:
-		LowPowerModifier: 10000
+	# ParallelProductionQueue@VEHICLE:
+	# 	LowPowerModifier: 10000
 	ProductionCostMultiplier@protoss:
 		Multiplier: 125
 	ProductionTimeMultiplier@protoss:
@@ -1857,8 +1857,8 @@ SCSTARGATE:
 		Dimensions: 3,3
 		LocalCenterOffset: 0,-512,0
 		BuildSounds: pshbld03.aud
-	ParallelProductionQueue@AIRCRAFT:
-		LowPowerModifier: 10000
+	# ParallelProductionQueue@AIRCRAFT:
+	# 	LowPowerModifier: 10000
 	Selectable:
 		Bounds: 3072, 2048
 		DecorationBounds: 3300, 2448, 0, 0
@@ -3232,8 +3232,8 @@ SCINFESTEDCOMMANDCENTER:
 		Description: Unlocks Siege Tanks.
 		IconPalette: windows256
 	WithBuildingBib:
-	ParallelProductionQueue@VEHICLE:
-		LowPowerModifier: 10000
+	# ParallelProductionQueue@VEHICLE:
+	# 	LowPowerModifier: 10000
 	RallyPoint: ##########
 		Path: 0,2
 	Exit@1:
