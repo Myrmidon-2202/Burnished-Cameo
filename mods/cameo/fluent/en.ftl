@@ -90,7 +90,7 @@ label-armor-class =
     .Superheavy = Superheavy
     .Shield = Shield
 
-loadscreen-loading = Drag to set a formation for units when attack-moving., Access your Promotions tab through the star button on the top right or the hotkey (default P)., The promotions counter on the top right displays your points and progress to earning them., Multiple production buildings can be cycled through using their categories' respective hotkeys.,Team Cash Sharing automatically redistributes resources among players.,Radiation will damage affected units regardless of player and resulting deaths do not count toward kills.
+loadscreen-loading = Activating Chronosphere..., Spawning Overlords..., Reticulating splines..., Constructing pylons..., Retrieving the Tacitus..., Building supply depots..., Generating jobs..., Making it glow..., Resolving target coordinates..., Seeding Tiberium..., Activating Core Defender Protocol..., Repositioning ion cannon..., Detecting nuclear launches..., Merging timelines..., Becoming one with Yuri..., Searching for synaptic link technology..., Fighting over dog food..., Preparing for the moment..., Hitting the gas..., Breaking the sound barrier..., Steam Bang!, Unit Lost, Infantry Reporting!, The Power of Money!, Double Time!, Meteor Strike approaching..., The writers were attacked by Black Hole..., Launching Death Hand Missile..., Ornithopters Incoming..., The Spice must flow..., Releasing Sardaukars..., Conquering Overmind..., Poking Orcs..., For the Emperor!..., Whaaag!!!..., BANEBLADE!!!..., Steel Rain!!!..., Working in threes..., LOADING, DO SO NOW...
 
 ## ingame-observer.yaml, ingame-player.yaml
 label-mute-indicator = Audio Muted
