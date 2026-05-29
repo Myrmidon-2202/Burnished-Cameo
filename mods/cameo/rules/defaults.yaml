@@ -948,7 +948,7 @@
 		RequiresCondition: tankbunkered
 
 ^ArtilleryBuffs:
-	Inherits@IxianTechnology: ^D2K_AdvancedIxianTechnologyTeamUpgrade
+	# Inherits@IxianTechnology: ^D2K_AdvancedIxianTechnologyTeamUpgrade
 
 ^AircraftBuffs:
 	Inherits@GlobalBuffs: ^GlobalBuffs
@@ -1422,7 +1422,7 @@
 		CruiseAltitude: 4000
 		RepulsionSpeed: 40
 		MaximumPitch: 40
-		IdealSeparation: 2000
+		IdealSeparation: 4000
 	Armor:
 		Type: Fighter
 	RevealsShroud:
@@ -1451,7 +1451,7 @@
 		CruiseAltitude: 4000
 		RepulsionSpeed: 40
 		MaximumPitch: 40
-		IdealSeparation: 2000
+		IdealSeparation: 4000
 	Armor:
 		Type: Bomber
 	RevealsShroud:
@@ -1475,7 +1475,7 @@
 		CruiseAltitude: 2000
 		RepulsionSpeed: 40
 		MaximumPitch: 40
-		IdealSeparation: 1500
+		IdealSeparation: 4000
 		AltitudeVelocity: 100
 	Armor:
 		Type: Helicopter
@@ -6574,6 +6574,67 @@ CPQDEBUGDUMMY:
 		ExitCell: 0,2
 		ProductionTypes: Soldier, Infantry, RAInfantry
 
+^IsBarrackOld:
+	Inherits@DisabledOverlay: ^DisableOnPowerDown
+	Inherits: ^ScaledProducer
+	Buildable:
+		Queue: Building, RABuilding
+		BuildPaletteOrder: 30
+		BuildDuration: 250
+		BuildDurationModifier: 100
+		Description: template-barracks.description
+	Valued:
+		Cost: 1000
+	Health:
+		HP: 200000
+	Armor:
+		Type: Wood
+	Power:
+		Amount: -20
+	RevealsShroud:
+		Range: 5000
+	Production@NORMAL:
+		Produces: Infantry, Soldier
+		RequiresCondition: !classicproductionqueues
+		PauseOnCondition: disabled
+		# InfiniteBuildLimit: 10
+	InfiltrateForSupportPower:
+		Proxy: infantry.upgraded
+		Types: SpyInfiltrate
+	Targetable@SpyInfiltrate:
+		TargetTypes: SpyInfiltrate
+	ProvidesPrerequisite@buildingname:
+	GrantExternalConditionToOwner@Scaled:
+		Condition: ownsbarr
+	ProductionCostMultiplier@Scaled0:
+		Prerequisites: 0barr, scaledproductionqueues
+	ProductionTimeMultiplier@Scaled0:
+		Prerequisites: 0barr, scaledproductionqueues
+	ProductionCostMultiplier@Scaled1:
+		Prerequisites: 1barr
+	ProductionTimeMultiplier@Scaled1:
+		Prerequisites: 1barr
+	ProductionCostMultiplier@Scaled2:
+		Prerequisites: 2barr
+	ProductionTimeMultiplier@Scaled2:
+		Prerequisites: 2barr
+	ProductionCostMultiplier@Scaled3:
+		Prerequisites: 3barr
+	ProductionTimeMultiplier@Scaled3:
+		Prerequisites: 3barr
+	ProductionCostMultiplier@Scaled4:
+		Prerequisites: 4barr
+	ProductionTimeMultiplier@Scaled4:
+		Prerequisites: 4barr
+	# Exit@1:
+	# 	SpawnOffset: -170,810,0
+	# 	ExitCell: 1,2
+	# 	ProductionTypes: Soldier, Infantry, RAInfantry
+	# Exit@2:
+	# 	SpawnOffset: -725,640,0
+	# 	ExitCell: 0,2
+	# 	ProductionTypes: Soldier, Infantry, RAInfantry
+
 ^IsDogKennel:
 	Inherits@DisabledOverlay: ^IsBarrack
 	Valued:
@@ -6707,6 +6768,84 @@ CPQDEBUGDUMMY:
 	ProductionTimeMultiplier@Scaled4:
 		Prerequisites: 4weap
 
+^IsWeaponFactoryOld:
+	Inherits@DisabledOverlay: ^DisableOnPowerDown
+	Inherits: ^ScaledProducer
+	Buildable:
+		Queue: Building, RABuilding
+		BuildPaletteOrder: 40
+		BuildDuration: 500
+		BuildDurationModifier: 100
+		Description: template-factory.description
+	Valued:
+		Cost: 2000
+	Health:
+		HP: 400000
+	Armor:
+		Type: Concrete
+	Power:
+		Amount: -40
+	RevealsShroud:
+		Range: 8000
+	Production@NORMAL:
+		Produces: Vehicle
+		RequiresCondition: !classicproductionqueues
+		PauseOnCondition: disabled
+	# Production@CLASSICPRODUCTIONQUEUES:
+	# 	Produces: RAVehicle
+	# 	RequiresCondition: classicproductionqueues
+	# 	PauseOnCondition: disabled
+	# ProductionQueue@VEHICLE:
+	# 	Type: Vehicle
+	# 	DisplayOrder: 3
+	# 	Group: Vehicle
+	# 	LowPowerModifier: 300
+	# 	ReadyAudio: UnitReady
+	# 	BlockedAudio: NoBuild
+	# 	LimitedAudio: BuildingInProgress
+	# 	QueuedAudio: Training
+	# 	OnHoldAudio: OnHold
+	# 	CancelledAudio: Cancelled
+	# 	# InfiniteBuildLimit: 10
+	# ProductionBar@VEHICLE:
+	# 	ProductionType: Vehicle
+	# 	RequiresCondition: !classicproductionqueues
+	# ProductionBar@RAVEHICLE:
+	# 	ProductionType: RAVehicle
+	# 	RequiresCondition: classicproductionqueues
+	InfiltrateForSupportPower:
+		Proxy: vehicles.upgraded
+		Types: SpyInfiltrate
+	Targetable@SpyInfiltrate:
+		TargetTypes: SpyInfiltrate
+	SpawnActorOnDeath@2100ResearchSteal:
+		Probability: 99
+		Actor: 2100artifact
+		DeathType: 2100ResearchSteal
+	ProvidesPrerequisite@buildingname:
+	GrantExternalConditionToOwner@Scaled:
+		Condition: ownsweap
+	ProductionCostMultiplier@Scaled0:
+		Prerequisites: 0weap, scaledproductionqueues
+	ProductionTimeMultiplier@Scaled0:
+		Prerequisites: 0weap, scaledproductionqueues
+	ProductionCostMultiplier@Scaled1:
+		Prerequisites: 1weap
+	ProductionTimeMultiplier@Scaled1:
+		Prerequisites: 1weap
+	ProductionCostMultiplier@Scaled2:
+		Prerequisites: 2weap
+	ProductionTimeMultiplier@Scaled2:
+		Prerequisites: 2weap
+	ProductionCostMultiplier@Scaled3:
+		Prerequisites: 3weap
+	ProductionTimeMultiplier@Scaled3:
+		Prerequisites: 3weap
+	ProductionCostMultiplier@Scaled4:
+		Prerequisites: 4weap
+	ProductionTimeMultiplier@Scaled4:
+		Prerequisites: 4weap
+
 ^IsAircraftFactory:
 	Inherits@DisabledOverlay: ^DisableOnPowerDown
 	Inherits: ^ScaledProducer
@@ -6792,7 +6931,188 @@ CPQDEBUGDUMMY:
 	ProductionTimeMultiplier@Scaled4:
 		Prerequisites: 4air
 
+^IsAircraftFactoryOld:
+	Inherits@DisabledOverlay: ^DisableOnPowerDown
+	Inherits: ^ScaledProducer
+	Inherits@repair: ^RepairsUnits
+	Buildable:
+		Queue: Building, RABuilding
+		BuildPaletteOrder: 50
+		BuildDuration: 375
+		BuildDurationModifier: 100
+		Description: template-airfield.description
+	Valued:
+		Cost: 1500
+	Health:
+		HP: 300000
+	Armor:
+		Type: Wood
+	Power:
+		Amount: -30
+	RevealsShroud:
+		Range: 6000
+	InfiltrateForSupportPower@SpyInfiltrate:
+		Proxy: aircraft.upgraded
+		Types: SpyInfiltrate
+	Targetable@SpyInfiltrate:
+		TargetTypes: SpyInfiltrate
+	SpawnActorOnDeath@2100ResearchSteal:
+		Probability: 99
+		Actor: 2100artifact
+		DeathType: 2100ResearchSteal
+	Production@NORMAL:
+		Produces: Aircraft
+		RequiresCondition: !classicproductionqueues
+		PauseOnCondition: disabled
+	# Production@CLASSICPRODUCTIONQUEUES:
+	# 	Produces: RAAircraft
+	# 	RequiresCondition: classicproductionqueues
+	# 	PauseOnCondition: disabled
+	# ProductionQueue@AIRCRAFT:
+	# 	Type: Aircraft
+	# 	DisplayOrder: 4
+	# 	Group: Aircraft
+	# 	LowPowerModifier: 300
+	# 	ReadyAudio: UnitReady
+	# 	BlockedAudio: NoBuild
+	# 	LimitedAudio: BuildingInProgress
+	# 	QueuedAudio: Training
+	# 	OnHoldAudio: OnHold
+	# 	CancelledAudio: Cancelled
+	# 	# InfiniteBuildLimit: 10
+	# ProductionBar@AIRCRAFT:
+	# 	ProductionType: Aircraft
+	# 	RequiresCondition: !classicproductionqueues
+	# ProductionBar@RAAIRCRAFT:
+	# 	ProductionType: RAAircraft
+	# 	RequiresCondition: classicproductionqueues
+	RepairsUnits:
+		HpPerStep: 1000
+		Interval: 10
+		PlayerExperience: 25
+		StartRepairingNotification: Repairing
+	RallyPoint:
+	ProvidesPrerequisite@buildingname:
+	GrantExternalConditionToOwner@Scaled:
+		Condition: ownsair
+	ProductionCostMultiplier@Scaled0:
+		Prerequisites: 0air, scaledproductionqueues
+	ProductionTimeMultiplier@Scaled0:
+		Prerequisites: 0air, scaledproductionqueues
+	ProductionCostMultiplier@Scaled1:
+		Prerequisites: 1air
+	ProductionTimeMultiplier@Scaled1:
+		Prerequisites: 1air
+	ProductionCostMultiplier@Scaled2:
+		Prerequisites: 2air
+	ProductionTimeMultiplier@Scaled2:
+		Prerequisites: 2air
+	ProductionCostMultiplier@Scaled3:
+		Prerequisites: 3air
+	ProductionTimeMultiplier@Scaled3:
+		Prerequisites: 3air
+	ProductionCostMultiplier@Scaled4:
+		Prerequisites: 4air
+	ProductionTimeMultiplier@Scaled4:
+		Prerequisites: 4air
+
 ^IsShipyard:
+	Inherits@DisabledOverlay: ^DisableOnPowerDown
+	Inherits: ^ScaledProducer
+	Inherits@CPQWP: ^CPQConditionWithPrimary
+	Inherits@prod: ^ProducesUnits
+	Inherits@repair: ^RepairsUnits
+	Buildable:
+		Queue: Building, RABuilding
+		BuildPaletteOrder: 50
+		BuildDuration: 250
+		BuildDurationModifier: 100
+		Description: template-shipyard.description
+	Valued:
+		Cost: 3000
+	Health:
+		HP: 600000
+	Armor:
+		Type: Concrete
+	Power:
+		Amount: -60
+	RevealsShroud:
+		Range: 12000
+	RequiresBuildableArea:
+		Adjacent: 10
+	Targetable@NavalYard:
+		TargetTypes: NavalYard
+	Reservable:
+	RepairsUnits:
+		HpPerStep: 1000
+		PlayerExperience: 25
+		StartRepairingNotification: Repairing
+	RallyPoint:
+	Production@NORMAL:
+		Produces: Naval
+		RequiresCondition: !classicproductionqueues
+	Production@CLASSICPRODUCTIONQUEUES:
+		Produces: RANaval
+		RequiresCondition: classicproductionqueues
+	ProductionQueue@NAVAL:
+		Type: Naval
+		DisplayOrder: 5
+		Group: Ship
+		LowPowerModifier: 300
+		ReadyAudio: UnitReady
+		BlockedAudio: NoBuild
+		LimitedAudio: BuildingInProgress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+		# InfiniteBuildLimit: 10
+	ProductionBar@NAVAL:
+		ProductionType: Naval
+		RequiresCondition: !classicproductionqueues
+	ProductionBar@RANAVAL:
+		ProductionType: RANaval
+		RequiresCondition: classicproductionqueues
+	Exit@1:
+		SpawnOffset: -1024,1024,0
+		Facing: 640
+		ExitCell: 0,2
+	Exit@2:
+		SpawnOffset: 1024,1024,0
+		Facing: 896
+		ExitCell: 2,2
+	Exit@3:
+		SpawnOffset: -1024,-1024,0
+		Facing: 384
+		ExitCell: 0,0
+	Exit@4:
+		SpawnOffset: 1024,-1024,0
+		Facing: 128
+		ExitCell: 2,0
+	ProvidesPrerequisite@buildingname:
+	GrantExternalConditionToOwner@Scaled:
+		Condition: ownsship
+	ProductionCostMultiplier@Scaled0:
+		Prerequisites: 0ship, scaledproductionqueues
+	ProductionTimeMultiplier@Scaled0:
+		Prerequisites: 0ship, scaledproductionqueues
+	ProductionCostMultiplier@Scaled1:
+		Prerequisites: 1ship
+	ProductionTimeMultiplier@Scaled1:
+		Prerequisites: 1ship
+	ProductionCostMultiplier@Scaled2:
+		Prerequisites: 2ship
+	ProductionTimeMultiplier@Scaled2:
+		Prerequisites: 2ship
+	ProductionCostMultiplier@Scaled3:
+		Prerequisites: 3ship
+	ProductionTimeMultiplier@Scaled3:
+		Prerequisites: 3ship
+	ProductionCostMultiplier@Scaled4:
+		Prerequisites: 4ship
+	ProductionTimeMultiplier@Scaled4:
+		Prerequisites: 4ship
+
+^IsShipyardOld:
 	Inherits@DisabledOverlay: ^DisableOnPowerDown
 	Inherits: ^ScaledProducer
 	Inherits@CPQWP: ^CPQConditionWithPrimary

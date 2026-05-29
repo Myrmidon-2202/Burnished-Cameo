@@ -178,8 +178,8 @@ E1.GDI:
 		Name: GDI Minigunner
 	Buildable:
 		BuildPaletteOrder: 10
-		Prerequisites: ~pyle
-		Queue: Infantry, RAInfantry
+		Prerequisites: pyle
+		Queue: Infantry.GDI, RAInfantry.GDI
 		Description: actor-e1.description
 	Armament@PRIMARY: ##########
 		Weapon: M16
@@ -208,15 +208,12 @@ E1: #map import compatibility
 
 E1.NOD:
 	Inherits: ^E1
-
-	
-	
 	Inherits@decoration: ^NodRankDecoration
 	Tooltip:
 		Name: Nod Minigunner
 	Buildable:
 		BuildPaletteOrder: 10
-		Prerequisites: ~hand
+		Prerequisites: hand
 		Queue: Infantry.NOD, RAInfantry.NOD
 		Description: actor-e1.description
 	Armament@PRIMARY: ##########
@@ -248,7 +245,6 @@ E2:
 	Inherits@DECORATIONS: ^InfantryExperienceHospitalHazmatOverrides
 	Inherits@AntiInf: ^PrioritizeInfantry
 	Inherits@AntiBuil: ^PrioritizeBuilding
-	
 	Inherits@decoration: ^GDIRankDecoration
 	Valued:
 		Cost: 200
@@ -258,8 +254,8 @@ E2:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 40
-		Prerequisites: ~pyle, ~!upgdiempgrenadier
-		Queue: Infantry, RAInfantry
+		Prerequisites: pyle
+		Queue: Infantry.GDI, RAInfantry.GDI
 		Description: actor-e2.description
 	Mobile:
 		Speed: 75
@@ -309,7 +305,7 @@ E2:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 20
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.GDI, RAInfantry.GDI,Infantry.NOD, RAInfantry.NOD
 		Description: actor-e3.description
 	Mobile:
 		Speed: 50
@@ -341,7 +337,6 @@ E3.GDI:
 	Inherits: ^E3
 	Tooltip:
 		Name: GDI Rocket Soldier
-	
 	Inherits@decoration: ^GDIRankDecoration
 	Buildable:
 		Prerequisites: ~pyle, ~!upgdimissilesoldier
@@ -396,8 +391,8 @@ E4:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 40
-		Prerequisites: ~hq.nod, ~!upblackhandflamer
-		Queue: Infantry, RAInfantry
+		Prerequisites: ~hq.nod
+		Queue: Infantry.NOD, RAInfantry.NOD
 		Description: actor-e4.description
 	Mobile:
 		Speed: 60
@@ -449,8 +444,8 @@ E5:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 50
-		Prerequisites: ~tmpl
-		Queue: Infantry, RAInfantry
+		Prerequisites: tmpl
+		Queue: Infantry.Nod, RAInfantry.Nod
 		Description: actor-e5.description
 	Mobile:
 		Speed: 48
@@ -501,8 +496,8 @@ E6:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 30
-		Prerequisites: ~cncbarracks
-		Queue: Infantry, RAInfantry
+		Prerequisites: pyle
+		Queue: Infantry.GDI, RAInfantry.GDI
 		Description: actor-e6.description
 	Mobile:
 		Speed: 50
@@ -564,7 +559,7 @@ E6:
 	ActorStatValues:
 		Stats: Armor, Sight, Speed
 
-^RMBO:
+RMBO:
 	Inherits: ^Soldier
 	Inherits@anim: ^TDRAInfantry
 	Inherits@Template: ^HeroInfantryTemplate
@@ -584,7 +579,8 @@ E6:
 	Buildable:
 		BuildLimit: 1
 		BuildPaletteOrder: 50
-		Queue: Infantry, RAInfantry
+		Prerequisites: eye
+		Queue: Infantry.GDI, RAInfantry.GDI, Infantry.Nod, RAInfantry.Nod
 		Description: template-commando.description
 	Mobile:
 		Speed: 65
@@ -632,37 +628,37 @@ E6:
 	RenderSprites:
 		Image: rmbo
 
-RMBO.GDI:
-	Inherits: ^RMBO
-	Inherits@decoration: ^GDIRankDecoration
-	Tooltip:
-		Name: GDI Commando
-	Buildable:
-		Prerequisites: ~eye, ~!upgdihavoc
-	Armament:
-		Weapon: Sniper
-		LocalOffset: 128,0,256
-		RequiresCondition: !up_armorpiercingbullets
-	Armament@GARRISONED:
-		Name: garrisoned
-		Weapon: Sniper
-		RequiresCondition: !up_armorpiercingbullets
-	Armament@Upgrade: ##########
-		Weapon: SniperAP
-		LocalOffset: 128,0,256
-		RequiresCondition: up_armorpiercingbullets
-	Armament@UpgradeGARRISONED: ##########
-		Name: garrisoned
-		Weapon: SniperAP
-		RequiresCondition: up_armorpiercingbullets
+# RMBO.GDI:
+# 	Inherits: ^RMBO
+# 	Inherits@decoration: ^GDIRankDecoration
+# 	Tooltip:
+# 		Name: GDI Commando
+# 	Buildable:
+# 		Prerequisites: ~eye, ~!upgdihavoc
+# 	Armament:
+# 		Weapon: Sniper
+# 		LocalOffset: 128,0,256
+# 		RequiresCondition: !up_armorpiercingbullets
+# 	Armament@GARRISONED:
+# 		Name: garrisoned
+# 		Weapon: Sniper
+# 		RequiresCondition: !up_armorpiercingbullets
+# 	Armament@Upgrade: ##########
+# 		Weapon: SniperAP
+# 		LocalOffset: 128,0,256
+# 		RequiresCondition: up_armorpiercingbullets
+# 	Armament@UpgradeGARRISONED: ##########
+# 		Name: garrisoned
+# 		Weapon: SniperAP
+# 		RequiresCondition: up_armorpiercingbullets
 
-RMBO.NOD:
-	Inherits: ^RMBO
-	Inherits@decoration: ^NodRankDecoration
-	Tooltip:
-		Name: Nod Commando
-	Buildable:
-		Prerequisites: ~tmpl, ~!upnodvenom
+# RMBO.NOD:
+# 	Inherits: ^RMBO
+# 	Inherits@decoration: ^NodRankDecoration
+# 	Tooltip:
+# 		Name: Nod Commando
+# 	Buildable:
+# 		Prerequisites: ~tmpl, ~!upnodvenom
 
 ^TDMCV:
 	Inherits: ^Vehicle
@@ -680,8 +676,6 @@ RMBO.NOD:
 
 MCV.GDI:
 	Inherits@mcv: ^TDMCV
-	
-
 	Tooltip:
 		Name: GDI Mobile Construction Vehicle
 	Buildable:
@@ -693,7 +687,6 @@ MCV.GDI:
 
 MCV.NOD:
 	Inherits@mcv: ^TDMCV
-
 		Tooltip:
 		Name: Nod Mobile Construction Vehicle
 	Buildable:
@@ -743,21 +736,18 @@ MCV.NOD:
 
 HARV.GDI:
 	Inherits: ^TDHARV
-	
-
 	Buildable:
 		Prerequisites: ~proc.gdi
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.GDI, RAVehicle.GDI
 		Description: template-harvester.description
 	Tooltip:
 		Name: GDI Tiberium Harvester
 
 HARV.NOD:
 	Inherits: ^TDHARV
-
 		Buildable:
 		Prerequisites: ~proc.nod, ~!upstealthsoldier
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Nod, RAVehicle.Nod
 		Description: template-harvester.description
 	Tooltip:
 		Name: Nod Tiberium Harvester
@@ -771,8 +761,6 @@ APC:
 	Inherits@AntiInf: ^PrioritizeInfantry
 	Inherits@AntiAir: ^PrioritizeAir
 	Inherits@botmicro: ^BotAutoDeployTransport
-	
-
 	Inherits@decoration: ^GDIRankDecoration
 	Valued:
 		Cost: 1200
@@ -783,8 +771,8 @@ APC:
 		OverrideActor: apc
 	Buildable:
 		BuildPaletteOrder: 30
-		Prerequisites: ~pyle, ~!upgdiassaultapc
-		Queue: Vehicle, RAVehicle
+		Prerequisites: pyle
+		Queue: Vehicle.GDI, RAVehicle.GDI
 		Description: actor-apc.description
 	Mobile:
 		Speed: 100
@@ -816,7 +804,7 @@ APC:
 	WithMuzzleOverlay:
 	WithSpriteTurret:
 	Cargo:
-		InitialUnits: e1.gdi, e1.gdi, e1.gdi, e1.gdi, e2, e2, e3.gdi, e3.gdi
+		InitialUnits:
 		Types: Infantry, Hacker, Fremen
 		MaxWeight: 8
 	FireWarheadsOnDeath:
@@ -846,7 +834,7 @@ ARTY:
 	Buildable:
 		BuildPaletteOrder: 60
 		Prerequisites: ~hq.nod, ~!upnodspecter
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Nod, RAVehicle.Nod
 		Description: actor-arty.description
 	Mobile:
 		Speed: 55
@@ -897,7 +885,7 @@ FTNK:
 	Buildable:
 		BuildPaletteOrder: 50
 		Prerequisites: ~hq.nod, ~!upnodftnk2
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Nod, RAVehicle.Nod
 		Description: actor-ftnk.description
 	Mobile:
 		Speed: 80
@@ -927,7 +915,6 @@ BGGY:
 	Inherits@EXP: ^GainsExperienceTD
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Inherits@AntiInf: ^PrioritizeInfantry
-
 	Inherits@decoration: ^NodRankDecoration
 	Valued:
 		Cost: 300
@@ -938,7 +925,7 @@ BGGY:
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: ~afld, ~!upnodbuggy2
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Nod, RAVehicle.Nod
 		Description: actor-bggy.description
 	Mobile:
 		Speed: 200
@@ -973,8 +960,6 @@ JEEP:
 	Inherits@EXP: ^GainsExperienceTD
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Inherits@AntiInf: ^PrioritizeInfantry
-	
-
 	Inherits@decoration: ^GDIRankDecoration
 	Valued:
 		Cost: 400
@@ -984,8 +969,8 @@ JEEP:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 20
-		Prerequisites: ~weap, ~!upgdihumvee
-		Queue: Vehicle, RAVehicle
+		Prerequisites: weap
+		Queue: Vehicle.GDI, RAVehicle.GDI
 		Description: actor-jeep.description
 	Mobile:
 		Speed: 150
@@ -1025,8 +1010,7 @@ BIKE:
 	Inherits@AntiVeh: ^PrioritizeVehicle
 	Inherits@AntiTank: ^PrioritizeTank
 	Inherits@AntiAir: ^PrioritizeAir
-
-		Inherits@decoration: ^NodRankDecoration
+	Inherits@decoration: ^NodRankDecoration
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -1036,7 +1020,7 @@ BIKE:
 	Buildable:
 		BuildPaletteOrder: 30
 		Prerequisites: ~afld, ~!upchemicalbike
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Nod, RAVehicle.Nod
 		Description: actor-bike.description
 	Mobile:
 		Speed: 200
@@ -1067,7 +1051,6 @@ LTNK:
 	Inherits@EXP: ^GainsExperienceTD
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
 	Inherits@AntiVeh: ^PrioritizeVehicle
-
 	Inherits@decoration: ^NodRankDecoration
 	Valued:
 		Cost: 600
@@ -1077,8 +1060,8 @@ LTNK:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 40
-		Prerequisites: ~afld, ~!upnodltnk2
-		Queue: Vehicle, RAVehicle
+		Prerequisites: afld
+		Queue: Vehicle.Nod, RAVehicle.Nod
 		Description: actor-ltnk.description
 	Mobile:
 		Speed: 110
@@ -1126,8 +1109,6 @@ MTNK:
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
 	Inherits@AntiVeh: ^PrioritizeVehicle
 	Inherits@AntiTank: ^PrioritizeTank
-	
-
 	Inherits@decoration: ^GDIRankDecoration
 	Valued:
 		Cost: 900
@@ -1137,8 +1118,8 @@ MTNK:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 40
-		Prerequisites: ~weap, ~!upgdipredator
-		Queue: Vehicle, RAVehicle
+		Prerequisites: weap
+		Queue: Vehicle.GDI, RAVehicle.GDI
 		Description: actor-mtnk.description
 	Mobile:
 		Speed: 80
@@ -1213,8 +1194,6 @@ HTNK:
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
 	Inherits@AntiVeh: ^PrioritizeVehicle
 	Inherits@AntiTank: ^PrioritizeTank
-	
-
 	Inherits@decoration: ^GDIRankDecoration
 	Valued:
 		Cost: 1600
@@ -1224,8 +1203,8 @@ HTNK:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 60
-		Prerequisites: ~eye, ~!upgdimammoth3
-		Queue: Vehicle, RAVehicle
+		Prerequisites: FIX.GDI, eye
+		Queue: Vehicle.GDI, RAVehicle.GDI
 		Description: actor-htnk.description
 	Mobile:
 		Locomotor: heavytracked
@@ -1301,7 +1280,6 @@ MLRS:
 	Inherits@AntiAir: ^PrioritizeAir
 	Inherits@AntiBuil: ^PrioritizeBuilding
 	Inherits@AntiDef: ^PrioritizeDefence
-	
 	Inherits@decoration: ^GDIRankDecoration
 	Valued:
 		Cost: 1000
@@ -1311,8 +1289,8 @@ MLRS:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 50
-		Prerequisites: ~hq.gdi
-		Queue: Vehicle, RAVehicle
+		Prerequisites: hq.gdi
+		Queue: Vehicle.GDI, RAVehicle.GDI
 		Description: actor-mlrs.description
 	Mobile:
 		Speed: 80
@@ -1358,68 +1336,66 @@ MLRS:
 		RequiresCondition: firing
 		Modifier: 50
 
-gdiarcher:
-	Inherits: ^Tank
-	Inherits@Template: ^ArtilleryTemplate
-	Inherits@EXP: ^GainsExperienceTD
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
-	
-	Inherits@decoration: ^GDIRankDecoration
-	Valued:
-		Cost: 750
-	Tooltip:
-		Name: Archer Artillery
-	UpdatesPlayerStatistics:
-		AddToArmyValue: true
-	Buildable:
-		BuildPaletteOrder: 50
-		Prerequisites: ~eye
-		Queue: Vehicle, RAVehicle
-		Description: actor-mlrs.description
-	Mobile:
-		Speed: 70
-		TurnSpeed: 14
-	Health:
-		HP: 35000
-	Repairable:
-		HpPerStep: 1750
-	ChangesHealth@SelfHealing:
-		Step: 14
-	Armor:
-		Type: Medium
-	Turreted:
-		TurnSpeed: 14
-		Offset: -512,0,256
-	Armament@PRIMARY:
-		Weapon: ArcherArtilleryShell
-		LocalOffset: 1024,0,512
-		MuzzleSequence: muzzle
-	AttackTurreted:
-	WithSpriteTurret:
-	WithMuzzleOverlay:
-	FireWarheadsOnDeath:
-		Weapon: ArcherArtilleryShell
-	RenderRangeCircle:
-	RenderSprites:
-		Image: gdiarcher
-		PlayerPalette: player_rgba
-	GrantConditionOnAttack:
-		Condition: firing
-		RevokeDelay: 70
-	SpeedMultiplier@firing:
-		RequiresCondition: firing
-		Modifier: 50
-	TurnSpeedMultiplier@firing:
-		RequiresCondition: firing
-		Modifier: 50
+# gdiarcher:
+# 	Inherits: ^Tank
+# 	Inherits@Template: ^ArtilleryTemplate
+# 	Inherits@EXP: ^GainsExperienceTD
+# 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+# 	Inherits@decoration: ^GDIRankDecoration
+# 	Valued:
+# 		Cost: 750
+# 	Tooltip:
+# 		Name: Archer Artillery
+# 	UpdatesPlayerStatistics:
+# 		AddToArmyValue: true
+# 	Buildable:
+# 		BuildPaletteOrder: 50
+# 		Prerequisites: ~eye
+# 		Queue: Vehicle, RAVehicle
+# 		Description: actor-mlrs.description
+# 	Mobile:
+# 		Speed: 70
+# 		TurnSpeed: 14
+# 	Health:
+# 		HP: 35000
+# 	Repairable:
+# 		HpPerStep: 1750
+# 	ChangesHealth@SelfHealing:
+# 		Step: 14
+# 	Armor:
+# 		Type: Medium
+# 	Turreted:
+# 		TurnSpeed: 14
+# 		Offset: -512,0,256
+# 	Armament@PRIMARY:
+# 		Weapon: ArcherArtilleryShell
+# 		LocalOffset: 1024,0,512
+# 		MuzzleSequence: muzzle
+# 	AttackTurreted:
+# 	WithSpriteTurret:
+# 	WithMuzzleOverlay:
+# 	FireWarheadsOnDeath:
+# 		Weapon: ArcherArtilleryShell
+# 	RenderRangeCircle:
+# 	RenderSprites:
+# 		Image: gdiarcher
+# 		PlayerPalette: player_rgba
+# 	GrantConditionOnAttack:
+# 		Condition: firing
+# 		RevokeDelay: 70
+# 	SpeedMultiplier@firing:
+# 		RequiresCondition: firing
+# 		Modifier: 50
+# 	TurnSpeedMultiplier@firing:
+# 		RequiresCondition: firing
+# 		Modifier: 50
 
 MSSM:
 	Inherits: ^Tank
 	Inherits@Template: ^FireSupportTemplate
 	Inherits@EXP: ^GainsExperienceTD
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
-
-		Inherits@decoration: ^NodRankDecoration
+	Inherits@decoration: ^NodRankDecoration
 	Valued:
 		Cost: 800
 	Tooltip:
@@ -1429,7 +1405,7 @@ MSSM:
 	Buildable:
 		BuildPaletteOrder: 100
 		Prerequisites: ~tmpl, ~!upchemicalssmlauncher
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Nod, RAVehicle.Nod
 		Description: actor-mssm.description
 		Icon: icon
 	Mobile:
@@ -1496,8 +1472,8 @@ STNK:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 90
-		Prerequisites: ~tmpl, ~!upchemicalstealthtank
-		Queue: Vehicle, RAVehicle
+		Prerequisites: tmpl
+		Queue: Vehicle.Nod, RAVehicle.Nod
 		Description: actor-stnk.description
 	Mobile:
 		Locomotor: heavywheeled
@@ -1617,38 +1593,36 @@ TRAN:
 
 tran.gdi:
 	Inherits: TRAN
-	
 	Valued:
 		Cost: 3000
 	Tooltip:
 		Name: GDI Chinook Transport
 	Buildable:
 		BuildPaletteOrder: 10
-		Prerequisites: ~hpad.gdi
-		Queue: Aircraft, RAAircraft
+		Prerequisites: hpad.gdi
+		Queue: Aircraft.GDI, RAAircraft.GDI
 		Description: actor-tran.description
 	Buildable:
-		Prerequisites: ~hpad.gdi
-		Queue: Aircraft, RAAircraft
+		Prerequisites: hpad
+		Queue: Aircraft.GDI, RAAircraft.GDI
 	EjectOnDeath:
 		PilotActor: e1.gdi
 	Cargo:
 		UnloadVoice: Move
 		Types: Infantry, Hacker, Fremen
 		MaxWeight: 8
-		InitialUnits: e1.gdi, e2, e3.gdi
+		InitialUnits:
 
 tran.nod:
 	Inherits: TRAN
-
 		Valued:
 		Cost: 3200
 	Tooltip:
 		Name: Nod Chinook Transport
 	Buildable:
 		BuildPaletteOrder: 10
-		Prerequisites: ~hpad.nod
-		Queue: Aircraft, RAAircraft
+		Prerequisites: hpad
+		Queue: Aircraft.Nod, RAAircraft.Nod
 		Description: actor-tran.description
 	EjectOnDeath:
 		PilotActor: e1.nod
@@ -1656,7 +1630,7 @@ tran.nod:
 		UnloadVoice: Move
 		Types: Infantry, Hacker, Fremen
 		MaxWeight: 8
-		InitialUnits: e1.nod, e3.nod, e4, e5
+		InitialUnits:
 
 HELI:
 	Inherits: ^Helicopter
@@ -1666,7 +1640,6 @@ HELI:
 	Inherits@AntiInf: ^PrioritizeInfantry
 	Inherits@AntiAir: ^PrioritizeAir
 	Inherits@AntiDef: ^PrioritizeDefence
-
 	Inherits@decoration: ^NodRankDecoration
 	Inherits@eject: ^AircraftEjectOnDeath
 	Valued:
@@ -1677,8 +1650,8 @@ HELI:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 20
-		Prerequisites: ~hpad.nod
-		Queue: Aircraft, RAAircraft
+		Prerequisites: hpad.nod
+		Queue: Aircraft.Nod, RAAircraft.Nod
 		Description: actor-heli.description
 	Aircraft:
 		Speed: 160
@@ -1746,7 +1719,6 @@ ORCA:
 	Inherits@AntiAir: ^PrioritizeAir
 	Inherits@AntiBuil: ^PrioritizeBuilding
 	Inherits@AntiDef: ^PrioritizeDefence
-	
 	Inherits@decoration: ^GDIRankDecoration
 	Inherits@eject: ^AircraftEjectOnDeath
 	Valued:
@@ -1757,8 +1729,8 @@ ORCA:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 20
-		Prerequisites: ~hpad.gdi
-		Queue: Aircraft, RAAircraft
+		Prerequisites: hpad
+		Queue: Aircraft.GDI, RAAircraft.GDI
 		Description: actor-orca.description
 	Aircraft:
 		Speed: 175
@@ -1788,7 +1760,7 @@ ORCA:
 	SpawnActorOnDeath:
 		Actor: ORCA.Husk
 	EjectOnDeath:
-		PilotActor: gdimissilesoldier
+		PilotActor: E1.GDI
 	WithMoveAnimation:
 		MoveSequence: move
 	WithMuzzleOverlay:
@@ -2159,7 +2131,7 @@ PYLE:
 	Inherits: ^BaseBuilding
 	Inherits@CPQWP: ^CPQConditionWithPrimary
 	Inherits@sell: ^TDSpawnActorsOnSell
-	Inherits@barr: ^IsBarrack
+	Inherits@barr: ^IsBarrackOld
 	Inherits@shape: ^2x2Shape
 	Tooltip:
 		Name: GDI Barracks
@@ -2180,6 +2152,26 @@ PYLE:
 	Exit@2:
 		SpawnOffset: 300,333,0
 		ExitCell: 1,1
+	Production:
+		Produces: Infantry.GDI
+	GrantExternalConditionToProduced:
+		Condition: produced
+	ProductionQueue:
+		Type: Infantry.GDI
+		DisplayOrder: 2
+		Group: Infantry
+		LowPowerModifier: 150
+		ReadyAudio: UnitReady
+		ReadyTextNotification: notification-unit-ready
+		BlockedAudio: NoBuild
+		BlockedTextNotification: notification-unable-to-build-more
+		LimitedAudio: BuildingInProgress
+		LimitedTextNotification: notification-unable-to-comply-building-in-progress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar:
+		ProductionType: Infantry.GDI
 	ProvidesPrerequisite:
 		Prerequisite: cncbarracks
 
@@ -2207,6 +2199,26 @@ HAND:
 	Exit@1:
 		SpawnOffset: 512,1024,0
 		ExitCell: 1,2
+	Production:
+		Produces: Infantry.Nod
+	GrantExternalConditionToProduced:
+		Condition: produced
+	ProductionQueue:
+		Type: Infantry.Nod
+		DisplayOrder: 2
+		Group: Infantry
+		LowPowerModifier: 150
+		ReadyAudio: UnitReady
+		ReadyTextNotification: notification-unit-ready
+		BlockedAudio: NoBuild
+		BlockedTextNotification: notification-unable-to-build-more
+		LimitedAudio: BuildingInProgress
+		LimitedTextNotification: notification-unable-to-comply-building-in-progress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar:
+		ProductionType: Infantry.Nod
 	ProvidesPrerequisite:
 		Prerequisite: cncbarracks
 
@@ -2252,7 +2264,7 @@ AFLD:
 	-Production@NORMAL:
 	-Production@CLASSICPRODUCTIONQUEUES:
 	ProductionAirdropCA@NORMAL:
-		Produces: Vehicle
+		Produces: Vehicle.Nod
 		RequiresCondition: !classicproductionqueues
 		ActorType: c17
 		LandingFacing: 64
@@ -2261,7 +2273,7 @@ AFLD:
 		ProportionalSpeed: true
 		PauseOnCondition: disabled
 	ProductionAirdropCA@CLASSIC:
-		Produces: RAVehicle
+		Produces: RAVehicle.Nod
 		RequiresCondition: classicproductionqueues
 		ActorType: c17
 		LandingFacing: 64
@@ -2269,6 +2281,24 @@ AFLD:
 		SpawnType: ClosestEdgeToDestination
 		ProportionalSpeed: true
 		PauseOnCondition: disabled
+	Production:
+		Produces: Vehicle.Nod
+	ProductionQueue:
+		Type: Vehicle.GDI
+		DisplayOrder: 3
+		Group: Vehicle
+		LowPowerModifier: 150
+		ReadyAudio: UnitReady
+		ReadyTextNotification: notification-unit-ready
+		BlockedAudio: NoBuild
+		BlockedTextNotification: notification-unable-to-build-more
+		LimitedAudio: BuildingInProgress
+		LimitedTextNotification: notification-unable-to-comply-building-in-progress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar:
+		ProductionType: Vehicle.Nod
 	WithBuildingBib:
 	WithIdleOverlay@DISH:
 		RequiresCondition: !build-incomplete
@@ -2281,7 +2311,7 @@ WEAP:
 	Inherits@shape: ^3x3Shape
 	Inherits@CPQWP: ^CPQConditionWithPrimary
 	Inherits@sell: ^TDSpawnActorsOnSell
-	Inherits@weap: ^IsWeaponFactory
+	Inherits@weap: ^IsWeaponFactoryOld
 	HitShape:
 		TargetableOffsets: 0,0,0, 0,1024,0, 0,-1024,0
 		Type: Rectangle
@@ -2309,6 +2339,24 @@ WEAP:
 		SpawnOffset: -512,-512,0
 		ExitCell: 0,1
 		ExitDelay: 3
+	Production:
+		Produces: Vehicle.GDI
+	ProductionQueue:
+		Type: Vehicle.GDI
+		DisplayOrder: 3
+		Group: Vehicle
+		LowPowerModifier: 150
+		ReadyAudio: UnitReady
+		ReadyTextNotification: notification-unit-ready
+		BlockedAudio: NoBuild
+		BlockedTextNotification: notification-unable-to-build-more
+		LimitedAudio: BuildingInProgress
+		LimitedTextNotification: notification-unable-to-comply-building-in-progress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar:
+		ProductionType: Vehicle.GDI
 	-ActorPreviewPlaceBuildingPreview:
 	SequencePlaceBuildingPreview:
 		Sequence: place
@@ -2318,7 +2366,7 @@ HPAD.GDI:
 	Inherits@shape: ^2x2Shape
 	Inherits@CPQWP: ^CPQConditionWithPrimary
 	Inherits@sell: ^TDSpawnActorsOnSell
-	Inherits@hpad: ^IsAircraftFactory
+	Inherits@hpad: ^IsAircraftFactoryOld
 	Tooltip:
 		Name: GDI Helipad
 	Buildable:
@@ -2330,6 +2378,24 @@ HPAD.GDI:
 	WithBuildingBib:
 	Exit@1:
 		SpawnOffset: 0,-256,0
+	Production:
+		Produces: Aircraft.GDI
+	ProductionQueue:
+		Type: Aircraft.GDI
+		DisplayOrder: 4
+		Group: Aircraft
+		LowPowerModifier: 150
+		ReadyAudio: UnitReady
+		ReadyTextNotification: notification-unit-ready
+		BlockedAudio: NoBuild
+		BlockedTextNotification: notification-unable-to-build-more
+		LimitedAudio: BuildingInProgress
+		LimitedTextNotification: notification-unable-to-comply-building-in-progress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar:
+		ProductionType: Aircraft.GDI
 	Reservable:
 	WithResupplyAnimation:
 		RequiresCondition: !build-incomplete
@@ -2344,7 +2410,7 @@ HPAD.NOD:
 	Inherits@shape: ^2x2Shape
 	Inherits@CPQWP: ^CPQConditionWithPrimary
 	Inherits@sell: ^TDNodSpawnActorsOnSell
-	Inherits@hpad: ^IsAircraftFactory
+	Inherits@hpad: ^IsAircraftFactoryOld
 	Inherits@repair: ^RepairsUnits
 	Tooltip:
 		Name: Nod Helipad
@@ -2357,6 +2423,24 @@ HPAD.NOD:
 	WithBuildingBib:
 	Exit@1:
 		SpawnOffset: 0,-256,0
+	Production:
+		Produces: Aircraft.Nod
+	ProductionQueue:
+		Type: Aircraft.Nod
+		DisplayOrder: 4
+		Group: Aircraft
+		LowPowerModifier: 150
+		ReadyAudio: UnitReady
+		ReadyTextNotification: notification-unit-ready
+		BlockedAudio: NoBuild
+		BlockedTextNotification: notification-unable-to-build-more
+		LimitedAudio: BuildingInProgress
+		LimitedTextNotification: notification-unable-to-comply-building-in-progress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar:
+		ProductionType: Aircraft.Nod
 	Reservable:
 	RepairsUnits:
 		HpPerStep: 1000
@@ -2540,36 +2624,26 @@ EYE:
 		PauseOnCondition: lowpower
 	WithBuildingBib:
 	IonCannonPower:
-		AllowMultiple: True
-		PauseOnCondition: disabled
-		RequiresCondition: ionc
-		Prerequisites:
-			1: ~techlevel.superweapons
-		Icons:
-			1: ioncannon
+		PauseOnCondition: lowpower
+		Prerequisites: ~techlevel.superweapons
+		Icon: ioncannon
 		Cursor: ioncannon
-		ChargeInterval: 6000
-		WeaponDelay: 0
-		Weapon: TDIonCannon
-		Effect: tsioncannon
-		EffectSequence: targeting
-		EffectPalette: ra2effect
-		Names:
-			1: power-ioncannon.name
-		Descriptions:
-			1: power-ioncannon.description
+		ChargeInterval: 9000
+		Name: actor-eye.ioncannonpower-name
+		Description: actor-eye.ioncannonpower-description
 		BeginChargeSpeechNotification: IonCannonCharging
 		EndChargeSpeechNotification: IonCannonReady
-		EndChargeTextNotification: Ion Cannon ready.
 		SelectTargetSpeechNotification: SelectTarget
-		SelectTargetTextNotification: Select target.
 		InsufficientPowerSpeechNotification: InsufficientPower
-		DisplayTimerRelationships: Ally, Neutral, Enemy
+		BeginChargeTextNotification: notification-ion-cannon-charging
+		EndChargeTextNotification: notification-ion-cannon-ready
+		SelectTargetTextNotification: notification-select-target
+		InsufficientPowerTextNotification: notification-insufficient-power
+		OnFireSound: ion1.aud
 		DisplayRadarPing: True
-		CameraRange: 6000
-		CameraRemoveDelay: 125
-		CameraActor: CAMERA.small
+		CameraActor: camera.small
 		SupportPowerPaletteOrder: 20
+	SupportPowerChargeBar:
 	RevealsShroud@SWReveal:
 		RequiresCondition: swreveal && ionc
 	SupportPowerChargeBar:
@@ -2590,32 +2664,26 @@ EYE:
 	PowerMultiplier@ionc:
 		Modifier: 200
 		RequiresCondition: ionc
-	Pluggable:
-		Offset: 0,0
-		Conditions:
-			eye: ionc
-		Requirements:
-			eye: !build-incomplete && !ionc
 
-eye.ionc:
-	Inherits: ^BuildingPlug
-	Tooltip:
-		Name: Ion Cannon Uplink
-	Valued:
-		Cost: 5000
-	Buildable:
-		Queue: Defence, RADefence
-		BuildPaletteOrder: 100
-		BuildDuration: 1500
-		BuildDurationModifier: 100
-		Prerequisites: ~fact.gdi, eye, !ionc, ~techlevel.superweapons
-		Description: actor-eye.ionc-description
-	Power:
-		Amount: -100
-	Plug:
-		Type: eye
-	RenderSprites:
-		Image: eye.ionc
+# eye.ionc:
+# 	Inherits: ^BuildingPlug
+# 	Tooltip:
+# 		Name: Ion Cannon Uplink
+# 	Valued:
+# 		Cost: 5000
+# 	Buildable:
+# 		Queue: Defence, RADefence
+# 		BuildPaletteOrder: 100
+# 		BuildDuration: 1500
+# 		BuildDurationModifier: 100
+# 		Prerequisites: ~fact.gdi, eye, !ionc, ~techlevel.superweapons
+# 		Description: actor-eye.ionc-description
+# 	Power:
+# 		Amount: -100
+# 	Plug:
+# 		Type: eye
+# 	RenderSprites:
+# 		Image: eye.ionc
 
 TMPL:
 	Inherits: ^BaseBuilding
@@ -2641,50 +2709,37 @@ TMPL:
 		Bounds: 3072, 3072, 0, -512
 	SelectionDecorations:
 	RenderDetectionCircle:
-	NukePowerCA:
-		OrderName: NukePowerInfoOrder
-		AllowMultiple: True
-		PauseOnCondition: disabled
-		RequiresCondition: nuke
-		Prerequisites:
-			1: ~techlevel.superweapons
-		Icons:
-			1: abomb
+	NukePower:
+		PauseOnCondition: lowpower
+		Prerequisites: ~techlevel.superweapons
+		Icon: abomb
 		Cursor: nuke
-		ChargeInterval: 10500
-		Names:
-			1: power-nuke.tdname
-		Descriptions:
-			1: power-nuke.description
+		ChargeInterval: 11250
+		Name: actor-tmpl.nukepower-name
+		Description: actor-tmpl.nukepower-description
 		EndChargeSpeechNotification: NuclearWeaponAvailable
-		EndChargeTextNotification: Nuclear Missile ready.
 		SelectTargetSpeechNotification: SelectTarget
-		SelectTargetTextNotification: Select target.
 		InsufficientPowerSpeechNotification: InsufficientPower
 		LaunchSpeechNotification: NuclearWeaponLaunched
-		LaunchTextNotification: Warning: Nuclear Missile launched.
 		IncomingSpeechNotification: NuclearWarheadApproaching
-		IncomingTextNotification: Warning: Nuclear Missile launched.
-		MissileWeapons:
-			1: atomic
-		MissileDelay: 10
-		SpawnOffset: 3c0,0,-1c512
-		BeaconPosterPalette: beaconposter
-		DisplayTimerRelationships: Ally, Neutral, Enemy
-		CameraRange: 10000
-		CameraRemoveDelay: 125
-		CircleRanges:
-			1: 10000
-		ArrowSequence: arrow
-		ClockSequence: clocklarge
-		CircleSequence: circles
-		DisplayBeacon: True
-		DisplayRadarPing: True
-		BeaconPosters:
-			1: atomic
-		SupportPowerPaletteOrder: 30
+		SelectTargetTextNotification: notification-select-target
+		EndChargeTextNotification: notification-nuclear-weapon-available
+		InsufficientPowerTextNotification: notification-insufficient-power
+		LaunchTextNotification: notification-nuclear-weapon-launched
+		IncomingTextNotification: notification-nuclear-warhead-approaching
+		MissileWeapons: atomic
 		MissileImage: atomic
-		BeaconActor: BLASTRADIUS.atomic
+		MissileDelay: 11
+		SpawnOffset: 3c0,0,-1c512
+		DisplayBeacon: True
+		BeaconPoster: atomic
+		BeaconPosterPalette: beaconposter
+		DisplayRadarPing: True
+		CameraRange: 10c0
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+		SupportPowerPaletteOrder: 30
 	WithBuildingBib:
 	WithSupportPowerActivationAnimation:
 		RequiresCondition: !build-incomplete && nuke
@@ -2711,32 +2766,26 @@ TMPL:
 	PowerMultiplier@nuke:
 		Modifier: 200
 		RequiresCondition: nuke
-	Pluggable:
-		Offset: 1,0
-		Conditions:
-			tmpl: nuke
-		Requirements:
-			tmpl: !build-incomplete && !nuke
 
-tmpl.nuke:
-	Inherits: ^BuildingPlug
-	Tooltip:
-		Name: Nuclear Missile Silo
-	Valued:
-		Cost: 5000
-	Buildable:
-		Queue: Defence, RADefence
-		BuildPaletteOrder: 100
-		BuildDuration: 1500
-		BuildDurationModifier: 100
-		Prerequisites: ~fact.nod, tmpl, !nodnuke, ~techlevel.superweapons
-		Description: actor-tmpl.nuke-description
-	Power:
-		Amount: -100
-	Plug:
-		Type: tmpl
-	RenderSprites:
-		Image: tmpl.nuke
+# tmpl.nuke:
+# 	Inherits: ^BuildingPlug
+# 	Tooltip:
+# 		Name: Nuclear Missile Silo
+# 	Valued:
+# 		Cost: 5000
+# 	Buildable:
+# 		Queue: Defence, RADefence
+# 		BuildPaletteOrder: 100
+# 		BuildDuration: 1500
+# 		BuildDurationModifier: 100
+# 		Prerequisites: ~fact.nod, tmpl, !nodnuke, ~techlevel.superweapons
+# 		Description: actor-tmpl.nuke-description
+# 	Power:
+# 		Amount: -100
+# 	Plug:
+# 		Type: tmpl
+# 	RenderSprites:
+# 		Image: tmpl.nuke
 
 GUN:
 	Inherits: ^Defense
@@ -3178,8 +3227,6 @@ CNCPT:
 	Inherits@exp: ^GainsExperienceTD
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
 	Inherits@AntiAir: ^PrioritizeAir
-	
-
 	Inherits@decoration: ^GDIRankDecoration
 	Valued:
 		Cost: 1600
@@ -3231,227 +3278,223 @@ CNCPT:
 	AcceptsDeliveredExperience: ##########
 		ValidTypes: vehicle ##########
 
-CNCCA:
-	Inherits: ^BoatUnit
-	Inherits@Template: ^BattleShipTemplate
-	Inherits@exp: ^GainsExperienceTD
-	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+# CNCCA:
+# 	Inherits: ^BoatUnit
+# 	Inherits@Template: ^BattleShipTemplate
+# 	Inherits@exp: ^GainsExperienceTD
+# 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+# 	Inherits@decoration: ^GDIRankDecoration
+# 	Valued:
+# 		Cost: 2600
+# 	Tooltip:
+# 		Name: Railgun Battleship
+# 	UpdatesPlayerStatistics:
+# 		AddToArmyValue: true
+# 	Buildable:
+# 		BuildPaletteOrder: 50
+# 		Prerequisites: ~hq.gdi
+# 		Queue: Naval, RANaval
+# 		Description: actor-ca.description
+# 	Mobile:
+# 		Speed: 50
+# 		TurnSpeed: 10
+# 	Health:
+# 		HP: 167500
+# 	ChangesHealth@SelfHealing:
+# 		Step: 67
+# 	Armor:
+# 		Type: Superheavy
+# 	Turreted@PRIMARY:
+# 		Turret: primary
+# 		Offset: 900,-50,200
+# 		TurnSpeed: 10
+# 	Turreted@SECONDARY:
+# 		Turret: secondary
+# 		Offset: -1200,-50,200
+# 		TurnSpeed: 10
+# 	Armament@PRIMARY:
+# 		Turret: primary
+# 		Weapon: GDIBattleshipRailgun
+# 		LocalOffset: 480,-100,40, 480,100,40
+# 		Recoil: 175
+# 		RecoilRecovery: 35
+# 		MuzzleSequence: muzzle
+# 		PauseOnCondition: !ammo
+# 	Armament@SECONDARY:
+# 		Name: secondary
+# 		Turret: secondary
+# 		Weapon: GDIBattleshipRailgun
+# 		LocalOffset: 480,-100,40, 480,100,40
+# 		Recoil: 175
+# 		RecoilRecovery: 35
+# 		MuzzleSequence: muzzle
+# 		PauseOnCondition: !ammo
+# 	# Armament@PRIMARYAA:
+# 	# 	Turret: primary
+# 	# 	Weapon: NewBoatMissile2AA
+# 	# 	LocalOffset: 480,-100,40, 480,100,40
+# 	# 	Recoil: 171
+# 	# 	RecoilRecovery: 34
+# 	# 	MuzzleSequence: muzzle
+# 	# Armament@SECONDARYAA:
+# 	# 	Name: secondary
+# 	# 	Turret: secondary
+# 	# 	Weapon: NewBoatMissile2AA
+# 	# 	LocalOffset: 480,-100,40, 480,100,40
+# 	# 	Recoil: 171
+# 	# 	RecoilRecovery: 34
+# 	# 	MuzzleSequence: muzzle
+# 	AttackTurreted:
+# 		Turrets: primary, secondary
+# 	AmmoPool:
+# 		Ammo: 1
+# 		AmmoCondition: ammo
+# 	ReloadAmmoPool:
+# 		Delay: 5
+# 		Count: 1
+# 		ResetOnFire: true
+# 	WithMuzzleOverlay:
+# 	WithSpriteTurret:
+# 	Selectable:
+# 		DecorationBounds: 2048, 2048
+# 	WithSpriteTurret@PRIMARY:
+# 		Turret: primary
+# 	WithSpriteTurret@SECONDARY:
+# 		Turret: secondary
+# 	DeliversCash:
+# 		Payload: 500
+# 	RenderSprites:
+# 		PlayerPalette: player_rgba
+
+# gdicarrier:
+# 	Inherits: ^BoatUnit
+# 	Inherits@Template: ^ArtilleryShipTemplate
+# 	Inherits@exp: ^GainsExperienceTD
+# 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+# 	Inherits@EMP: ^FrontalEMP
+# 	Inherits@decoration: ^GDIRankDecoration
+# 	Valued:
+# 		Cost: 4000
+# 	Tooltip:
+# 		Name: GDI Super Carrier
+# 	UpdatesPlayerStatistics:
+# 		AddToArmyValue: true
+# 	Buildable:
+# 		BuildPaletteOrder: 30
+# 		Prerequisites: ~eye
+# 		Queue: Naval, RANaval
+# 		Description: actor-japancarrier.description
+# 	Selectable:
+# 		DecorationBounds: 2048, 2048
+# 	Mobile:
+# 		Speed: 50
+# 		TurnSpeed: 10
+# 	Health:
+# 		HP: 300000
+# 	ChangesHealth@SelfHealing:
+# 		Step: 120
+# 	Armor:
+# 		Type: Superheavy
+# 	AttackFollowFrontal:
+# 		PauseOnCondition: disabled
+# 	DeliversCash:
+# 		Payload: 450
+# 	CarrierMaster:
+# 		Actors: A10Carrier, A10Carrier, A10Carrier
+# 		RearmTicks: 125
+# 		RespawnTicks: 250
+# 		InstaRepair: true
+# 		SlaveDisposalOnKill: KillSlaves
+# 		SpawnAllAtOnce: false
+# 	Armament@PRIMARY:
+# 		Weapon: JapanCarrierTarget
+# 		Damage: 1500
+# 		ReloadDelay: 125
+# 	Voiced:
+# 		VoiceSet: VehicleVoice
+# 	RenderSprites:
+# 		PlayerPalette: player
+
+# A10Carrier:
+# 	Inherits: ^RANeutralPlane
+# 	Inherits@Template: ^BomberTemplate
+# 	Inherits@exp: ^GainsExperienceTD
 	
-
-	Inherits@decoration: ^GDIRankDecoration
-	Valued:
-		Cost: 2600
-	Tooltip:
-		Name: Railgun Battleship
-	UpdatesPlayerStatistics:
-		AddToArmyValue: true
-	Buildable:
-		BuildPaletteOrder: 50
-		Prerequisites: ~hq.gdi
-		Queue: Naval, RANaval
-		Description: actor-ca.description
-	Mobile:
-		Speed: 50
-		TurnSpeed: 10
-	Health:
-		HP: 167500
-	ChangesHealth@SelfHealing:
-		Step: 67
-	Armor:
-		Type: Superheavy
-	Turreted@PRIMARY:
-		Turret: primary
-		Offset: 900,-50,200
-		TurnSpeed: 10
-	Turreted@SECONDARY:
-		Turret: secondary
-		Offset: -1200,-50,200
-		TurnSpeed: 10
-	Armament@PRIMARY:
-		Turret: primary
-		Weapon: GDIBattleshipRailgun
-		LocalOffset: 480,-100,40, 480,100,40
-		Recoil: 175
-		RecoilRecovery: 35
-		MuzzleSequence: muzzle
-		PauseOnCondition: !ammo
-	Armament@SECONDARY:
-		Name: secondary
-		Turret: secondary
-		Weapon: GDIBattleshipRailgun
-		LocalOffset: 480,-100,40, 480,100,40
-		Recoil: 175
-		RecoilRecovery: 35
-		MuzzleSequence: muzzle
-		PauseOnCondition: !ammo
-	# Armament@PRIMARYAA:
-	# 	Turret: primary
-	# 	Weapon: NewBoatMissile2AA
-	# 	LocalOffset: 480,-100,40, 480,100,40
-	# 	Recoil: 171
-	# 	RecoilRecovery: 34
-	# 	MuzzleSequence: muzzle
-	# Armament@SECONDARYAA:
-	# 	Name: secondary
-	# 	Turret: secondary
-	# 	Weapon: NewBoatMissile2AA
-	# 	LocalOffset: 480,-100,40, 480,100,40
-	# 	Recoil: 171
-	# 	RecoilRecovery: 34
-	# 	MuzzleSequence: muzzle
-	AttackTurreted:
-		Turrets: primary, secondary
-	AmmoPool:
-		Ammo: 1
-		AmmoCondition: ammo
-	ReloadAmmoPool:
-		Delay: 5
-		Count: 1
-		ResetOnFire: true
-	WithMuzzleOverlay:
-	WithSpriteTurret:
-	Selectable:
-		DecorationBounds: 2048, 2048
-	WithSpriteTurret@PRIMARY:
-		Turret: primary
-	WithSpriteTurret@SECONDARY:
-		Turret: secondary
-	DeliversCash:
-		Payload: 500
-	RenderSprites:
-		PlayerPalette: player_rgba
-
-gdicarrier:
-	Inherits: ^BoatUnit
-	Inherits@Template: ^ArtilleryShipTemplate
-	Inherits@exp: ^GainsExperienceTD
-	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
-	Inherits@EMP: ^FrontalEMP
-	
-
-	Inherits@decoration: ^GDIRankDecoration
-	Valued:
-		Cost: 4000
-	Tooltip:
-		Name: GDI Super Carrier
-	UpdatesPlayerStatistics:
-		AddToArmyValue: true
-	Buildable:
-		BuildPaletteOrder: 30
-		Prerequisites: ~eye
-		Queue: Naval, RANaval
-		Description: actor-japancarrier.description
-	Selectable:
-		DecorationBounds: 2048, 2048
-	Mobile:
-		Speed: 50
-		TurnSpeed: 10
-	Health:
-		HP: 300000
-	ChangesHealth@SelfHealing:
-		Step: 120
-	Armor:
-		Type: Superheavy
-	AttackFollowFrontal:
-		PauseOnCondition: disabled
-	DeliversCash:
-		Payload: 450
-	CarrierMaster:
-		Actors: A10Carrier, A10Carrier, A10Carrier
-		RearmTicks: 125
-		RespawnTicks: 250
-		InstaRepair: true
-		SlaveDisposalOnKill: KillSlaves
-		SpawnAllAtOnce: false
-	Armament@PRIMARY:
-		Weapon: JapanCarrierTarget
-		Damage: 1500
-		ReloadDelay: 125
-	Voiced:
-		VoiceSet: VehicleVoice
-	RenderSprites:
-		PlayerPalette: player
-
-A10Carrier:
-	Inherits: ^RANeutralPlane
-	Inherits@Template: ^BomberTemplate
-	Inherits@exp: ^GainsExperienceTD
-	
-	Valued:
-		Cost: 2000
-	Tooltip:
-		Name: A10 Bomber
-	Aircraft:
-		AltitudeVelocity: 120
-		InitialFacing: 768
-		TurnSpeed: 12
-		Speed: 200
-		Repulsable: false
-		TakeoffSounds: vhortaka.wav, vhortakb.wav
-		LandingSounds: vhorlana.wav, vhorlanb.wav
-		TakeUpCellWhenLand: false
-	Health:
-		HP: 10000
-	ChangesHealth@SelfHealing:
-		Step: 4
-	Armament@GUNS:
-		Name: primary
-		Weapon: VulcanA10Carrier
-		LocalOffset: 1024,0,-85
-	Armament@BOMBS:
-		Name: secondary
-		Weapon: NapalmA10Carrier
-		LocalOffset: 0,-256,-43, 0,256,-43
-	Armament@AA:
-		Name: secondary
-		Weapon: A10CarrierMissiles
-		LocalOffset: 0,-300,0, 0,300,0
-	AmmoPool:
-		Ammo: 16
-		AmmoCondition: ammo
-	WithAmmoPipsDecoration:
-		Position: BottomLeft
-		RequiresSelection: true
-		PipCount: 6
-	Voiced:
-		VoiceSet: VehicleVoice
-	AttackAircraft:
-		# FacingTolerance: 40
-		RequiresCondition: ammo
-	CarrierSlave:
-		LandingDistance: 8000
-	AutoTarget:
-		InitialStanceAI: AttackAnything
-		InitialStance: AttackAnything
-	HasParent:
-	-UpdatesPlayerStatistics:
-	-ActorLostNotification:
-	-WithShadow:
-	-MapEditorData:
-	RejectsOrders:
-	WithMuzzleOverlay:
-	Contrail@1:
-		Offset: -640,171,0
-		TrailLength: 15
-	Contrail@2:
-		Offset: -640,-171,0
-		TrailLength: 15
-	SpawnActorOnDeath:
-		Actor: A10Carrier.Husk
-	LeavesTrails:
-		Offsets: -500,0,125
-		MovingInterval: 2
-		Image: smokey
-		StationaryInterval: 2
-		SpawnAtLastPosition: False
-		TrailWhileStationary: True
-		Type: CenterPosition
-		RequiresCondition: enable-smoke
-	GrantConditionOnDamageState@SmokeTrail:
-		Condition: enable-smoke
-	RenderSprites:
-		PlayerPalette: player
-		Image: a10carrier
+# 	Valued:
+# 		Cost: 2000
+# 	Tooltip:
+# 		Name: A10 Bomber
+# 	Aircraft:
+# 		AltitudeVelocity: 120
+# 		InitialFacing: 768
+# 		TurnSpeed: 12
+# 		Speed: 200
+# 		Repulsable: false
+# 		TakeoffSounds: vhortaka.wav, vhortakb.wav
+# 		LandingSounds: vhorlana.wav, vhorlanb.wav
+# 		TakeUpCellWhenLand: false
+# 	Health:
+# 		HP: 10000
+# 	ChangesHealth@SelfHealing:
+# 		Step: 4
+# 	Armament@GUNS:
+# 		Name: primary
+# 		Weapon: VulcanA10Carrier
+# 		LocalOffset: 1024,0,-85
+# 	Armament@BOMBS:
+# 		Name: secondary
+# 		Weapon: NapalmA10Carrier
+# 		LocalOffset: 0,-256,-43, 0,256,-43
+# 	Armament@AA:
+# 		Name: secondary
+# 		Weapon: A10CarrierMissiles
+# 		LocalOffset: 0,-300,0, 0,300,0
+# 	AmmoPool:
+# 		Ammo: 16
+# 		AmmoCondition: ammo
+# 	WithAmmoPipsDecoration:
+# 		Position: BottomLeft
+# 		RequiresSelection: true
+# 		PipCount: 6
+# 	Voiced:
+# 		VoiceSet: VehicleVoice
+# 	AttackAircraft:
+# 		# FacingTolerance: 40
+# 		RequiresCondition: ammo
+# 	CarrierSlave:
+# 		LandingDistance: 8000
+# 	AutoTarget:
+# 		InitialStanceAI: AttackAnything
+# 		InitialStance: AttackAnything
+# 	HasParent:
+# 	-UpdatesPlayerStatistics:
+# 	-ActorLostNotification:
+# 	-WithShadow:
+# 	-MapEditorData:
+# 	RejectsOrders:
+# 	WithMuzzleOverlay:
+# 	Contrail@1:
+# 		Offset: -640,171,0
+# 		TrailLength: 15
+# 	Contrail@2:
+# 		Offset: -640,-171,0
+# 		TrailLength: 15
+# 	SpawnActorOnDeath:
+# 		Actor: A10Carrier.Husk
+# 	LeavesTrails:
+# 		Offsets: -500,0,125
+# 		MovingInterval: 2
+# 		Image: smokey
+# 		StationaryInterval: 2
+# 		SpawnAtLastPosition: False
+# 		TrailWhileStationary: True
+# 		Type: CenterPosition
+# 		RequiresCondition: enable-smoke
+# 	GrantConditionOnDamageState@SmokeTrail:
+# 		Condition: enable-smoke
+# 	RenderSprites:
+# 		PlayerPalette: player
+# 		Image: a10carrier
 
 CNCSS:
 	Inherits: ^BoatUnit
@@ -3460,7 +3503,6 @@ CNCSS:
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Inherits@EMP: ^FrontalEMP
 	Inherits@sub: ^Submarine
-
 	Valued:
 		Cost: 1600
 	Tooltip:
@@ -3470,7 +3512,7 @@ CNCSS:
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: ~cncspen
-		Queue: Naval, RANaval
+		Queue: Naval.Nod, RANaval.Nod
 		Description: actor-ss.description
 	Mobile:
 		Speed: 80
@@ -3516,7 +3558,6 @@ ssmsub:
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Inherits@EMP: ^FrontalEMP
 	Inherits@sub: ^Submarine
-
 		Valued:
 		Cost: 2800
 	Tooltip:
@@ -3694,7 +3735,6 @@ CNCRSS:
 LST:
 	Inherits: ^BoatUnit
 	Inherits@cargo: ^UnarmedCargoVehicle
-	
 	Valued:
 		Cost: 500
 	Tooltip:
