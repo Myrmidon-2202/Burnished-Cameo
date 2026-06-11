@@ -214,7 +214,7 @@ E1.NOD:
 	Buildable:
 		BuildPaletteOrder: 10
 		Prerequisites: hand
-		Queue: Infantry.NOD, RAInfantry.NOD
+		Queue: Infantry.Nod, RAInfantry.Nod
 		Description: actor-e1.description
 	Armament@PRIMARY: ##########
 		Weapon: M16
@@ -305,7 +305,7 @@ E2:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 20
-		Queue: Infantry.GDI, RAInfantry.GDI,Infantry.NOD, RAInfantry.NOD
+		Queue: Infantry.GDI, RAInfantry.GDI, Infantry.Nod, RAInfantry.Nod
 		Description: actor-e3.description
 	Mobile:
 		Speed: 50
@@ -391,8 +391,8 @@ E4:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 40
-		Prerequisites: ~hq.nod
-		Queue: Infantry.NOD, RAInfantry.NOD
+		Prerequisites: hq.nod
+		Queue: Infantry.Nod, RAInfantry.Nod
 		Description: actor-e4.description
 	Mobile:
 		Speed: 60
@@ -496,8 +496,8 @@ E6:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 30
-		Prerequisites: pyle
-		Queue: Infantry.GDI, RAInfantry.GDI
+		Prerequisites: barracks
+		Queue: Infantry.GDI, RAInfantry.GDI, Infantry.Nod, RAInfantry.Nod
 		Description: actor-e6.description
 	Mobile:
 		Speed: 50
@@ -737,7 +737,7 @@ MCV.NOD:
 HARV.GDI:
 	Inherits: ^TDHARV
 	Buildable:
-		Prerequisites: ~proc.gdi
+		Prerequisites: proc.gdi
 		Queue: Vehicle.GDI, RAVehicle.GDI
 		Description: template-harvester.description
 	Tooltip:
@@ -746,7 +746,7 @@ HARV.GDI:
 HARV.NOD:
 	Inherits: ^TDHARV
 		Buildable:
-		Prerequisites: ~proc.nod, ~!upstealthsoldier
+		Prerequisites: proc.nod
 		Queue: Vehicle.Nod, RAVehicle.Nod
 		Description: template-harvester.description
 	Tooltip:
@@ -833,7 +833,7 @@ ARTY:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 60
-		Prerequisites: ~hq.nod, ~!upnodspecter
+		Prerequisites: hq.nod
 		Queue: Vehicle.Nod, RAVehicle.Nod
 		Description: actor-arty.description
 	Mobile:
@@ -884,7 +884,7 @@ FTNK:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 50
-		Prerequisites: ~hq.nod, ~!upnodftnk2
+		Prerequisites: hq.nod
 		Queue: Vehicle.Nod, RAVehicle.Nod
 		Description: actor-ftnk.description
 	Mobile:
@@ -1203,7 +1203,7 @@ HTNK:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 60
-		Prerequisites: FIX.GDI, eye
+		Prerequisites: fix.gdi, eye
 		Queue: Vehicle.GDI, RAVehicle.GDI
 		Description: actor-htnk.description
 	Mobile:
@@ -1650,7 +1650,7 @@ HELI:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 20
-		Prerequisites: hpad.nod
+		Prerequisites: hpad
 		Queue: Aircraft.Nod, RAAircraft.Nod
 		Description: actor-heli.description
 	Aircraft:
@@ -2172,16 +2172,13 @@ PYLE:
 		CancelledAudio: Cancelled
 	ProductionBar:
 		ProductionType: Infantry.GDI
-	ProvidesPrerequisite:
-		Prerequisite: cncbarracks
-
 
 HAND:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^2x2Shape
 	Inherits@CPQWP: ^CPQConditionWithPrimary
 	Inherits@sell: ^TDNodSpawnActorsOnSell
-	Inherits@barr: ^IsBarrack
+	Inherits@barr: ^IsBarrackOld
 	Tooltip:
 		Name: Hand of Nod
 	ProvidesPrerequisite:
@@ -2219,14 +2216,12 @@ HAND:
 		CancelledAudio: Cancelled
 	ProductionBar:
 		ProductionType: Infantry.Nod
-	ProvidesPrerequisite:
-		Prerequisite: cncbarracks
 
 AFLD:
 	Inherits: ^BaseBuilding
 	Inherits@CPQWP: ^CPQConditionWithPrimary
 	Inherits@sell: ^TDNodSpawnActorsOnSell
-	Inherits@weap: ^IsWeaponFactory
+	Inherits@weap: ^IsWeaponFactoryOld
 	Inherits@shape: ^4x2Shape
 	HitShape:
 		TargetableOffsets: 0,0,0, 0,-512,256, 0,-1451,384, 0,512,128, 0,1536,85
@@ -2261,9 +2256,23 @@ AFLD:
 	Exit@4:
 		ExitCell: 2,2
 		Facing: 768
-	-Production@NORMAL:
-	-Production@CLASSICPRODUCTIONQUEUES:
-	ProductionAirdropCA@NORMAL:
+	ProductionQueue:
+		Type: Vehicle.Nod
+		DisplayOrder: 3
+		Group: Vehicle
+		LowPowerModifier: 150
+		ReadyAudio: UnitReady
+		ReadyTextNotification: notification-unit-ready
+		BlockedAudio: NoBuild
+		BlockedTextNotification: notification-unable-to-build-more
+		LimitedAudio: BuildingInProgress
+		LimitedTextNotification: notification-unable-to-comply-building-in-progress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar:
+		ProductionType: Vehicle.Nod
+	ProductionAirdropCA:
 		Produces: Vehicle.Nod
 		RequiresCondition: !classicproductionqueues
 		ActorType: c17
@@ -2281,24 +2290,6 @@ AFLD:
 		SpawnType: ClosestEdgeToDestination
 		ProportionalSpeed: true
 		PauseOnCondition: disabled
-	Production:
-		Produces: Vehicle.Nod
-	ProductionQueue:
-		Type: Vehicle.GDI
-		DisplayOrder: 3
-		Group: Vehicle
-		LowPowerModifier: 150
-		ReadyAudio: UnitReady
-		ReadyTextNotification: notification-unit-ready
-		BlockedAudio: NoBuild
-		BlockedTextNotification: notification-unable-to-build-more
-		LimitedAudio: BuildingInProgress
-		LimitedTextNotification: notification-unable-to-comply-building-in-progress
-		QueuedAudio: Training
-		OnHoldAudio: OnHold
-		CancelledAudio: Cancelled
-	ProductionBar:
-		ProductionType: Vehicle.Nod
 	WithBuildingBib:
 	WithIdleOverlay@DISH:
 		RequiresCondition: !build-incomplete
@@ -2481,7 +2472,7 @@ HQ.GDI:
 	AirstrikePower:
 		PauseOnCondition: disabled
 		Prerequisites:
-			1: up_a10airstrike
+			1:
 		Icons:
 			1: airstrike
 		ChargeInterval: 7500
@@ -2624,46 +2615,38 @@ EYE:
 		PauseOnCondition: lowpower
 	WithBuildingBib:
 	IonCannonPower:
-		PauseOnCondition: lowpower
-		Prerequisites: ~techlevel.superweapons
-		Icon: ioncannon
+		PauseOnCondition: disabled
+		Prerequisites:
+			1: ~techlevel.superweapons
+		Icons:
+			1: ioncannon
 		Cursor: ioncannon
-		ChargeInterval: 9000
-		Name: actor-eye.ioncannonpower-name
-		Description: actor-eye.ioncannonpower-description
+		ChargeInterval: 7500
+		WeaponDelay: 0
+		Weapon: IonCannon
+		Names:
+			1: power-ioncannon.name
+		Descriptions:
+			1: power-ioncannon.description
 		BeginChargeSpeechNotification: IonCannonCharging
 		EndChargeSpeechNotification: IonCannonReady
+		EndChargeTextNotification: Ion Cannon ready.
 		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
 		InsufficientPowerSpeechNotification: InsufficientPower
-		BeginChargeTextNotification: notification-ion-cannon-charging
-		EndChargeTextNotification: notification-ion-cannon-ready
-		SelectTargetTextNotification: notification-select-target
-		InsufficientPowerTextNotification: notification-insufficient-power
 		OnFireSound: ion1.aud
+		DisplayTimerRelationships: Ally, Neutral, Enemy
 		DisplayRadarPing: True
-		CameraActor: camera.small
+		CameraRange: 6000
+		CameraRemoveDelay: 125
+		CameraActor: CAMERA.small
 		SupportPowerPaletteOrder: 20
 	SupportPowerChargeBar:
-	RevealsShroud@SWReveal:
-		RequiresCondition: swreveal && ionc
-	SupportPowerChargeBar:
-	-Production@Addons:
-	-ProductionBar@Addons:
-	ProvidesPrerequisite@swlimit:
-		Prerequisite: ionc
-		RequiresCondition: ionc
-	ProvidesPrerequisite@techcenter:
-		Prerequisite: techcenter
-		RequiresCondition: !(powerdown || infiltrated)
-	ProvidesPrerequisite@tdtechcenter:
-		Prerequisite: tdtechcenter
-		RequiresCondition: !(powerdown || infiltrated)
-	DamageMultiplier@ionc:
-		Modifier: 50
-		RequiresCondition: ionc
-	PowerMultiplier@ionc:
-		Modifier: 200
-		RequiresCondition: ionc
+	Selectable:
+		Bounds: 2048, 2048
+		DecorationBounds: 2448, 2448, 0, 0
+	SelectionDecorations:
+
 
 # eye.ionc:
 # 	Inherits: ^BuildingPlug
@@ -2709,38 +2692,48 @@ TMPL:
 		Bounds: 3072, 3072, 0, -512
 	SelectionDecorations:
 	RenderDetectionCircle:
-	NukePower:
-		PauseOnCondition: lowpower
-		Prerequisites: ~techlevel.superweapons
-		Icon: abomb
+	NukePowerCA:
+		OrderName: NukePowerInfoOrder
+		AllowMultiple: True
+		PauseOnCondition: disabled
+		Prerequisites:
+			1: ~techlevel.superweapons
 		Cursor: nuke
-		ChargeInterval: 11250
-		Name: actor-tmpl.nukepower-name
-		Description: actor-tmpl.nukepower-description
-		EndChargeSpeechNotification: NuclearWeaponAvailable
+		Icons:
+			1: abomb
+		ChargeInterval: 10500
+		Names:
+			1: power-nuke.tdname
+		Descriptions:
+			1: power-nuke.description
 		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
 		InsufficientPowerSpeechNotification: InsufficientPower
+		EndChargeSpeechNotification: NuclearWeaponAvailable
+		EndChargeTextNotification: Nuclear Missile ready.
 		LaunchSpeechNotification: NuclearWeaponLaunched
+		LaunchTextNotification: Warning: Nuclear Missile launched.
 		IncomingSpeechNotification: NuclearWarheadApproaching
-		SelectTargetTextNotification: notification-select-target
-		EndChargeTextNotification: notification-nuclear-weapon-available
-		InsufficientPowerTextNotification: notification-insufficient-power
-		LaunchTextNotification: notification-nuclear-weapon-launched
-		IncomingTextNotification: notification-nuclear-warhead-approaching
-		MissileWeapons: atomic
-		MissileImage: atomic
-		MissileDelay: 11
-		SpawnOffset: 3c0,0,-1c512
+		IncomingTextNotification: Warning: Nuclear Missile launched.
+		MissileWeapons:
+			1: atomic
+		MissileDelay: 5
+		SpawnOffset: 1c0,427,0
+		DisplayTimerRelationships: Ally, Neutral, Enemy
 		DisplayBeacon: True
-		BeaconPoster: atomic
-		BeaconPosterPalette: beaconposter
 		DisplayRadarPing: True
-		CameraRange: 10c0
+		BeaconPosters:
+			1: atomic
+		CameraRange: 10000
+		CameraRemoveDelay: 125
+		CircleRanges:
+			1: 10000
 		ArrowSequence: arrow
-		ClockSequence: clock
+		ClockSequence: clocklarge
 		CircleSequence: circles
 		SupportPowerPaletteOrder: 30
-	WithBuildingBib:
+		MissileImage: atomic
+		BeaconActor: BLASTRADIUS.atomic
 	WithSupportPowerActivationAnimation:
 		RequiresCondition: !build-incomplete && nuke
 	WithSupportPowerActivationOverlay:
@@ -2748,24 +2741,7 @@ TMPL:
 		Sequence: smoke
 	RevealsShroud@SWReveal:
 		RequiresCondition: swreveal && nuke
-	SupportPowerChargeBar:
-	-Production@Addons:
-	-ProductionBar@Addons:
-	ProvidesPrerequisite@swlimit:
-		Prerequisite: nodnuke
-		RequiresCondition: nuke
-	ProvidesPrerequisite@techcenter:
-		Prerequisite: techcenter
-		RequiresCondition: !(powerdown || infiltrated)
-	ProvidesPrerequisite@tdtechcenter:
-		Prerequisite: tdtechcenter
-		RequiresCondition: !(powerdown || infiltrated)
-	DamageMultiplier@nuke:
-		Modifier: 50
-		RequiresCondition: nuke
-	PowerMultiplier@nuke:
-		Modifier: 200
-		RequiresCondition: nuke
+
 
 # tmpl.nuke:
 # 	Inherits: ^BuildingPlug
@@ -2839,50 +2815,50 @@ GUN:
 	RevealsShroudMultiplier@up_improvedartilleries:
 		Modifier: 120
 
-NodLaserTurret:
-	Inherits: ^Defense
-	Inherits@Template: ^BasicDefenseTemplate
-	Inherits@exp: ^GainsExperienceTDBuilding
-	Inherits@DisabledOverlay: ^DisableOnLowPowerOrPowerDown
-	Inherits@AUTOTARGET: ^AutoTargetGround
-	Inherits@AntiInf: ^PrioritizeInfantry
-	Inherits@shape: ^1x1Shape
-	Inherits@decoration: ^NodRankDecoration
-	Valued:
-		Cost: 1000
-	Tooltip:
-		Name: Nod Laser Turret
-	Buildable:
-		BuildPaletteOrder: 45
-		Prerequisites: ~fact.nod, hand
-		Queue: Defence, RADefence
-		Description: actor-nalasr.description
-	Building:
-	Health:
-		HP: 72500
-	WithBuildingBib:
-		HasMinibib: true
-	Turreted:
-		TurnSpeed: 30
-		InitialFacing: 0
-		RealignDelay: -1
-	-WithSpriteBody:
-	WithEmbeddedTurretSpriteBody:
-	Armament:
-		Weapon: NodTurretLaser
-		LocalOffset: 500,-80,140, 500,80,140
-		MuzzleSequence: muzzle
-	AttackTurreted:
-		RequiresCondition: !build-incomplete
-		PauseOnCondition: disabled
-	WithMuzzleOverlay:
-	-WithDeathAnimation:
-	RenderSprites:
-		PlayerPalette: player_rgba
-	Power:
-		Amount: -50
-	RevealsShroud:
-		Range: 6800
+# NodLaserTurret:
+# 	Inherits: ^Defense
+# 	Inherits@Template: ^BasicDefenseTemplate
+# 	Inherits@exp: ^GainsExperienceTDBuilding
+# 	Inherits@DisabledOverlay: ^DisableOnLowPowerOrPowerDown
+# 	Inherits@AUTOTARGET: ^AutoTargetGround
+# 	Inherits@AntiInf: ^PrioritizeInfantry
+# 	Inherits@shape: ^1x1Shape
+# 	Inherits@decoration: ^NodRankDecoration
+# 	Valued:
+# 		Cost: 1000
+# 	Tooltip:
+# 		Name: Nod Laser Turret
+# 	Buildable:
+# 		BuildPaletteOrder: 45
+# 		Prerequisites: ~fact.nod, hand
+# 		Queue: Defence, RADefence
+# 		Description: actor-nalasr.description
+# 	Building:
+# 	Health:
+# 		HP: 72500
+# 	WithBuildingBib:
+# 		HasMinibib: true
+# 	Turreted:
+# 		TurnSpeed: 30
+# 		InitialFacing: 0
+# 		RealignDelay: -1
+# 	-WithSpriteBody:
+# 	WithEmbeddedTurretSpriteBody:
+# 	Armament:
+# 		Weapon: NodTurretLaser
+# 		LocalOffset: 500,-80,140, 500,80,140
+# 		MuzzleSequence: muzzle
+# 	AttackTurreted:
+# 		RequiresCondition: !build-incomplete
+# 		PauseOnCondition: disabled
+# 	WithMuzzleOverlay:
+# 	-WithDeathAnimation:
+# 	RenderSprites:
+# 		PlayerPalette: player_rgba
+# 	Power:
+# 		Amount: -50
+# 	RevealsShroud:
+# 		Range: 6800
 
 SAM:
 	Inherits: ^Defense
@@ -2892,8 +2868,7 @@ SAM:
 	Inherits@shape: ^2x1Shape
 	Inherits@AntiAir: ^PrioritizeAir
 	Inherits@decoration: ^NodRankDecoration
-
-		Valued:
+	Valued:
 		Cost: 800
 	Tooltip:
 		Name: Nod SAM Site
@@ -2995,7 +2970,6 @@ GTWR:
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Inherits@AntiInf: ^PrioritizeInfantry
 	Inherits@shape: ^1x1Shape
-	
 	Inherits@decoration: ^GDIRankDecoration
 	Valued:
 		Cost: 500
@@ -3043,7 +3017,6 @@ ATWR:
 	Inherits@AntiTank: ^PrioritizeVehicle
 	Inherits@AntiTank: ^PrioritizeTank
 	Inherits@shape: ^1x1Shape
-	
 	Inherits@decoration: ^GDIRankDecoration
 	Valued:
 		Cost: 1000
