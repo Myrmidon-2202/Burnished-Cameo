@@ -4652,7 +4652,7 @@ Player:
 		AirToAirUnits: heli, orca, nodvenom, gdifirehawk, yak, mig, su57, raheli, rapierjumpjet, modkami, ra2falc, yrschp, yrbpln1, ra2hind, yrdisk, ra2shad, aa_phoenix, aa_pelican, d2k_air_drone, d2k_heavy_air_drone, d2k_farasha, steel_inspect, steel_twister, steel_grun, steel_cruiser, latin_yakolev, latin_mig, nax_haunebu, nax_haunebu2, nax_me262, nax_piercer, nax_dieglocke, nax_bf109
 		AirThreatUnits: heli, orca, nodvenom, gdifirehawk, tran.gdi, tran.nod, yak, mig, su57, mignuke, hind, raheli, MH60, rapierjumpjet, modkami, modbomber, modhip, ratran, ra2falc, ra2beag, yrschp, yrbpln1, ra2hind, ra2zep, yrdisk, ra2shad, aa_phoenix, aa_pelican, d2k_air_drone, d2k_heavy_air_drone, d2k_farasha, steel_inspect, steel_twister, steel_grun, steel_cargoship, steel_cruiser, latin_yakolev, latin_mig, nax_haunebu, nax_haunebu2, nax_me262, nax_bf109, nax_piercer, nax_dieglocke
 		#UnitBuilderMinCredits: 0
-		UnitQueues: Infantry, RAInfantry, Vehicle, RAVehicle, Aircraft, RAAircraft, Naval, RANaval, Addons, Upgrades, Promotions, Infantry.GDI, Infantry.Nod, Vehicle.GDI, Vehicle.Nod, Aircraft.GDI, Aircraft.Nod
+		UnitQueues: Infantry, RAInfantry, Vehicle, RAVehicle, Aircraft, RAAircraft, Naval, RANaval, Addons, Upgrades, Promotions, Infantry.GDI, Infantry.Nod, Vehicle.GDI, Vehicle.Nod, Aircraft.GDI, Aircraft.Nod, Infantry.Allies, Infantry.Soviet, Infantry.Japan, Vehicle.Allies, Vehicle.Soviet, Vehicle.Japan, Aircraft.Allies, Aircraft.Soviet, Aircraft.Japan
 		UnitDelays:
 			mcv.gdi: 5000
 			mcv.nod: 5000
@@ -4788,14 +4788,6 @@ Player:
 			orca: 5
 			tran.gdi: 1
 			tran.nod: 1
-			up_a10airstrike: 1
-			up_longrangesensors: 1
-			up_lightweightarmorplating: 1
-			up_heavyaircraftarmorplating: 1
-			up_advancedmissiletargeting: 1
-			up_armorpiercingbullets: 1
-			up_highvelocitycannons: 1
-			up_cuttingedgeequipment: 1
 			upgdimissilesoldier: 1
 			upgdiempgrenadier: 1
 			upgdisniper: 1
@@ -4820,14 +4812,6 @@ Player:
 			gdiofficer: 3
 			gdihavoc: 1
 			gdifirehawk: 3
-			up_elementalwarfare: 1
-			up_elitecapacitors: 1
-			up_improvedartilleries: 1
-			up_guerillatactics: 1
-			up_blackmarketupgrades: 1
-			up_tiberiuminfusion: 1
-			up_cyberneticmodifications: 1
-			up_advancedguerillatactics: 1
 			upchemicalrocket: 1
 			upchemicalbike: 1
 			upchemicalstealthtank: 1
@@ -4911,14 +4895,6 @@ Player:
 			modcore5: 1
 			modcore6: 1
 			modcore7: 1
-			up_advancedradarsystems: 1
-			up_infantryarmorplating: 1
-			up_reinforcedstructures: 1
-			up_cryomissiles: 1
-			up_lasertargetingsystems: 1
-			up_airsuperioritydoctrine: 1
-			up_chronoarmor: 1
-			up_gpssatellitesupport: 1
 			upalliedmachinegunner: 1
 			upsheridan: 1
 			uprapierjumpjet: 1
@@ -4941,14 +4917,6 @@ Player:
 			ctnk: 1
 			ramgg: 1
 			mrj: 1
-			up_conscription: 1
-			up_nuclearengines: 1
-			up_rocketenhancements: 1
-			up_advancedthermobarics: 1
-			up_experimentalteslaweaponry: 1
-			up_afterburners: 1
-			up_sovietautoloaders: 1
-			up_sovietsteel: 1
 			upfirerocketsoldier: 1
 			upmortarsoldier: 1
 			upcyberdog: 1
@@ -4973,14 +4941,6 @@ Player:
 			kotin: 5
 			v2rlnuke: 1
 			mignuke: 1
-			up_bushidodiscipline: 1
-			up_energizedarrows: 1
-			up_waveforcebullets: 1
-			up_stealthsuitintegration: 1
-			up_superiorwarengines: 1
-			up_divinewindprotocol: 1
-			up_advancedplasmaweapons: 1
-			up_nanotechrepairs: 1
 			upsamurai: 1
 			uparchermaiden: 1
 			uprocketangel: 1

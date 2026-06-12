@@ -917,7 +917,6 @@
 		Prerequisites: ships.upgraded
 
 ^GlobalBuffs:
-	Inherits: ^GPSSatelliteSupport
 
 ^InfantryBuffs:
 	Inherits@GlobalBuffs: ^GlobalBuffs
@@ -929,7 +928,6 @@
 
 ^VehicleBuffs:
 	Inherits@GlobalBuffs: ^GlobalBuffs
-	Inherits: ^NanoTechRepairs
 	ChangesHealth@SelfHealing:
 		Step: 10
 		Delay: 1
@@ -938,7 +936,6 @@
 
 ^TankBuffs:
 	Inherits@VehicleBuffs: ^VehicleBuffs
-	Inherits@upgrade: ^SovietSteel
 	DamageMultiplier@TankBuffs:
 		Modifier: 80
 	FirepowerMultiplier@TankBuffs:
@@ -1167,7 +1164,6 @@
 	-InaccuracyMultiplier@RANK-2:
 	-InaccuracyMultiplier@RANK-3:
 	-InaccuracyMultiplier@RANK-ELITE:
-	-InaccuracyMultiplier@up_gpssatellitesupport:
 	-InaccuracyMultiplier@COMMANDOCALL:
 
 ^SniperInfantryTemplate:
@@ -6663,6 +6659,35 @@ CPQDEBUGDUMMY:
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
 		# InfiniteBuildLimit: 10
+	Exit@0:
+		RequiresCondition: !being-captured
+		SpawnOffset: -280,400,0
+		ExitCell: -1,1
+		ProductionTypes: Dog, Infantry, RAInfantry
+		Priority: 3
+	Exit@1:
+		RequiresCondition: !being-captured
+		SpawnOffset: -280,400,0
+		ExitCell: 0,1
+		ProductionTypes: Dog, Infantry, RAInfantry
+		Priority: 2
+	Exit@2:
+		RequiresCondition: !being-captured
+		SpawnOffset: -280,400,0
+		ExitCell: -1,0
+		ProductionTypes: Dog, Infantry, RAInfantry
+		Priority: 2
+	CommandBarBlacklist:
+		DisableStop: false
+
+^IsDogKennelOld:
+	Inherits@DisabledOverlay: ^IsBarrack
+	Valued:
+		Cost: 200
+	Power:
+		Amount: -10
+	RallyPoint:
+		ForceSetType: Dog
 	Exit@0:
 		RequiresCondition: !being-captured
 		SpawnOffset: -280,400,0
