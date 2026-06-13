@@ -837,14 +837,14 @@ RARE3:
 RAJE3:
 	Inherits: ^Soldier
 	Inherits@anim: ^TDRAInfantry
-	Inherits@Template: ^SniperInfantryTemplate
+	Inherits@Template: ^AntiTankAntiAirInfantryTemplate
 	Inherits@exp: ^GainsExperienceRA
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Inherits@DECORATIONS: ^InfantryExperienceHospitalHazmatOverrides
 	Inherits@AntiInf: ^PrioritizeInfantry
 	Inherits@cloak: ^CloakedVehicle
 	Valued:
-		Cost: 500
+		Cost: 400
 	Tooltip:
 		Name: Japanese Sniper
 	UpdatesPlayerStatistics:
@@ -853,7 +853,7 @@ RAJE3:
 		Queue: Infantry.Japan
 		BuildAtProductionType: Soldier
 		BuildPaletteOrder: 80
-		Prerequisites: dome.japan
+		Prerequisites: modtentj
 		Description: actor-rasniper.description
 	Health:
 		HP: 10000
@@ -865,26 +865,17 @@ RAJE3:
 	AutoTargetPriority@DEFAULT:
 		ValidTargets: Infantry
 	Armament@PRIMARY:
-		Weapon: LightSniper
+		Weapon: JapaneseTankRFlak
 		LocalOffset: 128,0,256
-		RequiresCondition: !up_cryomissiles
 	Armament@GARRISONED:
 		Name: garrisoned
-		Weapon: LightSniper
+		Weapon: JapaneseTankRFlak
 		MuzzleSequence: garrison-muzzle
-		RequiresCondition: !up_cryomissiles
-	Armament@Upgrade: ##########
-		Weapon: CryoLightSniper
-		LocalOffset: 128,0,256
-		RequiresCondition: up_cryomissiles
-	Armament@GARRISONED:
-		Name: garrisoned
-		Weapon: CryoLightSniper
-		MuzzleSequence: garrison-muzzle
-		RequiresCondition: up_cryomissiles
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
 	Cloak:
+	Voiced:
+		VoiceSet: JapaneseVoice
 	RenderSprites:
 		Image: e1sniper
 		PlayerPalette: playerra
@@ -977,7 +968,7 @@ RAJE4:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 45
-		Prerequisites: modtentj
+		Prerequisites: dome.japan
 		Queue: Infantry.Japan
 		Description: actor-e4.description
 	Valued:
@@ -1441,81 +1432,81 @@ TECH1:
 #		VEHICLES
 ####################################################################################################
 
-v1truck:
-	Inherits: ^Tank
-	Inherits@Template: ^ArtilleryTemplate
-	Inherits@exp: ^GainsExperienceRA
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
-	Inherits@EMP: ^TurretEMP
-	Valued:
-		Cost: 850
-	Tooltip:
-		Name: V1 Rocket Truck
-	UpdatesPlayerStatistics:
-		AddToArmyValue: true
-	Buildable:
-		BuildPaletteOrder: 70
-		Prerequisites: ~dome.soviet
-		Queue: Vehicle, RAVehicle
-		Description: actor-v1truck.description
-	Mobile:
-		Speed: 100
-		TurnSpeed: 20
-	Health:
-		HP: 25000
-	Repairable:
-		HpPerStep: 1250
-	ChangesHealth@SelfHealing:
-		Step: 10
-	Armor:
-		Type: Light
-	Turreted:
-		TurnSpeed: 32
-		#Offset: -128,0,128
-		RealignDelay: 0
-	Armament:
-		Weapon: v1rockets
-		LocalOffset: -512,256,256, -512,128,256, -512,-128,256, -512,-256,256
-		MuzzleSequence: muzzle
-		RequiresCondition: !up_advancedthermobarics
-	Armament@Upgrade:
-		Weapon: v1rocketsThermobaric
-		LocalOffset: -512,256,256, -512,128,256, -512,-128,256, -512,-256,256
-		MuzzleSequence: muzzle
-		RequiresCondition: up_advancedthermobarics
-	AmmoPool:
-		Ammo: 4
-		AmmoCondition: ammo
-	Voiced:
-		VoiceSet: RussianVehicleVoice
-	-AttackTurreted:
-	WithMuzzleOverlay:
-	WithSpriteTurret@FourMissiles:
-		RequiresCondition: ammo == 4
-		Sequence: turret4
-	WithSpriteTurret@ThreeMissiles:
-		RequiresCondition: ammo == 3
-		Sequence: turret3
-	WithSpriteTurret@TwoMissiles:
-		RequiresCondition: ammo == 2
-		Sequence: turret2
-	WithSpriteTurret@OneMissile:
-		RequiresCondition: ammo == 1
-		Sequence: turret1
-	WithSpriteTurret@NoMissiles:
-		RequiresCondition: !ammo
-		Sequence: turret0
-	FireWarheadsOnDeath:
-		Weapon: v1rockets
-		RequiresCondition: !up_advancedthermobarics
-	FireWarheadsOnDeath@Upgrade:
-		Weapon: v1rocketsThermobaric
-		RequiresCondition: up_advancedthermobarics
-	ReloadAmmoPool:
-		Delay: 25
-		Count: 1
-	Selectable:
-		DecorationBounds: 1280, 1280
+# v1truck:
+# 	Inherits: ^Tank
+# 	Inherits@Template: ^ArtilleryTemplate
+# 	Inherits@exp: ^GainsExperienceRA
+# 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+# 	Inherits@EMP: ^TurretEMP
+# 	Valued:
+# 		Cost: 850
+# 	Tooltip:
+# 		Name: V1 Rocket Truck
+# 	UpdatesPlayerStatistics:
+# 		AddToArmyValue: true
+# 	Buildable:
+# 		BuildPaletteOrder: 70
+# 		Prerequisites: ~dome.soviet
+# 		Queue: Vehicle, RAVehicle
+# 		Description: actor-v1truck.description
+# 	Mobile:
+# 		Speed: 100
+# 		TurnSpeed: 20
+# 	Health:
+# 		HP: 25000
+# 	Repairable:
+# 		HpPerStep: 1250
+# 	ChangesHealth@SelfHealing:
+# 		Step: 10
+# 	Armor:
+# 		Type: Light
+# 	Turreted:
+# 		TurnSpeed: 32
+# 		#Offset: -128,0,128
+# 		RealignDelay: 0
+# 	Armament:
+# 		Weapon: v1rockets
+# 		LocalOffset: -512,256,256, -512,128,256, -512,-128,256, -512,-256,256
+# 		MuzzleSequence: muzzle
+# 		RequiresCondition: !up_advancedthermobarics
+# 	Armament@Upgrade:
+# 		Weapon: v1rocketsThermobaric
+# 		LocalOffset: -512,256,256, -512,128,256, -512,-128,256, -512,-256,256
+# 		MuzzleSequence: muzzle
+# 		RequiresCondition: up_advancedthermobarics
+# 	AmmoPool:
+# 		Ammo: 4
+# 		AmmoCondition: ammo
+# 	Voiced:
+# 		VoiceSet: RussianVehicleVoice
+# 	-AttackTurreted:
+# 	WithMuzzleOverlay:
+# 	WithSpriteTurret@FourMissiles:
+# 		RequiresCondition: ammo == 4
+# 		Sequence: turret4
+# 	WithSpriteTurret@ThreeMissiles:
+# 		RequiresCondition: ammo == 3
+# 		Sequence: turret3
+# 	WithSpriteTurret@TwoMissiles:
+# 		RequiresCondition: ammo == 2
+# 		Sequence: turret2
+# 	WithSpriteTurret@OneMissile:
+# 		RequiresCondition: ammo == 1
+# 		Sequence: turret1
+# 	WithSpriteTurret@NoMissiles:
+# 		RequiresCondition: !ammo
+# 		Sequence: turret0
+# 	FireWarheadsOnDeath:
+# 		Weapon: v1rockets
+# 		RequiresCondition: !up_advancedthermobarics
+# 	FireWarheadsOnDeath@Upgrade:
+# 		Weapon: v1rocketsThermobaric
+# 		RequiresCondition: up_advancedthermobarics
+# 	ReloadAmmoPool:
+# 		Delay: 25
+# 		Count: 1
+# 	Selectable:
+# 		DecorationBounds: 1280, 1280
 	
 V2RL:
 	Inherits: ^Vehicle
@@ -2645,6 +2636,32 @@ BADR.Japan:
 	SpawnActorOnDeath:
 		Actor: C17.Husk
 
+jkamistrikeplane:
+	Inherits: BADR
+	Tooltip:
+		Name: Zero Strike Fighter
+	Health:
+		HP: 100000
+	Aircraft:
+		Speed: 200
+	Valued:
+		Cost: 5000
+	Contrail@1:
+		Offset: -300,300,0
+	Contrail@2:
+		Offset: -300,-300,0
+	AttackBomber:
+		FacingTolerance: 32
+	Armament:
+		Weapon: StrikeZeroFighterChainGun
+	Armament@Secondary
+		Weapon: RapierBombs
+	RenderSprites:
+		PlayerPalette: player
+		Image: modkamimini
+	SpawnActorOnDeath:
+		Actor: modkamimini.Husk
+
 jsuperbomber:
 	Inherits: BADR
 	Tooltip:
@@ -2791,8 +2808,8 @@ MODKAMI:
 		HpPerStep: 1500
 	ChangesHealth@SelfHealing:
 		Step: 12
-	Armament@Missiles:
-		Weapon: ZeroFighterArrows
+	Armament@Bomb:
+		Weapon: RapierBombs
 		LocalOffset: 85,-300,-85, 85,300,-85
 		MuzzleSequence: muzzle
 		PauseOnCondition: !ammo
@@ -3678,21 +3695,21 @@ MODTYPEJ:
 		Prerequisites: modraweapj
 		Description: template-mbt.description
 	Valued:
-		Cost: 800
+		Cost: 450
 	Tooltip:
 		Name: I-Go Medium Tank
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 110000
+		HP: 40000
 	Repairable:
 		HpPerStep: 5500
 	ChangesHealth@SelfHealing:
 		Step: 44
 	Armor:
-		Type: Medium
+		Type: Light
 	Mobile:
-		Speed: 90
+		Speed: 160
 		TurnSpeed: 18
 	Turreted:
 		Offset: 64,0,0
@@ -3722,103 +3739,103 @@ MODTYPEJ:
 	FireWarheadsOnDeath:
 		Weapon: UnitExplode
 
-MODNANO:
-	Inherits: ^Vehicle
-	Inherits@Template: ^FireSupportTemplate
-	Inherits@exp: ^GainsExperienceRA
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
-	Inherits@EMP: ^TurretEMP
-	Inherits@AntiInf: ^PrioritizeInfantry
-	Inherits@AntiBuil: ^PrioritizeBuilding
-	Buildable:
-		Queue: Vehicle.Japan
-		BuildPaletteOrder: 70
-		Prerequisites: dome.japan
-		Description: actor-nanobggy.description
-	Valued:
-		Cost: 1200
-	Tooltip:
-		Name: Mortar Car
-	UpdatesPlayerStatistics:
-		AddToArmyValue: true
-	Health:
-		HP: 37500
-	Repairable:
-		HpPerStep: 1875
-	ChangesHealth@SelfHealing:
-		Step: 15
-	Armor:
-		Type: Light
-	Mobile:
-		Speed: 77
-		TurnSpeed: 17
-	Turreted:
-		TurnSpeed: 17
-		Offset: -250,0,0
-	Armament:
-		Weapon: NanoArtilleryAG
-		Recoil: 77
-		LocalOffset: 500,0,500
-		MuzzleSequence: muzzle
-	FirepowerMultiplier@Nanodrones:
-		Modifier: 33
-	AttackTurreted:
-	WithMuzzleOverlay:
-	WithSpriteTurret:
-	SelectionDecorations:
-	Selectable:
-		DecorationBounds: 1280, 1280
-	Voiced:
-		VoiceSet: JapaneseVehicleVoice
-	FireWarheadsOnDeath:
-		Weapon: NanoArtilleryAG
-	RenderSprites:
-		Image: modnano
+# MODNANO:
+# 	Inherits: ^Vehicle
+# 	Inherits@Template: ^FireSupportTemplate
+# 	Inherits@exp: ^GainsExperienceRA
+# 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+# 	Inherits@EMP: ^TurretEMP
+# 	Inherits@AntiInf: ^PrioritizeInfantry
+# 	Inherits@AntiBuil: ^PrioritizeBuilding
+# 	Buildable:
+# 		Queue: Vehicle.Japan
+# 		BuildPaletteOrder: 70
+# 		Prerequisites: dome.japan
+# 		Description: actor-nanobggy.description
+# 	Valued:
+# 		Cost: 1200
+# 	Tooltip:
+# 		Name: Mortar Car
+# 	UpdatesPlayerStatistics:
+# 		AddToArmyValue: true
+# 	Health:
+# 		HP: 37500
+# 	Repairable:
+# 		HpPerStep: 1875
+# 	ChangesHealth@SelfHealing:
+# 		Step: 15
+# 	Armor:
+# 		Type: Light
+# 	Mobile:
+# 		Speed: 77
+# 		TurnSpeed: 17
+# 	Turreted:
+# 		TurnSpeed: 17
+# 		Offset: -250,0,0
+# 	Armament:
+# 		Weapon: NanoArtilleryAG
+# 		Recoil: 77
+# 		LocalOffset: 500,0,500
+# 		MuzzleSequence: muzzle
+# 	FirepowerMultiplier@Nanodrones:
+# 		Modifier: 33
+# 	AttackTurreted:
+# 	WithMuzzleOverlay:
+# 	WithSpriteTurret:
+# 	SelectionDecorations:
+# 	Selectable:
+# 		DecorationBounds: 1280, 1280
+# 	Voiced:
+# 		VoiceSet: JapaneseVehicleVoice
+# 	FireWarheadsOnDeath:
+# 		Weapon: NanoArtilleryAG
+# 	RenderSprites:
+# 		Image: modnano
 
-jballista:
-	Inherits: ^Tank
-	Inherits@Template: ^ArtilleryTemplate
-	Inherits@exp: ^GainsExperienceRA
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
-	Inherits@EMP: ^FrontalEMP
-	Buildable:
-		Queue: Vehicle, RAVehicle
-		Prerequisites: ~modjtek
-		BuildPaletteOrder: 70
-		Description: actor-arty.description
-	Valued:
-		Cost: 1150
-	Tooltip:
-		Name: Ballista
-	UpdatesPlayerStatistics:
-		AddToArmyValue: true
-	Health:
-		HP: 65000
-	Repairable:
-		HpPerStep: 3250
-	ChangesHealth@SelfHealing:
-		Step: 26
-	Armor:
-		Type: Medium
-	Mobile:
-		Speed: 65
-		TurnSpeed: 13
-		Locomotor: lighttracked
-	Armament@PRIMARY: ##########
-		Weapon: BallistaMultiShot
-		LocalOffset: 624,0,208
-	Armament@Upgrade: ##########
-		Weapon: BallistaMultiShotEnergized
-		LocalOffset: 624,0,208
-		FireDelay: 3
-		RequiresCondition: up_energizedarrows
-	WithMuzzleOverlay:
-	FireWarheadsOnDeath:
-		Weapon: ArtilleryExplode
-	Voiced:
-		VoiceSet: JapaneseVehicleVoice
-	FirepowerMultiplier@up_energizedarrows:
-		Modifier: 75
+# jballista:
+# 	Inherits: ^Tank
+# 	Inherits@Template: ^ArtilleryTemplate
+# 	Inherits@exp: ^GainsExperienceRA
+# 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+# 	Inherits@EMP: ^FrontalEMP
+# 	Buildable:
+# 		Queue: Vehicle, RAVehicle
+# 		Prerequisites: ~modjtek
+# 		BuildPaletteOrder: 70
+# 		Description: actor-arty.description
+# 	Valued:
+# 		Cost: 1150
+# 	Tooltip:
+# 		Name: Ballista
+# 	UpdatesPlayerStatistics:
+# 		AddToArmyValue: true
+# 	Health:
+# 		HP: 65000
+# 	Repairable:
+# 		HpPerStep: 3250
+# 	ChangesHealth@SelfHealing:
+# 		Step: 26
+# 	Armor:
+# 		Type: Medium
+# 	Mobile:
+# 		Speed: 65
+# 		TurnSpeed: 13
+# 		Locomotor: lighttracked
+# 	Armament@PRIMARY: ##########
+# 		Weapon: BallistaMultiShot
+# 		LocalOffset: 624,0,208
+# 	Armament@Upgrade: ##########
+# 		Weapon: BallistaMultiShotEnergized
+# 		LocalOffset: 624,0,208
+# 		FireDelay: 3
+# 		RequiresCondition: up_energizedarrows
+# 	WithMuzzleOverlay:
+# 	FireWarheadsOnDeath:
+# 		Weapon: ArtilleryExplode
+# 	Voiced:
+# 		VoiceSet: JapaneseVehicleVoice
+# 	FirepowerMultiplier@up_energizedarrows:
+# 		Modifier: 75
 
 # modoitank:
 # 	Inherits: ^Tank
@@ -3998,7 +4015,7 @@ MODCORE:
 	Inherits@selection: ^SelectableSupportUnit
 	Inherits@mcv: ^MCV
 	Buildable:
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Japan, RAVehicle
 		BuildPaletteOrder: 210
 		Prerequisites: ~rafix.japan, dome.japan
 		BuildDurationModifier: 25
@@ -4046,7 +4063,7 @@ MODCORE:
 MODCORE1:
 	Inherits: MODCORE
 	Buildable:
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Japan, RAVehicle
 		BuildPaletteOrder: 210
 		Prerequisites: ~rafix.japan, dome.japan
 		Description: actor-jpcore.description-refinery
@@ -4065,7 +4082,7 @@ MODCORE1:
 MODCORE2:
 	Inherits: MODCORE
 	Buildable:
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Japan, RAVehicle
 		BuildPaletteOrder: 210
 		Prerequisites: ~rafix.japan, dome.japan
 		Description: actor-jpcore.description-power
@@ -4084,7 +4101,7 @@ MODCORE2:
 MODCORE3:
 	Inherits: MODCORE
 	Buildable:
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Japan, RAVehicle
 		BuildPaletteOrder: 210
 		Prerequisites: ~rafix.japan, dome.japan
 		Description: actor-jpcore.description-barracks
@@ -4103,7 +4120,7 @@ MODCORE3:
 MODCORE4:
 	Inherits: MODCORE
 	Buildable:
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Japan, RAVehicle
 		BuildPaletteOrder: 210
 		Prerequisites: ~rafix.japan, dome.japan
 		Description: actor-jpcore.description-radar
@@ -4122,7 +4139,7 @@ MODCORE4:
 MODCORE5:
 	Inherits: MODCORE
 	Buildable:
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Japan, RAVehicle
 		BuildPaletteOrder: 210
 		Prerequisites: ~rafix.japan, dome.japan
 		Description: actor-jpcore.description-airfield
@@ -4141,7 +4158,7 @@ MODCORE5:
 MODCORE6:
 	Inherits: MODCORE
 	Buildable:
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Japan, RAVehicle
 		BuildPaletteOrder: 210
 		Prerequisites: ~rafix.japan, dome.japan
 		Description: actor-jpcore.description-service-depot
@@ -4160,7 +4177,7 @@ MODCORE6:
 MODCORE7:
 	Inherits: MODCORE
 	Buildable:
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Japan, RAVehicle
 		BuildPaletteOrder: 210
 		Prerequisites: ~rafix.japan, dome.japan
 		Description: actor-jpcore.description-tech-center
@@ -5272,7 +5289,6 @@ MODTENTJ:
 
 RAPROC.ALLIES:
 	Inherits: ^RAPROC
-
 	FreeActor:
 		Actor: RAHARV.ALLIES
 		SpawnOffset: 1,2
@@ -5303,7 +5319,7 @@ RAPROC.SOVIET:
 JPROC:
 	Inherits: ^RAPROC
 	Inherits@sell: ^JapanSpawnActorsOnSell
-		FreeActor:
+	FreeActor:
 		Actor: RAHARV.JAPAN
 		SpawnOffset: 1,2
 		Facing: 256
@@ -5767,28 +5783,28 @@ MODRAAFLD:
 		CancelledAudio: Cancelled
 	ProductionBar:
 		ProductionType: Aircraft.Japan
-	AirstrikePower@JapanSuperBomber:
-		OrderName: JapanSuperBomber
+	AirstrikePower@JapanZeroStrike:
+		OrderName: JapanZeroStrike
 		Prerequisites:
 			1: ~techlevel.superweapons
 		Icons:
 			1: airstrike
-		ChargeInterval: 7500
+		ChargeInterval: 3500
 		Names:
-			1: power-super-bombers.name
+			1: Zero Fighter Run
 		Descriptions:
 			1: power-super-bombers.description
 		SelectTargetSpeechNotification: SelectTarget
 		CameraActor: camera
 		CameraRemoveDelay: 150
 		UnitTypes:
-			1: jsuperbomber
+			1: jkamistrikeplane
 		QuantizedFacings: 64
 		DisplayBeacon: true
 		BeaconPosters:
 			1: airstrike
 		SquadSizes:
-			1: 5
+			1: 4
 		SquadOffset: 1792,1792,0
 		ArrowSequence: arrow
 		ClockSequence: clock
@@ -5992,6 +6008,61 @@ MODJTEK:
 # 	SupportPowerChargeBar:
 # 	RenderSprites:
 # 		Image: jshrine
+
+JSHRINE:
+	Inherits: ^BaseBuilding
+	Inherits@shape: ^3x2Shape
+	Inherits@SW: ^PrimarySuperweapon
+	Inherits@sell: ^JapanSpawnActorsOnSell
+	Tooltip:
+		Name: Japanese Shrine
+	Buildable:
+		Prerequisites: ~modjtek, ~techlevel.superweapons
+		Description: actor-mslo.description
+	Building:
+		Footprint: xxx xxx ===
+		Dimensions: 3,3
+		LocalCenterOffset: 0,-512,0
+	AirstrikePower@JapanSuperBomber:
+		OrderName: JapanSuperBomber
+		AllowMultiple: true
+		PauseOnCondition: disabled
+		Prerequisites:
+			1: ~techlevel.superweapons
+		Icons:
+			1: airstrike
+		ChargeInterval: 7500
+		Names:
+			1: power-super-bombers.name
+		Descriptions:
+			1: power-super-bombers.description
+		EndChargeTextNotification: Bomber Strike Ready!
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		InsufficientPowerSpeechNotification: InsufficientPower
+		CameraRemoveDelay: 500
+		Duration: 250
+		ActiveCondition: active
+		DisplayRadarPing: True
+		UnitTypes:
+			1: jsuperbomber
+		QuantizedFacings: 64
+		DisplayBeacon: true
+		BeaconPosters:
+			1: airstrike
+		SquadSizes:
+			1: 5
+		SquadOffset: 1792,1792,0
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+		#UseDirectionalTarget: True
+		DirectionArrowAnimation: airstrikedirection
+		SupportPowerPaletteOrder: 40
+		DisplayTimerRelationships: Ally, Neutral, Enemy
+	SupportPowerChargeBar:
+	RenderSprites:
+		Image: jshrine
 
 ^RAFIX:
 	Inherits: ^BaseBuilding
@@ -6799,137 +6870,182 @@ jmgnest:
 	DetectCloaked:
 		Range: 3348
 
-jballistat:
+JRAGUN:
 	Inherits: ^Defense
 	Inherits@exp: ^GainsExperienceRABuilding
-	Inherits@selection: ^AdvancedDefenseTemplate
-	Inherits@AUTOTARGET: ^AutoTargetAll
-	Inherits@detect: ^GenericAllDetector
+	Inherits@Template: ^BasicDefenseTemplate
+	Inherits@AUTOTARGET: ^AutoTargetGround
 	Inherits@EMP: ^TurretEMP
-	Inherits@shape: ^1x1Shape
-	Inherits@AntiAir: ^PrioritizeAir
-	Inherits@AntiInf: ^PrioritizeInfantry
-	Valued:
-		Cost: 1400
-	Tooltip:
-		Name: Ballista Tower
+	Inherits@AntiTank: ^PrioritizeVehicle
 	Buildable:
-		BuildPaletteOrder: 40
-		Prerequisites: ~~rafact.japan, ~dome.japan
 		Queue: Defence, RADefence
-		Description: actor-mgnest.description
+		BuildPaletteOrder: 70
+		Prerequisites: ~rafact.japan, modtentj
+		Description: actor-gun.description
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Japanese Tank Turret
 	Building:
+		BuildSounds: placbldg.aud, build5.aud
 	Health:
-		HP: 190000
+		HP: 100000
 	WithBuildingBib:
 		HasMinibib: true
-	Armament@PRIMARY: ##########
-		Weapon: BallistaTowerMultiShot
-		LocalOffset: 624,0,208
-		PauseOnCondition: ammo < 5
-	Armament@AIR: ##########
-		Weapon: BallistaSingleShotAir
-		LocalOffset: 624,0,208
-		AmmoUsage: 5
-		PauseOnCondition: ammo < 5
-	Armament@Upgrade: ##########
-		Weapon: BallistaTowerMultiShotEnergized
-		LocalOffset: 624,0,208
-		PauseOnCondition: ammo < 5
-		RequiresCondition: up_energizedarrows
-	Armament@UpgradeAIR: ##########
-		Weapon: BallistaSingleShotAirEnergized
-		LocalOffset: 624,0,208
-		AmmoUsage: 5
-		PauseOnCondition: ammo < 5
-		RequiresCondition: up_energizedarrows
-	ReloadDelayMultiplier@DualWeapon:
-		Modifier: 125
-		RequiresCondition: up_energizedarrows
-	AmmoPool:
-		Ammo: 5
-		AmmoCondition: ammo
-	ReloadAmmoPool:
-		Delay: 5
-		Count: 1
-		ResetOnFire: true
-	WithAmmoPipsDecoration:
-		Position: BottomLeft
-		RequiresSelection: True
-	-RenderRangeCircle:
-	RenderRangeCircleCA:
-		Armaments: primary
-	RenderRangeCircleCA@SECONDARY:
-		Armaments: secondary
+	Turreted:
+		TurnSpeed: 48
+		InitialFacing: 224
+		RealignDelay: -1
+	-WithSpriteBody:
+	WithEmbeddedTurretSpriteBody:
+	Armament:
+		Weapon: RATurretGun
+		LocalOffset: 512,0,112
+		MuzzleSequence: muzzle
 	AttackTurreted:
 		RequiresCondition: !build-incomplete
 	WithMuzzleOverlay:
-	Turreted:
-		TurnSpeed: 25
-		InitialFacing: 200
-		RealignDelay: -1
-	-WithSpriteBody:
-	WithEmbeddedTurretSpriteBody:
-	Power:
-		Amount: -70
-	RevealsShroud:
-		Range: 9214
-	DetectCloaked:
-		Range: 4607
-	FirepowerMultiplier@up_energizedarrows:
-		Modifier: 75
-
-modpillboxfort:
-	Inherits: ^Defense
-	Inherits@exp: ^GainsExperienceRABuilding
-	Inherits@selection: ^AdvancedDefenseTemplate
-	Inherits@AUTOTARGET: ^AutoTargetGround
-	Inherits@detect: ^GenericGroundDetector
-	Inherits@EMP: ^TurretEMP
-	Inherits@shape: ^2x2Shape
-	Inherits@AntiTank: ^PrioritizeVehicle
-	Inherits@AntiTank: ^PrioritizeTank
-	Buildable:
-		Queue: Defence, RADefence
-		BuildPaletteOrder: 90
-		Prerequisites: ~rafact.japan, modjtek
-		Description: actor-waveforceturret.description
-	Valued:
-		Cost: 3200
-	Tooltip:
-		Name: Waveforce Turret
-	Building:
-		Footprint: xx xx
-		Dimensions: 2,2
-	Health:
-		HP: 220000
-	WithBuildingBib:
-		HasMinibib: true
-	Turreted:
-		TurnSpeed: 15
-		RealignDelay: -1
-	Armament@WaveTurretShell:
-		Weapon: WaveTurretShell
-		LocalOffset: 1000,0,500
-		MuzzleSequence: muzzle
-	FirepowerMultiplier@SplashCompensation:
-		Modifier: 50
-	AttackTurreted:
-	WithMuzzleOverlay:
-	-WithSpriteBody:
-	WithEmbeddedTurretSpriteBody:
 	RenderSprites:
-		Image: modpillboxfort
-	FireWarheadsOnDeath:
-		Weapon: WaveTurretImpact
-	DamageMultiplier@2x2Shape:
-		Modifier: 50
+		PlayerPalette: raplayer
+		Image: ragun
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
 	Power:
-		Amount: -160
+		Amount: -40
 	RevealsShroud:
-		Range: 9824
-	DetectCloaked:
-		Range: 4912
+		Range: 8683
+
+# jballistat:
+# 	Inherits: ^Defense
+# 	Inherits@exp: ^GainsExperienceRABuilding
+# 	Inherits@selection: ^AdvancedDefenseTemplate
+# 	Inherits@AUTOTARGET: ^AutoTargetAll
+# 	Inherits@detect: ^GenericAllDetector
+# 	Inherits@EMP: ^TurretEMP
+# 	Inherits@shape: ^1x1Shape
+# 	Inherits@AntiAir: ^PrioritizeAir
+# 	Inherits@AntiInf: ^PrioritizeInfantry
+# 	Valued:
+# 		Cost: 1400
+# 	Tooltip:
+# 		Name: Ballista Tower
+# 	Buildable:
+# 		BuildPaletteOrder: 40
+# 		Prerequisites: ~~rafact.japan, ~dome.japan
+# 		Queue: Defence, RADefence
+# 		Description: actor-mgnest.description
+# 	Building:
+# 	Health:
+# 		HP: 190000
+# 	WithBuildingBib:
+# 		HasMinibib: true
+# 	Armament@PRIMARY: ##########
+# 		Weapon: BallistaTowerMultiShot
+# 		LocalOffset: 624,0,208
+# 		PauseOnCondition: ammo < 5
+# 	Armament@AIR: ##########
+# 		Weapon: BallistaSingleShotAir
+# 		LocalOffset: 624,0,208
+# 		AmmoUsage: 5
+# 		PauseOnCondition: ammo < 5
+# 	Armament@Upgrade: ##########
+# 		Weapon: BallistaTowerMultiShotEnergized
+# 		LocalOffset: 624,0,208
+# 		PauseOnCondition: ammo < 5
+# 		RequiresCondition: up_energizedarrows
+# 	Armament@UpgradeAIR: ##########
+# 		Weapon: BallistaSingleShotAirEnergized
+# 		LocalOffset: 624,0,208
+# 		AmmoUsage: 5
+# 		PauseOnCondition: ammo < 5
+# 		RequiresCondition: up_energizedarrows
+# 	ReloadDelayMultiplier@DualWeapon:
+# 		Modifier: 125
+# 		RequiresCondition: up_energizedarrows
+# 	AmmoPool:
+# 		Ammo: 5
+# 		AmmoCondition: ammo
+# 	ReloadAmmoPool:
+# 		Delay: 5
+# 		Count: 1
+# 		ResetOnFire: true
+# 	WithAmmoPipsDecoration:
+# 		Position: BottomLeft
+# 		RequiresSelection: True
+# 	-RenderRangeCircle:
+# 	RenderRangeCircleCA:
+# 		Armaments: primary
+# 	RenderRangeCircleCA@SECONDARY:
+# 		Armaments: secondary
+# 	AttackTurreted:
+# 		RequiresCondition: !build-incomplete
+# 	WithMuzzleOverlay:
+# 	Turreted:
+# 		TurnSpeed: 25
+# 		InitialFacing: 200
+# 		RealignDelay: -1
+# 	-WithSpriteBody:
+# 	WithEmbeddedTurretSpriteBody:
+# 	Power:
+# 		Amount: -70
+# 	RevealsShroud:
+# 		Range: 9214
+# 	DetectCloaked:
+# 		Range: 4607
+# 	FirepowerMultiplier@up_energizedarrows:
+# 		Modifier: 75
+
+# modpillboxfort:
+# 	Inherits: ^Defense
+# 	Inherits@exp: ^GainsExperienceRABuilding
+# 	Inherits@selection: ^AdvancedDefenseTemplate
+# 	Inherits@AUTOTARGET: ^AutoTargetGround
+# 	Inherits@detect: ^GenericGroundDetector
+# 	Inherits@EMP: ^TurretEMP
+# 	Inherits@shape: ^2x2Shape
+# 	Inherits@AntiTank: ^PrioritizeVehicle
+# 	Inherits@AntiTank: ^PrioritizeTank
+# 	Buildable:
+# 		Queue: Defence, RADefence
+# 		BuildPaletteOrder: 90
+# 		Prerequisites: ~rafact.japan, modjtek
+# 		Description: actor-waveforceturret.description
+# 	Valued:
+# 		Cost: 3200
+# 	Tooltip:
+# 		Name: Waveforce Turret
+# 	Building:
+# 		Footprint: xx xx
+# 		Dimensions: 2,2
+# 	Health:
+# 		HP: 220000
+# 	WithBuildingBib:
+# 		HasMinibib: true
+# 	Turreted:
+# 		TurnSpeed: 15
+# 		RealignDelay: -1
+# 	Armament@WaveTurretShell:
+# 		Weapon: WaveTurretShell
+# 		LocalOffset: 1000,0,500
+# 		MuzzleSequence: muzzle
+# 	FirepowerMultiplier@SplashCompensation:
+# 		Modifier: 50
+# 	AttackTurreted:
+# 	WithMuzzleOverlay:
+# 	-WithSpriteBody:
+# 	WithEmbeddedTurretSpriteBody:
+# 	RenderSprites:
+# 		Image: modpillboxfort
+# 	FireWarheadsOnDeath:
+# 		Weapon: WaveTurretImpact
+# 	DamageMultiplier@2x2Shape:
+# 		Modifier: 50
+# 	Power:
+# 		Amount: -160
+# 	RevealsShroud:
+# 		Range: 9824
+# 	DetectCloaked:
+# 		Range: 4912
 
 	####################################################################################################
 	#		Promotion Units Allies
@@ -7441,59 +7557,6 @@ MODTIGER:
 		Image: alliedtiger
 		PlayerPalette: player_rgba
 
-MODTNKD:
-	Inherits: ^Tank
-	Inherits@Template: ^FireSupportTemplate
-	Inherits@exp: ^GainsExperienceRA
-	Inherits@PromotionUnitBuff: ^PromotionUnitBuff
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
-	Inherits@EMP: ^FrontalEMP
-	Inherits@AntiVeh: ^PrioritizeVehicle
-	Inherits@AntiTank: ^PrioritizeTank
-	Buildable:
-		Queue: Vehicle, RAVehicle
-		BuildPaletteOrder: 110
-		Description: actor-tnkd.description
-		Prerequisites: ~upalliedtankdestroyer, dome.allies
-	Valued:
-		Cost: 1200
-	Tooltip:
-		Name: Allied Tank Destroyer
-	UpdatesPlayerStatistics:
-		AddToArmyValue: true
-	Health:
-		HP: 67500
-	Repairable:
-		HpPerStep: 3375
-	ChangesHealth@SelfHealing:
-		Step: 27
-	Armor:
-		Type: Medium
-	Mobile:
-		Speed: 65
-		TurnSpeed: 13
-	Turreted:
-		TurnSpeed: 13
-	Armament:
-		Weapon: AlliedTankDestroyerCannon
-		Recoil: 128
-		RecoilRecovery: 38
-		LocalOffset: 1150,0,250
-		MuzzleSequence: muzzle
-	AttackFrontal:
-		FacingTolerance: 0
-	WithMuzzleOverlay:
-	SelectionDecorations:
-	Selectable:
-		DecorationBounds: 1280, 1280
-	Voiced:
-		VoiceSet: TankDestroyerVoice
-	FireWarheadsOnDeath:
-		Weapon: UnitExplode
-	RenderSprites:
-		Image: modtnkd2
-		PlayerPalette: player_rgba
-
 CTNK:
 	Inherits: ^Vehicle
 	Inherits@Template: ^EpicVehicleTemplate
@@ -7787,17 +7850,16 @@ GAP:
 	-ExternalCondition@shrouded:
 	-ExternalCondition@lockon:
 	Valued:
-		Cost: 5000
+		Cost: 800
 	Tooltip:
 		Name: Gap Generator
 	Building:
 		BuildSounds: placbldg.aud, build5.aud
 	Buildable:
-		BuildLimit: 1
 		BuildDuration: 1500
 		BuildDurationModifier: 100
 		Queue: Defence, RADefence
-		Prerequisites: atek
+		Prerequisites: ~rafact.soviet, atek
 		Description: actor-gap.description
 	Selectable:
 		Bounds: 1024, 2048, 0, -512
@@ -7855,7 +7917,6 @@ RAMGG:
 	-ExternalCondition@shrouded:
 	-ExternalCondition@lockon:
 	Buildable:
-		BuildLimit: 1
 		BuildDuration: 1500
 		BuildDurationModifier: 100
 		Queue: Vehicle.Allies
@@ -7884,8 +7945,8 @@ RAMGG:
 		TurnSpeed: 15
 	Targetable@Epic:
 		TargetTypes: Epic
-	TooltipExtras@Epic:
-		Description: Epic
+	# TooltipExtras@Epic:
+	# 	Description: Epic
 	WithIdleOverlay@SPINNER:
 		Offset: -299,0,171
 		Sequence: spinner
@@ -7937,13 +7998,12 @@ MRJ:
 	Inherits@EMP: ^FrontalEMP
 	-ExternalCondition@lockon:
 	Valued:
-		Cost: 5000
+		Cost: 1100
 	Tooltip:
 		Name: Mobile Radar Jammer
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
-		BuildLimit: 1
 		BuildDuration: 1500
 		BuildDurationModifier: 100
 		Queue: Vehicle.Allies, RAVehicle
@@ -8092,13 +8152,14 @@ mortarsoldier:
 	Inherits@AntiBuil: ^PrioritizeBuilding
 	Inherits@AntiDef: ^PrioritizeDefence
 	Inherits@anim: ^TDRAInfantry
+	Inherits@cloak: ^CloakedVehicle
 	Buildable:
 		Queue: Infantry.Japan
 		BuildPaletteOrder: 130
-		Prerequisites: dome.japan
+		Prerequisites: modjtek
 		Description: actor-mortarsoldier.description
 	Valued:
-		Cost: 500
+		Cost: 600
 	Tooltip:
 		Name: Japanese Mortar Soldier
 	UpdatesPlayerStatistics:
@@ -8118,26 +8179,11 @@ mortarsoldier:
 		Name: garrisoned
 		Weapon: SiegeMortar
 		RequiresCondition: !up_advancedthermobarics
-	Armament@Upgrade:
-		Weapon: SiegeMortarThermobaric
-		LocalOffset: 427,0,341
-		FireDelay: 10
-		RequiresCondition: up_advancedthermobarics
-	Armament@UpgradeGARRISONED:
-		Name: garrisoned
-		Weapon: SiegeMortarThermobaric
-		RequiresCondition: up_advancedthermobarics
-	DamageMultiplier@up_advancedthermobarics:
-		RequiresCondition: up_advancedthermobarics
-		Modifier: 50
 	FirepowerMultiplier@SplashDamage:
 		Modifier: 75
 	FireWarheadsOnDeath:
 		Weapon: SiegeMortar
 		RequiresCondition: !up_advancedthermobarics
-	FireWarheadsOnDeath@Upgrade:
-		Weapon: SiegeMortarThermobaric
-		RequiresCondition: up_advancedthermobarics
 	TakeCover:
 		ProneOffset: 227,0,-245
 	WithInfantryBody:
@@ -8146,7 +8192,7 @@ mortarsoldier:
 	RenderRangeCircle:
 		RangeCircleType: infantry
 	Voiced:
-		VoiceSet: RussianVoice
+		VoiceSet: JapaneseVoice
 	RenderSprites:
 		Image: mortarsoldier
 		PlayerPalette: playerra
@@ -9176,7 +9222,7 @@ RASAMURAI:
 	Tooltip:
 		Name: Samurai
 	Buildable:
-		BuildPaletteOrder: 10
+		BuildPaletteOrder: 100
 		Prerequisites: modjtek
 		Queue: Infantry.Japan
 		Description: actor-rasamurai.description
@@ -9258,6 +9304,59 @@ RASAMURAI:
 # 	WithDeathAnimation:
 # 		DeathSequencePalette: player
 
+MODTNKD:
+	Inherits: ^Tank
+	Inherits@Template: ^FireSupportTemplate
+	Inherits@exp: ^GainsExperienceRA
+	Inherits@PromotionUnitBuff: ^PromotionUnitBuff
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@EMP: ^FrontalEMP
+	Inherits@AntiVeh: ^PrioritizeVehicle
+	Inherits@AntiTank: ^PrioritizeTank
+	Buildable:
+		Queue: Vehicle.Japan, RAVehicle
+		BuildPaletteOrder: 110
+		Description: actor-tnkd.description
+		Prerequisites: modjtek
+	Valued:
+		Cost: 1200
+	Tooltip:
+		Name: Japanese Tank Destroyer
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 67500
+	Repairable:
+		HpPerStep: 3375
+	ChangesHealth@SelfHealing:
+		Step: 27
+	Armor:
+		Type: Medium
+	Mobile:
+		Speed: 65
+		TurnSpeed: 13
+	Turreted:
+		TurnSpeed: 13
+	Armament:
+		Weapon: AlliedTankDestroyerCannon
+		Recoil: 128
+		RecoilRecovery: 38
+		LocalOffset: 1150,0,250
+		MuzzleSequence: muzzle
+	AttackFrontal:
+		FacingTolerance: 0
+	WithMuzzleOverlay:
+	SelectionDecorations:
+	Selectable:
+		DecorationBounds: 1280, 1280
+	Voiced:
+		VoiceSet: JapaneseVehicleVoice
+	FireWarheadsOnDeath:
+		Weapon: UnitExplode
+	RenderSprites:
+		Image: modtnkd2
+		PlayerPalette: player_rgba
+
 MODHOVER:
 	Inherits: ^Tank
 	Inherits@Template: ^SupportVehicleTemplate
@@ -9292,7 +9391,7 @@ MODHOVER:
 	Armor:
 		Type: Medium
 	Mobile:
-		Locomotor: hover
+		Locomotor: fakeaircraftVEH
 		Speed: 130
 		TurnSpeed: 26
 	Hovers:
@@ -9670,26 +9769,26 @@ typechiha:
 	Inherits@EMP: ^TurretEMP
 	Inherits@AntiVeh: ^PrioritizeVehicle
 	Buildable:
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Japan
 		BuildPaletteOrder: 50
-		Prerequisites: ~modraweapj, ~upchiha
+		Prerequisites: modraweapj, dome.japan
 		Description: template-mbt.description
 	Valued:
-		Cost: 1100
+		Cost: 650
 	Tooltip:
-		Name: Chi-Ha Heavy Tank
+		Name: Chi-Ha Tank
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 130000
+		HP: 80000
 	Repairable:
 		HpPerStep: 6500
 	ChangesHealth@SelfHealing:
 		Step: 104
 	Armor:
-		Type: Heavy
+		Type: Medium
 	Mobile:
-		Speed: 85
+		Speed: 100
 		TurnSpeed: 17
 	Turreted:
 		Offset: 64,0,0
@@ -9719,67 +9818,67 @@ typechiha:
 	FireWarheadsOnDeath:
 		Weapon: UnitExplodeBig
 
-modhovert:
-	Inherits: ^Tank
-	Inherits@Template: ^HighTechTankTemplate
-	Inherits@exp: ^GainsExperienceRA
-	Inherits@PromotionUnitBuff: ^PromotionUnitBuff
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
-	Inherits@EMP: ^TurretEMP
-	Buildable:
-		Queue: Vehicle.Japan
-		Prerequisites: dome.japan
-		BuildPaletteOrder: 120
-		Description: actor-jphovert.description
-	Valued:
-		Cost: 1200
-	Tooltip:
-		Name: Hovercraft Flametank
-		GenericName: Tank
-	UpdatesPlayerStatistics:
-		AddToArmyValue: true
-	Health:
-		HP: 60000
-	Repairable:
-		HpPerStep: 3000
-	ChangesHealth@SelfHealing:
-		Step: 48
-	Armor:
-		Type: Medium
-	Mobile:
-		Locomotor: hover
-		Speed: 90
-		TurnSpeed: 18
-	Hovers:
-	Turreted:
-		TurnSpeed: 18
-		Offset: 0,0,0
-	Armament:
-		Weapon: HeavyFlamer
-		Recoil: 160
-		RecoilRecovery: 36
-		LocalOffset: 800,-120,160, 800,120,160
-		MuzzleSequence: muzzle
-		RequiresCondition: !up_advancedplasmaweapons
-	Armament@Upgrade: ##########
-		Weapon: HeavyPlasmaFlamer
-		Recoil: 160
-		RecoilRecovery: 36
-		LocalOffset: 800,-120,160, 800,120,160
-		MuzzleSequence: muzzle
-		RequiresCondition: up_advancedplasmaweapons
-	FireWarheadsOnDeath:
-		Weapon: FlametankExplode
-	AttackTurreted:
-	WithMuzzleOverlay:
-	WithSpriteTurret:
-	#SpawnActorOnDeath:
-	#	Actor: 2TNK.Husk
-	SelectionDecorations:
-	Selectable:
-		DecorationBounds: 1280, 1280
-	Voiced:
-		VoiceSet: RAVehicleVoice
+# modhovert:
+# 	Inherits: ^Tank
+# 	Inherits@Template: ^HighTechTankTemplate
+# 	Inherits@exp: ^GainsExperienceRA
+# 	Inherits@PromotionUnitBuff: ^PromotionUnitBuff
+# 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+# 	Inherits@EMP: ^TurretEMP
+# 	Buildable:
+# 		Queue: Vehicle.Japan
+# 		Prerequisites: dome.japan
+# 		BuildPaletteOrder: 120
+# 		Description: actor-jphovert.description
+# 	Valued:
+# 		Cost: 1200
+# 	Tooltip:
+# 		Name: Hovercraft Flametank
+# 		GenericName: Tank
+# 	UpdatesPlayerStatistics:
+# 		AddToArmyValue: true
+# 	Health:
+# 		HP: 60000
+# 	Repairable:
+# 		HpPerStep: 3000
+# 	ChangesHealth@SelfHealing:
+# 		Step: 48
+# 	Armor:
+# 		Type: Medium
+# 	Mobile:
+# 		Locomotor: hover
+# 		Speed: 90
+# 		TurnSpeed: 18
+# 	Hovers:
+# 	Turreted:
+# 		TurnSpeed: 18
+# 		Offset: 0,0,0
+# 	Armament:
+# 		Weapon: HeavyFlamer
+# 		Recoil: 160
+# 		RecoilRecovery: 36
+# 		LocalOffset: 800,-120,160, 800,120,160
+# 		MuzzleSequence: muzzle
+# 		RequiresCondition: !up_advancedplasmaweapons
+# 	Armament@Upgrade: ##########
+# 		Weapon: HeavyPlasmaFlamer
+# 		Recoil: 160
+# 		RecoilRecovery: 36
+# 		LocalOffset: 800,-120,160, 800,120,160
+# 		MuzzleSequence: muzzle
+# 		RequiresCondition: up_advancedplasmaweapons
+# 	FireWarheadsOnDeath:
+# 		Weapon: FlametankExplode
+# 	AttackTurreted:
+# 	WithMuzzleOverlay:
+# 	WithSpriteTurret:
+# 	#SpawnActorOnDeath:
+# 	#	Actor: 2TNK.Husk
+# 	SelectionDecorations:
+# 	Selectable:
+# 		DecorationBounds: 1280, 1280
+# 	Voiced:
+# 		VoiceSet: RAVehicleVoice
 
 # shogunexecutioner:
 # 	Inherits: ^Walker
@@ -9870,7 +9969,7 @@ MODBGGY:
 	Valued:
 		Cost: 900
 	Tooltip:
-		Name: Grenade Buggy
+		Name: Mortar Buggy
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:

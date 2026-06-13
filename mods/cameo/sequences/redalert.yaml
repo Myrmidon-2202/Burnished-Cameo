@@ -1286,31 +1286,31 @@ rachan:
 rasamurai:
 	Defaults:
 		Filename: rasamurai.shp
-		Scale: 0.8
+		Scale: 2
 	Inherits: ^InfantryOverlays
 	stand:
-		Facings: 8
+		Facings: 4
 	stand2:
-		Facings: 8
+		Facings: 4
 	run:
-		Start: 24
-		Length: 6
-		Facings: 8
+		Start: 4
+		Length: 4
+		Facings: 4
 		Tick: 120
 	shoot:
-		Start: 120
-		Length: 6
-		Facings: 8
+		Start: 27
+		Length: 7
+		Facings: 2
 	prone-stand:
-		Start: 16
-		Facings: 8
+		Start: 4
+		Facings: 4
 	prone-stand2:
-		Start: 16
-		Facings: 8
+		Start: 4
+		Facings: 4
 	prone-run:
-		Start: 72
-		Length: 6
-		Facings: 8
+		Start: 4
+		Length: 4
+		Facings: 4
 		Tick: 120
 	# stand -> prone transition
 	liedown:
@@ -1319,51 +1319,47 @@ rasamurai:
 	standup:
 		Start: 4
 	prone-shoot:
-		Start: 168
-		Length: 6
-		Facings: 8
+		Start: 27
+		Length: 7
+		Facings: 2
 	idle1:
-		Start: 24
-		Length: 6
-		Facings: 8
+		Start: 20
+		Length: 4
 		Tick: 120
 	idle2:
 		Start: 24
-		Length: 6
-		Facings: 8
+		Length: 3
 		Tick: 120
 	idle3:
-		Start: 24
-		Length: 6
-		Facings: 8
+		Start: 20
+		Length: 4
 		Tick: 120
 	cheer:
 		Start: 4
 	# Dancing
 	idle4:
 		Start: 24
-		Length: 6
-		Facings: 8
+		Length: 3
 		Tick: 120
 	# Shot
 	die1:
-		Start: 276
-		Length: 12
+		Start: 45
+		Length: 4
 		Tick: 80
 	# Explode
 	die2:
-		Start: 305
-		Length: 12
+		Start: 45
+		Length: 4
 		Tick: 80
 	# Fly and explode in air
 	die3:
-		Start: 330
-		Length: 12
+		Start: 45
+		Length: 4
 		Tick: 80
 	# Fly through air squish on ground
 	die4:
-		Start: 330
-		Length: 12
+		Start: 45
+		Length: 4
 		Tick: 80
 	# Burn
 	die5:
@@ -2162,7 +2158,7 @@ modhip:
 modhover:
 	Defaults:
 		Filename: modhover_new.shp
-		Scale: 0.4
+		Scale: 0.6
 	idle:
 		Facings: 64
 		Offset: 0,4
@@ -2846,6 +2842,7 @@ ragun:
 		Offset: -1,-1
 	icon:
 		Filename: ragunicon.png
+
 
 agun:
 	Defaults:
@@ -5223,6 +5220,7 @@ hakurei:
 
 modtypej:
 	Defaults:
+		Scale: 0.8
 		Filename: type89igo.shp
 	idle:
 		Facings: 64
@@ -5239,7 +5237,7 @@ modtypej:
 
 typechiha:
 	Defaults:
-		Scale: 1.2
+		Scale: 0.9
 	idle:
 		Filename: ChiHaChass.shp
 		Facings: 64

@@ -1047,6 +1047,22 @@ Player:
 					Attractiveness: 1
 					TargetMetric: Value
 					CheckRadius: 2500
+			JapanZeroStrike:
+				OrderName: JapanZeroStrike
+				MinimumAttractiveness: 1
+				IgnoreVisibility: true
+				Consideration@1:
+					Against: Enemy
+					Types: Ground
+					Attractiveness: 1
+					TargetMetric: None
+					CheckRadius: 5000
+				Consideration@2:
+					Against: Enemy
+					Types: Structure
+					Attractiveness: 1
+					TargetMetric: Value
+					CheckRadius: 2500
 			JapanSuperBomber:
 				OrderName: JapanSuperBomber
 				MinimumAttractiveness: 1

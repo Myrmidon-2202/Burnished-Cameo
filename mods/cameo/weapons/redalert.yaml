@@ -141,6 +141,26 @@ CHGuardRifleWaveforce:
 	Inherits: CHGuardRifle
 	Inherits: ^WaveforceBulletProjectile
 
+JapaneseTankRFlak:
+	Inherits: ^SmallArms
+	Inherits: ^FlakWeapon
+	ReloadDelay: 10
+	Range: 6314
+	Report: gun20.aud
+	ValidTargets: Ground, Water, Trees, Air
+	Warhead@SmallArms: SpreadDamage
+		ValidTargets: Ground, Water, Trees
+		Damage: 1000
+	Warhead@SmallArmsPercentage: HealthPercentageDamage
+		ValidTargets: Ground, Water, Trees
+		Damage: 1
+	Warhead@FlakWeapon: SpreadDamage
+		ValidTargets: Ground, Water, Trees
+		Damage: 800
+	Warhead@FlakWeaponPercentage: HealthPercentageDamage
+		ValidTargets: Ground, Water, Trees
+		Damage: 1
+
 GrenadeRA:
 	Inherits: ^Grenade
 	Inherits: ^LightFlameWeapon
@@ -2530,6 +2550,27 @@ ZeroFighterChainGun:
 	Warhead@ChaingunPercentage: HealthPercentageDamage
 		ValidTargets: Ground, Water, Trees, Air
 		Damage: 1
+
+StrikeZeroFighterChainGun:
+	Inherits: ^Chaingun
+	Range: 5000
+	Burst: 10
+	BurstDelays: 2
+	FirstBurstTargetOffset: -2984,0,0
+	FollowingBurstTargetOffset: 746,0,0
+	ReloadDelay: 125
+	Report: gun13.aud
+	ValidTargets: Ground, Water, Trees, Air
+	Warhead@Chaingun: SpreadDamage
+		ValidTargets: Ground, Water, Trees, Air
+		Damage: 2000
+		Spread: 300
+		ValidRelationships: Neutral, Enemy
+	Warhead@ChaingunPercentage: HealthPercentageDamage
+		ValidTargets: Ground, Water, Trees, Air
+		Damage: 3
+		Spread: 300
+		ValidRelationships: Neutral, Enemy
 
 ZeroFighterChainGunWaveforce:
 	Inherits: ^WaveforceBulletWarhead
