@@ -1224,7 +1224,7 @@ lego_astro_mcv:
 	Buildable:
 		Queue: Defence, RADefence
 		Description: Transforms into an Eagle Command.
-		Prerequisites ~astro_conyard
+		Prerequisites: ~astro_conyard
 	Tooltip:
 		Name: Mobile Construction Vehicle (Astro)
 	Transforms:
