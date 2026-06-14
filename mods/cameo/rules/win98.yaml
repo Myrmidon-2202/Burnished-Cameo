@@ -51,94 +51,94 @@ World:
 #       WIN98 TEST
 ####################################################################################################
 
-op2_command_center:
-	Inherits: ^BaseBuilding
-	Inherits@shape: ^3x2Shape
-	Inherits@CPQWP: ^CPQConditionWithPrimary
-	Inherits@aicash: ^AIConyardCash
-	Inherits@radar: ^RadarBuilding
-	Inherits@conyard: ^Conyard
-	Inherits@POWERDOWN: ^DisableOnPowerDown
-	Tooltip:
-		Name: Command Center
-	Power:
-		Amount: 100
-	Building:
-		Queue: Building, RABuilding
-		Prerequisites: ~win98_mycomputer
-		Footprint: xxx xxx ===
-		Dimensions: 3,3
-		LocalCenterOffset: 0,-512,0
-		BuildSounds: tscupd00.aud
-	Transforms:
-		IntoActor: op2_command_centerm
-		Offset: 1,1
-		Facing: 432
-	# ProductionQueue@Building:
-	# 	LowPowerModifier: 100
-	# ProductionQueue@Defense:
-	# 	LowPowerModifier: 100
-	WithBuildingPlacedAnimation:
-	ProvidesPrerequisite@buildingname:
-	WithBuildingBib:
-	RallyPoint:
-		Path: 0,2
-	Exit@1:
-		SpawnOffset: -1024,1024,0 #-1323,1280,0
-		ExitCell: 0,2
-		Facing: 540
-	ProvidesRadar:
-		RequiresCondition: !jammed
-	Selectable:
-		Bounds: 3072, 2560, 0, 0
-		DecorationBounds: 3072, 2560, 0, 0
-	# WithProductionOverlay@WELDING:
-	# 	RequiresCondition: !build-incomplete
-	# 	Queues: Building, Defence, RABuilding, RADefence
-	# 	Sequence: build
-	Voiced:
-		VoiceSet: SCCommandCenterVoice
-	RenderSprites:
-		Palette: td_temperat
+# op2_command_center:
+# 	Inherits: ^BaseBuilding
+# 	Inherits@shape: ^3x2Shape
+# 	Inherits@CPQWP: ^CPQConditionWithPrimary
+# 	Inherits@aicash: ^AIConyardCash
+# 	Inherits@radar: ^RadarBuilding
+# 	Inherits@conyard: ^Conyard
+# 	Inherits@POWERDOWN: ^DisableOnPowerDown
+# 	Tooltip:
+# 		Name: Command Center
+# 	Power:
+# 		Amount: 100
+# 	Building:
+# 		Queue: Building, RABuilding
+# 		Prerequisites: ~win98_mycomputer
+# 		Footprint: xxx xxx ===
+# 		Dimensions: 3,3
+# 		LocalCenterOffset: 0,-512,0
+# 		BuildSounds: tscupd00.aud
+# 	Transforms:
+# 		IntoActor: op2_command_centerm
+# 		Offset: 1,1
+# 		Facing: 432
+# 	# ProductionQueue@Building:
+# 	# 	LowPowerModifier: 100
+# 	# ProductionQueue@Defense:
+# 	# 	LowPowerModifier: 100
+# 	WithBuildingPlacedAnimation:
+# 	ProvidesPrerequisite@buildingname:
+# 	WithBuildingBib:
+# 	RallyPoint:
+# 		Path: 0,2
+# 	Exit@1:
+# 		SpawnOffset: -1024,1024,0 #-1323,1280,0
+# 		ExitCell: 0,2
+# 		Facing: 540
+# 	ProvidesRadar:
+# 		RequiresCondition: !jammed
+# 	Selectable:
+# 		Bounds: 3072, 2560, 0, 0
+# 		DecorationBounds: 3072, 2560, 0, 0
+# 	# WithProductionOverlay@WELDING:
+# 	# 	RequiresCondition: !build-incomplete
+# 	# 	Queues: Building, Defence, RABuilding, RADefence
+# 	# 	Sequence: build
+# 	Voiced:
+# 		VoiceSet: SCCommandCenterVoice
+# 	RenderSprites:
+# 		Palette: td_temperat
 
-op2_command_centerm:
-	Inherits: ^Helicopter
-	Inherits@explode: ^HeliExplodeLarge
-	Tooltip:
-		Name: Command Center
-	Selectable:
-		Bounds: 3072, 2048
-		DecorationBounds: 3300, 2448, 0, 0
-	Valued:
-		Cost: 5000
-	Health:
-		HP: 1000000
-	Armor:
-		Type: Concrete
-	Transforms:
-		IntoActor: op2_command_center
-		Offset: -1,-1
-		NoTransformNotification: BuildingCannotPlaceAudio
-	MustBeDestroyed:
-		RequiredForShortGame: true
-	BaseBuilding:
-	SelectionDecorations:
-	Aircraft:
-		TurnSpeed: 20
-		Speed: 61 #71
-		VTOL: true
-		CanForceLand: false
-		-CruisingCondition:
-	-AttackAircraft:
-	-SpawnActorOnDeath:
-	-Hovers@CRUISING:
-	Hovers:
-	-Voiced:
-	ProvidesPrerequisite@conyard:
-		Prerequisite: conyard
-	RenderSprites:
-		Palette: td_temperat
-		Image: op2_command_center
+# op2_command_centerm:
+# 	Inherits: ^Helicopter
+# 	Inherits@explode: ^HeliExplodeLarge
+# 	Tooltip:
+# 		Name: Command Center
+# 	Selectable:
+# 		Bounds: 3072, 2048
+# 		DecorationBounds: 3300, 2448, 0, 0
+# 	Valued:
+# 		Cost: 5000
+# 	Health:
+# 		HP: 1000000
+# 	Armor:
+# 		Type: Concrete
+# 	Transforms:
+# 		IntoActor: op2_command_center
+# 		Offset: -1,-1
+# 		NoTransformNotification: BuildingCannotPlaceAudio
+# 	MustBeDestroyed:
+# 		RequiredForShortGame: true
+# 	BaseBuilding:
+# 	SelectionDecorations:
+# 	Aircraft:
+# 		TurnSpeed: 20
+# 		Speed: 61 #71
+# 		VTOL: true
+# 		CanForceLand: false
+# 		-CruisingCondition:
+# 	-AttackAircraft:
+# 	-SpawnActorOnDeath:
+# 	-Hovers@CRUISING:
+# 	Hovers:
+# 	-Voiced:
+# 	ProvidesPrerequisite@conyard:
+# 		Prerequisite: conyard
+# 	RenderSprites:
+# 		Palette: td_temperat
+# 		Image: op2_command_center
 
 ####################################################################################################
 #       WIN98 BUILDINGS
