@@ -107,7 +107,6 @@ Player:
 		Offset: 128, 128, 0
 		ZOffset: -512
 
-
 ^WC1Building:
 	GrantConditionOnDamageState:
 		ValidDamageStates: Medium
@@ -141,7 +140,6 @@ Player:
 ^WCWorker:
 	Harvester:
 		PipCount: 3
-		Capacity: 6
 		BaleLoadDelay: 3
 		BaleUnloadDelay: 1
 		BaleUnloadAmount: 2
@@ -149,6 +147,8 @@ Player:
 		MaxUnloadQueue: 9
 	WithHarvestAnimation:
 	WithDockingAnimation:
+	StoresResources:
+		Capacity: 6
 
 ^WCUnitProduction:
 	Inherits@prod: ^ProducesUnits
@@ -221,13 +221,14 @@ wc_h_townhall:
 	GrantExternalConditionToOwner@BuildingsOwned:
 		Condition: BuildingsOwned
 	Inherits: ^BaseBuilding
+	Inherits@ref: ^Refinery
 	Inherits@shape: ^2x2Shape
 	Inherits@BURNABLE: ^WC1Building
 	Inherits@CPQWP: ^CPQCondition
 	Inherits@ai: ^AIConyardCash
 	Inherits@conyard: ^Conyard
 	Selectable:
-		Bounds: 116480, 116480
+		Bounds: 2048, 2048
 	HitShape:
 		TargetableOffsets: 630,299,0
 	Valued:
@@ -240,6 +241,8 @@ wc_h_townhall:
 		Dimensions: 2,3
 		LocalCenterOffset: 0,-512,0
 		-BuildSounds:
+	Transforms:
+		IntoActor: wc_h_mcv
 	DamageMultiplier@DamageReduction:
 		Modifier: 85
 	Health:
@@ -259,23 +262,23 @@ wc_h_townhall:
 		ActorTypes: wc_h_footman
 	ScalePowerWithHealth:
 	BaseBuilding:
-	SpawnActorPower@spysat:
-		PauseOnCondition: lowpower
-		OrderName: SpydronePower
-		Icon: wc_far_seeing
-		ChargeInterval: 1500
-		Name: Far Seeing
-		Description: Reveals an area of the map\nand cloaked enemy units.
-		SelectTargetSpeechNotification: SelectTarget
-		InsufficientPowerSpeechNotification: InsufficientPower
-		EndChargeSpeechNotification: SpyPlaneReady
-		Actor: camera.spysat
-		LifeTime: 250
-		DeploySound: sspysate.aud
-		LaunchSound: sspysate.aud
-		IncomingSound: sspysate.aud
-		SupportPowerPaletteOrder: 10
-		EffectSequence: idle
+	# SpawnActorPower@spysat:
+	# 	PauseOnCondition: lowpower
+	# 	OrderName: SpydronePower
+	# 	Icon: wc_far_seeing
+	# 	ChargeInterval: 1500
+	# 	Name: Far Seeing
+	# 	Description: Reveals an area of the map\nand cloaked enemy units.
+	# 	SelectTargetSpeechNotification: SelectTarget
+	# 	InsufficientPowerSpeechNotification: InsufficientPower
+	# 	EndChargeSpeechNotification: SpyPlaneReady
+	# 	Actor: camera.spysat
+	# 	LifeTime: 250
+	# 	DeploySound: sspysate.aud
+	# 	LaunchSound: sspysate.aud
+	# 	IncomingSound: sspysate.aud
+	# 	SupportPowerPaletteOrder: 10
+	# 	EffectSequence: idle
 	Production@NORMAL:
 		Produces: Building, Defence
 		PauseOnCondition: lowpower
@@ -327,12 +330,12 @@ wc_h_townhall:
 	ProvidesPrerequisite@faction:
 		Prerequisite: mmwchuman
 	Refinery:
+	DockHost:
 		DockAngle: 448
-		DockOffset: 1,3
-		IsDragRequired: False
+		DockOffset: -1c0, 1c0, 0
+		IsDragRequired: True
 		DragOffset: -554,512,0
 		DragLength: 12
-		TickRate: 15
 	StoresResources:
 		Capacity: 1000
 	WithResourceStoragePipsDecoration:
@@ -346,7 +349,7 @@ wc_h_farm:
 	Inherits@shape: ^2x2Shape
 	Inherits@BURNABLE: ^WC1Building
 	Selectable:
-		Bounds: 116480, 116480
+		Bounds: 2048, 2048
 	HitShape:
 		TargetableOffsets: 630,299,0
 	StoresResources:
@@ -358,7 +361,7 @@ wc_h_farm:
 	ProvidesPrerequisite:
 	Buildable:
 		BuildPaletteOrder: 11
-		Prerequisites: wc_h_townhall
+		Prerequisites: ~wc_h_townhall
 		Queue: Building, RABuilding
 		BuildDuration: 160
 		BuildDurationModifier: 100
@@ -416,14 +419,14 @@ wc_h_guard_tower:
 	Inherits@BURNABLE: ^WC1Building
 	Inherits@upgrade_arrows: ^wc_h_str_arrow
 	Selectable:
-		Bounds: 72789, 72789
+		Bounds: 2048,2048
 	Valued:
 		Cost: 1200
 	Tooltip:
 		Name: Guard Tower
 	Buildable:
 		BuildPaletteOrder: 5
-		Prerequisites: wc_h_barracks
+		Prerequisites: ~wc_h_townhall, wc_h_barracks
 		Queue: Defence, RADefence
 		BuildDuration: 750
 		BuildDurationModifier: 50
@@ -473,6 +476,7 @@ wc_h_guard_tower:
 wc_h_barracks:
 	Inherits: ^BaseBuilding
 	Inherits@BURNABLE: ^WC1Building
+	Inherits@shape: ^2x2Shape
 	Inherits@wcprod: ^WCUnitProduction
 	Inherits@CPQWP: ^CPQConditionWithPrimary
 	HitShape:
@@ -492,7 +496,7 @@ wc_h_barracks:
 		Description: Trains most human units
 		BuildDuration: 200
 		BuildDurationModifier: 100
-		Prerequisites: wc_h_farm
+		Prerequisites: ~wc_h_townhall, wc_h_farm
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -543,7 +547,7 @@ wc_h_barracks:
 	ProvidesPrerequisite@barracks:
 		Prerequisite: barracks
 	Selectable:
-		Bounds: 87381, 76458, 0, -9088
+		Bounds: 2048,2048
 	Voiced:
 		VoiceSet: humanbarracksvoice
 
@@ -568,7 +572,7 @@ wc_h_lumbermill:
 	ProvidesPrerequisite:
 	Buildable:
 		BuildPaletteOrder: 13
-		Prerequisites: wc_h_farm
+		Prerequisites: ~wc_h_townhall, wc_h_farm
 		Queue: Building, RABuilding
 		Description: Dropoff point for gold. (Tiberium)\nCan store up to 1000 resources\nProduces bows enabling Archers\nProvides arrow upgrades for archers and guard towers
 		BuildDuration: 200
@@ -588,16 +592,16 @@ wc_h_lumbermill:
 	ProductionBar@NORMAL:
 		ProductionType: Upgrades
 	Refinery:
+	DockHost:
 		DockAngle: 448
-		DockOffset: 0,2
-		IsDragRequired: False
+		DockOffset: -1c0, 1c0, 0
+		IsDragRequired: True
 		DragOffset: -554,512,0
 		DragLength: 12
-		TickRate: 15
 	StoresResources:
 		Capacity: 1000
 	Selectable:
-		Bounds: 116480, 116480
+		Bounds: 2048, 2048
 	CustomSellValue:
 		Value: 500
 	FreeActor:
@@ -627,7 +631,7 @@ wc_h_blacksmith:
 	Inherits@shape: ^2x2Shape
 	Inherits@CPQWP: ^CPQCondition
 	Selectable:
-		Bounds: 116480, 116480
+		Bounds: 2048, 2048
 	HitShape:
 		TargetableOffsets: 630,299,0
 	Valued:
@@ -641,7 +645,7 @@ wc_h_blacksmith:
 		ProductionType: Upgrades
 	Buildable:
 		BuildPaletteOrder: 14
-		Prerequisites: wc_h_barracks
+		Prerequisites: ~wc_h_townhall, wc_h_barracks
 		Queue: Building, RABuilding
 		BuildDuration: 400
 		BuildDurationModifier: 100
@@ -677,7 +681,7 @@ wc_h_church:
 	Inherits@wcprod: ^WCUnitProduction
 	Inherits@CPQWP: ^CPQConditionWithPrimary
 	Selectable:
-		Bounds: 116480, 116480
+		Bounds: 2048, 2048
 	HitShape:
 		TargetableOffsets: 630,299,0
 	Valued:
@@ -687,7 +691,7 @@ wc_h_church:
 	ProvidesPrerequisite:
 	Buildable:
 		BuildPaletteOrder: 15
-		Prerequisites: wc_h_barracks
+		Prerequisites: ~wc_h_townhall, wc_h_barracks
 		Queue: Building, RABuilding
 		BuildDuration: 300
 		BuildDurationModifier: 100
@@ -748,7 +752,7 @@ wc_h_stable:
 	Inherits@shape: ^2x2Shape
 	Inherits@CPQWP: ^CPQCondition
 	Selectable:
-		Bounds: 116480, 116480
+		Bounds: 2048, 2048
 	HitShape:
 		TargetableOffsets: 630,299,0
 	Valued:
@@ -762,7 +766,7 @@ wc_h_stable:
 	ProvidesPrerequisite:
 	Buildable:
 		BuildPaletteOrder: 16
-		Prerequisites: wc_h_barracks
+		Prerequisites: ~wc_h_townhall, wc_h_barracks
 		Queue: Building, RABuilding
 		BuildDuration: 400
 		BuildDurationModifier: 100
@@ -792,7 +796,7 @@ wc_h_tower:
 	Inherits@wcprod: ^WCUnitProduction
 	Inherits@CPQWP: ^CPQConditionWithPrimary
 	Selectable:
-		Bounds: 116480, 116480
+		Bounds: 2048, 2048
 	HitShape:
 		TargetableOffsets: 630,299,0
 	Valued:
@@ -802,7 +806,7 @@ wc_h_tower:
 	ProvidesPrerequisite:
 	Buildable:
 		BuildPaletteOrder: 17
-		Prerequisites: wc_h_barracks
+		Prerequisites: ~wc_h_townhall, wc_h_barracks
 		Queue: Building, RABuilding
 		BuildDuration: 400
 		BuildDurationModifier: 100
@@ -867,7 +871,7 @@ wc_h_stormwind:
 	Inherits@shape: ^2x2Shape
 	Inherits@SW: ^PrimarySuperweapon
 	Selectable:
-		Bounds: 174762, 174762
+		Bounds: 4096, 4096
 	HitShape:
 		TargetableOffsets: 630,299,0
 	Valued:
@@ -876,7 +880,7 @@ wc_h_stormwind:
 		Name: Stormwind
 	Buildable:
 		BuildPaletteOrder: 18
-		Prerequisites: wc_h_lumbermill,wc_h_blacksmith,wc_h_church,wc_h_tower,!swstormwind
+		Prerequisites: ~wc_h_townhall, wc_h_lumbermill,wc_h_blacksmith,wc_h_church,wc_h_tower,!swstormwind
 		Queue: Building, RABuilding
 		BuildDuration: 900
 		BuildDurationModifier: 100
@@ -896,22 +900,22 @@ wc_h_stormwind:
 	SpawnActorsOnSell:
 		ActorTypes: wc_h_footman
 	ScalePowerWithHealth:
-	SpawnActorPower:
-		AllowMultiple: True
-		OrderName: rainoffire
-		Icon: rainoffire_icon
-		Name: Rain Of Fire
-		Description: This is a very powerful spell that combines the natures of flame and water.\nIt calls forth the essence of fire and delivers it through\nmassive thunderheads of vapor and brimstone, creating an actual firestorm.\nThis spell is very destructive, and will cause damage to any\nfoes and buildings in its sphere of influence.\nUse this spell with care, for the rain of fire knows no friends.
-		Prerequisites: ~techlevel.superweapons
-		ChargeInterval: 9000
-		LifeTime: -1
-		EndChargeSpeechNotification: NuclearWeaponAvailable
-		SelectTargetSpeechNotification: SelectTarget
-		DisplayTimerRelationships: Ally, Neutral, Enemy
-		DisplayRadarPing: True
-		Actor: rainoffire
-		SupportPowerPaletteOrder: 20
-		EffectSequence: idle
+	# SpawnActorPower:
+	# 	AllowMultiple: True
+	# 	OrderName: rainoffire
+	# 	Icon: rainoffire_icon
+	# 	Name: Rain Of Fire
+	# 	Description: This is a very powerful spell that combines the natures of flame and water.\nIt calls forth the essence of fire and delivers it through\nmassive thunderheads of vapor and brimstone, creating an actual firestorm.\nThis spell is very destructive, and will cause damage to any\nfoes and buildings in its sphere of influence.\nUse this spell with care, for the rain of fire knows no friends.
+	# 	Prerequisites: ~techlevel.superweapons
+	# 	ChargeInterval: 9000
+	# 	LifeTime: -1
+	# 	EndChargeSpeechNotification: NuclearWeaponAvailable
+	# 	SelectTargetSpeechNotification: SelectTarget
+	# 	DisplayTimerRelationships: Ally, Neutral, Enemy
+	# 	DisplayRadarPing: True
+	# 	Actor: rainoffire
+	# 	SupportPowerPaletteOrder: 20
+	# 	EffectSequence: idle
 	Voiced:
 		VoiceSet: humanstormwindvoice
 	ProvidesPrerequisite@swlimit:
@@ -990,19 +994,19 @@ wc_o_townhall:
 		Type: Defence
 	Voiced:
 		VoiceSet: orctownhallvoice
-	SpawnActorPower@spysat:
-		PauseOnCondition: lowpower
-		OrderName: SpydronePower
-		Icon: wc_dark_vision
-		ChargeInterval: 1500
-		Name: Dark Vision
-		EffectSequence: idle
+	# SpawnActorPower@spysat:
+	# 	PauseOnCondition: lowpower
+	# 	OrderName: SpydronePower
+	# 	Icon: wc_dark_vision
+	# 	ChargeInterval: 1500
+	# 	Name: Dark Vision
+	# 	EffectSequence: idle
 	ProvidesPrerequisite@faction:
 		Prerequisite: mmwcorc
 wc_o_farm:
 	Inherits@wc_h_farm: wc_h_farm
 	Buildable:
-		Prerequisites: wc_o_townhall
+		Prerequisites: ~wc_o_townhall
 		Queue: Building, RABuilding
 	SpawnActorsOnSell:
 		ActorTypes: wc_o_grunt
@@ -1021,7 +1025,7 @@ wc_o_farm:
 wc_o_guard_tower:
 	Inherits: wc_h_guard_tower
 	Buildable:
-		Prerequisites: wc_o_barracks
+		Prerequisites: ~wc_o_townhall, wc_o_barracks
 		Queue: Defence, RADefence
 		IconPalette: chrome
 	Voiced:
@@ -1032,7 +1036,7 @@ wc_o_barracks:
 	Buildable:
 		Queue: Building, RABuilding
 		Description: Trains most orc units
-		Prerequisites: wc_o_farm
+		Prerequisites: ~wc_o_townhall, wc_o_farm
 	Production@NORMAL:
 		Produces: Infantry
 	Production@CLASSICPRODUCTIONQUEUES:
@@ -1051,7 +1055,7 @@ wc_o_barracks:
 wc_o_lumbermill:
 	Inherits@wc_h_lumbermill: wc_h_lumbermill
 	Buildable:
-		Prerequisites: wc_o_farm
+		Prerequisites: ~wc_o_townhall, wc_o_farm
 		Queue: Building, RABuilding
 		Description: Dropoff point for gold. (Tiberium)\nCan store up to 1000 resource\nProduces spears enabling Spearmen\nProvides spear upgrades for spearmen and Guard towers
 	Production@Upgrades:
@@ -1078,7 +1082,7 @@ wc_o_blacksmith:
 	ProductionBar@NORMAL:
 		ProductionType: Upgrades
 	Buildable:
-		Prerequisites: wc_o_barracks
+		Prerequisites: ~wc_o_townhall, wc_o_barracks
 		Queue: Building, RABuilding
 	SpawnActorsOnSell:
 		ActorTypes: wc_o_grunt
@@ -1102,7 +1106,7 @@ wc_o_damnedtemple:
 	ProductionBar@CLASSICPRODUCTIONQUEUES:
 		ProductionType: RAVehicle
 	Buildable:
-		Prerequisites: wc_o_barracks
+		Prerequisites: ~wc_o_townhall, wc_o_barracks
 		Queue: Building, RABuilding
 		Description: Trains Necrolytes.
 	SpawnActorsOnSell:
@@ -1122,7 +1126,7 @@ wc_o_kennel:
 	ProductionBar@NORMAL:
 		ProductionType: Upgrades
 	Buildable:
-		Prerequisites: wc_o_barracks
+		Prerequisites: ~wc_o_townhall, wc_o_barracks
 		Queue: Building, RABuilding
 		Description: Allows production of Raiders
 	SpawnActorsOnSell:
@@ -1133,7 +1137,7 @@ wc_o_kennel:
 wc_o_tower:
 	Inherits@wc_h_tower: wc_h_tower
 	Buildable:
-		Prerequisites: wc_o_barracks
+		Prerequisites: ~wc_o_townhall, wc_o_barracks
 		Queue: Building, RABuilding
 		Description: Trains Warlocks.\nProvides Radar.
 	Production@NORMAL:
@@ -1156,27 +1160,27 @@ wc_o_blackrockspire:
 	Tooltip:
 		Name: Blackrock Spire
 	Buildable:
-		Prerequisites: wc_o_lumbermill,wc_o_blacksmith,wc_o_damnedtemple,wc_o_tower,!swblackspire
+		Prerequisites: ~wc_o_townhall, wc_o_lumbermill,wc_o_blacksmith,wc_o_damnedtemple,wc_o_tower,!swblackspire
 		Queue: Building, RABuilding
 	SpawnActorsOnSell:
 		ActorTypes: wc_o_grunt
-	SpawnActorPower:
-		AllowMultiple: True
-		OrderName: poisoncloud
-		Icon: poisoncloud_icon
-		IconPalette: windows256
-		Name: Poison Cloud
-		Description: The caster creates a cloud comprised of brimstone,\nacid, and poisonous gases to envelop and choke his targets.\nThis foul stench eats through anything that stands in its way,\nand chokes the very life out of anyone unlucky enough to be in its path.\nIt is a mix of the sickly stench of rotting corpses and the essence of evil,\ndesigned to decay and corrode all that it comes in contact with.
-		Prerequisites: ~techlevel.superweapons
-		ChargeInterval: 9000
-		LifeTime: -1
-		EndChargeSpeechNotification: NuclearWeaponAvailable
-		SelectTargetSpeechNotification: SelectTarget
-		DisplayTimerRelationships: Ally, Neutral, Enemy
-		DisplayRadarPing: True
-		Actor: poisoncloud
-		SupportPowerPaletteOrder: 20
-		EffectSequence: idle
+	# SpawnActorPower:
+	# 	AllowMultiple: True
+	# 	OrderName: poisoncloud
+	# 	Icon: poisoncloud_icon
+	# 	IconPalette: windows256
+	# 	Name: Poison Cloud
+	# 	Description: The caster creates a cloud comprised of brimstone,\nacid, and poisonous gases to envelop and choke his targets.\nThis foul stench eats through anything that stands in its way,\nand chokes the very life out of anyone unlucky enough to be in its path.\nIt is a mix of the sickly stench of rotting corpses and the essence of evil,\ndesigned to decay and corrode all that it comes in contact with.
+	# 	Prerequisites: ~techlevel.superweapons
+	# 	ChargeInterval: 9000
+	# 	LifeTime: -1
+	# 	EndChargeSpeechNotification: NuclearWeaponAvailable
+	# 	SelectTargetSpeechNotification: SelectTarget
+	# 	DisplayTimerRelationships: Ally, Neutral, Enemy
+	# 	DisplayRadarPing: True
+	# 	Actor: poisoncloud
+	# 	SupportPowerPaletteOrder: 20
+	# 	EffectSequence: idle
 	Voiced:
 		VoiceSet: orcblackrockvoice
 	ProvidesPrerequisite@swlimit:
@@ -1284,81 +1288,81 @@ wc_h_peasant:
 		DefaultAttackSequence: harvest
 		-IdleSequences: idle1,idle2,idle3,idle4
 
-wc_h_peasant_engineer:
-	Inherits: ^Soldier
-	Inherits@WC1Infantry: ^WC1Infantry
-	Inherits@EXPERIENCE: ^GainsExperience
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
-	Inherits@DECORATIONS: ^InfantryExperienceHospitalHazmatOverrides
-	Inherits@upgrade_shields: ^wc_h_str_shield
-	Inherits@engineer: ^EngineerDefaultWeapons
-	Inherits@isengineer: ^IsEngineer
-	AutoTargetPriority@Repair:
-		ValidTargets: Repair, Repairing
-		ValidRelationships: Ally
-		Priority: 2
-	AutoTargetPriority@DEFAULT:
-		ValidRelationships: Enemy, Neutral
-	AutoTargetPriority@ATTACKANYTHING:
-		ValidRelationships: Enemy, Neutral
-	Valued:
-		Cost: 500
-	Tooltip:
-		Name: Engineer
-	UpdatesPlayerStatistics:
-		AddToArmyValue: false
-	Buildable:
-		BuildPaletteOrder: 5
-		Queue: Infantry, RAInfantry
-		Description: Captures Buildings.
-		BuildDuration: 250
-		BuildDurationModifier: 100
-	Mobile:
-		Speed: 90
-	DamageMultiplier@DamageReduction:
-		Modifier: 85
-	Health:
-		HP: 7200
-	#Food
-	Power:
-		Amount: -5
-	AutoTarget:
-		ScanRadius: 4
-	WithDeathAnimation:
-		UseDeathTypeSuffix: false
-	Inherits@EXT: ^ExternalConditions
-	AttackFrontal:
-		FacingTolerance: 0
-	Voiced:
-		VoiceSet: voicehuman
-	WithInfantryBody:
-		DefaultAttackSequence: harvest
-		-IdleSequences: idle1,idle2,idle3,idle4
-	-DamagedByTerrain:
-	WithInfantryBody@top:
-		StandSequences: top
-		MoveSequence: top
-	Passenger:
-		CustomPipType: yellow
-	EngineerRepair:
-	RepairsBridges:
-	CaptureManager:
-	GrantConditionOnPrerequisite@GLOBALREUSABLEENGINEER:
-		Condition: global-reusable-engineers
-		Prerequisites: global-reusable-engineers
-	Captures:
-		RequiresCondition: !global-reusable-engineers
-		CaptureTypes: building, defense, tech
-		PlayerExperience: 500
-		ConsumedByCapture: True
-	Captures@REUSABLE:
-		RequiresCondition: global-reusable-engineers
-		CaptureTypes: building, defense, tech
-		PlayerExperience: 500
-		CaptureDelay: 375
-		ConsumedByCapture: False
-		EnterCursor: ability
-		EnterBlockedCursor: move-blocked
+# wc_h_peasant_engineer:
+# 	Inherits: ^Soldier
+# 	Inherits@WC1Infantry: ^WC1Infantry
+# 	Inherits@EXPERIENCE: ^GainsExperience
+# 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+# 	Inherits@DECORATIONS: ^InfantryExperienceHospitalHazmatOverrides
+# 	Inherits@upgrade_shields: ^wc_h_str_shield
+# 	Inherits@engineer: ^EngineerDefaultWeapons
+# 	Inherits@isengineer: ^IsEngineer
+# 	AutoTargetPriority@Repair:
+# 		ValidTargets: Repair, Repairing
+# 		ValidRelationships: Ally
+# 		Priority: 2
+# 	AutoTargetPriority@DEFAULT:
+# 		ValidRelationships: Enemy, Neutral
+# 	AutoTargetPriority@ATTACKANYTHING:
+# 		ValidRelationships: Enemy, Neutral
+# 	Valued:
+# 		Cost: 500
+# 	Tooltip:
+# 		Name: Engineer
+# 	UpdatesPlayerStatistics:
+# 		AddToArmyValue: false
+# 	Buildable:
+# 		BuildPaletteOrder: 5
+# 		Queue: Infantry, RAInfantry
+# 		Description: Captures Buildings.
+# 		BuildDuration: 250
+# 		BuildDurationModifier: 100
+# 	Mobile:
+# 		Speed: 90
+# 	DamageMultiplier@DamageReduction:
+# 		Modifier: 85
+# 	Health:
+# 		HP: 7200
+# 	#Food
+# 	Power:
+# 		Amount: -5
+# 	AutoTarget:
+# 		ScanRadius: 4
+# 	WithDeathAnimation:
+# 		UseDeathTypeSuffix: false
+# 	Inherits@EXT: ^ExternalConditions
+# 	AttackFrontal:
+# 		FacingTolerance: 0
+# 	Voiced:
+# 		VoiceSet: voicehuman
+# 	WithInfantryBody:
+# 		DefaultAttackSequence: harvest
+# 		-IdleSequences: idle1,idle2,idle3,idle4
+# 	-DamagedByTerrain:
+# 	WithInfantryBody@top:
+# 		StandSequences: top
+# 		MoveSequence: top
+# 	Passenger:
+# 		CustomPipType: yellow
+# 	EngineerRepair:
+# 	RepairsBridges:
+# 	CaptureManager:
+# 	GrantConditionOnPrerequisite@GLOBALREUSABLEENGINEER:
+# 		Condition: global-reusable-engineers
+# 		Prerequisites: global-reusable-engineers
+# 	Captures:
+# 		RequiresCondition: !global-reusable-engineers
+# 		CaptureTypes: building, defense, tech
+# 		PlayerExperience: 500
+# 		ConsumedByCapture: True
+# 	Captures@REUSABLE:
+# 		RequiresCondition: global-reusable-engineers
+# 		CaptureTypes: building, defense, tech
+# 		PlayerExperience: 500
+# 		CaptureDelay: 375
+# 		ConsumedByCapture: False
+# 		EnterCursor: ability
+# 		EnterBlockedCursor: move-blocked
 
 wc_h_mcv:
 	Inherits: ^Soldier
@@ -1451,7 +1455,7 @@ wc_h_footman:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 10
-		Prerequisites: wc_h_barracks
+		Prerequisites: ~wc_h_barracks
 		Queue: Infantry, RAInfantry
 		Description: Basic Melee Infantry. Slow but can take some damage.
 		BuildDuration: 150
@@ -1511,7 +1515,7 @@ wc_h_archer:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 10
-		Prerequisites: wc_h_lumbermill
+		Prerequisites: ~wc_h_lumbermill
 		Queue: Infantry, RAInfantry
 		Description: Basic Ranged Infantry. Not as durable as Footman.\nCan attack air
 		BuildDuration: 125
@@ -1563,7 +1567,7 @@ wc_h_knight:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 10
-		Prerequisites: wc_h_stable
+		Prerequisites: ~wc_h_stable
 		Queue: Infantry, RAInfantry
 		Description: Mounted Infantry. Fast and durable.
 		BuildDuration: 300
@@ -1600,7 +1604,7 @@ wc_h_knight:
 		MoveSequence: run
 	Voiced:
 		VoiceSet: voicehuman
-	-Explodes:
+	# -Explodes:
 	Targetable@HEAL:
 		RequiresCondition: !parachute && !untargetable && damaged
 		TargetTypes: Heal, Healing
@@ -1619,7 +1623,7 @@ wc_h_catapult:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 10
-		Prerequisites: wc_h_blacksmith
+		Prerequisites: ~wc_h_blacksmith
 		Queue: Infantry, RAInfantry
 		Description: Siege weapon. Powerful against static targets.
 		BuildDuration: 400
@@ -1670,6 +1674,7 @@ wc_h_conjurer:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 10
+		Prerequisites: ~wc_h_townhall, wc_h_tower
 		Queue: Aircraft, RAAircraft
 		Description: Spell Caster.\nFar seer.\nCan summon Scorpion and Water Elemental\nCan attack Air\nDetector
 		BuildDuration: 340
@@ -1722,6 +1727,7 @@ wc_h_cleric:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 10
+		Prerequisites: ~wc_h_townhall, wc_h_church
 		Queue: Vehicle, RAVehicle
 		Description: Support Caster. Heals nearby units.
 		BuildDuration: 280
@@ -1821,7 +1827,7 @@ wc_n_scorpion:
 	Buildable:
 		Queue: Infantry
 		Description: Mighty Scorpion
-		-Prerequisites:
+		# -Prerequisites:
 	Valued:
 		Cost: 500
 	DamageMultiplier@DamageReduction:
@@ -1883,9 +1889,9 @@ wc_h_waterelemental:
 wc_n_waterelemental:
 	Inherits: wc_h_waterelemental
 	Buildable:
-		Queue: Infantry
+		Prerequisites: ~wc_n_portal
+		Queue: Naval
 		Description: Will make you wet your pants\nLiterally\nCannot be hurt by fire
-		Prerequisites:
 	Valued:
 		Cost: 1600
 	DamageMultiplier@DamageReduction:
@@ -1907,6 +1913,7 @@ wc_n_fireelemental:
 	Tooltip:
 		Name: Fire Elemental
 	Buildable:
+		Prerequisites: ~wc_n_portal
 		Description: Don't play with fire.\nExtremely vulnerable against Water\nCannot be hurt by fire
 	DamageMultiplier@DamageReduction:
 		Modifier: 85
@@ -1950,21 +1957,21 @@ wc_n_portal:
 		BuildDuration: 1125
 		BuildDurationModifier: 100
 		Description: Warps powerful units from other dimensions\nPorted Units does not require food\nCan be only built once
-		Prerequisites: wc_superweapon
+		Prerequisites: ~wc_superweapon
 		BuildLimit: 1
 		BuildPaletteOrder: 200
 	Production@NORMAL:
-		Produces: Infantry
+		Produces: Naval
 		RequiresCondition: !classicproductionqueues
 	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: Infantry
+		Produces: RANaval
 		RequiresCondition: classicproductionqueues
 	GrantExternalConditionToProduced:
 		Condition: produced
 	ProductionQueue:
-		Type: Infantry
+		Type: Naval
 		DisplayOrder: 2
-		Group: Infantry
+		Group: Naval
 		LowPowerModifier: 9999
 		ReadyAudio: UnitReady
 		BlockedAudio: NoBuild
@@ -1973,10 +1980,10 @@ wc_n_portal:
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
 	ProductionBar@NORMAL:
-		ProductionType: Infantry
+		ProductionType: Naval
 		RequiresCondition: !classicproductionqueues
 	ProductionBar@CLASSICPRODUCTIONQUEUES:
-		ProductionType: Infantry
+		ProductionType: RANaval
 		RequiresCondition: classicproductionqueues
 	WithMakeAnimation:
 	WithDeathAnimation:
@@ -1993,7 +2000,7 @@ wc_goldmine:
 	Inherits@Bot: ^BotMicromanageable
 	Inherits@XP: ^GainsExperienceCity
 	Selectable:
-		Bounds: 72789, 72789
+		Bounds: 3072, 3072
 	Valued:
 		Cost: 3000
 	Tooltip:
@@ -2004,7 +2011,7 @@ wc_goldmine:
 		BuildDuration: 375
 		BuildDurationModifier: 100
 		Description: Send workers inside to provide passive income\nMiners progressively get experience and work more efficiently
-		Prerequisites: wc_blacksmith
+		# Prerequisites: ~wc_h_townhall || ~wc_o_townhall 
 	Building:
 		Footprint: xxx xxx xxx
 		Dimensions: 3,3
@@ -2196,23 +2203,23 @@ wc_o_peon:
 	Voiced:
 		VoiceSet: voiceorc
 
-wc_o_peon_engineer:
-	Inherits@wc_h_peasant: wc_h_peasant_engineer
-	Tooltip:
-		Name: Engineer
-	Buildable:
-		BuildPaletteOrder: 5
-		Queue: Infantry, RAInfantry
-		Description: Harvester.
-	Voiced:
-		VoiceSet: voiceorc
+# wc_o_peon_engineer:
+# 	Inherits@wc_h_peasant: wc_h_peasant_engineer
+# 	Tooltip:
+# 		Name: Engineer
+# 	Buildable:
+# 		BuildPaletteOrder: 5
+# 		Queue: Infantry, RAInfantry
+# 		Description: Harvester.
+# 	Voiced:
+# 		VoiceSet: voiceorc
 wc_o_grunt:
 	Inherits@wc_h_footman: wc_h_footman
 	Tooltip:
 		Name: Grunt
 	Buildable:
 		BuildPaletteOrder: 10
-		Prerequisites: wc_o_barracks
+		Prerequisites: ~wc_o_barracks
 		Queue: Infantry, RAInfantry
 		Description: Basic Melee Infantry. Slow but can take some damage.
 	Armament:
@@ -2225,7 +2232,7 @@ wc_o_spearman:
 	Tooltip:
 		Name: Spearman
 	Buildable:
-		Prerequisites: wc_o_lumbermill
+		Prerequisites: ~wc_o_lumbermill
 		Queue: Infantry, RAInfantry
 		Description: Basic Ranged Infantry. Not as durable as Grunt.\nCan attack air
 	Armament:
@@ -2238,7 +2245,7 @@ wc_o_raider:
 	Tooltip:
 		Name: Raider
 	Buildable:
-		Prerequisites: wc_o_kennel
+		Prerequisites: ~wc_o_kennel
 		Queue: Infantry, RAInfantry
 		Description: Mounted Infantry. Fast and durable.
 	Armament:
@@ -2249,7 +2256,7 @@ wc_o_raider:
 wc_o_catapult:
 	Inherits@wc_h_catapult: wc_h_catapult
 	Buildable:
-		Prerequisites: wc_o_blacksmith
+		Prerequisites: ~wc_o_blacksmith
 		Queue: Infantry, RAInfantry
 	Voiced:
 		VoiceSet: voiceorc
@@ -2261,7 +2268,7 @@ wc_o_warlock:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
-		Prerequisites: wc_o_tower
+		Prerequisites: ~wc_o_tower
 		Queue: Aircraft, RAAircraft
 		Description: Spell Caster.\nFar seer\nCan summon Spider and Demon\nCan attack Air\nDetector
 	Armament:
@@ -2280,7 +2287,7 @@ wc_o_necrolyte:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
-		Prerequisites: wc_o_damnedtemple
+		Prerequisites: ~wc_o_damnedtemple
 		Queue: Vehicle, RAVehicle
 		Description: Support Caster. Heals nearby units.
 	Armament@3:
@@ -2370,11 +2377,11 @@ wc_o_demon:
 wc_n_demon:
 	Inherits: wc_o_demon
 	Buildable:
-		Queue: Infantry
+		Queue: Naval
 		Description: This beast comes from hell itself and therefore cannot be hurt by fire
 		BuildDuration: 1500
 		BuildDurationModifier: 100
-		-Prerequisites:
+		Prerequisites: ~wc_n_portal
 	Valued:
 		Cost: 5000
 	Mobile:
@@ -2401,8 +2408,9 @@ wc_o_skeleton_army:
 		Action: Kill
 		DeathTypes: DefaultDeath
 	Buildable:
+		Prerequisites: ~wc_n_portal
 		BuildPaletteOrder: 30
-		Queue: Infantry
+		Queue: Naval
 		Description: Big group of skeletons\nRegenerates fast\nWeak against Siege and Toxins
 		BuildDuration: 1125
 		BuildDurationModifier: 100
@@ -2470,8 +2478,9 @@ wc_n_brigand:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
+		Prerequisites: ~wc_n_portal
 		BuildPaletteOrder: 10
-		Queue: Infantry
+		Queue: Naval
 		Description: Deceitful bandit\nFaster than Footman
 		BuildDuration: 80
 		BuildDurationModifier: 100
@@ -2513,8 +2522,9 @@ wc_n_ogre:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
+		Prerequisites: ~wc_n_portal
 		BuildPaletteOrder: 10
-		Queue: Infantry
+		Queue: Naval
 		Description: Large, tanky and stupid\nPowerful melee attack
 		BuildDuration: 120
 		BuildDurationModifier: 100
@@ -2558,8 +2568,8 @@ wc_n_slime:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 10
-		Prerequisites:
-		Queue: Infantry
+		Prerequisites: ~wc_n_portal
+		Queue: Naval
 		Description: Slow Booger-like creature with jump attack that splits into more upon death
 		BuildDuration: 400
 		BuildDurationModifier: 100
@@ -2585,7 +2595,7 @@ wc_n_slime:
 		Weapon: SlimeJump
 	WithDeathAnimation:
 		UseDeathTypeSuffix: false
-		-CrushedSequence:
+		# -CrushedSequence:
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
 		-IdleSequences: idle1,idle2,idle3,idle4
@@ -2758,7 +2768,7 @@ wc_h_horses:
 		BuildDuration: 1500
 		BuildDurationModifier: 100
 		Description: Increases Horses speed by 20%
-		Prerequisites: ~!wc_h_horses
+		Prerequisites: ~!wc_h_horses, wc_h_townhall
 	Valued:
 		Cost: 2000
 	RenderSprites:

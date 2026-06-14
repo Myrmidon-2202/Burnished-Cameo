@@ -45,7 +45,7 @@ World:
 	ActorPreviewPlaceBuildingPreview:
 
 ^WormsBuilding:
-	Inherits@1: ^BaseBuilding
+	Inherits: ^BaseBuilding
 	Tooltip:
 		GenericName: Structure
 	OwnerLostAction:
@@ -77,15 +77,15 @@ Player:
 ####################################################################################################
 
 WCON:
-	GrantExternalConditionToOwner@BuildingsOwned:
-		Condition: BuildingsOwned
 	Inherits: ^WormsBuilding
 	Inherits@shape: ^2x2Shape
 	Inherits@CPQ: ^CPQCondition
 	Inherits@aicash: ^AIConyardCash
 	Inherits@conyard: ^Conyard
+	GrantExternalConditionToOwner@BuildingsOwned:
+		Condition: BuildingsOwned
 	Selectable:
-		Bounds: 131072, 131072
+		Bounds: 2048, 2048
 	HitShape:
 		TargetableOffsets: 630,299,0
 	Valued:
@@ -102,6 +102,12 @@ WCON:
 		HP: 110000
 	RevealsShroud:
 		Range: 4c0
+	Transforms:
+		IntoActor: worms_mcv
+		Offset: -1,-1
+		Facing: 432
+		TransformSounds: constru2.aud, hvydoor1.aud
+		NoTransformNotification: BuildingCannotPlaceAudio
 	RallyPoint:
 	Exit@1:
 		SpawnOffset: -426,85,0
@@ -111,6 +117,8 @@ WCON:
 		ExitCell: 1,1
 	Power:
 		Amount: 10
+	WithBuildingBib:
+		Palette: ra_temperat
 	SpawnActorsOnSell:
 		ActorTypes: wormuzi
 	ScalePowerWithHealth:
@@ -195,6 +203,8 @@ WNUKE:
 	Power:
 		Amount: 100
 	ScalePowerWithHealth:
+	WithBuildingBib:
+		Palette: ra_temperat
 	#WithIdleOverlay@BARREL:
 	#	Sequence: barrel-overlay
 	#WithIdleOverlay@BARREL2:
@@ -228,6 +238,7 @@ WNUK2:
 	RevealsShroud:
 		Range: 4c0
 	WithBuildingBib:
+		Palette: ra_temperat
 	Power:
 		Amount: 200
 	ScalePowerWithHealth:
@@ -238,6 +249,7 @@ WNUK2:
 
 WREF:
 	Inherits: ^WormsBuilding
+	Inherits@ref: ^Refinery
 	HitShape:
 		Type: Rectangle
 			TopLeft: -1536, -512
@@ -266,17 +278,16 @@ WREF:
 	RevealsShroud:
 		Range: 6c0
 	Refinery:
+	DockHost:
 		DockAngle: 448
-		DockOffset: 0,2
+		DockOffset: -1c0, 1c0, 0
 		IsDragRequired: True
 		DragOffset: -554,512,0
 		DragLength: 12
-		TickRate: 15
 	StoresResources:
 		Capacity: 1000
 	Selectable:
-		Bounds: 131072, 101930
-		DecorationBounds: 132864, 131072
+		Bounds: 2048, 2048
 	CustomSellValue:
 		Value: 500
 	FreeActor:
@@ -284,6 +295,7 @@ WREF:
 		SpawnOffset: 1,2
 		Facing: 256
 	WithBuildingBib:
+		Palette: ra_temperat
 	WithResourceLevelOverlay:
 		RequiresCondition: !build-incomplete
 	WithIdleOverlay@BARREL:
@@ -330,6 +342,7 @@ WHAND:
 	RevealsShroud:
 		Range: 5c0
 	WithBuildingBib:
+		Palette: ra_temperat
 	RallyPoint:
 	Exit@1:
 		SpawnOffset: 512,1024,0
@@ -362,14 +375,13 @@ WHAND:
 	ProvidesPrerequisite@buildingname:
 	Selectable:
 		Bounds: 2048, 2048
-		DecorationBounds: 87381, 123776, 0, -18176
 	SelectionDecorations:
 	WithIdleOverlay@FLIP:
 		Sequence: flip-overlay
-	ThrowsShrapnel:
-		Weapons: WormHusk
-		Pieces: 1, 1
-		Range: 2c0, 4c0
+	# ThrowsShrapnel:
+	# 	Weapons: WormHusk
+	# 	Pieces: 1, 1
+	# 	Range: 2c0, 4c0
 WWEAP:
 	Inherits: ^WormsBuilding
 	Inherits@shape: ^3x2Shape
@@ -397,14 +409,14 @@ WWEAP:
 		Dimensions: 3,2
 		LocalCenterOffset: 0,-512,0
 	Selectable:
-		Bounds: 131072, 87381
-		DecorationBounds: 131072, 116480, 0, -29098
+		Bounds: 2048, 2048
 	SelectionDecorations:
 	Health:
 		HP: 110000
 	RevealsShroud:
 		Range: 4c0
 	WithBuildingBib:
+		Palette: ra_temperat
 	#WithProductionDoorOverlay:
 	#	RequiresCondition: !build-incomplete
 	#	Sequence: build-top
@@ -463,14 +475,15 @@ WSHEEPSTATUE:
 		BuildDuration: 330
 		Description: Unlocks Sheeps, Skunks, and Moles.
 	Building:
-		Footprint: xx xx xx ==
-		Dimensions: 2,4
+		Footprint: xx xx ==
+		Dimensions: 2,3
 		LocalCenterOffset: 0,-512,0
 	Health:
 		HP: 55000
 	RevealsShroud:
 		Range: 4c0
-	#WithBuildingBib:
+	WithBuildingBib:
+		Palette: ra_temperat
 	Voiced:
 		VoiceSet: wormSheep
 
@@ -498,8 +511,7 @@ WHQ:
 		Dimensions: 2,3
 		LocalCenterOffset: 0,-512,0
 	Selectable:
-		Bounds: 87381, 72789, 0, 16384
-		DecorationBounds: 87381, 96469, 0, -7253
+		Bounds: 2048, 2048
 	SelectionDecorations:
 	#RenderSprites:
 	#	Image: dome
@@ -510,6 +522,7 @@ WHQ:
 	RevealsShroud:
 		Range: 10c0
 	WithBuildingBib:
+		Palette: ra_temperat
 	ProvidesRadar:
 		RequiresCondition: !lowpower
 	RenderDetectionCircle:
@@ -520,10 +533,10 @@ WHQ:
 		Amount: -50
 	WithIdleOverlay@AIMING:
 		Sequence: aiming-overlay
-	ThrowsShrapnel:
-		Weapons: WormHusk2
-		Pieces: 1, 1
-		Range: 2c0, 4c0
+	# ThrowsShrapnel:
+	# 	Weapons: WormHusk2
+	# 	Pieces: 1, 1
+	# 	Range: 2c0, 4c0
 WSHEEPSTRIKECOMMAND:
 	Inherits: ^WormsBuilding
 	Inherits@IDISABLE: ^DisabledOverlay
@@ -546,8 +559,7 @@ WSHEEPSTRIKECOMMAND:
 		Dimensions: 3,4
 		LocalCenterOffset: 0,-512,0
 	Selectable:
-		Bounds: 87381, 72789, 0, 16384
-		DecorationBounds: 87381, 96469, 0, -7253
+		Bounds: 2048,2048
 	SelectionDecorations:
 	#RenderSprites:
 	#	Image: dome
@@ -557,39 +569,40 @@ WSHEEPSTRIKECOMMAND:
 		HP: 80000
 	RevealsShroud:
 		Range: 10c0
-	#WithBuildingBib:
+	WithBuildingBib:
+		Palette: ra_temperat
 	ProvidesRadar:
 		RequiresCondition: !lowpower
 	RenderDetectionCircle:
 	DetectCloaked:
 		Range: 5c0
 		RequiresCondition: !lowpower
-	AirstrikePower:
-		PauseOnCondition: lowpower
-		Prerequisites: ~techlevel.superweapons
-		Icon: sheepstrike
-		ChargeInterval: 6000
-		SquadSize: 3
-		QuantizedFacings: 8
-		Name: Sheep Strike
-		Description: Stike an area with flaming sheep.
-		EndChargeSpeechNotification: AirstrikeReady
-		SelectTargetSpeechNotification: SelectTarget
-		InsufficientPowerSpeechNotification: InsufficientPower
-		IncomingSpeechNotification: EnemyPlanesApproaching
-		UnitType: worms_jetenginebomber
-		DisplayBeacon: True
-		BeaconPoster: airstrike
-		BeaconPosterPalette: beaconposter
-		DisplayRadarPing: True
-		CameraActor: camera
-		ArrowSequence: arrow
-		ClockSequence: clock
-		CircleSequence: circles
-		UseDirectionalTarget: True
-		DirectionArrowAnimation: airstrikedirection
-		SupportPowerPaletteOrder: 10
-	SupportPowerChargeBar:
+	# AirstrikePower:
+	# 	PauseOnCondition: lowpower
+	# 	Prerequisites: ~techlevel.superweapons
+	# 	Icon: sheepstrike
+	# 	ChargeInterval: 6000
+	# 	SquadSize: 3
+	# 	QuantizedFacings: 8
+	# 	Name: Sheep Strike
+	# 	Description: Stike an area with flaming sheep.
+	# 	EndChargeSpeechNotification: AirstrikeReady
+	# 	SelectTargetSpeechNotification: SelectTarget
+	# 	InsufficientPowerSpeechNotification: InsufficientPower
+	# 	IncomingSpeechNotification: EnemyPlanesApproaching
+	# 	UnitType: worms_jetenginebomber
+	# 	DisplayBeacon: True
+	# 	BeaconPoster: airstrike
+	# 	BeaconPosterPalette: beaconposter
+	# 	DisplayRadarPing: True
+	# 	CameraActor: camera
+	# 	ArrowSequence: arrow
+	# 	ClockSequence: clock
+	# 	CircleSequence: circles
+	# 	UseDirectionalTarget: True
+	# 	DirectionArrowAnimation: airstrikedirection
+	# 	SupportPowerPaletteOrder: 10
+	# SupportPowerChargeBar:
 	Power:
 		Amount: -50
 		
@@ -615,8 +628,7 @@ WTIMEMACHINE:
 		Dimensions: 1,2
 		LocalCenterOffset: 0,-512,0
 	Selectable:
-		Bounds: 87381, 72789, 0, 16384
-		DecorationBounds: 87381, 96469, 0, -7253
+		Bounds: 1024,1024
 	SelectionDecorations:
 	#RenderSprites:
 	#	Image: dome
@@ -635,46 +647,46 @@ WTIMEMACHINE:
 		RequiresCondition: !lowpower
 	Power:
 		Amount: -50
-	ChronoshiftPower@chronoshift:
-		OrderName: Chronoshift
-		Prerequisites: !botplayer
-		PauseOnCondition: lowpower
-		Icon: chrono
-		ChargeInterval: 3000
-		Name: Chronoshift
-		Description: Teleports a large group of units\nacross the map.
-		SelectTargetSpeechNotification: SelectTarget
-		InsufficientPowerSpeechNotification: InsufficientPower
-		#BeginChargeSpeechNotification: ChronosphereCharging
-		#EndChargeSpeechNotification: ChronosphereReady
-		Duration: 0
-		KillCargo: False
-		DisplayRadarPing: True
-		SelectionCursor: ability
-		TargetCursor: ability
-		SupportPowerPaletteOrder: 20
-		LaunchSound: chrono2.aud
-		IncomingSound: chrono2.aud
-		Dimensions: 5, 5
-		Footprint: __x__ _xxx_ xxxxx _xxx_ __x__
-	DetonateWeaponPower@aichrono:
-		OrderName: ChronoshiftAI
-		Prerequisites: botplayer
-		PauseOnCondition: lowpower
-		Icon: chrono
-		Cursor: ability
-		ChargeInterval: 7500
-		Name: Chronoshift
-		ActivationDelay: 25
-		Description: Teleports a large group of units\nacross the map.
-		Weapon: WormsChronoAI
-		CameraActor: camera.placeholderhack
-		CameraRemoveDelay: 0
-		SelectTargetSpeechNotification: SelectTarget
-		InsufficientPowerSpeechNotification: InsufficientPower
-		DisplayRadarPing: True
-		LaunchSound: chrono2.aud
-		IncomingSound: chrono2.aud
+	# ChronoshiftPower@chronoshift:
+	# 	OrderName: Chronoshift
+	# 	Prerequisites: !botplayer
+	# 	PauseOnCondition: lowpower
+	# 	Icon: chrono
+	# 	ChargeInterval: 3000
+	# 	Name: Chronoshift
+	# 	Description: Teleports a large group of units\nacross the map.
+	# 	SelectTargetSpeechNotification: SelectTarget
+	# 	InsufficientPowerSpeechNotification: InsufficientPower
+	# 	#BeginChargeSpeechNotification: ChronosphereCharging
+	# 	#EndChargeSpeechNotification: ChronosphereReady
+	# 	Duration: 0
+	# 	KillCargo: False
+	# 	DisplayRadarPing: True
+	# 	SelectionCursor: ability
+	# 	TargetCursor: ability
+	# 	SupportPowerPaletteOrder: 20
+	# 	LaunchSound: chrono2.aud
+	# 	IncomingSound: chrono2.aud
+	# 	Dimensions: 5, 5
+	# 	Footprint: __x__ _xxx_ xxxxx _xxx_ __x__
+	# DetonateWeaponPower@aichrono:
+	# 	OrderName: ChronoshiftAI
+	# 	Prerequisites: botplayer
+	# 	PauseOnCondition: lowpower
+	# 	Icon: chrono
+	# 	Cursor: ability
+	# 	ChargeInterval: 7500
+	# 	Name: Chronoshift
+	# 	ActivationDelay: 25
+	# 	Description: Teleports a large group of units\nacross the map.
+	# 	Weapon: WormsChronoAI
+	# 	CameraActor: camera.placeholderhack
+	# 	CameraRemoveDelay: 0
+	# 	SelectTargetSpeechNotification: SelectTarget
+	# 	InsufficientPowerSpeechNotification: InsufficientPower
+	# 	DisplayRadarPing: True
+	# 	LaunchSound: chrono2.aud
+	# 	IncomingSound: chrono2.aud
 WCONCRETEDONKEY:
 	Inherits: ^WormsBuilding
 	Inherits@IDISABLE: ^DisabledOverlay
@@ -698,8 +710,7 @@ WCONCRETEDONKEY:
 		Dimensions: 3,3
 		LocalCenterOffset: 0,-512,0
 	Selectable:
-		Bounds: 131072, 87381
-		DecorationBounds: 131072, 123776, 0, -21845
+		Bounds: 2048, 2048
 	SelectionDecorations:
 	Health:
 		HP: 210000
@@ -709,39 +720,40 @@ WCONCRETEDONKEY:
 	DetectCloaked:
 		Range: 5c0
 		RequiresCondition: !lowpower
-	NukePower:
-		PauseOnCondition: lowpower
-		Prerequisites: ~techlevel.superweapons
-		Icon: concretedonkey
-		Cursor: nuke
-		ChargeInterval: 9000
-		Name: Concrete Donkey
-		Description: Launch a tactical concrete donkey.\nApplies heavy damage over a large area.
-		EndChargeSpeechNotification: NuclearWeaponAvailable
-		SelectTargetSpeechNotification: SelectTarget
-		InsufficientPowerSpeechNotification: InsufficientPower
-		LaunchSpeechNotification: NuclearWeaponLaunched
-		IncomingSpeechNotification: NuclearWarheadApproaching
-		MissileWeapon: atomicdonkey
-		MissileDelay: 11
-		SpawnOffset: 3c0,0,-1c512
-		DisplayBeacon: True
-		BeaconPoster: atomic
-		BeaconPosterPalette: beaconposter
-		DisplayRadarPing: True
-		CameraRange: 10c0
-		ArrowSequence: arrow
-		ClockSequence: clock
-		CircleSequence: circles
-		SupportPowerPaletteOrder: 30
-		MissileImage: atomicdonkey
+	# NukePower:
+	# 	PauseOnCondition: lowpower
+	# 	Prerequisites: ~techlevel.superweapons
+	# 	Icon: concretedonkey
+	# 	Cursor: nuke
+	# 	ChargeInterval: 9000
+	# 	Name: Concrete Donkey
+	# 	Description: Launch a tactical concrete donkey.\nApplies heavy damage over a large area.
+	# 	EndChargeSpeechNotification: NuclearWeaponAvailable
+	# 	SelectTargetSpeechNotification: SelectTarget
+	# 	InsufficientPowerSpeechNotification: InsufficientPower
+	# 	LaunchSpeechNotification: NuclearWeaponLaunched
+	# 	IncomingSpeechNotification: NuclearWarheadApproaching
+	# 	MissileWeapon: atomicdonkey
+	# 	MissileDelay: 11
+	# 	SpawnOffset: 3c0,0,-1c512
+	# 	DisplayBeacon: True
+	# 	BeaconPoster: atomic
+	# 	BeaconPosterPalette: beaconposter
+	# 	DisplayRadarPing: True
+	# 	CameraRange: 10c0
+	# 	ArrowSequence: arrow
+	# 	ClockSequence: clock
+	# 	CircleSequence: circles
+	# 	SupportPowerPaletteOrder: 30
+	# 	MissileImage: atomicdonkey
 	WithBuildingBib:
-	WithSupportPowerActivationAnimation:
-		RequiresCondition: !build-incomplete
-	WithSupportPowerActivationOverlay:
-		RequiresCondition: !build-incomplete
-		#Sequence: smoke
-	SupportPowerChargeBar:
+		Palette: ra_temperat
+	# WithSupportPowerActivationAnimation:
+	# 	RequiresCondition: !build-incomplete
+	# WithSupportPowerActivationOverlay:
+	# 	RequiresCondition: !build-incomplete
+	# 	#Sequence: smoke
+	# SupportPowerChargeBar:
 	Power:
 		Amount: -150
 	ProvidesPrerequisite@buildingname:
@@ -773,13 +785,15 @@ WSILO:
 		Capacity: 3000
 	Power:
 		Amount: -10
+	WithBuildingBib:
+		HasMinibib: true
+		Palette: ra_temperat
 	MustBeDestroyed:
 		RequiredForShortGame: false
 	SelectionDecorations:
 	-AcceptsDeliveredCash:
 	Selectable:
-		Bounds: 87381, 43690
-		DecorationBounds: 89173, 54613
+		Bounds: 1024, 1024
 	WithIdleOverlay@BARREL:
 		Sequence: barrel-overlay
 	WithIdleOverlay@BARREL2:
@@ -804,6 +818,8 @@ WSANTASSLEIGH:
 	Building:
 		Footprint: xxx xxx
 		Dimensions: 3,2
+	WithBuildingBib:
+		Palette: ra_temperat
 	-GivesBuildableArea:
 	Health:
 		HP: 50000
@@ -824,8 +840,7 @@ WSANTASSLEIGH:
 	SelectionDecorations:
 	-AcceptsDeliveredCash:
 	Selectable:
-		Bounds: 87381, 43690
-		DecorationBounds: 89173, 54613
+		Bounds: 2048, 2048
 	WithResourceStoragePipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: true
@@ -855,6 +870,7 @@ WGTWR:
 		Range: 7c0
 	WithBuildingBib:
 		HasMinibib: true
+		Palette: ra_temperat
 	Armament:
 		Weapon: WormsVulcan
 		LocalOffset: 256,0,256
@@ -872,10 +888,10 @@ WGTWR:
 		Amount: -10
 	WithIdleOverlay@CLUSTER:
 		Sequence: cluster-overlay
-	ThrowsShrapnel:
-		Weapons: WormHusk
-		Pieces: 1, 1
-		Range: 2c0, 4c0
+	# ThrowsShrapnel:
+	# 	Weapons: WormHusk
+	# 	Pieces: 1, 1
+	# 	Range: 2c0, 4c0
 WORMS_AASITE:
 	Inherits: ^Defense
 	Inherits@AUTOTARGET: ^AutoTargetAir
@@ -900,10 +916,11 @@ WORMS_AASITE:
 		HP: 40000
 	RevealsShroud:
 		Range: 7c0
-	#WithBuildingBib:
-	#	HasMinibib: true
+	WithBuildingBib:
+		HasMinibib: true
+		Palette: ra_temperat
 	Armament:
-		Weapon: WormsPatriot
+		Weapon: Worms227mm
 		MuzzleSequence: muzzle
 		LocalOffset: 256,0,256
 	AttackTurreted:
@@ -973,7 +990,6 @@ LASPY:
 		Description: Advanced base defense.\nRequires power to operate.\n  Strong vs all Ground units\n  Cannot target Aircraft
 	Selectable:
 		Bounds: 1024, 1024
-		DecorationBounds: 40021, 80085, 0, -18176
 	SelectionDecorations:
 	Health:
 		HP: 75000
@@ -985,7 +1001,7 @@ LASPY:
 	WithChargeSpriteBody:
 		Sequence: active
 	Armament:
-		Weapon: Laser
+		Weapon: LaserObelisk
 		LocalOffset: 0,-85,1280
 	AttackCharges:
 		RequiresCondition: !build-incomplete
@@ -1010,7 +1026,7 @@ WORMS_WORMPAD:
 	Inherits@prod: ^ProducesUnits
 	Inherits@hpad: ^IsAircraftFactory
 	Selectable:
-		Bounds: 125610, 125610
+		Bounds: 2048, 2048
 	HitShape:
 		UseTargetableCellsOffsets: false
 		TargetableOffsets: 0,0,0, 768,-512,0, 768,512,0, -281,-512,0, -630,512,0
@@ -1028,6 +1044,8 @@ WORMS_WORMPAD:
 		Dimensions: 3,3
 	Health:
 		HP: 65000
+	WithBuildingBib:
+		Palette: ra_temperat
 	RevealsShroud:
 		Range: 5c0
 	Exit@1:
@@ -1109,7 +1127,7 @@ WORMUZI:
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
 		-IdleSequences: idle1,idle2,idle3,idle4
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: WormSuicideExplode
 		EmptyWeapon: WormSuicideExplode
 WORMGRENADE:
@@ -1150,7 +1168,7 @@ WORMGRENADE:
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
 		-IdleSequences: idle1,idle2,idle3,idle4
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: WormSuicideExplode
 		EmptyWeapon: WormSuicideExplode
 WORMBAZOOKA:
@@ -1180,10 +1198,10 @@ WORMBAZOOKA:
 		HP: 12000
 	AutoTarget:
 		ScanRadius: 6
-	Armament:
-		Weapon: WormsRockets
-		LocalOffset: 256,43,341
-		FireDelay: 5
+	# Armament:
+	# 	Weapon: WormsRockets
+	# 	LocalOffset: 256,43,341
+	# 	FireDelay: 5
 	TakeCover:
 		ProneOffset: 180,0,-200
 	WithDeathAnimation:
@@ -1198,7 +1216,7 @@ WORMBAZOOKA:
 		RequiresCondition: charging
 		SoundFiles: wormshoming.wav
 		Interval: 30, 40
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: WormSuicideExplode
 		EmptyWeapon: WormSuicideExplode
 WORMFLAMER:
@@ -1241,21 +1259,24 @@ WORMFLAMER:
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
 		-IdleSequences: idle1,idle2,idle3,idle4
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: WormSuicideExplode
 		EmptyWeapon: WormSuicideExplode
 WORMENGINEER:
-	Inherits: ^Soldier
+	Inherits: E6
+	Inherits@anim: ^TDRAInfantry
 	Inherits@selection: ^SelectableSupportUnit
+	Inherits@engineer: ^EngineerDefaultWeapons
+	Inherits@isengineer: ^IsEngineer
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Valued:
 		Cost: 500
 	Tooltip:
 		Name: Engineer Worm
 	Voiced:
 		VoiceSet: voiceWorm
-	AttackFrontal:
-		Voice: Attack
-		FacingTolerance: 0
+	# -AttackFrontal:
+		# FacingTolerance: 0
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
@@ -1268,23 +1289,47 @@ WORMENGINEER:
 	Health:
 		HP: 12000
 	Passenger:
-		CustomPipType: yellow
-	EngineerRepair:
+		CustomPipType: engineer
+	Garrisoner:
+		CustomPipType: engineer
+	InstantlyRepairs:
+		Types: building
+		EnterBehaviour: Dispose
+		RepairSound: urepair.wav
+	InstantlyRepairs@Tech:
+		Types: tech
+		EnterBehaviour: Dispose
+		RepairSound: urepair.wav
+	InstantlyRepairs@Civ:
+		Types: civ
+		ValidRelationships: Ally, Neutral
+		EnterBehaviour: Dispose
+		RepairSound: urepair.wav
 	RepairsBridges:
+		EnterBehaviour: Exit
 	CaptureManager:
-	Captures@SABOTAGE:
-		CaptureTypes: building-sabotage
-		SabotageThreshold: 55
-		PlayerExperience: 50
-	Captures@CAPTURES:
-		CaptureTypes: building, husk
-		PlayerExperience: 50
+	GrantConditionOnPrerequisite@GLOBALREUSABLEENGINEER:
+		Condition: global-reusable-engineers
+		Prerequisites: global-reusable-engineers
+	Captures:
+		RequiresCondition: !global-reusable-engineers
+		CaptureTypes: building, defense, tech
+		PlayerExperience: 500
+		ConsumedByCapture: True
+	Captures@REUSABLE:
+		RequiresCondition: global-reusable-engineers
+		CaptureTypes: building, defense, tech
+		PlayerExperience: 500
+		CaptureDelay: 375
+		ConsumedByCapture: False
+		EnterCursor: ability
+		EnterBlockedCursor: move-blocked
 	-AttackFrontal:
 	WithInfantryBody:
 		-IdleSequences: idle1,idle2,idle3,idle4
 	WithDeathAnimation:
 		UseDeathTypeSuffix: false
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: WormSuicideExplode
 		EmptyWeapon: WormSuicideExplode
 WORMDYNAMITE:
@@ -1329,7 +1374,7 @@ WORMDYNAMITE:
 		VoiceSet: voiceWorm
 	WithDeathAnimation:
 		UseDeathTypeSuffix: false
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: WormSuicideExplode
 		EmptyWeapon: WormSuicideExplode
 WHARV:
@@ -1350,6 +1395,12 @@ WHARV:
 		Description: Collects Tiberium for processing.\n  Unarmed
 	Selectable:
 		DecorationBounds: 1536, 1536
+	Harvester:
+		BaleLoadDelay: 4
+		BaleUnloadDelay: 1
+		EmptyCondition: no-tiberium
+	StoresResources:
+		Capacity: 45
 	Mobile:
 		Speed: 85
 	Health:
@@ -1362,7 +1413,7 @@ WHARV:
 		Range: 4c0
 	WithHarvestAnimation:
 	WithDockingAnimation:
-	Explodes:
+	FireWarheadsOnDeath:
 		RequiresCondition: !no-tiberium
 		Weapon: TiberiumExplosion
 	SelectionDecorations:
@@ -1433,7 +1484,7 @@ WTRUCK:
 	WithInfantryBody:
 		MoveSequence: run
 	-WithFacingSpriteBody:
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: SheepExplode
 		EmptyWeapon: SheepExplode
 		DamageSource: Killer
@@ -1479,7 +1530,7 @@ WORMS_MOLE:
 		MoveSequence: run
 		RequiresCondition: !submerged
 	-WithFacingSpriteBody:
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: SheepExplode
 		EmptyWeapon: SheepExplode
 		DamageSource: Killer
@@ -1547,10 +1598,10 @@ WORMBUGGY:
 	#	Sequence: aimgun-overlay
 	Voiced:
 		VoiceSet: voiceWorm
-	ThrowsShrapnel:
-		Weapons: WormHusk
-		Pieces: 1, 1
-		Range: 2c0, 4c0
+	# ThrowsShrapnel:
+	# 	Weapons: WormHusk
+	# 	Pieces: 1, 1
+	# 	Range: 2c0, 4c0
 	Cargo:
 		Types: Infantry, Hacker, Fremen
 		MaxWeight: 3
@@ -1611,10 +1662,10 @@ WORMS_MOAI:
 	#	Sequence: aimgun-overlay
 	Voiced:
 		VoiceSet: wormMoai
-	ThrowsShrapnel:
-		Weapons: WormHusk
-		Pieces: 1, 1
-		Range: 2c0, 4c0
+	# ThrowsShrapnel:
+	# 	Weapons: WormHusk
+	# 	Pieces: 1, 1
+	# 	Range: 2c0, 4c0
 WMTNK:
 	Inherits: ^Tank
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -1779,7 +1830,9 @@ WCANNON:
 		VoiceSet: voiceWorm
 WORMS_MCV:
 	Inherits: ^Vehicle
+	Inherits@Template: ^SupportVehicleTemplate
 	Inherits@selection: ^SelectableSupportUnit
+	Inherits@mcv: ^MCV
 	Valued:
 		Cost: 3500
 	Tooltip:
@@ -1906,8 +1959,8 @@ WORMS_UFO:
 		Weapon: RA2DiskLaser
 		LocalOffset: 427,-171,-213, 427,171,-213
 		PauseOnCondition: !ammo
-	Armament@SECONDARY2:
-		Weapon: WormsRockets
+	# Armament@SECONDARY2:
+	# 	Weapon: WormsRockets
 	AutoTarget:
 		ScanRadius: 5
 	AttackAircraft:

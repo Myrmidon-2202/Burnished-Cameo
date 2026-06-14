@@ -139,25 +139,25 @@ WormsChronoAI:
 		ValidTargets: Air, Ground, Water
 	Warhead@2Flash: ChronoFlashEffect
 
-WormsRockets:
-	Inherits: ^MissileWeapon
-	Report: wormrocket.wav
-	Projectile: MissileCA
-		Image: wormrocket
-		ContrailLength: 1
-	Warhead@2Eff_impact: CreateEffect
-		ImpactSounds: wormexplode.wav, wormexplode2.wav
-		Explosions: wormexp2
-	Warhead@2DamExtra: SpreadDamage
-		Spread: 341
-		Damage: 5000
-		Versus:
-			None: 100
-			Wood: 50
-			Light: 80
-			Medium: 50
-			Heavy: 34
-		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+# WormsRockets:
+# 	Inherits: ^MissileWeapon
+# 	Report: wormrocket.wav
+# 	Projectile: MissileCA
+# 		Image: wormrocket
+# 		ContrailLength: 1
+# 	Warhead@2Eff_impact: CreateEffect
+# 		ImpactSounds: wormexplode.wav, wormexplode2.wav
+# 		Explosions: wormexp2
+# 	Warhead@2DamExtra: SpreadDamage
+# 		Spread: 341
+# 		Damage: 5000
+# 		Versus:
+# 			None: 100
+# 			Wood: 50
+# 			Light: 80
+# 			Medium: 50
+# 			Heavy: 34
+# 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 WormsGrenade:
 	Inherits: Grenade
 	Projectile: Bullet
@@ -399,15 +399,15 @@ Worms227mm:
 			Medium: 50
 			Heavy: 34
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
-WormsPatriot:
-	Inherits: Patriot
-	Report: rocket2.aud
-	Projectile: MissileCA
-		Image: wormsmissile
-		ContrailLength: 1
-	Warhead@4EffAir: CreateEffect
-		ImpactSounds: wormexplode.wav, wormexplode2.wav
-		Explosions: wormexp2
+# WormsPatriot:
+# 	Inherits: Patriot
+# 	Report: rocket2.aud
+# 	Projectile: MissileCA
+# 		Image: wormsmissile
+# 		ContrailLength: 1
+# 	Warhead@4EffAir: CreateEffect
+# 		ImpactSounds: wormexplode.wav, wormexplode2.wav
+# 		Explosions: wormexp2
 Worms120mm:
 	Inherits: ^BallisticWeapon
 	Report: tnkfire4.aud
@@ -484,22 +484,60 @@ WormSuicideExplode:
 		ImpactSounds: wormexplode.wav, wormexplode2.wav
 		Explosions: wormexp2
 		Delay: 25
+
+^WormsLightHusks:
+	Inherits: ^DamagingExplosion
+	ReloadDelay: 60
+	Range: 5c0
+	ValidTargets: Ground, Air
+	Projectile: Bullet
+		Speed: 96
+		Blockable: false
+		LaunchAngle: 160
+		Palette: player
+		IsPlayerPalette: true
+		Shadow: true
+		AirburstAltitude: 768
+		Inaccuracy: 2048
+	Warhead@2Eff: CreateEffect
+		Explosions: building
+		ImpactSounds: xplos.aud
+		ValidTargets: Ground, Air
+	Warhead@3EffWater: CreateEffect
+		Explosions: large_splash
+		ImpactSounds: splash9.aud
+		ValidTargets: Water, Underwater
+
 WormHusk:
-	Inherits: ^GeneralsLightHusks
+	Inherits: ^WormsLightHusks
 	Projectile: Bullet
 		Image: wormfly
 	Warhead@2: SpawnActor
 		Actors: wormuzi
 		Delay: 1
 WormHusk2:
-	Inherits: ^GeneralsLightHusks
+	Inherits: ^WormsLightHusks
 	Projectile: Bullet
 		Image: wormfly
 	Warhead@2: SpawnActor
 		Actors: wormbazooka
 		Delay: 1
+
+^WormsHuskClusterExplode:
+	Inherits: UnitExplode
+	Projectile: InstantExplode
+	ReloadDelay: 30
+	Warhead@1Dam: SpreadDamage
+		Damage: 3000
+	Warhead@2Eff: CreateEffect
+		ImpactSounds: xplobig6.aud
+	Warhead@Shrapnel: FireShrapnel
+		InvalidTargets: FireImmune
+		Weapon: GLToxinCluster
+		ValidTargets: Ground, Water, Air
+
 WormHuskCluster:
-	Inherits: ^GeneralsHuskClusterExplode
+	Inherits: ^WormsHuskClusterExplode
 	Warhead@Shrapnel: FireShrapnel
 		InvalidTargets: FireImmune
 		Weapon: WormHusk

@@ -2469,7 +2469,6 @@ QTNK:
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Inherits@EMP: ^FrontalEMP
 	Buildable:
-		BuildLimit: 1
 		Queue: Vehicle.Soviet
 		BuildPaletteOrder: 190
 		Prerequisites: stek
@@ -2903,7 +2902,7 @@ MIG:
 	Buildable:
 		Queue: Aircraft.Soviet
 		BuildPaletteOrder: 50
-		Prerequisites: stek, ~!upmignukebomber
+		Prerequisites: stek
 		Description: actor-mig.description
 	Valued:
 		Cost: 1400

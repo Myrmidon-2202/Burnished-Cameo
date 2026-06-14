@@ -228,11 +228,12 @@ wc_h_stormwind:
 		
 wc_h_guard_tower:
 	Defaults:
-		Filename: wc_buildings.shp
+		Filename: wc_h_guard_tower.shp
 	Inherits: ^WC1DamagedFire
 	idle:
 		Start: 1
 	make:
+		Filename: wc_buildings.shp
 		Frames: 0,1
 		Length: 2
 		Tick: 450
