@@ -577,32 +577,39 @@ WSHEEPSTRIKECOMMAND:
 	DetectCloaked:
 		Range: 5c0
 		RequiresCondition: !lowpower
-	# AirstrikePower:
-	# 	PauseOnCondition: lowpower
-	# 	Prerequisites: ~techlevel.superweapons
-	# 	Icon: sheepstrike
-	# 	ChargeInterval: 6000
-	# 	SquadSize: 3
-	# 	QuantizedFacings: 8
-	# 	Name: Sheep Strike
-	# 	Description: Stike an area with flaming sheep.
-	# 	EndChargeSpeechNotification: AirstrikeReady
-	# 	SelectTargetSpeechNotification: SelectTarget
-	# 	InsufficientPowerSpeechNotification: InsufficientPower
-	# 	IncomingSpeechNotification: EnemyPlanesApproaching
-	# 	UnitType: worms_jetenginebomber
-	# 	DisplayBeacon: True
-	# 	BeaconPoster: airstrike
-	# 	BeaconPosterPalette: beaconposter
-	# 	DisplayRadarPing: True
-	# 	CameraActor: camera
-	# 	ArrowSequence: arrow
-	# 	ClockSequence: clock
-	# 	CircleSequence: circles
-	# 	UseDirectionalTarget: True
-	# 	DirectionArrowAnimation: airstrikedirection
-	# 	SupportPowerPaletteOrder: 10
-	# SupportPowerChargeBar:
+	AirstrikePower:
+		PauseOnCondition: lowpower
+		Prerequisites: 
+			1: ~techlevel.superweapons
+		Icons: 
+			1: sheepstrike
+		ChargeInterval: 6000
+		SquadSizes: 
+			1: 3
+		QuantizedFacings: 8
+		Names: 
+			1: Sheep Strike
+		Descriptions: 
+			1: Stike an area with flaming sheep.
+		EndChargeSpeechNotification: AirstrikeReady
+		SelectTargetSpeechNotification: SelectTarget
+		InsufficientPowerSpeechNotification: InsufficientPower
+		IncomingSpeechNotification: EnemyPlanesApproaching
+		UnitTypes: 
+			1: worms_jetenginebomber
+		DisplayBeacon: True
+		BeaconPosters: 
+			1: airstrike
+		BeaconPosterPalette: beaconposter
+		DisplayRadarPing: True
+		CameraActor: camera
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+		UseDirectionalTarget: True
+		DirectionArrowAnimation: airstrikedirection
+		SupportPowerPaletteOrder: 10
+	SupportPowerChargeBar:
 	Power:
 		Amount: -50
 		
@@ -647,6 +654,111 @@ WTIMEMACHINE:
 		RequiresCondition: !lowpower
 	Power:
 		Amount: -50
+	RA2ChronoshiftPower@chronoshift:
+		OrderName: Chronoshift
+		Prerequisites:
+			1: !botplayer
+		PauseOnCondition: disabled
+		Icons:
+			1: chrono
+		ChargeInterval: 4500
+		Names:
+			1: power-chronoshift.name
+		Descriptions:
+			1: power-chronoshift.description
+		Dimensions:
+			1: 5,5
+		Footprints:
+			1: __x__ _xxx_ xxxxx _xxx_ __x__
+		SelectTargetSpeechNotification: SelectTarget
+		InsufficientPowerSpeechNotification: InsufficientPower
+		#BeginChargeSpeechNotification: ChronosphereCharging
+		#EndChargeSpeechNotification: ChronosphereReady
+		EndChargeSound: schropen.wav
+		Durations:
+			1: -1
+		KillCargo: False
+		AllowImpassable: true
+		DisplayRadarPing: True
+		SelectionCursor: ability
+		TargetCursor: ability
+		LaunchSound: schrmov.wav
+		IncomingSound: schrmov.wav
+		Range: 4000
+		ShowTargetCircle: true
+		TargetCircleColor: b6f4ff
+		ImpactWeapon: ChronoshiftImpact
+		TeleportWeapon: ChronoshiftImpact
+		DisplayTimerRelationships: Ally, Neutral, Enemy
+	DetonateWeaponPower@ChronoReinforcements:
+		OrderName: ChronoReinforcements
+		Cost: 2000
+		Prerequisites:
+			1: up_chronoarmor
+		PauseOnCondition: disabled
+		Icons:
+			1: chronoreinforcements
+		Cursor: ability
+		ChargeInterval: 6000
+		Names:
+			1: Chrono Reinforcements
+		ActivationDelay: 25
+		ActivationSequence:
+		Descriptions:
+			1: Teleports a small taskforce to a specified location.
+		Weapons:
+			1: ChronoAI
+		CameraActor: camera.placeholderhack
+		CameraRemoveDelay: 0
+		SelectTargetSpeechNotification: SelectTarget
+		InsufficientPowerSpeechNotification: InsufficientPower
+		DisplayRadarPing: True
+		LaunchSound: chrono2.aud
+		IncomingSound: chrono2.aud
+		DisplayTimerRelationships: Ally, Neutral, Enemy
+	DetonateWeaponPowerCA@ChronoVortex:
+		AllowMultiple: true
+		OrderName: ChronoVortex
+		Prerequisites:
+			1:
+		IconImage: pdox
+		Icons:
+			1: chronovortex
+		Cursor: ability
+		ChargeInterval: 10500
+		Names:
+			1: Chrono Vortex
+		ActivationDelay: 100
+		Descriptions:
+			1: Initiate a Chrono Vortex which deals heavy damage over time to a large area.
+		Weapons:
+			1: ChronoVortexInit
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		EndChargeSpeechNotification: NuclearWeaponAvailable
+		EndChargeTextNotification: Chrono Vortex ready.
+		InsufficientPowerSpeechNotification: InsufficientPower
+		IncomingSpeechNotification: NuclearWarheadApproaching
+		IncomingTextNotification: Chrono Vortex activated.
+		IncomingSound: nukelaunch.aud
+		LaunchSound: nukelaunch.aud
+		DisplayTimerRelationships: Ally, Neutral, Enemy
+		PauseOnCondition: disabled
+		DisplayBeacon: True
+		DisplayRadarPing: True
+		ArrowSequence: arrow
+		ClockSequence: clocklarge
+		CircleSequence: circles
+		CameraRemoveDelay: 500
+		Duration: 500
+		ActiveCondition: active
+		BeaconPosters:
+			1: chronovortexicon
+		TargetCircleRanges:
+			1: 10000
+		TargetCircleColors: ff000080
+		BeaconActor: BLASTRADIUS.atomic
+		CameraRange: 10000
 	# ChronoshiftPower@chronoshift:
 	# 	OrderName: Chronoshift
 	# 	Prerequisites: !botplayer
@@ -720,32 +832,48 @@ WCONCRETEDONKEY:
 	DetectCloaked:
 		Range: 5c0
 		RequiresCondition: !lowpower
-	# NukePower:
-	# 	PauseOnCondition: lowpower
-	# 	Prerequisites: ~techlevel.superweapons
-	# 	Icon: concretedonkey
-	# 	Cursor: nuke
-	# 	ChargeInterval: 9000
-	# 	Name: Concrete Donkey
-	# 	Description: Launch a tactical concrete donkey.\nApplies heavy damage over a large area.
-	# 	EndChargeSpeechNotification: NuclearWeaponAvailable
-	# 	SelectTargetSpeechNotification: SelectTarget
-	# 	InsufficientPowerSpeechNotification: InsufficientPower
-	# 	LaunchSpeechNotification: NuclearWeaponLaunched
-	# 	IncomingSpeechNotification: NuclearWarheadApproaching
-	# 	MissileWeapon: atomicdonkey
-	# 	MissileDelay: 11
-	# 	SpawnOffset: 3c0,0,-1c512
-	# 	DisplayBeacon: True
-	# 	BeaconPoster: atomic
-	# 	BeaconPosterPalette: beaconposter
-	# 	DisplayRadarPing: True
-	# 	CameraRange: 10c0
-	# 	ArrowSequence: arrow
-	# 	ClockSequence: clock
-	# 	CircleSequence: circles
-	# 	SupportPowerPaletteOrder: 30
-	# 	MissileImage: atomicdonkey
+	NukePowerCA:
+		OrderName: NukePowerInfoOrder
+		AllowMultiple: True
+		PauseOnCondition: disabled
+		Prerequisites:
+			1: ~techlevel.superweapons
+		Cursor: nuke
+		Icons:
+			1: concretedonkey
+		ChargeInterval: 10500
+		Names:
+			1: Concrete Donkey
+		Descriptions:
+			1: Launch a tactical concrete donkey.\nApplies heavy damage over a large area.
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		InsufficientPowerSpeechNotification: InsufficientPower
+		EndChargeSpeechNotification: NuclearWeaponAvailable
+		EndChargeTextNotification: Nuclear Missile ready.
+		LaunchSpeechNotification: NuclearWeaponLaunched
+		LaunchTextNotification: Warning: Nuclear Missile launched.
+		IncomingSpeechNotification: NuclearWarheadApproaching
+		IncomingTextNotification: Warning: Nuclear Missile launched.
+		MissileWeapons:
+			1: atomicdonkey
+		MissileDelay: 5
+		SpawnOffset: 1c0,427,0
+		DisplayTimerRelationships: Ally, Neutral, Enemy
+		DisplayBeacon: True
+		DisplayRadarPing: True
+		BeaconPosters:
+			1: atomic
+		CameraRange: 10000
+		CameraRemoveDelay: 125
+		CircleRanges:
+			1: 10000
+		ArrowSequence: arrow
+		ClockSequence: clocklarge
+		CircleSequence: circles
+		SupportPowerPaletteOrder: 30
+		MissileImage: atomicdonkey
+		BeaconActor: BLASTRADIUS.atomic
 	WithBuildingBib:
 		Palette: ra_temperat
 	# WithSupportPowerActivationAnimation:
@@ -753,7 +881,7 @@ WCONCRETEDONKEY:
 	# WithSupportPowerActivationOverlay:
 	# 	RequiresCondition: !build-incomplete
 	# 	#Sequence: smoke
-	# SupportPowerChargeBar:
+	SupportPowerChargeBar:
 	Power:
 		Amount: -150
 	ProvidesPrerequisite@buildingname:
@@ -1262,76 +1390,31 @@ WORMFLAMER:
 	FireWarheadsOnDeath:
 		Weapon: WormSuicideExplode
 		EmptyWeapon: WormSuicideExplode
+
 WORMENGINEER:
 	Inherits: E6
-	Inherits@anim: ^TDRAInfantry
-	Inherits@selection: ^SelectableSupportUnit
-	Inherits@engineer: ^EngineerDefaultWeapons
-	Inherits@isengineer: ^IsEngineer
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Selectable:
+		Bounds: 1024, 1024
+		DecorationBounds: 1536, 1536
 	Valued:
-		Cost: 500
+		Cost: 400
 	Tooltip:
-		Name: Engineer Worm
-	Voiced:
-		VoiceSet: voiceWorm
-	# -AttackFrontal:
-		# FacingTolerance: 0
-	UpdatesPlayerStatistics:
-		AddToArmyValue: true
+		Name: Engineer
 	Buildable:
 		BuildPaletteOrder: 30
-		Prerequisites:
+		Prerequisites: ~WIN98_BARRACKS
 		Queue: Infantry, RAInfantry
-		Description: Damages and captures enemy structures.\n  Repairs destroyed vehicles\n  Unarmed
-	Mobile:
-		Speed: 48
-	Health:
-		HP: 12000
-	Passenger:
-		CustomPipType: engineer
-	Garrisoner:
-		CustomPipType: engineer
-	InstantlyRepairs:
-		Types: building
-		EnterBehaviour: Dispose
-		RepairSound: urepair.wav
-	InstantlyRepairs@Tech:
-		Types: tech
-		EnterBehaviour: Dispose
-		RepairSound: urepair.wav
-	InstantlyRepairs@Civ:
-		Types: civ
-		ValidRelationships: Ally, Neutral
-		EnterBehaviour: Dispose
-		RepairSound: urepair.wav
-	RepairsBridges:
-		EnterBehaviour: Exit
-	CaptureManager:
-	GrantConditionOnPrerequisite@GLOBALREUSABLEENGINEER:
-		Condition: global-reusable-engineers
-		Prerequisites: global-reusable-engineers
-	Captures:
-		RequiresCondition: !global-reusable-engineers
-		CaptureTypes: building, defense, tech
-		PlayerExperience: 500
-		ConsumedByCapture: True
-	Captures@REUSABLE:
-		RequiresCondition: global-reusable-engineers
-		CaptureTypes: building, defense, tech
-		PlayerExperience: 500
-		CaptureDelay: 375
-		ConsumedByCapture: False
-		EnterCursor: ability
-		EnterBlockedCursor: move-blocked
-	-AttackFrontal:
-	WithInfantryBody:
-		-IdleSequences: idle1,idle2,idle3,idle4
+		Description: Captures structures.
 	WithDeathAnimation:
 		UseDeathTypeSuffix: false
-	FireWarheadsOnDeath:
-		Weapon: WormSuicideExplode
-		EmptyWeapon: WormSuicideExplode
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+		-IdleSequences: idle1,idle2,idle3,idle4
+	Voiced:
+		VoiceSet: win98freecellvoice
+	RenderSprites:
+		Palette: td_temperat
+
 WORMDYNAMITE:
 	Inherits: ^Soldier
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -1885,7 +1968,6 @@ worms_mcv.bot:
 ####################################################################################################
 WORMS_JETENGINEBOMBER:
 	Inherits: ^RANeutralPlane
-	Interactable:
 	Huntable:
 	RejectsOrders:
 	Tooltip:
@@ -1923,6 +2005,34 @@ WORMS_JETENGINEBOMBER:
 	-MapEditorData:
 	SpawnActorOnDeath:
 		Actor: BADR.Husk
+
+BADR.Husk:
+	Inherits: ^PlaneHusk
+	Tooltip:
+		Name: Jet Engine Bomber
+	Aircraft:
+		TurnSpeed: 20
+		Speed: 149
+	LeavesTrails@0:
+		Offsets: -432,560,0
+		MovingInterval: 2
+		Image: smokey
+		StationaryInterval: 2
+		SpawnAtLastPosition: False
+		TrailWhileStationary: True
+		Type: CenterPosition
+	LeavesTrails@1:
+		Offsets: -432,-560,0
+		MovingInterval: 2
+		Image: smokey
+		StationaryInterval: 2
+		SpawnAtLastPosition: False
+		TrailWhileStationary: True
+		Type: CenterPosition
+	RenderSprites:
+		Image: worms_jetenginebomber
+		Palette: td_temperat
+	# -RevealOnDeath:
 
 WORMS_UFO:
 	Inherits: ^Helicopter

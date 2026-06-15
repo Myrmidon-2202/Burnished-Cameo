@@ -45,11 +45,13 @@ projectile_flamingsheep:
 		Filename: worms_projectile_sheep_strike32.shp
 		Length: *
 		ZOffset: 1023
+		Scale: 2.0
 
 atomicdonkey:
 	Defaults:
 		Length: *
 		ZOffset: 1023
+		Scale: 2.0
 	up: 
 		Filename: worms_donkey_projectile.shp
 	down: 
@@ -1118,6 +1120,7 @@ worms_mcv:
 worms_jetenginebomber:
 	Defaults: 
 		Filename: worms_jetenginebomber.shp
+		Scale: 2.0
 	idle:
 		Facings: -32
 		ZOffset: 2048
