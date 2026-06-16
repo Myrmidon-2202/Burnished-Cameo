@@ -81,25 +81,30 @@ wormgrenadeshp:
 		Filename: wormgrenadeshp.shp
 		Length: *
 		ZOffset: 1023
+		Scale: 2.0
 wormrocket:
 	idle:
 		Filename: wormrocket.shp
 		Facings: 8
 		ZOffset: 1023
+		Scale: 2.0
 worms_moai_rock:
 	idle:
 		Filename: worms_moai_rock.shp
 		Length: *
 		ZOffset: 1023
+		Scale: 2.0
 wormsmissile:
 	idle:
 		Filename: wormsmissile.shp
 		Facings: -32
 		ZOffset: 1023
+		Scale: 2.0
 explosion:
 	Defaults:
 		Length: *
 		ZOffset: 2047
+		Scale: 2.0
 	wormspiff: 
 		Filename: wormspiff.shp
 	wormexp2: 
@@ -112,6 +117,7 @@ wormfly:
 		Facings: 2
 		Length: 7
 		ZOffset: 1023
+		Scale: 2.0
 ####################################################################################################
 #		BUILDING WORMS
 ####################################################################################################
@@ -119,6 +125,7 @@ wcon:
 	# Inherits: ^DamagedFire
 	Defaults:
 		Filename: worm_conyard.shp
+		Scale: 2.0
 	idle: 
 		Start: 1
 	damaged-idle: 
@@ -129,6 +136,7 @@ wcon:
 		Filename: bib2.tem
 		UseTilesetExtension: true
 		Length: *
+		Scale: 1.0
 	icon: 
 		Filename: wormscameos.shp
 		Start: 0
@@ -136,6 +144,7 @@ wcon:
 wnuke:
 	Defaults:
 		Filename: worm_mill.shp
+		Scale: 2.0
 	idle: 
 		Length: 12
 		Tick: 100
@@ -150,6 +159,7 @@ wnuke:
 		Filename: bib3.tem
 		UseTilesetExtension: true
 		Length: *
+		Scale: 1.0
 	icon: 
 		Filename: wormscameos.shp
 		Start: 1
@@ -157,6 +167,7 @@ wnuke:
 wnuk2:
 	Defaults:
 		Filename: worm_tall_mill.shp
+		Scale: 2.0
 	idle: 
 		Length: 12
 		Tick: 100
@@ -170,6 +181,7 @@ wnuk2:
 		Filename: bib3.tem
 		UseTilesetExtension: true
 		Length: *
+		Scale: 1.0
 	icon: 
 		Filename: wormscameos.shp
 		Start: 6
@@ -204,6 +216,7 @@ wref:
 		AddExtension: False
 	Defaults:
 		Filename: worm_refinery.shp
+		Scale: 2.0
 	idle: 
 		Start: 0
 	damaged-idle: 
@@ -223,6 +236,7 @@ wref:
 		Filename: bib2.tem
 		UseTilesetExtension: true
 		Length: *
+		Scale: 1.0
 	icon: 
 		Filename: wormscameos.shp
 		Start: 2
@@ -236,6 +250,7 @@ whand:
 	Defaults:
 		Filename: worms_freezer.shp
 		Offset: 0,-8
+		Scale: 2.0
 	idle: 
 	damaged-idle: 
 		Start: 1
@@ -246,6 +261,7 @@ whand:
 		UseTilesetExtension: true
 		Length: *
 		Offset: 0,0
+		Scale: 1.0
 	icon: 
 		Filename: wormscameos.shp
 		Start: 3
@@ -266,6 +282,7 @@ wweap:
 	Defaults:
 		Filename: worms_rustycar.shp
 		Offset: 0,-12
+		Scale: 2.0
 	idle: 
 		ZOffset: -511
 	damaged-idle: 
@@ -290,6 +307,7 @@ wweap:
 		UseTilesetExtension: true
 		Length: *
 		Offset: 0,0
+		Scale: 1.0
 	icon: 
 		Filename: wormscameos.shp
 		Start: 5
@@ -298,15 +316,17 @@ wweap:
 wsheepstatue:
 	Defaults: 
 		Filename: worms_sheepstatue.shp
+		Scale: 2.0
 	idle: 
 	damaged-idle: 
 		Start: 1
 	dead: 
 	make: 
 	bib: 
-		Filename: bib2.tem
+		Filename: bib3.tem
 		UseTilesetExtension: true
 		Length: *
+		Scale: 1.0
 	icon: 
 		Filename: wormscameos.shp
 		Start: 7
@@ -314,6 +334,7 @@ wsheepstatue:
 wconcretedonkey:
 	Defaults:
 		Filename: worms_donkey_statue.shp
+		Scale: 2.0
 	idle: 
 	damaged-idle: 
 		Start: 1
@@ -325,6 +346,7 @@ wconcretedonkey:
 		UseTilesetExtension: true
 		Length: *
 		Offset: 0,24
+		Scale: 1.0
 	icon: 
 		Filename: wormscameos.shp
 		Start: 19
@@ -332,6 +354,7 @@ wconcretedonkey:
 whq:
 	Defaults:
 		Filename: worms_uplink.shp
+		Scale: 2.0
 	idle: 
 	damaged-idle: 
 		Start: 1
@@ -341,6 +364,7 @@ whq:
 		Filename: bib3.tem
 		UseTilesetExtension: true
 		Length: *
+		Scale: 1.0
 	icon: 
 		Filename: wormscameos.shp
 		Start: 4
@@ -354,6 +378,7 @@ whq:
 wsheepstrikecommand:
 	Defaults:
 		Filename: worms_sheepstrikecommand.shp
+		Scale: 2.0
 	idle: 
 	damaged-idle: 
 		Start: 1
@@ -363,6 +388,7 @@ wsheepstrikecommand:
 		Filename: bib2.tem
 		UseTilesetExtension: true
 		Length: *
+		Scale: 1.0
 	icon: 
 		Filename: wormscameos.shp
 		Start: 10
@@ -370,6 +396,7 @@ wsheepstrikecommand:
 wtimemachine:
 	Defaults:
 		Filename: worms_timemachine.shp
+		Scale: 2.0
 	idle: 
 	damaged-idle: 
 		Start: 1
@@ -382,6 +409,7 @@ wtimemachine:
 wsilo:
 	Defaults:
 		Filename: worms_treasurepile.shp
+		Scale: 2.0
 	idle: 
 		Start: 0
 		Offset: 0,-1
@@ -399,6 +427,7 @@ wsilo:
 			SNOW: TEMPERAT
 		Length: *
 		Offset: 0,1
+		Scale: 1.0
 	icon: 
 		Filename: wormscameos.shp
 		Start: 9
@@ -417,6 +446,7 @@ wsilo:
 wsantassleigh:
 	Defaults:
 		Filename: worms_santas_sleigh.shp
+		Scale: 2.0
 	idle: 
 		Start: 0
 	damaged-idle: 
@@ -428,6 +458,7 @@ wsantassleigh:
 		UseTilesetExtension: true
 		Length: *
 		Offset: 0,24
+		Scale: 1.0
 	icon: 
 		Filename: wormscameos.shp
 		Start: 17
@@ -435,6 +466,7 @@ wsantassleigh:
 wgtwr:
 	Defaults:
 		Filename: worm_gtwr.shp
+		Scale: 2.0
 	idle: 
 	damaged-idle: 
 	dead: 
@@ -454,6 +486,7 @@ wgtwr:
 			CAMEO: TEMPERAT
 		Length: *
 		Offset: 0,-2
+		Scale: 1.0
 	icon: 
 		Filename: gtwricnh.tem
 		AddExtension: False
@@ -467,6 +500,7 @@ wgtwr:
 worms_aasite:
 	Defaults:
 		Filename: worms_aasite.shp
+		Scale: 2.0
 	idle:
 		Start: 0
 	damaged-idle:
@@ -484,6 +518,7 @@ worms_aasite:
 			SNOW: TEMPERAT
 		Length: *
 		Offset: 0,-2
+		Scale: 1.0
 	muzzle: 
 		Filename: rasamfire.shp
 		Length: 18
@@ -495,6 +530,7 @@ worms_aasite:
 worms_candle:
 	Defaults:
 		Filename: worms_candle.shp
+		Scale: 2.0
 	idle:
 		Length: *
 		Tick: 100
@@ -517,7 +553,7 @@ worms_candle:
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
 		Length: *
-		Offset: 0,-2
+		Scale: 1.0
 	icon: 
 		Filename: wormscameos.shp
 		Start: 12
@@ -526,6 +562,7 @@ laspy:
 	Defaults:
 		Filename: wormLaserPyramid.png
 		Offset: 0,-12
+		Scale: 2.0
 	idle: 
 		Length: 1
 		Reverses: True
@@ -564,6 +601,7 @@ laspy:
 worms_wormpad:
 	Defaults:
 		Filename: worms_wormpad.shp
+		Scale: 2.0
 	idle:
 		ZOffset: -1023
 	damaged-idle:
@@ -580,6 +618,7 @@ worms_wormpad:
 		Filename: bib3.tem
 		UseTilesetExtension: true
 		Length: *
+		Scale: 1.0
 	icon: 
 		Filename: wormscameos.shp
 		Start: 30
@@ -589,6 +628,7 @@ worms_wormpad:
 wormuzi:
 	Defaults: 
 		Filename: wormRunUzi.png
+		Scale: 2.0
 	stand: 
 		Start: 0
 		Facings: -8
@@ -621,6 +661,7 @@ wormgrenade:
 	Inherits: ^WCInfantry
 	Defaults: 
 		Filename: wormRunGrenade.png
+		Scale: 2.0
 	stand: 
 		Start: 0
 		Facings: -8
@@ -654,6 +695,7 @@ wormbazooka:
 	Inherits: ^WCInfantry
 	Defaults: 
 		Filename: wormRunBazooka.png
+		Scale: 2.0
 	stand: 
 		Start: 0
 		Facings: -8
@@ -687,6 +729,7 @@ wormflamer:
 	Inherits: ^WCInfantry
 	Defaults: 
 		Filename: wormRunFlamer.png
+		Scale: 2.0
 	stand: 
 		Start: 0
 		Facings: -8
@@ -756,6 +799,7 @@ wormengineer:
 	Inherits: ^WCInfantry
 	Defaults: 
 		Filename: wormRunEngineer.png
+		Scale: 2.0
 	stand: 
 		Start: 0
 		Facings: -8
@@ -783,6 +827,7 @@ wormdynamite:
 	Inherits: ^WCInfantry
 	Defaults: 
 		Filename: wormrundynamite.png
+		Scale: 2.0
 	stand: 
 		Start: 0
 		Facings: -8
@@ -810,6 +855,7 @@ wormdynamite:
 wharv:
 	Defaults: 
 		Filename: worms_harvester.shp
+		Scale: 2.0
 	idle: 
 		Facings: -8
 	harvest: 
@@ -831,6 +877,7 @@ skunk:
 	Inherits: ^WCInfantry
 	Defaults: 
 		Filename: wormSkunk.png
+		Scale: 2.0
 	stand: 
 		Start: 0
 		Facings: -8
@@ -894,6 +941,7 @@ skunk:
 wtruck:
 	Defaults: 
 		Filename: wormSheep.png
+		Scale: 2.0
 	idle: 
 		Start: 0
 		Facings: -8
@@ -924,6 +972,7 @@ wtruck:
 worms_mole:
 	Defaults: 
 		Filename: worms_mole_stand.shp
+		Scale: 2.0
 	idle: 
 		Start: 0
 		Facings: -8
@@ -953,6 +1002,7 @@ worms_mole:
 wormbuggy:
 	Defaults: 
 		Filename: worms_taxi.shp
+		Scale: 2.0
 	idle: 
 		Facings: -8
 	turret: 
@@ -989,6 +1039,7 @@ wormbuggy:
 worms_moai:
 	Defaults: 
 		Filename: worms_moai.shp
+		Scale: 2.0
 	idle: 
 		Facings: 8
 	turret: 
@@ -1038,6 +1089,7 @@ wormbuggy.destroyed:
 wmtnk:
 	Defaults: 
 		Filename: mtnk.shp
+		Scale: 2.0
 	idle: 
 		Facings: 32
 		UseClassicFacings: True
@@ -1061,6 +1113,7 @@ wmtnk:
 wtank:
 	Defaults: 
 		Filename: worms_tank.shp
+		Scale: 2.0
 	idle: 
 		Facings: -8
 	turret: 
@@ -1089,6 +1142,7 @@ wmtnk.destroyed:
 wmissilelauncher:
 	Defaults: 
 		Filename: worms_missile_launcher.shp
+		Scale: 2.0
 	idle: 
 		Facings: -8
 	icon: 
@@ -1098,6 +1152,7 @@ wmissilelauncher:
 wcannon:
 	Defaults: 
 		Filename: worms_cannon.shp
+		Scale: 2.0
 	idle: 
 		Facings: -8
 	icon: 
@@ -1107,6 +1162,7 @@ wcannon:
 worms_mcv:
 	Defaults: 
 		Filename: worms_mcv.shp
+		Scale: 2.0
 	idle:
 		Facings: -8
 	icon: 
@@ -1135,6 +1191,7 @@ worms_jetenginebomber:
 worms_ufo:
 	Defaults: 
 		Filename: worms_ufo.shp
+		Scale: 2.0
 	idle:
 		Length: 4
 		Tick: 200
@@ -1146,6 +1203,7 @@ worms_ufo:
 worms_apache:
 	Defaults: 
 		Filename: worms_apache.shp
+		Scale: 2.0
 	idle:
 		Facings: -8
 	rotor:

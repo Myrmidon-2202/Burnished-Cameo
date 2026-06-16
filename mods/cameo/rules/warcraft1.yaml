@@ -262,23 +262,30 @@ wc_h_townhall:
 		ActorTypes: wc_h_footman
 	ScalePowerWithHealth:
 	BaseBuilding:
-	# SpawnActorPower@spysat:
-	# 	PauseOnCondition: lowpower
-	# 	OrderName: SpydronePower
-	# 	Icon: wc_far_seeing
-	# 	ChargeInterval: 1500
-	# 	Name: Far Seeing
-	# 	Description: Reveals an area of the map\nand cloaked enemy units.
-	# 	SelectTargetSpeechNotification: SelectTarget
-	# 	InsufficientPowerSpeechNotification: InsufficientPower
-	# 	EndChargeSpeechNotification: SpyPlaneReady
-	# 	Actor: camera.spysat
-	# 	LifeTime: 250
-	# 	DeploySound: sspysate.aud
-	# 	LaunchSound: sspysate.aud
-	# 	IncomingSound: sspysate.aud
-	# 	SupportPowerPaletteOrder: 10
-	# 	EffectSequence: idle
+	SpawnActorPower@farseeing:
+		PauseOnCondition: disabled
+		OrderName: FarSeeing
+		Prerequisites:
+			1:
+		Icons:
+			1: wc_far_seeing
+		ChargeInterval: 4500
+		Names:
+			1: Far Seeing
+		Descriptions:
+			1: Reveals area
+		SelectTargetSpeechNotification: SelectTarget
+		InsufficientPowerSpeechNotification: InsufficientPower
+		EndChargeSpeechNotification: SpyPlaneReady
+		Actors:
+			1: camera.psireveal
+		LifeTime: 250
+		DeploySound: spysreve.wav
+		LaunchSound: spysreve.wav
+		IncomingSound: spysreve.wav
+		SupportPowerPaletteOrder: 10
+		EffectSequence: idle
+		BlockedCursor: move-blocked
 	Production@NORMAL:
 		Produces: Building, Defence
 		PauseOnCondition: lowpower
@@ -900,22 +907,55 @@ wc_h_stormwind:
 	SpawnActorsOnSell:
 		ActorTypes: wc_h_footman
 	ScalePowerWithHealth:
-	# SpawnActorPower:
-	# 	AllowMultiple: True
-	# 	OrderName: rainoffire
-	# 	Icon: rainoffire_icon
-	# 	Name: Rain Of Fire
-	# 	Description: This is a very powerful spell that combines the natures of flame and water.\nIt calls forth the essence of fire and delivers it through\nmassive thunderheads of vapor and brimstone, creating an actual firestorm.\nThis spell is very destructive, and will cause damage to any\nfoes and buildings in its sphere of influence.\nUse this spell with care, for the rain of fire knows no friends.
-	# 	Prerequisites: ~techlevel.superweapons
-	# 	ChargeInterval: 9000
-	# 	LifeTime: -1
-	# 	EndChargeSpeechNotification: NuclearWeaponAvailable
-	# 	SelectTargetSpeechNotification: SelectTarget
-	# 	DisplayTimerRelationships: Ally, Neutral, Enemy
-	# 	DisplayRadarPing: True
-	# 	Actor: rainoffire
-	# 	SupportPowerPaletteOrder: 20
-	# 	EffectSequence: idle
+	SpawnActorPower:
+		AllowMultiple: True
+	 	OrderName: rainoffire
+	 	Icons: 
+			1: rainoffire_icon
+	 	Names: 
+			1: Rain Of Fire
+	 	Descriptions: 
+			1: This is a very powerful spell that combines the natures of flame and water.\nIt calls forth the essence of fire and delivers it through\nmassive thunderheads of vapor and brimstone, creating an actual firestorm.\nThis spell is very destructive, and will cause damage to any\nfoes and buildings in its sphere of influence.\nUse this spell with care, for the rain of fire knows no friends.
+	 	Prerequisites: 
+			1: ~techlevel.superweapons
+	 	ChargeInterval: 9000
+	 	LifeTime: 250
+	 	EndChargeSpeechNotification: NuclearWeaponAvailable
+	 	SelectTargetSpeechNotification: SelectTarget
+		InsufficientPowerSpeechNotification: InsufficientPower
+	 	DisplayTimerRelationships: Ally, Neutral, Enemy
+	 	DisplayRadarPing: True
+	 	Actors: 
+			1: rainoffire
+	 	SupportPowerPaletteOrder: 20
+	 	EffectSequence: idle
+
+	SpawnActorPower@psireveal:
+		PauseOnCondition: disabled
+		OrderName: SovietRA2SpyPlane
+		Prerequisites:
+			1:
+		Icons:
+			1: ra2psirev
+		ChargeInterval: 4500
+		Names:
+			1: power-ra2psireveal.name
+		Descriptions:
+			1: power-ra2psireveal.description
+		SelectTargetSpeechNotification: SelectTarget
+		InsufficientPowerSpeechNotification: InsufficientPower
+		EndChargeSpeechNotification: SpyPlaneReady
+		Actors:
+			1: camera.psireveal
+		LifeTime: 250
+		DeploySound: spysreve.wav
+		LaunchSound: spysreve.wav
+		IncomingSound: spysreve.wav
+		SupportPowerPaletteOrder: 10
+		EffectSequence: idle
+		BlockedCursor: move-blocked
+
+
 	Voiced:
 		VoiceSet: humanstormwindvoice
 	ProvidesPrerequisite@swlimit:
@@ -994,13 +1034,31 @@ wc_o_townhall:
 		Type: Defence
 	Voiced:
 		VoiceSet: orctownhallvoice
-	# SpawnActorPower@spysat:
-	# 	PauseOnCondition: lowpower
-	# 	OrderName: SpydronePower
-	# 	Icon: wc_dark_vision
-	# 	ChargeInterval: 1500
-	# 	Name: Dark Vision
-	# 	EffectSequence: idle
+	-SpawnActorPower@farseeing:
+	SpawnActorPower@darkvision:
+		PauseOnCondition: disabled
+		OrderName: DarkVision
+		Prerequisites:
+			1:
+		Icons:
+			1: wc_dark_vision
+		ChargeInterval: 4500
+		Names:
+			1: Dark Vision
+		Descriptions:
+			1: Reveals area
+		SelectTargetSpeechNotification: SelectTarget
+		InsufficientPowerSpeechNotification: InsufficientPower
+		EndChargeSpeechNotification: SpyPlaneReady
+		Actors:
+			1: camera.psireveal
+		LifeTime: 250
+		DeploySound: spysreve.wav
+		LaunchSound: spysreve.wav
+		IncomingSound: spysreve.wav
+		SupportPowerPaletteOrder: 10
+		EffectSequence: idle
+		BlockedCursor: move-blocked
 	ProvidesPrerequisite@faction:
 		Prerequisite: mmwcorc
 wc_o_farm:
@@ -1252,6 +1310,7 @@ wc_h_peasant:
 		AddToArmyValue: false
 	Buildable:
 		BuildPaletteOrder: 5
+		Prerequisites: ~wc_h_townhall
 		Queue: Defence, RADefence
 		Description: Harvester.
 		BuildDuration: 100
@@ -2194,6 +2253,7 @@ wc_o_peon:
 		Name: Peon
 	Buildable:
 		BuildPaletteOrder: 5
+		Prerequisites: ~wc_o_townhall
 		Queue: Defence, RADefence
 		Description: Harvester.
 	Armament:

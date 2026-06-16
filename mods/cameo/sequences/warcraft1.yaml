@@ -1,4 +1,6 @@
 ^WC1DamagedFire:
+	Defaults:
+		Scale: 2.0
 	burn1:
 		Filename: wc_burn.shp
 		Start: 0
@@ -14,6 +16,8 @@
 		Offset: 0, -9
 		AddExtension: True
 ^WCInfantry:
+	Defaults:
+		Scale: 2.0
 	WithDeathAnimation:
 		UseDeathTypeSuffix: false
 		CrushedSequence: die
@@ -1365,14 +1369,13 @@ wc_n_slime:
 wc_n_portal:
 	Defaults:
 		Filename: wc_portal.shp
+		Scale: 2.0
 	idle:
-	Scale: 0.7
 	make:
 		Frames: 0,1
 		Length: 2
 		Tick: 450
 		Filename: wc_buildings.shp
-	Scale: 0.7
 	icon:
 		Start: 42
 		Filename: wc_chrome.shp
@@ -1381,7 +1384,6 @@ wc_n_portal:
 		Length: 13
 		Tick: 80
 		Filename: wc_explosion.shp
-	Scale: 0.7
 
 ####################################################################################################
 #		UPGRADES
