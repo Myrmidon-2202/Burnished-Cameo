@@ -125,7 +125,7 @@ CHGuardRifle:
 	Inherits: ^Chaingun
 	ReloadDelay: 55
 	Range: 5547
-	ValidTargets: Ground, Water, Trees, Air
+	ValidTargets: Ground, Water, Trees
 	Report: iredweaa.wav, iredweab.wav, iredweac.wav, iredwead.wav
 	Warhead@SmallArms: SpreadDamage
 		Damage: 2000
@@ -150,6 +150,9 @@ JapaneseTankRFlak:
 	ValidTargets: Ground, Water, Trees, Air
 	Warhead@SmallArms: SpreadDamage
 		ValidTargets: Ground, Water, Trees
+		Damage: 1000
+	Warhead@SmallArms2: SpreadDamage
+		ValidTargets: Air
 		Damage: 1000
 	Warhead@SmallArmsPercentage: HealthPercentageDamage
 		ValidTargets: Ground, Water, Trees
