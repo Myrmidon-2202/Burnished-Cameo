@@ -900,22 +900,55 @@ wc_h_stormwind:
 	SpawnActorsOnSell:
 		ActorTypes: wc_h_footman
 	ScalePowerWithHealth:
-	# SpawnActorPower:
-	# 	AllowMultiple: True
-	# 	OrderName: rainoffire
-	# 	Icon: rainoffire_icon
-	# 	Name: Rain Of Fire
-	# 	Description: This is a very powerful spell that combines the natures of flame and water.\nIt calls forth the essence of fire and delivers it through\nmassive thunderheads of vapor and brimstone, creating an actual firestorm.\nThis spell is very destructive, and will cause damage to any\nfoes and buildings in its sphere of influence.\nUse this spell with care, for the rain of fire knows no friends.
-	# 	Prerequisites: ~techlevel.superweapons
-	# 	ChargeInterval: 9000
-	# 	LifeTime: -1
-	# 	EndChargeSpeechNotification: NuclearWeaponAvailable
-	# 	SelectTargetSpeechNotification: SelectTarget
-	# 	DisplayTimerRelationships: Ally, Neutral, Enemy
-	# 	DisplayRadarPing: True
-	# 	Actor: rainoffire
-	# 	SupportPowerPaletteOrder: 20
-	# 	EffectSequence: idle
+	SpawnActorPower:
+		AllowMultiple: True
+	 	OrderName: rainoffire
+	 	Icons: 
+			1: rainoffire_icon
+	 	Names: 
+			1: Rain Of Fire
+	 	Descriptions: 
+			1: This is a very powerful spell that combines the natures of flame and water.\nIt calls forth the essence of fire and delivers it through\nmassive thunderheads of vapor and brimstone, creating an actual firestorm.\nThis spell is very destructive, and will cause damage to any\nfoes and buildings in its sphere of influence.\nUse this spell with care, for the rain of fire knows no friends.
+	 	Prerequisites: 
+			1: ~techlevel.superweapons
+	 	ChargeInterval: 9000
+	 	LifeTime: 250
+	 	EndChargeSpeechNotification: NuclearWeaponAvailable
+	 	SelectTargetSpeechNotification: SelectTarget
+		InsufficientPowerSpeechNotification: InsufficientPower
+	 	DisplayTimerRelationships: Ally, Neutral, Enemy
+	 	DisplayRadarPing: True
+	 	Actors: 
+			1: rainoffire
+	 	SupportPowerPaletteOrder: 20
+	 	EffectSequence: idle
+
+	SpawnActorPower@psireveal:
+		PauseOnCondition: disabled
+		OrderName: SovietRA2SpyPlane
+		Prerequisites:
+			1:
+		Icons:
+			1: ra2psirev
+		ChargeInterval: 4500
+		Names:
+			1: power-ra2psireveal.name
+		Descriptions:
+			1: power-ra2psireveal.description
+		SelectTargetSpeechNotification: SelectTarget
+		InsufficientPowerSpeechNotification: InsufficientPower
+		EndChargeSpeechNotification: SpyPlaneReady
+		Actors:
+			1: camera.psireveal
+		LifeTime: 250
+		DeploySound: spysreve.wav
+		LaunchSound: spysreve.wav
+		IncomingSound: spysreve.wav
+		SupportPowerPaletteOrder: 10
+		EffectSequence: idle
+		BlockedCursor: move-blocked
+
+
 	Voiced:
 		VoiceSet: humanstormwindvoice
 	ProvidesPrerequisite@swlimit:

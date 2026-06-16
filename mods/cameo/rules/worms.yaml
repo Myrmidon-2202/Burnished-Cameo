@@ -188,7 +188,7 @@ WNUKE:
 		Prerequisite: wnuke
 	Buildable:
 		BuildPaletteOrder: 5
-		Prerequisites:
+		Prerequisites: ~wcon
 		Queue: Building, RABuilding
 		BuildDuration: 330
 		Description: Provides Power
@@ -226,7 +226,7 @@ WNUK2:
 		Prerequisite: wnuk2
 	Buildable:
 		BuildPaletteOrder: 80
-		Prerequisites: wnuke
+		Prerequisites: ~wcon, wnuke
 		Queue: Building, RABuilding
 		Description: Provides more power, cheaper than the\nstandard Power Plant
 	Building:
@@ -266,7 +266,7 @@ WREF:
 		Prerequisite: wref
 	Buildable:
 		BuildPaletteOrder: 10
-		Prerequisites: wnuke
+		Prerequisites: ~wcon, wnuke
 		Queue: Building, RABuilding
 		Description: Processes raw Tiberium\ninto useable resources
 	Building:
@@ -330,7 +330,7 @@ WHAND:
 		Prerequisite: barracks
 	Buildable:
 		BuildPaletteOrder: 30
-		Prerequisites: wnuke
+		Prerequisites: ~wcon, wnuke
 		Queue: Building, RABuilding
 		Description: Trains infantry
 	Building:
@@ -401,7 +401,7 @@ WWEAP:
 		Prerequisite: vehicleproduction
 	Buildable:
 		BuildPaletteOrder: 40
-		Prerequisites: wref
+		Prerequisites: ~wcon, wref
 		Queue: Building, RABuilding
 		Description: Produces vehicles
 	Building:
@@ -470,7 +470,7 @@ WSHEEPSTATUE:
 	ProvidesPrerequisite@buildingname:
 	Buildable:
 		BuildPaletteOrder: 45
-		Prerequisites: wweap
+		Prerequisites: ~wcon, wweap
 		Queue: Building, RABuilding
 		BuildDuration: 330
 		Description: Unlocks Sheeps, Skunks, and Moles.
@@ -503,7 +503,7 @@ WHQ:
 		Prerequisite: anyhq
 	Buildable:
 		BuildPaletteOrder: 70
-		Prerequisites: wref
+		Prerequisites: ~wcon, wref
 		Queue: Building, RABuilding
 		Description: Provides radar.\nUnlocks higher-tech units and buildings.\nRequires power to operate.
 	Building:
@@ -551,7 +551,7 @@ WSHEEPSTRIKECOMMAND:
 		Name: Worms Sheep Strike Command
 	Buildable:
 		BuildPaletteOrder: 70
-		Prerequisites: wref
+		Prerequisites: ~wcon, wref
 		Queue: Defence, RADefence
 		Description: Provides Sheep Strike power.\nRequires power to operate.
 	Building:
@@ -627,7 +627,7 @@ WTIMEMACHINE:
 		Name: Worms Time Machine
 	Buildable:
 		BuildPaletteOrder: 70
-		Prerequisites: anyhq
+		Prerequisites: ~wcon, anyhq
 		Queue: Defence, RADefence
 		Description: Provides Chronosphere.\nRequires power to operate.
 	Building:
@@ -814,7 +814,7 @@ WCONCRETEDONKEY:
 		Prerequisite: anyhq
 	Buildable:
 		BuildPaletteOrder: 100
-		Prerequisites: anyhq, ~techlevel.high
+		Prerequisites: ~wcon, anyhq, ~techlevel.high
 		Queue: Defence, RADefence
 		Description: Provides Concrete Donkey support power.\nRequires power to operate.
 	Building:
@@ -895,7 +895,7 @@ WSILO:
 		Name: Worms Tiberium Silo
 	Buildable:
 		BuildPaletteOrder: 35
-		Prerequisites: wref
+		Prerequisites: ~wcon, wref
 		Queue: Defence, RADefence
 		Description: Stores processed Tiberium
 	Building:
@@ -940,7 +940,7 @@ WSANTASSLEIGH:
 		Name: Worms Santa's Sleigh
 	Buildable:
 		BuildPaletteOrder: 35
-		Prerequisites: wref
+		Prerequisites: ~wcon, wref
 		Queue: Defence, RADefence
 		Description: Generates Cash
 	Building:
@@ -985,7 +985,7 @@ WGTWR:
 		Name: Worms Guard Tower
 	Buildable:
 		BuildPaletteOrder: 40
-		Prerequisites: whand
+		Prerequisites: ~wcon, whand
 		Queue: Defence, RADefence
 		BuildDuration: 1440
 		BuildDurationModifier: 40
@@ -1031,7 +1031,7 @@ WORMS_AASITE:
 		Name: Worms AA Site
 	Buildable:
 		BuildPaletteOrder: 40
-		Prerequisites: whand
+		Prerequisites: ~wcon, whand
 		Queue: Defence, RADefence
 		BuildDuration: 1440
 		BuildDurationModifier: 40
@@ -1074,7 +1074,7 @@ WORMS_CANDLE:
 		Name: Worms Candle
 	Buildable:
 		BuildPaletteOrder: 40
-		Prerequisites: whand
+		Prerequisites: ~wcon, whand
 		Queue: Defence, RADefence
 		BuildDuration: 1440
 		BuildDurationModifier: 40
@@ -1111,7 +1111,7 @@ LASPY:
 		Name: Laser Pyramid
 	Buildable:
 		BuildPaletteOrder: 60
-		Prerequisites: anyhq
+		Prerequisites: ~wcon, anyhq
 		Queue: Defence, RADefence
 		BuildDuration: 3120
 		BuildDurationModifier: 40
@@ -1164,7 +1164,7 @@ WORMS_WORMPAD:
 		Name: Space Port
 	Buildable:
 		BuildPaletteOrder: 50
-		Prerequisites: wref
+		Prerequisites: ~wcon, wref
 		Queue: Building, RABuilding
 		Description: Produces, rearms and\nrepairs helicopters
 	Building:
@@ -1236,7 +1236,7 @@ WORMUZI:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 10
-		Prerequisites:
+		Prerequisites: ~whand
 		Queue: Infantry, RAInfantry
 		Description: Uzi Infantry.
 	Mobile:
@@ -1276,7 +1276,7 @@ WORMGRENADE:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 40
-		Prerequisites:
+		Prerequisites: ~whand
 		Queue: Infantry, RAInfantry
 		Description: Fast infantry armed with grenades. \n  Strong vs Buildings, slow-moving targets
 	Mobile:
@@ -1317,7 +1317,7 @@ WORMBAZOOKA:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 20
-		Prerequisites:
+		Prerequisites: ~whand
 		Queue: Infantry, RAInfantry
 		Description: Anti-tank/Anti-aircraft infantry. \n  Strong vs Tanks, Aircraft\n  Weak vs Infantry
 	Mobile:
@@ -1365,7 +1365,7 @@ WORMFLAMER:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 40
-		Prerequisites:
+		Prerequisites: ~whand
 		Queue: Infantry, RAInfantry
 		Description: Advanced Anti-infantry unit.\n  Strong vs Infantry, Buildings\n  Weak vs Tanks
 	Mobile:
@@ -1402,7 +1402,7 @@ WORMENGINEER:
 		Name: Engineer
 	Buildable:
 		BuildPaletteOrder: 30
-		Prerequisites: ~WIN98_BARRACKS
+		Prerequisites: ~whand
 		Queue: Infantry, RAInfantry
 		Description: Captures structures.
 	WithDeathAnimation:
@@ -1428,7 +1428,7 @@ WORMDYNAMITE:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 50
-		Prerequisites: anyhq, ~techlevel.high
+		Prerequisites: ~whand, anyhq, ~techlevel.high
 		Queue: Infantry, RAInfantry
 		BuildDuration: 1000
 		BuildDurationModifier: 40
@@ -1471,7 +1471,7 @@ WHARV:
 		GenericName: Worms Harvester
 	Buildable:
 		BuildPaletteOrder: 10
-		Prerequisites: wref
+		Prerequisites: ~wref
 		Queue: Vehicle, RAVehicle
 		BuildDuration: 1680
 		BuildDurationModifier: 40
@@ -1517,7 +1517,7 @@ SKUNK:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 50
-		Prerequisites: wsheepstatue
+		Prerequisites: ~wweap, wsheepstatue
 		Queue: Vehicle, RAVehicle
 		Description: Toxic skunk!
 	Mobile:
@@ -1548,7 +1548,7 @@ WTRUCK:
 	Buildable:
 		Queue: Vehicle, RAVehicle
 		BuildPaletteOrder: 35
-		Prerequisites: wsheepstatue
+		Prerequisites: ~wweap, wsheepstatue
 		Description: Bahhh.
 	Valued:
 		Cost: 1500
@@ -1590,7 +1590,7 @@ WORMS_MOLE:
 	Buildable:
 		Queue: Vehicle, RAVehicle
 		BuildPaletteOrder: 35
-		Prerequisites: wsheepstatue
+		Prerequisites: ~wweap, wsheepstatue
 		Description: Jumps onto targets.
 	Valued:
 		Cost: 2500
@@ -1644,7 +1644,7 @@ WORMBUGGY:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 20
-		Prerequisites:
+		Prerequisites: ~wweap
 		Queue: Vehicle, RAVehicle
 		Description: Fast scout and anti-infantry vehicle.\n  Strong vs Infantry\n  Weak vs Tanks
 	Mobile:
@@ -1705,7 +1705,7 @@ WORMS_MOAI:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 20
-		Prerequisites: wsheepstatue
+		Prerequisites: ~wweap, wsheepstatue
 		Queue: Vehicle, RAVehicle
 		Description: Fast scout and anti-infantry vehicle.\n  Strong vs Infantry\n  Weak vs Tanks
 	Mobile:
@@ -1806,7 +1806,7 @@ WTANK:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 40
-		Prerequisites:
+		Prerequisites: ~wweap
 		Queue: Vehicle, RAVehicle
 		Description: General-Purpose Worms Tank.\n  Strong vs Tanks, Vehicles\n  Weak vs Infantry
 	Mobile:
@@ -1848,7 +1848,7 @@ WMISSILELAUNCHER:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 50
-		Prerequisites: anyhq, ~techlevel.medium
+		Prerequisites: ~wweap, anyhq, ~techlevel.medium
 		Queue: Vehicle, RAVehicle
 		Description: Long range rocket artillery.\n  Strong vs all Ground units.
 	Mobile:
@@ -1888,7 +1888,7 @@ WCANNON:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 20
-		Prerequisites: ~techlevel.medium
+		Prerequisites: ~wweap, ~techlevel.medium
 		Queue: Vehicle, RAVehicle
 		Description: Slow and Weak tank.\n  Strong vs all Ground units.
 	Mobile:
@@ -1922,7 +1922,7 @@ WORMS_MCV:
 		Name: Worms Mobile Construction Vehicle
 	Buildable:
 		BuildPaletteOrder: 100
-		Prerequisites: anyhq, ~techlevel.medium
+		Prerequisites: ~wweap, anyhq, ~techlevel.medium
 		Queue: Vehicle, RAVehicle
 		BuildDuration: 3750
 		BuildDurationModifier: 40
@@ -2004,9 +2004,9 @@ WORMS_JETENGINEBOMBER:
 		TrailLength: 20
 	-MapEditorData:
 	SpawnActorOnDeath:
-		Actor: BADR.Husk
+		Actor: JEB.Husk
 
-BADR.Husk:
+JEB.Husk:
 	Inherits: ^PlaneHusk
 	Tooltip:
 		Name: Jet Engine Bomber
@@ -2048,7 +2048,7 @@ WORMS_UFO:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 20
-		Prerequisites: hpad, anyhq, ~techlevel.medium
+		Prerequisites: ~hpad, anyhq, ~techlevel.medium
 		Queue: Aircraft, RAAircraft
 		Description: Helicopter Gunship with AG Missiles.\n  Strong vs Buildings, Tanks\n  Weak vs Infantry
 	Aircraft:
@@ -2111,7 +2111,7 @@ WORMS_APACHE:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 20
-		Prerequisites: hpad, ~techlevel.medium
+		Prerequisites: ~hpad, ~techlevel.medium
 		Queue: Aircraft, RAAircraft
 		Description: Helicopter Gunship with Missiles.\n  Strong vs Infantry, Light Vehicles and\n  Aircraft\n  Weak vs Tanks
 	Aircraft:
