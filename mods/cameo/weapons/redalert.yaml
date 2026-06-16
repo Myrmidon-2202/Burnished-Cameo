@@ -5048,11 +5048,11 @@ BuggyGrenade:
 		ContrailStartWidth: 99
 		ContrailEndWidth: 33
 	Warhead@Grenade: SpreadDamage
-		Damage: 60000
+		Damage: 40000
 	Warhead@GrenadeFriendlyFire: SpreadDamage
-		Damage: 30000
+		Damage: 20000
 	Warhead@GrenadePercentage: HealthPercentageDamage
-		Damage: 30
+		Damage: 20
 
 BuggyPlasmaGrenade:
 	Inherits: ^HeavyBomb
