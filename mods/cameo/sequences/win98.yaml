@@ -18,6 +18,7 @@
 win98_mycomputer:
 	Defaults:
 		Filename: win98_mycomputer.shp
+		Scale: 2.0
 	idle:
 		Start: 0
 	damaged-idle:
@@ -35,6 +36,7 @@ win98_powerplant:
 	Defaults:
 		Filename: win98_powerplant.shp
 		Start: 0
+		Scale: 2.0
 	idle:
 	damaged-idle:
 	dead:
@@ -47,6 +49,7 @@ win98_powerplant:
 win98_barracks:
 	Defaults:
 		Filename: win98_barracks.shp
+		Scale: 2.0
 	idle:
 		Start: 0
 		Length: 12
@@ -67,6 +70,7 @@ win98_barracks:
 win98_recyclebin:
 	Defaults:
 		Filename: win98_recyclebin.shp
+		Scale: 2.0
 	idle:
 		Start: 1
 	damaged-idle:
@@ -83,6 +87,7 @@ win98_recyclebin:
 win98_input_devices:
 	Defaults:
 		Filename: win98_input_devices.shp
+		Scale: 2.0
 	idle:
 		Start: 0
 		Length: 2
@@ -103,6 +108,7 @@ win98_input_devices:
 win98_powerplantadvanced:
 	Defaults:
 		Filename: win98_powerplantadvanced.shp
+		Scale: 2.0
 	idle:
 		Start: 0
 	damaged-idle:
@@ -119,6 +125,7 @@ win98_powerplantadvanced:
 win98_aquanet:
 	Defaults:
 		Filename: win98_aquanet.shp
+		Scale: 2.0
 	idle:
 	dead:
 	make:
@@ -130,6 +137,7 @@ win98_aquanet:
 win98_radar:
 	Defaults:
 		Filename: win98_radar.shp
+		Scale: 2.0
 	idle:
 		Start: 0
 		Length: 2
@@ -148,6 +156,7 @@ win98_radar:
 win98_aerial_uplink:
 	Defaults:
 		Filename: win98_aerial_uplink.shp
+		Scale: 2.0
 	idle:
 		Start: 0
 		Length: 9
@@ -168,6 +177,7 @@ win98_aerial_uplink:
 win98_defrag:
 	Defaults:
 		Filename: win98_defrag.shp
+		Scale: 2.0
 	idle:
 		Start: 0
 		Length: 16
@@ -186,6 +196,7 @@ win98_defrag:
 win98_hardware:
 	Defaults:
 		Filename: win98_hardware.shp
+		Scale: 2.0
 	idle:
 		Start: 0
 		Length: 6
@@ -209,6 +220,7 @@ win98_hardware:
 win98_crt_wall:
 	Defaults:
 		Filename: win98_crt_wall.shp
+		Scale: 2.0
 	idle:
 		Length: 16
 	scratched-idle:
@@ -225,6 +237,7 @@ win98_crt_wall:
 win98_processor:
 	Defaults:
 		Filename: win98_processor.shp
+		Scale: 2.0
 	idle:
 	damaged-idle:
 		Start: 0
@@ -249,6 +262,7 @@ win98_processor:
 win98_joystick:
 	Defaults:
 		Filename: win98_joystick.shp
+		Scale: 2.0
 	idle:
 		Length: 2
 		Tick: 200
@@ -276,6 +290,7 @@ win98_joystick:
 win98_paint:
 	Defaults:
 		Filename: win98_paint.shp
+		Scale: 2.0
 	idle:
 	damaged-idle:
 	make: 
@@ -299,6 +314,7 @@ win98_paint:
 win98_settings_gear:
 	Defaults:
 		Filename: win98_settings_gear.shp
+		Scale: 2.0
 	idle:
 	damaged-idle:
 	dead:
@@ -311,6 +327,7 @@ win98_settings_gear:
 win98_xbox:
 	Defaults:
 		Filename: win98_xbox.shp
+		Scale: 2.0
 	idle:
 	damaged-idle:
 	dead:
@@ -339,6 +356,7 @@ win98_xbox:
 win98_user:
 	Defaults:
 		Filename: win98_user.shp
+		Scale: 2.0
 	stand:
 		Start: 0
 		Facings: -4
@@ -360,6 +378,7 @@ win98_user:
 win98_erase:
 	Defaults:
 		Filename: win98_erase.shp
+		Scale: 2.0
 	stand:
 		Start: 0
 		Length: 2
@@ -384,6 +403,7 @@ win98_erase:
 win98_freecell:
 	Defaults:
 		Filename: win98_freecell.shp
+		Scale: 2.0
 	stand:
 		Start: 0
 		Facings: -4
@@ -405,6 +425,7 @@ win98_freecell:
 win98_agent:
 	Defaults:
 		Filename: win98_agent.shp
+		Scale: 2.0
 	stand:
 		Start: 0
 		Facings: -4
@@ -429,6 +450,7 @@ win98_spider:
 		Start: 0
 		Length: 1
 		AddExtension: False
+		Scale: 2.0
 	stand:
 	run:
 	repair:
@@ -456,6 +478,7 @@ win98_clippy:
 	Inherits: ^InfantryOverlays
 	Defaults:
 		Filename: win98_clippy.shp
+		Scale: 2.0
 	stand:
 		Facings: -16
 	run:
@@ -511,6 +534,7 @@ win98_clippy:
 win98_mcv:
 	Defaults:
 		Filename: win98_mcv.shp
+		Scale: 2.0
 	stand:
 		Start: 0
     Scale: 1.3
@@ -539,6 +563,7 @@ win98_mcv:
 win98_harvester:
 	Defaults:
 		Filename: win98_harvester.shp
+		Scale: 2.0
 	stand:
 		Start: 0
 	idle:
@@ -586,6 +611,7 @@ win98_harvester_full:
 win98_mouse:
 	Defaults:
 		Filename: win98_mouse.shp
+		Scale: 2.0
 	idle:
 		Facings: -32
 		UseClassicFacings: True
@@ -605,6 +631,7 @@ win98_mouse:
 win98_mine:
 	Defaults:
 		Filename: win98_mine.shp
+		Scale: 2.0
 	idle:
 		Start: 0
 	make:
@@ -621,6 +648,7 @@ win98_mine:
 win98_keyboard:
 	Defaults:
 		Filename: win98_keyboard.shp
+		Scale: 2.0
 	idle:
 		Facings: -32
 	stand:
@@ -639,6 +667,7 @@ win98_keyboard:
 win98_bitcoin:
 	Defaults:
 		Filename: win98_bitcoin.shp
+		Scale: 2.0
 	stand:
 		Start: 0
 	run:
@@ -661,6 +690,7 @@ win98_bitcoin:
 win98_msn_butterfly:
 	Defaults:
 		Filename: win98_msn_butterfly.shp
+		Scale: 2.0
 	idle:
 		Facings: -32
 	die:
@@ -673,6 +703,7 @@ win98_msn_butterfly:
 win98_explorer:
 	Defaults:
 		Filename: win98_explorer.shp
+		Scale: 2.0
 	idle:
 	rotor: 
 		Filename: lrotor.shp
@@ -698,6 +729,7 @@ win98_explorer:
 win98_regedit:
 	Defaults:
 		Filename: win98_regedit.shp
+		Scale: 2.0
 	idle:
 		Length: 32
 		Tick: 200
@@ -709,6 +741,7 @@ win98_regedit:
 win98_regedit_interceptor:
 	Defaults:
 		Filename: win98_regedit_interceptor.shp
+		Scale: 2.0
 	idle:
 		Facings: 1
 	shoot:
@@ -719,6 +752,7 @@ win98_regedit_interceptor:
 win98_sectorscanner:
 	Defaults:
 		Filename: win98_sectorscanner.shp
+		Scale: 2.0
 	idle:
 		Facings: -16
 
@@ -729,6 +763,7 @@ win98_sectorscanner:
 win98_email_raft:
 	Defaults:
 		Filename: win98_email_raft.shp
+		Scale: 2.0
 	idle:
 	turret: 
 		Filename: ra1mgun.shp
@@ -744,6 +779,7 @@ win98_email_raft:
 win98_benchy:
 	Defaults:
 		Filename: win98_benchy.shp
+		Scale: 2.0
 	idle:
 		Facings: -32
 	turret: 
@@ -761,12 +797,14 @@ win98_benchy:
 win98_projectile_demodisk:
 	Defaults:
 		Filename: win98_projectile_demodisk.shp
+		Scale: 2.0
 	idle:
 		Start: 0
 
 paintbrushfire:
 	Defaults:
 		Filename: paintbrushfire.shp
+		Scale: 2.0
 	idle: 
 		Filename: win98_projectile_paintbrush.shp
 		Facings: -32
@@ -774,16 +812,19 @@ paintbrushfire:
 win98_directx:
 	Defaults:
 		Filename: win98_directx.shp
+		Scale: 2.0
 	idle:
 
 win98_regedit_projectile:
 	Defaults:
 		Filename: win98_regedit_projectile.shp
+		Scale: 2.0
 	idle:
 
 win98_cd:
 	Defaults:
 		Filename: win98_cd.shp
+		Scale: 2.0
 	idle:
 
 # icon: MOVED TO MISC
