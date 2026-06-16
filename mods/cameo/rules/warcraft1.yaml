@@ -262,23 +262,30 @@ wc_h_townhall:
 		ActorTypes: wc_h_footman
 	ScalePowerWithHealth:
 	BaseBuilding:
-	# SpawnActorPower@spysat:
-	# 	PauseOnCondition: lowpower
-	# 	OrderName: SpydronePower
-	# 	Icon: wc_far_seeing
-	# 	ChargeInterval: 1500
-	# 	Name: Far Seeing
-	# 	Description: Reveals an area of the map\nand cloaked enemy units.
-	# 	SelectTargetSpeechNotification: SelectTarget
-	# 	InsufficientPowerSpeechNotification: InsufficientPower
-	# 	EndChargeSpeechNotification: SpyPlaneReady
-	# 	Actor: camera.spysat
-	# 	LifeTime: 250
-	# 	DeploySound: sspysate.aud
-	# 	LaunchSound: sspysate.aud
-	# 	IncomingSound: sspysate.aud
-	# 	SupportPowerPaletteOrder: 10
-	# 	EffectSequence: idle
+	SpawnActorPower@farseeing:
+		PauseOnCondition: disabled
+		OrderName: FarSeeing
+		Prerequisites:
+			1:
+		Icons:
+			1: wc_far_seeing
+		ChargeInterval: 4500
+		Names:
+			1: Far Seeing
+		Descriptions:
+			1: Reveals area
+		SelectTargetSpeechNotification: SelectTarget
+		InsufficientPowerSpeechNotification: InsufficientPower
+		EndChargeSpeechNotification: SpyPlaneReady
+		Actors:
+			1: camera.psireveal
+		LifeTime: 250
+		DeploySound: spysreve.wav
+		LaunchSound: spysreve.wav
+		IncomingSound: spysreve.wav
+		SupportPowerPaletteOrder: 10
+		EffectSequence: idle
+		BlockedCursor: move-blocked
 	Production@NORMAL:
 		Produces: Building, Defence
 		PauseOnCondition: lowpower
@@ -1027,13 +1034,7 @@ wc_o_townhall:
 		Type: Defence
 	Voiced:
 		VoiceSet: orctownhallvoice
-	# SpawnActorPower@spysat:
-	# 	PauseOnCondition: lowpower
-	# 	OrderName: SpydronePower
-	# 	Icon: wc_dark_vision
-	# 	ChargeInterval: 1500
-	# 	Name: Dark Vision
-	# 	EffectSequence: idle
+	-SpawnActorPower@farseeing:
 	SpawnActorPower@darkvision:
 		PauseOnCondition: disabled
 		OrderName: DarkVision
@@ -1309,6 +1310,7 @@ wc_h_peasant:
 		AddToArmyValue: false
 	Buildable:
 		BuildPaletteOrder: 5
+		Prerequisites: ~wc_h_townhall
 		Queue: Defence, RADefence
 		Description: Harvester.
 		BuildDuration: 100
@@ -2251,6 +2253,7 @@ wc_o_peon:
 		Name: Peon
 	Buildable:
 		BuildPaletteOrder: 5
+		Prerequisites: ~wc_o_townhall
 		Queue: Defence, RADefence
 		Description: Harvester.
 	Armament:
