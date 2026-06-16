@@ -1034,6 +1034,30 @@ wc_o_townhall:
 	# 	ChargeInterval: 1500
 	# 	Name: Dark Vision
 	# 	EffectSequence: idle
+	SpawnActorPower@darkvision:
+		PauseOnCondition: disabled
+		OrderName: DarkVision
+		Prerequisites:
+			1:
+		Icons:
+			1: wc_dark_vision
+		ChargeInterval: 4500
+		Names:
+			1: Dark Vision
+		Descriptions:
+			1: Reveals area
+		SelectTargetSpeechNotification: SelectTarget
+		InsufficientPowerSpeechNotification: InsufficientPower
+		EndChargeSpeechNotification: SpyPlaneReady
+		Actors:
+			1: camera.psireveal
+		LifeTime: 250
+		DeploySound: spysreve.wav
+		LaunchSound: spysreve.wav
+		IncomingSound: spysreve.wav
+		SupportPowerPaletteOrder: 10
+		EffectSequence: idle
+		BlockedCursor: move-blocked
 	ProvidesPrerequisite@faction:
 		Prerequisite: mmwcorc
 wc_o_farm:
