@@ -1089,7 +1089,6 @@ LTNK:
 		LocalOffset: 250,125,125
 		MuzzleSequence: muzzle
 		FireDelay: 10
-		RequiresCondition: up_blackmarketupgrades
 	AttackTurreted:
 	WithMuzzleOverlay:
 	WithSpriteTurret:
@@ -2739,8 +2738,8 @@ TMPL:
 	WithSupportPowerActivationOverlay:
 		RequiresCondition: !build-incomplete && nuke
 		Sequence: smoke
-	RevealsShroud@SWReveal:
-		RequiresCondition: swreveal && nuke
+	# RevealsShroud@SWReveal:
+	# 	RequiresCondition: swreveal && nuke
 
 
 # tmpl.nuke:
@@ -2795,12 +2794,6 @@ GUN:
 		Weapon: TurretGun
 		LocalOffset: 512,0,112
 		MuzzleSequence: muzzle
-		RequiresCondition: !up_blackmarketupgrades
-	Armament@Upgrade:
-		Weapon: TurretGunBlackMarket
-		LocalOffset: 512,0,112
-		MuzzleSequence: muzzle
-		RequiresCondition: up_blackmarketupgrades
 	AttackTurreted:
 		RequiresCondition: !build-incomplete
 		PauseOnCondition: disabled
@@ -2810,10 +2803,6 @@ GUN:
 		Amount: -35
 	RevealsShroud:
 		Range: 7711
-	RangeMultiplier@up_improvedartilleries:
-		Modifier: 110
-	RevealsShroudMultiplier@up_improvedartilleries:
-		Modifier: 120
 
 # NodLaserTurret:
 # 	Inherits: ^Defense

@@ -2114,6 +2114,7 @@ modkubel:
 modbggy:
 	Defaults:
 		Filename: jbuggy.shp
+		Scale: 0.8
 	idle:
 		Facings: 64
 	turret:
@@ -2284,6 +2285,7 @@ mod4tnkgirl:
 		Length: 5
 	icon:
 		Filename: 4tnkicon.shp
+
 jharv:
 	Defaults:
 		Filename: jharv.shp
@@ -5220,7 +5222,7 @@ hakurei:
 
 modtypej:
 	Defaults:
-		Scale: 0.8
+		Scale: 0.7
 		Filename: type89igo.shp
 	idle:
 		Facings: 64
@@ -5237,7 +5239,7 @@ modtypej:
 
 typechiha:
 	Defaults:
-		Scale: 0.9
+		Scale: 1.1
 	idle:
 		Filename: ChiHaChass.shp
 		Facings: 64

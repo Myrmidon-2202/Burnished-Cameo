@@ -1101,7 +1101,7 @@
 	RevealsShroud:
 		Range: 6500
 	Buildable:
-		BuildDurationModifier: 100
+		BuildDurationModifier: 20
 	TooltipExtras@AntiTank:
 		Description: Anti-Tank and Anti-Air
 	GrantExternalConditionToTransport:
@@ -7285,9 +7285,9 @@ CPQDEBUGDUMMY:
 		Range: 10000
 		DetectionTypes: Cloak, AirCloak, GroundCloak, Underwater, Hijacker
 		RequiresCondition: !disabled
-	RangedGpsProvider:
-		Range: 20000
-		RequiresCondition: !disabled
+	# RangedGpsProvider:
+	# 	Range: 20000
+	# 	RequiresCondition: !disabled
 	RenderDetectionCircle:
 	WithRangeCircle:
 		Range: 20000
