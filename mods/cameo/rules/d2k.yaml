@@ -1,10 +1,10 @@
 World:
-	# FactionCA@Atreides:
-	# 	Name: Atreides DU
-	# 	InternalName: atreides
-	# 	Game: Dune Universe
-	# 	Side: Dune
-	# 	Description: House Atreides\nThe noble Atreides, from the water world of Caladan,\nrely on their ornithopters to ensure air superiority.\nThey have allied themselves with the Fremen, the fearsome\nnative warriors of Dune that can move undetected in battle.\nTheir Strength lies in air superiority\nBonus: Builds structures faster\nSupport Power: Ornithopter Airstrike, Fremen Guerilla
+	FactionCA@Atreides:
+		Name: Atreides DU
+		InternalName: atreides
+		Game: Dune Universe
+		Side: Dune
+		Description: House Atreides\nThe noble Atreides, from the water world of Caladan,\nrely on their ornithopters to ensure air superiority.\nThey have allied themselves with the Fremen, the fearsome\nnative warriors of Dune that can move undetected in battle.\nTheir Strength lies in air superiority\nBonus: Builds structures faster\nSupport Power: Ornithopter Airstrike, Fremen Guerilla
 	# FactionCA@Harkonnen:
 	# 	Name: Harkonnen DU
 	# 	InternalName: harkonnen
@@ -23,16 +23,16 @@ World:
 	# 	Side: Houses
 	# 	InternalName: corrino
 	# 	Description: House Corrino\nOnce deadliest and grandest House in the Universe and for many thousands of years the imperial family of Imperium from the world Salusa Secundus.\nCorrino uses their elite trained Sardaukars, to rule the war.\nBonus: Uparmored Harvesters\nSupport Power: Release the Sardaukars
-	FactionCA@Ixian:
-		Name: Ixian DU
-		InternalName: ixian
-		Game: Dune Universe
-		Side: Dune
-		Description: Ixians
+	# FactionCA@Ixian:
+	# 	Name: Ixian DU
+	# 	InternalName: ixian
+	# 	Game: Dune Universe
+	# 	Side: Dune
+	# 	Description: Ixians
 	FactionCA@RandomDU:
 		Name: Any Dune
 		InternalName: RandomDU
-		RandomFactionMembers: ordos, ixian #atreides, ordos, harkonnen, corrino, ixian
+		RandomFactionMembers: ordos, #ixian #atreides, ordos, harkonnen, corrino, ixian
 		Game: Dune Universe
 		Side: Random
 		Description: Random Faction\nA random faction from Dune Universe will be chosen when the game starts.
@@ -1982,6 +1982,7 @@ ixian_launchpad:
 		Actor: light_inf
 	SpawnActorOnDeath@death4:
 		Actor: trooper
+
 high_tech_factory.ordos:
 	Inherits: high_tech_factory.ixian
 	Buildable:
@@ -6437,6 +6438,64 @@ ordos_wraith.Husk:
 		Speed: 100
 	RenderSprites:
 		Image: ordos_wraith
+		PlayerPalette: player_rgba
+
+d2katreidesmongoose:
+	Inherits: ^Walker
+	Inherits@Template: ^MainBattleTankTemplate
+	Inherits@EXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	Valued:
+		Cost: 700
+	Tooltip:
+		Name: Mongoose
+	Selectable:
+		Class: combattank
+	Buildable:
+		Queue: Vehicle
+		Prerequisites: ~heavy_factory
+		BuildPaletteOrder: 30
+		Description: actor-d2kcombattank.description
+		BuildDuration: 250
+		BuildDurationModifier: 100
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Mobile:
+		Speed: 75
+		TurnSpeed: 20
+		Locomotor: tracked
+	Health:
+		HP: 30000
+	Armor:
+		Type: Medium
+	RevealOnDeath:
+		Radius: 10c0
+	Armament@primary:
+		Weapon: RocketsG
+		Damage: 90
+		Recoil: 87
+		RecoilRecovery: 12
+		LocalOffset: 896,0,640
+		MuzzleSequence: muzzle
+	Turreted:
+		TurnSpeed: 12
+		Offset: -256,0,-64
+	WithMuzzleOverlay:
+	WithSpriteTurret:
+		Recoils: true
+	WithFacingSpriteBody:
+		Sequence: stand
+	WithMoveAnimation:
+		MoveSequence: run
+		ValidMovementTypes: Horizontal
+	AttackTurreted:
+	Voiced:
+		VoiceSet: D2kVehicleVoice
+	HitShape:
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, MinRange, Cargo, MaxRange
+	RenderSprites:
+		Image: mongoose_d2k_a
 		PlayerPalette: player_rgba
 
 # ^Ornithopter_Missiles:

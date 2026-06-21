@@ -8487,6 +8487,35 @@ combat_siege_tank:
 	icon:
 		Filename: d2k_siege_quad_icon.png
 
+mongoose_d2k_a:
+	Defaults:
+		Scale: 0.9
+	idle:
+		Filename: AtrMongooseSpritesheet-256.png
+		Start: 0
+		Facings: 32
+	stand:
+		Filename: AtrMongooseSpritesheet-256.png
+		Start: 0
+		Facings: 32
+	run:
+		Filename: AtrMongooseSpritesheet-256.png
+		Start: 32
+		Facings: 32
+		Length: 7
+		Tick: 100
+	turret:
+		Filename: AtrMongooseMissileSpritesheet-32.png
+		Facings: 32
+	muzzle:
+		Filename: DATA.R8
+		Start: 4028
+		Tick: 60
+		Facings: -32
+		BlendMode: Additive
+	icon:
+		Filename: d2kmongoosecameo.png
+
 d2k_ordos_stealth_tank:
 	idle:
 		Filename: ordos_tnkd.png
