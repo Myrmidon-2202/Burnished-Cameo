@@ -6321,130 +6321,122 @@ IRON:
 	WithDeathAnimation:
 		DeathSequencePalette: raplayer
 
-# PDOX:
-# 	Inherits: ^BaseBuilding
-# 	Inherits@shape: ^2x2Shape
-# 	Inherits@SW: ^PrimarySuperweapon
-# 	Inherits@sell: ^RASpawnActorsOnSell
-# 	Buildable:
-# 		Queue: Defence, RADefence
-# 		Prerequisites: ~atek, ~techlevel.superweapons
-# 		Description: actor-pdox.description
-# 	Tooltip:
-# 		Name: Chronosphere
-# 	Building:
-# 		Footprint: xx xx
-# 		Dimensions: 2,2
-# 		BuildSounds: placbldg.aud, build5.aud
-# 	WithBuildingBib:
-# 		HasMinibib: true
-# 	ChronoshiftPower@chronoshift:
-# 		OrderName: Chronoshift
-# 		Prerequisites:
-# 			1: !botplayer
-# 		PauseOnCondition: disabled
-# 		Icons:
-# 			1: chrono
-# 		ChargeInterval: 4500
-# 		Names: power-chronoshift.name
-# 		Descriptions:
-# 			1: power-chronoshift.description
-# 		Dimensions: 5,5
-# 		Footprint: __x__ _xxx_ xxxxx _xxx_ __x__
-# 		SelectTargetSpeechNotification: SelectTarget
-# 		InsufficientPowerSpeechNotification: InsufficientPower
-# 		BeginChargeSpeechNotification: ChronosphereCharging
-# 		EndChargeSpeechNotification: ChronosphereReady
-# 		EndChargeSound: schropen.wav
-# 		Durations:
-# 			1: -1
-# 		KillCargo: False
-# 		AllowImpassable: true
-# 		DisplayRadarPing: True
-# 		SelectionCursor: ability
-# 		TargetCursor: ability
-# 		LaunchSound: schrmov.wav
-# 		IncomingSound: schrmov.wav
-# 		Range: 4000
-# 		ShowTargetCircle: true
-# 		TargetCircleColor: b6f4ff
-# 		ImpactWeapon: ChronoshiftImpact
-# 		TeleportWeapon: ChronoshiftImpact
-# 		DisplayTimerRelationships: Ally, Neutral, Enemy
-# 	DetonateWeaponPower@ChronoReinforcements:
-# 		OrderName: ChronoReinforcements
-# 		Cost: 2000
-# 		Prerequisites:
-# 			1: up_chronoarmor
-# 		PauseOnCondition: disabled
-# 		Icons:
-# 			1: chronoreinforcements
-# 		Cursor: ability
-# 		ChargeInterval: 6000
-# 		Names:
-# 			1: Chrono Reinforcements
-# 		ActivationDelay: 25
-# 		ActivationSequence:
-# 		Descriptions:
-# 			1: Teleports a small taskforce to a specified location.
-# 		Weapons:
-# 			1: ChronoAI
-# 		CameraActor: camera.placeholderhack
-# 		CameraRemoveDelay: 0
-# 		SelectTargetSpeechNotification: SelectTarget
-# 		InsufficientPowerSpeechNotification: InsufficientPower
-# 		DisplayRadarPing: True
-# 		LaunchSound: chrono2.aud
-# 		IncomingSound: chrono2.aud
-# 		DisplayTimerRelationships: Ally, Neutral, Enemy
-# 	DetonateWeaponPowerCA@ChronoVortex:
-# 		AllowMultiple: true
-# 		OrderName: ChronoVortex
-# 		Prerequisites:
-# 			1:
-# 		IconImage: pdox
-# 		Icons:
-# 			1: chronovortex
-# 		Cursor: ability
-# 		ChargeInterval: 10500
-# 		Names:
-# 			1: Chrono Vortex
-# 		ActivationDelay: 100
-# 		Descriptions:
-# 			1: Initiate a Chrono Vortex which deals heavy damage over time to a large area.
-# 		Weapons:
-# 			1: ChronoVortexInit
-# 		SelectTargetSpeechNotification: SelectTarget
-# 		SelectTargetTextNotification: Select target.
-# 		EndChargeSpeechNotification: NuclearWeaponAvailable
-# 		EndChargeTextNotification: Chrono Vortex ready.
-# 		InsufficientPowerSpeechNotification: InsufficientPower
-# 		IncomingSpeechNotification: NuclearWarheadApproaching
-# 		IncomingTextNotification: Chrono Vortex activated.
-# 		IncomingSound: nukelaunch.aud
-# 		LaunchSound: nukelaunch.aud
-# 		DisplayTimerRelationships: Ally, Neutral, Enemy
-# 		PauseOnCondition: disabled
-# 		DisplayBeacon: True
-# 		DisplayRadarPing: True
-# 		ArrowSequence: arrow
-# 		ClockSequence: clocklarge
-# 		CircleSequence: circles
-# 		CameraRemoveDelay: 500
-# 		Duration: 500
-# 		ActiveCondition: active
-# 		BeaconPosters:
-# 			1: chronovortexicon
-# 		TargetCircleRanges:
-# 			1: 10000
-# 		TargetCircleColors: ff000080
-# 		BeaconActor: BLASTRADIUS.atomic
-# 		CameraRange: 10000
-# 	ProvidesPrerequisite@buildingname:
-# 	RenderSprites:
-# 		PlayerPalette: raplayer
-# 	WithDeathAnimation:
-# 		DeathSequencePalette: raplayer
+PDOX:
+	Inherits: ^BaseBuilding
+	Inherits@shape: ^2x2Shape
+	Inherits@SW: ^PrimarySuperweapon
+	Inherits@sell: ^RASpawnActorsOnSell
+	Buildable:
+		Queue: Defence, RADefence
+		Prerequisites: ~atek, ~techlevel.superweapons
+		Description: actor-pdox.description
+	Tooltip:
+		Name: Chronosphere
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+		BuildSounds: placbldg.aud, build5.aud
+	WithBuildingBib:
+		HasMinibib: true
+	ChronoshiftPower@chronoshift:
+		OrderName: Chronoshift
+		Prerequisites:
+			1:
+		PauseOnCondition: lowpower
+		Icons:
+			1: chrono
+		ChargeInterval: 4500
+		Names:
+			1: power-chronoshift.name
+		Descriptions:
+			1: power-chronoshift.description
+		Dimensions: 5,5
+		Footprint: __x__ _xxx_ xxxxx _xxx_ __x__
+		Range: 400
+		Durations:
+			1: -1
+		KillCargo: False
+		DisplayRadarPing: True
+		SelectionCursor: ability
+		TargetCursor: ability
+		SupportPowerPaletteOrder: 20
+		LaunchSound: chrono2.aud
+		IncomingSound: chrono2.aud
+		DisplayTimerRelationships: Ally, Neutral, Enemy
+	DetonateWeaponPower@ChronoReinforcements:
+		OrderName: ChronoReinforcements
+		Cost: 2000
+		Prerequisites:
+			1: botplayer
+		PauseOnCondition: disabled
+		Icons:
+			1: chronoreinforcements
+		Cursor: ability
+		ChargeInterval: 6000
+		Names:
+			1: Chrono Reinforcements
+		ActivationDelay: 25
+		ActivationSequence:
+		Descriptions:
+			1: Teleports a small taskforce to a specified location.
+		Weapons:
+			1: ChronoAI
+		CameraActor: camera.placeholderhack
+		CameraRemoveDelay: 0
+		SelectTargetSpeechNotification: SelectTarget
+		InsufficientPowerSpeechNotification: InsufficientPower
+		DisplayRadarPing: True
+		LaunchSound: chrono2.aud
+		IncomingSound: chrono2.aud
+		DisplayTimerRelationships: Ally, Neutral, Enemy
+	DetonateWeaponPowerCA@ChronoVortex:
+		AllowMultiple: true
+		OrderName: ChronoVortex
+		Prerequisites:
+			1:
+		IconImage: pdox
+		Icons:
+			1: chronovortex
+		Cursor: ability
+		ChargeInterval: 10500
+		Names:
+			1: Chrono Vortex
+		ActivationDelay: 100
+		Descriptions:
+			1: Initiate a Chrono Vortex which deals heavy damage over time to a large area.
+		Weapons:
+			1: ChronoVortexInit
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		EndChargeSpeechNotification: NuclearWeaponAvailable
+		EndChargeTextNotification: Chrono Vortex ready.
+		InsufficientPowerSpeechNotification: InsufficientPower
+		IncomingSpeechNotification: NuclearWarheadApproaching
+		IncomingTextNotification: Chrono Vortex activated.
+		IncomingSound: nukelaunch.aud
+		LaunchSound: nukelaunch.aud
+		DisplayTimerRelationships: Ally, Neutral, Enemy
+		PauseOnCondition: disabled
+		DisplayBeacon: True
+		DisplayRadarPing: True
+		ArrowSequence: arrow
+		ClockSequence: clocklarge
+		CircleSequence: circles
+		CameraRemoveDelay: 500
+		Duration: 500
+		ActiveCondition: active
+		BeaconPosters:
+			1: chronovortexicon
+		TargetCircleRanges:
+			1: 10000
+		TargetCircleColors: ff000080
+		BeaconActor: BLASTRADIUS.atomic
+		CameraRange: 10000
+	ProvidesPrerequisite@buildingname:
+	RenderSprites:
+		PlayerPalette: raplayer
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
 
 ^RiftBase:
 	Interactable:
