@@ -3915,7 +3915,7 @@ ordos_mortar:
 		Name: Mortar trooper
 	Buildable:
 		BuildPaletteOrder: 20
-		Prerequisites: ~d2k_barracks.ordos, outpost.ordos, ~upordos_ordos_mortar
+		Prerequisites: ~d2k_barracks.ordos, outpost.ordos
 		Queue: Infantry, RAInfantry
 		Description: template-antitank-antiair-infantry.description
 	Mobile:
@@ -6461,11 +6461,14 @@ d2katreidesmongoose:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Mobile:
-		Speed: 75
+		Speed: 95
 		TurnSpeed: 20
 		Locomotor: tracked
 	Health:
-		HP: 30000
+		HP: 50000
+	Selectable:
+		Bounds: 1536, 1536
+		DecorationBounds: 1536, 1536
 	Armor:
 		Type: Medium
 	RevealOnDeath:
@@ -6490,7 +6493,7 @@ d2katreidesmongoose:
 		ValidMovementTypes: Horizontal
 	AttackTurreted:
 	Voiced:
-		VoiceSet: D2kVehicleVoice
+		VoiceSet: D2KMongooseVoice
 	HitShape:
 	ActorStatValues:
 		Stats: Armor, Sight, Speed, Damage, ReloadDelay, MinRange, Cargo, MaxRange
@@ -9563,7 +9566,7 @@ combat_tank_o:
 combat_tank_o_stealth:
 	Inherits: ^combat_tank
 	Buildable:
-		Prerequisites: ~heavy_factory.ordos, outpost.ordos, ~upordos_ordos_stealth_tank
+		Prerequisites: ~heavy_factory.ordos, outpost.ordos
 		Description: Fast stealth tank with powerful long range cannon\n  Strong vs Tanks\n  Weak vs Infantry
 		IconPalette: windows256
 	Valued:

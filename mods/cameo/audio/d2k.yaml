@@ -215,6 +215,16 @@ D2KFremenVoice3:
 		Move: fremnm_oc1, fremnm_oc2, fremnm_oc3
 		Attack: fremnm_oc1, fremnm_oc2, fremnm_oc3
 		Guard: fremnm_oc1, fremnm_oc2, fremnm_oc3
+
+D2KMongooseVoice:
+    DefaultVariant: .wav
+    VolumeModifier: 1.33
+	Voices:
+		Action: Mongoosemove1, Mongoosemove2, Mongoosemove3
+		Select: MongooseSelect1, MongooseSelect2, MongooseSelect3
+		Move: Mongoosemove1, Mongoosemove2, Mongoosemove3
+		Attack: MongooseAttack1, MongooseAttack2, MongooseAttack3
+		Guard: MongooseAttack1, MongooseAttack2, MongooseAttack3
     
 D2KHarvester:
     DefaultVariant: .aud

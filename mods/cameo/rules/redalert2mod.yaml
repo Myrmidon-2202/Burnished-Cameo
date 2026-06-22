@@ -1,10 +1,10 @@
 World:
-	FactionCA@asianalliance:
-		Name: Asian Alliance #faction-ra2-yuri.name
-		InternalName: asianalliance
-		Game: Red Alert 2
-		Side: RA2 Mod
-		Description: Asian Alliance from Eagle Red Mod #faction-ra2-yuri.description
+	# FactionCA@asianalliance:
+	# 	Name: Asian Alliance #faction-ra2-yuri.name
+	# 	InternalName: asianalliance
+	# 	Game: Red Alert 2
+	# 	Side: RA2 Mod
+	# 	Description: Asian Alliance from Eagle Red Mod #faction-ra2-yuri.description
 	StartingUnits@mcvasianalliance:
 		Class: none
 		ClassName: MCV Only
@@ -22,12 +22,12 @@ World:
 		Factions: asianalliance
 		BaseActor: aa_acv
 		SupportActors: aa_gren,aa_gren,aa_gren,aa_tkiller,aa_tkiller,aa_quas,aa_lynx,aa_lynx,aa_lynx,aa_ptnk,aa_quas
-	FactionCA@consortium:
-		Name: Steel Consortium #faction-ra2-yuri.name
-		InternalName: consortium
-		Game: Red Alert 2
-		Side: RA2 Mod
-		Description: Steel Consortium from Reign of Steel Mod #faction-ra2-yuri.description
+	# FactionCA@consortium:
+	# 	Name: Steel Consortium #faction-ra2-yuri.name
+	# 	InternalName: consortium
+	# 	Game: Red Alert 2
+	# 	Side: RA2 Mod
+	# 	Description: Steel Consortium from Reign of Steel Mod #faction-ra2-yuri.description
 	StartingUnits@mcvconsortium:
 		Class: none
 		ClassName: MCV Only
@@ -45,12 +45,12 @@ World:
 		Factions: consortium
 		BaseActor: steel_qmcv
 		SupportActors: steel_fedinf,steel_fedinf,steel_fedinf,steel_qinf,steel_qinf,steel_manta,steel_qtank,steel_qtank,steel_qtank,steel_qutnk,steel_manta
-	FactionCA@naxis:
-		Name: Naxis #faction-ra2-yuri.name
-		InternalName: naxis
-		Game: Red Alert 2
-		Side: RA2 Mod
-		Description: Parody faction for WW2 Germany with added units from other WW2 related games. #faction-ra2-yuri.description
+	# FactionCA@naxis:
+	# 	Name: Naxis #faction-ra2-yuri.name
+	# 	InternalName: naxis
+	# 	Game: Red Alert 2
+	# 	Side: RA2 Mod
+	# 	Description: Parody faction for WW2 Germany with added units from other WW2 related games. #faction-ra2-yuri.description
 	StartingUnits@mcvnaxis:
 		Class: none
 		ClassName: MCV Only
@@ -69,12 +69,12 @@ World:
 		BaseActor: nax_mcv
 		SupportActors: nax_rifle,nax_rifle,nax_rifle,nax_mp40,nax_mp40,nax_wirbelwind,nax_tiger,nax_tiger,nax_tiger,nax_wirbelwind,nax_wirbelwind
 
-	FactionCA@lnaxis:
-		Name: Schwarzer Mond #faction-ra2-yuri.name
-		InternalName: lnaxis
-		Game: Red Alert 2
-		Side: RA2 Mod
-		Description: Lunar based branch of Naxis with crazy science #faction-ra2-yuri.description
+	# FactionCA@lnaxis:
+	# 	Name: Schwarzer Mond #faction-ra2-yuri.name
+	# 	InternalName: lnaxis
+	# 	Game: Red Alert 2
+	# 	Side: RA2 Mod
+	# 	Description: Lunar based branch of Naxis with crazy science #faction-ra2-yuri.description
 	StartingUnits@mcvlnaxis:
 		Class: none
 		ClassName: MCV Only
@@ -93,12 +93,12 @@ World:
 		BaseActor: nax2_mcv
 		SupportActors: nax_lunar,nax_lunar,nax_lunar2,nax_lunar2,nax_lunar2,nax2_beetle,nax2_tiger,nax2_panzer,nax2_panzer,nax2_beetle,nax2_beetle
 
-	FactionCA@syndicate:
-		Name: Latin Syndicate
-		InternalName: syndicate
-		Game: Red Alert 2
-		Side: RA2 Mod
-		Description: Latin American Crime Syndicate with old Soviet Technology #faction-ra2-yuri.description
+	# FactionCA@syndicate:
+	# 	Name: Latin Syndicate
+	# 	InternalName: syndicate
+	# 	Game: Red Alert 2
+	# 	Side: RA2 Mod
+	# 	Description: Latin American Crime Syndicate with old Soviet Technology #faction-ra2-yuri.description
 	StartingUnits@mcvsyndicate:
 		Class: none
 		ClassName: MCV Only
@@ -116,12 +116,12 @@ World:
 		Factions: syndicate
 		BaseActor: latin_mcv
 		SupportActors: latin_mili,latin_mili,latin_mili,latin_fftr,latin_fftr,nax_wirbelwind,nax_tiger,nax_tiger,nax_tiger,aa_ptnk,nax_wirbelwind
-	FactionCA@futuretech:
-		Name: (WIP)Future Tech
-		InternalName: futuretech
-		Game: Red Alert 2
-		Side: RA2 Mod
-		Description: Private corporation of Allies specialized in robotics
+	# FactionCA@futuretech:
+	# 	Name: (WIP)Future Tech
+	# 	InternalName: futuretech
+	# 	Game: Red Alert 2
+	# 	Side: RA2 Mod
+	# 	Description: Private corporation of Allies specialized in robotics
 	StartingUnits@mcvfuturetech:
 		Class: none
 		ClassName: MCV Only
