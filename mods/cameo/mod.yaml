@@ -41,6 +41,7 @@ FileSystem: DefaultFileSystem
 		~cameo|bits/shockwave
 		~cameo|bits/sc2k
 		~cameo|bits/shared
+		~cameo|bits/civilization2
 		#~cameo|bits/ee1
 		~cameo|bits/ra/ra_audio.mix
 		~cameo|bits/terran
@@ -133,6 +134,7 @@ Rules:
 	# cameo|rules/shockwave.yaml
 	# cameo|rules/simcity.yaml
 	# cameo|rules/sc2k.yaml
+	cameo|rules/civilization2.yaml
 	# cameo|rules/sow.yaml
 	# cameo|rules/starwars.yaml
 	# cameo|rules/tiberiaalliances.yaml
@@ -197,6 +199,7 @@ Sequences:
 	# cameo|sequences/valentine.yaml
 	# cameo|sequences/infected.yaml
 	# cameo|sequences/sc2k.yaml
+	cameo|sequences/civilization2.yaml
 	# cameo|sequences/xmas.yaml
 	# cameo|sequences/halloween.yaml
 	# cameo|sequences/tomorrow.yaml
@@ -262,6 +265,7 @@ Weapons:
 	# cameo|weapons/infected.yaml
 	# cameo|weapons/starwars.yaml
 	# cameo|weapons/sc2k.yaml
+	cameo|weapons/civilization2.yaml
 	# cameo|weapons/xmas.yaml
 	# cameo|weapons/tomorrow.yaml
 	# cameo|weapons/valentine.yaml
@@ -359,6 +363,7 @@ Voices:
 	cameo|audio/dune2.yaml
 	cameo|audio/wz2100.yaml
 	cameo|audio/sc2k.yaml
+	cameo|audio/civilization2.yaml
 	cameo|audio/xmas.yaml
 	cameo|audio/heroes.yaml
 	cameo|audio/outpost2.yaml

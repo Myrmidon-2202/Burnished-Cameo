@@ -2192,17 +2192,22 @@ usastealth:
 
 usacomanche:
 	idle:
+		Filename: usacomanche.shp
 		Facings: 32
 		UseClassicFacings: True
-	rotor: yrotorlg
+	rotor: 
+		Filename: yrotorlg.shp
 		Length: 4
-	slow-rotor: yrotorlg
+	slow-rotor: 
+		Filename: yrotorlg.shp
 		Start: 4
 		Length: 8
-	muzzle: minigun
+	muzzle: 
+		Filename: minigun.shp
 		Length: 6
 		Facings: 8
-	icon: usacomancheicon
+	icon: 
+		Filename: usacomancheicon.shp
 	
 usafirebase:
 	Defaults:

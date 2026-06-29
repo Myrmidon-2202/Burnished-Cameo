@@ -1,0 +1,516 @@
+World:
+	FactionCA@civilization2:
+		Name: Civilization 2
+		InternalName: civ2
+		Game: Special
+		Side: Factions
+		Description: Civilization 2, real time turn based empire building
+		Selectable: True
+	####################################################################################################
+	#		MPSTARTUNITS
+	####################################################################################################
+	StartingUnits@mcvonlycivilization2:
+		Class: none
+		ClassName: MCV Only
+		Factions: civ2
+		BaseActor: civ2_mcv
+	StartingUnits@defaultcivilization2:
+		Class: light
+		ClassName: Light Support
+		Factions: civ2
+		BaseActor: civ2_mcv
+		SupportActors: wormuzi,wormuzi,wormuzi,wormuzi,wormuzi,wormbazooka,wormbazooka,wormbuggy
+	StartingUnits@heavycivilization2:
+		Class: heavy
+		ClassName: Heavy Support
+		Factions: civ2
+		BaseActor: civ2_mcv
+		SupportActors: wormuzi,wormuzi,wormuzi,wormuzi,wormuzi,wormbazooka,wormbazooka,wormbuggy,wmtnk,wmtnk
+
+^Civ2Building:
+	Inherits: ^BaseBuilding
+	Tooltip:
+		GenericName: Structure
+	OwnerLostAction:
+		Action: Kill
+	Building:
+		BuildSounds: wormdrill.wav
+	SpawnActorsOnSell:
+		ActorTypes: wormuzi
+	MustBeDestroyed:
+		RequiredForShortGame: true
+	ActorLostNotification:
+		Notification: BuildingLost
+	ShakeOnDeath:
+	Demolishable:
+		Condition: being-demolished
+	Sellable:
+		RequiresCondition: !build-incomplete && !being-demolished
+		SellSounds: wormdrill.wav
+	GrantConditionOnDamageState@2:
+		ValidDamageStates: Medium
+		Condition: isBurning
+	GrantConditionOnDamageState@3:
+		ValidDamageStates: Heavy, Critical
+		Condition: isBurning2
+	WithIdleOverlay@2:
+		RequiresCondition: isBurning
+		Sequence: burn1
+		Palette: player
+	WithIdleOverlay@3:
+		RequiresCondition: isBurning2
+		Sequence: burn2
+		Palette: player
+
+^CIV2Infantry:
+	RenderSprites:
+		PlayerPalette: player
+	WithDeathAnimation:
+		DeathSequence: die
+		CrushedSequence: die-crushed
+		UseDeathTypeSuffix: false
+	Targetable:
+		TargetTypes: Ground, Ant, Cyborg
+
+####################################################################################################
+#		MISC
+####################################################################################################
+
+^CIV2BuildingFlag:
+	WithIdleOverlay:
+		Sequence: bigflag
+	RenderSprites:
+
+^CIV2UnitFlag:
+	WithIdleOverlay:
+		Sequence: smallflag
+	RenderSprites:
+
+####################################################################################################
+#		BUILDING CIV2
+####################################################################################################
+
+CIV2_DISTRICT_CAPITAL_BRONZE:
+	Inherits: ^Civ2Building
+	Inherits@flag: ^CIV2BuildingFlag
+	Inherits@shape: ^2x2Shape
+	Inherits@CPQ: ^CPQCondition
+	Inherits@aicash: ^AIConyardCash
+	Inherits@conyard: ^Conyard
+	GrantExternalConditionToOwner@BuildingsOwned:
+		Condition: BuildingsOwned
+	Selectable:
+		Bounds: 2048, 2048
+	HitShape:
+		TargetableOffsets: 630,299,0
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Capital District [Bronze]
+	ProvidesPrerequisite:
+		Prerequisite: civ2_district_capital_bronze
+	Building:
+		Footprint: xx xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 110000
+	RevealsShroud:
+		Range: 4c0
+	Transforms:
+		IntoActor: civ2_mcv
+		Offset: -1,-1
+		Facing: 432
+		TransformSounds: constru2.aud, hvydoor1.aud
+		NoTransformNotification: BuildingCannotPlaceAudio
+	RallyPoint:
+	Exit@1:
+		SpawnOffset: -426,85,0
+		ExitCell: 0,1
+	Exit@2:
+		SpawnOffset: 298,298,0
+		ExitCell: 1,1
+	Power:
+		Amount: 10
+	WithBuildingBib:
+		Palette: ra_temperat
+	SpawnActorsOnSell:
+		ActorTypes: wormuzi
+	ScalePowerWithHealth:
+	BaseBuilding:
+	Production@NORMAL:
+		Produces: Building, Defence
+		RequiresCondition: !classicproductionqueues
+	Production@CLASSICPRODUCTIONQUEUES:
+		Produces: RABuilding, RADefence
+		RequiresCondition: classicproductionqueues
+	ProductionBar@BuildingGDI:
+		ProductionType: Building
+		RequiresCondition: !classicproductionqueues
+	ProductionBar@DefenceGDI:
+		ProductionType: Defence
+		RequiresCondition: !classicproductionqueues
+	ProductionBar@RABuildingGDI:
+		ProductionType: RABuilding
+		RequiresCondition: classicproductionqueues
+	ProductionBar@RADefenceGDI:
+		ProductionType: RADefence
+		RequiresCondition: classicproductionqueues
+	ProductionQueue@GDIBuilding:
+		Type: Building
+		DisplayOrder: 0
+		Group: Building
+		LowPowerModifier: 200
+		ReadyAudio: ConstructionComplete
+		BlockedAudio: NoBuild
+		LimitedAudio: BuildingInProgress
+		QueuedAudio: Building
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionQueue@GDIDefense:
+		Type: Defence
+		DisplayOrder: 1
+		Group: Defence
+		LowPowerModifier: 300
+		ReadyAudio: ConstructionComplete
+		BlockedAudio: NoBuild
+		LimitedAudio: BuildingInProgress
+		QueuedAudio: Building
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	BaseProvider:
+		Cooldown: 75
+		Range: 14c0
+	#RotationPaletteEffect:
+	#	ExcludePalettes: WC1Player
+	#LightPaletteRotator:
+	#	ExcludePalettes: WC1Player	
+	ProvidesPrerequisite@factiongdi:
+		Prerequisite: mmworms
+
+CIV2_DISTRICT_HOUSING_BRONZE:
+	Inherits: ^Civ2Building
+	Inherits@flag: ^CIV2BuildingFlag
+	Inherits@shape: ^2x2Shape
+	Inherits@power: ^PowerPlant
+	Selectable:
+		Bounds: 2048, 2048
+	HitShape:
+		TargetableOffsets: 630,299,0
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Housing District [Bronze]
+	ProvidesPrerequisite:
+		Prerequisite: civ2_district_housing_bronze
+	Buildable:
+		BuildPaletteOrder: 5
+		Prerequisites: ~civ2_district_capital_bronze
+		Queue: Building, RABuilding
+		BuildDuration: 330
+		Description: Provides Power
+	Building:
+		Footprint: xX xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 55000
+	RevealsShroud:
+		Range: 4c0
+	Power:
+		Amount: 100
+	ScalePowerWithHealth:
+	WithBuildingBib:
+		Palette: ra_temperat
+	#WithIdleOverlay@BARREL:
+	#	Sequence: barrel-overlay
+	#WithIdleOverlay@BARREL2:
+	#	Sequence: barrel-overlay2
+
+CIV2_DISTRICT_RESOURCE_BRONZE:
+	Inherits: ^Civ2Building
+	Inherits@flag: ^CIV2BuildingFlag
+	Inherits@ref: ^Refinery
+	HitShape:
+		Type: Rectangle
+			TopLeft: -1536, -512
+			BottomRight: 1536, 853
+	HitShape@TOP:
+		Type: Rectangle
+			TopLeft: -512, -1450
+			BottomRight: 896, -512
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: Resource District [Bronze]
+	ProvidesPrerequisite:
+		Prerequisite: civ2_district_resource_bronze
+	Buildable:
+		BuildPaletteOrder: 10
+		Prerequisites: ~civ2_district_capital_bronze
+		Queue: Building, RABuilding
+		Description: Processes raw Tiberium\ninto useable resources
+	Building:
+		Footprint: _x_ xxx === ===
+		Dimensions: 3,4
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 100000
+	RevealsShroud:
+		Range: 6c0
+	Refinery:
+	DockHost:
+		DockAngle: 448
+		DockOffset: -1c0, 1c0, 0
+		IsDragRequired: True
+		DragOffset: -554,512,0
+		DragLength: 12
+	StoresResources:
+		Capacity: 1000
+	Selectable:
+		Bounds: 2048, 2048
+	CustomSellValue:
+		Value: 500
+	FreeActor:
+		Actor: WHARV
+		SpawnOffset: 1,2
+		Facing: 256
+	WithBuildingBib:
+		Palette: ra_temperat
+	WithResourceLevelOverlay:
+		RequiresCondition: !build-incomplete
+	Power:
+		Amount: -40
+	ProvidesPrerequisite@buildingname:
+	SelectionDecorations:
+	WithResourceStoragePipsDecoration:
+		Position: BottomLeft
+		RequiresSelection: true
+		PipCount: 10
+
+CIV2_DISTRICT_PRODUCTION_BRONZE:
+	Inherits: ^Civ2Building
+	Inherits@flag: ^CIV2BuildingFlag
+	Inherits@shape: ^2x2Shape
+	Inherits@CPQWP: ^CPQConditionWithPrimary
+	Inherits@prod: ^ProducesUnits
+	Inherits@barr: ^IsBarrack
+	HitShape:
+		UseTargetableCellsOffsets: false
+		TargetableOffsets: 0,0,0, 630,-512,0, 355,512,0, -281,-512,0, -630,512,0
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Production District [Bronze]
+	ProvidesPrerequisite:
+		Prerequisite: barracks
+	Buildable:
+		BuildPaletteOrder: 30
+		Prerequisites: ~civ2_district_capital_bronze, civ2_district_housing_bronze
+		Queue: Building, RABuilding
+		Description: Trains infantry
+	Building:
+		Footprint: xx xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 60000
+	RevealsShroud:
+		Range: 5c0
+	WithBuildingBib:
+		Palette: ra_temperat
+	RallyPoint:
+	Exit@1:
+		SpawnOffset: 512,1024,0
+		ExitCell: 1,2
+	Production@NORMAL:
+		Produces: Infantry
+		RequiresCondition: !classicproductionqueues
+	Production@CLASSICPRODUCTIONQUEUES:
+		Produces: RAInfantry
+		RequiresCondition: classicproductionqueues
+	ProductionQueue:
+		Type: Infantry
+		DisplayOrder: 2
+		Group: Infantry
+		LowPowerModifier: 300
+		ReadyAudio: UnitReady
+		BlockedAudio: NoBuild
+		LimitedAudio: BuildingInProgress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar@INFANTRYWORMS:
+		ProductionType: Infantry
+		RequiresCondition: !classicproductionqueues
+	ProductionBar@RAINFANTRYWORMS:
+		ProductionType: RAInfantry
+		RequiresCondition: classicproductionqueues
+	Power:
+		Amount: -20
+	ProvidesPrerequisite@buildingname:
+	Selectable:
+		Bounds: 2048, 2048
+	SelectionDecorations:
+
+####################################################################################################
+#		UNIT CIV2
+####################################################################################################
+
+CIV2_MCV:
+	Inherits: ^Vehicle
+	Inherits@flag: ^CIV2UnitFlag
+	Inherits@Template: ^SupportVehicleTemplate
+	Inherits@selection: ^SelectableSupportUnit
+	Inherits@mcv: ^MCV
+	Valued:
+		Cost: 3500
+	Tooltip:
+		Name: Settler [MCV]
+	Buildable:
+		BuildPaletteOrder: 100
+		Prerequisites: ~wweap, anyhq, ~techlevel.medium
+		Queue: Vehicle, RAVehicle
+		BuildDuration: 3750
+		BuildDurationModifier: 40
+		Description: Deploys into another Construction Yard.\n  Unarmed
+	Selectable:
+		DecorationBounds: 1536, 1536
+	Mobile:
+		Speed: 71
+		Locomotor: heavywheeled
+	Health:
+		HP: 120000
+	Repairable:
+		HpPerStep: 2182
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 7c0
+	Transforms:
+		IntoActor: civ2_district_capital_bronze
+		Offset: -1,-1
+		Facing: 432
+		TransformSounds: constru2.aud, hvydoor1.aud
+		NoTransformNotification: BuildingCannotPlaceAudio
+	MustBeDestroyed:
+		RequiredForShortGame: true
+	BaseBuilding:
+	SelectionDecorations:
+	Voiced:
+		VoiceSet: voiceWorm
+	ProvidesPrerequisite@factiongdi:
+		Prerequisite: mmworms
+
+civ2_warrior:
+	Inherits: ^Soldier
+	Inherits@flag: ^CIV2UnitFlag
+	Inherits@CIV2Infantry: ^CIV2Infantry
+	Inherits@EXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMoveMelee
+	Inherits@DECORATIONS: ^InfantryExperienceHospitalHazmatOverrides
+	# Inherits@upgrade_swords: ^wc_h_str_sword
+	# Inherits@upgrade_shields: ^wc_h_str_shield
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Warrior
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Buildable:
+		BuildPaletteOrder: 10
+		Prerequisites: ~civ2_district_production_bronze
+		Queue: Infantry, RAInfantry
+		Description: Basic Melee Infantry. Slow but can take some damage.
+		BuildDuration: 150
+		BuildDurationModifier: 100
+	Mobile:
+		Speed: 56
+	DamageMultiplier@DamageReduction:
+		Modifier: 85
+	FirepowerMultiplier@FirepowerIncrease:
+		Modifier: 115
+	Health:
+		HP: 14400
+	DamageMultiplier@armor:
+		Modifier: 60
+	Armor:
+		Type: None
+	#Food
+	Power:
+		Amount: -5
+	AutoTarget:
+		ScanRadius: 6
+		InitialStance: AttackAnything
+	Armament:
+		Weapon: footmanSlice
+	WithDeathAnimation:
+		UseDeathTypeSuffix: false
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+		-IdleSequences: idle1,idle2,idle3,idle4
+	Voiced:
+		VoiceSet: voicehuman
+	Crushable:
+		CrushClasses: vehicle
+
+	####################################################################################################
+	#		ARCHIVE
+	####################################################################################################
+
+# ^CIV2Infantry:
+# 	Inherits: ^Soldier
+# 	Inherits@ANNOUNCE: ^AnnounceOnBuild
+# 	Inherits@EXT: ^ExternalConditions
+# 	Mobile:
+# 		Speed: 72
+# 	Crushable:
+# 	WithDeathAnimation:
+# 		DeathSequence: die
+# 		CrushedSequence: die-crushed
+# 		CrushedSequencePalette: player
+# 		CrushedPaletteIsPlayerPalette: true
+# 		UseDeathTypeSuffix: false
+# 	WithInfantryBody:
+# 		IdleSequences: idle1
+# 		StandSequences: stand
+# 		DefaultAttackSequence: shoot
+# 	UpdatesPlayerStatistics:
+# 		AddToArmyValue: true
+# 	RenderSprites:
+# 		Palette: td_temperat
+# 	TakeCover:
+# 		SpeedModifier: 100
+# 	Targetable:
+# 		TargetTypes: Ground, Ant, Cyborg
+
+	# CIV2_WARRIOR:
+	# Inherits@CIV2INFANTRY: ^CIV2Infantry
+	# Inherits@flag: ^CIV2UnitFlag
+	# Inherits@Template: ^MeleeInfantryTemplate
+	# Inherits@EXP: ^GainsExperienceTD
+	# Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	# Inherits@WC2SwordUpg: ^wc2_h_str_sword
+	# Inherits@WC2HShieldUpg: ^wc2_h_str_shield
+	# Tooltip:
+	# 	Name: Warrior
+	# Valued:
+	# 	Cost: 300
+	# Power:
+	# 	Amount: -15
+	# Health:
+	# 	HP: 50000
+	# ChangesHealth@SelfHealing:
+	# 	Step: 50
+	# Mobile:
+	# 	Speed: 75
+	# Buildable:
+	# 	BuildPaletteOrder: 10
+	# 	Prerequisites: ~civ2_district_production_bronze
+	# 	Queue: Infantry, RAInfantry
+	# 	Description: Basic melee infantry. Slow but can take some damage.
+	# Armament:
+	# 	Weapon: wc2footmanslice
+	# 	FireDelay: 7
+	# Voiced:
+	# 	VoiceSet: wc2voicehumanfootman

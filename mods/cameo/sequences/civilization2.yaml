@@ -1,0 +1,296 @@
+####################################################################################################
+#		MISC
+####################################################################################################
+
+^CIV2BuildingFlag:
+	bigflag:
+		Filename: civilization2_flags.shp
+		Start: 0
+		ZOffset: 512
+		Offset: 0, -9
+	# Small fire for moderate damage.
+	burn1:
+		Filename: wc2_fire_small.shp
+		Start: 0
+		Length: 6
+		ZOffset: 512
+		Offset: 0, -9
+		AddExtension: True
+	# Large fire for heavy damage.
+	burn2:
+		Filename: wc2_fire_large.shp
+		Start: 0
+		Length: 10
+		ZOffset: 512
+		Offset: 0, -9
+		AddExtension: True
+
+^CIV2UnitFlag:
+	smallflag:
+		Filename: civilization2_flags.shp
+		Start: 1
+		ZOffset: 512
+		Offset: 0, -9
+
+####################################################################################################
+#		BUILDING CIV2
+####################################################################################################
+civ2_district_capital_bronze:
+	Inherits: ^CIV2BuildingFlag
+	bigflag:
+		Offset: -12, -12
+	Defaults:
+		Filename: civilization2_buildings.shp
+		Start: 3
+		Scale: 2.0
+	idle: 
+	damaged-idle: 
+	dead: 
+	make: 
+	bib: 
+		Filename: bib2.tem
+		UseTilesetExtension: true
+		Length: *
+		Scale: 1.0
+	icon: 
+		Filename: civilization_2_icons.png
+		Start: 3
+
+civ2_district_housing_bronze:
+	Inherits: ^CIV2BuildingFlag
+	bigflag:
+		Offset: -0, -0
+	Defaults:
+		Filename: civilization2_buildings.shp
+		Start: 0
+		Scale: 2.0
+	idle: 
+	damaged-idle: 
+	dead: 
+	make: 
+	bib: 
+		Filename: bib3.tem
+		UseTilesetExtension: true
+		Length: *
+		Scale: 1.0
+	icon: 
+		Filename: civilization_2_icons.png
+		Start: 0
+
+civ2_district_resource_bronze:
+	Inherits: ^CIV2BuildingFlag
+	Defaults:
+		Filename: civilization2_buildings.shp
+		Start: 1
+		Scale: 2.0
+	idle: 
+	damaged-idle: 
+	dead: 
+	make: 
+	resources: 
+		Filename: proctwr.shp
+		Length: 6
+		Offset: -30,-17
+	damaged-resources: 
+		Filename: proctwr.shp
+		Start: 6
+		Length: 6
+		Offset: -30,-17
+	bib: 
+		Filename: bib2.tem
+		UseTilesetExtension: true
+		Length: *
+		Scale: 1.0
+	icon: 
+		Filename: civilization_2_icons.png
+		Start: 1
+
+civ2_district_production_bronze:
+	Inherits: ^CIV2BuildingFlag
+	Defaults:
+		Filename: civilization2_buildings.shp
+		Start: 2
+		Scale: 2.0
+	idle: 
+	damaged-idle: 
+	dead: 
+	make: 
+	bib: 
+		Filename: bib3.tem
+		UseTilesetExtension: true
+		Length: *
+		Offset: 0,0
+		Scale: 1.0
+	icon: 
+		Filename: civilization_2_icons.png
+		Start: 2
+
+####################################################################################################
+#		UNIT CIV2
+####################################################################################################
+
+civ2_mcv:
+	Inherits: ^CIV2UnitFlag
+	smallflag:
+		Offset: -10, -10
+	Defaults: 
+		Filename: civilization2_units.shp
+		Scale: 1.0
+	idle:
+		Facings: 2
+		Combine:
+			settler1: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 0
+			settler2: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 0
+				FlipX: true
+	icon: 
+		Filename: civilization_2_icons.png
+		Start: 32
+
+civ2_warrior:
+	Inherits: ^WCInfantry
+	Inherits@flag: ^CIV2UnitFlag
+	smallflag:
+		Offset: -10, -10
+	Defaults: 
+		Filename: civilization2_units.shp
+		Scale: 1.0
+	idle:
+		Facings: 2
+		Combine:
+			warrior1: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 2
+			warrior2: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 2
+				FlipX: true
+	stand:
+		Facings: 2
+		Combine:
+			warrior3: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 2
+			warrior4: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 2
+				FlipX: true
+	run:
+		Facings: 2
+		Combine:
+			warrior5: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 2
+			warrior6: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 2
+				FlipX: true
+	shoot:
+		Facings: 2
+		Combine:
+			warrior7: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 2
+			warrior8: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 2
+				FlipX: true
+	die:
+		Facings: 2
+		Combine:
+			warrior9: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 2
+			warrior10: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 2
+				FlipX: true
+	icon: 
+		Filename: civilization_2_icons.png
+		Start: 34
+
+	####################################################################################################
+	#		ARCHIVE
+	####################################################################################################
+
+	# civ2_warrior:
+	# Inherits: ^CIV2UnitFlag
+	# Inherits@wc2: ^wc2_status_icons
+	# idle1:
+	# 	Facings: 2
+	# 	Combine:
+	# 		warrior1: 
+	# 			Filename: civilization2_units.shp
+	# 			Length: 1
+	# 			Frames: 2
+	# 		warrior2: 
+	# 			Filename: civilization2_units.shp
+	# 			Length: 1
+	# 			Frames: 2
+	# 			FlipX: true
+	# stand:
+	# 	Facings: 2
+	# 	Combine:
+	# 		warrior3: 
+	# 			Filename: civilization2_units.shp
+	# 			Length: 1
+	# 			Frames: 2
+	# 		warrior4: 
+	# 			Filename: civilization2_units.shp
+	# 			Length: 1
+	# 			Frames: 2
+	# 			FlipX: true
+	# run:
+	# 	Facings: 2
+	# 	Combine:
+	# 		warrior5: 
+	# 			Filename: civilization2_units.shp
+	# 			Length: 1
+	# 			Frames: 2
+	# 		warrior6: 
+	# 			Filename: civilization2_units.shp
+	# 			Length: 1
+	# 			Frames: 2
+	# 			FlipX: true
+	# shoot:
+	# 	Facings: 2
+	# 	Combine:
+	# 		warrior7: 
+	# 			Filename: civilization2_units.shp
+	# 			Length: 1
+	# 			Frames: 2
+	# 		warrior8: 
+	# 			Filename: civilization2_units.shp
+	# 			Length: 1
+	# 			Frames: 2
+	# 			FlipX: true
+	# die:
+	# 	Facings: 2
+	# 	Combine:
+	# 		warrior9: 
+	# 			Filename: civilization2_units.shp
+	# 			Length: 1
+	# 			Frames: 2
+	# 		warrior10: 
+	# 			Filename: civilization2_units.shp
+	# 			Length: 1
+	# 			Frames: 2
+	# 			FlipX: true
+	# icon: 
+	# 	Filename: civilization_2_icons.png
+	# 	Start: 34
