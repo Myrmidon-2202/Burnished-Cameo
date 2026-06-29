@@ -220,12 +220,12 @@ D2KMongooseVoice:
     DefaultVariant: .wav
     VolumeModifier: 1.33
 	Voices:
-		Action: Mongoosemove1, Mongoosemove2, Mongoosemove3
+		Action: MongooseAttack1, MongooseAttack2, MongooseAttack3, MongooseAttack4
 		Select: MongooseSelect1, MongooseSelect2, MongooseSelect3
 		Move: Mongoosemove1, Mongoosemove2, Mongoosemove3
-		Attack: MongooseAttack1, MongooseAttack2, MongooseAttack3
-		Guard: MongooseAttack1, MongooseAttack2, MongooseAttack3
-    
+		Attack: MongooseAttack1, MongooseAttack2, MongooseAttack3, MongooseAttack4
+		Guard: MongooseAttack1, MongooseAttack2, MongooseAttack3, MongooseAttack4
+
 D2KHarvester:
     DefaultVariant: .aud
     VolumeModifier: 1.33

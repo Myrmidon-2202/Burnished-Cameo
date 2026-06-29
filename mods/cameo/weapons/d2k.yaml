@@ -1503,12 +1503,12 @@ Sound:
 		AffectsParent: false
 		ValidRelationships: Neutral, Enemy
 		Versus:
-			None: 333
-			Wood: 88
-			Light: 123
-			Medium: 111
-			Heavy: 99
-			Concrete: 77
+			None: 533
+			Wood: 288
+			Light: 323
+			Medium: 311
+			Heavy: 299
+			Concrete: 2777
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
 	Warhead@2Dam: SpreadDamage
 		Range: 0, 32
@@ -1594,6 +1594,7 @@ contaminator_attack:
 	Warhead@SwordWeaponPercentage: HealthPercentageDamage
 		Falloff: 100, 100
 		Damage: 10
+
 LeechSpit:
 	Inherits: ^LightChemicalWeapon
 	Inherits: ^LightMissile
@@ -1678,7 +1679,7 @@ OrniBomb:
 		Acceleration: 0, 0, 0
 		Shadow: true
 	Warhead@1Dam: SpreadDamage
-		Damage: 7500 #400 in original, reduce when bombers can do multiple passes
+		Damage: 8500 #400 in original, reduce when bombers can do multiple passes
 		Spread: 1250
 		Falloff: 100, 50, 25, 0
 		Versus:
@@ -2444,7 +2445,7 @@ RashinanGun_upgrade:
 		Damage: 1
 
 Fremen_S:
-	Inherits: ^MG
+	Inherits: ^SmallArms
 	Report: FREMODD1.WAV
 	ValidTargets: Infantry
 	InvalidTargets: Vehicle, Structure, Air
@@ -3048,6 +3049,7 @@ D2KAAMineExplosion:
 		ExplosionPalette: effect75alpha
 
 D2KSniperRifle:
+	Inherits: ^SmallArms
 	Report: TURRET1.WAV
 	ReloadDelay: 120
 	Range: 12c0
@@ -4986,6 +4988,8 @@ oM_HMG_H:
 oFremen_L:
 	Inherits: oM_HMG
 	Report: BAZOOK2.WAV
+	ValidTargets: Vehicle, Structure, Air
+	InvalidTargets: Infantry
 	Warhead@1Dam: SpreadDamage
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect

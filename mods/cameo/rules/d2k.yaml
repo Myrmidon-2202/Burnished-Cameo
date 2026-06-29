@@ -3,37 +3,37 @@ World:
 		Name: Atreides DU
 		InternalName: atreides
 		Game: Dune Universe
-		Side: Dune
-		Description: House Atreides\nThe noble Atreides, from the water world of Caladan,\nrely on their ornithopters to ensure air superiority.\nThey have allied themselves with the Fremen, the fearsome\nnative warriors of Dune that can move undetected in battle.\nTheir Strength lies in air superiority\nBonus: Builds structures faster\nSupport Power: Ornithopter Airstrike, Fremen Guerilla
-	# FactionCA@Harkonnen:
-	# 	Name: Harkonnen DU
-	# 	InternalName: harkonnen
-	# 	Game: Dune Universe
-	# 	Side: Dune
-	# 	Description: House Harkonnen\nThe evil Harkonnen of the planet Giedi Prime\nwill stop at nothing to gain control of the spice.\nThey rely on brute force and atomic weapons to achieve their goals:\nwealth, and the destruction of House Atreides.\nTheir Specialities are Devastators and Annihilators.\nBonus: Explosions are more powerful\nSupport Power: Death Hand Missile
+		Side: Westwood's Dune
+		Description: House Atreides\nThe noble Atreides, from the water world of Caladan,\nrely on their ornithopters to ensure air superiority.\nThey have allied themselves with the Fremen, the fearsome\nnative warriors of Dune that can move undetected in battle.\nTheir Strength lies in air superiority\nSupport Power: Ornithopter Airstrike, Fremen Guerilla
+	FactionCA@Harkonnen:
+		Name: Harkonnen DU
+		InternalName: harkonnen
+		Game: Dune Universe
+		Side: Westwood's Dune
+		Description: House Harkonnen\nThe evil Harkonnen of the planet Giedi Prime\nwill stop at nothing to gain control of the spice.\nThey rely on brute force and atomic weapons to achieve their goals:\nwealth, and the destruction of House Atreides.\nTheir Specialities are Devastators and Annihilators.\nSupport Power: Death Hand Missile
 	FactionCA@Ordos:
 		Name: Ordos DU
 		InternalName: ordos
 		Game: Dune Universe
-		Side: Dune
-		Description: House Ordos\nThe insidious Ordos of the icy planet Sigma Draconis IV\nare known for their wealth, greed and treachery.\nRelying heavily on mercenaries they often resort\nto sabotage and forbidden Ixian technologies.\nTheir Strength lies in Stealth and quick hit and run tactics\nBonus: Stealthed units moves faster\nSupport Power: Saboteur, Chaos Lightning
-	# FactionCA@Corrino:
-	# 	Name: Corrino DU
-	# 	Game: Dune Universe
-	# 	Side: Houses
-	# 	InternalName: corrino
-	# 	Description: House Corrino\nOnce deadliest and grandest House in the Universe and for many thousands of years the imperial family of Imperium from the world Salusa Secundus.\nCorrino uses their elite trained Sardaukars, to rule the war.\nBonus: Uparmored Harvesters\nSupport Power: Release the Sardaukars
+		Side: Westwood's Dune
+		Description: House Ordos\nThe insidious Ordos of the icy planet Sigma Draconis IV\nare known for their wealth, greed and treachery.\nRelying heavily on mercenaries they often resort\nto sabotage and forbidden Ixian technologies.\nTheir Strength lies in Stealth and quick hit and run tactics\nSupport Power: Saboteur, Chaos Lightning
+	FactionCA@Corrino:
+		Name: Corrino DU
+		Game: Dune Universe
+		Side: Westwood's Dune
+		InternalName: corrino
+		Description: House Corrino\nOnce deadliest and grandest House in the Universe and for many thousands of years the imperial family of Imperium from the world Salusa Secundus.\nCorrino uses their elite trained Sardaukars, to rule the war.\nSupport Power: Release the Sardaukars
 	# FactionCA@Ixian:
 	# 	Name: Ixian DU
 	# 	InternalName: ixian
-	# 	Game: Dune Universe
+	# 	Game: Westwood's Dune
 	# 	Side: Dune
 	# 	Description: Ixians
 	FactionCA@RandomDU:
 		Name: Any Dune
 		InternalName: RandomDU
-		RandomFactionMembers: ordos, #ixian #atreides, ordos, harkonnen, corrino, ixian
-		Game: Dune Universe
+		RandomFactionMembers: ordos, atreides, harkonnen
+		Game:  Dune Universe
 		Side: Random
 		Description: Random Faction\nA random faction from Dune Universe will be chosen when the game starts.
 
@@ -45,11 +45,11 @@ World:
 		Class: none
 		ClassName: MCV Only
 		BaseActor: d2k_mcv.ixian
-		Factions: atreides, harkonnen, corrino, ixian
+		Factions: ixian
 	StartingUnits@ixian_L:
 		Class: light
 		ClassName: Light Support
-		Factions: atreides, harkonnen, corrino, ixian
+		Factions: ixian
 		BaseActor: d2k_mcv.ixian
 		SupportActors: light_inf, light_inf, heavy_inf, trooper, trooper, rocket_raider_ixian, combat_tank_ixian
 		InnerSupportRadius: 3
@@ -57,7 +57,7 @@ World:
 	StartingUnits@ixian_h:
 		Class: heavy
 		ClassName: Heavy Support
-		Factions: atreides, harkonnen, corrino, ixian
+		Factions: ixian
 		BaseActor: d2k_mcv.ixian
 		SupportActors: light_inf, light_inf, heavy_inf, trooper, trooper, rocket_raider_ixian, heavy_rocket_raider_ixian, combat_tank_ixian, duelist_tank
 		InnerSupportRadius: 3
@@ -83,6 +83,70 @@ World:
 		SupportActors: light_inf, light_inf, heavy_inf, trooper, trooper, rocket_raider_ixian, heavy_rocket_raider_ixian, combat_tank_ixian, duelist_tank
 		InnerSupportRadius: 3
 		OuterSupportRadius: 5
+	StartingUnits@atreides:
+		Class: none
+		ClassName: MCV Only
+		BaseActor: d2k_mcv.atreides
+		Factions: atreides
+	StartingUnits@atreides_L:
+		Class: light
+		ClassName: Light Support
+		Factions: atreides
+		BaseActor: d2k_mcv.atreides
+		SupportActors: light_inf, light_inf, heavy_inf, trooper, trooper
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	StartingUnits@atreides_h:
+		Class: heavy
+		ClassName: Heavy Support
+		Factions: atreides
+		BaseActor: d2k_mcv.atreides
+		SupportActors: light_inf, light_inf, heavy_inf, trooper, trooper, duelist_tank
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	StartingUnits@harkonnen:
+		Class: none
+		ClassName: MCV Only
+		BaseActor: d2k_mcv.harkonnen
+		Factions: harkonnen
+	StartingUnits@harkonnen_L:
+		Class: light
+		ClassName: Light Support
+		Factions: harkonnen
+		BaseActor: d2k_mcv.harkonnen
+		SupportActors: light_inf, light_inf, heavy_inf, trooper, trooper
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	StartingUnits@harkonnen_h:
+		Class: heavy
+		ClassName: Heavy Support
+		Factions: harkonnen
+		BaseActor: d2k_mcv.harkonnen
+		SupportActors: light_inf, light_inf, heavy_inf, trooper, trooper, duelist_tank
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	StartingUnits@corrino:
+		Class: none
+		ClassName: MCV Only
+		BaseActor: d2k_mcv.corrino
+		Factions: corrino
+	StartingUnits@corrino_L:
+		Class: light
+		ClassName: Light Support
+		Factions: corrino
+		BaseActor: d2k_mcv.corrino_h
+		SupportActors: light_inf, light_inf, heavy_inf, trooper, trooper
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	StartingUnits@corrino_h:
+		Class: heavy
+		ClassName: Heavy Support
+		Factions: harkonnen
+		BaseActor: d2k_mcv.corrino
+		SupportActors: light_inf, light_inf, heavy_inf, trooper, trooper, duelist_tank
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+
 Player:
 	ExternalCondition@BuildingsOwned:
 		Condition: BuildingsOwned
@@ -681,7 +745,7 @@ Player:
 	AirstrikePower@orni:
 		PauseOnCondition: disabled
 		Prerequisites:
-			1: ~upgrade_hightech
+			1: high_tech_factory.atreides
 		Icons:
 			1: ornistrike
 		IconPalette: d2kunit
@@ -699,7 +763,7 @@ Player:
 		InsufficientPowerSpeechNotification: InsufficientPower
 		IncomingSpeechNotification: EnemyPlanesApproaching
 		DisplayBeacon: True
-		AllowMultiple: False
+		AllowMultiple: True
 		BeaconPosters:
 			1: airstrike
 		BeaconPosterPalette: beaconposter
@@ -883,6 +947,34 @@ construction_yard.ixian:
 		Actor: trooper
 	FreeActor@CPQDEBUGDUMMY:
 		-RequiresCondition:
+
+construction_yard.atreides:
+	Inherits@D2kBLD: construction_yard.ixian
+	Tooltip:
+		Name: Atreides Construction Yard
+	Building:
+		Footprint: xxx xxx ===
+		Dimensions: 3,3
+		LocalCenterOffset: 0,-512,0
+		IconPalette: d2kunit
+	Production@Addons:
+		Produces: Addons
+	ProductionBar@Addons:
+		ProductionType: Addons
+	Transforms:
+		IntoActor: d2k_mcv.atreides
+		Offset: 1,1
+		Facing: 432
+		RequiresCondition: factundeploy
+	SpawnActorsOnSell:
+		ActorTypes: light_inf, light_inf, engineer
+	RenderSprites:
+		Image: conyard.atreides
+	ActorStatValues:
+		Upgrades: upgrade_conyard
+	GivesBuildableArea:
+		AreaTypes: building
+
 construction_yard.ordos:
 	Inherits@D2kBLD: construction_yard.ixian
 	Tooltip:
@@ -904,7 +996,61 @@ construction_yard.ordos:
 	SpawnActorsOnSell:
 		ActorTypes: light_inf, light_inf, engineer
 	RenderSprites:
-		Image: conyard.ordos
+		Image: conyard.atreides
+	ActorStatValues:
+		Upgrades: upgrade_conyard
+	GivesBuildableArea:
+		AreaTypes: building
+
+construction_yard.harkonnen:
+	Inherits@D2kBLD: construction_yard.ixian
+	Tooltip:
+		Name: Harkonnen Construction Yard
+	Building:
+		Footprint: xxx xxx ===
+		Dimensions: 3,3
+		LocalCenterOffset: 0,-512,0
+		IconPalette: d2kunit
+	Production@Addons:
+		Produces: Addons
+	ProductionBar@Addons:
+		ProductionType: Addons
+	Transforms:
+		IntoActor: d2k_mcv.harkonnen
+		Offset: 1,1
+		Facing: 432
+		RequiresCondition: factundeploy
+	SpawnActorsOnSell:
+		ActorTypes: light_inf, light_inf, engineer
+	RenderSprites:
+		Image: conyard.harkonnen
+	ActorStatValues:
+		Upgrades: upgrade_conyard
+	GivesBuildableArea:
+		AreaTypes: building
+
+construction_yard.corrino:
+	Inherits@D2kBLD: construction_yard.ixian
+	Tooltip:
+		Name: Corrino Construction Yard
+	Building:
+		Footprint: xxx xxx ===
+		Dimensions: 3,3
+		LocalCenterOffset: 0,-512,0
+		IconPalette: d2kunit
+	Production@Addons:
+		Produces: Addons
+	ProductionBar@Addons:
+		ProductionType: Addons
+	Transforms:
+		IntoActor: d2k_mcv.Corrino
+		Offset: 1,1
+		Facing: 432
+		RequiresCondition: factundeploy
+	SpawnActorsOnSell:
+		ActorTypes: light_inf, light_inf, engineer
+	RenderSprites:
+		Image: conyard.corrino
 	ActorStatValues:
 		Upgrades: upgrade_conyard
 	GivesBuildableArea:
@@ -920,7 +1066,7 @@ wind_trap.atreides:
 		BuildPaletteOrder: 10
 		Description: template-power.description
 		IconPalette: d2kunit
-		Prerequisites: ~construction_yard.ixian
+		Prerequisites: ~construction_yard.atreides
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -986,6 +1132,60 @@ wind_trap.ordos:
 		LocalCenterOffset: 0,-512,0
 	RenderSprites:
 		Image: power.ordos
+	Power:
+		Amount: 100
+	ScalePowerWithHealth:
+	ProvidesPrerequisite@buildingname:
+	SpawnActorOnDeath@death1:
+		Actor: light_inf
+	SpawnActorOnDeath@death2:
+		Actor: light_inf
+
+wind_trap.harkonnen:
+	Inherits: wind_trap.atreides
+	Buildable:
+		Queue: Building, RABuilding
+		BuildPaletteOrder: 10
+		Description: template-power.description
+		IconPalette: d2kunit
+		Prerequisites: ~construction_yard.harkonnen
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Wind Trap
+	Building:
+		Footprint: xx xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	RenderSprites:
+		Image: power.harkonnen
+	Power:
+		Amount: 100
+	ScalePowerWithHealth:
+	ProvidesPrerequisite@buildingname:
+	SpawnActorOnDeath@death1:
+		Actor: light_inf
+	SpawnActorOnDeath@death2:
+		Actor: light_inf
+
+wind_trap.corrino:
+	Inherits: wind_trap.atreides
+	Buildable:
+		Queue: Building, RABuilding
+		BuildPaletteOrder: 10
+		Description: template-power.description
+		IconPalette: d2kunit
+		Prerequisites: ~construction_yard.corrino
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Wind Trap
+	Building:
+		Footprint: xx xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	RenderSprites:
+		Image: power.atreides
 	Power:
 		Amount: 100
 	ScalePowerWithHealth:
@@ -1104,12 +1304,13 @@ d2k_barracks.ixian:
 		Produces: Addons
 	ProductionBar@Addons:
 		ProductionType: Addons
+
 d2k_barracks.ordos:
 	Inherits: ^D2KBuilding
 	Inherits@UPGRADEABLE: ^D2kUpgradeable
 	Inherits@D2KSprite: ^D2KPaletteRender
 	Inherits@CPQWP: ^CPQConditionWithPrimary
-	Inherits@barr: ^IsBarrack
+	Inherits@barr: ^IsBarrackOld
 	Inherits@Prereqs: ^D2KPrereqs
 	Inherits@shape: ^2x2Shape
 	Buildable:
@@ -1136,6 +1337,228 @@ d2k_barracks.ordos:
 		Prerequisite: barracks
 	GrantConditionOnPrerequisite@UPGRADEABLE:
 		Prerequisites: upgrade_barracks
+	Production:
+		Produces: Infantry.Ordos
+	ProductionQueue:
+		Type: Infantry.Ordos
+		DisplayOrder: 2
+		Group: Infantry
+		LowPowerModifier: 150
+		ReadyAudio: UnitReady
+		ReadyTextNotification: notification-unit-ready
+		BlockedAudio: NoBuild
+		BlockedTextNotification: notification-unable-to-build-more
+		LimitedAudio: BuildingInProgress
+		LimitedTextNotification: notification-unable-to-comply-building-in-progress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar:
+		ProductionType: Infantry.Ordos
+	ActorStatValues:
+		Upgrades: upgrade_barracks
+	-WithDeathAnimation:
+	SpawnActorOnDeath@death1:
+		Actor: light_inf
+	SpawnActorOnDeath@death2:
+		Actor: light_inf
+	FireProjectilesOnDeath:
+		Weapons: Debris2, Debris3
+		Pieces: 1, 2
+		Range: 1c512, 2c768
+	Production@Addons:
+		Produces: Addons
+	ProductionBar@Addons:
+		ProductionType: Addons
+
+d2k_barracks.atreides:
+	Inherits: ^D2KBuilding
+	Inherits@UPGRADEABLE: ^D2kUpgradeable
+	Inherits@D2KSprite: ^D2KPaletteRender
+	Inherits@CPQWP: ^CPQConditionWithPrimary
+	Inherits@barr: ^IsBarrackOld
+	Inherits@Prereqs: ^D2KPrereqs
+	Inherits@shape: ^2x2Shape
+	Buildable:
+		Prerequisites: ~construction_yard.atreides, wind_trap.atreides
+		IconPalette: d2kunit
+	Tooltip:
+		Name: Atreides Barracks
+	Building:
+		Footprint: xx xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	RallyPoint:
+	Exit@1:
+		SpawnOffset: 352,576,0
+		ExitCell: 0,2
+	Exit@2:
+		SpawnOffset: 512,480,0
+		ExitCell: 1,2
+	RenderSprites:
+		Image: barracks.atreides
+	ProvidesPrerequisite@d2kbarracks:
+		Prerequisite: d2k_barracks
+	ProvidesPrerequisite@barracks:
+		Prerequisite: barracks
+	ProvidesPrerequisite@barracks:
+		Prerequisite: barracks.atreides
+	GrantConditionOnPrerequisite@UPGRADEABLE:
+		Prerequisites: upgrade_barracks
+	Production:
+		Produces: Infantry.Atreides
+	ProductionQueue:
+		Type: Infantry.Atreides
+		DisplayOrder: 2
+		Group: Infantry
+		LowPowerModifier: 150
+		ReadyAudio: UnitReady
+		ReadyTextNotification: notification-unit-ready
+		BlockedAudio: NoBuild
+		BlockedTextNotification: notification-unable-to-build-more
+		LimitedAudio: BuildingInProgress
+		LimitedTextNotification: notification-unable-to-comply-building-in-progress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar:
+		ProductionType: Infantry.Atreides
+	ActorStatValues:
+		Upgrades: upgrade_barracks
+	-WithDeathAnimation:
+	SpawnActorOnDeath@death1:
+		Actor: light_inf
+	SpawnActorOnDeath@death2:
+		Actor: light_inf
+	FireProjectilesOnDeath:
+		Weapons: Debris2, Debris3
+		Pieces: 1, 2
+		Range: 1c512, 2c768
+	Production@Addons:
+		Produces: Addons
+	ProductionBar@Addons:
+		ProductionType: Addons
+
+d2k_barracks.harkonnen:
+	Inherits: ^D2KBuilding
+	Inherits@UPGRADEABLE: ^D2kUpgradeable
+	Inherits@D2KSprite: ^D2KPaletteRender
+	Inherits@CPQWP: ^CPQConditionWithPrimary
+	Inherits@barr: ^IsBarrackOld
+	Inherits@Prereqs: ^D2KPrereqs
+	Inherits@shape: ^2x2Shape
+	Buildable:
+		Prerequisites: ~construction_yard.harkonnen, wind_trap.harkonnen
+		IconPalette: d2kunit
+	Tooltip:
+		Name: Harkonnen Barracks
+	Building:
+		Footprint: xx xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	RallyPoint:
+	Exit@1:
+		SpawnOffset: 352,576,0
+		ExitCell: 0,2
+	Exit@2:
+		SpawnOffset: 512,480,0
+		ExitCell: 1,2
+	RenderSprites:
+		Image: barracks.Harkonnen
+	ProvidesPrerequisite@d2kbarracks:
+		Prerequisite: d2k_barracks
+	ProvidesPrerequisite@barracks:
+		Prerequisite: barracks
+	ProvidesPrerequisite@barracks:
+		Prerequisite: barracks.harkonnen
+	GrantConditionOnPrerequisite@UPGRADEABLE:
+		Prerequisites: upgrade_barracks
+	Production:
+		Produces: Infantry.Harkonnen
+	ProductionQueue:
+		Type: Infantry.Harkonnen
+		DisplayOrder: 2
+		Group: Infantry
+		LowPowerModifier: 150
+		ReadyAudio: UnitReady
+		ReadyTextNotification: notification-unit-ready
+		BlockedAudio: NoBuild
+		BlockedTextNotification: notification-unable-to-build-more
+		LimitedAudio: BuildingInProgress
+		LimitedTextNotification: notification-unable-to-comply-building-in-progress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar:
+		ProductionType: Infantry.Harkonnen
+	ActorStatValues:
+		Upgrades: upgrade_barracks
+	-WithDeathAnimation:
+	SpawnActorOnDeath@death1:
+		Actor: light_inf
+	SpawnActorOnDeath@death2:
+		Actor: light_inf
+	FireProjectilesOnDeath:
+		Weapons: Debris2, Debris3
+		Pieces: 1, 2
+		Range: 1c512, 2c768
+	Production@Addons:
+		Produces: Addons
+	ProductionBar@Addons:
+		ProductionType: Addons
+
+d2k_barracks.corrino:
+	Inherits: ^D2KBuilding
+	Inherits@UPGRADEABLE: ^D2kUpgradeable
+	Inherits@D2KSprite: ^D2KPaletteRender
+	Inherits@CPQWP: ^CPQConditionWithPrimary
+	Inherits@barr: ^IsBarrackOld
+	Inherits@Prereqs: ^D2KPrereqs
+	Inherits@shape: ^2x2Shape
+	Buildable:
+		Prerequisites: ~construction_yard.corrino, wind_trap.corrino
+		IconPalette: d2kunit
+	Tooltip:
+		Name: Corrino Barracks
+	Building:
+		Footprint: xx xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	RallyPoint:
+	Exit@1:
+		SpawnOffset: 352,576,0
+		ExitCell: 0,2
+	Exit@2:
+		SpawnOffset: 512,480,0
+		ExitCell: 1,2
+	RenderSprites:
+		Image: barracks.corrino
+	ProvidesPrerequisite@d2kbarracks:
+		Prerequisite: d2k_barracks
+	ProvidesPrerequisite@barracks:
+		Prerequisite: barracks
+	ProvidesPrerequisite@barracks:
+		Prerequisite: barracks.corrino
+	GrantConditionOnPrerequisite@UPGRADEABLE:
+		Prerequisites: upgrade_barracks
+	Production:
+		Produces: Infantry.Corrino
+	ProductionQueue:
+		Type: Infantry.Corrino
+		DisplayOrder: 2
+		Group: Infantry
+		LowPowerModifier: 150
+		ReadyAudio: UnitReady
+		ReadyTextNotification: notification-unit-ready
+		BlockedAudio: NoBuild
+		BlockedTextNotification: notification-unable-to-build-more
+		LimitedAudio: BuildingInProgress
+		LimitedTextNotification: notification-unable-to-comply-building-in-progress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar:
+		ProductionType: Infantry.Corrino
 	ActorStatValues:
 		Upgrades: upgrade_barracks
 	-WithDeathAnimation:
@@ -1299,7 +1722,7 @@ refinery.atreides:
 	Inherits@ref: ^Refinery
 	Inherits@shape: ^3x3Shape
 	Buildable:
-		Prerequisites: ~construction_yard.ixian, wind_trap.atreides
+		Prerequisites: ~construction_yard.atreides, wind_trap.atreides
 		IconPalette: d2kunit
 	Tooltip:
 		Name: Spice Refinery
@@ -1359,22 +1782,40 @@ refinery.atreides:
 		Actor: light_inf
 	SpawnActorOnDeath@death4:
 		Actor: trooper
+
 refinery.ordos:
 	Inherits: refinery.atreides
 	Buildable:
 		Prerequisites: ~construction_yard.ordos, wind_trap.ordos
 		IconPalette: d2kunit
 	FreeActor:
-		Actor: ordos_harv
+		Actor: harvester
 		SpawnOffset: 2,2
 		Facing: 160
 	FreeActorWithDelivery@1:
-		Actor: ordos_harv
+		Actor: harvester
 		DeliveryOffset: 2,2
-		DeliveringActor: ordos_carryall.reinforce
+		DeliveringActor: carryall.reinforce
 		Facing: 160
 	RenderSprites:
 		Image: refinery.ordos
+
+refinery.harkonnen:
+	Inherits: refinery.atreides
+	Buildable:
+		Prerequisites: ~construction_yard.harkonnen, wind_trap.harkonnen
+		IconPalette: d2kunit
+	FreeActor:
+		Actor: harvester
+		SpawnOffset: 2,2
+		Facing: 160
+	FreeActorWithDelivery@1:
+		Actor: harvester
+		DeliveryOffset: 2,2
+		DeliveringActor: carryall.reinforce
+		Facing: 160
+	RenderSprites:
+		Image: refinery.harkonnen
 
 d2k_silo.atreides:
 	Inherits: ^D2KBuilding
@@ -1382,7 +1823,7 @@ d2k_silo.atreides:
 	Inherits@shape: ^1x1Shape
 	Inherits@storage: ^StoresResources
 	Buildable:
-		Prerequisites: ~construction_yard.ixian, refinery.atreides
+		Prerequisites: ~construction_yard.atreides, refinery.atreides
 		Queue: Defence, RADefence
 		BuildPaletteOrder: 310
 		Description: template-silo.description
@@ -1418,6 +1859,7 @@ d2k_silo.atreides:
 		RequiresSelection: true
 		PipCount: 5
 		FullSequence: pip-yellow
+
 d2k_silo.ordos:
 	Inherits: d2k_silo.atreides
 	Buildable:
@@ -1428,6 +1870,7 @@ d2k_silo.ordos:
 		IconPalette: d2kunit
 	RenderSprites:
 		Image: silo.ordos
+
 d2k_munitions.ixian:
 	Inherits: ^D2KBuilding
 	Inherits@D2KSprite: ^D2KPaletteRender
@@ -1590,7 +2033,7 @@ heavy_factory:
 	Inherits@CPQWP: ^CPQConditionWithPrimary
 	Inherits@Prereqs: ^D2KPrereqs
 	Inherits@shape: ^3x3Shape
-	Inherits@weap: ^IsWeaponFactory
+	Inherits@weap: ^IsWeaponFactoryOld
 	Buildable:
 		Prerequisites: ~wip
 		Description: Produces heavy vehicles.
@@ -1676,7 +2119,7 @@ light_factory:
 	Inherits@CPQWP: ^CPQConditionWithPrimary
 	Inherits@Prereqs: ^D2KPrereqs
 	Inherits@shape: ^3x3Shape
-	Inherits@weap: ^IsWeaponFactory
+	Inherits@weap: ^IsWeaponFactoryOld
 	Buildable:
 		Prerequisites: ~wip
 		Description: Produces heavy vehicles.
@@ -1698,6 +2141,24 @@ light_factory:
 		RequiresCondition: !build-incomplete
 		Queues: Vehicle
 		Sequence: production-welding
+	# Production@NORMAL:
+	# 	Produces: Vehicle.d2k
+  #       RequiresCondition: !classicproductionqueues   
+  #   Production@CLASSICPRODUCTIONQUEUES:
+	# 	Produces: RAVehicle.d2k
+  #       RequiresCondition: classicproductionqueues       
+	# ProductionQueue:
+	# 	Type: Vehicle.d2k
+  #       Group: Vehicle
+  #       ReadyAudio: UnitReady
+  # 		LowPowerModifier: 250      
+	# 	BlockedAudio: NoBuild
+	# 	LimitedAudio: BuildingInProgress
+	# 	QueuedAudio: Building
+	# 	OnHoldAudio: OnHold
+	# ProductionBar@vehicle:
+	# 	ProductionType: Vehicle.d2k
+  #       RequiresCondition: !classicproductionqueues
 	RallyPoint:
 	Exit@1:
 		SpawnOffset: 544,-224,0
@@ -1716,8 +2177,70 @@ light_factory:
 		Condition: upgrade_light
 		Prerequisites: upgrade_light
 	-WithDeathAnimation:
+
+light_factory.atreides:
+	Inherits: light_factory
+	Inherits@weap: ^IsWeaponFactoryOld
+	Tooltip:
+		Name: Atreides Light Factory
+	RenderSprites:
+		Image: light.atreides
+	Buildable:
+		Prerequisites: ~construction_yard.atreides, refinery.atreides
+		Description: template-factory.description
+		IconPalette: player
+	Production:
+		Produces: VehicleLight.Atreides
+	ProductionQueue:
+		Type: VehicleLight.Atreides
+		DisplayOrder: 3
+		Group: Vehicle
+		LowPowerModifier: 150
+		ReadyAudio: UnitReady
+		ReadyTextNotification: notification-unit-ready
+		BlockedAudio: NoBuild
+		BlockedTextNotification: notification-unable-to-build-more
+		LimitedAudio: BuildingInProgress
+		LimitedTextNotification: notification-unable-to-comply-building-in-progress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar:
+		ProductionType: VehicleLight.Atreides
+
+light_factory.harkonnen:
+	Inherits: light_factory
+	Inherits@weap: ^IsWeaponFactoryOld
+	Tooltip:
+		Name: Harkonnen Light Factory
+	RenderSprites:
+		Image: light.harkonnen
+	Buildable:
+		Prerequisites: ~construction_yard.harkonnen, refinery.harkonnen
+		Description: template-factory.description
+		IconPalette: player
+	Production:
+		Produces: VehicleLight.Harkonnen
+	ProductionQueue:
+		Type: VehicleLight.Harkonnen
+		DisplayOrder: 3
+		Group: Vehicle
+		LowPowerModifier: 150
+		ReadyAudio: UnitReady
+		ReadyTextNotification: notification-unit-ready
+		BlockedAudio: NoBuild
+		BlockedTextNotification: notification-unable-to-build-more
+		LimitedAudio: BuildingInProgress
+		LimitedTextNotification: notification-unable-to-comply-building-in-progress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar:
+		ProductionType: VehicleLight.Harkonnen
+
 light_factory.ordos:
 	Inherits: light_factory
+	Inherits@weap: ^IsWeaponFactoryOld
 	Tooltip:
 		Name: Ordos Light Factory
 	RenderSprites:
@@ -1726,6 +2249,24 @@ light_factory.ordos:
 		Prerequisites: ~construction_yard.ordos, refinery.ordos
 		Description: template-factory.description
 		IconPalette: player
+	Production:
+		Produces: VehicleLight.Ordos
+	ProductionQueue:
+		Type: VehicleLight.Ordos
+		DisplayOrder: 3
+		Group: Vehicle
+		LowPowerModifier: 150
+		ReadyAudio: UnitReady
+		ReadyTextNotification: notification-unit-ready
+		BlockedAudio: NoBuild
+		BlockedTextNotification: notification-unable-to-build-more
+		LimitedAudio: BuildingInProgress
+		LimitedTextNotification: notification-unable-to-comply-building-in-progress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar:
+		ProductionType: VehicleLight.Ordos
 
 heavy_factory.ixian:
 	Inherits: heavy_factory
@@ -1762,6 +2303,86 @@ heavy_factory.ordos:
 		IconPalette: player
 	# ParallelProductionQueue@VEHICLE:
 	# 	BuildDurationModifier: 75
+	Production:
+		Produces: VehicleHeavy.Ordos
+	ProductionQueue:
+		Type: VehicleHeavy.Ordos
+		DisplayOrder: 3
+		Group: Vehicle
+		LowPowerModifier: 150
+		ReadyAudio: UnitReady
+		ReadyTextNotification: notification-unit-ready
+		BlockedAudio: NoBuild
+		BlockedTextNotification: notification-unable-to-build-more
+		LimitedAudio: BuildingInProgress
+		LimitedTextNotification: notification-unable-to-comply-building-in-progress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar:
+		ProductionType: VehicleHeavy.Ordos
+
+heavy_factory.atreides:
+	Inherits: heavy_factory
+	Tooltip:
+		Name: Atreides Heavy Factory
+	RenderSprites:
+		Image: heavy.atreides
+	Buildable:
+		Prerequisites: ~construction_yard.atreides, refinery.atreides
+		Description: template-factory.description
+		IconPalette: player
+	# ParallelProductionQueue@VEHICLE:
+	# 	BuildDurationModifier: 75
+	Production:
+		Produces: VehicleHeavy.Atreides
+	ProductionQueue:
+		Type: VehicleHeavy.Atreides
+		DisplayOrder: 3
+		Group: Vehicle
+		LowPowerModifier: 150
+		ReadyAudio: UnitReady
+		ReadyTextNotification: notification-unit-ready
+		BlockedAudio: NoBuild
+		BlockedTextNotification: notification-unable-to-build-more
+		LimitedAudio: BuildingInProgress
+		LimitedTextNotification: notification-unable-to-comply-building-in-progress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar:
+		ProductionType: VehicleHeavy.Atreides
+
+heavy_factory.harkonnen:
+	Inherits: heavy_factory
+	Tooltip:
+		Name: Harkonnen Heavy Factory
+	RenderSprites:
+		Image: heavy.harkonnen
+	Buildable:
+		Prerequisites: ~construction_yard.harkonnen, refinery.harkonnen
+		Description: template-factory.description
+		IconPalette: player
+	# ParallelProductionQueue@VEHICLE:
+	# 	BuildDurationModifier: 75
+	Production:
+		Produces: VehicleHeavy.Harkonnen
+	ProductionQueue:
+		Type: VehicleHeavy.Harkonnen
+		DisplayOrder: 3
+		Group: Vehicle
+		LowPowerModifier: 150
+		ReadyAudio: UnitReady
+		ReadyTextNotification: notification-unit-ready
+		BlockedAudio: NoBuild
+		BlockedTextNotification: notification-unable-to-build-more
+		LimitedAudio: BuildingInProgress
+		LimitedTextNotification: notification-unable-to-comply-building-in-progress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar:
+		ProductionType: VehicleHeavy.Harkonnen
 
 repair_pad.ixian:
 	Inherits: ^D2KBuilding
@@ -1801,6 +2422,7 @@ repair_pad.ixian:
 		Actor: light_inf
 	SpawnActorOnDeath@death2:
 		Actor: light_inf
+
 repair_pad.ordos:
 	Inherits: ^D2KBuilding
 	Inherits@D2KSprite: ^D2KPaletteRender
@@ -1841,6 +2463,89 @@ repair_pad.ordos:
 		Actor: light_inf
 	ProvidesPrerequisite@repair_pad:
 		Prerequisite: repair_pad.ordos
+
+repair_pad.atreides:
+	Inherits: ^D2KBuilding
+	Inherits@D2KSprite: ^D2KPaletteRender
+	Inherits@shape: ^3x3Shape
+	Inherits@repair: ^RepairsUnits
+	Inherits@repair: ^RepairFacility
+	Buildable:
+		Prerequisites: ~construction_yard.atreides, heavy_factory.atreides
+		IconPalette: d2kunit
+	Tooltip:
+		Name: Atreides Repair Pad
+	Building:
+		Footprint: +++ +++ +++
+		Dimensions: 3,3
+	HitShape:
+		Type: Rectangle
+			TopLeft: -1536, -512
+			BottomRight: 1536, 512
+	HitShape@TOPANDBOTTOM:
+		Type: Rectangle
+			TopLeft: -512, -1536
+			BottomRight: 512, 1536
+	Reservable:
+	RallyPoint:
+	RenderSprites:
+		Image: repair_pad.atreides
+	WithRepairOverlay:
+		RequiresCondition: !build-incomplete
+		Palette: effect75alpha
+	-WithDeathAnimation:
+	FireProjectilesOnDeath:
+		Weapons: Debris2, Debris3
+		Pieces: 4, 6
+		Range: 1c512, 2c768
+	SpawnActorOnDeath@death1:
+		Actor: light_inf
+	SpawnActorOnDeath@death2:
+		Actor: light_inf
+	ProvidesPrerequisite@repair_pad:
+		Prerequisite: repair_pad.atreides
+
+repair_pad.harkonnen:
+	Inherits: ^D2KBuilding
+	Inherits@D2KSprite: ^D2KPaletteRender
+	Inherits@shape: ^3x3Shape
+	Inherits@repair: ^RepairsUnits
+	Inherits@repair: ^RepairFacility
+	Buildable:
+		Prerequisites: ~construction_yard.harkonnen, heavy_factory.harkonnen
+		IconPalette: d2kunit
+	Tooltip:
+		Name: Harkonnen Repair Pad
+	Building:
+		Footprint: +++ +++ +++
+		Dimensions: 3,3
+	HitShape:
+		Type: Rectangle
+			TopLeft: -1536, -512
+			BottomRight: 1536, 512
+	HitShape@TOPANDBOTTOM:
+		Type: Rectangle
+			TopLeft: -512, -1536
+			BottomRight: 512, 1536
+	Reservable:
+	RallyPoint:
+	RenderSprites:
+		Image: repair_pad.harkonnen
+	WithRepairOverlay:
+		RequiresCondition: !build-incomplete
+		Palette: effect75alpha
+	-WithDeathAnimation:
+	FireProjectilesOnDeath:
+		Weapons: Debris2, Debris3
+		Pieces: 4, 6
+		Range: 1c512, 2c768
+	SpawnActorOnDeath@death1:
+		Actor: light_inf
+	SpawnActorOnDeath@death2:
+		Actor: light_inf
+	ProvidesPrerequisite@repair_pad:
+		Prerequisite: repair_pad.harkonnen
+
 outpost.ixian:
 	Inherits: ^D2KBuilding
 	Inherits@radar: ^RadarBuilding
@@ -1875,6 +2580,77 @@ outpost.ixian:
 		Actor: light_inf
 	ProvidesPrerequisite@outpost:
 		Prerequisite: outpost.d2k
+
+outpost.atreides:
+	Inherits: ^D2KBuilding
+	Inherits@radar: ^RadarBuilding
+	Inherits@D2KSprite: ^D2KPaletteRender
+	Inherits@shape: ^3x3Shape
+	Buildable:
+		Prerequisites: ~construction_yard.atreides, refinery.atreides
+		IconPalette: d2kunit
+	Tooltip:
+		Name: Atreides Outpost
+	Building:
+		Footprint: xxx xxx xxx
+		Dimensions: 3,3
+		LocalCenterOffset: 0,-512,0
+	RenderSprites:
+		Image: outpost.atreides
+	WithIdleOverlay@DISH:
+		RequiresCondition: !build-incomplete && !severe-damaged
+		Sequence: idle-dish
+		PauseOnCondition: disabled
+		Offset: -30,-60,0
+	GrantConditionOnDamageState@STOPDISH:
+		Condition: severe-damaged
+	-WithDeathAnimation:
+	FireProjectilesOnDeath:
+		Weapons: Debris2, Debris3
+		Pieces: 5, 9
+		Range: 1c512, 2c768
+	SpawnActorOnDeath@death1:
+		Actor: light_inf
+	SpawnActorOnDeath@death2:
+		Actor: light_inf
+	ProvidesPrerequisite@outpost:
+		Prerequisite: outpost.d2k
+
+outpost.harkonnen:
+	Inherits: ^D2KBuilding
+	Inherits@radar: ^RadarBuilding
+	Inherits@D2KSprite: ^D2KPaletteRender
+	Inherits@shape: ^3x3Shape
+	Buildable:
+		Prerequisites: ~construction_yard.harkonnen, refinery.harkonnen
+		IconPalette: d2kunit
+	Tooltip:
+		Name: Harkonnen Outpost
+	Building:
+		Footprint: xxx xxx xxx
+		Dimensions: 3,3
+		LocalCenterOffset: 0,-512,0
+	RenderSprites:
+		Image: outpost.harkonnen
+	WithIdleOverlay@DISH:
+		RequiresCondition: !build-incomplete && !severe-damaged
+		Sequence: idle-dish
+		PauseOnCondition: disabled
+		Offset: -30,-60,0
+	GrantConditionOnDamageState@STOPDISH:
+		Condition: severe-damaged
+	-WithDeathAnimation:
+	FireProjectilesOnDeath:
+		Weapons: Debris2, Debris3
+		Pieces: 5, 9
+		Range: 1c512, 2c768
+	SpawnActorOnDeath@death1:
+		Actor: light_inf
+	SpawnActorOnDeath@death2:
+		Actor: light_inf
+	ProvidesPrerequisite@outpost:
+		Prerequisite: outpost.d2k
+
 outpost.ordos:
 	Inherits: ^D2KBuilding
 	Inherits@radar: ^RadarBuilding
@@ -1940,6 +2716,7 @@ outpost.ordos:
 		SquadSizes:
 			1: 3
 		SquadOffset: 1792,1792,0
+
 ixian_launchpad:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^2x2Shape
@@ -1982,79 +2759,6 @@ ixian_launchpad:
 		Actor: light_inf
 	SpawnActorOnDeath@death4:
 		Actor: trooper
-
-high_tech_factory.ordos:
-	Inherits: high_tech_factory.ixian
-	Buildable:
-		Prerequisites: ~construction_yard.ordos, outpost.ordos
-		Description: actor-high_tech_factory.description
-		IconPalette: d2kunit
-	Building:
-		Footprint: _X_ xxx XXX ===
-		Dimensions: 3,4
-		LocalCenterOffset: 0,-512,0
-	Tooltip:
-		Name: High Tech Factory
-	RallyPoint:
-	RenderSprites:
-		Image: hightech.ordos
-
-research_centre.ixian:
-	Inherits: ^D2KBuilding
-	Inherits@D2KSprite: ^D2KPaletteRender
-	Inherits@CPQ: ^CPQCondition
-	Inherits@shape: ^3x3Shape
-	Inherits@tech: ^IsTechnoBuilding
-	Buildable:
-		Prerequisites: ~construction_yard.ixian, outpost.ixian
-		Description: Ixian Research Center\nUnlocks advanced tanks.
-		IconPalette: d2kunit
-	Tooltip:
-		Name: Ix Research Center
-	Building:
-		Footprint: _X_ xxx XXX ===
-		Dimensions: 3,4
-		LocalCenterOffset: 0,-512,0
-	HitShape:
-		TargetableOffsets: -1574,-158,0, -1050,-1024,0, -1155,960,0
-		Type: Rectangle
-			TopLeft: -1536, -512
-			BottomRight: 1536, 1536
-	HitShape@TOP:
-		TargetableOffsets: 1312,0,0
-		Type: Rectangle
-			TopLeft: -512, -1536
-			BottomRight: 512, -512
-	RenderSprites:
-		Image: research.gold
-	WithIdleOverlay@LIGHTS:
-		RequiresCondition: !build-incomplete
-		Sequence: idle-lights
-	ProvidesPrerequisite@research_centre:
-		Prerequisite: research_centre
-	-WithDeathAnimation:
-	FireProjectilesOnDeath:
-		Weapons: Debris2, Debris3
-		Pieces: 8, 12
-		Range: 1c512, 2c768
-	SpawnActorOnDeath@death1:
-		Actor: light_inf
-	SpawnActorOnDeath@death2:
-		Actor: light_inf
-	SpawnActorOnDeath@death3:
-		Actor: light_inf
-	SpawnActorOnDeath@death4:
-		Actor: trooper
-research_centre.ordos:
-	Inherits: research_centre.ixian
-	Buildable:
-		Prerequisites: ~construction_yard.ordos, outpost.ordos
-		Description: Ixian Research Center\nUnlocks advanced tanks.
-		IconPalette: d2kunit
-	Tooltip:
-		Name: Ix Research Center
-	RenderSprites:
-		Image: research.ordos
 
 high_tech_factory.ixian:
 	Inherits: ^D2KBuilding
@@ -2137,6 +2841,274 @@ high_tech_factory.ixian:
 		Produces: Addons
 	ProductionBar@Addons:
 		ProductionType: Addons
+
+high_tech_factory.ordos:
+	Inherits: high_tech_factory.ixian
+	Buildable:
+		Prerequisites: ~construction_yard.ordos, outpost.ordos
+		Description: actor-high_tech_factory.description
+		IconPalette: d2kunit
+	Building:
+		Footprint: _X_ xxx XXX ===
+		Dimensions: 3,4
+		LocalCenterOffset: 0,-512,0
+	Tooltip:
+		Name: Ordos High Tech Factory
+	RallyPoint:
+	RenderSprites:
+		Image: hightech.ordos
+
+high_tech_factory.harkonnen:
+	Inherits: high_tech_factory.ixian
+	Buildable:
+		Prerequisites: ~construction_yard.harkonnen, outpost.harkonnen
+		Description: actor-high_tech_factory.description
+		IconPalette: d2kunit
+	Building:
+		Footprint: _X_ xxx XXX ===
+		Dimensions: 3,4
+		LocalCenterOffset: 0,-512,0
+	Tooltip:
+		Name: Harkonnen High Tech Factory
+	Production:
+		Produces: Aircraft.Harkonnen
+	ProductionQueue:
+		Type: Aircraft.Harkonnen
+		DisplayOrder: 3
+		Group: Aircraft
+		LowPowerModifier: 150
+		ReadyAudio: UnitReady
+		ReadyTextNotification: notification-unit-ready
+		BlockedAudio: NoBuild
+		BlockedTextNotification: notification-unable-to-build-more
+		LimitedAudio: BuildingInProgress
+		LimitedTextNotification: notification-unable-to-comply-building-in-progress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar:
+		ProductionType: Aircraft.Harkonnen
+	RallyPoint:
+	RenderSprites:
+		Image: hightech.harkonnen
+
+high_tech_factory.atreides:
+	Inherits: ^D2KBuilding
+	Inherits@UPGRADEABLE: ^D2kUpgradeable
+	Inherits@D2KSprite: ^D2KPaletteRender
+	Inherits@CPQWP: ^CPQConditionWithPrimary
+	Inherits@shape: ^3x3Shape
+	Inherits@hpad: ^IsAircraftFactoryOld
+	Buildable:
+		Prerequisites: ~construction_yard.atreides, outpost.atreides
+		Description: actor-high_tech_factory.description
+		IconPalette: d2kunit
+	Building:
+		BuildPaletteOrder: 160
+		Footprint: _X_ xxx XXX ===
+		Dimensions: 3,4
+		LocalCenterOffset: 0,-512,0
+	Tooltip:
+		Name: Atreides High Tech Factory
+	ProductionCostMultiplier@dune:
+		Multiplier: 150
+	ProductionTimeMultiplier@dune:
+		Multiplier: 150
+	Armor:
+		Type: Concrete
+	Exit:
+		SpawnOffset: 0,0,728
+		ExitCell: 0,0
+	HitShape:
+		TargetableOffsets: -1312,0,0, -1312,-1024,0, -1312,1024,0
+		Type: Rectangle
+			TopLeft: -1536, -512
+			BottomRight: 1536, 1536
+	HitShape@TOP:
+		TargetableOffsets: 1280,0,0
+		Type: Rectangle
+			TopLeft: -512, -1536
+			BottomRight: 512, -512
+	RallyPoint:
+	RenderSprites:
+		Image: hightech.atreides
+	WithProductionOverlay@WELDING:
+		RequiresCondition: !build-incomplete
+		Queues: Aircraft
+		Sequence: production-welding
+	ProvidesPrerequisite@upgrade3:
+		Prerequisite: hightech.harkonnen
+		Factions: harkonnen, corrino, guild
+	ProvidesPrerequisite@upgrade:
+		Prerequisite: hightech.atreides
+		Factions: atreides, ixian, fremen
+	ProvidesPrerequisite@upgrade2:
+		Prerequisite: hightech.ordos
+		Factions: ordos, mercenary, smugglers, tleilaxu
+	ProvidesPrerequisite@buildingname:
+	ProvidesPrerequisite@high_tech_factory:
+		Prerequisite: high_tech_factory
+	GrantConditionOnPrerequisite@UPGRADEABLE:
+		Prerequisites: upgrade_hightech
+	AirstrikePower@orni1:
+		PauseOnCondition: disabled
+		Prerequisites:
+			1: high_tech_factory
+		Icons:
+			1: ornistrike
+		IconPalette: d2kunit
+		ChargeInterval: 4500
+		UnitTypes:
+			1: ornithopter
+		SquadSizes:
+			1: 3
+		QuantizedFacings: 32
+		Names:
+			1: Ornithopters
+		Descriptions:
+			1: Ornithopters hit the target with bombs and heavy machine guns
+		SelectTargetSpeechNotification: SelectTarget
+		InsufficientPowerSpeechNotification: InsufficientPower
+		IncomingSpeechNotification: EnemyPlanesApproaching
+		DisplayBeacon: True
+		AllowMultiple: True
+		BeaconPosters:
+			1: airstrike
+		BeaconPosterPalette: beaconposter
+		DisplayRadarPing: True
+		CameraActor: camera
+		CameraRemoveDelay: 150
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+		DisplayTimerRelationships: Ally, Neutral, Enemy
+		#UseDirectionalTarget: True
+		DirectionArrowAnimation: airstrikedirection
+		Strikes: 3
+		CircleDelay: 25
+		OrderName: ornistrike
+		SupportPowerPaletteOrder: 20
+		SupportPowerChargeBar:
+	Production:
+		Produces: Aircraft.Atreides
+	ProductionQueue:
+		Type: Aircraft.Atreides
+		DisplayOrder: 3
+		Group: Aircraft
+		LowPowerModifier: 150
+		ReadyAudio: UnitReady
+		ReadyTextNotification: notification-unit-ready
+		BlockedAudio: NoBuild
+		BlockedTextNotification: notification-unable-to-build-more
+		LimitedAudio: BuildingInProgress
+		LimitedTextNotification: notification-unable-to-comply-building-in-progress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar:
+		ProductionType: Aircraft.Atreides
+	DamageMultiplier@upgrade_hightech:
+		RequiresCondition: upgrade_hightech
+		Modifier: 75
+	ActorStatValues:
+		Upgrades: upgrade_hightech
+	-WithDeathAnimation:
+	FireProjectilesOnDeath:
+		Weapons: Debris2, Debris3
+		Pieces: 7, 10
+		Range: 1c512, 2c768
+	SpawnActorOnDeath@death1:
+		Actor: light_inf
+	SpawnActorOnDeath@death2:
+		Actor: light_inf
+	SpawnActorOnDeath@death3:
+		Actor: light_inf
+	SpawnActorOnDeath@death4:
+		Actor: trooper
+	Production@Addons:
+		Produces: Addons
+	ProductionBar@Addons:
+		ProductionType: Addons
+
+research_centre.ixian:
+	Inherits: ^D2KBuilding
+	Inherits@D2KSprite: ^D2KPaletteRender
+	Inherits@CPQ: ^CPQCondition
+	Inherits@shape: ^3x3Shape
+	Inherits@tech: ^IsTechnoBuilding
+	Buildable:
+		Prerequisites: ~construction_yard.ixian, outpost.ixian
+		Description: Ixian Research Center\nUnlocks advanced tanks.
+		IconPalette: d2kunit
+	Tooltip:
+		Name: Ix Research Center
+	Building:
+		Footprint: _X_ xxx XXX ===
+		Dimensions: 3,4
+		LocalCenterOffset: 0,-512,0
+	HitShape:
+		TargetableOffsets: -1574,-158,0, -1050,-1024,0, -1155,960,0
+		Type: Rectangle
+			TopLeft: -1536, -512
+			BottomRight: 1536, 1536
+	HitShape@TOP:
+		TargetableOffsets: 1312,0,0
+		Type: Rectangle
+			TopLeft: -512, -1536
+			BottomRight: 512, -512
+	RenderSprites:
+		Image: research.gold
+	WithIdleOverlay@LIGHTS:
+		RequiresCondition: !build-incomplete
+		Sequence: idle-lights
+	ProvidesPrerequisite@research_centre:
+		Prerequisite: research_centre
+	-WithDeathAnimation:
+	FireProjectilesOnDeath:
+		Weapons: Debris2, Debris3
+		Pieces: 8, 12
+		Range: 1c512, 2c768
+	SpawnActorOnDeath@death1:
+		Actor: light_inf
+	SpawnActorOnDeath@death2:
+		Actor: light_inf
+	SpawnActorOnDeath@death3:
+		Actor: light_inf
+	SpawnActorOnDeath@death4:
+		Actor: trooper
+
+research_centre.ordos:
+	Inherits: research_centre.ixian
+	Buildable:
+		Prerequisites: ~construction_yard.ordos, outpost.ordos
+		Description: Ixian Research Center\nUnlocks advanced tanks.
+		IconPalette: d2kunit
+	Tooltip:
+		Name: Ix Research Center
+	RenderSprites:
+		Image: research.ordos
+
+research_centre.atreides:
+	Inherits: research_centre.ixian
+	Buildable:
+		Prerequisites: ~construction_yard.atreides, outpost.atreides
+		Description: Ixian Research Center\nUnlocks advanced tanks.
+		IconPalette: d2kunit
+	Tooltip:
+		Name: Ix Research Center
+	RenderSprites:
+		Image: research.atreides
+
+research_centre.harkonnen:
+	Inherits: research_centre.ixian
+	Buildable:
+		Prerequisites: ~construction_yard.harkonnen, outpost.harkonnen
+		Description: Ixian Research Center\nUnlocks advanced tanks.
+		IconPalette: d2kunit
+	Tooltip:
+		Name: Ix Research Center
+	RenderSprites:
+		Image: research.harkonnen
 
 starport.ixian:
 	Inherits: ^D2KBuilding
@@ -2255,6 +3227,48 @@ starport.ordos:
 		IconPalette: d2kunit
 	RenderSprites:
 		Image: starport.ordos
+
+starport.atreides:
+	Inherits: starport.ixian
+	Buildable:
+		Queue: Building, RABuilding
+		BuildLimit: 1
+		BuildPaletteOrder: 150
+		BuildDuration: 1500
+		BuildDurationModifier: 100
+		Prerequisites: ~construction_yard.atreides, research_centre.atreidies, derricklimit
+		Description: Dropzone for quick reinforcements, and passive income.
+		IconPalette: d2kunit
+	RenderSprites:
+		Image: starport.atreides
+
+starport.harkonnen:
+	Inherits: starport.ixian
+	Buildable:
+		Queue: Building, RABuilding
+		BuildLimit: 1
+		BuildPaletteOrder: 150
+		BuildDuration: 1500
+		BuildDurationModifier: 100
+		Prerequisites: ~construction_yard.harkonnen, research_centre.harkonnen, derricklimit
+		Description: Dropzone for quick reinforcements, and passive income.
+		IconPalette: d2kunit
+	RenderSprites:
+		Image: starport.harkonnen
+
+starport.corrino:
+	Inherits: starport.ixian
+	Buildable:
+		Queue: Building, RABuilding
+		BuildLimit: 1
+		BuildPaletteOrder: 150
+		BuildDuration: 1500
+		BuildDurationModifier: 100
+		Prerequisites: ~construction_yard.corrino, derricklimit
+		Description: Dropzone for quick reinforcements, and passive income.
+		IconPalette: d2kunit
+	RenderSprites:
+		Image: starport.corrino
 
 storm_lasher_big:
 	Inherits: ^D2KBuilding
@@ -2440,8 +3454,6 @@ machine_gun_turret:
 	Inherits@D2KSprite: ^D2KPaletteRender
 	Inherits@AntiInf: ^PrioritizeInfantry
 	Inherits@shape: ^1x1Shape
-	Inherits@NeedleGuns: ^D2K_NeedleGuns
-	Inherits@Armor: ^D2K_GeneralPurposeArmor
 	Buildable:
 		Queue: Defence, RADefence
 		Prerequisites: ~construction_yard.ixian, d2k_barracks.ixian
@@ -2513,8 +3525,7 @@ medium_gun_turret:
 	Inherits@D2KSprite: ^D2KPaletteRender
 	Inherits@AntiVeh: ^PrioritizeVehicle
 	Inherits@shape: ^1x1Shape
-	Inherits@Armor: ^D2K_GeneralPurposeArmor
-	Inherits@Barrel: ^D2K_ReinforcedBarrel
+		
 	Buildable:
 		Queue: Defence, RADefence
 		Prerequisites: ~construction_yard.ixian, d2k_barracks.ixian
@@ -2681,9 +3692,8 @@ large_gun_turret:
 	Inherits@AntiAir: ^PrioritizeAir
 	Inherits@shape: ^1x1Shape
 	Inherits@EMP: ^TurretEMP
-	Inherits@HeavyMissiles: ^D2K_HeavyMissilesUpgrade
-	Inherits@Armor: ^D2K_GeneralPurposeArmor
-	Buildable:
+	
+		Buildable:
 		Queue: Defence, RADefence
 		Prerequisites: ~construction_yard.ixian, outpost.ixian
 		BuildPaletteOrder: 610
@@ -3189,6 +4199,216 @@ palace.ordos:
 	Production@Saboteurs:
 		Produces: Saboteurs
 
+palace.atreides:
+	Inherits: ^D2KBuilding
+	Inherits@D2KSprite: ^D2KPaletteRender
+	Inherits@CPQ: ^CPQCondition
+	Inherits@shape: ^3x3Shape
+	Inherits@SW: ^PrimarySuperweapon
+	Buildable:
+		Prerequisites: ~construction_yard.atreides, research_centre.atreides
+		Description: This structure unlocks support powers.
+		IconPalette: d2kunit
+	Tooltip:
+		Name: Palace
+	Building:
+		Footprint: xxx xxx XXX
+		Dimensions: 3,3
+		LocalCenterOffset: 0,-512,0
+	HitShape:
+		TargetableOffsets: -1574,-158,0, -1050,-1024,0, -1155,960,0
+		Type: Rectangle
+			TopLeft: -1536, -512
+			BottomRight: 1536, 1536
+	HitShape@TOP:
+		TargetableOffsets: 1312,0,0
+		Type: Rectangle
+			TopLeft: -512, -1536
+			BottomRight: 512, -512
+	RenderSprites:
+		Image: palace.atreides
+	ProvidesPrerequisite@palace:
+		Prerequisite: palace
+	-WithDeathAnimation:
+	FireProjectilesOnDeath:
+		Weapons: Debris2, Debris3
+		Pieces: 8, 12
+		Range: 1c512, 2c768
+	SpawnActorOnDeath@death1:
+		Actor: light_inf
+	SpawnActorOnDeath@death2:
+		Actor: light_inf
+	SpawnActorOnDeath@death3:
+		Actor: light_inf
+	SpawnActorOnDeath@death4:
+		Actor: trooper
+	ProvidesPrerequisite@swlimit:
+		Prerequisite: apalace
+	AirstrikePower@orni2:
+		PauseOnCondition: disabled
+		Prerequisites:
+			1: high_tech_factory
+		Icons:
+			1: ornistrike
+		IconPalette: d2kunit
+		ChargeInterval: 4500
+		UnitTypes:
+			1: ornithopter
+		SquadSizes:
+			1: 3
+		QuantizedFacings: 32
+		Names:
+			1: Ornithopters
+		Descriptions:
+			1: Ornithopters hit the target with bombs and heavy machine guns
+		SelectTargetSpeechNotification: SelectTarget
+		InsufficientPowerSpeechNotification: InsufficientPower
+		IncomingSpeechNotification: EnemyPlanesApproaching
+		DisplayBeacon: True
+		AllowMultiple: True
+		BeaconPosters:
+			1: airstrike
+		BeaconPosterPalette: beaconposter
+		DisplayRadarPing: True
+		CameraActor: camera
+		CameraRemoveDelay: 150
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+		DisplayTimerRelationships: Ally, Neutral, Enemy
+		#UseDirectionalTarget: True
+		DirectionArrowAnimation: airstrikedirection
+		Strikes: 3
+		CircleDelay: 25
+		OrderName: ornistrike
+		SupportPowerPaletteOrder: 20
+		SupportPowerChargeBar:
+	Exit@1:
+		SpawnOffset: -704,768,0
+		ExitCell: -1,2
+	Exit@2:
+		SpawnOffset: -704,768,0
+		ExitCell: -1,3
+	Exit@3:
+		SpawnOffset: -704,768,0
+		ExitCell: 0,3
+	ProduceActorPower@fremen:
+		Names:
+			1: Enlist Fremen
+		Descriptions:
+			1: Produces fremen bands
+		Icons:
+			1: icon
+		IconImage: fremen
+		AllowMultiple: True
+		PauseOnCondition: disabled
+		Prerequisites: palace
+			1: palace
+		Actors: fremen, fremen, fremen, fremen
+		Type: fremen
+		ChargeInterval: 1500
+		AutoFire: true
+		OrderName: fremen
+		SupportPowerPaletteOrder: 20
+		RequiresCondition: palace_fremen
+	GrantConditionOnPrerequisite@fremen:
+		Condition: palace_fremen
+		Prerequisites: palace
+	Production@fremen:
+		Produces: fremen
+
+palace.harkonnen:
+	Inherits: ^D2KBuilding
+	Inherits@D2KSprite: ^D2KPaletteRender
+	Inherits@CPQ: ^CPQCondition
+	Inherits@shape: ^3x3Shape
+	Inherits@SW: ^PrimarySuperweapon
+	Buildable:
+		Prerequisites: ~construction_yard.harkonnen, research_centre.harkonnen
+		Description: This structure unlocks the death hand.
+		IconPalette: d2kunit
+	Tooltip:
+		Name: Palace
+	Building:
+		Footprint: xxx xxx XXX
+		Dimensions: 3,3
+		LocalCenterOffset: 0,-512,0
+	HitShape:
+		TargetableOffsets: -1574,-158,0, -1050,-1024,0, -1155,960,0
+		Type: Rectangle
+			TopLeft: -1536, -512
+			BottomRight: 1536, 1536
+	HitShape@TOP:
+		TargetableOffsets: 1312,0,0
+		Type: Rectangle
+			TopLeft: -512, -1536
+			BottomRight: 512, -512
+	RenderSprites:
+		Image: palace.harkonnen
+	ProvidesPrerequisite@palace:
+		Prerequisite: palace
+	-WithDeathAnimation:
+	FireProjectilesOnDeath:
+		Weapons: Debris2, Debris3
+		Pieces: 8, 12
+		Range: 1c512, 2c768
+	SpawnActorOnDeath@death1:
+		Actor: light_inf
+	SpawnActorOnDeath@death2:
+		Actor: light_inf
+	SpawnActorOnDeath@death3:
+		Actor: light_inf
+	SpawnActorOnDeath@death4:
+		Actor: trooper
+	ProvidesPrerequisite@swlimit:
+		Prerequisite: apalace
+	NukePowerCA:
+		Cursor: nuke
+		Icon: deathhand
+		IconPalette: d2kunit
+		PauseOnCondition: disabled
+		Prerequisites:
+			1: ~techlevel.superweapons
+		Icons:
+			1: deathhand
+		Names:
+			1: Death Hand
+		Descriptions:
+			1: Launches a death hand missile at a target location
+		MissileWeapons:
+			1: deathhand
+		BeaconPosters:
+			1: atomic
+		CircleRanges:
+			1: 10000
+		ChargeInterval: 4500
+		SelectTargetSpeechNotification: SelectTarget
+		BeginChargeSpeechNotification: DeathHandCharging
+		InsufficientPowerSpeechNotification: InsufficientPower
+		EndChargeSpeechNotification: DeathHandAvailable
+		LaunchSpeechNotification: NuclearWeaponLaunched
+		IncomingSpeechNotification: NuclearWarheadApproaching
+		MissileDelay: 5
+		MissilePalette: d2kunit
+		TrailPalette: d2kunit
+		SpawnOffset: 32,816,0
+		DetonationAltitude: 3c0
+		RemoveMissileOnDetonation: False
+		AllowMultiple: True
+		DisplayBeacon: True
+		DisplayRadarPing: True
+		DisplayTimerRelationships: Ally, Neutral, Enemy
+		CameraRange: 10000
+		ArrowSequence: arrow
+		CircleSequence: circles
+		FlightVelocity: 384
+		TrailInterval: 0
+		TrailImage: large_trail
+		TrailSequences: idle
+		SupportPowerPaletteOrder: 40
+		OrderName: deathhand
+		MissileImage: deathhand
+
 # palace_emperor:
 # 	Inherits: ^D2KBuilding
 # 	Inherits@IDISABLE: ^D2KDisableOnLowPowerOrPowerDown
@@ -3508,6 +4728,7 @@ palace.ordos:
 # 	Production@Atreides:
 # 		-RequiresCondition:
 # 	-Production@Ordos:
+
 # emperor_h_palace:
 # 	Inherits: palace
 # 	Buildable:
@@ -3604,9 +4825,6 @@ light_inf:
 	Inherits@DECORATIONS: ^InfantryExperienceHospitalHazmatOverrides
 	Inherits@anim: ^D2KPaletteRenderInfantry
 	Inherits@AntiInf: ^PrioritizeInfantry
-	Inherits@Armor: ^D2K_GeneralPurposeArmor
-	Inherits@NeedleGuns: ^D2K_NeedleGuns
-	Inherits@IxianTechnology: ^D2K_AdvancedIxianTechnology
 	Valued:
 		Cost: 150
 	Tooltip:
@@ -3615,10 +4833,10 @@ light_inf:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 10
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Atreides
 		Description: template-scout-infantry.description
 		IconPalette: d2kunit
-		Prerequisites: ~d2k_barracks
+		Prerequisites: barracks.atreides
 	Mobile:
 		Speed: 52
 	Health:
@@ -3649,8 +4867,59 @@ light_inf:
 		IdleSequences: idle1,idle2,idle3,idle4
 		DefaultAttackSequence: shoot
 	Parachutable:
-	ActorStatValues:
-		Upgrades: d2k_personal_shield, d2k_needle_guns, d2k_general_purpose_armor, d2k_advanced_ixian_technology
+
+light_inf.harkonnen:
+	Inherits: ^D2KInfantry
+	Inherits@Template: ^ScoutInfantryTemplate
+	Inherits@exp: ^GainsExperienceRA
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	Inherits@DECORATIONS: ^InfantryExperienceHospitalHazmatOverrides
+	Inherits@anim: ^D2KPaletteRenderInfantry
+	Inherits@AntiInf: ^PrioritizeInfantry
+	Valued:
+		Cost: 150
+	Tooltip:
+		Name: Light Infantry
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Buildable:
+		BuildPaletteOrder: 10
+		Queue: Infantry.Harkonnen
+		Description: template-scout-infantry.description
+		IconPalette: d2kunit
+		Prerequisites: barracks.harkonnen
+	Mobile:
+		Speed: 52
+	Health:
+		HP: 18000
+	ChangesHealth@SelfHealing:
+		Step: 18
+	Armament@PRIMARY: ##########
+		Weapon: LMG
+		LocalOffset: 128,0,256
+		RequiresCondition: !d2k_needle_guns
+	Armament@Upgrade: ##########
+		Weapon: LMG_upgrade
+		LocalOffset: 128,0,256
+		RequiresCondition: d2k_needle_guns
+	Armament@GARRISONED: ##########
+		Name: garrisoned
+		Weapon: LMG
+		MuzzleSequence: garrison-muzzle
+		MuzzlePalette: d2keffect
+		RequiresCondition: !d2k_needle_guns
+	Armament@UpgradeGARRISONED: ##########
+		Name: garrisoned
+		Weapon: LMG_upgrade
+		MuzzleSequence: garrison-muzzle
+		MuzzlePalette: d2keffect
+		RequiresCondition: d2k_needle_guns
+	WithInfantryBody:
+		IdleSequences: idle1,idle2,idle3,idle4
+		DefaultAttackSequence: shoot
+	Parachutable:
+	RenderSprites:
+		Image: light_inf
 
 engineer:
 	Inherits: E6
@@ -3658,6 +4927,7 @@ engineer:
 	Inherits@personalshield: ^D2KPersonalShield
 	Inherits@anim: ^D2KPaletteRenderInfantry
 	Buildable:
+		Queues: Infantry.Atreides, Infantry.Ordos, Infantry.Harkonnen
 		Prerequisites: ~d2k_barracks
 		IconPalette: d2kunit
 	RenderSprites:
@@ -3727,13 +4997,10 @@ trooper:
 	Inherits@anim: ^D2KPaletteRenderInfantry
 	Inherits@EXPERIENCE: ^GainsExperience
 	Inherits@AntiVeh: ^PrioritizeVehicle
-	Inherits@Armor: ^D2K_GeneralPurposeArmor
-	Inherits@HeavyMissiles: ^D2K_HeavyMissilesUpgrade
-	Inherits@IxianTechnology: ^D2K_AdvancedIxianTechnology
 	Buildable:
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Atreides
 		BuildPaletteOrder: 20
-		Prerequisites: ~d2k_barracks, ~!upordos_ordos_aatrooper
+		Prerequisites: barracks.atreides
 		BuildDuration: 80
 		BuildDurationModifier: 100
 		Description: template-antitank-antiair-infantry.description
@@ -3777,8 +5044,6 @@ shock_infantry:
 	Inherits@DECORATIONS: ^InfantryExperienceHospitalHazmatOverrides
 	Inherits@anim: ^D2KPaletteRenderInfantry
 	Inherits@AntiVeh: ^PrioritizeVehicle
-	Inherits@Armor: ^D2K_GeneralPurposeArmor
-	Inherits@IxianTechnology: ^D2K_AdvancedIxianTechnology
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -3820,6 +5085,53 @@ shock_infantry:
 	ActorStatValues:
 		Upgrades: d2k_personal_shield, d2k_general_purpose_armor, d2k_advanced_ixian_technology
 
+heavy_trooper:
+	Inherits: ^D2KInfantry
+	Inherits@Template: ^HeavyInfantryTemplate
+	Inherits@exp: ^GainsExperienceRA
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@DECORATIONS: ^InfantryExperienceHospitalHazmatOverrides
+	Inherits@anim: ^D2KPaletteRenderInfantry
+	Inherits@AntiVeh: ^PrioritizeVehicle
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Heavy Trooper
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Buildable:
+		BuildPaletteOrder: 10
+		Queue: Infantry.Harkonnen
+		Description: actor-shock_infantry.description
+		IconPalette: d2kunit
+		Prerequisites: barracks
+	Mobile:
+		Speed: 45
+	Health:
+		HP: 39000
+	ChangesHealth@SelfHealing:
+		Step: 36
+	Armament@PRIMARY: ##########
+		Weapon: autogun_tank
+		LocalOffset: 135,0,200
+	Armament@SECONDARY: ##########
+		Weapon: D2K_Rocket_Trooper
+		LocalOffset: 135,0,200
+	Armament@Garrison: ##########
+		Name: garrisoned
+		Weapon: autogun_tank
+		MuzzleSequence: garrison-muzzle
+		MuzzlePalette: d2keffect
+	WithInfantryBody:
+		-IdleSequences: idle1,idle2
+		DefaultAttackSequence: shoot
+	Parachutable:
+	Voiced:
+		VoiceSet: D2KDevastator
+	RenderSprites:
+		Image: shockgunner
+		PlayerPalette: player
+
 chem_troop:
 	Inherits: light_inf
 	Inherits@Chemical: ^D2K_BiologicalWarfare
@@ -3831,9 +5143,9 @@ chem_troop:
 		Name: Chemical Trooper
 	Buildable:
 		BuildPaletteOrder: 10
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Ordos
 		Description: General-purpose infantry equipped with chemical weapon.\nCannot attack buildings\n  Strong vs Infantry\n  Weak vs Vehicles
-		Prerequisites: ~d2k_barracks.ordos, ~upordos_chem_troop
+		Prerequisites: barracks
 		IconPalette: player
 		BuildDuration: 80
 		BuildDurationModifier: 100
@@ -3874,8 +5186,8 @@ ordos_aatrooper:
 		Name: Anti Air trooper
 	Buildable:
 		BuildPaletteOrder: 20
-		Prerequisites: ~d2k_barracks.ordos, ~upordos_ordos_aatrooper
-		Queue: Infantry, RAInfantry
+		Prerequisites: barracks
+		Queue: Infantry.Ordos
 		Description: template-antitank-antiair-infantry.description
 	Mobile:
 		Speed: 48
@@ -3901,6 +5213,7 @@ ordos_aatrooper:
 		Payload: 125
 	RenderSprites:
 		PlayerPalette: player_rgba
+
 ordos_mortar:
 	Inherits: ^Soldier
 	Inherits@Template: ^MortarInfantryTemplate
@@ -3916,7 +5229,7 @@ ordos_mortar:
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: ~d2k_barracks.ordos, outpost.ordos
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Ordos
 		Description: template-antitank-antiair-infantry.description
 	Mobile:
 		Speed: 48
@@ -3991,59 +5304,59 @@ ordos_mortar:
 # 	Voiced:
 # 		VoiceSet: D2KThumper
 
-# fremen:
-# 	Inherits: ^D2KInfantry
-# 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
-# 	Inherits@anim: ^D2KPaletteRenderInfantry
-# 	Inherits@EXPERIENCE: ^GainsExperience
-# 	Inherits@EXT: ^ExternalConditions
-# 	Inherits@bot: ^BotMicromanageable
-# 	Inherits@AntiBuil: ^PrioritizeBuilding
-# 	Tooltip:
-# 		Name: Desert Phantom
-# 	UpdatesPlayerStatistics:
-# 		AddToArmyValue: true
-# 	Buildable:
-# 		Queue: Infantry, RAInfantry
-# 		BuildPaletteOrder: 80
-# 		Prerequisites: ~barracks.atreides, upgrade_barracks, high_tech_factory, ~techlevel.medium, ~du_fremen
-# 		Icon: phantomicon
-# 		IconPalette: windows256
-# 		Description: Fast Elite infantry units armed with assault rifles and machine guns. When grouped, they can take down buildings extremely quickly\nDetector\n  Strong vs Buildings\n  Weak vs Infantry, Vehicles\n  Special Ability: Invisibility
-# 		BuildDuration: 300
-# 		BuildDurationModifier: 100
-# 	Mobile:
-# 		Speed: 68
-# 	Valued:
-# 		Cost: 400
-# 	Health:
-# 		HP: 15000
-# 	RevealsShroud:
-# 		Range: 5c256
-# 	Armament@PRIMARY:
-# 		Weapon: Fremen_S
-# 	Armament@SECONDARY:
-# 		Weapon: Fremen_L
-# 	WithInfantryBody:
-# 		DefaultAttackSequence: shoot
-# 	Cloak:
-# 		InitialDelay: 80
-# 		CloakDelay: 40
-# 		UncloakOn: Attack, Unload, Demolish, Dock, Damage, Heal
-# 		IsPlayerPalette: true
-# 		PauseOnCondition: cloak-force-disabled || base-reveal
-# 		Palette: d2kcloak
-# 		CloakedCondition: cloaked
-# 	GrantConditionOnDamageState@UNCLOAK:
-# 		Condition: cloak-force-disabled
-# 		ValidDamageStates: Critical
-# 	-MustBeDestroyed:
-# 	Voiced:
-# 		VoiceSet: D2KFremenVoice
-# 	DetectCloaked:
-# 		Range: 3c256
-# 	Passenger:
-# 		CargoType: Fremen
+fremen:
+	Inherits: ^D2KInfantry
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@anim: ^D2KPaletteRenderInfantry
+	Inherits@EXPERIENCE: ^GainsExperience
+	Inherits@EXT: ^ExternalConditions
+	Inherits@bot: ^BotMicromanageable
+	Inherits@AntiBuil: ^PrioritizeBuilding
+	Tooltip:
+		Name: Fremen
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Buildable:
+		Queue: Infantry.Atreides
+		BuildPaletteOrder: 80
+		Prerequisites: ~barracks.atreides, upgrade_barracks, high_tech_factory, ~techlevel.medium
+		Icon: phantomicon
+		IconPalette: windows256
+		Description: Fast Elite infantry units armed with assault rifles and machine guns. When grouped, they can take down buildings extremely quickly\nDetector\n  Strong vs Buildings\n  Weak vs Infantry, Vehicles\n  Special Ability: Invisibility
+		BuildDuration: 300
+		BuildDurationModifier: 100
+	Mobile:
+		Speed: 68
+	Valued:
+		Cost: 400
+	Health:
+		HP: 15000
+	RevealsShroud:
+		Range: 5c256
+	Armament@PRIMARY:
+		Weapon: Fremen_S
+	Armament@SECONDARY:
+		Weapon: Fremen_L
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+	Cloak:
+		InitialDelay: 80
+		CloakDelay: 40
+		UncloakOn: Attack, Unload, Demolish, Dock, Damage, Heal
+		IsPlayerPalette: true
+		PauseOnCondition: cloak-force-disabled || base-reveal
+		Palette: d2kcloak
+		CloakedCondition: cloaked
+	GrantConditionOnDamageState@UNCLOAK:
+		Condition: cloak-force-disabled
+		ValidDamageStates: Critical
+	-MustBeDestroyed:
+	Voiced:
+		VoiceSet: D2KFremenVoice
+	DetectCloaked:
+		Range: 3c256
+	Passenger:
+		CargoType: Fremen
 
 # fremeng:
 # 	Inherits: fremen
@@ -4059,6 +5372,7 @@ ordos_mortar:
 # 		HP: 20000
 # 	RenderSprites:
 # 		Image: fremen
+
 facedancer:
 	Inherits: ^D2KInfantry
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
@@ -4156,11 +5470,11 @@ contaminator:
 	Tooltip:
 		Name: Contaminator
 	Buildable:
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Ordos
 		BuildPaletteOrder: 10
 		BuildDuration: 375
 		BuildDurationModifier: 100
-		Prerequisites: ~d2k_barracks.ordos, ~upordos_contaminator
+		Prerequisites: ~d2k_barracks.ordos
 		Description: The Contaminator is a genetically engineered organism\nthat infects a target organic unit to create another Contaminator\nwhen the target dies. They are quite\nresilient to gunfire.\n  Strong vs Buildings, Infantry, Air, Vehicles\n  Weak vs Siege
 	Health:
 		HP: 37500
@@ -4204,92 +5518,88 @@ contaminator:
 # 		Image: contaminator
 # 	-Buildable:
 
-# grenadier:
-# 	Inherits: ^D2KInfantry
-# 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
-# 	Inherits@anim: ^D2KPaletteRenderInfantry
-# 	Inherits@EXPERIENCE: ^GainsExperience
-# 	Inherits@EXT: ^ExternalConditions
-# 	Inherits@AntiBuil: ^PrioritizeBuilding
-# 	Inherits@AntiInf: ^PrioritizeInfantry
-# 	Buildable:
-# 		Queue: Infantry, RAInfantry
-# 		BuildPaletteOrder: 60
-# 		Prerequisites: upgrade_barracks, ~techlevel.medium, high_tech_factory
-# 		BuildDuration: 100
-# 		BuildDurationModifier: 100
-# 		Description: Infantry armed with grenades. \nVery prone to friendly fire\n  Strong vs Buildings, Infantry\n  Weak vs Vehicles
-# 		IconPalette: d2kunit
-# 	Valued:
-# 		Cost: 100
-# 	Tooltip:
-# 		Name: Grenadier
-# 	UpdatesPlayerStatistics:
-# 		AddToArmyValue: true
-# 	Health:
-# 		HP: 8000
-# 	Mobile:
-# 		Speed: 52
-# 	Armament:
-# 		Weapon: d2k_grenade
-# 		LocalOffset: 192,0,224
-# 		FireDelay: 3
-# 	TakeCover:
-# 		ProneOffset: 96,100,-64
-# 	WithInfantryBody:
-# 		DefaultAttackSequence: throw
-# 	FireWarheadsOnDeath:
-# 		Weapon: GrenDeath
-# 		EmptyWeapon: GrenDeath
-# 	Voiced:
-# 		VoiceSet: D2KGrenadier
+grenadier:
+	Inherits: ^D2KInfantry
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@anim: ^D2KPaletteRenderInfantry
+	Inherits@EXPERIENCE: ^GainsExperience
+	Inherits@EXT: ^ExternalConditions
+	Inherits@AntiBuil: ^PrioritizeBuilding
+	Inherits@AntiInf: ^PrioritizeInfantry
+	Buildable:
+		Queue: Infantry.Atreides
+		BuildPaletteOrder: 60
+		Prerequisites: upgrade_barracks, high_tech_factory
+		BuildDuration: 100
+		BuildDurationModifier: 100
+		Description: Infantry armed with grenades. \nVery prone to friendly fire\n  Strong vs Buildings, Infantry\n  Weak vs Vehicles
+		IconPalette: d2kunit
+	Valued:
+		Cost: 100
+	Tooltip:
+		Name: Grenadier
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 8000
+	Mobile:
+		Speed: 52
+	Armament:
+		Weapon: d2k_grenade
+		LocalOffset: 192,0,224
+		FireDelay: 3
+	TakeCover:
+		ProneOffset: 96,100,-64
+	WithInfantryBody:
+		DefaultAttackSequence: throw
+	FireWarheadsOnDeath:
+		Weapon: GrenDeath
+		EmptyWeapon: GrenDeath
+	Voiced:
+		VoiceSet: D2KGrenadier
 
-# sardaukar:
-# 	Inherits: ^D2KInfantry
-# 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
-# 	Inherits@anim: ^D2KPaletteRenderInfantry
-# 	Inherits@EXPERIENCE: ^GainsExperience
-# 	Inherits@EXT: ^ExternalConditions
-# 	Inherits@AntiInf: ^PrioritizeInfantry
-# 	Inherits@AntiVeh: ^PrioritizeVehicle
-# 	Buildable:
-# 		Queue: Infantry, RAInfantry
-# 		BuildPaletteOrder: 50
-# 		Prerequisites: ~palace.sardaukar, ~techlevel.high, ~wip-content
-# 		BuildDuration: 280
-# 		BuildDurationModifier: 100
-# 		Description: Assault infantry of Emperor's Army\n  Strong vs Infantry, Vehicles\n  Weak vs Artillery
-# 		IconPalette: d2kunit
-# 	Valued:
-# 		Cost: 150
-# 	Tooltip:
-# 		Name: Sardaukar Warrior
-# 	Armor:
-# 		Type: Light
-# 	UpdatesPlayerStatistics:
-# 		AddToArmyValue: true
-# 	Health:
-# 		HP: 20000
-# 	Mobile:
-# 		Speed: 31
-# 	RevealsShroud:
-# 		Range: 4c768
-# 	WithInfantryBody:
-# 		DefaultAttackSequence: shoot
-# 	Armament@PRIMARY:
-# 		Weapon: M_LMG
-# 	Armament@SECONDARY:
-# 		Weapon: M_HMG
-# 	FireWarheadsOnDeath:
-# 		Weapon: SardDeath
-# 		EmptyWeapon: SardDeath
-# 		Chance: 100
-# 	Voiced:
-# 		VoiceSet: D2KSardaukarElite
-# 	Targetable@PersonalShielded:
-# 		TargetTypes: PersonalShieldedSard
-# 	GrantCondition@d2k_personal_shield_disabled:
-# 		RequiresCondition: d2k_personal_shield && SmallCaliberShieldHits > 15
+sardaukar:
+	Inherits: ^D2KInfantry
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@anim: ^D2KPaletteRenderInfantry
+	Inherits@EXPERIENCE: ^GainsExperience
+	Inherits@EXT: ^ExternalConditions
+	Inherits@AntiInf: ^PrioritizeInfantry
+	Inherits@AntiVeh: ^PrioritizeVehicle
+	Buildable:
+		Queue: Infantry.Corrino, RAInfantry
+		BuildPaletteOrder: 50
+		Prerequisites: barracks.corrino
+		BuildDuration: 280
+		BuildDurationModifier: 100
+		Description: Assault infantry of Emperor's Army\n  Strong vs Infantry, Vehicles\n  Weak vs Artillery
+		IconPalette: d2kunit
+	Valued:
+		Cost: 150
+	Tooltip:
+		Name: Sardaukar Warrior
+	Armor:
+		Type: Light
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 20000
+	Mobile:
+		Speed: 31
+	RevealsShroud:
+		Range: 4c768
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+	Armament@PRIMARY:
+		Weapon: M_LMG
+	Armament@SECONDARY:
+		Weapon: M_HMG
+	FireWarheadsOnDeath:
+		Weapon: SardDeath
+		EmptyWeapon: SardDeath
+		Chance: 100
+	Voiced:
+		VoiceSet: D2KSardaukarElite
 
 # mpsardaukar:
 # 	Inherits: sardaukar
@@ -4631,53 +5941,53 @@ saboteur:
 # 	RenderSprites:
 # 		Image: plasma_infantry
 
-# fedaykin:
-# 	Inherits: ^D2KInfantry
-# 	Inherits@anim: ^D2KPaletteRenderInfantry
-# 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
-# 	Inherits@EXPERIENCE: ^GainsExperience
-# 	Inherits@EXT: ^ExternalConditions
-# 	Inherits@AntiInf: ^PrioritizeInfantry
-# 	Tooltip:
-# 		Name: Fedaykin
-# 	UpdatesPlayerStatistics:
-# 		AddToArmyValue: true
-# 	Buildable:
-# 		Queue: Infantry, RAInfantry
-# 		BuildPaletteOrder: 120
-# 		Prerequisites: ~barracks.atreides, upgrade_barracks, high_tech_factory, ~techlevel.medium, ~faction.fremen
-# 		Description: Stealth Elite Fremen Guerilla infantry armed with Sonic Weapon\n  Strong vs Infantry, Vehicles, Buildings\n  Weak vs Artillery, Tanks
-# 		IconPalette: d2kunit
-# 		BuildDuration: 280
-# 		BuildDurationModifier: 100
-# 	Mobile:
-# 		Speed: 52
-# 	Valued:
-# 		Cost: 300
-# 	Health:
-# 		HP: 17500
-# 	RevealsShroud:
-# 		Range: 4c768
-# 	Armament:
-# 		Weapon: Sound2
-# 	AttackFrontal:
-# 		FacingTolerance: 0
-# 	WithInfantryBody:
-# 		DefaultAttackSequence: shoot
-# 	Crushable:
-# 		WarnProbability: 80
-# 	Voiced:
-# 		VoiceSet: D2KFremenVoice3
-# 	Cloak:
-# 		Palette: d2kcloak
-# 		IsPlayerPalette: true
-# 		InitialDelay: 60
-# 		CloakDelay: 60
-# 		UncloakOn: Unload, Infiltrate, Demolish, Dock, Damage, Heal, Attack
-# 		CloakedCondition: cloaked
-# 		PauseOnCondition: cloak-force-disabled || base-reveal
-# 	Passenger:
-# 		CargoType: Fremen
+fedaykin:
+	Inherits: ^D2KInfantry
+	Inherits@anim: ^D2KPaletteRenderInfantry
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@EXPERIENCE: ^GainsExperience
+	Inherits@EXT: ^ExternalConditions
+	Inherits@AntiInf: ^PrioritizeInfantry
+	Tooltip:
+		Name: Fedaykin
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Buildable:
+		Queue: Infantry.Atreides
+		BuildPaletteOrder: 120
+		Prerequisites: ~barracks.atreides, upgrade_barracks, high_tech_factory
+		Description: Elite Fremen infantry armed with a Weirding Module\n  Strong vs Infantry, Vehicles, Buildings\n  Weak vs Artillery, Tanks
+		IconPalette: d2kunit
+		BuildDuration: 280
+		BuildDurationModifier: 100
+	Mobile:
+		Speed: 52
+	Valued:
+		Cost: 300
+	Health:
+		HP: 17500
+	RevealsShroud:
+		Range: 4c768
+	Armament:
+		Weapon: Sound2
+	AttackFrontal:
+		FacingTolerance: 0
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+	Crushable:
+		WarnProbability: 80
+	Voiced:
+		VoiceSet: D2KFremenVoice3
+	Cloak:
+		Palette: d2kcloak
+		IsPlayerPalette: true
+		InitialDelay: 60
+		CloakDelay: 60
+		UncloakOn: Unload, Infiltrate, Demolish, Dock, Damage, Heal, Attack
+		CloakedCondition: cloaked
+		PauseOnCondition: cloak-force-disabled || base-reveal
+	Passenger:
+		CargoType: Fremen
 
 # emperor_fedaykin:
 # 	Inherits: fedaykin
@@ -4696,7 +6006,7 @@ d2k_leech:
 	Buildable:
 		Queue: Vehicle, RAVehicle
 		BuildPaletteOrder: 130
-		Prerequisites:  ~d2k_barracks.ordos, ~upordos_d2k_leech
+		Prerequisites:  ~d2k_barracks.ordos
 		Description: Stealth creature that can attack infantry and vehicles.\nCan detect cloaked units.\nRegenerates health extremely quickly\nUpon attack lays eggs which, upon death of vehicls, creates another Leech\n  Strong vs Infantry, Vehicles\n  Weak vs Aircraft\n  Special Abilities: Invisibility, Jump, Lay Eggs
 		IconPalette: player
 		BuildDuration: 500
@@ -4910,82 +6220,82 @@ d2k_leech:
 # 	WithAmmoPipsDecoration:
 # 		Position: BottomLeft
 # 		RequiresSelection: true
-# d2k_sniper:
-# 	Inherits: ^D2KInfantry
-# 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
-# 	Inherits@EXT: ^ExternalConditions
-# 	Inherits@EXPERIENCE: ^GainsExperience
-# 	Inherits@AntiInf: ^PrioritizeInfantry
-# 	Buildable:
-# 		Queue: Infantry, RAInfantry
-# 		BuildPaletteOrder: 160
-# 		Prerequisites: ~barracks.ordos, upgrade_barracks, ~!faction.ordos. ~!faction.smugglers, ~techlevel.medium, high_tech_factory
-# 		Description: Infantry armed with a long range rifle\nCan detect cloaked units at great distances.\nCan Deplay to grant stealth and accuracy but loses movement\n  Strong vs Infantry, Air, Vehicles\n  Weak vs Tanks\n  Special Ability: Invisibility while static
-# 		IconPalette: d2kunit
-# 		BuildDuration: 600
-# 		BuildDurationModifier: 100
-# 	Valued:
-# 		Cost: 800
-# 	Tooltip:
-# 		Name: Heavy Sniper
-# 	UpdatesPlayerStatistics:
-# 		AddToArmyValue: true
-# 	Health:
-# 		HP: 5000
-# 	Mobile:
-# 		Speed: 25
-# 	Armament:
-# 		Weapon: D2KSniperRifle
-# 	RevealsShroud:
-# 		Range: 5c0
-# 	DetectCloaked:
-# 		Range: 8c0
-# 	AttackFrontal:
-# 		FacingTolerance: 0
-# 	WithInfantryBody:
-# 		DefaultAttackSequence: shoot
-# 	Crushable:
-# 		WarnProbability: 15
-# 	Cloak:
-# 		InitialDelay: 85
-# 		CloakDelay: 85
-# 		IsPlayerPalette: true
-# 		UncloakOn: Unload, Infiltrate, Demolish, Dock, Damage, Heal, Move
-# 		Palette: racloak
-# 		CloakedCondition: cloaked
-# 		RequiresCondition: deployed
-# 		PauseOnCondition: cloak-force-disabled || base-reveal
-# 	GrantConditionOnDamageState@UNCLOAK:
-# 		Condition: cloak-force-disabled
-# 		ValidDamageStates: Critical
-# 	-MustBeDestroyed:
-# 	WithDeathAnimation:
-# 	WithDecoration@deployed:
-# 		Image: deployed-icon
-# 		Sequence: deployed
-# 		RequiresCondition: deployed
-# 	GrantConditionOnDeploy:
-# 		DeployedCondition: deployed
-# 		SkipMakeAnimation: true
-# 		UndeployOnMove: true
-# 		UndeployOnPickup: true
-# 		PauseOnCondition: disabled
-# 	RenderSprites:
-# 		PlayerPalette: raplayer
-# 	WithDeathAnimation:
-# 		DeathSequencePalette: raplayer
-# 		CrushedSequencePalette: raplayer
-# 		CrushedPaletteIsPlayerPalette: True
-# 	InaccuracyMultiplier@deploy:
-# 		Modifier: 0
-# 		RequiresCondition: deployed
-# 	AutoDeployer:
-# 		DeployChance: 100
-# 	SpeedMultiplier@deploy:
-# 		Modifier: 0
-# 		RequiresCondition: deployed
-# 	GrantCondition@d2k_personal_shield_disabled:
-# 		RequiresCondition: d2k_personal_shield && SmallCaliberShieldHits > 0
+
+d2k_sniper:
+	Inherits: ^D2KInfantry
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	Inherits@EXT: ^ExternalConditions
+	Inherits@EXPERIENCE: ^GainsExperience
+	Inherits@AntiInf: ^PrioritizeInfantry
+	Buildable:
+		Queue: Infantry.Atreides, RAInfantry
+		BuildPaletteOrder: 60
+		Prerequisites: ~barracks.atreides, upgrade_barracks, high_tech_factory
+		Description: Infantry armed with a long range rifle\nCan detect cloaked units at great distances.\nCan Deplay to grant stealth and accuracy but loses movement\n  Strong vs Infantry, Air, Vehicles\n  Weak vs Tanks\n  Special Ability: Invisibility while static
+		IconPalette: d2kunit
+		BuildDuration: 600
+		BuildDurationModifier: 100
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Atreides Sniper
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 5000
+	Mobile:
+		Speed: 25
+	Armament:
+		Weapon: D2KSniperRifle
+	RevealsShroud:
+		Range: 5c0
+	DetectCloaked:
+		Range: 8c0
+	AttackFrontal:
+		FacingTolerance: 0
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+	Crushable:
+		WarnProbability: 15
+	Cloak:
+		InitialDelay: 85
+		CloakDelay: 85
+		IsPlayerPalette: true
+		UncloakOn: Unload, Infiltrate, Demolish, Dock, Damage, Heal, Move
+		Palette: racloak
+		CloakedCondition: cloaked
+		RequiresCondition: deployed
+		PauseOnCondition: cloak-force-disabled || base-reveal
+	GrantConditionOnDamageState@UNCLOAK:
+		Condition: cloak-force-disabled
+		ValidDamageStates: Critical
+	-MustBeDestroyed:
+	WithDeathAnimation:
+	WithDecoration@deployed:
+		Image: deployed-icon
+		Sequence: deployed
+		RequiresCondition: deployed
+	GrantConditionOnDeploy:
+		DeployedCondition: deployed
+		SkipMakeAnimation: true
+		UndeployOnMove: true
+		UndeployOnPickup: true
+		PauseOnCondition: disabled
+	RenderSprites:
+		PlayerPalette: raplayer
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+		CrushedSequencePalette: raplayer
+		CrushedPaletteIsPlayerPalette: True
+	InaccuracyMultiplier@deploy:
+		Modifier: 0
+		RequiresCondition: deployed
+	AutoDeployer:
+		DeployChance: 100
+	SpeedMultiplier@deploy:
+		Modifier: 0
+		RequiresCondition: deployed
+
 
 # d2k_marksman:
 # 	Inherits: d2k_sniper
@@ -5413,81 +6723,80 @@ d2k_leech:
 # 	Cargo:
 # 		InitialUnits: light_inf, light_inf, light_inf
 
-# d2k_atreides_apc:
-# 	Inherits@D2KT: ^D2KTank
-# 	Inherits@GAINSEXPERIENCE: ^GainsExperience
-# 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
-# 	Inherits@CARGO: ^CargoVehicle
-# 	Inherits@EXT: ^ExternalConditions
-# 	Inherits@EMP: ^TurretEMP
-# 	Inherits@AntiInf: ^PrioritizeInfantry
-# 	Buildable:
-# 		Queue: Vehicle, RAVehicle
-# 		BuildPaletteOrder: 100
-# 		BuildDuration: 375
-# 		BuildDurationModifier: 100
-# 		Prerequisites: ~faction.atreides, upgrade_heavy, ~techlevel.medium
-# 		Description: Stealth Heavy Carrier vehicle with machine gun\nCan carry 12 passengers\nDue to its giant size its very attractive to worms
-# 		IconPalette: windows256
-# 	Valued:
-# 		Cost: 1000
-# 	Tooltip:
-# 		Name: Armored Personnel Carrier
-# 	AutoDeployer:
-# 		DeployChance: 100
-# 	UpdatesPlayerStatistics:
-# 		AddToArmyValue: true
-# 	Health:
-# 		HP: 120000
-# 	Armor:
-# 		Type: Heavy
-# 	Mobile:
-# 		TurnSpeed: 24
-# 		Speed: 50
-# 	Turreted:
-# 		TurnSpeed: 80
-# 		RealignDelay: 15
-# 		Offset: 175,165,110
-# 	RevealsShroud:
-# 		Range: 4c0
-# 	WithMuzzleOverlay:
-# 	Cargo:
-# 		MaxWeight: 12
-# 		Types: Infantry
-# 	Armament:
-# 		Weapon: HMG
-# 		Recoil: 0
-# 		RecoilRecovery: 25
-# 		MuzzleSequence: muzzle
-# 		LocalOffset: 225, 165, 110
-# 		MuzzlePalette: d2keffect
-# 	AttackTurreted:
-# 	WithMuzzleOverlay:
-# 	WithSpriteTurret:
-# 		Palette: player
-# 		IsPlayerPalette: true
-# 	FireWarheadsOnDeath:
-
-# 		Weapon: D2KUnitExplodeLarge
-# 		EmptyWeapon: D2KUnitExplodeLarge
-# 	Selectable:
-# 		Class: d2k_atreides_apc
-# 	RenderSprites:
-# 		PlayerPalette: player
-# 	Cloak:
-# 		InitialDelay: 500
-# 		CloakDelay: 375
-# 		UncloakOn: Attack, Unload, Demolish, Damage
-# 		DetectionTypes: Cloak
-# 		Palette: player
-# 		IsPlayerPalette: true
-# 		CloakedCondition: cloaked
-# 		PauseOnCondition: cloak-force-disabled || base-reveal
-# 	AttractsWorms:
-# 		Intensity: 1000
-# 	WithCargoPipsDecoration:
-# 		Position: BottomLeft
-# 		RequiresSelection: true
+d2k_atreides_apc:
+	Inherits@D2KT: ^D2KTank
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@CARGO: ^CargoVehicle
+	Inherits@EXT: ^ExternalConditions
+	Inherits@EMP: ^TurretEMP
+	Inherits@AntiInf: ^PrioritizeInfantry
+	Buildable:
+		Queue: heavy_factory.atreides
+		BuildPaletteOrder: 100
+		BuildDuration: 375
+		BuildDurationModifier: 100
+		Prerequisites: heavy_factory.atreides
+		Description: Stealth Heavy Carrier vehicle with machine gun\nCan carry 12 passengers\nDue to its giant size its very attractive to worms
+		IconPalette: windows256
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Armored Personnel Carrier
+	AutoDeployer:
+		DeployChance: 100
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 120000
+	Armor:
+		Type: Heavy
+	Mobile:
+		TurnSpeed: 24
+		Speed: 50
+	Turreted:
+		TurnSpeed: 80
+		RealignDelay: 15
+		Offset: 175,165,110
+	RevealsShroud:
+		Range: 4c0
+	WithMuzzleOverlay:
+	Cargo:
+		MaxWeight: 12
+		Types: Infantry
+	Armament:
+		Weapon: HMG
+		Recoil: 0
+		RecoilRecovery: 25
+		MuzzleSequence: muzzle
+		LocalOffset: 225, 165, 110
+		MuzzlePalette: d2keffect
+	AttackTurreted:
+	WithMuzzleOverlay:
+	WithSpriteTurret:
+		Palette: player
+		IsPlayerPalette: true
+	FireWarheadsOnDeath:
+		Weapon: D2KUnitExplodeLarge
+		EmptyWeapon: D2KUnitExplodeLarge
+	Selectable:
+		Class: d2k_atreides_apc
+	RenderSprites:
+		PlayerPalette: player
+	Cloak:
+		InitialDelay: 500
+		CloakDelay: 375
+		UncloakOn: Attack, Unload, Demolish, Damage
+		DetectionTypes: Cloak
+		Palette: player
+		IsPlayerPalette: true
+		CloakedCondition: cloaked
+		PauseOnCondition: cloak-force-disabled || base-reveal
+	AttractsWorms:
+		Intensity: 1000
+	WithCargoPipsDecoration:
+		Position: BottomLeft
+		RequiresSelection: true
 
 # d2k_atreides_apc.bot1:
 # 	Inherits: d2k_atreides_apc
@@ -6018,6 +7327,7 @@ d2k_mcv.ixian:
 		VoiceSet: D2KMCV
 	RenderSprites:
 		Image: d2k_mcv
+
 d2k_mcv.ordos:
 	Inherits@D2KT: ^D2KTank
 	Inherits@Template: ^SupportVehicleTemplate
@@ -6043,6 +7353,85 @@ d2k_mcv.ordos:
 		VoiceSet: EBFDOMCV
 	RenderSprites:
 		Image: d2k_mcv
+
+d2k_mcv.atreides:
+	Inherits@D2KT: ^D2KTank
+	Inherits@Template: ^SupportVehicleTemplate
+	Inherits@selection: ^SelectableSupportUnit
+	Inherits@D2KSprite: ^D2KPaletteRender
+	Inherits@mcv: ^MCV
+	Buildable:
+		Prerequisites: ~repair_pad.atreides
+		IconPalette: d2kunit
+	Tooltip:
+		Name: Atreides Mobile Construction Vehicle
+	FireWarheadsOnDeath:
+		Weapon: D2KUnitExplodeLarge
+		EmptyWeapon: D2KUnitExplodeLarge
+	Transforms:
+		IntoActor: construction_yard.atreides
+		Offset: -1,-1
+		TransformSounds: BUILD1.WAV
+		Facing: 256
+		NoTransformNotification: BuildingCannotPlaceAudio
+	-RevealOnFire:
+	Voiced:
+		VoiceSet: D2KMCV
+	RenderSprites:
+		Image: d2k_mcv
+
+d2k_mcv.harkonnen:
+	Inherits@D2KT: ^D2KTank
+	Inherits@Template: ^SupportVehicleTemplate
+	Inherits@selection: ^SelectableSupportUnit
+	Inherits@D2KSprite: ^D2KPaletteRender
+	Inherits@mcv: ^MCV
+	Buildable:
+		Prerequisites: ~repair_pad.harkonnen
+		IconPalette: d2kunit
+	Tooltip:
+		Name: Harkonnen Mobile Construction Vehicle
+	FireWarheadsOnDeath:
+		Weapon: D2KUnitExplodeLarge
+		EmptyWeapon: D2KUnitExplodeLarge
+	Transforms:
+		IntoActor: construction_yard.harkonnen
+		Offset: -1,-1
+		TransformSounds: BUILD1.WAV
+		Facing: 256
+		NoTransformNotification: BuildingCannotPlaceAudio
+	-RevealOnFire:
+	Voiced:
+		VoiceSet: D2KMCV
+	RenderSprites:
+		Image: d2k_mcv
+
+d2k_mcv.corrino:
+	Inherits@D2KT: ^D2KTank
+	Inherits@Template: ^SupportVehicleTemplate
+	Inherits@selection: ^SelectableSupportUnit
+	Inherits@D2KSprite: ^D2KPaletteRender
+	Inherits@mcv: ^MCV
+	Buildable:
+		Prerequisites: ~repair_pad.harkonnen
+		IconPalette: d2kunit
+	Tooltip:
+		Name: Corrino Mobile Construction Vehicle
+	FireWarheadsOnDeath:
+		Weapon: D2KUnitExplodeLarge
+		EmptyWeapon: D2KUnitExplodeLarge
+	Transforms:
+		IntoActor: construction_yard.atreides
+		Offset: -1,-1
+		TransformSounds: BUILD1.WAV
+		Facing: 256
+		NoTransformNotification: BuildingCannotPlaceAudio
+	-RevealOnFire:
+	Voiced:
+		VoiceSet: D2KMCV
+	RenderSprites:
+		Image: d2k_mcv
+
 # d2k_tleilaxu_mcv:
 # 	Inherits: d2k_mcv
 # 	Buildable:
@@ -6452,10 +7841,10 @@ d2katreidesmongoose:
 	Selectable:
 		Class: combattank
 	Buildable:
-		Queue: Vehicle
-		Prerequisites: ~heavy_factory
+		Queue: VehicleHeavy.Atreides
+		Prerequisites: heavy_factory
 		BuildPaletteOrder: 30
-		Description: actor-d2kcombattank.description
+		Description: Generalist Combat Walker
 		BuildDuration: 250
 		BuildDurationModifier: 100
 	UpdatesPlayerStatistics:
@@ -6467,8 +7856,8 @@ d2katreidesmongoose:
 	Health:
 		HP: 50000
 	Selectable:
-		Bounds: 1536, 1536
-		DecorationBounds: 1536, 1536
+		Bounds: 1436, 1436
+		DecorationBounds: 1436, 1436
 	Armor:
 		Type: Medium
 	RevealOnDeath:
@@ -6481,7 +7870,7 @@ d2katreidesmongoose:
 		LocalOffset: 896,0,640
 		MuzzleSequence: muzzle
 	Turreted:
-		TurnSpeed: 12
+		TurnSpeed: 16
 		Offset: -256,0,-64
 	WithMuzzleOverlay:
 	WithSpriteTurret:
@@ -6501,156 +7890,155 @@ d2katreidesmongoose:
 		Image: mongoose_d2k_a
 		PlayerPalette: player_rgba
 
-# ^Ornithopter_Missiles:
-# 	GrantConditionOnPrerequisite@orniupg:
-# 		Condition: d2k_ornithopter_upgrade
-# 		Prerequisites: d2k_ornithopter_upgrade
-# 	Armament@bombs:
-# 		RequiresCondition: !d2k_ornithopter_upgrade
-# 	Armament@missiles:
-# 		Name: secondary
-# 		Weapon: OrniMissile
-# 		RequiresCondition: d2k_ornithopter_upgrade
+^Ornithopter_Missiles:
+	GrantConditionOnPrerequisite@orniupg:
+		Condition: d2k_ornithopter_upgrade
+		Prerequisites: d2k_ornithopter_upgrade
+	Armament@bombs:
+		RequiresCondition: !d2k_ornithopter_upgrade
+	Armament@missiles:
+		Name: secondary
+		Weapon: OrniMissile
+		RequiresCondition: d2k_ornithopter_upgrade
 
-# ornithopter:
-# 	Inherits@D2KSprite: ^D2KPaletteRender
-# 	Inherits@EXT: ^ExternalConditions
-# 	Inherits: ^RANeutralPlane
-# 	Inherits@ornimiss: ^Ornithopter_Missiles
-# 	Inherits@AntiBuil: ^PrioritizeBuilding
-# 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
-# 	AttackBomber:
-# 		#FacingTolerance: 0
-# 		FacingTolerance: 32
-# 	Armament@bombs:
-# 		Name: secondary
-# 		Weapon: OrniBomb
-# 		RequiresCondition: !d2k_ornithopter_upgrade
-# 	Armament@guns:
-# 		Name: primary
-# 		Weapon: OrniGun
-# 		LocalOffset: 0,128,0, 0,-128,0
-# 		MuzzleSequence: muzzle
-# 		MuzzlePalette: d2keffect
-# 	Health:
-# 		HP: 45000
-# 	Armor:
-# 		Type: Medium
-# 	WithMuzzleOverlay:
-# 	Aircraft:
-# 		Speed: 224
-# 		TurnSpeed: 8
-# 		Repulsable: False
-# 		CruiseAltitude: 1920
-# 	AmmoPool:
-# 		Ammo: 6
-# 	Tooltip:
-# 		Name: Ornithopter
-# 	SpawnActorOnDeath:
-# 		Actor: ornithopter.husk
-# 	RejectsOrders:
-# 	RevealOnFire:
-# 	Targetable@AIRBORNE:
-# 		TargetTypes: Air
-# 	HitShape:
-# 		Type: Circle
-# 			Radius: 256
-# 	-MapEditorData:
-
-
-# ornithopter.controllable:
-# 	Inherits@D2KSprite: ^D2KPaletteRender
-# 	Inherits: ^RANeutralPlane
-# 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
-# 	Inherits@GAINSEXPERIENCE: ^GainsExperience
-# 	Inherits@ornimiss: ^Ornithopter_Missiles
-# 	Inherits@AntiBuil: ^PrioritizeBuilding
-# 	AutoTarget:
-# 		InitialStance: ReturnFire
-# 	Valued:
-# 		Cost: 1250
-# 	Tooltip:
-# 		Name: Ornithopter
-# 	Buildable:
-# 		Queue: Aircraft, RAAircraft
-# 		BuildPaletteOrder: 40
-# 		Prerequisites: ~du_ornithopter, outpost, ~techlevel.medium
-# 		BuildDuration: 600
-# 		BuildDurationModifier: 100
-# 		Description: Powerful Aircraft armed with dual Heavy Machine Guns and Bombs.\n Strong vs Everything
-# 		IconPalette: d2kunit
-# 	UpdatesPlayerStatistics:
-# 		AddToArmyValue: true
-# 	Health:
-# 		HP: 32000
-# 	AmmoPool:
-# 		Name: primary
-# 		Ammo: 6
-# 		AmmoCondition: ammo
-# 	ReloadAmmoPool:
-# 		Delay: 250
-# 		Count: 6
-# 		ResetOnFire: false
-# 	AttackAircraft:
-# 		AttackType: Strafe
-# 		Armaments: primary, guns
-# 		StrafeRunLength: 7c0
-# 		PersistentTargeting: False
-# 		FacingTolerance: 40
-# 	Armament@guns:
-# 		Name: guns
-# 		Weapon: OrniGunC
-# 		LocalOffset: 0,128,0, 0,-128,0
-# 		MuzzleSequence: muzzle
-# 		MuzzlePalette: d2keffect
-# 	Armament@bombs:
-# 		Name: primary
-# 		Weapon: OrniBombC
-# 		PauseOnCondition: !ammo
-# 	Armament@missiles:
-# 		Name: primary
-# 		PauseOnCondition: !ammo
-# 	Aircraft:
-# 		CruiseAltitude: 1920
-# 		Speed: 184
-# 		RepulsionSpeed: 40
-# 		MaximumPitch: 56
-# 		Repulsable: true
-# 		CanHover: false
-# 		AirborneCondition: airborne
-# 		TurnSpeed: 40
-# 	RevealsShroud:
-# 		Range: 4c0
-# 		Type: GroundPosition
-# 	WithMuzzleOverlay:
-# 	Guard:
-# 		Voice: Guard
-# 	Guardable:
-# 	Targetable:
-# 		TargetTypes: Air, Plane
-# 	WithFacingSpriteBody:
-# 		RequiresCondition: airborne
-# 	WithFacingSpriteBody@LANDED:
-# 		Sequence: idle-landed
-# 		RequiresCondition: !airborne
-# 	Selectable:
-# 		Class: ornithopter.controllable
-# 		Bounds: 1536, 1280, 0, 0
-# 	SelectionDecorations:
-# 	SpawnActorOnDeath:
-# 		Actor: ornithopter.controllable.husk
-# 	Voiced:
-# 		VoiceSet: D2KVehicleVoice
-# 	RenderSprites:
-# 		Image: ornithopter
-# 	MapEditorData:
-# 		Categories: Aircraft
+ornithopter:
+	Inherits@D2KSprite: ^D2KPaletteRender
+	Inherits: ^RANeutralPlane
+	Inherits@ornimiss: ^Ornithopter_Missiles
+	Inherits@AntiBuil: ^PrioritizeBuilding
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	AttackBomber:
+		#FacingTolerance: 0
+		FacingTolerance: 32
+	Armament@bombs:
+		Name: secondary
+		Weapon: OrniBomb
+		RequiresCondition: !d2k_ornithopter_upgrade
+	Armament@guns:
+		Name: primary
+		Weapon: OrniGun
+		LocalOffset: 0,128,0, 0,-128,0
+		MuzzleSequence: muzzle
+		MuzzlePalette: d2keffect
+	Health:
+		HP: 45000
+	Armor:
+		Type: Medium
+	WithMuzzleOverlay:
+	Aircraft:
+		Speed: 224
+		TurnSpeed: 8
+		Repulsable: False
+		CruiseAltitude: 1920
+	AmmoPool:
+		Ammo: 6
+	Tooltip:
+		Name: Ornithopter
+	SpawnActorOnDeath:
+		Actor: ornithopter.husk
+	RejectsOrders:
+	RevealOnFire:
+	Targetable@AIRBORNE:
+		TargetTypes: Air
+	HitShape:
+		Type: Circle
+			Radius: 256
+	-MapEditorData:
 
 
-# ornithopter.controllable.husk:
-# 	Inherits: ornithopter.husk
-# 	Aircraft:
-# 		Speed: 156
+ornithopter.controllable:
+	Inherits@D2KSprite: ^D2KPaletteRender
+	Inherits: ^RANeutralPlane
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Inherits@ornimiss: ^Ornithopter_Missiles
+	Inherits@AntiBuil: ^PrioritizeBuilding
+	AutoTarget:
+		InitialStance: ReturnFire
+	Valued:
+		Cost: 1250
+	Tooltip:
+		Name: Ornithopter
+	Buildable:
+		Queue: Aircraft.Atreides
+		BuildPaletteOrder: 40
+		Prerequisites: high_tech_factory.atreides
+		BuildDuration: 600
+		BuildDurationModifier: 100
+		Description: Powerful Aircraft armed with dual Heavy Machine Guns and Bombs.\n Strong vs Everything
+		IconPalette: d2kunit
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 32000
+	AmmoPool:
+		Name: primary
+		Ammo: 6
+		AmmoCondition: ammo
+	ReloadAmmoPool:
+		Delay: 250
+		Count: 6
+		ResetOnFire: false
+	AttackAircraft:
+		AttackType: Strafe
+		Armaments: primary, guns
+		StrafeRunLength: 7c0
+		PersistentTargeting: False
+		FacingTolerance: 40
+	Armament@guns:
+		Name: guns
+		Weapon: OrniGunC
+		LocalOffset: 0,128,0, 0,-128,0
+		MuzzleSequence: muzzle
+		MuzzlePalette: d2keffect
+	Armament@bombs:
+		Name: primary
+		Weapon: OrniBombC
+		PauseOnCondition: !ammo
+	Armament@missiles:
+		Name: primary
+		PauseOnCondition: !ammo
+	Aircraft:
+		CruiseAltitude: 1920
+		Speed: 184
+		RepulsionSpeed: 40
+		MaximumPitch: 56
+		Repulsable: true
+		CanHover: false
+		AirborneCondition: airborne
+		TurnSpeed: 40
+	RevealsShroud:
+		Range: 4c0
+		Type: GroundPosition
+	WithMuzzleOverlay:
+	Guard:
+		Voice: Guard
+	Guardable:
+	Targetable:
+		TargetTypes: Air, Plane
+	WithFacingSpriteBody:
+		RequiresCondition: airborne
+	WithFacingSpriteBody@LANDED:
+		Sequence: idle-landed
+		RequiresCondition: !airborne
+	Selectable:
+		Class: ornithopter.controllable
+		Bounds: 1536, 1280, 0, 0
+	SelectionDecorations:
+	SpawnActorOnDeath:
+		Actor: ornithopter.controllable.husk
+	Voiced:
+		VoiceSet: D2KVehicleVoice
+	RenderSprites:
+		Image: ornithopter
+	MapEditorData:
+		Categories: Aircraft
+
+
+ornithopter.controllable.husk:
+	Inherits: ornithopter.husk
+	Aircraft:
+		Speed: 156
 
 d2k_air_drone:
 	Inherits: ^RANeutralPlane
@@ -6661,10 +8049,6 @@ d2k_air_drone:
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
 	Inherits@AntiBuil: ^PrioritizeBuilding
 	Inherits@CLOAK: ^CloakedAircraft
-	Inherits@HeavyMissiles: ^D2K_HeavyMissilesUpgrade
-	Inherits@Armor: ^D2K_GeneralPurposeArmor
-	Inherits@NeedleGuns: ^D2K_NeedleGuns
-	Inherits@IxianTechnology: ^D2K_AdvancedIxianTechnology
 	Inherits@eject: ^AircraftEjectOnDeath
 	Valued:
 		Cost: 1200
@@ -6771,73 +8155,73 @@ d2k_air_drone.husk:
 	FallsToEarth:
 		Explosion: D2KUnitExplodeSmall
 
-# phoenix:
-# 	Inherits: ^RANeutralPlane
-# 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
-# 	Inherits@GAINSEXPERIENCE: ^GainsExperience
-# 	Inherits@AntiBuil: ^PrioritizeBuilding
-# 	AutoTarget:
-# 		InitialStance: ReturnFire
-# 	Valued:
-# 		Cost: 800
-# 	Buildable:
-# 		Queue: Aircraft, RAAircraft
-# 		BuildPaletteOrder: 40
-# 		Prerequisites: outpost, ~du_gunship, ~techlevel.medium
-# 		BuildDuration: 512
-# 		BuildDurationModifier: 100
-# 		Description: Medium Plane armed with dual Air-To-Ground flame rockets.\n Strong vs Buildings, Vehicles, Infantry
-# 	Tooltip:
-# 		Name: Gunship
-# 	UpdatesPlayerStatistics:
-# 		AddToArmyValue: true
-# 	Health:
-# 		HP: 25000
-# 	Armor:
-# 		Type: Medium
-# 	RevealsShroud:
-# 		Range: 4c512
-# 		Type: GroundPosition
-# 	AmmoPool:
-# 		Ammo: 3
-# 		AmmoCondition: ammo
-# 	ReloadAmmoPool:
-# 		Delay: 200
-# 		Count: 1
-# 		ResetOnFire: true
-# 	AttackAircraft:
-# 		FacingTolerance: 320
-# 	Armament:
-# 		Weapon: PhoenixRocket
-# 		LocalOffset: 0,-640,0, 0,640,0
-# 		LocalYaw: -40, 24
-# 		PauseOnCondition: !ammo
-# 	Aircraft:
-# 		CruiseAltitude: 1920
-# 		Speed: 154
-# 		TurnSpeed: 32
-# 		RepulsionSpeed: 40
-# 		MaximumPitch: 56
-# 		CanHover: false
-# 	Guard:
-# 		Voice: Guard
-# 	Guardable:
-# 	Targetable:
-# 		TargetTypes: Air, Plane
-# 	SpawnActorOnDeath:
-# 		Actor: phoenix.husk
-# 	Selectable:
-# 		Class: phoenix
-# 		Bounds: 1536, 1280, 0, 128
-# 	SelectionDecorations:
-# 	Voiced:
-# 		VoiceSet: D2KVehicleVoice
-# 	RenderSprites:
-# 		Image: d2k_gunship
-# 	ThrowsShrapnel:
-# 		Weapons: Debris2, Debris3
-# 		Pieces: 2, 3
-# 		Range: 2c0, 4c0
+phoenix:
+	Inherits: ^RANeutralPlane
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Inherits@AntiBuil: ^PrioritizeBuilding
+	AutoTarget:
+		InitialStance: ReturnFire
+	Valued:
+		Cost: 800
+	Buildable:
+		Queue: Aircraft.Harkonnen
+		BuildPaletteOrder: 40
+		Prerequisites: outpost
+		BuildDuration: 512
+		BuildDurationModifier: 100
+		Description: Medium Plane armed with dual Air-To-Ground flame rockets.\n Strong vs Buildings, Vehicles, Infantry
+	Tooltip:
+		Name: Gunship
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 25000
+	Armor:
+		Type: Medium
+	RevealsShroud:
+		Range: 4c512
+		Type: GroundPosition
+	AmmoPool:
+		Ammo: 3
+		AmmoCondition: ammo
+	ReloadAmmoPool:
+		Delay: 200
+		Count: 1
+		ResetOnFire: true
+	AttackAircraft:
+		FacingTolerance: 320
+	Armament:
+		Weapon: PhoenixRocket
+		LocalOffset: 0,-640,0, 0,640,0
+		LocalYaw: -40, 24
+		PauseOnCondition: !ammo
+	Aircraft:
+		CruiseAltitude: 1920
+		Speed: 154
+		TurnSpeed: 32
+		RepulsionSpeed: 40
+		MaximumPitch: 56
+		CanHover: false
+	Guard:
+		Voice: Guard
+	Guardable:
+	Targetable:
+		TargetTypes: Air, Plane
+	SpawnActorOnDeath:
+		Actor: phoenix.husk
+	Selectable:
+		Class: phoenix
+		Bounds: 1536, 1280, 0, 128
+	SelectionDecorations:
+	Voiced:
+		VoiceSet: D2KVehicleVoice
+	RenderSprites:
+		Image: d2k_gunship
+	# ThrowsShrapnel:
+	# 	Weapons: Debris2, Debris3
+	# 	Pieces: 2, 3
+	# 	Range: 2c0, 4c0
 
 
 swarmer.husk:
@@ -7093,12 +8477,9 @@ harvester:
 	Inherits@Template: ^HarvesterTemplate
 	Inherits@selection: ^SelectableEconomicUnit
 	Inherits@D2KSprite: ^D2KPaletteRender
-	Inherits@CLOAK: ^CloakedVehicle
-	Inherits@Armor: ^D2K_GeneralPurposeArmor
-	Inherits@IxianTechnology: ^D2K_AdvancedIxianTechnology
 	Buildable:
-		Queue: Vehicle, RAVehicle
-		Prerequisites: ~spice_refinery, ~heavy_factory.ixian
+		Queue: VehicleHeavy.Atreides, VehicleHeavy.Ordos
+		Prerequisites: spice_refinery
 		BuildPaletteOrder: 10
 		Description: template-harvester.description
 		IconPalette: d2kunit
@@ -7171,251 +8552,250 @@ harvester:
 		VoiceSet: D2KHarvester
 	ActorStatValues:
 		Upgrades: d2k_general_purpose_armor, d2k_advanced_ixian_technology
-ordos_harv:
-	Inherits@D2KT: ^D2KTank
-	Inherits@harv: ^Harvester
-	Inherits@Template: ^HarvesterTemplate
-	Inherits@selection: ^SelectableEconomicUnit
+
+# ordos_harv:
+# 	Inherits@D2KT: ^D2KTank
+# 	Inherits@harv: ^Harvester
+# 	Inherits@Template: ^HarvesterTemplate
+# 	Inherits@selection: ^SelectableEconomicUnit
+# 	Inherits@D2KSprite: ^D2KPaletteRender
+# 	Inherits@CLOAK: ^CloakedVehicle
+# 	Buildable:
+# 		Queue: Vehicle, RAVehicle
+# 		Prerequisites: ~spice_refinery, ~heavy_factory.ordos
+# 		BuildPaletteOrder: 10
+# 		Description: template-harvester.description
+# 		IconPalette: d2kunit
+# 	Valued:
+# 		Cost: 500
+# 	Tooltip:
+# 		Name: Spice Harvester
+# 	Selectable:
+# 		Class: harvester
+# 		DecorationBounds: 1536, 1536
+# 	Harvester:
+# 		BuildDuration: 250
+# 		BuildDurationModifier: 100
+# 		HarvestFacings: 8
+# 		BaleUnloadDelay: 1
+# 	StoresResources:
+# 		Capacity: 45
+# 	CarryableHarvester:
+# 	Health:
+# 		HP: 200000
+# 	Repairable:
+# 		HpPerStep: 10000
+# 	ChangesHealth@SelfHealing:
+# 		Step: 80
+# 	Armor:
+# 		Type: Heavy
+# 	Shielded:
+# 		DamageRegenDelay: 125
+# 		RegenAmount: 160
+# 		RegenInterval: 1
+# 		ShieldsUpCondition: d2k_shielded
+# 		SelectionBarColor: 8888FFFF
+# 		RequiresCondition: !disabled && d2k_advanced_ixian_technology
+# 	Cloak:
+# 		RequiresCondition: !disabled && d2k_advanced_ixian_technology
+# 	Mobile:
+# 		Speed: 45
+# 		TurnSpeed: 9
+# 	RevealsShroud:
+# 		Range: 5000
+# 	GrantConditionOnPrerequisite@guildharv:
+# 		Prerequisites: faction.guild
+# 		Condition: harv_spd
+# 	GrantConditionOnPrerequisite@ixianharv:
+# 		Prerequisites: faction.ixian
+# 		Condition: harv_cloak
+# 	SpeedMultiplier@harv_upg:
+# 		Modifier: 125
+# 		RequiresCondition: harv_spd
+# 	GrantConditionOnPrerequisite@corrinoharv:
+# 		Prerequisites: faction.corrino
+# 		Condition: harv_hp
+# 	DamageMultiplier@corrinoharv:
+# 		Modifier: 60
+# 		RequiresCondition: harv_hp
+# 	FireWarheadsOnDeath:
+# 		Weapon: D2KUnitExplodeLarge
+# 		EmptyWeapon: D2KUnitExplodeLarge
+# 	WithHarvestOverlay:
+# 		Palette: effect50alpha
+# 	WithDockingAnimation:
+# 	AttractsWorms:
+# 		Intensity: 750
+# 	-RevealOnFire:
+# 	Voiced:
+# 		VoiceSet: EBFDOHarvester
+# 	ActorStatValues:
+# 		Upgrades: d2k_general_purpose_armor, d2k_advanced_ixian_technology
+# 	WithMoveAnimation:
+# 		MoveSequence: move
+# 	RenderSprites:
+# 		PlayerPalette: player_rgba
+
+trike:
+	Inherits@D2KV: ^D2KVehicle
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Inherits@D2KSprite: ^D2KPaletteRender
-	Inherits@CLOAK: ^CloakedVehicle
-	Inherits@Armor: ^D2K_GeneralPurposeArmor
-	Inherits@IxianTechnology: ^D2K_AdvancedIxianTechnology
+	Inherits@EXT: ^ExternalConditions
+	Inherits@EMP: ^FrontalEMP
+	Inherits@AntiInf: ^PrioritizeInfantry
 	Buildable:
-		Queue: Vehicle, RAVehicle
-		Prerequisites: ~spice_refinery, ~heavy_factory.ordos
+		Queue: VehicleLight.Atreides
 		BuildPaletteOrder: 10
-		Description: template-harvester.description
+		Prerequisites: light_factory.atreides
+		BuildDuration: 175
+		BuildDurationModifier: 100
+		Description: Fast scout\n  Strong vs Infantry\n  Weak vs Tanks
 		IconPalette: d2kunit
 	Valued:
-		Cost: 500
+		Cost: 250
 	Tooltip:
-		Name: Spice Harvester
+		Name: Trike
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
 	Selectable:
-		Class: harvester
-		DecorationBounds: 1536, 1536
-	Harvester:
-		BuildDuration: 250
-		BuildDurationModifier: 100
-		HarvestFacings: 8
-		BaleUnloadDelay: 1
-	StoresResources:
-		Capacity: 45
-	CarryableHarvester:
+		Class: trike
 	Health:
-		HP: 200000
-	Repairable:
-		HpPerStep: 10000
-	ChangesHealth@SelfHealing:
-		Step: 80
+		HP: 27500
 	Armor:
-		Type: Heavy
-	Shielded:
-		DamageRegenDelay: 125
-		RegenAmount: 160
-		RegenInterval: 1
-		ShieldsUpCondition: d2k_shielded
-		SelectionBarColor: 8888FFFF
-		RequiresCondition: !disabled && d2k_advanced_ixian_technology
-	Cloak:
-		RequiresCondition: !disabled && d2k_advanced_ixian_technology
+		Type: Light
 	Mobile:
-		Speed: 45
-		TurnSpeed: 9
+		TurnSpeed: 160
+		Speed: 128
 	RevealsShroud:
-		Range: 5000
-	GrantConditionOnPrerequisite@guildharv:
-		Prerequisites: faction.guild
-		Condition: harv_spd
-	GrantConditionOnPrerequisite@ixianharv:
-		Prerequisites: faction.ixian
-		Condition: harv_cloak
-	SpeedMultiplier@harv_upg:
-		Modifier: 125
-		RequiresCondition: harv_spd
-	GrantConditionOnPrerequisite@corrinoharv:
-		Prerequisites: faction.corrino
-		Condition: harv_hp
-	DamageMultiplier@corrinoharv:
-		Modifier: 60
-		RequiresCondition: harv_hp
+		Range: 4c768
+	WithMuzzleOverlay:
+	Armament@damage:
+		Weapon: HMG
+		LocalOffset: -544,0,0
+		MuzzleSequence: muzzle
+		MuzzlePalette: d2keffect
+	AttackFrontal:
+		FacingTolerance: 0
 	FireWarheadsOnDeath:
-		Weapon: D2KUnitExplodeLarge
-		EmptyWeapon: D2KUnitExplodeLarge
-	WithHarvestOverlay:
-		Palette: effect50alpha
-	WithDockingAnimation:
+		Weapon: D2KUnitExplodeSmall
+		EmptyWeapon: D2KUnitExplodeSmall
 	AttractsWorms:
-		Intensity: 750
-	-RevealOnFire:
+		Intensity: 420
+	Cloak@TDcloak:
+		Palette: d2kcloak
 	Voiced:
-		VoiceSet: EBFDOHarvester
-	ActorStatValues:
-		Upgrades: d2k_general_purpose_armor, d2k_advanced_ixian_technology
-	WithMoveAnimation:
-		MoveSequence: move
+		VoiceSet: D2KTrike
+
+d2k_buzzsaw:
+	Inherits@D2KV: ^D2KVehicle
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@EXT: ^ExternalConditions
+	Inherits@EMP: ^FrontalEMP
+	Inherits@AntiInf: ^PrioritizeInfantry
+	Valued:
+		Cost: 350
+	Tooltip:
+		Name: Buzzsaw
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Buildable:
+		BuildPaletteOrder: 10
+		Prerequisites: ~faction.harkonnen
+		Queue: VehicleLight.Harkonnen, RAVehicle
+		BuildDuration: 200
+		BuildDurationModifier: 100
+		Description: Fast and moderately armoured, this unit is ideal for scouting\nan area quickly and taking out infantry either with its dual cannons\nor with the massive central blade\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+	Mobile:
+		TurnSpeed: 48
+		Speed: 102
+		Voice: Move
+	Health:
+		HP: 30000
+	Repairable:
+		HpPerStep: 1200
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 7c0
 	RenderSprites:
-		PlayerPalette: player_rgba
-# trike:
-# 	Inherits@D2KV: ^D2KVehicle
-# 	Inherits@GAINSEXPERIENCE: ^GainsExperience
-# 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
-# 	Inherits@D2KSprite: ^D2KPaletteRender
-# 	Inherits@EXT: ^ExternalConditions
-# 	Inherits@EMP: ^FrontalEMP
-# 	Inherits@AntiInf: ^PrioritizeInfantry
-# 	Buildable:
-# 		Queue: Vehicle, RAVehicle
-# 		BuildPaletteOrder: 10
-# 		Prerequisites: ~light.trike, ~!faction.harkonnen
-# 		BuildDuration: 175
-# 		BuildDurationModifier: 100
-# 		Description: Fast scout\n  Strong vs Infantry\n  Weak vs Tanks
-# 		IconPalette: d2kunit
-# 	Valued:
-# 		Cost: 250
-# 	Tooltip:
-# 		Name: Trike
-# 	UpdatesPlayerStatistics:
-# 		AddToArmyValue: true
-# 	Selectable:
-# 		Class: trike
-# 	Health:
-# 		HP: 27500
-# 	Armor:
-# 		Type: Light
-# 	Mobile:
-# 		TurnSpeed: 160
-# 		Speed: 128
-# 	RevealsShroud:
-# 		Range: 4c768
-# 	WithMuzzleOverlay:
-# 	Armament@damage:
-# 		Weapon: HMG
-# 		LocalOffset: -544,0,0
-# 		MuzzleSequence: muzzle
-# 		MuzzlePalette: d2keffect
-# 	AttackFrontal:
-# 		FacingTolerance: 0
-# 	FireWarheadsOnDeath:
+		Image: d2k_buzzsaw
+	Armament@hmg:
+		Weapon: D2K70mmH
+		LocalOffset: 180,-100,110, 180,100,110
+	Armament@saw:
+		Weapon: D2K_buzzsaw
+	AttackFollow:
+		FacingTolerance: 128
+	AcceptsDeliveredExperience: ##########
+		ValidTypes: vehicle
+	WithFacingSpriteBody:
+		RequiresCondition: !sawup
+	WithFacingSpriteBody@sawup:
+		Sequence: idle-up
+		RequiresCondition: sawup
+	Voiced:
+		VoiceSet: D2KBuzzsawVoice
+	FireWarheadsOnDeath:
+		Weapon: D2KUnitExplodeSmall
+		EmptyWeapon: D2KUnitExplodeSmall
+	GrantConditionOnTerrain:
+		TerrainTypes: Rough, Road, Tiberium, BlueTiberium, RedTiberium, GoldTiberium, Ore, Gems, SCMinerals, ClearDune, Dune, Concrete, Sand, SpiceSand, Spice
+		Condition: sawup
 
-# 		Weapon: D2KUnitExplodeSmall
-# 		EmptyWeapon: D2KUnitExplodeSmall
-# 	AttractsWorms:
-# 		Intensity: 420
-# 	Cloak@TDcloak:
-# 		Palette: d2kcloak
-# 	Voiced:
-# 		VoiceSet: D2KTrike
-# d2k_buzzsaw:
-# 	Inherits@D2KV: ^D2KVehicle
-# 	Inherits@GAINSEXPERIENCE: ^GainsExperience
-# 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
-# 	Inherits@EXT: ^ExternalConditions
-# 	Inherits@EMP: ^FrontalEMP
-# 	Inherits@AntiInf: ^PrioritizeInfantry
-# 	Valued:
-# 		Cost: 350
-# 	Tooltip:
-# 		Name: Buzzsaw
-# 	UpdatesPlayerStatistics:
-# 		AddToArmyValue: true
-# 	Buildable:
-# 		BuildPaletteOrder: 10
-# 		Prerequisites: ~faction.harkonnen
-# 		Queue: Vehicle, RAVehicle
-# 		BuildDuration: 200
-# 		BuildDurationModifier: 100
-# 		Description: Fast and moderately armoured, this unit is ideal for scouting\nan area quickly and taking out infantry either with its dual cannons\nor with the massive central blade\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
-# 	Mobile:
-# 		TurnSpeed: 48
-# 		Speed: 102
-# 		Voice: Move
-# 	Health:
-# 		HP: 30000
-# 	Repairable:
-# 		HpPerStep: 1200
-# 	Armor:
-# 		Type: Light
-# 	RevealsShroud:
-# 		Range: 7c0
-# 	RenderSprites:
-# 		Image: d2k_buzzsaw
-# 	Armament@hmg:
-# 		Weapon: D2K70mmH
-# 		LocalOffset: 180,-100,110, 180,100,110
-# 	Armament@saw:
-# 		Weapon: D2K_buzzsaw
-# 	AttackFollow:
-# 		FacingTolerance: 128
-# 	AcceptsDeliveredExperience: ##########
-# 		ValidTypes: vehicle
-# 	WithFacingSpriteBody:
-# 		RequiresCondition: !sawup
-# 	WithFacingSpriteBody@sawup:
-# 		Sequence: idle-up
-# 		RequiresCondition: sawup
-# 	Voiced:
-# 		VoiceSet: D2KBuzzsawVoice
-# 	FireWarheadsOnDeath:
-
-# 		Weapon: D2KUnitExplodeSmall
-# 		EmptyWeapon: D2KUnitExplodeSmall
-# 	GrantConditionOnTerrain:
-# 		TerrainTypes: Rough, Road, Tiberium, BlueTiberium, RedTiberium, GoldTiberium, Ore, Gems, SCMinerals, ClearDune, Dune, Concrete, Sand, SpiceSand, Spice
-# 		Condition: sawup
-# quad:
-# 	Inherits: ^D2KVehicle
-# 	Inherits@GAINSEXPERIENCE: ^GainsExperience
-# 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
-# 	Inherits@D2KSprite: ^D2KPaletteRender
-# 	Inherits@EXT: ^ExternalConditions
-# 	Inherits@EMP: ^FrontalEMP
-# 	Inherits@AntiVeh: ^PrioritizeVehicle
-# 	Buildable:
-# 		Queue: Vehicle, RAVehicle
-# 		Prerequisites: upgrade_light, ~!faction.tleilaxu, ~!faction.smugglers, ~!faction.guild, ~!faction.corrino, ~!faction.emperor, ~techlevel.low
-# 		BuildPaletteOrder: 20
-# 		BuildDuration: 210
-# 		BuildDurationModifier: 100
-# 		Description: Missile Scout\nCan attack air\n  Strong vs Vehicles\n  Weak vs Infantry
-# 		IconPalette: d2kunit
-# 	Valued:
-# 		Cost: 400
-# 	Tooltip:
-# 		Name: Rocket Quad
-# 	UpdatesPlayerStatistics:
-# 		AddToArmyValue: true
-# 	Health:
-# 		HP: 36000
-# 	Armor:
-# 		Type: Light
-# 	Mobile:
-# 		TurnSpeed: 128
-# 		Speed: 96
-# 	RevealsShroud:
-# 		Range: 4c768
-# 	Armament:
-# 		Weapon: D2K_Rocket
-# 		LocalOffset: 128,64,64, 128,-64,64
-# 		MuzzlePalette: d2keffect
-# 	Armament@aa:
-# 		Weapon: D2K_Rocket_AA
-# 		LocalOffset: 128,64,64, 128,-64,64
-# 		MuzzlePalette: d2keffect
-# 	AttackFrontal:
-# 		FacingTolerance: 0
-# 	FireWarheadsOnDeath:
-
-# 		Weapon: D2KUnitExplodeSmall
-# 		EmptyWeapon: D2KUnitExplodeSmall
-# 	Selectable:
-# 		Class: quad
-# 	AttractsWorms:
-# 		Intensity: 470
-# 	Cloak@TDcloak:
-# 		Palette: d2kcloak
-# 	Voiced:
-# 		VoiceSet: D2KRPGQuad
+quad:
+	Inherits: ^D2KVehicle
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	Inherits@D2KSprite: ^D2KPaletteRender
+	Inherits@EXT: ^ExternalConditions
+	Inherits@EMP: ^FrontalEMP
+	Inherits@AntiVeh: ^PrioritizeVehicle
+	Buildable:
+		Queue: VehicleLight.Atreides, VehicleLight.Ordos, VehicleLight.Harkonnen
+		Prerequisites: upgrade_light
+		BuildPaletteOrder: 20
+		BuildDuration: 210
+		BuildDurationModifier: 100
+		Description: Missile Scout\nCan attack air\n  Strong vs Vehicles\n  Weak vs Infantry
+		IconPalette: d2kunit
+	Valued:
+		Cost: 400
+	Tooltip:
+		Name: Quad
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 36000
+	Armor:
+		Type: Light
+	Mobile:
+		TurnSpeed: 128
+		Speed: 96
+	RevealsShroud:
+		Range: 4c768
+	Armament:
+		Weapon: D2K_Rocket
+		LocalOffset: 128,64,64, 128,-64,64
+		MuzzlePalette: d2keffect
+	Armament@aa:
+		Weapon: D2K_Rocket_AA
+		LocalOffset: 128,64,64, 128,-64,64
+		MuzzlePalette: d2keffect
+	AttackFrontal:
+		FacingTolerance: 0
+	FireWarheadsOnDeath:
+		Weapon: D2KUnitExplodeSmall
+		EmptyWeapon: D2KUnitExplodeSmall
+	Selectable:
+		Class: quad
+	AttractsWorms:
+		Intensity: 470
+	Cloak@TDcloak:
+		Palette: d2kcloak
+	Voiced:
+		VoiceSet: D2KRPGQuad
 
 # d2k_rocket_buggy:
 # 	Inherits: ^D2KVehicle
@@ -7812,8 +9192,8 @@ siege_tank:
 	Inherits@AntiInf: ^PrioritizeInfantry
 	Inherits@AntiBuil: ^PrioritizeBuilding
 	Buildable:
-		Queue: Vehicle, RAVehicle
-		Prerequisites: ~disabled ,upgrade_heavy
+		Queue: VehicleHeavy.Atreides, VehicleHeavy.Ordos
+		Prerequisites: upgrade_heavy
 		BuildPaletteOrder: 50
 		Description: Siege Artillery\n  Strong vs Infantry, Buildings\n  Weak vs Tanks
 		IconPalette: d2kunit
@@ -7821,6 +9201,72 @@ siege_tank:
 		Cost: 600
 	Tooltip:
 		Name: Siege Tank
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 40000
+	Armor:
+		Type: Light
+	Mobile:
+		Speed: 43
+		TurnSpeed: 48
+	RevealsShroud:
+		Range: 6c768
+	Turreted:
+		Offset: 32,16,0
+		TurnSpeed: 48
+	Armament:
+		Weapon: D2K_155mm
+		Recoil: 150
+		RecoilRecovery: 19
+		LocalOffset: 512,0,320
+		MuzzleSequence: muzzle
+		MuzzlePalette: d2keffect
+	AttackFrontal:
+		FacingTolerance: 0
+	WithMuzzleOverlay:
+	WithSpriteTurret:
+	FireWarheadsOnDeath:
+		Weapon: D2KUnitExplodeMed
+		EmptyWeapon: D2KUnitExplodeMed
+	AutoTarget:
+		InitialStanceAI: Defend
+	Selectable:
+		Class: siegetank
+	SpawnActorOnDeath:
+		Actor: siege_tank.husk
+		OwnerType: InternalName
+		EffectiveOwnerFromOwner: true
+	AttractsWorms:
+		Intensity: 600
+	GrantConditionOnPrerequisite@d2k_siege_range_upgrade:
+		Condition: d2k_siege_range_upgrade
+		Prerequisites: d2k_siege_range_upgrade
+	RangeMultiplier@d2k_siege_range_upgrade:
+		Modifier: 150
+		RequiresCondition: d2k_siege_range_upgrade
+	Voiced:
+		VoiceSet: D2KSiegeTank
+
+assault_tank:
+	Inherits@D2KT: ^D2KTank
+	Inherits@Template: ^LineBreakerTemplate
+	Inherits@exp: ^GainsExperienceRA
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@D2KSprite: ^D2KPaletteRender
+	Inherits@EMP: ^FrontalEMP
+	Inherits@AntiInf: ^PrioritizeInfantry
+	Inherits@AntiBuil: ^PrioritizeBuilding
+	Buildable:
+		Queue: VehicleHeavy.Harkonnen
+		Prerequisites: upgrade_heavy
+		BuildPaletteOrder: 50
+		Description: Siege Gun\n  Strong vs Infantry, Buildings\n  Weak vs Tanks
+		IconPalette: d2kunit
+	Valued:
+		Cost: 600
+	Tooltip:
+		Name: Assault Tank
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -7878,7 +9324,7 @@ ordos_cobra:
 	Inherits@AntiInf: ^PrioritizeInfantry
 	Inherits@AntiBuil: ^PrioritizeBuilding
 	Buildable:
-		Queue: Vehicle, RAVehicle
+		Queue: VehicleHeavy.Ordos
 		Prerequisites: ~heavy_factory.ordos, outpost.ordos, ~!upordos_python
 		BuildPaletteOrder: 50
 		Description: Siege Artillery\n  Strong vs Infantry, Buildings\n  Weak vs Tanks
@@ -8079,9 +9525,6 @@ siege_tank_ixian:
 	Inherits@IXEMP: ^D2K_Ix_Frontal_EMP
 	Inherits@SHADOWS: ^Shadows
 	Inherits@CLOAK: ^CloakedVehicle
-	Inherits@Barrel: ^D2K_ReinforcedBarrel
-	Inherits@Armor: ^D2K_GeneralPurposeArmor
-	Inherits@IxianTechnology: ^D2K_AdvancedIxianTechnology
 	Buildable:
 		Queue: Vehicle, RAVehicle
 		BuildPaletteOrder: 50
@@ -8171,10 +9614,6 @@ duelist_tank:
 	Inherits@D2KSprite: ^D2KPaletteRender
 	Inherits@IXEMP: ^D2K_Ix_Turret_EMP
 	Inherits@AntiVeh: ^PrioritizeVehicle
-	Inherits@Barrel: ^D2K_ReinforcedBarrel
-	Inherits@NeedleGuns: ^D2K_NeedleGuns
-	Inherits@Armor: ^D2K_GeneralPurposeArmor
-	Inherits@IxianTechnology: ^D2K_AdvancedIxianTechnology
 	Buildable:
 		Queue: Vehicle, RAVehicle
 		BuildPaletteOrder: 40
@@ -8259,9 +9698,6 @@ missile_tank_ixian:
 	Inherits@D2KSprite: ^D2KPaletteRender
 	Inherits@IXEMP: ^D2K_Ix_Frontal_EMP
 	Inherits@AntiVeh: ^PrioritizeVehicle
-	Inherits@HeavyMissiles: ^D2K_HeavyMissilesUpgrade
-	Inherits@Armor: ^D2K_GeneralPurposeArmor
-	Inherits@IxianTechnology: ^D2K_AdvancedIxianTechnology
 	Tooltip:
 		Name: Ix Missile Tank
 	UpdatesPlayerStatistics:
@@ -8353,7 +9789,6 @@ d2k_autogun_tank:
 	Inherits@D2KT: ^D2KTank
 	Inherits@GAINSEXPERIENCE: ^GainsExperience
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
-	Inherits@EXT: ^ExternalConditions
 	Inherits@EMP: ^FrontalEMP
 	Inherits@AntiInf: ^PrioritizeInfantry
 	Buildable:
@@ -8479,55 +9914,55 @@ d2k_autogun_tank_small:
 		Modifier: 120
 		RequiresCondition: gatling > 1
 
-# missile_tank:
-# 	Inherits@D2KT: ^D2KTank
-# 	Inherits@Template: ^ArtilleryTemplate
-# 	Inherits@exp: ^GainsExperienceRA
-# 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
-# 	Inherits@D2KSprite: ^D2KPaletteRender
-# 	Inherits@IXEMP: ^D2K_Ix_Frontal_EMP
-# 	Inherits@AntiVeh: ^PrioritizeVehicle
-# 	Tooltip:
-# 		Name: Missile Tank
-# 	UpdatesPlayerStatistics:
-# 		AddToArmyValue: true
-# 	Buildable:
-# 		Queue: Vehicle, RAVehicle
-# 		Prerequisites: ~wip, ~heavy.missile_tank, upgrade_heavy, research_centre, ~techlevel.high, ~!faction.ixian, ~!faction.guild
-# 		BuildPaletteOrder: 60
-# 		Description: Rocket Artillery\n  Strong vs Vehicles, Buildings, Aircraft\n  Weak vs Infantry\nDetector
-# 		IconPalette: d2kunit
-# 	Valued:
-# 		Cost: 750
-# 	Mobile:
-# 		Speed: 64
-# 		TurnSpeed: 80
-# 	Health:
-# 		HP: 50000
-# 	Armor:
-# 		Type: Medium
-# 	RevealsShroud:
-# 		Range: 6c768
-# 	Armament:
-# 		Weapon: mtank_pri
-# 		LocalOffset: -128,128,171, -128,-128,171
-# 	AttackFrontal:
-# 		FacingTolerance: 0
-# 	AutoTarget:
-# 		InitialStanceAI: Defend
-# 	FireWarheadsOnDeath:
-# 		Weapon: D2KUnitExplodeMed
-# 		EmptyWeapon: D2KUnitExplodeMed
-# 	Selectable:
-# 		Class: missiletank
-# 	AttractsWorms:
-# 		Intensity: 600
-# 	Cloak@TDcloak:
-# 		Palette: d2kcloak
-# 	DetectCloaked:
-# 		Range: 4c0
-# 	Voiced:
-# 		VoiceSet: D2KMissileTank
+missile_tank:
+	Inherits@D2KT: ^D2KTank
+	Inherits@Template: ^ArtilleryTemplate
+	Inherits@exp: ^GainsExperienceRA
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	Inherits@D2KSprite: ^D2KPaletteRender
+	Inherits@IXEMP: ^D2K_Ix_Frontal_EMP
+	Inherits@AntiVeh: ^PrioritizeVehicle
+	Tooltip:
+		Name: Missile Tank
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Buildable:
+		Queue: VehicleHeavy.Atreides, VehicleHeavy.Ordos
+		Prerequisites: upgrade_heavy, research_centre
+		BuildPaletteOrder: 60
+		Description: Rocket Artillery\n  Strong vs Vehicles, Buildings, Aircraft\n  Weak vs Infantry\nDetector
+		IconPalette: d2kunit
+	Valued:
+		Cost: 750
+	Mobile:
+		Speed: 64
+		TurnSpeed: 80
+	Health:
+		HP: 50000
+	Armor:
+		Type: Medium
+	RevealsShroud:
+		Range: 6c768
+	Armament:
+		Weapon: mtank_pri
+		LocalOffset: -128,128,171, -128,-128,171
+	AttackFrontal:
+		FacingTolerance: 0
+	AutoTarget:
+		InitialStanceAI: Defend
+	FireWarheadsOnDeath:
+		Weapon: D2KUnitExplodeMed
+		EmptyWeapon: D2KUnitExplodeMed
+	Selectable:
+		Class: missiletank
+	AttractsWorms:
+		Intensity: 600
+	Cloak@TDcloak:
+		Palette: d2kcloak
+	DetectCloaked:
+		Range: 4c0
+	Voiced:
+		VoiceSet: D2KMissileTank
 
 # d2k_flame_tank:
 # 	Inherits: ^D2KVehicle
@@ -8577,57 +10012,56 @@ d2k_autogun_tank_small:
 # 	Voiced:
 # 		VoiceSet: D2KFlameTank
 
-# sonic_tank:
-# 	Inherits: ^D2KTank
-# 	Inherits@GAINSEXPERIENCE: ^GainsExperience
-# 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
-# 	Inherits@D2KSprite: ^D2KPaletteRender
-# 	Inherits@EXT: ^ExternalConditions
-# 	Inherits@IXEMP: ^D2K_Ix_Frontal_EMP
-# 	Inherits@AntiInf: ^PrioritizeInfantry
-# 	Inherits@AntiVeh: ^PrioritizeVehicle
-# 	Buildable:
-# 		Queue: Vehicle, RAVehicle
-# 		BuildPaletteOrder: 100
-# 		Prerequisites: ~heavy.atreides, research_centre, ~techlevel.high, ~!faction.ixian, ~!faction.fremen
-# 		BuildDuration: 500
-# 		BuildDurationModifier: 100
-# 		Description: Fires sonic shocks\n  Strong vs Infantry, Vehicles\n  Weak vs Tanks, Artillery
-# 		IconPalette: d2kunit
-# 	Valued:
-# 		Cost: 1000
-# 	Tooltip:
-# 		Name: Sonic Tank
-# 	UpdatesPlayerStatistics:
-# 		AddToArmyValue: true
-# 	Health:
-# 		HP: 100000
-# 	Armor:
-# 		Type: Heavy
-# 	Mobile:
-# 		TurnSpeed: 48
-# 		Speed: 31
-# 	RevealsShroud:
-# 		Range: 5c768
-# 	Armament:
-# 		Weapon: Sound
-# 		LocalOffset: 600,0,427
-# 	AttackFrontal:
-# 		FacingTolerance: 0
-# 	FireWarheadsOnDeath:
-
-# 		Weapon: D2KUnitExplodeLarge
-# 		EmptyWeapon: D2KUnitExplodeLarge
-# 	SpawnActorOnDeath:
-# 		Actor: sonic_tank.husk
-# 		OwnerType: InternalName
-# 		EffectiveOwnerFromOwner: true
-# 	AttractsWorms:
-# 		Intensity: 600
-# 	Cloak@TDcloak:
-# 		Palette: d2kcloak
-# 	Voiced:
-# 		VoiceSet: D2KSonicTank
+sonic_tank:
+	Inherits: ^D2KTank
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@D2KSprite: ^D2KPaletteRender
+	Inherits@EXT: ^ExternalConditions
+	Inherits@IXEMP: ^D2K_Ix_Frontal_EMP
+	Inherits@AntiInf: ^PrioritizeInfantry
+	Inherits@AntiVeh: ^PrioritizeVehicle
+	Buildable:
+		Queue: VehicleHeavy.Atreides
+		BuildPaletteOrder: 100
+		Prerequisites: ~heavy.atreides, research_centre.atreides
+		BuildDuration: 500
+		BuildDurationModifier: 100
+		Description: Fires sonic shocks\n  Strong vs Infantry, Vehicles\n  Weak vs Tanks, Artillery
+		IconPalette: d2kunit
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Sonic Tank
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 100000
+	Armor:
+		Type: Heavy
+	Mobile:
+		TurnSpeed: 48
+		Speed: 31
+	RevealsShroud:
+		Range: 5c768
+	Armament:
+		Weapon: Sound
+		LocalOffset: 600,0,427
+	AttackFrontal:
+		FacingTolerance: 0
+	FireWarheadsOnDeath:
+		Weapon: D2KUnitExplodeLarge
+		EmptyWeapon: D2KUnitExplodeLarge
+	SpawnActorOnDeath:
+		Actor: sonic_tank.husk
+		OwnerType: InternalName
+		EffectiveOwnerFromOwner: true
+	AttractsWorms:
+		Intensity: 600
+	Cloak@TDcloak:
+		Palette: d2kcloak
+	Voiced:
+		VoiceSet: D2KSonicTank
 
 # emperor_sonic_tank:
 # 	Inherits: sonic_tank
@@ -8885,94 +10319,93 @@ ordos_deviatormk2:
 # 	Voiced:
 # 		VoiceSet: D2KAnnihilatorVoice
 
-# devastator:
-# 	Inherits@D2KT: ^D2KTank
-# 	Inherits@GAINSEXPERIENCE: ^GainsExperience
-# 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
-# 	Inherits@D2KSprite: ^D2KPaletteRender
-# 	Inherits@EXT: ^ExternalConditions
-# 	Inherits@IXEMP: ^D2K_Ix_Frontal_EMP
-# 	Inherits@AntiTank: ^PrioritizeTank
-# 	Buildable:
-# 		Queue: Vehicle, RAVehicle
-# 		BuildPaletteOrder: 100
-# 		Prerequisites: ~heavy.harkonnen, research_centre, ~techlevel.high, ~faction.harkonnen
-# 		BuildDuration: 1000
-# 		BuildDurationModifier: 100
-# 		Description: Super Heavy Tank\n  Strong vs Tanks\n  Weak vs Artillery
-# 		IconPalette: d2kunit
-# 	Valued:
-# 		Cost: 1500
-# 	Tooltip:
-# 		Name: Devastator
-# 	UpdatesPlayerStatistics:
-# 		AddToArmyValue: true
-# 	Health:
-# 		HP: 150000
-# 	ChangesHealth:
-# 		Step: 60
-# 		Delay: 1
-# 		StartIfBelow: 100
-# 		DamageCooldown: 1
-# 	Armor:
-# 		Type: Heavy
-# 	Voiced:
-# 		VoiceSet: D2KDevastator
-# 	Mobile:
-# 		TurnSpeed: 48
-# 		Speed: 33
-# 		Locomotor: heavytracked
-# 		RequiresCondition: !overload
-# 		PauseOnCondition: notmobile
-# 	AutoCarryable:
-# 		RequiresCondition: !overload
-# 	RevealsShroud:
-# 		Range: 4c768
-# 	Armament:
-# 		Weapon: DevBullet
-# 		LocalOffset: 640,0,32
-# 		MuzzleSequence: muzzle
-# 		MuzzlePalette: d2keffect
-# 	AttackFrontal:
-# 		FacingTolerance: 0
-# 	WithMuzzleOverlay:
-# 		IgnoreOffset: true
-# 	FireWarheadsOnDeath:
-
-# 		Weapon: D2KUnitExplodeLarge
-# 		EmptyWeapon: D2KUnitExplodeLarge
-# 		RequiresCondition: !overload
-# 	SpawnActorOnDeath:
-# 		Actor: devastator.husk
-# 		OwnerType: InternalName
-# 		EffectiveOwnerFromOwner: true
-# 	Explodes@OVERLOAD:
-# 		Weapon: PlasmaExplosion
-# 		EmptyWeapon: PlasmaExplosion
-# 		RequiresCondition: meltdown
-# 	GrantConditionOnDeploy@REACTOR:
-# 		DeployedCondition: overload
-# 		PauseOnCondition: overload
-# 	WithIdleOverlay@OVERLOAD:
-# 		Sequence: active
-# 		RequiresCondition: overload
-# 	WithIdleOverlay@OVERLOAD2:
-# 		Sequence: active-2
-# 		RequiresCondition: overload
-# 	KillsSelf@MELTDOWN:
-# 		Delay: 180
-# 		RequiresCondition: overload
-# 		GrantsCondition: meltdown
-# 	AttractsWorms:
-# 		Intensity: 700
-# 	ChangesHealth:
-# 		Step: 50
-# 		Delay: 3
-# 		StartIfBelow: 50
-# 	Selectable:
-# 		DecorationBounds: 1280, 1280, 0, 0
-# 	Cloak@TDcloak:
-# 		Palette: d2kcloak
+devastator:
+	Inherits@D2KT: ^D2KTank
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@D2KSprite: ^D2KPaletteRender
+	Inherits@EXT: ^ExternalConditions
+	Inherits@IXEMP: ^D2K_Ix_Frontal_EMP
+	Inherits@AntiTank: ^PrioritizeTank
+	Buildable:
+		Queue: VehicleHeavy,Harkonnen
+		BuildPaletteOrder: 100
+		Prerequisites: ~heavy.harkonnen, research_centre, ~techlevel.high, ~faction.harkonnen
+		BuildDuration: 1000
+		BuildDurationModifier: 100
+		Description: Super Heavy Tank\n  Strong vs Tanks\n  Weak vs Artillery
+		IconPalette: d2kunit
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: Devastator
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 150000
+	ChangesHealth:
+		Step: 60
+		Delay: 1
+		StartIfBelow: 100
+		DamageCooldown: 1
+	Armor:
+		Type: Heavy
+	Voiced:
+		VoiceSet: D2KDevastator
+	Mobile:
+		TurnSpeed: 48
+		Speed: 33
+		Locomotor: heavytracked
+		RequiresCondition: !overload
+		PauseOnCondition: notmobile
+	AutoCarryable:
+		RequiresCondition: !overload
+	RevealsShroud:
+		Range: 4c768
+	Armament:
+		Weapon: DevBullet
+		LocalOffset: 640,0,32
+		MuzzleSequence: muzzle
+		MuzzlePalette: d2keffect
+	AttackFrontal:
+		FacingTolerance: 0
+	WithMuzzleOverlay:
+		IgnoreOffset: true
+	FireWarheadsOnDeath:
+		Weapon: D2KUnitExplodeLarge
+		EmptyWeapon: D2KUnitExplodeLarge
+		RequiresCondition: !overload
+	SpawnActorOnDeath:
+		Actor: devastator.husk
+		OwnerType: InternalName
+		EffectiveOwnerFromOwner: true
+	# Explodes@OVERLOAD:
+	# 	Weapon: PlasmaExplosion
+	# 	EmptyWeapon: PlasmaExplosion
+	# 	RequiresCondition: meltdown
+	GrantConditionOnDeploy@REACTOR:
+		DeployedCondition: overload
+		PauseOnCondition: overload
+	WithIdleOverlay@OVERLOAD:
+		Sequence: active
+		RequiresCondition: overload
+	WithIdleOverlay@OVERLOAD2:
+		Sequence: active-2
+		RequiresCondition: overload
+	KillsSelf@MELTDOWN:
+		Delay: 180
+		RequiresCondition: overload
+		GrantsCondition: meltdown
+	AttractsWorms:
+		Intensity: 700
+	ChangesHealth:
+		Step: 50
+		Delay: 3
+		StartIfBelow: 50
+	Selectable:
+		DecorationBounds: 1280, 1280, 0, 0
+	Cloak@TDcloak:
+		Palette: d2kcloak
 
 # d2k_tyrant:
 # 	Inherits@D2KT: ^D2KTank
@@ -9047,7 +10480,7 @@ raider:
 	Inherits@EMP: ^FrontalEMP
 	Inherits@AntiInf: ^PrioritizeInfantry
 	Buildable:
-		Queue: Vehicle, RAVehicle
+		Queue: VehicleLight.Ordos
 		BuildPaletteOrder: 10
 		Prerequisites: ~light_factory.ordos
 		Description: Improved Scout\nCan carry a passenger\n  Strong vs Infantry, Light Vehicles\n  Weak vs Tanks
@@ -9082,7 +10515,6 @@ raider:
 	AttackFrontal:
 		FacingTolerance: 0
 	FireWarheadsOnDeath:
-
 		Weapon: D2KUnitExplodeSmall
 		EmptyWeapon: D2KUnitExplodeSmall
 	AttractsWorms:
@@ -9210,9 +10642,8 @@ rocket_raider_ixian:
 	Inherits@IXEMP: ^D2K_Ix_Frontal_EMP
 	Inherits@AntiVeh: ^PrioritizeVehicle
 	Inherits@AntiAir: ^PrioritizeAir
-	Inherits@HeavyMissiles: ^D2K_HeavyMissilesUpgrade
-	Inherits@Armor: ^D2K_GeneralPurposeArmor
-	Inherits@IxianTechnology: ^D2K_AdvancedIxianTechnology
+	
+
 	Buildable:
 		Queue: Vehicle, RAVehicle
 		BuildPaletteOrder: 10
@@ -9316,8 +10747,7 @@ shock_raider:
 	Inherits@EMP: ^FrontalEMP
 	Inherits@AntiVeh: ^PrioritizeVehicle
 	Inherits@AntiInf: ^PrioritizeInfantry
-	Inherits@Armor: ^D2K_GeneralPurposeArmor
-	Inherits@IxianTechnology: ^D2K_AdvancedIxianTechnology
+
 	Buildable:
 		Queue: Vehicle, RAVehicle
 		BuildPaletteOrder: 10
@@ -9483,7 +10913,8 @@ deviator:
 combat_tank_a:
 	Inherits: ^combat_tank
 	Buildable:
-		Prerequisites: ~faction.atreides, ~techlevel.medium
+		Queue: VehicleHeavy.Atreides
+		Prerequisites: heavy_factory.atreides
 	Armament:
 		Weapon: 80mm_A
 
@@ -9497,11 +10928,11 @@ combat_tank_h:
 	Inherits@EMP: ^TurretEMP
 	Inherits@AntiVeh: ^PrioritizeVehicle
 	Buildable:
-		Queue: Vehicle, RAVehicle
+		Queue: VehicleHeavy
 		BuildPaletteOrder: 40
 		Description: Main Battle Tank\n  Strong vs Tanks\n  Weak vs Infantry
 		IconPalette: d2kunit
-		Prerequisites: ~heavy.harkonnen_combat, ~techlevel.medium, ~!faction.guild, ~!faction.corrino
+		Prerequisites: ~heavy_factory.Harkonnen
 	Valued:
 		Cost: 600
 	Tooltip:
@@ -9542,6 +10973,7 @@ combat_tank_h:
 combat_tank_o:
 	Inherits: ^combat_tank
 	Buildable:
+		Queue: VehicleHeavy.Ordos
 		Prerequisites: ~heavy_factory.ordos
 	Turreted:
 		TurnSpeed: 80
@@ -9566,6 +10998,7 @@ combat_tank_o:
 combat_tank_o_stealth:
 	Inherits: ^combat_tank
 	Buildable:
+		Queue: VehicleHeavy.Ordos
 		Prerequisites: ~heavy_factory.ordos, outpost.ordos
 		Description: Fast stealth tank with powerful long range cannon\n  Strong vs Tanks\n  Weak vs Infantry
 		IconPalette: windows256
@@ -9613,9 +11046,6 @@ combat_tank_ixian:
 	Inherits@D2KSprite: ^D2KPaletteRender
 	Inherits@IXEMP: ^D2K_Ix_Turret_EMP
 	Inherits@AntiVeh: ^PrioritizeVehicle
-	Inherits@Barrel: ^D2K_ReinforcedBarrel
-	Inherits@Armor: ^D2K_GeneralPurposeArmor
-	Inherits@IxianTechnology: ^D2K_AdvancedIxianTechnology
 	Buildable:
 		Queue: Vehicle, RAVehicle
 		BuildPaletteOrder: 40
@@ -9955,6 +11385,52 @@ carryall:
 		BuildPaletteOrder: 120
 		Prerequisites: ~high_tech_factory.ixian
 
+carryall.atreides:
+	Inherits: carryall.reinforce
+	Health:
+		HP: 200000
+	-Carryall:
+	AutoCarryall:
+		BeforeLoadDelay: 10
+		BeforeUnloadDelay: 15
+		LocalOffset: 0, 0, -128
+	Aircraft:
+		MinAirborneAltitude: 400
+	RevealsShroud@lifting_low:
+		Range: 2c512
+		Type: GroundPosition
+		RequiresCondition: !airborne
+	RevealsShroud@lifting_high:
+		Range: 1c256
+		Type: GroundPosition
+		RequiresCondition: !cruising
+	Buildable:
+		Queue: Aircraft.Atreides
+		BuildPaletteOrder: 120
+
+carryall.harkonnen:
+	Inherits: carryall.reinforce
+	Health:
+		HP: 200000
+	-Carryall:
+	AutoCarryall:
+		BeforeLoadDelay: 10
+		BeforeUnloadDelay: 15
+		LocalOffset: 0, 0, -128
+	Aircraft:
+		MinAirborneAltitude: 400
+	RevealsShroud@lifting_low:
+		Range: 2c512
+		Type: GroundPosition
+		RequiresCondition: !airborne
+	RevealsShroud@lifting_high:
+		Range: 1c256
+		Type: GroundPosition
+		RequiresCondition: !cruising
+	Buildable:
+		Queue: Aircraft.Harkonnen
+		BuildPaletteOrder: 120
+
 carryall.paradrop:
 	Inherits: carryall.reinforce
 	Cargo:
@@ -9963,7 +11439,6 @@ carryall.paradrop:
 	ParaDrop:
 		DropRange: 4c0
 		ChuteSound: chute1.aud
-
 
 ordos_carryall.reinforce:
 	Inherits: carryall.reinforce
@@ -10354,7 +11829,7 @@ upgrade_barracks:
 	Valued:
 		Cost: 1250
 	RenderSprites:
-		Image: barracks.ordos
+		Image: barracks.atreides
 
 upgrade_light:
 	Inherits: ^researched_upgrade.template
@@ -10372,7 +11847,7 @@ upgrade_light:
 	Valued:
 		Cost: 1250
 	RenderSprites:
-		Image: light.ordos
+		Image: light.atreides
 
 upgrade_heavy:
 	Inherits: ^researched_upgrade.template
@@ -10390,7 +11865,7 @@ upgrade_heavy:
 	Valued:
 		Cost: 1250
 	RenderSprites:
-		Image: heavy.ordos
+		Image: heavy.atreides
 
 upgrade_hightech:
 	Inherits: ^researched_upgrade.template
@@ -10975,942 +12450,6 @@ combat_tank_o.husk:
 # 		Type: Concrete
 # 	-SpawnActorOnDeath@1:
 
-##############################################
-#               Vordel
-##############################################
-
-# mcv_vordel:
-# 	Inherits@D2KT: ^D2KTank
-# 	Inherits@selection: ^SelectableSupportUnit
-# 	Inherits@D2KSprite: ^D2KPaletteRender
-# 	Inherits@mcv: ^MCV
-# 	Inherits@conyard: ^Conyard
-# 	Inherits@EXT: ^ExternalConditions
-# 	Buildable:
-# 		Prerequisites: ~techlevel.medium, allowsVordelMCV
-# 		Queue: Infantry, RAInfantry
-# 		BuildPaletteOrder: 110
-# 		BuildDurationModifier: 50
-# 		BuildLimit: 1
-# 		Description: Deploys into another Projections Base\nProjections Base produces units and also enables combinations\n\nCombinating:\nPut 3 regular units of same type inside Projections Base to create 1 Absorbed unit\n2 Absorbed units of same type to create 1 Overwhelmed unit\nLimit of 10 Projection Bases
-# 		IconPalette: d2kunit
-# 	Valued:
-# 		Cost: 3000
-# 	Tooltip:
-# 		Name: Mobile Projector Vehicle
-# 	Selectable:
-# 		Class: mcv
-# 		DecorationBounds: 2048, 1280
-# 	Health:
-# 		HP: 300000
-# 	Armor:
-# 		Type: Heavy
-# 	Mobile:
-# 		Speed: 50
-# 	RevealsShroud:
-# 		Range: 2c768
-# 	MustBeDestroyed:
-# 		RequiredForShortGame: true
-# 	BaseBuilding:
-# 	FireWarheadsOnDeath:
-
-# 		Weapon: D2KUnitExplodeLarge
-# 		EmptyWeapon: D2KUnitExplodeLarge
-# 	Transforms:
-# 		IntoActor: construction_yard_vordel
-# 		Offset: -1,-1
-# 		TransformSounds: BUILD1.WAV
-# 		Facing: 256
-# 		NoTransformNotification: BuildingCannotPlaceAudio
-# 	SpawnActorOnDeath:
-# 		Actor: d2k_mcv.husk
-# 		OwnerType: InternalName
-# 		EffectiveOwnerFromOwner: true
-# 	AttractsWorms:
-# 		Intensity: 700
-# 	ChangesHealth:
-# 		Step: 50
-# 		Delay: 3
-# 		StartIfBelow: 50
-# 	-RevealOnFire:
-# 	Cloak@TDcloak:
-# 		Palette: d2kcloak
-# 	Voiced:
-# 		VoiceSet: D2KVordelVoice
-# 	RenderSprites:
-# 		Image: d2k_mcv
-# 		Palette: cloak
-
-# construction_yard_vordel:
-# 	GrantExternalConditionToOwner@BuildingsOwned:
-# 		Condition: BuildingsOwned
-# 	Inherits@D2kBLD: ^D2KBuilding
-# 	Inherits@shape: ^3x2Shape
-# 	Inherits@D2KSprite: ^D2KPaletteRender
-# 	Inherits@CPQ: ^CPQCondition
-# 	Inherits@Prereqs: ^D2KPrereqs
-# 	Inherits@ai: ^AIConyardCash
-# 	Inherits@conyard: ^Conyard
-# 	Inherits@promotions: ^Promotions
-# 	Inherits@dufactionprereqs: ^DuneUniverseFactionPrereqs
-# 	Inherits@prod: ^ProducesUnits
-# 	GrantConditionOnPowerState@supply:
-# 		Condition: lowpower
-# 		ValidPowerStates: Low, Critical
-# 	Exit@1:
-# 		SpawnOffset: -704,768,0
-# 		ExitCell: -1,2
-# 	Exit@2:
-# 		SpawnOffset: -704,768,0
-# 		ExitCell: -1,3
-# 	Exit@3:
-# 		SpawnOffset: -704,768,0
-# 		ExitCell: 0,3
-# 	GrantConditionOnPrerequisite@botplayer:
-# 		Prerequisites: ~botplayer
-# 		Condition: botplayer
-# 	GrantConditionOnPrerequisite@vordel2:
-# 		Prerequisites: vordel2
-# 		Condition: vordel2
-# 	GrantConditionOnPrerequisite@vordel3:
-# 		Prerequisites: vordel3
-# 		Condition: vordel3
-# 	GrantConditionOnPrerequisite@vordel4:
-# 		Prerequisites: vordel4
-# 		Condition: vordel4
-# 	GrantConditionOnPrerequisite@vordel5:
-# 		Prerequisites: vordel5
-# 		Condition: vordel5
-# 	GrantConditionOnPrerequisite@vordel6:
-# 		Prerequisites: vordel6
-# 		Condition: vordel6
-# 	GrantConditionOnPrerequisite@vordel7:
-# 		Prerequisites: vordel7
-# 		Condition: vordel7
-# 	GrantConditionOnPrerequisite@vordel8:
-# 		Prerequisites: vordel8
-# 		Condition: vordel8
-# 	GrantConditionOnPrerequisite@vordel9:
-# 		Prerequisites: vordel9
-# 		Condition: vordel9
-# 	GrantConditionOnPrerequisite@vordel10:
-# 		Prerequisites: vordel10
-# 		Condition: vordel10
-# 	CashTrickler@max:
-# 		Interval: 400
-# 		Amount: 400
-# 		PauseOnCondition: lowpower && !botplayer
-# 	CashTricklerBar:
-# 	CashTricklerMultiplier@vordel2:
-# 		Modifier: 90
-# 		RequiresCondition: vordel2
-# 	CashTricklerMultiplier@vordel3:
-# 		Modifier: 90
-# 		RequiresCondition: vordel3
-# 	CashTricklerMultiplier@vordel4:
-# 		Modifier: 90
-# 		RequiresCondition: vordel4
-# 	CashTricklerMultiplier@vordel5:
-# 		Modifier: 90
-# 		RequiresCondition: vordel5
-# 	CashTricklerMultiplier@vordel6:
-# 		Modifier: 90
-# 		RequiresCondition: vordel6
-# 	CashTricklerMultiplier@vordel7:
-# 		Modifier: 90
-# 		RequiresCondition: vordel7
-# 	CashTricklerMultiplier@vordel8:
-# 		Modifier: 91
-# 		RequiresCondition: vordel8
-# 	CashTricklerMultiplier@vordel9:
-# 		Modifier: 91
-# 		RequiresCondition: vordel9
-# 	CashTricklerMultiplier@vordel10:
-# 		Modifier: 91 #This will give Vordel 4x the income of a single Projector Base on having a total of 10 Projector Bases
-# 		RequiresCondition: vordel10
-# 	RallyPoint:
-# 	Buildable:
-# 		Description: Produces units and vehicles of Vordel.\nUnits must stay within range of this building. Otherwise they will disappear.
-# 	Building:
-# 		Footprint: xxx xxx ===
-# 		Dimensions: 3,3
-# 		LocalCenterOffset: 0,-512,0
-# 		IconPalette: d2kunit
-# 	Health:
-# 		HP: 500000
-# 	Armor:
-# 		Type: Concrete
-# 	RevealsShroud:
-# 		Range: 5c768
-# 	Production@NORMAL:
-# 		Produces: Infantry
-# 		RequiresCondition: !classicproductionqueues
-# 		PauseOnCondition: lowpower && !botplayer
-# 	Production@CLASSICPRODUCTIONQUEUES:
-# 		Produces: RAInfantry
-# 		RequiresCondition: classicproductionqueues
-# 		PauseOnCondition: lowpower && !botplayer
-# 	Valued:
-# 		Cost: 5000
-# 	Tooltip:
-# 		Name: Projections Base
-# 	CustomSellValue:
-# 		Value: 5000
-# 	SpawnActorsOnSell:
-# 		ActorTypes: light_inf_vordel_spawned, light_inf_vordel_spawned, light_inf_vordel_spawned, light_inf_vordel_spawned
-# 	BaseBuilding:
-# 	ProductionBar@VORDEL:
-# 		ProductionType: Infantry
-# 		RequiresCondition: !classicproductionqueues
-# 	ProductionBar@CPQVORDEL:
-# 		ProductionType: RAInfantry
-# 		RequiresCondition: classicproductionqueues
-# 	Power:
-# 		Amount: 100
-# 	RenderSprites:
-# 		Image: conyard.ordos
-# 		Palette: cloak
-# 	WithBuildingPlacedOverlay:
-# 		RequiresCondition: !build-incomplete
-# 		Palette: d2kunit
-# 	ProductionQueue@normal:
-# 		Type: Infantry
-# 		Group: Infantry
-# 		ReadyAudio: ConstructionComplete
-# 		BlockedAudio: NoBuild
-# 		LimitedAudio: BuildingInProgress
-# 		QueuedAudio: Building
-# 		LowPowerModifier: 250
-# 		OnHoldAudio: OnHold
-# 		CancelledAudio: Cancelled
-# 	ProvidesPrerequisite@buildingname:
-# 	RevealOnDeath:
-# 		Radius: 5c768
-# 	BaseProvider:
-# 		Range: 15c0
-# 	GivesBuildableArea:
-# 		AreaTypes: building
-# 	-WithDeathAnimation:
-# 	ThrowsShrapnel:
-# 		Weapons: Debris, Debris2, Debris3, Debris4
-# 		Pieces: 4, 6
-# 		Range: 1c512, 3c0
-# 	SpawnActorOnDeath@death1:
-# 		Actor: light_inf_vordel_spawned
-# 	SpawnActorOnDeath@death2:
-# 		Actor: light_inf_vordel_spawned
-# 	SpawnActorOnDeath@death3:
-# 		Actor: light_inf_vordel_spawned
-# 	SpawnActorOnDeath@death4:
-# 		Actor: light_inf_vordel_spawned
-# 	SpawnActorOnDeath@death5:
-# 		Actor: light_inf_vordel_spawned
-# 	FreeActor@CPQDEBUGDUMMY:
-# 		-RequiresCondition:
-# 	ProximityExternalCondition@d2kvordelproxy:
-# 		Condition: d2kvordelproxy
-# 		Range: 25c0
-# 		RequiresCondition: !lowpower && !disabled
-# 	WithRangeCircle@d2kvordelproxy:
-# 		Range: 25c0
-# 		RequiresCondition: !lowpower && !disabled
-# 	Production:
-# 		Produces: Upgrades
-# 	ProductionBar:
-# 		ProductionType: Upgrades
-
-# light_inf_vordel:
-# 	Inherits: light_inf
-# 	Inherits@vordelproxy: ^D2KVordelProxyUnit
-# 	Inherits@MC: ^MCImmune
-# 	Buildable:
-# 		Prerequisites: construction_yard_vordel
-# 		Queue: Infantry
-# 		Description: General-purpose vordel infantry.\n  Strong vs Infantry\n  Weak vs Vehicles
-# 	RenderSprites:
-# 		Image: light_inf
-# 		Palette: cloak
-# 	Power:
-# 		Amount: -5
-# 	Voiced:
-# 		VoiceSet: D2KVordelVoice
-
-# light_inf_vordel_spawned:
-# 	Inherits: light_inf_vordel
-# 	Buildable:
-# 		Prerequisites: ~botplayer
-# 	Power:
-# 		Amount: 0
-
-# light_inf_vordel_2:
-# 	Inherits: light_inf_vordel
-# 	Inherits@absorbed: ^D2KVordelAbsorbed
-# 	Tooltip:
-# 		Name: Absorbed Light Infantry
-# 	Buildable:
-# 		Prerequisites: light_inf_vordel, ~botplayer
-# 		Queue: Infantry, RAInfantry
-# 	ReloadDelayMultiplier@mk2:
-# 		Modifier: 66
-# 	FirepowerMultiplier@mk2:
-# 		Modifier: 150
-
-# trooper_vordel:
-# 	Inherits: trooper
-# 	Inherits@vordelproxy: ^D2KVordelProxyUnit
-# 	Inherits@MC: ^MCImmune
-# 	Buildable:
-# 		-Prerequisites:
-# 		Queue: Infantry
-# 	Power:
-# 		Amount: -8
-# 	RenderSprites:
-# 		Image: trooper
-# 		Palette: cloak
-# 	Voiced:
-# 		VoiceSet: D2KVordelVoice
-
-# trooper_vordel_2:
-# 	Inherits: trooper_vordel
-# 	Inherits@absorbed: ^D2KVordelAbsorbed
-# 	Tooltip:
-# 		Name: Absorbed Trooper
-# 	Buildable:
-# 		Prerequisites: trooper_vordel, ~botplayer
-# 		Queue: Infantry, RAInfantry
-
-# trike_vordel:
-# 	Inherits: trike
-# 	Inherits@vordelproxy: ^D2KVordelProxyUnit
-# 	Inherits@MC: ^MCImmune
-# 	Inherits@snipe: ^DriverKillImmune
-# 	Inherits@ND: ^NotDevourable
-# 	Buildable:
-# 		BuildPaletteOrder: 10
-# 		-Prerequisites:
-# 		Queue: Infantry, RAInfantry
-# 	Power:
-# 		Amount: -15
-# 	RenderSprites:
-# 		Image: trike
-# 		Palette: cloak
-# 	Voiced:
-# 		VoiceSet: D2KVordelVoice
-# 	-FireWarheadsOnDeath:
-
-
-# trike_vordel_2:
-# 	Inherits: trike_vordel
-# 	Inherits@absorbed: ^D2KVordelAbsorbed
-# 	Tooltip:
-# 		Name: Absorbed Trike
-# 	Buildable:
-# 		Prerequisites: trike_vordel, ~botplayer
-# 		Queue: Infantry, RAInfantry
-
-# trike_vordel_3:
-# 	Inherits: trike_vordel_2
-# 	Inherits@absorbed: ^D2KVordelAbsorbed2
-# 	Tooltip:
-# 		Name: Overwhelmed Trike
-# 	-KillsSelf@vordel:
-# 	Buildable:
-# 		Prerequisites: trike_vordel_2, ~botplayer
-# 		Queue: Infantry, RAInfantry
-
-# quad_vordel:
-# 	Inherits: quad
-# 	Inherits@vordelproxy: ^D2KVordelProxyUnit
-# 	Inherits@MC: ^MCImmune
-# 	Inherits@snipe: ^DriverKillImmune
-# 	Inherits@ND: ^NotDevourable
-# 	Power:
-# 		Amount: -20
-# 	Buildable:
-# 		-Prerequisites:
-# 		Queue: Infantry, RAInfantry
-# 	RenderSprites:
-# 		Image: quad
-# 		Palette: cloak
-# 	Voiced:
-# 		VoiceSet: D2KVordelVoice
-# 	-FireWarheadsOnDeath:
-
-
-# quad_vordel_2:
-# 	Inherits: quad_vordel
-# 	Inherits@absorbed: ^D2KVordelAbsorbed
-# 	Tooltip:
-# 		Name: Absorbed Quad
-# 	Buildable:
-# 		Prerequisites: quad_vordel, ~botplayer
-# 		Queue: Infantry, RAInfantry
-
-# quad_vordel_3:
-# 	Inherits: quad_vordel_2
-# 	Inherits@absorbed: ^D2KVordelAbsorbed2
-# 	Tooltip:
-# 		Name: Overwhelmed Quad
-# 	-KillsSelf@vordel:
-# 	Buildable:
-# 		Prerequisites: quad_vordel_2, ~botplayer
-# 		Queue: Infantry, RAInfantry
-# combat_tank_vordel:
-# 	Inherits: combat_tank_o
-# 	Inherits@vordelproxy: ^D2KVordelProxyUnit
-# 	Inherits@MC: ^MCImmune
-# 	Inherits@snipe: ^DriverKillImmune
-# 	Inherits@ND: ^NotDevourable
-# 	Power:
-# 		Amount: -30
-# 	Buildable:
-# 		-Prerequisites:
-# 		Queue: Infantry, RAInfantry
-# 	RenderSprites:
-# 		Image: combat_tank_o
-# 		Palette: cloak
-# 	Voiced:
-# 		VoiceSet: D2KVordelVoice
-# 	-FireWarheadsOnDeath:
-
-# 	-SpawnActorOnDeath:
-
-# combat_tank_vordel_2:
-# 	Inherits: combat_tank_vordel
-# 	Inherits@absorbed: ^D2KVordelAbsorbed
-# 	Tooltip:
-# 		Name: Absorbed Combat Tank
-# 	Buildable:
-# 		Prerequisites: combat_tank_vordel, ~botplayer
-# 		Queue: Infantry, RAInfantry
-
-# combat_tank_vordel_3:
-# 	Inherits: combat_tank_vordel_2
-# 	Inherits@absorbed: ^D2KVordelAbsorbed2
-# 	Tooltip:
-# 		Name: Overwhelmed Combat Tank
-# 	-KillsSelf@vordel:
-# 	Buildable:
-# 		Prerequisites: combat_tank_vordel_2, ~botplayer
-# 		Queue: Infantry, RAInfantry
-
-# siege_tank_vordel:
-# 	Inherits: siege_tank
-# 	Inherits@vordelproxy: ^D2KVordelProxyUnit
-# 	Inherits@MC: ^MCImmune
-# 	Inherits@snipe: ^DriverKillImmune
-# 	Inherits@ND: ^NotDevourable
-# 	Power:
-# 		Amount: -35
-# 	Buildable:
-# 		-Prerequisites:
-# 		Queue: Infantry, RAInfantry
-# 	RenderSprites:
-# 		Image: siege_tank
-# 		Palette: cloak
-# 	Voiced:
-# 		VoiceSet: D2KVordelVoice
-# 	-FireWarheadsOnDeath:
-
-# 	-SpawnActorOnDeath:
-
-# siege_tank_vordel_2:
-# 	Inherits: siege_tank_vordel
-# 	Inherits@absorbed: ^D2KVordelAbsorbed
-# 	Tooltip:
-# 		Name: Absorbed Siege Tank
-# 	Buildable:
-# 		Prerequisites: siege_tank_vordel, ~botplayer
-# 		Queue: Infantry, RAInfantry
-# siege_tank_vordel_3:
-# 	Inherits: siege_tank_vordel_2
-# 	Inherits@absorbed: ^D2KVordelAbsorbed2
-# 	Tooltip:
-# 		Name: Overwhelmed Siege Tank
-# 	-KillsSelf@vordel:
-# 	Buildable:
-# 		Prerequisites: siege_tank_vordel_2, ~botplayer
-# 		Queue: Infantry, RAInfantry
-# missile_tank_vordel:
-# 	Inherits: missile_tank
-# 	Inherits@vordelproxy: ^D2KVordelProxyUnit
-# 	Inherits@MC: ^MCImmune
-# 	Inherits@snipe: ^DriverKillImmune
-# 	Inherits@ND: ^NotDevourable
-# 	Power:
-# 		Amount: -35
-# 	Buildable:
-# 		Prerequisites: ~research.missile_tank_vordel
-# 		Queue: Infantry, RAInfantry
-# 	RenderSprites:
-# 		Image: missile_tank
-# 		Palette: cloak
-# 	Voiced:
-# 		VoiceSet: D2KVordelVoice
-# 	-FireWarheadsOnDeath:
-
-# 	-SpawnActorOnDeath:
-
-# missile_tank_vordel_2:
-# 	Inherits: missile_tank_vordel
-# 	Inherits@absorbed: ^D2KVordelAbsorbed
-# 	Tooltip:
-# 		Name: Absorbed Missile Tank
-# 	Buildable:
-# 		Prerequisites: missile_tank_vordel, ~botplayer
-# 		Queue: Infantry, RAInfantry
-
-# missile_tank_vordel_3:
-# 	Inherits: missile_tank_vordel_2
-# 	Inherits@absorbed: ^D2KVordelAbsorbed2
-# 	Tooltip:
-# 		Name: Overwhelmed Missile Tank
-# 	-KillsSelf@vordel:
-# 	Buildable:
-# 		Prerequisites: missile_tank_vordel_2, ~botplayer
-# 		Queue: Infantry, RAInfantry
-# projection_outpost_vordel:
-# 	Inherits: ^D2KVehicle
-# 	Inherits@EXPERIENCE: ^GainsExperience
-# 	Inherits@MC: ^MCImmune
-# 	Inherits@snipe: ^DriverKillImmune
-# 	Inherits@ND: ^NotDevourable
-# 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
-# 	Valued:
-# 		Cost: 1500
-# 	Tooltip:
-# 		Name: Projection Outpost
-# 	UpdatesPlayerStatistics:
-# 		AddToArmyValue: true
-# 	Buildable:
-# 		BuildPaletteOrder: 30
-# 		Queue: Infantry, RAInfantry
-# 		Description: Prevents nearby Delusion units from vanishing\nDeploy to become static but increase effective range\nProvides Power\nProvides Radar upon deploying
-# 		IconPalette: ra2
-# 		BuildDurationModifier: 50
-# 	WithFacingSpriteBody:
-# 		RequiresCondition: !deployed
-# 	WithSpriteBody@deployed:
-# 		Sequence: idle-deployed
-# 		RequiresCondition: deployed
-# 	#WithIdleOverlay@deployed:
-# 	#    Sequence: idle-overlay
-# 	#    RequiresCondition: deployed
-# 	#    Offset: 300,-700,0
-# 	Power:
-# 		Amount: 50
-# 	Mobile:
-# 		Speed: 75
-# 		PauseOnCondition: deployed
-# 	ProvidesRadar:
-# 		RequiresCondition: !disabled && !jammed && deployed
-# 	Health:
-# 		HP: 50000
-# 	Repairable:
-# 		HpPerStep: 1246
-# 	Armor:
-# 		Type: Medium
-# 	RevealsShroud:
-# 		Range: 6c0
-# 	Inherits@EXT: ^ExternalConditions ##########
-# 	AcceptsDeliveredExperience: ##########
-# 		ValidTypes: vehicle ##########
-# 	RenderSprites:
-# 		Palette: cloak
-# 	Voiced:
-# 		VoiceSet: D2KVordelVoice
-# 	GainsExperience:
-# 		LevelUpNotification: LevelUpRA2
-# 	RenderSprites:
-# 		Image: vordel_projection_outpost
-# 	GrantConditionOnDeploy:
-# 		DeployedCondition: deployed
-# 	ProximityExternalCondition@d2kvordelproxy:
-# 		Condition: d2kvordelproxy
-# 		Range: 7c0
-# 		RequiresCondition: !deployed
-# 	WithRangeCircle@d2kvordelproxy:
-# 		Range: 7c0
-# 		RequiresCondition: !deployed
-# 	ProximityExternalCondition@d2kvordelproxy2:
-# 		Condition: d2kvordelproxy
-# 		Range: 15c0
-# 		RequiresCondition: deployed
-# 	WithRangeCircle@d2kvordelproxy2:
-# 		Range: 15c0
-# 		RequiresCondition: deployed
-# 	DamageMultiplier@deployed:
-# 		Modifier: 75
-# 		RequiresCondition: deployed
-# 	PowerMultiplier@deployed:
-# 		Modifier: 200
-# 		RequiresCondition: deployed
-# 	Armament@Deploy:
-# 		Weapon: deploytargeting.10c0
-# 		Name: primary
-# 	AttackFrontal:
-# 		FacingTolerance: 0
-# 	AutoTarget:
-# 		InitialStance: AttackAnything
-# 		ScanRadius: 15
-# 	AutoDeployer:
-# 		DeployChance: 100
-# 		DeployTicks: 450
-# 		DeployTrigger: Attack
-# research.missile_tank_vordel:
-# 	Inherits: ^upgrade.template
-# 	Tooltip:
-# 		Name: Missile Tank
-# 	Buildable:
-# 		BuildPaletteOrder: 200
-# 		Prerequisites: ~!research.missile_tank_vordel
-# 		Queue: Upgrades
-# 		BuildDuration: 1500
-# 		BuildDurationModifier: 100
-# 		Description: Unlocks Missile Tank
-# 		IconPalette: d2kunit
-# 	Valued:
-# 		Cost: 1000
-# 	RenderSprites:
-# 		Image: missile_tank
-# 	ProvidesPrerequisite@upgradename:
-
-# Upgrades_apparition:
-# 	Inherits: ^upgrade.template
-# 	Tooltip:
-# 		Name: Apparition
-# 	Buildable:
-# 		BuildPaletteOrder: 200
-# 		Prerequisites: ~!Upgrades_apparition, ~research.missile_tank_vordel
-# 		Queue: Upgrades
-# 		BuildDuration: 2250
-# 		BuildDurationModifier: 100
-# 		Description: Unlocks Apparition
-# 		IconPalette: ra2
-# 	Valued:
-# 		Cost: 1500
-# 	RenderSprites:
-# 		Image: d2k_apparition
-# 	ProvidesPrerequisite@upgradename:
-
-# Upgrades_aircraft_eater:
-# 	Inherits: ^upgrade.template
-# 	Tooltip:
-# 		Name: Aircraft Eater
-# 	Buildable:
-# 		BuildPaletteOrder: 200
-# 		Prerequisites: ~!Upgrades_aircraft_eater, ~Upgrades_defender
-# 		Queue: Upgrades
-# 		BuildDuration: 3500
-# 		BuildDurationModifier: 100
-# 		Description: Unlocks Aircraft Eater
-# 		IconPalette: ra2
-# 	Valued:
-# 		Cost: 2500
-# 	RenderSprites:
-# 		Image: d2k_aircraft_eater
-# 	ProvidesPrerequisite@upgradename:
-
-# Upgrades_defender:
-# 	Inherits: ^upgrade.template
-# 	Tooltip:
-# 		Name: Defender
-# 	Buildable:
-# 		BuildPaletteOrder: 200
-# 		Prerequisites: ~!Upgrades_defender, ~Upgrades_apparition
-# 		Queue: Upgrades
-# 		BuildDuration: 2500
-# 		BuildDurationModifier: 100
-# 		Description: Unlocks Defender
-# 		IconPalette: ra2
-# 	Valued:
-# 		Cost: 2000
-# 	RenderSprites:
-# 		Image: d2k_defender
-# 	ProvidesPrerequisite@upgradename:
-
-# d2k_apparition:
-# 	Inherits@D2KT: ^D2KTank
-# 	Inherits@GAINSEXPERIENCE: ^GainsExperience
-# 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
-# 	Inherits@EXT: ^ExternalConditions
-# 	Inherits@EMP: ^FrontalEMP
-# 	Inherits@bot: ^BotMicromanageable
-# 	Inherits@vordelproxy: ^D2KVordelProxyUnit
-# 	Inherits@AntiVeh: ^PrioritizeVehicle
-# 	Inherits@AntiAir: ^PrioritizeAir
-# 	Inherits@MC: ^MCImmune
-# 	Inherits@snipe: ^DriverKillImmune
-# 	Inherits@ND: ^NotDevourable
-# 	Buildable:
-# 		Queue: Infantry, RAInfantry
-# 		BuildPaletteOrder: 80
-# 		BuildDuration: 650
-# 		BuildDurationModifier: 100
-# 		Prerequisites: ~techlevel.medium, ~Upgrades_apparition
-# 		Description: Mysterious creature\nResistant against missiles and heavy calibre armaments
-# 		IconPalette: ra2
-# 	Valued:
-# 		Cost: 600
-# 	WithAttackAnimation:
-# 		Armament: primary
-# 		Sequence: shoot
-# 	WithAttackAnimation@1:
-# 		Armament: secondary
-# 		Sequence: shoot
-# 	Power:
-# 		Amount: -50
-# 	Tooltip:
-# 		Name: Apparition
-# 	UpdatesPlayerStatistics:
-# 		AddToArmyValue: true
-# 	Health:
-# 		HP: 37000
-# 	Armor:
-# 		Type: None
-# 	Mobile:
-# 		TurnSpeed: 72
-# 		Speed: 143
-# 		Locomotor: hover
-# 	RevealsShroud:
-# 		Range: 5c0
-# 	Armament:
-# 		Name: primary
-# 		Weapon: d2k_basq
-# 		Recoil: 65
-# 		RecoilRecovery: 25
-# 		MuzzleSequence: muzzle
-# 		LocalOffset: 600, 0, 175
-# 	Armament@aa:
-# 		Name: secondary
-# 		Weapon: d2k_basq_AA
-# 		Recoil: 65
-# 		RecoilRecovery: 25
-# 		MuzzleSequence: muzzle
-# 		LocalOffset: 600, 0, 175
-# 	AttackFrontal:
-# 		FacingTolerance: 0
-# 	FireWarheadsOnDeath:
-# 		Weapon: D2KUnitExplodeMed
-# 		EmptyWeapon: D2KUnitExplodeMed
-# 	Selectable:
-# 		Class: d2k_apparition
-# 	AttractsWorms:
-# 		Intensity: 500
-# 	RenderSprites:
-# 		Image: d2k_apparition
-# 		Palette: cloak
-# 	Cloak@TDcloak:
-# 		Palette: racloak
-
-# d2k_apparition_vordel_2:
-# 	Inherits: d2k_apparition
-# 	Inherits@absorbed: ^D2KVordelAbsorbed
-# 	Tooltip:
-# 		Name: Absorbed Apparition
-# 	Buildable:
-# 		Prerequisites: d2k_apparition, ~botplayer
-# 		Queue: Infantry, RAInfantry
-
-# d2k_apparition_vordel_3:
-# 	Inherits: d2k_apparition_vordel_2
-# 	Inherits@absorbed: ^D2KVordelAbsorbed2
-# 	Tooltip:
-# 		Name: Overwhelmed Apparition
-# 	-KillsSelf@vordel:
-# 	Buildable:
-# 		Prerequisites: d2k_apparition_vordel_2, ~botplayer
-# 		Queue: Infantry, RAInfantry
-# d2k_aircraft_eater:
-# 	Inherits: ^RANeutralPlane
-# 	Inherits@AUTOTARGET: ^AutoTargetAir
-# 	Inherits@GAINSEXPERIENCE: ^GainsExperience
-# 	Inherits@vordelproxy: ^D2KVordelProxyUnit
-# 	Inherits@AntiAir: ^PrioritizeAir
-# 	AutoTarget:
-# 		InitialStance: ReturnFire
-# 	Valued:
-# 		Cost: 1000
-# 	Power:
-# 		Amount: -50
-# 	WithAttackAnimation:
-# 		Armament: primary
-# 		Sequence: shoot
-# 	Buildable:
-# 		Queue: Infantry, RAInfantry, RAVehicle, Aircraft
-# 		BuildPaletteOrder: 40
-# 		Prerequisites: ~Upgrades_aircraft_eater, ~techlevel.medium
-# 		BuildDuration: 750
-# 		BuildDurationModifier: 100
-# 		Description: Mysterious Anti-Air Air Unit.\nCan consume any Aircraft Unit instantly\nNeeds time to digest after each meal\n Strong vs Air
-# 		IconPalette: ra2
-# 	Tooltip:
-# 		Name: Aircraft Eater
-# 	-Passenger:
-# 	UpdatesPlayerStatistics:
-# 		AddToArmyValue: true
-# 	Health:
-# 		HP: 25000
-# 	Armor:
-# 		Type: Heavy
-# 	RevealsShroud:
-# 		Range: 4c512
-# 		Type: GroundPosition
-# 	AttackAircraft:
-# 		FacingTolerance: 320
-# 	ReloadArmamentsBar:
-# 	Armament:
-# 		Name: primary
-# 		Weapon: d2k_aircraft_eater
-# 		LocalOffset: 0,0,0
-# 		LocalYaw: -40, 24
-# 	Aircraft:
-# 		CruiseAltitude: 1920
-# 		Speed: 133
-# 		TurnSpeed: 28
-# 		MaximumPitch: 56
-# 		CanHover: false
-# 		Repulsable: False
-# 	Guard:
-# 	Guardable:
-# 	Targetable:
-# 		TargetTypes: Air, Plane
-# 	SpawnActorOnDeath:
-# 		Actor: d2k_aircraft_eater.husk
-# 	Selectable:
-# 		Class: d2k_aircraft_eater
-# 		Bounds: 65536, 50944, 0, 3626
-# 		DecorationBounds: 72789, 52778, 0, 1792
-# 	SelectionDecorations:
-# 	Voiced:
-# 		VoiceSet: D2KVordelVoice
-# 	RenderSprites:
-# 		Image: d2k_aircraft_eater
-# 		Palette: cloak
-
-# d2k_aircraft_eater.husk:
-# 	Inherits: ^PlaneHusk
-# 	Tooltip:
-# 		Name: Aircraft Eater
-# 	Aircraft:
-# 		TurnSpeed: 8
-# 		Speed: 140
-# 	RenderSprites:
-# 		Image: d2k_aircraft_eater
-# 		Palette: cloak
-# 	FallsToEarth:
-# 		Explosion: D2KUnitExplodeMed
-
-# d2k_aircraft_eater_vordel_2:
-# 	Inherits: d2k_aircraft_eater
-# 	Inherits@absorbed: ^D2KVordelAbsorbed
-# 	Tooltip:
-# 		Name: Absorbed Aircraft Eater
-# 	Buildable:
-# 		Prerequisites: d2k_aircraft_eater, ~botplayer
-# 		Queue: Infantry, RAInfantry
-# d2k_aircraft_eater_vordel_3:
-# 	Inherits: d2k_aircraft_eater_vordel_2
-# 	Inherits@absorbed: ^D2KVordelAbsorbed2
-# 	Tooltip:
-# 		Name: Overwhelmed Aircraft Eater
-# 	-KillsSelf@vordel:
-# 	Buildable:
-# 		Prerequisites: d2k_aircraft_eater_vordel_2, ~botplayer
-# 		Queue: Infantry, RAInfantry
-# d2k_defender:
-# 	Inherits: ^RANeutralPlane
-# 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
-# 	Inherits@GAINSEXPERIENCE: ^GainsExperience
-# 	Inherits@vordelproxy: ^D2KVordelProxyUnit
-# 	Inherits@AntiInf: ^PrioritizeInfantry
-# 	AutoTarget:
-# 		InitialStance: ReturnFire
-# 	Valued:
-# 		Cost: 450
-# 	Power:
-# 		Amount: -30
-# 	Buildable:
-# 		Queue: Infantry, RAInfantry, RAVehicle, Aircraft
-# 		BuildPaletteOrder: 40
-# 		Prerequisites: ~Upgrades_defender, ~techlevel.medium
-# 		BuildDuration: 350
-# 		BuildDurationModifier: 100
-# 		Description: Air Unit\nStrong vs Infantry
-# 		IconPalette: ra2
-# 	Tooltip:
-# 		Name: Defender
-# 	UpdatesPlayerStatistics:
-# 		AddToArmyValue: true
-# 	Health:
-# 		HP: 7500
-# 	-Passenger:
-# 	Armor:
-# 		Type: None
-# 	RevealsShroud:
-# 		Range: 4c512
-# 		Type: GroundPosition
-# 	AttackAircraft:
-# 		FacingTolerance: 320
-# 	Armament:
-# 		Weapon: D2K_ShockGunInf
-# 		LocalOffset: 0,0,0
-# 		LocalYaw: -40, 24
-# 	Aircraft:
-# 		CruiseAltitude: 1920
-# 		Speed: 175
-# 		TurnSpeed: 28
-# 		MaximumPitch: 56
-# 		CanHover: false
-# 		Repulsable: False
-# 	Guard:
-# 	Guardable:
-# 	Targetable:
-# 		TargetTypes: Air, Plane
-# 	SpawnActorOnDeath:
-# 		Actor: d2k_defender.husk
-# 	Selectable:
-# 		Class: d2k_defender
-# 		Bounds: 65536, 50944, 0, 3626
-# 		DecorationBounds: 72789, 52778, 0, 1792
-# 	SelectionDecorations:
-# 	Voiced:
-# 		VoiceSet: D2KVordelVoice
-# 	RenderSprites:
-# 		Image: d2k_defender
-# 		Palette: cloak
-
-# d2k_defender.husk:
-# 	Inherits: ^PlaneHusk
-# 	Tooltip:
-# 		Name: Defender
-# 	Aircraft:
-# 		TurnSpeed: 8
-# 		Speed: 140
-# 	RenderSprites:
-# 		Image: d2k_defender
-# 		Palette: cloak
-# 	FallsToEarth:
-# 		Explosion: D2KUnitExplodeMed
-
-# d2k_defender_vordel_2:
-# 	Inherits: d2k_defender
-# 	Inherits@absorbed: ^D2KVordelAbsorbed
-# 	Tooltip:
-# 		Name: Absorbed Defender
-# 	Buildable:
-# 		Prerequisites: d2k_defender, ~botplayer
-# 		Queue: Infantry, RAInfantry
-
-# d2k_defender_vordel_3:
-# 	Inherits: d2k_defender_vordel_2
-# 	Inherits@absorbed: ^D2KVordelAbsorbed2
-# 	Tooltip:
-# 		Name: Overwhelmed Defender
-# 	-KillsSelf@vordel:
-# 	Buildable:
-# 		Prerequisites: d2k_defender_vordel_2, ~botplayer
-# 		Queue: Infantry, RAInfantry
 ##############################################
 #                CREEPS
 ##############################################
@@ -12568,9 +13107,6 @@ heavy_inf:
 	Inherits@DECORATIONS: ^InfantryExperienceHospitalHazmatOverrides
 	Inherits@anim: ^D2KPaletteRenderInfantry
 	Inherits@AntiInf: ^PrioritizeInfantry
-	Inherits@Armor: ^D2K_GeneralPurposeArmor
-	Inherits@NeedleGuns: ^D2K_NeedleGuns
-	Inherits@IxianTechnology: ^D2K_AdvancedIxianTechnology
 	Valued:
 		Cost: 400
 	Tooltip:
@@ -12633,8 +13169,7 @@ storm_infantry:
 	Inherits@DECORATIONS: ^InfantryExperienceHospitalHazmatOverrides
 	Inherits@anim: ^D2KPaletteRenderInfantry
 	Inherits@AntiVeh: ^PrioritizeVehicle
-	Inherits@Armor: ^D2K_GeneralPurposeArmor
-	Inherits@IxianTechnology: ^D2K_AdvancedIxianTechnology
+
 	Valued:
 		Cost: 800
 	Tooltip:
@@ -12687,8 +13222,7 @@ storm_raider:
 	Inherits@EMP: ^TurretEMP
 	Inherits@AntiVeh: ^PrioritizeVehicle
 	Inherits@AntiInf: ^PrioritizeInfantry
-	Inherits@Armor: ^D2K_GeneralPurposeArmor
-	Inherits@IxianTechnology: ^D2K_AdvancedIxianTechnology
+
 	Buildable:
 		Queue: Vehicle, RAVehicle
 		BuildPaletteOrder: 10
@@ -12764,8 +13298,7 @@ storm_lasher:
 	Inherits@AntiTank: ^PrioritizeTank
 	Inherits@shape: ^2x2Shape
 	Inherits@detect: ^GenericGroundDetector
-	Inherits@Armor: ^D2K_GeneralPurposeArmor
-	Inherits@IxianTechnology: ^D2K_AdvancedIxianTechnology
+
 	Buildable:
 		Queue: Defence, RADefence
 		Prerequisites: ~upixians_stormlasher, research_centre.ixian
@@ -12858,10 +13391,6 @@ heavy_rocket_raider_ixian:
 	Inherits@IXEMP: ^D2K_Ix_Frontal_EMP
 	Inherits@AntiVeh: ^PrioritizeVehicle
 	Inherits@AntiAir: ^PrioritizeAir
-	Inherits@HeavyMissiles: ^D2K_HeavyMissilesUpgrade
-	Inherits@NeedleGuns: ^D2K_NeedleGuns
-	Inherits@Armor: ^D2K_GeneralPurposeArmor
-	Inherits@IxianTechnology: ^D2K_AdvancedIxianTechnology
 	Buildable:
 		Queue: Vehicle, RAVehicle
 		BuildPaletteOrder: 10
@@ -12971,9 +13500,6 @@ combat_siege_tank:
 	Inherits@D2KSprite: ^D2KPaletteRender
 	Inherits@IXEMP: ^D2K_Ix_Turret_EMP
 	Inherits@AntiBuil: ^PrioritizeBuilding
-	Inherits@Barrel: ^D2K_ReinforcedBarrel
-	Inherits@Armor: ^D2K_GeneralPurposeArmor
-	Inherits@IxianTechnology: ^D2K_AdvancedIxianTechnology
 	Buildable:
 		Queue: Vehicle, RAVehicle
 		BuildPaletteOrder: 40
@@ -13046,10 +13572,6 @@ d2k_neocymek:
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
 	Inherits@EMP: ^FrontalEMP
 	#Inherits@announce: ^AnnounceOnBuild
-	Inherits@Barrel: ^D2K_ReinforcedBarrel
-	Inherits@NeedleGuns: ^D2K_NeedleGuns
-	Inherits@Armor: ^D2K_GeneralPurposeArmor
-	Inherits@IxianTechnology: ^D2K_AdvancedIxianTechnology
 	Tooltip:
 		Name: Neo Cymek
 	Valued:
@@ -13147,8 +13669,7 @@ d2k_jammer:
 	Inherits@AntiEpic: ^PrioritizeEpic
 	Inherits@COMMANDOSKULL: ^CommandoSkull
 	Inherits@bot: ^BotMicromanageable
-	Inherits@Armor: ^D2K_GeneralPurposeArmor
-	Inherits@IxianTechnology: ^D2K_AdvancedIxianTechnology
+
 	Valued:
 		Cost: 5000
 	Tooltip:
@@ -13387,8 +13908,6 @@ d2k_apparition:
 # 	Inherits@exp: ^GainsExperienceRA
 # 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 # 	Inherits@IXEMP: ^D2K_Ix_Frontal_EMP
-# 	Inherits@Armor: ^D2K_GeneralPurposeArmor
-# 	Inherits@IxianTechnology: ^D2K_AdvancedIxianTechnology
 # 	Buildable:
 # 		Queue: Vehicle, RAVehicle
 # 		BuildLimit: 1
@@ -13480,10 +13999,6 @@ d2k_ixdrone:
 	Inherits@AntiAir: ^PrioritizeAir
 	Inherits@cloak: ^CloakedAircraft
 	Inherits@eject: ^AircraftEjectOnDeath
-	Inherits@NeedleGuns: ^D2K_NeedleGuns
-	Inherits@Armor: ^D2K_GeneralPurposeArmor
-	Inherits@Barrel: ^D2K_ReinforcedBarrel
-	Inherits@IxianTechnology: ^D2K_AdvancedIxianTechnology
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -13569,10 +14084,7 @@ d2k_ixdrone.husk:
 # 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
 # 	Inherits@AntiBuil: ^PrioritizeBuilding
 # 	Inherits@CLOAK: ^CloakedAircraft
-# 	Inherits@HeavyMissiles: ^D2K_HeavyMissilesUpgrade
-# 	Inherits@Armor: ^D2K_GeneralPurposeArmor
-# 	Inherits@NeedleGuns: ^D2K_NeedleGuns
-# 	Inherits@IxianTechnology: ^D2K_AdvancedIxianTechnology
+
 # 	Inherits@eject: ^AircraftEjectOnDeath
 # 	Valued:
 # 		Cost: 2400
@@ -13706,8 +14218,6 @@ d2k_ixbomber:
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Inherits@cloak: ^CloakedAircraft
 	Inherits@eject: ^AircraftEjectOnDeath
-	Inherits@Armor: ^D2K_GeneralPurposeArmor
-	Inherits@IxianTechnology: ^D2K_AdvancedIxianTechnology
 	Valued:
 		Cost: 1600
 	Tooltip:
@@ -13784,10 +14294,6 @@ d2k_resonancedrone:
 	Inherits@AutoRepair: ^PrioritizeRepair
 	Inherits@cloak: ^CloakedAircraft
 	Inherits@eject: ^AircraftEjectOnDeath
-	Inherits@AntiInf: ^D2K_NeedleGuns
-	Inherits@Armor: ^D2K_GeneralPurposeArmor
-	Inherits@Barrel: ^D2K_ReinforcedBarrel
-	Inherits@IxianTechnology: ^D2K_AdvancedIxianTechnology
 	Valued:
 		Cost: 2000
 	Tooltip:
@@ -13887,8 +14393,6 @@ d2k_farasha:
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
 	Inherits@MC: ^MCImmune
 	Inherits@COMMANDOSKULL: ^CommandoSkull
-	Inherits@Armor: ^D2K_GeneralPurposeArmor
-	Inherits@IxianTechnology: ^D2K_AdvancedIxianTechnology
 	#Inherits@guildtele: ^Guild_teleport
 	Inherits@eject: ^AircraftEjectOnDeath
 	Valued:
@@ -14021,8 +14525,7 @@ d2k_farasha_drone:
 	Inherits@Template: ^BomberTemplate
 	Inherits@exp: ^GainsExperienceRA
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
-	Inherits@Armor: ^D2K_GeneralPurposeArmor
-	Inherits@IxianTechnology: ^D2K_AdvancedIxianTechnology
+
 	Valued:
 		Cost: 1000
 	Tooltip:

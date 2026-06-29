@@ -7677,7 +7677,6 @@ harvester.husk:
 		ZOffset: -512
 
 trike:
-	Inherits: vordel_effect
 	Defaults:
 		AddExtension: false
 	idle:
@@ -7727,6 +7726,36 @@ quad:
 		Offset: -30,-24
 
 siege_tank:
+	Inherits: vordel_effect
+	Defaults:
+		AddExtension: false
+	idle:
+		Filename: DATA.R16
+		Scale: 1.5
+		Remap: 54F94B
+		Start: 1763
+		Facings: -32
+	turret:
+		Filename: DATA.R16
+		Scale: 1.5
+		Remap: 54F94B
+		Start: 1891
+		Facings: -32
+	muzzle:
+		Filename: DATA.R16
+		Scale: 1.5
+		Remap: 54F94B
+		Start: 3671
+		Length: 3
+		BlendMode: Additive
+	icon:
+		Filename: DATA.R16
+		Scale: 1.5
+		Remap: 54F94B
+		Start: 4287
+		Offset: -30,-24
+
+assault_tank:
 	Inherits: vordel_effect
 	Defaults:
 		AddExtension: false
