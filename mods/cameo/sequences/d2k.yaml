@@ -5022,6 +5022,110 @@ shockgunner:
 		BlendMode: Additive
 		AddExtension: false
 
+heavy_trooper:
+	Defaults:
+		AddExtension: false
+		Scale: 1.9
+	stand:
+		Filename: d2k_shockgunner.shp
+		Start: 0
+		Facings: -8
+		Offset: 8,-5
+	run:
+		Filename: d2k_shockgunner.shp
+		Start: 8
+		Length: 6
+		Facings: -8
+		Offset: 8,-5
+		Tick: 100
+	shoot:
+		Filename: d2k_shockgunner.shp
+		Start: 56
+		Length: 5
+		Facings: -8
+		Offset: 8,-5
+		Tick: 80
+	prone-stand:
+		Filename: d2k_shockgunner.shp
+		Start: 96
+		Facings: -8
+		Offset: 8,-5
+	prone-run:
+		Filename: d2k_shockgunner.shp
+		Start: 104
+		Length: 3
+		Facings: -8
+		Offset: 8,-5
+		Tick: 100
+	prone-shoot:
+		Filename: d2k_shockgunner.shp
+		Start: 128
+		Length: 5
+		Facings: -8
+		Offset: 8,-5
+		Tick: 80
+	die1:
+		Filename: DATA.R16
+		Scale: 1.5
+		Remap: 54F94B
+		Frames: 382, 389, 396, 403, 410, 417, 424, 431, 438, 443, 448, 453
+		Length: 12
+		Tick: 80
+	die2:
+		Filename: DATA.R16
+		Scale: 1.5
+		Remap: 54F94B
+		Frames: 383, 390, 397, 404, 411, 418, 425, 432, 439, 444, 449, 454
+		Length: 12
+		Tick: 80
+	die3:
+		Filename: DATA.R16
+		Scale: 1.5
+		Remap: 54F94B
+		Frames: 384, 391, 398, 405, 412, 419, 426, 433, 440, 445, 450, 455
+		Length: 12
+		Tick: 80
+	die4:
+		Filename: DATA.R16
+		Scale: 1.5
+		Remap: 54F94B
+		Frames: 385, 392, 399, 406, 413, 420, 427, 434, 441, 446, 451, 456
+		Length: 12
+		Tick: 80
+	die5:
+		Filename: e1.shp
+		Start: 324
+		Length: 18
+		Tick: 80
+	die6:
+		Filename: e1.shp
+		Start: 366
+		Length: 11
+		Tick: 80
+	die7:
+		Filename: electro.shp
+		Length: *
+	die-crushed:
+		Filename: DATA.R16
+		Scale: 1.5
+		Remap: 54F94B
+		Frames: 386, 393, 400, 407, 414, 421, 428, 435, 442, 447, 452, 457
+		Length: 12
+		Tick: 800
+		ZOffset: -511
+	icon:
+		Filename: HeavyTrooperCameo.png
+		Start: 0
+	garrison-muzzle:
+		Filename: DATA.R16
+		Scale: 1.5
+		Remap: 54F94B
+		Start: 4028
+		Tick: 60
+		Facings: -32
+		BlendMode: Additive
+		AddExtension: false
+
 storm_infantry:
 	Defaults:
 		AddExtension: false
@@ -5622,14 +5726,14 @@ sardaukar:
 	stand:
 		Filename: DATA.R16
 		Scale: 1.5
-		Remap: 54F94B
+		# Remap: 54F94B
 		Start: 930
 		Facings: -8
 		Transpose: true
 	idle1:
 		Filename: DATA.R16
 		Scale: 1.5
-		Remap: 54F94B
+		# Remap: 54F94B
 		Frames: 1111, 1118, 1125, 1132, 1139, 1146, 1153, 1160
 		Length: 8
 		Tick: 80
@@ -5637,7 +5741,7 @@ sardaukar:
 	idle2:
 		Filename: DATA.R16
 		Scale: 1.5
-		Remap: 54F94B
+		# Remap: 54F94B
 		Frames: 1112, 1119, 1126, 1133, 1140, 1147, 1154, 1161
 		Length: 8
 		Tick: 80
@@ -5645,7 +5749,7 @@ sardaukar:
 	run:
 		Filename: DATA.R16
 		Scale: 1.5
-		Remap: 54F94B
+		# Remap: 54F94B
 		Start: 938
 		Length: 6
 		Facings: -8
@@ -5654,7 +5758,7 @@ sardaukar:
 	shoot:
 		Filename: DATA.R16
 		Scale: 1.5
-		Remap: 54F94B
+		# Remap: 54F94B
 		Start: 978
 		Length: 6
 		Facings: -8
@@ -5662,14 +5766,14 @@ sardaukar:
 	prone-stand:
 		Filename: DATA.R16
 		Scale: 1.5
-		Remap: 54F94B
+		# Remap: 54F94B
 		Start: 1034
 		Facings: -8
 		Transpose: true
 	prone-run:
 		Filename: DATA.R16
 		Scale: 1.5
-		Remap: 54F94B
+		# Remap: 54F94B
 		Start: 1042
 		Length: 3
 		Facings: -8
@@ -5678,7 +5782,7 @@ sardaukar:
 	standup:
 		Filename: DATA.R16
 		Scale: 1.5
-		Remap: 54F94B
+		# Remap: 54F94B
 		Start: 1026
 		Facings: -8
 		Transpose: true
@@ -5686,7 +5790,7 @@ sardaukar:
 	prone-shoot:
 		Filename: DATA.R16
 		Scale: 1.5
-		Remap: 54F94B
+		# Remap: 54F94B
 		Start: 1058
 		Length: 6
 		Facings: -8
@@ -5758,6 +5862,8 @@ sardaukaricon:
 		Offset: -30,-24
 
 d2k_sardaukar_elite:
+	Defaults:
+		Scale: 2.3
 	stand:
 		Filename: d2k_sardaukar_elite.shp
 		Facings: -8
@@ -5787,7 +5893,7 @@ d2k_sardaukar_elite:
 	die-crushed:
 		Filename: DATA.R16
 		Scale: 1.5
-		Remap: 54F94B
+		# Remap: 54F94B
 		Frames: 386, 393, 400, 407, 414, 421, 428, 435, 442, 447, 452, 457
 		Length: 12
 		Tick: 800
@@ -5795,6 +5901,8 @@ d2k_sardaukar_elite:
 		AddExtension: false
 
 d2k_sardaukar_assassin:
+	Defaults:
+		Scale: 1.5
 	stand:
 		Filename: d2k_sardaukar_assassin.shp
 		Facings: -8
@@ -5826,7 +5934,7 @@ d2k_sardaukar_assassin:
 	die-crushed:
 		Filename: DATA.R16
 		Scale: 1.5
-		Remap: 54F94B
+		# Remap: 54F94B
 		Frames: 1110, 1117, 1124, 1131, 1138, 1145, 1152, 1159
 		Length: 8
 		Tick: 800
@@ -7128,6 +7236,8 @@ d2k_marksman:
 		Offset: 0,-1
 
 d2k_light_tank:
+	Defaults:
+		Scale: 1.5
 	idle:
 		Filename: d2k_light_apc.shp
 		Facings: -32
@@ -7149,6 +7259,8 @@ d2k_light_tank:
 		Offset: 0,-1
 
 d2k_lion_king:
+	Defaults:
+		Scale: 2
 	idle:
 		Filename: d2k_lion_king.shp
 		Facings: -32
@@ -7314,6 +7426,8 @@ d2k_apc.husk:
 		ZOffset: -512
 
 d2k_gunship:
+	Defaults:
+		Scale: 2
 	idle:
 		Filename: d2k_gunship.shp
 		Facings: -32
@@ -7321,6 +7435,8 @@ d2k_gunship:
 		Filename: phoenixicon.shp
 
 d2k_combat_fleet:
+	Defaults:
+		Scale: 2
 	idle:
 		Filename: d2k_combat_fleet.shp
 		Facings: -32
@@ -7328,6 +7444,8 @@ d2k_combat_fleet:
 		Filename: d2k_combat_fleet_icon.shp
 
 d2k_combat_fleet.husk:
+	Defaults:
+		Scale: 2
 	idle:
 		Filename: d2k_combat_fleet.shp
 		ZOffset: -512
@@ -7697,7 +7815,7 @@ trike:
 		Filename: DATA.R16
 		Scale: 1.5
 		Remap: 54F94B
-		Start: 4305
+		Start: 4278
 		Offset: -30,-24
 
 quad:
@@ -7756,21 +7874,11 @@ siege_tank:
 		Offset: -30,-24
 
 assault_tank:
-	Inherits: vordel_effect
 	Defaults:
-		AddExtension: false
+		Scale: 1
 	idle:
-		Filename: DATA.R16
-		Scale: 1.5
-		Remap: 54F94B
-		Start: 1763
-		Facings: -32
-	turret:
-		Filename: DATA.R16
-		Scale: 1.5
-		Remap: 54F94B
-		Start: 1891
-		Facings: -32
+		Filename: HarkAssaultTankSpritesheet-32.png
+		Facings: 32
 	muzzle:
 		Filename: DATA.R16
 		Scale: 1.5
@@ -7779,11 +7887,8 @@ assault_tank:
 		Length: 3
 		BlendMode: Additive
 	icon:
-		Filename: DATA.R16
-		Scale: 1.5
-		Remap: 54F94B
-		Start: 4287
-		Offset: -30,-24
+		Filename: d2kharkassaulttankicon.png
+		Offset: 0,0
 
 siege_quad:
 	Defaults:
@@ -7882,6 +7987,8 @@ ix_siege_tank:
 		Filename: d2k_ix_siege_icon.shp
 
 d2k_rocket_buggy:
+	Defaults:
+		Scale: 1.5
 	idle:
 		Filename: d2k_rocket_buggy.shp
 		Start: 0
@@ -7890,6 +7997,8 @@ d2k_rocket_buggy:
 		Filename: d2k_rocket_buggy_icon.shp
 
 d2k_transport_buggy:
+	Defaults:
+		Scale: 1.5
 	idle:
 		Filename: d2k_transport_buggy.shp
 		Start: 0
@@ -7922,6 +8031,8 @@ d2k_combat_buggy:
 		Filename: d2k_combat_buggy_icon.shp
 
 d2k_buzzsaw:
+	Defaults:
+		Scale: 1.5
 	idle:
 		Filename: d2k_buzzsaw.shp
 		Start: 0
@@ -8393,6 +8504,7 @@ combat_tank_ixian:
 
 combat_tank_corrino:
 	Defaults:
+		Scale: 1.5
 		AddExtension: false
 	idle:
 		Filename: d2k_ct_striped.shp
@@ -8604,6 +8716,8 @@ devastator.husk:
 		ZOffset: -512
 
 d2k_tyrant:
+	Defaults:
+		Scale: 1.5
 	idle:
 		Filename: d2k_tyrant.shp
 		Facings: -32

@@ -132,9 +132,9 @@ Player:
 		DisplayOrder: 4
 		Default: multipleproductionqueues
 		Values:
-			classicproductionqueues: Single
+			# classicproductionqueues: Single
 			multipleproductionqueues: Multi
-			scaledproductionqueues: Competitive
+			# scaledproductionqueues: Competitive
 	LobbyPrerequisiteDropdown@derricklimit_is:
 		ID: derricklimit_is
 		Label: Passive Income Limit
