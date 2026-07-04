@@ -55,6 +55,14 @@ civ2_district_capital_bronze:
 	icon: 
 		Filename: civilization_2_icons.png
 		Start: 3
+	civ2_district_capital_classic:
+		Start: 11
+
+civ2_district_capital_classic:
+	Inherits: civ2_district_capital_bronze
+	icon: 
+		Filename: civilization_2_icons.png
+		Start: 7
 
 civ2_district_housing_bronze:
 	Inherits: ^CIV2BuildingFlag
@@ -76,6 +84,14 @@ civ2_district_housing_bronze:
 	icon: 
 		Filename: civilization_2_icons.png
 		Start: 0
+	civ2_district_housing_classic:
+		Start: 8
+
+civ2_district_housing_classic:
+	Inherits: civ2_district_housing_bronze
+	icon: 
+		Filename: civilization_2_icons.png
+		Start: 4
 
 civ2_district_resource_bronze:
 	Inherits: ^CIV2BuildingFlag
@@ -104,6 +120,14 @@ civ2_district_resource_bronze:
 	icon: 
 		Filename: civilization_2_icons.png
 		Start: 1
+	civ2_district_resource_classic:
+		Start: 9
+
+civ2_district_resource_classic:
+	Inherits: civ2_district_resource_bronze
+	icon: 
+		Filename: civilization_2_icons.png
+		Start: 5
 
 civ2_district_production_bronze:
 	Inherits: ^CIV2BuildingFlag
@@ -124,6 +148,14 @@ civ2_district_production_bronze:
 	icon: 
 		Filename: civilization_2_icons.png
 		Start: 2
+	civ2_district_production_classic:
+		Start: 10
+
+civ2_district_production_classic:
+	Inherits: civ2_district_production_bronze
+	icon: 
+		Filename: civilization_2_icons.png
+		Start: 6
 
 ####################################################################################################
 #		UNIT CIV2
@@ -223,6 +255,41 @@ civ2_warrior:
 	icon: 
 		Filename: civilization_2_icons.png
 		Start: 34
+
+####################################################################################################
+#		UPGRADES
+####################################################################################################
+
+^Upgrade:
+	AlwaysVisible:
+	Interactable:
+	ScriptTriggers:
+	Buildable:
+		Queue: Upgrade
+		BuildLimit: 1
+		BuildDurationModifier: 100
+	ProvidesPrerequisite@upgradename:
+
+civ2_era_classic:
+	icon:
+		Filename: civilization_2_advances.png
+		Start: 1
+
+civ2_advance_construction:
+	icon:
+		Filename: civilization_2_advances.png
+		Start: 13
+
+civ2_advance_mathematics:
+	icon:
+		Filename: civilization_2_advances.png
+		Start: 22
+
+civ2_advance_warriorcode:
+	icon:
+		Filename: civilization_2_advances.png
+		Start: 30
+
 
 	####################################################################################################
 	#		ARCHIVE

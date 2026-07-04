@@ -178,6 +178,10 @@ CIV2_DISTRICT_CAPITAL_BRONZE:
 		QueuedAudio: Building
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
+	Production@Addons:
+		Produces: Addons
+	ProductionBar@Addons:
+		ProductionType: Addons
 	BaseProvider:
 		Cooldown: 75
 		Range: 14c0
@@ -187,6 +191,31 @@ CIV2_DISTRICT_CAPITAL_BRONZE:
 	#	ExcludePalettes: WC1Player	
 	ProvidesPrerequisite@factiongdi:
 		Prerequisite: mmworms
+	WithSpriteBody:
+		RequiresCondition: !civ2_era_classic
+
+	# Classic Capital Upgrade
+	GrantConditionOnPrerequisite@classic:
+		Condition: civ2_era_classic
+		Prerequisites: civ2_era_classic
+	WithSpriteBody@classic:
+		Sequence: civ2_district_capital_classic
+		RequiresCondition: civ2_era_classic
+	PowerMultiplier@classic:
+		Modifier: 200
+		RequiresCondition: civ2_era_classic
+	DamageMultiplier@classic:
+		Modifier: 66
+		RequiresCondition: civ2_era_classic
+		# RequiresCondition: wc2_human_betterfarm && !wc2_human_bestfarm
+
+CIV2_DISTRICT_CAPITAL_CLASSIC:
+	Inherits@CIV2_DISTRICT_CAPITAL_BRONZE: CIV2_DISTRICT_CAPITAL_BRONZE
+	Tooltip:
+		Name: Capital District [Classic]
+	# Buildable:
+	# 	Prerequisites: ~civ2_district_capital_bronze, ~civ2_era_classic
+	# 	Description: Main district, produces districts and research.
 
 CIV2_DISTRICT_HOUSING_BRONZE:
 	Inherits: ^Civ2Building
@@ -205,10 +234,10 @@ CIV2_DISTRICT_HOUSING_BRONZE:
 		Prerequisite: civ2_district_housing_bronze
 	Buildable:
 		BuildPaletteOrder: 5
-		Prerequisites: ~civ2_district_capital_bronze
+		Prerequisites: ~civ2_district_capital_bronze, ~!civ2_era_classic
 		Queue: Building, RABuilding
 		BuildDuration: 330
-		Description: Provides Power
+		Description: Provides housing (power)
 	Building:
 		Footprint: xX xx ==
 		Dimensions: 2,3
@@ -219,6 +248,10 @@ CIV2_DISTRICT_HOUSING_BRONZE:
 		Range: 4c0
 	Power:
 		Amount: 100
+	Production@Addons:
+		Produces: Addons
+	ProductionBar@Addons:
+		ProductionType: Addons
 	ScalePowerWithHealth:
 	WithBuildingBib:
 		Palette: ra_temperat
@@ -226,6 +259,32 @@ CIV2_DISTRICT_HOUSING_BRONZE:
 	#	Sequence: barrel-overlay
 	#WithIdleOverlay@BARREL2:
 	#	Sequence: barrel-overlay2
+	WithSpriteBody:
+		RequiresCondition: !civ2_era_classic
+
+	# Classic House Upgrade
+	GrantConditionOnPrerequisite@classic:
+		Condition: civ2_era_classic
+		Prerequisites: civ2_era_classic
+	WithSpriteBody@classic:
+		Sequence: civ2_district_housing_classic
+		RequiresCondition: civ2_era_classic
+	PowerMultiplier@classic:
+		Modifier: 200
+		RequiresCondition: civ2_era_classic
+	DamageMultiplier@classic:
+		Modifier: 66
+		RequiresCondition: civ2_era_classic
+		# RequiresCondition: wc2_human_betterfarm && !wc2_human_bestfarm
+
+CIV2_DISTRICT_HOUSING_CLASSIC:
+	Inherits@CIV2_DISTRICT_HOUSING_BRONZE: CIV2_DISTRICT_HOUSING_BRONZE
+	Tooltip:
+		Name: Housing District [Classic]
+	Buildable:
+		Prerequisites: ~civ2_district_capital_bronze, ~civ2_era_classic
+		Description: Provides housing (power)
+
 
 CIV2_DISTRICT_RESOURCE_BRONZE:
 	Inherits: ^Civ2Building
@@ -247,7 +306,7 @@ CIV2_DISTRICT_RESOURCE_BRONZE:
 		Prerequisite: civ2_district_resource_bronze
 	Buildable:
 		BuildPaletteOrder: 10
-		Prerequisites: ~civ2_district_capital_bronze
+		Prerequisites: ~civ2_district_capital_bronze, ~!civ2_era_classic
 		Queue: Building, RABuilding
 		Description: Processes raw Tiberium\ninto useable resources
 	Building:
@@ -277,16 +336,41 @@ CIV2_DISTRICT_RESOURCE_BRONZE:
 		Facing: 256
 	WithBuildingBib:
 		Palette: ra_temperat
-	WithResourceLevelOverlay:
-		RequiresCondition: !build-incomplete
+	# WithResourceLevelOverlay:
+	# 	RequiresCondition: !build-incomplete
 	Power:
 		Amount: -40
 	ProvidesPrerequisite@buildingname:
 	SelectionDecorations:
-	WithResourceStoragePipsDecoration:
-		Position: BottomLeft
-		RequiresSelection: true
-		PipCount: 10
+	# WithResourceStoragePipsDecoration:
+	# 	Position: BottomLeft
+	# 	RequiresSelection: true
+	# 	PipCount: 10
+	WithSpriteBody:
+		RequiresCondition: !civ2_era_classic
+
+	# Classic Resource Upgrade
+	GrantConditionOnPrerequisite@classic:
+		Condition: civ2_era_classic
+		Prerequisites: civ2_era_classic
+	WithSpriteBody@classic:
+		Sequence: civ2_district_resource_classic
+		RequiresCondition: civ2_era_classic
+	PowerMultiplier@classic:
+		Modifier: 200
+		RequiresCondition: civ2_era_classic
+	DamageMultiplier@classic:
+		Modifier: 66
+		RequiresCondition: civ2_era_classic
+		# RequiresCondition: wc2_human_betterfarm && !wc2_human_bestfarm
+
+CIV2_DISTRICT_RESOURCE_CLASSIC:
+	Inherits@CIV2_DISTRICT_RESOURCE_BRONZE: CIV2_DISTRICT_RESOURCE_BRONZE
+	Tooltip:
+		Name: Resource District [Classic]
+	Buildable:
+		Prerequisites: ~civ2_district_capital_bronze, ~civ2_era_classic
+		Description: Processes raw Tiberium\ninto useable resources
 
 CIV2_DISTRICT_PRODUCTION_BRONZE:
 	Inherits: ^Civ2Building
@@ -352,6 +436,31 @@ CIV2_DISTRICT_PRODUCTION_BRONZE:
 	Selectable:
 		Bounds: 2048, 2048
 	SelectionDecorations:
+	WithSpriteBody:
+		RequiresCondition: !civ2_era_classic
+
+	# Classic Production Upgrade
+	GrantConditionOnPrerequisite@classic:
+		Condition: civ2_era_classic
+		Prerequisites: civ2_era_classic
+	WithSpriteBody@classic:
+		Sequence: civ2_district_production_classic
+		RequiresCondition: civ2_era_classic
+	PowerMultiplier@classic:
+		Modifier: 200
+		RequiresCondition: civ2_era_classic
+	DamageMultiplier@classic:
+		Modifier: 66
+		RequiresCondition: civ2_era_classic
+		# RequiresCondition: wc2_human_betterfarm && !wc2_human_bestfarm
+
+CIV2_DISTRICT_PRODUCTION_CLASSIC:
+	Inherits@CIV2_DISTRICT_PRODUCTION_BRONZE: CIV2_DISTRICT_PRODUCTION_BRONZE
+	Tooltip:
+		Name: Production District [Classic]
+	Buildable:
+		Prerequisites: ~civ2_district_capital_bronze, ~civ2_era_classic
+		Description: Trains infantry
 
 ####################################################################################################
 #		UNIT CIV2
@@ -453,6 +562,80 @@ civ2_warrior:
 		VoiceSet: voicehuman
 	Crushable:
 		CrushClasses: vehicle
+
+####################################################################################################
+#		UPGRADES
+####################################################################################################
+
+^Upgrade:
+	AlwaysVisible:
+	Interactable:
+	ScriptTriggers:
+	Buildable:
+		Queue: Upgrade
+		BuildLimit: 1
+		BuildDurationModifier: 100
+	ProvidesPrerequisite@upgradename:
+
+CIV2_ADVANCE_CONSTRUCTION:
+	Inherits: ^Upgrade
+	Tooltip:
+		Name: Construction
+	Buildable:
+		BuildPaletteOrder: 1
+		Queue: Addons
+		BuildDuration: 1500
+		Description: Advances your Civilization in the knowledge of Construction.
+		Prerequisites: ~civ2_district_capital_bronze
+	Valued:
+		Cost: 2000
+	RenderSprites:
+		Image: civ2_advance_construction
+
+CIV2_ADVANCE_MATHEMATICS:
+	Inherits: ^Upgrade
+	Tooltip:
+		Name: Mathematics
+	Buildable:
+		BuildPaletteOrder: 1
+		Queue: Addons
+		BuildDuration: 1500
+		Description: Advances your Civilization in the knowledge of Mathematics.
+		Prerequisites: ~civ2_district_capital_bronze
+	Valued:
+		Cost: 2000
+	RenderSprites:
+		Image: civ2_advance_mathematics
+
+CIV2_ADVANCE_WARRIORCODE:
+	Inherits: ^Upgrade
+	Tooltip:
+		Name: Warrior Code
+	Buildable:
+		BuildPaletteOrder: 1
+		Queue: Addons
+		BuildDuration: 1500
+		Description: Advances your Civilization in the knowledge of Warrior Code.
+		Prerequisites: ~civ2_district_capital_bronze
+	Valued:
+		Cost: 2000
+	RenderSprites:
+		Image: civ2_advance_warriorcode
+
+CIV2_ERA_CLASSIC:
+	Inherits: ^researched_upgrade.template
+	Tooltip:
+		Name: Classic Era
+	Valued:
+		Cost: 5000
+	Buildable:
+		BuildPaletteOrder: 10
+		Prerequisites: ~civ2_district_capital_bronze, civ2_advance_construction, civ2_advance_mathematics, civ2_advance_warriorcode
+		Queue: Addons
+		Description: Moves your Civilization into the Classic era.
+		Icon: icon
+	RenderSprites:
+	ProvidesPrerequisite:
 
 	####################################################################################################
 	#		ARCHIVE
