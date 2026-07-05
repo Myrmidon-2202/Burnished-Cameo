@@ -2159,3 +2159,52 @@ faction-ra2-modded-random =
    .name = Any
    .description = Random faction
       A random faction from Red Alert 2 Mods will be chosen when the game starts.
+	  
+faction-dune-atreides =
+   .name = Westwood's Atreides
+   .description = 
+		The Atreides from Westood's dune games.
+
+		Noble House Atreides, seeking to obtain rulership for the good of all.
+	
+		Balanced Forces, with a focus on fire support.
+
+		Support powers: Ornithopter Bombing Runs, Fremen Support
+	  
+faction-dune-harkonnen =
+   .name = Westwood's Harkonnen
+   .description = 
+		The Harkonnen from Westwood's dune games.
+
+		Evil House Harkonnen, driven by a hunger for power at all costs.
+   
+		Heavy Forces, with a focus on medium ranged vehicular warfare.
+
+		Support powers: Death Hand Missile
+	  
+faction-dune-ordos =
+   .name = Westwood's Ordos
+   .description = 
+		The Ordos from Westwood's dune games.
+
+		Insidious House Ordos, seeking profit above all else. 
+
+		Light Forces, with a focus on rapid hit and run assaults with ambushes.
+
+		Support powers: Chaos Lightning, Sabotuers
+	  
+faction-dune-corrino =
+   .name = Westwood's Corrino
+   .description = 
+		The Corrino from Westwood's dune games.
+
+		Taciturn House Corrino, determined to cling to their waning power.
+	  
+		Balanced Forces, with a focus on enduring heavy infantry backed by vehicular support.
+
+		Support powers: Release the Sardaukar
+
+faction-dune-random =
+   .name = Any
+   .description = Random faction
+		A random faction from Westwood's dune games will be chosen when the game starts.

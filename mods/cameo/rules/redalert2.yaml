@@ -1,29 +1,29 @@
 World:
-	FactionCA@RA2America:
-		Name: Allies RA2 #faction-ra2-allies.name
-		InternalName: ra2america
-		Game: Red Alert 2
-		Side: Red Alert 2
-		Description: faction-ra2-allies.description
-	FactionCA@ra2russia:
-		Name: Soviets RA2 #faction-ra2-soviets.name
-		InternalName: ra2russia
-		Game: Red Alert 2
-		Side: Red Alert 2
-		Description: faction-ra2-soviets.description
+	# FactionCA@RA2America:
+	# 	Name: Allies RA2 #faction-ra2-allies.name
+	# 	InternalName: ra2america
+	# 	Game: Red Alert 2
+	# 	Side: Red Alert 2
+	# 	Description: faction-ra2-allies.description
+	# FactionCA@ra2russia:
+	# 	Name: Soviets RA2 #faction-ra2-soviets.name
+	# 	InternalName: ra2russia
+	# 	Game: Red Alert 2
+	# 	Side: Red Alert 2
+	# 	Description: faction-ra2-soviets.description
 	FactionCA@yuri:
 		Name: Yuri #faction-ra2-yuri.name
 		InternalName: yuri
 		Game: Red Alert 2
 		Side: Red Alert 2
 		Description: faction-ra2-yuri.description
-	FactionCA@Randomra2:
-		Name: Random RA2 #faction-ra2-random.name
-		InternalName: Randomra2
-		RandomFactionMembers: ra2america, ra2russia, yuri
-		Game: Red Alert 2
-		Side: Random
-		Description: faction-ra2-random.description
+	# FactionCA@Randomra2:
+	# 	Name: Random RA2 #faction-ra2-random.name
+	# 	InternalName: Randomra2
+	# 	RandomFactionMembers: ra2america, ra2russia, yuri
+	# 	Game: Red Alert 2
+	# 	Side: Random
+	# 	Description: faction-ra2-random.description
 	####################################################################################################
 	#		MPSTARTUNITS
 	####################################################################################################
@@ -8658,7 +8658,7 @@ yrlunr:
 		Name: Cosmonaut
 	Buildable:
 		Queue: Aircraft, RAAircraft
-		Prerequisites: yrygcomd, ~upyrlunr
+		Prerequisites: yrygcomd
 	Armament@PRIMARY:
 		Weapon: RA2CosmonautLaser
 		LocalOffset: 128,196,128, 128,-196,128
@@ -12317,57 +12317,57 @@ upmindcontrolcap:
 
 ### Lunar tree
 
-upyrtele:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Upgrade Magnetron
-	Buildable:
-		BuildPaletteOrder: 87
-		Queue: Promotions
-		Description: Makes Magnetrons attack air and gain range.
-		Prerequisites: ~yrnacnst, !upyrtele, rank1
-	RenderSprites:
-		Image: yrtele
-	ProvidesPrerequisite:
+# upyrtele:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Upgrade Magnetron
+# 	Buildable:
+# 		BuildPaletteOrder: 87
+# 		Queue: Promotions
+# 		Description: Makes Magnetrons attack air and gain range.
+# 		Prerequisites: ~yrnacnst, !upyrtele, rank1
+# 	RenderSprites:
+# 		Image: yrtele
+# 	ProvidesPrerequisite:
 
-upyrdisk:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Upgrade Floating Discs
-	Buildable:
-		BuildPaletteOrder: 90
-		Queue: Promotions
-		Description: Makes Floating Discs able to destroy units and buildings underneath.
-		Prerequisites: ~yrnacnst, upyrtele, rank1
-	RenderSprites:
-		Image: yrdisk
-	ProvidesPrerequisite:
+# upyrdisk:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Upgrade Floating Discs
+# 	Buildable:
+# 		BuildPaletteOrder: 90
+# 		Queue: Promotions
+# 		Description: Makes Floating Discs able to destroy units and buildings underneath.
+# 		Prerequisites: ~yrnacnst, upyrtele, rank1
+# 	RenderSprites:
+# 		Image: yrdisk
+# 	ProvidesPrerequisite:
 
-upyrlunr:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Unlock Cosmonaut
-	Buildable:
-		BuildPaletteOrder: 93
-		Queue: Promotions
-		Description: Allows training of Cosmonauts.
-		Prerequisites: ~yrnacnst, upyrdisk, rank1
-	RenderSprites:
-		Image: yrlunr
-	ProvidesPrerequisite:
+# upyrlunr:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Unlock Cosmonaut
+# 	Buildable:
+# 		BuildPaletteOrder: 93
+# 		Queue: Promotions
+# 		Description: Allows training of Cosmonauts.
+# 		Prerequisites: ~yrnacnst, upyrdisk, rank1
+# 	RenderSprites:
+# 		Image: yrlunr
+# 	ProvidesPrerequisite:
 
-upyrgat:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Chainguns
-	Buildable:
-		BuildPaletteOrder: 96
-		Queue: Promotions
-		Description: Uprades Gatling weapons to become more powerful.
-		Prerequisites: ~yrnacnst, upyrlunr, rank1
-	RenderSprites:
-		Image: yrygggun
-	ProvidesPrerequisite:
+# upyrgat:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Chainguns
+# 	Buildable:
+# 		BuildPaletteOrder: 96
+# 		Queue: Promotions
+# 		Description: Uprades Gatling weapons to become more powerful.
+# 		Prerequisites: ~yrnacnst, upyrlunr, rank1
+# 	RenderSprites:
+# 		Image: yrygggun
+# 	ProvidesPrerequisite:
 
 ^YuriGatlingUpgrade:
 	GrantConditionOnAttack@gatling:

@@ -329,7 +329,18 @@ D2KTrooper:
 		Move: geninf_oc1, geninf_oc2, geninf_oc3
 		Attack: geninf_oc1, geninf_oc2, geninf_oc3
 		Guard: geninf_oc1, geninf_oc2, geninf_oc3
-        
+
+D2kHeavyTrooper:
+    Inherits: ^D2KInfantryDeath
+    VolumeModifier: 1.33
+    DefaultVariant: .wav
+	Voices:
+		Select: harktrooperselect1, harktrooperselect2, harktrooperselect3, harktrooperselect4, harktrooperselect5
+		Move: harktroopermove1, harktroopermove2, harktroopermove3, harktroopermove4, harktroopermove5
+		Attack: harktrooperattack1, harktrooperattack2, harktrooperattack3, harktrooperattack4, harktrooperattack5
+		Action: harktroopermove1, harktroopermove2, harktroopermove3, harktroopermove4, harktroopermove5
+		Guard: harktrooperattack1, harktrooperattack2, harktrooperattack3, harktrooperattack4, harktrooperattack5
+
 D2KSonicTank:
     DefaultVariant: .aud
     VolumeModifier: 1.33

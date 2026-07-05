@@ -3135,7 +3135,7 @@ Player:
 		NavalProductionTypes: raspen, ra1syrd, ra1jsyrd, cncsyrd, cncspen, yrygyard, ra2gayard, ra2nayard, glsyrd, chsyrd, usasyrd, aa_cgyard, latin_cgyard, nax_naval
 		AirUnitsTypes: gdifirehawk, mig, su57, mignuke, rapierjumpjet, modbomber, ra2falc, ra2beag, yrbpln1, ra2hind, aa_phoenix, steel_twister, steel_grun, latin_yakolev, latin_mig, d2k_air_drone, d2k_ixbomber, ornithopter.controllable
 		StaticAntiAirTypes: sam, atwr, agun, rasam, jmgnest, jballistat, ra2nasam, ra2naflak, yrygggun, yrngbnkr, yrngtbnk, large_gun_turret, aa_cgpuls, steel_fedaa, latin_aatur, nax_flak88, scmissileturret, sccreepcolony
-		HighValueTargetTypes: fact.gdi, fact.nod, proc.gdi, proc.nod, weap, afld, hq.gdi, hq.nod, eye, tmpl, rafact.allies, rafact.soviet, rafact.japan, raproc.allies, raproc.soviet, jproc, raweap, raweapa, modraweapj, dome.allies, dome.soviet, dome.japan, atek, stek, modjtek, gap, mslo, iron, pdox, jshrine, ra2gacnst, ra2nacnst, yrnacnst, ra2garefn, ra2narefn, yryarefn, ra2gaweap, ra2naweap, yrygweap, ra2gaairc, ra2naradr, ra2napsis, ra2gatech, ra2natech, yrygtech, ra2gaweat, ra2gacsph, ra2namisl, ra2nairon, yrygppet, yryggntc, aa_cgcnst, aa_cgrefn, aa_cgweap, aa_cgradr, aa_cgtech, aa_cgionc, aa_cgchao, steel_qacst, steel_qref, steel_qaweap, steel_qatech, steel_qaorbit, latin_cgcnst, latin_cgauto, latin_cgweap, latin_cgspy, latin_ca12hit, nax_conyard, nax_refin, nax_weap, nax_radar, nax_tek, nax_tech, nax_rocket, nax2_conyard, nax2_refin; nax2_weap, nax2_radar, nax2_tech, nax2_meteorray, nax2_gcore, construction_yard.ixian, refinery.atreides, heavy_factory.ixian, outpost.ixian research_centre.ixian, starport.ixian, storm_lasher_big, construction_yard.ordos, refinery.ordos, heavy_factory.ordos, outpost.ordos research_centre.ordos, starport.ordos, tsntmisl, tsntmislcabal, tsgtplug, astro_transport, astro_special_starfighter, astro_space_police_cruiser, astro_starship2
+		HighValueTargetTypes: fact.gdi, fact.nod, proc.gdi, proc.nod, weap, afld, hq.gdi, hq.nod, eye, tmpl, rafact.allies, rafact.soviet, rafact.japan, raproc.allies, raproc.soviet, jproc, raweap, raweapa, modraweapj, dome.allies, dome.soviet, dome.japan, atek, stek, modjtek, gap, mslo, iron, pdox, jshrine, ra2gacnst, ra2nacnst, yrnacnst, ra2garefn, ra2narefn, yryarefn, ra2gaweap, ra2naweap, yrygweap, ra2gaairc, ra2naradr, ra2napsis, ra2gatech, ra2natech, yrygtech, ra2gaweat, ra2gacsph, ra2namisl, ra2nairon, yrygppet, yryggntc, aa_cgcnst, aa_cgrefn, aa_cgweap, aa_cgradr, aa_cgtech, aa_cgionc, aa_cgchao, steel_qacst, steel_qref, steel_qaweap, steel_qatech, steel_qaorbit, latin_cgcnst, latin_cgauto, latin_cgweap, latin_cgspy, latin_ca12hit, nax_conyard, nax_refin, nax_weap, nax_radar, nax_tek, nax_tech, nax_rocket, nax2_conyard, nax2_refin; nax2_weap, nax2_radar, nax2_tech, nax2_meteorray, nax2_gcore, construction_yard.ixian, refinery.atreides, heavy_factory.ixian, outpost.ixian research_centre.ixian, starport.ixian, storm_lasher_big, construction_yard.ordos, refinery.ordos, heavy_factory.ordos, outpost.ordos, research_centre.ordos, starport.ordos, construction_yard.atreides, refinery.atreides, heavy_factory.atreides, outpost.atreides, research_centre.atreides, starport.atreides, construction_yard.harkonnen, refinery.harkonnen, heavy_factory.harkonnen, outpost.harkonnen, research_centre.harkonnen, starport.harkonnen, tsntmisl, tsntmislcabal, tsgtplug, astro_transport, astro_special_starfighter, astro_space_police_cruiser, astro_starship2
 		HighValueTargetPriority: 50
 		AirToAirPriority: 25
 		BigAirThreats: gdifirehawk, mignuke, modbomber, rapierjumpjet, ra2beag, yrbpln1, ra2zep, yrdisk, d2k_farasha, steel_inspect, steel_cruiser, latin_mig, scbattlecruiser, scpythean, scphobos, scbehemoth
@@ -3403,7 +3403,7 @@ Player:
 		SiloTypes: silo, rasilo, scsupplydepot, scpylon, scoverlord, d2k_silo, wc2_human_elven_lumber_mill, wc2_orc_troll_lumber_mill
 		AntiAirTypes: sam, atwr, agun, rasam, hbox, jmgnest, ra2nasam, ra2naflak, yrygggun, yrngbnkr.bot, large_gun_turret, aa_cgpuls, aa_cghype, steel_fedaa, latin_sml, latin_aatur, nax_flak88, nax2_twr, scmissileturret, sccreepcolony
 		DefenseTypes: gtwr, atwr, gun, nodlaserturret, obli, pbox, hbox, ragun, gap, modartyturret, ftur, tsla, modpillboxfort, ra2gapill, ra2atesla, ra2gtgcan, yrngbnkr, ra2nalasr, ra2naflak, ra2tesla, yrygggun, yrngtbnk, aa_cgflam, aa_cgpnch, aa_cgrail, aa_cgchtw, aa_cgplas, machine_gun_turret, medium_gun_turret, large_gun_turret, storm_lasher, steel_fedturret, steel_qcannon, steel_bfg10k, latin_ngdshktur, latin_ngbunk2, latin_cgup, latin_sml, nax_twr, nax_flak88, nax2_twr, nax2_sturmcann, scbunker, sccreepcolony
-		FragileTypes: hq.gdi, hq.nod, eye, tmpl, dome.allies, dome.soviet, dome.japan, atek, stek, modjtek, jshrine, mslo, pdox, iron, modspaceport, ra2gaairc, ra2naradr, ra2napsis, ra2gatech, ra2natech, yrygtech, ra2gaorep, ra2gaspysat, yrgarobo, ra2nanrct, yrngindp, ra2yclon, yrygcomd, ra2gaweat, ra2gacsph, ra2namisl, ra2nairon, yrygppet, yryggntc, aa_cgradr, aa_cgtech, aa_cgionc, aa_cgchao, aa_cgmiac, outpost.ixian, outpost.ordos, research_centre.ixian, starport.ixian, research_centre.ordos, starport.ordos, storm_lasher_big, oilb.building, oilb.ra2, oilb.d2k, steel_qtradr, steel_qatech, latin_radar, latin_cgspy, latin_cgup, latin_cgte, latin_ca12hit, nax_radar, nax_tek, nax_tech, nax_sausage, nax_beer, nax_rocket, nax2_radar, nax2_tech, nax2_dairy, nax2_meteorray, scengineeringbay, scacademy, scarmory, scsciencefacility, scterranmslo
+		FragileTypes: hq.gdi, hq.nod, eye, tmpl, dome.allies, dome.soviet, dome.japan, atek, stek, modjtek, jshrine, mslo, pdox, iron, modspaceport, ra2gaairc, ra2naradr, ra2napsis, ra2gatech, ra2natech, yrygtech, ra2gaorep, ra2gaspysat, yrgarobo, ra2nanrct, yrngindp, ra2yclon, yrygcomd, ra2gaweat, ra2gacsph, ra2namisl, ra2nairon, yrygppet, yryggntc, aa_cgradr, aa_cgtech, aa_cgionc, aa_cgchao, aa_cgmiac, outpost.ixian, outpost.ordos, outpost.atreides, outpost.harkonnen, outpost.corrino, research_centre.ixian, research_centre.atreides, research_centre.harkonnen, research_centre.corrino, starport.ixian, research_centre.ordos, starport.ordos, storm_lasher_big, oilb.building, oilb.ra2, oilb.d2k, steel_qtradr, steel_qatech, latin_radar, latin_cgspy, latin_cgup, latin_cgte, latin_ca12hit, nax_radar, nax_tek, nax_tech, nax_sausage, nax_beer, nax_rocket, nax2_radar, nax2_tech, nax2_dairy, nax2_meteorray, scengineeringbay, scacademy, scarmory, scsciencefacility, scterranmslo
 		BuildingIntervals:
 		#Refinery
 			proc.gdi: 1500
@@ -3538,6 +3538,9 @@ Player:
 			ra2napsis: 3000
 			outpost.ixian: 3000
 			outpost.ordos: 3000
+			outpost.atreides: 3000
+			outpost.harkonnen: 3000
+			outpost.corrino: 3000
 			aa_cgradr: 3000
 			steel_qtradr: 3000
 			latin_radar: 3000
@@ -3560,6 +3563,9 @@ Player:
 			yrygtech: 6000
 			research_centre.ixian: 6000
 			research_centre.ordos: 6000
+			research_centre.atreides: 6000
+			research_centre.harkonnen: 6000
+			research_centre.corrino: 6000
 			aa_cgtech: 6000
 			steel_qatech: 6000
 			latin_cgspy: 6000
@@ -3763,6 +3769,23 @@ Player:
 			repair_pad.ordos: 1
 			outpost.ordos: 1
 			research_centre.ordos: 1
+			d2k_barracks.atreides: 10
+			high_tech_factory.atreides: 10
+			light_factory.atreides: 10
+			heavy_factory.atreides: 10
+			repair_pad.atreides: 1
+			outpost.atreides: 1
+			research_centre.atreides: 1
+			d2k_barracks.harkonnen: 10
+			high_tech_factory.harkonnen: 10
+			light_factory.harkonnen: 10
+			heavy_factory.harkonnen: 10
+			repair_pad.harkonnen: 1
+			outpost.harkonnen: 1
+			research_centre.harkonnen: 1
+			d2k_barracks.corrino: 10
+			outpost.corrino: 1
+			research_centre.corrino: 1
 			#################### BuildingLimits Modded RA
 			#evo: 1
 			#tevo: 1
@@ -4245,7 +4268,6 @@ Player:
 			nax2_dairy: 10
 			#################### Buildings Ixians
 			construction_yard.ixian: 5
-			refinery.atreides: 15
 			d2k_barracks.ixian: 15
 			heavy_factory.ixian: 15
 			ixian_launchpad: 5
@@ -4275,6 +4297,40 @@ Player:
 			autogun_turret: 10
 			artillery_platform: 10
 			palace.ordos: 1
+			#################### Buildings Atreides
+			construction_yard.atreides: 5
+			refinery.atreides: 15
+			d2k_barracks.atreides: 15
+			light_factory.atreides: 15
+			heavy_factory.atreides: 15
+			high_tech_factory.atreides: 5
+			outpost.atreides: 1
+			research_centre.atreides: 1
+			repair_pad.atreides: 1
+			starport.atreides: 1
+			palace.atreides: 1
+			#################### Buildings Harkonnen
+			construction_yard.harkonnen: 5
+			refinery.harkonnen: 15
+			d2k_barracks.harkonnen: 15
+			light_factory.harkonnen: 15
+			heavy_factory.harkonnen: 15
+			high_tech_factory.harkonnen: 5
+			outpost.harkonnen: 1
+			research_centre.harkonnen: 1
+			repair_pad.harkonnen: 1
+			starport.harkonnen: 1
+			palace.harkonnen: 1
+			#################### Buildings Corrino
+			construction_yard.corrino: 5
+			refinery.corrino: 15
+			d2k_barracks.corrino: 15
+			high_tech_factory.corrino: 5
+			outpost.corrino: 1
+			research_centre.corrino: 1
+			repair_pad.corrino: 1
+			starport.corrino: 5
+			palace.corrino: 1
 			#################### BuildingFractions Dune Universe
 			#wind_trap: 10
 			#d2k_mini_windtrap: 10
@@ -4681,7 +4737,7 @@ Player:
 		AirToAirUnits: heli, orca, nodvenom, gdifirehawk, yak, mig, su57, raheli, rapierjumpjet, modkami, ra2falc, yrschp, yrbpln1, ra2hind, yrdisk, ra2shad, aa_phoenix, aa_pelican, d2k_air_drone, d2k_heavy_air_drone, d2k_farasha, steel_inspect, steel_twister, steel_grun, steel_cruiser, latin_yakolev, latin_mig, nax_haunebu, nax_haunebu2, nax_me262, nax_piercer, nax_dieglocke, nax_bf109
 		AirThreatUnits: heli, orca, nodvenom, gdifirehawk, tran.gdi, tran.nod, yak, mig, su57, mignuke, hind, raheli, MH60, rapierjumpjet, modkami, modbomber, modhip, ratran, ra2falc, ra2beag, yrschp, yrbpln1, ra2hind, ra2zep, yrdisk, ra2shad, aa_phoenix, aa_pelican, d2k_air_drone, d2k_heavy_air_drone, d2k_farasha, steel_inspect, steel_twister, steel_grun, steel_cargoship, steel_cruiser, latin_yakolev, latin_mig, nax_haunebu, nax_haunebu2, nax_me262, nax_bf109, nax_piercer, nax_dieglocke
 		#UnitBuilderMinCredits: 0
-		UnitQueues: Infantry, RAInfantry, Vehicle, RAVehicle, Aircraft, RAAircraft, Naval, RANaval, Addons, Upgrades, Promotions, Infantry.GDI, Infantry.Nod, Vehicle.GDI, Vehicle.Nod, Aircraft.GDI, Aircraft.Nod, Infantry.Allies, Infantry.Soviet, Infantry.Japan, Vehicle.Allies, Vehicle.Soviet, Vehicle.Japan, Aircraft.Allies, Aircraft.Soviet, Aircraft.Japan, Infantry.Atreides, Infantry.Harkonnen, Infantry.Ordos, Infantry.Corrino, VehicleLight.Atreides, VehicleLight.Harkonnen, VehicleLight.Ordos, VehicleHeavy.Atreides, VehicleHeavy.Harkonnen, VehicleHeavy.Ordos, StarportVehicle.Atreides, StarportVehicle.Harkonnen, StarportVehicle.Ordos, StarportVehicle.Corrino
+		UnitQueues: Infantry, RAInfantry, Vehicle, RAVehicle, Aircraft, RAAircraft, Naval, RANaval, Addons, Upgrades, Promotions, Infantry.GDI, Infantry.Nod, Vehicle.GDI, Vehicle.Nod, Aircraft.GDI, Aircraft.Nod, Infantry.Allies, Infantry.Soviet, Infantry.Japan, Vehicle.Allies, Vehicle.Soviet, Vehicle.Japan, Aircraft.Allies, Aircraft.Soviet, Aircraft.Japan, Infantry.Atreides, Infantry.Harkonnen, Infantry.Ordos, Infantry.Corrino, VehicleLight.Atreides, VehicleLight.Harkonnen, VehicleLight.Ordos, VehicleHeavy.Atreides, VehicleHeavy.Harkonnen, VehicleHeavy.Ordos, VehicleStarport.Atreides, VehicleStarport.Harkonnen, VehicleStarport.Ordos, VehicleStarport.Corrino, Aircraft.Atreides, Aircraft.Harkonnen, Aircraft.Ordos, Aircraft.Corrino
 		UnitDelays:
 			mcv.gdi: 5000
 			mcv.nod: 5000
@@ -5324,6 +5380,10 @@ Player:
 			########### Units Ixians
 			harvester: 10
 			carryall: 1
+			carryall.atreides: 1
+			carryall.harkonnen: 1
+			carryall.ordos: 1
+			carryall.corrino: 1
 			engineer: 1
 			light_inf: 1
 			light_inf.harkonnen: 1
@@ -5386,35 +5446,21 @@ Player:
 			contaminator: 5
 			d2k_leech: 3
 			d2k_aa_mine: 3
-			d2k_laser_tank: 10
+			d2k_laser_tank: 5
 			combat_tank_o: 10
 			deviator: 7
 			swarmer: 3
 			########### Upgrades Ordos
-			ordos_upgrade_shield: 1
-			ordos_upgrade_toxin: 1
-			upordos_chem_troop: 3
-			upordos_contaminator: 3
-			upordos_d2k_leech: 3
-			upordos_tleilax_labcrawl: 3
-			upordos_ordos_aatrooper: 3
-			upordos_d2k_laser_tank: 3
-			upordos_deviatormk2: 3
-			upordos_wraith: 3
-			upordos_ordos_mortar: 3
-			upordos_ordos_stealth_tank: 3
-			upordos_banshee: 3
-			upordos_python: 3
 			#################### UnitsToBuild Dune Universe
 			quake_tank: 1
 			d2k_heavy_air_drone: 1
 			d2k_mcv: 1
 			shotgunner: 5
 			submachinegunner: 5
-			mpsardaukar: 5
+			sardaukar: 5
 			d2k_sardaukar_elite: 3
 			nsfremen: 3
-			fremen: 3
+			fremen: 5
 			facedancer_harv: 10
 			plasma_infantry: 10
 			facedancer: 10
@@ -5425,7 +5471,7 @@ Player:
 			d2k_drone_h: 3
 			d2k_emperor_worm: 1
 			d2k_rider_worm: 3
-			d2k_sniper: 3
+			d2k_sniper: 5
 			d2k_marksman: 3
 			d2k_stealth_apc.bot1: 5
 			d2k_stealth_apc.bot2: 3
@@ -5433,12 +5479,14 @@ Player:
 			phoenix: 3
 			d2k_mechanic: 1
 			d2k_hijacker: 1
+			bene_gesserit: 1
 			guild_quad: 3
 			siege_quad: 3
 			d2k_atreides_apc.bot1: 5
 			d2k_atreides_apc.bot2: 3
 			d2k_autogun_tank: 5
 			d2k_flame_tank: 3
+			d2katreidesmongoose: 5
 			ornithopter.controllable: 3
 			grenadier: 3
 			sonic_tank: 10
@@ -5463,10 +5511,11 @@ Player:
 			mg_quad_tleilaxu.bot: 5
 			d2k_scourge: 3
 			siege_tank: 5
+			assault_tank: 5
 			missile_tank: 10
 			stealth_raider: 7
 			combat_tank_a: 10
-			combat_tank_h: 10
+			combat_tank_h: 15
 			d2k_combat_buggy: 7
 			d2k_kwny_fighter: 7
 			rocket_raider_ixian.bot1: 5
@@ -5492,9 +5541,6 @@ Player:
 			d2k_sardaukar_buggy: 3
 			d2k_transport_buggy.bot1: 3
 			d2k_transport_buggy.bot2: 3
-			d2k_combat_siege_upgrade: 1
-			d2k_quake_tank_upgrade: 1
-			d2k_duelist_tank_upgrade: 1
 			emperor_fremen: 3
 			emperor_sardaukar: 5
 			emperor_fedaykin: 5
@@ -5512,17 +5558,6 @@ Player:
 			d2k_airdefenseplatform: 10
 			d2k_striketeam2: 1
 			d2k_striketeam3: 1
-			upgrade.contaminator: 1
-			upgrade.leech: 1
-			upgrade.emperorworm: 1
-			upgrade.rocketeer: 1
-			upgrade.rocket_raider: 1
-			upgrade.mg_quad: 1
-			upgrade.mcv: 1
-			upgrade.basq: 1
-			upgrade.tleilaxueyes: 1
-			upgrade.gholas: 1
-			d2k_ornithopter_upgrade: 1
 			#################### UnitsToBuild TERRAN
 			scscv: 10
 			scmarine: 5

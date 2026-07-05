@@ -3597,15 +3597,19 @@ flameall:
 		Tick: 160
 		ZOffset: 1023
 
-# tsdroppod:
-# 	idle:
-# 		Length: *
-# 		Tick: 200
+tsdroppod:
+	Defaults:
+		Filename: tsdroppod.shp
+	idle:
+		Length: *
+		Tick: 200
 
-# tspodring:
-# 	idle:
-# 		Length: *
-# 		ZOffset: 256
+tspodring:
+	Defaults: 
+		Filename: tspodring.shp
+	idle:
+		Length: *
+		ZOffset: 256
 
 tsobl2:
 	Defaults:

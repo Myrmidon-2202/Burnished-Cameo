@@ -4,25 +4,25 @@ World:
 		InternalName: atreides
 		Game: Dune Universe
 		Side: Westwood's Dune
-		Description: House Atreides\nThe noble Atreides, from the water world of Caladan,\nrely on their ornithopters to ensure air superiority.\nThey have allied themselves with the Fremen, the fearsome\nnative warriors of Dune that can move undetected in battle.\nTheir Strength lies in air superiority\nSupport Power: Ornithopter Airstrike, Fremen Guerilla
+		Description: faction-dune-atreides.description
 	FactionCA@Harkonnen:
 		Name: Harkonnen
 		InternalName: harkonnen
 		Game: Dune Universe
 		Side: Westwood's Dune
-		Description: House Harkonnen\nThe evil Harkonnen of the planet Giedi Prime\nwill stop at nothing to gain control of the spice.\nThey rely on brute force and atomic weapons to achieve their goals:\nwealth, and the destruction of House Atreides.\nTheir Specialities are Devastators and Annihilators.\nSupport Power: Death Hand Missile
+		Description: faction-dune-harkonnen.description
 	FactionCA@Ordos:
 		Name: Ordos
 		InternalName: ordos
 		Game: Dune Universe
 		Side: Westwood's Dune
-		Description: House Ordos\nThe insidious Ordos of the icy planet Sigma Draconis IV\nare known for their wealth, greed and treachery.\nRelying heavily on mercenaries they often resort\nto sabotage and forbidden Ixian technologies.\nTheir Strength lies in Stealth and quick hit and run tactics\nSupport Power: Saboteur, Chaos Lightning
+		Description: faction-dune-ordos.description
 	FactionCA@Corrino:
 		Name: Corrino
+		InternalName: corrino
 		Game: Dune Universe
 		Side: Westwood's Dune
-		InternalName: corrino
-		Description: House Corrino\nOnce deadliest and grandest House in the Universe and for many thousands of years the imperial family of Imperium from the world Salusa Secundus.\nCorrino uses their elite trained Sardaukars, to rule the war.\nSupport Power: Release the Sardaukars
+		Description: faction-dune-corrino.description
 	# FactionCA@Ixian:
 	# 	Name: Ixian
 	# 	InternalName: ixian
@@ -35,7 +35,7 @@ World:
 		RandomFactionMembers: ordos, atreides, harkonnen
 		Game:  Dune Universe
 		Side: Random
-		Description: Random Faction\nA random faction from Dune Universe will be chosen when the game starts.
+		Description: faction-dune-Random.description
 
 	#########################################
 	#   DUNE UNIVERSE
@@ -323,6 +323,7 @@ Player:
 	Inherits@munisilo: ^D2K_MunitionsSiloBuff
 	Inherits@BulletImmune: ^BulletImmune
 	Inherits@personalshield: ^D2KPersonalShield
+	Inherits@mindcontrol: ^MindControllable
 	WithDeathAnimation:
 		DeathTypes:
 			ExplosionDeath: 1
@@ -523,6 +524,7 @@ Player:
 ^D2KVehicle:
 	Inherits@vehicle: ^Vehicle
 	Inherits@munisilo: ^D2K_MunitionsSiloBuff
+	Inherits@mindcontrol: ^MindControllable
 	-Carryable:
 	Tooltip:
 		GenericName: Unit
@@ -712,18 +714,13 @@ Player:
 		Upgrades: ordos_upgrade_toxin
 ^D2K_Ordos_Shields:
 	Inherits: ^D2KPersonalShield
-	GrantConditionOnPrerequisite@ordos_upgrade_shield:
-		Condition: ordos_upgrade_shield
-		Prerequisites: ordos_upgrade_shield
-	ActorStatValues:
-		Upgrades: ordos_upgrade_shield
 	Shielded:
 		DamageRegenDelay: 125
 		RegenAmount: 48
 		RegenInterval: 1
 		ShieldsUpCondition: d2k_shielded
 		SelectionBarColor: 8888FFFF
-		RequiresCondition: !disabled && ordos_upgrade_shield
+		RequiresCondition: !disabled
 ^D2K_Ix_Turret_EMP:
 	Inherits: ^D2K_Ix_technology
 	AttackTurreted:
@@ -1051,6 +1048,7 @@ construction_yard.corrino:
 		ActorTypes: light_inf, light_inf, engineer
 	RenderSprites:
 		Image: conyard.corrino
+		Palette: d2kunit
 	ActorStatValues:
 		Upgrades: upgrade_conyard
 	GivesBuildableArea:
@@ -1520,7 +1518,7 @@ d2k_barracks.corrino:
 	Inherits@shape: ^2x2Shape
 	Buildable:
 		Prerequisites: ~construction_yard.corrino, wind_trap.corrino
-		IconPalette: terrain
+		IconPalette: player
 	Tooltip:
 		Name: Corrino Barracks
 	Building:
@@ -1763,6 +1761,7 @@ refinery.atreides:
 		RequiresCondition: d2k_spice_sifter_upgrade
 	ActorStatValues:
 		Upgrades: d2k_spice_sifter_upgrade
+	ProvidesPrerequisite@buildingname:
 	RenderSprites:
 		Image: refinery.atreides
 	WithIdleOverlay@TOP:
@@ -1801,6 +1800,7 @@ refinery.ordos:
 		DeliveryOffset: 2,2
 		DeliveringActor: carryall.reinforce
 		Facing: 160
+	ProvidesPrerequisite@buildingname:
 	RenderSprites:
 		Image: refinery.ordos
 
@@ -1818,6 +1818,7 @@ refinery.harkonnen:
 		DeliveryOffset: 2,2
 		DeliveringActor: carryall.reinforce
 		Facing: 160
+	ProvidesPrerequisite@buildingname:
 	RenderSprites:
 		Image: refinery.harkonnen
 
@@ -1835,6 +1836,7 @@ refinery.corrino:
 		DeliveryOffset: 2,2
 		DeliveringActor: carryall.reinforce
 		Facing: 160
+	ProvidesPrerequisite@buildingname:
 	RenderSprites:
 		Image: refinery.harkonnen
 
@@ -3536,6 +3538,7 @@ starport.corrino:
 	Inherits: starport.ixian
 	Buildable:
 		Queue: Building, RABuilding
+		BuildLimit: 4
 		BuildPaletteOrder: 150
 		BuildDuration: 1500
 		BuildDurationModifier: 100
@@ -3974,6 +3977,8 @@ flame_turret:
 		Name: Flame Turret
 	Armament:
 		Weapon: d2kFlameTurret
+	RenderSprites:
+		Image: flame_turret
 
 large_gun_turret:
 	Inherits: ^D2KDefense
@@ -4760,15 +4765,13 @@ palace.corrino:
 			1: Deploys Corrino's Sardaukars from orbit to decimate your enemies.\nDrop Pods damages area around\nProvides passive income
 		Weapons:
 			1: SardaukarDroppodSpawner
-		BeaconPosters:
-			1: sardaukar_icon
 		OrderName: GDI Drop
 		Cursor: ability
 		PauseOnCondition: disabled
 		InsufficientPowerSpeechNotification: InsufficientPower
 		LaunchSpeechNotification: ReinforcementsArrived
 		SelectTargetSpeechNotification: SelectTarget
-		DisplayBeacon: True
+		DisplayBeacon: False
 		DisplayRadarPing: True
 		DisplayTimerRelationships: Ally, Neutral, Enemy
 		ChargeInterval: 6000
@@ -4777,6 +4780,8 @@ palace.corrino:
 		IconPalette: d2kunit
 		CameraRemoveDelay: 60
 		AllowMultiple: True
+		TargetCircleRange:
+			1: 6000
 
 
 # palace_emperor:
@@ -5257,7 +5262,7 @@ light_inf.harkonnen:
 		Queue: Infantry.Harkonnen
 		Description: template-scout-infantry.description
 		IconPalette: d2kunit
-		Prerequisites: barracks.harkonnen
+		Prerequisites: d2k_barracks.harkonnen
 	Mobile:
 		Speed: 52
 	Health:
@@ -5297,13 +5302,14 @@ engineer:
 	Inherits@personalshield: ^D2KPersonalShield
 	Inherits@anim: ^D2KPaletteRenderInfantry
 	Buildable:
-		Queues: Infantry.Atreides, Infantry.Ordos, Infantry.Harkonnen, Infantry.Corrino
-		Prerequisites: d2k_barracks
+		Queue: Infantry.Atreides, Infantry.Ordos, Infantry.Harkonnen, Infantry.Corrino
+		Prerequisites:
 		IconPalette: d2kunit
 	RenderSprites:
 		Image: engineer
 	Voiced:
 		VoiceSet: D2KEngineerVoice
+
 # submachinegunner:
 # 	Inherits: light_inf
 # 	Valued:
@@ -5473,22 +5479,22 @@ heavy_trooper:
 		Queue: Infantry.Harkonnen
 		Description: actor-shock_infantry.description
 		IconPalette: d2kunit
-		Prerequisites: barracks.harkonnen
+		Prerequisites: d2k_barracks.harkonnen
 	Mobile:
 		Speed: 45
 	Health:
-		HP: 39000
+		HP: 21000
 	ChangesHealth@SelfHealing:
 		Step: 36
 	Armament@PRIMARY: ##########
-		Weapon: autogun_tank
+		Weapon: trooper_autogun
 		LocalOffset: 135,0,200
 	Armament@SECONDARY: ##########
 		Weapon: D2K_Rocket_Trooper
 		LocalOffset: 135,0,200
 	Armament@Garrison: ##########
 		Name: garrisoned
-		Weapon: autogun_tank
+		Weapon: trooper_autogun
 		MuzzleSequence: garrison-muzzle
 		MuzzlePalette: d2keffect
 	WithInfantryBody:
@@ -5496,7 +5502,7 @@ heavy_trooper:
 		DefaultAttackSequence: shoot
 	Parachutable:
 	Voiced:
-		VoiceSet: D2KDevastator
+		VoiceSet: D2kHeavyTrooper
 	RenderSprites:
 		Image: heavy_trooper
 		PlayerPalette: player
@@ -5684,7 +5690,7 @@ fremen:
 	Inherits@bot: ^BotMicromanageable
 	Inherits@AntiBuil: ^PrioritizeBuilding
 	Tooltip:
-		Name: Fremen
+		Name: Fremen Shahid
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
@@ -5701,7 +5707,7 @@ fremen:
 	Valued:
 		Cost: 400
 	Health:
-		HP: 15000
+		HP: 23000
 	RevealsShroud:
 		Range: 5c256
 	Armament@PRIMARY:
@@ -5841,7 +5847,7 @@ contaminator:
 	Tooltip:
 		Name: Contaminator
 	Buildable:
-		Queue: Infantry.Ordos
+		Queue: Infantry
 		BuildPaletteOrder: 10
 		BuildDuration: 375
 		BuildDurationModifier: 100
@@ -5941,7 +5947,7 @@ sardaukar:
 	Buildable:
 		Queue: Infantry.Corrino
 		BuildPaletteOrder: 50
-		Prerequisites: barracks.corrino
+		Prerequisites: d2k_barracks.corrino
 		BuildDuration: 280
 		BuildDurationModifier: 100
 		Description: Assault infantry of Emperor's Army\n  Strong vs Infantry, Vehicles\n  Weak vs Artillery
@@ -5955,7 +5961,7 @@ sardaukar:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 20000
+		HP: 23000
 	Mobile:
 		Speed: 31
 	RevealsShroud:
@@ -6085,7 +6091,7 @@ d2k_sardaukar_assassin:
 		ValidTargets: Infantry
 		Priority: 100
 	Health:
-		HP: 21000
+		HP: 22000
 	Mobile:
 		Speed: 34
 	HitShape:
@@ -6343,11 +6349,11 @@ fedaykin:
 		BuildDuration: 280
 		BuildDurationModifier: 100
 	Mobile:
-		Speed: 52
+		Speed: 60
 	Valued:
 		Cost: 300
 	Health:
-		HP: 17500
+		HP: 21000
 	RevealsShroud:
 		Range: 4c768
 	Armament:
@@ -6612,7 +6618,7 @@ d2k_sniper:
 	Buildable:
 		Queue: Infantry.Atreides, RAInfantry
 		BuildPaletteOrder: 60
-		Prerequisites: ~barracks.atreides, upgrade_barracks, high_tech_factory
+		Prerequisites: ~barracks.atreides, upgrade_barracks, outpost.atreides
 		Description: Infantry armed with a long range rifle\nCan detect cloaked units at great distances.\nCan Deplay to grant stealth and accuracy but loses movement\n  Strong vs Infantry, Air, Vehicles\n  Weak vs Tanks\n  Special Ability: Invisibility while static
 		IconPalette: d2kunit
 		BuildDuration: 600
@@ -6723,8 +6729,8 @@ flamethrower:
 		BuildPaletteOrder: 40
 		BuildDuration: 220
 		BuildDurationModifier: 100
-		Prerequisites: ~barracks.harkonnen, upgrade_barracks, high_tech_factory
-		Description: Stealth Deadly unit.\nUndetected even when exiting vehicles and infiltrating.\n  Strong vs Infantry, Vehicles, Tanks, Buildings\n  Weak vs Siege\n  Special Ability: Invisibility
+		Prerequisites: ~barracks.harkonnen, upgrade_barracks, high_tech_factory.harkonnen
+		Description: Close range assault unit.\n  Strong vs Infantry, Vehicles, Tanks, Buildings\n  Weak vs Siege\n  Special Ability: Invisibility
 		IconPalette: d2kunit
 	Valued:
 		Cost: 300
@@ -6735,7 +6741,7 @@ flamethrower:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 8000
+		HP: 9000
 	Mobile:
 		Speed: 32
 	RevealsShroud:
@@ -6900,14 +6906,14 @@ bene_gesserit:
 		Prerequisites: palace.corrino
 		BuildDuration: 500
 		BuildDurationModifier: 100
-		Description: Witch of the Imperium. Can control enemy units using The Voice and\ninstantly kill infantry with Gom Jabbar\nCannot be poisoned nor mind controlled
+		Description: Witch of the Imperium. Can control enemy units using The Voice and\ninstantly kill infantry with the Gom Jabbar\nCannot be poisoned nor mind controlled
 		IconPalette: player
 	-ExternalCondition@Poisoned:
 	-Targetable@poisoned:
 	Mobile:
 		Speed: 64
 	Health:
-		HP: 3000
+		HP: 8000
 	AutoTarget:
 		ScanRadius: 6
 		RequiresCondition: !controlling
@@ -6921,8 +6927,9 @@ bene_gesserit:
 		Name: garrisoned
 		Weapon: D2KTheVoice
 	Passenger:
-	MindController:
+	MindControllerCA:
 		ArmamentNames: primary
+		TicksToControl: 10
 		Capacity: 1
 		RequiresCondition: !disabled
 		ControllingCondition: controlling
@@ -6970,7 +6977,7 @@ d2k_light_tank:
 		Description: Light Carrier vehicle with light cannon and missile launcher\nCan carry 3 passengers\n Strong vs Vehicles, Tanks\n Weak vs Infantry
 		IconPalette: d2kunit
 	Valued:
-		Cost: 750
+		Cost: 650
 	Tooltip:
 		Name: Personnel Carrier
 	AutoDeployer:
@@ -6992,7 +6999,7 @@ d2k_light_tank:
 		Range: 3c512
 	WithMuzzleOverlay:
 	Cargo:
-		MaxWeight: 3
+		MaxWeight: 6
 		Types: Infantry
 	Armament:
 		Weapon: d2k70mm
@@ -7620,7 +7627,7 @@ ordos_apc:
 	Voiced:
 		VoiceSet: EBFDOAPC
 	Cargo:
-		InitialUnits: light_inf, light_inf, light_inf, light_inf, chem_troop, chem_troop, trooper, trooper
+		InitialUnits:
 		Types: Infantry, Hacker, Fremen
 		MaxWeight: 8
 	RenderSprites:
@@ -7980,6 +7987,7 @@ ordos_eye:
 	Inherits@GAINSEXPERIENCE: ^GainsExperience
 	Inherits@AntiAir: ^PrioritizeAir
 	Inherits@AntiInf: ^PrioritizeInfantry
+	Inherits@eject: ^AircraftEjectOnDeath
 	AutoTarget:
 		InitialStance: ReturnFire
 	Valued:
@@ -7990,9 +7998,9 @@ ordos_eye:
 		Prerequisites: ~high_tech_factory.ordos
 		BuildDuration: 250
 		BuildDurationModifier: 100
-		Description: Light plane armed with dual machine guns. \nCan attack air.\n Strong vs Infantry and Air
+		Description: Light scout aircraft with a suicidal passenger \nCan attack air.\n Strong vs Infantry and Air
 	Tooltip:
-		Name: Eye on the Sky
+		Name: Eye in the Sky
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -8002,11 +8010,6 @@ ordos_eye:
 		Type: GroundPosition
 	AttackAircraft:
 		FacingTolerance: 320
-	Armament@PRIMARY:
-		Weapon: eye_bomberguy
-		LocalOffset: 256,-213,0, 256,213,0
-		MuzzleSequence: muzzle
-		MuzzlePalette: ra2effect
 	Aircraft:
 		CruiseAltitude: 1920
 		Speed: 180
@@ -8022,6 +8025,8 @@ ordos_eye:
 		TargetTypes: Air, Plane
 	SpawnActorOnDeath:
 		Actor: ordos_eye.husk
+	EjectOnDeath:
+		PilotActor: saboteur
 	Selectable:
 		Class: ordos_eye
 		Bounds: 1280, 1024, 0, 0
@@ -8219,7 +8224,7 @@ d2katreidesmongoose:
 		Class: combattank
 	Buildable:
 		Queue: VehicleHeavy.Atreides, VehicleStarport.Atreides
-		Prerequisites: heavy_factory
+		Prerequisites: heavy_factory.atreides
 		BuildPaletteOrder: 30
 		Description: Generalist Combat Walker
 		BuildDuration: 250
@@ -8348,13 +8353,13 @@ ornithopter.controllable:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 32000
+		HP: 33000
 	AmmoPool:
 		Name: primary
 		Ammo: 6
 		AmmoCondition: ammo
 	ReloadAmmoPool:
-		Delay: 250
+		Delay: 150
 		Count: 6
 		ResetOnFire: false
 	AttackAircraft:
@@ -8378,7 +8383,7 @@ ornithopter.controllable:
 		PauseOnCondition: !ammo
 	Aircraft:
 		CruiseAltitude: 1920
-		Speed: 184
+		Speed: 190
 		RepulsionSpeed: 40
 		MaximumPitch: 56
 		Repulsable: true
@@ -8533,6 +8538,7 @@ d2k_air_drone.husk:
 
 phoenix:
 	Inherits: ^RANeutralPlane
+	Inherits@Template: ^BomberTemplate
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Inherits@GAINSEXPERIENCE: ^GainsExperience
 	Inherits@AntiBuil: ^PrioritizeBuilding
@@ -8594,6 +8600,7 @@ phoenix:
 		VoiceSet: D2KVehicleVoice
 	RenderSprites:
 		Image: d2k_gunship
+		PlayerPalette: player_rgba
 	# ThrowsShrapnel:
 	# 	Weapons: Debris2, Debris3
 	# 	Pieces: 2, 3
@@ -8629,7 +8636,7 @@ ordos_banshee.husk:
 ordos_eye.husk:
 	Inherits: ^PlaneHusk
 	Tooltip:
-		Name: Eye on the Sky
+		Name: Eye in the Sky
 	Aircraft:
 		TurnSpeed: 8
 		Speed: 65
@@ -8660,7 +8667,7 @@ d2k_combat_fleet:
 	Inherits@MC: ^MCImmune
 	Inherits@guildtele: ^Guild_teleport
 	Valued:
-		Cost: 1500
+		Cost: 1800
 	Tooltip:
 		Name: Combat Fleet
 	UpdatesPlayerStatistics:
@@ -8669,7 +8676,7 @@ d2k_combat_fleet:
 		BuildPaletteOrder: 40
 		Prerequisites: high_tech_factory.corrino, research_centre.corrino
 		Queue: Aircraft.Corrino
-		Description: Heavy fleet which fires multiple unguided rockets at its targets.\n Strong vs Ground targets
+		Description: Heavy siege vessel which fires multiple unguided rockets at its targets.
 		IconPalette: ra2
 	Aircraft:
 		InitialFacing: 896
@@ -8725,7 +8732,7 @@ d2k_kwny_fighter:
 	Inherits@MC: ^MCImmune
 	Inherits@guildtele: ^Guild_teleport
 	Valued:
-		Cost: 1200
+		Cost: 1000
 	Tooltip:
 		Name: Kwny Fighter
 	UpdatesPlayerStatistics:
@@ -8743,7 +8750,7 @@ d2k_kwny_fighter:
 		IdealSeparation: 1c0
 		RepulsionSpeed: 10
 	Health:
-		HP: 35000
+		HP: 30000
 	RevealsShroud:
 		Range: 7c0
 		Type: GroundPosition
@@ -8757,7 +8764,7 @@ d2k_kwny_fighter:
 		FacingTolerance: 160
 	SelectionDecorations:
 	Selectable:
-		DecorationBounds: 2048, 2048
+		DecorationBounds: 1024, 1024
 	Voiced:
 		VoiceSet: D2KVehicleVoice
 	SpawnActorOnDeath:
@@ -8783,21 +8790,20 @@ d2k_kwny_fighter.husk:
 
 d2k_airdefenseplatform:
 	Inherits: ^Helicopter
-	Inherits: ^SpaceshipTemplate
+	Inherits@Template: ^SpaceshipTemplate
 	Inherits@EXPERIENCE: ^GainsExperience
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
 	Valued:
 		Cost: 1500
 	Tooltip:
 		Name: Air Defense Platform
-	Hovers:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 180
-		Prerequisites: high_tech_factory.harkonnen, research_centre
+		Prerequisites: high_tech_factory.harkonnen, research_centre.harkonnen
 		Queue: Aircraft.Harkonnen
-		Description: Mobile Base Defense equipped with Dual High Calibre Machinegun
+		Description: Mobile Base Air Defense equipped with Dual High Calibre Machinegun
 		IconPalette: ra2
 		BuildDuration: 625
 		BuildDurationModifier: 100
@@ -9579,7 +9585,7 @@ siege_tank:
 		Description: Siege Artillery\n  Strong vs Infantry, Buildings\n  Weak vs Tanks
 		IconPalette: d2kunit
 	Valued:
-		Cost: 600
+		Cost: 800
 	Tooltip:
 		Name: Siege Tank
 	UpdatesPlayerStatistics:
@@ -9645,9 +9651,9 @@ assault_tank:
 		Description: Siege Gun\n  Strong vs Infantry, Buildings\n  Weak vs Tanks
 		IconPalette: d2kunit
 	Valued:
-		Cost: 600
+		Cost: 900
 	Tooltip:
-		Name: Assault Tank
+		Name: Assault Gun
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -9656,12 +9662,12 @@ assault_tank:
 		Type: Light
 	Mobile:
 		Speed: 43
-		TurnSpeed: 48
+		TurnSpeed: 200
 	RevealsShroud:
 		Range: 6c768
 	Armament:
-		Weapon: D2K_155mm
-		LocalOffset: 512,0,320
+		Weapon: AssaultGunCannon
+		LocalOffset: 812,0,320
 		MuzzleSequence: muzzle
 		MuzzlePalette: d2keffect
 	AttackFrontal:
@@ -9687,7 +9693,7 @@ assault_tank:
 		Modifier: 150
 		RequiresCondition: d2k_siege_range_upgrade
 	Voiced:
-		VoiceSet: D2KSiegeTank
+		VoiceSet: D2KAnnihilatorVoice
 	RenderSprites:
 		PlayerPalette: player_rgba
 
@@ -10162,80 +10168,80 @@ missile_tank_ixian:
 	ActorStatValues:
 		Upgrades: d2k_heavy_missile_upgrade, d2k_advanced_ixian_technology
 
-d2k_autogun_tank:
-	Inherits@D2KT: ^D2KTank
-	Inherits@GAINSEXPERIENCE: ^GainsExperience
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
-	Inherits@EMP: ^FrontalEMP
-	Inherits@AntiInf: ^PrioritizeInfantry
-	Buildable:
-		Queue: VehicleHeavy.Ordos
-		Prerequisites: ~heavy_factory.ordos, outpost.ordos
-		BuildPaletteOrder: 50
-		BuildDuration: 625
-		BuildDurationModifier: 100
-		Description: Heavy Anti-Infantry Tank\n  Strong vs Infantry, Vehicles\n  Weak vs Tanks
-	Valued:
-		Cost: 1100
-	Tooltip:
-		Name: Heavy Autogun Tank
-	UpdatesPlayerStatistics:
-		AddToArmyValue: true
-	Health:
-		HP: 145000
-	Armor:
-		Type: Heavy
-	Mobile:
-		Speed: 45
-		TurnSpeed: 28
-	RevealsShroud:
-		Range: 6c768
-	Turreted:
-		Offset: 32,16,0
-		TurnSpeed: 48
-	Armament:
-		Weapon: autogun_tank
-		LocalOffset: 500,-150,200, 500,150,200
-		MuzzleSequence: muzzle
-		MuzzlePalette: d2keffect
-	AttackFrontal:
-		FacingTolerance: 0
-	WithMuzzleOverlay:
-	RenderSprites:
-	FireWarheadsOnDeath:
-		Weapon: D2KUnitExplodeLarge
-		EmptyWeapon: D2KUnitExplodeLarge
-	AutoTarget:
-		InitialStanceAI: Defend
-	Selectable:
-		Class: d2k_autogun_tank
-	AttractsWorms:
-		Intensity: 600
-	Cloak@TDcloak:
-		Palette: cloak
-	Voiced:
-		VoiceSet: D2KAutoGunTank
-	GrantConditionOnAttack@gatling:
-		Condition: gatling
-		ArmamentNames: primary, garrisoned
-		RequiredShotsPerInstance: 12, 24
-		MaximumInstances: 2
-		RevokeDelay: 25
-		RevokeAll: false
-		IsCyclic: false
-		RevokeOnNewTarget: false
-	ReloadDelayMultiplier@gatling1:
-		Modifier: 75
-		RequiresCondition: gatling == 1
-	ReloadDelayMultiplier@gatling1:
-		Modifier: 50
-		RequiresCondition: gatling > 1
-	RangeMultiplier@gatling1:
-		Modifier: 120
-		RequiresCondition: gatling == 1
-	RangeMultiplier@gatling1:
-		Modifier: 140
-		RequiresCondition: gatling > 1
+# d2k_autogun_tank:
+# 	Inherits@D2KT: ^D2KTank
+# 	Inherits@GAINSEXPERIENCE: ^GainsExperience
+# 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+# 	Inherits@EMP: ^FrontalEMP
+# 	Inherits@AntiInf: ^PrioritizeInfantry
+# 	Buildable:
+# 		Queue: VehicleHeavy.Ordos
+# 		Prerequisites: ~heavy_factory.ordos, outpost.ordos
+# 		BuildPaletteOrder: 50
+# 		BuildDuration: 625
+# 		BuildDurationModifier: 100
+# 		Description: Heavy Anti-Infantry Tank\n  Strong vs Infantry, Vehicles\n  Weak vs Tanks
+# 	Valued:
+# 		Cost: 1100
+# 	Tooltip:
+# 		Name: Heavy Autogun Tank
+# 	UpdatesPlayerStatistics:
+# 		AddToArmyValue: true
+# 	Health:
+# 		HP: 145000
+# 	Armor:
+# 		Type: Medium
+# 	Mobile:
+# 		Speed: 45
+# 		TurnSpeed: 28
+# 	RevealsShroud:
+# 		Range: 6c768
+# 	Turreted:
+# 		Offset: 32,16,0
+# 		TurnSpeed: 48
+# 	Armament:
+# 		Weapon: autogun_tank
+# 		LocalOffset: 500,-150,200, 500,150,200
+# 		MuzzleSequence: muzzle
+# 		MuzzlePalette: d2keffect
+# 	AttackFrontal:
+# 		FacingTolerance: 0
+# 	WithMuzzleOverlay:
+# 	RenderSprites:
+# 	FireWarheadsOnDeath:
+# 		Weapon: D2KUnitExplodeLarge
+# 		EmptyWeapon: D2KUnitExplodeLarge
+# 	AutoTarget:
+# 		InitialStanceAI: Defend
+# 	Selectable:
+# 		Class: d2k_autogun_tank
+# 	AttractsWorms:
+# 		Intensity: 600
+# 	Cloak@TDcloak:
+# 		Palette: cloak
+# 	Voiced:
+# 		VoiceSet: D2KAutoGunTank
+# 	GrantConditionOnAttack@gatling:
+# 		Condition: gatling
+# 		ArmamentNames: primary, garrisoned
+# 		RequiredShotsPerInstance: 12, 24
+# 		MaximumInstances: 2
+# 		RevokeDelay: 25
+# 		RevokeAll: false
+# 		IsCyclic: false
+# 		RevokeOnNewTarget: false
+# 	ReloadDelayMultiplier@gatling1:
+# 		Modifier: 75
+# 		RequiresCondition: gatling == 1
+# 	ReloadDelayMultiplier@gatling1:
+# 		Modifier: 50
+# 		RequiresCondition: gatling > 1
+# 	RangeMultiplier@gatling1:
+# 		Modifier: 120
+# 		RequiresCondition: gatling == 1
+# 	RangeMultiplier@gatling1:
+# 		Modifier: 140
+# 		RequiresCondition: gatling > 1
 
 d2k_autogun_tank_small:
 	Inherits: combat_tank_h
@@ -10305,7 +10311,7 @@ missile_tank:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
-		Queue: VehicleHeavy.Atreides, VehicleHeavy.Harkonnen, VehicleStarport.Atreides, VehicleStarport.Harkonnen, VehicleStarport.Ordos
+		Queue: VehicleHeavy.Atreides, VehicleHeavy.Harkonnen, VehicleStarport.Atreides, VehicleStarport.Harkonnen, VehicleStarport.Ordos, VehicleStarport.Corrino
 		Prerequisites: upgrade_heavy, research_centre
 		BuildPaletteOrder: 60
 		Description: Rocket Artillery\n  Strong vs Vehicles, Buildings, Aircraft\n  Weak vs Infantry\nDetector
@@ -10351,7 +10357,7 @@ d2k_flame_tank:
 	Inherits@AntiInf: ^PrioritizeInfantry
 	Buildable:
 		Queue: VehicleHeavy.Harkonnen, VehicleStarport.Harkonnen
-		Prerequisites: upgrade_heavy, high_tech_factory
+		Prerequisites: upgrade_heavy, high_tech_factory.harkonnen
 		BuildPaletteOrder: 50
 		BuildDuration: 200
 		BuildDurationModifier: 100
@@ -10474,19 +10480,19 @@ d2k_laser_tank:
 	Buildable:
 		Queue: VehicleHeavy.Ordos, VehicleStarport.Ordos
 		BuildPaletteOrder: 100
-		Prerequisites: ~heavy_factory.ordos
+		Prerequisites: ~heavy_factory.ordos, outpost.ordos
 		BuildDuration: 400
 		BuildDurationModifier: 100
 		Description: Ordos Universal Battle Tank\nHighly Mobile Hover unit\nFires laser beams\nWeak durability\n  Strong vs Everything
 		IconPalette: windows256
 	Valued:
-		Cost: 1100
+		Cost: 1000
 	Tooltip:
 		Name: Laser Tank
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 80000
+		HP: 60000
 	Armor:
 		Type: Medium
 	Mobile:
@@ -10502,9 +10508,9 @@ d2k_laser_tank:
 	Armament:
 		Weapon: d2k_laser_tank
 		LocalOffset: 275,125,0
-	Armament@aa:
-		Weapon: d2k_laser_aa_tank
-		LocalOffset: 275,125,0
+	# Armament@aa:
+	# 	Weapon: d2k_laser_aa_tank
+	# 	LocalOffset: 275,125,0
 	AttackTurreted:
 	Hovers:
 	WithSpriteTurret:
@@ -10720,7 +10726,7 @@ devastator:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 150000
+		HP: 160000
 	ChangesHealth:
 		Step: 60
 		Delay: 1
@@ -10802,13 +10808,13 @@ d2k_tyrant:
 		BuildDurationModifier: 100
 		Description: Super Heavy Tank\n  Strong vs Tanks\n  Weak vs Artillery
 	Valued:
-		Cost: 1400
+		Cost: 1300
 	Tooltip:
 		Name: Tyrant
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 150000
+		HP: 160000
 	Armor:
 		Type: Heavy
 	Voiced:
@@ -12186,6 +12192,10 @@ upgrade_conyard:
 		Cost: 1250
 	RenderSprites:
 		Image: conyard.ordos
+		FactionImages:
+			atreides: conyard.atreides
+			harkonnen: conyard.harkonnen
+			corrino: conyard.corrino
 
 upgrade_barracks:
 	Inherits: ^researched_upgrade.template
@@ -13321,173 +13331,173 @@ upixians_farasha:
 ##############################################
 #                Upgrade Ordos
 ##############################################
-upordos_chem_troop:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Unlock Chemical Trooper
-	Buildable:
-		BuildPaletteOrder: 109
-		Queue: Promotions
-		IconPalette: player
-		Description: Allows training of Chemical Infantry.
-		Prerequisites: ~construction_yard.ordos, !upordos_chem_troop, rank1
-	RenderSprites:
-		Image: chemtrooper
-	ProvidesPrerequisite:
+# upordos_chem_troop:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Unlock Chemical Trooper
+# 	Buildable:
+# 		BuildPaletteOrder: 109
+# 		Queue: Promotions
+# 		IconPalette: player
+# 		Description: Allows training of Chemical Infantry.
+# 		Prerequisites: ~construction_yard.ordos, !upordos_chem_troop, rank1
+# 	RenderSprites:
+# 		Image: chemtrooper
+# 	ProvidesPrerequisite:
 
-upordos_contaminator:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Unlock Contaminator
-	Buildable:
-		BuildPaletteOrder: 112
-		Queue: Promotions
-		IconPalette: player
-		Description: Allows training of Contaminators.
-		Prerequisites: ~construction_yard.ordos, !upordos_contaminator, upordos_chem_troop, rank1
-	RenderSprites:
-		Image: contaminator
-	ProvidesPrerequisite:
+# upordos_contaminator:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Unlock Contaminator
+# 	Buildable:
+# 		BuildPaletteOrder: 112
+# 		Queue: Promotions
+# 		IconPalette: player
+# 		Description: Allows training of Contaminators.
+# 		Prerequisites: ~construction_yard.ordos, !upordos_contaminator, upordos_chem_troop, rank1
+# 	RenderSprites:
+# 		Image: contaminator
+# 	ProvidesPrerequisite:
 
-upordos_d2k_leech:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Unlock Leecher
-	Buildable:
-		BuildPaletteOrder: 115
-		Queue: Promotions
-		IconPalette: player
-		Description: Enables construction of Leechers.
-		Prerequisites: ~construction_yard.ordos, !upordos_d2k_leech, upordos_contaminator, rank1
-	RenderSprites:
-		Image: d2k_leech
-	ProvidesPrerequisite:
+# upordos_d2k_leech:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Unlock Leecher
+# 	Buildable:
+# 		BuildPaletteOrder: 115
+# 		Queue: Promotions
+# 		IconPalette: player
+# 		Description: Enables construction of Leechers.
+# 		Prerequisites: ~construction_yard.ordos, !upordos_d2k_leech, upordos_contaminator, rank1
+# 	RenderSprites:
+# 		Image: d2k_leech
+# 	ProvidesPrerequisite:
 
-upordos_tleilax_labcrawl:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Unlock Laboratory Crawler
-	Buildable:
-		BuildPaletteOrder: 118
-		Queue: Promotions
-		IconPalette: player
-		Description: Enables construction of Laboratory Crawlers.
-		Prerequisites: ~construction_yard.ordos, !upordos_tleilax_labcrawl, upordos_d2k_leech, rank1
-	RenderSprites:
-		Image: tleilax_labcrawl
-	ProvidesPrerequisite:
-#
-upordos_ordos_aatrooper:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Unlock AA Trooper
-	Buildable:
-		BuildPaletteOrder: 110
-		Queue: Promotions
-		#IconPalette: d2kunit
-		Description: Enables construction of Specialized AA Troopers.
-		Prerequisites: ~construction_yard.ordos, !upordos_ordos_aatrooper, rank1
-	RenderSprites:
-		Image: ordos_aatrooper
-	ProvidesPrerequisite:
+# upordos_tleilax_labcrawl:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Unlock Laboratory Crawler
+# 	Buildable:
+# 		BuildPaletteOrder: 118
+# 		Queue: Promotions
+# 		IconPalette: player
+# 		Description: Enables construction of Laboratory Crawlers.
+# 		Prerequisites: ~construction_yard.ordos, !upordos_tleilax_labcrawl, upordos_d2k_leech, rank1
+# 	RenderSprites:
+# 		Image: tleilax_labcrawl
+# 	ProvidesPrerequisite:
+# #
+# upordos_ordos_aatrooper:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Unlock AA Trooper
+# 	Buildable:
+# 		BuildPaletteOrder: 110
+# 		Queue: Promotions
+# 		#IconPalette: d2kunit
+# 		Description: Enables construction of Specialized AA Troopers.
+# 		Prerequisites: ~construction_yard.ordos, !upordos_ordos_aatrooper, rank1
+# 	RenderSprites:
+# 		Image: ordos_aatrooper
+# 	ProvidesPrerequisite:
 
-upordos_d2k_laser_tank:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Unlock Laser Tank
-	Buildable:
-		BuildPaletteOrder: 113
-		Queue: Promotions
-		IconPalette: d2kunit
-		Description: Enables construction of Laser Tanks.
-		Prerequisites: ~construction_yard.ordos, upordos_ordos_aatrooper, !upordos_d2k_laser_tank, rank1
-	RenderSprites:
-		Image: d2k_laser_tank
-	ProvidesPrerequisite:
+# upordos_d2k_laser_tank:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Unlock Laser Tank
+# 	Buildable:
+# 		BuildPaletteOrder: 113
+# 		Queue: Promotions
+# 		IconPalette: d2kunit
+# 		Description: Enables construction of Laser Tanks.
+# 		Prerequisites: ~construction_yard.ordos, upordos_ordos_aatrooper, !upordos_d2k_laser_tank, rank1
+# 	RenderSprites:
+# 		Image: d2k_laser_tank
+# 	ProvidesPrerequisite:
 
-upordos_deviatormk2:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Unlock Deviator Tank
-	Buildable:
-		BuildPaletteOrder: 116
-		Queue: Promotions
-		IconPalette: d2kunit
-		Description: Enables construction of Ix Duelist Tanks.
-		Prerequisites: ~construction_yard.ordos, upordos_d2k_laser_tank, !upordos_deviatormk2, rank1
-	RenderSprites:
-		Image: ordos_deviatormk2
-	ProvidesPrerequisite:
+# upordos_deviatormk2:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Unlock Deviator Tank
+# 	Buildable:
+# 		BuildPaletteOrder: 116
+# 		Queue: Promotions
+# 		IconPalette: d2kunit
+# 		Description: Enables construction of Ix Duelist Tanks.
+# 		Prerequisites: ~construction_yard.ordos, upordos_d2k_laser_tank, !upordos_deviatormk2, rank1
+# 	RenderSprites:
+# 		Image: ordos_deviatormk2
+# 	ProvidesPrerequisite:
 
-upordos_wraith:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Unlock Wraith
-	Buildable:
-		BuildPaletteOrder: 119
-		Queue: Promotions
-		IconPalette: windows256
-		Description: Enables construction of the Wraith.
-		Prerequisites: ~construction_yard.ordos, upordos_deviatormk2, !upordos_wraith, rank1
-	RenderSprites:
-		Image: ordos_wraith
-	ProvidesPrerequisite:
+# upordos_wraith:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Unlock Wraith
+# 	Buildable:
+# 		BuildPaletteOrder: 119
+# 		Queue: Promotions
+# 		IconPalette: windows256
+# 		Description: Enables construction of the Wraith.
+# 		Prerequisites: ~construction_yard.ordos, upordos_deviatormk2, !upordos_wraith, rank1
+# 	RenderSprites:
+# 		Image: ordos_wraith
+# 	ProvidesPrerequisite:
 
-#
-upordos_ordos_mortar:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Unlock Mortar Troopers
-	Buildable:
-		BuildPaletteOrder: 111
-		Queue: Promotions
-		IconPalette: windows256
-		Description: Enables construction of Mortar Troopers.
-		Prerequisites: ~construction_yard.ordos, !upordos_ordos_mortar, rank1
-	RenderSprites:
-		Image: ordos_mortar
-	ProvidesPrerequisite:
+# #
+# upordos_ordos_mortar:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Unlock Mortar Troopers
+# 	Buildable:
+# 		BuildPaletteOrder: 111
+# 		Queue: Promotions
+# 		IconPalette: windows256
+# 		Description: Enables construction of Mortar Troopers.
+# 		Prerequisites: ~construction_yard.ordos, !upordos_ordos_mortar, rank1
+# 	RenderSprites:
+# 		Image: ordos_mortar
+# 	ProvidesPrerequisite:
 
-upordos_ordos_stealth_tank:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Unlock Tank Destroyer
-	Buildable:
-		BuildPaletteOrder: 114
-		Queue: Promotions
-		IconPalette: d2kunit
-		Description: Enables construction of Tank Destroyers.
-		Prerequisites: ~construction_yard.ordos, upordos_ordos_mortar, !upordos_ordos_stealth_tank, rank1
-	RenderSprites:
-		Image: d2k_ordos_stealth_tank
-	ProvidesPrerequisite:
+# upordos_ordos_stealth_tank:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Unlock Tank Destroyer
+# 	Buildable:
+# 		BuildPaletteOrder: 114
+# 		Queue: Promotions
+# 		IconPalette: d2kunit
+# 		Description: Enables construction of Tank Destroyers.
+# 		Prerequisites: ~construction_yard.ordos, upordos_ordos_mortar, !upordos_ordos_stealth_tank, rank1
+# 	RenderSprites:
+# 		Image: d2k_ordos_stealth_tank
+# 	ProvidesPrerequisite:
 
-upordos_banshee:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Unlock Banshees
-	Buildable:
-		BuildPaletteOrder: 117
-		Queue: Promotions
-		IconPalette: ra2
-		Description: Enables construction of Banshees.
-		Prerequisites: ~construction_yard.ordos, upordos_ordos_stealth_tank, !upordos_banshee, rank1
-	RenderSprites:
-		Image: ordos_banshee
-	ProvidesPrerequisite:
+# upordos_banshee:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Unlock Banshees
+# 	Buildable:
+# 		BuildPaletteOrder: 117
+# 		Queue: Promotions
+# 		IconPalette: ra2
+# 		Description: Enables construction of Banshees.
+# 		Prerequisites: ~construction_yard.ordos, upordos_ordos_stealth_tank, !upordos_banshee, rank1
+# 	RenderSprites:
+# 		Image: ordos_banshee
+# 	ProvidesPrerequisite:
 
-upordos_python:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Unlock Python
-	Buildable:
-		BuildPaletteOrder: 120
-		Queue: Promotions
-		Description: Enables construction of the Python.
-		Prerequisites: ~construction_yard.ordos, upordos_banshee, !upordos_python, rank1
-	RenderSprites:
-		Image: ordos_python
-	ProvidesPrerequisite:
+# upordos_python:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Unlock Python
+# 	Buildable:
+# 		BuildPaletteOrder: 120
+# 		Queue: Promotions
+# 		Description: Enables construction of the Python.
+# 		Prerequisites: ~construction_yard.ordos, upordos_banshee, !upordos_python, rank1
+# 	RenderSprites:
+# 		Image: ordos_python
+# 	ProvidesPrerequisite:
 
 #
 heavy_inf:
@@ -13561,7 +13571,6 @@ storm_infantry:
 	Inherits@DECORATIONS: ^InfantryExperienceHospitalHazmatOverrides
 	Inherits@anim: ^D2KPaletteRenderInfantry
 	Inherits@AntiVeh: ^PrioritizeVehicle
-
 	Valued:
 		Cost: 800
 	Tooltip:
@@ -14983,13 +14992,3 @@ d2k_farasha_drone.husk:
 		Image: d2k_farasha_drone
 	FallsToEarth:
 		Explosion: D2KUnitExplodeSmall
-
-###################
-
-BLASTRADIUS.atomic:
-	Inherits: ^BlastRadiusIndicator
-	WithRangeCircle:
-		Type: blast-radius
-		Range: 10000
-	RenderSprites:
-		Palette: d2kunit
