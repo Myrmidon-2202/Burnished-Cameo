@@ -196,7 +196,7 @@ specialrangedstar:
 	Projectile: Bullet
 		Speed: 0c650
 		Image: lego_flaming_star
-		Sequences: anim
+		Sequence: anim
 		RangeLimit: 15c0
 		Palette: player
 		IsPlayerPalette: true
@@ -233,7 +233,7 @@ astroplasmaglob:
 		Speed: 0c650
 		Image: lego_plasma_ball
 		RangeLimit: 15c0
-		Sequences: anim
+		Sequence: anim
 		Palette: player
 		IsPlayerPalette: true
 	Warhead@1Dam: TargetDamage
@@ -338,7 +338,7 @@ heromelee:
 spacelaser:
 	Range: 7c512
 	Report: space_laser.wav
-	Projectile: InstantHit
+	Projectile: AthenaProjectile
 	ValidTargets: Ground, Air, Trees
 	Warhead@1Dam_impact: SpreadDamage
 		Range: 0, 1c1, 2c1, 2c512
@@ -357,6 +357,7 @@ spacelaser:
 		Delay: 3
 	Warhead@4laserblast: CreateEffect
 		Explosions: earthspacelaser
+		Image: earthspacelaser
 	Warhead@5Smu_area2: LeaveSmudge
 		SmudgeType: Scorch
 		InvalidTargets: Vehicle, Structure, Wall, Husk, Trees, Creep
@@ -373,7 +374,7 @@ empstar:
 		Sequences: anim
 		RangeLimit: 15c0
 		Palette: player
-		IsPlayerPalette: true        
+		IsPlayerPalette: true
 	Warhead@1Con: GrantExternalCondition
 		Condition: empdisable
 		ValidTargets: Vehicle, Cyborg, Structure
@@ -384,7 +385,7 @@ legoemp:
 	ReloadDelay: 60
 	Range: 9c512
 	Report: earth_ship_attack.wav
-	Projectile: InstantHit
+	Projectile: Bullet
 	Warhead@1Dam: TargetDamage
 		Spread: 500
 		Damage: 10000
@@ -395,7 +396,7 @@ legoemp:
 			Medium: 80
 			Heavy: 70
 			Concrete: 60
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath         
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
 	Warhead@1Con: GrantExternalCondition
 		Condition: empdisable
 		ValidTargets: Vehicle, Cyborg, Structure

@@ -3081,7 +3081,7 @@ Player:
 		AdditionalHarvesters: 1
 		ScanForIdleHarvestersInterval: 1000
 		HarvesterTypes: harv.gdi, harv.nod, tanodharv, raharv.soviet, raharv.allies, raharv.japan, ra2cmin, ra2harv, aa_drmn, harvester, steel_qmin, latin_harv, nax_slavemaster, nax_slav, nax2_armor_harv, scscv, scprobe, scdrone, astro_builder
-		RefineryTypes: proc.gdi, proc.nod, raproc.allies, raproc.soviet, jproc, ra2narefn, ra2garefn, yryarefn, aa_cgrefn, steel_qref, latin_cgauto, nax_refin, screfinery, scassimilator, scextractor, tsproc, glsupply, chsupply, usasupply, refinery, refinery.atreides, wc2_human_elven_lumber_mill, wc2_orc_troll_lumber_mill, astro_harvester
+		RefineryTypes: proc.gdi, proc.nod, raproc.allies, raproc.soviet, jproc, ra2narefn, ra2garefn, yryarefn, aa_cgrefn, steel_qref, latin_cgauto, nax_refin, screfinery, scassimilator, scextractor, tsproc, glsupply, chsupply, usasupply, refinery, refinery.atreides, wc2_human_elven_lumber_mill, wc2_orc_troll_lumber_mill, astro_harvester, astro_conyard
 	BuildingRepairBotModule:
 		RequiresCondition: genericbot
 	McvManagerBotModuleCA:
@@ -3278,6 +3278,12 @@ Player:
 				AttackOrderName: Unload
 				MoveBackOrderName: Move
 				AttackRequires: CargoLoaded
+			astro_transport:
+				AttackDesireOfEach: 100
+				MoveToOrderName: Move
+				AttackOrderName: Unload
+				MoveBackOrderName: Move
+				AttackRequires: CargoLoaded
 		ValidTargets: SpyInfiltrate
 		InvalidTargets: Water
 		TargetDistances: Random
@@ -3337,7 +3343,8 @@ Player:
 			miss: All
 			ramiss: All
 			fcom: All
-		PassengerTypes: e1.gdi, e1.nod, e2, e3.gdi, e3.nod, e4, e5, e3chem, tsblackhandlaser, tsblackhandflamer, tsstealthsoldier, gdishotgunner, gdimissilesoldier, gdisniper, rae1, rare1, raje1, rare3, raje3, shok, mortarsoldier, ramaid, rae2, rae4, raje4, sniper, alliedmachinegunner, e3flamer, ra2e1, ra2ggi, ra2seal, ra2e2, ra2shk, ra2flakt, ra2deso, ra2snipe, yrinit, yrvirus, aa_gren, aa_tkiller, aa_flam, aa_plast, aa_japrif, aa_archer, aa_asdf, light_inf, heavy_inf, trooper, shock_infantry, storm_infantry, steel_fedinf, steel_board_inf, steel_qinf, latin_mili, latin_tkiller, latin_fftr, latin_fthrow, latin_narco, nax_rifle, nax_cons, nax_mp40, nax_merc, nax_shrek, nax_tcons, nax_lunar, nax_lunar2, nax2_uber, scmarine, scfirebat, scmarauder, scghost, scmadcap, scharakan, scsilvertongue
+			astro_transport: All
+		PassengerTypes: e1.gdi, e1.nod, e2, e3.gdi, e3.nod, e4, e5, e3chem, tsblackhandlaser, tsblackhandflamer, tsstealthsoldier, gdishotgunner, gdimissilesoldier, gdisniper, rae1, rare1, raje1, rare3, raje3, shok, mortarsoldier, ramaid, rae2, rae4, raje4, sniper, alliedmachinegunner, e3flamer, ra2e1, ra2ggi, ra2seal, ra2e2, ra2shk, ra2flakt, ra2deso, ra2snipe, yrinit, yrvirus, aa_gren, aa_tkiller, aa_flam, aa_plast, aa_japrif, aa_archer, aa_asdf, light_inf, heavy_inf, trooper, shock_infantry, storm_infantry, steel_fedinf, steel_board_inf, steel_qinf, latin_mili, latin_tkiller, latin_fftr, latin_fthrow, latin_narco, nax_rifle, nax_cons, nax_mp40, nax_merc, nax_shrek, nax_tcons, nax_lunar, nax_lunar2, nax2_uber, scmarine, scfirebat, scmarauder, scghost, astro_trooper, astro_commando, astro_gripley
 		ValidTransportOwner: AlliedBot
 	LoadCargoBotModule@TankBunker:
 		RequiresCondition: genericbot
@@ -3394,11 +3401,11 @@ Player:
 		BuildingQueues: Building, RABuilding
 		DefenseQueues: Defence, RADefence
 		ConstructionYardTypes: fact.gdi, fact.nod, rafact.allies, rafact.soviet, rafact.japan, ra2nacnst, ra2gacnst, yrnacnst, tsgtcnstgdi, tsgtcnstnod, tsgtcnstmutant, tsgtcnstcabal, sccommandcenter, scnexus, schatchery, sclair, schive, glcommand, chcommand, usacommand, construction_yard.ixian, construction_yard.ordos, construction_yard.atreides, construction_yard.harkonnen, construction_yard.corrino, wc2_human_townhall, wc2_orc_greathall, aa_cgcnst, steel_qacst, latin_cgcnst, nax_conyard, nax2_conyard, astro_conyard
-		RefineryTypes: proc.gdi, proc.nod, raproc.allies, raproc.soviet, jproc, ra2narefn, ra2garefn, yryarefn, tsproc, tsprocnod, tsprocmutant, tsproccabal, screfinery, scassimilator, scextractor, glsupply, chsupply, usasupply, refinery, refinery.atreides, refinery.ordos, refinery.harkonnen, refinery.corrino, wc2_human_elven_lumber_mill, wc2_orc_troll_lumber_mill, wc2_human_townhall, wc2_orc_greathall, aa_cgrefn, steel_qref, latin_cgauto, nax_refin, nax2_refin, astro_harvester
+		RefineryTypes: proc.gdi, proc.nod, raproc.allies, raproc.soviet, jproc, ra2narefn, ra2garefn, yryarefn, tsproc, tsprocnod, tsprocmutant, tsproccabal, screfinery, scassimilator, scextractor, glsupply, chsupply, usasupply, refinery, refinery.atreides, refinery.ordos, refinery.harkonnen, refinery.corrino, wc2_human_elven_lumber_mill, wc2_orc_troll_lumber_mill, wc2_human_townhall, wc2_orc_greathall, aa_cgrefn, steel_qref, latin_cgauto, nax_refin, nax2_refin, astro_harvester, astro_conyard
 		PowerTypes: nuke, nuk2, powr, apwr, jpwr, ra2napowr, ra2gapowr, ra2nanrct, yryapowr, scsupplydepot, scpylon, scbotoverlord, tsgtpowr, tsntpowrmutant, tsntpowrcabal, tsgtpowrup, tsntpowr, tsntapwr, chpower, chpower2, usapower, wind_trap, wind_trap.atreides, wind_trap.ordos, wind_trap.harkonnen, wind_trap.corrino, d2k_mini_windtrap, wc2_human_farm, wc2_orc_pigfarm, aa_cgapwr, aa_cgtnkr, steel_qapowr, latin_cgpow, nax_powr, nax2_powr, scoverlord, astro_biodome
-		BarracksTypes: pyle, hand, tent, barr, ra2gapile, ra2nahand, yryabrck, scbarracks, scgateway, schatchery, sclair, schive, tsgtpile, tsgtpile2, tsnthand, tsnthand2, glbarracks, chbarracks, usabarracks, d2k_barracks, d2k_barracks.ixian, d2k_barracks.ordos, d2k_barracks.atreides, d2k_barracks.harkonnen, d2k_barracks.corrino, wc2_human_barracks, wc2_orc_barracks, aa_cgbrck, steel_qabarr, latin_cgpile, nax_barr, nax2_barr, astro_barracks
+		BarracksTypes: pyle, hand, tent, barr, ra2gapile, ra2nahand, yryabrck, scbarracks, scgateway, schatchery, sclair, schive, tsgtpile, tsgtpile2, tsnthand, tsnthand2, glbarracks, chbarracks, usabarracks, d2k_barracks, d2k_barracks.ixian, d2k_barracks.ordos, d2k_barracks.atreides, d2k_barracks.harkonnen, d2k_barracks.corrino, wc2_human_barracks, wc2_orc_barracks, aa_cgbrck, steel_qabarr, latin_cgpile, nax_barr, nax2_barr, astro_barracks, astro_conyard
 		VehiclesFactoryTypes: weap, afld, raweapa, raweap, ra2gaweap, ra2naweap, yrygweap, scfactory, scroboticsfacility, schatchery, sclair, schive, tsgtweap, tsgtweapmutant, tsntweap, tsntweapcabal, glweap, chweap, usaweap, heavy_factory.ixian, starport.ixian, heavy_factory.ordos, starport.ordos, light_factory.ordos, heavy_factory.harkonnen, starport.harkonnen, light_factory.harkonnen, heavy_factory.atreides, starport.atreides, light_factory.atreides, starport.corrino, wc2_human_gnomish_inventor, wc2_orc_goblin_alchemist, aa_cgweap, steel_qaweap, latin_cgweap, nax_weap, nax2_weap, tsntweap, tsntweapcabal, tsgtweapmutant, astro_vehiclefactory
-		ProductionTypes: pyle, hand, tent, barr, ra2gapile, ra2nahand, yryabrck, scbarracks, scgateway, scspawningpool, tsgtpile, tsgtpile2, tsnthand, tsnthand2, glbarracks, chbarracks, usabarracks, d2k_barracks, d2k_barracks.ixian, d2k_barracks.atreides, d2k_barracks.harkonnen, d2k_barracks.corrino, wc2_human_barracks, wc2_orc_barracks, aa_cgbrck, steel_qabarr, latin_cgpile, nax_barr, nax2_barr, weap, afld, raweapa, raweap, ra2gaweap, ra2naweap, yrygweap, scfactory, scroboticsfacility, schatchery, sclair, schive, tsgtweap, tsgtweapmutant, tsntweap, tsntweapcabal, glweap, chweap, usaweap, heavy_factory.ixian, starport.ixian, wc2_human_gnomish_inventor, wc2_orc_goblin_alchemist, aa_cgweap, steel_qaweap, latin_cgweap, nax_weap, nax2_weap, hpad.gdi, tsnthpad, tsnthpad, tsgthpadmutant, tsgthpad, hpad.nod, rahpad, raafld, modraafld, ra2gaairc, ra2naairf, high_tech_factory.ixian, aa_cgairf, latin_cgair, nax_airfield, nax2_airfield, heavy_factory.ordos, starport.ordos, light_factory.ordos, d2k_barracks.ordos, d2k_barracks.ordos, astro_barracks, light_factory.ordos, heavy_factory.harkonnen, starport.harkonnen, light_factory.harkonnen, heavy_factory.atreides, starport.atreides, light_factory.atreides, starport.corrino, high_tech_factory.atreides, high_tech_factory.harkonnen, high_tech_factory.corrino, astro_vehiclefactory
+		ProductionTypes: pyle, hand, tent, barr, ra2gapile, ra2nahand, yryabrck, scbarracks, scgateway, scspawningpool, tsgtpile, tsgtpile2, tsnthand, tsnthand2, glbarracks, chbarracks, usabarracks, d2k_barracks, d2k_barracks.ixian, d2k_barracks.atreides, d2k_barracks.harkonnen, d2k_barracks.corrino, wc2_human_barracks, wc2_orc_barracks, aa_cgbrck, steel_qabarr, latin_cgpile, nax_barr, nax2_barr, weap, afld, raweapa, raweap, ra2gaweap, ra2naweap, yrygweap, scfactory, scroboticsfacility, schatchery, sclair, schive, tsgtweap, tsgtweapmutant, tsntweap, tsntweapcabal, glweap, chweap, usaweap, heavy_factory.ixian, starport.ixian, wc2_human_gnomish_inventor, wc2_orc_goblin_alchemist, aa_cgweap, steel_qaweap, latin_cgweap, nax_weap, nax2_weap, hpad.gdi, tsnthpad, tsnthpad, tsgthpadmutant, tsgthpad, hpad.nod, rahpad, raafld, modraafld, ra2gaairc, ra2naairf, high_tech_factory.ixian, aa_cgairf, latin_cgair, nax_airfield, nax2_airfield, heavy_factory.ordos, starport.ordos, light_factory.ordos, d2k_barracks.ordos, d2k_barracks.ordos, light_factory.ordos, heavy_factory.harkonnen, starport.harkonnen, light_factory.harkonnen, heavy_factory.atreides, starport.atreides, light_factory.atreides, starport.corrino, high_tech_factory.atreides, high_tech_factory.harkonnen, high_tech_factory.corrino, astro_barracks, astro_vehiclefactory, astro_conyard
 		NavalProductionTypes: cncsyrd, cncspen, raspen, ra1syrd, ra1jsyrd, yrygyard, ra2gayard, ra2nayard, aa_cgyard, latin_cgyard, nax_naval
 		SiloTypes: silo, rasilo, scsupplydepot, scpylon, scoverlord, d2k_silo, wc2_human_elven_lumber_mill, wc2_orc_troll_lumber_mill
 		AntiAirTypes: sam, atwr, agun, rasam, hbox, jmgnest, ra2nasam, ra2naflak, yrygggun, yrngbnkr.bot, large_gun_turret, aa_cgpuls, aa_cghype, steel_fedaa, latin_sml, latin_aatur, nax_flak88, nax2_twr, scmissileturret, sccreepcolony
@@ -4725,6 +4732,10 @@ Player:
 			astro_barracks: 20
 			astro_vehiclefactory: 20
 			astro_tower: 10
+			astro_tower2: 10
+			astro_tower3: 10
+			Towerupgrade: 10
+			Towerupgrade2: 10
 			astro_wellcap: 10
 	UnitBuilderBotModuleCA@generic:
 		RequiresCondition: genericbot
@@ -4737,7 +4748,7 @@ Player:
 		AirToAirUnits: heli, orca, nodvenom, gdifirehawk, yak, mig, su57, raheli, rapierjumpjet, modkami, ra2falc, yrschp, yrbpln1, ra2hind, yrdisk, ra2shad, aa_phoenix, aa_pelican, d2k_air_drone, d2k_heavy_air_drone, d2k_farasha, steel_inspect, steel_twister, steel_grun, steel_cruiser, latin_yakolev, latin_mig, nax_haunebu, nax_haunebu2, nax_me262, nax_piercer, nax_dieglocke, nax_bf109
 		AirThreatUnits: heli, orca, nodvenom, gdifirehawk, tran.gdi, tran.nod, yak, mig, su57, mignuke, hind, raheli, MH60, rapierjumpjet, modkami, modbomber, modhip, ratran, ra2falc, ra2beag, yrschp, yrbpln1, ra2hind, ra2zep, yrdisk, ra2shad, aa_phoenix, aa_pelican, d2k_air_drone, d2k_heavy_air_drone, d2k_farasha, steel_inspect, steel_twister, steel_grun, steel_cargoship, steel_cruiser, latin_yakolev, latin_mig, nax_haunebu, nax_haunebu2, nax_me262, nax_bf109, nax_piercer, nax_dieglocke
 		#UnitBuilderMinCredits: 0
-		UnitQueues: Infantry, RAInfantry, Vehicle, RAVehicle, Aircraft, RAAircraft, Naval, RANaval, Addons, Upgrades, Promotions, Infantry.GDI, Infantry.Nod, Vehicle.GDI, Vehicle.Nod, Aircraft.GDI, Aircraft.Nod, Infantry.Allies, Infantry.Soviet, Infantry.Japan, Vehicle.Allies, Vehicle.Soviet, Vehicle.Japan, Aircraft.Allies, Aircraft.Soviet, Aircraft.Japan, Infantry.Atreides, Infantry.Harkonnen, Infantry.Ordos, Infantry.Corrino, VehicleLight.Atreides, VehicleLight.Harkonnen, VehicleLight.Ordos, VehicleHeavy.Atreides, VehicleHeavy.Harkonnen, VehicleHeavy.Ordos, VehicleStarport.Atreides, VehicleStarport.Harkonnen, VehicleStarport.Ordos, VehicleStarport.Corrino, Aircraft.Atreides, Aircraft.Harkonnen, Aircraft.Ordos, Aircraft.Corrino
+		UnitQueues: Infantry, Defense, RAInfantry, Vehicle, RAVehicle, Aircraft, RAAircraft, Naval, RANaval, Addons, Upgrades, Promotions, Infantry.GDI, Infantry.Nod, Vehicle.GDI, Vehicle.Nod, Aircraft.GDI, Aircraft.Nod, Infantry.Allies, Infantry.Soviet, Infantry.Japan, Vehicle.Allies, Vehicle.Soviet, Vehicle.Japan, Aircraft.Allies, Aircraft.Soviet, Aircraft.Japan, Infantry.Atreides, Infantry.Harkonnen, Infantry.Ordos, Infantry.Corrino, VehicleLight.Atreides, VehicleLight.Harkonnen, VehicleLight.Ordos, VehicleHeavy.Atreides, VehicleHeavy.Harkonnen, VehicleHeavy.Ordos, VehicleStarport.Atreides, VehicleStarport.Harkonnen, VehicleStarport.Ordos, VehicleStarport.Corrino, Aircraft.Atreides, Aircraft.Harkonnen, Aircraft.Ordos, Aircraft.Corrino, Infantry.Legobattles, Vehicle.Legobattles
 		UnitDelays:
 			mcv.gdi: 5000
 			mcv.nod: 5000
@@ -6247,12 +6258,15 @@ Player:
 			astro_commando: 1
 			astro_space_police: 1
 			astro_gemma: 1
+			astro_biff: 1
 			astro_space_police_captain: 1
 			astro_claw_tank: 1
 			astro_transport: 1
 			astro_special_starfighter: 1
 			astro_space_police_cruiser: 1
 			astro_starship2: 1
+			astro_tower2: 1
+			astro_tower3: 1
 		UnitLimits:
 			#################### UnitLimits Naval
 			cncpt: 10

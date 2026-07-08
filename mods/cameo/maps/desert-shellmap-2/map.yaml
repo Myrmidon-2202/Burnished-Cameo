@@ -26,6 +26,7 @@ Players:
 		Name: Creeps
 		NonCombatant: True
 		Faction: Random
+		Enemies: Soviets, GDI, Nod
 	PlayerReference@Allies:
 		Name: Allies
 		Faction: allies
@@ -323,18 +324,6 @@ Actors:
 		Owner: Japan
 		Location: 24,72
 		TurretFacing: 0
-	# Actor87: modpillboxfort
-	# 	Owner: Japan
-	# 	Location: 40,68
-	# Actor88: modpillboxfort
-	# 	Owner: Japan
-	# 	Location: 51,68
-	# Actor89: modpillboxfort
-	# 	Owner: Japan
-	# 	Location: 32,73
-	# Actor90: modpillboxfort
-	# 	Owner: Japan
-	# 	Location: 61,72
 	Actor91: jpwr
 		Owner: Japan
 		Location: 66,74
@@ -401,23 +390,6 @@ Actors:
 		Facing: 384
 		SubCell: 3
 		Location: 71,17
-	# Actor114: v1truck
-	# 	Owner: Soviets
-	# 	Location: 71,36
-	# 	Facing: 253
-	# 	Stance: ReturnFire
-	# Actor115: v1truck
-	# 	Owner: Soviets
-	# 	Location: 72,13
-	# 	Facing: 245
-	# Actor122: modnano
-	# 	Owner: Japan
-	# 	Location: 39,71
-	# 	Facing: 95
-	# Actor123: modnano
-	# 	Owner: Japan
-	# 	Location: 52,71
-	# 	Facing: 951
 	Actor126: raje1
 		Owner: Japan
 		Facing: 384
@@ -457,5 +429,61 @@ Actors:
 	Center: waypoint
 		Owner: Neutral
 		Location: 47,48
+	Actor109: astro_conyard
+		Owner: Creeps
+		Location: 46,51
+	Actor114: construction_yard.harkonnen
+		Owner: Creeps
+		Location: 42,48
+	Actor115: win98_mycomputer
+		Owner: Creeps
+		Location: 49,48
+	Actor116: win98_xbox
+		Owner: Creeps
+		Location: 49,50
+	Actor123: heavy_trooper
+		Owner: Creeps
+		Location: 41,50
+		SubCell: 3
+		Facing: 384
+	Actor136: heavy_trooper
+		Owner: Creeps
+		Facing: 384
+		Location: 39,49
+		SubCell: 3
+	Actor137: heavy_trooper
+		Owner: Creeps
+		Facing: 384
+		Location: 40,47
+		SubCell: 3
+	Actor146: devastator
+		Owner: Creeps
+		Facing: 384
+		Location: 40,48
+	Actor119: astro_trooper
+		Owner: Neutral
+		Facing: 384
+		Location: 48,53
+		SubCell: 3
+	Actor120: astro_trooper
+		Owner: Neutral
+		Facing: 384
+		Location: 45,53
+		SubCell: 3
+	Actor121: win98_user
+		Owner: Creeps
+		Facing: 384
+		Location: 52,48
+		SubCell: 3
+	Actor122: win98_user
+		Owner: Creeps
+		Facing: 384
+		Location: 53,50
+		SubCell: 3
+	Actor124: win98_user
+		Owner: Creeps
+		Facing: 384
+		Location: 52,52
+		SubCell: 3
 
 Rules: rules.yaml
