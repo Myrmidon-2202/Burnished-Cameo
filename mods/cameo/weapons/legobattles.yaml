@@ -341,9 +341,9 @@ spacelaser:
 	Projectile: AthenaProjectile
 	ValidTargets: Ground, Air, Trees
 	Warhead@1Dam_impact: SpreadDamage
-		Range: 0, 1c1, 2c1, 2c512
+		Range: 0, 1c1, 2c1
 		Damage: 10000
-		Falloff: 1000, 1000, 250, 100
+		Falloff: 1000, 250, 100
 		ValidTargets: Ground, Air, Trees
 		AffectsParent: True
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath, Incendiary

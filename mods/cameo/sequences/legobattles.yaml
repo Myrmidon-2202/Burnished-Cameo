@@ -281,7 +281,6 @@ astro_tower3:
 # 		CrushedSequence: die
 
 astro_builder:
-	#inherits: ^legoinfantry
 	Defaults:
 		Filename: astro_builder.shp
 		Scale: 1.5
@@ -297,18 +296,7 @@ astro_builder:
 				Length: 3
 				Frames: 3,2,1
 				FlipX: true
-	idle:
-		Facings: -8
-		Combine:
-			astro_builder00: 
-				Filename: astro_builder.shp
-				Length: 5
-				Frames: 0,1,2,3,4
-			astro_builder01: 
-				Filename: astro_builder.shp
-				Length: 3
-				Frames: 3,2,1
-				FlipX: true
+	idle: invisibleitem
 	run: 
 		Facings: -8
 		Length: 5
@@ -1131,16 +1119,16 @@ alien_conyard:
 	Defaults:
 		Filename: alien_buildings.shp
 		Scale: 2.0
-	idle: alien_buildings
+	idle: alien_buildings.shp
 		Start: 0
 		Length: 1
-	damaged-idle: alien_buildings
+	damaged-idle: alien_buildings.shp
 		Start: 0
 		Length: 1
-	make: alien_buildings
+	make: alien_buildings.shp
 		Start: 0
 		Length: 1
-	dead: alien_buildings
+	dead: alien_buildings.shp
 		Start: 0
 		Length: 1
 	lego_production_overlay_alien: 

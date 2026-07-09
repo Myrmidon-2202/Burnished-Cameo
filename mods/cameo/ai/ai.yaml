@@ -3096,7 +3096,7 @@ Player:
 		EnemyScanRadius: 15
 	CaptureManagerBotModuleCA:
 		RequiresCondition: genericbot && !easiestbot
-		CapturingActorTypes: e6, rae6, ra2engineer, ra2engineer.soviet, ra2engineer.yuri, ra2engineer.asian, ra2engineer.syndicate, steel_fedeng, nax_eng, tsengineer, tsengineer2, engineer, d2k_hijacker, d2k_mechanic, scscv
+		CapturingActorTypes: e6, rae6, ra2engineer, ra2engineer.soviet, ra2engineer.yuri, ra2engineer.asian, ra2engineer.syndicate, steel_fedeng, nax_eng, tsengineer, tsengineer2, engineer, d2k_hijacker, d2k_mechanic, scscv, astro_builder
 		PriorityCapturableActorTypes: v19, hosp, fcom, miss, ramiss, rabio, oilb, v19.husk, hosp.husk, bio.husk, miss.husk, fcom.husk, oilb.husk
 		CapturableActorTypes: fact.gdi, fact.nod, proc.gdi, proc.nod, weap, afld, hq.nod, hq.gdi, tsntradr, tsntradrcabal, tsgtradr, tsgtradrmutant, eye, tsnttech, tsgttech, tsfgttech, tscabaltech, tsnttmpl, tscore, tmpl, rafact.allies, rafact.soviet, rafact.japan, raproc.allies, raproc.soviet, jproc, raweap, raweapa, modraweapj, dome.allies, dome.soviet, dome.japan, raafld, modraafld, modspaceport, atek, stek, modjtek, ra2nacnst, ra2gacnst, yrnacnst, ra2narefn, ra2garefn, ra2naweap, ra2gaweap, yrygweap, ra2gaairc, ra2naradr, ra2napsis, ra2gatech, ra2natech, yrygtech, aa_cgcnst, aa_cgweap, aa_cgradr, aa_cgtech, construction_yard.ixian, heavy_factory.ixian, refinery.atreides, research_centre.ixian, starport.ixian, latin_cgcnst, latin_cgweap, latin_cgauto, latin_cgspy, nax_conyard, nax_weap, nax_refin, nax_tek, nax_tech, nax2_conyard, nax2_weap, nax2_refin, nax2_radar, nax2_tech, sccommandcenter, scfactory, scengineeringbay, scacademy, scarmory, scsciencefacility, astro_conyard
 		PriorityCaptureChance: 75
@@ -3129,7 +3129,7 @@ Player:
 		IgnoredEnemyTargetTypes: TechHusk, DisguisedSpy
 		SuggestedGroundLeaderLocomotor: foot, wheeled, tracked, heavytracked
 		SuggestedNavyLeaderLocomotor: naval
-		ExcludeFromSquadsTypes: e6, rae6, ra2engineer, ra2engineer.soviet, ra2engineer.yuri, ra2engineer.asian, ra2engineer.syndicate, steel_fedeng, tsengineer, tsengineer2, engineer, d2k_hijacker, d2k_mechanic, harv.gdi, harv.nod, tanodharv, mcv.gdi, mcv.nod, raharv.soviet, raharv.allies, raharv.japan, ramcv.allies, ramcv.soviet, ramcv.japan, mnly, modcore, modcore1, modcore2, modcore3, modcore4, modcore5, modcore6, modcore7, ra2cmin, ra2harv, yrslav, yrsmin, aa_drmn, scoverlord, tsharv, ra2amcv, ra2smcv, yrpcv, aa_acv, tsmcvgdi, tsmcvnod, tsmcvmutant, tsmcvcabal, glworker, chharv, usahook, chhacker, harvester, carryall, carryall.reinforce, d2k_mcv.ixian, d2k_mcv.ordos, wc2_human_mcv, wc2_orc_mcv, wc2_human_peasant, wc2_orc_peon, raspy, ra2spy, ra2cleg, dtrk, ctnk, qtnk, quake_tank, ra2dtruck, ra2terror, tran.gdi, tran.nod, ratran, modhip, ra2shad, aa_shinobi, aa_oilt, steel_qmcv, steel_qmin, latin_mcv, latin_harv, nax_mcv, nax2_mcv, nax2_armor_harv, nax_slavemaster, nax_slav, latin_ra2terror, latin_ra2dtruck, latin_nuketruk, sczmcv, scpmcv, sctmcv, scscv, scprobe, scdrone, scdropship, scmedivac, scshuttle, ordos_harv, astro_harvester
+		ExcludeFromSquadsTypes: e6, rae6, ra2engineer, ra2engineer.soviet, ra2engineer.yuri, ra2engineer.asian, ra2engineer.syndicate, steel_fedeng, tsengineer, tsengineer2, engineer, d2k_hijacker, d2k_mechanic, harv.gdi, harv.nod, tanodharv, mcv.gdi, mcv.nod, raharv.soviet, raharv.allies, raharv.japan, ramcv.allies, ramcv.soviet, ramcv.japan, mnly, modcore, modcore1, modcore2, modcore3, modcore4, modcore5, modcore6, modcore7, ra2cmin, ra2harv, yrslav, yrsmin, aa_drmn, scoverlord, tsharv, ra2amcv, ra2smcv, yrpcv, aa_acv, tsmcvgdi, tsmcvnod, tsmcvmutant, tsmcvcabal, glworker, chharv, usahook, chhacker, harvester, carryall, carryall.reinforce, d2k_mcv.ixian, d2k_mcv.ordos, wc2_human_mcv, wc2_orc_mcv, wc2_human_peasant, wc2_orc_peon, raspy, ra2spy, ra2cleg, dtrk, ctnk, qtnk, quake_tank, ra2dtruck, ra2terror, tran.gdi, tran.nod, ratran, modhip, ra2shad, aa_shinobi, aa_oilt, steel_qmcv, steel_qmin, latin_mcv, latin_harv, nax_mcv, nax2_mcv, nax2_armor_harv, nax_slavemaster, nax_slav, latin_ra2terror, latin_ra2dtruck, latin_nuketruk, sczmcv, scpmcv, sctmcv, scscv, scprobe, scdrone, scdropship, scmedivac, scshuttle, ordos_harv, astro_builder
 		ConstructionYardTypes: fact.gdi, fact.nod, rafact.allies, rafact.soviet, rafact.japan, ra2nacnst, ra2gacnst, yrnacnst, tsgtcnstgdi, tsgtcnstnod, tsgtcnstmutant, tsgtcnstcabal, sccommandcenter, scnexus, schatchery, sclair, schive, glcommand, chcommand, usacommand, construction_yard.ixian, construction_yard.ordos, construction_yard.atreides, construction_yard.harkonnen, construction_yard.corrino, wc2_human_townhall, wc2_orc_greathall, aa_cgcnst, steel_qacst, astro_conyard
 		NavalUnitsTypes: ss, msub, dd, ca, pt, japanspeedboat, japancarrier, yamatobattleship, cncss, nodlasercorvette, ssmsub, cncdd, cncca, cncpt, ra2sqd, ra2dlph, ra2dest, ra2aegis, ra2sub, ra2hyd, ra2dred, ra2carrier, yrbsub, glgunboat, chflameboat, usagunboat, usabattleship, usacarrier, aa_gunb, aa_lsub, aa_quasfrig, aa_karrier, aa_tsun, aa_ksub, latin_triton, latin_sub, nax_tuboat, nax_muboat
 		NavalProductionTypes: raspen, ra1syrd, ra1jsyrd, cncsyrd, cncspen, yrygyard, ra2gayard, ra2nayard, glsyrd, chsyrd, usasyrd, aa_cgyard, latin_cgyard, nax_naval
@@ -3312,7 +3312,7 @@ Player:
 	LoadGarrisonerBotModuleCA@Infantry:
 		RequiresCondition: genericbot && !easiestbot
 		PassengersPerScan: 6
-		GarrisonerUnit: e1.gdi, e1.nod, e2, e3.gdi, e3.nod, e4, e5, e3chem, tsblackhandlaser, tsblackhandflamer, tsstealthsoldier, gdishotgunner, gdimissilesoldier, gdisniper, rae1, rare1, raje1, rare3, raje3, shok, mortarsoldier, ramaid, rae2, rae4, raje4, sniper, alliedmachinegunner, e3flamer, ra2e1, ra2ggi, ra2seal, ra2e2, ra2shk, ra2flakt, ra2deso, ra2snipe, yrinit, yrvirus, aa_gren, aa_tkiller, aa_flam, aa_plast, aa_japrif, aa_archer, aa_asdf, light_inf, heavy_inf, trooper, shock_infantry, storm_infantry, steel_fedinf, steel_board_inf, steel_qinf, latin_mili, latin_tkiller, latin_fftr, latin_fthrow, latin_narco, nax_rifle, nax_mp40, nax_shrek, astro_trooper, astro_gripley, astro_commando, astro_space_police, astro_gemma,astro_space_police_captain, astro_biff
+		GarrisonerUnit: e1.gdi, e1.nod, e2, e3.gdi, e3.nod, e4, e5, e3chem, tsblackhandlaser, tsblackhandflamer, tsstealthsoldier, gdishotgunner, gdimissilesoldier, gdisniper, rae1, rare1, raje1, rare3, raje3, shok, mortarsoldier, ramaid, rae2, rae4, raje4, sniper, alliedmachinegunner, e3flamer, ra2e1, ra2ggi, ra2seal, ra2e2, ra2shk, ra2flakt, ra2deso, ra2snipe, yrinit, yrvirus, aa_gren, aa_tkiller, aa_flam, aa_plast, aa_japrif, aa_archer, aa_asdf, light_inf, heavy_inf, trooper, shock_infantry, storm_infantry, steel_fedinf, steel_board_inf, steel_qinf, latin_mili, latin_tkiller, latin_fftr, latin_fthrow, latin_narco, nax_rifle, nax_mp40, nax_shrek, astro_trooper, astro_gripley, astro_commando, astro_space_police, astro_gemma, astro_space_police_captain, astro_biff
 	LoadCargoBotModule@Infantry:
 		RequiresCondition: genericbot
 		TransportTypesAndLoadRequirement:
@@ -4748,7 +4748,7 @@ Player:
 		AirToAirUnits: heli, orca, nodvenom, gdifirehawk, yak, mig, su57, raheli, rapierjumpjet, modkami, ra2falc, yrschp, yrbpln1, ra2hind, yrdisk, ra2shad, aa_phoenix, aa_pelican, d2k_air_drone, d2k_heavy_air_drone, d2k_farasha, steel_inspect, steel_twister, steel_grun, steel_cruiser, latin_yakolev, latin_mig, nax_haunebu, nax_haunebu2, nax_me262, nax_piercer, nax_dieglocke, nax_bf109
 		AirThreatUnits: heli, orca, nodvenom, gdifirehawk, tran.gdi, tran.nod, yak, mig, su57, mignuke, hind, raheli, MH60, rapierjumpjet, modkami, modbomber, modhip, ratran, ra2falc, ra2beag, yrschp, yrbpln1, ra2hind, ra2zep, yrdisk, ra2shad, aa_phoenix, aa_pelican, d2k_air_drone, d2k_heavy_air_drone, d2k_farasha, steel_inspect, steel_twister, steel_grun, steel_cargoship, steel_cruiser, latin_yakolev, latin_mig, nax_haunebu, nax_haunebu2, nax_me262, nax_bf109, nax_piercer, nax_dieglocke
 		#UnitBuilderMinCredits: 0
-		UnitQueues: Infantry, Defense, RAInfantry, Vehicle, RAVehicle, Aircraft, RAAircraft, Naval, RANaval, Addons, Upgrades, Promotions, Infantry.GDI, Infantry.Nod, Vehicle.GDI, Vehicle.Nod, Aircraft.GDI, Aircraft.Nod, Infantry.Allies, Infantry.Soviet, Infantry.Japan, Vehicle.Allies, Vehicle.Soviet, Vehicle.Japan, Aircraft.Allies, Aircraft.Soviet, Aircraft.Japan, Infantry.Atreides, Infantry.Harkonnen, Infantry.Ordos, Infantry.Corrino, VehicleLight.Atreides, VehicleLight.Harkonnen, VehicleLight.Ordos, VehicleHeavy.Atreides, VehicleHeavy.Harkonnen, VehicleHeavy.Ordos, VehicleStarport.Atreides, VehicleStarport.Harkonnen, VehicleStarport.Ordos, VehicleStarport.Corrino, Aircraft.Atreides, Aircraft.Harkonnen, Aircraft.Ordos, Aircraft.Corrino, Infantry.Legobattles, Vehicle.Legobattles
+		UnitQueues: Infantry, Defense, Defence, RAInfantry, Vehicle, RAVehicle, Aircraft, RAAircraft, Naval, RANaval, Addons, Upgrades, Promotions, Infantry.GDI, Infantry.Nod, Vehicle.GDI, Vehicle.Nod, Aircraft.GDI, Aircraft.Nod, Infantry.Allies, Infantry.Soviet, Infantry.Japan, Vehicle.Allies, Vehicle.Soviet, Vehicle.Japan, Aircraft.Allies, Aircraft.Soviet, Aircraft.Japan, Infantry.Atreides, Infantry.Harkonnen, Infantry.Ordos, Infantry.Corrino, VehicleLight.Atreides, VehicleLight.Harkonnen, VehicleLight.Ordos, VehicleHeavy.Atreides, VehicleHeavy.Harkonnen, VehicleHeavy.Ordos, VehicleStarport.Atreides, VehicleStarport.Harkonnen, VehicleStarport.Ordos, VehicleStarport.Corrino, Aircraft.Atreides, Aircraft.Harkonnen, Aircraft.Ordos, Aircraft.Corrino, Infantry.Legobattles, Vehicle.Legobattles, InfantryHero.Legobattles, Towerupgrade, Towerupgrade2
 		UnitDelays:
 			mcv.gdi: 5000
 			mcv.nod: 5000
@@ -4824,6 +4824,7 @@ Player:
 			d2k_heavy_air_drone: 750
 			scoverlord: 1500
 			scbroodweaver: 1500
+			lego_astro_mcv: 1000
 		UnitsToBuild:
 			#################### UnitsToBuild Naval
 			cncpt: 10
@@ -6250,16 +6251,15 @@ Player:
 			wc2_o_deathanddecayupg: 1
 			wc2_o_raisedeadupg: 1
 			######################## UnitsToBuild Lego Battles
-			lego_astro_mcv.bot: 1
 			lego_astro_mcv: 1
-			astro_builder: 100
-			astro_trooper: 100
-			astro_gripley: 1
-			astro_commando: 1
-			astro_space_police: 1
-			astro_gemma: 1
-			astro_biff: 1
-			astro_space_police_captain: 1
+			astro_builder: 50
+			astro_trooper: 10
+			astro_gripley: 10
+			astro_commando: 10
+			astro_space_police: 10
+			astro_gemma: 50
+			astro_biff: 50
+			astro_space_police_captain: 50
 			astro_claw_tank: 1
 			astro_transport: 1
 			astro_special_starfighter: 1
@@ -6407,3 +6407,20 @@ Player:
 			wc2_orc_peon: 20
 			wc2_orc_goblin_sappers: 10
 			wc2_orc_goblin_zeppelin: 5
+			#################### UnitLimits Lego battles
+			lego_astro_mcv: 10
+			astro_builder: 50
+			astro_trooper: 50
+			astro_gripley: 25
+			astro_commando: 250
+			astro_space_police: 10
+			astro_gemma: 1
+			astro_biff: 1
+			astro_space_police_captain: 1
+			astro_claw_tank: 10
+			astro_transport: 10
+			astro_special_starfighter: 10
+			astro_space_police_cruiser: 10
+			astro_starship2: 10
+			astro_tower2: 10
+			astro_tower3: 10

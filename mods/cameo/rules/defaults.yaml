@@ -920,19 +920,19 @@
 
 ^InfantryBuffs:
 	Inherits@GlobalBuffs: ^GlobalBuffs
-	ChangesHealth@SelfHealing:
-		Step: 10
-		Delay: 2
-		StartIfBelow: 100
-		DamageCooldown: 2
+	# ChangesHealth@SelfHealing:
+	# 	Step: 10
+	# 	Delay: 2
+	# 	StartIfBelow: 100
+	# 	DamageCooldown: 2
 
 ^VehicleBuffs:
 	Inherits@GlobalBuffs: ^GlobalBuffs
-	ChangesHealth@SelfHealing:
-		Step: 10
-		Delay: 1
-		StartIfBelow: 100
-		DamageCooldown: 1
+	# ChangesHealth@SelfHealing:
+	# 	Step: 10
+	# 	Delay: 1
+	# 	StartIfBelow: 100
+	# 	DamageCooldown: 1
 
 ^TankBuffs:
 	Inherits@VehicleBuffs: ^VehicleBuffs
@@ -970,19 +970,19 @@
 	AttackAircraft:
 		OpportunityFire: true
 		PersistentTargeting: true
-	ChangesHealth@SelfHealing:
-		Step: 10
-		Delay: 1
-		StartIfBelow: 100
-		DamageCooldown: 1
+	# ChangesHealth@SelfHealing:
+	# 	Step: 10
+	# 	Delay: 1
+	# 	StartIfBelow: 100
+	# 	DamageCooldown: 1
 
 ^ShipBuffs:
 	Inherits@GlobalBuffs: ^GlobalBuffs
-	ChangesHealth@SelfHealing:
-		Step: 10
-		Delay: 1
-		StartIfBelow: 100
-		DamageCooldown: 1
+	# ChangesHealth@SelfHealing:
+	# 	Step: 10
+	# 	Delay: 1
+	# 	StartIfBelow: 100
+	# 	DamageCooldown: 1
 
 ^DefenseBuffs:
 	Inherits@GlobalBuffs: ^GlobalBuffs
