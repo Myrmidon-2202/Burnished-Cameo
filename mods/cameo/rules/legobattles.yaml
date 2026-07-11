@@ -2305,7 +2305,7 @@ lego_alien_conyard:
 	Power:
 		Amount: 50
 	SpawnActorsOnSell:
-		ActorTypes: astro_builder
+		ActorTypes: alien_builder
 	ScalePowerWithHealth:
 	BaseBuilding:
 	ProvidesRadar:
@@ -2325,6 +2325,24 @@ lego_alien_conyard:
 		ForceTargetStances: None
 		PauseOnCondition: healed && !injured
 	BaseBuilding:
+	Production:
+		Produces: InfantryHero.Legobattles
+	ProductionQueue:
+		Type: InfantryHero.Legobattles
+		DisplayOrder: 2
+		Group: Infantry
+		LowPowerModifier: 150
+		ReadyAudio: UnitReady
+		ReadyTextNotification: notification-unit-ready
+		BlockedAudio: NoBuild
+		BlockedTextNotification: notification-unable-to-build-more
+		LimitedAudio: BuildingInProgress
+		LimitedTextNotification: notification-unable-to-comply-building-in-progress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar:
+		ProductionType: InfantryHero.Legobattles
 	Voiced:
 		VoiceSet: astroconyardvoice
 	Refinery:
@@ -2377,3 +2395,1295 @@ lego_alien_mcv:
 	WithInfantryBody:
 		-IdleSequences: idle1,idle2,idle3,idle4
 
+alien_barracks:
+	Inherits@template: ^lego_barracks
+	Inherits@shape: ^2x2Shape
+	Tooltip:
+		Name: Breeding Pit
+	Valued:
+		Cost: 800
+	Buildable:
+		Queue: Building, RABuilding
+		Description: Trains Alien infantry.
+		Prerequisites: ~lego_alien_conyard
+	SpawnActorsOnSell:
+		ActorTypes: alien_trooper
+	WithProductionOverlay@Alienmen:
+		RequiresCondition: !build-incomplete
+		Queues: Infantry.Legobattles
+		Sequence: lego_production_overlay_alien
+	Voiced:
+		VoiceSet: astrobarracksvoice
+	ProvidesPrerequisite:
+		Prerequisite: ALIEN_BARRACKS
+	RenderSprites:
+		Image: alien_barracks
+
+alien_hatchery:
+	Inherits@template: ^lego_building
+	Inherits@shape: ^2x2Shape
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Hatchery
+	Buildable:
+		Queue: Building, RABuilding
+		Prerequisites: ~lego_alien_conyard
+		BuildPaletteOrder: 10
+		BuildDuration: 160
+		BuildDurationModifier: 100
+		Description: Generator, build to keep producing units.
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+		LocalCenterOffset: 0,0,0
+	Health:
+		HP: 65000
+	Power:
+		Amount: 300
+	Voiced:
+		VoiceSet: biodomevoice
+	ProvidesPrerequisite:
+		Prerequisite: ALIEN_BIODOME
+	RenderSprites:
+		Image: alien_hatchery
+
+alien_harvester:
+	Inherits@ref: ^Refinery
+	Inherits@template: ^lego_building
+	Inherits@shape: ^2x2Shape
+	#Inherits@CPQWP: ^CPQCondition 
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Harvester
+	Health:
+		HP: 65000
+	Buildable:
+		Queue: Building, RABuilding
+		Prerequisites: ~lego_alien_conyard
+		BuildPaletteOrder: 30
+		BuildDuration: 160
+		BuildDurationModifier: 100
+		Description: Resource dropoff structure.
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+		LocalCenterOffset: 0,0,0
+	Refinery:
+		DockAngle: 112
+		DockOffset: 1,2 
+		IsDragRequired: False
+		DragOffset: -554,512,0
+		DragLength: 12
+		TickRate: 15
+	DockHost:
+		DockAngle: 112
+		DockOffset: 0, 2c512, 0
+		IsDragRequired: False
+		DragOffset: -554,512,0
+		DragLength: 12
+		TickRate: 15
+	StoresResources:
+		PipColor: yellow
+		PipCount: 5
+		Capacity: 1000
+	ResourcePurifier:
+		Modifier: 5
+	FreeActor@1:
+		Actor: alien_builder
+	FreeActor@2:
+		Actor: alien_builder
+	Voiced:
+		VoiceSet: eharvestervoice
+
+alien_wellcap:
+	Inherits@template: ^lego_building
+	Inherits@shape: ^2x2Shape
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Well Cap
+	Buildable:
+		Queue: Building, RABuilding
+		Prerequisites: ~astro_conyard
+		BuildPaletteOrder: 40
+		BuildDuration: 120
+		BuildDurationModifier: 100
+		Description: Generates income.
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+		LocalCenterOffset: 0,0,0
+	Health:
+		HP: 65000
+	CashTrickler:
+		Amount: 300
+		DisplayDuration: 30
+		Interval: 200
+	Voiced:
+		VoiceSet: ewellcapvoice
+
+alien_vehiclefactory:
+	Inherits@template: ^lego_building
+	Inherits@factory: ^lego_vehiclefactory
+	Inherits@shape: ^2x2Shape
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: Creation Pit
+	Buildable:
+		Queue: Building, RABuilding
+		Prerequisites: ~lego_alien_conyard, ~ALIEN_BIODOME, ~ALIEN_BARRACKS
+		BuildPaletteOrder: 50
+		BuildDuration: 160
+		BuildDurationModifier: 100
+		Description: Trains Alien special units.
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+		LocalCenterOffset: 0,0,0
+	WithProductionOverlay@Legospecial:
+		RequiresCondition: !build-incomplete
+		Queues: Vehicle.Legobattles
+		Sequence: lego_production_overlay_brick
+		Palette: player
+		IsPlayerPalette: True
+	SpawnActorsOnSell:
+		ActorTypes: alien_trooper
+	Health:
+		HP: 65000
+	Voiced:
+		VoiceSet: astrospecialfactoryvoice
+
+alien_tower:
+	Inherits: ^Defense
+	Inherits@lego_tower: ^lego_tower
+	# Don't declare AutoTarget stuff before AttackBase stuff or an annoying bug with WithSpriteBody will occur.
+	#Inherits@AUTOTARGET: ^AutoTargetAll
+	Tooltip:
+		Name: Alien Tower
+	Buildable:
+		Prerequisites: ~lego_alien_conyard
+		Queue: Defence, RADefence
+		Description: Upgradable defense building\nDetector
+	Voiced:
+		VoiceSet: astrotowervoice
+	Armament@PRIMARY:
+		Weapon: legoranged
+		RequiresCondition: !alien_tower2upg && !alien_tower3upg
+	Armament@AA:
+		Weapon: legorangedaa
+		RequiresCondition: !alien_tower2upg && !alien_tower3upg
+	Armament@guardtower:
+		Weapon: specialrangedstar
+		RequiresCondition: alien_tower2upg && !alien_tower3upg
+	Armament@guardtoweraa:
+		Weapon: specialrangedstar
+		RequiresCondition: alien_tower2upg && !alien_tower3upg
+	Armament@g3tower:
+		Weapon: astroplasmaglob
+		RequiresCondition: alien_tower2upg && alien_tower3upg
+	Armament@3toweraa:
+		Weapon: astroplasmaglob
+		RequiresCondition: alien_tower2upg && alien_tower3upg
+	AttackOmni:
+		PauseOnCondition: disabled
+	WithRangeCircle:
+		Range: 3072
+		# RequiresCondition: alien_tower2upg
+	Inherits@AUTOTARGET: ^AutoTargetAll
+	### Upgrade stuff ###
+	WithSpriteBody:
+		RequiresCondition: !alien_towerupg && !alien_tower2upg
+		Sequence: alien_tower
+	Production@guardtower:
+		Produces: Towerupgrade
+		RequiresCondition: !alien_tower2upg && !alien_tower3upg
+	ProductionBar@guardtower:
+		ProductionType: Towerupgrade
+		RequiresCondition: !alien_tower2upg && !alien_tower3upg
+	ProductionQueue@guardtower:
+		Type: Towerupgrade
+		DisplayOrder: 0
+		Group: Addon
+		LowPowerModifier: 200
+		QueueLimit: 1
+		ItemLimit: 1
+		RequiresCondition: !alien_tower2upg && !alien_tower3upg
+	GrantConditionOnProduction@guardtower:
+		Condition: alien_tower2upg
+		Actors: alien_tower2
+	WithSpriteBody@guardtower:
+		Sequence: alien_tower2
+		RequiresCondition: alien_tower2upg && !alien_tower3upg
+	DamageMultiplier@guardtower:
+		Modifier: 77
+		RequiresCondition: alien_tower2upg
+	###
+	Production@3tower:
+		Produces: Towerupgrade2
+		RequiresCondition: alien_tower2upg && !alien_tower3upg
+	ProductionBar@3tower:
+		ProductionType: Towerupgrade2
+	ProductionQueue@3tower:
+		Type: Towerupgrade2
+		DisplayOrder: 0
+		Group: Addon
+		LowPowerModifier: 200
+		QueueLimit: 1
+		ItemLimit: 1
+	GrantConditionOnProduction@3tower:
+		Condition: alien_tower3upg
+		Actors: alien_tower3
+	WithSpriteBody@3tower:
+		Sequence: alien_tower3
+		RequiresCondition: alien_tower3upg
+	DamageMultiplier@3tower:
+		Modifier: 87
+		RequiresCondition: alien_tower3upg
+	ActorPreviewPlaceBuildingPreview:
+		Palette: player
+	Building:
+		BuildSounds: wc2_constrct.aud
+
+alien_tower2:
+	Tooltip:
+		Name: Alien Tower II
+	Buildable:
+		BuildPaletteOrder: 1
+		RequiresCondition: !alien_tower2upg && !alien_tower3upg
+		Prerequisites: ~lego_alien_conyard
+		Queue: Towerupgrade
+		BuildDuration: 3500
+		BuildDurationModifier: 12
+		Description: Upgraded guard tower, attacks land, sea, and air.
+	Valued:
+		Cost: 800
+	Interactable:
+	AlwaysVisible:
+	KillsSelf:
+		RemoveInstead: true
+	ProvidesPrerequisite@buildingname:
+	RenderSprites:
+		Image: alien_tower2
+
+alien_tower3:
+	Tooltip:
+		Name: Alien Tower III
+	Buildable:
+		BuildPaletteOrder: 1
+		Prerequisites: ~lego_alien_conyard
+		RequiresCondition: alien_tower2upg && !alien_tower3upg
+		Queue: Towerupgrade2
+		BuildDuration: 3500
+		BuildDurationModifier: 12
+		Description: Further upgraded Guard tower, attacks land, sea, and air.
+	Valued:
+		Cost: 800
+	Interactable:
+	AlwaysVisible:
+	KillsSelf:
+		RemoveInstead: true
+	ProvidesPrerequisite@buildingname:
+	RenderSprites:
+		Image: alien_tower3
+
+alien_builder:
+	Inherits: ^Soldier
+	Inherits: ^PropagandaSelfHeallego
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@selection: ^SelectableEconomicUnit
+	Inherits@harv: ^Harvester
+	Inherits@worker: ^LBWorker
+	AutoTargetPriority@Repair:
+		ValidTargets: Repair, Repairing
+		ValidStances: Ally
+		Priority: 2
+	Tooltip:
+		Name: Builder
+	Buildable:
+		Queue: InfantryHero.Legobattles
+		Prerequisites: ~lego_alien_conyard
+		BuildPaletteOrder: 5
+		BuildDuration: 250
+		Description: Basic Harvester. Can repair.
+	StoresResources:
+		Capacity: 5
+	Armament@repair:
+		Name: repair
+		Weapon: builderrepair
+		TargetStances: Ally
+		ForceTargetStances: Ally
+		LocalOffset: 240,160,240
+	Armament@primary:
+		Name: primary
+		Weapon: troopermelee
+		ForceTargetStances: Enemy, Neutral
+	Captures:
+		CaptureTypes: building, tech
+		PlayerExperience: 500
+		CaptureDelay: 375
+		ConsumedByCapture: False
+		EnterCursor: ability
+		EnterBlockedCursor: move-blocked
+	Valued:
+		Cost: 50
+	Mobile:
+		Speed: 50
+	Health:
+		HP: 30000
+	Power:
+		Amount: -5
+	ReloadDelayMultiplier@cow:
+		Modifier: 60
+	AttackFrontal:
+		Armaments: primary, repair
+	WithHarvesterSpriteBody:
+		ImageByFullness: alien_builder, alien_builder
+	WithAttackAnimation:
+		Sequence: harvest
+	WithMoveAnimation:
+		MoveSequence: run
+	-DamagedByTerrain:
+	-WithInfantryBody:
+	-WithDeathAnimation:
+	WithHarvestAnimation:
+		HarvestSequence: harvest
+	Voiced:
+		VoiceSet: buildervoice
+
+alien_drone:
+	Inherits@Soldier: ^Soldier
+	Inherits: ^HeavyInfantryTemplate
+	Inherits: ^PropagandaSelfHeallego
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Tooltip:
+		Name: Drone
+	Buildable:
+		Queue: Infantry.Legobattles
+		BuildPaletteOrder: 1
+		BuildDuration: 100
+		Prerequisites: ~alien_barracks
+		Description: Basic Melee Infantry
+	Armament:
+		Weapon: troopermelee
+	Valued:
+		Cost: 100
+	Mobile:
+		Speed: 30
+	Health:
+		HP: 20000
+	ReloadDelayMultiplier@cow:
+		Modifier: 60
+	Voiced:
+		VoiceSet: troopervoice
+	WithInfantryBody:
+		-IdleSequences: idle1,idle2,idle3,idle4
+	Power:
+		Amount: -10
+	WithDeathAnimation:
+		UseDeathTypeSuffix: false
+
+alien_laser_trooper:
+	Inherits@Soldier: ^Soldier
+	Inherits: ^HeavyInfantryTemplate
+	Inherits: ^PropagandaSelfHeallego
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Tooltip:
+		Name: Commando
+	Buildable:
+		Queue: Infantry.Legobattles
+		BuildPaletteOrder: 2
+		BuildDuration: 250
+		Prerequisites: ~alien_barracks
+		Description: Basic Ranged Infantry
+	Armament:
+		Weapon: legoranged
+	Armament@aa:
+		Weapon: legorangedAA
+	Valued:
+		Cost: 150
+	Mobile:
+		Speed: 30
+	Health:
+		HP: 18000
+	ReloadDelayMultiplier@cow:
+		Modifier: 60
+	Power:
+		Amount: -10
+	Voiced:
+		VoiceSet: ecommandovoice
+	WithInfantryBody:
+		-IdleSequences: idle1,idle2,idle3,idle4
+	WithDeathAnimation:
+		UseDeathTypeSuffix: false
+
+alien_grav_runner:
+	Inherits@Soldier: ^Soldier
+	Inherits: ^HeavyInfantryTemplate
+	Inherits: ^PropagandaSelfHeallego
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Tooltip:
+		Name: Grav Runner
+	Buildable:
+		Queue: Infantry.Legobattles
+		BuildPaletteOrder: 4
+		BuildDuration: 300
+		Prerequisites: ~alien_barracks
+		Description: Heavy Melee Infantry
+	Armament:
+		Weapon: cavalrymelee
+	Valued:
+		Cost: 350
+	Mobile:
+		Speed: 30
+	Health:
+		HP: 40000
+	ReloadDelayMultiplier@cow:
+		Modifier: 60
+	Power:
+		Amount: -15
+	Voiced:
+		VoiceSet: gripleyvoice
+	WithInfantryBody:
+		-IdleSequences: idle1,idle2,idle3,idle4
+	WithDeathAnimation:
+		UseDeathTypeSuffix: false
+
+alien_space_criminal:
+	Inherits@Soldier: ^Soldier
+	Inherits: ^HeavyInfantryTemplate
+	Inherits: ^PropagandaSelfHeallego
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Tooltip:
+		Name: Space Criminal
+	Buildable:
+		Queue: Infantry.Legobattles
+		BuildPaletteOrder: 3
+		BuildDuration: 350
+		Prerequisites: ~alien_barracks
+		Description: Harrying Ranged Infantry.
+	Armament:
+		Weapon: legoranged
+	Armament@aa:
+		Weapon: legorangedAA
+	Valued:
+		Cost: 500
+	Mobile:
+		Speed: 60
+	Health:
+		HP: 19000
+	ReloadDelayMultiplier@cow:
+		Modifier: 60
+	Power:
+		Amount: -10
+	Voiced:
+		VoiceSet: policevoice
+	WithInfantryBody:
+		-IdleSequences: idle1,idle2,idle3,idle4
+	WithDeathAnimation:
+		UseDeathTypeSuffix: false
+
+alien_commander:
+	Inherits@Soldier: ^Soldier
+	Inherits: ^HeroInfantryTemplate
+	Inherits: ^PropagandaSelfHeallego
+	Inherits@LEGOMAGETemplate: ^lego_mage
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Tooltip:
+		Name: Alien Commander
+	Buildable:
+		Queue: InfantryHero.Legobattles
+		BuildPaletteOrder: 60
+		BuildDuration: 250
+		Prerequisites: ~lego_alien_conyard
+		Description: Stalwart Melee Hero.
+		BuildLimit: 1
+	Valued:
+		Cost: 500
+	Mobile:
+		Speed: 30
+	Health:
+		HP: 110000
+	ReloadDelayMultiplier@cow:
+		Modifier: 60
+	Voiced:
+		VoiceSet: biffvoice
+	Targetable@LEGOHERO:
+		TargetTypes: LHEROtarget
+	ProximityExternalCondition@PROPAGANDA:
+		Range: 6c0
+		Condition: propaganda
+		RequiresCondition: !disabled
+	WithRangeCircle:
+		Range: 6c0
+		Type: propaganda
+		RequiresCondition: !disabled
+	WithInfantryBody:
+		-IdleSequences: idle1,idle2,idle3,idle4
+	WithDeathAnimation:
+		UseDeathTypeSuffix: false
+	#Buff Spells
+	GrantCondition@DEFENSEBUFFSELF:
+		Condition: defensebuff
+		RequiresCondition: FSD_cond_1
+	ProximityExternalCondition@DEFENSEBUFFOTHER:
+		Condition: defensebuff
+		Range: 6c0
+		RequiresCondition: FSD_cond_1 && !disabled
+	GrantCondition@SPEEDBUFFSELF:
+		Condition: speedbuff
+		RequiresCondition: FSD_cond_2
+	ProximityExternalCondition@SPEEDBUFFOTHER:
+		Condition: speedbuff
+		Range: 6c0
+		RequiresCondition: FSD_cond_2 && !disabled
+	#Spells
+	AttackFrontal:
+		Armaments: primary, defense, speed, legoemp, spacelaser
+	AutoTargetPriority@DEFAULT:
+		RequiresCondition: !stance-attackanything && !assault-move && !FSD_cond_2
+	AutoTargetPriority@ATTACKANYTHING:
+		RequiresCondition: (stance-attackanything || assault-move) && !FSD_cond_2
+	AutoTargetPriority@ATTACKANYTHING_HASTE:
+		RequiresCondition: (stance-attackanything || assault-move) && FSD_cond_2
+		ValidTargets: haste_target
+		InvalidTargets: NoAutoTarget
+	Armament:
+		Name: primary
+		Weapon: heromelee
+		FireDelay: 7
+		RequiresCondition: (FSD_cond_1 && !wc2_cond_bot_owner) || (FSD_cond_1_AI && wc2_cond_bot_owner) || (FSD_cond_2) 
+	Armament@DEFENSE:
+		Name: defense
+		Weapon: heromelee
+		FireDelay: 7
+		TargetStances: Enemy
+		GrantCondition: 
+			Condition: defensebuff
+		RequiresCondition: FSD_cond_2
+		PauseOnCondition: mana < 10
+	Armament@SPEED:
+		Name: speed
+		Weapon: heromelee
+		FireDelay: 7
+		TargetStances: Enemy
+		GrantCondition: 
+			Condition: speedbuff
+		RequiresCondition: FSD_cond_2
+		PauseOnCondition: mana < 10
+	Armament@LEGOEMP:
+		Name: legoemp
+		Weapon: legoemp
+		AmmoUsage: 55
+		FireDelay: 7
+		RequiresCondition: FSD_cond_3
+		PauseOnCondition: mana < 25
+	Armament@SPACELASER:
+		Name: spacelaser
+		Weapon: spacelaser
+		AmmoUsage: 150
+		FireDelay: 7
+		RequiresCondition: FSD_cond_4
+		PauseOnCondition: mana < 50
+	# "Mana" (AmmoPool)
+	GrantConditionOnAttack@DEFENSE:
+		Condition: cond_defense_drain
+		ArmamentNames: deathcoil
+		MaximumInstances: 1
+		RevokeDelay: 2
+	GrantConditionOnAttack@SPEED:
+		Condition: cond_speed_drain
+		ArmamentNames: speed
+		MaximumInstances: 1
+		RevokeDelay: 2
+	GrantConditionOnAttack@LEGOEMP:
+		Condition: cond_legoemp_drain
+		ArmamentNames: legoemp
+		MaximumInstances: 1
+		RevokeDelay: 2
+	GrantConditionOnAttack@SPACELASER:
+		Condition: cond_spacelaser_drain
+		ArmamentNames: spacelaser
+		MaximumInstances: 1
+		RevokeDelay: 2
+	AmmoPool:
+		Armaments: primary, defense, speed, legoemp, spacelaser
+		Ammo: 255
+		PipCount: 10
+		AmmoCondition: mana
+	ReloadAmmoPool@PassiveRegen:
+		Delay: 10
+		Count: 1
+		ShowSelectionBar: false
+	ReloadAmmoPool@DEFENSE:
+		Delay: 1
+		Count: -100
+		RequiresCondition: cond_defense_drain
+	ReloadAmmoPool@HASTE:
+		Delay: 1
+		Count: -50
+		RequiresCondition: cond_speed_drain
+	ReloadAmmoPool@LEGOEMP:
+		Delay: 1
+		Count: -25
+		RequiresCondition: cond_legoemp_drain
+	ReloadAmmoPool@SPACELASER:
+		Delay: 1
+		Count: -50
+		RequiresCondition: cond_spacelaser_drain
+
+	### Visual indicator for mana
+	WithAmmoPipsDecoration:
+		PipCount: 4
+		Position: TopLeft
+		FullSequence: pip-green
+		AmmoPools:
+
+	### Visual indicator of mode ###
+	WithDecoration@Mode_Deathcoil:
+		Sequence: deathcoil_status_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_1
+	WithDecoration@Mode_Haste:
+		Sequence: haste_status_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_2 
+	WithDecoration@Mode_DeathAndDecay:
+		Sequence: deathanddecay_status_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_3
+	WithDecoration@Mode_Spacelaser:
+		Sequence: raisedead_status_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_4
+	
+	### Starting spell randomizer for AI.
+	GrantConditionOnBotOwner@wc2magebotcontrol:
+		Condition: wc2_cond_bot_owner
+		Bots: easiest, easy, medium, hard, brutal, challenger, unbeatable, cameogod, airforce, defenseai
+	GrantRandomCondition@wc2magebotcontrol:
+		Conditions: FSD_cond_1_AI, FSD_cond_2_AI, FSD_cond_3_AI, FSD_cond_4_AI
+	# FSD_Cond_1 is always granted at start due to the four state deploy.
+	GrantCondition@Cond2AI:
+		Condition: FSD_cond_2
+		RequiresCondition: wc2_cond_bot_owner && FSD_cond_2_AI
+	GrantCondition@Cond3AI:
+		Condition: FSD_cond_3
+		RequiresCondition: wc2_cond_bot_owner && FSD_cond_3_AI
+	GrantCondition@Cond4AI:
+		Condition: FSD_cond_4
+		RequiresCondition: wc2_cond_bot_owner && FSD_cond_4_AI
+
+alien_queen:
+	Inherits@Soldier: ^Soldier
+	Inherits: ^HeroInfantryTemplate
+	Inherits: ^PropagandaSelfHeallego
+	Inherits@LEGOMAGETemplate: ^lego_mage
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Tooltip:
+		Name: Alien Queen
+	Buildable:
+		Queue: InfantryHero.Legobattles
+		BuildPaletteOrder: 60
+		BuildDuration: 250
+		Prerequisites: ~lego_alien_conyard
+		Description: Supportive Melee Hero.
+		BuildLimit: 1
+	Valued:
+		Cost: 500
+	Mobile:
+		Speed: 30
+	Health:
+		HP: 105000
+	ReloadDelayMultiplier@cow:
+		Modifier: 60
+	Voiced:
+		VoiceSet: biffvoice
+	Targetable@LEGOHERO:
+		TargetTypes: LHEROtarget
+	ProximityExternalCondition@PROPAGANDA:
+		Range: 6c0
+		Condition: propaganda
+		RequiresCondition: !disabled
+	WithRangeCircle:
+		Range: 6c0
+		Type: propaganda
+		RequiresCondition: !disabled
+	WithInfantryBody:
+		-IdleSequences: idle1,idle2,idle3,idle4
+	WithDeathAnimation:
+		UseDeathTypeSuffix: false
+	#Buff Spells
+	GrantCondition@DEFENSEBUFFSELF:
+		Condition: defensebuff
+		RequiresCondition: FSD_cond_1
+	ProximityExternalCondition@DEFENSEBUFFOTHER:
+		Condition: defensebuff
+		Range: 6c0
+		RequiresCondition: FSD_cond_1 && !disabled
+	GrantCondition@SPEEDBUFFSELF:
+		Condition: speedbuff
+		RequiresCondition: FSD_cond_2
+	ProximityExternalCondition@SPEEDBUFFOTHER:
+		Condition: speedbuff
+		Range: 6c0
+		RequiresCondition: FSD_cond_2 && !disabled
+	#Spells
+	AttackFrontal:
+		Armaments: primary, defense, speed, legoemp, spacelaser
+	AutoTargetPriority@DEFAULT:
+		RequiresCondition: !stance-attackanything && !assault-move && !FSD_cond_2
+	AutoTargetPriority@ATTACKANYTHING:
+		RequiresCondition: (stance-attackanything || assault-move) && !FSD_cond_2
+	AutoTargetPriority@ATTACKANYTHING_HASTE:
+		RequiresCondition: (stance-attackanything || assault-move) && FSD_cond_2
+		ValidTargets: haste_target
+		InvalidTargets: NoAutoTarget
+	Armament:
+		Name: primary
+		Weapon: heromelee
+		FireDelay: 7
+		RequiresCondition: (FSD_cond_1 && !wc2_cond_bot_owner) || (FSD_cond_1_AI && wc2_cond_bot_owner) || (FSD_cond_2) 
+	Armament@DEFENSE:
+		Name: defense
+		Weapon: heromelee
+		FireDelay: 7
+		TargetStances: Enemy
+		GrantCondition: 
+			Condition: defensebuff
+		RequiresCondition: FSD_cond_2
+		PauseOnCondition: mana < 10
+	Armament@SPEED:
+		Name: speed
+		Weapon: heromelee
+		FireDelay: 7
+		TargetStances: Enemy
+		GrantCondition: 
+			Condition: speedbuff
+		RequiresCondition: FSD_cond_2
+		PauseOnCondition: mana < 10
+	Armament@LEGOEMP:
+		Name: legoemp
+		Weapon: legoemp
+		AmmoUsage: 55
+		FireDelay: 7
+		RequiresCondition: FSD_cond_3
+		PauseOnCondition: mana < 25
+	Armament@SPACELASER:
+		Name: spacelaser
+		Weapon: spacelaser
+		AmmoUsage: 150
+		FireDelay: 7
+		RequiresCondition: FSD_cond_4
+		PauseOnCondition: mana < 50
+	# "Mana" (AmmoPool)
+	GrantConditionOnAttack@DEFENSE:
+		Condition: cond_defense_drain
+		ArmamentNames: deathcoil
+		MaximumInstances: 1
+		RevokeDelay: 2
+	GrantConditionOnAttack@SPEED:
+		Condition: cond_speed_drain
+		ArmamentNames: speed
+		MaximumInstances: 1
+		RevokeDelay: 2
+	GrantConditionOnAttack@LEGOEMP:
+		Condition: cond_legoemp_drain
+		ArmamentNames: legoemp
+		MaximumInstances: 1
+		RevokeDelay: 2
+	GrantConditionOnAttack@SPACELASER:
+		Condition: cond_spacelaser_drain
+		ArmamentNames: spacelaser
+		MaximumInstances: 1
+		RevokeDelay: 2
+	AmmoPool:
+		Armaments: primary, defense, speed, legoemp, spacelaser
+		Ammo: 255
+		PipCount: 10
+		AmmoCondition: mana
+	ReloadAmmoPool@PassiveRegen:
+		Delay: 10
+		Count: 1
+		ShowSelectionBar: false
+	ReloadAmmoPool@DEFENSE:
+		Delay: 1
+		Count: -100
+		RequiresCondition: cond_defense_drain
+	ReloadAmmoPool@HASTE:
+		Delay: 1
+		Count: -50
+		RequiresCondition: cond_speed_drain
+	ReloadAmmoPool@LEGOEMP:
+		Delay: 1
+		Count: -25
+		RequiresCondition: cond_legoemp_drain
+	ReloadAmmoPool@SPACELASER:
+		Delay: 1
+		Count: -50
+		RequiresCondition: cond_spacelaser_drain
+
+	### Visual indicator for mana
+	WithAmmoPipsDecoration:
+		PipCount: 4
+		Position: TopLeft
+		FullSequence: pip-green
+		AmmoPools:
+
+	### Visual indicator of mode ###
+	WithDecoration@Mode_Deathcoil:
+		Sequence: deathcoil_status_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_1
+	WithDecoration@Mode_Haste:
+		Sequence: haste_status_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_2 
+	WithDecoration@Mode_DeathAndDecay:
+		Sequence: deathanddecay_status_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_3
+	WithDecoration@Mode_Spacelaser:
+		Sequence: raisedead_status_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_4
+	
+	### Starting spell randomizer for AI.
+	GrantConditionOnBotOwner@wc2magebotcontrol:
+		Condition: wc2_cond_bot_owner
+		Bots: easiest, easy, medium, hard, brutal, challenger, unbeatable, cameogod, airforce, defenseai
+	GrantRandomCondition@wc2magebotcontrol:
+		Conditions: FSD_cond_1_AI, FSD_cond_2_AI, FSD_cond_3_AI, FSD_cond_4_AI
+	# FSD_Cond_1 is always granted at start due to the four state deploy.
+	GrantCondition@Cond2AI:
+		Condition: FSD_cond_2
+		RequiresCondition: wc2_cond_bot_owner && FSD_cond_2_AI
+	GrantCondition@Cond3AI:
+		Condition: FSD_cond_3
+		RequiresCondition: wc2_cond_bot_owner && FSD_cond_3_AI
+	GrantCondition@Cond4AI:
+		Condition: FSD_cond_4
+		RequiresCondition: wc2_cond_bot_owner && FSD_cond_4_AI
+
+space_criminal_leader:
+	Inherits@Soldier: ^Soldier
+	Inherits@LEGOMAGETemplate: ^lego_mage
+	Inherits: ^HeroInfantryTemplate
+	Inherits: ^PropagandaSelfHeallego
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Tooltip:
+		Name: Space Criminal Leader
+	Buildable:
+		Queue: InfantryHero.Legobattles
+		BuildPaletteOrder: 60
+		BuildDuration: 250
+		Prerequisites: ~lego_alien_conyard 
+		Description: Harrying Ranged Hero.
+		BuildLimit: 1
+	Valued:
+		Cost: 500
+	Mobile:
+		Speed: 50
+	Health:
+		HP: 105000
+	ReloadDelayMultiplier@cow:
+		Modifier: 60
+	Voiced:
+		VoiceSet: captainvoice
+	Targetable@LEGOHERO:
+		TargetTypes: LHEROtarget
+	ProximityExternalCondition@PROPAGANDA:
+		Range: 6c0
+		Condition: propaganda
+		RequiresCondition: !disabled
+	WithRangeCircle:
+		Range: 6c0
+		Type: propaganda
+		RequiresCondition: !disabled
+	WithInfantryBody:
+		-IdleSequences: idle1,idle2,idle3,idle4
+	WithDeathAnimation:
+		UseDeathTypeSuffix: false
+	#Buff Spells
+	GrantCondition@DEFENSEBUFFSELF:
+		Condition: defensebuff
+		RequiresCondition: FSD_cond_1
+	ProximityExternalCondition@DEFENSEBUFFOTHER:
+		Condition: defensebuff
+		Range: 6c0
+		RequiresCondition: FSD_cond_1 && !disabled
+	GrantCondition@DAMAGEBUFFSELF:
+		Condition: damagebuff
+		RequiresCondition: FSD_cond_2
+	ProximityExternalCondition@SPEEDBUFFOTHER:
+		Condition: damagebuff
+		Range: 6c0
+		RequiresCondition: FSD_cond_2 && !disabled
+	GrantCondition@TRACKBUFFSELF:
+		Condition: trackbuff
+		RequiresCondition: FSD_cond_3
+	ProximityExternalCondition@TRACKBUFFOTHER:
+		Condition: trackbuff
+		Range: 6c0
+		RequiresCondition: FSD_cond_3 && !disabled
+	#Spells
+	AttackFrontal:
+		Armaments: primary, defense, damage, tracking, spacelaser
+	AutoTargetPriority@DEFAULT:
+		RequiresCondition: !stance-attackanything && !assault-move && !FSD_cond_2
+	AutoTargetPriority@ATTACKANYTHING:
+		RequiresCondition: (stance-attackanything || assault-move) && !FSD_cond_2
+	AutoTargetPriority@ATTACKANYTHING_HASTE:
+		RequiresCondition: (stance-attackanything || assault-move) && FSD_cond_2
+		ValidTargets: haste_target
+		InvalidTargets: NoAutoTarget
+	Armament:
+		Name: primary
+		Weapon: legoheroranged
+		FireDelay: 7
+		RequiresCondition: (FSD_cond_1 && !wc2_cond_bot_owner) || (FSD_cond_1_AI && wc2_cond_bot_owner) || (FSD_cond_2) || (FSD_cond_3) || (FSD_cond_4)
+	Armament@DEFENSE:
+		Name: defense
+		Weapon: legoheroranged
+		FireDelay: 7
+		TargetStances: Ally
+		GrantCondition: 
+			Condition: defensebuff
+		RequiresCondition: FSD_cond_1
+		PauseOnCondition: mana < 10
+	# Armament@DEATHCOILSCATTER1:
+	# 	Weapon: wc2deathknightDeathCoilScatter_Left
+	# 	FireDelay: 7
+	# 	RequiresCondition: (FSD_cond_1 && !wc2_cond_bot_owner) || (FSD_cond_1_AI && wc2_cond_bot_owner)
+	# 	PauseOnCondition: mana < 100
+	# Armament@DEATHCOILSCATTER2:
+	# 	Weapon: wc2deathknightDeathCoilScatter_Right
+	# 	FireDelay: 7
+	# 	RequiresCondition: (FSD_cond_1 && !wc2_cond_bot_owner) || (FSD_cond_1_AI && wc2_cond_bot_owner)
+	# 	PauseOnCondition: mana < 100
+	Armament@DAMAGE:
+		Name: damage
+		Weapon: legoheroranged
+		FireDelay: 7
+		TargetStances: Ally
+		GrantCondition: 
+			Condition: damagebuff
+		RequiresCondition: FSD_cond_2
+		PauseOnCondition: mana < 10
+	Armament@TRACKBUFF:
+		Name: tracking
+		Weapon: legoheroranged
+		FireDelay: 7
+		RequiresCondition: FSD_cond_3
+		GrantCondition: 
+			Condition: trackbuff
+		PauseOnCondition: mana < 25
+	Armament@SPACELASER:
+		Name: spacelaser
+		Weapon: spacelaser
+		AmmoUsage: 150
+		FireDelay: 7
+		RequiresCondition: FSD_cond_4
+		PauseOnCondition: mana < 50
+	# "Mana" (AmmoPool)
+	GrantConditionOnAttack@DEFENSE:
+		Condition: cond_defense_drain
+		ArmamentNames: deathcoil
+		MaximumInstances: 1
+		RevokeDelay: 2
+	GrantConditionOnAttack@DAMAGE:
+		Condition: cond_damage_drain
+		ArmamentNames: damage
+		MaximumInstances: 1
+		RevokeDelay: 2
+	GrantConditionOnAttack@TRACKBUFF:
+		Condition: cond_track_drain
+		ArmamentNames: legoheroranged
+		MaximumInstances: 1
+		RevokeDelay: 2
+	GrantConditionOnAttack@SPACELASER:
+		Condition: cond_spacelaser_drain
+		ArmamentNames: spacelaser
+		MaximumInstances: 1
+		RevokeDelay: 2
+	AmmoPool:
+		Armaments: primary, defense, speed, tracking, spacelaser
+		Ammo: 255
+		PipCount: 10
+		AmmoCondition: mana
+	ReloadAmmoPool@PassiveRegen:
+		Delay: 10
+		Count: 1
+		ShowSelectionBar: false
+	ReloadAmmoPool@DEFENSE:
+		Delay: 1
+		Count: -100
+		RequiresCondition: cond_defense_drain
+	ReloadAmmoPool@DAMAGE:
+		Delay: 1
+		Count: -50
+		RequiresCondition: cond_damage_drain
+	ReloadAmmoPool@TRACKBUFF:
+		Delay: 1
+		Count: -25
+		RequiresCondition: cond_track_drain
+	ReloadAmmoPool@SPACELASER:
+		Delay: 1
+		Count: -50
+		RequiresCondition: cond_spacelaser_drain
+
+	### Visual indicator for mana
+	WithAmmoPipsDecoration:
+		PipCount: 4
+		Position: TopLeft
+		FullSequence: pip-green
+		AmmoPools:
+
+	### Visual indicator of mode ###
+	WithDecoration@Mode_Deathcoil:
+		Sequence: deathcoil_status_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_1
+	WithDecoration@Mode_Haste:
+		Sequence: haste_status_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_2 
+	WithDecoration@Mode_DeathAndDecay:
+		Sequence: deathanddecay_status_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_3
+	WithDecoration@Mode_Spacelaser:
+		Sequence: raisedead_status_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_4
+	
+	### Starting spell randomizer for AI.
+	GrantConditionOnBotOwner@wc2magebotcontrol:
+		Condition: wc2_cond_bot_owner
+		Bots: easiest, easy, medium, hard, brutal, challenger, unbeatable, cameogod, airforce, defenseai
+	GrantRandomCondition@wc2magebotcontrol:
+		Conditions: FSD_cond_1_AI, FSD_cond_2_AI, FSD_cond_3_AI, FSD_cond_4_AI
+	# FSD_Cond_1 is always granted at start due to the four state deploy.
+	GrantCondition@Cond2AI:
+		Condition: FSD_cond_2
+		RequiresCondition: wc2_cond_bot_owner && FSD_cond_2_AI
+	GrantCondition@Cond3AI:
+		Condition: FSD_cond_3
+		RequiresCondition: wc2_cond_bot_owner && FSD_cond_3_AI
+	GrantCondition@Cond4AI:
+		Condition: FSD_cond_4
+		RequiresCondition: wc2_cond_bot_owner && FSD_cond_4_AI
+
+alien_attack_ship:
+	Inherits@LEGOTankTRACKED: ^Tank
+	Inherits: ^MainBattleTankTemplate
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	# Inherits@fix: ^Repairable
+	# Inherits@2: ^IronCurtainable
+	# Inherits@rad: ^VehicleRadiation
+	# Inherits@EMP: ^UnitDisable
+	# Inherits@mag: ^Magnefreezable
+	# Inherits@heal: ^MachineShopRepairable
+	# Inherits@driver-dead: ^AffectedByDriverKill
+	# Inherits@salvage: ^GenericSalvageBonus
+	# Inherits@emergencyrepair: ^EmergencyRepairable
+	# Inherits@chrono: ^Chronoshiftable
+  # Inherits@instablow: ^Instant_Kill_Vehicle
+  # Inherits@unstableeffect: ^UnstableEffect
+  # Inherits@base-reveal: ^Base-reveal
+  # Inherits@LeechEggLayable: ^LeechEggLayable
+  # Inherits@Xmassetting: ^Xmas_setting
+  # Inherits@casinoupgrade: ^CasinoUpgradeable
+	Inherits: ^PropagandaSelfHeallego
+	Crushable:
+		WarnProbability: 0
+		CrushClasses: vehicle
+		RequiresCondition: !invulnerability
+	CaptureManager:
+		BeingCapturedCondition: being-captured
+	Capturable:
+		Types: vehicle
+		ValidStances: Enemy, Neutral
+		RequiresCondition: !untargetable
+	-Huntable:
+	Selectable:
+		Bounds: 1280, 1280, 0, 0
+		DecorationBounds: 1280, 1280, 0, 0
+	Tooltip:
+		Name: Claw Tank
+	Buildable:
+		Queue: Vehicle.Legobattles
+		BuildPaletteOrder: 60
+		BuildDurationModifier: 50
+		Prerequisites: ~alien_vehiclefactory
+		Description: Assault vehicle.
+	Power:
+		Amount: -20
+	Health:
+		HP: 90000
+	Armament:
+		Weapon: specialrangedAA
+	Armor:
+		Type: Medium
+	AttackFrontal:
+		FacingTolerance: 2
+		PauseOnCondition: disabled
+	Valued:
+		Cost: 700
+	Mobile:
+		Speed: 30
+		SharesCell: False
+	RevealsShroud:
+		Range: 9c0
+		Type: GroundPosition
+	RenderSprites:
+		Scale: 2
+	Health:
+		HP: 95000
+	ReloadDelayMultiplier@cow:
+		Modifier: 60
+	Voiced:
+		VoiceSet: clawtankvoice
+
+alien_transport_ship:
+	Inherits@LEGOAirUnit: ^lego_airunit
+	Inherits@LEGOTemplate: ^lego_transport
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits: ^PropagandaSelfHeallego
+	Tooltip:
+		Name: Alien Transport Ship
+	Armament:
+		Weapon: legoranged
+	Armament@aa:
+		Weapon: legorangedAA
+	Valued:
+		Cost: 600
+	Health:
+		HP: 80000
+	Armor:
+		Type: Medium
+	AttackFrontal:
+		FacingTolerance: 2
+		PauseOnCondition: disabled
+	Buildable:
+		Prerequisites: ~alien_vehiclefactory
+		Queue: Vehicle.Legobattles
+		Description: Flying transport unit. Detector.
+	Power:
+		Amount: -75
+	Selectable:
+		DecorationBounds: 1280, 1280, 0, 0
+	Voiced:
+		VoiceSet: astrotransportvoice
+
+alien_strike_ship:
+	Inherits@LEGOAirUnit: ^lego_airunit
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits: ^PropagandaSelfHeallego
+	Tooltip:
+		Name: Alien Strike Ship
+	Valued:
+		Cost: 600
+	Health:
+		HP: 95000
+	Armament:
+		Weapon: specialrangedAA
+	Armor:
+		Type: Medium
+	AttackFrontal:
+		FacingTolerance: 2
+		PauseOnCondition: disabled
+	Aircraft:
+		InitialFacing: 224
+		TurnSpeed: 7
+		Speed: 165
+		IdealSeparation: 1c0
+		RepulsionSpeed: 10
+	Buildable:
+		Prerequisites: ~alien_vehiclefactory
+		Queue: Vehicle.Legobattles
+		Description: Medium Flying unit. Detector.
+	Power:
+		Amount: -75
+	Selectable:
+		DecorationBounds: 1280, 1280, 0, 0
+	Voiced:
+		VoiceSet: starfightervoice
+
+alien_space_criminal_hotrod:
+	Inherits@LEGOAirUnit: ^lego_airunit
+	Inherits@SPACE: ^SpaceshipTemplate
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits: ^PropagandaSelfHeallego
+	Tooltip:
+		Name: Space Criminal Hot Rod
+	Valued:
+		Cost: 700
+	Health:
+		HP: 97000
+	Armament:
+		Weapon: specialrangedstar
+	Armor:
+		Type: Medium
+	AttackFrontal:
+		FacingTolerance: 2
+		PauseOnCondition: disabled
+	Aircraft:
+		InitialFacing: 224
+		TurnSpeed: 7
+		Speed: 165
+		IdealSeparation: 1c0
+		RepulsionSpeed: 10
+	Buildable:
+		Prerequisites: ~alien_vehiclefactory
+		Queue: Vehicle
+		Description: Flying Patrol unit.\nDetector.
+	Power:
+		Amount: -75
+	DetectCloaked:
+		CloakTypes: Cloak, Underwater
+		Range: 9c0
+	RenderDetectionCircle:
+	Voiced:
+		VoiceSet: spacepolicecruiservoice
+	Selectable:
+		DecorationBounds: 1280, 1280, 0, 0
+	RenderSprites:
+		Scale: 0.7
+
+alien_assault_ship:
+	Inherits@LEGOAirUnit: ^lego_airunit
+	Inherits@SPACE: ^SpaceshipTemplate
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits: ^PropagandaSelfHeallego
+	Tooltip:
+		Name: Alien Assault Ship
+	Valued:
+		Cost: 900
+	Health:
+		HP: 100000
+	Armament:
+		Weapon: specialrangedAA2
+	Armor:
+		Type: Heavy
+	AttackFrontal:
+		FacingTolerance: 2
+		PauseOnCondition: disabled
+	Aircraft:
+		InitialFacing: 224
+		TurnSpeed: 7
+		Speed: 165
+		IdealSeparation: 1c0
+		RepulsionSpeed: 10
+	Buildable:
+		Prerequisites: ~alien_vehiclefactory
+		Queue: Vehicle.Legobattles
+		Description: Heavy Flying unit.
+	Power:
+		Amount: -75
+	Selectable:
+		DecorationBounds: 1280, 1280, 0, 0
+	Voiced:
+		VoiceSet: starship2voice

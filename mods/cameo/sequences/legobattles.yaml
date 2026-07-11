@@ -1191,3 +1191,776 @@ alien_mcv:
 		Filename: alien_cameos.png
 		Start: 10
 		AddExtension: False
+
+alien_barracks:
+	Defaults:
+		Filename: alien_buildings.shp
+		Scale: 2.0
+	idle: alien_buildings.shp
+		Start: 3
+	damaged-idle: alien_buildings.shp
+		Start: 3
+	make: alien_buildings.shp
+		Start: 3
+	dead: alien_buildings.shp
+		Start: 3
+	lego_production_overlay_alien: 
+		Filename: lego_production_overlay_alien.shp
+		Length: 10
+		Offset: 7,6,0
+	icon: alien_cameos.png
+		Filename: alien_cameos.png
+		Start: 4
+		AddExtension: False
+
+alien_hatchery:
+	Defaults:
+		Filename: alien_buildings.shp
+		Scale: 2.0
+	idle: alien_buildings.shp
+		Start: 1
+	damaged-idle: alien_buildings.shp
+		Start: 1
+	make: alien_buildings.shp
+		Start: 1
+	dead: alien_buildings.shp
+		Start: 1
+	icon: alien_cameos.png
+		Filename: alien_cameos.png
+		Start: 1
+		AddExtension: False
+
+alien_harvester:
+	Defaults:
+		Filename: alien_buildings.shp
+		Scale: 2.0
+	idle: alien_buildings.shp
+		Start: 6
+	damaged-idle: alien_buildings.shp
+		Start: 6
+	make: alien_buildings.shp
+		Start: 6
+	dead: alien_buildings.shp
+		Start: 6
+	icon: astro_cameos.png
+		Filename: astro_cameos.png
+		Start: 2
+		AddExtension: False
+
+alien_wellcap:
+	Defaults:
+		Filename: alien_buildings.shp
+		Scale: 2.0
+	idle: alien_buildings.shp
+		Start: 2
+	damaged-idle: alien_buildings.shp
+		Start: 2
+	make: alien_buildings.shp
+		Start: 2
+	dead: alien_buildings.shp
+		Start: 2
+	icon: alien_cameos.png
+		Filename: alien_cameos.png
+		Start: 3
+		AddExtension: False
+
+alien_vehiclefactory:
+	Defaults:
+		Filename: alien_buildings.shp
+		Scale: 2.0
+	idle: alien_buildings.shp
+		Start: 5
+	damaged-idle: alien_buildings.shp
+		Start: 5
+	make: alien_buildings.shp
+		Start: 5
+	dead: alien_buildings.shp
+		Start: 5
+	lego_production_overlay_brick: 
+		Filename: lego_production_overlay_brick.shp
+		Length: 10
+		Offset: 7,6,0
+	icon: alien_cameos.png
+		Filename: alien_cameos.png
+		Start: 5
+		AddExtension: False
+
+alien_tower:
+	Defaults:
+		Filename: alien_buildings.shp
+		Scale: 2.0
+		AddExtension: False
+	idle: alien_buildings.shp
+		Start: 7
+	make: alien_buildings.shp
+		Start: 7
+	dead: alien_buildings.shp
+		Start: 7
+	icon: alien_cameos.png
+		Filename: alien_cameos.png
+		Start: 7
+	alien_tower: alien_buildings.shp
+		Start: 7
+	alien_tower2: alien_buildings.shp
+		Start: 8
+	alien_tower3: alien_buildings.shp
+	 	Start: 9
+
+
+alien_tower2:
+	Defaults:
+		Filename: alien_buildings.shp
+		Scale: 2.0
+		AddExtension: False
+	idle: alien_buildings.shp
+		Start: 8
+	make: alien_buildings.shp
+		Start: 8
+	dead: alien_buildings.shp
+		Start: 8
+	icon: alien_cameos.png
+		Filename: alien_cameos.png
+		Start: 8
+		AddExtension: False
+
+
+alien_tower3:
+	Defaults:
+		Filename: alien_buildings.shp
+		Scale: 2.0
+		AddExtension: False
+	idle: alien_buildings.shp
+		Start: 9
+	make: alien_buildings.shp
+		Start: 9
+	dead: alien_buildings.shp
+		Start: 9
+	icon: alien_cameos.png
+		Filename: alien_cameos.png
+		Start: 9
+		AddExtension: False
+
+
+alien_builder:
+	Defaults:
+		Filename: alien_builder.shp
+		Scale: 1.5
+	stand: 
+		Facings: -8
+		Combine:
+			alien_builder00: 
+				Filename: alien_builder.shp
+				Length: 5
+				Frames: 0,1,2,3,4
+			alien_builder01: 
+				Filename: alien_builder.shp
+				Length: 3
+				Frames: 3,2,1
+				FlipX: true
+	idle: invisibleitem
+	run: 
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			alien_builder1: 
+				Filename: alien_builder.shp
+				Length: 25
+				Frames:  5,6,7,8,9, 10,11,12,13,14, 15,16,17,18,19, 20,21,22,23,24, 25,26,27,28,29
+			alien_builder2: 
+				Filename: alien_builder.shp
+				Length: 15
+				Frames: 24,23,22,21,20, 19,18,17,16,15, 14,13,12,11,10
+				FlipX: true
+	harvest:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			alien_builder3: 
+				Filename: alien_builder.shp
+				Length: 25
+				Frames: 30,31,32,33,34, 35,36,37,38,39, 40,41,42,43,44, 45,46,47,48,49, 50,51,52,53,54
+			alien_builder4: 
+				Filename: alien_builder.shp
+				Length: 15
+				Frames: 49,48,47,46,45, 44,43,42,41,40, 39,38,37,36,35
+				FlipX: true
+	dock:
+		Facings: -8
+		Combine:
+			alien_builder5: 
+				Filename: alien_builder.shp
+				Length: 5
+				Frames: 0,1,2,3,4
+			alien_builder6: 
+				Filename: alien_builder.shp
+				Length: 3
+				Frames: 3,2,1
+				FlipX: true
+	dock-loop: 
+		Facings: -8
+		Combine:
+			alien_builder7: 
+				Filename: alien_builder.shp
+				Length: 5
+				Frames: 0,1,2,3,4
+			alien_builder8: 
+				Filename: alien_builder.shp
+				Length: 3
+				Frames: 3,2,1
+				FlipX: true
+	die:
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 1
+	die-crushed:
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 1
+	icon: alien_cameos.png
+		Filename: alien_cameos.png
+		Start: 16
+		AddExtension: False
+
+alien_drone:
+	#inherits: ^legoinfantry
+	Defaults:
+		Filename: alien_drone.shp
+		Scale: 2.0
+	stand:
+		Facings: -8
+		Combine:
+			alien_dronewal1:
+				Filename: alien_drone.shp
+				Length: 5
+				Frames: 0,5,10,15,20
+			alien_dronewal2:
+				Filename: alien_drone.shp
+				Length: 3
+				Frames: 15,10,5
+				FlipX: true
+	run:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			alien_dronerun1:
+				Filename: alien_drone.shp
+				Length: 25
+				Frames: 0,1,2,3,4, 5,6,7,8,9, 10,11,12,13,14, 15,16,17,18,19, 20,21,22,23,24
+			alien_dronerun2:
+				Filename: alien_drone.shp
+				Length: 15
+				Frames: 19,18,17,16,15, 14,13,12,11,10, 9,8,7,6,5
+				FlipX: true
+	shoot:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			alien_droenerhit1:
+				Filename: alien_drone.shp
+				Length: 25
+				Frames: 25,26,27,28,29, 30,31,32,33,34, 35,36,37,38,39, 40,41,42,43,44, 45,46,47,48,49
+			alien_droenerhit2:
+				Filename: alien_drone.shp
+				Length: 15
+				Frames: 44,43,42,41,40, 39,38,37,36,35, 34,33,32,31,30
+				FlipX: true
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	die-crushed: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: alien_cameos.png
+		Filename: alien_cameos.png
+		Start: 17
+		AddExtension: False
+
+alien_laser_trooper:
+	Defaults:
+		Filename: alien_laser_trooper.shp
+		Scale: 2.0
+	stand:
+		Facings: -8
+		Combine:
+			alien_laser_trooperwal1:
+				Filename: alien_laser_trooper.shp
+				Length: 5
+				Frames: 0,5,10,15,20
+			alien_laser_trooperwal2:
+				Filename: alien_laser_trooper.shp
+				Length: 3
+				Frames: 15,10,5
+				FlipX: true
+	run:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			alien_laser_trooperrun1:
+				Filename: alien_laser_trooper.shp
+				Length: 25
+				Frames: 0,1,2,3,4, 5,6,7,8,9, 10,11,12,13,14, 15,16,17,18,19, 20,21,22,23,24
+			alien_laser_trooperrun2:
+				Filename: alien_laser_trooper.shp
+				Length: 15
+				Frames: 19,18,17,16,15, 14,13,12,11,10, 9,8,7,6,5
+				FlipX: true
+	shoot:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			alien_laser_trooperhit1:
+				Filename: alien_laser_trooper.shp
+				Length: 25
+				Frames: 25,26,27,28,29, 30,31,32,33,34, 35,36,37,38,39, 40,41,42,43,44, 45,46,47,48,49
+			alien_laser_trooperhit2:
+				Filename: alien_laser_trooper.shp
+				Length: 15
+				Frames: 44,43,42,41,40, 39,38,37,36,35, 34,33,32,31,30
+				FlipX: true
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	die-crushed: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: alien_cameos.png
+		Filename: alien_cameos.png
+		Start: 18
+		AddExtension: False
+
+alien_grav_runner:
+	#inherits: ^legoinfantry
+	Defaults:
+		Filename: alien_grav_runner.shp
+		Scale: 2.0
+	stand:
+		Facings: -8
+		Combine:
+			alien_gripleywal1:
+				Filename: alien_grav_runner.shp
+				Length: 5
+				Frames: 0,3,6,9,12
+			alien_gripleywal2:
+				Filename: alien_grav_runner.shp
+				Length: 3
+				Frames: 9,6,3
+				FlipX: true
+	run:
+		Facings: -8
+		Length: 3
+		Tick: 100
+		Combine:
+			alien_gripleyrun1:
+				Filename: alien_grav_runner.shp
+				Length: 15
+				Frames: 0,1,2, 3,4,5, 6,7,8, 9,10,11, 12,13,14
+			alien_gripleyrun2:
+				Filename: alien_grav_runner.shp
+				Length: 9
+				Frames: 11,10,9, 8,7,6, 5,4,3
+				FlipX: true
+	shoot:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			alien_gripleyhit1:
+				Filename: alien_grav_runner.shp
+				Length: 25
+				Frames: 15,16,17,18,19, 20,21,22,23,24, 25,26,27,28,29, 30,31,32,33,34, 35,36,37,38,39
+			alien_gripleyhit2:
+				Filename: alien_grav_runner.shp
+				Length: 15
+				Frames: 34,33,32,31,30, 29,28,27,26,25, 24,23,22,21,20
+				FlipX: true
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	die-crushed: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: alien_cameos.png
+		Filename: alien_cameos.png
+		Start: 18
+		AddExtension: False
+
+alien_space_criminal:
+	Defaults:
+		Filename: alien_space_criminal.shp
+		Scale: 2.0
+	stand:
+		Facings: -8
+		Combine:
+			alien_space_criminalwal1:
+				Filename: alien_space_criminal.shp
+				Length: 5
+				Frames: 0,5,10,15,20
+			alien_space_criminalwal2:
+				Filename: alien_space_criminal.shp
+				Length: 3
+				Frames: 15,10,5
+				FlipX: true
+	run:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			alien_space_criminalrun1:
+				Filename: alien_space_criminal.shp
+				Length: 25
+				Frames: 0,1,2,3,4, 5,6,7,8,9, 10,11,12,13,14, 15,16,17,18,19, 20,21,22,23,24
+			alien_space_criminalrun2:
+				Filename: alien_space_criminal.shp
+				Length: 15
+				Frames: 19,18,17,16,15, 14,13,12,11,10, 9,8,7,6,5
+				FlipX: true
+	shoot:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			alien_space_criminalhit1:
+				Filename: alien_space_criminal.shp
+				Length: 25
+				Frames: 25,26,27,28,29, 30,31,32,33,34, 35,36,37,38,39, 40,41,42,43,44, 45,46,47,48,49
+			alien_space_criminalhit2:
+				Filename: alien_space_criminal.shp
+				Length: 15
+				Frames: 44,43,42,41,40, 39,38,37,36,35, 34,33,32,31,30
+				FlipX: true
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	die-crushed: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: alien_cameos.png
+		Filename: alien_cameos.png
+		Start: 20
+		AddExtension: False
+
+alien_commander:
+	Defaults:
+		Filename: alien_commander.shp
+		Scale: 2.0
+	stand:
+		Facings: -8
+		Combine:
+			alien_commanderwal1: alien_commander
+				Filename: alien_commander.shp
+				Length: 5
+				Frames: 0,5,10,15,20
+			alien_commanderwal2: alien_commander
+				Filename: alien_commander.shp
+				Length: 3
+				Frames: 15,10,5
+				FlipX: true
+	run:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			alien_commanderrun1: alien_commander
+				Filename: alien_commander.shp
+				Length: 25
+				Frames: 0,1,2,3,4, 5,6,7,8,9, 10,11,12,13,14, 15,16,17,18,19, 20,21,22,23,24
+			alien_commanderrun2: alien_commander
+				Filename: alien_commander.shp
+				Length: 15
+				Frames: 19,18,17,16,15, 14,13,12,11,10, 9,8,7,6,5
+				FlipX: true
+	shoot:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			alien_commanderhit1: alien_commander
+				Filename: alien_commander.shp
+				Length: 25
+				Frames: 25,26,27,28,29, 30,31,32,33,34, 35,36,37,38,39, 40,41,42,43,44, 45,46,47,48,49
+			alien_commanderhit2: alien_commander
+				Filename: alien_commander.shp
+				Length: 15
+				Frames: 44,43,42,41,40, 39,38,37,36,35, 34,33,32,31,30
+				FlipX: true
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	die-crushed: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: alien_cameos.png
+		Filename: alien_cameos.png
+		Start: 23
+		AddExtension: False
+	haste_status_icon: wc2_icons_statuses.png
+		Filename: wc2_icons_statuses.png
+		Start: 1
+		AddExtension: False
+	deathcoil_status_icon: wc2_icons_statuses.png
+		Filename: wc2_icons_statuses.png
+		Offset: 16,16
+		Start: 8
+		AddExtension: False
+	deathanddecay_status_icon: wc2_icons_statuses.png
+		Filename: wc2_icons_statuses.png
+		Start: 9
+		AddExtension: False
+	raisedead_status_icon: wc2_icons_statuses.png
+		Filename: wc2_icons_statuses.png
+		Start: 10
+		AddExtension: False
+	locked_status_icon: wc2_icons_statuses.png
+		Filename: wc2_icons_statuses.png
+		Start: 14
+		AddExtension: False
+
+alien_queen:
+	Defaults:
+		Filename: alien_queen.shp
+		Scale: 2.0
+	stand:
+		Facings: -8
+		Combine:
+			alien_queenwal1: alien_queen
+				Filename: alien_queen.shp
+				Length: 5
+				Frames: 0,5,10,15,20
+			alien_queenwal2: alien_queen
+				Filename: alien_queen.shp
+				Length: 3
+				Frames: 15,10,5
+				FlipX: true
+	run:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			alien_queenrun1: alien_queen
+				Filename: alien_queen.shp
+				Length: 25
+				Frames: 0,1,2,3,4, 5,6,7,8,9, 10,11,12,13,14, 15,16,17,18,19, 20,21,22,23,24
+			alien_queenrun2: alien_queen
+				Filename: alien_queen.shp
+				Length: 15
+				Frames: 19,18,17,16,15, 14,13,12,11,10, 9,8,7,6,5
+				FlipX: true
+	shoot:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			alien_queenhit1: alien_queen
+				Filename: alien_queen.shp
+				Length: 25
+				Frames: 25,26,27,28,29, 30,31,32,33,34, 35,36,37,38,39, 40,41,42,43,44, 45,46,47,48,49
+			alien_queenhit2: alien_queen
+				Filename: alien_queen.shp
+				Length: 15
+				Frames: 44,43,42,41,40, 39,38,37,36,35, 34,33,32,31,30
+				FlipX: true
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	die-crushed: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: alien_cameos.png
+		Filename: alien_cameos.png
+		Start: 24
+		AddExtension: False
+	haste_status_icon: wc2_icons_statuses.png
+		Filename: wc2_icons_statuses.png
+		Start: 1
+		AddExtension: False
+	deathcoil_status_icon: wc2_icons_statuses.png
+		Filename: wc2_icons_statuses.png
+		Offset: 16,16
+		Start: 8
+		AddExtension: False
+	deathanddecay_status_icon: wc2_icons_statuses.png
+		Filename: wc2_icons_statuses.png
+		Start: 9
+		AddExtension: False
+	raisedead_status_icon: wc2_icons_statuses.png
+		Filename: wc2_icons_statuses.png
+		Start: 10
+		AddExtension: False
+	locked_status_icon: wc2_icons_statuses.png
+		Filename: wc2_icons_statuses.png
+		Start: 14
+		AddExtension: False
+
+space_criminal_leader:
+	Defaults:
+		Filename: astro_gemma.shp
+		Scale: 2.0
+	stand:
+		Facings: -8
+		Combine:
+			astro_gemmawal1:
+				Filename: astro_gemma.shp
+				Length: 5
+				Frames: 0,5,10,15,20
+			astro_gemmawal2:
+				Filename: astro_gemma.shp
+				Length: 3
+				Frames: 15,10,5
+				FlipX: true
+	run:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			astro_gemmarun1: astro_gemma
+				Filename: astro_gemma.shp
+				Length: 25
+				Frames: 0,1,2,3,4, 5,6,7,8,9, 10,11,12,13,14, 15,16,17,18,19, 20,21,22,23,24
+			astro_gemmarun2: astro_gemma
+				Filename: astro_gemma.shp
+				Length: 15
+				Frames: 19,18,17,16,15, 14,13,12,11,10, 9,8,7,6,5
+				FlipX: true
+	shoot:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			astro_gemmahit1:
+				Filename: astro_gemma.shp
+				Length: 25
+				Frames: 25,26,27,28,29, 30,31,32,33,34, 35,36,37,38,39, 40,41,42,43,44, 45,46,47,48,49
+			astro_gemmahit2:
+				Filename: astro_gemma.shp
+				Length: 15
+				Frames: 44,43,42,41,40, 39,38,37,36,35, 34,33,32,31,30
+				FlipX: true
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	die-crushed: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: astro_cameos.png
+		Filename: astro_cameos.png
+		Start: 21
+		AddExtension: False
+	haste_status_icon: wc2_icons_statuses.png
+		Filename: wc2_icons_statuses.png
+		Start: 1
+		AddExtension: False
+	deathcoil_status_icon: wc2_icons_statuses.png
+		Filename: wc2_icons_statuses.png
+		Offset: 16,16
+		Start: 8
+		AddExtension: False
+	deathanddecay_status_icon: wc2_icons_statuses.png
+		Filename: wc2_icons_statuses.png
+		Start: 9
+		AddExtension: False
+	raisedead_status_icon: wc2_icons_statuses.png
+		Filename: wc2_icons_statuses.png
+		Start: 10
+		AddExtension: False
+	locked_status_icon: wc2_icons_statuses.png
+		Filename: wc2_icons_statuses.png
+		Start: 14
+		AddExtension: False
+
+alien_space_criminal_hotrod:
+	Defaults:
+		Filename: alien_hotrod.shp
+		Scale: 2.0
+	idle:
+		Filename: alien_hotrod.shp
+		Facings: 16
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: alien_cameos.png
+		Filename: alien_cameos.png
+		Start: 25
+		AddExtension: False
+
+alien_attack_ship:
+	Defaults:
+		Filename: alien_attack_ship.shp
+		Scale: 2.0
+	idle:
+		Filename: alien_attack_ship.shp
+		Facings: 16
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: alien_cameos.png
+		Filename: alien_cameos.png
+		Start: 33
+		AddExtension: False
+
+alien_strike_ship:
+	Defaults:
+		Filename: alien_strike_ship.shp
+		Scale: 2.0
+	idle:
+		Filename: alien_strike_ship.shp
+		Facings: 16
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: alien_cameos.png
+		Filename: alien_cameos.png
+		Start: 34
+		AddExtension: False
+
+alien_assault_ship:
+	Defaults:
+		Filename: alien_attack_ship.shp
+		Scale: 2.0
+	idle:
+		Filename: alien_attack_ship.shp
+		Facings: 16
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: alien_cameos.png
+		Filename: alien_cameos.png
+		Start: 35
+		AddExtension: False
+
+alien_transport_ship:
+	idle:
+		Filename: alien_transport_ship.shp
+		Facings: 16
+		Scale: 2.0
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: alien_cameos.png
+		Filename: alien_cameos.png
+		Start: 36
+		AddExtension: False
