@@ -236,6 +236,203 @@ starship2voice:
 		Poisoned: blank
 
 #################################################################
-#  Astro SFX
+#  Alien Structures
 #################################################################
 
+craterbasevoice:
+	VolumeModifier: 1.7
+	DefaultVariant: .wav
+	Voices:
+		Select: crater_base
+		Die: lego_struc_break
+		Action: blank
+
+breedingpitvoice:
+	VolumeModifier: 1.7
+	DefaultVariant: .wav
+	Voices:
+		Select: breeding_pit
+		Die: lego_struc_break
+		Action: blank
+
+creationpitvoice:
+	VolumeModifier: 1.7
+	DefaultVariant: .wav
+	Voices:
+		Select: creation_pit
+		Die: lego_struc_break
+		Action: blank
+
+spirevoice:
+	VolumeModifier: 1.7
+	DefaultVariant: .wav
+	Voices:
+		Select: spire
+		Die: lego_struc_break
+		Action: blank
+
+alienwellcapvoice:
+	VolumeModifier: 1.7
+	DefaultVariant: .wav
+	Voices:
+		Select: alien_wellcap
+		Die: lego_struc_break
+		Action: blank
+
+#################################################################
+#  Alien Units
+#################################################################
+
+alienbuildervoice:
+	VolumeModifier: 1.7
+	DefaultVariant: .wav
+	Voices:
+		Select: alien_builder_select
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: alien_builder_select
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank
+
+dronevoice:
+	VolumeModifier: 1.7
+	DefaultVariant: .wav
+	Voices:
+		Select: drone_select
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: drone_select
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank
+
+lasertroopervoice:
+	VolumeModifier: 1.7
+	DefaultVariant: .wav
+	Voices:
+		Select: laser_trooper_select
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: laser_trooper_select
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank
+
+gravrunnervoice:
+	VolumeModifier: 1.7
+	DefaultVariant: .wav
+	Voices:
+		Select: grav_runner_select
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: grav_runner_select
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank
+
+spacecriminalvoice:
+	VolumeModifier: 1.7
+	DefaultVariant: .wav
+	Voices:
+		Select: space_criminal_select
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: space_criminal_select
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank
+
+alienattackshipvoice:
+	VolumeModifier: 1.7
+	DefaultVariant: .wav
+	Voices:
+		Select: alien_attack_ship_select
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: alien_attack_ship_select
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank
+
+hotrodvoice:
+	VolumeModifier: 1.7
+	DefaultVariant: .wav
+	Voices:
+		Select: space_criminal_hotrod
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: space_criminal_hotrod
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank
+
+alienassaultshipvoice:
+	VolumeModifier: 1.7
+	DefaultVariant: .wav
+	Voices:
+		Select: alien_assault_ship_select
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: alien_assault_ship_select
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank
+
+aliencommandervoice:
+	VolumeModifier: 1.7
+	DefaultVariant: .wav
+	Voices:
+		Select: alien_commander_select
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: alien_commander_select
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank
+
+alienqueenvoice:
+	VolumeModifier: 1.7
+	DefaultVariant: .wav
+	Voices:
+		Select: alien_queen_select
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: alien_queen_select
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank
+
+spacecriminalleadervoice:
+	VolumeModifier: 1.7
+	DefaultVariant: .wav
+	Voices:
+		Select: space_criminal_leader
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: space_criminal_leader
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank

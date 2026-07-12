@@ -7,10 +7,10 @@
 		ContrailLength: 15
 		Speed: 4000
 		Width: 20
-	Warhead@Effect: CreateEffect
-		Explosions: green_small_fire
-		ImpactSounds: kaboom12.aud
-		ValidTargets: Ground, Ship, Trees
+	# Warhead@Effect: CreateEffect
+	# 	Explosions: green_small_fire
+	# 	ImpactSounds: kaboom12.aud
+	# 	ValidTargets: Ground, Ship, Trees
 	Warhead@EffectWater: CreateEffect
 		Explosions: green_small_fire
 		ImpactSounds: kaboom12.aud
@@ -190,7 +190,7 @@ DuelistTankCannon:
 	Inherits: ^D2K_Cannon
 	Range: 7000
 	MinRange: 700
-	ReloadDelay: 140
+	ReloadDelay: 300
 	Report: d2khc.wav
 	Projectile: Bullet
 		Speed: 700
@@ -198,6 +198,61 @@ DuelistTankCannon:
 		TrailDelay: 0
 		ContrailStartColor: 88FF4488
 		ContrailEndColor: FFFFFF44
+		ContrailStartWidth: 80
+		ContrailEndWidth: 16
+		InaccuracyType: PerCellIncrement
+		Image: d2k_155mm
+		Palette: d2keffect
+	Warhead@MediumFlameWeapon: SpreadDamage
+		Damage: 14000
+	Warhead@MediumFlameWeaponFriendlyFire: SpreadDamage
+		Damage: 7000
+	Warhead@MediumFlameWeaponPercentage: HealthPercentageDamage
+		Damage: 7
+	Warhead@Grenade: SpreadDamage
+		Damage: 14000
+	Warhead@GrenadeFriendlyFire: SpreadDamage
+		Damage: 7000
+	Warhead@GrenadePercentage: HealthPercentageDamage
+		Damage: 7
+	Warhead@HeavyBomb: SpreadDamage
+		Damage: 14000
+	Warhead@HeavyBombPercentage: HealthPercentageDamage
+		Damage: 7
+	Warhead@TankDestroyerCannon: SpreadDamage
+		Damage: 14000
+	Warhead@TankDestroyerCannonPercentage: HealthPercentageDamage
+		Damage: 7
+	Warhead@HeavyCannon: SpreadDamage
+		Damage: 14000
+	Warhead@HeavyCannonPercentage: HealthPercentageDamage
+		Damage: 7
+	Warhead@MediumCannon: SpreadDamage
+		Damage: 14000
+	Warhead@MediumCannonPercentage: HealthPercentageDamage
+		Damage: 7
+	-Warhead@Effect1:
+	-Warhead@Effect2:
+	Warhead@Effect: CreateEffect
+		Explosions: d2k_large_explosion
+		ImpactSounds: EXPLMD2.WAV
+		ExplosionPalette: effect75alpha
+
+AssaultGunCannon:
+	Inherits: ^MediumFlameWeapon
+	Inherits: ^Grenade
+	Inherits: ^HeavyBomb
+	Inherits: ^TankDestroyerCannon
+	Inherits: ^HeavyCannon
+	Inherits: ^D2K_Cannon
+	Range: 7000
+	MinRange: 700
+	ReloadDelay: 200
+	Report: d2khc.wav
+	Projectile: Bullet
+		Speed: 700
+		ContrailLength: 8
+		TrailDelay: 0
 		ContrailStartWidth: 80
 		ContrailEndWidth: 16
 		InaccuracyType: PerCellIncrement
@@ -865,7 +920,7 @@ D2K_Rocket_Trooper2:
 D2K_Combat_Fleet:
 	Inherits: D2K_Rocket
 	Range: 10c0
-	Burst: 10
+	Burst: 15
 	BurstDelays: 2
 	ReloadDelay: 50
 
@@ -1531,6 +1586,7 @@ Sound:
 Sound2:
 	Inherits: Sound
 	Range: 5c512
+	Report: weirding_weapon.wav
 	ReloadDelay: 40
 	Projectile: AreaBeam
 		Speed: 0c256
@@ -2329,6 +2385,7 @@ LMG:
 	ReloadDelay: 20
 	Range: 4448
 	Report: gun11.aud
+	ValidTargets: Ground, Water, Trees
 	Warhead@Chaingun: SpreadDamage
 		Damage: 2000
 	Warhead@ChaingunPercentage: HealthPercentageDamage
@@ -2377,7 +2434,7 @@ sardaukar_gun:
 	ValidTargets: Ground, Water, Trees, Air
 	Warhead@HeavyCannon: SpreadDamage
 		ValidTargets: Ground, Water, Trees, Air
-		Damage: 2000
+		Damage: 3000
 	Warhead@HeavyCannonPercentage: HealthPercentageDamage
 		ValidTargets: Ground, Water, Trees, Air
 		Damage: 1
@@ -2900,6 +2957,18 @@ autogun_tank_small:
 			Medium: 15
 			Heavy: 5
 
+trooper_autogun:
+	Inherits: autogun_turret
+	Range: 5c0
+	ValidTargets: Ground, Water, Trees, Air
+	Warhead@1Dam: SpreadDamage
+		Damage: 700
+		Versus:
+			Wood: 45
+			Light: 45
+			Medium: 15
+			Heavy: 5
+
 autogun_tank_small_aa:
 	Inherits: autogun_tank_small
 	Range: 6750
@@ -2939,7 +3008,7 @@ OrniGun:
 		InaccuracyType: PerCellIncrement
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Ground
-		Damage: 3333
+		Damage: 4000
 		Spread: 333
 		Falloff: 100, 33
 		Versus:
@@ -3574,7 +3643,7 @@ PhoenixRocket:
 	Inherits: ^D2KMissile
 	ReloadDelay: 100
 	Burst: 8
-	Range: 4c512
+	Range: 5c512
 	BurstDelays: 10
 	Projectile: Missile
 		Inaccuracy: 96
@@ -3582,7 +3651,7 @@ PhoenixRocket:
 		RangeLimit: 4c512
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c0
-		Damage: 7500
+		Damage: 8500
 		Versus:
 			None: 150
 			Wood: 100
@@ -4144,7 +4213,7 @@ d2k_chemgun:
 	Inherits: ^LightChemicalWeapon
 	InvalidTargets: Structure, Water
 	ReloadDelay: 60
-	Range: 5c0
+	Range: 3c0
 	Report: chemtrooper_att.wav
 	Projectile: RadBeam
 		Amplitude: 120
@@ -4728,7 +4797,7 @@ oOrniBomb:
 	Warhead@1Dam: SpreadDamage
 		Spread: 320
 		Falloff: 100, 60, 30, 15, 0
-		Damage: 2500 #400 in original, reduce when bombers can do multiple passes
+		Damage: 3500 #400 in original, reduce when bombers can do multiple passes
 		Versus:
 			None: 90
 			wall: 50
@@ -5015,7 +5084,7 @@ oM_HMG_H:
 	ReloadDelay: 50
 
 oFremen_L:
-	Inherits: oM_HMG
+	Inherits: ^D2KMissile
 	Report: BAZOOK2.WAV
 	ValidTargets: Vehicle, Structure, Air
 	InvalidTargets: Infantry

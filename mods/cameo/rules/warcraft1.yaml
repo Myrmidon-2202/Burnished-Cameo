@@ -1008,6 +1008,8 @@ wc_o_townhall:
 		Condition: BuildingsOwned
 	Inherits@WTH: wc_h_townhall
 	ProvidesPrerequisite:
+	Transforms:
+		IntoActor: wc_o_mcv
 	SpawnActorsOnSell:
 		ActorTypes: wc_h_footman
 	Production@NORMAL:
@@ -2070,7 +2072,7 @@ wc_goldmine:
 		BuildDuration: 375
 		BuildDurationModifier: 100
 		Description: Send workers inside to provide passive income\nMiners progressively get experience and work more efficiently
-		# Prerequisites: ~wc_h_townhall || ~wc_o_townhall 
+		Prerequisites: ~wc_h_townhall || ~wc_o_townhall 
 	Building:
 		Footprint: xxx xxx xxx
 		Dimensions: 3,3
@@ -2231,6 +2233,29 @@ wc_goldmine:
 	WithCargoPipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: true
+
+wc_goldmine.human:
+	Inherits@WC2BUILDING: wc_goldmine
+	Valued:
+		Cost: 4000
+	Buildable:
+		Prerequisites: ~wc_blacksmith, ~wc_h_mcv
+	Cargo:
+		InitialUnits: wc_h_peasant, wc_o_peon, wc_h_peasant, wc_o_peon, wc_h_peasant
+	RenderSprites:
+		Image: wc_goldmine
+
+wc_goldmine.horde:
+	Inherits@WC2BUILDING: wc_goldmine
+	Valued:
+		Cost: 4000
+	Buildable:
+		Prerequisites: ~wc_blacksmith, ~wc_o_mcv
+	Cargo:
+		InitialUnits: wc_h_peasant, wc_o_peon, wc_h_peasant, wc_o_peon, wc_h_peasant
+	RenderSprites:
+		Image: wc_goldmine
+
 
 wc_goldmine.bot:
 	Inherits@WC2BUILDING: wc_goldmine

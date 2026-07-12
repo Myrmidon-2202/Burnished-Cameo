@@ -4,7 +4,7 @@ InfantrySoviets = {"rare1", "rare1", "rare1", "rare1", "rare1", "rare3", "rare3"
 InfantryJapan = {"raje1", "raje1", "raje1", "raje1", "raje1", "raje3", "raje3"}
 AlliesVehicles = {"1tnk", "1tnk", "1tnk", "2tnk", "2tnk", "raarty"}
 SovietVehicles = {"3tnk", "3tnk", "3tnk", "4tnk", "v2rl"}
-JapanVehicles = {"modkubel", "modkubel", "modkubel", "modtypej", "modtypej", "modnano"}
+JapanVehicles = {"modkubel", "modkubel", "modkubel", "modtypej", "modtypej"}
 
 GDIConvoy = {"mtnk", "mtnk", "mtnk", "htnk", "mlrs"}
 NodConvoy = {"bike", "bike", "bike", "ltnk", "ltnk", "mssm"}

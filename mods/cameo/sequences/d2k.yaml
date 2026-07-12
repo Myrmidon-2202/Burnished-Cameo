@@ -1660,6 +1660,7 @@ conyard.harkonnen:
 conyard.corrino:
 	Defaults:
 		AddExtension: false
+		Scale: 1.5
 	idle:
 		Filename: conyard_corrino.shp
 	make:
@@ -1711,6 +1712,7 @@ conyard.corrino:
 		Offset: -16,-16
 	icon:
 		Filename: conyard_corrino_icon.shp
+		Remap: 54F94B
 
 starport.harkonnen:
 	Defaults:
@@ -2670,6 +2672,7 @@ barracks.merc:
 barracks.corrino:
 	Defaults:
 		AddExtension: false
+		Scale: 1.5
 	make:
 		Filename: DATA.R16
 		Scale: 1.5
@@ -2695,6 +2698,7 @@ barracks.corrino:
 		Offset: -16,-16
 	icon:
 		Filename: d2k_barracks_corrino_icon.shp
+		Remap: 54F94B
 
 d2k_flesh_vat:
 	idle:
@@ -5888,6 +5892,42 @@ d2k_sardaukar_elite:
 		Length: 5
 		Tick: 175
 		Scale: 1.2
+	die2:
+		Filename: d2k_sardaukar_elite.shp
+		Start: 96
+		Length: 5
+		Tick: 175
+		Scale: 1.2
+	die3:
+		Filename: d2k_sardaukar_elite.shp
+		Start: 96
+		Length: 5
+		Tick: 175
+		Scale: 1.2
+	die4:
+		Filename: d2k_sardaukar_elite.shp
+		Start: 96
+		Length: 5
+		Tick: 175
+		Scale: 1.2
+	die5:
+		Filename: d2k_sardaukar_elite.shp
+		Start: 96
+		Length: 5
+		Tick: 175
+		Scale: 1.2
+	die6:
+		Filename: d2k_sardaukar_elite.shp
+		Start: 96
+		Length: 5
+		Tick: 175
+		Scale: 1.2
+	die7:
+		Filename: d2k_sardaukar_elite.shp
+		Start: 96
+		Length: 5
+		Tick: 175
+		Scale: 1.2
 	icon:
 		Filename: d2k_sardaukar_elite_icon.shp
 	die-crushed:
@@ -5925,6 +5965,36 @@ d2k_sardaukar_assassin:
 		Facings: -8
 		Tick: 90
 	die:
+		Filename: d2k_sardaukar_assassin.shp
+		Start: 184
+		Length: 15
+		Tick: 105
+	die2:
+		Filename: d2k_sardaukar_assassin.shp
+		Start: 184
+		Length: 15
+		Tick: 105
+	die3:
+		Filename: d2k_sardaukar_assassin.shp
+		Start: 184
+		Length: 15
+		Tick: 105
+	die4:
+		Filename: d2k_sardaukar_assassin.shp
+		Start: 184
+		Length: 15
+		Tick: 105
+	die5:
+		Filename: d2k_sardaukar_assassin.shp
+		Start: 184
+		Length: 15
+		Tick: 105
+	die6:
+		Filename: d2k_sardaukar_assassin.shp
+		Start: 184
+		Length: 15
+		Tick: 105
+	die7:
 		Filename: d2k_sardaukar_assassin.shp
 		Start: 184
 		Length: 15
@@ -6146,6 +6216,7 @@ oneblastbullet:
 fedaykin:
 	Defaults:
 		Filename: fedaykin.shp
+		Scale: 1.5
 		AddExtension: false
 	stand:
 		Facings: 8
@@ -7377,6 +7448,7 @@ d2k_flame_tank:
 d2k_apc:
 	Defaults:
 		AddExtension: false
+		Scale: 1.5
 	idle:
 		Filename: d2kifv.shp
 		Facings: 32
@@ -7427,10 +7499,10 @@ d2k_apc.husk:
 
 d2k_gunship:
 	Defaults:
-		Scale: 2
+		AddExtension: false
 	idle:
-		Filename: d2k_gunship.shp
-		Facings: -32
+		Filename: HarkGunshipSpritesheet-32.png
+		Facings: 32
 	icon:
 		Filename: phoenixicon.shp
 
@@ -7875,7 +7947,7 @@ siege_tank:
 
 assault_tank:
 	Defaults:
-		Scale: 1
+		Scale: 0.7
 	idle:
 		Filename: HarkAssaultTankSpritesheet-32.png
 		Facings: 32
@@ -7919,6 +7991,7 @@ siege_quad:
 ordos_cobra:
 	Defaults:
 		Filename: ordos_cobra.png
+		Salce: 0.8
 		AddExtension: false
 	idle:
 		Start: 64
@@ -8135,6 +8208,8 @@ d2k_projector2:
 		Filename: d2k_projector_icon.shp
 
 d2k_laser_tank:
+	Defaults:
+		Scale: 0.8
 	idle:
 		Filename: ordos_lasertank.png
 		Start: 0
@@ -8147,6 +8222,7 @@ d2k_laser_tank:
 		Scale: 0.6
 	icon:
 		Filename: ordos_lasertank_icon.png
+
 ordos_deviatormk2:
 	idle:
 		Filename: ordos_deviatormk2.png
@@ -8166,12 +8242,12 @@ ordos_apc:
 		Filename: ordos_apc.png
 		Start: 0
 		Facings: 64
-		Scale: 0.8
+		Scale: 0.6
 	turret:
 		Filename: ordos_apc.png
 		Start: 64
 		Facings: 64
-		Scale: 0.8
+		Scale: 0.6
 	icon:
 		Filename: ordos_apc_icon.png
 
@@ -8200,6 +8276,8 @@ d2k_aa_mine:
 		Filename: d2k_aa_mine_icon.shp
 
 d2k_kwny_fighter:
+	Defaults:
+		Scale: 1.5
 	idle:
 		Filename: d2k_kwny_fighter.shp
 		Start: 0
@@ -8564,6 +8642,8 @@ combat_tank_fremen:
 		Offset: -30,-24
 
 d2k_autogun_tank_small:
+	Defaults:
+		Scale: 1.5
 	idle:
 		Filename: d2k_ct_striped.shp
 		Facings: -32
@@ -8658,6 +8738,8 @@ mongoose_d2k_a:
 		Filename: d2kmongoosecameo.png
 
 d2k_ordos_stealth_tank:
+	Defaults:
+		Scale: 0.8
 	idle:
 		Filename: ordos_tnkd.png
 		Facings: 64

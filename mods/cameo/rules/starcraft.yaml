@@ -1,29 +1,29 @@
 World:
-	FactionCA@terran:
-		Name: Terran SC
-		InternalName: terran
-		Game: StarCraft
-		Side: StarCraft
-		Description: Terran wield powerful units that consume power for production, can lift buildings, and deploy Nuclear Strikes, while defenses remain operational.
-	FactionCA@protoss:
-		Name: Protoss SC
-		InternalName: protoss
-		Game: StarCraft
-		Side: StarCraft
-		Description: Protoss\nFeatures:\n- Units consume power (supply)\n- Unit production pauses on low power\n- Buildings and defenses do not require power to operate\n- Relatively resilient and powerful units\nSupport powers: Purifier Beam
-	FactionCA@zerg:
-		Name: Zerg SC
-		InternalName: zerg
-		Game: StarCraft
-		Side: StarCraft
-		Description: Zerg\nFeatures:\n- Units consume power (supply)\n- Unit production pauses on low power\n- Buildings and defenses do not require power to operate\n- Relatively powerful units\nSupport powers: Nuclear Strike
-	FactionCA@RandomSC:
-		Name: Any StarCraft
-		InternalName: RandomSC
-		RandomFactionMembers: terran, protoss, zerg
-		Game: StarCraft
-		Side: Random
-		Description: Random Faction\nA random faction from StarCraft will be chosen when the game starts.
+	# FactionCA@terran:
+	# 	Name: Terran SC
+	# 	InternalName: terran
+	# 	Game: StarCraft
+	# 	Side: StarCraft
+	# 	Description: Terran wield powerful units that consume power for production, can lift buildings, and deploy Nuclear Strikes, while defenses remain operational.
+	# FactionCA@protoss:
+	# 	Name: Protoss SC
+	# 	InternalName: protoss
+	# 	Game: StarCraft
+	# 	Side: StarCraft
+	# 	Description: Protoss\nFeatures:\n- Units consume power (supply)\n- Unit production pauses on low power\n- Buildings and defenses do not require power to operate\n- Relatively resilient and powerful units\nSupport powers: Purifier Beam
+	# FactionCA@zerg:
+	# 	Name: Zerg SC
+	# 	InternalName: zerg
+	# 	Game: StarCraft
+	# 	Side: StarCraft
+	# 	Description: Zerg\nFeatures:\n- Units consume power (supply)\n- Unit production pauses on low power\n- Buildings and defenses do not require power to operate\n- Relatively powerful units\nSupport powers: Nuclear Strike
+	# FactionCA@RandomSC:
+	# 	Name: Any StarCraft
+	# 	InternalName: RandomSC
+	# 	RandomFactionMembers: terran, protoss, zerg
+	# 	Game: StarCraft
+	# 	Side: Random
+	# 	Description: Random Faction\nA random faction from StarCraft will be chosen when the game starts.
 	####################################################################################################
 	#		SC TERRAN
 	####################################################################################################

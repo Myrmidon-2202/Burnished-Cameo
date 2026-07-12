@@ -9,11 +9,12 @@ troopermelee:
 	ReloadDelay: 20
 	Range: 1c512
 	Projectile: InstantHit
+	ValidTargets: Ground, Helicopter, Air
 	Report: trooper_attack.wav
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		Damage: 4025
-		ValidTargets: Ground, Air
+		ValidTargets: Ground, Helicopter, Air
 		Versus:
 			None: 150
 			Wood: 50
@@ -27,7 +28,7 @@ troopermelee:
 		Spread: 128
 		Delay: 5
 		DamageTypes: Prone100Percent, TriggerProne, FireDeath, Incendiary
-		ValidTargets: Ground, Air
+		ValidTargets: Ground, Helicopter, Air
 		Versus:
 			None: 150
 			Wood: 50
@@ -35,6 +36,10 @@ troopermelee:
 			Medium: 80
 			Heavy: 60
 			Concrete: 40
+
+alienmelee:
+	Inherits: troopermelee
+	Report: drone_attack.wav
 
 HQHEROHEAL:
 	ReloadDelay: 15
@@ -86,7 +91,7 @@ legorangedAA:
 			Medium: 80
 			Heavy: 60
 			Concrete: 20
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath         
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
 	Warhead@2Eff: CreateEffect
 	Warhead@Percentage: HealthPercentageDamage
 		Damage: 2
@@ -107,14 +112,18 @@ legoranged:
 	ReloadDelay: 40
 	Range: 8c512
 	Report: commando_attack.wav
-	ValidTargets: Ground
+	ValidTargets: Ground, Helicopter, Air
 	Warhead@1Dam: TargetDamage
-		ValidTargets: Ground
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath         
+		ValidTargets: Ground, Helicopter, Air
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
 	Warhead@2Eff: CreateEffect
 	Warhead@Percentage: HealthPercentageDamage
 		DamageTypes: Prone100Percent, TriggerProne, FireDeath, Incendiary
-		ValidTargets: Ground
+		ValidTargets:Ground, Helicopter, Air
+
+alienlegoranged:
+	Inherits: legoranged
+	Report: laser_trooper_attack.wav
 
 specialrangedAA:
 	ReloadDelay: 60
@@ -136,14 +145,14 @@ specialrangedAA:
 			Medium: 80
 			Heavy: 70
 			Concrete: 60
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath         
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
 	Warhead@2Eff: CreateEffect
 	Warhead@Percentage: HealthPercentageDamage
 		Damage: 2
 		Spread: 550
 		Delay: 5
 		DamageTypes: Prone100Percent, TriggerProne, FireDeath, Incendiary
-		ValidTargets: Ground, Air
+		ValidTargets: Ground, Helicopter, Air
 		Versus:
 			None: 150
 			Wood: 60
@@ -156,6 +165,7 @@ specialrangedAA2:
 	ReloadDelay: 60
 	Range: 9c512
 	Report: earth_ship_attack.wav
+	ValidTargets: Ground, Helicopter, Air
 	Projectile: Bullet
 		Speed: 0c650
 		Image: astro_lolipop
@@ -165,7 +175,7 @@ specialrangedAA2:
 	Warhead@1Dam: TargetDamage
 		Spread: 300
 		Damage: 10000
-		ValidTargets: Ground
+		ValidTargets: Ground, Helicopter, Air
 		Versus:
 			None: 150
 			Wood: 60
@@ -173,14 +183,14 @@ specialrangedAA2:
 			Medium: 80
 			Heavy: 70
 			Concrete: 60
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath         
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
 	Warhead@2Eff: CreateEffect
 	Warhead@Percentage: HealthPercentageDamage
 		Damage: 10
 		Spread: 550
 		Delay: 5
 		DamageTypes: Prone100Percent, TriggerProne, FireDeath, Incendiary
-		ValidTargets: Ground
+		ValidTargets: Ground, Helicopter, Air
 		Versus:
 			None: 150
 			Wood: 60
@@ -196,11 +206,12 @@ specialrangedstar:
 	Projectile: Bullet
 		Speed: 0c650
 		Image: lego_flaming_star
-		Sequences: anim
+		Sequence: anim
 		RangeLimit: 15c0
 		Palette: player
 		IsPlayerPalette: true
 	Warhead@1Dam: TargetDamage
+		ValidTargets: Ground, Helicopter, Air
 		Spread: 500
 		Damage: 10000
 		Versus:
@@ -213,6 +224,7 @@ specialrangedstar:
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath         
 	Warhead@2Eff: CreateEffect
 	Warhead@Percentage: HealthPercentageDamage
+		ValidTargets: Ground, Helicopter, Air
 		Damage: 10
 		Spread: 550
 		Delay: 5
@@ -233,12 +245,13 @@ astroplasmaglob:
 		Speed: 0c650
 		Image: lego_plasma_ball
 		RangeLimit: 15c0
-		Sequences: anim
+		Sequence: anim
 		Palette: player
 		IsPlayerPalette: true
 	Warhead@1Dam: TargetDamage
 		Spread: 700
 		Damage: 15000
+		ValidTargets: Ground, Helicopter, Air
 		Versus:
 			None: 150
 			Wood: 60
@@ -253,6 +266,7 @@ astroplasmaglob:
 		Spread: 550
 		Delay: 5
 		DamageTypes: Prone100Percent, TriggerProne, FireDeath, Incendiary
+		ValidTargets: Ground, Helicopter, Air
 		Versus:
 			None: 150
 			Wood: 60
@@ -270,7 +284,7 @@ cavalrymelee:
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		Damage: 8025
-		ValidTargets: Ground
+		ValidTargets: Ground, Helicopter, Air
 		Versus:
 			None: 150
 			Wood: 50
@@ -284,7 +298,7 @@ cavalrymelee:
 		Spread: 128
 		Delay: 5
 		DamageTypes: Prone100Percent, TriggerProne, FireDeath, Incendiary
-		ValidTargets: Ground
+		ValidTargets: Ground, Helicopter, Air
 		Versus:
 			None: 150
 			Wood: 50
@@ -293,17 +307,22 @@ cavalrymelee:
 			Heavy: 60
 			Concrete: 40
 
+aliencavalrymelee:
+	Inherits: cavalrymelee
+	Report: grav_runner_attack.wav
+
 legoheroranged:
 	Inherits: legoranged
 	ReloadDelay: 40
 	Range: 8c512
 	Report: commando_attack.wav
 	Warhead@1Dam: TargetDamage
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath         
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		ValidTargets: Ground, Helicopter, Air
 	Warhead@2Eff: CreateEffect
 	Warhead@Percentage: HealthPercentageDamage
 		DamageTypes: Prone100Percent, TriggerProne, FireDeath, Incendiary
-		ValidTargets: Ground
+		ValidTargets: Ground, Helicopter, Air
 
 heromelee:
 	Inherits: ^legomelee
@@ -321,12 +340,14 @@ heromelee:
 			Medium: 80
 			Heavy: 60
 			Concrete: 40
-		DamageTypes: DefaultDeath 
+		DamageTypes: DefaultDeath
+		ValidTargets: Ground, Helicopter, Air
 	Warhead@Percentage: HealthPercentageDamage
 		Damage: 2
 		Spread: 128
 		Delay: 5
 		DamageTypes: Prone100Percent, TriggerProne, FireDeath, Incendiary
+		ValidTargets: Ground, Helicopter, Air
 		Versus:
 			None: 150
 			Wood: 70
@@ -335,16 +356,24 @@ heromelee:
 			Heavy: 70
 			Concrete: 40
 
+aliencommandermelee:
+	Inherits: heromelee
+	Report: alien_commander_attack.wav
+
+alienqueenmelee:
+	Inherits: heromelee
+	Report: alien_queen_attack.wav
+
 spacelaser:
 	Range: 7c512
 	Report: space_laser.wav
-	Projectile: InstantHit
-	ValidTargets: Ground, Air, Trees
+	Projectile: AthenaProjectile
+	ValidTargets: Ground, Helicopter, Air, Trees
 	Warhead@1Dam_impact: SpreadDamage
-		Range: 0, 1c1, 2c1, 2c512
+		Range: 0, 1c1, 2c1
 		Damage: 10000
-		Falloff: 1000, 1000, 250, 100
-		ValidTargets: Ground, Air, Trees
+		Falloff: 1000, 250, 100
+		ValidTargets: Ground, Helicopter, Air, Trees
 		AffectsParent: True
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath, Incendiary
 	Warhead@2Smu_impact: LeaveSmudge
@@ -357,6 +386,7 @@ spacelaser:
 		Delay: 3
 	Warhead@4laserblast: CreateEffect
 		Explosions: earthspacelaser
+		Image: earthspacelaser
 	Warhead@5Smu_area2: LeaveSmudge
 		SmudgeType: Scorch
 		InvalidTargets: Vehicle, Structure, Wall, Husk, Trees, Creep
@@ -366,14 +396,13 @@ spacelaser:
 empstar:
 	ReloadDelay: 60
 	Range: 9c512
-	Report: emp.wav
 	Projectile: Bullet
 		Speed: 0c250
 		Image: lego_emp_star
-		Sequences: anim
+		Sequences: idle
 		RangeLimit: 15c0
 		Palette: player
-		IsPlayerPalette: true        
+		IsPlayerPalette: true
 	Warhead@1Con: GrantExternalCondition
 		Condition: empdisable
 		ValidTargets: Vehicle, Cyborg, Structure
@@ -385,17 +414,6 @@ legoemp:
 	Range: 9c512
 	Report: earth_ship_attack.wav
 	Projectile: InstantHit
-	Warhead@1Dam: TargetDamage
-		Spread: 500
-		Damage: 10000
-		Versus:
-			None: 150
-			Wood: 60
-			Light: 100
-			Medium: 80
-			Heavy: 70
-			Concrete: 60
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath         
 	Warhead@1Con: GrantExternalCondition
 		Condition: empdisable
 		ValidTargets: Vehicle, Cyborg, Structure
@@ -404,4 +422,66 @@ legoemp:
 	Warhead@3cluster: FireCluster
 		Weapon: empstar
 		Dimensions: 10,10
+		Footprint: X_____________X  X_____________X X_____________X X_____________X X_____________XX_____________XX_____________XX_____________XX_____________XX_____________XX_____________XX_____________XX_____________XX_____________XX_____________XX_____________XX_____________X X_____________X X_____________X
+
+espstar:
+	ReloadDelay: 60
+	Range: 9c512
+	Projectile: Bullet
+		Speed: 0c250
+		Image: lego_emp_star
+		Sequences: idle
+		RangeLimit: 15c0
+		Palette: player
+		IsPlayerPalette: true
+	Warhead@2Con: GrantExternalCondition
+		Condition: espdisable
+		Duration: 100
+		Range: 3c0
+		ValidTargets: Infantry
+		ValidRelationships: Enemy
+
+legoesp:
+	ReloadDelay: 60
+	Range: 9c512
+	Report: esp.wav
+	Projectile: InstantHit
+	Warhead@2Con: GrantExternalCondition
+		Condition: espdisable
+		Duration: 100
+		Range: 2c0
+		ValidTargets: Infantry
+		ValidRelationships: Enemy
+	Warhead@3cluster: FireCluster
+		Weapon: espstar
+		Dimensions: 10,10
 		Footprint: X_____________X  X_____________X X_____________X X_____________X X_____________XX_____________XX_____________XX_____________XX_____________XX_____________XX_____________XX_____________XX_____________XX_____________XX_____________XX_____________XX_____________X X_____________X X_____________X 
+
+crystalcache:
+	ReloadDelay: 120
+	Range: 9c512
+	Report: crystalcache.wav
+	Projectile: Bullet
+	Warhead@4Res: CreateResource
+		AddsResourceType: Tiberium
+		Size: 6
+
+clusterbomb:
+	Inherits: ArtilleryShell
+	Report: clusterbomb.wav
+	Burst: 6
+	Projectile: Bullet
+		Speed: 200
+	Warhead@3Eff: CreateEffect
+		ImpactSounds: dunepoff.aud, dune2splash.aud, dune2cannon.aud
+
+hotwire:
+	ReloadDelay: 75
+	Report: hotwire.wav
+	Range: 7000
+	TargetActorCenter: true
+	ValidTargets: Vehicle
+	InvalidTargets: Infantry, Hero, MCImmune
+	Projectile: InstantHit
+	Warhead@1Dam: TargetDamage
+		Damage: 0
