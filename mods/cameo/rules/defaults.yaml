@@ -2369,7 +2369,7 @@
 		Condition: leaflet
 	GrantCondition@disable:
 		Condition: disabled
-		RequiresCondition: ReaperTrap || superfreeze || chronodisabled || leaflet || stickyfoam
+		RequiresCondition: ReaperTrap || superfreeze || chronodisabled || leaflet || stickyfoam || espdisable
 	WithColoredOverlay@leaflet:
 		RequiresCondition: leaflet
 		Color: 000000b4
@@ -2382,6 +2382,12 @@
 	WithColoredOverlay@stickyfoam:
 		RequiresCondition: stickyfoam
 		Color: 44FF44AA
+	ExternalCondition@ESP:
+		TotalCap: 1
+		Condition: espdisable
+	WithColoredOverlay@ESP:
+		Color: 000000b4
+		RequiresCondition: espdisable
 	# WithDecoration@stickyfoam:
 	# 	Image: explosion
 	# 	Sequence: op2_stickyfoam_goo

@@ -2,60 +2,86 @@
 #		INHERITABLES
 ####################################################################################################
 
-^lego_status_icons:
+^lego_spell_icons:
 	Defaults:
 		Scale: 1.2
-	bloodlust_status_icon:
-		Filename: wc2_icons_statuses.png
+	speed_spell_icon:
+		Filename: lego_spell_icons.png
 		Start: 0
-	haste_status_icon:
-		Filename: wc2_icons_statuses.png
+	damage_spell_icon:
+		Filename: lego_spell_icons.png
 		Start: 1
-	slow_status_icon:
-		Filename: wc2_icons_statuses.png
+	armor_spell_icon:
+		Filename: lego_spell_icons.png
 		Start: 2
-	invisibility_status_icon:
-		Filename: wc2_icons_statuses.png
+	forest_spell_icon:
+		Filename: lego_spell_icons.png
 		Start: 3
-	unholyarmor_status_icon:
-		Filename: wc2_icons_statuses.png
+	earthquake_spell_icon:
+		Filename: lego_spell_icons.png
 		Start: 4
-	fireball_status_icon:
-		Filename: wc2_icons_statuses.png
+	fireball_spell_icon:
+		Filename: lego_spell_icons.png
 		Start: 5
-	blizzard_status_icon:
-		Filename: wc2_icons_statuses.png
+	lightning_spell_icon:
+		Filename: lego_spell_icons.png
 		Start: 6
-	polymorph_status_icon:
-		Filename: wc2_icons_statuses.png
+	monkey_spell_icon:
+		Filename: lego_spell_icons.png
 		Start: 7
-	deathcoil_status_icon:
-		Filename: wc2_icons_statuses.png
+	crab_spell_icon:
+		Filename: lego_spell_icons.png
 		Start: 8
-	deathanddecay_status_icon:
-		Filename: wc2_icons_statuses.png
+	cannon_spell_icon:
+		Filename: lego_spell_icons.png
 		Start: 9
-	raisedead_status_icon:
-		Filename: wc2_icons_statuses.png
+	emp_spell_icon:
+		Filename: lego_spell_icons.png
 		Start: 10
-	holyvision_status_icon:
-		Filename: wc2_icons_statuses.png
+	spacelaser_spell_icon:
+		Filename: lego_spell_icons.png
 		Start: 11
-	healing_status_icon:
-		Filename: wc2_icons_statuses.png
+	esp_spell_icon:
+		Filename: lego_spell_icons.png
 		Start: 12
-	exorcism_status_icon:
-		Filename: wc2_icons_statuses.png
+	crystal_spell_icon:
+		Filename: lego_spell_icons.png
 		Start: 13
-	locked_status_icon:
-		Filename: wc2_icons_statuses.png
+	track_spell_icon:
+		Filename: lego_spell_icons.png
 		Start: 14
-	runes_status_icon:
-		Filename: wc2_icons_statuses.png
+	cluster_spell_icon:
+		Filename: lego_spell_icons.png
 		Start: 15
-	eyeofkilrogg_status_icon:
-		Filename: wc2_icons_statuses.png
+	hotwire_spell_icon:
+		Filename: lego_spell_icons.png
 		Start: 16
+	boulder_spell_icon:
+		Filename: lego_spell_icons.png
+		Start: 17
+	jungle_spell_icon:
+		Filename: lego_spell_icons.png
+		Start: 18
+	arrow_spell_icon:
+		Filename: lego_spell_icons.png
+		Start: 19
+	teleport_spell_icon:
+		Filename: lego_spell_icons.png
+		Start: 20
+	hammer_spell_icon:
+		Filename: lego_spell_icons.png
+		Start: 21
+	mining_spell_icon:
+		Filename: lego_spell_icons.png
+		Start: 22
+	roar_spell_icon:
+		Filename: lego_spell_icons.png
+		Start: 23
+	lumber_spell_icon:
+		Filename: lego_spell_icons.png
+		Start: 24
+
+
 
 ####################################################################################################
 #		ASTRO - BUILDINGS
@@ -644,8 +670,7 @@ astro_space_police:
 
 
 astro_gemma:
-	#inherits: ^legoinfantry	
-	# Inherits@status: ^lego_status_icons
+	Inherits: ^lego_spell_icons
 	Defaults:
 		Filename: astro_gemma.shp
 		Scale: 2.0
@@ -701,31 +726,31 @@ astro_gemma:
 		Filename: astro_cameos.png
 		Start: 21
 		AddExtension: False
-	haste_status_icon: wc2_icons_statuses.png
-		Filename: wc2_icons_statuses.png
-		Start: 1
-		AddExtension: False
-	deathcoil_status_icon: wc2_icons_statuses.png
-		Filename: wc2_icons_statuses.png
-		Offset: 16,16
-		Start: 8
-		AddExtension: False
-	deathanddecay_status_icon: wc2_icons_statuses.png
-		Filename: wc2_icons_statuses.png
-		Start: 9
-		AddExtension: False
-	raisedead_status_icon: wc2_icons_statuses.png
-		Filename: wc2_icons_statuses.png
-		Start: 10
-		AddExtension: False
-	locked_status_icon: wc2_icons_statuses.png
-		Filename: wc2_icons_statuses.png
-		Start: 14
-		AddExtension: False
+	# haste_status_icon: lego_spell_icons.png
+	# 	Filename: lego_spell_icons.png
+	# 	Start: 1
+	# 	AddExtension: False
+	# deathcoil_status_icon: lego_spell_icons.png
+	# 	Filename: lego_spell_icons.png
+	# 	Offset: 16,16
+	# 	Start: 8
+	# 	AddExtension: False
+	# deathanddecay_status_icon: wc2_icons_statuses.png
+	# 	Filename: wc2_icons_statuses.png
+	# 	Start: 9
+	# 	AddExtension: False
+	# raisedead_status_icon: wc2_icons_statuses.png
+	# 	Filename: wc2_icons_statuses.png
+	# 	Start: 10
+	# 	AddExtension: False
+	# locked_status_icon: wc2_icons_statuses.png
+	# 	Filename: wc2_icons_statuses.png
+	# 	Start: 14
+	# 	AddExtension: False
 
 
 astro_space_police_captain:
-	#inherits: ^legoinfantry
+	Inherits: ^lego_spell_icons
 	Defaults:
 		Filename: astro_space_police_captain.shp
 		Scale: 2.0
@@ -781,30 +806,30 @@ astro_space_police_captain:
 		Filename: astro_cameos.png
 		Start: 22
 		AddExtension: False
-	haste_status_icon: wc2_icons_statuses.png
-		Filename: wc2_icons_statuses.png
-		Start: 1
-		AddExtension: False
-	deathcoil_status_icon: wc2_icons_statuses.png
-		Filename: wc2_icons_statuses.png
-		Offset: 16,16
-		Start: 8
-		AddExtension: False
-	deathanddecay_status_icon: wc2_icons_statuses.png
-		Filename: wc2_icons_statuses.png
-		Start: 9
-		AddExtension: False
-	raisedead_status_icon: wc2_icons_statuses.png
-		Filename: wc2_icons_statuses.png
-		Start: 10
-		AddExtension: False
-	locked_status_icon: wc2_icons_statuses.png
-		Filename: wc2_icons_statuses.png
-		Start: 14
-		AddExtension: False
+	# haste_status_icon: wc2_icons_statuses.png
+	# 	Filename: wc2_icons_statuses.png
+	# 	Start: 1
+	# 	AddExtension: False
+	# deathcoil_status_icon: wc2_icons_statuses.png
+	# 	Filename: wc2_icons_statuses.png
+	# 	Offset: 16,16
+	# 	Start: 8
+	# 	AddExtension: False
+	# deathanddecay_status_icon: wc2_icons_statuses.png
+	# 	Filename: wc2_icons_statuses.png
+	# 	Start: 9
+	# 	AddExtension: False
+	# raisedead_status_icon: wc2_icons_statuses.png
+	# 	Filename: wc2_icons_statuses.png
+	# 	Start: 10
+	# 	AddExtension: False
+	# locked_status_icon: wc2_icons_statuses.png
+	# 	Filename: wc2_icons_statuses.png
+	# 	Start: 14
+	# 	AddExtension: False
 
 astro_biff:
-	#inherits: ^legoinfantry
+	Inherits: ^lego_spell_icons
 	Defaults:
 		Filename: astro_biff.shp
 		Scale: 2.0
@@ -860,31 +885,31 @@ astro_biff:
 		Filename: astro_cameos.png
 		Start: 23
 		AddExtension: False
-	haste_status_icon: wc2_icons_statuses.png
-		Filename: wc2_icons_statuses.png
-		Start: 1
-		AddExtension: False
-	deathcoil_status_icon: wc2_icons_statuses.png
-		Filename: wc2_icons_statuses.png
-		Offset: 16,16
-		Start: 8
-		AddExtension: False
-	deathanddecay_status_icon: wc2_icons_statuses.png
-		Filename: wc2_icons_statuses.png
-		Start: 9
-		AddExtension: False
-	raisedead_status_icon: wc2_icons_statuses.png
-		Filename: wc2_icons_statuses.png
-		Start: 10
-		AddExtension: False
-	locked_status_icon: wc2_icons_statuses.png
-		Filename: wc2_icons_statuses.png
-		Start: 14
-		AddExtension: False
+	# haste_status_icon: wc2_icons_statuses.png
+	# 	Filename: wc2_icons_statuses.png
+	# 	Start: 1
+	# 	AddExtension: False
+	# deathcoil_status_icon: wc2_icons_statuses.png
+	# 	Filename: wc2_icons_statuses.png
+	# 	Offset: 16,16
+	# 	Start: 8
+	# 	AddExtension: False
+	# deathanddecay_status_icon: wc2_icons_statuses.png
+	# 	Filename: wc2_icons_statuses.png
+	# 	Start: 9
+	# 	AddExtension: False
+	# raisedead_status_icon: wc2_icons_statuses.png
+	# 	Filename: wc2_icons_statuses.png
+	# 	Start: 10
+	# 	AddExtension: False
+	# locked_status_icon: wc2_icons_statuses.png
+	# 	Filename: wc2_icons_statuses.png
+	# 	Start: 14
+	# 	AddExtension: False
 
 
 legobattles_ghost:
-	#inherits: ^legoinfantry
+	Inherits: ^lego_spell_icons
 	Defaults:
 		Filename: legobattles_ghost.shp
 		Scale: 2.0
@@ -1060,30 +1085,24 @@ lego_flaming_star:
 		Scale: 2.0
 	idle:
 		Filename: lego_flaming_star.shp
-	anim: lego_flaming_star
-		Filename: lego_flaming_star.shp
-		start: 0
-		length: 8
+		Start: 0
+		Length: 8
 
 lego_plasma_ball:
 	Defaults:
 		Scale: 2.0
 	idle:
 		Filename: lego_plasma_ball.shp
-	anim: lego_plasma_ball
-		Filename: lego_plasma_ball.shp
-		start: 0
-		length: 8
+		Start: 0
+		Length: 8
 
 lego_emp_star:
 	Defaults:
 		Scale: 2.0
 	idle:
 		Filename: lego_emp_star.shp
-	anim: lego_emp_star
-		Filename: lego_emp_star.shp
-		start: 0
-		length: 8
+		Start: 0
+		Length: 8
 
 
 ####################################################################################################
@@ -1095,7 +1114,7 @@ explosion:
 		Length: *
 		ZOffset: 2047
 	earthspacelaser: earthspacelaser.shp
-		start: 0
+		Start: 0
 		Length: 15
 		Offset: 0, -78
 		Tick: 100
@@ -1106,7 +1125,7 @@ earthspacelaser:
 		Scale: 1.5
 	earthspacelaser:
 		Filename: earthspacelaser.shp
-		start: 0
+		Start: 0
 		Length: 15
 		Offset: 0, -78
 		Tick: 100
@@ -1242,8 +1261,8 @@ alien_harvester:
 		Start: 6
 	dead: alien_buildings.shp
 		Start: 6
-	icon: astro_cameos.png
-		Filename: astro_cameos.png
+	icon: alien_cameos.png
+		Filename: alien_cameos.png
 		Start: 2
 		AddExtension: False
 
@@ -1478,8 +1497,67 @@ alien_drone:
 		Length: 7
 	icon: alien_cameos.png
 		Filename: alien_cameos.png
-		Start: 17
+		Start: 23
 		AddExtension: False
+
+# Code for spinninng north move drone
+# alien_drone:
+# 	#inherits: ^legoinfantry
+# 	Defaults:
+# 		Filename: alien_drone.shp
+# 		Scale: 2.0
+# 	stand:
+# 		Facings: -8
+# 		Combine:
+# 			alien_dronewal1:
+# 				Filename: alien_drone.shp
+# 				Length: 5
+# 				Frames: 0,5,10,15,20
+# 			alien_dronewal2:
+# 				Filename: alien_drone.shp
+# 				Length: 3
+# 				Frames: 15,10,5
+# 				FlipX: true
+# 	run:
+# 		Facings: -8
+# 		Length: 5
+# 		Tick: 100
+# 		Combine:
+# 			alien_dronerun1:
+# 				Filename: alien_drone.shp
+# 				Length: 25
+# 				Frames: 0,1,2,3,4, 5,6,7,8,9, 10,11,12,13,14, 15,16,17,18,19, 20,21,22,23,24
+# 			alien_dronerun2:
+# 				Filename: alien_drone.shp
+# 				Length: 15
+# 				Frames: 19,18,17,16,15, 14,13,12,11,10, 9,8,7,6,5
+# 				FlipX: true
+# 	shoot:
+# 		Facings: -8
+# 		Length: 5
+# 		Tick: 100
+# 		Combine:
+# 			alien_droenerhit1:
+# 				Filename: alien_drone.shp
+# 				Length: 25
+# 				Frames: 25,26,27,28,29, 30,31,32,33,34, 35,36,37,38,39, 40,41,42,43,44, 45,46,47,48,49
+# 			alien_droenerhit2:
+# 				Filename: alien_drone.shp
+# 				Length: 15
+# 				Frames: 44,43,42,41,40, 39,38,37,36,35, 34,33,32,31,30
+# 				FlipX: true
+# 	die: lego_explosion
+# 		Filename: lego_explosion.shp
+# 		Start: 0
+# 		Length: 7
+# 	die-crushed: lego_explosion
+# 		Filename: lego_explosion.shp
+# 		Start: 0
+# 		Length: 7
+# 	icon: alien_cameos.png
+# 		Filename: alien_cameos.png
+# 		Start: 23
+# 		AddExtension: False
 
 alien_laser_trooper:
 	Defaults:
@@ -1535,7 +1613,7 @@ alien_laser_trooper:
 		Length: 7
 	icon: alien_cameos.png
 		Filename: alien_cameos.png
-		Start: 18
+		Start: 17
 		AddExtension: False
 
 alien_grav_runner:
@@ -1650,10 +1728,11 @@ alien_space_criminal:
 		Length: 7
 	icon: alien_cameos.png
 		Filename: alien_cameos.png
-		Start: 20
+		Start: 19
 		AddExtension: False
 
 alien_commander:
+	Inherits: ^lego_spell_icons
 	Defaults:
 		Filename: alien_commander.shp
 		Scale: 2.0
@@ -1707,31 +1786,32 @@ alien_commander:
 		Length: 7
 	icon: alien_cameos.png
 		Filename: alien_cameos.png
-		Start: 23
+		Start: 20
 		AddExtension: False
-	haste_status_icon: wc2_icons_statuses.png
-		Filename: wc2_icons_statuses.png
-		Start: 1
-		AddExtension: False
-	deathcoil_status_icon: wc2_icons_statuses.png
-		Filename: wc2_icons_statuses.png
-		Offset: 16,16
-		Start: 8
-		AddExtension: False
-	deathanddecay_status_icon: wc2_icons_statuses.png
-		Filename: wc2_icons_statuses.png
-		Start: 9
-		AddExtension: False
-	raisedead_status_icon: wc2_icons_statuses.png
-		Filename: wc2_icons_statuses.png
-		Start: 10
-		AddExtension: False
-	locked_status_icon: wc2_icons_statuses.png
-		Filename: wc2_icons_statuses.png
-		Start: 14
-		AddExtension: False
+	# haste_status_icon: lego_spell_icons.png
+	# 	Filename: lego_spell_icons.png
+	# 	Start: 1
+	# 	AddExtension: False
+	# deathcoil_status_icon: lego_spell_icons.png
+	# 	Filename: lego_spell_icons.png
+	# 	Offset: 16,16
+	# 	Start: 8
+	# 	AddExtension: False
+	# deathanddecay_status_icon: lego_spell_icons.png
+	# 	Filename: lego_spell_icons.png
+	# 	Start: 9
+	# 	AddExtension: False
+	# raisedead_status_icon: lego_spell_icons.png
+	# 	Filename: lego_spell_icons.png
+	# 	Start: 10
+	# 	AddExtension: False
+	# locked_status_icon: lego_spell_icons.png
+	# 	Filename: lego_spell_icons.png
+	# 	Start: 14
+	# 	AddExtension: False
 
 alien_queen:
+	Inherits: ^lego_spell_icons
 	Defaults:
 		Filename: alien_queen.shp
 		Scale: 2.0
@@ -1785,43 +1865,44 @@ alien_queen:
 		Length: 7
 	icon: alien_cameos.png
 		Filename: alien_cameos.png
-		Start: 24
+		Start: 21
 		AddExtension: False
-	haste_status_icon: wc2_icons_statuses.png
-		Filename: wc2_icons_statuses.png
-		Start: 1
-		AddExtension: False
-	deathcoil_status_icon: wc2_icons_statuses.png
-		Filename: wc2_icons_statuses.png
-		Offset: 16,16
-		Start: 8
-		AddExtension: False
-	deathanddecay_status_icon: wc2_icons_statuses.png
-		Filename: wc2_icons_statuses.png
-		Start: 9
-		AddExtension: False
-	raisedead_status_icon: wc2_icons_statuses.png
-		Filename: wc2_icons_statuses.png
-		Start: 10
-		AddExtension: False
-	locked_status_icon: wc2_icons_statuses.png
-		Filename: wc2_icons_statuses.png
-		Start: 14
-		AddExtension: False
+	# haste_status_icon: lego_spell_icons.png
+	# 	Filename: lego_spell_icons.png
+	# 	Start: 1
+	# 	AddExtension: False
+	# deathcoil_status_icon: lego_spell_icons.png
+	# 	Filename: lego_spell_icons.png
+	# 	Offset: 16,16
+	# 	Start: 8
+	# 	AddExtension: False
+	# deathanddecay_status_icon: lego_spell_icons.png
+	# 	Filename: lego_spell_icons.png
+	# 	Start: 9
+	# 	AddExtension: False
+	# raisedead_status_icon: lego_spell_icons.png
+	# 	Filename: lego_spell_icons.png
+	# 	Start: 10
+	# 	AddExtension: False
+	# locked_status_icon: lego_spell_icons.png
+	# 	Filename: lego_spell_icons.png
+	# 	Start: 14
+	# 	AddExtension: False
 
 space_criminal_leader:
+	Inherits: ^lego_spell_icons
 	Defaults:
-		Filename: astro_gemma.shp
+		Filename: alien_space_criminal_leader.shp
 		Scale: 2.0
 	stand:
 		Facings: -8
 		Combine:
-			astro_gemmawal1:
-				Filename: astro_gemma.shp
+			alien_space_criminal_leaderwal1:
+				Filename: alien_space_criminal_leader.shp
 				Length: 5
 				Frames: 0,5,10,15,20
-			astro_gemmawal2:
-				Filename: astro_gemma.shp
+			alien_space_criminal_leaderwal2:
+				Filename: alien_space_criminal_leader.shp
 				Length: 3
 				Frames: 15,10,5
 				FlipX: true
@@ -1830,12 +1911,12 @@ space_criminal_leader:
 		Length: 5
 		Tick: 100
 		Combine:
-			astro_gemmarun1: astro_gemma
-				Filename: astro_gemma.shp
+			alien_space_criminal_leaderrun1: alien_space_criminal_leader
+				Filename: alien_space_criminal_leader.shp
 				Length: 25
 				Frames: 0,1,2,3,4, 5,6,7,8,9, 10,11,12,13,14, 15,16,17,18,19, 20,21,22,23,24
-			astro_gemmarun2: astro_gemma
-				Filename: astro_gemma.shp
+			alien_space_criminal_leaderrun2: alien_space_criminal_leader
+				Filename: alien_space_criminal_leader.shp
 				Length: 15
 				Frames: 19,18,17,16,15, 14,13,12,11,10, 9,8,7,6,5
 				FlipX: true
@@ -1844,12 +1925,12 @@ space_criminal_leader:
 		Length: 5
 		Tick: 100
 		Combine:
-			astro_gemmahit1:
-				Filename: astro_gemma.shp
+			alien_space_criminal_leaderrun1: alien_space_criminal_leader
+				Filename: alien_space_criminal_leader.shp
 				Length: 25
 				Frames: 25,26,27,28,29, 30,31,32,33,34, 35,36,37,38,39, 40,41,42,43,44, 45,46,47,48,49
-			astro_gemmahit2:
-				Filename: astro_gemma.shp
+			alien_space_criminal_leaderrun2: alien_space_criminal_leader
+				Filename: alien_space_criminal_leader.shp
 				Length: 15
 				Frames: 44,43,42,41,40, 39,38,37,36,35, 34,33,32,31,30
 				FlipX: true
@@ -1861,31 +1942,31 @@ space_criminal_leader:
 		Filename: lego_explosion.shp
 		Start: 0
 		Length: 7
-	icon: astro_cameos.png
-		Filename: astro_cameos.png
-		Start: 21
+	icon: alien_cameos.png
+		Filename: alien_cameos.png
+		Start: 22
 		AddExtension: False
-	haste_status_icon: wc2_icons_statuses.png
-		Filename: wc2_icons_statuses.png
-		Start: 1
-		AddExtension: False
-	deathcoil_status_icon: wc2_icons_statuses.png
-		Filename: wc2_icons_statuses.png
-		Offset: 16,16
-		Start: 8
-		AddExtension: False
-	deathanddecay_status_icon: wc2_icons_statuses.png
-		Filename: wc2_icons_statuses.png
-		Start: 9
-		AddExtension: False
-	raisedead_status_icon: wc2_icons_statuses.png
-		Filename: wc2_icons_statuses.png
-		Start: 10
-		AddExtension: False
-	locked_status_icon: wc2_icons_statuses.png
-		Filename: wc2_icons_statuses.png
-		Start: 14
-		AddExtension: False
+	# haste_status_icon: lego_spell_icons.png
+	# 	Filename: lego_spell_icons.png
+	# 	Start: 1
+	# 	AddExtension: False
+	# deathcoil_status_icon: lego_spell_icons.png
+	# 	Filename: lego_spell_icons.png
+	# 	Offset: 16,16
+	# 	Start: 8
+	# 	AddExtension: False
+	# deathanddecay_status_icon: lego_spell_icons.png
+	# 	Filename: lego_spell_icons.png
+	# 	Start: 9
+	# 	AddExtension: False
+	# raisedead_status_icon: lego_spell_icons.png
+	# 	Filename: lego_spell_icons.png
+	# 	Start: 10
+	# 	AddExtension: False
+	# locked_status_icon: lego_spell_icons.png
+	# 	Filename: lego_spell_icons.png
+	# 	Start: 14
+	# 	AddExtension: False
 
 alien_space_criminal_hotrod:
 	Defaults:
@@ -1900,7 +1981,7 @@ alien_space_criminal_hotrod:
 		Length: 7
 	icon: alien_cameos.png
 		Filename: alien_cameos.png
-		Start: 25
+		Start: 24
 		AddExtension: False
 
 alien_attack_ship:
@@ -1916,7 +1997,7 @@ alien_attack_ship:
 		Length: 7
 	icon: alien_cameos.png
 		Filename: alien_cameos.png
-		Start: 33
+		Start: 32
 		AddExtension: False
 
 alien_strike_ship:
@@ -1932,15 +2013,15 @@ alien_strike_ship:
 		Length: 7
 	icon: alien_cameos.png
 		Filename: alien_cameos.png
-		Start: 34
+		Start: 33
 		AddExtension: False
 
 alien_assault_ship:
 	Defaults:
-		Filename: alien_attack_ship.shp
+		Filename: alien_assault_ship.shp
 		Scale: 2.0
 	idle:
-		Filename: alien_attack_ship.shp
+		Filename: alien_assault_ship.shp
 		Facings: 16
 	die: lego_explosion
 		Filename: lego_explosion.shp
@@ -1948,7 +2029,7 @@ alien_assault_ship:
 		Length: 7
 	icon: alien_cameos.png
 		Filename: alien_cameos.png
-		Start: 35
+		Start: 34
 		AddExtension: False
 
 alien_transport_ship:
@@ -1962,5 +2043,86 @@ alien_transport_ship:
 		Length: 7
 	icon: alien_cameos.png
 		Filename: alien_cameos.png
-		Start: 36
+		Start: 35
+		AddExtension: False
+
+####################################################################################################
+#		Imperials - Structures
+####################################################################################################
+
+lego_imperial_conyard:
+	Defaults:
+		Filename: imperial_buildings.shp
+		Scale: 2.0
+	idle: imperial_buildings.shp
+		Start: 0
+		Length: 1
+	damaged-idle: imperial_buildings.shp
+		Start: 0
+		Length: 1
+	make: imperial_buildings.shp
+		Start: 0
+		Length: 1
+	dead: imperial_buildings.shp
+		Start: 0
+		Length: 1
+	lego_production_overlay_human: 
+		Filename: lego_production_overlay_human.shp
+		Length: 10
+		Offset: 14,12,0
+	icon: imperial_cameos.png
+		Filename: imperial_cameos.png
+		Start: 0
+		AddExtension: False
+
+####################################################################################################
+#		Imperials - Units
+####################################################################################################
+
+lego_imperial_mcv:
+	#inherits: ^legoinfantry
+	Defaults:
+		Filename: imperial_builder.shp
+		Scale: 2.0
+	stand:
+		Facings: -8
+		Combine:
+			imperial_buildermcv1:
+				Filename: imperial_builder.shp
+				Length: 5
+				Frames: 0,1,2,3,4
+			imperial_buildermcv2:
+				Filename: imperial_builder.shp
+				Length: 3
+				Frames: 3,2,1
+				FlipX: true
+	idle: 
+		Filename: imperial_builder.shp
+		Start: 0
+		Length: 1
+	run:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			imperial_buildermcv3:
+				Filename: imperial_builder.shp
+				Length: 25
+				Frames:  5,6,7,8,9, 10,11,12,13,14, 15,16,17,18,19, 20,21,22,23,24, 25,26,27,28,29
+			imperial_buildermcv4:
+				Filename: imperial_builder.shp
+				Length: 15
+				Frames: 24,23,22,21,20, 19,18,17,16,15, 14,13,12,11,10
+				FlipX: true
+	die: imperial_builder
+		Filename: imperial_builder.shp
+		Start: 0
+		Length: 7
+	die-crushed: imperial_builder
+		Filename: imperial_builder.shp
+		Start: 0
+		Length: 7
+	icon: imperial_cameos.png
+		Filename: imperial_cameos.png
+		Start: 10
 		AddExtension: False
