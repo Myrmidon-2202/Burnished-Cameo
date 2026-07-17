@@ -10,13 +10,31 @@ World:
 		InternalName: legobattlesalien
 		Game: Lego Battles
 		Side: Lego Battles
-		Description: Aliens faction from Lego Battles
+		Description: Alien faction from Lego Battles
 	FactionCA@legobattlesimperial:
 		Name: Imperial
 		InternalName: legobattlesimperial
 		Game: Lego Battles
 		Side: Lego Battles
 		Description: Imperial faction from Lego Battles
+	FactionCA@legobattlespirate:
+		Name: Pirate
+		InternalName: legobattlespirate
+		Game: Lego Battles
+		Side: Lego Battles
+		Description: Pirate faction from Lego Battles
+	FactionCA@legobattlesking:
+		Name: King
+		InternalName: legobattlesking
+		Game: Lego Battles
+		Side: Lego Battles
+		Description: King faction from Lego Battles
+	FactionCA@legobattleswizard:
+		Name: Wizard
+		InternalName: legobattleswizard
+		Game: Lego Battles
+		Side: Lego Battles
+		Description: Wizard faction from Lego Battles
 
 	####################################################################################################
 	#		Astro
@@ -82,174 +100,65 @@ World:
 		BaseActor: lego_imperial_mcv
 		SupportActors: legobattles_ghost,legobattles_ghost
 
-# Player:
-# 	ExternalCondition@BuildingsOwned:
-# 		Condition: BuildingsOwned
-# 	ProvidesPrerequisite@BuildingsOwned:
-# 		Prerequisite: allowsMCV
-# 		RequiresCondition: BuildingsOwned < 5
-# 	ClassicProductionQueue@RABUILDINGASTRO:
-# 		Type: RABuilding
-# 		DisplayOrder: 0
-# 		Group: Building
-# 		LowPowerModifier: 200
-# 		ReadyAudio: ConstructionComplete
-# 		BlockedAudio: NoBuild
-# 		LimitedAudio: BuildingInProgress
-# 		QueuedAudio: Training
-# 		OnHoldAudio: OnHold
-# 		CancelledAudio: Cancelled
-# 		SpeedUp: True
-# 		BuildTimeSpeedReduction: 100, 50, 33, 25, 20, 17, 14, 12, 11, 10
-# 	ClassicProductionQueue@RADEFENCEASTRO:
-# 		Type: RADefence
-# 		DisplayOrder: 1
-# 		Group: Defence
-# 		LowPowerModifier: 300
-# 		ReadyAudio: ConstructionComplete
-# 		BlockedAudio: NoBuild
-# 		LimitedAudio: BuildingInProgress
-# 		QueuedAudio: Training
-# 		OnHoldAudio: OnHold
-# 		CancelledAudio: Cancelled
-# 		SpeedUp: True
-# 		BuildTimeSpeedReduction: 100, 50, 33, 25, 20, 17, 14, 12, 11, 10
-# 	ClassicProductionQueue@RAINFANTRYTASTRO:
-# 		Type: RAInfantry
-# 		DisplayOrder: 2
-# 		Group: Infantry
-# 		LowPowerModifier: 300
-# 		ReadyAudio: UnitReady
-# 		BlockedAudio: NoBuild
-# 		LimitedAudio: BuildingInProgress
-# 		QueuedAudio: Training
-# 		OnHoldAudio: OnHold
-# 		CancelledAudio: Cancelled
-# 		SpeedUp: True
-# 		BuildTimeSpeedReduction: 100, 50, 33, 25, 20, 17, 14, 12, 11, 10
-# 	ClassicProductionQueue@RAVEHICLEASTRO:
-# 		Type: RAVehicle
-# 		DisplayOrder: 2
-# 		Group: Vehicle
-# 		LowPowerModifier: 300
-# 		ReadyAudio: UnitReady
-# 		BlockedAudio: NoBuild
-# 		LimitedAudio: BuildingInProgress
-# 		QueuedAudio: Training
-# 		OnHoldAudio: OnHold
-# 		CancelledAudio: Cancelled
-# 		SpeedUp: True
-# 		BuildTimeSpeedReduction: 100, 50, 33, 25, 20, 17, 14, 12, 11, 10
-# 	ClassicProductionQueue@RAAIRCRAFTASTRO:
-# 		Type: RAAircraft
-# 		DisplayOrder: 2
-# 		Group: Aircraft
-# 		LowPowerModifier: 300
-# 		ReadyAudio: UnitReady
-# 		BlockedAudio: NoBuild
-# 		LimitedAudio: BuildingInProgress
-# 		QueuedAudio: Training
-# 		OnHoldAudio: OnHold
-# 		CancelledAudio: Cancelled
-# 		SpeedUp: True
-# 		BuildTimeSpeedReduction: 100, 50, 33, 25, 20, 17, 14, 12, 11, 10
-# 	ClassicProductionQueue@RANAVALASTRO:
-# 		Type: RANAVAL
-# 		DisplayOrder: 2
-# 		Group: Naval
-# 		LowPowerModifier: 300
-# 		ReadyAudio: UnitReady
-# 		BlockedAudio: NoBuild
-# 		LimitedAudio: BuildingInProgress
-# 		QueuedAudio: Training
-# 		OnHoldAudio: OnHold
-# 		CancelledAudio: Cancelled
-# 		SpeedUp: True
-# 		BuildTimeSpeedReduction: 100, 50, 33, 25, 20, 17, 14, 12, 11, 10
+	StartingUnits@mcvonlypirate:
+		Class: none
+		ClassName: MCV Only
+		Factions: legobattlespirate
+		BaseActor: lego_pirate_mcv
 
+	StartingUnits@defaultpirate:
+		Class: light
+		ClassName: Light Support
+		Factions: legobattlespirate
+		BaseActor: lego_pirate_mcv
+		SupportActors: legobattles_ghost
 
+	StartingUnits@heavypirate:
+		Class: heavy
+		ClassName: Heavy Support
+		Factions: legobattlespirate
+		BaseActor: lego_pirate_mcv
+		SupportActors: legobattles_ghost,legobattles_ghost
 
-	# ProvidesPrerequisite@faction_alien:
-	# 	Prerequisite: faction_alien
-	# 	Factions: Alien
-	# ClassicProductionQueue@RABUILDINGALIEN:
-	# 	Type: RABuilding.alien
-	# 	DisplayOrder: 0
-	# 	Group: Building
-	# 	LowPowerModifier: 200
-	# 	ReadyAudio: ConstructionComplete
-	# 	BlockedAudio: NoBuild
-	# 	LimitedAudio: BuildingInProgress
-	# 	QueuedAudio: Training
-	# 	OnHoldAudio: OnHold
-	# 	CancelledAudio: Cancelled
-	# 	SpeedUp: True
-	# 	BuildTimeSpeedReduction: 100, 50, 33, 25, 20, 17, 14, 12, 11, 10
-	# ClassicProductionQueue@RADEFENCEALIEN:
-	# 	Type: RADefence.alien
-	# 	DisplayOrder: 1
-	# 	Group: Defence
-	# 	LowPowerModifier: 300
-	# 	ReadyAudio: ConstructionComplete
-	# 	BlockedAudio: NoBuild
-	# 	LimitedAudio: BuildingInProgress
-	# 	QueuedAudio: Training
-	# 	OnHoldAudio: OnHold
-	# 	CancelledAudio: Cancelled
-	# 	SpeedUp: True
-	# 	BuildTimeSpeedReduction: 100, 50, 33, 25, 20, 17, 14, 12, 11, 10
-	# ClassicProductionQueue@RAINFANTRYTALIEN:
-	# 	Type: RAInfantry
-	# 	DisplayOrder: 2
-	# 	Group: Infantry
-	# 	LowPowerModifier: 300
-	# 	ReadyAudio: UnitReady
-	# 	BlockedAudio: NoBuild
-	# 	LimitedAudio: BuildingInProgress
-	# 	QueuedAudio: Training
-	# 	OnHoldAudio: OnHold
-	# 	CancelledAudio: Cancelled
-	# 	SpeedUp: True
-	# 	BuildTimeSpeedReduction: 100, 50, 33, 25, 20, 17, 14, 12, 11, 10
-	# ClassicProductionQueue@RAVEHICLEALIEN:
-	# 	Type: RAVehicle.alien
-	# 	DisplayOrder: 2
-	# 	Group: Vehicle
-	# 	LowPowerModifier: 300
-	# 	ReadyAudio: UnitReady
-	# 	BlockedAudio: NoBuild
-	# 	LimitedAudio: BuildingInProgress
-	# 	QueuedAudio: Training
-	# 	OnHoldAudio: OnHold
-	# 	CancelledAudio: Cancelled
-	# 	SpeedUp: True
-	# 	BuildTimeSpeedReduction: 100, 50, 33, 25, 20, 17, 14, 12, 11, 10
-	# ClassicProductionQueue@RAAIRCRAFTALIEN:
-	# 	Type: RAAircraft.alien
-	# 	DisplayOrder: 2
-	# 	Group: Aircraft
-	# 	LowPowerModifier: 300
-	# 	ReadyAudio: UnitReady
-	# 	BlockedAudio: NoBuild
-	# 	LimitedAudio: BuildingInProgress
-	# 	QueuedAudio: Training
-	# 	OnHoldAudio: OnHold
-	# 	CancelledAudio: Cancelled
-	# 	SpeedUp: True
-	# 	BuildTimeSpeedReduction: 100, 50, 33, 25, 20, 17, 14, 12, 11, 10
-	# ClassicProductionQueue@RANAVALALIEN:
-	# 	Type: RANAVAL.alien
-	# 	DisplayOrder: 2
-	# 	Group: Naval
-	# 	LowPowerModifier: 300
-	# 	ReadyAudio: UnitReady
-	# 	BlockedAudio: NoBuild
-	# 	LimitedAudio: BuildingInProgress
-	# 	QueuedAudio: Training
-	# 	OnHoldAudio: OnHold
-	# 	CancelledAudio: Cancelled
-	# 	SpeedUp: True
-	# 	BuildTimeSpeedReduction: 100, 50, 33, 25, 20, 17, 14, 12, 11, 10
+	StartingUnits@mcvonlyking:
+		Class: none
+		ClassName: MCV Only
+		Factions: legobattlesking
+		BaseActor: lego_king_mcv
+
+	StartingUnits@defaultking:
+		Class: light
+		ClassName: Light Support
+		Factions: legobattlesking
+		BaseActor: lego_king_mcv
+		SupportActors: legobattles_ghost
+
+	StartingUnits@heavyking:
+		Class: heavy
+		ClassName: Heavy Support
+		Factions: legobattlesking
+		BaseActor: lego_king_mcv
+		SupportActors: legobattles_ghost,legobattles_ghost
+
+	StartingUnits@mcvonlywizard:
+		Class: none
+		ClassName: MCV Only
+		Factions: legobattleswizard
+		BaseActor: lego_wizard_mcv
+
+	StartingUnits@defaultwizard:
+		Class: light
+		ClassName: Light Support
+		Factions: legobattleswizard
+		BaseActor: lego_wizard_mcv
+		SupportActors: legobattles_ghost
+
+	StartingUnits@heavywizard:
+		Class: heavy
+		ClassName: Heavy Support
+		Factions: legobattleswizard
+		BaseActor: lego_wizard_mcv
+		SupportActors: legobattles_ghost,legobattles_ghost
 
 	####################################################################################################
 	#		LEGO
@@ -313,9 +222,6 @@ World:
 	####################################################################################################
 
 ^PropagandaSelfHeal:
-	GrantConditionOnPrerequisite@upsubliminal:
-		Condition: upsubliminal
-		Prerequisites: upsubliminal
 	ExternalCondition@PROPAGANDA:
 		Condition: propaganda
 		TotalCap: 1
@@ -347,24 +253,6 @@ World:
 	# GrantCondition@PROPPSI:
 	# 	Condition: prevent-mindcontrol
 	# 	RequiresCondition: propaganda
-	GrantConditionOnPrerequisite@usabombardament:
-		Condition: usabombardament
-		Prerequisites: usabombardament
-	GrantConditionOnPrerequisite@usasearchndestroy:
-		Condition: usasearchndestroy
-		Prerequisites: usasearchndestroy
-	GrantConditionOnPrerequisite@usaholdtheline:
-		Condition: usaholdtheline
-		Prerequisites: usaholdtheline
-	DamageMultiplier@usaholdtheline:
-		RequiresCondition: usaholdtheline
-		Modifier: 90
-	FirepowerMultiplier@usabombardament:
-		RequiresCondition: usabombardament
-		Modifier: 120
-	RangeMultiplier@usasearchndestroy:
-		Modifier: 120
-		RequiresCondition: usasearchndestroy
 
 ^PropagandaSelfHeallego:
 	ExternalCondition@PROPAGANDA:
@@ -409,7 +297,21 @@ World:
 		RequiresCondition: trackbuff
 		Modifier: 200
 
+^PropagandaSelfHeallegostructure:
+	ExternalCondition@MINEBUFF:
+		Condition: minebuff
+		TotalCap: 0
+	CashTricklerMultiplier@MINEBUFF:
+		RequiresCondition: minebuff
+		Modifier: 200
 
+^PropagandaSelfHeallegobuilder:
+	ExternalCondition@LOGBUFF:
+		Condition: logbuff
+		TotalCap: 0
+	SpeedMultiplier@LOGBUFF:
+		RequiresCondition: logbuff
+		Modifier: 500
 
 	####################################################################################################
 	#		INHERITABLES - BUILDING
@@ -464,6 +366,9 @@ World:
 		BeforeUnloadDelay: 0
 		AfterUnloadDelay: 0
 		LoadedCondition: loaded
+	WithCargoPipsDecoration:
+		Position: BottomLeft
+		RequiresSelection: true
 	FireWarheadsOnDeath:
 		Weapon: HeliExplode
 		EmptyWeapon: HeliExplode
@@ -870,11 +775,11 @@ astro_conyard:
 		ValidTargets: LHEROtarget
 	AttackOmni:
 		PauseOnCondition: disabled
-	Armament@primary: 
-		Weapon: HQHEROHEAL
-		TargetStances: Ally
-		ForceTargetStances: None
-		PauseOnCondition: healed && !injured
+	# Armament@primary: 
+	# 	Weapon: HQHEROHEAL
+	# 	TargetStances: Ally
+	# 	ForceTargetStances: None
+	# 	PauseOnCondition: healed && !injured
 	BaseBuilding:
 	Voiced:
 		VoiceSet: astroconyardvoice
@@ -980,6 +885,7 @@ astro_harvester:
 		VoiceSet: eharvestervoice
 
 astro_wellcap:
+	Inherits: ^PropagandaSelfHeallegostructure
 	Inherits@template: ^lego_building
 	Inherits@shape: ^2x2Shape
 	Valued:
@@ -1038,7 +944,7 @@ astro_vehiclefactory:
 		Name: Special Factory
 	Buildable:
 		Queue: Building, RABuilding
-		Prerequisites: ~astro_conyard, ~ASTRO_BIODOME, ~ASTRO_BARRACKS
+		Prerequisites: ~astro_conyard, astro_biodome, astro_barracks
 		BuildPaletteOrder: 50
 		BuildDuration: 160
 		BuildDurationModifier: 100
@@ -1252,6 +1158,7 @@ lego_astro_mcv:
 astro_builder:
 	Inherits: ^Soldier
 	Inherits: ^PropagandaSelfHeallego
+	Inherits: ^PropagandaSelfHeallegobuilder
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Inherits@selection: ^SelectableEconomicUnit
 	Inherits@harv: ^Harvester
@@ -2075,22 +1982,6 @@ astro_claw_tank:
 	Inherits@LEGOTankTRACKED: ^Walker
 	Inherits: ^MainBattleTankTemplate
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
-	# Inherits@fix: ^Repairable
-	# Inherits@2: ^IronCurtainable
-	# Inherits@rad: ^VehicleRadiation
-	# Inherits@EMP: ^UnitDisable
-	# Inherits@mag: ^Magnefreezable
-	# Inherits@heal: ^MachineShopRepairable
-	# Inherits@driver-dead: ^AffectedByDriverKill
-	# Inherits@salvage: ^GenericSalvageBonus
-	# Inherits@emergencyrepair: ^EmergencyRepairable
-	# Inherits@chrono: ^Chronoshiftable
-  # Inherits@instablow: ^Instant_Kill_Vehicle
-  # Inherits@unstableeffect: ^UnstableEffect
-  # Inherits@base-reveal: ^Base-reveal
-  # Inherits@LeechEggLayable: ^LeechEggLayable
-  # Inherits@Xmassetting: ^Xmas_setting
-  # Inherits@casinoupgrade: ^CasinoUpgradeable
 	Inherits: ^PropagandaSelfHeallego
 	Crushable:
 		WarnProbability: 0
@@ -2345,11 +2236,11 @@ lego_alien_conyard:
 		ValidTargets: LHEROtarget
 	AttackOmni:
 		PauseOnCondition: disabled
-	Armament@primary: 
-		Weapon: HQHEROHEAL
-		TargetStances: Ally
-		ForceTargetStances: None
-		PauseOnCondition: healed && !injured
+	# Armament@primary: 
+	# 	Weapon: HQHEROHEAL
+	# 	TargetStances: Ally
+	# 	ForceTargetStances: None
+	# 	PauseOnCondition: healed && !injured
 	BaseBuilding:
 	Production:
 		Produces: InfantryHero.Legobattles
@@ -2370,7 +2261,7 @@ lego_alien_conyard:
 	ProductionBar:
 		ProductionType: InfantryHero.Legobattles
 	Voiced:
-		VoiceSet: astroconyardvoice
+		VoiceSet: alien_
 	Refinery:
 		# DockAngle: 112
 		# DockOffset: 1,2
@@ -2398,7 +2289,6 @@ lego_alien_conyard:
 		Sequence: lego_production_overlay_alien
 	RenderSprites:
 		Image: alien_conyard
-
 
 lego_alien_mcv:
 	Inherits@LEGOINFANTRY: ^Soldier
@@ -2524,6 +2414,7 @@ alien_harvester:
 		VoiceSet: eharvestervoice
 
 alien_wellcap:
+	Inherits: ^PropagandaSelfHeallegostructure
 	Inherits@template: ^lego_building
 	Inherits@shape: ^2x2Shape
 	Valued:
@@ -2532,7 +2423,7 @@ alien_wellcap:
 		Name: Well Cap
 	Buildable:
 		Queue: Building, RABuilding
-		Prerequisites: ~astro_conyard
+		Prerequisites: ~lego_alien_conyard
 		BuildPaletteOrder: 40
 		BuildDuration: 120
 		BuildDurationModifier: 100
@@ -2548,7 +2439,7 @@ alien_wellcap:
 		DisplayDuration: 30
 		Interval: 200
 	Voiced:
-		VoiceSet: alienwellvoice
+		VoiceSet: alienwellcapvoice
 
 alien_vehiclefactory:
 	Inherits@template: ^lego_building
@@ -2560,7 +2451,7 @@ alien_vehiclefactory:
 		Name: Creation Pit
 	Buildable:
 		Queue: Building, RABuilding
-		Prerequisites: ~lego_alien_conyard, ~ALIEN_BIODOME, ~ALIEN_BARRACKS
+		Prerequisites: ~lego_alien_conyard, alien_biodome, alien_barracks
 		BuildPaletteOrder: 50
 		BuildDuration: 160
 		BuildDurationModifier: 100
@@ -2718,6 +2609,7 @@ alien_tower3:
 alien_builder:
 	Inherits: ^Soldier
 	Inherits: ^PropagandaSelfHeallego
+	Inherits: ^PropagandaSelfHeallegobuilder
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Inherits@selection: ^SelectableEconomicUnit
 	Inherits@harv: ^Harvester
@@ -3757,7 +3649,7 @@ lego_imperial_conyard:
 	Power:
 		Amount: 50
 	SpawnActorsOnSell:
-		ActorTypes: alien_builder
+		ActorTypes: imperial_builder
 	ScalePowerWithHealth:
 	BaseBuilding:
 	ProvidesRadar:
@@ -3771,11 +3663,11 @@ lego_imperial_conyard:
 		ValidTargets: LHEROtarget
 	AttackOmni:
 		PauseOnCondition: disabled
-	Armament@primary: 
-		Weapon: HQHEROHEAL
-		TargetStances: Ally
-		ForceTargetStances: None
-		PauseOnCondition: healed && !injured
+	# Armament@primary: 
+	# 	Weapon: HQHEROHEAL
+	# 	TargetStances: Ally
+	# 	ForceTargetStances: None
+	# 	PauseOnCondition: healed && !injured
 	BaseBuilding:
 	Production:
 		Produces: InfantryHero.Legobattles
@@ -3814,12 +3706,308 @@ lego_imperial_conyard:
 		PipCount: 10
 		Capacity: 1000
 	Voiced:
-		VoiceSet: craterbasevoice
+		VoiceSet: fortressvoice
 	ProvidesPrerequisite@buildingname:
 	WithProductionOverlay@Legoman:
 		RequiresCondition: !build-incomplete
-		Queues: Infantry, Defense
+		Queues: InfantryHero.Legobattles, Defense
 		Sequence: lego_production_overlay_human
+
+
+imperial_barracks:
+	Inherits@template: ^lego_barracks
+	Inherits@shape: ^2x2Shape
+	Tooltip:
+		Name: Imperial Barracks
+	Valued:
+		Cost: 800
+	Buildable:
+		Queue: Building, RABuilding
+		Description: Trains Imperial infantry.
+		Prerequisites: ~lego_imperial_conyard
+	SpawnActorsOnSell:
+		ActorTypes: imperial_swordsman
+	WithProductionOverlay@Legomen:
+		RequiresCondition: !build-incomplete
+		Queues: Infantry.Legobattles
+		Sequence: lego_production_overlay_human
+	Voiced:
+		VoiceSet: imperialbarracksvoice
+	ProvidesPrerequisite:
+		Prerequisite: IMPERIAL_BARRACKS
+	RenderSprites:
+		Image: imperial_barracks
+
+imperial_quarters:
+	Inherits@template: ^lego_building
+	Inherits@shape: ^2x2Shape
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Quarters
+	Buildable:
+		Queue: Building, RABuilding
+		Prerequisites: ~lego_imperial_conyard
+		BuildPaletteOrder: 10
+		BuildDuration: 160
+		BuildDurationModifier: 100
+		Description: Generator, build to keep producing units.
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+		LocalCenterOffset: 0,0,0
+	Health:
+		HP: 65000
+	Power:
+		Amount: 300
+	Voiced:
+		VoiceSet: farmvoice
+	ProvidesPrerequisite:
+		Prerequisite: IMPERIAL_QUARTERS
+	RenderSprites:
+		Image: imperial_quarters
+
+imperial_lumber_mill:
+	Inherits@ref: ^Refinery
+	Inherits@template: ^lego_building
+	Inherits@shape: ^2x2Shape
+	#Inherits@CPQWP: ^CPQCondition 
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Lumber Mill
+	Health:
+		HP: 65000
+	Buildable:
+		Queue: Building, RABuilding
+		Prerequisites: ~lego_imperial_conyard
+		BuildPaletteOrder: 30
+		BuildDuration: 160
+		BuildDurationModifier: 100
+		Description: Resource dropoff structure.
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+		LocalCenterOffset: 0,0,0
+	Refinery:
+		DockAngle: 112
+		DockOffset: 1,2 
+		IsDragRequired: False
+		DragOffset: -554,512,0
+		DragLength: 12
+		TickRate: 15
+	DockHost:
+		DockAngle: 112
+		DockOffset: 0, 2c512, 0
+		IsDragRequired: False
+		DragOffset: -554,512,0
+		DragLength: 12
+		TickRate: 15
+	StoresResources:
+		PipColor: yellow
+		PipCount: 5
+		Capacity: 1000
+	ResourcePurifier:
+		Modifier: 5
+	FreeActor@1:
+		Actor: imperial_builder
+	FreeActor@2:
+		Actor: imperial_builder
+	Voiced:
+		VoiceSet: lumbervoice
+
+imperial_quarry:
+	Inherits: ^PropagandaSelfHeallegostructure
+	Inherits@template: ^lego_building
+	Inherits@shape: ^2x2Shape
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Quarry
+	Buildable:
+		Queue: Building, RABuilding
+		Prerequisites: ~lego_imperial_conyard
+		BuildPaletteOrder: 40
+		BuildDuration: 120
+		BuildDurationModifier: 100
+		Description: Generates income.
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+		LocalCenterOffset: 0,0,0
+	Health:
+		HP: 65000
+	CashTrickler:
+		Amount: 300
+		DisplayDuration: 30
+		Interval: 200
+	Voiced:
+		VoiceSet: minevoice
+
+imperial_vehiclefactory:
+	Inherits@template: ^lego_building
+	Inherits@factory: ^lego_vehiclefactory
+	Inherits@shape: ^2x2Shape
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: DryDock
+	Buildable:
+		Queue: Building, RABuilding
+		Prerequisites: ~lego_imperial_conyard, imperial_quarters, imperial_barracks
+		BuildPaletteOrder: 50
+		BuildDuration: 160
+		BuildDurationModifier: 100
+		Description: Trains Imperial special units.
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+		LocalCenterOffset: 0,0,0
+	WithProductionOverlay@Legospecial:
+		RequiresCondition: !build-incomplete
+		Queues: Vehicle.Legobattles
+		Sequence: lego_production_overlay_brick
+		Palette: player
+		IsPlayerPalette: True
+	SpawnActorsOnSell:
+		ActorTypes: imperial_swordsman
+	Health:
+		HP: 65000
+	Voiced:
+		VoiceSet: drydockvoice
+
+imperial_tower:
+	Inherits: ^Defense
+	Inherits@lego_tower: ^lego_tower
+	# Don't declare AutoTarget stuff before AttackBase stuff or an annoying bug with WithSpriteBody will occur.
+	#Inherits@AUTOTARGET: ^AutoTargetAll
+	Tooltip:
+		Name: Imperial Tower
+	Buildable:
+		Prerequisites: ~lego_imperial_conyard
+		Queue: Defence, RADefence
+		Description: Upgradable defense building\nDetector
+	Voiced:
+		VoiceSet: spirevoice
+	Armament@PRIMARY:
+		Weapon: piratelegoranged
+		RequiresCondition: !imperial_tower2upg && !imperial_tower3upg
+	Armament@AA:
+		Weapon: piratelegoranged
+		RequiresCondition: !imperial_tower2upg && !imperial_tower3upg
+	Armament@guardtower:
+		Weapon: specialrangedstar
+		RequiresCondition: imperial_tower2upg && !imperial_tower3upg
+	Armament@guardtoweraa:
+		Weapon: specialrangedstar
+		RequiresCondition: imperial_tower2upg && !imperial_tower3upg
+	Armament@g3tower:
+		Weapon: piratespecialrangedball
+		RequiresCondition: imperial_tower2upg && imperial_tower3upg
+	Armament@3toweraa:
+		Weapon: piratespecialrangedball
+		RequiresCondition: imperial_tower2upg && imperial_tower3upg
+	AttackOmni:
+		PauseOnCondition: disabled
+	WithRangeCircle:
+		Range: 3072
+		# RequiresCondition: imperial_tower2upg
+	Inherits@AUTOTARGET: ^AutoTargetAll
+	### Upgrade stuff ###
+	WithSpriteBody:
+		RequiresCondition: !imperial_towerupg && !imperial_tower2upg
+		Sequence: imperial_tower
+	Production@guardtower:
+		Produces: Towerupgrade
+		RequiresCondition: !imperial_tower2upg && !imperial_tower3upg
+	ProductionBar@guardtower:
+		ProductionType: Towerupgrade
+		RequiresCondition: !imperial_tower2upg && !imperial_tower3upg
+	ProductionQueue@guardtower:
+		Type: Towerupgrade
+		DisplayOrder: 0
+		Group: Addon
+		LowPowerModifier: 200
+		QueueLimit: 1
+		ItemLimit: 1
+		RequiresCondition: !imperial_tower2upg && !imperial_tower3upg
+	GrantConditionOnProduction@guardtower:
+		Condition: imperial_tower2upg
+		Actors: imperial_tower2
+	WithSpriteBody@guardtower:
+		Sequence: imperial_tower2
+		RequiresCondition: imperial_tower2upg && !imperial_tower3upg
+	DamageMultiplier@guardtower:
+		Modifier: 77
+		RequiresCondition: imperial_tower2upg
+	###
+	Production@3tower:
+		Produces: Towerupgrade2
+		RequiresCondition: imperial_tower2upg && !imperial_tower3upg
+	ProductionBar@3tower:
+		ProductionType: Towerupgrade2
+	ProductionQueue@3tower:
+		Type: Towerupgrade2
+		DisplayOrder: 0
+		Group: Addon
+		LowPowerModifier: 200
+		QueueLimit: 1
+		ItemLimit: 1
+	GrantConditionOnProduction@3tower:
+		Condition: imperial_tower3upg
+		Actors: imperial_tower3
+	WithSpriteBody@3tower:
+		Sequence: imperial_tower3
+		RequiresCondition: imperial_tower3upg
+	DamageMultiplier@3tower:
+		Modifier: 87
+		RequiresCondition: imperial_tower3upg
+	ActorPreviewPlaceBuildingPreview:
+		Palette: player
+	Building:
+		BuildSounds: imperialtowervoice
+
+imperial_tower2:
+	Tooltip:
+		Name: Imperial Tower II
+	Buildable:
+		BuildPaletteOrder: 1
+		RequiresCondition: !imperial_tower2upg && !imperial_tower3upg
+		Prerequisites: ~lego_imperial_conyard
+		Queue: Towerupgrade
+		BuildDuration: 3500
+		BuildDurationModifier: 12
+		Description: Upgraded guard tower, attacks land, sea, and air.
+	Valued:
+		Cost: 800
+	Interactable:
+	AlwaysVisible:
+	KillsSelf:
+		RemoveInstead: true
+	ProvidesPrerequisite@buildingname:
+	RenderSprites:
+		Image: imperial_tower2
+
+imperial_tower3:
+	Tooltip:
+		Name: Imperial Tower III
+	Buildable:
+		BuildPaletteOrder: 1
+		Prerequisites: ~lego_imperial_conyard
+		RequiresCondition: imperial_tower2upg && !imperial_tower3upg
+		Queue: Towerupgrade2
+		BuildDuration: 3500
+		BuildDurationModifier: 12
+		Description: Further upgraded Guard tower, attacks land, sea, and air.
+	Valued:
+		Cost: 800
+	Interactable:
+	AlwaysVisible:
+	KillsSelf:
+		RemoveInstead: true
+	ProvidesPrerequisite@buildingname:
+	RenderSprites:
+		Image: imperial_tower3
 
 ####################################################################################################
 #		Imperial - Units
@@ -3840,8 +4028,5042 @@ lego_imperial_mcv:
 		Facing: 108
 		TransformSounds:
 	Voiced:
-		VoiceSet: alienbuildervoice
+		VoiceSet: imperialbuildervoice
 	RenderSprites:
 		Image: lego_imperial_mcv
 	WithInfantryBody:
 		-IdleSequences: idle1,idle2,idle3,idle4
+
+imperial_builder:
+	Inherits: ^Soldier
+	Inherits: ^PropagandaSelfHeallego
+	Inherits: ^PropagandaSelfHeallegobuilder
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@selection: ^SelectableEconomicUnit
+	Inherits@harv: ^Harvester
+	Inherits@worker: ^LBWorker
+	AutoTargetPriority@Repair:
+		ValidTargets: Repair, Repairing
+		ValidStances: Ally
+		Priority: 2
+	Tooltip:
+		Name: Builder
+	Buildable:
+		Queue: InfantryHero.Legobattles
+		Prerequisites: ~lego_imperial_conyard
+		BuildPaletteOrder: 5
+		BuildDuration: 250
+		Description: Basic Harvester. Can repair.
+	StoresResources:
+		Capacity: 5
+	Armament@repair:
+		Name: repair
+		Weapon: builderrepair
+		TargetStances: Ally
+		ForceTargetStances: Ally
+		LocalOffset: 240,160,240
+	Armament@primary:
+		Name: primary
+		Weapon: troopermelee
+		ForceTargetStances: Enemy, Neutral
+	Captures:
+		CaptureTypes: building, tech
+		PlayerExperience: 500
+		CaptureDelay: 375
+		ConsumedByCapture: False
+		EnterCursor: ability
+		EnterBlockedCursor: move-blocked
+	Valued:
+		Cost: 50
+	Mobile:
+		Speed: 50
+	Health:
+		HP: 30000
+	Power:
+		Amount: -5
+	ReloadDelayMultiplier@cow:
+		Modifier: 60
+	AttackFrontal:
+		Armaments: primary, repair
+	WithHarvesterSpriteBody:
+		ImageByFullness: imperial_builder, imperial_builder
+	WithAttackAnimation:
+		Sequence: harvest
+	WithMoveAnimation:
+		MoveSequence: run
+	-DamagedByTerrain:
+	-WithInfantryBody:
+	-WithDeathAnimation:
+	WithHarvestAnimation:
+		HarvestSequence: harvest
+	Voiced:
+		VoiceSet: imperialbuildervoice
+
+imperial_swordsman:
+	Inherits@Soldier: ^Soldier
+	Inherits: ^HeavyInfantryTemplate
+	Inherits: ^PropagandaSelfHeallego
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Tooltip:
+		Name: Swordsman
+	Buildable:
+		Queue: Infantry.Legobattles
+		BuildPaletteOrder: 1
+		BuildDuration: 100
+		Prerequisites: ~imperial_barracks
+		Description: Basic Melee Infantry
+	Armament:
+		Weapon: swordsmanmelee
+	Valued:
+		Cost: 100
+	Mobile:
+		Speed: 30
+	Health:
+		HP: 31000
+	ReloadDelayMultiplier@cow:
+		Modifier: 60
+	Voiced:
+		VoiceSet: swordsmanvoice
+	WithInfantryBody:
+		-IdleSequences: idle1,idle2,idle3,idle4
+	Power:
+		Amount: -10
+	WithDeathAnimation:
+		UseDeathTypeSuffix: false
+
+imperial_rifleman:
+	Inherits@Soldier: ^Soldier
+	Inherits: ^HeavyInfantryTemplate
+	Inherits: ^PropagandaSelfHeallego
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Tooltip:
+		Name: Rifleman
+	Buildable:
+		Queue: Infantry.Legobattles
+		BuildPaletteOrder: 2
+		BuildDuration: 250
+		Prerequisites: ~imperial_barracks
+		Description: Basic Ranged Infantry
+	Armament:
+		Weapon: piratelegoranged
+	Armament@aa:
+		Weapon: piratelegoranged
+	Valued:
+		Cost: 150
+	Mobile:
+		Speed: 30
+	Health:
+		HP: 18000
+	ReloadDelayMultiplier@cow:
+		Modifier: 60
+	Power:
+		Amount: -10
+	Voiced:
+		VoiceSet: riflemanvoice
+	WithInfantryBody:
+		-IdleSequences: idle1,idle2,idle3,idle4
+	WithDeathAnimation:
+		UseDeathTypeSuffix: false
+
+imperial_cavalry:
+	Inherits@Soldier: ^Soldier
+	Inherits: ^HeavyInfantryTemplate
+	Inherits: ^PropagandaSelfHeallego
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Tooltip:
+		Name: Cavalry
+	Buildable:
+		Queue: Infantry.Legobattles
+		BuildPaletteOrder: 4
+		BuildDuration: 300
+		Prerequisites: ~imperial_barracks
+		Description: Heavy Melee Infantry
+	Armament:
+		Weapon: cavalrymelee
+	Valued:
+		Cost: 250
+	Mobile:
+		Speed: 30
+	Health:
+		HP: 40000
+	ReloadDelayMultiplier@cow:
+		Modifier: 60
+	Power:
+		Amount: -15
+	Voiced:
+		VoiceSet: cavalryvoice
+	WithInfantryBody:
+		-IdleSequences: idle1,idle2,idle3,idle4
+	WithDeathAnimation:
+		UseDeathTypeSuffix: false
+
+imperial_ninja:
+	Inherits@Soldier: ^Soldier
+	Inherits: ^HeavyInfantryTemplate
+	Inherits: ^PropagandaSelfHeallego
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Tooltip:
+		Name: Ninja
+	Buildable:
+		Queue: Infantry.Legobattles
+		BuildPaletteOrder: 3
+		BuildDuration: 350
+		Prerequisites: ~imperial_barracks
+		Description: Harrying Ranged Infantry.
+	Armament:
+		Weapon: piratelegorangedshuriken
+	Armament@aa:
+		Weapon: piratelegorangedshuriken
+	Valued:
+		Cost: 100
+	Mobile:
+		Speed: 60
+	Health:
+		HP: 20000
+	ReloadDelayMultiplier@cow:
+		Modifier: 60
+	Power:
+		Amount: -10
+	Voiced:
+		VoiceSet: ninjavoice
+	WithInfantryBody:
+		-IdleSequences: idle1,idle2,idle3,idle4
+	WithDeathAnimation:
+		UseDeathTypeSuffix: false
+
+imperial_culverin:
+	Inherits@LEGOTankTRACKED: ^Tank
+	Inherits: ^MainBattleTankTemplate
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits: ^PropagandaSelfHeallego
+	Crushable:
+		WarnProbability: 0
+		CrushClasses: vehicle
+		RequiresCondition: !invulnerability
+	CaptureManager:
+		BeingCapturedCondition: being-captured
+	Capturable:
+		Types: vehicle
+		ValidStances: Enemy, Neutral
+		RequiresCondition: !untargetable
+	-Huntable:
+	Selectable:
+		Bounds: 1280, 1280, 0, 0
+		DecorationBounds: 1280, 1280, 0, 0
+	Tooltip:
+		Name: Culverin
+	Buildable:
+		Queue: Vehicle.Legobattles
+		BuildPaletteOrder: 60
+		BuildDurationModifier: 50
+		Prerequisites: ~imperial_vehiclefactory
+		Description: Assault vehicle.
+	Power:
+		Amount: -20
+	Health:
+		HP: 90000
+	Armament:
+		Weapon: piratespecialrangedballimp
+	Armor:
+		Type: Medium
+	AttackFrontal:
+		FacingTolerance: 2
+		PauseOnCondition: disabled
+	Valued:
+		Cost: 700
+	Mobile:
+		Speed: 30
+		SharesCell: False
+	RevealsShroud:
+		Range: 9c0
+		Type: GroundPosition
+	RenderSprites:
+		Scale: 2
+	Health:
+		HP: 95000
+	ReloadDelayMultiplier@cow:
+		Modifier: 60
+	Voiced:
+		VoiceSet: culverinvoice
+
+imperial_flying_ship:
+	Inherits@LEGOAirUnit: ^lego_airunit
+	Inherits@LEGOTemplate: ^lego_transport
+	Inherits@SPACE: ^SpaceshipTemplate
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits: ^PropagandaSelfHeallego
+	Tooltip:
+		Name: Ninja Flying Ship
+	Valued:
+		Cost: 700
+	Health:
+		HP: 97000
+	Armament:
+		Weapon: piratespecialrangedarrow
+	Armor:
+		Type: Medium
+	AttackFrontal:
+		FacingTolerance: 2
+		PauseOnCondition: disabled
+	Aircraft:
+		InitialFacing: 224
+		TurnSpeed: 7
+		Speed: 165
+		IdealSeparation: 1c0
+		RepulsionSpeed: 10
+	Buildable:
+		Prerequisites: ~imperial_vehiclefactory
+		Queue: Vehicle.Legobattles
+		Description: Flying Patrol unit.\nDetector.
+	Power:
+		Amount: -75
+	DetectCloaked:
+		CloakTypes: Cloak, Underwater
+		Range: 9c0
+	RenderDetectionCircle:
+	Voiced:
+		VoiceSet: ninjaflyingshipvoice
+	Selectable:
+		DecorationBounds: 1280, 1280, 0, 0
+	RenderSprites:
+		Scale: 0.7
+
+imperial_governor_broadside:
+	Inherits@Soldier: ^Soldier
+	Inherits: ^HeroInfantryTemplate
+	Inherits: ^PropagandaSelfHeallego
+	Inherits@LEGOMAGETemplate: ^lego_mage
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Tooltip:
+		Name: Governor Broadside
+	Buildable:
+		Queue: InfantryHero.Legobattles
+		BuildPaletteOrder: 60
+		BuildDuration: 250
+		Prerequisites: ~lego_imperial_conyard
+		Description: Stalwart Melee Hero.
+		BuildLimit: 1
+	Valued:
+		Cost: 500
+	Mobile:
+		Speed: 60
+	Health:
+		HP: 100000
+	ReloadDelayMultiplier@cow:
+		Modifier: 60
+	Voiced:
+		VoiceSet: governorbroadsidevoice
+	Targetable@LEGOHERO:
+		TargetTypes: LHEROtarget
+	ProximityExternalCondition@PROPAGANDA:
+		Range: 6c0
+		Condition: propaganda
+		RequiresCondition: !disabled
+	WithRangeCircle:
+		Range: 6c0
+		Type: propaganda
+		RequiresCondition: !disabled
+	WithInfantryBody:
+		-IdleSequences: idle1,idle2,idle3,idle4
+	WithDeathAnimation:
+		UseDeathTypeSuffix: false
+	#Buff Spells
+	GrantCondition@DEFENSEBUFFSELF:
+		Condition: defensebuff
+		RequiresCondition: FSD_cond_1
+	ProximityExternalCondition@DEFENSEBUFFOTHER:
+		Condition: defensebuff
+		Range: 6c0
+		RequiresCondition: FSD_cond_1 && !disabled
+	GrantCondition@DAMAGEBUFFSELF:
+		Condition: damagebuff
+		RequiresCondition: FSD_cond_2
+	ProximityExternalCondition@DAMAGEBUFFOTHER:
+		Condition: damagebuff
+		Range: 6c0
+		RequiresCondition: FSD_cond_2 && !disabled
+	#Spells
+	AttackFrontal:
+		Armaments: primary, defense, damage, crystalcache, artillery
+	AutoTargetPriority@DEFAULT:
+		RequiresCondition: !stance-attackanything && !assault-move && !FSD_cond_2
+	AutoTargetPriority@ATTACKANYTHING:
+		RequiresCondition: (stance-attackanything || assault-move) && !FSD_cond_2
+	AutoTargetPriority@ATTACKANYTHING_HASTE:
+		RequiresCondition: (stance-attackanything || assault-move) && FSD_cond_2
+		ValidTargets: haste_target
+		InvalidTargets: NoAutoTarget
+	Armament:
+		Name: primary
+		Weapon: governormelee
+		FireDelay: 7
+		RequiresCondition: (FSD_cond_1 && !wc2_cond_bot_owner) || (FSD_cond_1_AI && wc2_cond_bot_owner) || (FSD_cond_2) 
+	Armament@DEFENSE:
+		Name: defense
+		Weapon: governormelee
+		FireDelay: 7
+		TargetStances: Enemy
+		GrantCondition: 
+			Condition: defensebuff
+		RequiresCondition: FSD_cond_2
+		PauseOnCondition: mana < 10
+	Armament@DAMAGE:
+		Name: damage
+		Weapon: governormelee
+		FireDelay: 7
+		TargetStances: Enemy
+		GrantCondition: 
+			Condition: damagebuff
+		RequiresCondition: FSD_cond_2
+		PauseOnCondition: mana < 10
+	Armament@CRYSTALCACHE:
+		Name: crystalcache
+		Weapon: crystalcache
+		AmmoUsage: 55
+		FireDelay: 7
+		RequiresCondition: FSD_cond_3
+		PauseOnCondition: mana < 25
+	Armament@ARTILLERY:
+		Name: artillery
+		Weapon: artillery
+		AmmoUsage: 150
+		FireDelay: 7
+		RequiresCondition: FSD_cond_4
+		PauseOnCondition: mana < 50
+	# "Mana" (AmmoPool)
+	GrantConditionOnAttack@DEFENSE:
+		Condition: cond_defense_drain
+		ArmamentNames: deathcoil
+		MaximumInstances: 1
+		RevokeDelay: 2
+	GrantConditionOnAttack@DAMAGE:
+		Condition: cond_damage_drain
+		ArmamentNames: damage
+		MaximumInstances: 1
+		RevokeDelay: 2
+	GrantConditionOnAttack@CRYSTALCACHE:
+		Condition: cond_crystalcache_drain
+		ArmamentNames: crystalcache
+		MaximumInstances: 1
+		RevokeDelay: 2
+	GrantConditionOnAttack@ARTILLERY:
+		Condition: cond_artillery_drain
+		ArmamentNames: artillery
+		MaximumInstances: 1
+		RevokeDelay: 2
+	AmmoPool:
+		Armaments: primary, defense, damage, crystalcache, artillery
+		Ammo: 255
+		PipCount: 10
+		AmmoCondition: mana
+	ReloadAmmoPool@PassiveRegen:
+		Delay: 10
+		Count: 1
+		ShowSelectionBar: false
+	ReloadAmmoPool@DEFENSE:
+		Delay: 1
+		Count: -100
+		RequiresCondition: cond_defense_drain
+	ReloadAmmoPool@HASTE:
+		Delay: 1
+		Count: -50
+		RequiresCondition: cond_damage_drain
+	ReloadAmmoPool@CRYSTALCACHE:
+		Delay: 1
+		Count: -25
+		RequiresCondition: cond_crystalcache_drain
+	ReloadAmmoPool@ARTILLERY:
+		Delay: 1
+		Count: -50
+		RequiresCondition: cond_artillery_drain
+
+	### Visual indicator for mana
+	WithAmmoPipsDecoration:
+		PipCount: 4
+		Position: TopLeft
+		FullSequence: pip-green
+		AmmoPools:
+
+	### Visual indicator of mode ###
+	WithDecoration@Mode_Armor:
+		Sequence: armor_spell_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_1
+	WithDecoration@Mode_Damage:
+		Sequence: damage_spell_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_2 
+	WithDecoration@Mode_Junglegrowth:
+		Sequence: jungle_spell_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_3
+	WithDecoration@Mode_Artillery:
+		Sequence: cannon_spell_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_4
+	
+	### Starting spell randomizer for AI.
+	GrantConditionOnBotOwner@wc2magebotcontrol:
+		Condition: wc2_cond_bot_owner
+		Bots: easiest, easy, medium, hard, brutal, challenger, unbeatable, cameogod, airforce, defenseai
+	GrantRandomCondition@wc2magebotcontrol:
+		Conditions: FSD_cond_1_AI, FSD_cond_2_AI, FSD_cond_3_AI, FSD_cond_4_AI
+	# FSD_Cond_1 is always granted at start due to the four state deploy.
+	GrantCondition@Cond2AI:
+		Condition: FSD_cond_2
+		RequiresCondition: wc2_cond_bot_owner && FSD_cond_2_AI
+	GrantCondition@Cond3AI:
+		Condition: FSD_cond_3
+		RequiresCondition: wc2_cond_bot_owner && FSD_cond_3_AI
+	GrantCondition@Cond4AI:
+		Condition: FSD_cond_4
+		RequiresCondition: wc2_cond_bot_owner && FSD_cond_4_AI
+
+imperial_camilla:
+	Inherits@Soldier: ^Soldier
+	Inherits: ^HeroInfantryTemplate
+	Inherits: ^PropagandaSelfHeallego
+	Inherits@LEGOMAGETemplate: ^lego_mage
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Tooltip:
+		Name: Camilla
+	Buildable:
+		Queue: InfantryHero.Legobattles
+		BuildPaletteOrder: 60
+		BuildDuration: 250
+		Prerequisites: ~lego_imperial_conyard
+		Description: Stalwart Melee Hero.
+		BuildLimit: 1
+	Valued:
+		Cost: 500
+	Mobile:
+		Speed: 60
+	Health:
+		HP: 100000
+	ReloadDelayMultiplier@cow:
+		Modifier: 60
+	Voiced:
+		VoiceSet: camillavoice
+	Targetable@LEGOHERO:
+		TargetTypes: LHEROtarget
+	ProximityExternalCondition@PROPAGANDA:
+		Range: 6c0
+		Condition: propaganda
+		RequiresCondition: !disabled
+	WithRangeCircle:
+		Range: 6c0
+		Type: propaganda
+		RequiresCondition: !disabled
+	WithInfantryBody:
+		-IdleSequences: idle1,idle2,idle3,idle4
+	WithDeathAnimation:
+		UseDeathTypeSuffix: false
+	#Buff Spells
+	GrantCondition@DEFENSEBUFFSELF:
+		Condition: defensebuff
+		RequiresCondition: FSD_cond_1
+	ProximityExternalCondition@DEFENSEBUFFOTHER:
+		Condition: defensebuff
+		Range: 6c0
+		RequiresCondition: FSD_cond_1 && !disabled
+	GrantCondition@DAMAGEBUFFSELF:
+		Condition: damagebuff
+		RequiresCondition: FSD_cond_2
+	ProximityExternalCondition@DAMAGEBUFFOTHER:
+		Condition: damagebuff
+		Range: 6c0
+		RequiresCondition: FSD_cond_2 && !disabled
+	#Spells
+	AttackFrontal:
+		Armaments: primary, defense, damage, crystalcache, artillery
+	AutoTargetPriority@DEFAULT:
+		RequiresCondition: !stance-attackanything && !assault-move && !FSD_cond_2
+	AutoTargetPriority@ATTACKANYTHING:
+		RequiresCondition: (stance-attackanything || assault-move) && !FSD_cond_2
+	AutoTargetPriority@ATTACKANYTHING_HASTE:
+		RequiresCondition: (stance-attackanything || assault-move) && FSD_cond_2
+		ValidTargets: haste_target
+		InvalidTargets: NoAutoTarget
+	Armament:
+		Name: primary
+		Weapon: camillamelee
+		FireDelay: 7
+		RequiresCondition: (FSD_cond_1 && !wc2_cond_bot_owner) || (FSD_cond_1_AI && wc2_cond_bot_owner) || (FSD_cond_2) 
+	Armament@DEFENSE:
+		Name: defense
+		Weapon: camillamelee
+		FireDelay: 7
+		TargetStances: Enemy
+		GrantCondition: 
+			Condition: defensebuff
+		RequiresCondition: FSD_cond_2
+		PauseOnCondition: mana < 10
+	Armament@DAMAGE:
+		Name: damage
+		Weapon: camillamelee
+		FireDelay: 7
+		TargetStances: Enemy
+		GrantCondition: 
+			Condition: damagebuff
+		RequiresCondition: FSD_cond_2
+		PauseOnCondition: mana < 10
+	Armament@CRYSTALCACHE:
+		Name: crystalcache
+		Weapon: crystalcache
+		AmmoUsage: 55
+		FireDelay: 7
+		RequiresCondition: FSD_cond_3
+		PauseOnCondition: mana < 25
+	Armament@ARTILLERY:
+		Name: artillery
+		Weapon: artillery
+		AmmoUsage: 150
+		FireDelay: 7
+		RequiresCondition: FSD_cond_4
+		PauseOnCondition: mana < 50
+	# "Mana" (AmmoPool)
+	GrantConditionOnAttack@DEFENSE:
+		Condition: cond_defense_drain
+		ArmamentNames: deathcoil
+		MaximumInstances: 1
+		RevokeDelay: 2
+	GrantConditionOnAttack@DAMAGE:
+		Condition: cond_damage_drain
+		ArmamentNames: damage
+		MaximumInstances: 1
+		RevokeDelay: 2
+	GrantConditionOnAttack@CRYSTALCACHE:
+		Condition: cond_crystalcache_drain
+		ArmamentNames: crystalcache
+		MaximumInstances: 1
+		RevokeDelay: 2
+	GrantConditionOnAttack@ARTILLERY:
+		Condition: cond_artillery_drain
+		ArmamentNames: artillery
+		MaximumInstances: 1
+		RevokeDelay: 2
+	AmmoPool:
+		Armaments: primary, defense, damage, crystalcache, artillery
+		Ammo: 255
+		PipCount: 10
+		AmmoCondition: mana
+	ReloadAmmoPool@PassiveRegen:
+		Delay: 10
+		Count: 1
+		ShowSelectionBar: false
+	ReloadAmmoPool@DEFENSE:
+		Delay: 1
+		Count: -100
+		RequiresCondition: cond_defense_drain
+	ReloadAmmoPool@HASTE:
+		Delay: 1
+		Count: -50
+		RequiresCondition: cond_damage_drain
+	ReloadAmmoPool@CRYSTALCACHE:
+		Delay: 1
+		Count: -25
+		RequiresCondition: cond_crystalcache_drain
+	ReloadAmmoPool@ARTILLERY:
+		Delay: 1
+		Count: -50
+		RequiresCondition: cond_artillery_drain
+
+	### Visual indicator for mana
+	WithAmmoPipsDecoration:
+		PipCount: 4
+		Position: TopLeft
+		FullSequence: pip-green
+		AmmoPools:
+
+	### Visual indicator of mode ###
+	WithDecoration@Mode_Armor:
+		Sequence: armor_spell_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_1
+	WithDecoration@Mode_Damage:
+		Sequence: damage_spell_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_2 
+	WithDecoration@Mode_Junglegrowth:
+		Sequence: jungle_spell_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_3
+	WithDecoration@Mode_Artillery:
+		Sequence: cannon_spell_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_4
+
+	### Starting spell randomizer for AI.
+	GrantConditionOnBotOwner@wc2magebotcontrol:
+		Condition: wc2_cond_bot_owner
+		Bots: easiest, easy, medium, hard, brutal, challenger, unbeatable, cameogod, airforce, defenseai
+	GrantRandomCondition@wc2magebotcontrol:
+		Conditions: FSD_cond_1_AI, FSD_cond_2_AI, FSD_cond_3_AI, FSD_cond_4_AI
+	# FSD_Cond_1 is always granted at start due to the four state deploy.
+	GrantCondition@Cond2AI:
+		Condition: FSD_cond_2
+		RequiresCondition: wc2_cond_bot_owner && FSD_cond_2_AI
+	GrantCondition@Cond3AI:
+		Condition: FSD_cond_3
+		RequiresCondition: wc2_cond_bot_owner && FSD_cond_3_AI
+	GrantCondition@Cond4AI:
+		Condition: FSD_cond_4
+		RequiresCondition: wc2_cond_bot_owner && FSD_cond_4_AI
+
+imperial_ninja_master:
+	Inherits@Soldier: ^Soldier
+	Inherits: ^HeroInfantryTemplate
+	Inherits: ^PropagandaSelfHeallego
+	Inherits@LEGOMAGETemplate: ^lego_mage
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Tooltip:
+		Name: Ninja Master
+	Buildable:
+		Queue: InfantryHero.Legobattles
+		BuildPaletteOrder: 60
+		BuildDuration: 250
+		Prerequisites: ~lego_imperial_conyard
+		Description: Stalwart Melee Hero.
+		BuildLimit: 1
+	Valued:
+		Cost: 500
+	Mobile:
+		Speed: 60
+	Health:
+		HP: 100000
+	ReloadDelayMultiplier@cow:
+		Modifier: 60
+	Voiced:
+		VoiceSet: ninjamastervoice
+	Targetable@LEGOHERO:
+		TargetTypes: LHEROtarget
+	ProximityExternalCondition@PROPAGANDA:
+		Range: 6c0
+		Condition: propaganda
+		RequiresCondition: !disabled
+	WithRangeCircle:
+		Range: 6c0
+		Type: propaganda
+		RequiresCondition: !disabled
+	WithInfantryBody:
+		-IdleSequences: idle1,idle2,idle3,idle4
+	WithDeathAnimation:
+		UseDeathTypeSuffix: false
+	PortableChronoCA:
+		ChargeDelay: 20
+		HasDistanceLimit: false
+		FlashScreen: false
+		ChronoshiftSound: teleport.wav
+		RequiresCondition: FSD_cond_3
+	#Buff Spells
+	GrantCondition@SPEEDBUFFSELF:
+		Condition: speedbuff
+		RequiresCondition: FSD_cond_1
+	ProximityExternalCondition@SPEEDBUFFOTHER:
+		Condition: speedbuff
+		Range: 6c0
+		RequiresCondition: FSD_cond_1 && !disabled
+	GrantCondition@DAMAGEBUFFSELF:
+		Condition: damagebuff
+		RequiresCondition: FSD_cond_2
+	ProximityExternalCondition@DAMAGEBUFFOTHER:
+		Condition: damagebuff
+		Range: 6c0
+		RequiresCondition: FSD_cond_2 && !disabled
+	#Spells
+	AttackFrontal:
+		Armaments: primary, speed, damage, teleport, arrowtrigger
+	AutoTargetPriority@DEFAULT:
+		RequiresCondition: !stance-attackanything && !assault-move && !FSD_cond_2
+	AutoTargetPriority@ATTACKANYTHING:
+		RequiresCondition: (stance-attackanything || assault-move) && !FSD_cond_2
+	AutoTargetPriority@ATTACKANYTHING_HASTE:
+		RequiresCondition: (stance-attackanything || assault-move) && FSD_cond_2
+		ValidTargets: haste_target
+		InvalidTargets: NoAutoTarget
+	Armament:
+		Name: primary
+		Weapon: ninjamastermelee
+		FireDelay: 7
+		RequiresCondition: (FSD_cond_1 && !wc2_cond_bot_owner) || (FSD_cond_1_AI && wc2_cond_bot_owner) || (FSD_cond_2) 
+	Armament@SPEED:
+		Name: speed
+		Weapon: ninjamastermelee
+		FireDelay: 7
+		TargetStances: Enemy
+		GrantCondition: 
+			Condition: speedbuff
+		RequiresCondition: FSD_cond_1
+		PauseOnCondition: mana < 10
+	Armament@DAMAGE:
+		Name: damage
+		Weapon: ninjamastermelee
+		FireDelay: 7
+		TargetStances: Enemy
+		GrantCondition: 
+			Condition: damagebuff
+		RequiresCondition: FSD_cond_2
+		PauseOnCondition: mana < 10
+	Armament@TELEPORT:
+		Name: teleport
+		Weapon: ninjamastermelee
+		AmmoUsage: 30
+		FireDelay: 7
+		RequiresCondition: FSD_cond_3
+		PauseOnCondition: mana < 25
+	Armament@ARROWTRIGGER:
+		Name: arrowtrigger
+		Weapon: arrowtrigger
+		AmmoUsage: 150
+		FireDelay: 7
+		RequiresCondition: FSD_cond_4
+		PauseOnCondition: mana < 50
+	# "Mana" (AmmoPool)
+	GrantConditionOnAttack@SPEED:
+		Condition: cond_speed_drain
+		ArmamentNames: speed
+		MaximumInstances: 1
+		RevokeDelay: 2
+	GrantConditionOnAttack@DAMAGE:
+		Condition: cond_damage_drain
+		ArmamentNames: damage
+		MaximumInstances: 1
+		RevokeDelay: 2
+	GrantConditionOnAttack@TELEPORT:
+		Condition: cond_teleport_drain
+		ArmamentNames: teleport
+		MaximumInstances: 1
+		RevokeDelay: 2
+	GrantConditionOnAttack@ARROWTRIGGER:
+		Condition: cond_arrowtrigger_drain
+		ArmamentNames: arrowtrigger
+		MaximumInstances: 1
+		RevokeDelay: 2
+	AmmoPool:
+		Armaments: primary, speed, damage, teleport, arrowtrigger
+		Ammo: 255
+		PipCount: 10
+		AmmoCondition: mana
+	ReloadAmmoPool@PassiveRegen:
+		Delay: 10
+		Count: 1
+		ShowSelectionBar: false
+	ReloadAmmoPool@SPEED:
+		Delay: 1
+		Count: -100
+		RequiresCondition: cond_speed_drain
+	ReloadAmmoPool@DAMAGE:
+		Delay: 1
+		Count: -50
+		RequiresCondition: cond_damage_drain
+	ReloadAmmoPool@TELEPORT:
+		Delay: 1
+		Count: -25
+		RequiresCondition: cond_teleport_drain
+	ReloadAmmoPool@ARROWTRIGGER:
+		Delay: 1
+		Count: -50
+		RequiresCondition: cond_arrowtrigger_drain
+
+	### Visual indicator for mana
+	WithAmmoPipsDecoration:
+		PipCount: 4
+		Position: TopLeft
+		FullSequence: pip-green
+		AmmoPools:
+
+	### Visual indicator of mode ###
+	WithDecoration@Mode_Speed:
+		Sequence: speed_spell_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_1
+	WithDecoration@Mode_Damage:
+		Sequence: damage_spell_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_2 
+	WithDecoration@Mode_Teleport:
+		Sequence: teleport_spell_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_3
+	WithDecoration@Mode_Arrowrain:
+		Sequence: arrow_spell_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_4
+	
+	### Starting spell randomizer for AI.
+	GrantConditionOnBotOwner@wc2magebotcontrol:
+		Condition: wc2_cond_bot_owner
+		Bots: easiest, easy, medium, hard, brutal, challenger, unbeatable, cameogod, airforce, defenseai
+	GrantRandomCondition@wc2magebotcontrol:
+		Conditions: FSD_cond_1_AI, FSD_cond_2_AI, FSD_cond_3_AI, FSD_cond_4_AI
+	# FSD_Cond_1 is always granted at start due to the four state deploy.
+	GrantCondition@Cond2AI:
+		Condition: FSD_cond_2
+		RequiresCondition: wc2_cond_bot_owner && FSD_cond_2_AI
+	GrantCondition@Cond3AI:
+		Condition: FSD_cond_3
+		RequiresCondition: wc2_cond_bot_owner && FSD_cond_3_AI
+	GrantCondition@Cond4AI:
+		Condition: FSD_cond_4
+		RequiresCondition: wc2_cond_bot_owner && FSD_cond_4_AI
+
+####################################################################################################
+#		Pirate - Structures
+####################################################################################################
+
+lego_pirate_conyard:
+	Inherits: ^BaseBuilding
+	Inherits@shape: ^3x3Shape
+	Inherits@ref: ^Refinery
+	Inherits@conyard: ^Conyard
+	Tooltip:
+		Name: Pirates Hold
+	Building:
+		Footprint: xx xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+		Description: pirate HQ unit./n Constructs buildings./n Hero units are healed by it.
+	Transforms:
+		IntoActor: lego_pirate_mcv
+		Offset: 1,1
+		Facing: 432
+	Valued:
+		Cost: 3000
+	ProvidesPrerequisite:
+	DamageMultiplier@DamageReduction:
+		Modifier: 88
+	Health:
+		HP: 200000
+	RevealsShroud:
+		Range: 4c0
+	RallyPoint:
+	Exit@1:
+		SpawnOffset: -426,85,0
+		ExitCell: 0,1
+	Exit@2:
+		SpawnOffset: 298,298,0
+		ExitCell: 1,1
+	Power:
+		Amount: 50
+	SpawnActorsOnSell:
+		ActorTypes: pirate_builder
+	ScalePowerWithHealth:
+	BaseBuilding:
+	ProvidesRadar:
+	BaseProvider:
+		Cooldown: 75
+		Range: 14c0
+	AutoTarget:
+		ScanRadius: 5
+		InitialStance: AttackAnything
+	AutoTargetPriority@DEFAULT:
+		ValidTargets: LHEROtarget
+	AttackOmni:
+		PauseOnCondition: disabled
+	# Armament@primary: 
+	# 	Weapon: HQHEROHEAL
+	# 	TargetStances: Ally
+	# 	ForceTargetStances: None
+	# 	PauseOnCondition: healed && !injured
+	Production:
+		Produces: InfantryHero.Legobattles
+	ProductionQueue:
+		Type: InfantryHero.Legobattles
+		DisplayOrder: 2
+		Group: Infantry
+		LowPowerModifier: 150
+		ReadyAudio: UnitReady
+		ReadyTextNotification: notification-unit-ready
+		BlockedAudio: NoBuild
+		BlockedTextNotification: notification-unable-to-build-more
+		LimitedAudio: BuildingInProgress
+		LimitedTextNotification: notification-unable-to-comply-building-in-progress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar:
+		ProductionType: InfantryHero.Legobattles
+	Refinery:
+		# DockAngle: 112
+		# DockOffset: 1,2
+		# IsDragRequired: False
+		# DragOffset: -554,512,0
+		# DragLength: 12
+		# TickRate: 15
+	DockHost:
+		DockAngle: 112
+		DockOffset: 0, 2c512, 0
+		IsDragRequired: False
+		DragOffset: -554,512,0
+		DragLength: 12
+		TickRate: 15
+	StoresResources:
+		PipColor: Green
+		PipCount: 10
+		Capacity: 1000
+	Voiced:
+		VoiceSet: holdvoice
+	ProvidesPrerequisite@buildingname:
+	WithProductionOverlay@Legoman:
+		RequiresCondition: !build-incomplete
+		Queues: Infantry, Defense
+		Sequence: lego_production_overlay_human
+
+
+pirate_barracks:
+	Inherits@template: ^lego_barracks
+	Inherits@shape: ^2x2Shape
+	Tooltip:
+		Name: Shanty Shack
+	Valued:
+		Cost: 800
+	Buildable:
+		Queue: Building, RABuilding
+		Description: Trains pirate infantry.
+		Prerequisites: ~lego_pirate_conyard
+	SpawnActorsOnSell:
+		ActorTypes: pirate_oarsman
+	WithProductionOverlay@Legomen:
+		RequiresCondition: !build-incomplete
+		Queues: Infantry.Legobattles
+		Sequence: lego_production_overlay_human
+	Voiced:
+		VoiceSet: piratebarracksvoice
+	ProvidesPrerequisite:
+		Prerequisite: pirate_BARRACKS
+	RenderSprites:
+		Image: pirate_barracks
+
+pirate_plantation:
+	Inherits@template: ^lego_building
+	Inherits@shape: ^2x2Shape
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Plantation
+	Buildable:
+		Queue: Building, RABuilding
+		Prerequisites: ~lego_pirate_conyard
+		BuildPaletteOrder: 10
+		BuildDuration: 160
+		BuildDurationModifier: 100
+		Description: Generator, build to keep producing units.
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+		LocalCenterOffset: 0,0,0
+	Health:
+		HP: 65000
+	Power:
+		Amount: 300
+	Voiced:
+		VoiceSet: farmvoice
+	ProvidesPrerequisite:
+		Prerequisite: PIRATE PLATATION
+	RenderSprites:
+		Image: pirate_plantation
+
+pirate_lumber_mill:
+	Inherits@ref: ^Refinery
+	Inherits@template: ^lego_building
+	Inherits@shape: ^2x2Shape
+	#Inherits@CPQWP: ^CPQCondition 
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Lumber Mill
+	Health:
+		HP: 65000
+	Buildable:
+		Queue: Building, RABuilding
+		Prerequisites: ~lego_pirate_conyard
+		BuildPaletteOrder: 30
+		BuildDuration: 160
+		BuildDurationModifier: 100
+		Description: Resource dropoff structure.
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+		LocalCenterOffset: 0,0,0
+	Refinery:
+		DockAngle: 112
+		DockOffset: 1,2 
+		IsDragRequired: False
+		DragOffset: -554,512,0
+		DragLength: 12
+		TickRate: 15
+	DockHost:
+		DockAngle: 112
+		DockOffset: 0, 2c512, 0
+		IsDragRequired: False
+		DragOffset: -554,512,0
+		DragLength: 12
+		TickRate: 15
+	StoresResources:
+		PipColor: yellow
+		PipCount: 5
+		Capacity: 1000
+	ResourcePurifier:
+		Modifier: 5
+	FreeActor@1:
+		Actor: pirate_builder
+	FreeActor@2:
+		Actor: pirate_builder
+	Voiced:
+		VoiceSet: lumbervoice
+
+pirate_quarry:
+	Inherits: ^PropagandaSelfHeallegostructure
+	Inherits@template: ^lego_building
+	Inherits@shape: ^2x2Shape
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Mine
+	Buildable:
+		Queue: Building, RABuilding
+		Prerequisites: ~lego_pirate_conyard
+		BuildPaletteOrder: 40
+		BuildDuration: 120
+		BuildDurationModifier: 100
+		Description: Generates income.
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+		LocalCenterOffset: 0,0,0
+	Health:
+		HP: 65000
+	CashTrickler:
+		Amount: 300
+		DisplayDuration: 30
+		Interval: 200
+	Voiced:
+		VoiceSet: minevoice
+
+pirate_vehiclefactory:
+	Inherits@template: ^lego_building
+	Inherits@factory: ^lego_vehiclefactory
+	Inherits@shape: ^2x2Shape
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: DryDock
+	Buildable:
+		Queue: Building, RABuilding
+		Prerequisites: ~lego_pirate_conyard, pirate_plantation, pirate_barracks
+		BuildPaletteOrder: 50
+		BuildDuration: 160
+		BuildDurationModifier: 100
+		Description: Trains pirate special units.
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+		LocalCenterOffset: 0,0,0
+	WithProductionOverlay@Legospecial:
+		RequiresCondition: !build-incomplete
+		Queues: Vehicle.Legobattles
+		Sequence: lego_production_overlay_brick
+		Palette: player
+		IsPlayerPalette: True
+	SpawnActorsOnSell:
+		ActorTypes: pirate_oarsman
+	Health:
+		HP: 65000
+	Voiced:
+		VoiceSet: drydockvoice
+
+pirate_tower:
+	Inherits: ^Defense
+	Inherits@lego_tower: ^lego_tower
+	# Don't declare AutoTarget stuff before AttackBase stuff or an annoying bug with WithSpriteBody will occur.
+	#Inherits@AUTOTARGET: ^AutoTargetAll
+	Tooltip:
+		Name: Pirate Tower
+	Buildable:
+		Prerequisites: ~lego_pirate_conyard
+		Queue: Defence, RADefence
+		Description: Upgradable defense building\nDetector
+	Voiced:
+		VoiceSet: imperialtowervoice
+	Armament@PRIMARY:
+		Weapon: piratelegoranged
+		RequiresCondition: !pirate_tower2upg && !pirate_tower3upg
+	Armament@AA:
+		Weapon: piratelegoranged
+		RequiresCondition: !pirate_tower2upg && !pirate_tower3upg
+	Armament@guardtower:
+		Weapon: specialrangedstar
+		RequiresCondition: pirate_tower2upg && !pirate_tower3upg
+	Armament@guardtoweraa:
+		Weapon: specialrangedstar
+		RequiresCondition: pirate_tower2upg && !pirate_tower3upg
+	Armament@g3tower:
+		Weapon: piratespecialrangedball
+		RequiresCondition: pirate_tower2upg && pirate_tower3upg
+	Armament@3toweraa:
+		Weapon: piratespecialrangedball
+		RequiresCondition: pirate_tower2upg && pirate_tower3upg
+	AttackOmni:
+		PauseOnCondition: disabled
+	WithRangeCircle:
+		Range: 3072
+		# RequiresCondition: pirate_tower2upg
+	Inherits@AUTOTARGET: ^AutoTargetAll
+	### Upgrade stuff ###
+	WithSpriteBody:
+		RequiresCondition: !pirate_towerupg && !pirate_tower2upg
+		Sequence: pirate_tower
+	Production@guardtower:
+		Produces: Towerupgrade
+		RequiresCondition: !pirate_tower2upg && !pirate_tower3upg
+	ProductionBar@guardtower:
+		ProductionType: Towerupgrade
+		RequiresCondition: !pirate_tower2upg && !pirate_tower3upg
+	ProductionQueue@guardtower:
+		Type: Towerupgrade
+		DisplayOrder: 0
+		Group: Addon
+		LowPowerModifier: 200
+		QueueLimit: 1
+		ItemLimit: 1
+		RequiresCondition: !pirate_tower2upg && !pirate_tower3upg
+	GrantConditionOnProduction@guardtower:
+		Condition: pirate_tower2upg
+		Actors: pirate_tower2
+	WithSpriteBody@guardtower:
+		Sequence: pirate_tower2
+		RequiresCondition: pirate_tower2upg && !pirate_tower3upg
+	DamageMultiplier@guardtower:
+		Modifier: 77
+		RequiresCondition: pirate_tower2upg
+	###
+	Production@3tower:
+		Produces: Towerupgrade2
+		RequiresCondition: pirate_tower2upg && !pirate_tower3upg
+	ProductionBar@3tower:
+		ProductionType: Towerupgrade2
+	ProductionQueue@3tower:
+		Type: Towerupgrade2
+		DisplayOrder: 0
+		Group: Addon
+		LowPowerModifier: 200
+		QueueLimit: 1
+		ItemLimit: 1
+	GrantConditionOnProduction@3tower:
+		Condition: pirate_tower3upg
+		Actors: pirate_tower3
+	WithSpriteBody@3tower:
+		Sequence: pirate_tower3
+		RequiresCondition: pirate_tower3upg
+	DamageMultiplier@3tower:
+		Modifier: 87
+		RequiresCondition: pirate_tower3upg
+	ActorPreviewPlaceBuildingPreview:
+		Palette: player
+	Building:
+		BuildSounds: piratetowervoice
+
+pirate_tower2:
+	Tooltip:
+		Name: Pirate Tower II
+	Buildable:
+		BuildPaletteOrder: 1
+		RequiresCondition: !pirate_tower2upg && !pirate_tower3upg
+		Prerequisites: ~lego_pirate_conyard
+		Queue: Towerupgrade
+		BuildDuration: 3500
+		BuildDurationModifier: 12
+		Description: Upgraded guard tower, attacks land, sea, and air.
+	Valued:
+		Cost: 800
+	Interactable:
+	AlwaysVisible:
+	KillsSelf:
+		RemoveInstead: true
+	ProvidesPrerequisite@buildingname:
+	RenderSprites:
+		Image: pirate_tower2
+
+pirate_tower3:
+	Tooltip:
+		Name: Pirate Tower III
+	Buildable:
+		BuildPaletteOrder: 1
+		Prerequisites: ~lego_pirate_conyard
+		RequiresCondition: pirate_tower2upg && !pirate_tower3upg
+		Queue: Towerupgrade2
+		BuildDuration: 3500
+		BuildDurationModifier: 12
+		Description: Further upgraded Guard tower, attacks land, sea, and air.
+	Valued:
+		Cost: 800
+	Interactable:
+	AlwaysVisible:
+	KillsSelf:
+		RemoveInstead: true
+	ProvidesPrerequisite@buildingname:
+	RenderSprites:
+		Image: pirate_tower3
+
+####################################################################################################
+#		pirate - Units
+####################################################################################################
+
+lego_pirate_mcv:
+	Inherits@LEGOINFANTRY: ^Soldier
+	Inherits@LegoTemplate: ^lego_mcv
+	Buildable:
+		Queue: Defence, RADefence
+		Description: Transforms into an Fortress.
+		Prerequisites: ~lego_pirate_conyard
+	Tooltip:
+		Name: Mobile Construction Vehicle (Pirate)
+	Transforms:
+		IntoActor: lego_pirate_conyard
+		Offset: -1,-1
+		Facing: 108
+		TransformSounds:
+	Voiced:
+		VoiceSet: piratebuildervoice
+	RenderSprites:
+		Image: lego_pirate_mcv
+	WithInfantryBody:
+		-IdleSequences: idle1,idle2,idle3,idle4
+
+pirate_builder:
+	Inherits: ^Soldier
+	Inherits: ^PropagandaSelfHeallego
+	Inherits: ^PropagandaSelfHeallegobuilder
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@selection: ^SelectableEconomicUnit
+	Inherits@harv: ^Harvester
+	Inherits@worker: ^LBWorker
+	AutoTargetPriority@Repair:
+		ValidTargets: Repair, Repairing
+		ValidStances: Ally
+		Priority: 2
+	Tooltip:
+		Name: Builder
+	Buildable:
+		Queue: InfantryHero.Legobattles
+		Prerequisites: ~lego_pirate_conyard
+		BuildPaletteOrder: 5
+		BuildDuration: 250
+		Description: Basic Harvester. Can repair.
+	StoresResources:
+		Capacity: 5
+	Armament@repair:
+		Name: repair
+		Weapon: builderrepair
+		TargetStances: Ally
+		ForceTargetStances: Ally
+		LocalOffset: 240,160,240
+	Armament@primary:
+		Name: primary
+		Weapon: troopermelee
+		ForceTargetStances: Enemy, Neutral
+	Captures:
+		CaptureTypes: building, tech
+		PlayerExperience: 500
+		CaptureDelay: 375
+		ConsumedByCapture: False
+		EnterCursor: ability
+		EnterBlockedCursor: move-blocked
+	Valued:
+		Cost: 50
+	Mobile:
+		Speed: 50
+	Health:
+		HP: 30000
+	Power:
+		Amount: -5
+	ReloadDelayMultiplier@cow:
+		Modifier: 60
+	AttackFrontal:
+		Armaments: primary, repair
+	WithHarvesterSpriteBody:
+		ImageByFullness: pirate_builder, pirate_builder
+	WithAttackAnimation:
+		Sequence: harvest
+	WithMoveAnimation:
+		MoveSequence: run
+	-DamagedByTerrain:
+	-WithInfantryBody:
+	-WithDeathAnimation:
+	WithHarvestAnimation:
+		HarvestSequence: harvest
+	Voiced:
+		VoiceSet: piratebuildervoice
+
+pirate_oarsman:
+	Inherits@Soldier: ^Soldier
+	Inherits: ^HeavyInfantryTemplate
+	Inherits: ^PropagandaSelfHeallego
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Tooltip:
+		Name: Oarsman
+	Buildable:
+		Queue: Infantry.Legobattles
+		BuildPaletteOrder: 1
+		BuildDuration: 100
+		Prerequisites: ~pirate_barracks
+		Description: Basic Melee Infantry
+	Armament:
+		Weapon: oarsmanmelee
+	Valued:
+		Cost: 100
+	Mobile:
+		Speed: 30
+	Health:
+		HP: 31000
+	ReloadDelayMultiplier@cow:
+		Modifier: 60
+	Voiced:
+		VoiceSet: oarsmanvoice
+	WithInfantryBody:
+		-IdleSequences: idle1,idle2,idle3,idle4
+	Power:
+		Amount: -10
+	WithDeathAnimation:
+		UseDeathTypeSuffix: false
+
+pirate_gunman:
+	Inherits@Soldier: ^Soldier
+	Inherits: ^HeavyInfantryTemplate
+	Inherits: ^PropagandaSelfHeallego
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Tooltip:
+		Name: Gunman
+	Buildable:
+		Queue: Infantry.Legobattles
+		BuildPaletteOrder: 2
+		BuildDuration: 250
+		Prerequisites: ~pirate_barracks
+		Description: Basic Ranged Infantry
+	Armament:
+		Weapon: piratelegoranged
+	Armament@aa:
+		Weapon: piratelegoranged
+	Valued:
+		Cost: 150
+	Mobile:
+		Speed: 30
+	Health:
+		HP: 18000
+	ReloadDelayMultiplier@cow:
+		Modifier: 60
+	Power:
+		Amount: -10
+	Voiced:
+		VoiceSet: riflemanvoice
+	WithInfantryBody:
+		-IdleSequences: idle1,idle2,idle3,idle4
+	WithDeathAnimation:
+		UseDeathTypeSuffix: false
+
+pirate_horseman:
+	Inherits@Soldier: ^Soldier
+	Inherits: ^HeavyInfantryTemplate
+	Inherits: ^PropagandaSelfHeallego
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Tooltip:
+		Name: Horseman
+	Buildable:
+		Queue: Infantry.Legobattles
+		BuildPaletteOrder: 4
+		BuildDuration: 300
+		Prerequisites: ~pirate_barracks
+		Description: Heavy Melee Infantry
+	Armament:
+		Weapon: cavalrymelee
+	Valued:
+		Cost: 250
+	Mobile:
+		Speed: 50
+	Health:
+		HP: 40000
+	ReloadDelayMultiplier@cow:
+		Modifier: 60
+	Power:
+		Amount: -15
+	Voiced:
+		VoiceSet: cavalryvoice
+	WithInfantryBody:
+		-IdleSequences: idle1,idle2,idle3,idle4
+	WithDeathAnimation:
+		UseDeathTypeSuffix: false
+
+pirate_islander:
+	Inherits@Soldier: ^Soldier
+	Inherits: ^HeavyInfantryTemplate
+	Inherits: ^PropagandaSelfHeallego
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Tooltip:
+		Name: Islander
+	Buildable:
+		Queue: Infantry.Legobattles
+		BuildPaletteOrder: 3
+		BuildDuration: 350
+		Prerequisites: ~pirate_barracks
+		Description: Harrying Ranged Infantry.
+	Armament:
+		Weapon: piratelegorangedarrow
+	Armament@aa:
+		Weapon: piratelegorangedarrow
+	Valued:
+		Cost: 100
+	Mobile:
+		Speed: 60
+	Health:
+		HP: 20000
+	ReloadDelayMultiplier@cow:
+		Modifier: 60
+	Power:
+		Amount: -10
+	Voiced:
+		VoiceSet: islandervoice
+	WithInfantryBody:
+		-IdleSequences: idle1,idle2,idle3,idle4
+	WithDeathAnimation:
+		UseDeathTypeSuffix: false
+
+pirate_cannon:
+	Inherits@LEGOTankTRACKED: ^Tank
+	Inherits: ^MainBattleTankTemplate
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits: ^PropagandaSelfHeallego
+	Crushable:
+		WarnProbability: 0
+		CrushClasses: vehicle
+		RequiresCondition: !invulnerability
+	CaptureManager:
+		BeingCapturedCondition: being-captured
+	Capturable:
+		Types: vehicle
+		ValidStances: Enemy, Neutral
+		RequiresCondition: !untargetable
+	-Huntable:
+	Selectable:
+		Bounds: 1280, 1280, 0, 0
+		DecorationBounds: 1280, 1280, 0, 0
+	Tooltip:
+		Name: Cannon
+	Buildable:
+		Queue: Vehicle.Legobattles
+		BuildPaletteOrder: 60
+		BuildDurationModifier: 50
+		Prerequisites: ~pirate_vehiclefactory
+		Description: Assault vehicle.
+	Power:
+		Amount: -20
+	Health:
+		HP: 90000
+	Armament:
+		Weapon: piratespecialrangedball
+	Armor:
+		Type: Medium
+	AttackFrontal:
+		FacingTolerance: 2
+		PauseOnCondition: disabled
+	Valued:
+		Cost: 700
+	Mobile:
+		Speed: 30
+		SharesCell: False
+	RevealsShroud:
+		Range: 9c0
+		Type: GroundPosition
+	RenderSprites:
+		Scale: 2
+	ReloadDelayMultiplier@cow:
+		Modifier: 60
+	Voiced:
+		VoiceSet: culverinvoice
+
+pirate_tiki_golem:
+	Inherits@LEGOTankTRACKED: ^Walker
+	Inherits: ^MainBattleTankTemplate
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits: ^PropagandaSelfHeallego
+	Crushable:
+		WarnProbability: 0
+		CrushClasses: vehicle
+		RequiresCondition: !invulnerability
+	CaptureManager:
+		BeingCapturedCondition: being-captured
+	Capturable:
+		Types: vehicle
+		ValidStances: Enemy, Neutral
+		RequiresCondition: !untargetable
+	-Huntable:
+	Selectable:
+		Bounds: 1280, 1280, 0, 0
+		DecorationBounds: 1280, 1280, 0, 0
+	Tooltip:
+		Name: Tiki Golem
+	Buildable:
+		Queue: Vehicle.Legobattles
+		BuildPaletteOrder: 60
+		BuildDurationModifier: 50
+		Prerequisites: ~pirate_vehiclefactory
+		Description: Assault vehicle.
+	Power:
+		Amount: -20
+	Health:
+		HP: 120000
+	Armament:
+		Weapon: kingpecialrangedrock
+	Armor:
+		Type: Medium
+	AttackFrontal:
+		FacingTolerance: 2
+		PauseOnCondition: disabled
+	Valued:
+		Cost: 700
+	Mobile:
+		Speed: 30
+		SharesCell: False
+	RevealsShroud:
+		Range: 9c0
+		Type: GroundPosition
+	ReloadDelayMultiplier@cow:
+		Modifier: 60
+	Voiced:
+		VoiceSet: tikigolemvoice
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+	WithDeathAnimation:
+		UseDeathTypeSuffix: false
+
+pirate_captain_brickbeard:
+	Inherits@Soldier: ^Soldier
+	Inherits: ^HeroInfantryTemplate
+	Inherits: ^PropagandaSelfHeallego
+	Inherits@LEGOMAGETemplate: ^lego_mage
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Tooltip:
+		Name: Captain Brickbeard
+	Buildable:
+		Queue: InfantryHero.Legobattles
+		BuildPaletteOrder: 60
+		BuildDuration: 250
+		Prerequisites: ~lego_pirate_conyard
+		Description: Stalwart Melee Hero.
+		BuildLimit: 1
+	Valued:
+		Cost: 500
+	Mobile:
+		Speed: 60
+	Health:
+		HP: 100000
+	ReloadDelayMultiplier@cow:
+		Modifier: 60
+	Voiced:
+		VoiceSet: captainbrickbeardvoice
+	Targetable@LEGOHERO:
+		TargetTypes: LHEROtarget
+	ProximityExternalCondition@PROPAGANDA:
+		Range: 6c0
+		Condition: propaganda
+		RequiresCondition: !disabled
+	WithRangeCircle:
+		Range: 6c0
+		Type: propaganda
+		RequiresCondition: !disabled
+	WithInfantryBody:
+		-IdleSequences: idle1,idle2,idle3,idle4
+	WithDeathAnimation:
+		UseDeathTypeSuffix: false
+	#Buff Spells
+	GrantCondition@DEFENSEBUFFSELF:
+		Condition: defensebuff
+		RequiresCondition: FSD_cond_1
+	ProximityExternalCondition@DEFENSEBUFFOTHER:
+		Condition: defensebuff
+		Range: 6c0
+		RequiresCondition: FSD_cond_1 && !disabled
+	GrantCondition@SPEEDBUFFSELF:
+		Condition: speedbuff
+		RequiresCondition: FSD_cond_2
+	ProximityExternalCondition@SPEEDBUFFOTHER:
+		Condition: speedbuff
+		Range: 6c0
+		RequiresCondition: FSD_cond_2 && !disabled
+	#Spells
+	AttackFrontal:
+		Armaments: primary, speed, speed, monkeyswarm, crabswarm
+	AutoTargetPriority@DEFAULT:
+		RequiresCondition: !stance-attackanything && !assault-move && !FSD_cond_2
+	AutoTargetPriority@ATTACKANYTHING:
+		RequiresCondition: (stance-attackanything || assault-move) && !FSD_cond_2
+	AutoTargetPriority@ATTACKANYTHING_HASTE:
+		RequiresCondition: (stance-attackanything || assault-move) && FSD_cond_2
+		ValidTargets: haste_target
+		InvalidTargets: NoAutoTarget
+	Armament:
+		Name: primary
+		Weapon: captainmelee
+		FireDelay: 7
+		RequiresCondition: (FSD_cond_1 && !wc2_cond_bot_owner) || (FSD_cond_1_AI && wc2_cond_bot_owner) || (FSD_cond_2) 
+	Armament@speed:
+		Name: speed
+		Weapon: captainmelee
+		FireDelay: 7
+		TargetStances: Enemy
+		GrantCondition: 
+			Condition: defensebuff
+		RequiresCondition: FSD_cond_2
+		PauseOnCondition: mana < 10
+	Armament@SPEED:
+		Name: speed
+		Weapon: captainmelee
+		FireDelay: 7
+		TargetStances: Enemy
+		GrantCondition: 
+			Condition: speedbuff
+		RequiresCondition: FSD_cond_2
+		PauseOnCondition: mana < 10
+	Armament@MONKEYSWARM:
+		Name: monkeyswarm
+		Weapon: monkeyswarm
+		AmmoUsage: 55
+		FireDelay: 7
+		RequiresCondition: FSD_cond_3
+		PauseOnCondition: mana < 25
+	Armament@crabswarm:
+		Name: crabswarm
+		Weapon: crabswarm
+		AmmoUsage: 150
+		FireDelay: 7
+		RequiresCondition: FSD_cond_4
+		PauseOnCondition: mana < 50
+	# "Mana" (AmmoPool)
+	GrantConditionOnAttack@speed:
+		Condition: cond_defense_drain
+		ArmamentNames: deathcoil
+		MaximumInstances: 1
+		RevokeDelay: 2
+	GrantConditionOnAttack@SPEED:
+		Condition: cond_speed_drain
+		ArmamentNames: speed
+		MaximumInstances: 1
+		RevokeDelay: 2
+	GrantConditionOnAttack@MONKEYSWARM:
+		Condition: cond_monkeyswarm_drain
+		ArmamentNames: monkeyswarm
+		MaximumInstances: 1
+		RevokeDelay: 2
+	GrantConditionOnAttack@crabswarm:
+		Condition: cond_crabswarm_drain
+		ArmamentNames: crabswarm
+		MaximumInstances: 1
+		RevokeDelay: 2
+	AmmoPool:
+		Armaments: primary, speed, speed, monkeyswarm, crabswarm
+		Ammo: 255
+		PipCount: 10
+		AmmoCondition: mana
+	ReloadAmmoPool@PassiveRegen:
+		Delay: 10
+		Count: 1
+		ShowSelectionBar: false
+	ReloadAmmoPool@speed:
+		Delay: 1
+		Count: -100
+		RequiresCondition: cond_defense_drain
+	ReloadAmmoPool@HASTE:
+		Delay: 1
+		Count: -50
+		RequiresCondition: cond_speed_drain
+	ReloadAmmoPool@MONKEYSWARM:
+		Delay: 1
+		Count: -25
+		RequiresCondition: cond_monkeyswarm_drain
+	ReloadAmmoPool@crabswarm:
+		Delay: 1
+		Count: -50
+		RequiresCondition: cond_crabswarm_drain
+
+	### Visual indicator for mana
+	WithAmmoPipsDecoration:
+		PipCount: 4
+		Position: TopLeft
+		FullSequence: pip-green
+		AmmoPools:
+
+	### Visual indicator of mode ###
+	WithDecoration@Mode_Armor:
+		Sequence: armor_spell_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_1
+	WithDecoration@Mode_Damage:
+		Sequence: speed_spell_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_2 
+	WithDecoration@Mode_Monkeyswarm:
+		Sequence: monkey_spell_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_3
+	WithDecoration@Mode_crabswarm:
+		Sequence: crab_spell_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_4
+
+	### Starting spell randomizer for AI.
+	GrantConditionOnBotOwner@wc2magebotcontrol:
+		Condition: wc2_cond_bot_owner
+		Bots: easiest, easy, medium, hard, brutal, challenger, unbeatable, cameogod, airforce, defenseai
+	GrantRandomCondition@wc2magebotcontrol:
+		Conditions: FSD_cond_1_AI, FSD_cond_2_AI, FSD_cond_3_AI, FSD_cond_4_AI
+	# FSD_Cond_1 is always granted at start due to the four state deploy.
+	GrantCondition@Cond2AI:
+		Condition: FSD_cond_2
+		RequiresCondition: wc2_cond_bot_owner && FSD_cond_2_AI
+	GrantCondition@Cond3AI:
+		Condition: FSD_cond_3
+		RequiresCondition: wc2_cond_bot_owner && FSD_cond_3_AI
+	GrantCondition@Cond4AI:
+		Condition: FSD_cond_4
+		RequiresCondition: wc2_cond_bot_owner && FSD_cond_4_AI
+
+pirate_lady_pirate:
+	Inherits@Soldier: ^Soldier
+	Inherits: ^HeroInfantryTemplate
+	Inherits: ^PropagandaSelfHeallego
+	Inherits@LEGOMAGETemplate: ^lego_mage
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Tooltip:
+		Name: Lady Pirate
+	Buildable:
+		Queue: InfantryHero.Legobattles
+		BuildPaletteOrder: 60
+		BuildDuration: 250
+		Prerequisites: ~lego_pirate_conyard
+		Description: Stalwart Melee Hero.
+		BuildLimit: 1
+	Valued:
+		Cost: 500
+	Mobile:
+		Speed: 60
+	Health:
+		HP: 100000
+	ReloadDelayMultiplier@cow:
+		Modifier: 60
+	Voiced:
+		VoiceSet: ladypiratevoice
+	Targetable@LEGOHERO:
+		TargetTypes: LHEROtarget
+	ProximityExternalCondition@PROPAGANDA:
+		Range: 6c0
+		Condition: propaganda
+		RequiresCondition: !disabled
+	WithRangeCircle:
+		Range: 6c0
+		Type: propaganda
+		RequiresCondition: !disabled
+	WithInfantryBody:
+		-IdleSequences: idle1,idle2,idle3,idle4
+	WithDeathAnimation:
+		UseDeathTypeSuffix: false
+	#Buff Spells
+	GrantCondition@DEFENSEBUFFSELF:
+		Condition: defensebuff
+		RequiresCondition: FSD_cond_1
+	ProximityExternalCondition@DEFENSEBUFFOTHER:
+		Condition: defensebuff
+		Range: 6c0
+		RequiresCondition: FSD_cond_1 && !disabled
+	GrantCondition@SPEEDBUFFSELF:
+		Condition: speedbuff
+		RequiresCondition: FSD_cond_2
+	ProximityExternalCondition@SPEEDBUFFOTHER:
+		Condition: speedbuff
+		Range: 6c0
+		RequiresCondition: FSD_cond_2 && !disabled
+	#Spells
+	AttackFrontal:
+		Armaments: primary, speed, speed, monkeyswarm, crabswarm
+	AutoTargetPriority@DEFAULT:
+		RequiresCondition: !stance-attackanything && !assault-move && !FSD_cond_2
+	AutoTargetPriority@ATTACKANYTHING:
+		RequiresCondition: (stance-attackanything || assault-move) && !FSD_cond_2
+	AutoTargetPriority@ATTACKANYTHING_HASTE:
+		RequiresCondition: (stance-attackanything || assault-move) && FSD_cond_2
+		ValidTargets: haste_target
+		InvalidTargets: NoAutoTarget
+	Armament:
+		Name: primary
+		Weapon: ladypiratemelee
+		FireDelay: 7
+		RequiresCondition: (FSD_cond_1 && !wc2_cond_bot_owner) || (FSD_cond_1_AI && wc2_cond_bot_owner) || (FSD_cond_2) 
+	Armament@speed:
+		Name: speed
+		Weapon: ladypiratemelee
+		FireDelay: 7
+		TargetStances: Enemy
+		GrantCondition: 
+			Condition: defensebuff
+		RequiresCondition: FSD_cond_2
+		PauseOnCondition: mana < 10
+	Armament@SPEED:
+		Name: speed
+		Weapon: ladypiratemelee
+		FireDelay: 7
+		TargetStances: Enemy
+		GrantCondition: 
+			Condition: speedbuff
+		RequiresCondition: FSD_cond_2
+		PauseOnCondition: mana < 10
+	Armament@MONKEYSWARM:
+		Name: monkeyswarm
+		Weapon: monkeyswarm
+		AmmoUsage: 55
+		FireDelay: 7
+		RequiresCondition: FSD_cond_3
+		PauseOnCondition: mana < 25
+	Armament@crabswarm:
+		Name: crabswarm
+		Weapon: crabswarm
+		AmmoUsage: 150
+		FireDelay: 7
+		RequiresCondition: FSD_cond_4
+		PauseOnCondition: mana < 50
+	# "Mana" (AmmoPool)
+	GrantConditionOnAttack@speed:
+		Condition: cond_defense_drain
+		ArmamentNames: deathcoil
+		MaximumInstances: 1
+		RevokeDelay: 2
+	GrantConditionOnAttack@SPEED:
+		Condition: cond_speed_drain
+		ArmamentNames: speed
+		MaximumInstances: 1
+		RevokeDelay: 2
+	GrantConditionOnAttack@MONKEYSWARM:
+		Condition: cond_monkeyswarm_drain
+		ArmamentNames: monkeyswarm
+		MaximumInstances: 1
+		RevokeDelay: 2
+	GrantConditionOnAttack@crabswarm:
+		Condition: cond_crabswarm_drain
+		ArmamentNames: crabswarm
+		MaximumInstances: 1
+		RevokeDelay: 2
+	AmmoPool:
+		Armaments: primary, speed, speed, monkeyswarm, crabswarm
+		Ammo: 255
+		PipCount: 10
+		AmmoCondition: mana
+	ReloadAmmoPool@PassiveRegen:
+		Delay: 10
+		Count: 1
+		ShowSelectionBar: false
+	ReloadAmmoPool@speed:
+		Delay: 1
+		Count: -100
+		RequiresCondition: cond_defense_drain
+	ReloadAmmoPool@HASTE:
+		Delay: 1
+		Count: -50
+		RequiresCondition: cond_speed_drain
+	ReloadAmmoPool@MONKEYSWARM:
+		Delay: 1
+		Count: -25
+		RequiresCondition: cond_monkeyswarm_drain
+	ReloadAmmoPool@crabswarm:
+		Delay: 1
+		Count: -50
+		RequiresCondition: cond_crabswarm_drain
+
+	### Visual indicator for mana
+	WithAmmoPipsDecoration:
+		PipCount: 4
+		Position: TopLeft
+		FullSequence: pip-green
+		AmmoPools:
+
+	### Visual indicator of mode ###
+	WithDecoration@Mode_Armor:
+		Sequence: armor_spell_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_1
+	WithDecoration@Mode_Damage:
+		Sequence: speed_spell_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_2 
+	WithDecoration@Mode_Monkeyswarm:
+		Sequence: monkey_spell_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_3
+	WithDecoration@Mode_crabswarm:
+		Sequence: crab_spell_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_4
+
+	### Starting spell randomizer for AI.
+	GrantConditionOnBotOwner@wc2magebotcontrol:
+		Condition: wc2_cond_bot_owner
+		Bots: easiest, easy, medium, hard, brutal, challenger, unbeatable, cameogod, airforce, defenseai
+	GrantRandomCondition@wc2magebotcontrol:
+		Conditions: FSD_cond_1_AI, FSD_cond_2_AI, FSD_cond_3_AI, FSD_cond_4_AI
+	# FSD_Cond_1 is always granted at start due to the four state deploy.
+	GrantCondition@Cond2AI:
+		Condition: FSD_cond_2
+		RequiresCondition: wc2_cond_bot_owner && FSD_cond_2_AI
+	GrantCondition@Cond3AI:
+		Condition: FSD_cond_3
+		RequiresCondition: wc2_cond_bot_owner && FSD_cond_3_AI
+	GrantCondition@Cond4AI:
+		Condition: FSD_cond_4
+		RequiresCondition: wc2_cond_bot_owner && FSD_cond_4_AI
+
+pirate_king_kahuka:
+	Inherits@Soldier: ^Soldier
+	Inherits: ^HeroInfantryTemplate
+	Inherits: ^PropagandaSelfHeallego
+	Inherits@LEGOMAGETemplate: ^lego_mage
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Tooltip:
+		Name: King Kahuka
+	Buildable:
+		Queue: InfantryHero.Legobattles
+		BuildPaletteOrder: 60
+		BuildDuration: 250
+		Prerequisites: ~lego_pirate_conyard
+		Description: Stalwart Melee Hero.
+		BuildLimit: 1
+	Valued:
+		Cost: 500
+	Mobile:
+		Speed: 60
+	Health:
+		HP: 100000
+	ReloadDelayMultiplier@cow:
+		Modifier: 60
+	Voiced:
+		VoiceSet: kingkahukavoice
+	Targetable@LEGOHERO:
+		TargetTypes: LHEROtarget
+	ProximityExternalCondition@PROPAGANDA:
+		Range: 6c0
+		Condition: propaganda
+		RequiresCondition: !disabled
+	WithRangeCircle:
+		Range: 6c0
+		Type: propaganda
+		RequiresCondition: !disabled
+	WithInfantryBody:
+		-IdleSequences: idle1,idle2,idle3,idle4
+	WithDeathAnimation:
+		UseDeathTypeSuffix: false
+	PortableChronoCA:
+		ChargeDelay: 20
+		HasDistanceLimit: false
+		FlashScreen: false
+		ChronoshiftSound: crystalcache.wav
+		RequiresCondition: FSD_cond_3
+	#Buff Spells
+	GrantCondition@SPEEDBUFFSELF:
+		Condition: speedbuff
+		RequiresCondition: FSD_cond_1
+	ProximityExternalCondition@SPEEDBUFFOTHER:
+		Condition: speedbuff
+		Range: 6c0
+		RequiresCondition: FSD_cond_1 && !disabled
+	GrantCondition@DAMAGEBUFFSELF:
+		Condition: damagebuff
+		RequiresCondition: FSD_cond_2
+	ProximityExternalCondition@DAMAGEBUFFOTHER:
+		Condition: damagebuff
+		Range: 6c0
+		RequiresCondition: FSD_cond_2 && !disabled
+	#Spells
+	AttackFrontal:
+		Armaments: primary, speed, damage, crystalcache, coconutstorm
+	AutoTargetPriority@DEFAULT:
+		RequiresCondition: !stance-attackanything && !assault-move && !FSD_cond_2
+	AutoTargetPriority@ATTACKANYTHING:
+		RequiresCondition: (stance-attackanything || assault-move) && !FSD_cond_2
+	AutoTargetPriority@ATTACKANYTHING_HASTE:
+		RequiresCondition: (stance-attackanything || assault-move) && FSD_cond_2
+		ValidTargets: haste_target
+		InvalidTargets: NoAutoTarget
+	Armament:
+		Name: primary
+		Weapon: kahukamelee
+		FireDelay: 7
+		RequiresCondition: (FSD_cond_1 && !wc2_cond_bot_owner) || (FSD_cond_1_AI && wc2_cond_bot_owner) || (FSD_cond_2) 
+	Armament@SPEED:
+		Name: speed
+		Weapon: kahukamelee
+		FireDelay: 7
+		TargetStances: Enemy
+		GrantCondition: 
+			Condition: speedbuff
+		RequiresCondition: FSD_cond_1
+		PauseOnCondition: mana < 10
+	Armament@DAMAGE:
+		Name: damage
+		Weapon: kahukamelee
+		FireDelay: 7
+		TargetStances: Enemy
+		GrantCondition: 
+			Condition: damagebuff
+		RequiresCondition: FSD_cond_2
+		PauseOnCondition: mana < 10
+	Armament@TELEPORT:
+		Name: crystalcache
+		Weapon: kahukamelee
+		AmmoUsage: 30
+		FireDelay: 7
+		RequiresCondition: FSD_cond_3
+		PauseOnCondition: mana < 25
+	Armament@ARROWTRIGGER:
+		Name: coconutstorm
+		Weapon: coconutstorm
+		AmmoUsage: 150
+		FireDelay: 7
+		RequiresCondition: FSD_cond_4
+		PauseOnCondition: mana < 50
+	# "Mana" (AmmoPool)
+	GrantConditionOnAttack@SPEED:
+		Condition: cond_speed_drain
+		ArmamentNames: speed
+		MaximumInstances: 1
+		RevokeDelay: 2
+	GrantConditionOnAttack@DAMAGE:
+		Condition: cond_damage_drain
+		ArmamentNames: damage
+		MaximumInstances: 1
+		RevokeDelay: 2
+	GrantConditionOnAttack@TELEPORT:
+		Condition: cond_crystalcache_drain
+		ArmamentNames: crystalcache
+		MaximumInstances: 1
+		RevokeDelay: 2
+	GrantConditionOnAttack@ARROWTRIGGER:
+		Condition: cond_coconutstorm_drain
+		ArmamentNames: coconutstorm
+		MaximumInstances: 1
+		RevokeDelay: 2
+	AmmoPool:
+		Armaments: primary, speed, damage, crystalcache, coconutstorm
+		Ammo: 255
+		PipCount: 10
+		AmmoCondition: mana
+	ReloadAmmoPool@PassiveRegen:
+		Delay: 10
+		Count: 1
+		ShowSelectionBar: false
+	ReloadAmmoPool@SPEED:
+		Delay: 1
+		Count: -100
+		RequiresCondition: cond_speed_drain
+	ReloadAmmoPool@DAMAGE:
+		Delay: 1
+		Count: -50
+		RequiresCondition: cond_damage_drain
+	ReloadAmmoPool@TELEPORT:
+		Delay: 1
+		Count: -25
+		RequiresCondition: cond_crystalcache_drain
+	ReloadAmmoPool@ARROWTRIGGER:
+		Delay: 1
+		Count: -50
+		RequiresCondition: cond_coconutstorm_drain
+
+	### Visual indicator for mana
+	WithAmmoPipsDecoration:
+		PipCount: 4
+		Position: TopLeft
+		FullSequence: pip-green
+		AmmoPools:
+
+	### Visual indicator of mode ###
+	WithDecoration@Mode_Speed:
+		Sequence: speed_spell_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_1
+	WithDecoration@Mode_Damage:
+		Sequence: damage_spell_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_2 
+	WithDecoration@Mode_Junglegrowth:
+		Sequence: jungle_spell_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_3
+	WithDecoration@Mode_Coconutswarm:
+		Sequence: boulder_spell_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_4
+	
+	### Starting spell randomizer for AI.
+	GrantConditionOnBotOwner@wc2magebotcontrol:
+		Condition: wc2_cond_bot_owner
+		Bots: easiest, easy, medium, hard, brutal, challenger, unbeatable, cameogod, airforce, defenseai
+	GrantRandomCondition@wc2magebotcontrol:
+		Conditions: FSD_cond_1_AI, FSD_cond_2_AI, FSD_cond_3_AI, FSD_cond_4_AI
+	# FSD_Cond_1 is always granted at start due to the four state deploy.
+	GrantCondition@Cond2AI:
+		Condition: FSD_cond_2
+		RequiresCondition: wc2_cond_bot_owner && FSD_cond_2_AI
+	GrantCondition@Cond3AI:
+		Condition: FSD_cond_3
+		RequiresCondition: wc2_cond_bot_owner && FSD_cond_3_AI
+	GrantCondition@Cond4AI:
+		Condition: FSD_cond_4
+		RequiresCondition: wc2_cond_bot_owner && FSD_cond_4_AI
+
+pirate_monkey:
+	Inherits@Soldier: ^Soldier
+	Inherits: ^HeavyInfantryTemplate
+	Inherits: ^PropagandaSelfHeallego
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Tooltip:
+		Name: Monkey
+	Buildable:
+		Queue: Infantry.Legobattles
+		BuildPaletteOrder: 1
+		BuildDuration: 100
+		Prerequisites:
+		Description: A monkey, for scouting or sabotage.
+	Armament:
+		Weapon: oarsmanmelee
+	Valued:
+		Cost: 100
+	Mobile:
+		Speed: 60
+	Health:
+		HP: 10000
+	ReloadDelayMultiplier@cow:
+		Modifier: 60
+	Voiced:
+		VoiceSet: oarsmanvoice
+	WithInfantryBody:
+		-IdleSequences: idle1,idle2,idle3,idle4
+	Power:
+		Amount: -10
+	WithDeathAnimation:
+		UseDeathTypeSuffix: false
+
+# pirate_crab:
+# 	Inherits@Soldier: ^Soldier
+# 	Inherits: ^PropagandaSelfHeallego
+# 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+# 	-Selectable:
+# 	-Targetable:
+# 	-SelectionDecorations:
+# 	Tooltip:
+# 		Name: crabswarm
+# 	Buildable:
+# 		BuildPaletteOrder: 1
+# 		BuildDuration: 100
+# 		Prerequisites:
+# 		Description: crabswarms
+# 	Armament:
+# 		Weapon: alienmelee
+# 	Valued:
+# 		Cost: 100
+# 	Mobile:
+# 		Speed: 1
+# 	Health:
+# 		HP: 31000
+# 	ReloadDelayMultiplier@cow:
+# 		Modifier: 60
+# 	Voiced:
+# 		VoiceSet: swordsmanvoice
+# 	WithSpriteBody:
+# 		DefaultSequence: idle
+# 		Animation: pirate_crab
+# 	Power:
+# 		Amount: -10
+# 	WithDeathAnimation:
+# 		UseDeathTypeSuffix: false
+
+####################################################################################################
+#		King - Structures
+####################################################################################################
+
+lego_king_conyard:
+	Inherits: ^BaseBuilding
+	Inherits@shape: ^3x3Shape
+	Inherits@ref: ^Refinery
+	Inherits@conyard: ^Conyard
+	Tooltip:
+		Name: Castle
+	Building:
+		Footprint: xx xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+		Description: King HQ unit./n Constructs buildings./n Hero units are healed by it.
+	Transforms:
+		IntoActor: lego_king_mcv
+		Offset: 1,1
+		Facing: 432
+	Valued:
+		Cost: 3000
+	ProvidesPrerequisite:
+	DamageMultiplier@DamageReduction:
+		Modifier: 88
+	Health:
+		HP: 200000
+	RevealsShroud:
+		Range: 4c0
+	RallyPoint:
+	Exit@1:
+		SpawnOffset: -426,85,0
+		ExitCell: 0,1
+	Exit@2:
+		SpawnOffset: 298,298,0
+		ExitCell: 1,1
+	Power:
+		Amount: 50
+	SpawnActorsOnSell:
+		ActorTypes: king_builder
+	ScalePowerWithHealth:
+	BaseBuilding:
+	ProvidesRadar:
+	BaseProvider:
+		Cooldown: 75
+		Range: 14c0
+	AutoTarget:
+		ScanRadius: 5
+		InitialStance: AttackAnything
+	AutoTargetPriority@DEFAULT:
+		ValidTargets: LHEROtarget
+	AttackOmni:
+		PauseOnCondition: disabled
+	# Armament@primary: 
+	# 	Weapon: HQHEROHEAL
+	# 	TargetStances: Ally
+	# 	ForceTargetStances: None
+	# 	PauseOnCondition: healed && !injured
+	Production:
+		Produces: InfantryHero.Legobattles
+	ProductionQueue:
+		Type: InfantryHero.Legobattles
+		DisplayOrder: 2
+		Group: Infantry
+		LowPowerModifier: 150
+		ReadyAudio: UnitReady
+		ReadyTextNotification: notification-unit-ready
+		BlockedAudio: NoBuild
+		BlockedTextNotification: notification-unable-to-build-more
+		LimitedAudio: BuildingInProgress
+		LimitedTextNotification: notification-unable-to-comply-building-in-progress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar:
+		ProductionType: InfantryHero.Legobattles
+	Refinery:
+		# DockAngle: 112
+		# DockOffset: 1,2
+		# IsDragRequired: False
+		# DragOffset: -554,512,0
+		# DragLength: 12
+		# TickRate: 15
+	DockHost:
+		DockAngle: 112
+		DockOffset: 0, 2c512, 0
+		IsDragRequired: False
+		DragOffset: -554,512,0
+		DragLength: 12
+		TickRate: 15
+	StoresResources:
+		PipColor: Green
+		PipCount: 10
+		Capacity: 1000
+	Voiced:
+		VoiceSet: castlevoice
+	ProvidesPrerequisite@buildingname:
+	WithProductionOverlay@Legoman:
+		RequiresCondition: !build-incomplete
+		Queues: Defence
+		Sequence: lego_production_overlay_human
+
+
+king_barracks:
+	Inherits@template: ^lego_barracks
+	Inherits@shape: ^2x2Shape
+	Tooltip:
+		Name: Barracks
+	Valued:
+		Cost: 800
+	Buildable:
+		Queue: Building, RABuilding
+		Description: Trains king infantry.
+		Prerequisites: ~lego_king_conyard
+	SpawnActorsOnSell:
+		ActorTypes: king_guardsman
+	WithProductionOverlay@Legomen:
+		RequiresCondition: !build-incomplete
+		Queues: Infantry.Legobattles
+		Sequence: lego_production_overlay_human
+	Voiced:
+		VoiceSet: kingbarracksvoice
+	ProvidesPrerequisite:
+		Prerequisite: KING_BARRACKS
+	RenderSprites:
+		Image: king_barracks
+
+king_farm:
+	Inherits@template: ^lego_building
+	Inherits@shape: ^2x2Shape
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Farm
+	Buildable:
+		Queue: Building, RABuilding
+		Prerequisites: ~lego_king_conyard
+		BuildPaletteOrder: 10
+		BuildDuration: 160
+		BuildDurationModifier: 100
+		Description: Generator, build to keep producing units.
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+		LocalCenterOffset: 0,0,0
+	Health:
+		HP: 65000
+	Power:
+		Amount: 300
+	Voiced:
+		VoiceSet: farmvoice
+	ProvidesPrerequisite:
+		Prerequisite: KING FARM
+	RenderSprites:
+		Image: king_farm
+
+king_lumber_mill:
+	Inherits@ref: ^Refinery
+	Inherits@template: ^lego_building
+	Inherits@shape: ^2x2Shape
+	#Inherits@CPQWP: ^CPQCondition 
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Lumber Mill
+	Health:
+		HP: 65000
+	Buildable:
+		Queue: Building, RABuilding
+		Prerequisites: ~lego_king_conyard
+		BuildPaletteOrder: 30
+		BuildDuration: 160
+		BuildDurationModifier: 100
+		Description: Resource dropoff structure.
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+		LocalCenterOffset: 0,0,0
+	Refinery:
+		DockAngle: 112
+		DockOffset: 1,2 
+		IsDragRequired: False
+		DragOffset: -554,512,0
+		DragLength: 12
+		TickRate: 15
+	DockHost:
+		DockAngle: 112
+		DockOffset: 0, 2c512, 0
+		IsDragRequired: False
+		DragOffset: -554,512,0
+		DragLength: 12
+		TickRate: 15
+	StoresResources:
+		PipColor: yellow
+		PipCount: 5
+		Capacity: 1000
+	ResourcePurifier:
+		Modifier: 5
+	FreeActor@1:
+		Actor: king_builder
+	FreeActor@2:
+		Actor: king_builder
+	Voiced:
+		VoiceSet: lumbervoice
+
+king_mine:
+	Inherits: ^PropagandaSelfHeallegostructure
+	Inherits@template: ^lego_building
+	Inherits@shape: ^2x2Shape
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Mine
+	Buildable:
+		Queue: Building, RABuilding
+		Prerequisites: ~lego_king_conyard
+		BuildPaletteOrder: 40
+		BuildDuration: 120
+		BuildDurationModifier: 100
+		Description: Generates income.
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+		LocalCenterOffset: 0,0,0
+	Health:
+		HP: 65000
+	CashTrickler:
+		Amount: 300
+		DisplayDuration: 30
+		Interval: 200
+	Voiced:
+		VoiceSet: minevoice
+
+king_vehiclefactory:
+	Inherits@template: ^lego_building
+	Inherits@factory: ^lego_vehiclefactory
+	Inherits@shape: ^2x2Shape
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: Special Factory
+	Buildable:
+		Queue: Building, RABuilding
+		Prerequisites: ~lego_king_conyard, king_farm, king_barracks
+		BuildPaletteOrder: 50
+		BuildDuration: 160
+		BuildDurationModifier: 100
+		Description: Trains king special units.
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+		LocalCenterOffset: 0,0,0
+	WithProductionOverlay@Legospecial:
+		RequiresCondition: !build-incomplete
+		Queues: Vehicle.Legobattles
+		Sequence: lego_production_overlay_brick
+		Palette: player
+		IsPlayerPalette: True
+	SpawnActorsOnSell:
+		ActorTypes: king_guardsman
+	Health:
+		HP: 65000
+	Voiced:
+		VoiceSet: specialfactoryvoice
+
+king_tower:
+	Inherits: ^Defense
+	Inherits@lego_tower: ^lego_tower
+	# Don't declare AutoTarget stuff before AttackBase stuff or an annoying bug with WithSpriteBody will occur.
+	#Inherits@AUTOTARGET: ^AutoTargetAll
+	Tooltip:
+		Name: King's Tower
+	Buildable:
+		Prerequisites: ~lego_king_conyard
+		Queue: Defence, RADefence
+		Description: Upgradable defense building\nDetector
+	Voiced:
+		VoiceSet: kingtowervoice
+	Armament@PRIMARY:
+		Weapon: piratelegoranged
+		RequiresCondition: !king_tower2upg && !king_tower3upg
+	Armament@AA:
+		Weapon: piratelegoranged
+		RequiresCondition: !king_tower2upg && !king_tower3upg
+	Armament@guardtower:
+		Weapon: specialrangedstar
+		RequiresCondition: king_tower2upg && !king_tower3upg
+	Armament@guardtoweraa:
+		Weapon: specialrangedstar
+		RequiresCondition: king_tower2upg && !king_tower3upg
+	Armament@g3tower:
+		Weapon: piratespecialrangedball
+		RequiresCondition: king_tower2upg && king_tower3upg
+	Armament@3toweraa:
+		Weapon: piratespecialrangedball
+		RequiresCondition: king_tower2upg && king_tower3upg
+	AttackOmni:
+		PauseOnCondition: disabled
+	WithRangeCircle:
+		Range: 3072
+		# RequiresCondition: king_tower2upg
+	Inherits@AUTOTARGET: ^AutoTargetAll
+	### Upgrade stuff ###
+	WithSpriteBody:
+		RequiresCondition: !king_towerupg && !king_tower2upg
+		Sequence: king_tower
+	Production@guardtower:
+		Produces: Towerupgrade
+		RequiresCondition: !king_tower2upg && !king_tower3upg
+	ProductionBar@guardtower:
+		ProductionType: Towerupgrade
+		RequiresCondition: !king_tower2upg && !king_tower3upg
+	ProductionQueue@guardtower:
+		Type: Towerupgrade
+		DisplayOrder: 0
+		Group: Addon
+		LowPowerModifier: 200
+		QueueLimit: 1
+		ItemLimit: 1
+		RequiresCondition: !king_tower2upg && !king_tower3upg
+	GrantConditionOnProduction@guardtower:
+		Condition: king_tower2upg
+		Actors: king_tower2
+	WithSpriteBody@guardtower:
+		Sequence: king_tower2
+		RequiresCondition: king_tower2upg && !king_tower3upg
+	DamageMultiplier@guardtower:
+		Modifier: 77
+		RequiresCondition: king_tower2upg
+	###
+	Production@3tower:
+		Produces: Towerupgrade2
+		RequiresCondition: king_tower2upg && !king_tower3upg
+	ProductionBar@3tower:
+		ProductionType: Towerupgrade2
+	ProductionQueue@3tower:
+		Type: Towerupgrade2
+		DisplayOrder: 0
+		Group: Addon
+		LowPowerModifier: 200
+		QueueLimit: 1
+		ItemLimit: 1
+	GrantConditionOnProduction@3tower:
+		Condition: king_tower3upg
+		Actors: king_tower3
+	WithSpriteBody@3tower:
+		Sequence: king_tower3
+		RequiresCondition: king_tower3upg
+	DamageMultiplier@3tower:
+		Modifier: 87
+		RequiresCondition: king_tower3upg
+	ActorPreviewPlaceBuildingPreview:
+		Palette: player
+	Building:
+		BuildSounds: imperialtowervoice
+
+king_tower2:
+	Tooltip:
+		Name: kingTower II
+	Buildable:
+		BuildPaletteOrder: 1
+		RequiresCondition: !king_tower2upg && !king_tower3upg
+		Prerequisites: ~lego_king_conyard
+		Queue: Towerupgrade
+		BuildDuration: 3500
+		BuildDurationModifier: 12
+		Description: Upgraded guard tower, attacks land, sea, and air.
+	Valued:
+		Cost: 800
+	Interactable:
+	AlwaysVisible:
+	KillsSelf:
+		RemoveInstead: true
+	ProvidesPrerequisite@buildingname:
+	RenderSprites:
+		Image: king_tower2
+
+king_tower3:
+	Tooltip:
+		Name: kingTower III
+	Buildable:
+		BuildPaletteOrder: 1
+		Prerequisites: ~lego_king_conyard
+		RequiresCondition: king_tower2upg && !king_tower3upg
+		Queue: Towerupgrade2
+		BuildDuration: 3500
+		BuildDurationModifier: 12
+		Description: Further upgraded Guard tower, attacks land, sea, and air.
+	Valued:
+		Cost: 800
+	Interactable:
+	AlwaysVisible:
+	KillsSelf:
+		RemoveInstead: true
+	ProvidesPrerequisite@buildingname:
+	RenderSprites:
+		Image: king_tower3
+
+####################################################################################################
+#		king - Units
+####################################################################################################
+
+lego_king_mcv:
+	Inherits@LEGOINFANTRY: ^Soldier
+	Inherits@LegoTemplate: ^lego_mcv
+	Buildable:
+		Queue: Defence, RADefence
+		Description: Transforms into an Fortress.
+		Prerequisites: ~lego_king_conyard
+	Tooltip:
+		Name: Mobile Construction Vehicle (King)
+	Transforms:
+		IntoActor: lego_king_conyard
+		Offset: -1,-1
+		Facing: 108
+		TransformSounds:
+	Voiced:
+		VoiceSet: kingbuildervoice
+	RenderSprites:
+		Image: lego_king_mcv
+	WithInfantryBody:
+		-IdleSequences: idle1,idle2,idle3,idle4
+
+king_builder
+	Inherits: ^Soldier
+	Inherits: ^PropagandaSelfHeallego
+	Inherits: ^PropagandaSelfHeallegobuilder
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@selection: ^SelectableEconomicUnit
+	Inherits@harv: ^Harvester
+	Inherits@worker: ^LBWorker
+	AutoTargetPriority@Repair:
+		ValidTargets: Repair, Repairing
+		ValidStances: Ally
+		Priority: 2
+	Tooltip:
+		Name: Builder
+	Buildable:
+		Queue: InfantryHero.Legobattles
+		Prerequisites: ~lego_king_conyard
+		BuildPaletteOrder: 5
+		BuildDuration: 250
+		Description: Basic Harvester. Can repair.
+	StoresResources:
+		Capacity: 5
+	Armament@repair:
+		Name: repair
+		Weapon: builderrepair
+		TargetStances: Ally
+		ForceTargetStances: Ally
+		LocalOffset: 240,160,240
+	Armament@primary:
+		Name: primary
+		Weapon: troopermelee
+		ForceTargetStances: Enemy, Neutral
+	Captures:
+		CaptureTypes: building, tech
+		PlayerExperience: 500
+		CaptureDelay: 375
+		ConsumedByCapture: False
+		EnterCursor: ability
+		EnterBlockedCursor: move-blocked
+	Valued:
+		Cost: 50
+	Mobile:
+		Speed: 50
+	Health:
+		HP: 30000
+	Power:
+		Amount: -5
+	ReloadDelayMultiplier@cow:
+		Modifier: 60
+	AttackFrontal:
+		Armaments: primary, repair
+	WithHarvesterSpriteBody:
+		ImageByFullness: king_builder, king_builder
+	WithAttackAnimation:
+		Sequence: harvest
+	WithMoveAnimation:
+		MoveSequence: run
+	-DamagedByTerrain:
+	-WithInfantryBody:
+	-WithDeathAnimation:
+	WithHarvestAnimation:
+		HarvestSequence: harvest
+	Voiced:
+		VoiceSet: kingbuildervoice
+
+king_guardsman:
+	Inherits@Soldier: ^Soldier
+	Inherits: ^HeavyInfantryTemplate
+	Inherits: ^PropagandaSelfHeallego
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Tooltip:
+		Name: Guardsman
+	Buildable:
+		Queue: Infantry.Legobattles
+		BuildPaletteOrder: 1
+		BuildDuration: 100
+		Prerequisites: ~king_barracks
+		Description: Basic Melee Infantry
+	Armament:
+		Weapon: alienmelee
+	Valued:
+		Cost: 100
+	Mobile:
+		Speed: 30
+	Health:
+		HP: 31000
+	ReloadDelayMultiplier@cow:
+		Modifier: 60
+	Voiced:
+		VoiceSet: guardsmanvoice
+	WithInfantryBody:
+		-IdleSequences: idle1,idle2,idle3,idle4
+	Power:
+		Amount: -10
+	WithDeathAnimation:
+		UseDeathTypeSuffix: false
+
+king_archer:
+	Inherits@Soldier: ^Soldier
+	Inherits: ^HeavyInfantryTemplate
+	Inherits: ^PropagandaSelfHeallego
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Tooltip:
+		Name: Archer
+	Buildable:
+		Queue: Infantry.Legobattles
+		BuildPaletteOrder: 2
+		BuildDuration: 250
+		Prerequisites: ~king_barracks
+		Description: Basic Ranged Infantry
+	Armament:
+		Weapon: piratelegorangedarrow
+	Armament@aa:
+		Weapon: piratelegorangedarrow
+	Valued:
+		Cost: 150
+	Mobile:
+		Speed: 30
+	Health:
+		HP: 18000
+	ReloadDelayMultiplier@cow:
+		Modifier: 60
+	Power:
+		Amount: -10
+	Voiced:
+		VoiceSet: archervoice
+	WithInfantryBody:
+		-IdleSequences: idle1,idle2,idle3,idle4
+	WithDeathAnimation:
+		UseDeathTypeSuffix: false
+
+king_knight:
+	Inherits@Soldier: ^Soldier
+	Inherits: ^HeavyInfantryTemplate
+	Inherits: ^PropagandaSelfHeallego
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Tooltip:
+		Name: Knight
+	Buildable:
+		Queue: Infantry.Legobattles
+		BuildPaletteOrder: 4
+		BuildDuration: 300
+		Prerequisites: ~king_barracks
+		Description: Heavy Melee Infantry
+	Armament:
+		Weapon: cavalrymelee
+	Valued:
+		Cost: 250
+	Mobile:
+		Speed: 30
+	Health:
+		HP: 40000
+	ReloadDelayMultiplier@cow:
+		Modifier: 60
+	Power:
+		Amount: -15
+	Voiced:
+		VoiceSet: cavalryvoice
+	WithInfantryBody:
+		-IdleSequences: idle1,idle2,idle3,idle4
+	WithDeathAnimation:
+		UseDeathTypeSuffix: false
+
+king_dwarf:
+	Inherits@Soldier: ^Soldier
+	Inherits: ^HeavyInfantryTemplate
+	Inherits: ^PropagandaSelfHeallego
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Tooltip:
+		Name: Dwarf
+	Buildable:
+		Queue: Infantry.Legobattles
+		BuildPaletteOrder: 3
+		BuildDuration: 350
+		Prerequisites: ~king_barracks
+		Description: Harrying Ranged Infantry.
+	Armament:
+		Weapon: swordsmanmelee
+	Armament@aa:
+		Weapon: swordsmanmelee
+	Valued:
+		Cost: 100
+	Mobile:
+		Speed: 40
+	Health:
+		HP: 32000
+	ReloadDelayMultiplier@cow:
+		Modifier: 60
+	Power:
+		Amount: -10
+	Voiced:
+		VoiceSet: dwarfvoice
+	WithInfantryBody:
+		-IdleSequences: idle1,idle2,idle3,idle4
+	WithDeathAnimation:
+		UseDeathTypeSuffix: false
+
+king_ballista:
+	Inherits@LEGOTankTRACKED: ^Walker
+	Inherits: ^MainBattleTankTemplate
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits: ^PropagandaSelfHeallego
+	Crushable:
+		WarnProbability: 0
+		CrushClasses: vehicle
+		RequiresCondition: !invulnerability
+	CaptureManager:
+		BeingCapturedCondition: being-captured
+	Capturable:
+		Types: vehicle
+		ValidStances: Enemy, Neutral
+		RequiresCondition: !untargetable
+	-Huntable:
+	Selectable:
+		Bounds: 1280, 1280, 0, 0
+		DecorationBounds: 1280, 1280, 0, 0
+	Tooltip:
+		Name: Ballista
+	Buildable:
+		Queue: Vehicle.Legobattles
+		BuildPaletteOrder: 60
+		BuildDurationModifier: 50
+		Prerequisites: ~king_vehiclefactory
+		Description: Assault vehicle.
+	Power:
+		Amount: -20
+	Health:
+		HP: 90000
+	Armament:
+		Weapon: specialrangedAA
+	Armor:
+		Type: Medium
+	AttackFrontal:
+		FacingTolerance: 2
+		PauseOnCondition: disabled
+	Valued:
+		Cost: 700
+	Mobile:
+		Speed: 30
+		SharesCell: False
+	RevealsShroud:
+		Range: 9c0
+		Type: GroundPosition
+	RenderSprites:
+		Scale: 2
+	ReloadDelayMultiplier@cow:
+		Modifier: 60
+	Voiced:
+		VoiceSet: ballistavoice
+
+king_catapult:
+	Inherits@LEGOTankTRACKED: ^Walker
+	Inherits: ^MainBattleTankTemplate
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits: ^PropagandaSelfHeallego
+	Crushable:
+		WarnProbability: 0
+		CrushClasses: vehicle
+		RequiresCondition: !invulnerability
+	CaptureManager:
+		BeingCapturedCondition: being-captured
+	Capturable:
+		Types: vehicle
+		ValidStances: Enemy, Neutral
+		RequiresCondition: !untargetable
+	-Huntable:
+	Selectable:
+		Bounds: 1280, 1280, 0, 0
+		DecorationBounds: 1280, 1280, 0, 0
+	Tooltip:
+		Name: Catapult
+	Buildable:
+		Queue: Vehicle.Legobattles
+		BuildPaletteOrder: 60
+		BuildDurationModifier: 50
+		Prerequisites: ~king_vehiclefactory
+		Description: Assault vehicle.
+	Power:
+		Amount: -20
+	Health:
+		HP: 90000
+	Armament:
+		Weapon: kingpecialrangedrock
+	Armor:
+		Type: Medium
+	AttackFrontal:
+		FacingTolerance: 2
+		PauseOnCondition: disabled
+	Valued:
+		Cost: 700
+	Mobile:
+		Speed: 30
+		SharesCell: False
+	RevealsShroud:
+		Range: 9c0
+		Type: GroundPosition
+	RenderSprites:
+		Scale: 2
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+	ReloadDelayMultiplier@cow:
+		Modifier: 60
+	Voiced:
+		VoiceSet: catapultvoice
+
+king_dwarf_glider:
+	Inherits@LEGOAirUnit: ^lego_airunit
+	Inherits@LEGOTemplate: ^lego_transport
+	Inherits@SPACE: ^SpaceshipTemplate
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits: ^PropagandaSelfHeallego
+	Tooltip:
+		Name: Dwarven Glider
+	Valued:
+		Cost: 700
+	Health:
+		HP: 97000
+	Armament:
+		Weapon: piratespecialrangedarrow
+	Armor:
+		Type: Medium
+	AttackFrontal:
+		FacingTolerance: 2
+		PauseOnCondition: disabled
+	Aircraft:
+		InitialFacing: 224
+		TurnSpeed: 7
+		Speed: 165
+		IdealSeparation: 1c0
+		RepulsionSpeed: 10
+	Buildable:
+		Prerequisites: ~king_vehiclefactory
+		Queue: Vehicle.Legobattles
+		Description: Flying Patrol unit.\nDetector.
+	Power:
+		Amount: -75
+	DetectCloaked:
+		CloakTypes: Cloak, Underwater
+		Range: 9c0
+	RenderDetectionCircle:
+	Voiced:
+		VoiceSet: dwarvenglidervoice
+	Selectable:
+		DecorationBounds: 1280, 1280, 0, 0
+	RenderSprites:
+		Scale: 0.7
+
+king_dragon:
+	Inherits@LEGOAirUnit: ^lego_airunit
+	Inherits@SPACE: ^SpaceshipTemplate
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits: ^PropagandaSelfHeallego
+	Tooltip:
+		Name: Dragon
+	Valued:
+		Cost: 800
+	Health:
+		HP: 97000
+	Armament:
+		Weapon: dragonbreath
+	Armor:
+		Type: Medium
+	AttackFrontal:
+		FacingTolerance: 2
+		PauseOnCondition: disabled
+	Aircraft:
+		InitialFacing: 224
+		TurnSpeed: 30
+		Speed: 165
+		IdealSeparation: 1c0
+		RepulsionSpeed: 10
+	Buildable:
+		Prerequisites: ~king_vehiclefactory
+		Queue: Vehicle.Legobattles
+		Description: Flying Patrol unit.\nDetector.
+	Power:
+		Amount: -75
+	DetectCloaked:
+		CloakTypes: Cloak, Underwater
+		Range: 9c0
+	RenderDetectionCircle:
+	Voiced:
+		VoiceSet: dragonvoice
+	WithInfantryBody:
+		IdleSequences: idle
+		StandSequences: stand
+		DefaultAttackSequence: shoot
+	WithMoveAnimation:
+		MoveSequence: run
+	Selectable:
+		DecorationBounds: 1280, 1280, 0, 0
+	RenderSprites:
+		Scale: 0.7
+
+king_king:
+	Inherits@Soldier: ^Soldier
+	Inherits: ^HeroInfantryTemplate
+	Inherits: ^PropagandaSelfHeallego
+	Inherits@LEGOMAGETemplate: ^lego_mage
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Tooltip:
+		Name: King
+	Buildable:
+		Queue: InfantryHero.Legobattles
+		BuildPaletteOrder: 60
+		BuildDuration: 250
+		Prerequisites: ~lego_king_conyard
+		Description: Stalwart Melee Hero.
+		BuildLimit: 1
+	Valued:
+		Cost: 500
+	Mobile:
+		Speed: 60
+	Health:
+		HP: 100000
+	ReloadDelayMultiplier@cow:
+		Modifier: 60
+	Voiced:
+		VoiceSet: kingvoice
+	Targetable@LEGOHERO:
+		TargetTypes: LHEROtarget
+	ProximityExternalCondition@PROPAGANDA:
+		Range: 6c0
+		Condition: propaganda
+		RequiresCondition: !disabled
+	WithRangeCircle:
+		Range: 6c0
+		Type: propaganda
+		RequiresCondition: !disabled
+	WithInfantryBody:
+		-IdleSequences: idle1,idle2,idle3,idle4
+	WithDeathAnimation:
+		UseDeathTypeSuffix: false
+	#Buff Spells
+	GrantCondition@DEFENSEBUFFSELF:
+		Condition: defensebuff
+		RequiresCondition: FSD_cond_1
+	ProximityExternalCondition@DEFENSEBUFFOTHER:
+		Condition: defensebuff
+		Range: 6c0
+		RequiresCondition: FSD_cond_1 && !disabled
+	GrantCondition@SPEEDBUFFSELF:
+		Condition: speedbuff
+		RequiresCondition: FSD_cond_2
+	ProximityExternalCondition@SPEEDBUFFOTHER:
+		Condition: speedbuff
+		Range: 6c0
+		RequiresCondition: FSD_cond_2 && !disabled
+	#Spells
+	AttackFrontal:
+		Armaments: primary, defense, speed, crystalcache, earthquake
+	AutoTargetPriority@DEFAULT:
+		RequiresCondition: !stance-attackanything && !assault-move && !FSD_cond_2
+	AutoTargetPriority@ATTACKANYTHING:
+		RequiresCondition: (stance-attackanything || assault-move) && !FSD_cond_2
+	AutoTargetPriority@ATTACKANYTHING_HASTE:
+		RequiresCondition: (stance-attackanything || assault-move) && FSD_cond_2
+		ValidTargets: haste_target
+		InvalidTargets: NoAutoTarget
+	Armament:
+		Name: primary
+		Weapon: kingmelee
+		FireDelay: 7
+		RequiresCondition: (FSD_cond_1 && !wc2_cond_bot_owner) || (FSD_cond_1_AI && wc2_cond_bot_owner) || (FSD_cond_2) 
+	Armament@DEFENSE:
+		Name: defense
+		Weapon: kingmelee
+		FireDelay: 7
+		TargetStances: Enemy
+		GrantCondition: 
+			Condition: defensebuff
+		RequiresCondition: FSD_cond_2
+		PauseOnCondition: mana < 10
+	Armament@SPEED:
+		Name: speed
+		Weapon: kingmelee
+		FireDelay: 7
+		TargetStances: Enemy
+		GrantCondition: 
+			Condition: speedbuff
+		RequiresCondition: FSD_cond_2
+		PauseOnCondition: mana < 10
+	Armament@CRYSTALCACHE:
+		Name: crystalcache
+		Weapon: crystalcache
+		AmmoUsage: 55
+		FireDelay: 7
+		RequiresCondition: FSD_cond_3
+		PauseOnCondition: mana < 25
+	Armament@EARTHQUAKE:
+		Name: earthquake
+		Weapon: earthquake
+		AmmoUsage: 150
+		FireDelay: 7
+		RequiresCondition: FSD_cond_4
+		PauseOnCondition: mana < 50
+	# "Mana" (AmmoPool)
+	GrantConditionOnAttack@DEFENSE:
+		Condition: cond_defense_drain
+		ArmamentNames: deathcoil
+		MaximumInstances: 1
+		RevokeDelay: 2
+	GrantConditionOnAttack@SPEED:
+		Condition: cond_damage_drain
+		ArmamentNames: speed
+		MaximumInstances: 1
+		RevokeDelay: 2
+	GrantConditionOnAttack@CRYSTALCACHE:
+		Condition: cond_crystalcache_drain
+		ArmamentNames: crystalcache
+		MaximumInstances: 1
+		RevokeDelay: 2
+	GrantConditionOnAttack@EARTHQUAKE:
+		Condition: cond_artillery_drain
+		ArmamentNames: earthquake
+		MaximumInstances: 1
+		RevokeDelay: 2
+	AmmoPool:
+		Armaments: primary, defense, speed, crystalcache, earthquake
+		Ammo: 255
+		PipCount: 10
+		AmmoCondition: mana
+	ReloadAmmoPool@PassiveRegen:
+		Delay: 10
+		Count: 1
+		ShowSelectionBar: false
+	ReloadAmmoPool@DEFENSE:
+		Delay: 1
+		Count: -100
+		RequiresCondition: cond_defense_drain
+	ReloadAmmoPool@HASTE:
+		Delay: 1
+		Count: -50
+		RequiresCondition: cond_damage_drain
+	ReloadAmmoPool@CRYSTALCACHE:
+		Delay: 1
+		Count: -25
+		RequiresCondition: cond_crystalcache_drain
+	ReloadAmmoPool@EARTHQUAKE:
+		Delay: 1
+		Count: -50
+		RequiresCondition: cond_artillery_drain
+
+	### Visual indicator for mana
+	WithAmmoPipsDecoration:
+		PipCount: 4
+		Position: TopLeft
+		FullSequence: pip-green
+		AmmoPools:
+
+	### Visual indicator of mode ###
+	WithDecoration@Mode_Armor:
+		Sequence: armor_spell_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_1
+	WithDecoration@Mode_Speed:
+		Sequence: speed_spell_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_2 
+	WithDecoration@Mode_Forestgrowth:
+		Sequence: forest_spell_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_3
+	WithDecoration@Mode_Earthquake:
+		Sequence: earthquake_spell_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_4
+	
+	### Starting spell randomizer for AI.
+	GrantConditionOnBotOwner@wc2magebotcontrol:
+		Condition: wc2_cond_bot_owner
+		Bots: easiest, easy, medium, hard, brutal, challenger, unbeatable, cameogod, airforce, defenseai
+	GrantRandomCondition@wc2magebotcontrol:
+		Conditions: FSD_cond_1_AI, FSD_cond_2_AI, FSD_cond_3_AI, FSD_cond_4_AI
+	# FSD_Cond_1 is always granted at start due to the four state deploy.
+	GrantCondition@Cond2AI:
+		Condition: FSD_cond_2
+		RequiresCondition: wc2_cond_bot_owner && FSD_cond_2_AI
+	GrantCondition@Cond3AI:
+		Condition: FSD_cond_3
+		RequiresCondition: wc2_cond_bot_owner && FSD_cond_3_AI
+	GrantCondition@Cond4AI:
+		Condition: FSD_cond_4
+		RequiresCondition: wc2_cond_bot_owner && FSD_cond_4_AI
+
+king_queen:
+	Inherits@Soldier: ^Soldier
+	Inherits: ^HeroInfantryTemplate
+	Inherits: ^PropagandaSelfHeallego
+	Inherits@LEGOMAGETemplate: ^lego_mage
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Tooltip:
+		Name: Queen
+	Buildable:
+		Queue: InfantryHero.Legobattles
+		BuildPaletteOrder: 60
+		BuildDuration: 250
+		Prerequisites: ~lego_king_conyard
+		Description: Stalwart Melee Hero.
+		BuildLimit: 1
+	Valued:
+		Cost: 500
+	Mobile:
+		Speed: 60
+	Health:
+		HP: 100000
+	ReloadDelayMultiplier@cow:
+		Modifier: 60
+	Voiced:
+		VoiceSet: queenvoice
+	Targetable@LEGOHERO:
+		TargetTypes: LHEROtarget
+	ProximityExternalCondition@PROPAGANDA:
+		Range: 6c0
+		Condition: propaganda
+		RequiresCondition: !disabled
+	WithRangeCircle:
+		Range: 6c0
+		Type: propaganda
+		RequiresCondition: !disabled
+	WithInfantryBody:
+		-IdleSequences: idle1,idle2,idle3,idle4
+	WithDeathAnimation:
+		UseDeathTypeSuffix: false
+	#Buff Spells
+	GrantCondition@DEFENSEBUFFSELF:
+		Condition: defensebuff
+		RequiresCondition: FSD_cond_1
+	ProximityExternalCondition@DEFENSEBUFFOTHER:
+		Condition: defensebuff
+		Range: 6c0
+		RequiresCondition: FSD_cond_1 && !disabled
+	GrantCondition@DAMAGEBUFFSELF:
+		Condition: speedbuff
+		RequiresCondition: FSD_cond_2
+	ProximityExternalCondition@DAMAGEBUFFOTHER:
+		Condition: speedbuff
+		Range: 6c0
+		RequiresCondition: FSD_cond_2 && !disabled
+	#Spells
+	AttackFrontal:
+		Armaments: primary, defense, speed, crystalcache, earthquake
+	AutoTargetPriority@DEFAULT:
+		RequiresCondition: !stance-attackanything && !assault-move && !FSD_cond_2
+	AutoTargetPriority@ATTACKANYTHING:
+		RequiresCondition: (stance-attackanything || assault-move) && !FSD_cond_2
+	AutoTargetPriority@ATTACKANYTHING_HASTE:
+		RequiresCondition: (stance-attackanything || assault-move) && FSD_cond_2
+		ValidTargets: haste_target
+		InvalidTargets: NoAutoTarget
+	Armament:
+		Name: primary
+		Weapon: queenmelee
+		FireDelay: 7
+		RequiresCondition: (FSD_cond_1 && !wc2_cond_bot_owner) || (FSD_cond_1_AI && wc2_cond_bot_owner) || (FSD_cond_2) 
+	Armament@DEFENSE:
+		Name: defense
+		Weapon: queenmelee
+		FireDelay: 7
+		TargetStances: Enemy
+		GrantCondition: 
+			Condition: defensebuff
+		RequiresCondition: FSD_cond_2
+		PauseOnCondition: mana < 10
+	Armament@SPEED:
+		Name: speed
+		Weapon: queenmelee
+		FireDelay: 7
+		TargetStances: Enemy
+		GrantCondition: 
+			Condition: speedbuff
+		RequiresCondition: FSD_cond_2
+		PauseOnCondition: mana < 10
+	Armament@CRYSTALCACHE:
+		Name: crystalcache
+		Weapon: crystalcache
+		AmmoUsage: 55
+		FireDelay: 7
+		RequiresCondition: FSD_cond_3
+		PauseOnCondition: mana < 25
+	Armament@EARTHQUAKE:
+		Name: earthquake
+		Weapon: earthquake
+		AmmoUsage: 150
+		FireDelay: 7
+		RequiresCondition: FSD_cond_4
+		PauseOnCondition: mana < 50
+	# "Mana" (AmmoPool)
+	GrantConditionOnAttack@DEFENSE:
+		Condition: cond_defense_drain
+		ArmamentNames: deathcoil
+		MaximumInstances: 1
+		RevokeDelay: 2
+	GrantConditionOnAttack@SPEED:
+		Condition: cond_damage_drain
+		ArmamentNames: speed
+		MaximumInstances: 1
+		RevokeDelay: 2
+	GrantConditionOnAttack@CRYSTALCACHE:
+		Condition: cond_crystalcache_drain
+		ArmamentNames: crystalcache
+		MaximumInstances: 1
+		RevokeDelay: 2
+	GrantConditionOnAttack@EARTHQUAKE:
+		Condition: cond_artillery_drain
+		ArmamentNames: earthquake
+		MaximumInstances: 1
+		RevokeDelay: 2
+	AmmoPool:
+		Armaments: primary, defense, speed, crystalcache, earthquake
+		Ammo: 255
+		PipCount: 10
+		AmmoCondition: mana
+	ReloadAmmoPool@PassiveRegen:
+		Delay: 10
+		Count: 1
+		ShowSelectionBar: false
+	ReloadAmmoPool@DEFENSE:
+		Delay: 1
+		Count: -100
+		RequiresCondition: cond_defense_drain
+	ReloadAmmoPool@HASTE:
+		Delay: 1
+		Count: -50
+		RequiresCondition: cond_damage_drain
+	ReloadAmmoPool@CRYSTALCACHE:
+		Delay: 1
+		Count: -25
+		RequiresCondition: cond_crystalcache_drain
+	ReloadAmmoPool@EARTHQUAKE:
+		Delay: 1
+		Count: -50
+		RequiresCondition: cond_artillery_drain
+
+	### Visual indicator for mana
+	WithAmmoPipsDecoration:
+		PipCount: 4
+		Position: TopLeft
+		FullSequence: pip-green
+		AmmoPools:
+
+	### Visual indicator of mode ###
+	WithDecoration@Mode_Armor:
+		Sequence: armor_spell_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_1
+	WithDecoration@Mode_Speed:
+		Sequence: speed_spell_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_2 
+	WithDecoration@Mode_Junglegrowth:
+		Sequence: forest_spell_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_3
+	WithDecoration@Mode_Artillery:
+		Sequence: earthquake_spell_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_4
+	
+	### Starting spell randomizer for AI.
+	GrantConditionOnBotOwner@wc2magebotcontrol:
+		Condition: wc2_cond_bot_owner
+		Bots: easiest, easy, medium, hard, brutal, challenger, unbeatable, cameogod, airforce, defenseai
+	GrantRandomCondition@wc2magebotcontrol:
+		Conditions: FSD_cond_1_AI, FSD_cond_2_AI, FSD_cond_3_AI, FSD_cond_4_AI
+	# FSD_Cond_1 is always granted at start due to the four state deploy.
+	GrantCondition@Cond2AI:
+		Condition: FSD_cond_2
+		RequiresCondition: wc2_cond_bot_owner && FSD_cond_2_AI
+	GrantCondition@Cond3AI:
+		Condition: FSD_cond_3
+		RequiresCondition: wc2_cond_bot_owner && FSD_cond_3_AI
+	GrantCondition@Cond4AI:
+		Condition: FSD_cond_4
+		RequiresCondition: wc2_cond_bot_owner && FSD_cond_4_AI
+
+king_dwarf_king:
+	Inherits@Soldier: ^Soldier
+	Inherits: ^HeroInfantryTemplate
+	Inherits: ^PropagandaSelfHeallego
+	Inherits@LEGOMAGETemplate: ^lego_mage
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Tooltip:
+		Name: King
+	Buildable:
+		Queue: InfantryHero.Legobattles
+		BuildPaletteOrder: 60
+		BuildDuration: 250
+		Prerequisites: ~lego_king_conyard
+		Description: Stalwart Melee Hero.
+		BuildLimit: 1
+	Valued:
+		Cost: 500
+	Mobile:
+		Speed: 60
+	Health:
+		HP: 100000
+	ReloadDelayMultiplier@cow:
+		Modifier: 60
+	Voiced:
+		VoiceSet: dwarfkingvoice
+	Targetable@LEGOHERO:
+		TargetTypes: LHEROtarget
+	ProximityExternalCondition@PROPAGANDA:
+		Range: 6c0
+		Condition: propaganda
+		RequiresCondition: !disabled
+	WithRangeCircle:
+		Range: 6c0
+		Type: propaganda
+		RequiresCondition: !disabled
+	WithInfantryBody:
+		-IdleSequences: idle1,idle2,idle3,idle4
+	WithDeathAnimation:
+		UseDeathTypeSuffix: false
+	#Buff Spells
+	GrantCondition@DEFENSEBUFFSELF:
+		Condition: defensebuff
+		RequiresCondition: FSD_cond_1
+	ProximityExternalCondition@DEFENSEBUFFOTHER:
+		Condition: defensebuff
+		Range: 6c0
+		RequiresCondition: FSD_cond_1 && !disabled
+	GrantCondition@DAMAGEBUFFSELF:
+		Condition: damagebuff
+		RequiresCondition: FSD_cond_2
+	ProximityExternalCondition@DAMAGEBUFFOTHER:
+		Condition: damagebuff
+		Range: 6c0
+		RequiresCondition: FSD_cond_2 && !disabled
+	ProximityExternalCondition@MINEBUFF:
+		Condition: minebuff
+		Range: 6c0
+		RequiresCondition: FSD_cond_3 && !disabled
+	#Spells
+	AttackFrontal:
+		Armaments: primary, defense, damage, mining, hammerthrow
+	AutoTargetPriority@DEFAULT:
+		RequiresCondition: !stance-attackanything && !assault-move && !FSD_cond_2
+	AutoTargetPriority@ATTACKANYTHING:
+		RequiresCondition: (stance-attackanything || assault-move) && !FSD_cond_2
+	AutoTargetPriority@ATTACKANYTHING_HASTE:
+		RequiresCondition: (stance-attackanything || assault-move) && FSD_cond_2
+		ValidTargets: haste_target
+		InvalidTargets: NoAutoTarget
+	Armament:
+		Name: primary
+		Weapon: dwarfkingmelee
+		FireDelay: 7
+		RequiresCondition: (FSD_cond_1 && !wc2_cond_bot_owner) || (FSD_cond_1_AI && wc2_cond_bot_owner) || (FSD_cond_2) 
+	Armament@defense:
+		Name: defense
+		Weapon: dwarfkingmelee
+		FireDelay: 7
+		TargetStances: Enemy
+		GrantCondition: 
+			Condition: defensebuff
+		RequiresCondition: FSD_cond_1
+		PauseOnCondition: mana < 10
+	Armament@DAMAGE:
+		Name: damage
+		Weapon: dwarfkingmelee
+		FireDelay: 7
+		TargetStances: Enemy
+		GrantCondition: 
+			Condition: damagebuff
+		RequiresCondition: FSD_cond_2
+		PauseOnCondition: mana < 10
+	Armament@MINEBUFF:
+		Name: minebuff
+		Weapon: dwarfkingmelee
+		AmmoUsage: 30
+		FireDelay: 7
+		RequiresCondition: FSD_cond_3
+		PauseOnCondition: mana < 25
+	Armament@hammerthrow:
+		Name: hammerthrow
+		Weapon: hammerthrow
+		AmmoUsage: 150
+		FireDelay: 7
+		RequiresCondition: FSD_cond_4
+		PauseOnCondition: mana < 50
+	# "Mana" (AmmoPool)
+	GrantConditionOnAttack@defense:
+		Condition: cond_defense_drain
+		ArmamentNames: defense
+		MaximumInstances: 1
+		RevokeDelay: 2
+	GrantConditionOnAttack@DAMAGE:
+		Condition: cond_damage_drain
+		ArmamentNames: damage
+		MaximumInstances: 1
+		RevokeDelay: 2
+	GrantConditionOnAttack@mining:
+		Condition: cond_mining_drain
+		ArmamentNames: mining
+		MaximumInstances: 1
+		RevokeDelay: 2
+	GrantConditionOnAttack@hammerthrow:
+		Condition: cond_hammerthrow_drain
+		ArmamentNames: hammerthrow
+		MaximumInstances: 1
+		RevokeDelay: 2
+	AmmoPool:
+		Armaments: primary, defense, damage, mining, hammerthrow
+		Ammo: 255
+		PipCount: 10
+		AmmoCondition: mana
+	ReloadAmmoPool@PassiveRegen:
+		Delay: 10
+		Count: 1
+		ShowSelectionBar: false
+	ReloadAmmoPool@defense:
+		Delay: 1
+		Count: -100
+		RequiresCondition: cond_defense_drain
+	ReloadAmmoPool@DAMAGE:
+		Delay: 1
+		Count: -50
+		RequiresCondition: cond_damage_drain
+	ReloadAmmoPool@mining:
+		Delay: 1
+		Count: -25
+		RequiresCondition: cond_mining_drain
+	ReloadAmmoPool@hammerthrow:
+		Delay: 1
+		Count: -50
+		RequiresCondition: cond_hammerthrow_drain
+
+	### Visual indicator for mana
+	WithAmmoPipsDecoration:
+		PipCount: 4
+		Position: TopLeft
+		FullSequence: pip-green
+		AmmoPools:
+
+	### Visual indicator of mode ###
+	WithDecoration@Mode_Speed:
+		Sequence: armor_spell_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_1
+	WithDecoration@Mode_Damage:
+		Sequence: damage_spell_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_2 
+	WithDecoration@Mode_Mining:
+		Sequence: mining_spell_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_3
+	WithDecoration@Mode_Arrowrain:
+		Sequence: hammer_spell_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_4
+	
+	### Starting spell randomizer for AI.
+	GrantConditionOnBotOwner@wc2magebotcontrol:
+		Condition: wc2_cond_bot_owner
+		Bots: easiest, easy, medium, hard, brutal, challenger, unbeatable, cameogod, airforce, defenseai
+	GrantRandomCondition@wc2magebotcontrol:
+		Conditions: FSD_cond_1_AI, FSD_cond_2_AI, FSD_cond_3_AI, FSD_cond_4_AI
+	# FSD_Cond_1 is always granted at start due to the four state deploy.
+	GrantCondition@Cond2AI:
+		Condition: FSD_cond_2
+		RequiresCondition: wc2_cond_bot_owner && FSD_cond_2_AI
+	GrantCondition@Cond3AI:
+		Condition: FSD_cond_3
+		RequiresCondition: wc2_cond_bot_owner && FSD_cond_3_AI
+	GrantCondition@Cond4AI:
+		Condition: FSD_cond_4
+		RequiresCondition: wc2_cond_bot_owner && FSD_cond_4_AI
+
+####################################################################################################
+#		Wizard - Structures
+####################################################################################################
+
+lego_wizard_conyard:
+	Inherits: ^BaseBuilding
+	Inherits@shape: ^3x3Shape
+	Inherits@ref: ^Refinery
+	Inherits@conyard: ^Conyard
+	Tooltip:
+		Name: Skeleton Tower
+	Building:
+		Footprint: xx xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+		Description: Wizard HQ unit./n Constructs buildings./n Hero units are healed by it.
+	Transforms:
+		IntoActor: lego_wizard_mcv
+		Offset: 1,1
+		Facing: 432
+	Valued:
+		Cost: 3000
+	ProvidesPrerequisite:
+	DamageMultiplier@DamageReduction:
+		Modifier: 88
+	Health:
+		HP: 200000
+	RevealsShroud:
+		Range: 4c0
+	RallyPoint:
+	Exit@1:
+		SpawnOffset: -426,85,0
+		ExitCell: 0,1
+	Exit@2:
+		SpawnOffset: 298,298,0
+		ExitCell: 1,1
+	Power:
+		Amount: 50
+	SpawnActorsOnSell:
+		ActorTypes: wizard_builder
+	ScalePowerWithHealth:
+	BaseBuilding:
+	ProvidesRadar:
+	BaseProvider:
+		Cooldown: 75
+		Range: 14c0
+	AutoTarget:
+		ScanRadius: 5
+		InitialStance: AttackAnything
+	AutoTargetPriority@DEFAULT:
+		ValidTargets: LHEROtarget
+	AttackOmni:
+		PauseOnCondition: disabled
+	# Armament@primary: 
+	# 	Weapon: HQHEROHEAL
+	# 	TargetStances: Ally
+	# 	ForceTargetStances: None
+	# 	PauseOnCondition: healed && !injured
+	Production:
+		Produces: InfantryHero.Legobattles
+	ProductionQueue:
+		Type: InfantryHero.Legobattles
+		DisplayOrder: 2
+		Group: Infantry
+		LowPowerModifier: 150
+		ReadyAudio: UnitReady
+		ReadyTextNotification: notification-unit-ready
+		BlockedAudio: NoBuild
+		BlockedTextNotification: notification-unable-to-build-more
+		LimitedAudio: BuildingInProgress
+		LimitedTextNotification: notification-unable-to-comply-building-in-progress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar:
+		ProductionType: InfantryHero.Legobattles
+	Refinery:
+		# DockAngle: 112
+		# DockOffset: 1,2
+		# IsDragRequired: False
+		# DragOffset: -554,512,0
+		# DragLength: 12
+		# TickRate: 15
+	DockHost:
+		DockAngle: 112
+		DockOffset: 0, 2c512, 0
+		IsDragRequired: False
+		DragOffset: -554,512,0
+		DragLength: 12
+		TickRate: 15
+	StoresResources:
+		PipColor: Green
+		PipCount: 10
+		Capacity: 1000
+	Voiced:
+		VoiceSet: skeletontowervoice
+	ProvidesPrerequisite@buildingname:
+	WithProductionOverlay@Legoman:
+		RequiresCondition: !build-incomplete
+		Queues: Defence
+		Sequence: lego_production_overlay_skeleton
+
+
+wizard_barracks:
+	Inherits@template: ^lego_barracks
+	Inherits@shape: ^2x2Shape
+	Tooltip:
+		Name: Mausoleum
+	Valued:
+		Cost: 800
+	Buildable:
+		Queue: Building, RABuilding
+		Description: Trains wizard infantry.
+		Prerequisites: ~lego_wizard_conyard
+	SpawnActorsOnSell:
+		ActorTypes: wizard_skeleton
+	WithProductionOverlay@Legomen:
+		RequiresCondition: !build-incomplete
+		Queues: Infantry.Legobattles
+		Sequence: lego_production_overlay_skeleton
+	Voiced:
+		VoiceSet: mausoleumvoice
+	ProvidesPrerequisite:
+		Prerequisite: wizard_BARRACKS
+	RenderSprites:
+		Image: wizard_barracks
+
+wizard_graveyard:
+	Inherits@template: ^lego_building
+	Inherits@shape: ^2x2Shape
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Graveyard
+	Buildable:
+		Queue: Building, RABuilding
+		Prerequisites: ~lego_wizard_conyard
+		BuildPaletteOrder: 10
+		BuildDuration: 160
+		BuildDurationModifier: 100
+		Description: Generator, build to keep producing units.
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+		LocalCenterOffset: 0,0,0
+	Health:
+		HP: 65000
+	Power:
+		Amount: 300
+	Voiced:
+		VoiceSet: graveyardvoice
+	ProvidesPrerequisite:
+		Prerequisite: WIZARD FARM
+	RenderSprites:
+		Image: wizard_graveyard
+
+wizard_lumber_mill:
+	Inherits@ref: ^Refinery
+	Inherits@template: ^lego_building
+	Inherits@shape: ^2x2Shape
+	#Inherits@CPQWP: ^CPQCondition 
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Lumber Mill
+	Health:
+		HP: 65000
+	Buildable:
+		Queue: Building, RABuilding
+		Prerequisites: ~lego_wizard_conyard
+		BuildPaletteOrder: 30
+		BuildDuration: 160
+		BuildDurationModifier: 100
+		Description: Resource dropoff structure.
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+		LocalCenterOffset: 0,0,0
+	Refinery:
+		DockAngle: 112
+		DockOffset: 1,2 
+		IsDragRequired: False
+		DragOffset: -554,512,0
+		DragLength: 12
+		TickRate: 15
+	DockHost:
+		DockAngle: 112
+		DockOffset: 0, 2c512, 0
+		IsDragRequired: False
+		DragOffset: -554,512,0
+		DragLength: 12
+		TickRate: 15
+	StoresResources:
+		PipColor: yellow
+		PipCount: 5
+		Capacity: 1000
+	ResourcePurifier:
+		Modifier: 5
+	FreeActor@1:
+		Actor: wizard_builder
+	FreeActor@2:
+		Actor: wizard_builder
+	Voiced:
+		VoiceSet: lumbervoice
+
+wizard_mine:
+	Inherits: ^PropagandaSelfHeallegostructure
+	Inherits@template: ^lego_building
+	Inherits@shape: ^2x2Shape
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Mine
+	Buildable:
+		Queue: Building, RABuilding
+		Prerequisites: ~lego_wizard_conyard
+		BuildPaletteOrder: 40
+		BuildDuration: 120
+		BuildDurationModifier: 100
+		Description: Generates income.
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+		LocalCenterOffset: 0,0,0
+	Health:
+		HP: 65000
+	CashTrickler:
+		Amount: 300
+		DisplayDuration: 30
+		Interval: 200
+	Voiced:
+		VoiceSet: minevoice
+
+wizard_vehiclefactory:
+	Inherits@template: ^lego_building
+	Inherits@factory: ^lego_vehiclefactory
+	Inherits@shape: ^2x2Shape
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: Cauldron
+	Buildable:
+		Queue: Building, RABuilding
+		Prerequisites: ~lego_wizard_conyard, wizard_graveyard, wizard_barracks
+		BuildPaletteOrder: 50
+		BuildDuration: 160
+		BuildDurationModifier: 100
+		Description: Trains wizard special units.
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+		LocalCenterOffset: 0,0,0
+	WithProductionOverlay@Legospecial:
+		RequiresCondition: !build-incomplete
+		Queues: Vehicle.Legobattles
+		Sequence: lego_production_overlay_brick
+		Palette: player
+		IsPlayerPalette: True
+	SpawnActorsOnSell:
+		ActorTypes: wizard_oarsman
+	Health:
+		HP: 65000
+	Voiced:
+		VoiceSet: specialfactoryvoice
+
+wizard_tower:
+	Inherits: ^Defense
+	Inherits@lego_tower: ^lego_tower
+	# Don't declare AutoTarget stuff before AttackBase stuff or an annoying bug with WithSpriteBody will occur.
+	#Inherits@AUTOTARGET: ^AutoTargetAll
+	Tooltip:
+		Name: Wizard Tower
+	Buildable:
+		Prerequisites: ~lego_wizard_conyard
+		Queue: Defence, RADefence
+		Description: Upgradable defense building\nDetector
+	Voiced:
+		VoiceSet: kingtowervoice
+	Armament@PRIMARY:
+		Weapon: piratelegoranged
+		RequiresCondition: !wizard_tower2upg && !wizard_tower3upg
+	Armament@AA:
+		Weapon: piratelegoranged
+		RequiresCondition: !wizard_tower2upg && !wizard_tower3upg
+	Armament@guardtower:
+		Weapon: specialrangedstar
+		RequiresCondition: wizard_tower2upg && !wizard_tower3upg
+	Armament@guardtoweraa:
+		Weapon: specialrangedstar
+		RequiresCondition: wizard_tower2upg && !wizard_tower3upg
+	Armament@g3tower:
+		Weapon: piratespecialrangedball
+		RequiresCondition: wizard_tower2upg && wizard_tower3upg
+	Armament@3toweraa:
+		Weapon: piratespecialrangedball
+		RequiresCondition: wizard_tower2upg && wizard_tower3upg
+	AttackOmni:
+		PauseOnCondition: disabled
+	WithRangeCircle:
+		Range: 3072
+		# RequiresCondition: wizard_tower2upg
+	Inherits@AUTOTARGET: ^AutoTargetAll
+	### Upgrade stuff ###
+	WithSpriteBody:
+		RequiresCondition: !wizard_towerupg && !wizard_tower2upg
+		Sequence: wizard_tower
+	Production@guardtower:
+		Produces: Towerupgrade
+		RequiresCondition: !wizard_tower2upg && !wizard_tower3upg
+	ProductionBar@guardtower:
+		ProductionType: Towerupgrade
+		RequiresCondition: !wizard_tower2upg && !wizard_tower3upg
+	ProductionQueue@guardtower:
+		Type: Towerupgrade
+		DisplayOrder: 0
+		Group: Addon
+		LowPowerModifier: 200
+		QueueLimit: 1
+		ItemLimit: 1
+		RequiresCondition: !wizard_tower2upg && !wizard_tower3upg
+	GrantConditionOnProduction@guardtower:
+		Condition: wizard_tower2upg
+		Actors: wizard_tower2
+	WithSpriteBody@guardtower:
+		Sequence: wizard_tower2
+		RequiresCondition: wizard_tower2upg && !wizard_tower3upg
+	DamageMultiplier@guardtower:
+		Modifier: 77
+		RequiresCondition: wizard_tower2upg
+	###
+	Production@3tower:
+		Produces: Towerupgrade2
+		RequiresCondition: wizard_tower2upg && !wizard_tower3upg
+	ProductionBar@3tower:
+		ProductionType: Towerupgrade2
+	ProductionQueue@3tower:
+		Type: Towerupgrade2
+		DisplayOrder: 0
+		Group: Addon
+		LowPowerModifier: 200
+		QueueLimit: 1
+		ItemLimit: 1
+	GrantConditionOnProduction@3tower:
+		Condition: wizard_tower3upg
+		Actors: wizard_tower3
+	WithSpriteBody@3tower:
+		Sequence: wizard_tower3
+		RequiresCondition: wizard_tower3upg
+	DamageMultiplier@3tower:
+		Modifier: 87
+		RequiresCondition: wizard_tower3upg
+	ActorPreviewPlaceBuildingPreview:
+		Palette: player
+	Building:
+		BuildSounds: imperialtowervoice
+
+wizard_tower2:
+	Tooltip:
+		Name: Wizard Tower II
+	Buildable:
+		BuildPaletteOrder: 1
+		RequiresCondition: !wizard_tower2upg && !wizard_tower3upg
+		Prerequisites: ~lego_wizard_conyard
+		Queue: Towerupgrade
+		BuildDuration: 3500
+		BuildDurationModifier: 12
+		Description: Upgraded guard tower, attacks land, sea, and air.
+	Valued:
+		Cost: 800
+	Interactable:
+	AlwaysVisible:
+	KillsSelf:
+		RemoveInstead: true
+	ProvidesPrerequisite@buildingname:
+	RenderSprites:
+		Image: wizard_tower2
+
+wizard_tower3:
+	Tooltip:
+		Name: Wizard Tower III
+	Buildable:
+		BuildPaletteOrder: 1
+		Prerequisites: ~lego_wizard_conyard
+		RequiresCondition: wizard_tower2upg && !wizard_tower3upg
+		Queue: Towerupgrade2
+		BuildDuration: 3500
+		BuildDurationModifier: 12
+		Description: Further upgraded Guard tower, attacks land, sea, and air.
+	Valued:
+		Cost: 800
+	Interactable:
+	AlwaysVisible:
+	KillsSelf:
+		RemoveInstead: true
+	ProvidesPrerequisite@buildingname:
+	RenderSprites:
+		Image: wizard_tower3
+
+####################################################################################################
+#		wizard- Units
+####################################################################################################
+
+lego_wizard_mcv:
+	Inherits@LEGOINFANTRY: ^Soldier
+	Inherits@LegoTemplate: ^lego_mcv
+	Buildable:
+		Queue: Defence, RADefence
+		Description: Transforms into an Fortress.
+		Prerequisites: ~lego_wizard_conyard
+	Tooltip:
+		Name: Mobile Construction Vehicle (Wizard)
+	Transforms:
+		IntoActor: lego_wizard_conyard
+		Offset: -1,-1
+		Facing: 108
+		TransformSounds:
+	Voiced:
+		VoiceSet: wizardbuildervoice
+	RenderSprites:
+		Image: lego_wizard_mcv
+	WithInfantryBody:
+		-IdleSequences: idle1,idle2,idle3,idle4
+
+wizard_builder
+	Inherits: ^Soldier
+	Inherits: ^PropagandaSelfHeallego
+	Inherits: ^PropagandaSelfHeallegobuilder
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@selection: ^SelectableEconomicUnit
+	Inherits@harv: ^Harvester
+	Inherits@worker: ^LBWorker
+	AutoTargetPriority@Repair:
+		ValidTargets: Repair, Repairing
+		ValidStances: Ally
+		Priority: 2
+	Tooltip:
+		Name: Builder
+	Buildable:
+		Queue: InfantryHero.Legobattles
+		Prerequisites: ~lego_wizard_conyard
+		BuildPaletteOrder: 5
+		BuildDuration: 250
+		Description: Basic Harvester. Can repair.
+	StoresResources:
+		Capacity: 5
+	Armament@repair:
+		Name: repair
+		Weapon: builderrepair
+		TargetStances: Ally
+		ForceTargetStances: Ally
+		LocalOffset: 240,160,240
+	Armament@primary:
+		Name: primary
+		Weapon: troopermelee
+		ForceTargetStances: Enemy, Neutral
+	Captures:
+		CaptureTypes: building, tech
+		PlayerExperience: 500
+		CaptureDelay: 375
+		ConsumedByCapture: False
+		EnterCursor: ability
+		EnterBlockedCursor: move-blocked
+	Valued:
+		Cost: 50
+	Mobile:
+		Speed: 50
+	Health:
+		HP: 30000
+	Power:
+		Amount: -5
+	ReloadDelayMultiplier@cow:
+		Modifier: 60
+	AttackFrontal:
+		Armaments: primary, repair
+	WithHarvesterSpriteBody:
+		ImageByFullness: wizard_builder, wizard_builder
+	WithAttackAnimation:
+		Sequence: harvest
+	WithMoveAnimation:
+		MoveSequence: run
+	-DamagedByTerrain:
+	-WithInfantryBody:
+	-WithDeathAnimation:
+	WithHarvestAnimation:
+		HarvestSequence: harvest
+	Voiced:
+		VoiceSet: wizardbuildervoice
+
+wizard_skeleton:
+	Inherits@Soldier: ^Soldier
+	Inherits: ^HeavyInfantryTemplate
+	Inherits: ^PropagandaSelfHeallego
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Tooltip:
+		Name: Skeleton
+	Buildable:
+		Queue: Infantry.Legobattles
+		BuildPaletteOrder: 1
+		BuildDuration: 100
+		Prerequisites: ~wizard_barracks
+		Description: Basic Melee Infantry
+	Armament:
+		Weapon: skeletonmelee
+	Valued:
+		Cost: 60
+	Mobile:
+		Speed: 60
+	Health:
+		HP: 29000
+	ReloadDelayMultiplier@cow:
+		Modifier: 60
+	Voiced:
+		VoiceSet: skeletonvoice
+	WithInfantryBody:
+		-IdleSequences: idle1,idle2,idle3,idle4
+	Power:
+		Amount: -10
+	WithDeathAnimation:
+		UseDeathTypeSuffix: false
+
+wizard_crossbowman:
+	Inherits@Soldier: ^Soldier
+	Inherits: ^HeavyInfantryTemplate
+	Inherits: ^PropagandaSelfHeallego
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Tooltip:
+		Name: Crossbowman
+	Buildable:
+		Queue: Infantry.Legobattles
+		BuildPaletteOrder: 2
+		BuildDuration: 250
+		Prerequisites: ~wizard_barracks
+		Description: Basic Ranged Infantry
+	Armament:
+		Weapon: piratelegorangedarrow
+	Armament@aa:
+		Weapon: piratelegorangedarrow
+	Valued:
+		Cost: 150
+	Mobile:
+		Speed: 30
+	Health:
+		HP: 18000
+	ReloadDelayMultiplier@cow:
+		Modifier: 60
+	Power:
+		Amount: -10
+	Voiced:
+		VoiceSet: crossbowmanvoice
+	WithInfantryBody:
+		-IdleSequences: idle1,idle2,idle3,idle4
+	WithDeathAnimation:
+		UseDeathTypeSuffix: false
+
+wizard_knight:
+	Inherits@Soldier: ^Soldier
+	Inherits: ^HeavyInfantryTemplate
+	Inherits: ^PropagandaSelfHeallego
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Tooltip:
+		Name: Skeleton Knight
+	Buildable:
+		Queue: Infantry.Legobattles
+		BuildPaletteOrder: 4
+		BuildDuration: 300
+		Prerequisites: ~wizard_barracks
+		Description: Heavy Melee Infantry
+	Armament:
+		Weapon: cavalrymelee
+	Valued:
+		Cost: 250
+	Mobile:
+		Speed: 30
+	Health:
+		HP: 40000
+	ReloadDelayMultiplier@cow:
+		Modifier: 60
+	Power:
+		Amount: -15
+	Voiced:
+		VoiceSet: cavalryvoice
+	WithInfantryBody:
+		-IdleSequences: idle1,idle2,idle3,idle4
+	WithDeathAnimation:
+		UseDeathTypeSuffix: false
+
+wizard_troll:
+	Inherits@Soldier: ^Soldier
+	Inherits: ^HeavyInfantryTemplate
+	Inherits: ^PropagandaSelfHeallego
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Tooltip:
+		Name: Troll
+	Buildable:
+		Queue: Infantry.Legobattles
+		BuildPaletteOrder: 3
+		BuildDuration: 350
+		Prerequisites: ~wizard_barracks
+		Description: Harrying Ranged Infantry.
+	Armament:
+		Weapon: swordsmanmelee
+	Armament@aa:
+		Weapon: swordsmanmelee
+	Valued:
+		Cost: 100
+	Mobile:
+		Speed: 60
+	Health:
+		HP: 31000
+	ReloadDelayMultiplier@cow:
+		Modifier: 60
+	Power:
+		Amount: -10
+	Voiced:
+		VoiceSet: trollvoice
+	WithInfantryBody:
+		-IdleSequences: idle1,idle2,idle3,idle4
+	WithDeathAnimation:
+		UseDeathTypeSuffix: false
+
+wizard_siege_tower:
+	Inherits@LEGOTankTRACKED: ^Walker
+	Inherits: ^MainBattleTankTemplate
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits: ^PropagandaSelfHeallego
+	Crushable:
+		WarnProbability: 0
+		CrushClasses: vehicle
+		RequiresCondition: !invulnerability
+	CaptureManager:
+		BeingCapturedCondition: being-captured
+	Capturable:
+		Types: vehicle
+		ValidStances: Enemy, Neutral
+		RequiresCondition: !untargetable
+	-Huntable:
+	Selectable:
+		Bounds: 1280, 1280, 0, 0
+		DecorationBounds: 1280, 1280, 0, 0
+	Tooltip:
+		Name: Siege Tower
+	Buildable:
+		Queue: Vehicle.Legobattles
+		BuildPaletteOrder: 60
+		BuildDurationModifier: 50
+		Prerequisites: ~wizard_vehiclefactory
+		Description: Assault vehicle.
+	Power:
+		Amount: -20
+	Health:
+		HP: 100000
+	Armament:
+		Weapon: specialrangedAA
+	Armor:
+		Type: Medium
+	AttackFrontal:
+		FacingTolerance: 2
+		PauseOnCondition: disabled
+	Valued:
+		Cost: 700
+	Mobile:
+		Speed: 30
+		SharesCell: False
+	RevealsShroud:
+		Range: 9c0
+		Type: GroundPosition
+	RenderSprites:
+		Scale: 2
+	ReloadDelayMultiplier@cow:
+		Modifier: 60
+	Voiced:
+		VoiceSet: siegetowervoice
+
+wizard_troll_giant:
+	Inherits@LEGOTankTRACKED: ^Walker
+	Inherits: ^MainBattleTankTemplate
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits: ^PropagandaSelfHeallego
+	Crushable:
+		WarnProbability: 0
+		CrushClasses: vehicle
+		RequiresCondition: !invulnerability
+	CaptureManager:
+		BeingCapturedCondition: being-captured
+	Capturable:
+		Types: vehicle
+		ValidStances: Enemy, Neutral
+		RequiresCondition: !untargetable
+	-Huntable:
+	Selectable:
+		Bounds: 1280, 1280, 0, 0
+		DecorationBounds: 1280, 1280, 0, 0
+	Tooltip:
+		Name: Troll Giant
+	Buildable:
+		Queue: Vehicle.Legobattles
+		BuildPaletteOrder: 60
+		BuildDurationModifier: 50
+		Prerequisites: ~wizard_vehiclefactory
+		Description: Assault vehicle.
+	Power:
+		Amount: -20
+	Health:
+		HP: 95000
+	Armament:
+		Weapon: kingpecialrangedrock
+	Armor:
+		Type: Medium
+	AttackFrontal:
+		FacingTolerance: 2
+		PauseOnCondition: disabled
+	Valued:
+		Cost: 700
+	Mobile:
+		Speed: 30
+		SharesCell: False
+	RevealsShroud:
+		Range: 9c0
+		Type: GroundPosition
+	RenderSprites:
+		Scale: 2
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+	ReloadDelayMultiplier@cow:
+		Modifier: 60
+	Voiced:
+		VoiceSet: trollgiantvoice
+
+wizard_troll_blimp:
+	Inherits@LEGOAirUnit: ^lego_airunit
+	Inherits@LEGOTemplate: ^lego_transport
+	Inherits@SPACE: ^SpaceshipTemplate
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits: ^PropagandaSelfHeallego
+	Tooltip:
+		Name: Troll Blimp
+	Valued:
+		Cost: 700
+	Health:
+		HP: 97000
+	Armament:
+		Weapon: piratespecialrangedarrow
+	Armor:
+		Type: Medium
+	AttackFrontal:
+		FacingTolerance: 2
+		PauseOnCondition: disabled
+	Aircraft:
+		InitialFacing: 224
+		TurnSpeed: 7
+		Speed: 165
+		IdealSeparation: 1c0
+		RepulsionSpeed: 10
+	Buildable:
+		Prerequisites: ~wizard_vehiclefactory
+		Queue: Vehicle.Legobattles
+		Description: Flying Patrol unit.\nDetector.
+	Power:
+		Amount: -75
+	DetectCloaked:
+		CloakTypes: Cloak, Underwater
+		Range: 9c0
+	RenderDetectionCircle:
+	Voiced:
+		VoiceSet: trollblimpvoice
+	Selectable:
+		DecorationBounds: 1280, 1280, 0, 0
+	RenderSprites:
+		Scale: 0.7
+
+wizard_dragon:
+	Inherits@LEGOAirUnit: ^lego_airunit
+	Inherits@SPACE: ^SpaceshipTemplate
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits: ^PropagandaSelfHeallego
+	Tooltip:
+		Name: Dragon
+	Valued:
+		Cost: 800
+	Health:
+		HP: 97000
+	Armament:
+		Weapon: dragonbreath
+	Armor:
+		Type: Medium
+	AttackFrontal:
+		FacingTolerance: 2
+		PauseOnCondition: disabled
+	Aircraft:
+		InitialFacing: 224
+		TurnSpeed: 30
+		Speed: 165
+		IdealSeparation: 1c0
+		RepulsionSpeed: 10
+	Buildable:
+		Prerequisites: ~wizard_vehiclefactory
+		Queue: Vehicle.Legobattles
+		Description: Flying Patrol unit.\nDetector.
+	Power:
+		Amount: -75
+	DetectCloaked:
+		CloakTypes: Cloak, Underwater
+		Range: 9c0
+	RenderDetectionCircle:
+	Voiced:
+		VoiceSet: dragonvoice
+	WithInfantryBody:
+		IdleSequences: idle
+		StandSequences: stand
+		DefaultAttackSequence: shoot
+	WithMoveAnimation:
+		MoveSequence: run
+	Selectable:
+		DecorationBounds: 1280, 1280, 0, 0
+	RenderSprites:
+		Scale: 0.7
+
+wizard_wizard:
+	Inherits@Soldier: ^Soldier
+	Inherits: ^HeroInfantryTemplate
+	Inherits: ^PropagandaSelfHeallego
+	Inherits@LEGOMAGETemplate: ^lego_mage
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Tooltip:
+		Name: Wizard
+	Buildable:
+		Queue: InfantryHero.Legobattles
+		BuildPaletteOrder: 60
+		BuildDuration: 250
+		Prerequisites: ~lego_wizard_conyard
+		Description: Stalwart Melee Hero.
+		BuildLimit: 1
+	Valued:
+		Cost: 500
+	Mobile:
+		Speed: 60
+	Health:
+		HP: 110000
+	ReloadDelayMultiplier@cow:
+		Modifier: 60
+	Voiced:
+		VoiceSet: wizardvoice
+	Targetable@LEGOHERO:
+		TargetTypes: LHEROtarget
+	ProximityExternalCondition@PROPAGANDA:
+		Range: 6c0
+		Condition: propaganda
+		RequiresCondition: !disabled
+	WithRangeCircle:
+		Range: 6c0
+		Type: propaganda
+		RequiresCondition: !disabled
+	WithInfantryBody:
+		-IdleSequences: idle1,idle2,idle3,idle4
+	WithDeathAnimation:
+		UseDeathTypeSuffix: false
+	#Buff Spells
+	GrantCondition@SPEEDBUFFSELF:
+		Condition: speedbuff
+		RequiresCondition: FSD_cond_1
+	ProximityExternalCondition@SPEEDBUFFOTHER:
+		Condition: speedbuff
+		Range: 6c0
+		RequiresCondition: FSD_cond_1 && !disabled
+	GrantCondition@DAMAGEBUFFSELF:
+		Condition: damagebuff
+		RequiresCondition: FSD_cond_2
+	ProximityExternalCondition@DAMAGEBUFFOTHER:
+		Condition: damagebuff
+		Range: 6c0
+		RequiresCondition: FSD_cond_2 && !disabled
+	#Spells
+	AttackFrontal:
+		Armaments: primary, speed, damage, fireball, lightningspawner
+	AutoTargetPriority@DEFAULT:
+		RequiresCondition: !stance-attackanything && !assault-move && !FSD_cond_2
+	AutoTargetPriority@ATTACKANYTHING:
+		RequiresCondition: (stance-attackanything || assault-move) && !FSD_cond_2
+	AutoTargetPriority@ATTACKANYTHING_HASTE:
+		RequiresCondition: (stance-attackanything || assault-move) && FSD_cond_2
+		ValidTargets: haste_target
+		InvalidTargets: NoAutoTarget
+	Armament:
+		Name: primary
+		Weapon: wizardmelee
+		FireDelay: 7
+		RequiresCondition: (FSD_cond_1 && !wc2_cond_bot_owner) || (FSD_cond_1_AI && wc2_cond_bot_owner) || (FSD_cond_2) 
+	Armament@SPEED:
+		Name: speed
+		Weapon: wizardmelee
+		FireDelay: 7
+		TargetStances: Enemy
+		GrantCondition: 
+			Condition: speedbuff
+		RequiresCondition: FSD_cond_2
+		PauseOnCondition: mana < 10
+	Armament@DAMAGE:
+		Name: damage
+		Weapon: wizardmelee
+		FireDelay: 7
+		TargetStances: Enemy
+		GrantCondition: 
+			Condition: damagebuff
+		RequiresCondition: FSD_cond_2
+		PauseOnCondition: mana < 10
+	Armament@FIREBALL:
+		Name: fireball
+		Weapon: fireball
+		AmmoUsage: 25
+		FireDelay: 7
+		RequiresCondition: FSD_cond_3
+		PauseOnCondition: mana < 25
+	Armament@LIGHTNINGBLAST:
+		Name: lightningblast
+		Weapon: lightningblast
+		AmmoUsage: 55
+		FireDelay: 7
+		RequiresCondition: FSD_cond_4
+		PauseOnCondition: mana < 50
+	# "Mana" (AmmoPool)
+	GrantConditionOnAttack@SPEED:
+		Condition: cond_speed_drain
+		ArmamentNames: deathcoil
+		MaximumInstances: 1
+		RevokeDelay: 2
+	GrantConditionOnAttack@DAMAGE:
+		Condition: cond_damage_drain
+		ArmamentNames: damage
+		MaximumInstances: 1
+		RevokeDelay: 2
+	GrantConditionOnAttack@FIREBALL:
+		Condition: cond_fireball_drain
+		ArmamentNames: fireball
+		MaximumInstances: 1
+		RevokeDelay: 2
+	GrantConditionOnAttack@LIGHTNINGBLAST:
+		Condition: cond_lightningblast_drain
+		ArmamentNames: lightningblast
+		MaximumInstances: 1
+		RevokeDelay: 2
+	AmmoPool:
+		Armaments: primary, speed, damage, fireball, lightningblast
+		Ammo: 255
+		PipCount: 10
+		AmmoCondition: mana
+	ReloadAmmoPool@PassiveRegen:
+		Delay: 10
+		Count: 1
+		ShowSelectionBar: false
+	ReloadAmmoPool@SPEED:
+		Delay: 1
+		Count: -100
+		RequiresCondition: cond_speed_drain
+	ReloadAmmoPool@HASTE:
+		Delay: 1
+		Count: -50
+		RequiresCondition: cond_damage_drain
+	ReloadAmmoPool@FIREBALL:
+		Delay: 1
+		Count: -25
+		RequiresCondition: cond_fireball_drain
+	ReloadAmmoPool@LIGHTNINGBLAST:
+		Delay: 1
+		Count: -50
+		RequiresCondition: cond_lightningblast_drain
+
+	### Visual indicator for mana
+	WithAmmoPipsDecoration:
+		PipCount: 4
+		Position: TopLeft
+		FullSequence: pip-green
+		AmmoPools:
+
+	### Visual indicator of mode ###
+	WithDecoration@Mode_Armor:
+		Sequence: armor_spell_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_1
+	WithDecoration@Mode_Damage:
+		Sequence: damage_spell_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_2 
+	WithDecoration@Mode_Fireball:
+		Sequence: fireball_spell_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_3
+	WithDecoration@Mode_Lightning:
+		Sequence: lightning_spell_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_4
+	
+	### Starting spell randomizer for AI.
+	GrantConditionOnBotOwner@wc2magebotcontrol:
+		Condition: wc2_cond_bot_owner
+		Bots: easiest, easy, medium, hard, brutal, challenger, unbeatable, cameogod, airforce, speedai
+	GrantRandomCondition@wc2magebotcontrol:
+		Conditions: FSD_cond_1_AI, FSD_cond_2_AI, FSD_cond_3_AI, FSD_cond_4_AI
+	# FSD_Cond_1 is always granted at start due to the four state deploy.
+	GrantCondition@Cond2AI:
+		Condition: FSD_cond_2
+		RequiresCondition: wc2_cond_bot_owner && FSD_cond_2_AI
+	GrantCondition@Cond3AI:
+		Condition: FSD_cond_3
+		RequiresCondition: wc2_cond_bot_owner && FSD_cond_3_AI
+	GrantCondition@Cond4AI:
+		Condition: FSD_cond_4
+		RequiresCondition: wc2_cond_bot_owner && FSD_cond_4_AI
+
+wizard_sorceress:
+	Inherits@Soldier: ^Soldier
+	Inherits: ^HeroInfantryTemplate
+	Inherits: ^PropagandaSelfHeallego
+	Inherits@LEGOMAGETemplate: ^lego_mage
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Tooltip:
+		Name: Sorceress
+	Buildable:
+		Queue: InfantryHero.Legobattles
+		BuildPaletteOrder: 60
+		BuildDuration: 250
+		Prerequisites: ~lego_wizard_conyard
+		Description: Stalwart Melee Hero.
+		BuildLimit: 1
+	Valued:
+		Cost: 500
+	Mobile:
+		Speed: 60
+	Health:
+		HP: 100000
+	ReloadDelayMultiplier@cow:
+		Modifier: 60
+	Voiced:
+		VoiceSet: sorceressvoice
+	Targetable@LEGOHERO:
+		TargetTypes: LHEROtarget
+	ProximityExternalCondition@PROPAGANDA:
+		Range: 6c0
+		Condition: propaganda
+		RequiresCondition: !disabled
+	WithRangeCircle:
+		Range: 6c0
+		Type: propaganda
+		RequiresCondition: !disabled
+	WithInfantryBody:
+		-IdleSequences: idle1,idle2,idle3,idle4
+	WithDeathAnimation:
+		UseDeathTypeSuffix: false
+	#Buff Spells
+	GrantCondition@SPEEDBUFFSELF:
+		Condition: speedbuff
+		RequiresCondition: FSD_cond_1
+	ProximityExternalCondition@SPEEDBUFFOTHER:
+		Condition: speedbuff
+		Range: 6c0
+		RequiresCondition: FSD_cond_1 && !disabled
+	GrantCondition@DAMAGEBUFFSELF:
+		Condition: damagebuff
+		RequiresCondition: FSD_cond_2
+	ProximityExternalCondition@DAMAGEBUFFOTHER:
+		Condition: damagebuff
+		Range: 6c0
+		RequiresCondition: FSD_cond_2 && !disabled
+	#Spells
+	AttackFrontal:
+		Armaments: primary, speed, damage, fireball, lightningspawner
+	AutoTargetPriority@DEFAULT:
+		RequiresCondition: !stance-attackanything && !assault-move && !FSD_cond_2
+	AutoTargetPriority@ATTACKANYTHING:
+		RequiresCondition: (stance-attackanything || assault-move) && !FSD_cond_2
+	AutoTargetPriority@ATTACKANYTHING_HASTE:
+		RequiresCondition: (stance-attackanything || assault-move) && FSD_cond_2
+		ValidTargets: haste_target
+		InvalidTargets: NoAutoTarget
+	Armament:
+		Name: primary
+		Weapon: sorceressmelee
+		FireDelay: 7
+		RequiresCondition: (FSD_cond_1 && !wc2_cond_bot_owner) || (FSD_cond_1_AI && wc2_cond_bot_owner) || (FSD_cond_2) 
+	Armament@SPEED:
+		Name: speed
+		Weapon: sorceressmelee
+		FireDelay: 7
+		TargetStances: Enemy
+		GrantCondition: 
+			Condition: speedbuff
+		RequiresCondition: FSD_cond_2
+		PauseOnCondition: mana < 10
+	Armament@DAMAGE:
+		Name: damage
+		Weapon: sorceressmelee
+		FireDelay: 7
+		TargetStances: Enemy
+		GrantCondition: 
+			Condition: damagebuff
+		RequiresCondition: FSD_cond_2
+		PauseOnCondition: mana < 10
+	Armament@FIREBALL:
+		Name: fireball
+		Weapon: fireball
+		AmmoUsage: 25
+		FireDelay: 7
+		RequiresCondition: FSD_cond_3
+		PauseOnCondition: mana < 25
+	Armament@LIGHTNINGBLAST:
+		Name: lightningblast
+		Weapon: lightningblast
+		AmmoUsage: 55
+		FireDelay: 7
+		RequiresCondition: FSD_cond_4
+		PauseOnCondition: mana < 50
+	# "Mana" (AmmoPool)
+	GrantConditionOnAttack@SPEED:
+		Condition: cond_speed_drain
+		ArmamentNames: deathcoil
+		MaximumInstances: 1
+		RevokeDelay: 2
+	GrantConditionOnAttack@DAMAGE:
+		Condition: cond_damage_drain
+		ArmamentNames: damage
+		MaximumInstances: 1
+		RevokeDelay: 2
+	GrantConditionOnAttack@FIREBALL:
+		Condition: cond_fireball_drain
+		ArmamentNames: fireball
+		MaximumInstances: 1
+		RevokeDelay: 2
+	GrantConditionOnAttack@LIGHTNINGBLAST:
+		Condition: cond_lightningblast_drain
+		ArmamentNames: lightningblast
+		MaximumInstances: 1
+		RevokeDelay: 2
+	AmmoPool:
+		Armaments: primary, speed, damage, fireball, lightningblast
+		Ammo: 255
+		PipCount: 10
+		AmmoCondition: mana
+	ReloadAmmoPool@PassiveRegen:
+		Delay: 10
+		Count: 1
+		ShowSelectionBar: false
+	ReloadAmmoPool@SPEED:
+		Delay: 1
+		Count: -100
+		RequiresCondition: cond_speed_drain
+	ReloadAmmoPool@HASTE:
+		Delay: 1
+		Count: -50
+		RequiresCondition: cond_damage_drain
+	ReloadAmmoPool@FIREBALL:
+		Delay: 1
+		Count: -25
+		RequiresCondition: cond_fireball_drain
+	ReloadAmmoPool@LIGHTNINGBLAST:
+		Delay: 1
+		Count: -50
+		RequiresCondition: cond_lightningblast_drain
+
+	### Visual indicator for mana
+	WithAmmoPipsDecoration:
+		PipCount: 4
+		Position: TopLeft
+		FullSequence: pip-green
+		AmmoPools:
+
+	### Visual indicator of mode ###
+	WithDecoration@Mode_Armor:
+		Sequence: armor_spell_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_1
+	WithDecoration@Mode_Damage:
+		Sequence: damage_spell_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_2 
+	WithDecoration@Mode_Fireball:
+		Sequence: fireball_spell_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_3
+	WithDecoration@Mode_Lightning:
+		Sequence: lightning_spell_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_4
+	
+	### Starting spell randomizer for AI.
+	GrantConditionOnBotOwner@wc2magebotcontrol:
+		Condition: wc2_cond_bot_owner
+		Bots: easiest, easy, medium, hard, brutal, challenger, unbeatable, cameogod, airforce, speedai
+	GrantRandomCondition@wc2magebotcontrol:
+		Conditions: FSD_cond_1_AI, FSD_cond_2_AI, FSD_cond_3_AI, FSD_cond_4_AI
+	# FSD_Cond_1 is always granted at start due to the four state deploy.
+	GrantCondition@Cond2AI:
+		Condition: FSD_cond_2
+		RequiresCondition: wc2_cond_bot_owner && FSD_cond_2_AI
+	GrantCondition@Cond3AI:
+		Condition: FSD_cond_3
+		RequiresCondition: wc2_cond_bot_owner && FSD_cond_3_AI
+	GrantCondition@Cond4AI:
+		Condition: FSD_cond_4
+		RequiresCondition: wc2_cond_bot_owner && FSD_cond_4_AI
+
+wizard_troll_king:
+	Inherits@Soldier: ^Soldier
+	Inherits: ^HeroInfantryTemplate
+	Inherits: ^PropagandaSelfHeallego
+	Inherits@LEGOMAGETemplate: ^lego_mage
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Tooltip:
+		Name: Troll King
+	Buildable:
+		Queue: InfantryHero.Legobattles
+		BuildPaletteOrder: 60
+		BuildDuration: 250
+		Prerequisites: ~lego_wizard_conyard
+		Description: Stalwart Melee Hero.
+		BuildLimit: 1
+	Valued:
+		Cost: 500
+	Mobile:
+		Speed: 60
+	Health:
+		HP: 100000
+	ReloadDelayMultiplier@cow:
+		Modifier: 60
+	Voiced:
+		VoiceSet: trollkingvoice
+	Targetable@LEGOHERO:
+		TargetTypes: LHEROtarget
+	ProximityExternalCondition@PROPAGANDA:
+		Range: 6c0
+		Condition: propaganda
+		RequiresCondition: !disabled
+	WithRangeCircle:
+		Range: 6c0
+		Type: propaganda
+		RequiresCondition: !disabled
+	WithInfantryBody:
+		-IdleSequences: idle1,idle2,idle3,idle4
+	WithDeathAnimation:
+		UseDeathTypeSuffix: false
+	#Buff Spells
+	GrantCondition@SPEEDBUFFSELF:
+		Condition: speedbuff
+		RequiresCondition: FSD_cond_1
+	ProximityExternalCondition@SPEEDBUFFOTHER:
+		Condition: speedbuff
+		Range: 6c0
+		RequiresCondition: FSD_cond_1 && !disabled
+	GrantCondition@DAMAGEBUFFSELF:
+		Condition: damagebuff
+		RequiresCondition: FSD_cond_2
+	ProximityExternalCondition@DAMAGEBUFFOTHER:
+		Condition: damagebuff
+		Range: 6c0
+		RequiresCondition: FSD_cond_2 && !disabled
+	ProximityExternalCondition@LOGBUFFOTHER:
+		Condition: logbuff
+		Range: 6c0
+		RequiresCondition: FSD_cond_3 && !disabled
+	#Spells
+	AttackFrontal:
+		Armaments: primary, speed, damage, logbuff, roarweapon
+	AutoTargetPriority@DEFAULT:
+		RequiresCondition: !stance-attackanything && !assault-move && !FSD_cond_2
+	AutoTargetPriority@ATTACKANYTHING:
+		RequiresCondition: (stance-attackanything || assault-move) && !FSD_cond_2
+	AutoTargetPriority@ATTACKANYTHING_HASTE:
+		RequiresCondition: (stance-attackanything || assault-move) && FSD_cond_2
+		ValidTargets: haste_target
+		InvalidTargets: NoAutoTarget
+	Armament:
+		Name: primary
+		Weapon: trollkingmelee
+		FireDelay: 7
+		RequiresCondition: (FSD_cond_1 && !wc2_cond_bot_owner) || (FSD_cond_1_AI && wc2_cond_bot_owner) || (FSD_cond_2) 
+	Armament@SPEED:
+		Name: speed
+		Weapon: trollkingmelee
+		FireDelay: 7
+		TargetStances: Enemy
+		GrantCondition: 
+			Condition: speedbuff
+		RequiresCondition: FSD_cond_1
+		PauseOnCondition: mana < 10
+	Armament@DAMAGE:
+		Name: damage
+		Weapon: trollkingmelee
+		FireDelay: 7
+		TargetStances: Enemy
+		GrantCondition: 
+			Condition: damagebuff
+		RequiresCondition: FSD_cond_2
+		PauseOnCondition: mana < 10
+	Armament@LOGBUFF:
+		Name: logbuff
+		Weapon: trollkingmelee
+		AmmoUsage: 30
+		FireDelay: 7
+		RequiresCondition: FSD_cond_3
+		PauseOnCondition: mana < 25
+	Armament@ROAR:
+		Name: roarweapon
+		Weapon: roarweapon
+		AmmoUsage: 150
+		FireDelay: 7
+		RequiresCondition: FSD_cond_4
+		PauseOnCondition: mana < 50
+	# "Mana" (AmmoPool)
+	GrantConditionOnAttack@SPEED:
+		Condition: cond_speed_drain
+		ArmamentNames: speed
+		MaximumInstances: 1
+		RevokeDelay: 2
+	GrantConditionOnAttack@DAMAGE:
+		Condition: cond_damage_drain
+		ArmamentNames: damage
+		MaximumInstances: 1
+		RevokeDelay: 2
+	GrantConditionOnAttack@LOGBUFF:
+		Condition: cond_logbuff_drain
+		ArmamentNames: logbuff
+		MaximumInstances: 1
+		RevokeDelay: 2
+	GrantConditionOnAttack@ROAR:
+		Condition: cond_roarweapon_drain
+		ArmamentNames: roarweapon
+		MaximumInstances: 1
+		RevokeDelay: 2
+	AmmoPool:
+		Armaments: primary, speed, damage, logbuff, roarweapon
+		Ammo: 255
+		PipCount: 10
+		AmmoCondition: mana
+	ReloadAmmoPool@PassiveRegen:
+		Delay: 10
+		Count: 1
+		ShowSelectionBar: false
+	ReloadAmmoPool@SPEED:
+		Delay: 1
+		Count: -100
+		RequiresCondition: cond_speed_drain
+	ReloadAmmoPool@DAMAGE:
+		Delay: 1
+		Count: -50
+		RequiresCondition: cond_damage_drain
+	ReloadAmmoPool@logbuff:
+		Delay: 1
+		Count: -25
+		RequiresCondition: cond_logbuff_drain
+	ReloadAmmoPool@ROAR:
+		Delay: 1
+		Count: -50
+		RequiresCondition: cond_roarweapon_drain
+
+	### Visual indicator for mana
+	WithAmmoPipsDecoration:
+		PipCount: 4
+		Position: TopLeft
+		FullSequence: pip-green
+		AmmoPools:
+
+	### Visual indicator of mode ###
+	WithDecoration@Mode_Speed:
+		Sequence: speed_spell_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_1
+	WithDecoration@Mode_Damage:
+		Sequence: damage_spell_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_2 
+	WithDecoration@Mode_Logbuff:
+		Sequence: lumber_spell_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_3
+	WithDecoration@Mode_Arrowrain:
+		Sequence: roar_spell_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_4
+	
+	### Starting spell randomizer for AI.
+	GrantConditionOnBotOwner@wc2magebotcontrol:
+		Condition: wc2_cond_bot_owner
+		Bots: easiest, easy, medium, hard, brutal, challenger, unbeatable, cameogod, airforce, defenseai
+	GrantRandomCondition@wc2magebotcontrol:
+		Conditions: FSD_cond_1_AI, FSD_cond_2_AI, FSD_cond_3_AI, FSD_cond_4_AI
+	# FSD_Cond_1 is always granted at start due to the four state deploy.
+	GrantCondition@Cond2AI:
+		Condition: FSD_cond_2
+		RequiresCondition: wc2_cond_bot_owner && FSD_cond_2_AI
+	GrantCondition@Cond3AI:
+		Condition: FSD_cond_3
+		RequiresCondition: wc2_cond_bot_owner && FSD_cond_3_AI
+	GrantCondition@Cond4AI:
+		Condition: FSD_cond_4
+		RequiresCondition: wc2_cond_bot_owner && FSD_cond_4_AI

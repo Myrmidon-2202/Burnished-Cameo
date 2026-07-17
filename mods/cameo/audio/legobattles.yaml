@@ -3,7 +3,7 @@
 #################################################################
 
 astroconyardvoice:
-	VolumeModifier: 1.7
+	VolumeModifier: 1.0
 	DefaultVariant: .wav
 	Voices:
 		Select: earth_fortress
@@ -11,42 +11,47 @@ astroconyardvoice:
 		Action: blank
 
 astrobarracksvoice:
-	VolumeModifier: 1.7
+	VolumeModifier: 1.0
 	DefaultVariant: .wav
 	Voices:
 		Select: earth_barracks
 		Die: lego_struc_break
 
 biodomevoice:
-	VolumeModifier: 1.7
+	VolumeModifier: 1.0
 	DefaultVariant: .wav
 	Voices:
 		Select: earth_bio
+		Die: lego_struc_break
 
 eharvestervoice:
-	VolumeModifier: 1.7
+	VolumeModifier: 1.0
 	DefaultVariant: .wav
 	Voices:
 		Select: earth_harvester
+		Die: lego_struc_break
 
 ewellcapvoice:
-	VolumeModifier: 1.7
+	VolumeModifier: 1.0
 	DefaultVariant: .wav
 	Voices:
 		Select: mars_mine
+		Die: lego_struc_break
 
 astrospecialfactoryvoice:
-	VolumeModifier: 1.7
+	VolumeModifier: 1.0
 	DefaultVariant: .wav
 	Voices:
 		Select: mars_special_factory
+		Die: lego_struc_break
 
 astrotowervoice:
-	VolumeModifier: 1.7
+	VolumeModifier: 1.0
 	DefaultVariant: .wav
 	Voices:
 		Select: earth_tower
 		Action: earth_tower
+		Die: lego_struc_break
 
 
 #################################################################
@@ -54,7 +59,7 @@ astrotowervoice:
 #################################################################
 
 buildervoice:
-	VolumeModifier: 1.7
+	VolumeModifier: 1.0
 	DefaultVariant: .wav
 	Voices:
 		Select: earth_builder_select
@@ -68,7 +73,7 @@ buildervoice:
 		Poisoned: blank
 
 troopervoice:
-	VolumeModifier: 1.7
+	VolumeModifier: 1.0
 	DefaultVariant: .wav
 	Voices:
 		Select: earth_trooper_select
@@ -82,7 +87,7 @@ troopervoice:
 		Poisoned: blank
 
 ecommandovoice:
-	VolumeModifier: 1.7
+	VolumeModifier: 1.0
 	DefaultVariant: .wav
 	Voices:
 		Select: ecommando_select
@@ -96,7 +101,7 @@ ecommandovoice:
 		Poisoned: blank
 
 gripleyvoice:
-	VolumeModifier: 1.7
+	VolumeModifier: 1.0
 	DefaultVariant: .wav
 	Voices:
 		Select: gripley_select
@@ -110,7 +115,7 @@ gripleyvoice:
 		Poisoned: blank
 
 gemmavoice:
-	VolumeModifier: 1.7
+	VolumeModifier: 1.0
 	DefaultVariant: .wav
 	Voices:
 		Select: gemma_select
@@ -124,7 +129,7 @@ gemmavoice:
 		Poisoned: blank
 
 policevoice:
-	VolumeModifier: 1.7
+	VolumeModifier: 1.0
 	DefaultVariant: .wav
 	Voices:
 		Select: space_police
@@ -138,7 +143,7 @@ policevoice:
 		Poisoned: blank
 
 biffvoice:
-	VolumeModifier: 1.7
+	VolumeModifier: 1.0
 	DefaultVariant: .wav
 	Voices:
 		Select: biff_select
@@ -152,7 +157,7 @@ biffvoice:
 		Poisoned: blank
 
 captainvoice:
-	VolumeModifier: 1.7
+	VolumeModifier: 1.0
 	DefaultVariant: .wav
 	Voices:
 		Select: space_police_capt
@@ -166,7 +171,7 @@ captainvoice:
 		Poisoned: blank
 
 clawtankvoice:
-	VolumeModifier: 1.7
+	VolumeModifier: 1.0
 	DefaultVariant: .wav
 	Voices:
 		Select: claw_tank_select
@@ -180,7 +185,7 @@ clawtankvoice:
 		Poisoned: blank
 
 astrotransportvoice:
-	VolumeModifier: 1.7
+	VolumeModifier: 1.0
 	DefaultVariant: .wav
 	Voices:
 		Select: astro_transport_ship
@@ -194,7 +199,7 @@ astrotransportvoice:
 		Poisoned: blank
 
 starfightervoice:
-	VolumeModifier: 1.7
+	VolumeModifier: 1.0
 	DefaultVariant: .wav
 	Voices:
 		Select: astro_transport_ship
@@ -208,7 +213,7 @@ starfightervoice:
 		Poisoned: blank
 
 spacepolicecruiservoice:
-	VolumeModifier: 1.7
+	VolumeModifier: 1.0
 	DefaultVariant: .wav
 	Voices:
 		Select: space_police_cruiser
@@ -222,7 +227,7 @@ spacepolicecruiservoice:
 		Poisoned: blank
 
 starship2voice:
-	VolumeModifier: 1.7
+	VolumeModifier: 1.0
 	DefaultVariant: .wav
 	Voices:
 		Select: starship_select
@@ -240,7 +245,7 @@ starship2voice:
 #################################################################
 
 craterbasevoice:
-	VolumeModifier: 1.7
+	VolumeModifier: 1.0
 	DefaultVariant: .wav
 	Voices:
 		Select: crater_base
@@ -248,43 +253,40 @@ craterbasevoice:
 		Action: blank
 
 breedingpitvoice:
-	VolumeModifier: 1.7
+	VolumeModifier: 1.0
 	DefaultVariant: .wav
 	Voices:
-		Select: breeding_pit
+		Select: alien_breeding pit
 		Die: lego_struc_break
-		Action: blank
+
+alienwellcapvoice:
+	VolumeModifier: 1.0
+	DefaultVariant: .wav
+	Voices:
+		Select: alien_mine
+		Die: lego_struc_break
 
 creationpitvoice:
-	VolumeModifier: 1.7
+	VolumeModifier: 1.0
 	DefaultVariant: .wav
 	Voices:
 		Select: creation_pit
 		Die: lego_struc_break
-		Action: blank
 
-spirevoice:
-	VolumeModifier: 1.7
+alientowervoice:
+	VolumeModifier: 1.0
 	DefaultVariant: .wav
 	Voices:
 		Select: spire
+		Action: spire
 		Die: lego_struc_break
-		Action: blank
-
-alienwellcapvoice:
-	VolumeModifier: 1.7
-	DefaultVariant: .wav
-	Voices:
-		Select: alien_wellcap
-		Die: lego_struc_break
-		Action: blank
 
 #################################################################
 #  Alien Units
 #################################################################
 
 alienbuildervoice:
-	VolumeModifier: 1.7
+	VolumeModifier: 1.0
 	DefaultVariant: .wav
 	Voices:
 		Select: alien_builder_select
@@ -298,7 +300,7 @@ alienbuildervoice:
 		Poisoned: blank
 
 dronevoice:
-	VolumeModifier: 1.7
+	VolumeModifier: 1.0
 	DefaultVariant: .wav
 	Voices:
 		Select: drone_select
@@ -312,7 +314,7 @@ dronevoice:
 		Poisoned: blank
 
 lasertroopervoice:
-	VolumeModifier: 1.7
+	VolumeModifier: 1.0
 	DefaultVariant: .wav
 	Voices:
 		Select: laser_trooper_select
@@ -326,7 +328,7 @@ lasertroopervoice:
 		Poisoned: blank
 
 gravrunnervoice:
-	VolumeModifier: 1.7
+	VolumeModifier: 1.0
 	DefaultVariant: .wav
 	Voices:
 		Select: grav_runner_select
@@ -340,7 +342,7 @@ gravrunnervoice:
 		Poisoned: blank
 
 spacecriminalvoice:
-	VolumeModifier: 1.7
+	VolumeModifier: 1.0
 	DefaultVariant: .wav
 	Voices:
 		Select: space_criminal_select
@@ -354,7 +356,7 @@ spacecriminalvoice:
 		Poisoned: blank
 
 alienattackshipvoice:
-	VolumeModifier: 1.7
+	VolumeModifier: 1.0
 	DefaultVariant: .wav
 	Voices:
 		Select: alien_attack_ship_select
@@ -368,7 +370,7 @@ alienattackshipvoice:
 		Poisoned: blank
 
 hotrodvoice:
-	VolumeModifier: 1.7
+	VolumeModifier: 1.0
 	DefaultVariant: .wav
 	Voices:
 		Select: space_criminal_hotrod
@@ -382,7 +384,7 @@ hotrodvoice:
 		Poisoned: blank
 
 alienassaultshipvoice:
-	VolumeModifier: 1.7
+	VolumeModifier: 1.0
 	DefaultVariant: .wav
 	Voices:
 		Select: alien_assault_ship_select
@@ -396,7 +398,7 @@ alienassaultshipvoice:
 		Poisoned: blank
 
 aliencommandervoice:
-	VolumeModifier: 1.7
+	VolumeModifier: 1.0
 	DefaultVariant: .wav
 	Voices:
 		Select: alien_commander_select
@@ -410,7 +412,7 @@ aliencommandervoice:
 		Poisoned: blank
 
 alienqueenvoice:
-	VolumeModifier: 1.7
+	VolumeModifier: 1.0
 	DefaultVariant: .wav
 	Voices:
 		Select: alien_queen_select
@@ -424,7 +426,7 @@ alienqueenvoice:
 		Poisoned: blank
 
 spacecriminalleadervoice:
-	VolumeModifier: 1.7
+	VolumeModifier: 1.0
 	DefaultVariant: .wav
 	Voices:
 		Select: space_criminal_leader
@@ -433,6 +435,714 @@ spacecriminalleadervoice:
 		Action: lego_move
 		Die: lego_unit_death
 		Build: space_criminal_leader
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank
+
+#################################################################
+#  Imperial Structures
+#################################################################
+
+fortressvoice:
+	VolumeModifier: 1.0
+	DefaultVariant: .wav
+	Voices:
+		Select: imperial_fortress
+		Die: lego_struc_break
+		Action: blank
+
+farmvoice:
+	VolumeModifier: 1.0
+	DefaultVariant: .wav
+	Voices:
+		Select: farm
+		Die: lego_struc_break
+		Action: blank
+
+lumbervoice:
+	VolumeModifier: 1.0
+	DefaultVariant: .wav
+	Voices:
+		Select: wood_harvester
+		Die: lego_struc_break
+		Action: blank
+
+imperialbarracksvoice:
+	VolumeModifier: 1.0
+	DefaultVariant: .wav
+	Voices:
+		Select: imperial_barracks
+		Die: lego_struc_break
+		Action: blank
+
+drydockvoice:
+	VolumeModifier: 1.0
+	DefaultVariant: .wav
+	Voices:
+		Select: imperial_pirates_special_factory
+		Die: lego_struc_break
+		Action: blank
+
+imperialtowervoice:
+	VolumeModifier: 1.0
+	DefaultVariant: .wav
+	Voices:
+		Select: imperial_tower
+		Die: lego_struc_break
+		Action: blank
+
+minevoice:
+	VolumeModifier: 1.0
+	DefaultVariant: .wav
+	Voices:
+		Select: mine
+		Die: lego_struc_break
+		Action: blank
+
+#################################################################
+#  Imperial Units
+#################################################################
+
+imperialbuildervoice:
+	VolumeModifier: 1.0
+	DefaultVariant: .wav
+	Voices:
+		Select: imperial_builder_select
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: imperial_builder_select
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank
+
+swordsmanvoice:
+	VolumeModifier: 1.0
+	DefaultVariant: .wav
+	Voices:
+		Select: swordsman_select
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: swordsman_select
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank
+
+riflemanvoice:
+	VolumeModifier: 1.0
+	DefaultVariant: .wav
+	Voices:
+		Select: rifleman_gunman_select
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: rifleman_gunman_select
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank
+
+cavalryvoice:
+	VolumeModifier: 1.0
+	DefaultVariant: .wav
+	Voices:
+		Select: horse_select
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: horse_select
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank
+
+ninjavoice:
+	VolumeModifier: 1.0
+	DefaultVariant: .wav
+	Voices:
+		Select: ninja
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: ninja
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank
+
+ninjaflyingshipvoice:
+	VolumeModifier: 1.0
+	DefaultVariant: .wav
+	Voices:
+		Select: transport_ninja_ship
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: transport_ninja_ship
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank
+
+culverinvoice:
+	VolumeModifier: 1.0
+	DefaultVariant: .wav
+	Voices:
+		Select: Cannon_Select
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: Cannon_Select
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank
+
+governorbroadsidevoice:
+	VolumeModifier: 1.0
+	DefaultVariant: .wav
+	Voices:
+		Select: gov_broadside_select
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: gov_broadside_select
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank
+
+camillavoice:
+	VolumeModifier: 1.0
+	DefaultVariant: .wav
+	Voices:
+		Select: camilla_select
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: camilla_select
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank
+
+ninjamastervoice:
+	VolumeModifier: 1.0
+	DefaultVariant: .wav
+	Voices:
+		Select: ninja_master
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: ninja_master
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank
+
+#################################################################
+#  Pirate Structures
+#################################################################
+
+holdvoice:
+	VolumeModifier: 1.0
+	DefaultVariant: .wav
+	Voices:
+		Select: pirates_hold
+		Die: lego_struc_break
+		Action: blank
+
+piratebarracksvoice:
+	VolumeModifier: 1.0
+	DefaultVariant: .wav
+	Voices:
+		Select: pirate_barracks
+		Die: lego_struc_break
+		Action: blank
+
+piratetowervoice:
+	VolumeModifier: 1.0
+	DefaultVariant: .wav
+	Voices:
+		Select: pirates_tower
+		Die: lego_struc_break
+		Action: blank
+
+minevoice:
+	VolumeModifier: 1.0
+	DefaultVariant: .wav
+	Voices:
+		Select: mine
+		Die: lego_struc_break
+		Action: blank
+
+#################################################################
+#  Pirate Units
+#################################################################
+
+piratebuildervoice:
+	VolumeModifier: 1.0
+	DefaultVariant: .wav
+	Voices:
+		Select: pirate_builder_select
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: pirate_builder_select
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank
+
+oarsmanvoice:
+	VolumeModifier: 1.0
+	DefaultVariant: .wav
+	Voices:
+		Select: oarsman_select
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: oarsman_select
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank
+
+islandervoice:
+	VolumeModifier: 1.0
+	DefaultVariant: .wav
+	Voices:
+		Select: islander_select
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: islander_select
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank
+
+tikigolemvoice:
+	VolumeModifier: 1.0
+	DefaultVariant: .wav
+	Voices:
+		Select: tiki_golem
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: tiki_golem
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank
+
+captainbrickbeardvoice:
+	VolumeModifier: 1.0
+	DefaultVariant: .wav
+	Voices:
+		Select: capt_brickbeard_select
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: capt_brickbeard_select
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank
+
+ladypiratevoice:
+	VolumeModifier: 1.0
+	DefaultVariant: .wav
+	Voices:
+		Select: lady_pirate_select
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: lady_pirate_select
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank
+
+kingkahukavoice:
+	VolumeModifier: 1.0
+	DefaultVariant: .wav
+	Voices:
+		Select: king_kahuka
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: king_kahuka
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank
+
+#################################################################
+#  King Structures
+#################################################################
+
+castlevoice:
+	VolumeModifier: 1.0
+	DefaultVariant: .wav
+	Voices:
+		Select: king_fortress
+		Die: lego_struc_break
+		Action: blank
+
+kingbarracksvoice:
+	VolumeModifier: 1.0
+	DefaultVariant: .wav
+	Voices:
+		Select: king_barracks
+		Die: lego_struc_break
+		Action: blank
+
+specialfactoryvoice:
+	VolumeModifier: 1.0
+	DefaultVariant: .wav
+	Voices:
+		Select: king_pirates_special_factory
+		Die: lego_struc_break
+		Action: blank
+
+kingtowervoice:
+	VolumeModifier: 1.0
+	DefaultVariant: .wav
+	Voices:
+		Select: king_tower
+		Die: lego_struc_break
+		Action: blank
+
+#################################################################
+#  King Units
+#################################################################
+
+kingbuildervoice:
+	VolumeModifier: 1.0
+	DefaultVariant: .wav
+	Voices:
+		Select: king_builder_select
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: king_builder_select
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank
+
+guardsmanvoice:
+	VolumeModifier: 1.0
+	DefaultVariant: .wav
+	Voices:
+		Select: guardsman_select
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: guardsman_select
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank
+
+archervoice:
+	VolumeModifier: 1.0
+	DefaultVariant: .wav
+	Voices:
+		Select: rifleman_gunman_select
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: rifleman_gunman_select
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank
+
+dwarfvoice:
+	VolumeModifier: 1.0
+	DefaultVariant: .wav
+	Voices:
+		Select: dwarf
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: dwarf
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank
+
+dwarvenglidervoice:
+	VolumeModifier: 1.0
+	DefaultVariant: .wav
+	Voices:
+		Select: dwarf_glider
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: dwarf_glider
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank
+
+ballistavoice:
+	VolumeModifier: 1.0
+	DefaultVariant: .wav
+	Voices:
+		Select: ballista_select
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: ballista_select
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank
+
+catapultvoice:
+	VolumeModifier: 1.0
+	DefaultVariant: .wav
+	Voices:
+		Select: catapult_select
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: catapult_select
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank
+
+dragonvoice:
+	VolumeModifier: 1.0
+	DefaultVariant: .wav
+	Voices:
+		Select: dragon_select
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: dragon_select
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank
+
+kingvoice:
+	VolumeModifier: 1.0
+	DefaultVariant: .wav
+	Voices:
+		Select: king_select
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: king_select
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank
+
+queenvoice:
+	VolumeModifier: 1.0
+	DefaultVariant: .wav
+	Voices:
+		Select: queen_select
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: queen_select
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank
+
+dwarfkingvoice:
+	VolumeModifier: 1.0
+	DefaultVariant: .wav
+	Voices:
+		Select: dwarf_king
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: dwarf_king
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank
+
+#################################################################
+#  Wizard Structures
+#################################################################
+
+skeletontowervoice:
+	VolumeModifier: 1.0
+	DefaultVariant: .wav
+	Voices:
+		Select: wizard_fortress
+		Die: lego_struc_break
+		Action: blank
+
+graveyardvoice:
+	VolumeModifier: 1.0
+	DefaultVariant: .wav
+	Voices:
+		Select: graveyard
+		Die: lego_struc_break
+		Action: blank
+
+wizardbarracksvoice:
+	VolumeModifier: 1.0
+	DefaultVariant: .wav
+	Voices:
+		Select: mausoleum
+		Die: lego_struc_break
+		Action: blank
+
+#################################################################
+#  Wizard Units
+#################################################################
+
+wizardbuildervoice:
+	VolumeModifier: 1.0
+	DefaultVariant: .wav
+	Voices:
+		Select: wizard_builder_select
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: wizard_builder_select
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank
+
+skeletonvoice:
+	VolumeModifier: 1.0
+	DefaultVariant: .wav
+	Voices:
+		Select: skeleton_attack_select
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: skeleton_attack_select
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank
+
+crossbowmanvoice:
+	VolumeModifier: 1.0
+	DefaultVariant: .wav
+	Voices:
+		Select: crossbowman_select_siegetower attack
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: crossbowman_select_siegetower attack
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank
+
+trollvoice:
+	VolumeModifier: 1.0
+	DefaultVariant: .wav
+	Voices:
+		Select: troll
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: troll
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank
+
+trollblimpvoice:
+	VolumeModifier: 1.0
+	DefaultVariant: .wav
+	Voices:
+		Select: troll_blimp
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: troll_blimp
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank
+
+siegetowervoice:
+	VolumeModifier: 1.0
+	DefaultVariant: .wav
+	Voices:
+		Select: siegetower_select
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: siegetower_select
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank
+
+trollgiantvoice:
+	VolumeModifier: 1.0
+	DefaultVariant: .wav
+	Voices:
+		Select: troll_giant_select
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: troll_giant_select
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank
+
+wizardvoice:
+	VolumeModifier: 1.0
+	DefaultVariant: .wav
+	Voices:
+		Select: wizard_select
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: wizard_select
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank
+
+sorceressvoice:
+	VolumeModifier: 1.0
+	DefaultVariant: .wav
+	Voices:
+		Select: female_wizard_select
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: female_wizard_select
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank
+
+trollkingvoice:
+	VolumeModifier: 1.0
+	DefaultVariant: .wav
+	Voices:
+		Select: troll_king
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: troll_king
 		Burned: blank
 		Zapped: blank
 		Poisoned: blank

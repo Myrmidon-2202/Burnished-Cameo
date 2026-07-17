@@ -41,6 +41,30 @@ alienmelee:
 	Inherits: troopermelee
 	Report: drone_attack.wav
 
+swordsmanmelee:
+	Inherits: troopermelee
+	Report: swordsman_attack.wav
+
+oarsmanmelee:
+	Inherits: troopermelee
+	Report: oarsman_attack.wav
+
+guardsmanmelee:
+	Inherits: troopermelee
+	Report: guardsman_attack.wav
+
+skeletonmelee:
+	Inherits: troopermelee
+	Report: skeleton_attack_select.wav
+
+dwarfmelee:
+	Inherits: troopermelee
+	Report: dwarf.wav
+
+trollmanmelee:
+	Inherits: troopermelee
+	Report: troll.wav
+
 HQHEROHEAL:
 	ReloadDelay: 15
 	Range: 5c512
@@ -125,6 +149,31 @@ alienlegoranged:
 	Inherits: legoranged
 	Report: laser_trooper_attack.wav
 
+piratelegoranged:
+	Inherits: legoranged
+	Report: rifleman_attack.wav
+	# Projectile: NojamMissile
+	Projectile: Bullet
+		Speed: 0c850
+		Image: lego_musket_ball
+# 	Warheads:
+# 		InstantHit:
+# 			Damage: 200
+
+piratelegorangedarrow:
+	Inherits: legoranged
+	Report: tower_attacks.wav
+	Projectile: Bullet
+		Speed: 0c850
+		Image: lego_arrow
+
+piratelegorangedshuriken:
+	Inherits: legoranged
+	Report: ninja.wav
+	Projectile: Bullet
+		Speed: 0c850
+		Image: lego_shuriken
+
 specialrangedAA:
 	ReloadDelay: 60
 	Range: 10c512
@@ -198,6 +247,68 @@ specialrangedAA2:
 			Medium: 80
 			Heavy: 60
 			Concrete: 60
+
+piratespecialrangedarrow:
+	Inherits: legoranged
+	Report: tower_attack.wav
+	Projectile: Bullet
+		Speed: 0c850
+		Image: special_lego_arrow
+	Warhead@1Dam: TargetDamage
+		Spread: 300
+		Damage: 10000
+		ValidTargets: Ground, Helicopter, Air
+		Versus:
+			None: 150
+			Wood: 60
+			Light: 100
+			Medium: 80
+			Heavy: 70
+			Concrete: 60
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+	Warhead@2Eff: CreateEffect
+	Warhead@Percentage: HealthPercentageDamage
+		Damage: 10
+		Spread: 550
+		Delay: 5
+		DamageTypes: Prone100Percent, TriggerProne, FireDeath, Incendiary
+		ValidTargets: Ground, Helicopter, Air
+		Versus:
+			None: 150
+			Wood: 60
+			Light: 100
+			Medium: 80
+			Heavy: 60
+			Concrete: 60
+
+piratespecialrangedball:
+	Inherits: ArtilleryShell
+	Report: gov_capt_3ship_attack.wav
+	Projectile: Bullet
+		Speed: 300
+		Image: lego_cannonball
+	Warhead@3Eff: CreateEffect
+		ImpactSounds: dunepoff.aud, dune2splash.aud, dune2cannon.aud
+
+piratespecialrangedballimp:
+	Inherits: ArtilleryShell
+	Range: 11c512
+	Report: gov_capt_3ship_attack.wav
+	Projectile: Bullet
+		Speed: 300
+		Image: lego_cannonball
+	Warhead@3Eff: CreateEffect
+		ImpactSounds: dunepoff.aud, dune2splash.aud, dune2cannon.aud
+
+kingpecialrangedrock:
+	Inherits: ArtilleryShell
+	Range: 12c512
+	Report: catapult_giant_boulderthrow_attack.wav
+	Projectile: Bullet
+		Speed: 300
+		Image: lego_boulder
+	Warhead@3Eff: CreateEffect
+		ImpactSounds: dunepoff.aud, dune2splash.aud, dune2cannon.aud
 
 specialrangedstar:
 	ReloadDelay: 60
@@ -274,6 +385,33 @@ astroplasmaglob:
 			Medium: 80
 			Heavy: 60
 			Concrete: 60
+
+dragonbreath:
+	Inherits: ^FireWeapon
+	ReloadDelay: 50
+	Burst: 15
+	BurstDelays: 1
+	Report: dragon_attack.wav
+	Projectile: Bullet
+		Speed: 170
+		TrailImage: fb4
+		Image: fb3
+		LaunchAngle: 62
+		Inaccuracy: 853
+	Warhead@1Dam: SpreadDamage
+		Spread: 341
+		Damage: 5000
+		Versus:
+			None: 70
+			Wood: 80
+			Tree: 80
+			Light: 40
+			Heavy: 20
+			Concrete: 10
+	Warhead@2Smu: LeaveSmudge
+		Chance: 15
+	Warhead@3Eff: CreateEffect
+		Explosions: small_napalm
 
 cavalrymelee:
 	Inherits: ^legomelee
@@ -364,6 +502,54 @@ alienqueenmelee:
 	Inherits: heromelee
 	Report: alien_queen_attack.wav
 
+governormelee:
+	Inherits: heromelee
+	Report: gov_broadside_attack.wav
+
+camillamelee:
+	Inherits: heromelee
+	Report: camilla.wav
+
+ninjamastermelee:
+	Inherits: heromelee
+	Report: ninja_master.wav
+
+captainmelee:
+	Inherits: heromelee
+	Report: capt_brickbeard_attack.wav
+
+ladypiratemelee:
+	Inherits: heromelee
+	Report: lady_pirate_attack.wav
+
+kahukamelee:
+	Inherits: heromelee
+	Report: king_kahuka.wav
+
+kingmelee:
+	Inherits: heromelee
+	Report: king_attack.wav
+
+queenmelee:
+	Inherits: heromelee
+	Report: queen_attack.wav
+
+dwarfkingmelee:
+	Inherits: heromelee
+	Report: tower_attacks.wav
+
+wizardmelee:
+	Inherits: heromelee
+	Report: wizard_attack.wav
+
+sorceressmelee:
+	Inherits: heromelee
+	Report: female_wizard_attack.wav
+
+trollkingmelee:
+	Inherits: heromelee
+	Report: troll_king.wav
+
 spacelaser:
 	Range: 7c512
 	Report: space_laser.wav
@@ -374,8 +560,9 @@ spacelaser:
 		Damage: 10000
 		Falloff: 1000, 250, 100
 		ValidTargets: Ground, Helicopter, Air, Trees
-		AffectsParent: True
+		AffectsParent: False
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath, Incendiary
+		ValidRelationships: Enemy
 	Warhead@2Smu_impact: LeaveSmudge
 		SmudgeType: Scorch
 		InvalidTargets: Vehicle, Structure, Wall, Husk, Trees, Creep
@@ -464,7 +651,7 @@ crystalcache:
 	Projectile: Bullet
 	Warhead@4Res: CreateResource
 		AddsResourceType: Tiberium
-		Size: 6
+		Size: 3
 
 clusterbomb:
 	Inherits: ArtilleryShell
@@ -485,3 +672,283 @@ hotwire:
 	Projectile: InstantHit
 	Warhead@1Dam: TargetDamage
 		Damage: 0
+
+artillery:
+	Inherits: ArtilleryShell
+	Report: artillery.wav
+	Burst: 6
+	Projectile: Bullet
+		Speed: 300
+		Image: lego_cannonball
+	Warhead@3Eff: CreateEffect
+		ImpactSounds: dunepoff.aud, dune2splash.aud, dune2cannon.aud
+
+arrowtrigger:
+	ReloadDelay: 60
+	Range: 9c512
+	Report: arrowvolley_sound.wav
+	Projectile: InstantExplode
+	Warhead@1: FireShrapnel
+		InvalidTargets: FireImmune
+		Weapon: arrowrain
+		Amount: 1
+
+arrowrain:
+	ReloadDelay: 60
+	Range: 9c512
+	Image: lego_arrow
+	Report: arrowvolley_sound.wav
+	Projectile: AthenaProjectile
+		Altitude: 8000
+	Warhead@1: FireCluster
+		Weapon: arrowfall
+		# RandomClusterCount: 5
+		Dimensions: 5,5
+		Footprint: xxxxx xxxxx xxxxx xxxxx xxxxx 
+
+arrowfall:
+	Projectile: Bullet
+		Speed: 300
+		Image: lego_arrow
+		TrailImage: smokey
+		UsePlayerColor: true
+	Warhead@1Dam: SpreadDamage
+		Damage: 5000
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+		ValidRelationships: Enemy
+	Warhead@2Smu: LeaveSmudge
+		SmudgeType: Crater
+	Warhead@5Eff: CreateEffect
+		Image: lego_arrow
+		Explosions: idle
+		ValidTargets: Ground, Air, Water
+
+monkeyswarm:
+	ReloadDelay: 160
+	Range: 4c0
+	Projectile: InstantHit
+	Warhead@spawn: SpawnActor
+		Actors: pirate_monkey, pirate_monkey, pirate_monkey, pirate_monkey
+
+crabswarm:
+	ReloadDelay: 160
+	Range: 4c0
+	Projectile: InstantHit
+	Warhead@spawn: SpawnActor
+		Actors: pirate_oarsman, pirate_oarsman, pirate_oarsman, pirate_oarsman
+
+coconutstorm:
+	Inherits: artillery
+
+earthquake:
+	ValidTargets: Ground, Trees, Water, Underwater, Air
+	Range: 1c512
+	Report: earthquake.wav
+	Projectile: InstantHit
+	Warhead@Damage: SpreadDamage
+		Spread: 1600
+		Falloff: 160, 80, 40, 20, 10
+		Damage: 60000
+		Versus:
+			Wood: 100
+			Concrete: 96
+			Steel: 92
+			None: 88
+			Flak: 84
+			Plate: 80
+			Heroic: 76
+			Scout: 72
+			Light: 68
+			Medium: 64
+			Heavy: 60
+			Superheavy: 56
+			Fighter: 52
+			Bomber: 48
+			Helicopter: 44
+			Spaceship: 40
+		ValidTargets: Ground, Trees, Water, Air
+		AffectsParent: false
+		ValidRelationships: Enemy
+	Warhead@13Shake: ShakeScreen
+		Duration: 40
+		Intensity: 4
+		Multiplier: 1,1
+
+hammerfragments:
+	ReloadDelay: 60
+	Range: 9c512
+	Projectile: Bullet
+		Speed: 1c250
+		Image: lego_emp_star
+		Sequences: idle
+		RangeLimit: 9c512
+		Palette: player
+		IsPlayerPalette: true
+	Warhead@Damage: SpreadDamage
+		Spread: 1600
+		Falloff: 160, 80, 40, 20, 10
+		Damage: 100
+		Versus:
+			Wood: 100
+			Concrete: 96
+			Steel: 92
+			None: 88
+			Flak: 84
+			Plate: 80
+			Heroic: 76
+			Scout: 72
+			Light: 68
+			Medium: 64
+			Heavy: 60
+			Superheavy: 56
+			Fighter: 52
+			Bomber: 48
+			Helicopter: 44
+			Spaceship: 40
+		ValidTargets: Ground, Trees, Water, Air
+		ValidRelationships: Enemy
+
+hammerthrow:
+	ReloadDelay: 60
+	Range: 1c512
+	Report: esp.wav
+	Projectile: Bullet
+	Warhead@3cluster: FireCluster
+		Weapon: hammerfragments
+		Dimensions: 10,10
+		Footprint: X_____________X  X_____________X X_____________X X_____________X X_____________XX_____________XX_____________XX_____________XX_____________XX_____________XX_____________XX_____________XX_____________XX_____________XX_____________XX_____________XX_____________X X_____________X X_____________X
+	Warhead@Damage: SpreadDamage
+		Spread: 1600
+		Falloff: 160, 80, 40, 20, 10
+		Damage: 200
+		Versus:
+			Wood: 100
+			Concrete: 96
+			Steel: 92
+			None: 88
+			Flak: 84
+			Plate: 80
+			Heroic: 76
+			Scout: 72
+			Light: 68
+			Medium: 64
+			Heavy: 60
+			Superheavy: 56
+			Fighter: 52
+			Bomber: 48
+			Helicopter: 44
+			Spaceship: 40
+		ValidTargets: Ground, Trees, Water, Air
+		ValidRelationships: Enemy
+
+roarweapon:
+	Range: 10c0
+	Projectile: InstantHit
+	Warheads: FireCluster
+		Weapon: roarfire
+		Dimensions: 3,3
+		Footprint: X_X / _X_ / X_X
+		RandomClusterCount: -1
+	Warhead@Damage: SpreadDamage
+		Spread: 1600
+		Falloff: 160, 80, 40, 20, 10
+		Damage: 60000
+		Versus:
+			Wood: 100
+			Concrete: 96
+			Steel: 92
+			None: 88
+			Flak: 84
+			Plate: 80
+			Heroic: 76
+			Scout: 72
+			Light: 68
+			Medium: 64
+			Heavy: 60
+			Superheavy: 56
+			Fighter: 52
+			Bomber: 48
+			Helicopter: 44
+			Spaceship: 40
+		ValidTargets: Ground, Air
+		ValidRelationships: Enemy
+
+roarfire:
+	Warheads: CreateEffect
+		Image: roar_fire
+
+fireball:
+	ReloadDelay: 60
+	Range: 9c512
+	Projectile: Bullet
+		Speed: 2
+		Image: lego_emp_star
+		Sequences: idle
+		RangeLimit: 15c0
+		Palette: player
+		IsPlayerPalette: true
+	Warhead@Damage: SpreadDamage
+		Spread: 1600
+		Falloff: 160, 80, 40, 20, 10
+		Damage: 4000
+		Versus:
+			Wood: 100
+			Concrete: 96
+			Steel: 92
+			None: 88
+			Flak: 84
+			Plate: 80
+			Heroic: 76
+			Scout: 72
+			Light: 68
+			Medium: 64
+			Heavy: 60
+			Superheavy: 56
+			Fighter: 52
+			Bomber: 48
+			Helicopter: 44
+			Spaceship: 40
+		ValidTargets: Ground, Trees, Water, Air
+		ValidRelationships: Enemy
+
+lightningblast:
+	ReloadDelay: 60
+	Range: 9c512
+	Projectile: InstantHit
+		RangeLimit: 15c0
+		Palette: player
+		IsPlayerPalette: true
+	Warhead@3cluster: FireCluster
+		Weapon: lightningshard
+		Dimensions: 10,10
+		Footprint: X_____________X  X_____________X X_____________X X_____________X X_____________XX_____________XX_____________XX_____________XX_____________XX_____________XX_____________XX_____________XX_____________XX_____________XX_____________XX_____________XX_____________X X_____________X X_____________X 
+
+lightningshard:
+	ReloadDelay: 60
+	Range: 9c512
+	Report: esp.wav
+	Projectile: Bullet
+		Image: lego_emp_star
+	Warhead@Damage: SpreadDamage
+		Spread: 1600
+		Falloff: 160, 80, 40, 20, 10
+		Damage: 4000
+		Versus:
+			Wood: 100
+			Concrete: 96
+			Steel: 92
+			None: 88
+			Flak: 84
+			Plate: 80
+			Heroic: 76
+			Scout: 72
+			Light: 68
+			Medium: 64
+			Heavy: 60
+			Superheavy: 56
+			Fighter: 52
+			Bomber: 48
+			Helicopter: 44
+			Spaceship: 40
+		ValidTargets: Ground, Trees, Water, Air
+		ValidRelationships: Enemy

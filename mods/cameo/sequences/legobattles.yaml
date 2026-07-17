@@ -81,8 +81,6 @@
 		Filename: lego_spell_icons.png
 		Start: 24
 
-
-
 ####################################################################################################
 #		ASTRO - BUILDINGS
 ####################################################################################################
@@ -2075,6 +2073,155 @@ lego_imperial_conyard:
 		Start: 0
 		AddExtension: False
 
+imperial_barracks:
+	Defaults:
+		Filename: imperial_buildings.shp
+		Scale: 2.0
+	idle: imperial_buildings.shp
+		Start: 3
+	damaged-idle: imperial_buildings.shp
+		Start: 3
+	make: imperial_buildings.shp
+		Start: 3
+	dead: imperial_buildings.shp
+		Start: 3
+	lego_production_overlay_human: 
+		Filename: lego_production_overlay_human.shp
+		Length: 10
+		Offset: 7,6,0
+	icon: imperial_cameos.png
+		Filename: imperial_cameos.png
+		Start: 4
+		AddExtension: False
+
+imperial_quarters:
+	Defaults:
+		Filename: imperial_buildings.shp
+		Scale: 2.0
+	idle: imperial_buildings.shp
+		Start: 1
+	damaged-idle: imperial_buildings.shp
+		Start: 1
+	make: imperial_buildings.shp
+		Start: 1
+	dead: imperial_buildings.shp
+		Start: 1
+	icon: imperial_cameos.png
+		Filename: imperial_cameos.png
+		Start: 1
+		AddExtension: False
+
+imperial_lumber_mill:
+	Defaults:
+		Filename: imperial_buildings.shp
+		Scale: 2.0
+	idle: imperial_buildings.shp
+		Start: 6
+	damaged-idle: imperial_buildings.shp
+		Start: 6
+	make: imperial_buildings.shp
+		Start: 6
+	dead: imperial_buildings.shp
+		Start: 6
+	icon: imperial_cameos.png
+		Filename: imperial_cameos.png
+		Start: 2
+		AddExtension: False
+
+imperial_quarry:
+	Defaults:
+		Filename: imperial_buildings.shp
+		Scale: 2.0
+	idle: imperial_buildings.shp
+		Start: 2
+	damaged-idle: imperial_buildings.shp
+		Start: 2
+	make: imperial_buildings.shp
+		Start: 2
+	dead: imperial_buildings.shp
+		Start: 2
+	icon: imperial_cameos.png
+		Filename: imperial_cameos.png
+		Start: 3
+		AddExtension: False
+
+imperial_vehiclefactory:
+	Defaults:
+		Filename: imperial_buildings.shp
+		Scale: 2.0
+	idle: imperial_buildings.shp
+		Start: 5
+	damaged-idle: imperial_buildings.shp
+		Start: 5
+	make: imperial_buildings.shp
+		Start: 5
+	dead: imperial_buildings.shp
+		Start: 5
+	lego_production_overlay_brick: 
+		Filename: lego_production_overlay_brick.shp
+		Length: 10
+		Offset: 7,6,0
+	icon: imperial_cameos.png
+		Filename: imperial_cameos.png
+		Start: 5
+		AddExtension: False
+
+imperial_tower:
+	Defaults:
+		Filename: imperial_buildings.shp
+		Scale: 2.0
+		AddExtension: False
+	idle: imperial_buildings.shp
+		Start: 7
+	make: imperial_buildings.shp
+		Start: 7
+	dead: imperial_buildings.shp
+		Start: 7
+	icon: imperial_cameos.png
+		Filename: imperial_cameos.png
+		Start: 7
+	imperial_tower: imperial_buildings.shp
+		Start: 7
+	imperial_tower2: imperial_buildings.shp
+		Start: 8
+	imperial_tower3: imperial_buildings.shp
+	 	Start: 9
+
+
+imperial_tower2:
+	Defaults:
+		Filename: imperial_buildings.shp
+		Scale: 2.0
+		AddExtension: False
+	idle: imperial_buildings.shp
+		Start: 8
+	make: imperial_buildings.shp
+		Start: 8
+	dead: imperial_buildings.shp
+		Start: 8
+	icon: imperial_cameos.png
+		Filename: imperial_cameos.png
+		Start: 8
+		AddExtension: False
+
+
+imperial_tower3:
+	Defaults:
+		Filename: imperial_buildings.shp
+		Scale: 2.0
+		AddExtension: False
+	idle: imperial_buildings.shp
+		Start: 9
+	make: imperial_buildings.shp
+		Start: 9
+	dead: imperial_buildings.shp
+		Start: 9
+	icon: imperial_cameos.png
+		Filename: imperial_cameos.png
+		Start: 9
+		AddExtension: False
+
+
 ####################################################################################################
 #		Imperials - Units
 ####################################################################################################
@@ -2126,3 +2273,3155 @@ lego_imperial_mcv:
 		Filename: imperial_cameos.png
 		Start: 10
 		AddExtension: False
+
+imperial_builder:
+	Defaults:
+		Filename: imperial_builder.shp
+		Scale: 1.5
+	stand: 
+		Facings: -8
+		Combine:
+			imperial_builder00: 
+				Filename: imperial_builder.shp
+				Length: 5
+				Frames: 0,1,2,3,4
+			imperial_builder01: 
+				Filename: imperial_builder.shp
+				Length: 3
+				Frames: 3,2,1
+				FlipX: true
+	idle: invisibleitem
+	run: 
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			imperial_builder1: 
+				Filename: imperial_builder.shp
+				Length: 25
+				Frames:  5,6,7,8,9, 10,11,12,13,14, 15,16,17,18,19, 20,21,22,23,24, 25,26,27,28,29
+			imperial_builder2: 
+				Filename: imperial_builder.shp
+				Length: 15
+				Frames: 24,23,22,21,20, 19,18,17,16,15, 14,13,12,11,10
+				FlipX: true
+	harvest:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			imperial_builder3: 
+				Filename: imperial_builder.shp
+				Length: 25
+				Frames: 30,31,32,33,34, 35,36,37,38,39, 40,41,42,43,44, 45,46,47,48,49, 50,51,52,53,54
+			imperial_builder4: 
+				Filename: imperial_builder.shp
+				Length: 15
+				Frames: 49,48,47,46,45, 44,43,42,41,40, 39,38,37,36,35
+				FlipX: true
+	dock:
+		Facings: -8
+		Combine:
+			imperial_builder5: 
+				Filename: imperial_builder.shp
+				Length: 5
+				Frames: 0,1,2,3,4
+			imperial_builder6: 
+				Filename: imperial_builder.shp
+				Length: 3
+				Frames: 3,2,1
+				FlipX: true
+	dock-loop: 
+		Facings: -8
+		Combine:
+			imperial_builder7: 
+				Filename: imperial_builder.shp
+				Length: 5
+				Frames: 0,1,2,3,4
+			imperial_builder8: 
+				Filename: imperial_builder.shp
+				Length: 3
+				Frames: 3,2,1
+				FlipX: true
+	die:
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 1
+	die-crushed:
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 1
+	icon: imperial_cameos.png
+		Filename: imperial_cameos.png
+		Start: 16
+		AddExtension: False
+
+imperial_swordsman:
+	Defaults:
+		Filename: imperial_swordsman.shp
+		Scale: 2.0
+	stand:
+		Facings: -8
+		Combine:
+			imperial_swordsmanwal1:
+				Filename: imperial_swordsman.shp
+				Length: 5
+				Frames: 0,5,10,15,20
+			imperial_swordsmanwal2:
+				Filename: imperial_swordsman.shp
+				Length: 3
+				Frames: 15,10,5
+				FlipX: true
+	run:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			imperial_swordsmanrun1:
+				Filename: imperial_swordsman.shp
+				Length: 25
+				Frames: 0,1,2,3,4, 5,6,7,8,9, 10,11,12,13,14, 15,16,17,18,19, 20,21,22,23,24
+			imperial_swordsmanrun2:
+				Filename: imperial_swordsman.shp
+				Length: 15
+				Frames: 19,18,17,16,15, 14,13,12,11,10, 9,8,7,6,5
+				FlipX: true
+	shoot:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			imperial_swordsmanhit1:
+				Filename: imperial_swordsman.shp
+				Length: 25
+				Frames: 25,26,27,28,29, 30,31,32,33,34, 35,36,37,38,39, 40,41,42,43,44, 45,46,47,48,49
+			imperial_swordsmanhit2:
+				Filename: imperial_swordsman.shp
+				Length: 15
+				Frames: 44,43,42,41,40, 39,38,37,36,35, 34,33,32,31,30
+				FlipX: true
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	die-crushed: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: imperial_cameos.png
+		Filename: imperial_cameos.png
+		Start: 17
+		AddExtension: False
+
+imperial_rifleman:
+	Defaults:
+		Filename: imperial_rifleman.shp
+		Scale: 2.0
+	stand:
+		Facings: -8
+		Combine:
+			imperial_riflemanwal1:
+				Filename: imperial_rifleman.shp
+				Length: 5
+				Frames: 0,5,10,15,20
+			imperial_riflemanwal2:
+				Filename: imperial_rifleman.shp
+				Length: 3
+				Frames: 15,10,5
+				FlipX: true
+	run:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			imperial_riflemanrun1:
+				Filename: imperial_rifleman.shp
+				Length: 25
+				Frames: 0,1,2,3,4, 5,6,7,8,9, 10,11,12,13,14, 15,16,17,18,19, 20,21,22,23,24
+			imperial_riflemanrun2:
+				Filename: imperial_rifleman.shp
+				Length: 15
+				Frames: 19,18,17,16,15, 14,13,12,11,10, 9,8,7,6,5
+				FlipX: true
+	shoot:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			imperial_riflemanhit1:
+				Filename: imperial_rifleman.shp
+				Length: 25
+				Frames: 25,26,27,28,29, 30,31,32,33,34, 35,36,37,38,39, 40,41,42,43,44, 45,46,47,48,49
+			imperial_riflemanhit2:
+				Filename: imperial_rifleman.shp
+				Length: 15
+				Frames: 44,43,42,41,40, 39,38,37,36,35, 34,33,32,31,30
+				FlipX: true
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	die-crushed: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: imperial_cameos.png
+		Filename: imperial_cameos.png
+		Start: 18
+		AddExtension: False
+
+imperial_cavalry:
+	Defaults:
+		Filename: imperial_cavalry.shp
+		Scale: 2.0
+	stand:
+		Facings: -8
+		Combine:
+			imperial_cavalrywal1:
+				Filename: imperial_cavalry.shp
+				Length: 5
+				Frames: 0,3,6,9,12
+			imperial_cavalrywal2:
+				Filename: imperial_cavalry.shp
+				Length: 3
+				Frames: 9,6,3
+				FlipX: true
+	run:
+		Facings: -8
+		Length: 3
+		Tick: 100
+		Combine:
+			imperial_cavalryrun1:
+				Filename: imperial_cavalry.shp
+				Length: 15
+				Frames: 0,1,2, 3,4,5, 6,7,8, 9,10,11, 12,13,14
+			imperial_cavalryrun2:
+				Filename: imperial_cavalry.shp
+				Length: 9
+				Frames: 11,10,9, 8,7,6, 5,4,3
+				FlipX: true
+	shoot:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			imperial_cavalryhit1:
+				Filename: imperial_cavalry.shp
+				Length: 25
+				Frames: 15,16,17,18,19, 20,21,22,23,24, 25,26,27,28,29, 30,31,32,33,34, 35,36,37,38,39
+			imperial_cavalryhit2:
+				Filename: imperial_cavalry.shp
+				Length: 15
+				Frames: 34,33,32,31,30, 29,28,27,26,25, 24,23,22,21,20
+				FlipX: true
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	die-crushed: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: imperial_cameos.png
+		Filename: imperial_cameos.png
+		Start: 19
+		AddExtension: False
+
+imperial_ninja:
+	Defaults:
+		Filename: imperial_ninja.shp
+		Scale: 2.0
+	stand:
+		Facings: -8
+		Combine:
+			imperial_ninjawal1:
+				Filename: imperial_ninja.shp
+				Length: 5
+				Frames: 0,5,10,15,20
+			imperial_ninjawal2:
+				Filename: imperial_ninja.shp
+				Length: 3
+				Frames: 15,10,5
+				FlipX: true
+	run:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			imperial_ninjarun1:
+				Filename: imperial_ninja.shp
+				Length: 25
+				Frames: 0,1,2,3,4, 5,6,7,8,9, 10,11,12,13,14, 15,16,17,18,19, 20,21,22,23,24
+			imperial_ninjarun2:
+				Filename: imperial_ninja.shp
+				Length: 15
+				Frames: 19,18,17,16,15, 14,13,12,11,10, 9,8,7,6,5
+				FlipX: true
+	shoot:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			imperial_ninjahit1:
+				Filename: imperial_ninja.shp
+				Length: 25
+				Frames: 25,26,27,28,29, 30,31,32,33,34, 35,36,37,38,39, 40,41,42,43,44, 45,46,47,48,49
+			imperial_ninjahit2:
+				Filename: imperial_ninja.shp
+				Length: 15
+				Frames: 44,43,42,41,40, 39,38,37,36,35, 34,33,32,31,30
+				FlipX: true
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	die-crushed: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: imperial_cameos.png
+		Filename: imperial_cameos.png
+		Start: 20
+		AddExtension: False
+
+imperial_governor_broadside:
+	Inherits: ^lego_spell_icons
+	Defaults:
+		Filename: imperial_broadside.shp
+		Scale: 2.0
+	stand:
+		Facings: -8
+		Combine:
+			imperial_governor_broadsidewal1:
+				Filename: imperial_governor_broadside.shp
+				Length: 5
+				Frames: 0,5,10,15,20
+			imperial_governor_broadsidewal2:
+				Filename: imperial_governor_broadside.shp
+				Length: 3
+				Frames: 15,10,5
+				FlipX: true
+	run:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			imperial_governor_broadsidemarun1: imperial_governor_broadside
+				Filename: imperial_governor_broadside.shp
+				Length: 25
+				Frames: 0,1,2,3,4, 5,6,7,8,9, 10,11,12,13,14, 15,16,17,18,19, 20,21,22,23,24
+			imperial_governor_broadsidemarun2: imperial_governor_broadside
+				Filename: imperial_governor_broadside.shp
+				Length: 15
+				Frames: 19,18,17,16,15, 14,13,12,11,10, 9,8,7,6,5
+				FlipX: true
+	shoot:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			imperial_governor_broadsidemahit1:
+				Filename: imperial_governor_broadside.shp
+				Length: 25
+				Frames: 25,26,27,28,29, 30,31,32,33,34, 35,36,37,38,39, 40,41,42,43,44, 45,46,47,48,49
+			imperial_governor_broadsidemahit2:
+				Filename: imperial_governor_broadside.shp
+				Length: 15
+				Frames: 44,43,42,41,40, 39,38,37,36,35, 34,33,32,31,30
+				FlipX: true
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	die-crushed: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: imperial_cameos.png
+		Filename: imperial_cameos.png
+		Start: 22
+		AddExtension: False
+
+imperial_camilla:
+	Inherits: ^lego_spell_icons
+	Defaults:
+		Filename: imperial_camilla.shp
+		Scale: 2.0
+	stand:
+		Facings: -8
+		Combine:
+			imperial_camillawal1: imperial_camilla
+				Filename: imperial_camilla.shp
+				Length: 5
+				Frames: 0,5,10,15,20
+			imperial_camillawal2: imperial_camilla
+				Filename: imperial_camilla.shp
+				Length: 3
+				Frames: 15,10,5
+				FlipX: true
+	run:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			imperial_camillarun1: imperial_camilla
+				Filename: imperial_camilla.shp
+				Length: 25
+				Frames: 0,1,2,3,4, 5,6,7,8,9, 10,11,12,13,14, 15,16,17,18,19, 20,21,22,23,24
+			imperial_camillarun2: imperial_camilla
+				Filename: imperial_camilla.shp
+				Length: 15
+				Frames: 19,18,17,16,15, 14,13,12,11,10, 9,8,7,6,5
+				FlipX: true
+	shoot:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			imperial_camillahit1: imperial_camilla
+				Filename: imperial_camilla.shp
+				Length: 25
+				Frames: 25,26,27,28,29, 30,31,32,33,34, 35,36,37,38,39, 40,41,42,43,44, 45,46,47,48,49
+			imperial_camillahit2: imperial_camilla
+				Filename: imperial_camilla.shp
+				Length: 15
+				Frames: 44,43,42,41,40, 39,38,37,36,35, 34,33,32,31,30
+				FlipX: true
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	die-crushed: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: imperial_cameos.png
+		Filename: imperial_cameos.png
+		Start: 23
+		AddExtension: False
+
+imperial_ninja_master:
+	Inherits: ^lego_spell_icons
+	Defaults:
+		Filename: imperial_ninja_master.shp
+		Scale: 2.0
+	stand:
+		Facings: -8
+		Combine:
+			imperial_ninja_masterwal1: imperial_ninja_master
+				Filename: imperial_ninja_master.shp
+				Length: 5
+				Frames: 0,5,10,15,20
+			imperial_ninja_masterwal2: imperial_ninja_master
+				Filename: imperial_ninja_master.shp
+				Length: 3
+				Frames: 15,10,5
+				FlipX: true
+	run:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			imperial_ninja_masterrun1: imperial_ninja_master
+				Filename: imperial_ninja_master.shp
+				Length: 25
+				Frames: 0,1,2,3,4, 5,6,7,8,9, 10,11,12,13,14, 15,16,17,18,19, 20,21,22,23,24
+			imperial_ninja_masterrun2: imperial_ninja_master
+				Filename: imperial_ninja_master.shp
+				Length: 15
+				Frames: 19,18,17,16,15, 14,13,12,11,10, 9,8,7,6,5
+				FlipX: true
+	shoot:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			imperial_ninja_masterhit1: imperial_ninja_master
+				Filename: imperial_ninja_master.shp
+				Length: 25
+				Frames: 25,26,27,28,29, 30,31,32,33,34, 35,36,37,38,39, 40,41,42,43,44, 45,46,47,48,49
+			imperial_ninja_masterhit2: imperial_ninja_master
+				Filename: imperial_ninja_master.shp
+				Length: 15
+				Frames: 44,43,42,41,40, 39,38,37,36,35, 34,33,32,31,30
+				FlipX: true
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	die-crushed: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: imperial_cameos.png
+		Filename: imperial_cameos.png
+		Start: 21
+		AddExtension: False
+
+imperial_culverin:
+	Defaults:
+		Scale: 1.1
+	idle:
+		Filename: imperial_culverin.shp
+		Facings: 	16
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: imperial_cameos.png
+		Filename: imperial_cameos.png
+		Start: 24
+		AddExtension: False
+
+imperial_flying_ship:
+	idle:
+		Filename: imperial_flying_ship.shp
+		Start: 16
+		Length: 9
+		Facings: 16
+		Scale: 2.0
+	run:
+		Filename: imperial_flying_ship.shp
+		Start: 16
+		Length: 9
+		Facings: 16
+		Scale: 2.0
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: imperial_cameos.png
+		Filename: imperial_cameos.png
+		Start: 36
+		AddExtension: False
+
+####################################################################################################
+#		Pirate - Projectiles
+####################################################################################################
+
+lego_cannonball:
+	Defaults:
+		Scale: 2.0
+	idle:
+		Filename: lego_tube.shp
+		Start: 0
+		Length: 8
+
+lego_shuriken:
+	Defaults:
+		Scale: 2.0
+	idle:
+		Filename: lego_shuriken.shp
+		Start: 0
+		Length: 4
+
+# lego_boulder:
+# 	Defaults:
+# 		Scale: 2.0
+# 	idle:
+# 		Filename: lego_round_brick.shp
+# 		Start: 0
+# 		Length: 8
+
+lego_musket_ball:
+	Defaults:
+		Scale: 2.0
+	idle:
+		Filename: lego_ball.shp
+
+lego_arrow:
+	Defaults:
+		Scale: 2.0
+	idle:
+		Filename: lego_arrow.shp
+		Facings: 8
+		Combine:
+			arrowbotleft:
+				Filename: lego_arrow.shp
+				Length: 5
+				Frames: 4,3,2,1,0
+				FlipX: true
+			arrowtopright:
+				Filename: lego_arrow.shp
+				Length: 5
+				Frames: 0,1,2,3,4
+
+special_lego_arrow:
+	Defaults:
+		Scale: 2.0
+	idle:
+		Facings: 8
+		Combine:
+			arrowbotleftlarge:
+				Filename: lego_big_arrow.shp
+				Length: 5
+				Frames: 4,3,2,1,0
+				FlipX: true
+			arrowtopright:
+				Filename: lego_big_arrow.shp
+				Length: 5
+				Frames: 0,1,2,3,4
+
+####################################################################################################
+#		Pirates - Structures
+####################################################################################################
+
+lego_pirate_conyard:
+	Defaults:
+		Filename: pirate_buildings.shp
+		Scale: 2.0
+	idle: pirate_buildings.shp
+		Start: 0
+		Length: 1
+	damaged-idle: pirate_buildings.shp
+		Start: 0
+		Length: 1
+	make: pirate_buildings.shp
+		Start: 0
+		Length: 1
+	dead: pirate_buildings.shp
+		Start: 0
+		Length: 1
+	lego_production_overlay_human: 
+		Filename: lego_production_overlay_human.shp
+		Length: 10
+		Offset: 14,12,0
+	icon: pirate_cameos.png
+		Filename: pirate_cameos.png
+		Start: 0
+		AddExtension: False
+
+pirate_barracks:
+	Defaults:
+		Filename: pirate_buildings.shp
+		Scale: 2.0
+	idle: pirate_buildings.shp
+		Start: 3
+	damaged-idle: pirate_buildings.shp
+		Start: 3
+	make: pirate_buildings.shp
+		Start: 3
+	dead: pirate_buildings.shp
+		Start: 3
+	lego_production_overlay_human: 
+		Filename: lego_production_overlay_human.shp
+		Length: 10
+		Offset: 7,6,0
+	icon: pirate_cameos.png
+		Filename: pirate_cameos.png
+		Start: 4
+		AddExtension: False
+
+pirate_plantation:
+	Defaults:
+		Filename: pirate_buildings.shp
+		Scale: 2.0
+	idle: pirate_buildings.shp
+		Start: 1
+	damaged-idle: pirate_buildings.shp
+		Start: 1
+	make: pirate_buildings.shp
+		Start: 1
+	dead: pirate_buildings.shp
+		Start: 1
+	icon: pirate_cameos.png
+		Filename: pirate_cameos.png
+		Start: 1
+		AddExtension: False
+
+pirate_lumber_mill:
+	Defaults:
+		Filename: pirate_buildings.shp
+		Scale: 2.0
+	idle: pirate_buildings.shp
+		Start: 6
+	damaged-idle: pirate_buildings.shp
+		Start: 6
+	make: pirate_buildings.shp
+		Start: 6
+	dead: pirate_buildings.shp
+		Start: 6
+	icon: pirate_cameos.png
+		Filename: pirate_cameos.png
+		Start: 2
+		AddExtension: False
+
+pirate_quarry:
+	Defaults:
+		Filename: pirate_buildings.shp
+		Scale: 2.0
+	idle: pirate_buildings.shp
+		Start: 2
+	damaged-idle: pirate_buildings.shp
+		Start: 2
+	make: pirate_buildings.shp
+		Start: 2
+	dead: pirate_buildings.shp
+		Start: 2
+	icon: pirate_cameos.png
+		Filename: pirate_cameos.png
+		Start: 3
+		AddExtension: False
+
+pirate_vehiclefactory:
+	Defaults:
+		Filename: pirate_buildings.shp
+		Scale: 2.0
+	idle: pirate_buildings.shp
+		Start: 5
+	damaged-idle: pirate_buildings.shp
+		Start: 5
+	make: pirate_buildings.shp
+		Start: 5
+	dead: pirate_buildings.shp
+		Start: 5
+	lego_production_overlay_brick: 
+		Filename: lego_production_overlay_brick.shp
+		Length: 10
+		Offset: 7,6,0
+	icon: pirate_cameos.png
+		Filename: pirate_cameos.png
+		Start: 5
+		AddExtension: False
+
+pirate_tower:
+	Defaults:
+		Filename: pirate_buildings.shp
+		Scale: 2.0
+		AddExtension: False
+	idle: pirate_buildings.shp
+		Start: 7
+	make: pirate_buildings.shp
+		Start: 7
+	dead: pirate_buildings.shp
+		Start: 7
+	icon: pirate_cameos.png
+		Filename: pirate_cameos.png
+		Start: 7
+	pirate_tower: pirate_buildings.shp
+		Start: 7
+	pirate_tower2: pirate_buildings.shp
+		Start: 8
+	pirate_tower3: pirate_buildings.shp
+	 	Start: 9
+
+
+pirate_tower2:
+	Defaults:
+		Filename: pirate_buildings.shp
+		Scale: 2.0
+		AddExtension: False
+	idle: pirate_buildings.shp
+		Start: 8
+	make: pirate_buildings.shp
+		Start: 8
+	dead: pirate_buildings.shp
+		Start: 8
+	icon: pirate_cameos.png
+		Filename: pirate_cameos.png
+		Start: 8
+		AddExtension: False
+
+
+pirate_tower3:
+	Defaults:
+		Filename: pirate_buildings.shp
+		Scale: 2.0
+		AddExtension: False
+	idle: pirate_buildings.shp
+		Start: 9
+	make: pirate_buildings.shp
+		Start: 9
+	dead: pirate_buildings.shp
+		Start: 9
+	icon: pirate_cameos.png
+		Filename: pirate_cameos.png
+		Start: 9
+		AddExtension: False
+
+
+####################################################################################################
+#		Pirates - Units
+####################################################################################################
+
+lego_pirate_mcv:
+	#inherits: ^legoinfantry
+	Defaults:
+		Filename: pirate_builder.shp
+		Scale: 2.0
+	stand:
+		Facings: -8
+		Combine:
+			pirate_buildermcv1:
+				Filename: pirate_builder.shp
+				Length: 5
+				Frames: 0,1,2,3,4
+			pirate_buildermcv2:
+				Filename: pirate_builder.shp
+				Length: 3
+				Frames: 3,2,1
+				FlipX: true
+	idle: 
+		Filename: pirate_builder.shp
+		Start: 0
+		Length: 1
+	run:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			pirate_buildermcv3:
+				Filename: pirate_builder.shp
+				Length: 25
+				Frames:  5,6,7,8,9, 10,11,12,13,14, 15,16,17,18,19, 20,21,22,23,24, 25,26,27,28,29
+			pirate_buildermcv4:
+				Filename: pirate_builder.shp
+				Length: 15
+				Frames: 24,23,22,21,20, 19,18,17,16,15, 14,13,12,11,10
+				FlipX: true
+	die: pirate_builder
+		Filename: pirate_builder.shp
+		Start: 0
+		Length: 7
+	die-crushed: pirate_builder
+		Filename: pirate_builder.shp
+		Start: 0
+		Length: 7
+	icon: pirate_cameos.png
+		Filename: pirate_cameos.png
+		Start: 10
+		AddExtension: False
+
+pirate_builder:
+	Defaults:
+		Filename: pirate_builder.shp
+		Scale: 1.5
+	stand: 
+		Facings: -8
+		Combine:
+			pirate_builder00: 
+				Filename: pirate_builder.shp
+				Length: 5
+				Frames: 0,1,2,3,4
+			pirate_builder01: 
+				Filename: pirate_builder.shp
+				Length: 3
+				Frames: 3,2,1
+				FlipX: true
+	idle: invisibleitem
+	run: 
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			pirate_builder1:
+				Filename: pirate_builder.shp
+				Length: 25
+				Frames:  5,6,7,8,9, 10,11,12,13,14, 15,16,17,18,19, 20,21,22,23,24, 25,26,27,28,29
+			pirate_builder2: 
+				Filename: pirate_builder.shp
+				Length: 15
+				Frames: 24,23,22,21,20, 19,18,17,16,15, 14,13,12,11,10
+				FlipX: true
+	harvest:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			pirate_builder3: 
+				Filename: pirate_builder.shp
+				Length: 25
+				Frames: 30,31,32,33,34, 35,36,37,38,39, 40,41,42,43,44, 45,46,47,48,49, 50,51,52,53,54
+			pirate_builder4: 
+				Filename: pirate_builder.shp
+				Length: 15
+				Frames: 49,48,47,46,45, 44,43,42,41,40, 39,38,37,36,35
+				FlipX: true
+	dock:
+		Facings: -8
+		Combine:
+			pirate_builder5: 
+				Filename: pirate_builder.shp
+				Length: 5
+				Frames: 0,1,2,3,4
+			pirate_builder6: 
+				Filename: pirate_builder.shp
+				Length: 3
+				Frames: 3,2,1
+				FlipX: true
+	dock-loop: 
+		Facings: -8
+		Combine:
+			pirate_builder7: 
+				Filename: pirate_builder.shp
+				Length: 5
+				Frames: 0,1,2,3,4
+			pirate_builder8: 
+				Filename: pirate_builder.shp
+				Length: 3
+				Frames: 3,2,1
+				FlipX: true
+	die:
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 1
+	die-crushed:
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 1
+	icon: pirate_cameos.png
+		Filename: pirate_cameos.png
+		Start: 16
+		AddExtension: False
+
+pirate_oarsman:
+	Defaults:
+		Filename: pirate_oarsman.shp
+		Scale: 2.0
+	stand:
+		Facings: -8
+		Combine:
+			pirate_oarsmanwal1:
+				Filename: pirate_oarsman.shp
+				Length: 5
+				Frames: 0,5,10,15,20
+			pirate_oarsmanwal2:
+				Filename: pirate_oarsman.shp
+				Length: 3
+				Frames: 15,10,5
+				FlipX: true
+	run:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			pirate_oarsmanrun1:
+				Filename: pirate_oarsman.shp
+				Length: 25
+				Frames: 0,1,2,3,4, 5,6,7,8,9, 10,11,12,13,14, 15,16,17,18,19, 20,21,22,23,24
+			pirate_oarsmanrun2:
+				Filename: pirate_oarsman.shp
+				Length: 15
+				Frames: 19,18,17,16,15, 14,13,12,11,10, 9,8,7,6,5
+				FlipX: true
+	shoot:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			pirate_oarsmanhit1:
+				Filename: pirate_oarsman.shp
+				Length: 25
+				Frames: 25,26,27,28,29, 30,31,32,33,34, 35,36,37,38,39, 40,41,42,43,44, 45,46,47,48,49
+			pirate_oarsmanhit2:
+				Filename: pirate_oarsman.shp
+				Length: 15
+				Frames: 44,43,42,41,40, 39,38,37,36,35, 34,33,32,31,30
+				FlipX: true
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	die-crushed: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: pirate_cameos.png
+		Filename: pirate_cameos.png
+		Start: 17
+		AddExtension: False
+
+pirate_monkey:
+	Defaults:
+		Filename: pirate_monkey.shp
+		Scale: 2.0
+	stand:
+		Facings: -8
+		Combine:
+			pirate_monkeywal1:
+				Filename: pirate_monkey.shp
+				Length: 5
+				Frames: 0,5,10,15,20
+			pirate_monkeywal2:
+				Filename: pirate_monkey.shp
+				Length: 3
+				Frames: 15,10,5
+				FlipX: true
+	run:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			pirate_monkeyrun1:
+				Filename: pirate_monkey.shp
+				Length: 25
+				Frames: 0,1,2,3,4, 5,6,7,8,9, 10,11,12,13,14, 15,16,17,18,19, 20,21,22,23,24
+			pirate_monkeyrun2:
+				Filename: pirate_monkey.shp
+				Length: 15
+				Frames: 19,18,17,16,15, 14,13,12,11,10, 9,8,7,6,5
+				FlipX: true
+	shoot:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			pirate_monkeyhit1:
+				Filename: pirate_monkey.shp
+				Length: 25
+				Frames: 25,26,27,28,29, 30,31,32,33,34, 35,36,37,38,39, 40,41,42,43,44, 45,46,47,48,49
+			pirate_monkeyhit2:
+				Filename: pirate_monkey.shp
+				Length: 15
+				Frames: 44,43,42,41,40, 39,38,37,36,35, 34,33,32,31,30
+				FlipX: true
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	die-crushed: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: pirate_cameos.png
+		Filename: pirate_cameos.png
+		Start: 17
+		AddExtension: False
+
+pirate_gunman:
+	Defaults:
+		Filename: pirate_gunman.shp
+		Scale: 2.0
+	stand:
+		Facings: -8
+		Combine:
+			pirate_gunmanwal1:
+				Filename: pirate_gunman.shp
+				Length: 5
+				Frames: 0,5,10,15,20
+			pirate_gunmanwal2:
+				Filename: pirate_gunman.shp
+				Length: 3
+				Frames: 15,10,5
+				FlipX: true
+	run:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			pirate_gunmanrun1:
+				Filename: pirate_gunman.shp
+				Length: 25
+				Frames: 0,1,2,3,4, 5,6,7,8,9, 10,11,12,13,14, 15,16,17,18,19, 20,21,22,23,24
+			pirate_gunmanrun2:
+				Filename: pirate_gunman.shp
+				Length: 15
+				Frames: 19,18,17,16,15, 14,13,12,11,10, 9,8,7,6,5
+				FlipX: true
+	shoot:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			pirate_gunmanhit1:
+				Filename: pirate_gunman.shp
+				Length: 25
+				Frames: 25,26,27,28,29, 30,31,32,33,34, 35,36,37,38,39, 40,41,42,43,44, 45,46,47,48,49
+			pirate_gunmanhit2:
+				Filename: pirate_gunman.shp
+				Length: 15
+				Frames: 44,43,42,41,40, 39,38,37,36,35, 34,33,32,31,30
+				FlipX: true
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	die-crushed: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: pirate_cameos.png
+		Filename: pirate_cameos.png
+		Start: 19
+		AddExtension: False
+
+pirate_horseman:
+	Defaults:
+		Filename: pirate_horseman.shp
+		Scale: 2.0
+	stand:
+		Facings: -8
+		Combine:
+			pirate_horsemanwal1:
+				Filename: pirate_horseman.shp
+				Length: 5
+				Frames: 0,3,6,9,12
+			pirate_horsemanwal2:
+				Filename: pirate_horseman.shp
+				Length: 3
+				Frames: 9,6,3
+				FlipX: true
+	run:
+		Facings: -8
+		Length: 3
+		Tick: 100
+		Combine:
+			pirate_horsemanrun1:
+				Filename: pirate_horseman.shp
+				Length: 15
+				Frames: 0,1,2, 3,4,5, 6,7,8, 9,10,11, 12,13,14
+			pirate_horsemanrun2:
+				Filename: pirate_horseman.shp
+				Length: 9
+				Frames: 11,10,9, 8,7,6, 5,4,3
+				FlipX: true
+	shoot:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			pirate_horsemanhit1:
+				Filename: pirate_horseman.shp
+				Length: 25
+				Frames: 15,16,17,18,19, 20,21,22,23,24, 25,26,27,28,29, 30,31,32,33,34, 35,36,37,38,39
+			pirate_horsemanhit2:
+				Filename: pirate_horseman.shp
+				Length: 15
+				Frames: 34,33,32,31,30, 29,28,27,26,25, 24,23,22,21,20
+				FlipX: true
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	die-crushed: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: pirate_cameos.png
+		Filename: pirate_cameos.png
+		Start: 18
+		AddExtension: False
+
+pirate_islander:
+	Defaults:
+		Filename: pirate_islander.shp
+		Scale: 2.0
+	stand:
+		Facings: -8
+		Combine:
+			pirate_islanderwal1:
+				Filename: pirate_islander.shp
+				Length: 5
+				Frames: 0,5,10,15,20
+			pirate_islanderwal2:
+				Filename: pirate_islander.shp
+				Length: 3
+				Frames: 15,10,5
+				FlipX: true
+	run:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			pirate_islanderrun1:
+				Filename: pirate_islander.shp
+				Length: 25
+				Frames: 0,1,2,3,4, 5,6,7,8,9, 10,11,12,13,14, 15,16,17,18,19, 20,21,22,23,24
+			pirate_islanderrun2:
+				Filename: pirate_islander.shp
+				Length: 15
+				Frames: 19,18,17,16,15, 14,13,12,11,10, 9,8,7,6,5
+				FlipX: true
+	shoot:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			pirate_islanderhit1:
+				Filename: pirate_islander.shp
+				Length: 25
+				Frames: 25,26,27,28,29, 30,31,32,33,34, 35,36,37,38,39, 40,41,42,43,44, 45,46,47,48,49
+			pirate_islanderhit2:
+				Filename: pirate_islander.shp
+				Length: 15
+				Frames: 44,43,42,41,40, 39,38,37,36,35, 34,33,32,31,30
+				FlipX: true
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	die-crushed: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: pirate_cameos.png
+		Filename: pirate_cameos.png
+		Start: 20
+		AddExtension: False
+
+pirate_captain_brickbeard:
+	Inherits: ^lego_spell_icons
+	Defaults:
+		Filename: pirate_captain_brickbeard.shp
+		Scale: 2.0
+	stand:
+		Facings: -8
+		Combine:
+			pirate_captain_brickbeardwal1:
+				Filename: pirate_captain_brickbeard.shp
+				Length: 5
+				Frames: 0,5,10,15,20
+			pirate_captain_brickbeardwal2:
+				Filename: pirate_captain_brickbeard.shp
+				Length: 3
+				Frames: 15,10,5
+				FlipX: true
+	run:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			pirate_captain_brickbeardmarun1: pirate_captain_brickbeard
+				Filename: pirate_captain_brickbeard.shp
+				Length: 25
+				Frames: 0,1,2,3,4, 5,6,7,8,9, 10,11,12,13,14, 15,16,17,18,19, 20,21,22,23,24
+			pirate_captain_brickbeardmarun2: pirate_captain_brickbeard
+				Filename: pirate_captain_brickbeard.shp
+				Length: 15
+				Frames: 19,18,17,16,15, 14,13,12,11,10, 9,8,7,6,5
+				FlipX: true
+	shoot:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			pirate_captain_brickbeardhit1:
+				Filename: pirate_captain_brickbeard.shp
+				Length: 25
+				Frames: 25,26,27,28,29, 30,31,32,33,34, 35,36,37,38,39, 40,41,42,43,44, 45,46,47,48,49
+			pirate_captain_brickbeardhit2:
+				Filename: pirate_captain_brickbeard.shp
+				Length: 15
+				Frames: 44,43,42,41,40, 39,38,37,36,35, 34,33,32,31,30
+				FlipX: true
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	die-crushed: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: pirate_cameos.png
+		Filename: pirate_cameos.png
+		Start: 22
+		AddExtension: False
+
+pirate_lady_pirate:
+	Inherits: ^lego_spell_icons
+	Defaults:
+		Filename: pirate_lady_pirate.shp
+		Scale: 2.0
+	stand:
+		Facings: -8
+		Combine:
+			pirate_lady_piratewal1: pirate_lady_pirate
+				Filename: pirate_lady_pirate.shp
+				Length: 5
+				Frames: 0,5,10,15,20
+			pirate_lady_piratewal2: pirate_lady_pirate
+				Filename: pirate_lady_pirate.shp
+				Length: 3
+				Frames: 15,10,5
+				FlipX: true
+	run:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			pirate_lady_piraterun1: pirate_lady_pirate
+				Filename: pirate_lady_pirate.shp
+				Length: 25
+				Frames: 0,1,2,3,4, 5,6,7,8,9, 10,11,12,13,14, 15,16,17,18,19, 20,21,22,23,24
+			pirate_lady_piraterun2: pirate_lady_pirate
+				Filename: pirate_lady_pirate.shp
+				Length: 15
+				Frames: 19,18,17,16,15, 14,13,12,11,10, 9,8,7,6,5
+				FlipX: true
+	shoot:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			pirate_lady_piratehit1: pirate_lady_pirate
+				Filename: pirate_lady_pirate.shp
+				Length: 25
+				Frames: 25,26,27,28,29, 30,31,32,33,34, 35,36,37,38,39, 40,41,42,43,44, 45,46,47,48,49
+			pirate_lady_piratehit2: pirate_lady_pirate
+				Filename: pirate_lady_pirate.shp
+				Length: 15
+				Frames: 44,43,42,41,40, 39,38,37,36,35, 34,33,32,31,30
+				FlipX: true
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	die-crushed: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: pirate_cameos.png
+		Filename: pirate_cameos.png
+		Start: 23
+		AddExtension: False
+
+pirate_king_kahuka:
+	Inherits: ^lego_spell_icons
+	Defaults:
+		Filename: pirate_king_kahuka.shp
+		Scale: 2.0
+	stand:
+		Facings: -8
+		Combine:
+			pirate_king_kahukawal1: pirate_king_kahuka
+				Filename: pirate_king_kahuka.shp
+				Length: 5
+				Frames: 0,5,10,15,20
+			pirate_king_kahukawal2: pirate_king_kahuka
+				Filename: pirate_king_kahuka.shp
+				Length: 3
+				Frames: 15,10,5
+				FlipX: true
+	run:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			pirate_king_kahukarun1: pirate_king_kahuka
+				Filename: pirate_king_kahuka.shp
+				Length: 25
+				Frames: 0,1,2,3,4, 5,6,7,8,9, 10,11,12,13,14, 15,16,17,18,19, 20,21,22,23,24
+			pirate_king_kahukarun2: pirate_king_kahuka
+				Filename: pirate_king_kahuka.shp
+				Length: 15
+				Frames: 19,18,17,16,15, 14,13,12,11,10, 9,8,7,6,5
+				FlipX: true
+	shoot:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			pirate_king_kahukahit1: pirate_king_kahuka
+				Filename: pirate_king_kahuka.shp
+				Length: 25
+				Frames: 25,26,27,28,29, 30,31,32,33,34, 35,36,37,38,39, 40,41,42,43,44, 45,46,47,48,49
+			pirate_king_kahukahit2: pirate_king_kahuka
+				Filename: pirate_king_kahuka.shp
+				Length: 15
+				Frames: 44,43,42,41,40, 39,38,37,36,35, 34,33,32,31,30
+				FlipX: true
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	die-crushed: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: pirate_cameos.png
+		Filename: pirate_cameos.png
+		Start: 21
+		AddExtension: False
+
+pirate_cannon:
+	Defaults:
+	idle:
+		Filename: pirate_cannon.shp
+		Facings: 16
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: pirate_cameos.png
+		Filename: pirate_cameos.png
+		Start: 24
+		AddExtension: False
+
+pirate_tiki_golem:
+	Defaults:
+		Filename: pirate_tiki_golem.shp
+		Scale: 1.7
+	stand:
+		Filename: pirate_tiki_golem.shp
+		Start: 0
+		Facings: 16
+	run:
+		Filename: pirate_tiki_golem.shp
+		Start: 16
+		Facings: 16
+		Length: 9
+	shoot:
+		Filename: pirate_tiki_golem.shp
+		Start: 160
+		Facings: 16
+		Length: 9
+	muzzle: gunfire2
+		Filename: gunfire2.shp
+		Length: 2
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	die-crushed: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: pirate_cameos
+		Filename: pirate_cameos.png
+		Start: 25
+		AddExtension: False
+
+pirate_crab:
+	Defaults:
+		Filename: CrabSprite.png
+	idle:
+		Filename: CrabSprite.png
+	icon: king_cameos.png
+		Filename: king_cameos.png
+		Start: 5
+		AddExtension: False
+
+####################################################################################################
+#		King - Structures
+####################################################################################################
+
+lego_king_conyard:
+	Defaults:
+		Filename: king_buildings.shp
+		Scale: 2.0
+	idle: king_buildings.shp
+		Start: 0
+		Length: 1
+	damaged-idle: king_buildings.shp
+		Start: 0
+		Length: 1
+	make: king_buildings.shp
+		Start: 0
+		Length: 1
+	dead: king_buildings.shp
+		Start: 0
+		Length: 1
+	lego_production_overlay_human: 
+		Filename: lego_production_overlay_human.shp
+		Length: 10
+		Offset: 14,12,0
+	icon: king_cameos.png
+		Filename: king_cameos.png
+		Start: 0
+		AddExtension: False
+
+king_barracks:
+	Defaults:
+		Filename: king_buildings.shp
+		Scale: 2.0
+	idle: king_buildings.shp
+		Start: 3
+	damaged-idle: king_buildings.shp
+		Start: 3
+	make: king_buildings.shp
+		Start: 3
+	dead: king_buildings.shp
+		Start: 3
+	lego_production_overlay_human: 
+		Filename: lego_production_overlay_human.shp
+		Length: 10
+		Offset: 7,6,0
+	icon: king_cameos.png
+		Filename: king_cameos.png
+		Start: 4
+		AddExtension: False
+
+king_farm:
+	Defaults:
+		Filename: king_buildings.shp
+		Scale: 2.0
+	idle: king_buildings.shp
+		Start: 1
+	damaged-idle: king_buildings.shp
+		Start: 1
+	make: king_buildings.shp
+		Start: 1
+	dead: king_buildings.shp
+		Start: 1
+	icon: king_cameos.png
+		Filename: king_cameos.png
+		Start: 1
+		AddExtension: False
+
+king_lumber_mill:
+	Defaults:
+		Filename: king_buildings.shp
+		Scale: 2.0
+	idle: king_buildings.shp
+		Start: 6
+	damaged-idle: king_buildings.shp
+		Start: 6
+	make: king_buildings.shp
+		Start: 6
+	dead: king_buildings.shp
+		Start: 6
+	icon: king_cameos.png
+		Filename: king_cameos.png
+		Start: 2
+		AddExtension: False
+
+king_mine:
+	Defaults:
+		Filename: king_buildings.shp
+		Scale: 2.0
+	idle: king_buildings.shp
+		Start: 2
+	damaged-idle: king_buildings.shp
+		Start: 2
+	make: king_buildings.shp
+		Start: 2
+	dead: king_buildings.shp
+		Start: 2
+	icon: king_cameos.png
+		Filename: king_cameos.png
+		Start: 3
+		AddExtension: False
+
+king_vehiclefactory:
+	Defaults:
+		Filename: king_buildings.shp
+		Scale: 2.0
+	idle: king_buildings.shp
+		Start: 5
+	damaged-idle: king_buildings.shp
+		Start: 5
+	make: king_buildings.shp
+		Start: 5
+	dead: king_buildings.shp
+		Start: 5
+	lego_production_overlay_brick: 
+		Filename: lego_production_overlay_brick.shp
+		Length: 10
+		Offset: 7,6,0
+	icon: king_cameos.png
+		Filename: king_cameos.png
+		Start: 5
+		AddExtension: False
+
+king_tower:
+	Defaults:
+		Filename: king_buildings.shp
+		Scale: 2.0
+		AddExtension: False
+	idle: king_buildings.shp
+		Start: 7
+	make: king_buildings.shp
+		Start: 7
+	dead: king_buildings.shp
+		Start: 7
+	icon: king_cameos.png
+		Filename: king_cameos.png
+		Start: 7
+	king_tower: king_buildings.shp
+		Start: 7
+	king_tower2: king_buildings.shp
+		Start: 8
+	king_tower3: king_buildings.shp
+	 	Start: 9
+
+
+king_tower2:
+	Defaults:
+		Filename: king_buildings.shp
+		Scale: 2.0
+		AddExtension: False
+	idle: king_buildings.shp
+		Start: 8
+	make: king_buildings.shp
+		Start: 8
+	dead: king_buildings.shp
+		Start: 8
+	icon: king_cameos.png
+		Filename: king_cameos.png
+		Start: 8
+		AddExtension: False
+
+
+king_tower3:
+	Defaults:
+		Filename: king_buildings.shp
+		Scale: 2.0
+		AddExtension: False
+	idle: king_buildings.shp
+		Start: 9
+	make: king_buildings.shp
+		Start: 9
+	dead: king_buildings.shp
+		Start: 9
+	icon: king_cameos.png
+		Filename: king_cameos.png
+		Start: 9
+		AddExtension: False
+
+
+
+
+lego_king_mcv:
+	Defaults:
+		Filename: king_builder.shp
+		Scale: 2.0
+	stand:
+		Facings: -8
+		Combine:
+			king_buildermcv1:
+				Filename: king_builder.shp
+				Length: 5
+				Frames: 0,1,2,3,4
+			king_buildermcv2:
+				Filename: king_builder.shp
+				Length: 3
+				Frames: 3,2,1
+				FlipX: true
+	idle: 
+		Filename: king_builder.shp
+		Start: 0
+		Length: 1
+	run:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			king_buildermcv3:
+				Filename: king_builder.shp
+				Length: 25
+				Frames:  5,6,7,8,9, 10,11,12,13,14, 15,16,17,18,19, 20,21,22,23,24, 25,26,27,28,29
+			king_buildermcv4:
+				Filename: king_builder.shp
+				Length: 15
+				Frames: 24,23,22,21,20, 19,18,17,16,15, 14,13,12,11,10
+				FlipX: true
+	die: king_builder
+		Filename: king_builder.shp
+		Start: 0
+		Length: 7
+	die-crushed: king_builder
+		Filename: king_builder.shp
+		Start: 0
+		Length: 7
+	icon: king_cameos.png
+		Filename: king_cameos.png
+		Start: 10
+		AddExtension: False
+
+
+king_builder:
+	Defaults:
+		Filename: king_builder.shp
+		Scale: 1.5
+	stand: 
+		Facings: -8
+		Combine:
+			king_builder00: 
+				Filename: king_builder.shp
+				Length: 5
+				Frames: 0,1,2,3,4
+			king_builder01: 
+				Filename: king_builder.shp
+				Length: 3
+				Frames: 3,2,1
+				FlipX: true
+	idle: invisibleitem
+	run: 
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			king_builder1: 
+				Filename: king_builder.shp
+				Length: 25
+				Frames:  5,6,7,8,9, 10,11,12,13,14, 15,16,17,18,19, 20,21,22,23,24, 25,26,27,28,29
+			king_builder2: 
+				Filename: king_builder.shp
+				Length: 15
+				Frames: 24,23,22,21,20, 19,18,17,16,15, 14,13,12,11,10
+				FlipX: true
+	harvest:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			king_builder3: 
+				Filename: king_builder.shp
+				Length: 25
+				Frames: 30,31,32,33,34, 35,36,37,38,39, 40,41,42,43,44, 45,46,47,48,49, 50,51,52,53,54
+			king_builder4: 
+				Filename: king_builder.shp
+				Length: 15
+				Frames: 49,48,47,46,45, 44,43,42,41,40, 39,38,37,36,35
+				FlipX: true
+	dock:
+		Facings: -8
+		Combine:
+			king_builder5: 
+				Filename: king_builder.shp
+				Length: 5
+				Frames: 0,1,2,3,4
+			king_builder6: 
+				Filename: king_builder.shp
+				Length: 3
+				Frames: 3,2,1
+				FlipX: true
+	dock-loop: 
+		Facings: -8
+		Combine:
+			king_builder7: 
+				Filename: king_builder.shp
+				Length: 5
+				Frames: 0,1,2,3,4
+			king_builder8: 
+				Filename: king_builder.shp
+				Length: 3
+				Frames: 3,2,1
+				FlipX: true
+	die:
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 1
+	die-crushed:
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 1
+	icon: king_cameos.png
+		Filename: king_cameos.png
+		Start: 16
+		AddExtension: False
+
+king_guardsman:
+	Defaults:
+		Filename: king_guardsman.shp
+		Scale: 2.0
+	stand:
+		Facings: -8
+		Combine:
+			king_guardsmanwal1:
+				Filename: king_guardsman.shp
+				Length: 5
+				Frames: 0,5,10,15,20
+			king_guardsmanwal2:
+				Filename: king_guardsman.shp
+				Length: 3
+				Frames: 15,10,5
+				FlipX: true
+	run:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			king_guardsmanrun1:
+				Filename: king_guardsman.shp
+				Length: 25
+				Frames: 0,1,2,3,4, 5,6,7,8,9, 10,11,12,13,14, 15,16,17,18,19, 20,21,22,23,24
+			king_guardsmanrun2:
+				Filename: king_guardsman.shp
+				Length: 15
+				Frames: 19,18,17,16,15, 14,13,12,11,10, 9,8,7,6,5
+				FlipX: true
+	shoot:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			king_guardsmanhit1:
+				Filename: king_guardsman.shp
+				Length: 25
+				Frames: 25,26,27,28,29, 30,31,32,33,34, 35,36,37,38,39, 40,41,42,43,44, 45,46,47,48,49
+			king_guardsmanhit2:
+				Filename: king_guardsman.shp
+				Length: 15
+				Frames: 44,43,42,41,40, 39,38,37,36,35, 34,33,32,31,30
+				FlipX: true
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	die-crushed: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: king_cameos.png
+		Filename: king_cameos.png
+		Start: 17
+		AddExtension: False
+
+king_archer:
+	Defaults:
+		Filename: king_archer.shp
+		Scale: 2.0
+	stand:
+		Facings: -8
+		Combine:
+			king_archerwal1:
+				Filename: king_archer.shp
+				Length: 5
+				Frames: 0,5,10,15,20
+			king_archerwal2:
+				Filename: king_archer.shp
+				Length: 3
+				Frames: 15,10,5
+				FlipX: true
+	run:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			king_archerrun1:
+				Filename: king_archer.shp
+				Length: 25
+				Frames: 0,1,2,3,4, 5,6,7,8,9, 10,11,12,13,14, 15,16,17,18,19, 20,21,22,23,24
+			king_archerrun2:
+				Filename: king_archer.shp
+				Length: 15
+				Frames: 19,18,17,16,15, 14,13,12,11,10, 9,8,7,6,5
+				FlipX: true
+	shoot:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			king_archerhit1:
+				Filename: king_archer.shp
+				Length: 25
+				Frames: 25,26,27,28,29, 30,31,32,33,34, 35,36,37,38,39, 40,41,42,43,44, 45,46,47,48,49
+			king_archerhit2:
+				Filename: king_archer.shp
+				Length: 15
+				Frames: 44,43,42,41,40, 39,38,37,36,35, 34,33,32,31,30
+				FlipX: true
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	die-crushed: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: king_cameos.png
+		Filename: king_cameos.png
+		Start: 18
+		AddExtension: False
+
+king_knight:
+	Defaults:
+		Filename: king_knight.shp
+		Scale: 2.0
+	stand:
+		Facings: -8
+		Combine:
+			king_knightwal1:
+				Filename: king_knight.shp
+				Length: 5
+				Frames: 0,3,6,9,12
+			king_knightwal2:
+				Filename: king_knight.shp
+				Length: 3
+				Frames: 9,6,3
+				FlipX: true
+	run:
+		Facings: -8
+		Length: 3
+		Tick: 100
+		Combine:
+			king_knightrun1:
+				Filename: king_knight.shp
+				Length: 15
+				Frames: 0,1,2, 3,4,5, 6,7,8, 9,10,11, 12,13,14
+			king_knightrun2:
+				Filename: king_knight.shp
+				Length: 9
+				Frames: 11,10,9, 8,7,6, 5,4,3
+				FlipX: true
+	shoot:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			king_knighthit1:
+				Filename: king_knight.shp
+				Length: 25
+				Frames: 15,16,17,18,19, 20,21,22,23,24, 25,26,27,28,29, 30,31,32,33,34, 35,36,37,38,39
+			king_knighthit2:
+				Filename: king_knight.shp
+				Length: 15
+				Frames: 34,33,32,31,30, 29,28,27,26,25, 24,23,22,21,20
+				FlipX: true
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	die-crushed: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: king_cameos.png
+		Filename: king_cameos.png
+		Start: 19
+		AddExtension: False
+
+king_dwarf:
+	Defaults:
+		Filename: king_dwarf.shp
+		Scale: 2.0
+	stand:
+		Facings: -8
+		Combine:
+			king_dwarfwal1:
+				Filename: king_dwarf.shp
+				Length: 5
+				Frames: 0,5,10,15,20
+			king_dwarfwal2:
+				Filename: king_dwarf.shp
+				Length: 3
+				Frames: 15,10,5
+				FlipX: true
+	run:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			king_dwarfrun1:
+				Filename: king_dwarf.shp
+				Length: 25
+				Frames: 0,1,2,3,4, 5,6,7,8,9, 10,11,12,13,14, 15,16,17,18,19, 20,21,22,23,24
+			king_dwarfrun2:
+				Filename: king_dwarf.shp
+				Length: 15
+				Frames: 19,18,17,16,15, 14,13,12,11,10, 9,8,7,6,5
+				FlipX: true
+	shoot:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			king_dwarfhit1:
+				Filename: king_dwarf.shp
+				Length: 25
+				Frames: 25,26,27,28,29, 30,31,32,33,34, 35,36,37,38,39, 40,41,42,43,44, 45,46,47,48,49
+			king_dwarfhit2:
+				Filename: king_dwarf.shp
+				Length: 15
+				Frames: 44,43,42,41,40, 39,38,37,36,35, 34,33,32,31,30
+				FlipX: true
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	die-crushed: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: king_cameos.png
+		Filename: king_cameos.png
+		Start: 20
+		AddExtension: False
+
+king_king:
+	Inherits: ^lego_spell_icons
+	Defaults:
+		Filename: king_king.shp
+		Scale: 2.0
+	stand:
+		Facings: -8
+		Combine:
+			king_kingwal1:
+				Filename: king_king.shp
+				Length: 5
+				Frames: 0,5,10,15,20
+			king_kingwal2:
+				Filename: king_king.shp
+				Length: 3
+				Frames: 15,10,5
+				FlipX: true
+	run:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			king_kingmarun1: king_king
+				Filename: king_king.shp
+				Length: 25
+				Frames: 0,1,2,3,4, 5,6,7,8,9, 10,11,12,13,14, 15,16,17,18,19, 20,21,22,23,24
+			king_kingmarun2: king_king
+				Filename: king_king.shp
+				Length: 15
+				Frames: 19,18,17,16,15, 14,13,12,11,10, 9,8,7,6,5
+				FlipX: true
+	shoot:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			king_kinghit1:
+				Filename: king_king.shp
+				Length: 25
+				Frames: 25,26,27,28,29, 30,31,32,33,34, 35,36,37,38,39, 40,41,42,43,44, 45,46,47,48,49
+			king_kinghit2:
+				Filename: king_king.shp
+				Length: 15
+				Frames: 44,43,42,41,40, 39,38,37,36,35, 34,33,32,31,30
+				FlipX: true
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	die-crushed: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: king_cameos.png
+		Filename: king_cameos.png
+		Start: 22
+		AddExtension: False
+
+king_queen:
+	Inherits: ^lego_spell_icons
+	Defaults:
+		Filename: king_queen.shp
+		Scale: 2.0
+	stand:
+		Facings: -8
+		Combine:
+			king_queenwal1: king_queen
+				Filename: king_queen.shp
+				Length: 5
+				Frames: 0,5,10,15,20
+			king_queenwal2: king_queen
+				Filename: king_queen.shp
+				Length: 3
+				Frames: 15,10,5
+				FlipX: true
+	run:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			king_queenrun1: king_queen
+				Filename: king_queen.shp
+				Length: 25
+				Frames: 0,1,2,3,4, 5,6,7,8,9, 10,11,12,13,14, 15,16,17,18,19, 20,21,22,23,24
+			king_queenrun2: king_queen
+				Filename: king_queen.shp
+				Length: 15
+				Frames: 19,18,17,16,15, 14,13,12,11,10, 9,8,7,6,5
+				FlipX: true
+	shoot:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			king_queenhit1: king_queen
+				Filename: king_queen.shp
+				Length: 25
+				Frames: 25,26,27,28,29, 30,31,32,33,34, 35,36,37,38,39, 40,41,42,43,44, 45,46,47,48,49
+			king_queenhit2: king_queen
+				Filename: king_queen.shp
+				Length: 15
+				Frames: 44,43,42,41,40, 39,38,37,36,35, 34,33,32,31,30
+				FlipX: true
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	die-crushed: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: king_cameos.png
+		Filename: king_cameos.png
+		Start: 23
+		AddExtension: False
+
+king_dwarf_king:
+	Inherits: ^lego_spell_icons
+	Defaults:
+		Filename: king_dwarf_king.shp
+		Scale: 2.0
+	stand:
+		Facings: -8
+		Combine:
+			king_dwarf_kingwal1: king_dwarf_king
+				Filename: king_dwarf_king.shp
+				Length: 5
+				Frames: 0,5,10,15,20
+			king_dwarf_kingwal2: king_dwarf_king
+				Filename: king_dwarf_king.shp
+				Length: 3
+				Frames: 15,10,5
+				FlipX: true
+	run:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			king_dwarf_kingrun1: king_dwarf_king
+				Filename: king_dwarf_king.shp
+				Length: 25
+				Frames: 0,1,2,3,4, 5,6,7,8,9, 10,11,12,13,14, 15,16,17,18,19, 20,21,22,23,24
+			king_dwarf_kingrun2: king_dwarf_king
+				Filename: king_dwarf_king.shp
+				Length: 15
+				Frames: 19,18,17,16,15, 14,13,12,11,10, 9,8,7,6,5
+				FlipX: true
+	shoot:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			king_dwarf_kinghit1: king_dwarf_king
+				Filename: king_dwarf_king.shp
+				Length: 25
+				Frames: 25,26,27,28,29, 30,31,32,33,34, 35,36,37,38,39, 40,41,42,43,44, 45,46,47,48,49
+			king_dwarf_kinghit2: king_dwarf_king
+				Filename: king_dwarf_king.shp
+				Length: 15
+				Frames: 44,43,42,41,40, 39,38,37,36,35, 34,33,32,31,30
+				FlipX: true
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	die-crushed: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: king_cameos.png
+		Filename: king_cameos.png
+		Start: 21
+		AddExtension: False
+
+king_ballista:
+	Defaults:
+		Filename: king_ballista.shp
+		Scale: 1.1
+	idle:
+		Filename: king_ballista.shp
+		Start: 0
+		Facings: 16
+	stand:
+		Filename: king_ballista.shp
+		Start: 0
+		Facings: 16
+	run:
+		Filename: king_ballista.shp
+		Start: 16
+		Facings: 16
+		Length: 9
+	muzzle: gunfire2
+		Filename: gunfire2.shp
+		Length: 2
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	die-crushed: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: king_cameos
+		Filename: king_cameos.png
+		Start: 24
+		AddExtension: False
+
+king_catapult:
+	Defaults:
+		Filename: king_catapult.shp
+		Scale: 1.2
+	idle:
+		Filename: king_catapult.shp
+		Start: 0
+		Facings: 16
+	stand:
+		Filename: king_catapult.shp
+		Start: 0
+		Facings: 16
+	run:
+		Filename: king_catapult.shp
+		Start: 16
+		Facings: 16
+		Length: 9
+	shoot:
+		Filename: king_catapult.shp
+		Start: 160
+		Facings: 16
+		Length: 9
+	muzzle: gunfire2
+		Filename: gunfire2.shp
+		Length: 2
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	die-crushed: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: king_cameos
+		Filename: king_cameos.png
+		Start: 25
+		AddExtension: False
+
+king_dwarf_glider:
+	Defaults:
+		Filename: king_dwarf_glider.shp
+		Scale: 1.2
+	idle:
+		Filename: king_dwarf_glider.shp
+		Start: 16
+		Facings: 16
+		Length: 9
+	stand:
+		Filename: king_dwarf_glider.shp
+		Start: 0
+		Facings: 16
+	run:
+		Filename: king_dwarf_glider.shp
+		Start: 16
+		Facings: 16
+		Length: 9
+	muzzle: gunfire2
+		Filename: gunfire2.shp
+		Length: 2
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	die-crushed: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: king_cameos
+		Filename: king_cameos.png
+		Start: 32
+		AddExtension: False
+
+king_dragon:
+	Defaults:
+		Filename: king_dragon.shp
+		Scale: 1.7
+	idle:
+		Filename: king_dragon.shp
+		Start: 0
+		Facings: 16
+		Length: 1
+	stand:
+		Filename: king_dragon.shp
+		Start: 16
+		Facings: 16
+		Length: 9
+	run:
+		Filename: king_dragon.shp
+		Start: 16
+		Facings: 16
+		Length: 9
+	shoot:
+		Filename: king_dragon.shp
+		Start: 160
+		Facings: 16
+		Length: 9
+	muzzle: gunfire2
+		Filename: gunfire2.shp
+		Length: 2
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	die-crushed: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: king_cameos
+		Filename: king_cameos.png
+		Start: 33
+		AddExtension: False
+
+
+####################################################################################################
+#		Wizard - Structures
+####################################################################################################
+
+lego_wizard_conyard:
+	Defaults:
+		Filename: wizard_buildings.shp
+		Scale: 2.0
+	idle: wizard_buildings.shp
+		Start: 0
+		Length: 1
+	damaged-idle: wizard_buildings.shp
+		Start: 0
+		Length: 1
+	make: wizard_buildings.shp
+		Start: 0
+		Length: 1
+	dead: wizard_buildings.shp
+		Start: 0
+		Length: 1
+	lego_production_overlay_skeleton: 
+		Filename: lego_production_overlay_skeleton.shp
+		Length: 10
+		Offset: 14,12,0
+	icon: wizard_cameos.png
+		Filename: wizard_cameos.png
+		Start: 0
+		AddExtension: False
+
+wizard_barracks:
+	Defaults:
+		Filename: wizard_buildings.shp
+		Scale: 2.0
+	idle: wizard_buildings.shp
+		Start: 3
+	damaged-idle: wizard_buildings.shp
+		Start: 3
+	make: wizard_buildings.shp
+		Start: 3
+	dead: wizard_buildings.shp
+		Start: 3
+	lego_production_overlay_skeleton: 
+		Filename: lego_production_overlay_skeleton.shp
+		Length: 10
+		Offset: 7,6,0
+	icon: wizard_cameos.png
+		Filename: wizard_cameos.png
+		Start: 4
+		AddExtension: False
+
+wizard_graveyard:
+	Defaults:
+		Filename: wizard_buildings.shp
+		Scale: 2.0
+	idle: wizard_buildings.shp
+		Start: 1
+	damaged-idle: wizard_buildings.shp
+		Start: 1
+	make: wizard_buildings.shp
+		Start: 1
+	dead: wizard_buildings.shp
+		Start: 1
+	icon: wizard_cameos.png
+		Filename: wizard_cameos.png
+		Start: 1
+		AddExtension: False
+
+wizard_lumber_mill:
+	Defaults:
+		Filename: wizard_buildings.shp
+		Scale: 2.0
+	idle: wizard_buildings.shp
+		Start: 6
+	damaged-idle: wizard_buildings.shp
+		Start: 6
+	make: wizard_buildings.shp
+		Start: 6
+	dead: wizard_buildings.shp
+		Start: 6
+	icon: wizard_cameos.png
+		Filename: wizard_cameos.png
+		Start: 2
+		AddExtension: False
+
+wizard_mine:
+	Defaults:
+		Filename: wizard_buildings.shp
+		Scale: 2.0
+	idle: wizard_buildings.shp
+		Start: 2
+	damaged-idle: wizard_buildings.shp
+		Start: 2
+	make: wizard_buildings.shp
+		Start: 2
+	dead: wizard_buildings.shp
+		Start: 2
+	icon: wizard_cameos.png
+		Filename: wizard_cameos.png
+		Start: 3
+		AddExtension: False
+
+wizard_vehiclefactory:
+	Defaults:
+		Filename: wizard_buildings.shp
+		Scale: 2.0
+	idle: wizard_buildings.shp
+		Start: 5
+	damaged-idle: wizard_buildings.shp
+		Start: 5
+	make: wizard_buildings.shp
+		Start: 5
+	dead: wizard_buildings.shp
+		Start: 5
+	lego_production_overlay_brick: 
+		Filename: lego_production_overlay_brick.shp
+		Length: 10
+		Offset: 7,6,0
+	icon: wizard_cameos.png
+		Filename: wizard_cameos.png
+		Start: 5
+		AddExtension: False
+
+wizard_tower:
+	Defaults:
+		Filename: wizard_buildings.shp
+		Scale: 2.0
+		AddExtension: False
+	idle: wizard_buildings.shp
+		Start: 7
+	make: wizard_buildings.shp
+		Start: 7
+	dead: wizard_buildings.shp
+		Start: 7
+	icon: wizard_cameos.png
+		Filename: wizard_cameos.png
+		Start: 7
+	wizard_tower: wizard_buildings.shp
+		Start: 7
+	wizard_tower2: wizard_buildings.shp
+		Start: 8
+	wizard_tower3: wizard_buildings.shp
+	 	Start: 9
+
+
+wizard_tower2:
+	Defaults:
+		Filename: wizard_buildings.shp
+		Scale: 2.0
+		AddExtension: False
+	idle: wizard_buildings.shp
+		Start: 8
+	make: wizard_buildings.shp
+		Start: 8
+	dead: wizard_buildings.shp
+		Start: 8
+	icon: wizard_cameos.png
+		Filename: wizard_cameos.png
+		Start: 8
+		AddExtension: False
+
+
+wizard_tower3:
+	Defaults:
+		Filename: wizard_buildings.shp
+		Scale: 2.0
+		AddExtension: False
+	idle: wizard_buildings.shp
+		Start: 9
+	make: wizard_buildings.shp
+		Start: 9
+	dead: wizard_buildings.shp
+		Start: 9
+	icon: wizard_cameos.png
+		Filename: wizard_cameos.png
+		Start: 9
+		AddExtension: False
+
+
+
+
+lego_wizard_mcv:
+	Defaults:
+		Filename: wizard_builder.shp
+		Scale: 2.0
+	stand:
+		Facings: -8
+		Combine:
+			wizard_buildermcv1:
+				Filename: wizard_builder.shp
+				Length: 5
+				Frames: 0,1,2,3,4
+			wizard_buildermcv2:
+				Filename: wizard_builder.shp
+				Length: 3
+				Frames: 3,2,1
+				FlipX: true
+	idle: 
+		Filename: wizard_builder.shp
+		Start: 0
+		Length: 1
+	run:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			wizard_buildermcv3:
+				Filename: wizard_builder.shp
+				Length: 25
+				Frames:  5,6,7,8,9, 10,11,12,13,14, 15,16,17,18,19, 20,21,22,23,24, 25,26,27,28,29
+			wizard_buildermcv4:
+				Filename: wizard_builder.shp
+				Length: 15
+				Frames: 24,23,22,21,20, 19,18,17,16,15, 14,13,12,11,10
+				FlipX: true
+	die: wizard_builder
+		Filename: wizard_builder.shp
+		Start: 0
+		Length: 7
+	die-crushed: wizard_builder
+		Filename: wizard_builder.shp
+		Start: 0
+		Length: 7
+	icon: wizard_cameos.png
+		Filename: wizard_cameos.png
+		Start: 10
+		AddExtension: False
+
+wizard_builder:
+	Defaults:
+		Filename: wizard_builder.shp
+		Scale: 1.5
+	stand: 
+		Facings: -8
+		Combine:
+			wizard_builder00: 
+				Filename: wizard_builder.shp
+				Length: 5
+				Frames: 0,1,2,3,4
+			wizard_builder01: 
+				Filename: wizard_builder.shp
+				Length: 3
+				Frames: 3,2,1
+				FlipX: true
+	idle: invisibleitem
+	run: 
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			wizard_builder1: 
+				Filename: wizard_builder.shp
+				Length: 25
+				Frames:  5,6,7,8,9, 10,11,12,13,14, 15,16,17,18,19, 20,21,22,23,24, 25,26,27,28,29
+			wizard_builder2: 
+				Filename: wizard_builder.shp
+				Length: 15
+				Frames: 24,23,22,21,20, 19,18,17,16,15, 14,13,12,11,10
+				FlipX: true
+	harvest:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			wizard_builder3: 
+				Filename: wizard_builder.shp
+				Length: 25
+				Frames: 30,31,32,33,34, 35,36,37,38,39, 40,41,42,43,44, 45,46,47,48,49, 50,51,52,53,54
+			wizard_builder4: 
+				Filename: wizard_builder.shp
+				Length: 15
+				Frames: 49,48,47,46,45, 44,43,42,41,40, 39,38,37,36,35
+				FlipX: true
+	dock:
+		Facings: -8
+		Combine:
+			wizard_builder5: 
+				Filename: wizard_builder.shp
+				Length: 5
+				Frames: 0,1,2,3,4
+			wizard_builder6: 
+				Filename: wizard_builder.shp
+				Length: 3
+				Frames: 3,2,1
+				FlipX: true
+	dock-loop: 
+		Facings: -8
+		Combine:
+			wizard_builder7: 
+				Filename: wizard_builder.shp
+				Length: 5
+				Frames: 0,1,2,3,4
+			wizard_builder8: 
+				Filename: wizard_builder.shp
+				Length: 3
+				Frames: 3,2,1
+				FlipX: true
+	die:
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 1
+	die-crushed:
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 1
+	icon: wizard_cameos.png
+		Filename: wizard_cameos.png
+		Start: 16
+		AddExtension: False
+
+wizard_skeleton:
+	Defaults:
+		Filename: wizard_skeleton.shp
+		Scale: 2.0
+	stand:
+		Facings: -8
+		Combine:
+			wizard_skeletonwal1:
+				Filename: wizard_skeleton.shp
+				Length: 5
+				Frames: 0,5,10,15,20
+			wizard_skeletonwal2:
+				Filename: wizard_skeleton.shp
+				Length: 3
+				Frames: 15,10,5
+				FlipX: true
+	run:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			wizard_skeletonrun1:
+				Filename: wizard_skeleton.shp
+				Length: 25
+				Frames: 0,1,2,3,4, 5,6,7,8,9, 10,11,12,13,14, 15,16,17,18,19, 20,21,22,23,24
+			wizard_skeletonrun2:
+				Filename: wizard_skeleton.shp
+				Length: 15
+				Frames: 19,18,17,16,15, 14,13,12,11,10, 9,8,7,6,5
+				FlipX: true
+	shoot:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			wizard_skeletonhit1:
+				Filename: wizard_skeleton.shp
+				Length: 25
+				Frames: 25,26,27,28,29, 30,31,32,33,34, 35,36,37,38,39, 40,41,42,43,44, 45,46,47,48,49
+			wizard_skeletonhit2:
+				Filename: wizard_skeleton.shp
+				Length: 15
+				Frames: 44,43,42,41,40, 39,38,37,36,35, 34,33,32,31,30
+				FlipX: true
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	die-crushed: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: wizard_cameos.png
+		Filename: wizard_cameos.png
+		Start: 17
+		AddExtension: False
+
+wizard_crossbowman:
+	Defaults:
+		Filename: wizard_crossbowman.shp
+		Scale: 2.0
+	stand:
+		Facings: -8
+		Combine:
+			wizard_crossbowmanwal1:
+				Filename: wizard_crossbowman.shp
+				Length: 5
+				Frames: 0,5,10,15,20
+			wizard_crossbowmanwal2:
+				Filename: wizard_crossbowman.shp
+				Length: 3
+				Frames: 15,10,5
+				FlipX: true
+	run:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			wizard_crossbowmanrun1:
+				Filename: wizard_crossbowman.shp
+				Length: 25
+				Frames: 0,1,2,3,4, 5,6,7,8,9, 10,11,12,13,14, 15,16,17,18,19, 20,21,22,23,24
+			wizard_crossbowmanrun2:
+				Filename: wizard_crossbowman.shp
+				Length: 15
+				Frames: 19,18,17,16,15, 14,13,12,11,10, 9,8,7,6,5
+				FlipX: true
+	shoot:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			wizard_crossbowmanhit1:
+				Filename: wizard_crossbowman.shp
+				Length: 25
+				Frames: 25,26,27,28,29, 30,31,32,33,34, 35,36,37,38,39, 40,41,42,43,44, 45,46,47,48,49
+			wizard_crossbowmanhit2:
+				Filename: wizard_crossbowman.shp
+				Length: 15
+				Frames: 44,43,42,41,40, 39,38,37,36,35, 34,33,32,31,30
+				FlipX: true
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	die-crushed: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: wizard_cameos.png
+		Filename: wizard_cameos.png
+		Start: 18
+		AddExtension: False
+
+wizard_knight:
+	Defaults:
+		Filename: wizard_skeleknight.shp
+		Scale: 2.0
+	stand:
+		Facings: -8
+		Combine:
+			wizard_skeleknightwal1:
+				Filename: wizard_skeleknight.shp
+				Length: 5
+				Frames: 0,3,6,9,12
+			wizard_skeleknightwal2:
+				Filename: wizard_skeleknight.shp
+				Length: 3
+				Frames: 9,6,3
+				FlipX: true
+	run:
+		Facings: -8
+		Length: 3
+		Tick: 100
+		Combine:
+			wizard_skeleknightrun1:
+				Filename: wizard_skeleknight.shp
+				Length: 15
+				Frames: 0,1,2, 3,4,5, 6,7,8, 9,10,11, 12,13,14
+			wizard_skeleknightrun2:
+				Filename: wizard_skeleknight.shp
+				Length: 9
+				Frames: 11,10,9, 8,7,6, 5,4,3
+				FlipX: true
+	shoot:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			wizard_skeleknighthit1:
+				Filename: wizard_skeleknight.shp
+				Length: 25
+				Frames: 15,16,17,18,19, 20,21,22,23,24, 25,26,27,28,29, 30,31,32,33,34, 35,36,37,38,39
+			wizard_skeleknighthit2:
+				Filename: wizard_skeleknight.shp
+				Length: 15
+				Frames: 34,33,32,31,30, 29,28,27,26,25, 24,23,22,21,20
+				FlipX: true
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	die-crushed: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: wizard_cameos.png
+		Filename: wizard_cameos.png
+		Start: 19
+		AddExtension: False
+
+wizard_troll:
+	Defaults:
+		Filename: wizard_troll.shp
+		Scale: 2.0
+	stand:
+		Facings: -8
+		Combine:
+			wizard_trollwal1:
+				Filename: wizard_troll.shp
+				Length: 5
+				Frames: 0,5,10,15,20
+			wizard_trollwal2:
+				Filename: wizard_troll.shp
+				Length: 3
+				Frames: 15,10,5
+				FlipX: true
+	run:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			wizard_trollrun1:
+				Filename: wizard_troll.shp
+				Length: 25
+				Frames: 0,1,2,3,4, 5,6,7,8,9, 10,11,12,13,14, 15,16,17,18,19, 20,21,22,23,24
+			wizard_trollrun2:
+				Filename: wizard_troll.shp
+				Length: 15
+				Frames: 19,18,17,16,15, 14,13,12,11,10, 9,8,7,6,5
+				FlipX: true
+	shoot:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			wizard_trollhit1:
+				Filename: wizard_troll.shp
+				Length: 25
+				Frames: 25,26,27,28,29, 30,31,32,33,34, 35,36,37,38,39, 40,41,42,43,44, 45,46,47,48,49
+			wizard_trollhit2:
+				Filename: wizard_troll.shp
+				Length: 15
+				Frames: 44,43,42,41,40, 39,38,37,36,35, 34,33,32,31,30
+				FlipX: true
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	die-crushed: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: wizard_cameos.png
+		Filename: wizard_cameos.png
+		Start: 23
+		AddExtension: False
+
+wizard_wizard:
+	Inherits: ^lego_spell_icons
+	Defaults:
+		Filename: wizard_wizard.shp
+		Scale: 2.0
+	stand:
+		Facings: -8
+		Combine:
+			wizard_wizardwal1:
+				Filename: wizard_wizard.shp
+				Length: 5
+				Frames: 0,5,10,15,20
+			wizard_wizardwal2:
+				Filename: wizard_wizard.shp
+				Length: 3
+				Frames: 15,10,5
+				FlipX: true
+	run:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			wizard_wizardmarun1: wizard_wizard
+				Filename: wizard_wizard.shp
+				Length: 25
+				Frames: 0,1,2,3,4, 5,6,7,8,9, 10,11,12,13,14, 15,16,17,18,19, 20,21,22,23,24
+			wizard_wizardmarun2: wizard_wizard
+				Filename: wizard_wizard.shp
+				Length: 15
+				Frames: 19,18,17,16,15, 14,13,12,11,10, 9,8,7,6,5
+				FlipX: true
+	shoot:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			wizard_wizardhit1:
+				Filename: wizard_wizard.shp
+				Length: 25
+				Frames: 25,26,27,28,29, 30,31,32,33,34, 35,36,37,38,39, 40,41,42,43,44, 45,46,47,48,49
+			wizard_wizardhit2:
+				Filename: wizard_wizard.shp
+				Length: 15
+				Frames: 44,43,42,41,40, 39,38,37,36,35, 34,33,32,31,30
+				FlipX: true
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	die-crushed: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: wizard_cameos.png
+		Filename: wizard_cameos.png
+		Start: 20
+		AddExtension: False
+
+wizard_sorceress:
+	Inherits: ^lego_spell_icons
+	Defaults:
+		Filename: wizard_sorceress.shp
+		Scale: 2.0
+	stand:
+		Facings: -8
+		Combine:
+			wizard_sorceresswal1: wizard_sorceress
+				Filename: wizard_sorceress.shp
+				Length: 5
+				Frames: 0,5,10,15,20
+			wizard_sorceresswal2: wizard_sorceress
+				Filename: wizard_sorceress.shp
+				Length: 3
+				Frames: 15,10,5
+				FlipX: true
+	run:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			wizard_sorceressrun1: wizard_sorceress
+				Filename: wizard_sorceress.shp
+				Length: 25
+				Frames: 0,1,2,3,4, 5,6,7,8,9, 10,11,12,13,14, 15,16,17,18,19, 20,21,22,23,24
+			wizard_sorceressrun2: wizard_sorceress
+				Filename: wizard_sorceress.shp
+				Length: 15
+				Frames: 19,18,17,16,15, 14,13,12,11,10, 9,8,7,6,5
+				FlipX: true
+	shoot:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			wizard_sorceresshit1: wizard_sorceress
+				Filename: wizard_sorceress.shp
+				Length: 25
+				Frames: 25,26,27,28,29, 30,31,32,33,34, 35,36,37,38,39, 40,41,42,43,44, 45,46,47,48,49
+			wizard_sorceresshit2: wizard_sorceress
+				Filename: wizard_sorceress.shp
+				Length: 15
+				Frames: 44,43,42,41,40, 39,38,37,36,35, 34,33,32,31,30
+				FlipX: true
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	die-crushed: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: wizard_cameos.png
+		Filename: wizard_cameos.png
+		Start: 22
+		AddExtension: False
+
+wizard_troll_king:
+	Inherits: ^lego_spell_icons
+	Defaults:
+		Filename: wizard_troll_king.shp
+		Scale: 2.0
+	stand:
+		Facings: -8
+		Combine:
+			wizard_troll_kingwal1: wizard_troll_king
+				Filename: wizard_troll_king.shp
+				Length: 5
+				Frames: 0,5,10,15,20
+			wizard_troll_kingwal2: wizard_troll_king
+				Filename: wizard_troll_king.shp
+				Length: 3
+				Frames: 15,10,5
+				FlipX: true
+	run:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			wizard_troll_kingrun1: wizard_troll_king
+				Filename: wizard_troll_king.shp
+				Length: 25
+				Frames: 0,1,2,3,4, 5,6,7,8,9, 10,11,12,13,14, 15,16,17,18,19, 20,21,22,23,24
+			wizard_troll_kingrun2: wizard_troll_king
+				Filename: wizard_troll_king.shp
+				Length: 15
+				Frames: 19,18,17,16,15, 14,13,12,11,10, 9,8,7,6,5
+				FlipX: true
+	shoot:
+		Facings: -8
+		Length: 5
+		Tick: 100
+		Combine:
+			wizard_troll_kinghit1: wizard_troll_king
+				Filename: wizard_troll_king.shp
+				Length: 25
+				Frames: 25,26,27,28,29, 30,31,32,33,34, 35,36,37,38,39, 40,41,42,43,44, 45,46,47,48,49
+			wizard_troll_kinghit2: wizard_troll_king
+				Filename: wizard_troll_king.shp
+				Length: 15
+				Frames: 44,43,42,41,40, 39,38,37,36,35, 34,33,32,31,30
+				FlipX: true
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	die-crushed: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: wizard_cameos.png
+		Filename: wizard_cameos.png
+		Start: 21
+		AddExtension: False
+
+wizard_siege_tower:
+	Defaults:
+		Filename: wizard_siege_tower.shp
+		Scale: 1.1
+	idle:
+		Filename: wizard_siege_tower.shp
+		Start: 0
+		Facings: 16
+	stand:
+		Filename: wizard_siege_tower.shp
+		Start: 0
+		Facings: 16
+	run:
+		Filename: wizard_siege_tower.shp
+		Start: 16
+		Facings: 16
+		Length: 9
+	muzzle: gunfire2
+		Filename: gunfire2.shp
+		Length: 2
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	die-crushed: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: wizard_cameos
+		Filename: wizard_cameos.png
+		Start: 24
+		AddExtension: False
+
+wizard_troll_giant:
+	Defaults:
+		Filename: wizard_troll_giant.shp
+		Scale: 1.2
+	idle:
+		Filename: wizard_troll_giant.shp
+		Start: 0
+		Facings: 16
+	stand:
+		Filename: wizard_troll_giant.shp
+		Start: 0
+		Facings: 16
+	run:
+		Filename: wizard_troll_giant.shp
+		Start: 16
+		Facings: 16
+		Length: 9
+	shoot:
+		Filename: wizard_troll_giant.shp
+		Start: 160
+		Facings: 16
+		Length: 9
+	muzzle: gunfire2
+		Filename: gunfire2.shp
+		Length: 2
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	die-crushed: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: wizard_cameos
+		Filename: wizard_cameos.png
+		Start: 25
+		AddExtension: False
+
+wizard_troll_blimp:
+	Defaults:
+		Filename: wizard_troll_blimp.shp
+		Scale: 1.6
+	idle:
+		Filename: wizard_troll_blimp.shp
+		Start: 0
+		Facings: 16
+	stand:
+		Filename: wizard_troll_blimp.shp
+		Start: 0
+		Facings: 16
+	run:
+		Filename: wizard_troll_blimp.shp
+		Start: 16
+		Facings: 16
+		Length: 9
+	muzzle: gunfire2
+		Filename: gunfire2.shp
+		Length: 2
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	die-crushed: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: wizard_cameos
+		Filename: wizard_cameos.png
+		Start: 32
+		AddExtension: False
+
+wizard_dragon:
+	Defaults:
+		Filename: wizard_dragon.shp
+		Scale: 1.7
+	idle:
+		Filename: wizard_dragon.shp
+		Start: 0
+		Facings: 16
+		Length: 1
+	stand:
+		Filename: wizard_dragon.shp
+		Start: 16
+		Facings: 16
+		Length: 9
+	run:
+		Filename: wizard_dragon.shp
+		Start: 16
+		Facings: 16
+		Length: 9
+	shoot:
+		Filename: wizard_dragon.shp
+		Start: 160
+		Facings: 16
+		Length: 9
+	muzzle: gunfire2
+		Filename: gunfire2.shp
+		Length: 2
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	die-crushed: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: wizard_cameos
+		Filename: wizard_cameos.png
+		Start: 33
+		AddExtension: False
+
+####################################################################################################
+#		Wizard - Projectiles
+####################################################################################################
+
+roarfire:
+	Defaults:
+		Filename: roar_fire.shp
+		Scale: 1.0
+	idle:
+		Filename: roar_fire.shp
+		Start: 0
+		Length: 7
+
+lego_boulder:
+	Defaults:
+		Filename: lego_boulder.shp
+		Scale: 2.0
+	idle:
+		Filename: lego_boulder.shp
+		Start: 0
+		Length: 8
