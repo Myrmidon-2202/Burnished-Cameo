@@ -1578,7 +1578,7 @@ actor-nax_rocket =
       Requires power to operate
 
 actor-shock_infantry =
-   .description = Armed with a shock gun.
+   .description = Armed with a autogun, firing high calibre ammo and rockets.
        Damages enemies in a line.
        Strong vs Infantry, Vehicles
 
