@@ -99,11 +99,15 @@ legorangedAA:
 	Range: 8c512
 	Report: commando_attack.wav
 	ValidTargets: Air
-	Projectile: Bullet
+	Projectile: Missile
+		HorizontalRateOfTurn: 100
+		VerticalRateOfTurn: 100
 		Speed: 0c850
 		Image: astro_laser
 		Palette: player
 		IsPlayerPalette: true
+		Jammable: False
+		AllowSnapping: True
 	Warhead@1Dam: TargetDamage
 		Spread: 150
 		Damage: 1500
@@ -152,25 +156,29 @@ alienlegoranged:
 piratelegoranged:
 	Inherits: legoranged
 	Report: rifleman_attack.wav
-	# Projectile: NojamMissile
-	Projectile: Bullet
+	Projectile: Missile
+		HorizontalRateOfTurn: 100
+		VerticalRateOfTurn: 100
 		Speed: 0c850
 		Image: lego_musket_ball
-# 	Warheads:
-# 		InstantHit:
-# 			Damage: 200
+		Jammable: False
+		AllowSnapping: True
 
 piratelegorangedarrow:
 	Inherits: legoranged
 	Report: tower_attacks.wav
-	Projectile: Bullet
+	Projectile: Missile
+		HorizontalRateOfTurn: 100
+		VerticalRateOfTurn: 100
 		Speed: 0c850
 		Image: lego_arrow
 
 piratelegorangedshuriken:
 	Inherits: legoranged
 	Report: ninja.wav
-	Projectile: Bullet
+	Projectile: Missile
+		HorizontalRateOfTurn: 100
+		VerticalRateOfTurn: 100
 		Speed: 0c850
 		Image: lego_shuriken
 
@@ -178,15 +186,19 @@ specialrangedAA:
 	ReloadDelay: 60
 	Range: 10c512
 	Report: earth_ship_attack.wav
-	Projectile: Bullet
+	Projectile: Missile
 		Speed: 0c650
 		Image: astro_lolipop
 		Palette: player
 		IsPlayerPalette: true
+		HorizontalRateOfTurn: 100
+		VerticalRateOfTurn: 100
+		Jammable: False
+		AllowSnapping: True
 	Warhead@1Dam: TargetDamage
 		Spread: 150
 		Damage: 6000
-		ValidTargets: Ground
+		ValidTargets: Ground, Helicopter, Air
 		Versus:
 			None: 150
 			Wood: 60
@@ -215,12 +227,15 @@ specialrangedAA2:
 	Range: 9c512
 	Report: earth_ship_attack.wav
 	ValidTargets: Ground, Helicopter, Air
-	Projectile: Bullet
+	Projectile: Missile
+		HorizontalRateOfTurn: 100
+		VerticalRateOfTurn: 100
 		Speed: 0c650
 		Image: astro_lolipop
-		RangeLimit: 15c0
 		Palette: player
 		IsPlayerPalette: true
+		Jammable: False
+		AllowSnapping: True
 	Warhead@1Dam: TargetDamage
 		Spread: 300
 		Damage: 10000
@@ -251,9 +266,13 @@ specialrangedAA2:
 piratespecialrangedarrow:
 	Inherits: legoranged
 	Report: tower_attack.wav
-	Projectile: Bullet
+	Projectile: Missile
+		HorizontalRateOfTurn: 100
+		VerticalRateOfTurn: 100
 		Speed: 0c850
 		Image: special_lego_arrow
+		Jammable: False
+		AllowSnapping: True
 	Warhead@1Dam: TargetDamage
 		Spread: 300
 		Damage: 10000
@@ -284,9 +303,13 @@ piratespecialrangedarrow:
 piratespecialrangedball:
 	Inherits: ArtilleryShell
 	Report: gov_capt_3ship_attack.wav
-	Projectile: Bullet
+	Projectile: Missile
+		HorizontalRateOfTurn: 100
+		VerticalRateOfTurn: 100
 		Speed: 300
 		Image: lego_cannonball
+		Jammable: False
+		AllowSnapping: True
 	Warhead@3Eff: CreateEffect
 		ImpactSounds: dunepoff.aud, dune2splash.aud, dune2cannon.aud
 
@@ -294,9 +317,13 @@ piratespecialrangedballimp:
 	Inherits: ArtilleryShell
 	Range: 11c512
 	Report: gov_capt_3ship_attack.wav
-	Projectile: Bullet
+	Projectile: Missile
+		HorizontalRateOfTurn: 100
+		VerticalRateOfTurn: 100
 		Speed: 300
 		Image: lego_cannonball
+		Jammable: False
+		AllowSnapping: True
 	Warhead@3Eff: CreateEffect
 		ImpactSounds: dunepoff.aud, dune2splash.aud, dune2cannon.aud
 
@@ -304,9 +331,13 @@ kingpecialrangedrock:
 	Inherits: ArtilleryShell
 	Range: 12c512
 	Report: catapult_giant_boulderthrow_attack.wav
-	Projectile: Bullet
+	Projectile: Missile
+		HorizontalRateOfTurn: 100
+		VerticalRateOfTurn: 100
 		Speed: 300
 		Image: lego_boulder
+		Jammable: False
+		AllowSnapping: True
 	Warhead@3Eff: CreateEffect
 		ImpactSounds: dunepoff.aud, dune2splash.aud, dune2cannon.aud
 
@@ -314,13 +345,16 @@ specialrangedstar:
 	ReloadDelay: 60
 	Range: 9c512
 	Report: earth_ship_attack.wav
-	Projectile: Bullet
+	Projectile: Missile
+		HorizontalRateOfTurn: 100
+		VerticalRateOfTurn: 100
 		Speed: 0c650
 		Image: lego_flaming_star
 		Sequence: anim
-		RangeLimit: 15c0
 		Palette: player
 		IsPlayerPalette: true
+		Jammable: False
+		AllowSnapping: True
 	Warhead@1Dam: TargetDamage
 		ValidTargets: Ground, Helicopter, Air
 		Spread: 500
@@ -332,7 +366,7 @@ specialrangedstar:
 			Medium: 80
 			Heavy: 70
 			Concrete: 60
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath         
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
 	Warhead@2Eff: CreateEffect
 	Warhead@Percentage: HealthPercentageDamage
 		ValidTargets: Ground, Helicopter, Air
@@ -352,13 +386,16 @@ astroplasmaglob:
 	ReloadDelay: 60
 	Range: 10c512
 	Report: earth_ship_attack.wav
-	Projectile: Bullet
+	Projectile: Missile
+		HorizontalRateOfTurn: 100
+		VerticalRateOfTurn: 100
 		Speed: 0c650
 		Image: lego_plasma_ball
-		RangeLimit: 15c0
 		Sequence: anim
 		Palette: player
 		IsPlayerPalette: true
+		Jammable: False
+		AllowSnapping: True
 	Warhead@1Dam: TargetDamage
 		Spread: 700
 		Damage: 15000
@@ -370,7 +407,7 @@ astroplasmaglob:
 			Medium: 80
 			Heavy: 70
 			Concrete: 60
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath         
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
 	Warhead@2Eff: CreateEffect
 	Warhead@Percentage: HealthPercentageDamage
 		Damage: 10
@@ -408,6 +445,7 @@ dragonbreath:
 			Light: 40
 			Heavy: 20
 			Concrete: 10
+		ValidTargets: Ground, Helicopter, Air
 	Warhead@2Smu: LeaveSmudge
 		Chance: 15
 	Warhead@3Eff: CreateEffect
@@ -649,6 +687,7 @@ crystalcache:
 	Range: 9c512
 	Report: crystalcache.wav
 	Projectile: Bullet
+		Speed: 50
 	Warhead@4Res: CreateResource
 		AddsResourceType: Tiberium
 		Size: 3
@@ -735,7 +774,7 @@ crabswarm:
 	Range: 4c0
 	Projectile: InstantHit
 	Warhead@spawn: SpawnActor
-		Actors: pirate_oarsman, pirate_oarsman, pirate_oarsman, pirate_oarsman
+		Actors: pirate_crab, pirate_crab
 
 coconutstorm:
 	Inherits: artillery
@@ -776,12 +815,11 @@ earthquake:
 
 hammerfragments:
 	ReloadDelay: 60
-	Range: 9c512
+	Range: 9c0
 	Projectile: Bullet
-		Speed: 1c250
-		Image: lego_emp_star
-		Sequences: idle
-		RangeLimit: 9c512
+		Speed: 60
+		Image: hammer_throw
+		Sequences: anim
 		Palette: player
 		IsPlayerPalette: true
 	Warhead@Damage: SpreadDamage
@@ -810,9 +848,12 @@ hammerfragments:
 
 hammerthrow:
 	ReloadDelay: 60
-	Range: 1c512
+	Range: 7c0
 	Report: esp.wav
 	Projectile: Bullet
+		Speed: 90
+		Image: hammer_throw
+		Sequences: idle
 	Warhead@3cluster: FireCluster
 		Weapon: hammerfragments
 		Dimensions: 10,10
@@ -842,12 +883,13 @@ hammerthrow:
 		ValidRelationships: Enemy
 
 roarweapon:
-	Range: 10c0
+	Range: 2c0
 	Projectile: InstantHit
+	Report: roar.wav
 	Warheads: FireCluster
 		Weapon: roarfire
-		Dimensions: 3,3
-		Footprint: X_X / _X_ / X_X
+		Dimensions: 6,6
+		Footprint: X_X / _X_ / X_X X_X / _X_ / X_X
 		RandomClusterCount: -1
 	Warhead@Damage: SpreadDamage
 		Spread: 1600
@@ -874,17 +916,20 @@ roarweapon:
 		ValidRelationships: Enemy
 
 roarfire:
+	Projectile: Bullet
+		Speed: 80
+		Spacing: 420
 	Warheads: CreateEffect
-		Image: roar_fire
+		Image: roarfire
+		Explosions: idle
 
 fireball:
 	ReloadDelay: 60
-	Range: 9c512
+	Range: 9c0
+	Report: exploding_fire.wav
 	Projectile: Bullet
-		Speed: 2
-		Image: lego_emp_star
-		Sequences: idle
-		RangeLimit: 15c0
+		Speed: 170
+		Image: lego_fireball
 		Palette: player
 		IsPlayerPalette: true
 	Warhead@Damage: SpreadDamage
@@ -910,24 +955,25 @@ fireball:
 			Spaceship: 40
 		ValidTargets: Ground, Trees, Water, Air
 		ValidRelationships: Enemy
+	Warhead@3Eff: CreateEffect
+		Explosions: small_napalm
 
 lightningblast:
 	ReloadDelay: 60
-	Range: 9c512
+	Range: 9c0
 	Projectile: InstantHit
-		RangeLimit: 15c0
-		Palette: player
-		IsPlayerPalette: true
-	Warhead@3cluster: FireCluster
+	ValidTargets: Ground, Trees, Water, Air
+	Warhead@6cluster: FireCluster
 		Weapon: lightningshard
-		Dimensions: 10,10
-		Footprint: X_____________X  X_____________X X_____________X X_____________X X_____________XX_____________XX_____________XX_____________XX_____________XX_____________XX_____________XX_____________XX_____________XX_____________XX_____________XX_____________XX_____________X X_____________X X_____________X 
+		Dimensions: 6,6
+		Footprint: __X_X_ ______ X____X ______ ______ X_X___
 
 lightningshard:
 	ReloadDelay: 60
-	Range: 9c512
+	Range: 9c0
 	Report: esp.wav
 	Projectile: Bullet
+		Speed: 150
 		Image: lego_emp_star
 	Warhead@Damage: SpreadDamage
 		Spread: 1600

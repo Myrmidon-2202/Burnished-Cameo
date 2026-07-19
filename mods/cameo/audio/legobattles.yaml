@@ -345,12 +345,12 @@ spacecriminalvoice:
 	VolumeModifier: 1.0
 	DefaultVariant: .wav
 	Voices:
-		Select: space_criminal_select
+		Select: space_criminal
 		Move: lego_move
 		Attack: lego_move
 		Action: lego_move
 		Die: lego_unit_death
-		Build: space_criminal_select
+		Build: space_criminal
 		Burned: blank
 		Zapped: blank
 		Poisoned: blank

@@ -3644,7 +3644,7 @@ pirate_cannon:
 		Length: 7
 	icon: pirate_cameos.png
 		Filename: pirate_cameos.png
-		Start: 24
+		Start: 23
 		AddExtension: False
 
 pirate_tiki_golem:
@@ -3678,7 +3678,7 @@ pirate_tiki_golem:
 		Length: 7
 	icon: pirate_cameos
 		Filename: pirate_cameos.png
-		Start: 25
+		Start: 24
 		AddExtension: False
 
 pirate_crab:
@@ -5425,3 +5425,23 @@ lego_boulder:
 		Filename: lego_boulder.shp
 		Start: 0
 		Length: 8
+
+lego_fireball:
+	Defaults:
+		Filename: wizardfireball.png
+		Scale: 2.0
+	idle:
+		Filename: wizardfireball.png
+		Facings: 16
+
+hammer_throw:
+	Defaults:
+		Filename: dwarfhammer.png
+		Scale: 2.0
+	idle:
+		Filename: dwarfhammer.png
+		Start: 0
+		Facings: 16
+	anim:
+		Start: 16
+		Length: 14
