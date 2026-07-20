@@ -551,7 +551,6 @@ astro_gripley:
 		AddExtension: False
 
 astro_commando:
-	#inherits: ^legoinfantry
 	Defaults:
 		Filename: astro_commando.shp
 		Scale: 2.0
@@ -1048,7 +1047,7 @@ astro_starship2:
 	idle:
 		Filename: astro_starship2.shp	
 		Facings: -16
-		Scale: 2.0
+		Scale: 2.5
 	die: lego_explosion
 		Filename: lego_explosion.shp
 		Start: 0
@@ -2017,7 +2016,7 @@ alien_strike_ship:
 alien_assault_ship:
 	Defaults:
 		Filename: alien_assault_ship.shp
-		Scale: 2.0
+		Scale: 2.5
 	idle:
 		Filename: alien_assault_ship.shp
 		Facings: 16
@@ -3683,12 +3682,34 @@ pirate_tiki_golem:
 
 pirate_crab:
 	Defaults:
-		Filename: CrabSprite.png
+		Filename: CrabSpritesheet.png
+		Scale: 0.8
 	idle:
-		Filename: CrabSprite.png
-	icon: king_cameos.png
-		Filename: king_cameos.png
-		Start: 5
+		Filename: CrabSpritesheet.png
+		Start: 0
+		Facings: 16
+	stand:
+		Filename: CrabSpritesheet.png
+		Start: 0
+		Facings: 16
+	run:
+		Filename: CrabSpritesheet.png
+		Start: 0
+		Facings: -16
+	shoot:
+		Filename: CrabSpritesheet.png
+		Start: 0
+		Facings: 16
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	die-crushed: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: CrabIcon.png
+		Filename: CrabIcon.png
 		AddExtension: False
 
 ####################################################################################################
@@ -4514,9 +4535,9 @@ king_dragon:
 		Scale: 1.7
 	idle:
 		Filename: king_dragon.shp
-		Start: 0
+		Start: 16
 		Facings: 16
-		Length: 1
+		Length: 9
 	stand:
 		Filename: king_dragon.shp
 		Start: 16
@@ -5370,9 +5391,9 @@ wizard_dragon:
 		Scale: 1.7
 	idle:
 		Filename: wizard_dragon.shp
-		Start: 0
+		Start: 16
 		Facings: 16
-		Length: 1
+		Length: 9
 	stand:
 		Filename: wizard_dragon.shp
 		Start: 16

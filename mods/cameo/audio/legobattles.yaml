@@ -739,6 +739,20 @@ tikigolemvoice:
 		Zapped: blank
 		Poisoned: blank
 
+crabvoice:
+	VolumeModifier: 1.0
+	DefaultVariant: .wav
+	Voices:
+		Select: crab_swarm_start
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: crab_swarm_start
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank
+
 captainbrickbeardvoice:
 	VolumeModifier: 1.0
 	DefaultVariant: .wav

@@ -166,7 +166,7 @@ piratelegoranged:
 
 piratelegorangedarrow:
 	Inherits: legoranged
-	Report: tower_attacks.wav
+	Report: tower_attack.wav
 	Projectile: Missile
 		HorizontalRateOfTurn: 100
 		VerticalRateOfTurn: 100
@@ -772,9 +772,10 @@ monkeyswarm:
 crabswarm:
 	ReloadDelay: 160
 	Range: 4c0
+	Report: crab_swarm_clip
 	Projectile: InstantHit
 	Warhead@spawn: SpawnActor
-		Actors: pirate_crab, pirate_crab
+		Actors: pirate_crab, pirate_crab, pirate_crab, pirate_crab, pirate_crab, pirate_crab
 
 coconutstorm:
 	Inherits: artillery
@@ -787,7 +788,7 @@ earthquake:
 	Warhead@Damage: SpreadDamage
 		Spread: 1600
 		Falloff: 160, 80, 40, 20, 10
-		Damage: 60000
+		Damage: 10000
 		Versus:
 			Wood: 100
 			Concrete: 96
@@ -978,7 +979,7 @@ lightningshard:
 	Warhead@Damage: SpreadDamage
 		Spread: 1600
 		Falloff: 160, 80, 40, 20, 10
-		Damage: 4000
+		Damage: 10000
 		Versus:
 			Wood: 100
 			Concrete: 96

@@ -6244,40 +6244,31 @@ pirate_monkey:
 		UseDeathTypeSuffix: false
 
 pirate_crab:
-	Inherits@1: ^ExistsInWorld
-	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
-	Inherits@bot: ^BotMicromanageable
-	-UpdatesPlayerStatistics:
-	BodyOrientation:
-		QuantizedFacings: 1
-	OwnerLostAction:
-		Action: Kill
-	HiddenUnderFog:
-		Type: CenterPosition
-	Aircraft:
-		CruiseAltitude: 7000
-		Speed: 1000
-		MaximumPitch: 2000
-		Repulsable: false
-		VTOL: true
-		CanHover: true
-		CanSlide: true
-		CanForceLand: false
-	HitShape:
+	Inherits@Soldier: ^Soldier
+	Inherits: ^HeavyInfantryTemplate
+	Inherits: ^PropagandaSelfHeallego
+	Inherits@AUTOTARGET: ^AutoTargetAll
+	Tooltip:
+		Name: Crab
+	Buildable:
+		BuildPaletteOrder: 1
+		BuildDuration: 100
+		Prerequisites: ~pirate_barracks
+		Description: Crabs mateys!
 	Armament:
-		LocalOffset: 200,400,90, -90 ,-420, 90
-		Weapon: poisoncloud
-	AutoTarget:
-		InitialStance: AttackAnything
-		ScanRadius: 9999
-	AttackMove:
-	AttackOmni:
-		ForceFireIgnoresActors: true
-	AttackWander:
-		WanderMoveRadius: 9999
-	KillsSelf:
-		RemoveInstead: true
-		Delay: 1000
+		Weapon: oarsmanmelee
+	Mobile:
+		Speed: 40
+	Health:
+		HP: 11000
+	ReloadDelayMultiplier@cow:
+		Modifier: 60
+	Voiced:
+		VoiceSet: crabvoice
+	WithInfantryBody:
+		-IdleSequences: idle1,idle2,idle3,idle4
+	WithDeathAnimation:
+		UseDeathTypeSuffix: false
 
 ####################################################################################################
 #		King - Structures
@@ -7060,10 +7051,11 @@ king_dragon:
 		HP: 97000
 	Armament:
 		Weapon: dragonbreath
+		Name: primary
 	Armor:
 		Type: Medium
 	AttackFrontal:
-		FacingTolerance: 2
+		FacingTolerance: 1
 		PauseOnCondition: disabled
 	Aircraft:
 		InitialFacing: 224
@@ -7084,9 +7076,10 @@ king_dragon:
 	Voiced:
 		VoiceSet: dragonvoice
 	WithInfantryBody:
-		IdleSequences: idle
-		StandSequences: stand
 		DefaultAttackSequence: shoot
+	WithAttackAnimation:
+		Armament: primary
+		Sequence: shoot
 	WithMoveAnimation:
 		MoveSequence: run
 	Selectable:
@@ -8457,7 +8450,7 @@ wizard_dragon:
 	Armor:
 		Type: Medium
 	AttackFrontal:
-		FacingTolerance: 2
+		FacingTolerance: 1
 		PauseOnCondition: disabled
 	Aircraft:
 		InitialFacing: 224
@@ -8478,11 +8471,12 @@ wizard_dragon:
 	Voiced:
 		VoiceSet: dragonvoice
 	WithInfantryBody:
-		IdleSequences: idle
-		StandSequences: stand
 		DefaultAttackSequence: shoot
 	WithMoveAnimation:
 		MoveSequence: run
+	WithAttackAnimation:
+		Armament: primary
+		Sequence: shoot
 	Selectable:
 		DecorationBounds: 1280, 1280, 0, 0
 	RenderSprites:
