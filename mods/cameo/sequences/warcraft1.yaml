@@ -493,6 +493,7 @@ wc_o_guard_tower:
 		Filename: wc_buildings.shp
 	Inherits: ^WC1DamagedFire
 	idle:
+		Filename: wc_o_guard_tower.shp
 		Start: 1
 	make:
 		Frames: 0,1
@@ -502,10 +503,10 @@ wc_o_guard_tower:
 		Start: 24
 		Filename: wc_chrome.shp
 	dead:
+		Filename: wc_explosion.shp
 		Start: 0
 		Length: 13
 		Tick: 80
-		Filename: wc_explosion.shp
 ####################################################################################################
 #		UNIT human
 ####################################################################################################

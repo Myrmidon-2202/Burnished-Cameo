@@ -61,7 +61,7 @@ dwarfmelee:
 	Inherits: troopermelee
 	Report: dwarf.wav
 
-trollmanmelee:
+trollmelee:
 	Inherits: troopermelee
 	Report: troll.wav
 
@@ -94,11 +94,11 @@ builderrepair:
 		ValidTargets: ivanattached
 		ValidStances: Ally
 
-legorangedAA:
+legorangedaa:
 	ReloadDelay: 40
-	Range: 8c512
+	Range: 5c512
 	Report: commando_attack.wav
-	ValidTargets: Air
+	ValidTargets: Ground, Helicopter, Air
 	Projectile: Missile
 		HorizontalRateOfTurn: 100
 		VerticalRateOfTurn: 100
@@ -111,7 +111,7 @@ legorangedAA:
 	Warhead@1Dam: TargetDamage
 		Spread: 150
 		Damage: 1500
-		ValidTargets: Air
+		ValidTargets: Ground, Helicopter, Air
 		Versus:
 			None: 150
 			Wood: 40
@@ -126,7 +126,7 @@ legorangedAA:
 		Spread: 150
 		Delay: 5
 		DamageTypes: Prone100Percent, TriggerProne, FireDeath, Incendiary
-		ValidTargets: Air
+		ValidTargets: Ground, Helicopter, Air
 		Versus:
 			None: 150
 			Wood: 40
@@ -136,9 +136,9 @@ legorangedAA:
 			Concrete: 20
 
 legoranged:
-	Inherits: legorangedAA
+	Inherits: legorangedaa
 	ReloadDelay: 40
-	Range: 8c512
+	Range: 5c512
 	Report: commando_attack.wav
 	ValidTargets: Ground, Helicopter, Air
 	Warhead@1Dam: TargetDamage
@@ -147,7 +147,7 @@ legoranged:
 	Warhead@2Eff: CreateEffect
 	Warhead@Percentage: HealthPercentageDamage
 		DamageTypes: Prone100Percent, TriggerProne, FireDeath, Incendiary
-		ValidTargets:Ground, Helicopter, Air
+		ValidTargets: Ground, Helicopter, Air
 
 alienlegoranged:
 	Inherits: legoranged
@@ -184,7 +184,7 @@ piratelegorangedshuriken:
 
 specialrangedAA:
 	ReloadDelay: 60
-	Range: 10c512
+	Range: 7c512
 	Report: earth_ship_attack.wav
 	Projectile: Missile
 		Speed: 0c650
@@ -224,7 +224,7 @@ specialrangedAA:
 
 specialrangedAA2:
 	ReloadDelay: 60
-	Range: 9c512
+	Range: 8c512
 	Report: earth_ship_attack.wav
 	ValidTargets: Ground, Helicopter, Air
 	Projectile: Missile
@@ -265,6 +265,7 @@ specialrangedAA2:
 
 piratespecialrangedarrow:
 	Inherits: legoranged
+	Range: 8c512
 	Report: tower_attack.wav
 	Projectile: Missile
 		HorizontalRateOfTurn: 100
@@ -315,7 +316,7 @@ piratespecialrangedball:
 
 piratespecialrangedballimp:
 	Inherits: ArtilleryShell
-	Range: 11c512
+	Range: 9c512
 	Report: gov_capt_3ship_attack.wav
 	Projectile: Missile
 		HorizontalRateOfTurn: 100
@@ -329,7 +330,7 @@ piratespecialrangedballimp:
 
 kingpecialrangedrock:
 	Inherits: ArtilleryShell
-	Range: 12c512
+	Range: 9c512
 	Report: catapult_giant_boulderthrow_attack.wav
 	Projectile: Missile
 		HorizontalRateOfTurn: 100
@@ -384,7 +385,7 @@ specialrangedstar:
 
 astroplasmaglob:
 	ReloadDelay: 60
-	Range: 10c512
+	Range: 9c512
 	Report: earth_ship_attack.wav
 	Projectile: Missile
 		HorizontalRateOfTurn: 100
@@ -490,7 +491,7 @@ aliencavalrymelee:
 legoheroranged:
 	Inherits: legoranged
 	ReloadDelay: 40
-	Range: 8c512
+	Range: 6c512
 	Report: commando_attack.wav
 	Warhead@1Dam: TargetDamage
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
@@ -589,7 +590,7 @@ trollkingmelee:
 	Report: troll_king.wav
 
 spacelaser:
-	Range: 7c512
+	Range: 6c512
 	Report: space_laser.wav
 	Projectile: AthenaProjectile
 	ValidTargets: Ground, Helicopter, Air, Trees
@@ -620,10 +621,10 @@ spacelaser:
 
 empstar:
 	ReloadDelay: 60
-	Range: 9c512
+	Range: 6c512
 	Projectile: Bullet
 		Speed: 0c250
-		Image: lego_emp_star
+		Image: green_emp_star
 		Sequences: idle
 		RangeLimit: 15c0
 		Palette: player
@@ -636,7 +637,7 @@ empstar:
 
 legoemp:
 	ReloadDelay: 60
-	Range: 9c512
+	Range: 6c512
 	Report: earth_ship_attack.wav
 	Projectile: InstantHit
 	Warhead@1Con: GrantExternalCondition
@@ -668,7 +669,7 @@ espstar:
 
 legoesp:
 	ReloadDelay: 60
-	Range: 9c512
+	Range: 6c512
 	Report: esp.wav
 	Projectile: InstantHit
 	Warhead@2Con: GrantExternalCondition
@@ -684,7 +685,7 @@ legoesp:
 
 crystalcache:
 	ReloadDelay: 120
-	Range: 9c512
+	Range: 7c512
 	Report: crystalcache.wav
 	Projectile: Bullet
 		Speed: 50
@@ -724,7 +725,7 @@ artillery:
 
 arrowtrigger:
 	ReloadDelay: 60
-	Range: 9c512
+	Range: 7c512
 	Report: arrowvolley_sound.wav
 	Projectile: InstantExplode
 	Warhead@1: FireShrapnel
@@ -734,7 +735,7 @@ arrowtrigger:
 
 arrowrain:
 	ReloadDelay: 60
-	Range: 9c512
+	Range: 7c512
 	Image: lego_arrow
 	Report: arrowvolley_sound.wav
 	Projectile: AthenaProjectile
@@ -890,7 +891,7 @@ roarweapon:
 	Warheads: FireCluster
 		Weapon: roarfire
 		Dimensions: 6,6
-		Footprint: X_X / _X_ / X_X X_X / _X_ / X_X
+		Footprint:X_X___ ___X_X X_X___ X_X___ ___X_X X_X___
 		RandomClusterCount: -1
 	Warhead@Damage: SpreadDamage
 		Spread: 1600
@@ -926,7 +927,7 @@ roarfire:
 
 fireball:
 	ReloadDelay: 60
-	Range: 9c0
+	Range: 7c0
 	Report: exploding_fire.wav
 	Projectile: Bullet
 		Speed: 170
@@ -961,7 +962,7 @@ fireball:
 
 lightningblast:
 	ReloadDelay: 60
-	Range: 9c0
+	Range: 1c0
 	Projectile: InstantHit
 	ValidTargets: Ground, Trees, Water, Air
 	Warhead@6cluster: FireCluster
@@ -975,11 +976,11 @@ lightningshard:
 	Report: esp.wav
 	Projectile: Bullet
 		Speed: 150
-		Image: lego_emp_star
+		Image: lego_lightning
 	Warhead@Damage: SpreadDamage
 		Spread: 1600
 		Falloff: 160, 80, 40, 20, 10
-		Damage: 10000
+		Damage: 4000
 		Versus:
 			Wood: 100
 			Concrete: 96

@@ -645,6 +645,8 @@ World:
 		MaxUnloadQueue: 9
 	WithHarvestAnimation:
 	WithDockingAnimation:
+	Valued:
+		Cost: 60
 	Power:
 		Amount: -5	
 
@@ -680,7 +682,7 @@ World:
 ^lego_mcv:
 	Inherits@mcv: ^MCV
 	Valued:
-		Cost: 3000
+		Cost: 4000
 	Buildable:
 		BuildPaletteOrder: 10
 		BuildDuration: 750
@@ -993,7 +995,6 @@ astro_tower:
 	Inherits: ^Defense
 	Inherits@lego_tower: ^lego_tower
 	# Don't declare AutoTarget stuff before AttackBase stuff or an annoying bug with WithSpriteBody will occur.
-	#Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
 		Name: Astro Tower
 	Buildable:
@@ -1005,36 +1006,33 @@ astro_tower:
 	Armament@PRIMARY:
 		Weapon: legoranged
 		RequiresCondition: !astrotower2upg && !astrotower3upg
-		LocalOffset: 0,0,0
 	Armament@AA:
-		Weapon: legorangedaa
+		Weapon: legoranged
 		RequiresCondition: !astrotower2upg && !astrotower3upg
-		LocalOffset: 0,0,0
 	Armament@guardtower:
 		Weapon: specialrangedstar
 		RequiresCondition: astrotower2upg && !astrotower3upg
-		LocalOffset: 0,0,0
 	Armament@guardtoweraa:
 		Weapon: specialrangedstar
 		RequiresCondition: astrotower2upg && !astrotower3upg
-		LocalOffset: 0,0,0
 	Armament@g3tower:
 		Weapon: astroplasmaglob
 		RequiresCondition: astrotower2upg && astrotower3upg
-		LocalOffset: 0,0,0
 	Armament@3toweraa:
 		Weapon: astroplasmaglob
 		RequiresCondition: astrotower2upg && astrotower3upg
-		LocalOffset: 0,0,0
-	AttackOmni:
-		PauseOnCondition: disabled
+	Turreted:
+		TurnSpeed: 1023
+		Offset: 128,128,384
+	AttackTurreted:
+		PauseOnCondition: !build-incomplete
 	WithRangeCircle:
 		Range: 3072
 		# RequiresCondition: astrotower2upg
 	Inherits@AUTOTARGET: ^AutoTargetAll
 	### Upgrade stuff ###
 	WithSpriteBody:
-		RequiresCondition: !astrotowerupg && !astrotower2upg
+		RequiresCondition: !astrotower2upg && !astrotower3upg
 		Sequence: astro_tower
 	Production@guardtower:
 		Produces: Towerupgrade
@@ -1238,7 +1236,7 @@ astro_trooper:
 	Mobile:
 		Speed: 30
 	Health:
-		HP: 20000
+		HP: 27500
 	ReloadDelayMultiplier@cow:
 		Modifier: 60
 	Voiced:
@@ -1300,7 +1298,7 @@ astro_commando:
 	Armament:
 		Weapon: legoranged
 	Armament@aa:
-		Weapon: legorangedAA
+		Weapon: legorangedaa
 	Valued:
 		Cost: 150
 	Mobile:
@@ -1335,7 +1333,7 @@ astro_space_police:
 	Armament:
 		Weapon: legoranged
 	Armament@aa:
-		Weapon: legorangedAA
+		Weapon: legorangedaa
 	Valued:
 		Cost: 500
 	Mobile:
@@ -2012,7 +2010,7 @@ astro_claw_tank:
 	Power:
 		Amount: -20
 	Health:
-		HP: 90000
+		HP: 45000
 	Armament:
 		Weapon: specialrangedAA
 	Armor:
@@ -2054,11 +2052,11 @@ astro_transport:
 	Armament:
 		Weapon: legoranged
 	Armament@aa:
-		Weapon: legorangedAA
+		Weapon: legorangedaa
 	Valued:
 		Cost: 600
 	Health:
-		HP: 80000
+		HP: 85000
 	Armor:
 		Type: Medium
 	AttackFrontal:
@@ -2084,7 +2082,7 @@ astro_special_starfighter:
 	Valued:
 		Cost: 600
 	Health:
-		HP: 95000
+		HP: 55000
 	Armament:
 		Weapon: specialrangedAA
 	Armor:
@@ -2119,7 +2117,7 @@ astro_space_police_cruiser:
 	Valued:
 		Cost: 700
 	Health:
-		HP: 97000   
+		HP: 55000
 	Armament:
 		Weapon: specialrangedstar
 	Armor:
@@ -2160,7 +2158,7 @@ astro_starship2:
 	Valued:
 		Cost: 900
 	Health:
-		HP: 100000
+		HP: 70000
 	Armament:
 		Weapon: specialrangedAA2
 	Armor:
@@ -2508,8 +2506,11 @@ alien_tower:
 	Armament@3toweraa:
 		Weapon: astroplasmaglob
 		RequiresCondition: alien_tower2upg && alien_tower3upg
-	AttackOmni:
-		PauseOnCondition: disabled
+	Turreted:
+		TurnSpeed: 1023
+		Offset: 128,128,384
+	AttackTurreted:
+		PauseOnCondition: !build-incomplete
 	WithRangeCircle:
 		Range: 3072
 		# RequiresCondition: alien_tower2upg
@@ -2695,7 +2696,7 @@ alien_drone:
 	Mobile:
 		Speed: 30
 	Health:
-		HP: 29000
+		HP: 22500
 	ReloadDelayMultiplier@cow:
 		Modifier: 60
 	Voiced:
@@ -3399,22 +3400,6 @@ alien_attack_ship:
 	Inherits@LEGOTankTRACKED: ^Tank
 	Inherits: ^MainBattleTankTemplate
 	Inherits@AUTOTARGET: ^AutoTargetAll
-	# Inherits@fix: ^Repairable
-	# Inherits@2: ^IronCurtainable
-	# Inherits@rad: ^VehicleRadiation
-	# Inherits@EMP: ^UnitDisable
-	# Inherits@mag: ^Magnefreezable
-	# Inherits@heal: ^MachineShopRepairable
-	# Inherits@driver-dead: ^AffectedByDriverKill
-	# Inherits@salvage: ^GenericSalvageBonus
-	# Inherits@emergencyrepair: ^EmergencyRepairable
-	# Inherits@chrono: ^Chronoshiftable
-  # Inherits@instablow: ^Instant_Kill_Vehicle
-  # Inherits@unstableeffect: ^UnstableEffect
-  # Inherits@base-reveal: ^Base-reveal
-  # Inherits@LeechEggLayable: ^LeechEggLayable
-  # Inherits@Xmassetting: ^Xmas_setting
-  # Inherits@casinoupgrade: ^CasinoUpgradeable
 	Inherits: ^PropagandaSelfHeallego
 	Crushable:
 		WarnProbability: 0
@@ -3441,7 +3426,7 @@ alien_attack_ship:
 	Power:
 		Amount: -20
 	Health:
-		HP: 90000
+		HP: 45000
 	Armament:
 		Weapon: specialrangedAA
 	Armor:
@@ -3476,11 +3461,11 @@ alien_transport_ship:
 	Armament:
 		Weapon: legoranged
 	Armament@aa:
-		Weapon: legorangedAA
+		Weapon: legorangedaa
 	Valued:
 		Cost: 600
 	Health:
-		HP: 80000
+		HP: 85000
 	Armor:
 		Type: Medium
 	AttackFrontal:
@@ -3506,7 +3491,7 @@ alien_strike_ship:
 	Valued:
 		Cost: 600
 	Health:
-		HP: 95000
+		HP: 55000
 	Armament:
 		Weapon: specialrangedAA
 	Armor:
@@ -3541,7 +3526,7 @@ alien_space_criminal_hotrod:
 	Valued:
 		Cost: 700
 	Health:
-		HP: 97000
+		HP: 55000
 	Armament:
 		Weapon: specialrangedstar
 	Armor:
@@ -3582,7 +3567,7 @@ alien_assault_ship:
 	Valued:
 		Cost: 900
 	Health:
-		HP: 100000
+		HP: 70000
 	Armament:
 		Weapon: specialrangedAA2
 	Armor:
@@ -3885,7 +3870,7 @@ imperial_tower:
 		Queue: Defence, RADefence
 		Description: Upgradable defense building\nDetector
 	Voiced:
-		VoiceSet: spirevoice
+		VoiceSet: imperialtowervoice
 	Armament@PRIMARY:
 		Weapon: piratelegoranged
 		RequiresCondition: !imperial_tower2upg && !imperial_tower3upg
@@ -3904,8 +3889,11 @@ imperial_tower:
 	Armament@3toweraa:
 		Weapon: piratespecialrangedball
 		RequiresCondition: imperial_tower2upg && imperial_tower3upg
-	AttackOmni:
-		PauseOnCondition: disabled
+	Turreted:
+		TurnSpeed: 1023
+		Offset: 128,128,384
+	AttackTurreted:
+		PauseOnCondition: !build-incomplete
 	WithRangeCircle:
 		Range: 3072
 		# RequiresCondition: imperial_tower2upg
@@ -4116,7 +4104,7 @@ imperial_swordsman:
 	Mobile:
 		Speed: 30
 	Health:
-		HP: 31000
+		HP: 25000
 	ReloadDelayMultiplier@cow:
 		Modifier: 60
 	Voiced:
@@ -4294,7 +4282,7 @@ imperial_flying_ship:
 	Valued:
 		Cost: 700
 	Health:
-		HP: 97000
+		HP: 55000
 	Armament:
 		Weapon: piratespecialrangedarrow
 	Armor:
@@ -4748,7 +4736,8 @@ imperial_ninja_master:
 		UseDeathTypeSuffix: false
 	PortableChronoCA:
 		ChargeDelay: 20
-		HasDistanceLimit: false
+		HasDistanceLimit: true
+		MaxDistance: 30
 		FlashScreen: false
 		ChronoshiftSound: teleport.wav
 		RequiresCondition: FSD_cond_3
@@ -5200,8 +5189,11 @@ pirate_tower:
 	Armament@3toweraa:
 		Weapon: piratespecialrangedball
 		RequiresCondition: pirate_tower2upg && pirate_tower3upg
-	AttackOmni:
-		PauseOnCondition: disabled
+	Turreted:
+		TurnSpeed: 1023
+		Offset: 128,128,384
+	AttackTurreted:
+		PauseOnCondition: !build-incomplete
 	WithRangeCircle:
 		Range: 3072
 		# RequiresCondition: pirate_tower2upg
@@ -5412,7 +5404,7 @@ pirate_oarsman:
 	Mobile:
 		Speed: 30
 	Health:
-		HP: 31000
+		HP: 30000
 	ReloadDelayMultiplier@cow:
 		Modifier: 60
 	Voiced:
@@ -5607,7 +5599,7 @@ pirate_tiki_golem:
 	Power:
 		Amount: -20
 	Health:
-		HP: 120000
+		HP: 55000
 	Armament:
 		Weapon: kingpecialrangedrock
 	Armor:
@@ -6549,10 +6541,10 @@ king_tower:
 	Voiced:
 		VoiceSet: kingtowervoice
 	Armament@PRIMARY:
-		Weapon: piratelegoranged
+		Weapon: piratelegorangedarrow
 		RequiresCondition: !king_tower2upg && !king_tower3upg
 	Armament@AA:
-		Weapon: piratelegoranged
+		Weapon: piratelegorangedarrow
 		RequiresCondition: !king_tower2upg && !king_tower3upg
 	Armament@guardtower:
 		Weapon: specialrangedstar
@@ -6566,8 +6558,11 @@ king_tower:
 	Armament@3toweraa:
 		Weapon: piratespecialrangedball
 		RequiresCondition: king_tower2upg && king_tower3upg
-	AttackOmni:
-		PauseOnCondition: disabled
+	Turreted:
+		TurnSpeed: 1023
+		Offset: 128,128,384
+	AttackTurreted:
+		PauseOnCondition: !build-incomplete
 	WithRangeCircle:
 		Range: 3072
 		# RequiresCondition: king_tower2upg
@@ -6778,7 +6773,7 @@ king_guardsman:
 	Mobile:
 		Speed: 30
 	Health:
-		HP: 31000
+		HP: 35000
 	ReloadDelayMultiplier@cow:
 		Modifier: 60
 	Voiced:
@@ -6876,7 +6871,7 @@ king_dwarf:
 	Mobile:
 		Speed: 40
 	Health:
-		HP: 32000
+		HP: 25000
 	ReloadDelayMultiplier@cow:
 		Modifier: 60
 	Power:
@@ -6918,7 +6913,7 @@ king_ballista:
 	Power:
 		Amount: -20
 	Health:
-		HP: 90000
+		HP: 45000
 	Armament:
 		Weapon: specialrangedAA
 	Armor:
@@ -6971,7 +6966,7 @@ king_catapult:
 	Power:
 		Amount: -20
 	Health:
-		HP: 90000
+		HP: 55000
 	Armament:
 		Weapon: kingpecialrangedrock
 	Armor:
@@ -7007,7 +7002,7 @@ king_dwarf_glider:
 	Valued:
 		Cost: 700
 	Health:
-		HP: 97000
+		HP: 55000
 	Armament:
 		Weapon: piratespecialrangedarrow
 	Armor:
@@ -7046,9 +7041,9 @@ king_dragon:
 	Tooltip:
 		Name: Dragon
 	Valued:
-		Cost: 800
+		Cost: 900
 	Health:
-		HP: 97000
+		HP: 80000
 	Armament:
 		Weapon: dragonbreath
 		Name: primary
@@ -7943,10 +7938,10 @@ wizard_tower:
 	Voiced:
 		VoiceSet: kingtowervoice
 	Armament@PRIMARY:
-		Weapon: piratelegoranged
+		Weapon: piratelegorangedarrow
 		RequiresCondition: !wizard_tower2upg && !wizard_tower3upg
 	Armament@AA:
-		Weapon: piratelegoranged
+		Weapon: piratelegorangedarrow
 		RequiresCondition: !wizard_tower2upg && !wizard_tower3upg
 	Armament@guardtower:
 		Weapon: specialrangedstar
@@ -7960,8 +7955,11 @@ wizard_tower:
 	Armament@3toweraa:
 		Weapon: piratespecialrangedball
 		RequiresCondition: wizard_tower2upg && wizard_tower3upg
-	AttackOmni:
-		PauseOnCondition: disabled
+	Turreted:
+		TurnSpeed: 1023
+		Offset: 128,128,384
+	AttackTurreted:
+		PauseOnCondition: !build-incomplete
 	WithRangeCircle:
 		Range: 3072
 		# RequiresCondition: wizard_tower2upg
@@ -8172,7 +8170,7 @@ wizard_skeleton:
 	Mobile:
 		Speed: 60
 	Health:
-		HP: 29000
+		HP: 22500
 	ReloadDelayMultiplier@cow:
 		Modifier: 60
 	Voiced:
@@ -8264,15 +8262,15 @@ wizard_troll:
 		Prerequisites: ~wizard_barracks
 		Description: Harrying Ranged Infantry.
 	Armament:
-		Weapon: swordsmanmelee
+		Weapon: trollmelee
 	Armament@aa:
-		Weapon: swordsmanmelee
+		Weapon: trollmelee
 	Valued:
 		Cost: 100
 	Mobile:
 		Speed: 60
 	Health:
-		HP: 31000
+		HP: 25000
 	ReloadDelayMultiplier@cow:
 		Modifier: 60
 	Power:
@@ -8314,7 +8312,7 @@ wizard_siege_tower:
 	Power:
 		Amount: -20
 	Health:
-		HP: 100000
+		HP: 45000
 	Armament:
 		Weapon: specialrangedAA
 	Armor:
@@ -8367,7 +8365,7 @@ wizard_troll_giant:
 	Power:
 		Amount: -20
 	Health:
-		HP: 95000
+		HP: 55000
 	Armament:
 		Weapon: kingpecialrangedrock
 	Armor:
@@ -8403,7 +8401,7 @@ wizard_troll_blimp:
 	Valued:
 		Cost: 700
 	Health:
-		HP: 97000
+		HP: 55000
 	Armament:
 		Weapon: piratespecialrangedarrow
 	Armor:
@@ -8442,9 +8440,9 @@ wizard_dragon:
 	Tooltip:
 		Name: Dragon
 	Valued:
-		Cost: 800
+		Cost: 900
 	Health:
-		HP: 97000
+		HP: 80000
 	Armament:
 		Weapon: dragonbreath
 	Armor:

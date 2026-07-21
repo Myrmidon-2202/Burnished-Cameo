@@ -8,14 +8,14 @@ World:
 		Name: Human WC1
 		InternalName: human
 		Game: Warcraft
-		Side: Factions
+		Side: Warcraft 1
 		Description: Human\nLeaders of the Alliance\nMighty and intelligent.\nSupport Powers: Farseeing, Rain of Fire
 		Selectable: True
 	FactionCA@orc:
 		Name: Orc WC1
 		InternalName: orc
 		Game: Warcraft
-		Side: Factions
+		Side: Warcraft 1
 		Description: Orc\nLeaders of the Horde\nBrutish and crafty.\nSupport Powers: Dark Vision, Poison Cloud
 		Selectable: True
 	FactionCA@RandomWC:
@@ -128,6 +128,18 @@ Player:
 		Palette: player
 
 ^WC1Infantry:
+	Armor:
+		Type: Plate
+	RevealsShroud:
+		Range: 7000
+	DamageMultiplier@HeavyInfantryBuff:
+		Modifier: 80
+	Crushable:
+		CrushClasses: vehicle
+	Buildable:
+		BuildDurationModifier: 50
+	GrantExternalConditionToTransport:
+		Condition: ifv-cannon
 	RenderSprites:
 		PlayerPalette: player
 	WithDeathAnimation:
@@ -1438,7 +1450,7 @@ wc_h_mcv:
 		Queue: Building, RABuilding
 		BuildDuration: 750
 		BuildDurationModifier: 100
-		Description: Tramsforms into another Town Hall
+		Description: Transforms into another Town Hall
 		Icon: townhall_icon
 	Tooltip:
 		Name: Mobile Construction Peasant (Human)
@@ -1472,14 +1484,14 @@ wc_h_mcv:
 	ProvidesPrerequisite@faction:
 		Prerequisite: mmwchuman
 
-wc_h_mcv.bot:
-	Inherits: wc_h_mcv
-	Buildable:
-		BuildPaletteOrder: 100
-		BuildLimit: 1
-		Prerequisites: ~techlevel.medium, ~botplayer, allowsMCV
-	RenderSprites:
-		Image: wc_h_peasant
+# wc_h_mcv.bot:
+# 	Inherits: wc_h_mcv
+# 	Buildable:
+# 		BuildPaletteOrder: 100
+# 		BuildLimit: 1
+# 		Prerequisites: ~techlevel.medium, ~botplayer, allowsMCV
+# 	RenderSprites:
+# 		Image: wc_h_peasant
 
 wc_o_mcv:
 	Inherits: wc_h_mcv
@@ -1551,14 +1563,14 @@ wc_h_footman:
 	Crushable:
 		CrushClasses: vehicle
 
-wc_o_mcv.bot:
-	Inherits: wc_o_mcv
-	Buildable:
-		BuildPaletteOrder: 100
-		BuildLimit: 1
-		Prerequisites: ~techlevel.medium, ~botplayer, allowsMCV
-	RenderSprites:
-		Image: wc_o_peon
+# wc_o_mcv.bot:
+# 	Inherits: wc_o_mcv
+# 	Buildable:
+# 		BuildPaletteOrder: 100
+# 		BuildLimit: 1
+# 		Prerequisites: ~techlevel.medium, ~botplayer, allowsMCV
+# 	RenderSprites:
+# 		Image: wc_o_peon
 
 wc_h_archer:
 	Inherits: ^Soldier

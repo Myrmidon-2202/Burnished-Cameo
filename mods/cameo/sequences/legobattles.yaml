@@ -1101,6 +1101,14 @@ lego_emp_star:
 		Start: 0
 		Length: 8
 
+green_emp_star:
+	Defaults:
+		Scale: 2.0
+	idle:
+		Filename: earth_emp.shp
+		Start: 0
+		Length: 4
+
 
 ####################################################################################################
 #		ASTRO - Misc
@@ -1967,10 +1975,10 @@ space_criminal_leader:
 
 alien_space_criminal_hotrod:
 	Defaults:
-		Filename: alien_hotrod.shp
+		Filename: alien_criminal_hotrod.png
 		Scale: 2.0
 	idle:
-		Filename: alien_hotrod.shp
+		Filename: alien_criminal_hotrod.png
 		Facings: 16
 	die: lego_explosion
 		Filename: lego_explosion.shp
@@ -1983,10 +1991,10 @@ alien_space_criminal_hotrod:
 
 alien_attack_ship:
 	Defaults:
-		Filename: alien_attack_ship.shp
+		Filename: alien_attack_ship.png
 		Scale: 2.0
 	idle:
-		Filename: alien_attack_ship.shp
+		Filename: alien_attack_ship.png
 		Facings: 16
 	die: lego_explosion
 		Filename: lego_explosion.shp
@@ -1999,10 +2007,10 @@ alien_attack_ship:
 
 alien_strike_ship:
 	Defaults:
-		Filename: alien_strike_ship.shp
-		Scale: 2.0
+		Filename: alien_strike_ship.png
+		Scale: 1.5
 	idle:
-		Filename: alien_strike_ship.shp
+		Filename: alien_strike_ship.png
 		Facings: 16
 	die: lego_explosion
 		Filename: lego_explosion.shp
@@ -2015,10 +2023,10 @@ alien_strike_ship:
 
 alien_assault_ship:
 	Defaults:
-		Filename: alien_assault_ship.shp
+		Filename: alien_assault_ship.png
 		Scale: 2.5
 	idle:
-		Filename: alien_assault_ship.shp
+		Filename: alien_assault_ship.png
 		Facings: 16
 	die: lego_explosion
 		Filename: lego_explosion.shp
@@ -2031,7 +2039,7 @@ alien_assault_ship:
 
 alien_transport_ship:
 	idle:
-		Filename: alien_transport_ship.shp
+		Filename: alien_transport_ship.png
 		Facings: 16
 		Scale: 2.0
 	die: lego_explosion
@@ -3284,7 +3292,7 @@ pirate_monkey:
 		Length: 7
 	icon: pirate_cameos.png
 		Filename: pirate_cameos.png
-		Start: 17
+		Start: 26
 		AddExtension: False
 
 pirate_gunman:
@@ -3643,7 +3651,7 @@ pirate_cannon:
 		Length: 7
 	icon: pirate_cameos.png
 		Filename: pirate_cameos.png
-		Start: 23
+		Start: 25
 		AddExtension: False
 
 pirate_tiki_golem:
@@ -5466,3 +5474,11 @@ hammer_throw:
 	anim:
 		Start: 16
 		Length: 14
+
+lego_lightning:
+	Defaults:
+		Filename: wizardlightning.png
+		Scale: 2.0
+	idle:
+		Filename: wizardlightning.png
+		Facings: 16
