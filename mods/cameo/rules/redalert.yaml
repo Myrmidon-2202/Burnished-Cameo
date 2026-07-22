@@ -5663,7 +5663,7 @@ RAAFLD:
 	AirstrikePower@parabombs:
 		OrderName: Parabombs
 		Prerequisites:
-			1: ~techlevel.superweapons, ~up_advancedthermobarics
+			1: ~techlevel.superweapons
 		Icons:
 			1: airstrike
 		ChargeInterval: 7500

@@ -8658,7 +8658,7 @@ yrlunr:
 		Name: Cosmonaut
 	Buildable:
 		Queue: Aircraft, RAAircraft
-		Prerequisites: yrygcomd
+		Prerequisites: ~yrygcomd
 	Armament@PRIMARY:
 		Weapon: RA2CosmonautLaser
 		LocalOffset: 128,196,128, 128,-196,128

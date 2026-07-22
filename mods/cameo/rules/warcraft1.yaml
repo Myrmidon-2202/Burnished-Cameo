@@ -298,48 +298,49 @@ wc_h_townhall:
 		SupportPowerPaletteOrder: 10
 		EffectSequence: idle
 		BlockedCursor: move-blocked
-	Production@NORMAL:
-		Produces: Building, Defence
-		PauseOnCondition: lowpower
-		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RABuilding, RADefence
-		PauseOnCondition: lowpower
-		RequiresCondition: classicproductionqueues
-	ProductionBar@Building:
-		ProductionType: Building
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@RABuilding:
-		ProductionType: RABuilding
-		RequiresCondition: classicproductionqueues
-	ProductionBar@Defence:
-		ProductionType: Defence
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@RADefence:
-		ProductionType: RADefence
-		RequiresCondition: classicproductionqueues
-	ProductionQueue@Building:
-		Type: Building
-		DisplayOrder: 0
-		Group: Building
-		LowPowerModifier: 200
-		ReadyAudio: ConstructionComplete
-		BlockedAudio: NoBuild
-		LimitedAudio: BuildingInProgress
-		QueuedAudio: Building
-		OnHoldAudio: OnHold
-		CancelledAudio: Cancelled
-	ProductionQueue@Defence:
-		Type: Defence
-		DisplayOrder: 1
-		Group: Defence
-		LowPowerModifier: 200
-		ReadyAudio: UnitReady
-		BlockedAudio: NoBuild
-		LimitedAudio: BuildingInProgress
-		QueuedAudio: Building
-		OnHoldAudio: OnHold
-		CancelledAudio: Cancelled
+	SupportPowerChargeBar:
+	# Production@NORMAL:
+	# 	Produces: Building, Defence
+	# 	PauseOnCondition: lowpower
+	# 	RequiresCondition: !classicproductionqueues
+	# Production@CLASSICPRODUCTIONQUEUES:
+	# 	Produces: RABuilding, RADefence
+	# 	PauseOnCondition: lowpower
+	# 	RequiresCondition: classicproductionqueues
+	# ProductionBar@Building:
+	# 	ProductionType: Building
+	# 	RequiresCondition: !classicproductionqueues
+	# ProductionBar@RABuilding:
+	# 	ProductionType: RABuilding
+	# 	RequiresCondition: classicproductionqueues
+	# ProductionBar@Defence:
+	# 	ProductionType: Defence
+	# 	RequiresCondition: !classicproductionqueues
+	# ProductionBar@RADefence:
+	# 	ProductionType: RADefence
+	# 	RequiresCondition: classicproductionqueues
+	# ProductionQueue@Building:
+	# 	Type: Building
+	# 	DisplayOrder: 0
+	# 	Group: Building
+	# 	LowPowerModifier: 200
+	# 	ReadyAudio: ConstructionComplete
+	# 	BlockedAudio: NoBuild
+	# 	LimitedAudio: BuildingInProgress
+	# 	QueuedAudio: Building
+	# 	OnHoldAudio: OnHold
+	# 	CancelledAudio: Cancelled
+	# ProductionQueue@Defence:
+	# 	Type: Defence
+	# 	DisplayOrder: 1
+	# 	Group: Defence
+	# 	LowPowerModifier: 200
+	# 	ReadyAudio: UnitReady
+	# 	BlockedAudio: NoBuild
+	# 	LimitedAudio: BuildingInProgress
+	# 	QueuedAudio: Building
+	# 	OnHoldAudio: OnHold
+	# 	CancelledAudio: Cancelled
 	BaseProvider:
 		Cooldown: 75
 		Range: 14c0
@@ -644,6 +645,7 @@ wc_h_lumbermill:
 		Position: BottomLeft
 		RequiresSelection: true
 		PipCount: 10
+
 wc_h_blacksmith:
 	Inherits: ^BaseBuilding
 	Inherits@BURNABLE: ^WC1Building
@@ -899,7 +901,7 @@ wc_h_stormwind:
 		Name: Stormwind
 	Buildable:
 		BuildPaletteOrder: 18
-		Prerequisites: ~wc_h_townhall, wc_h_lumbermill,wc_h_blacksmith,wc_h_church,wc_h_tower,!swstormwind
+		Prerequisites: ~wc_h_townhall, wc_h_lumbermill, wc_h_blacksmith, wc_h_church,wc_h_tower, !swstormwind
 		Queue: Building, RABuilding
 		BuildDuration: 900
 		BuildDurationModifier: 100
@@ -919,7 +921,7 @@ wc_h_stormwind:
 	SpawnActorsOnSell:
 		ActorTypes: wc_h_footman
 	ScalePowerWithHealth:
-	SpawnActorPower:
+	SpawnActorPower@rainoffire:
 		AllowMultiple: True
 	 	OrderName: rainoffire
 	 	Icons: 
@@ -931,7 +933,7 @@ wc_h_stormwind:
 	 	Prerequisites: 
 			1: ~techlevel.superweapons
 	 	ChargeInterval: 9000
-	 	LifeTime: 250
+	 	LifeTime: -1
 	 	EndChargeSpeechNotification: NuclearWeaponAvailable
 	 	SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
@@ -941,33 +943,7 @@ wc_h_stormwind:
 			1: rainoffire
 	 	SupportPowerPaletteOrder: 20
 	 	EffectSequence: idle
-
-	SpawnActorPower@psireveal:
-		PauseOnCondition: disabled
-		OrderName: SovietRA2SpyPlane
-		Prerequisites:
-			1:
-		Icons:
-			1: ra2psirev
-		ChargeInterval: 4500
-		Names:
-			1: power-ra2psireveal.name
-		Descriptions:
-			1: power-ra2psireveal.description
-		SelectTargetSpeechNotification: SelectTarget
-		InsufficientPowerSpeechNotification: InsufficientPower
-		EndChargeSpeechNotification: SpyPlaneReady
-		Actors:
-			1: camera.psireveal
-		LifeTime: 250
-		DeploySound: spysreve.wav
-		LaunchSound: spysreve.wav
-		IncomingSound: spysreve.wav
-		SupportPowerPaletteOrder: 10
-		EffectSequence: idle
-		BlockedCursor: move-blocked
-
-
+	SupportPowerChargeBar:
 	Voiced:
 		VoiceSet: humanstormwindvoice
 	ProvidesPrerequisite@swlimit:
@@ -1023,35 +999,35 @@ wc_o_townhall:
 	Transforms:
 		IntoActor: wc_o_mcv
 	SpawnActorsOnSell:
-		ActorTypes: wc_h_footman
-	Production@NORMAL:
-		Produces: Building, Defence
-		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RABuilding, RADefence
-		RequiresCondition: classicproductionqueues
-	ProductionBar@Building:
-		ProductionType: Building
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@Defence:
-		ProductionType: Defence
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@RABuilding:
-		ProductionType: RABuilding
-		RequiresCondition: classicproductionqueues
-	ProductionBar@RADefence:
-		ProductionType: RADefence
-		RequiresCondition: classicproductionqueues
-	ProductionQueue@Building:
-		Type: Building
-	ProductionQueue@Defence:
-		Type: Defence
+		ActorTypes: wc_o_grunt
+	# Production@NORMAL:
+	# 	Produces: Building, Defence
+	# 	RequiresCondition: !classicproductionqueues
+	# Production@CLASSICPRODUCTIONQUEUES:
+	# 	Produces: RABuilding, RADefence
+	# 	RequiresCondition: classicproductionqueues
+	# ProductionBar@Building:
+	# 	ProductionType: Building
+	# 	RequiresCondition: !classicproductionqueues
+	# ProductionBar@Defence:
+	# 	ProductionType: Defence
+	# 	RequiresCondition: !classicproductionqueues
+	# ProductionBar@RABuilding:
+	# 	ProductionType: RABuilding
+	# 	RequiresCondition: classicproductionqueues
+	# ProductionBar@RADefence:
+	# 	ProductionType: RADefence
+	# 	RequiresCondition: classicproductionqueues
+	# ProductionQueue@Building:
+	# 	Type: Building
+	# ProductionQueue@Defence:
+	# 	Type: Defence
 	Voiced:
 		VoiceSet: orctownhallvoice
 	-SpawnActorPower@farseeing:
 	SpawnActorPower@darkvision:
 		PauseOnCondition: disabled
-		OrderName: DarkVision
+		OrderName: SovietSpyPlane
 		Prerequisites:
 			1:
 		Icons:
@@ -1075,6 +1051,7 @@ wc_o_townhall:
 		BlockedCursor: move-blocked
 	ProvidesPrerequisite@faction:
 		Prerequisite: mmwcorc
+
 wc_o_farm:
 	Inherits@wc_h_farm: wc_h_farm
 	Buildable:
@@ -1236,23 +1213,25 @@ wc_o_blackrockspire:
 		Queue: Building, RABuilding
 	SpawnActorsOnSell:
 		ActorTypes: wc_o_grunt
-	# SpawnActorPower:
-	# 	AllowMultiple: True
-	# 	OrderName: poisoncloud
-	# 	Icon: poisoncloud_icon
-	# 	IconPalette: windows256
-	# 	Name: Poison Cloud
-	# 	Description: The caster creates a cloud comprised of brimstone,\nacid, and poisonous gases to envelop and choke his targets.\nThis foul stench eats through anything that stands in its way,\nand chokes the very life out of anyone unlucky enough to be in its path.\nIt is a mix of the sickly stench of rotting corpses and the essence of evil,\ndesigned to decay and corrode all that it comes in contact with.
-	# 	Prerequisites: ~techlevel.superweapons
-	# 	ChargeInterval: 9000
-	# 	LifeTime: -1
-	# 	EndChargeSpeechNotification: NuclearWeaponAvailable
-	# 	SelectTargetSpeechNotification: SelectTarget
-	# 	DisplayTimerRelationships: Ally, Neutral, Enemy
-	# 	DisplayRadarPing: True
-	# 	Actor: poisoncloud
-	# 	SupportPowerPaletteOrder: 20
-	# 	EffectSequence: idle
+	SpawnActorPower:
+		AllowMultiple: True
+		OrderName: poisoncloud
+		Icon: poisoncloud_icon
+		IconPalette: windows256
+		Name: Poison Cloud
+		Description: The caster creates a cloud comprised of brimstone,\nacid, and poisonous gases to envelop and choke his targets.\nThis foul stench eats through anything that stands in its way,\nand chokes the very life out of anyone unlucky enough to be in its path.\nIt is a mix of the sickly stench of rotting corpses and the essence of evil,\ndesigned to decay and corrode all that it comes in contact with.
+		Prerequisites: ~techlevel.superweapons
+		ChargeInterval: 9000
+		LifeTime: -1
+		EndChargeSpeechNotification: NuclearWeaponAvailable
+		SelectTargetSpeechNotification: SelectTarget
+		DisplayTimerRelationships: Ally, Neutral, Enemy
+		DisplayRadarPing: True
+		Actors: 
+			1: poisoncloud
+		SupportPowerPaletteOrder: 20
+		EffectSequence: idle
+	SupportPowerChargeBar:
 	Voiced:
 		VoiceSet: orcblackrockvoice
 	ProvidesPrerequisite@swlimit:
@@ -2763,7 +2742,7 @@ wc_h_str_arrow:
 		BuildDuration: 1500
 		BuildDurationModifier: 100
 		Description: Increases Arrow Damage dealt by Archers and Guard Towers by 40%
-		Prerequisites: ~!wc_h_str_arrow
+		Prerequisites: ~wc_h_lumbermill, ~!wc_h_str_arrow
 	Valued:
 		Cost: 2000
 	RenderSprites:
@@ -2780,7 +2759,7 @@ wc_h_str_arrow2:
 		BuildDuration: 1500
 		BuildDurationModifier: 100
 		Description: Increases Arrow Damage by Archers and Guard Towers by further 40%
-		Prerequisites: ~!wc_h_str_arrow2, ~wc_h_str_arrow
+		Prerequisites: ~wc_h_lumbermill, ~!wc_h_str_arrow2, ~wc_h_str_arrow
 	Valued:
 		Cost: 2000
 	RenderSprites:
@@ -2797,7 +2776,7 @@ wc_h_str_sword:
 		BuildDuration: 1500
 		BuildDurationModifier: 100
 		Description: Increases Sword Damage by 30%
-		Prerequisites: ~!wc_h_str_sword
+		Prerequisites: ~wc_h_blacksmith, ~!wc_h_str_sword
 	Valued:
 		Cost: 2000
 	RenderSprites:
@@ -2814,7 +2793,7 @@ wc_h_str_sword2:
 		BuildDuration: 1500
 		BuildDurationModifier: 100
 		Description: Increases Sword Damage by further 30%
-		Prerequisites: ~!wc_h_str_sword2, ~wc_h_str_sword
+		Prerequisites: ~wc_h_blacksmith, ~!wc_h_str_sword2, ~wc_h_str_sword
 	Valued:
 		Cost: 2000
 	RenderSprites:
@@ -2831,7 +2810,7 @@ wc_h_str_shield:
 		BuildDuration: 1500
 		BuildDurationModifier: 100
 		Description: Increases Shield Resistance of all units by 25%
-		Prerequisites: ~!wc_h_str_shield
+		Prerequisites: ~wc_h_blacksmith, ~!wc_h_str_shield
 	Valued:
 		Cost: 2000
 	RenderSprites:
@@ -2848,7 +2827,7 @@ wc_h_str_shield2:
 		BuildDuration: 1500
 		BuildDurationModifier: 100
 		Description: Increases Shield Resistance of all units by further 25%
-		Prerequisites: ~!wc_h_str_shield2, ~wc_h_str_shield
+		Prerequisites: ~wc_h_blacksmith, ~!wc_h_str_shield2, ~wc_h_str_shield
 	Valued:
 		Cost: 2000
 	RenderSprites:
@@ -2865,7 +2844,7 @@ wc_h_horses:
 		BuildDuration: 1500
 		BuildDurationModifier: 100
 		Description: Increases Horses speed by 20%
-		Prerequisites: ~!wc_h_horses, wc_h_townhall
+		Prerequisites: ~wc_h_stable, ~!wc_h_horses, wc_h_townhall
 	Valued:
 		Cost: 2000
 	RenderSprites:
@@ -2882,7 +2861,7 @@ wc_h_horses2:
 		BuildDuration: 1500
 		BuildDurationModifier: 100
 		Description: Increases Horses speed by further 20%
-		Prerequisites: ~!wc_h_horses2, ~wc_h_horses
+		Prerequisites: ~wc_h_stable, ~!wc_h_horses2, ~wc_h_horses
 	Valued:
 		Cost: 2000
 	RenderSprites:
@@ -2896,7 +2875,7 @@ wc_o_str_spear:
 	Buildable:
 		Queue: Upgrades
 		Description: Increases Spear Damage dealt by Spearmen and Guard Towers by 35%
-		Prerequisites: ~!wc_o_str_spear
+		Prerequisites: ~wc_o_lumbermill, ~!wc_o_str_spear
 	RenderSprites:
 		Image: wc_o_str_spear
 
@@ -2907,7 +2886,7 @@ wc_o_str_spear2:
 	Buildable:
 		Queue: Upgrades
 		Description: Increases Spear Damage dealt by Spearmen and Guard Towers by further 35%
-		Prerequisites: ~!wc_o_str_spear2, ~wc_o_str_spear
+		Prerequisites: ~wc_o_lumbermill, ~!wc_o_str_spear2, ~wc_o_str_spear
 	RenderSprites:
 		Image: wc_o_str_spear2
 
@@ -2918,7 +2897,7 @@ wc_o_str_axe:
 	Buildable:
 		Queue: Upgrades
 		Description: Increases Axe Damage by 30%
-		Prerequisites: ~!wc_o_str_axe2
+		Prerequisites: ~wc_o_blacksmith, ~!wc_o_str_axe2
 	Valued:
 		Cost: 1000
 	RenderSprites:
@@ -2931,7 +2910,7 @@ wc_o_str_axe2:
 	Buildable:
 		Queue: Upgrades
 		Description: Increases Axe Damage by further 30%
-		Prerequisites: ~!wc_o_str_axe2, ~wc_o_str_axe
+		Prerequisites: ~wc_o_blacksmith, ~!wc_o_str_axe2, ~wc_o_str_axe
 	RenderSprites:
 		Image: wc_o_str_axe2
 
@@ -2939,7 +2918,7 @@ wc_o_str_shield:
 	Inherits@shld: wc_h_str_shield
 	Buildable:
 		Queue: Upgrades
-		Prerequisites: ~!wc_o_str_shield
+		Prerequisites: ~wc_o_blacksmith, ~!wc_o_str_shield
 	RenderSprites:
 		Image: wc_o_str_shield
 
@@ -2947,7 +2926,7 @@ wc_o_str_shield2:
 	Inherits@shld: wc_h_str_shield2
 	Buildable:
 		Queue: Upgrades
-		Prerequisites: ~!wc_o_str_shield2, ~wc_o_str_shield
+		Prerequisites: ~wc_o_blacksmith, ~!wc_o_str_shield2, ~wc_o_str_shield
 	RenderSprites:
 		Image: wc_o_str_shield2
 
@@ -2959,7 +2938,7 @@ wc_o_wolves:
 		BuildPaletteOrder: 1
 		Queue: Upgrades
 		Description: Increases Wolves speed by 20%
-		Prerequisites: ~!wc_o_wolves
+		Prerequisites: ~wc_o_kennel, ~!wc_o_wolves
 	RenderSprites:
 		Image: wc_o_wolves
 
@@ -2971,7 +2950,7 @@ wc_o_wolves2:
 		BuildPaletteOrder: 1
 		Queue: Upgrades
 		Description: Increases Wolves speed by further 20%
-		Prerequisites: ~!wc_o_wolves2, ~wc_o_wolves
+		Prerequisites: ~wc_o_kennel, ~!wc_o_wolves2, ~wc_o_wolves
 	RenderSprites:
 		Image: wc_o_wolves2
 
@@ -2983,6 +2962,7 @@ wc_h_upgradefarm:
 		Queue: Farmupgrade.human
 		BuildDuration: 1125
 		BuildDurationModifier: 100
+		Prerequisites: ~wc_h_farm
 		Description: Expands farm gaining 100 more food out of this farm
 		Icon: expand-icon
 	Valued:
@@ -2998,6 +2978,7 @@ wc_o_upgradefarm:
 	Inherits: wc_h_upgradefarm
 	Buildable:
 		Icon: expand-icon
+		Prerequisites: ~wc_o_farm
 		Queue: Farmupgrade.orc
 	RenderSprites:
 		Image: wc_o_farm
