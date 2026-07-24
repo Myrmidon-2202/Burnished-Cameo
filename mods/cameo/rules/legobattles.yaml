@@ -2487,7 +2487,9 @@ alien_tower:
 		Queue: Defence, RADefence
 		Description: Upgradable defense building\nDetector
 	Voiced:
-		VoiceSet: spirevoice
+		VoiceSet: alientowervoice
+	RenderSprites: 
+		Image: alien_tower
 	Armament@PRIMARY:
 		Weapon: legoranged
 		RequiresCondition: !alien_tower2upg && !alien_tower3upg

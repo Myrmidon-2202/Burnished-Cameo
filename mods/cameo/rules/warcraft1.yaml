@@ -9,14 +9,14 @@ World:
 		InternalName: human
 		Game: Warcraft
 		Side: Warcraft 1
-		Description: Human\nLeaders of the Alliance\nMighty and intelligent.\nSupport Powers: Farseeing, Rain of Fire
+		Description: faction-warcraft-human.description
 		Selectable: True
 	FactionCA@orc:
 		Name: Orc WC1
 		InternalName: orc
 		Game: Warcraft
 		Side: Warcraft 1
-		Description: Orc\nLeaders of the Horde\nBrutish and crafty.\nSupport Powers: Dark Vision, Poison Cloud
+		Description: faction-warcraft-orc.description
 		Selectable: True
 	FactionCA@RandomWC:
 		Name: Any
@@ -24,7 +24,7 @@ World:
 		RandomFactionMembers: human, orc
 		Game: Warcraft
 		Side: Random
-		Description: Random Faction\nA random faction from Warcraft 1 will be chosen when the game starts.
+		Description: faction-warcraft-random.description
 	####################################################################################################
 	#       Warcraft 1
 	####################################################################################################
@@ -128,6 +128,7 @@ Player:
 		Palette: player
 
 ^WC1Infantry:
+	Inherits: ^IronCurtainable
 	Armor:
 		Type: Plate
 	RevealsShroud:
@@ -148,6 +149,14 @@ Player:
 		UseDeathTypeSuffix: false
 	Targetable:
 		TargetTypes: Ground, Ant, Cyborg
+	GrantCondition@untargetable:
+		Condition: untargetable
+		RequiresCondition: chronobeamed || invulnerability || shrouded
+	GrantCondition@mortal:
+		Condition: mortal
+	Targetable:
+		RequiresCondition: !parachute && !untargetable
+		TargetTypes: Ground, Vehicle
 
 ^WCWorker:
 	Harvester:
@@ -385,7 +394,7 @@ wc_h_farm:
 		Queue: Building, RABuilding
 		BuildDuration: 160
 		BuildDurationModifier: 100
-		Description: Provides 100 Food (Power)\nCan be expanded to store twice as much Food\nCan store up to 500 resources.
+		Description: Provides 100 Food (Power). Can be expanded to store twice as much Food. Can store up to 500 resources.
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -450,7 +459,7 @@ wc_h_guard_tower:
 		Queue: Defence, RADefence
 		BuildDuration: 750
 		BuildDurationModifier: 50
-		Description: Basic Anti-Ground and Anti-Air Defense building\nDetector
+		Description: Basic Anti-Ground and Anti-Air Defense building. Detector.
 		IconPalette: windows256
 	Building:
 		Footprint: xx xx
@@ -594,7 +603,7 @@ wc_h_lumbermill:
 		BuildPaletteOrder: 13
 		Prerequisites: ~wc_h_townhall, wc_h_farm
 		Queue: Building, RABuilding
-		Description: Dropoff point for gold. (Tiberium)\nCan store up to 1000 resources\nProduces bows enabling Archers\nProvides arrow upgrades for archers and guard towers
+		Description: warcraft-lumbermill-human.description
 		BuildDuration: 200
 		BuildDurationModifier: 100
 	Building:
@@ -640,7 +649,6 @@ wc_h_lumbermill:
 	SelectionDecorations:
 	Voiced:
 		VoiceSet: humanlumbermillvoice
-
 	WithResourceStoragePipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: true
@@ -791,7 +799,7 @@ wc_h_stable:
 		Queue: Building, RABuilding
 		BuildDuration: 400
 		BuildDurationModifier: 100
-		Description: Allows production of Knights\nProvides upgrades for Knights
+		Description: Allows production of Knights. Provides upgrades for Knights
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -831,7 +839,7 @@ wc_h_tower:
 		Queue: Building, RABuilding
 		BuildDuration: 400
 		BuildDurationModifier: 100
-		Description: Trains Conjurers.\nProvides Radar.
+		Description: Trains Conjurers. Provides Radar.
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -921,28 +929,28 @@ wc_h_stormwind:
 	SpawnActorsOnSell:
 		ActorTypes: wc_h_footman
 	ScalePowerWithHealth:
-	SpawnActorPower@rainoffire:
+	SpawnActorPower:
 		AllowMultiple: True
-	 	OrderName: rainoffire
-	 	Icons: 
+		OrderName: rainoffire
+		Icons: 
 			1: rainoffire_icon
-	 	Names: 
+		Names: 
 			1: Rain Of Fire
-	 	Descriptions: 
-			1: This is a very powerful spell that combines the natures of flame and water.\nIt calls forth the essence of fire and delivers it through\nmassive thunderheads of vapor and brimstone, creating an actual firestorm.\nThis spell is very destructive, and will cause damage to any\nfoes and buildings in its sphere of influence.\nUse this spell with care, for the rain of fire knows no friends.
-	 	Prerequisites: 
-			1: ~techlevel.superweapons
-	 	ChargeInterval: 9000
-	 	LifeTime: -1
-	 	EndChargeSpeechNotification: NuclearWeaponAvailable
-	 	SelectTargetSpeechNotification: SelectTarget
+		Descriptions: 
+			1: warcraft-rainoffire-human.description
+		Prerequisites: 
+			1: ~techlevel.superweapons, swstormwind
+		ChargeInterval: 9000
+		LifeTime: -1
+		EndChargeSpeechNotification: NuclearWeaponAvailable
+		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
-	 	DisplayTimerRelationships: Ally, Neutral, Enemy
-	 	DisplayRadarPing: True
-	 	Actors: 
+		DisplayTimerRelationships: Ally, Neutral, Enemy
+		DisplayRadarPing: True
+		Actors: 
 			1: rainoffire
-	 	SupportPowerPaletteOrder: 20
-	 	EffectSequence: idle
+		SupportPowerPaletteOrder: 20
+		EffectSequence: idle
 	SupportPowerChargeBar:
 	Voiced:
 		VoiceSet: humanstormwindvoice
@@ -964,7 +972,7 @@ rainoffire:
 		Type: CenterPosition
 	HitShape:
 	Aircraft:
-		CruiseAltitude: 7000
+		CruiseAltitude: 2000
 		Speed: 1000
 		MaximumPitch: 2000
 		Repulsable: false
@@ -1106,7 +1114,7 @@ wc_o_lumbermill:
 	Buildable:
 		Prerequisites: ~wc_o_townhall, wc_o_farm
 		Queue: Building, RABuilding
-		Description: Dropoff point for gold. (Tiberium)\nCan store up to 1000 resource\nProduces spears enabling Spearmen\nProvides spear upgrades for spearmen and Guard towers
+		Description: warcraft-lumbermill-orc.description
 	Production@Upgrades:
 		Produces: Upgrades
 	ProductionQueue@Upgrades:
@@ -1188,7 +1196,7 @@ wc_o_tower:
 	Buildable:
 		Prerequisites: ~wc_o_townhall, wc_o_barracks
 		Queue: Building, RABuilding
-		Description: Trains Warlocks.\nProvides Radar.
+		Description: Trains Warlocks. Provides Radar.
 	Production@NORMAL:
 		Produces: Aircraft
 	Production@CLASSICPRODUCTIONQUEUES:
@@ -1209,18 +1217,22 @@ wc_o_blackrockspire:
 	Tooltip:
 		Name: Blackrock Spire
 	Buildable:
-		Prerequisites: ~wc_o_townhall, wc_o_lumbermill,wc_o_blacksmith,wc_o_damnedtemple,wc_o_tower,!swblackspire
+		Prerequisites: ~wc_o_townhall, wc_o_lumbermill, wc_o_blacksmith, wc_o_damnedtemple, wc_o_tower, !swblackspire
 		Queue: Building, RABuilding
 	SpawnActorsOnSell:
 		ActorTypes: wc_o_grunt
 	SpawnActorPower:
 		AllowMultiple: True
 		OrderName: poisoncloud
-		Icon: poisoncloud_icon
+		Icons: 
+			1: poisoncloud_icon
 		IconPalette: windows256
-		Name: Poison Cloud
-		Description: The caster creates a cloud comprised of brimstone,\nacid, and poisonous gases to envelop and choke his targets.\nThis foul stench eats through anything that stands in its way,\nand chokes the very life out of anyone unlucky enough to be in its path.\nIt is a mix of the sickly stench of rotting corpses and the essence of evil,\ndesigned to decay and corrode all that it comes in contact with.
-		Prerequisites: ~techlevel.superweapons
+		Names: 
+			1: Poison Cloud
+		Descriptions: 
+			1: warcraft-poisoncloud-orc.description
+		Prerequisites: 
+			1: ~techlevel.superweapons, swblackspire
 		ChargeInterval: 9000
 		LifeTime: -1
 		EndChargeSpeechNotification: NuclearWeaponAvailable
@@ -1271,7 +1283,9 @@ poisoncloud:
 		WanderMoveRadius: 9999
 	KillsSelf:
 		RemoveInstead: true
-		Delay: 1000
+		Delay: 100000
+	RenderSprites:
+		Image: poisoncloud
 
 ####################################################################################################
 #		UNIT human
@@ -1500,7 +1514,7 @@ wc_h_footman:
 	Inherits@upgrade_swords: ^wc_h_str_sword
 	Inherits@upgrade_shields: ^wc_h_str_shield
 	Valued:
-		Cost: 300
+		Cost: 200
 	Tooltip:
 		Name: Footman
 	UpdatesPlayerStatistics:
@@ -1560,7 +1574,7 @@ wc_h_archer:
 	Inherits@upgrade_shields: ^wc_h_str_shield
 	Inherits@upgrade_arrows: ^wc_h_str_arrow
 	Valued:
-		Cost: 400
+		Cost: 225
 	Tooltip:
 		Name: Archer
 	UpdatesPlayerStatistics:
@@ -1569,7 +1583,7 @@ wc_h_archer:
 		BuildPaletteOrder: 10
 		Prerequisites: ~wc_h_lumbermill
 		Queue: Infantry, RAInfantry
-		Description: Basic Ranged Infantry. Not as durable as Footman.\nCan attack air
+		Description: Basic Ranged Infantry. Not as durable as Footman. Can attack air
 		BuildDuration: 125
 		BuildDurationModifier: 100
 	Armor:
@@ -1612,7 +1626,7 @@ wc_h_knight:
 	Inherits@upgrade_swords: ^wc_h_str_sword
 	Inherits@upgrade_horses: ^wc_h_horses
 	Valued:
-		Cost: 1200
+		Cost: 425
 	Tooltip:
 		Name: Knight
 	UpdatesPlayerStatistics:
@@ -1668,7 +1682,7 @@ wc_h_catapult:
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Inherits@EXT: ^ExternalConditions
 	Valued:
-		Cost: 1700
+		Cost: 900
 	Tooltip:
 		Name: Catapult
 	UpdatesPlayerStatistics:
@@ -1719,7 +1733,7 @@ wc_h_conjurer:
 	Inherits@upgrade_shields: ^wc_h_str_shield
 	Inherits@MC: ^MCImmune
 	Valued:
-		Cost: 1600
+		Cost: 450
 	Tooltip:
 		Name: Conjurer
 	UpdatesPlayerStatistics:
@@ -1728,7 +1742,7 @@ wc_h_conjurer:
 		BuildPaletteOrder: 10
 		Prerequisites: ~wc_h_townhall, wc_h_tower
 		Queue: Aircraft, RAAircraft
-		Description: Spell Caster.\nFar seer.\nCan summon Scorpion and Water Elemental\nCan attack Air\nDetector
+		Description: Spell Caster. Far seer. Can summon Scorpions and Water Elementals. Can attack Air. Detector
 		BuildDuration: 340
 		BuildDurationModifier: 100
 	Mobile:
@@ -1772,7 +1786,7 @@ wc_h_cleric:
 	Inherits@DECORATIONS: ^InfantryExperienceHospitalHazmatOverrides
 	Inherits@upgrade_shields: ^wc_h_str_shield
 	Valued:
-		Cost: 1200
+		Cost: 350
 	Tooltip:
 		Name: Cleric
 	UpdatesPlayerStatistics:
@@ -1821,6 +1835,12 @@ wc_h_cleric:
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
 		-IdleSequences: idle1,idle2,idle3,idle4
+	ProximityExternalCondition@ClericInvisibility:
+		Range: 3c0
+		Condition: tscloak
+		EnableSound: magic.aud
+		DisableSound: magic.aud
+		RequiresCondition: !disabled || mortal
 	Voiced:
 		VoiceSet: voicehuman
 
@@ -1943,7 +1963,7 @@ wc_n_waterelemental:
 	Buildable:
 		Prerequisites: ~wc_n_portal
 		Queue: Naval
-		Description: Will make you wet your pants\nLiterally\nCannot be hurt by fire
+		Description: Will make you wet your pants. Literally cannot be hurt by fire.
 	Valued:
 		Cost: 1600
 	DamageMultiplier@DamageReduction:
@@ -1966,7 +1986,7 @@ wc_n_fireelemental:
 		Name: Fire Elemental
 	Buildable:
 		Prerequisites: ~wc_n_portal
-		Description: Don't play with fire.\nExtremely vulnerable against Water\nCannot be hurt by fire
+		Description: Don't play with fire. Extremely vulnerable against Water. Cannot be hurt by fire
 	DamageMultiplier@DamageReduction:
 		Modifier: 85
 	FirepowerMultiplier@FirepowerIncrease:
@@ -2008,7 +2028,7 @@ wc_n_portal:
 		Queue: Building, RABuilding
 		BuildDuration: 1125
 		BuildDurationModifier: 100
-		Description: Warps powerful units from other dimensions\nPorted Units does not require food\nCan be only built once
+		Description: Warps powerful units from elsewhere in Azeroth, or beyond. Ported Units does not require food. Can be only built once
 		Prerequisites: ~wc_superweapon
 		BuildLimit: 1
 		BuildPaletteOrder: 200
@@ -2062,7 +2082,7 @@ wc_goldmine:
 		Queue: Building, RABuilding
 		BuildDuration: 375
 		BuildDurationModifier: 100
-		Description: Send workers inside to provide passive income\nMiners progressively get experience and work more efficiently
+		Description: Send workers inside to provide passive income. Miners progressively get experience and work more efficiently.
 		Prerequisites: ~wc_h_townhall || ~wc_o_townhall 
 	Building:
 		Footprint: xxx xxx xxx
@@ -2289,6 +2309,7 @@ wc_o_peon:
 # 		Description: Harvester.
 # 	Voiced:
 # 		VoiceSet: voiceorc
+
 wc_o_grunt:
 	Inherits@wc_h_footman: wc_h_footman
 	Tooltip:
@@ -2310,7 +2331,7 @@ wc_o_spearman:
 	Buildable:
 		Prerequisites: ~wc_o_lumbermill
 		Queue: Infantry, RAInfantry
-		Description: Basic Ranged Infantry. Not as durable as Grunt.\nCan attack air
+		Description: Basic Ranged Infantry. Not as durable as Grunt. Can attack air.
 	Armament:
 		Weapon: spearFire
 	Voiced:
@@ -2346,7 +2367,7 @@ wc_o_warlock:
 	Buildable:
 		Prerequisites: ~wc_o_tower
 		Queue: Aircraft, RAAircraft
-		Description: Spell Caster.\nFar seer\nCan summon Spider and Demon\nCan attack Air\nDetector
+		Description: Spell Caster. Farseer. Can summon Spiders and Demons. Can attack Air. Detector
 	Armament:
 		Weapon: summon1_spider
 	Armament@1:
@@ -2365,11 +2386,26 @@ wc_o_necrolyte:
 	Buildable:
 		Prerequisites: ~wc_o_damnedtemple
 		Queue: Vehicle, RAVehicle
-		Description: Support Caster. Heals nearby units.
+		Description: Support Caster. Summons the Dead. Casts Unholy Armor.
+	Armament@2:
+		Weapon: armorNecrolyte
+		TargetRelationships: Ally
+		RequiresCondition: undeployed
+		ForceTargetRelationships: None
 	Armament@3:
 		Weapon: fireballNecrolyte
+		RequiresCondition: undeployed
 		TargetRelationships: Enemy
 		ForceTargetRelationships: None
+	GrantConditionOnDeploy:
+		DeployedCondition: deployed
+		UndeployedCondition: undeployed
+		UndeployOnMove: true
+	Armament:
+		Weapon: summon0_necrolyte
+		RequiresCondition: deployed
+		ForceTargetRelationships: None
+	-ProximityExternalCondition@ClericInvisibility:
 	Voiced:
 		VoiceSet: voiceorc
 
@@ -2386,7 +2422,7 @@ wc_n_spider:
 		Name: Spider
 	Buildable:
 		Queue: Infantry
-		Description: May cause heart attack to Arachnophobics.\nFaster but more vulnerable than Scorpion
+		Description: May cause heart attack to Arachnophobes. Faster but more vulnerable than the Scorpion.
 	Valued:
 		Cost: 600
 	Mobile:
@@ -2402,6 +2438,39 @@ wc_n_spider:
 	RenderSprites:
 		Image: wc_o_spider
 
+wc_o_skeleton_single:
+	Inherits@wc_h_scorpion: wc_h_scorpion
+	Inherits@upgrade_shields: ^wc_h_str_shield
+	Inherits@upgrade_swords: ^wc_h_str_sword
+	Inherits@MC: ^MCImmune
+	-Buildable:
+	Tooltip:
+		Name: The Dead
+	Armament:
+		Weapon: skeletonSlice
+	DamageMultiplier@DamageReduction:
+		Modifier: 85
+	FirepowerMultiplier@FirepowerIncrease:
+		Modifier: 115
+	Health:
+		HP: 5400
+	Mobile:
+		Speed: 75
+	AutoTarget:
+		InitialStance: AttackAnything
+		ScanRadius: 6
+	ChangesHealth:
+		PercentageStep: 5
+		Step: 0
+		Delay: 16
+		StartIfBelow: 100
+	RenderSprites:
+		Image: wc_o_skeleton
+	Voiced:
+		VoiceSet: voiceskeleton
+	-TakeCover:
+	-ActorLostNotification:
+
 wc_o_skeleton:
 	Inherits@wc_h_scorpion: wc_h_scorpion
 	Inherits@upgrade_shields: ^wc_h_str_shield
@@ -2409,7 +2478,7 @@ wc_o_skeleton:
 	Inherits@MC: ^MCImmune
 	-Buildable:
 	Tooltip:
-		Name: Skeleton
+		Name: The Dead
 	Armament:
 		Weapon: skeletonSlice
 	DamageMultiplier@DamageReduction:
@@ -2487,7 +2556,7 @@ wc_o_skeleton_army:
 		Prerequisites: ~wc_n_portal
 		BuildPaletteOrder: 30
 		Queue: Naval
-		Description: Big group of skeletons\nRegenerates fast\nWeak against Siege and Toxins
+		Description: Big group of skeletons. Regenerates fast. Weak against Siege and Toxins
 		BuildDuration: 1125
 		BuildDurationModifier: 100
 	Tooltip:
@@ -2557,7 +2626,7 @@ wc_n_brigand:
 		Prerequisites: ~wc_n_portal
 		BuildPaletteOrder: 10
 		Queue: Naval
-		Description: Deceitful bandit\nFaster than Footman
+		Description: Deceitful bandit. Faster than Footman
 		BuildDuration: 80
 		BuildDurationModifier: 100
 	Mobile:
@@ -2601,7 +2670,7 @@ wc_n_ogre:
 		Prerequisites: ~wc_n_portal
 		BuildPaletteOrder: 10
 		Queue: Naval
-		Description: Large, tanky and stupid\nPowerful melee attack
+		Description: Large, tanky and stupid. Powerful melee attack.
 		BuildDuration: 120
 		BuildDurationModifier: 100
 	Mobile:
@@ -2679,7 +2748,7 @@ wc_n_slime:
 		VoiceSet: AntVoice
 	-Crushable:
 	Selectable:
-		Bounds: 65536, 65536
+		Bounds: 512, 512
 	SpawnActorOnDeath@1:
 		Actor: wc_n_slime_b
 	SpawnActorOnDeath@2:

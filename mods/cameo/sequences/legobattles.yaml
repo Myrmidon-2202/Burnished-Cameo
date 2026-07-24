@@ -241,7 +241,7 @@ astro_tower:
 	astro_tower2: legobattles_astro_buildings.shp
 		Start: 8
 	astro_tower3: legobattles_astro_buildings.shp
-	 	Start: 9
+		Start: 9
 
 
 astro_tower2:
@@ -278,29 +278,11 @@ astro_tower3:
 		AddExtension: False
 
 ####################################################################################################
-#		Alien - BUILDINGS
-####################################################################################################
-# alien_base:
-# 	idle: legobattles_astro_buildings
-# 		Start: 0
-# 	damaged-idle: legobattles_astro_buildings
-# 		Start: 0
-# 	make: legobattles_astro_buildings
-# 		Start: 0
-# 	dead: legobattles_astro_buildings
-# 		Start: 0
-# 	lego_production_overlay_human: lego_production_overlay_human
-# 		Length: 10
-# 		Offset: 14,12,0
-# 	icon: astro_cameos.png
-# 		Start: 0
-# 		AddExtension: False
-####################################################################################################
 #		ASTRO - INFANTRY
 ####################################################################################################
 
 # ^legoinfantry:
-	WithDeathAnimation:
+# 	WithDeathAnimation:
 # 		UseDeathTypeSuffix: false
 # 		CrushedSequence: die
 
@@ -1328,7 +1310,7 @@ alien_tower:
 	alien_tower2: alien_buildings.shp
 		Start: 8
 	alien_tower3: alien_buildings.shp
-	 	Start: 9
+		Start: 9
 
 
 alien_tower2:
@@ -3861,7 +3843,7 @@ king_tower:
 	king_tower2: king_buildings.shp
 		Start: 8
 	king_tower3: king_buildings.shp
-	 	Start: 9
+		Start: 9
 
 
 king_tower2:

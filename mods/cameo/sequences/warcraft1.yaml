@@ -15,6 +15,7 @@
 		ZOffset: 512
 		Offset: 0, -9
 		AddExtension: True
+
 ^WCInfantry:
 	Defaults:
 		Scale: 2.0
@@ -1300,6 +1301,7 @@ wc_o_demon:
 wc_n_brigand:
 	Defaults:
 		Filename: wc_n_brigand.shp
+		Scale: 2.0
 	stand:
 		Start: 0
 		Facings: -8
@@ -1325,6 +1327,7 @@ wc_n_brigand:
 wc_n_ogre:
 	Defaults:
 		Filename: wc_n_ogre.shp
+		Scale: 2.0
 	stand:
 		Start: 0
 		Facings: -8
@@ -1350,6 +1353,7 @@ wc_n_ogre:
 wc_n_slime:
 	Defaults:
 		Filename: wc_n_slime.shp
+		Scale: 2.0
 	stand:
 		Start: 0
 		Length: 8
@@ -1481,6 +1485,11 @@ rainoffire:
 	idle:
 		Start: 36
 		Filename: wc1projectiles.shp
+
+poisoncloud:
+	idle:
+		Length: 4
+		Filename: wc_o_poisoncloud.shp
 	
 spearfire:
 	idle:

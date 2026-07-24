@@ -432,7 +432,7 @@ waterelementalFire:
 			Concrete: 100
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
 	Warhead@2Eff: CreateEffect
-		Explosions: napalm
+		# Explosions: napalm
 		ImpactActors: false
 		ImpactSounds: firehit.aud
 	Warhead@Percentage: HealthPercentageDamage
@@ -448,12 +448,14 @@ waterelementalFire:
 			Heavy: 70
 			Concrete: 40
 
+# -230 formerly
+
 rainoffire:
 	ReloadDelay: 5
 	Range: 100c0
 	Projectile: GravityBomb
 		Image: rainoffire
-		Velocity: 0, 0, -230
+		Velocity: 0, 0, -100
 		Acceleration: 0, 0, -40
 		Shadow: true
 	Warhead@1Eff_impact: CreateEffect
@@ -530,7 +532,14 @@ poisoncloud:
 			Heavy: 60
 			Wood: 40
 			Concrete: 20
-		
+
+summon0_necrolyte:
+	ReloadDelay: 300
+	Range: 4c0
+	Projectile: InstantHit
+	Warhead@spawn: SpawnActor
+		Actors: wc_o_skeleton_single
+
 summon1_conjurer:
 	ReloadDelay: 160
 	Range: 4c0
@@ -558,17 +567,32 @@ summon2_daemon:
 	Projectile: InstantHit
 	Warhead@spawn: SpawnActor
 		Actors: wc_o_demon
-	
+
 fireballnecrolyte:
 	Inherits: fireballcleric
 	Range: 4c0
 	Projectile: Bullet
-		
+
+armorNecrolyte:
+	Range: 3c0
+	ReloadDelay: 250
+	TargetActorCenter: true
+	Projectile: InstantHit
+	Warhead@1: TargetDamage
+	Warhead@2: GrantExternalCondition
+		Duration: 250
+		Condition: invulnerability
+		ValidTargets: Infantry, Vehicle
+		ValidRelationships: Ally
+	Warhead@Effect: CreateEffect
+		ImpactSounds: magic.aud
+		ImpactActors: false
+
 fireballwarlock:
 	Inherits: fireballconjurer
 	Range: 3c0
 	Projectile: Bullet
-		
+
 demonslice:
 	Inherits: ^WC1Melee
 	ReloadDelay: 30
