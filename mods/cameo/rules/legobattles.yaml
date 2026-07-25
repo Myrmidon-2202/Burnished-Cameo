@@ -35,6 +35,13 @@ World:
 		Game: Lego Battles
 		Side: Lego Battles
 		Description: Wizard faction from Lego Battles
+	FactionCA@legobattlesrandom:
+		Name: Random LB
+		InternalName: randomlb
+		RandomFactionMembers: legobattlesastro, legobattlesalien, legobattlesimperial, legobattlespirate, legobattlesking, legobattleswizard
+		Game:  Lego Battles
+		Side: Random
+		Description: Play a random Lego Battles Faction
 
 	####################################################################################################
 	#		Astro
@@ -314,7 +321,7 @@ World:
 		Modifier: 500
 
 	####################################################################################################
-	#		INHERITABLES - BUILDING
+	#		INHERITABLES
 	####################################################################################################		
 ^lego_airunit:
 	Inherits: ^Helicopter
@@ -634,6 +641,16 @@ World:
 	#		INHERITABLES - Units
 	####################################################################################################		
 
+^LegoInfantryBounds:
+	Selectable:
+		Bounds: 840, 840, 0, 0
+		DecorationBounds: 840, 840, 0, 0
+
+^LegoCavalryBounds:
+	Selectable:
+		Bounds: 1000, 1000, 0, 0
+		DecorationBounds: 1000, 1000, 0, 0
+
 ^LBWorker:
 	Harvester:
 		PipCount: 3
@@ -648,13 +665,17 @@ World:
 	Valued:
 		Cost: 60
 	Power:
-		Amount: -5	
+		Amount: -5
+	Selectable:
+		Bounds: 840, 840, 0, 0
+		DecorationBounds: 840, 840, 0, 0
 
 ^lego_mage:
 	Inherits@FOURSTATEDEPLOY: ^LEGOFourStateDeploy
 	Inherits@EXPERIENCE: ^GainsExperience
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
 	Inherits@MC: ^MCImmune
+	Inherits@LB: ^LegoInfantryBounds
 	Valued:
 		Cost: 600
 	Buildable:
@@ -1000,7 +1021,7 @@ astro_tower:
 	Buildable:
 		Prerequisites: ~astro_conyard
 		Queue: Defence, RADefence
-		Description: Upgradable defense building\nDetector
+		Description: Upgradable defense building. Detector
 	Voiced:
 		VoiceSet: astrotowervoice
 	Armament@PRIMARY:
@@ -1219,6 +1240,7 @@ astro_trooper:
 	Inherits@Soldier: ^Soldier
 	Inherits: ^HeavyInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
+	Inherits@LB: ^LegoInfantryBounds
 	Inherits@AUTOTARGET: ^AutoTargetAir
 	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
@@ -1252,6 +1274,7 @@ astro_gripley:
 	Inherits@Soldier: ^Soldier
 	Inherits: ^HeavyInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
+	Inherits: ^LegoCavalryBounds
 	Inherits@AUTOTARGET: ^AutoTargetAir
 	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
@@ -1285,6 +1308,7 @@ astro_commando:
 	Inherits@Soldier: ^Soldier
 	Inherits: ^HeavyInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
+	Inherits@LB: ^LegoInfantryBounds
 	Inherits@AUTOTARGET: ^AutoTargetAir
 	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
@@ -1320,6 +1344,7 @@ astro_space_police:
 	Inherits@Soldier: ^Soldier
 	Inherits: ^HeavyInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
+	Inherits@LB: ^LegoInfantryBounds
 	Inherits@AUTOTARGET: ^AutoTargetAir
 	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
@@ -2134,7 +2159,7 @@ astro_space_police_cruiser:
 	Buildable:
 		Prerequisites: ~astro_vehiclefactory
 		Queue: Vehicle
-		Description: Flying Patrol unit.\nDetector.
+		Description: Flying Patrol unit.. Detector.
 	Power:
 		Amount: -75
 	DetectCloaked:
@@ -2485,7 +2510,7 @@ alien_tower:
 	Buildable:
 		Prerequisites: ~lego_alien_conyard
 		Queue: Defence, RADefence
-		Description: Upgradable defense building\nDetector
+		Description: Upgradable defense building. Detector
 	Voiced:
 		VoiceSet: alientowervoice
 	RenderSprites: 
@@ -2682,6 +2707,7 @@ alien_drone:
 	Inherits@Soldier: ^Soldier
 	Inherits: ^HeavyInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
+	Inherits@LB: ^LegoInfantryBounds
 	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
 		Name: Drone
@@ -2714,6 +2740,7 @@ alien_laser_trooper:
 	Inherits@Soldier: ^Soldier
 	Inherits: ^HeavyInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
+	Inherits@LB: ^LegoInfantryBounds
 	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
 		Name: Laser Trooper
@@ -2746,6 +2773,7 @@ alien_grav_runner:
 	Inherits@Soldier: ^Soldier
 	Inherits: ^HeavyInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
+	Inherits: ^LegoCavalryBounds
 	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
 		Name: Grav Runner
@@ -2778,6 +2806,7 @@ alien_space_criminal:
 	Inherits@Soldier: ^Soldier
 	Inherits: ^HeavyInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
+	Inherits@LB: ^LegoInfantryBounds
 	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
 		Name: Space Criminal
@@ -3545,7 +3574,7 @@ alien_space_criminal_hotrod:
 	Buildable:
 		Prerequisites: ~alien_vehiclefactory
 		Queue: Vehicle.Legobattles
-		Description: Flying Patrol unit.\nDetector.
+		Description: Flying Patrol unit.. Detector.
 	Power:
 		Amount: -75
 	DetectCloaked:
@@ -3870,7 +3899,7 @@ imperial_tower:
 	Buildable:
 		Prerequisites: ~lego_imperial_conyard
 		Queue: Defence, RADefence
-		Description: Upgradable defense building\nDetector
+		Description: Upgradable defense building. Detector
 	Voiced:
 		VoiceSet: imperialtowervoice
 	Armament@PRIMARY:
@@ -3880,10 +3909,10 @@ imperial_tower:
 		Weapon: piratelegoranged
 		RequiresCondition: !imperial_tower2upg && !imperial_tower3upg
 	Armament@guardtower:
-		Weapon: specialrangedstar
+		Weapon: piratespecialrangedball
 		RequiresCondition: imperial_tower2upg && !imperial_tower3upg
 	Armament@guardtoweraa:
-		Weapon: specialrangedstar
+		Weapon: piratespecialrangedball
 		RequiresCondition: imperial_tower2upg && !imperial_tower3upg
 	Armament@g3tower:
 		Weapon: piratespecialrangedball
@@ -4090,6 +4119,7 @@ imperial_swordsman:
 	Inherits@Soldier: ^Soldier
 	Inherits: ^HeavyInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
+	Inherits@LB: ^LegoInfantryBounds
 	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
 		Name: Swordsman
@@ -4122,6 +4152,7 @@ imperial_rifleman:
 	Inherits@Soldier: ^Soldier
 	Inherits: ^HeavyInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
+	Inherits@LB: ^LegoInfantryBounds
 	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
 		Name: Rifleman
@@ -4156,6 +4187,7 @@ imperial_cavalry:
 	Inherits@Soldier: ^Soldier
 	Inherits: ^HeavyInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
+	Inherits: ^LegoCavalryBounds
 	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
 		Name: Cavalry
@@ -4188,6 +4220,7 @@ imperial_ninja:
 	Inherits@Soldier: ^Soldier
 	Inherits: ^HeavyInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
+	Inherits@LB: ^LegoInfantryBounds
 	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
 		Name: Ninja
@@ -4301,7 +4334,7 @@ imperial_flying_ship:
 	Buildable:
 		Prerequisites: ~imperial_vehiclefactory
 		Queue: Vehicle.Legobattles
-		Description: Flying Patrol unit.\nDetector.
+		Description: Flying Patrol unit.. Detector.
 	Power:
 		Amount: -75
 	DetectCloaked:
@@ -5170,7 +5203,7 @@ pirate_tower:
 	Buildable:
 		Prerequisites: ~lego_pirate_conyard
 		Queue: Defence, RADefence
-		Description: Upgradable defense building\nDetector
+		Description: Upgradable defense building. Detector
 	Voiced:
 		VoiceSet: imperialtowervoice
 	Armament@PRIMARY:
@@ -5180,10 +5213,10 @@ pirate_tower:
 		Weapon: piratelegoranged
 		RequiresCondition: !pirate_tower2upg && !pirate_tower3upg
 	Armament@guardtower:
-		Weapon: specialrangedstar
+		Weapon: piratespecialrangedball
 		RequiresCondition: pirate_tower2upg && !pirate_tower3upg
 	Armament@guardtoweraa:
-		Weapon: specialrangedstar
+		Weapon: piratespecialrangedball
 		RequiresCondition: pirate_tower2upg && !pirate_tower3upg
 	Armament@g3tower:
 		Weapon: piratespecialrangedball
@@ -5390,6 +5423,7 @@ pirate_oarsman:
 	Inherits@Soldier: ^Soldier
 	Inherits: ^HeavyInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
+	Inherits@LB: ^LegoInfantryBounds
 	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
 		Name: Oarsman
@@ -5422,6 +5456,7 @@ pirate_gunman:
 	Inherits@Soldier: ^Soldier
 	Inherits: ^HeavyInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
+	Inherits@LB: ^LegoInfantryBounds
 	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
 		Name: Gunman
@@ -5456,6 +5491,7 @@ pirate_horseman:
 	Inherits@Soldier: ^Soldier
 	Inherits: ^HeavyInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
+	Inherits: ^LegoCavalryBounds
 	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
 		Name: Horseman
@@ -5488,6 +5524,7 @@ pirate_islander:
 	Inherits@Soldier: ^Soldier
 	Inherits: ^HeavyInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
+	Inherits@LB: ^LegoInfantryBounds
 	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
 		Name: Islander
@@ -6539,7 +6576,7 @@ king_tower:
 	Buildable:
 		Prerequisites: ~lego_king_conyard
 		Queue: Defence, RADefence
-		Description: Upgradable defense building\nDetector
+		Description: Upgradable defense building. Detector
 	Voiced:
 		VoiceSet: kingtowervoice
 	Armament@PRIMARY:
@@ -6549,16 +6586,16 @@ king_tower:
 		Weapon: piratelegorangedarrow
 		RequiresCondition: !king_tower2upg && !king_tower3upg
 	Armament@guardtower:
-		Weapon: specialrangedstar
+		Weapon: piratespecialrangedarrow
 		RequiresCondition: king_tower2upg && !king_tower3upg
 	Armament@guardtoweraa:
-		Weapon: specialrangedstar
+		Weapon: piratespecialrangedarrow
 		RequiresCondition: king_tower2upg && !king_tower3upg
 	Armament@g3tower:
-		Weapon: piratespecialrangedball
+		Weapon: piratespecialrangedarrow
 		RequiresCondition: king_tower2upg && king_tower3upg
 	Armament@3toweraa:
-		Weapon: piratespecialrangedball
+		Weapon: piratespecialrangedarrow
 		RequiresCondition: king_tower2upg && king_tower3upg
 	Turreted:
 		TurnSpeed: 1023
@@ -6759,6 +6796,7 @@ king_guardsman:
 	Inherits@Soldier: ^Soldier
 	Inherits: ^HeavyInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
+	Inherits@LB: ^LegoInfantryBounds
 	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
 		Name: Guardsman
@@ -6791,6 +6829,7 @@ king_archer:
 	Inherits@Soldier: ^Soldier
 	Inherits: ^HeavyInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
+	Inherits@LB: ^LegoInfantryBounds
 	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
 		Name: Archer
@@ -6825,6 +6864,7 @@ king_knight:
 	Inherits@Soldier: ^Soldier
 	Inherits: ^HeavyInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
+	Inherits: ^LegoCavalryBounds
 	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
 		Name: Knight
@@ -6857,6 +6897,7 @@ king_dwarf:
 	Inherits@Soldier: ^Soldier
 	Inherits: ^HeavyInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
+	Inherits@LB: ^LegoInfantryBounds
 	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
 		Name: Dwarf
@@ -7021,7 +7062,7 @@ king_dwarf_glider:
 	Buildable:
 		Prerequisites: ~king_vehiclefactory
 		Queue: Vehicle.Legobattles
-		Description: Flying Patrol unit.\nDetector.
+		Description: Flying Patrol unit.. Detector.
 	Power:
 		Amount: -75
 	DetectCloaked:
@@ -7041,7 +7082,7 @@ king_dragon:
 	Inherits@AUTOTARGET: ^AutoTargetAll
 	Inherits: ^PropagandaSelfHeallego
 	Tooltip:
-		Name: Dragon
+		Name: King Dragon
 	Valued:
 		Cost: 900
 	Health:
@@ -7049,6 +7090,7 @@ king_dragon:
 	Armament:
 		Weapon: dragonbreath
 		Name: primary
+		LocalOffset: 0,500,0
 	Armor:
 		Type: Medium
 	AttackFrontal:
@@ -7063,7 +7105,7 @@ king_dragon:
 	Buildable:
 		Prerequisites: ~king_vehiclefactory
 		Queue: Vehicle.Legobattles
-		Description: Flying Patrol unit.\nDetector.
+		Description: Flying Patrol unit.. Detector.
 	Power:
 		Amount: -75
 	DetectCloaked:
@@ -7080,7 +7122,7 @@ king_dragon:
 	WithMoveAnimation:
 		MoveSequence: run
 	Selectable:
-		DecorationBounds: 1280, 1280, 0, 0
+		DecorationBounds: 2560, 2560, 0, 0
 	RenderSprites:
 		Scale: 0.7
 
@@ -7936,7 +7978,7 @@ wizard_tower:
 	Buildable:
 		Prerequisites: ~lego_wizard_conyard
 		Queue: Defence, RADefence
-		Description: Upgradable defense building\nDetector
+		Description: Upgradable defense building. Detector
 	Voiced:
 		VoiceSet: kingtowervoice
 	Armament@PRIMARY:
@@ -7946,16 +7988,16 @@ wizard_tower:
 		Weapon: piratelegorangedarrow
 		RequiresCondition: !wizard_tower2upg && !wizard_tower3upg
 	Armament@guardtower:
-		Weapon: specialrangedstar
+		Weapon: piratespecialrangedarrow
 		RequiresCondition: wizard_tower2upg && !wizard_tower3upg
 	Armament@guardtoweraa:
-		Weapon: specialrangedstar
+		Weapon: piratespecialrangedarrow
 		RequiresCondition: wizard_tower2upg && !wizard_tower3upg
 	Armament@g3tower:
-		Weapon: piratespecialrangedball
+		Weapon: piratespecialrangedarrow
 		RequiresCondition: wizard_tower2upg && wizard_tower3upg
 	Armament@3toweraa:
-		Weapon: piratespecialrangedball
+		Weapon: piratespecialrangedarrow
 		RequiresCondition: wizard_tower2upg && wizard_tower3upg
 	Turreted:
 		TurnSpeed: 1023
@@ -8156,6 +8198,7 @@ wizard_skeleton:
 	Inherits@Soldier: ^Soldier
 	Inherits: ^HeavyInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
+	Inherits@LB: ^LegoInfantryBounds
 	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
 		Name: Skeleton
@@ -8188,6 +8231,7 @@ wizard_crossbowman:
 	Inherits@Soldier: ^Soldier
 	Inherits: ^HeavyInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
+	Inherits@LB: ^LegoInfantryBounds
 	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
 		Name: Crossbowman
@@ -8222,6 +8266,7 @@ wizard_knight:
 	Inherits@Soldier: ^Soldier
 	Inherits: ^HeavyInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
+	Inherits: ^LegoCavalryBounds
 	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
 		Name: Skeleton Knight
@@ -8254,6 +8299,7 @@ wizard_troll:
 	Inherits@Soldier: ^Soldier
 	Inherits: ^HeavyInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
+	Inherits@LB: ^LegoInfantryBounds
 	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
 		Name: Troll
@@ -8420,7 +8466,7 @@ wizard_troll_blimp:
 	Buildable:
 		Prerequisites: ~wizard_vehiclefactory
 		Queue: Vehicle.Legobattles
-		Description: Flying Patrol unit.\nDetector.
+		Description: Flying Patrol unit.. Detector.
 	Power:
 		Amount: -75
 	DetectCloaked:
@@ -8440,13 +8486,14 @@ wizard_dragon:
 	Inherits@AUTOTARGET: ^AutoTargetAll
 	Inherits: ^PropagandaSelfHeallego
 	Tooltip:
-		Name: Dragon
+		Name: Wizard Dragon
 	Valued:
 		Cost: 900
 	Health:
 		HP: 80000
 	Armament:
 		Weapon: dragonbreath
+		LocalOffset: 0,500,0
 	Armor:
 		Type: Medium
 	AttackFrontal:
@@ -8461,7 +8508,7 @@ wizard_dragon:
 	Buildable:
 		Prerequisites: ~wizard_vehiclefactory
 		Queue: Vehicle.Legobattles
-		Description: Flying Patrol unit.\nDetector.
+		Description: Flying Patrol unit.. Detector.
 	Power:
 		Amount: -75
 	DetectCloaked:
@@ -8478,7 +8525,7 @@ wizard_dragon:
 		Armament: primary
 		Sequence: shoot
 	Selectable:
-		DecorationBounds: 1280, 1280, 0, 0
+		DecorationBounds: 2560, 2560, 0, 0
 	RenderSprites:
 		Scale: 0.7
 

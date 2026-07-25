@@ -346,6 +346,7 @@ specialrangedstar:
 	ReloadDelay: 60
 	Range: 9c512
 	Report: earth_ship_attack.wav
+	ValidTargets: Ground, Helicopter, Air
 	Projectile: Missile
 		HorizontalRateOfTurn: 100
 		VerticalRateOfTurn: 100
@@ -387,6 +388,7 @@ astroplasmaglob:
 	ReloadDelay: 60
 	Range: 9c512
 	Report: earth_ship_attack.wav
+	ValidTargets: Ground, Helicopter, Air
 	Projectile: Missile
 		HorizontalRateOfTurn: 100
 		VerticalRateOfTurn: 100
@@ -430,6 +432,7 @@ dragonbreath:
 	Burst: 15
 	BurstDelays: 1
 	Report: dragon_attack.wav
+	ValidTargets: Ground, Helicopter, Air
 	Projectile: Bullet
 		Speed: 170
 		TrailImage: fb4
