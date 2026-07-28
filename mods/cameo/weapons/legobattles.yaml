@@ -4,6 +4,33 @@
 	Warhead@1: CreateEffect
 		Delay: 8
 
+earthbuildermelee:
+	Inherits: troopermelee
+	Warhead@1Dam: TargetDamage
+		Damage: 2025
+		ValidTargets: Ground, Helicopter, Air
+		Versus:
+			None: 100
+			Wood: 50
+			Light: 100
+			Medium: 80
+			Heavy: 60
+			Concrete: 120
+		DamageTypes: DefaultDeath 
+	Report: earth_builder_attack.wav
+
+alienbuildermelee:
+	Inherits: earthbuildermelee
+	Report: alien_builder_attack.wav
+
+imppirbuildermelee:
+	Inherits: earthbuildermelee
+	Report: imperial_pirates_builder_attack.wav
+
+kinwizbuildermelee:
+	Inherits: earthbuildermelee
+	Report: king_wizard_builder_attack.wav
+
 troopermelee:
 	Inherits: ^legomelee
 	ReloadDelay: 20
@@ -11,8 +38,7 @@ troopermelee:
 	Projectile: InstantHit
 	ValidTargets: Ground, Helicopter, Air
 	Report: trooper_attack.wav
-	Warhead@1Dam: SpreadDamage
-		Spread: 128
+	Warhead@1Dam: TargetDamage
 		Damage: 4025
 		ValidTargets: Ground, Helicopter, Air
 		Versus:
@@ -39,30 +65,103 @@ troopermelee:
 
 alienmelee:
 	Inherits: troopermelee
+	Warhead@1Dam: TargetDamage
+		Damage: 3025
+		ValidTargets: Ground, Helicopter, Air
+		Versus:
+			None: 150
+			Wood: 50
+			Light: 100
+			Medium: 80
+			Heavy: 60
+			Concrete: 40
+		DamageTypes: DefaultDeath 
 	Report: drone_attack.wav
 
 swordsmanmelee:
 	Inherits: troopermelee
+		Damage: 3625
+		ValidTargets: Ground, Helicopter, Air
+		Versus:
+			None: 150
+			Wood: 50
+			Light: 100
+			Medium: 80
+			Heavy: 60
+			Concrete: 40
 	Report: swordsman_attack.wav
 
 oarsmanmelee:
 	Inherits: troopermelee
+		Damage: 3425
+		ValidTargets: Ground, Helicopter, Air
+		Versus:
+			None: 150
+			Wood: 50
+			Light: 100
+			Medium: 80
+			Heavy: 60
+			Concrete: 40
 	Report: oarsman_attack.wav
 
 guardsmanmelee:
 	Inherits: troopermelee
+	Warhead@1Dam: TargetDamage
+		Damage: 2025
+		ValidTargets: Ground, Helicopter, Air
+		Versus:
+			None: 150
+			Wood: 50
+			Light: 100
+			Medium: 80
+			Heavy: 60
+			Concrete: 40
+		DamageTypes: DefaultDeath 
 	Report: guardsman_attack.wav
 
 skeletonmelee:
 	Inherits: troopermelee
+	Warhead@1Dam: TargetDamage
+		Damage: 3025
+		ValidTargets: Ground, Helicopter, Air
+		Versus:
+			None: 150
+			Wood: 50
+			Light: 100
+			Medium: 80
+			Heavy: 60
+			Concrete: 40
+		DamageTypes: DefaultDeath 
 	Report: skeleton_attack_select.wav
 
 dwarfmelee:
 	Inherits: troopermelee
+	Warhead@1Dam: TargetDamage
+		Damage: 3025
+		ValidTargets: Ground, Helicopter, Air
+		Versus:
+			None: 150
+			Wood: 50
+			Light: 100
+			Medium: 80
+			Heavy: 60
+			Concrete: 40
+		DamageTypes: DefaultDeath 
 	Report: dwarf.wav
 
 trollmelee:
 	Inherits: troopermelee
+	Warhead@1Dam: TargetDamage
+		Damage: 3525
+		ValidTargets: Ground, Helicopter, Air
+		Versus:
+			None: 150
+			Wood: 50
+			Light: 100
+			Medium: 80
+			Heavy: 60
+			Concrete: 40
+		DamageTypes: DefaultDeath 
 	Report: troll.wav
 
 HQHEROHEAL:
@@ -84,7 +183,7 @@ builderrepair:
 	ValidTargets: Repairing, Repair
 	Projectile: LaserZap
 		Color: 8888FF
-	Warhead@1Dam: SpreadDamage
+	Warhead@1Dam: TargetDamage
 		Spread: 213
 		Damage: -1000
 		ValidStances: Ally
@@ -186,6 +285,7 @@ specialrangedAA:
 	ReloadDelay: 60
 	Range: 7c512
 	Report: earth_ship_attack.wav
+	ValidTargets: Ground, Helicopter, Air
 	Projectile: Missile
 		Speed: 0c650
 		Image: astro_lolipop
@@ -238,7 +338,7 @@ specialrangedAA2:
 		AllowSnapping: True
 	Warhead@1Dam: TargetDamage
 		Spread: 300
-		Damage: 10000
+		Damage: 1000
 		ValidTargets: Ground, Helicopter, Air
 		Versus:
 			None: 150
@@ -276,7 +376,7 @@ piratespecialrangedarrow:
 		AllowSnapping: True
 	Warhead@1Dam: TargetDamage
 		Spread: 300
-		Damage: 10000
+		Damage: 1000
 		ValidTargets: Ground, Helicopter, Air
 		Versus:
 			None: 150
@@ -305,9 +405,10 @@ piratespecialrangedball:
 	Inherits: ArtilleryShell
 	Report: gov_capt_3ship_attack.wav
 	Projectile: Missile
+		Damage: 1000
 		HorizontalRateOfTurn: 100
 		VerticalRateOfTurn: 100
-		Speed: 300
+		Speed: 200
 		Image: lego_cannonball
 		Jammable: False
 		AllowSnapping: True
@@ -321,7 +422,7 @@ piratespecialrangedballimp:
 	Projectile: Missile
 		HorizontalRateOfTurn: 100
 		VerticalRateOfTurn: 100
-		Speed: 300
+		Speed: 200
 		Image: lego_cannonball
 		Jammable: False
 		AllowSnapping: True
@@ -330,9 +431,10 @@ piratespecialrangedballimp:
 
 kingpecialrangedrock:
 	Inherits: ArtilleryShell
-	Range: 9c512
+	Range: 7c512
 	Report: catapult_giant_boulderthrow_attack.wav
 	Projectile: Missile
+		Damage: 1000
 		HorizontalRateOfTurn: 100
 		VerticalRateOfTurn: 100
 		Speed: 300
@@ -344,7 +446,7 @@ kingpecialrangedrock:
 
 specialrangedstar:
 	ReloadDelay: 60
-	Range: 9c512
+	Range: 6c512
 	Report: earth_ship_attack.wav
 	ValidTargets: Ground, Helicopter, Air
 	Projectile: Missile
@@ -360,7 +462,7 @@ specialrangedstar:
 	Warhead@1Dam: TargetDamage
 		ValidTargets: Ground, Helicopter, Air
 		Spread: 500
-		Damage: 10000
+		Damage: 1000
 		Versus:
 			None: 150
 			Wood: 60
@@ -386,7 +488,7 @@ specialrangedstar:
 
 astroplasmaglob:
 	ReloadDelay: 60
-	Range: 9c512
+	Range: 7c512
 	Report: earth_ship_attack.wav
 	ValidTargets: Ground, Helicopter, Air
 	Projectile: Missile
@@ -401,7 +503,7 @@ astroplasmaglob:
 		AllowSnapping: True
 	Warhead@1Dam: TargetDamage
 		Spread: 700
-		Damage: 15000
+		Damage: 1500
 		ValidTargets: Ground, Helicopter, Air
 		Versus:
 			None: 150
@@ -510,7 +612,7 @@ heromelee:
 	Range: 1c512
 	Projectile: InstantHit
 	Report: biff_attack.wav
-	Warhead@1Dam: SpreadDamage
+	Warhead@1Dam: TargetDamage
 		Spread: 128
 		Damage: 7025
 		Versus:
@@ -599,7 +701,7 @@ spacelaser:
 	ValidTargets: Ground, Helicopter, Air, Trees
 	Warhead@1Dam_impact: SpreadDamage
 		Range: 0, 1c1, 2c1
-		Damage: 10000
+		Damage: 1000
 		Falloff: 1000, 250, 100
 		ValidTargets: Ground, Helicopter, Air, Trees
 		AffectsParent: False
@@ -792,7 +894,7 @@ earthquake:
 	Warhead@Damage: SpreadDamage
 		Spread: 1600
 		Falloff: 160, 80, 40, 20, 10
-		Damage: 10000
+		Damage: 1000
 		Versus:
 			Wood: 100
 			Concrete: 96

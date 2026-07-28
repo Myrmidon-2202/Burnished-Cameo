@@ -118,36 +118,6 @@ CRATE:
 		NoBaseSelectionShares: 10000
 		Units: yrpcv
 		ValidFactions: yuri
-	GiveBaseBuilderCrateAction@asianalliance:
-		SelectionShares: 0
-		NoBaseSelectionShares: 10000
-		Units: aa_acv
-		ValidFactions: asianalliance
-	GiveBaseBuilderCrateAction@consortium:
-		SelectionShares: 0
-		NoBaseSelectionShares: 10000
-		Units: steel_qmcv
-		ValidFactions: consortium
-	GiveBaseBuilderCrateAction@syndicate:
-		SelectionShares: 0
-		NoBaseSelectionShares: 10000
-		Units: latin_mcv
-		ValidFactions: syndicate
-	GiveBaseBuilderCrateAction@naxis:
-		SelectionShares: 0
-		NoBaseSelectionShares: 10000
-		Units: nax_mcv
-		ValidFactions: naxis
-	GiveBaseBuilderCrateAction@lnaxis:
-		SelectionShares: 0
-		NoBaseSelectionShares: 10000
-		Units: nax2_mcv
-		ValidFactions: lnaxis
-	GiveBaseBuilderCrateAction@ix:
-		SelectionShares: 0
-		NoBaseSelectionShares: 10000
-		Units: d2k_mcv.ixian
-		ValidFactions: ixian
 	GiveBaseBuilderCrateAction@terran:
 		SelectionShares: 0
 		NoBaseSelectionShares: 10000
@@ -173,6 +143,16 @@ CRATE:
 		NoBaseSelectionShares: 10000
 		Units: wc2_orc_mcv
 		ValidFactions: orc2
+	GiveBaseBuilderCrateAction@human:
+		SelectionShares: 0
+		NoBaseSelectionShares: 10000
+		Units: wc_h_mcv
+		ValidFactions: human
+	GiveBaseBuilderCrateAction@orc:
+		SelectionShares: 0
+		NoBaseSelectionShares: 10000
+		Units: wc_o_mcv
+		ValidFactions: orc
 
 WWCRATE:
 	Inherits: CRATE

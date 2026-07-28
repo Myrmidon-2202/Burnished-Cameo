@@ -19,7 +19,7 @@ World:
 		Description: faction-warcraft-orc.description
 		Selectable: True
 	FactionCA@RandomWC:
-		Name: Any
+		Name: Random WC1
 		InternalName: RandomWC
 		RandomFactionMembers: human, orc
 		Game: Warcraft
@@ -133,8 +133,8 @@ Player:
 		Type: Plate
 	RevealsShroud:
 		Range: 7000
-	DamageMultiplier@HeavyInfantryBuff:
-		Modifier: 80
+	DamageMultiplier@Wc1Buff:
+		Modifier: 50
 	Crushable:
 		CrushClasses: vehicle
 	Buildable:
@@ -157,6 +157,8 @@ Player:
 	Targetable:
 		RequiresCondition: !parachute && !untargetable
 		TargetTypes: Ground, Vehicle
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience
 
 ^WCWorker:
 	Harvester:
@@ -265,14 +267,14 @@ wc_h_townhall:
 	Transforms:
 		IntoActor: wc_h_mcv
 	DamageMultiplier@DamageReduction:
-		Modifier: 85
+		Modifier: 61
 	Health:
 		HP: 200000
 	RevealsShroud:
 		Range: 4c0
 	RallyPoint:
 	Exit@1:
-		SpawnOffset: -426,85,0
+		SpawnOffset: -426,61,0
 		ExitCell: 0,1
 	Exit@2:
 		SpawnOffset: 298,298,0
@@ -401,7 +403,7 @@ wc_h_farm:
 		LocalCenterOffset: 0,-512,0
 		-BuildSounds:
 	DamageMultiplier@DamageReduction:
-		Modifier: 85
+		Modifier: 61
 	Health:
 		HP: 65000
 	RevealsShroud:
@@ -469,7 +471,7 @@ wc_h_guard_tower:
 		InitialStance: AttackAnything
 		ScanRadius: 15
 	DamageMultiplier@DamageReduction:
-		Modifier: 85
+		Modifier: 61
 	FirepowerMultiplier@FirepowerIncrease:
 		Modifier: 115
 	Health:
@@ -531,14 +533,14 @@ wc_h_barracks:
 		Dimensions: 2,3
 		LocalCenterOffset: 0,-512,0
 	DamageMultiplier@DamageReduction:
-		Modifier: 85
+		Modifier: 61
 	Health:
 		HP: 80000
 	RevealsShroud:
 		Range: 5c0
 	RallyPoint:
 	Exit@1:
-		SpawnOffset: -426,85,0
+		SpawnOffset: -426,61,0
 		ExitCell: 0,1
 	Exit@2:
 		SpawnOffset: 298,298,0
@@ -589,13 +591,13 @@ wc_h_lumbermill:
 	HitShape:
 		Type: Rectangle
 			TopLeft: -1536, -512
-			BottomRight: 1536, 853
+			BottomRight: 1536, 613
 	HitShape@TOP:
 		Type: Rectangle
 			TopLeft: -512, -1450
 			BottomRight: 896, -512
 	Valued:
-		Cost: 1600
+		Cost: 1100
 	Tooltip:
 		Name: Lumber Mill
 	ProvidesPrerequisite:
@@ -611,7 +613,7 @@ wc_h_lumbermill:
 		Dimensions: 2,3
 		LocalCenterOffset: 0,-512,0
 	DamageMultiplier@DamageReduction:
-		Modifier: 85
+		Modifier: 61
 	Health:
 		HP: 60000
 	RevealsShroud:
@@ -684,7 +686,7 @@ wc_h_blacksmith:
 		Dimensions: 2,3
 		LocalCenterOffset: 0,-512,0
 	DamageMultiplier@DamageReduction:
-		Modifier: 85
+		Modifier: 61
 	Health:
 		HP: 75000
 	RevealsShroud:
@@ -730,14 +732,14 @@ wc_h_church:
 		Dimensions: 2,3
 		LocalCenterOffset: 0,-512,0
 	DamageMultiplier@DamageReduction:
-		Modifier: 85
+		Modifier: 61
 	Health:
 		HP: 75000
 	RevealsShroud:
 		Range: 4c0
 	RallyPoint:
 	Exit@1:
-		SpawnOffset: -426,85,0
+		SpawnOffset: -426,61,0
 		ExitCell: 0,1
 	Exit@2:
 		SpawnOffset: 298,298,0
@@ -805,7 +807,7 @@ wc_h_stable:
 		Dimensions: 2,3
 		LocalCenterOffset: 0,-512,0
 	DamageMultiplier@DamageReduction:
-		Modifier: 85
+		Modifier: 61
 	Health:
 		HP: 75000
 	RevealsShroud:
@@ -845,7 +847,7 @@ wc_h_tower:
 		Dimensions: 2,3
 		LocalCenterOffset: 0,-512,0
 	DamageMultiplier@DamageReduction:
-		Modifier: 85
+		Modifier: 61
 	FirepowerMultiplier@FirepowerIncrease:
 		Modifier: 115
 	Health:
@@ -854,7 +856,7 @@ wc_h_tower:
 		Range: 4c0
 	RallyPoint:
 	Exit@1:
-		SpawnOffset: -426,85,0
+		SpawnOffset: -426,61,0
 		ExitCell: 0,1
 	Exit@2:
 		SpawnOffset: 298,298,0
@@ -909,7 +911,7 @@ wc_h_stormwind:
 		Name: Stormwind
 	Buildable:
 		BuildPaletteOrder: 18
-		Prerequisites: ~wc_h_townhall, wc_h_lumbermill, wc_h_blacksmith, wc_h_church,wc_h_tower, !swstormwind
+		Prerequisites: ~wc_h_townhall, wc_h_lumbermill, wc_h_blacksmith, wc_h_church, wc_h_tower, !swstormwind
 		Queue: Building, RABuilding
 		BuildDuration: 900
 		BuildDurationModifier: 100
@@ -919,7 +921,7 @@ wc_h_stormwind:
 		Dimensions: 3,4
 		LocalCenterOffset: 0,-512,0
 	DamageMultiplier@DamageReduction:
-		Modifier: 85
+		Modifier: 61
 	Health:
 		HP: 150000
 	RevealsShroud:
@@ -1330,7 +1332,7 @@ wc_h_peasant:
 	Mobile:
 		Speed: 90
 	DamageMultiplier@DamageReduction:
-		Modifier: 85
+		Modifier: 61
 	FirepowerMultiplier@FirepowerIncrease:
 		Modifier: 115
 	Health:
@@ -1386,7 +1388,7 @@ wc_h_peasant:
 # 	Mobile:
 # 		Speed: 90
 # 	DamageMultiplier@DamageReduction:
-# 		Modifier: 85
+# 		Modifier: 61
 # 	Health:
 # 		HP: 7200
 # 	#Food
@@ -1435,7 +1437,6 @@ wc_h_mcv:
 	Inherits@WC1Infantry: ^WC1Infantry
 	Inherits@EXT: ^ExternalConditions
 	Inherits@mcv: ^MCV
-	Inherits@conyard: ^Conyard
 	Valued:
 		Cost: 3000
 	Buildable:
@@ -1445,6 +1446,7 @@ wc_h_mcv:
 		BuildDurationModifier: 100
 		Description: Transforms into another Town Hall
 		Icon: townhall_icon
+		Prerequisites: ~wc_h_townhall
 	Tooltip:
 		Name: Mobile Construction Peasant (Human)
 	Selectable:
@@ -1453,7 +1455,7 @@ wc_h_mcv:
 	Mobile:
 		Speed: 95
 	DamageMultiplier@DamageReduction:
-		Modifier: 85
+		Modifier: 61
 	Health:
 		HP: 30000
 	Armor:
@@ -1494,6 +1496,7 @@ wc_o_mcv:
 		BuildDuration: 750
 		BuildDurationModifier: 100
 		Icon: townhall_icon
+		Prerequisites: ~wc_o_townhall
 	Transforms:
 		IntoActor: wc_o_townhall
 	Tooltip:
@@ -1529,7 +1532,7 @@ wc_h_footman:
 	Mobile:
 		Speed: 56
 	DamageMultiplier@DamageReduction:
-		Modifier: 85
+		Modifier: 61
 	FirepowerMultiplier@FirepowerIncrease:
 		Modifier: 115
 	Health:
@@ -1593,7 +1596,7 @@ wc_h_archer:
 	Mobile:
 		Speed: 56
 	DamageMultiplier@DamageReduction:
-		Modifier: 85
+		Modifier: 61
 	FirepowerMultiplier@FirepowerIncrease:
 		Modifier: 115
 	Health:
@@ -1647,7 +1650,7 @@ wc_h_knight:
 	Armor:
 		Type: Medium
 	DamageMultiplier@DamageReduction:
-		Modifier: 85
+		Modifier: 61
 	FirepowerMultiplier@FirepowerIncrease:
 		Modifier: 115
 	Health:
@@ -1679,7 +1682,7 @@ wc_h_catapult:
 	Inherits: ^Vehicle
 	Inherits@WC1Infantry: ^WC1Infantry
 	Inherits@EXPERIENCE: ^GainsExperience
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
 	Inherits@EXT: ^ExternalConditions
 	Valued:
 		Cost: 900
@@ -1703,7 +1706,7 @@ wc_h_catapult:
 	Armor:
 		Type: Medium
 	DamageMultiplier@DamageReduction:
-		Modifier: 85
+		Modifier: 61
 	FirepowerMultiplier@FirepowerIncrease:
 		Modifier: 115
 	Health:
@@ -1748,7 +1751,7 @@ wc_h_conjurer:
 	Mobile:
 		Speed: 56
 	DamageMultiplier@DamageReduction:
-		Modifier: 85
+		Modifier: 61
 	FirepowerMultiplier@FirepowerIncrease:
 		Modifier: 115
 	Health:
@@ -1801,7 +1804,7 @@ wc_h_cleric:
 	Mobile:
 		Speed: 56
 	DamageMultiplier@DamageReduction:
-		Modifier: 85
+		Modifier: 61
 	FirepowerMultiplier@FirepowerIncrease:
 		Modifier: 115
 	Health:
@@ -1846,6 +1849,7 @@ wc_h_cleric:
 
 wc_h_scorpion:
 	Inherits: ^Soldier
+	Inherits@WC1Infantry: ^WC1Infantry
 	Inherits@EXPERIENCE: ^GainsExperience
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMoveMelee
 	Inherits@DECORATIONS: ^InfantryExperienceHospitalHazmatOverrides
@@ -1864,7 +1868,7 @@ wc_h_scorpion:
 	Mobile:
 		Speed: 56
 	DamageMultiplier@DamageReduction:
-		Modifier: 85
+		Modifier: 61
 	FirepowerMultiplier@FirepowerIncrease:
 		Modifier: 115
 	Health:
@@ -1903,7 +1907,7 @@ wc_n_scorpion:
 	Valued:
 		Cost: 500
 	DamageMultiplier@DamageReduction:
-		Modifier: 85
+		Modifier: 61
 	FirepowerMultiplier@FirepowerIncrease:
 		Modifier: 115
 	Health:
@@ -1933,7 +1937,7 @@ wc_h_waterelemental:
 		Delay: 20
 		StartIfBelow: 100
 	DamageMultiplier@DamageReduction:
-		Modifier: 85
+		Modifier: 61
 	FirepowerMultiplier@FirepowerIncrease:
 		Modifier: 115
 	Health:
@@ -1957,6 +1961,8 @@ wc_h_waterelemental:
 	-Crushable:
 	Voiced:
 		VoiceSet: AntVoice
+	RenderSprites:
+		Image: wc_h_waterelemental
 
 wc_n_waterelemental:
 	Inherits: wc_h_waterelemental
@@ -1967,7 +1973,7 @@ wc_n_waterelemental:
 	Valued:
 		Cost: 1600
 	DamageMultiplier@DamageReduction:
-		Modifier: 85
+		Modifier: 61
 	FirepowerMultiplier@FirepowerIncrease:
 		Modifier: 115
 	Health:
@@ -1988,7 +1994,7 @@ wc_n_fireelemental:
 		Prerequisites: ~wc_n_portal
 		Description: Don't play with fire. Extremely vulnerable against Water. Cannot be hurt by fire
 	DamageMultiplier@DamageReduction:
-		Modifier: 85
+		Modifier: 61
 	FirepowerMultiplier@FirepowerIncrease:
 		Modifier: 115
 	Health:
@@ -2019,7 +2025,7 @@ wc_n_portal:
 		Name: Portal
 	RallyPoint:
 	Exit@1:
-		SpawnOffset: -426,85,0
+		SpawnOffset: -426,61,0
 		ExitCell: 0,1
 	Exit@2:
 		SpawnOffset: 298,298,0
@@ -2083,14 +2089,14 @@ wc_goldmine:
 		BuildDuration: 375
 		BuildDurationModifier: 100
 		Description: Send workers inside to provide passive income. Miners progressively get experience and work more efficiently.
-		Prerequisites: ~wc_h_townhall || ~wc_o_townhall 
+		Prerequisites: ~oldContent
 	Building:
 		Footprint: xxx xxx xxx
 		Dimensions: 3,3
 	GivesBuildableArea:
 		AreaTypes: building
 	DamageMultiplier@DamageReduction:
-		Modifier: 85
+		Modifier: 61
 	Health:
 		HP: 100000
 	Power:
@@ -2250,7 +2256,7 @@ wc_goldmine.human:
 	Valued:
 		Cost: 4000
 	Buildable:
-		Prerequisites: ~wc_blacksmith, ~wc_h_mcv
+		Prerequisites: wc_blacksmith, ~wc_h_townhall
 	Cargo:
 		InitialUnits: wc_h_peasant, wc_o_peon, wc_h_peasant, wc_o_peon, wc_h_peasant
 	RenderSprites:
@@ -2261,7 +2267,7 @@ wc_goldmine.horde:
 	Valued:
 		Cost: 4000
 	Buildable:
-		Prerequisites: ~wc_blacksmith, ~wc_o_mcv
+		Prerequisites: wc_blacksmith, ~wc_o_townhall
 	Cargo:
 		InitialUnits: wc_h_peasant, wc_o_peon, wc_h_peasant, wc_o_peon, wc_h_peasant
 	RenderSprites:
@@ -2379,6 +2385,7 @@ wc_o_warlock:
 
 wc_o_necrolyte:
 	Inherits@wc_h_cleric: wc_h_cleric
+	Inherits: ^BotAutoDeployOnAttack
 	Tooltip:
 		Name: Necrolyte
 	UpdatesPlayerStatistics:
@@ -2430,7 +2437,7 @@ wc_n_spider:
 	ReloadDelayMultiplier:
 		Modifier: 75
 	DamageMultiplier@DamageReduction:
-		Modifier: 85
+		Modifier: 61
 	FirepowerMultiplier@FirepowerIncrease:
 		Modifier: 115
 	Health:
@@ -2440,6 +2447,7 @@ wc_n_spider:
 
 wc_o_skeleton_single:
 	Inherits@wc_h_scorpion: wc_h_scorpion
+	Inherits@WC1Infantry: ^WC1Infantry
 	Inherits@upgrade_shields: ^wc_h_str_shield
 	Inherits@upgrade_swords: ^wc_h_str_sword
 	Inherits@MC: ^MCImmune
@@ -2449,7 +2457,7 @@ wc_o_skeleton_single:
 	Armament:
 		Weapon: skeletonSlice
 	DamageMultiplier@DamageReduction:
-		Modifier: 85
+		Modifier: 61
 	FirepowerMultiplier@FirepowerIncrease:
 		Modifier: 115
 	Health:
@@ -2478,11 +2486,11 @@ wc_o_skeleton:
 	Inherits@MC: ^MCImmune
 	-Buildable:
 	Tooltip:
-		Name: The Dead
+		Name: Horde of the Dead
 	Armament:
 		Weapon: skeletonSlice
 	DamageMultiplier@DamageReduction:
-		Modifier: 85
+		Modifier: 61
 	FirepowerMultiplier@FirepowerIncrease:
 		Modifier: 115
 	Health:
@@ -2518,6 +2526,8 @@ wc_o_demon:
 		ScanRadius: 6
 	Selectable:
 		Bounds: 58240, 58240, 0, 0
+	RenderSprites:
+		Image: wc_o_demon
 
 wc_n_demon:
 	Inherits: wc_o_demon
@@ -2534,7 +2544,7 @@ wc_n_demon:
 	ReloadDelayMultiplier:
 		Modifier: 80
 	DamageMultiplier@DamageReduction:
-		Modifier: 85
+		Modifier: 61
 	FirepowerMultiplier@FirepowerIncrease:
 		Modifier: 115
 	Health:
@@ -2566,7 +2576,7 @@ wc_o_skeleton_army:
 	Valued:
 		Cost: 3600
 	DamageMultiplier@DamageReduction:
-		Modifier: 85
+		Modifier: 61
 	FirepowerMultiplier@FirepowerIncrease:
 		Modifier: 115
 	Health:
@@ -2632,7 +2642,7 @@ wc_n_brigand:
 	Mobile:
 		Speed: 64
 	DamageMultiplier@DamageReduction:
-		Modifier: 85
+		Modifier: 61
 	FirepowerMultiplier@FirepowerIncrease:
 		Modifier: 115
 	Health:
@@ -2676,7 +2686,7 @@ wc_n_ogre:
 	Mobile:
 		Speed: 48
 	DamageMultiplier@DamageReduction:
-		Modifier: 85
+		Modifier: 61
 	FirepowerMultiplier@FirepowerIncrease:
 		Modifier: 115
 	Health:
@@ -2721,7 +2731,7 @@ wc_n_slime:
 	Mobile:
 		Speed: 30
 	DamageMultiplier@DamageReduction:
-		Modifier: 85
+		Modifier: 61
 	FirepowerMultiplier@FirepowerIncrease:
 		Modifier: 115
 	Health:
@@ -2764,7 +2774,7 @@ wc_n_slime_b:
 	ReloadDelayMultiplier:
 		Modifier: 70
 	DamageMultiplier@DamageReduction:
-		Modifier: 85
+		Modifier: 61
 	FirepowerMultiplier@FirepowerIncrease:
 		Modifier: 115
 	Health:
@@ -2787,7 +2797,7 @@ wc_n_slime_c:
 	Mobile:
 		Speed: 55
 	DamageMultiplier@DamageReduction:
-		Modifier: 85
+		Modifier: 61
 	FirepowerMultiplier@FirepowerIncrease:
 		Modifier: 115
 	Health:

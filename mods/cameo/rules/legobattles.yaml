@@ -622,8 +622,6 @@ World:
 		Dimensions: 2,2
 	DamageMultiplier@DamageReduction:
 		Modifier: 88
-	FirepowerMultiplier@FirepowerIncrease:
-		Modifier: 111
 	Health:
 		HP: 60000
 	Armor:
@@ -679,13 +677,10 @@ World:
 	Valued:
 		Cost: 600
 	Buildable:
-		BuildPaletteOrder: 10
 		BuildDuration: 340
 		BuildDurationModifier: 100
-	DamageMultiplier@DamageReduction:
-		Modifier: 88
 	FirepowerMultiplier@FirepowerIncrease:
-		Modifier: 111
+		Modifier: 105
 	Health:
 		HP: 12000
 	Armor:
@@ -1201,7 +1196,7 @@ astro_builder:
 		LocalOffset: 240,160,240
 	Armament@primary:
 		Name: primary
-		Weapon: troopermelee
+		Weapon: earthbuildermelee
 		ForceTargetStances: Enemy, Neutral
 	Captures:
 		CaptureTypes: building, tech
@@ -2008,6 +2003,7 @@ legobattles_ghost:
 astro_claw_tank:
 	Inherits@LEGOTankTRACKED: ^Walker
 	Inherits: ^MainBattleTankTemplate
+	Inherits@AUTOTARGET: ^AutoTargetAir
 	Inherits@AUTOTARGET: ^AutoTargetAll
 	Inherits: ^PropagandaSelfHeallego
 	Crushable:
@@ -2159,7 +2155,7 @@ astro_space_police_cruiser:
 	Buildable:
 		Prerequisites: ~astro_vehiclefactory
 		Queue: Vehicle
-		Description: Flying Patrol unit.. Detector.
+		Description: Flying Patrol unit. Detector.
 	Power:
 		Amount: -75
 	DetectCloaked:
@@ -2201,6 +2197,7 @@ astro_starship2:
 		Prerequisites: ~astro_vehiclefactory
 		Queue: Vehicle.Legobattles
 		Description: Heavy Flying unit.
+		BuildDuration: 1140
 	Power:
 		Amount: -75
 	RenderSprites:
@@ -2668,7 +2665,7 @@ alien_builder:
 		LocalOffset: 240,160,240
 	Armament@primary:
 		Name: primary
-		Weapon: troopermelee
+		Weapon: alienbuildermelee
 		ForceTargetStances: Enemy, Neutral
 	Captures:
 		CaptureTypes: building, tech
@@ -3481,6 +3478,8 @@ alien_attack_ship:
 		Modifier: 60
 	Voiced:
 		VoiceSet: alienattackshipvoice
+	RenderSprites:
+		PlayerPalette: player_rgba
 
 alien_transport_ship:
 	Inherits@LEGOAirUnit: ^lego_airunit
@@ -3512,6 +3511,8 @@ alien_transport_ship:
 		DecorationBounds: 1280, 1280, 0, 0
 	Voiced:
 		VoiceSet: astrotransportvoice
+	RenderSprites:
+		PlayerPalette: player_rgba
 
 alien_strike_ship:
 	Inherits@LEGOAirUnit: ^lego_airunit
@@ -3546,6 +3547,8 @@ alien_strike_ship:
 		DecorationBounds: 1280, 1280, 0, 0
 	Voiced:
 		VoiceSet: starfightervoice
+	RenderSprites:
+		PlayerPalette: player_rgba
 
 alien_space_criminal_hotrod:
 	Inherits@LEGOAirUnit: ^lego_airunit
@@ -3574,7 +3577,7 @@ alien_space_criminal_hotrod:
 	Buildable:
 		Prerequisites: ~alien_vehiclefactory
 		Queue: Vehicle.Legobattles
-		Description: Flying Patrol unit.. Detector.
+		Description: Flying Patrol unit. Detector.
 	Power:
 		Amount: -75
 	DetectCloaked:
@@ -3587,6 +3590,7 @@ alien_space_criminal_hotrod:
 		DecorationBounds: 1280, 1280, 0, 0
 	RenderSprites:
 		Scale: 0.7
+		PlayerPalette: player_rgba
 
 alien_assault_ship:
 	Inherits@LEGOAirUnit: ^lego_airunit
@@ -3616,12 +3620,15 @@ alien_assault_ship:
 		Prerequisites: ~alien_vehiclefactory
 		Queue: Vehicle.Legobattles
 		Description: Heavy Flying unit.
+		BuildDuration: 1140
 	Power:
 		Amount: -75
 	Selectable:
 		DecorationBounds: 1280, 1280, 0, 0
 	Voiced:
 		VoiceSet: alienassaultshipvoice
+	RenderSprites:
+		PlayerPalette: player_rgba
 
 ####################################################################################################
 #		Imperial - Structures
@@ -4080,7 +4087,7 @@ imperial_builder:
 		LocalOffset: 240,160,240
 	Armament@primary:
 		Name: primary
-		Weapon: troopermelee
+		Weapon: imppirbuildermelee
 		ForceTargetStances: Enemy, Neutral
 	Captures:
 		CaptureTypes: building, tech
@@ -4281,7 +4288,7 @@ imperial_culverin:
 	Power:
 		Amount: -20
 	Health:
-		HP: 90000
+		HP: 30000
 	Armament:
 		Weapon: piratespecialrangedballimp
 	Armor:
@@ -4334,7 +4341,7 @@ imperial_flying_ship:
 	Buildable:
 		Prerequisites: ~imperial_vehiclefactory
 		Queue: Vehicle.Legobattles
-		Description: Flying Patrol unit.. Detector.
+		Description: Flying Patrol unit. Detector.
 	Power:
 		Amount: -75
 	DetectCloaked:
@@ -5384,7 +5391,7 @@ pirate_builder:
 		LocalOffset: 240,160,240
 	Armament@primary:
 		Name: primary
-		Weapon: troopermelee
+		Weapon: imppirbuildermelee
 		ForceTargetStances: Enemy, Neutral
 	Captures:
 		CaptureTypes: building, tech
@@ -5585,7 +5592,7 @@ pirate_cannon:
 	Power:
 		Amount: -20
 	Health:
-		HP: 90000
+		HP: 30000
 	Armament:
 		Weapon: piratespecialrangedball
 	Armor:
@@ -6757,7 +6764,7 @@ king_builder:
 		LocalOffset: 240,160,240
 	Armament@primary:
 		Name: primary
-		Weapon: troopermelee
+		Weapon: kinwizbuildermelee
 		ForceTargetStances: Enemy, Neutral
 	Captures:
 		CaptureTypes: building, tech
@@ -7062,7 +7069,7 @@ king_dwarf_glider:
 	Buildable:
 		Prerequisites: ~king_vehiclefactory
 		Queue: Vehicle.Legobattles
-		Description: Flying Patrol unit.. Detector.
+		Description: Flying Patrol unit. Detector.
 	Power:
 		Amount: -75
 	DetectCloaked:
@@ -7090,7 +7097,7 @@ king_dragon:
 	Armament:
 		Weapon: dragonbreath
 		Name: primary
-		LocalOffset: 0,500,0
+		LocalOffset: 1600,0,0
 	Armor:
 		Type: Medium
 	AttackFrontal:
@@ -7105,7 +7112,8 @@ king_dragon:
 	Buildable:
 		Prerequisites: ~king_vehiclefactory
 		Queue: Vehicle.Legobattles
-		Description: Flying Patrol unit.. Detector.
+		Description: Flying Assault unit. Detector.
+		BuildDuration: 1140
 	Power:
 		Amount: -75
 	DetectCloaked:
@@ -7515,7 +7523,7 @@ king_dwarf_king:
 	Inherits@LEGOMAGETemplate: ^lego_mage
 	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
-		Name: King
+		Name: Dwarf King
 	Buildable:
 		Queue: InfantryHero.Legobattles
 		BuildPaletteOrder: 60
@@ -7962,7 +7970,7 @@ wizard_vehiclefactory:
 		Palette: player
 		IsPlayerPalette: True
 	SpawnActorsOnSell:
-		ActorTypes: wizard_oarsman
+		ActorTypes: wizard_skeleton
 	Health:
 		HP: 65000
 	Voiced:
@@ -8153,7 +8161,7 @@ wizard_builder:
 		Capacity: 5
 	Armament@repair:
 		Name: repair
-		Weapon: builderrepair
+		Weapon: kinwizbuildermelee
 		TargetStances: Ally
 		ForceTargetStances: Ally
 		LocalOffset: 240,160,240
@@ -8466,7 +8474,7 @@ wizard_troll_blimp:
 	Buildable:
 		Prerequisites: ~wizard_vehiclefactory
 		Queue: Vehicle.Legobattles
-		Description: Flying Patrol unit.. Detector.
+		Description: Flying Patrol unit. Detector.
 	Power:
 		Amount: -75
 	DetectCloaked:
@@ -8493,7 +8501,7 @@ wizard_dragon:
 		HP: 80000
 	Armament:
 		Weapon: dragonbreath
-		LocalOffset: 0,500,0
+		LocalOffset: 1600,0,0
 	Armor:
 		Type: Medium
 	AttackFrontal:
@@ -8508,7 +8516,8 @@ wizard_dragon:
 	Buildable:
 		Prerequisites: ~wizard_vehiclefactory
 		Queue: Vehicle.Legobattles
-		Description: Flying Patrol unit.. Detector.
+		Description: Flying Assault unit. Detector.
+		BuildDuration: 1140
 	Power:
 		Amount: -75
 	DetectCloaked:

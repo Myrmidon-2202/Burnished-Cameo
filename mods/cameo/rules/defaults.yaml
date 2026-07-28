@@ -4592,12 +4592,12 @@
 	WithColoredOverlay@corroded:
 		RequiresCondition: corroded
 		Color: 44FF4444
-	WithIdleOverlay@corroded:
-		RequiresCondition: corroded
-		Image: explosion
-		Sequence: nax_corr_frag
-		StartSequence: nax_corr_frag
-		Palette: ra2effect
+	# WithIdleOverlay@corroded:
+	# 	RequiresCondition: corroded
+	# 	Image: explosion
+	# 	Sequence: nax_corr_frag
+	# 	StartSequence: nax_corr_frag
+	# 	Palette: ra2effect
 
 ^AffectedByHealingField:
 	ExternalCondition@HealingField:
