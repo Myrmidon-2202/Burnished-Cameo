@@ -453,13 +453,13 @@ Actors:
 		SubCell: 3
 	Actor137: heavy_trooper
 		Owner: Creeps
-		Facing: 384
 		Location: 40,47
 		SubCell: 3
+		Facing: 384
 	Actor146: devastator
 		Owner: Creeps
-		Facing: 384
 		Location: 40,48
+		Facing: 384
 	Actor119: astro_trooper
 		Owner: Neutral
 		Facing: 384
@@ -485,5 +485,15 @@ Actors:
 		Facing: 384
 		Location: 52,52
 		SubCell: 3
+	Actor125: sardaukar
+		Location: 41,46
+		SubCell: 3
+		Owner: Creeps
+		Facing: 384
+	Actor132: sardaukar
+		Location: 42,51
+		SubCell: 3
+		Facing: 384
+		Owner: Creeps
 
 Rules: rules.yaml

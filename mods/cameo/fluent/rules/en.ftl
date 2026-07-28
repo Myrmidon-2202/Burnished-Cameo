@@ -2088,12 +2088,39 @@ promotions =
    .rank8 = Level 8
 
 promotions-flavor =
-   .prefix = General Staff
+   .prefix = Promotion Faction Tip
    .notification-01 = You have been promoted. Review the Promotions tab for access to new technologies.
    .notification-02 = Congratulations on your field promotion! Purchase a Promotional upgrade to bolster your forces.
    .notification-03 = Your successes have granted you access to an exclusive field technology or ability of your choice.
    .notification-04 = You've been authorized to purchase a Promotional upgrade. Fight on to earn more points and expand your arsenal.
    .notification-05 = A Promotional upgrade is now available to you. Unlock new units and powers or augment your existing ones.
+
+warcraft-lumbermill-human =
+   .description = Human Lumbermill
+     Dropoff point for gold. (Tiberium).
+	  Can store up to 1000 resources.
+	  Woodworking produces crossbows for archers.
+	  Provides upgrades for archers and Guard towers.
+
+warcraft-lumbermill-orc =
+   .description = Orc Lumbermill
+     Dropoff point for gold. (Tiberium).
+	  Can store up to 1000 resources.
+	  Woodworking produces spears for spearmen.
+	  Provides upgrades for spearmen and Guard towers.
+
+warcraft-rainoffire-human =
+   .description = Rain of Fire
+      This is a very powerful spell that combines the natures of flame and water.
+      It calls forth the essence of fire and delivers it through massive thunderheads of vapor and brimstone, creating an actual firestorm.
+      This spell is very destructive, and will cause damage to any foes and buildings in its sphere of influence.
+      Use this spell with care, for the rain of fire knows no friends.
+
+warcraft-poisoncloud-orc =
+   .description = Poison Cloud
+      The caster creates a cloud comprised of brimstone, acid, and poisonous gases to envelop and choke his targets.
+      This foul stench eats through anything that stands in its way, and chokes the very life out of anyone unlucky enough to be in its path.
+      It is a mix of the sickly stench of rotting corpses and the essence of evil, designed to decay and corrode all that it comes in contact with.
 
 faction-random =
    .name = Any
@@ -2192,3 +2219,22 @@ faction-dune-random =
    .name = Any
    .description = Random faction
 	  A random faction from Westwood's Dune games will be chosen when the game starts.
+
+faction-warcraft-human =
+   .name = Warcraft 1 Human
+   .description = The Humans from Warcraft 1.
+       The Mighty and Intelligent human kingdom of Stormwind, determined to defend it's holdings from all interlopers.
+       Enduring melee focused forces, with supportive and restoring spellcasters.
+       Support powers: Farseeing, Rain of Fire
+
+faction-warcraft-orc =
+   .name = Warcraft 1 Orc
+   .description = The Orcs from Warcraft 1.
+       The Brutish and Crafty Blackrock orcs, seeking expansion via mercilessly crushing all in their path.
+       Enduring melee focused forces, with supportive and reinforcing spellcasters.
+       Support powers: Dark Vision, Poison Cloud
+
+faction-warcraft-random =
+   .name = Any
+   .description = Random faction
+	  A random faction from Warcraft 1 will be chosen when the game starts.

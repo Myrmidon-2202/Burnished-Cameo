@@ -35,6 +35,13 @@ World:
 		Game: Lego Battles
 		Side: Lego Battles
 		Description: Wizard faction from Lego Battles
+	FactionCA@legobattlesrandom:
+		Name: Random LB
+		InternalName: randomlb
+		RandomFactionMembers: legobattlesastro, legobattlesalien, legobattlesimperial, legobattlespirate, legobattlesking, legobattleswizard
+		Game:  Lego Battles
+		Side: Random
+		Description: Play a random Lego Battles Faction
 
 	####################################################################################################
 	#		Astro
@@ -314,7 +321,7 @@ World:
 		Modifier: 500
 
 	####################################################################################################
-	#		INHERITABLES - BUILDING
+	#		INHERITABLES
 	####################################################################################################		
 ^lego_airunit:
 	Inherits: ^Helicopter
@@ -403,7 +410,7 @@ World:
 ^lego_tank:
 	Inherits@VEHICLE: ^legovehicle
 	Inherits@EXPERIENCE: ^GainsExperience
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Valued:
 		Cost: 750
 	Buildable:
@@ -634,6 +641,16 @@ World:
 	#		INHERITABLES - Units
 	####################################################################################################		
 
+^LegoInfantryBounds:
+	Selectable:
+		Bounds: 840, 840, 0, 0
+		DecorationBounds: 840, 840, 0, 0
+
+^LegoCavalryBounds:
+	Selectable:
+		Bounds: 1000, 1000, 0, 0
+		DecorationBounds: 1000, 1000, 0, 0
+
 ^LBWorker:
 	Harvester:
 		PipCount: 3
@@ -645,14 +662,20 @@ World:
 		MaxUnloadQueue: 9
 	WithHarvestAnimation:
 	WithDockingAnimation:
+	Valued:
+		Cost: 60
 	Power:
-		Amount: -5	
+		Amount: -5
+	Selectable:
+		Bounds: 840, 840, 0, 0
+		DecorationBounds: 840, 840, 0, 0
 
 ^lego_mage:
 	Inherits@FOURSTATEDEPLOY: ^LEGOFourStateDeploy
 	Inherits@EXPERIENCE: ^GainsExperience
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
 	Inherits@MC: ^MCImmune
+	Inherits@LB: ^LegoInfantryBounds
 	Valued:
 		Cost: 600
 	Buildable:
@@ -680,7 +703,7 @@ World:
 ^lego_mcv:
 	Inherits@mcv: ^MCV
 	Valued:
-		Cost: 3000
+		Cost: 4000
 	Buildable:
 		BuildPaletteOrder: 10
 		BuildDuration: 750
@@ -993,20 +1016,19 @@ astro_tower:
 	Inherits: ^Defense
 	Inherits@lego_tower: ^lego_tower
 	# Don't declare AutoTarget stuff before AttackBase stuff or an annoying bug with WithSpriteBody will occur.
-	#Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
 		Name: Astro Tower
 	Buildable:
 		Prerequisites: ~astro_conyard
 		Queue: Defence, RADefence
-		Description: Upgradable defense building\nDetector
+		Description: Upgradable defense building. Detector
 	Voiced:
 		VoiceSet: astrotowervoice
 	Armament@PRIMARY:
 		Weapon: legoranged
 		RequiresCondition: !astrotower2upg && !astrotower3upg
 	Armament@AA:
-		Weapon: legorangedaa
+		Weapon: legoranged
 		RequiresCondition: !astrotower2upg && !astrotower3upg
 	Armament@guardtower:
 		Weapon: specialrangedstar
@@ -1020,15 +1042,18 @@ astro_tower:
 	Armament@3toweraa:
 		Weapon: astroplasmaglob
 		RequiresCondition: astrotower2upg && astrotower3upg
-	AttackOmni:
-		PauseOnCondition: disabled
+	Turreted:
+		TurnSpeed: 1023
+		Offset: 128,128,384
+	AttackTurreted:
+		PauseOnCondition: !build-incomplete
 	WithRangeCircle:
 		Range: 3072
 		# RequiresCondition: astrotower2upg
 	Inherits@AUTOTARGET: ^AutoTargetAll
 	### Upgrade stuff ###
 	WithSpriteBody:
-		RequiresCondition: !astrotowerupg && !astrotower2upg
+		RequiresCondition: !astrotower2upg && !astrotower3upg
 		Sequence: astro_tower
 	Production@guardtower:
 		Produces: Towerupgrade
@@ -1078,7 +1103,7 @@ astro_tower:
 	ActorPreviewPlaceBuildingPreview:
 		Palette: player
 	Building:
-		BuildSounds: wc2_constrct.aud
+		BuildSounds: build.wav
 
 astro_tower2:
 	Tooltip:
@@ -1123,15 +1148,6 @@ astro_tower3:
 		Image: astro_tower3
 
 ####################################################################################################
-#		Alien - BUILDINGS
-####################################################################################################
-
-# ALIEN_BASE:
-# 	Inherits: ^ASTRO_CONYARD
-# 	Tooltip:
-# 		Name: Crater Base
-
-####################################################################################################
 #		ASTRO - INFANTRY
 ####################################################################################################
 
@@ -1159,7 +1175,7 @@ astro_builder:
 	Inherits: ^Soldier
 	Inherits: ^PropagandaSelfHeallego
 	Inherits: ^PropagandaSelfHeallegobuilder
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Inherits@selection: ^SelectableEconomicUnit
 	Inherits@harv: ^Harvester
 	Inherits@worker: ^LBWorker
@@ -1224,7 +1240,9 @@ astro_trooper:
 	Inherits@Soldier: ^Soldier
 	Inherits: ^HeavyInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@LB: ^LegoInfantryBounds
+	Inherits@AUTOTARGET: ^AutoTargetAir
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
 		Name: Trooper
 	Buildable:
@@ -1240,7 +1258,7 @@ astro_trooper:
 	Mobile:
 		Speed: 30
 	Health:
-		HP: 20000
+		HP: 27500
 	ReloadDelayMultiplier@cow:
 		Modifier: 60
 	Voiced:
@@ -1256,7 +1274,9 @@ astro_gripley:
 	Inherits@Soldier: ^Soldier
 	Inherits: ^HeavyInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits: ^LegoCavalryBounds
+	Inherits@AUTOTARGET: ^AutoTargetAir
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
 		Name: Gripley
 	Buildable:
@@ -1288,7 +1308,9 @@ astro_commando:
 	Inherits@Soldier: ^Soldier
 	Inherits: ^HeavyInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@LB: ^LegoInfantryBounds
+	Inherits@AUTOTARGET: ^AutoTargetAir
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
 		Name: Commando
 	Buildable:
@@ -1300,7 +1322,7 @@ astro_commando:
 	Armament:
 		Weapon: legoranged
 	Armament@aa:
-		Weapon: legorangedAA
+		Weapon: legorangedaa
 	Valued:
 		Cost: 150
 	Mobile:
@@ -1322,7 +1344,9 @@ astro_space_police:
 	Inherits@Soldier: ^Soldier
 	Inherits: ^HeavyInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@LB: ^LegoInfantryBounds
+	Inherits@AUTOTARGET: ^AutoTargetAir
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
 		Name: Space Police
 	Buildable:
@@ -1334,7 +1358,7 @@ astro_space_police:
 	Armament:
 		Weapon: legoranged
 	Armament@aa:
-		Weapon: legorangedAA
+		Weapon: legorangedaa
 	Valued:
 		Cost: 500
 	Mobile:
@@ -1357,7 +1381,8 @@ astro_gemma:
 	Inherits: ^HeroInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
 	Inherits@LEGOMAGETemplate: ^lego_mage
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AUTOTARGET: ^AutoTargetAir
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
 		Name: Gemma
 	Buildable:
@@ -1548,7 +1573,8 @@ astro_space_police_captain:
 	Inherits@LEGOMAGETemplate: ^lego_mage
 	Inherits: ^HeroInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AUTOTARGET: ^AutoTargetAir
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
 		Name: Space Police Captain
 	Buildable:
@@ -1757,7 +1783,8 @@ astro_biff:
 	Inherits: ^HeroInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
 	Inherits@LEGOMAGETemplate: ^lego_mage
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AUTOTARGET: ^AutoTargetAir
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
 		Name: Biff
 	Buildable:
@@ -1948,14 +1975,14 @@ legobattles_ghost:
 	Inherits@Soldier: ^Soldier
 	Inherits: ^HeroInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
 		Name: Ghost
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 60
 		BuildDurationModifier: 50
-		Prerequisites: 
+		Prerequisites: ~wipcontent
 		Description: Spooky.
 	Armament:
 		Weapon: heromelee
@@ -1981,7 +2008,7 @@ legobattles_ghost:
 astro_claw_tank:
 	Inherits@LEGOTankTRACKED: ^Walker
 	Inherits: ^MainBattleTankTemplate
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Inherits: ^PropagandaSelfHeallego
 	Crushable:
 		WarnProbability: 0
@@ -2008,7 +2035,7 @@ astro_claw_tank:
 	Power:
 		Amount: -20
 	Health:
-		HP: 90000
+		HP: 45000
 	Armament:
 		Weapon: specialrangedAA
 	Armor:
@@ -2043,18 +2070,18 @@ astro_claw_tank:
 astro_transport:
 	Inherits@LEGOAirUnit: ^lego_airunit
 	Inherits@LEGOTemplate: ^lego_transport
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Inherits: ^PropagandaSelfHeallego
 	Tooltip:
 		Name: Astro Transport
 	Armament:
 		Weapon: legoranged
 	Armament@aa:
-		Weapon: legorangedAA
+		Weapon: legorangedaa
 	Valued:
 		Cost: 600
 	Health:
-		HP: 80000
+		HP: 85000
 	Armor:
 		Type: Medium
 	AttackFrontal:
@@ -2073,14 +2100,14 @@ astro_transport:
 
 astro_special_starfighter:
 	Inherits@LEGOAirUnit: ^lego_airunit
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Inherits: ^PropagandaSelfHeallego
 	Tooltip:
 		Name: Starfighter
 	Valued:
 		Cost: 600
 	Health:
-		HP: 95000
+		HP: 55000
 	Armament:
 		Weapon: specialrangedAA
 	Armor:
@@ -2108,14 +2135,14 @@ astro_special_starfighter:
 astro_space_police_cruiser:
 	Inherits@LEGOAirUnit: ^lego_airunit
 	Inherits@SPACE: ^SpaceshipTemplate
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Inherits: ^PropagandaSelfHeallego
 	Tooltip:
 		Name: Space Police Cruiser
 	Valued:
 		Cost: 700
 	Health:
-		HP: 97000   
+		HP: 55000
 	Armament:
 		Weapon: specialrangedstar
 	Armor:
@@ -2132,7 +2159,7 @@ astro_space_police_cruiser:
 	Buildable:
 		Prerequisites: ~astro_vehiclefactory
 		Queue: Vehicle
-		Description: Flying Patrol unit.\nDetector.
+		Description: Flying Patrol unit.. Detector.
 	Power:
 		Amount: -75
 	DetectCloaked:
@@ -2149,14 +2176,14 @@ astro_space_police_cruiser:
 astro_starship2:
 	Inherits@LEGOAirUnit: ^lego_airunit
 	Inherits@SPACE: ^SpaceshipTemplate
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Inherits: ^PropagandaSelfHeallego
 	Tooltip:
 		Name: Starship 2
 	Valued:
 		Cost: 900
 	Health:
-		HP: 100000
+		HP: 70000
 	Armament:
 		Weapon: specialrangedAA2
 	Armor:
@@ -2451,7 +2478,7 @@ alien_vehiclefactory:
 		Name: Creation Pit
 	Buildable:
 		Queue: Building, RABuilding
-		Prerequisites: ~lego_alien_conyard, alien_biodome, alien_barracks
+		Prerequisites: ~lego_alien_conyard, alien_hatchery, alien_barracks
 		BuildPaletteOrder: 50
 		BuildDuration: 160
 		BuildDurationModifier: 100
@@ -2483,9 +2510,11 @@ alien_tower:
 	Buildable:
 		Prerequisites: ~lego_alien_conyard
 		Queue: Defence, RADefence
-		Description: Upgradable defense building\nDetector
+		Description: Upgradable defense building. Detector
 	Voiced:
-		VoiceSet: spirevoice
+		VoiceSet: alientowervoice
+	RenderSprites: 
+		Image: alien_tower
 	Armament@PRIMARY:
 		Weapon: legoranged
 		RequiresCondition: !alien_tower2upg && !alien_tower3upg
@@ -2504,8 +2533,11 @@ alien_tower:
 	Armament@3toweraa:
 		Weapon: astroplasmaglob
 		RequiresCondition: alien_tower2upg && alien_tower3upg
-	AttackOmni:
-		PauseOnCondition: disabled
+	Turreted:
+		TurnSpeed: 1023
+		Offset: 128,128,384
+	AttackTurreted:
+		PauseOnCondition: !build-incomplete
 	WithRangeCircle:
 		Range: 3072
 		# RequiresCondition: alien_tower2upg
@@ -2610,7 +2642,7 @@ alien_builder:
 	Inherits: ^Soldier
 	Inherits: ^PropagandaSelfHeallego
 	Inherits: ^PropagandaSelfHeallegobuilder
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Inherits@selection: ^SelectableEconomicUnit
 	Inherits@harv: ^Harvester
 	Inherits@worker: ^LBWorker
@@ -2675,7 +2707,8 @@ alien_drone:
 	Inherits@Soldier: ^Soldier
 	Inherits: ^HeavyInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@LB: ^LegoInfantryBounds
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
 		Name: Drone
 	Buildable:
@@ -2691,7 +2724,7 @@ alien_drone:
 	Mobile:
 		Speed: 30
 	Health:
-		HP: 29000
+		HP: 22500
 	ReloadDelayMultiplier@cow:
 		Modifier: 60
 	Voiced:
@@ -2707,7 +2740,8 @@ alien_laser_trooper:
 	Inherits@Soldier: ^Soldier
 	Inherits: ^HeavyInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@LB: ^LegoInfantryBounds
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
 		Name: Laser Trooper
 	Buildable:
@@ -2739,7 +2773,8 @@ alien_grav_runner:
 	Inherits@Soldier: ^Soldier
 	Inherits: ^HeavyInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits: ^LegoCavalryBounds
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
 		Name: Grav Runner
 	Buildable:
@@ -2771,7 +2806,8 @@ alien_space_criminal:
 	Inherits@Soldier: ^Soldier
 	Inherits: ^HeavyInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@LB: ^LegoInfantryBounds
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
 		Name: Space Criminal
 	Buildable:
@@ -2804,7 +2840,7 @@ alien_commander:
 	Inherits: ^HeroInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
 	Inherits@LEGOMAGETemplate: ^lego_mage
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
 		Name: Alien Commander
 	Buildable:
@@ -2995,7 +3031,7 @@ alien_queen:
 	Inherits: ^HeroInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
 	Inherits@LEGOMAGETemplate: ^lego_mage
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
 		Name: Alien Queen
 	Buildable:
@@ -3186,7 +3222,7 @@ space_criminal_leader:
 	Inherits@LEGOMAGETemplate: ^lego_mage
 	Inherits: ^HeroInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
 		Name: Space Criminal Leader
 	Buildable:
@@ -3235,13 +3271,6 @@ space_criminal_leader:
 		Condition: damagebuff
 		Range: 6c0
 		RequiresCondition: FSD_cond_2 && !disabled
-	GrantCondition@TRACKBUFFSELF:
-		Condition: trackbuff
-		RequiresCondition: FSD_cond_3
-	ProximityExternalCondition@TRACKBUFFOTHER:
-		Condition: trackbuff
-		Range: 6c0
-		RequiresCondition: FSD_cond_3 && !disabled
 	#Spells
 	MindControllerCA:
 		ArmamentNames: hotwire
@@ -3401,23 +3430,7 @@ space_criminal_leader:
 alien_attack_ship:
 	Inherits@LEGOTankTRACKED: ^Tank
 	Inherits: ^MainBattleTankTemplate
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
-	# Inherits@fix: ^Repairable
-	# Inherits@2: ^IronCurtainable
-	# Inherits@rad: ^VehicleRadiation
-	# Inherits@EMP: ^UnitDisable
-	# Inherits@mag: ^Magnefreezable
-	# Inherits@heal: ^MachineShopRepairable
-	# Inherits@driver-dead: ^AffectedByDriverKill
-	# Inherits@salvage: ^GenericSalvageBonus
-	# Inherits@emergencyrepair: ^EmergencyRepairable
-	# Inherits@chrono: ^Chronoshiftable
-  # Inherits@instablow: ^Instant_Kill_Vehicle
-  # Inherits@unstableeffect: ^UnstableEffect
-  # Inherits@base-reveal: ^Base-reveal
-  # Inherits@LeechEggLayable: ^LeechEggLayable
-  # Inherits@Xmassetting: ^Xmas_setting
-  # Inherits@casinoupgrade: ^CasinoUpgradeable
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Inherits: ^PropagandaSelfHeallego
 	Crushable:
 		WarnProbability: 0
@@ -3444,7 +3457,7 @@ alien_attack_ship:
 	Power:
 		Amount: -20
 	Health:
-		HP: 90000
+		HP: 45000
 	Armament:
 		Weapon: specialrangedAA
 	Armor:
@@ -3472,18 +3485,18 @@ alien_attack_ship:
 alien_transport_ship:
 	Inherits@LEGOAirUnit: ^lego_airunit
 	Inherits@LEGOTemplate: ^lego_transport
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Inherits: ^PropagandaSelfHeallego
 	Tooltip:
 		Name: Alien Transport Ship
 	Armament:
 		Weapon: legoranged
 	Armament@aa:
-		Weapon: legorangedAA
+		Weapon: legorangedaa
 	Valued:
 		Cost: 600
 	Health:
-		HP: 80000
+		HP: 85000
 	Armor:
 		Type: Medium
 	AttackFrontal:
@@ -3502,14 +3515,14 @@ alien_transport_ship:
 
 alien_strike_ship:
 	Inherits@LEGOAirUnit: ^lego_airunit
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Inherits: ^PropagandaSelfHeallego
 	Tooltip:
 		Name: Alien Strike Ship
 	Valued:
 		Cost: 600
 	Health:
-		HP: 95000
+		HP: 55000
 	Armament:
 		Weapon: specialrangedAA
 	Armor:
@@ -3537,14 +3550,14 @@ alien_strike_ship:
 alien_space_criminal_hotrod:
 	Inherits@LEGOAirUnit: ^lego_airunit
 	Inherits@SPACE: ^SpaceshipTemplate
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Inherits: ^PropagandaSelfHeallego
 	Tooltip:
 		Name: Space Criminal Hot Rod
 	Valued:
 		Cost: 700
 	Health:
-		HP: 97000
+		HP: 55000
 	Armament:
 		Weapon: specialrangedstar
 	Armor:
@@ -3561,7 +3574,7 @@ alien_space_criminal_hotrod:
 	Buildable:
 		Prerequisites: ~alien_vehiclefactory
 		Queue: Vehicle.Legobattles
-		Description: Flying Patrol unit.\nDetector.
+		Description: Flying Patrol unit.. Detector.
 	Power:
 		Amount: -75
 	DetectCloaked:
@@ -3578,14 +3591,14 @@ alien_space_criminal_hotrod:
 alien_assault_ship:
 	Inherits@LEGOAirUnit: ^lego_airunit
 	Inherits@SPACE: ^SpaceshipTemplate
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Inherits: ^PropagandaSelfHeallego
 	Tooltip:
 		Name: Alien Assault Ship
 	Valued:
 		Cost: 900
 	Health:
-		HP: 100000
+		HP: 70000
 	Armament:
 		Weapon: specialrangedAA2
 	Armor:
@@ -3886,9 +3899,9 @@ imperial_tower:
 	Buildable:
 		Prerequisites: ~lego_imperial_conyard
 		Queue: Defence, RADefence
-		Description: Upgradable defense building\nDetector
+		Description: Upgradable defense building. Detector
 	Voiced:
-		VoiceSet: spirevoice
+		VoiceSet: imperialtowervoice
 	Armament@PRIMARY:
 		Weapon: piratelegoranged
 		RequiresCondition: !imperial_tower2upg && !imperial_tower3upg
@@ -3896,10 +3909,10 @@ imperial_tower:
 		Weapon: piratelegoranged
 		RequiresCondition: !imperial_tower2upg && !imperial_tower3upg
 	Armament@guardtower:
-		Weapon: specialrangedstar
+		Weapon: piratespecialrangedball
 		RequiresCondition: imperial_tower2upg && !imperial_tower3upg
 	Armament@guardtoweraa:
-		Weapon: specialrangedstar
+		Weapon: piratespecialrangedball
 		RequiresCondition: imperial_tower2upg && !imperial_tower3upg
 	Armament@g3tower:
 		Weapon: piratespecialrangedball
@@ -3907,8 +3920,11 @@ imperial_tower:
 	Armament@3toweraa:
 		Weapon: piratespecialrangedball
 		RequiresCondition: imperial_tower2upg && imperial_tower3upg
-	AttackOmni:
-		PauseOnCondition: disabled
+	Turreted:
+		TurnSpeed: 1023
+		Offset: 128,128,384
+	AttackTurreted:
+		PauseOnCondition: !build-incomplete
 	WithRangeCircle:
 		Range: 3072
 		# RequiresCondition: imperial_tower2upg
@@ -4038,7 +4054,7 @@ imperial_builder:
 	Inherits: ^Soldier
 	Inherits: ^PropagandaSelfHeallego
 	Inherits: ^PropagandaSelfHeallegobuilder
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Inherits@selection: ^SelectableEconomicUnit
 	Inherits@harv: ^Harvester
 	Inherits@worker: ^LBWorker
@@ -4103,7 +4119,8 @@ imperial_swordsman:
 	Inherits@Soldier: ^Soldier
 	Inherits: ^HeavyInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@LB: ^LegoInfantryBounds
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
 		Name: Swordsman
 	Buildable:
@@ -4119,7 +4136,7 @@ imperial_swordsman:
 	Mobile:
 		Speed: 30
 	Health:
-		HP: 31000
+		HP: 25000
 	ReloadDelayMultiplier@cow:
 		Modifier: 60
 	Voiced:
@@ -4135,7 +4152,8 @@ imperial_rifleman:
 	Inherits@Soldier: ^Soldier
 	Inherits: ^HeavyInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@LB: ^LegoInfantryBounds
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
 		Name: Rifleman
 	Buildable:
@@ -4169,7 +4187,8 @@ imperial_cavalry:
 	Inherits@Soldier: ^Soldier
 	Inherits: ^HeavyInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits: ^LegoCavalryBounds
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
 		Name: Cavalry
 	Buildable:
@@ -4201,7 +4220,8 @@ imperial_ninja:
 	Inherits@Soldier: ^Soldier
 	Inherits: ^HeavyInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@LB: ^LegoInfantryBounds
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
 		Name: Ninja
 	Buildable:
@@ -4234,7 +4254,7 @@ imperial_ninja:
 imperial_culverin:
 	Inherits@LEGOTankTRACKED: ^Tank
 	Inherits: ^MainBattleTankTemplate
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Inherits: ^PropagandaSelfHeallego
 	Crushable:
 		WarnProbability: 0
@@ -4290,14 +4310,14 @@ imperial_flying_ship:
 	Inherits@LEGOAirUnit: ^lego_airunit
 	Inherits@LEGOTemplate: ^lego_transport
 	Inherits@SPACE: ^SpaceshipTemplate
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Inherits: ^PropagandaSelfHeallego
 	Tooltip:
 		Name: Ninja Flying Ship
 	Valued:
 		Cost: 700
 	Health:
-		HP: 97000
+		HP: 55000
 	Armament:
 		Weapon: piratespecialrangedarrow
 	Armor:
@@ -4314,7 +4334,7 @@ imperial_flying_ship:
 	Buildable:
 		Prerequisites: ~imperial_vehiclefactory
 		Queue: Vehicle.Legobattles
-		Description: Flying Patrol unit.\nDetector.
+		Description: Flying Patrol unit.. Detector.
 	Power:
 		Amount: -75
 	DetectCloaked:
@@ -4333,7 +4353,7 @@ imperial_governor_broadside:
 	Inherits: ^HeroInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
 	Inherits@LEGOMAGETemplate: ^lego_mage
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
 		Name: Governor Broadside
 	Buildable:
@@ -4524,7 +4544,7 @@ imperial_camilla:
 	Inherits: ^HeroInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
 	Inherits@LEGOMAGETemplate: ^lego_mage
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
 		Name: Camilla
 	Buildable:
@@ -4715,7 +4735,7 @@ imperial_ninja_master:
 	Inherits: ^HeroInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
 	Inherits@LEGOMAGETemplate: ^lego_mage
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
 		Name: Ninja Master
 	Buildable:
@@ -4751,7 +4771,8 @@ imperial_ninja_master:
 		UseDeathTypeSuffix: false
 	PortableChronoCA:
 		ChargeDelay: 20
-		HasDistanceLimit: false
+		HasDistanceLimit: true
+		MaxDistance: 30
 		FlashScreen: false
 		ChronoshiftSound: teleport.wav
 		RequiresCondition: FSD_cond_3
@@ -5182,7 +5203,7 @@ pirate_tower:
 	Buildable:
 		Prerequisites: ~lego_pirate_conyard
 		Queue: Defence, RADefence
-		Description: Upgradable defense building\nDetector
+		Description: Upgradable defense building. Detector
 	Voiced:
 		VoiceSet: imperialtowervoice
 	Armament@PRIMARY:
@@ -5192,10 +5213,10 @@ pirate_tower:
 		Weapon: piratelegoranged
 		RequiresCondition: !pirate_tower2upg && !pirate_tower3upg
 	Armament@guardtower:
-		Weapon: specialrangedstar
+		Weapon: piratespecialrangedball
 		RequiresCondition: pirate_tower2upg && !pirate_tower3upg
 	Armament@guardtoweraa:
-		Weapon: specialrangedstar
+		Weapon: piratespecialrangedball
 		RequiresCondition: pirate_tower2upg && !pirate_tower3upg
 	Armament@g3tower:
 		Weapon: piratespecialrangedball
@@ -5203,8 +5224,11 @@ pirate_tower:
 	Armament@3toweraa:
 		Weapon: piratespecialrangedball
 		RequiresCondition: pirate_tower2upg && pirate_tower3upg
-	AttackOmni:
-		PauseOnCondition: disabled
+	Turreted:
+		TurnSpeed: 1023
+		Offset: 128,128,384
+	AttackTurreted:
+		PauseOnCondition: !build-incomplete
 	WithRangeCircle:
 		Range: 3072
 		# RequiresCondition: pirate_tower2upg
@@ -5334,7 +5358,7 @@ pirate_builder:
 	Inherits: ^Soldier
 	Inherits: ^PropagandaSelfHeallego
 	Inherits: ^PropagandaSelfHeallegobuilder
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Inherits@selection: ^SelectableEconomicUnit
 	Inherits@harv: ^Harvester
 	Inherits@worker: ^LBWorker
@@ -5399,7 +5423,8 @@ pirate_oarsman:
 	Inherits@Soldier: ^Soldier
 	Inherits: ^HeavyInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@LB: ^LegoInfantryBounds
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
 		Name: Oarsman
 	Buildable:
@@ -5415,7 +5440,7 @@ pirate_oarsman:
 	Mobile:
 		Speed: 30
 	Health:
-		HP: 31000
+		HP: 30000
 	ReloadDelayMultiplier@cow:
 		Modifier: 60
 	Voiced:
@@ -5431,7 +5456,8 @@ pirate_gunman:
 	Inherits@Soldier: ^Soldier
 	Inherits: ^HeavyInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@LB: ^LegoInfantryBounds
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
 		Name: Gunman
 	Buildable:
@@ -5465,7 +5491,8 @@ pirate_horseman:
 	Inherits@Soldier: ^Soldier
 	Inherits: ^HeavyInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits: ^LegoCavalryBounds
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
 		Name: Horseman
 	Buildable:
@@ -5497,7 +5524,8 @@ pirate_islander:
 	Inherits@Soldier: ^Soldier
 	Inherits: ^HeavyInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@LB: ^LegoInfantryBounds
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
 		Name: Islander
 	Buildable:
@@ -5530,7 +5558,7 @@ pirate_islander:
 pirate_cannon:
 	Inherits@LEGOTankTRACKED: ^Tank
 	Inherits: ^MainBattleTankTemplate
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Inherits: ^PropagandaSelfHeallego
 	Crushable:
 		WarnProbability: 0
@@ -5583,7 +5611,7 @@ pirate_cannon:
 pirate_tiki_golem:
 	Inherits@LEGOTankTRACKED: ^Walker
 	Inherits: ^MainBattleTankTemplate
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Inherits: ^PropagandaSelfHeallego
 	Crushable:
 		WarnProbability: 0
@@ -5610,7 +5638,7 @@ pirate_tiki_golem:
 	Power:
 		Amount: -20
 	Health:
-		HP: 120000
+		HP: 55000
 	Armament:
 		Weapon: kingpecialrangedrock
 	Armor:
@@ -5640,7 +5668,7 @@ pirate_captain_brickbeard:
 	Inherits: ^HeroInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
 	Inherits@LEGOMAGETemplate: ^lego_mage
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
 		Name: Captain Brickbeard
 	Buildable:
@@ -5831,7 +5859,7 @@ pirate_lady_pirate:
 	Inherits: ^HeroInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
 	Inherits@LEGOMAGETemplate: ^lego_mage
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
 		Name: Lady Pirate
 	Buildable:
@@ -6022,7 +6050,7 @@ pirate_king_kahuka:
 	Inherits: ^HeroInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
 	Inherits@LEGOMAGETemplate: ^lego_mage
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
 		Name: King Kahuka
 	Buildable:
@@ -6218,14 +6246,14 @@ pirate_monkey:
 	Inherits@Soldier: ^Soldier
 	Inherits: ^HeavyInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
 		Name: Monkey
 	Buildable:
 		Queue: Infantry.Legobattles
 		BuildPaletteOrder: 1
 		BuildDuration: 100
-		Prerequisites:
+		Prerequisites: ~None
 		Description: A monkey, for scouting or sabotage.
 	Armament:
 		Weapon: oarsmanmelee
@@ -6246,39 +6274,32 @@ pirate_monkey:
 	WithDeathAnimation:
 		UseDeathTypeSuffix: false
 
-# pirate_crab:
-# 	Inherits@Soldier: ^Soldier
-# 	Inherits: ^PropagandaSelfHeallego
-# 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
-# 	-Selectable:
-# 	-Targetable:
-# 	-SelectionDecorations:
-# 	Tooltip:
-# 		Name: crabswarm
-# 	Buildable:
-# 		BuildPaletteOrder: 1
-# 		BuildDuration: 100
-# 		Prerequisites:
-# 		Description: crabswarms
-# 	Armament:
-# 		Weapon: alienmelee
-# 	Valued:
-# 		Cost: 100
-# 	Mobile:
-# 		Speed: 1
-# 	Health:
-# 		HP: 31000
-# 	ReloadDelayMultiplier@cow:
-# 		Modifier: 60
-# 	Voiced:
-# 		VoiceSet: swordsmanvoice
-# 	WithSpriteBody:
-# 		DefaultSequence: idle
-# 		Animation: pirate_crab
-# 	Power:
-# 		Amount: -10
-# 	WithDeathAnimation:
-# 		UseDeathTypeSuffix: false
+pirate_crab:
+	Inherits@Soldier: ^Soldier
+	Inherits: ^HeavyInfantryTemplate
+	Inherits: ^PropagandaSelfHeallego
+	Inherits@AUTOTARGET: ^AutoTargetAll
+	Tooltip:
+		Name: Crab
+	Buildable:
+		BuildPaletteOrder: 1
+		BuildDuration: 100
+		Prerequisites: ~pirate_barracks
+		Description: Crabs mateys!
+	Armament:
+		Weapon: oarsmanmelee
+	Mobile:
+		Speed: 40
+	Health:
+		HP: 11000
+	ReloadDelayMultiplier@cow:
+		Modifier: 60
+	Voiced:
+		VoiceSet: crabvoice
+	WithInfantryBody:
+		-IdleSequences: idle1,idle2,idle3,idle4
+	WithDeathAnimation:
+		UseDeathTypeSuffix: false
 
 ####################################################################################################
 #		King - Structures
@@ -6555,29 +6576,32 @@ king_tower:
 	Buildable:
 		Prerequisites: ~lego_king_conyard
 		Queue: Defence, RADefence
-		Description: Upgradable defense building\nDetector
+		Description: Upgradable defense building. Detector
 	Voiced:
 		VoiceSet: kingtowervoice
 	Armament@PRIMARY:
-		Weapon: piratelegoranged
+		Weapon: piratelegorangedarrow
 		RequiresCondition: !king_tower2upg && !king_tower3upg
 	Armament@AA:
-		Weapon: piratelegoranged
+		Weapon: piratelegorangedarrow
 		RequiresCondition: !king_tower2upg && !king_tower3upg
 	Armament@guardtower:
-		Weapon: specialrangedstar
+		Weapon: piratespecialrangedarrow
 		RequiresCondition: king_tower2upg && !king_tower3upg
 	Armament@guardtoweraa:
-		Weapon: specialrangedstar
+		Weapon: piratespecialrangedarrow
 		RequiresCondition: king_tower2upg && !king_tower3upg
 	Armament@g3tower:
-		Weapon: piratespecialrangedball
+		Weapon: piratespecialrangedarrow
 		RequiresCondition: king_tower2upg && king_tower3upg
 	Armament@3toweraa:
-		Weapon: piratespecialrangedball
+		Weapon: piratespecialrangedarrow
 		RequiresCondition: king_tower2upg && king_tower3upg
-	AttackOmni:
-		PauseOnCondition: disabled
+	Turreted:
+		TurnSpeed: 1023
+		Offset: 128,128,384
+	AttackTurreted:
+		PauseOnCondition: !build-incomplete
 	WithRangeCircle:
 		Range: 3072
 		# RequiresCondition: king_tower2upg
@@ -6703,11 +6727,11 @@ lego_king_mcv:
 	WithInfantryBody:
 		-IdleSequences: idle1,idle2,idle3,idle4
 
-king_builder
+king_builder:
 	Inherits: ^Soldier
 	Inherits: ^PropagandaSelfHeallego
 	Inherits: ^PropagandaSelfHeallegobuilder
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Inherits@selection: ^SelectableEconomicUnit
 	Inherits@harv: ^Harvester
 	Inherits@worker: ^LBWorker
@@ -6772,7 +6796,8 @@ king_guardsman:
 	Inherits@Soldier: ^Soldier
 	Inherits: ^HeavyInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@LB: ^LegoInfantryBounds
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
 		Name: Guardsman
 	Buildable:
@@ -6782,13 +6807,13 @@ king_guardsman:
 		Prerequisites: ~king_barracks
 		Description: Basic Melee Infantry
 	Armament:
-		Weapon: alienmelee
+		Weapon: guardsmanmelee
 	Valued:
 		Cost: 100
 	Mobile:
 		Speed: 30
 	Health:
-		HP: 31000
+		HP: 35000
 	ReloadDelayMultiplier@cow:
 		Modifier: 60
 	Voiced:
@@ -6804,7 +6829,8 @@ king_archer:
 	Inherits@Soldier: ^Soldier
 	Inherits: ^HeavyInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@LB: ^LegoInfantryBounds
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
 		Name: Archer
 	Buildable:
@@ -6838,7 +6864,8 @@ king_knight:
 	Inherits@Soldier: ^Soldier
 	Inherits: ^HeavyInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits: ^LegoCavalryBounds
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
 		Name: Knight
 	Buildable:
@@ -6870,7 +6897,8 @@ king_dwarf:
 	Inherits@Soldier: ^Soldier
 	Inherits: ^HeavyInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@LB: ^LegoInfantryBounds
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
 		Name: Dwarf
 	Buildable:
@@ -6880,15 +6908,13 @@ king_dwarf:
 		Prerequisites: ~king_barracks
 		Description: Harrying Ranged Infantry.
 	Armament:
-		Weapon: swordsmanmelee
-	Armament@aa:
-		Weapon: swordsmanmelee
+		Weapon: guardsmanmelee
 	Valued:
 		Cost: 100
 	Mobile:
 		Speed: 40
 	Health:
-		HP: 32000
+		HP: 25000
 	ReloadDelayMultiplier@cow:
 		Modifier: 60
 	Power:
@@ -6903,7 +6929,7 @@ king_dwarf:
 king_ballista:
 	Inherits@LEGOTankTRACKED: ^Walker
 	Inherits: ^MainBattleTankTemplate
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Inherits: ^PropagandaSelfHeallego
 	Crushable:
 		WarnProbability: 0
@@ -6930,7 +6956,7 @@ king_ballista:
 	Power:
 		Amount: -20
 	Health:
-		HP: 90000
+		HP: 45000
 	Armament:
 		Weapon: specialrangedAA
 	Armor:
@@ -6956,7 +6982,7 @@ king_ballista:
 king_catapult:
 	Inherits@LEGOTankTRACKED: ^Walker
 	Inherits: ^MainBattleTankTemplate
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Inherits: ^PropagandaSelfHeallego
 	Crushable:
 		WarnProbability: 0
@@ -6983,7 +7009,7 @@ king_catapult:
 	Power:
 		Amount: -20
 	Health:
-		HP: 90000
+		HP: 55000
 	Armament:
 		Weapon: kingpecialrangedrock
 	Armor:
@@ -7012,14 +7038,14 @@ king_dwarf_glider:
 	Inherits@LEGOAirUnit: ^lego_airunit
 	Inherits@LEGOTemplate: ^lego_transport
 	Inherits@SPACE: ^SpaceshipTemplate
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Inherits: ^PropagandaSelfHeallego
 	Tooltip:
 		Name: Dwarven Glider
 	Valued:
 		Cost: 700
 	Health:
-		HP: 97000
+		HP: 55000
 	Armament:
 		Weapon: piratespecialrangedarrow
 	Armor:
@@ -7036,7 +7062,7 @@ king_dwarf_glider:
 	Buildable:
 		Prerequisites: ~king_vehiclefactory
 		Queue: Vehicle.Legobattles
-		Description: Flying Patrol unit.\nDetector.
+		Description: Flying Patrol unit.. Detector.
 	Power:
 		Amount: -75
 	DetectCloaked:
@@ -7053,20 +7079,22 @@ king_dwarf_glider:
 king_dragon:
 	Inherits@LEGOAirUnit: ^lego_airunit
 	Inherits@SPACE: ^SpaceshipTemplate
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Inherits: ^PropagandaSelfHeallego
 	Tooltip:
-		Name: Dragon
+		Name: King Dragon
 	Valued:
-		Cost: 800
+		Cost: 900
 	Health:
-		HP: 97000
+		HP: 80000
 	Armament:
 		Weapon: dragonbreath
+		Name: primary
+		LocalOffset: 0,500,0
 	Armor:
 		Type: Medium
 	AttackFrontal:
-		FacingTolerance: 2
+		FacingTolerance: 1
 		PauseOnCondition: disabled
 	Aircraft:
 		InitialFacing: 224
@@ -7077,7 +7105,7 @@ king_dragon:
 	Buildable:
 		Prerequisites: ~king_vehiclefactory
 		Queue: Vehicle.Legobattles
-		Description: Flying Patrol unit.\nDetector.
+		Description: Flying Patrol unit.. Detector.
 	Power:
 		Amount: -75
 	DetectCloaked:
@@ -7087,13 +7115,14 @@ king_dragon:
 	Voiced:
 		VoiceSet: dragonvoice
 	WithInfantryBody:
-		IdleSequences: idle
-		StandSequences: stand
 		DefaultAttackSequence: shoot
+	WithAttackAnimation:
+		Armament: primary
+		Sequence: shoot
 	WithMoveAnimation:
 		MoveSequence: run
 	Selectable:
-		DecorationBounds: 1280, 1280, 0, 0
+		DecorationBounds: 2560, 2560, 0, 0
 	RenderSprites:
 		Scale: 0.7
 
@@ -7102,7 +7131,7 @@ king_king:
 	Inherits: ^HeroInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
 	Inherits@LEGOMAGETemplate: ^lego_mage
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
 		Name: King
 	Buildable:
@@ -7293,7 +7322,7 @@ king_queen:
 	Inherits: ^HeroInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
 	Inherits@LEGOMAGETemplate: ^lego_mage
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
 		Name: Queen
 	Buildable:
@@ -7484,7 +7513,7 @@ king_dwarf_king:
 	Inherits: ^HeroInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
 	Inherits@LEGOMAGETemplate: ^lego_mage
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
 		Name: King
 	Buildable:
@@ -7795,7 +7824,7 @@ wizard_barracks:
 		Queues: Infantry.Legobattles
 		Sequence: lego_production_overlay_skeleton
 	Voiced:
-		VoiceSet: mausoleumvoice
+		VoiceSet: wizardbarracksvoice
 	ProvidesPrerequisite:
 		Prerequisite: wizard_BARRACKS
 	RenderSprites:
@@ -7949,29 +7978,32 @@ wizard_tower:
 	Buildable:
 		Prerequisites: ~lego_wizard_conyard
 		Queue: Defence, RADefence
-		Description: Upgradable defense building\nDetector
+		Description: Upgradable defense building. Detector
 	Voiced:
 		VoiceSet: kingtowervoice
 	Armament@PRIMARY:
-		Weapon: piratelegoranged
+		Weapon: piratelegorangedarrow
 		RequiresCondition: !wizard_tower2upg && !wizard_tower3upg
 	Armament@AA:
-		Weapon: piratelegoranged
+		Weapon: piratelegorangedarrow
 		RequiresCondition: !wizard_tower2upg && !wizard_tower3upg
 	Armament@guardtower:
-		Weapon: specialrangedstar
+		Weapon: piratespecialrangedarrow
 		RequiresCondition: wizard_tower2upg && !wizard_tower3upg
 	Armament@guardtoweraa:
-		Weapon: specialrangedstar
+		Weapon: piratespecialrangedarrow
 		RequiresCondition: wizard_tower2upg && !wizard_tower3upg
 	Armament@g3tower:
-		Weapon: piratespecialrangedball
+		Weapon: piratespecialrangedarrow
 		RequiresCondition: wizard_tower2upg && wizard_tower3upg
 	Armament@3toweraa:
-		Weapon: piratespecialrangedball
+		Weapon: piratespecialrangedarrow
 		RequiresCondition: wizard_tower2upg && wizard_tower3upg
-	AttackOmni:
-		PauseOnCondition: disabled
+	Turreted:
+		TurnSpeed: 1023
+		Offset: 128,128,384
+	AttackTurreted:
+		PauseOnCondition: !build-incomplete
 	WithRangeCircle:
 		Range: 3072
 		# RequiresCondition: wizard_tower2upg
@@ -8097,11 +8129,11 @@ lego_wizard_mcv:
 	WithInfantryBody:
 		-IdleSequences: idle1,idle2,idle3,idle4
 
-wizard_builder
+wizard_builder:
 	Inherits: ^Soldier
 	Inherits: ^PropagandaSelfHeallego
 	Inherits: ^PropagandaSelfHeallegobuilder
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Inherits@selection: ^SelectableEconomicUnit
 	Inherits@harv: ^Harvester
 	Inherits@worker: ^LBWorker
@@ -8166,7 +8198,8 @@ wizard_skeleton:
 	Inherits@Soldier: ^Soldier
 	Inherits: ^HeavyInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@LB: ^LegoInfantryBounds
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
 		Name: Skeleton
 	Buildable:
@@ -8182,7 +8215,7 @@ wizard_skeleton:
 	Mobile:
 		Speed: 60
 	Health:
-		HP: 29000
+		HP: 22500
 	ReloadDelayMultiplier@cow:
 		Modifier: 60
 	Voiced:
@@ -8198,7 +8231,8 @@ wizard_crossbowman:
 	Inherits@Soldier: ^Soldier
 	Inherits: ^HeavyInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@LB: ^LegoInfantryBounds
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
 		Name: Crossbowman
 	Buildable:
@@ -8232,7 +8266,8 @@ wizard_knight:
 	Inherits@Soldier: ^Soldier
 	Inherits: ^HeavyInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits: ^LegoCavalryBounds
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
 		Name: Skeleton Knight
 	Buildable:
@@ -8264,7 +8299,8 @@ wizard_troll:
 	Inherits@Soldier: ^Soldier
 	Inherits: ^HeavyInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@LB: ^LegoInfantryBounds
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
 		Name: Troll
 	Buildable:
@@ -8274,15 +8310,15 @@ wizard_troll:
 		Prerequisites: ~wizard_barracks
 		Description: Harrying Ranged Infantry.
 	Armament:
-		Weapon: swordsmanmelee
+		Weapon: trollmelee
 	Armament@aa:
-		Weapon: swordsmanmelee
+		Weapon: trollmelee
 	Valued:
 		Cost: 100
 	Mobile:
 		Speed: 60
 	Health:
-		HP: 31000
+		HP: 25000
 	ReloadDelayMultiplier@cow:
 		Modifier: 60
 	Power:
@@ -8297,7 +8333,7 @@ wizard_troll:
 wizard_siege_tower:
 	Inherits@LEGOTankTRACKED: ^Walker
 	Inherits: ^MainBattleTankTemplate
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Inherits: ^PropagandaSelfHeallego
 	Crushable:
 		WarnProbability: 0
@@ -8324,7 +8360,7 @@ wizard_siege_tower:
 	Power:
 		Amount: -20
 	Health:
-		HP: 100000
+		HP: 45000
 	Armament:
 		Weapon: specialrangedAA
 	Armor:
@@ -8350,7 +8386,7 @@ wizard_siege_tower:
 wizard_troll_giant:
 	Inherits@LEGOTankTRACKED: ^Walker
 	Inherits: ^MainBattleTankTemplate
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Inherits: ^PropagandaSelfHeallego
 	Crushable:
 		WarnProbability: 0
@@ -8377,7 +8413,7 @@ wizard_troll_giant:
 	Power:
 		Amount: -20
 	Health:
-		HP: 95000
+		HP: 55000
 	Armament:
 		Weapon: kingpecialrangedrock
 	Armor:
@@ -8406,14 +8442,14 @@ wizard_troll_blimp:
 	Inherits@LEGOAirUnit: ^lego_airunit
 	Inherits@LEGOTemplate: ^lego_transport
 	Inherits@SPACE: ^SpaceshipTemplate
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Inherits: ^PropagandaSelfHeallego
 	Tooltip:
 		Name: Troll Blimp
 	Valued:
 		Cost: 700
 	Health:
-		HP: 97000
+		HP: 55000
 	Armament:
 		Weapon: piratespecialrangedarrow
 	Armor:
@@ -8430,7 +8466,7 @@ wizard_troll_blimp:
 	Buildable:
 		Prerequisites: ~wizard_vehiclefactory
 		Queue: Vehicle.Legobattles
-		Description: Flying Patrol unit.\nDetector.
+		Description: Flying Patrol unit.. Detector.
 	Power:
 		Amount: -75
 	DetectCloaked:
@@ -8447,20 +8483,21 @@ wizard_troll_blimp:
 wizard_dragon:
 	Inherits@LEGOAirUnit: ^lego_airunit
 	Inherits@SPACE: ^SpaceshipTemplate
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Inherits: ^PropagandaSelfHeallego
 	Tooltip:
-		Name: Dragon
+		Name: Wizard Dragon
 	Valued:
-		Cost: 800
+		Cost: 900
 	Health:
-		HP: 97000
+		HP: 80000
 	Armament:
 		Weapon: dragonbreath
+		LocalOffset: 0,500,0
 	Armor:
 		Type: Medium
 	AttackFrontal:
-		FacingTolerance: 2
+		FacingTolerance: 1
 		PauseOnCondition: disabled
 	Aircraft:
 		InitialFacing: 224
@@ -8471,7 +8508,7 @@ wizard_dragon:
 	Buildable:
 		Prerequisites: ~wizard_vehiclefactory
 		Queue: Vehicle.Legobattles
-		Description: Flying Patrol unit.\nDetector.
+		Description: Flying Patrol unit.. Detector.
 	Power:
 		Amount: -75
 	DetectCloaked:
@@ -8481,13 +8518,14 @@ wizard_dragon:
 	Voiced:
 		VoiceSet: dragonvoice
 	WithInfantryBody:
-		IdleSequences: idle
-		StandSequences: stand
 		DefaultAttackSequence: shoot
 	WithMoveAnimation:
 		MoveSequence: run
+	WithAttackAnimation:
+		Armament: primary
+		Sequence: shoot
 	Selectable:
-		DecorationBounds: 1280, 1280, 0, 0
+		DecorationBounds: 2560, 2560, 0, 0
 	RenderSprites:
 		Scale: 0.7
 
@@ -8496,7 +8534,7 @@ wizard_wizard:
 	Inherits: ^HeroInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
 	Inherits@LEGOMAGETemplate: ^lego_mage
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
 		Name: Wizard
 	Buildable:
@@ -8547,7 +8585,7 @@ wizard_wizard:
 		RequiresCondition: FSD_cond_2 && !disabled
 	#Spells
 	AttackFrontal:
-		Armaments: primary, speed, damage, fireball, lightningspawner
+		Armaments: primary, speed, damage, fireball, lightningblast
 	AutoTargetPriority@DEFAULT:
 		RequiresCondition: !stance-attackanything && !assault-move && !FSD_cond_2
 	AutoTargetPriority@ATTACKANYTHING:
@@ -8620,7 +8658,7 @@ wizard_wizard:
 		PipCount: 10
 		AmmoCondition: mana
 	ReloadAmmoPool@PassiveRegen:
-		Delay: 10
+		Delay: 5
 		Count: 1
 		ShowSelectionBar: false
 	ReloadAmmoPool@SPEED:
@@ -8687,7 +8725,7 @@ wizard_sorceress:
 	Inherits: ^HeroInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
 	Inherits@LEGOMAGETemplate: ^lego_mage
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
 		Name: Sorceress
 	Buildable:
@@ -8738,7 +8776,7 @@ wizard_sorceress:
 		RequiresCondition: FSD_cond_2 && !disabled
 	#Spells
 	AttackFrontal:
-		Armaments: primary, speed, damage, fireball, lightningspawner
+		Armaments: primary, speed, damage, fireball, lightningblast
 	AutoTargetPriority@DEFAULT:
 		RequiresCondition: !stance-attackanything && !assault-move && !FSD_cond_2
 	AutoTargetPriority@ATTACKANYTHING:
@@ -8811,7 +8849,7 @@ wizard_sorceress:
 		PipCount: 10
 		AmmoCondition: mana
 	ReloadAmmoPool@PassiveRegen:
-		Delay: 10
+		Delay: 5
 		Count: 1
 		ShowSelectionBar: false
 	ReloadAmmoPool@SPEED:
@@ -8878,7 +8916,7 @@ wizard_troll_king:
 	Inherits: ^HeroInfantryTemplate
 	Inherits: ^PropagandaSelfHeallego
 	Inherits@LEGOMAGETemplate: ^lego_mage
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
 		Name: Troll King
 	Buildable:

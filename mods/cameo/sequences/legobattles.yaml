@@ -241,7 +241,7 @@ astro_tower:
 	astro_tower2: legobattles_astro_buildings.shp
 		Start: 8
 	astro_tower3: legobattles_astro_buildings.shp
-	 	Start: 9
+		Start: 9
 
 
 astro_tower2:
@@ -278,29 +278,11 @@ astro_tower3:
 		AddExtension: False
 
 ####################################################################################################
-#		Alien - BUILDINGS
-####################################################################################################
-# alien_base:
-# 	idle: legobattles_astro_buildings
-# 		Start: 0
-# 	damaged-idle: legobattles_astro_buildings
-# 		Start: 0
-# 	make: legobattles_astro_buildings
-# 		Start: 0
-# 	dead: legobattles_astro_buildings
-# 		Start: 0
-# 	lego_production_overlay_human: lego_production_overlay_human
-# 		Length: 10
-# 		Offset: 14,12,0
-# 	icon: astro_cameos.png
-# 		Start: 0
-# 		AddExtension: False
-####################################################################################################
 #		ASTRO - INFANTRY
 ####################################################################################################
 
 # ^legoinfantry:
-	WithDeathAnimation:
+# 	WithDeathAnimation:
 # 		UseDeathTypeSuffix: false
 # 		CrushedSequence: die
 
@@ -551,7 +533,6 @@ astro_gripley:
 		AddExtension: False
 
 astro_commando:
-	#inherits: ^legoinfantry
 	Defaults:
 		Filename: astro_commando.shp
 		Scale: 2.0
@@ -1048,7 +1029,7 @@ astro_starship2:
 	idle:
 		Filename: astro_starship2.shp	
 		Facings: -16
-		Scale: 2.0
+		Scale: 2.5
 	die: lego_explosion
 		Filename: lego_explosion.shp
 		Start: 0
@@ -1101,6 +1082,14 @@ lego_emp_star:
 		Filename: lego_emp_star.shp
 		Start: 0
 		Length: 8
+
+green_emp_star:
+	Defaults:
+		Scale: 2.0
+	idle:
+		Filename: earth_emp.shp
+		Start: 0
+		Length: 4
 
 
 ####################################################################################################
@@ -1321,7 +1310,7 @@ alien_tower:
 	alien_tower2: alien_buildings.shp
 		Start: 8
 	alien_tower3: alien_buildings.shp
-	 	Start: 9
+		Start: 9
 
 
 alien_tower2:
@@ -1968,10 +1957,10 @@ space_criminal_leader:
 
 alien_space_criminal_hotrod:
 	Defaults:
-		Filename: alien_hotrod.shp
+		Filename: alien_criminal_hotrod.png
 		Scale: 2.0
 	idle:
-		Filename: alien_hotrod.shp
+		Filename: alien_criminal_hotrod.png
 		Facings: 16
 	die: lego_explosion
 		Filename: lego_explosion.shp
@@ -1984,10 +1973,10 @@ alien_space_criminal_hotrod:
 
 alien_attack_ship:
 	Defaults:
-		Filename: alien_attack_ship.shp
+		Filename: alien_attack_ship.png
 		Scale: 2.0
 	idle:
-		Filename: alien_attack_ship.shp
+		Filename: alien_attack_ship.png
 		Facings: 16
 	die: lego_explosion
 		Filename: lego_explosion.shp
@@ -2000,10 +1989,10 @@ alien_attack_ship:
 
 alien_strike_ship:
 	Defaults:
-		Filename: alien_strike_ship.shp
-		Scale: 2.0
+		Filename: alien_strike_ship.png
+		Scale: 1.5
 	idle:
-		Filename: alien_strike_ship.shp
+		Filename: alien_strike_ship.png
 		Facings: 16
 	die: lego_explosion
 		Filename: lego_explosion.shp
@@ -2016,10 +2005,10 @@ alien_strike_ship:
 
 alien_assault_ship:
 	Defaults:
-		Filename: alien_assault_ship.shp
-		Scale: 2.0
+		Filename: alien_assault_ship.png
+		Scale: 2.5
 	idle:
-		Filename: alien_assault_ship.shp
+		Filename: alien_assault_ship.png
 		Facings: 16
 	die: lego_explosion
 		Filename: lego_explosion.shp
@@ -2032,7 +2021,7 @@ alien_assault_ship:
 
 alien_transport_ship:
 	idle:
-		Filename: alien_transport_ship.shp
+		Filename: alien_transport_ship.png
 		Facings: 16
 		Scale: 2.0
 	die: lego_explosion
@@ -3285,7 +3274,7 @@ pirate_monkey:
 		Length: 7
 	icon: pirate_cameos.png
 		Filename: pirate_cameos.png
-		Start: 17
+		Start: 26
 		AddExtension: False
 
 pirate_gunman:
@@ -3644,7 +3633,7 @@ pirate_cannon:
 		Length: 7
 	icon: pirate_cameos.png
 		Filename: pirate_cameos.png
-		Start: 24
+		Start: 25
 		AddExtension: False
 
 pirate_tiki_golem:
@@ -3678,17 +3667,39 @@ pirate_tiki_golem:
 		Length: 7
 	icon: pirate_cameos
 		Filename: pirate_cameos.png
-		Start: 25
+		Start: 24
 		AddExtension: False
 
 pirate_crab:
 	Defaults:
-		Filename: CrabSprite.png
+		Filename: CrabSpritesheet.png
+		Scale: 0.8
 	idle:
-		Filename: CrabSprite.png
-	icon: king_cameos.png
-		Filename: king_cameos.png
-		Start: 5
+		Filename: CrabSpritesheet.png
+		Start: 0
+		Facings: 16
+	stand:
+		Filename: CrabSpritesheet.png
+		Start: 0
+		Facings: 16
+	run:
+		Filename: CrabSpritesheet.png
+		Start: 0
+		Facings: -16
+	shoot:
+		Filename: CrabSpritesheet.png
+		Start: 0
+		Facings: 16
+	die: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	die-crushed: lego_explosion
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon: CrabIcon.png
+		Filename: CrabIcon.png
 		AddExtension: False
 
 ####################################################################################################
@@ -3832,7 +3843,7 @@ king_tower:
 	king_tower2: king_buildings.shp
 		Start: 8
 	king_tower3: king_buildings.shp
-	 	Start: 9
+		Start: 9
 
 
 king_tower2:
@@ -4514,9 +4525,9 @@ king_dragon:
 		Scale: 1.7
 	idle:
 		Filename: king_dragon.shp
-		Start: 0
+		Start: 16
 		Facings: 16
-		Length: 1
+		Length: 9
 	stand:
 		Filename: king_dragon.shp
 		Start: 16
@@ -5370,9 +5381,9 @@ wizard_dragon:
 		Scale: 1.7
 	idle:
 		Filename: wizard_dragon.shp
-		Start: 0
+		Start: 16
 		Facings: 16
-		Length: 1
+		Length: 9
 	stand:
 		Filename: wizard_dragon.shp
 		Start: 16
@@ -5425,3 +5436,31 @@ lego_boulder:
 		Filename: lego_boulder.shp
 		Start: 0
 		Length: 8
+
+lego_fireball:
+	Defaults:
+		Filename: wizardfireball.png
+		Scale: 2.0
+	idle:
+		Filename: wizardfireball.png
+		Facings: 16
+
+hammer_throw:
+	Defaults:
+		Filename: dwarfhammer.png
+		Scale: 2.0
+	idle:
+		Filename: dwarfhammer.png
+		Start: 0
+		Facings: 16
+	anim:
+		Start: 16
+		Length: 14
+
+lego_lightning:
+	Defaults:
+		Filename: wizardlightning.png
+		Scale: 2.0
+	idle:
+		Filename: wizardlightning.png
+		Facings: 16

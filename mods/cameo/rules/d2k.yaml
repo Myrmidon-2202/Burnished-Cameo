@@ -32,7 +32,7 @@ World:
 	FactionCA@RandomDU:
 		Name: Any Dune
 		InternalName: RandomDU
-		RandomFactionMembers: ordos, atreides, harkonnen
+		RandomFactionMembers: ordos, atreides, harkonnen, corrino
 		Game:  Dune Universe
 		Side: Random
 		Description: faction-dune-Random.description
@@ -993,7 +993,7 @@ construction_yard.ordos:
 	SpawnActorsOnSell:
 		ActorTypes: light_inf, light_inf, engineer
 	RenderSprites:
-		Image: conyard.atreides
+		Image: conyard.ordos
 	ActorStatValues:
 		Upgrades: upgrade_conyard
 	GivesBuildableArea:
@@ -1033,8 +1033,8 @@ construction_yard.corrino:
 	Building:
 		Footprint: xxx xxx ===
 		Dimensions: 3,3
-		LocalCenterOffset: 0,-512,0
 		IconPalette: d2kunit
+		LocalCenterOffset: 0,-512,0
 	Production@Addons:
 		Produces: Addons
 	ProductionBar@Addons:
@@ -1048,7 +1048,6 @@ construction_yard.corrino:
 		ActorTypes: light_inf, light_inf, engineer
 	RenderSprites:
 		Image: conyard.corrino
-		Palette: d2kunit
 	ActorStatValues:
 		Upgrades: upgrade_conyard
 	GivesBuildableArea:
@@ -1202,7 +1201,7 @@ wind_trap.corrino:
 # 		BuildPaletteOrder: 110
 # 		BuildDuration: 50
 # 		BuildDurationModifier: 100
-# 		Description: Provides power for other structures.\nTakes a lot less space than regular Wind Trap
+# 		Description: Provides power for other structures.. Takes a lot less space than regular Wind Trap
 # 		IconPalette: player
 # 		Prerequisites: ~construction_yard.ixian
 # 	Valued:
@@ -1672,7 +1671,7 @@ d2k_barracks.corrino:
 # 		BuildPaletteOrder: 220
 # 		BuildDuration: 1500
 # 		BuildDurationModifier: 100
-# 		Description: Provides upgrades and advanced technologies for Tleilaxu\nProvides Radar\nProvides superweapon
+# 		Description: Provides upgrades and advanced technologies for Tleilaxu. Provides Radar. Provides superweapon
 # 		IconPalette: windows256
 # 	ProvidesRadar:
 # 		RequiresCondition: !disabled && !jammed
@@ -1697,7 +1696,7 @@ d2k_barracks.corrino:
 # 		Name: Wormsign
 # 		IncomingSpeechNotification: EnemyUnitsApproaching
 # 		DisplayTimerRelationships: Ally, Neutral, Enemy
-# 		Description: Summons Tamed Sandworm anywhere on the map.\nSandworm can roam around the map and swallow enemy units\nCannot swallow big targets
+# 		Description: Summons Tamed Sandworm anywhere on the map.. Sandworm can roam around the map and swallow enemy units. Cannot swallow big targets
 # 		SelectTargetSpeechNotification: SelectTarget
 # 		InsufficientPowerSpeechNotification: InsufficientPower
 # 		Prerequisites: ~faction.tleilaxu
@@ -2511,6 +2510,7 @@ repair_pad.ixian:
 		Weapons: Debris2, Debris3
 		Pieces: 4, 6
 		Range: 1c512, 2c768
+	ProvidesPrerequisite@buildingname:
 	SpawnActorOnDeath@death1:
 		Actor: light_inf
 	SpawnActorOnDeath@death2:
@@ -2550,6 +2550,7 @@ repair_pad.ordos:
 		Weapons: Debris2, Debris3
 		Pieces: 4, 6
 		Range: 1c512, 2c768
+	ProvidesPrerequisite@buildingname:
 	SpawnActorOnDeath@death1:
 		Actor: light_inf
 	SpawnActorOnDeath@death2:
@@ -2591,6 +2592,7 @@ repair_pad.atreides:
 		Weapons: Debris2, Debris3
 		Pieces: 4, 6
 		Range: 1c512, 2c768
+	ProvidesPrerequisite@buildingname:
 	SpawnActorOnDeath@death1:
 		Actor: light_inf
 	SpawnActorOnDeath@death2:
@@ -2632,6 +2634,7 @@ repair_pad.harkonnen:
 		Weapons: Debris2, Debris3
 		Pieces: 4, 6
 		Range: 1c512, 2c768
+	ProvidesPrerequisite@buildingname:
 	SpawnActorOnDeath@death1:
 		Actor: light_inf
 	SpawnActorOnDeath@death2:
@@ -2646,7 +2649,7 @@ repair_pad.corrino:
 	Inherits@repair: ^RepairsUnits
 	Inherits@repair: ^RepairFacility
 	Buildable:
-		Prerequisites: ~construction_yard.corrino, heavy_factory.corrino
+		Prerequisites: ~construction_yard.corrino
 		IconPalette: d2kunit
 	Tooltip:
 		Name: Corrino Repair Pad
@@ -2673,6 +2676,7 @@ repair_pad.corrino:
 		Weapons: Debris2, Debris3
 		Pieces: 4, 6
 		Range: 1c512, 2c768
+	ProvidesPrerequisite@buildingname:
 	SpawnActorOnDeath@death1:
 		Actor: light_inf
 	SpawnActorOnDeath@death2:
@@ -2714,6 +2718,7 @@ outpost:
 		Actor: light_inf
 	ProvidesPrerequisite@outpost:
 		Prerequisite: outpost.d2k
+	ProvidesPrerequisite@buildingname:
 
 outpost.atreides:
 	Inherits: outpost
@@ -3249,7 +3254,7 @@ research_centre:
 	Inherits@tech: ^IsTechnoBuilding
 	Buildable:
 		Prerequisites: ~construction_yard.ixian, outpost
-		Description: Ixian Research Center\nUnlocks advanced tanks.
+		Description: Ixian Research Center. Unlocks advanced tanks.
 		IconPalette: d2kunit
 	Tooltip:
 		Name: Research Center
@@ -3293,7 +3298,7 @@ research_centre.ordos:
 	Inherits: research_centre
 	Buildable:
 		Prerequisites: ~construction_yard.ordos, outpost.ordos
-		Description: Ixian Research Center\nUnlocks advanced tanks.
+		Description: Ixian Research Center. Unlocks advanced tanks.
 		IconPalette: d2kunit
 	Tooltip:
 		Name: Ordos Research Center
@@ -3305,7 +3310,7 @@ research_centre.atreides:
 	Inherits: research_centre
 	Buildable:
 		Prerequisites: ~construction_yard.atreides, outpost.atreides
-		Description: Ixian Research Center\nUnlocks advanced tanks.
+		Description: Ixian Research Center. Unlocks advanced tanks.
 		IconPalette: d2kunit
 	Tooltip:
 		Name: Atreides Research Center
@@ -3316,7 +3321,7 @@ research_centre.harkonnen:
 	Inherits: research_centre
 	Buildable:
 		Prerequisites: ~construction_yard.harkonnen, outpost.harkonnen
-		Description: Ixian Research Center\nUnlocks advanced tanks.
+		Description: Ixian Research Center. Unlocks advanced tanks.
 		IconPalette: d2kunit
 	Tooltip:
 		Name: Harkonnen Research Center
@@ -3328,7 +3333,7 @@ research_centre.corrino:
 	Inherits: research_centre
 	Buildable:
 		Prerequisites: ~construction_yard.corrino, outpost.corrino
-		Description: Ixian Research Center\nUnlocks advanced tanks.
+		Description: Ixian Research Center. Unlocks advanced tanks.
 		IconPalette: d2kunit
 	Tooltip:
 		Name: Corrino Research Center
@@ -3643,7 +3648,7 @@ storm_lasher_big:
 # 		HP: 121000
 # 	Buildable:
 # 		Prerequisites: heavy_factory, outpost, research_centre, ~techlevel.high, ~faction.smugglers
-# 		Description: Dropzone for quick reinforcements.\nEnables drop-off of supervehicles
+# 		Description: Dropzone for quick reinforcements.. Enables drop-off of supervehicles
 # 		BuildDuration: 1500
 # 		BuildDurationModifier: 100
 # 		IconPalette: player
@@ -3664,7 +3669,7 @@ storm_lasher_big:
 # 		HP: 145000
 # 	Buildable:
 # 		Prerequisites: heavy_factory, outpost, research_centre, ~techlevel.high, ~faction.corrino
-# 		Description: Dropzone for quick reinforcements.\nEnables drop-off of Corrino's Special Vehicles
+# 		Description: Dropzone for quick reinforcements.. Enables drop-off of Corrino's Special Vehicles
 # 		BuildDuration: 1500
 # 		IconPalette: d2kunit
 # 	Valued:
@@ -3886,7 +3891,7 @@ artillery_platform:
 		Queue: Defence, RADefence
 		Prerequisites: ~d2k_barracks.ordos
 		BuildPaletteOrder: 510
-		Description: Defensive structure.\n  Strong vs Infantry, Vehicles, Buildings\n  Weak vs Tanks
+		Description: Defensive structure..   Strong vs Infantry, Vehicles, Buildings.   Weak vs Tanks
 	Health:
 		HP: 125000
 	Valued:
@@ -3911,7 +3916,7 @@ autogun_turret:
 		Queue: Defence, RADefence
 		Prerequisites: ~d2k_barracks.ordos
 		BuildPaletteOrder: 510
-		Description: Defensive structure.\n  Strong vs Infantry, Vehicles, Buildings\n  Weak vs Tanks
+		Description: Defensive structure..   Strong vs Infantry, Vehicles, Buildings.   Weak vs Tanks
 		IconPalette: chrome
 	Health:
 		HP: 75000
@@ -3966,7 +3971,7 @@ flame_turret:
 		Queue: Defence, RADefence
 		Prerequisites: ~construction_yard.harkonnen, d2k_barracks.harkonnen
 		BuildPaletteOrder: 510
-		Description: Defensive structure.\nDetector.\n  Strong vs Infantry, Vehicles, Tanks\n  Weak vs Siege
+		Description: Defensive structure.. Detector..   Strong vs Infantry, Vehicles, Tanks.   Weak vs Siege
 	Health:
 		HP: 40000
 	-WithSpriteTurret:
@@ -4050,7 +4055,7 @@ large_gun_turret:
 # 		BuildPaletteOrder: 60
 # 		BuildDuration: 150
 # 		Prerequisites: d2k_barracks, ~faction.smugglers, ~techlevel.low
-# 		Description: Defensive structure. Explodes when an enemy unit moves over it.\n  Strong vs Infantry\n  Weak vs Tanks\n\n  Invisible to enemy.
+# 		Description: Defensive structure. Explodes when an enemy unit moves over it..   Strong vs Infantry.   Weak vs Tanks. .   Invisible to enemy.
 # 		IconPalette: d2kunit
 # 	Valued:
 # 		Cost: 125
@@ -4082,7 +4087,7 @@ large_gun_turret:
 # 		Queue: Defence, RADefence
 # 		BuildDurationModifier: 50
 # 		BuildDuration: 1250
-# 		Description: Universal Base Defence\nCan burrow to reposition or swallow enemy units\nCannot swallow large units
+# 		Description: Universal Base Defence. Can burrow to reposition or swallow enemy units. Cannot swallow large units
 # 	Building:
 # 		Footprint: xx
 # 		Dimensions: 2,1
@@ -4126,7 +4131,7 @@ large_gun_turret:
 # 		BuildPaletteOrder: 70
 # 		BuildDuration: 200
 # 		Prerequisites: d2k_barracks, ~faction.smugglers, ~techlevel.medium
-# 		Description: Defensive structure. Explodes when an enemy unit moves over it.\n  Strong vs Tanks\n  Weak vs Infantry\n\n  Invisible to enemy.
+# 		Description: Defensive structure. Explodes when an enemy unit moves over it..   Strong vs Tanks.   Weak vs Infantry. .   Invisible to enemy.
 # 		IconPalette: d2kunit
 # 	Valued:
 # 		Cost: 200
@@ -4164,7 +4169,7 @@ large_gun_turret:
 # 		BuildPaletteOrder: 620
 # 		BuildDuration: 937
 # 		BuildDurationModifier: 100
-# 		Description: Unlocks elite infantry and weapons.\nProvides Passive Income\nCan be only built once.
+# 		Description: Unlocks elite infantry and weapons.. Provides Passive Income. Can be only built once.
 # 		IconPalette: d2kunit
 # 	Valued:
 # 		Cost: 1600
@@ -4259,7 +4264,7 @@ large_gun_turret:
 # 		MissileImage: deathhand
 # 	ProduceActorPower@atrfremen:
 # 		Name: Hire Fremen Guerillas
-# 		Description: Fast Elite infantry units armed with assault rifles and machine guns. When grouped, they can take down buildings extremely quickly\n  Strong vs Buildings\n  Weak vs Infantry, Vehicles\n  Special Ability: Invisibility
+# 		Description: Fast Elite infantry units armed with assault rifles and machine guns. When grouped, they can take down buildings extremely quickly.   Strong vs Buildings.   Weak vs Infantry, Vehicles.   Special Ability: Invisibility
 # 		Icon: fremeng
 # 		IconPalette: d2kunit
 # 		AllowMultiple: True
@@ -4332,7 +4337,7 @@ large_gun_turret:
 # 		Names:
 # 			1: Recruit Saboteur
 # 		Descriptions:
-# 			1: Sneaky stealth infantry that can infiltrate safely, armed with explosives that can be attached to vehicles and buildings\n  Strong vs Buildings\n  Weak vs Everything\n  Special Abilities: Destroy Buildings, Invisibility
+# 			1: Sneaky stealth infantry that can infiltrate safely, armed with explosives that can be attached to vehicles and buildings.   Strong vs Buildings.   Weak vs Everything.   Special Abilities: Destroy Buildings, Invisibility
 # 		BeaconPosters:
 # 			1: fremen
 # 		AllowMultiple: True
@@ -4762,7 +4767,7 @@ palace.corrino:
 		Names:
 			1: Release the Sardaukar!
 		Descriptions:
-			1: Deploys Corrino's Sardaukars from orbit to decimate your enemies.\nDrop Pods damages area around\nProvides passive income
+			1: Deploys Corrino's Sardaukars from orbit to decimate your enemies.. Drop Pods damages area around. Provides passive income
 		Weapons:
 			1: SardaukarDroppodSpawner
 		OrderName: GDI Drop
@@ -4796,7 +4801,7 @@ palace.corrino:
 # 		BuildPaletteOrder: 620
 # 		BuildDuration: 937
 # 		BuildDurationModifier: 100
-# 		Description: Trains Emperor's Elite Sardaukars.\nProvides Passive Income\nMakes all infantry trained elite\nProvides discount for Sardaukars\nCan be only built once.
+# 		Description: Trains Emperor's Elite Sardaukars.. Provides Passive Income. Makes all infantry trained elite. Provides discount for Sardaukars. Can be only built once.
 # 		IconPalette: d2kunit
 # 	Power:
 # 		Amount: -250
@@ -4840,7 +4845,7 @@ palace.corrino:
 # 		Names:
 # 			1: Release the Sardaukars
 # 		Descriptions:
-# 			1: Deploys Corrino's Sardaukars from orbit to decimate your enemies.\nDrop Pods damages area around\nProvides passive income
+# 			1: Deploys Corrino's Sardaukars from orbit to decimate your enemies.. Drop Pods damages area around. Provides passive income
 # 		Weapons:
 # 			1: SardaukarDroppodSpawner
 # 		BeaconPosters:
@@ -4914,7 +4919,7 @@ palace.corrino:
 # 		Names:
 # 			1: Death before Dishonor
 # 		Descriptions:
-# 			1: Deploys Corrino's Sardaukar Juggernauts and Chief from orbit to devastate your enemies.\nDrop Pods damages area around heavily and stuns everything around\nSardaukar Chief can plant C4 and jams enemy radar
+# 			1: Deploys Corrino's Sardaukar Juggernauts and Chief from orbit to devastate your enemies.. Drop Pods damages area around heavily and stuns everything around. Sardaukar Chief can plant C4 and jams enemy radar
 # 		Weapons:
 # 			1: SardaukarEliteDroppodSpawner
 # 		BeaconPosters:
@@ -4946,7 +4951,7 @@ palace.corrino:
 # 		BuildPaletteOrder: 620
 # 		BuildDuration: 1000
 # 		BuildDurationModifier: 100
-# 		Description: Allows to call reinforcements and special powers for Mercenaries\nProvides Passive Income
+# 		Description: Allows to call reinforcements and special powers for Mercenaries. Provides Passive Income
 # 		IconPalette: player
 # 	Power:
 # 		Amount: -200
@@ -4989,7 +4994,7 @@ palace.corrino:
 # 		Names:
 # 			1: Bounty Hunting
 # 		Descriptions:
-# 			1: Places Bounty on selected targets giving up to 40% of their total value\nupon being killed or destroyed.
+# 			1: Places Bounty on selected targets giving up to 40% of their total value. upon being killed or destroyed.
 # 		Conditions:
 # 			1: glabounty3
 # 		Durations:
@@ -5013,9 +5018,9 @@ palace.corrino:
 # 			2: Strike Team Paradrop II
 # 			3: Strike Team Paradrop III
 # 		Descriptions:
-# 			1: Carryall planes drops a Small Mercenary strike team\nanywhere on the map.
-# 			2: Carryall planes drops a Mercenary strike team\nanywhere on the map.
-# 			3: Carryall planes drops a Mercenary army\nanywhere on the map.
+# 			1: Carryall planes drops a Small Mercenary strike team. anywhere on the map.
+# 			2: Carryall planes drops a Mercenary strike team. anywhere on the map.
+# 			3: Carryall planes drops a Mercenary army. anywhere on the map.
 # 		DropItems:
 # 			1: submachinegunner, submachinegunner, submachinegunner, submachinegunner, submachinegunner, submachinegunner, trooper, trooper
 # 			2: submachinegunner, submachinegunner, submachinegunner, submachinegunner, submachinegunner, submachinegunner, submachinegunner, submachinegunner, submachinegunner, submachinegunner, trooper, trooper, trike, trike, quad
@@ -5319,7 +5324,7 @@ engineer:
 # 	Buildable:
 # 		BuildPaletteOrder: 10
 # 		Queue: Infantry, RAInfantry
-# 		Description: General-purpose infantry equipped with SMG\nDeals burst damage.\nShort Range\n  Strong vs Infantry, Vehicles\n  Weak vs Siege
+# 		Description: General-purpose infantry equipped with SMG. Deals burst damage.. Short Range.   Strong vs Infantry, Vehicles.   Weak vs Siege
 # 		Prerequisites: ~faction.mercenary
 # 		BuildDuration: 80
 # 		BuildDurationModifier: 100
@@ -5344,7 +5349,7 @@ engineer:
 # 	Buildable:
 # 		BuildPaletteOrder: 10
 # 		Queue: Infantry, RAInfantry
-# 		Description: General-purpose infantry equipped with shotgun\nDeals massive damage up front.\nVery Short Range\n  Strong vs Infantry, Vehicles\n  Weak vs Siege
+# 		Description: General-purpose infantry equipped with shotgun. Deals massive damage up front.. Very Short Range.   Strong vs Infantry, Vehicles.   Weak vs Siege
 # 		Prerequisites: ~faction.smugglers
 # 		BuildDuration: 90
 # 		BuildDurationModifier: 100
@@ -5520,7 +5525,7 @@ chem_troop:
 	Buildable:
 		BuildPaletteOrder: 10
 		Queue: Infantry.Ordos
-		Description: General-purpose infantry equipped with chemical weapon.\nCannot attack buildings\n  Strong vs Infantry\n  Weak vs Vehicles
+		Description: General-purpose infantry equipped with chemical weapon.. Cannot attack buildings.   Strong vs Infantry.   Weak vs Vehicles
 		Prerequisites: barracks
 		IconPalette: player
 		BuildDuration: 80
@@ -5638,7 +5643,7 @@ ordos_mortar:
 # 		Prerequisites: upgrade_barracks, ~techlevel.low, ~d2k_prereq_no_tleilaxu
 # 		BuildDuration: 200
 # 		BuildDurationModifier: 100
-# 		Description: Attracts nearby worms when deployed\n  Unarmed
+# 		Description: Attracts nearby worms when deployed.   Unarmed
 # 		IconPalette: d2kunit
 # 	Valued:
 # 		Cost: 150
@@ -5699,7 +5704,7 @@ fremen:
 		Prerequisites: ~barracks.atreides, upgrade_barracks, high_tech_factory, ~techlevel.medium
 		Icon: phantomicon
 		IconPalette: windows256
-		Description: Fast Elite infantry units armed with assault rifles and machine guns. When grouped, they can take down buildings extremely quickly\nDetector\n  Strong vs Buildings\n  Weak vs Infantry, Vehicles\n  Special Ability: Invisibility
+		Description: Fast Elite infantry units armed with assault rifles and machine guns. When grouped, they can take down buildings extremely quickly. Detector.   Strong vs Buildings.   Weak vs Infantry, Vehicles.   Special Ability: Invisibility
 		BuildDuration: 300
 		BuildDurationModifier: 100
 	Mobile:
@@ -5767,7 +5772,7 @@ facedancer:
 		BuildDuration: 175
 		BuildDurationModifier: 100
 		Prerequisites: ~d2k_barracks.ordos, outpost.ordos, ~upordos_facedancer
-		Description: Genetically modified humanoid\nCan shapeshift into various forms.\n Does not lie down when attacked\nCannot be damaged by Tiberium\nThrows grenades\nMust resupply at Resource Center\n  Strong vs Buildings, Infantry, Air, Vehicles\n  Weak vs Siege
+		Description: Genetically modified humanoid. Can shapeshift into various forms..  Does not lie down when attacked. Cannot be damaged by Tiberium. Throws grenades. Must resupply at Resource Center.   Strong vs Buildings, Infantry, Air, Vehicles.   Weak vs Siege
 	Health:
 		HP: 5000
 	Power:
@@ -5852,7 +5857,7 @@ contaminator:
 		BuildDuration: 375
 		BuildDurationModifier: 100
 		Prerequisites: ~d2k_barracks.ordos
-		Description: The Contaminator is a genetically engineered organism\nthat infects a target organic unit to create another Contaminator\nwhen the target dies. They are quite\nresilient to gunfire.\n  Strong vs Buildings, Infantry, Air, Vehicles\n  Weak vs Siege
+		Description: The Contaminator is a genetically engineered organism. that infects a target organic unit to create another Contaminator. when the target dies. They are quite. resilient to gunfire..   Strong vs Buildings, Infantry, Air, Vehicles.   Weak vs Siege
 	Health:
 		HP: 37500
 	Mobile:
@@ -5910,7 +5915,7 @@ grenadier:
 		Prerequisites: upgrade_barracks, high_tech_factory.atreides
 		BuildDuration: 100
 		BuildDurationModifier: 100
-		Description: Infantry armed with grenades. \nVery prone to friendly fire\n  Strong vs Buildings, Infantry\n  Weak vs Vehicles
+		Description: Infantry armed with grenades. . Very prone to friendly fire.   Strong vs Buildings, Infantry.   Weak vs Vehicles
 		IconPalette: d2kunit
 	Valued:
 		Cost: 100
@@ -5950,7 +5955,7 @@ sardaukar:
 		Prerequisites: d2k_barracks.corrino
 		BuildDuration: 280
 		BuildDurationModifier: 100
-		Description: Assault infantry of Emperor's Army\n  Strong vs Infantry, Vehicles\n  Weak vs Artillery
+		Description: Assault infantry of Emperor's Army.   Strong vs Infantry, Vehicles.   Weak vs Artillery
 		IconPalette: d2kunit
 	Valued:
 		Cost: 150
@@ -6018,7 +6023,7 @@ d2k_sardaukar_elite:
 		Prerequisites: ~barracks.corrino, upgrade_barracks, high_tech_factory.corrino, research_centre.corrino
 		BuildDuration: 500
 		BuildDurationModifier: 100
-		Description: Heavily Armored Elite assault infantry of Emperor's Army\nCannot lay down or be crushed\n  Strong vs Everything
+		Description: Heavily Armored Elite assault infantry of Emperor's Army. Cannot lay down or be crushed.   Strong vs Everything
 		IconPalette: player
 	Valued:
 		Cost: 1000
@@ -6076,7 +6081,7 @@ d2k_sardaukar_assassin:
 		Queue: Infantry.Corrino
 		BuildPaletteOrder: 70
 		Prerequisites: ~barracks.corrino, upgrade_barracks, high_tech_factory.corrino
-		Description: Assassin equipped with Heat Blade and Crossbow\n  Strong vs Infantry
+		Description: Assassin equipped with Heat Blade and Crossbow.   Strong vs Infantry
 		BuildDuration: 300
 		BuildDurationModifier: 100
 		IconPalette: windows256
@@ -6184,7 +6189,7 @@ saboteur:
 		Queue: Infantry, RAInfantry
 		BuildPaletteOrder: 100
 		Prerequisites: ~wip-content
-		Description: Sneaky stealth infantry that can infiltrate safely, armed with explosives that can be attached to buildings\nExplodes upon death\nDetector\n  Strong vs Buildings\n  Weak vs Everything\n  Special Abilities: Destroy Buildings, Invisibility
+		Description: Sneaky stealth infantry that can infiltrate safely, armed with explosives that can be attached to buildings. Explodes upon death. Detector.   Strong vs Buildings.   Weak vs Everything.   Special Abilities: Destroy Buildings, Invisibility
 		IconPalette: d2kunit
 	Valued:
 		Cost: 300 ## actually 0, but spawns from support power at Palace
@@ -6247,7 +6252,7 @@ saboteur:
 # 		Queue: Infantry, RAInfantry
 # 		BuildPaletteOrder: 10
 # 		Prerequisites: ~barracks.atreides, ~faction.fremen
-# 		Description: Universal Fremen infantry unit armed with assault rifle and rockets.\nCan attack air.\n  Strong vs Infantry, Vehicles\n  Weak vs Artillery
+# 		Description: Universal Fremen infantry unit armed with assault rifle and rockets.. Can attack air..   Strong vs Infantry, Vehicles.   Weak vs Artillery
 # 		BuildDuration: 120
 # 		BuildDurationModifier: 100
 # 		Icon: icon
@@ -6278,7 +6283,7 @@ saboteur:
 # 	Buildable:
 # 		Prerequisites: ~faction.emperor, upgrade_barracks
 # 		BuildDuration: 150
-# 		Description: Fremen infantry unit armed with Rocket Launcher.\nCan attack air.\n  Strong vs Tanks, Air\n  Weak vs Infantry, Artillery
+# 		Description: Fremen infantry unit armed with Rocket Launcher.. Can attack air..   Strong vs Tanks, Air.   Weak vs Infantry, Artillery
 
 # plasma_infantry:
 # 	Inherits: ^D2KInfantry
@@ -6294,7 +6299,7 @@ saboteur:
 # 		BuildDuration: 280
 # 		BuildDurationModifier: 100
 # 		Prerequisites: ~barracks.harkonnen, upgrade_barracks, high_tech_factory, ~techlevel.medium, ~faction.corrino
-# 		Description: Advanced infantry armed with a plasma ball launcher\n  Strong vs Tanks\n  Weak vs Artillery, Infantry
+# 		Description: Advanced infantry armed with a plasma ball launcher.   Strong vs Tanks.   Weak vs Artillery, Infantry
 # 		IconPalette: d2kunit
 # 	Valued:
 # 		Cost: 300
@@ -6344,7 +6349,7 @@ fedaykin:
 		Queue: Infantry.Atreides
 		BuildPaletteOrder: 120
 		Prerequisites: ~barracks.atreides, upgrade_barracks, high_tech_factory
-		Description: Elite Fremen infantry armed with a Weirding Module\n  Strong vs Infantry, Vehicles, Buildings\n  Weak vs Artillery, Tanks
+		Description: Elite Fremen infantry armed with a Weirding Module.   Strong vs Infantry, Vehicles, Buildings.   Weak vs Artillery, Tanks
 		IconPalette: d2kunit
 		BuildDuration: 280
 		BuildDurationModifier: 100
@@ -6395,7 +6400,7 @@ d2k_leech:
 		Queue: Vehicle, RAVehicle
 		BuildPaletteOrder: 130
 		Prerequisites:  ~d2k_barracks.ordos
-		Description: Stealth creature that can attack infantry and vehicles.\nCan detect cloaked units.\nRegenerates health extremely quickly\nUpon attack lays eggs which, upon death of vehicls, creates another Leech\n  Strong vs Infantry, Vehicles\n  Weak vs Aircraft\n  Special Abilities: Invisibility, Jump, Lay Eggs
+		Description: Stealth creature that can attack infantry and vehicles.. Can detect cloaked units.. Regenerates health extremely quickly. Upon attack lays eggs which, upon death of vehicls, creates another Leech.   Strong vs Infantry, Vehicles.   Weak vs Aircraft.   Special Abilities: Invisibility, Jump, Lay Eggs
 		IconPalette: player
 		BuildDuration: 500
 		BuildDurationModifier: 100
@@ -6447,7 +6452,7 @@ d2k_leech:
 # 		Queue: Infantry, RAInfantry
 # 		BuildPaletteOrder: 140
 # 		Prerequisites: ~barracks.harkonnen, upgrade_barracks, high_tech_factory, ~techlevel.medium
-# 		Description: Flying infantry unit armed with dual assault rifle.\n Can Attack air units.\n  Strong vs Infantry\n  Weak vs Vehicles
+# 		Description: Flying infantry unit armed with dual assault rifle..  Can Attack air units..   Strong vs Infantry.   Weak vs Vehicles
 # 		IconPalette: d2kunit
 # 		BuildDuration: 250
 # 		BuildDurationModifier: 100
@@ -6539,7 +6544,7 @@ d2k_leech:
 # 		Queue: Infantry, RAInfantry
 # 		BuildPaletteOrder: 140
 # 		Prerequisites: ~barracks.ordos, upgrade_barracks, high_tech_factory, ~techlevel.medium, ~!faction.tleilaxu
-# 		Description: Stealth Flying infantry unit armed with deadly dual machine guns\n  Strong vs Infantry, Vehicles\n  Weak vs Air
+# 		Description: Stealth Flying infantry unit armed with deadly dual machine guns.   Strong vs Infantry, Vehicles.   Weak vs Air
 # 		IconPalette: d2kunit
 # 		BuildDuration: 325
 # 		BuildDurationModifier: 100
@@ -6576,7 +6581,7 @@ d2k_leech:
 # 		Queue: Infantry, RAInfantry
 # 		BuildPaletteOrder: 140
 # 		Prerequisites: ~techlevel.medium, d2k_tleilaxu_tech, upgrade.rocketeer, ~faction.tleilaxu
-# 		Description: Flying infantry unit armed with deadly dual machine guns\n\nMust resupply at Resource Center\n  Strong vs Infantry\n  Weak vs Vehicles Strong vs Everything
+# 		Description: Flying infantry unit armed with deadly dual machine guns. . Must resupply at Resource Center.   Strong vs Infantry.   Weak vs Vehicles Strong vs Everything
 # 		BuildDuration: 400
 # 		BuildDurationModifier: 100
 # 	-Cloak:
@@ -6619,7 +6624,7 @@ d2k_sniper:
 		Queue: Infantry.Atreides, RAInfantry
 		BuildPaletteOrder: 60
 		Prerequisites: ~barracks.atreides, upgrade_barracks, outpost.atreides
-		Description: Infantry armed with a long range rifle\nCan detect cloaked units at great distances.\nCan Deplay to grant stealth and accuracy but loses movement\n  Strong vs Infantry, Air, Vehicles\n  Weak vs Tanks\n  Special Ability: Invisibility while static
+		Description: Infantry armed with a long range rifle. Can detect cloaked units at great distances.. Can Deplay to grant stealth and accuracy but loses movement.   Strong vs Infantry, Air, Vehicles.   Weak vs Tanks.   Special Ability: Invisibility while static
 		IconPalette: d2kunit
 		BuildDuration: 600
 		BuildDurationModifier: 100
@@ -6693,7 +6698,7 @@ d2k_sniper:
 # 		Queue: Infantry, RAInfantry
 # 		BuildPaletteOrder: 160
 # 		Prerequisites: ~barracks.atreides, upgrade_barracks, ~!faction.ixian, ~techlevel.low
-# 		Description: Spotter Infantry armed with a long range rifle\nCan detect cloaked units.\nCan Deplay to grant more view distance and accuracy, but loses movement\n  Strong vs Infantry, Air, Vehicles\n  Weak vs Tanks\n  Special Ability: Binoculars
+# 		Description: Spotter Infantry armed with a long range rifle. Can detect cloaked units.. Can Deplay to grant more view distance and accuracy, but loses movement.   Strong vs Infantry, Air, Vehicles.   Weak vs Tanks.   Special Ability: Binoculars
 # 		IconPalette: d2kunit
 # 		BuildDuration: 400
 # 		BuildDurationModifier: 100
@@ -6730,7 +6735,7 @@ flamethrower:
 		BuildDuration: 220
 		BuildDurationModifier: 100
 		Prerequisites: ~barracks.harkonnen, upgrade_barracks, high_tech_factory.harkonnen
-		Description: Close range assault unit.\n  Strong vs Infantry, Vehicles, Tanks, Buildings\n  Weak vs Siege\n  Special Ability: Invisibility
+		Description: Close range assault unit..   Strong vs Infantry, Vehicles, Tanks, Buildings.   Weak vs Siege.   Special Ability: Invisibility
 		IconPalette: d2kunit
 	Valued:
 		Cost: 300
@@ -6780,7 +6785,7 @@ flamethrower:
 # 		Queue: Infantry, RAInfantry
 # 		BuildPaletteOrder: 170
 # 		Prerequisites: upgrade_barracks, ~barracks.ordos, ~techlevel.low
-# 		Description: Stealth unit that can hijack enemy vehicles\n  Unarmed
+# 		Description: Stealth unit that can hijack enemy vehicles.   Unarmed
 # 		IconPalette: d2kunit
 # 		BuildDuration: 400
 # 		BuildDurationModifier: 100
@@ -6838,7 +6843,7 @@ flamethrower:
 # 		BuildDuration: 375
 # 		BuildDurationModifier: 100
 # 		Prerequisites: upgrade_barracks, high_tech_factory, ~techlevel.medium, ~mechanic_prereq
-# 		Description: Repairs nearby vehicles and buildings.\nCan enter vehicle husks to repair them.\nRemoves attached explosives from units and buildings\n  Unarmed
+# 		Description: Repairs nearby vehicles and buildings.. Can enter vehicle husks to repair them.. Removes attached explosives from units and buildings.   Unarmed
 # 		IconPalette: d2kunit
 # 	Valued:
 # 		Cost: 400
@@ -6906,7 +6911,7 @@ bene_gesserit:
 		Prerequisites: palace.corrino
 		BuildDuration: 500
 		BuildDurationModifier: 100
-		Description: Witch of the Imperium. Can control enemy units using The Voice and\ninstantly kill infantry with the Gom Jabbar\nCannot be poisoned nor mind controlled
+		Description: Witch of the Imperium. Can control enemy units using The Voice and. instantly kill infantry with the Gom Jabbar. Cannot be poisoned nor mind controlled
 		IconPalette: player
 	-ExternalCondition@Poisoned:
 	-Targetable@poisoned:
@@ -6974,7 +6979,7 @@ d2k_light_tank:
 		BuildDuration: 325
 		BuildDurationModifier: 100
 		Prerequisites:
-		Description: Light Carrier vehicle with light cannon and missile launcher\nCan carry 3 passengers\n Strong vs Vehicles, Tanks\n Weak vs Infantry
+		Description: Light Carrier vehicle with light cannon and missile launcher. Can carry 3 passengers.  Strong vs Vehicles, Tanks.  Weak vs Infantry
 		IconPalette: d2kunit
 	Valued:
 		Cost: 650
@@ -7058,7 +7063,7 @@ d2k_light_tank:
 # 		BuildPaletteOrder: 150
 # 		BuildDurationModifier: 50
 # 		Prerequisites:
-# 		Description: Ultimate Transport Vehicle\nCan carry 12 passengers quickly\nLimit: 1
+# 		Description: Ultimate Transport Vehicle. Can carry 12 passengers quickly. Limit: 1
 # 		BuildLimit: 1
 # 	Cargo:
 # 		MaxWeight: 12
@@ -7122,7 +7127,7 @@ d2k_atreides_apc:
 		BuildDuration: 375
 		BuildDurationModifier: 100
 		Prerequisites: heavy_factory.atreides
-		Description: Stealth Heavy Carrier vehicle with machine gun\nCan carry 12 passengers\nDue to its giant size its very attractive to worms
+		Description: Stealth Heavy Carrier vehicle with machine gun. Can carry 12 passengers. Due to its giant size its very attractive to worms
 		IconPalette: windows256
 	Valued:
 		Cost: 1000
@@ -7214,7 +7219,7 @@ d2k_atreides_apc:
 # 		BuildDuration: 650
 # 		BuildDurationModifier: 100
 # 		Prerequisites: ~faction.tleilaxu, upgrade.basq, d2k_tleilaxu_tech, ~techlevel.medium
-# 		Description: Bio hover tank\nGood against both ground and air\nResistant against missiles and heavy calibre armaments
+# 		Description: Bio hover tank. Good against both ground and air. Resistant against missiles and heavy calibre armaments
 # 		IconPalette: ra2
 # 	Valued:
 # 		Cost: 750
@@ -7297,7 +7302,7 @@ d2k_atreides_apc:
 # 		BuildDuration: 300
 # 		BuildDurationModifier: 100
 # 		Prerequisites: ~techlevel.low, ~light.harkonnen, upgrade_light, ~faction.corrino
-# 		Description: Suicidal remote vehicle armed with high explosives\nHas very weak armor \n\n Requires a Light Factory in order to move.
+# 		Description: Suicidal remote vehicle armed with high explosives. Has very weak armor . .  Requires a Light Factory in order to move.
 # 		IconPalette: d2kunit
 # 	WithColoredOverlay:
 # 		RequiresCondition: !remote
@@ -7364,7 +7369,7 @@ d2k_atreides_apc:
 # 		BuildDuration: 600
 # 		BuildDurationModifier: 100
 # 		Prerequisites: ~heavy.atreides, research_centre, ~techlevel.high, ~faction.fremen
-# 		Description: Fremen Quick Stealth tank armed with missile launcher and autocannon\nLow durability\n  Strong vs Vehicles, Air\n  Weak vs Infantry
+# 		Description: Fremen Quick Stealth tank armed with missile launcher and autocannon. Low durability.   Strong vs Vehicles, Air.   Weak vs Infantry
 # 		IconPalette: d2kunit
 # 	Selectable:
 # 		Class: stealth_tank
@@ -7473,7 +7478,7 @@ d2k_apc:
 		BuildDuration: 325
 		BuildDurationModifier: 100
 		Prerequisites:
-		Description: Hit and Run Vehicle with small cannon and missile launcher\nCan carry 3 passengers
+		Description: Hit and Run Vehicle with small cannon and missile launcher. Can carry 3 passengers
 		IconPalette: d2kunit
 	AutoDeployer:
 		DeployChance: 100
@@ -7588,7 +7593,7 @@ ordos_apc:
 		Prerequisites: ~light_factory.ordos, outpost.ordos
 		BuildDuration: 400
 		BuildDurationModifier: 100
-		Description: Ordos Hover Apc\nHighly Mobile Hover unit\nFires laser beams\nWeak durability\n  Strong vs Everything
+		Description: Ordos Hover Apc. Highly Mobile Hover unit. Fires laser beams. Weak durability.   Strong vs Everything
 		IconPalette: windows256
 	Valued:
 		Cost: 1000
@@ -7648,7 +7653,7 @@ tleilax_labcrawl:
 		Prerequisites: ~light_factory.ordos, ~upordos_tleilax_labcrawl
 		BuildDuration: 400
 		BuildDurationModifier: 100
-		Description: Tleilaxu Mobile Laboratory\nCan contaminate infantry with horrible plagues\nMoves with a chemical team\nWeak durability\n  Strong vs Everything
+		Description: Tleilaxu Mobile Laboratory. Can contaminate infantry with horrible plagues. Moves with a chemical team. Weak durability.   Strong vs Everything
 		IconPalette: windows256
 	Valued:
 		Cost: 1500
@@ -7857,7 +7862,7 @@ swarmer:
 		Prerequisites: ~high_tech_factory.ordos
 		BuildDuration: 250
 		BuildDurationModifier: 100
-		Description: Light plane armed with dual machine guns. \nCan attack air.\n Strong vs Infantry and Air
+		Description: Light plane armed with dual machine guns. . Can attack air..  Strong vs Infantry and Air
 	Tooltip:
 		Name: Swarmer Drone
 	UpdatesPlayerStatistics:
@@ -7922,7 +7927,7 @@ d2k_aa_mine:
 		Prerequisites: ~high_tech_factory.ordos
 		BuildDuration: 500
 		BuildDurationModifier: 100
-		Description: Slowly Flying Mine that hurls missiles upon contact with enemy airplane before exploding\nIn higher numbers can take down entire squadron
+		Description: Slowly Flying Mine that hurls missiles upon contact with enemy airplane before exploding. In higher numbers can take down entire squadron
 	Tooltip:
 		Name: Air Mine
 	UpdatesPlayerStatistics:
@@ -7998,7 +8003,7 @@ ordos_eye:
 		Prerequisites: ~high_tech_factory.ordos
 		BuildDuration: 250
 		BuildDurationModifier: 100
-		Description: Light scout aircraft with a suicidal passenger \nCan attack air.\n Strong vs Infantry and Air
+		Description: Light scout aircraft with a suicidal passenger . Can attack air..  Strong vs Infantry and Air
 	Tooltip:
 		Name: Eye in the Sky
 	UpdatesPlayerStatistics:
@@ -8063,7 +8068,7 @@ ordos_banshee:
 		Prerequisites: ~high_tech_factory.ordos, ~upordos_banshee
 		BuildDuration: 250
 		BuildDurationModifier: 100
-		Description: Light plane armed with dual machine guns. \nCan attack air.\n Strong vs Infantry and Air
+		Description: Light plane armed with dual machine guns. . Can attack air..  Strong vs Infantry and Air
 	Tooltip:
 		Name: Banshee
 	UpdatesPlayerStatistics:
@@ -8348,7 +8353,7 @@ ornithopter.controllable:
 		Prerequisites: high_tech_factory.atreides
 		BuildDuration: 600
 		BuildDurationModifier: 100
-		Description: Powerful Aircraft armed with dual Heavy Machine Guns and Bombs.\n Strong vs Everything
+		Description: Powerful Aircraft armed with dual Heavy Machine Guns and Bombs..  Strong vs Everything
 		IconPalette: d2kunit
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
@@ -8552,7 +8557,7 @@ phoenix:
 		Prerequisites: outpost.harkonnen
 		BuildDuration: 512
 		BuildDurationModifier: 100
-		Description: Medium Plane armed with dual Air-To-Ground flame rockets.\n Strong vs Buildings, Vehicles, Infantry
+		Description: Medium Plane armed with dual Air-To-Ground flame rockets..  Strong vs Buildings, Vehicles, Infantry
 	Tooltip:
 		Name: Gunship
 	UpdatesPlayerStatistics:
@@ -8741,7 +8746,7 @@ d2k_kwny_fighter:
 		BuildPaletteOrder: 10
 		Prerequisites: high_tech_factory.corrino
 		Queue: Aircraft.Corrino
-		Description: Fast Spaceship fighter used for aerial combat. Equipped with guided missiles\nStrong vs Everything
+		Description: Fast Spaceship fighter used for aerial combat. Equipped with guided missiles. Strong vs Everything
 		IconPalette: ra2
 	Aircraft:
 		InitialFacing: 896
@@ -9036,7 +9041,7 @@ trike:
 		Prerequisites:
 		BuildDuration: 175
 		BuildDurationModifier: 100
-		Description: Fast scout\n  Strong vs Infantry\n  Weak vs Tanks
+		Description: Fast scout.   Strong vs Infantry.   Weak vs Tanks
 		IconPalette: d2kunit
 	Valued:
 		Cost: 250
@@ -9093,7 +9098,7 @@ d2k_buzzsaw:
 		Queue: VehicleLight.Harkonnen, VehicleStarport.Harkonnen
 		BuildDuration: 200
 		BuildDurationModifier: 100
-		Description: Fast and moderately armoured, this unit is ideal for scouting\nan area quickly and taking out infantry either with its dual cannons\nor with the massive central blade\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+		Description: Fast and moderately armoured, this unit is ideal for scouting. an area quickly and taking out infantry either with its dual cannons. or with the massive central blade.   Strong vs Infantry.   Weak vs Vehicles, Aircraft
 	Mobile:
 		TurnSpeed: 48
 		Speed: 102
@@ -9146,7 +9151,7 @@ quad:
 		BuildPaletteOrder: 20
 		BuildDuration: 210
 		BuildDurationModifier: 100
-		Description: Missile Scout\nCan attack air\n  Strong vs Vehicles\n  Weak vs Infantry
+		Description: Missile Scout. Can attack air.   Strong vs Vehicles.   Weak vs Infantry
 		IconPalette: d2kunit
 	Valued:
 		Cost: 400
@@ -9199,7 +9204,7 @@ d2k_rocket_buggy:
 		BuildPaletteOrder: 20
 		BuildDuration: 175
 		BuildDurationModifier: 100
-		Description: Missile Scout\n  Strong vs Vehicles\n  Weak vs Infantry
+		Description: Missile Scout.   Strong vs Vehicles.   Weak vs Infantry
 		IconPalette: ra2
 	Valued:
 		Cost: 350
@@ -9321,7 +9326,7 @@ d2k_rocket_buggy:
 # 		LoadingCondition: notmobile
 # 	Buildable:
 # 		Queue: Vehicle, RAVehicle
-# 		Description: Transport unit with 6 spaces\nFilled with Sardaukars
+# 		Description: Transport unit with 6 spaces. Filled with Sardaukars
 # 		Icon: icon_sard
 # 		BuildPaletteOrder: 140
 # 	Cargo:
@@ -9344,7 +9349,7 @@ d2k_rocket_buggy:
 # 		BuildPaletteOrder: 20
 # 		BuildDuration: 225
 # 		BuildDurationModifier: 100
-# 		Description: Hit and run vehicle with good combat capabilities\n  Strong vs Vehicles\n  Weak vs Infantry
+# 		Description: Hit and run vehicle with good combat capabilities.   Strong vs Vehicles.   Weak vs Infantry
 # 		IconPalette: ra2
 # 	Valued:
 # 		Cost: 325
@@ -9399,7 +9404,7 @@ d2k_rocket_buggy:
 # 		BuildPaletteOrder: 50
 # 		BuildDuration: 325
 # 		BuildDurationModifier: 100
-# 		Description: Quad with additional Siege weapon on top giving this vehicle\nability to fight both infantry and vehicles\nDue to Siege weapon blocking top part of the vehicle\nit's unable to target Air\n  Strong vs Infantry, Buildings\n  Weak vs Tanks
+# 		Description: Quad with additional Siege weapon on top giving this vehicle. ability to fight both infantry and vehicles. Due to Siege weapon blocking top part of the vehicle. it's unable to target Air.   Strong vs Infantry, Buildings.   Weak vs Tanks
 # 		IconPalette: player
 # 	Valued:
 # 		Cost: 600
@@ -9497,7 +9502,7 @@ d2k_rocket_buggy:
 # 		Name: MG Quad
 # 	Buildable:
 # 		Prerequisites: ~faction.smugglers
-# 		Description: Quad MG Scout\n  Strong vs Infantry\n  Weak vs Vehicles
+# 		Description: Quad MG Scout.   Strong vs Infantry.   Weak vs Vehicles
 # 		BuildPaletteOrder: 0
 # 	Valued:
 # 		Cost: 300
@@ -9524,7 +9529,7 @@ d2k_rocket_buggy:
 # 	Buildable:
 # 		Prerequisites: ~faction.tleilaxu, d2k_tleilaxu_tech, upgrade.mg_quad, ~techlevel.low
 # 		Queue: Vehicle, RAVehicle
-# 		Description: Speedy Quad with burst MG\nMust resupply at resource center\nCan carry up to 3 passengers\n  Strong vs Infantry\n  Weak vs Vehicles
+# 		Description: Speedy Quad with burst MG. Must resupply at resource center. Can carry up to 3 passengers.   Strong vs Infantry.   Weak vs Vehicles
 # 		BuildPaletteOrder: 10
 # 		BuildDuration: 175
 # 		BuildDurationModifier: 100
@@ -9582,7 +9587,7 @@ siege_tank:
 		Queue: VehicleHeavy.Atreides, VehicleHeavy.Ordos, VehicleStarport.Atreides, VehicleStarport.Harkonnen, VehicleStarport.Ordos
 		Prerequisites: upgrade_heavy
 		BuildPaletteOrder: 50
-		Description: Siege Artillery\n  Strong vs Infantry, Buildings\n  Weak vs Tanks
+		Description: Siege Artillery.   Strong vs Infantry, Buildings.   Weak vs Tanks
 		IconPalette: d2kunit
 	Valued:
 		Cost: 800
@@ -9648,7 +9653,7 @@ assault_tank:
 		Queue: VehicleHeavy.Harkonnen, VehicleStarport.Harkonnen
 		Prerequisites: ~heavy_factory.harkonnen
 		BuildPaletteOrder: 50
-		Description: Siege Gun\n  Strong vs Infantry, Buildings\n  Weak vs Tanks
+		Description: Siege Gun.   Strong vs Infantry, Buildings.   Weak vs Tanks
 		IconPalette: d2kunit
 	Valued:
 		Cost: 900
@@ -9710,7 +9715,7 @@ ordos_cobra:
 		Queue: VehicleHeavy.Ordos, VehicleStarport.Ordos
 		Prerequisites: ~heavy_factory.ordos, outpost.ordos, ~!upordos_python
 		BuildPaletteOrder: 50
-		Description: Siege Artillery\n  Strong vs Infantry, Buildings\n  Weak vs Tanks
+		Description: Siege Artillery.   Strong vs Infantry, Buildings.   Weak vs Tanks
 		IconPalette: d2kunit
 	Valued:
 		Cost: 1000
@@ -9811,7 +9816,7 @@ ordos_python:
 		Queue: Vehicle, RAVehicle
 		Prerequisites: ~heavy_factory.ordos, outpost.ordos, ~upordos_python
 		BuildPaletteOrder: 50
-		Description: Siege Artillery\n  Strong vs Infantry, Buildings\n  Weak vs Tanks
+		Description: Siege Artillery.   Strong vs Infantry, Buildings.   Weak vs Tanks
 		IconPalette: d2kunit
 	Valued:
 		Cost: 1200
@@ -10180,7 +10185,7 @@ missile_tank_ixian:
 # 		BuildPaletteOrder: 50
 # 		BuildDuration: 625
 # 		BuildDurationModifier: 100
-# 		Description: Heavy Anti-Infantry Tank\n  Strong vs Infantry, Vehicles\n  Weak vs Tanks
+# 		Description: Heavy Anti-Infantry Tank.   Strong vs Infantry, Vehicles.   Weak vs Tanks
 # 	Valued:
 # 		Cost: 1100
 # 	Tooltip:
@@ -10314,7 +10319,7 @@ missile_tank:
 		Queue: VehicleHeavy.Atreides, VehicleHeavy.Harkonnen, VehicleStarport.Atreides, VehicleStarport.Harkonnen, VehicleStarport.Ordos, VehicleStarport.Corrino
 		Prerequisites: upgrade_heavy, research_centre
 		BuildPaletteOrder: 60
-		Description: Rocket Artillery\n  Strong vs Vehicles, Buildings, Aircraft\n  Weak vs Infantry\nDetector
+		Description: Rocket Artillery.   Strong vs Vehicles, Buildings, Aircraft.   Weak vs Infantry. Detector
 		IconPalette: d2kunit
 	Valued:
 		Cost: 750
@@ -10361,7 +10366,7 @@ d2k_flame_tank:
 		BuildPaletteOrder: 50
 		BuildDuration: 200
 		BuildDurationModifier: 100
-		Description: Flame Tank\n  Strong vs Infantry, Buildings\n  Weak vs Tanks
+		Description: Flame Tank.   Strong vs Infantry, Buildings.   Weak vs Tanks
 		IconPalette: player
 	Valued:
 		Cost: 550
@@ -10411,7 +10416,7 @@ sonic_tank:
 		Prerequisites: ~heavy.atreides, research_centre.atreides
 		BuildDuration: 500
 		BuildDurationModifier: 100
-		Description: Fires sonic shocks\n  Strong vs Infantry, Vehicles\n  Weak vs Tanks, Artillery
+		Description: Fires sonic shocks.   Strong vs Infantry, Vehicles.   Weak vs Tanks, Artillery
 		IconPalette: d2kunit
 	Valued:
 		Cost: 1000
@@ -10483,7 +10488,7 @@ d2k_laser_tank:
 		Prerequisites: ~heavy_factory.ordos, outpost.ordos
 		BuildDuration: 400
 		BuildDurationModifier: 100
-		Description: Ordos Universal Battle Tank\nHighly Mobile Hover unit\nFires laser beams\nWeak durability\n  Strong vs Everything
+		Description: Ordos Universal Battle Tank. Highly Mobile Hover unit. Fires laser beams. Weak durability.   Strong vs Everything
 		IconPalette: windows256
 	Valued:
 		Cost: 1000
@@ -10543,7 +10548,7 @@ ordos_deviatormk2:
 		Prerequisites: ~heavy_factory.ordos, research_centre.ordos, ~upordos_deviatormk2
 		BuildDuration: 400
 		BuildDurationModifier: 100
-		Description: Ordos Universal Battle Tank\nHighly Mobile Hover unit\nFires laser beams\nWeak durability\n  Strong vs Everything
+		Description: Ordos Universal Battle Tank. Highly Mobile Hover unit. Fires laser beams. Weak durability.   Strong vs Everything
 		IconPalette: windows256
 	Valued:
 		Cost: 1400
@@ -10595,7 +10600,7 @@ ordos_deviatormk2:
 # 		Prerequisites: ~heavy.harkonnen, ~techlevel.medium, ~faction.guild
 # 		BuildDuration: 375
 # 		BuildDurationModifier: 100
-# 		Description: Main Battle tank of Spacing Guild\nCan jump\n  Strong vs Vehicles, Air
+# 		Description: Main Battle tank of Spacing Guild. Can jump.   Strong vs Vehicles, Air
 # 		IconPalette: windows256
 # 	Valued:
 # 		Cost: 600
@@ -10661,7 +10666,7 @@ ordos_deviatormk2:
 # 		Prerequisites: ~heavy.harkonnen, research_centre, upgrade_heavy, ~faction.harkonnen, ~techlevel.high
 # 		BuildDuration: 500
 # 		BuildDurationModifier: 100
-# 		Description: Super Heavy Tank\nOnly one can be built\n  Strong vs Everything
+# 		Description: Super Heavy Tank. Only one can be built.   Strong vs Everything
 # 		IconPalette: ra2
 # 		BuildLimit: 1
 # 	RenderSprites:
@@ -10717,7 +10722,7 @@ devastator:
 		Prerequisites: heavy_factory.harkonnen, research_centre.harkonnen
 		BuildDuration: 1000
 		BuildDurationModifier: 100
-		Description: Super Heavy Tank\n  Strong vs Tanks\n  Weak vs Artillery
+		Description: Super Heavy Tank.   Strong vs Tanks.   Weak vs Artillery
 		IconPalette: d2kunit
 	Valued:
 		Cost: 1500
@@ -10806,7 +10811,7 @@ d2k_tyrant:
 		Prerequisites: research_centre.corrino
 		BuildDuration: 750
 		BuildDurationModifier: 100
-		Description: Super Heavy Tank\n  Strong vs Tanks\n  Weak vs Artillery
+		Description: Super Heavy Tank.   Strong vs Tanks.   Weak vs Artillery
 	Valued:
 		Cost: 1300
 	Tooltip:
@@ -10867,7 +10872,7 @@ raider:
 		Queue: VehicleLight.Ordos, VehicleStarport.Ordos
 		BuildPaletteOrder: 10
 		Prerequisites: ~light_factory.ordos
-		Description: Improved Scout\nCan carry a passenger\n  Strong vs Infantry, Light Vehicles\n  Weak vs Tanks
+		Description: Improved Scout. Can carry a passenger.   Strong vs Infantry, Light Vehicles.   Weak vs Tanks
 		IconPalette: d2kunit
 	Cargo:
 		Types: Infantry
@@ -10926,7 +10931,7 @@ ordos_scoutdrone:
 		Queue: VehicleLight.Ordos, VehicleStarport.Ordos
 		BuildPaletteOrder: 10
 		Prerequisites: ~light_factory.ordos
-		Description: Improved Scout\n  Strong vs Vehicles\n  Weak vs Infantry
+		Description: Improved Scout.   Strong vs Vehicles.   Weak vs Infantry
 		IconPalette: d2kunit
 	Valued:
 		Cost: 500
@@ -10984,7 +10989,7 @@ stealth_raider:
 		BuildPaletteOrder: 30
 		BuildDuration: 175
 		BuildDurationModifier: 100
-		Description: Invisible Raider Trike\n  Strong vs Infantry, Light Vehicles\n  Weak vs Tanks
+		Description: Invisible Raider Trike.   Strong vs Infantry, Light Vehicles.   Weak vs Tanks
 		IconPalette: d2kunit
 	Valued:
 		Cost: 375
@@ -11212,7 +11217,7 @@ deviator:
 		Prerequisites: ~heavy_factory.ordos, research_centre.ordos
 		BuildDuration: 400
 		BuildDurationModifier: 100
-		Description: Fires a warhead which changes\nthe allegiance of enemy vehicles
+		Description: Fires a warhead which changes. the allegiance of enemy vehicles
 		IconPalette: d2kunit
 	Mobile:
 		TurnSpeed: 48
@@ -11252,7 +11257,7 @@ deviator:
 	Buildable:
 		Queue: Vehicle, RAVehicle
 		BuildPaletteOrder: 40
-		Description: Main Battle Tank\n  Strong vs Tanks\n  Weak vs Infantry
+		Description: Main Battle Tank.   Strong vs Tanks.   Weak vs Infantry
 		IconPalette: d2kunit
 	Valued:
 		Cost: 600
@@ -11311,7 +11316,7 @@ combat_tank_h:
 	Buildable:
 		Queue: VehicleHeavy.Harkonnen, VehicleStarport.Harkonnen
 		BuildPaletteOrder: 40
-		Description: Main Battle Tank\n  Strong vs Tanks\n  Weak vs Infantry
+		Description: Main Battle Tank.   Strong vs Tanks.   Weak vs Infantry
 		IconPalette: d2kunit
 		Prerequisites: heavy_factory.harkonnen
 	Valued:
@@ -11381,7 +11386,7 @@ combat_tank_o_stealth:
 	Buildable:
 		Queue: VehicleHeavy.Ordos, VehicleStarport.Ordos
 		Prerequisites: ~heavy_factory.ordos, outpost.ordos
-		Description: Fast stealth tank with powerful long range cannon\n  Strong vs Tanks\n  Weak vs Infantry
+		Description: Fast stealth tank with powerful long range cannon.   Strong vs Tanks.   Weak vs Infantry
 		IconPalette: windows256
 	Valued:
 		Cost: 1000
@@ -11396,7 +11401,7 @@ combat_tank_o_stealth:
 		LocalOffset: 750,0,0
 		-MuzzleSequence:
 	Health:
-		HP: 80000
+		HP: 60000
 	-AttackTurreted:
 	AttackFrontal:
 		FacingTolerance: 0
@@ -11494,7 +11499,7 @@ combat_tank_corrino:
 		Queue: VehicleStarport.Corrino
 		BuildPaletteOrder: 10
 		Prerequisites: starport.corrino
-		Description: Corrino Multi-Purpose Main Battle Tank\nEquipped with Lower Calibre Cannon and AA/AT Missile System\n  All-Rounder
+		Description: Corrino Multi-Purpose Main Battle Tank. Equipped with Lower Calibre Cannon and AA/AT Missile System.   All-Rounder
 	Armament:
 		Weapon: D2K76mm
 		Recoil: 65
@@ -11562,7 +11567,7 @@ combat_tank_corrino:
 # 			fremen: phantomloaded
 # 	Buildable:
 # 		Prerequisites: ~faction.fremen, ~techlevel.medium
-# 		Description: Fremen Main Battle Tank\nCan be fitted with Fremen to gain extra firepower
+# 		Description: Fremen Main Battle Tank. Can be fitted with Fremen to gain extra firepower
 # 	Armament:
 # 		Weapon: 80mm_H
 # 		Recoil: 65
@@ -12741,7 +12746,7 @@ combat_tank_o.husk:
 # 		BuildPaletteOrder: 150
 # 		BuildDuration: 250
 # 		BuildDurationModifier: 100
-# 		Description: Produces Fremen Units\nNOTE: Can be only placed on Arrakis Cliffs
+# 		Description: Produces Fremen Units. NOTE: Can be only placed on Arrakis Cliffs
 # 		IconPalette: windows256
 # 	RequiresBuildableArea:
 # 		AreaTypes: building

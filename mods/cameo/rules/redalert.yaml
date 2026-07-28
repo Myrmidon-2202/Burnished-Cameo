@@ -3003,7 +3003,7 @@ HIND:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 100000
+		HP: 80000
 	Repairable:
 		HpPerStep: 5000
 	ChangesHealth@SelfHealing:
@@ -3084,10 +3084,10 @@ HIND:
 	GrantConditionOnDamageState@SmokeTrail:
 		Condition: enable-smoke
 	AmmoPool:
-		Ammo: 12
+		Ammo: 10
 		AmmoCondition: ammo
 	ReloadAmmoPool:
-		Delay: 4
+		Delay: 8
 		Count: 1
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
@@ -5663,7 +5663,7 @@ RAAFLD:
 	AirstrikePower@parabombs:
 		OrderName: Parabombs
 		Prerequisites:
-			1: ~techlevel.superweapons, ~up_advancedthermobarics
+			1: ~techlevel.superweapons
 		Icons:
 			1: airstrike
 		ChargeInterval: 7500
