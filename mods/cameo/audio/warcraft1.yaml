@@ -37,7 +37,34 @@ voiceskeleton:
 		Build: skeletonyes1,skeletonyes2,skeletonyes3
 		Burned: skeletondeath1
 		Zapped: skeletondeath1
-		Poisoned: skeletondeath1        
+		Poisoned: skeletondeath1
+
+voicewaterelemental:
+	VolumeModifier: 1.7
+	DefaultVariant: .wav
+	Voices:
+		Select: waterelementalgiggle1, waterelementalgiggle2, waterelementalgiggle3, waterelementalgiggle4
+		Attack: waterelementalgiggle1, waterelementalgiggle2, waterelementalgiggle3, waterelementalgiggle4
+		Action: waterelementalgiggle1, waterelementalgiggle2, waterelementalgiggle3, waterelementalgiggle4
+		Move: waterelementalgiggle1, waterelementalgiggle2, waterelementalgiggle3, waterelementalgiggle4
+		Die: waterelementalgiggle4
+		Build: waterelementalgiggle2, waterelementalgiggle3, waterelementalgiggle4
+		Burned: waterelementalgiggle4
+		Zapped: waterelementalgiggle4
+		Poisoned: waterelementalgiggle4
+
+voicedemon:
+	VolumeModifier: 1.7
+	DefaultVariant: .wav
+	Voices:
+		Select: warcraftdemon1, warcraftdemon2, warcraftdemon3, warcraftdemon4
+		Attack: warcraftdemon2, warcraftdemon3, warcraftdemon4
+		Action: warcraftdemon2, warcraftdemon3, warcraftdemon4
+		Move: warcraftdemon1, warcraftdemon2
+		Die: warcraftdemon2
+		Build:  warcraftdemon2, warcraftdemon3, warcraftdemon4
+		Burned: warcraftdemon2
+		Poisoned: warcraftdemon2
 ####################################################################################################
 #		HUMAN STRUCTURES
 ####################################################################################################

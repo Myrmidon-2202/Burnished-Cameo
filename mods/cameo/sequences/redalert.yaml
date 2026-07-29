@@ -3276,23 +3276,26 @@ modspaceport:
 jpwr:
 	Inherits: ^WithBuildingBib3
 	Defaults:
+		Scale: 1.4
 	idle:
-		Filename: JapReactorUndamagedIdle.png
-		Length: *
-		Scale: 0.9
+		Filename: newjappowerplant.png
+		Start: 8
+		Length: 10
+		FlipX: true
 	damaged-idle:
-		Filename: JapReactorDamagedIdle.png
-		Length: *
-		Scale: 0.9
+		Filename: newjappowerplant.png
+		Start: 18
+		Length: 10
+		FlipX: true
 	make:
-		Filename: JapReactorBuildup.png
-		Length: *
-		Scale: 0.9
+		Filename: newjappowerplant.png
+		Start: 0
+		Length: 8
 	dead:
-		Filename: JapReactorDamagedIdle.png
-		Length: *
-		Tick: 13
-		Scale: 0.9
+		Filename: newjappowerplant.png
+		Start: 18
+		Length: 10
+		FlipX: true
 	bib:
 		TilesetOverrides:
 			INTERIOR: TEMPERAT

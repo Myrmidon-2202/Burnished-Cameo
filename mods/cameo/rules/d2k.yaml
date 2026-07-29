@@ -2722,8 +2722,8 @@ outpost:
 		Actor: light_inf
 	SpawnActorOnDeath@death2:
 		Actor: light_inf
-	ProvidesPrerequisite@outpost:
-		Prerequisite: outpost.d2k
+	ProvidesPrerequisite@outpost2:
+		Prerequisite: outpost
 	ProvidesPrerequisite@buildingname:
 
 outpost.atreides:
@@ -3039,6 +3039,24 @@ high_tech_factory.ordos:
 	ProvidesPrerequisite@buildingname:
 	Tooltip:
 		Name: Ordos High Tech Factory
+	ProductionFromMapEdge@NORMAL:
+		Produces: Aircraft.Ordos
+	ProductionQueue:
+		Type: Aircraft.Ordos
+		DisplayOrder: 3
+		Group: Aircraft
+		LowPowerModifier: 150
+		ReadyAudio: UnitReady
+		ReadyTextNotification: notification-unit-ready
+		BlockedAudio: NoBuild
+		BlockedTextNotification: notification-unable-to-build-more
+		LimitedAudio: BuildingInProgress
+		LimitedTextNotification: notification-unable-to-comply-building-in-progress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar:
+		ProductionType: Aircraft.Ordos
 	RallyPoint:
 	RenderSprites:
 		Image: hightech.ordos
@@ -4496,7 +4514,7 @@ palace.ordos:
 		PauseOnCondition: disabled
 		Prerequisites: palace
 			1: palace
-		Actors: trooper, trooper, saboteur, saboteur
+		Actors: saboteur, saboteur
 		Type: Saboteurs
 		ChargeInterval: 1500
 		AutoFire: true
@@ -5316,7 +5334,7 @@ engineer:
 	Inherits@anim: ^D2KPaletteRenderInfantry
 	Buildable:
 		BuildPaletteOrder: 40
-		Queue: Infantry.Atreides, Infantry.Ordos, Infantry.Harkonnen, Infantry.Corrino
+		Queues: Infantry.Atreides, Infantry.Ordos, Infantry.Harkonnen, Infantry.Corrino
 		Prerequisites:
 		IconPalette: d2kunit
 	Tooltip:
@@ -7869,12 +7887,12 @@ swarmer:
 	Valued:
 		Cost: 450
 	Buildable:
-		Queue: Aircraft, RAAircraft
+		Queue: Aircraft.Ordos, RAAircraft.Ordos
 		BuildPaletteOrder: 30
 		Prerequisites: ~high_tech_factory.ordos
 		BuildDuration: 250
 		BuildDurationModifier: 100
-		Description: Light plane armed with dual machine guns. . Can attack air.. Strong vs Infantry and Air
+		Description: Light craft armed with dual machine guns. Can attack air. Strong vs Infantry and Air
 	Tooltip:
 		Name: Swarmer Drone
 	UpdatesPlayerStatistics:
@@ -7924,6 +7942,7 @@ swarmer:
 		Position: BottomLeft
 		RequiresSelection: True
 		PipCount: 6
+
 d2k_aa_mine:
 	Inherits: ^RANeutralPlane
 	Inherits@AUTOTARGET: ^AutoTargetAir
@@ -7934,12 +7953,12 @@ d2k_aa_mine:
 	Valued:
 		Cost: 500
 	Buildable:
-		Queue: Aircraft, RAAircraft
+		Queue: Aircraft.Ordos, RAAircraft
 		BuildPaletteOrder: 30
 		Prerequisites: ~high_tech_factory.ordos
 		BuildDuration: 500
 		BuildDurationModifier: 100
-		Description: Slowly Flying Mine that hurls missiles upon contact with enemy airplane before exploding. In higher numbers can take down entire squadron
+		Description: Slowly Flying Mine that hurls missiles upon contact with enemy aircraft.
 	Tooltip:
 		Name: Air Mine
 	UpdatesPlayerStatistics:
@@ -8000,7 +8019,6 @@ d2k_aa_mine:
 ordos_eye:
 	Inherits: ^RANeutralPlane
 	Inherits@Template: ^BomberTemplate
-	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
 	Inherits@GAINSEXPERIENCE: ^GainsExperience
 	Inherits@AntiAir: ^PrioritizeAir
 	Inherits@AntiInf: ^PrioritizeInfantry
@@ -8010,7 +8028,7 @@ ordos_eye:
 	Valued:
 		Cost: 1500
 	Buildable:
-		Queue: Aircraft, RAAircraft
+		Queue: Aircraft.Ordos, RAAircraft.Ordos
 		BuildPaletteOrder: 30
 		Prerequisites: ~high_tech_factory.ordos
 		BuildDuration: 250
@@ -8023,10 +8041,8 @@ ordos_eye:
 	Health:
 		HP: 150000
 	RevealsShroud:
-		Range: 5c0
+		Range: 10c0
 		Type: GroundPosition
-	AttackAircraft:
-		FacingTolerance: 320
 	Aircraft:
 		CruiseAltitude: 1920
 		Speed: 180
@@ -8037,7 +8053,6 @@ ordos_eye:
 	Guard:
 		Voice: Guard
 	Guardable:
-	WithMuzzleOverlay:
 	Targetable:
 		TargetTypes: Air, Plane
 	SpawnActorOnDeath:
@@ -8052,16 +8067,7 @@ ordos_eye:
 		VoiceSet: EBFDEyeonSky
 	RenderSprites:
 		PlayerPalette: player_rgba
-	AmmoPool:
-		Ammo: 12
-		AmmoCondition: ammo
-	ReloadAmmoPool:
-		Delay: 8
-		Count: 1
-	WithAmmoPipsDecoration:
-		Position: BottomLeft
-		RequiresSelection: True
-		PipCount: 6
+
 ordos_banshee:
 	Inherits: ^RANeutralPlane
 	Inherits@Template: ^HelicopterTemplate
@@ -8637,6 +8643,7 @@ swarmer.husk:
 	RenderSprites:
 		PlayerPalette: player_rgba
 		Image: swarmer
+
 ordos_banshee.husk:
 	Inherits: ^PlaneHusk
 	Tooltip:
@@ -8650,6 +8657,7 @@ ordos_banshee.husk:
 	RenderSprites:
 		PlayerPalette: player_rgba
 		Image: ordos_banshee
+
 ordos_eye.husk:
 	Inherits: ^PlaneHusk
 	Tooltip:

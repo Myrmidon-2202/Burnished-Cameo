@@ -1901,7 +1901,6 @@ wc_h_scorpion:
 wc_n_scorpion:
 	Inherits: wc_h_scorpion
 	Buildable:
-		Queue: Infantry
 		Description: Mighty Scorpion
 		# -Prerequisites:
 	Valued:
@@ -1925,6 +1924,8 @@ wc_h_waterelemental:
 	Inherits@SHADOW: ^WC1_Shadow
 	Valued:
 		Cost: 250
+	Buildable:
+		Description: Will make you wet your pants. Literally cannot be hurt by fire.
 	Tooltip:
 		Name: Water Elemental
 	UpdatesPlayerStatistics:
@@ -1960,7 +1961,7 @@ wc_h_waterelemental:
 	-Voiced:
 	-Crushable:
 	Voiced:
-		VoiceSet: AntVoice
+		VoiceSet: voicewaterelemental
 	RenderSprites:
 		Image: wc_h_waterelemental
 
@@ -2451,7 +2452,8 @@ wc_o_skeleton_single:
 	Inherits@upgrade_shields: ^wc_h_str_shield
 	Inherits@upgrade_swords: ^wc_h_str_sword
 	Inherits@MC: ^MCImmune
-	-Buildable:
+	Buildable:
+		Description: Restless Dead
 	Tooltip:
 		Name: The Dead
 	Armament:
@@ -2519,13 +2521,17 @@ wc_o_demon:
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Tooltip:
 		Name: Demon
+	Buildable:
+		Description: This beast comes from hell itself and therefore cannot be hurt by fire
 	Armament:
 		Weapon: demonSlice
 	AutoTarget:
 		InitialStance: AttackAnything
 		ScanRadius: 6
 	Selectable:
-		Bounds: 58240, 58240, 0, 0
+		Bounds: 512, 512
+	Voiced:
+		VoiceSet: voicedemon
 	RenderSprites:
 		Image: wc_o_demon
 

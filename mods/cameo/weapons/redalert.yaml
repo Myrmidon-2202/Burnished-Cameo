@@ -150,16 +150,16 @@ JapaneseTankRFlak:
 	ValidTargets: Ground, Water, Trees, Air
 	Warhead@SmallArms: SpreadDamage
 		ValidTargets: Ground, Water, Trees
-		Damage: 1400
+		Damage: 1600
 	Warhead@SmallArms2: SpreadDamage
 		ValidTargets: Air
-		Damage: 1000
+		Damage: 1200
 	Warhead@SmallArmsPercentage: HealthPercentageDamage
 		ValidTargets: Ground, Water, Trees
 		Damage: 1
 	Warhead@FlakWeapon: SpreadDamage
 		ValidTargets: Ground, Water, Trees
-		Damage: 800
+		Damage: 900
 	Warhead@FlakWeaponPercentage: HealthPercentageDamage
 		ValidTargets: Ground, Water, Trees
 		Damage: 1
@@ -1980,7 +1980,7 @@ SCUD:
 	Inherits: ^HeavyMissile
 	Inherits: ^HeavyFlameWeapon
 	ReloadDelay: 125
-	Range: 13688
+	Range: 9c0
 	MinRange: 3422
 	Report: missile1.aud
 	Projectile: Bullet
@@ -1994,13 +1994,13 @@ SCUD:
 		Shadow: True
 		LaunchAngle: 75
 	Warhead@HeavyMissile: SpreadDamage
-		Damage: 60000
+		Damage: 6000
 	Warhead@HeavyMissilePercentage: HealthPercentageDamage
 		Damage: 30
 	Warhead@HeavyFlameWeapon: SpreadDamage
-		Damage: 60000
+		Damage: 6000
 	Warhead@HeavyFlameWeaponFriendlyFire: SpreadDamage
-		Damage: 30000
+		Damage: 3000
 	Warhead@HeavyFlameWeaponPercentage: HealthPercentageDamage
 		Damage: 30
 
