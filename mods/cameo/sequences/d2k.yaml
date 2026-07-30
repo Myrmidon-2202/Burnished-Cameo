@@ -5867,67 +5867,57 @@ sardaukaricon:
 
 d2k_sardaukar_elite:
 	Defaults:
-		Scale: 2.3
+		Scale: 2.5
 	stand:
 		Filename: d2k_sardaukar_elite.shp
 		Facings: -8
-		Scale: 1.2
 	run:
 		Filename: d2k_sardaukar_elite.shp
 		Start: 8
 		Facings: -8
 		Length: 6
 		Tick: 150
-		Scale: 1.2
 	shoot:
 		Filename: d2k_sardaukar_elite.shp
 		Start: 56
 		Facings: -8
 		Length: 5
 		Tick: 150
-		Scale: 1.2
 	die:
 		Filename: d2k_sardaukar_elite.shp
 		Start: 96
 		Length: 5
 		Tick: 175
-		Scale: 1.2
 	die2:
 		Filename: d2k_sardaukar_elite.shp
 		Start: 96
 		Length: 5
 		Tick: 175
-		Scale: 1.2
 	die3:
 		Filename: d2k_sardaukar_elite.shp
 		Start: 96
 		Length: 5
 		Tick: 175
-		Scale: 1.2
 	die4:
 		Filename: d2k_sardaukar_elite.shp
 		Start: 96
 		Length: 5
 		Tick: 175
-		Scale: 1.2
 	die5:
 		Filename: d2k_sardaukar_elite.shp
 		Start: 96
 		Length: 5
 		Tick: 175
-		Scale: 1.2
 	die6:
 		Filename: d2k_sardaukar_elite.shp
 		Start: 96
 		Length: 5
 		Tick: 175
-		Scale: 1.2
 	die7:
 		Filename: d2k_sardaukar_elite.shp
 		Start: 96
 		Length: 5
 		Tick: 175
-		Scale: 1.2
 	icon:
 		Filename: d2k_sardaukar_elite_icon.shp
 	die-crushed:
@@ -5942,7 +5932,7 @@ d2k_sardaukar_elite:
 
 d2k_sardaukar_assassin:
 	Defaults:
-		Scale: 1.5
+		Scale: 1.7
 	stand:
 		Filename: d2k_sardaukar_assassin.shp
 		Facings: -8
@@ -7308,7 +7298,7 @@ d2k_marksman:
 
 d2k_light_tank:
 	Defaults:
-		Scale: 1.5
+		Scale: 2.5
 	idle:
 		Filename: d2k_light_apc.shp
 		Facings: -32
@@ -8061,7 +8051,7 @@ ix_siege_tank:
 
 d2k_rocket_buggy:
 	Defaults:
-		Scale: 1.5
+		Scale: 1.6
 	idle:
 		Filename: d2k_rocket_buggy.shp
 		Start: 0
@@ -8071,7 +8061,7 @@ d2k_rocket_buggy:
 
 d2k_transport_buggy:
 	Defaults:
-		Scale: 1.5
+		Scale: 2.0
 	idle:
 		Filename: d2k_transport_buggy.shp
 		Start: 0
@@ -8083,6 +8073,8 @@ d2k_transport_buggy:
 		Start: 1
 
 d2k_combat_buggy:
+	Defaults:
+		Scale: 2.0
 	idle:
 		Filename: d2k_buggy.shp
 		Facings: -32
@@ -9110,6 +9102,59 @@ d2k_chaos_effect:
 		Length: *
 		ZOffset: 1023
 		Offset: 0, -108
+
+aa_cgchao:
+	Defaults:
+		Offset: 0,-12
+	idle:
+		Filename: aa_cgchao.shp
+		Length: 1
+		ShadowStart: 3
+		Tick: 150
+	damaged-idle:
+		Filename: aa_cgchao.shp
+		Start: 1
+		Length: 1
+		ShadowStart: 4
+		Tick: 150
+	charged:
+		Filename: aa_cgchao_a.shp
+		Length: 32
+		Tick: 50
+	damaged-charged:
+		Filename: aa_cgchao_a.shp
+		Length: 32
+		Tick: 50
+	active:
+		Filename: aa_cgchao_a.shp
+		Length: 32
+		Tick: 50
+	damaged-active:
+		Filename: aa_cgchao_a.shp
+		Length: 32
+		Tick: 50
+	deactive:
+		Filename: aa_cgchao_a.shp
+		Length: 32
+		Tick: 50
+	damaged-deactive:
+		Filename: aa_cgchao_a.shp
+		Length: 32
+		Tick: 50
+	make:
+		Filename: aa_cgchaomk.shp
+		Length: 32
+		ShadowStart: 32
+	dead:
+		Filename: aa_cgchao.shp
+		Start: 1
+		Tick: 150
+	icon:
+		Filename: aa_cgchao_icon.shp
+		Offset: 0,0
+	icon2:
+		Filename: aa_cgchao_icon2.shp
+		Offset: 0,0
 
 d2k_airdefenseplatform:
 	idle:

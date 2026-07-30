@@ -128,7 +128,7 @@ spearFire:
 		RangeLimit: 6c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 200
-		Damage: 2000
+		Damage: 3000
 		ValidTargets: Ground
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
 	Warhead@2Eff: CreateEffect
@@ -143,7 +143,7 @@ wc_tower_fire_aa:
 		VerticalRateOfTurn: 100
 	Warhead@1Dam: SpreadDamage
 		Spread: 250
-		Damage: 2500
+		Damage: 3500
 		Versus:
 			None: 150
 			Wood: 50
@@ -250,11 +250,11 @@ SlimeJump:
 			Concrete: 30
 		
 catapultfire:
-	ReloadDelay: 200
+	ReloadDelay: 180
 	Range: 9216
 	MinRange: 3072
 	Report: catapult.aud
-	ValidTargets: Ground
+	ValidTargets: Ground, Air
 	Projectile: Bullet
 		LaunchAngle: 56
 		Speed: 256
@@ -263,14 +263,14 @@ catapultfire:
 	Warhead@1Dam: SpreadDamage
 		Spread: 512
 		Damage: 38250
-		ValidTargets: Ground
+		ValidTargets: Ground, Air
 		Versus:
 			None: 120
-			Wood: 40
+			Wood: 60
 			Light: 100
 			Medium: 80
 			Heavy: 60
-			Concrete: 20
+			Concrete: 25
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		ImpactSounds: explode.aud
@@ -575,7 +575,7 @@ fireballnecrolyte:
 
 armorNecrolyte:
 	Range: 3c0
-	ReloadDelay: 250
+	ReloadDelay: 260
 	TargetActorCenter: true
 	Projectile: InstantHit
 	Warhead@1: TargetDamage

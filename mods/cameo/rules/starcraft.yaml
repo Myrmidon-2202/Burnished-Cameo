@@ -1049,83 +1049,83 @@ SCMISSILETURRET:
 	RenderSprites:
 		PlayerPalette: player_rgba
 
-SCSENTINEL:
-	Inherits: ^Defense
-	Inherits@Template: ^AdvancedDefenseTemplate
-	Inherits@EXPERIENCE: ^GainsExperienceTDBuilding
-	Inherits@AUTOTARGET: ^AutoTargetAll
-	Inherits@detect: ^GenericAllDetector
-	Inherits@EMP: ^TurretEMP
-	Buildable:
-		Queue: Defence, RADefence
-		BuildPaletteOrder: 20
-		Prerequisites: ~scengineeringbay
-		Description: template-anti-infantry-defense.description
-	Valued:
-		Cost: 800
-	Tooltip:
-		Name: Sentinel
-	Building:
-		Footprint: x
-		Dimensions: 1,1
-		BuildSounds: tscupd00.aud
-	Health:
-		HP: 160000
-	Selectable:
-		Bounds: 1024, 1024
-	Turreted:
-		TurnSpeed: 40
-		InitialFacing: 896
-		Offset: -1,1,1
-		RealignDelay: -1
-	AttackTurreted:
-		Voice: Attack
-	Armament:
-		Weapon: NaxLaserT
-		LocalOffset: 600,0,600
-		MuzzleSequence: muzzle
-		MuzzlePalette: ra2effect
-		RequiresCondition: !upnax2_ylaser
-	ProvidesPrerequisite@buildingname:
-	Transforms:
-		IntoActor: scsentinelm
-		Offset: 0,0
-		NoTransformNotification: BuildingCannotPlaceAudio
-	WithMuzzleOverlay:
-	WithSpriteTurret:
-		RequiresCondition: !build-incomplete
-	AutoTarget:
-	Power:
-		Amount: -40
-	RevealsShroud:
-		Range: 8181
-	DetectCloaked:
-		Range: 4090
-	RenderSprites:
-		PlayerPalette: player_rgba
-	ProvidesPrerequisite@buildingname:
+# SCSENTINEL:
+# 	Inherits: ^Defense
+# 	Inherits@Template: ^AdvancedDefenseTemplate
+# 	Inherits@EXPERIENCE: ^GainsExperienceTDBuilding
+# 	Inherits@AUTOTARGET: ^AutoTargetAll
+# 	Inherits@detect: ^GenericAllDetector
+# 	Inherits@EMP: ^TurretEMP
+# 	Buildable:
+# 		Queue: Defence, RADefence
+# 		BuildPaletteOrder: 20
+# 		Prerequisites: ~scengineeringbay
+# 		Description: template-anti-infantry-defense.description
+# 	Valued:
+# 		Cost: 800
+# 	Tooltip:
+# 		Name: Sentinel
+# 	Building:
+# 		Footprint: x
+# 		Dimensions: 1,1
+# 		BuildSounds: tscupd00.aud
+# 	Health:
+# 		HP: 160000
+# 	Selectable:
+# 		Bounds: 1024, 1024
+# 	Turreted:
+# 		TurnSpeed: 40
+# 		InitialFacing: 896
+# 		Offset: -1,1,1
+# 		RealignDelay: -1
+# 	AttackTurreted:
+# 		Voice: Attack
+# 	Armament:
+# 		Weapon: NaxLaserT
+# 		LocalOffset: 600,0,600
+# 		MuzzleSequence: muzzle
+# 		MuzzlePalette: ra2effect
+# 		RequiresCondition: !upnax2_ylaser
+# 	ProvidesPrerequisite@buildingname:
+# 	Transforms:
+# 		IntoActor: scsentinelm
+# 		Offset: 0,0
+# 		NoTransformNotification: BuildingCannotPlaceAudio
+# 	WithMuzzleOverlay:
+# 	WithSpriteTurret:
+# 		RequiresCondition: !build-incomplete
+# 	AutoTarget:
+# 	Power:
+# 		Amount: -40
+# 	RevealsShroud:
+# 		Range: 8181
+# 	DetectCloaked:
+# 		Range: 4090
+# 	RenderSprites:
+# 		PlayerPalette: player_rgba
+# 	ProvidesPrerequisite@buildingname:
 
-SCSENTINELM:
-	Inherits: SCCOMMANDCENTERM
-	Inherits@EXPERIENCE: ^GainsExperienceTDBuilding
-	Tooltip:
-		Name: Sentinel
-	Selectable:
-		Bounds: 1024, 1024
-		DecorationBounds: 1024, 1024, 0, 0
-	Valued:
-		Cost: 800
-	Health:
-		HP: 160000
-	Armor:
-		Type: Steel
-	Transforms:
-		IntoActor: scsentinel
-		Offset: 0,0
-	RenderSprites:
-		Image: scsentinelm
-	RenderSprites:
-		PlayerPalette: player_rgba
+# SCSENTINELM:
+# 	Inherits: SCCOMMANDCENTERM
+# 	Inherits@EXPERIENCE: ^GainsExperienceTDBuilding
+# 	Tooltip:
+# 		Name: Sentinel
+# 	Selectable:
+# 		Bounds: 1024, 1024
+# 		DecorationBounds: 1024, 1024, 0, 0
+# 	Valued:
+# 		Cost: 800
+# 	Health:
+# 		HP: 160000
+# 	Armor:
+# 		Type: Steel
+# 	Transforms:
+# 		IntoActor: scsentinel
+# 		Offset: 0,0
+# 	RenderSprites:
+# 		Image: scsentinelm
+# 	RenderSprites:
+# 		PlayerPalette: player_rgba
 
 SCFACTORY:
 	Inherits: ^BaseBuilding
@@ -5732,331 +5732,331 @@ SCTMCV:
 ## Terran Promotions
 ### Infantry Tree
 
-upmadcap:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Unlock Madcap
-	Buildable:
-		BuildPaletteOrder: 8033
-		Queue: Promotions
-		Description: An upgrade to the marine.
-		Prerequisites: ~sccommandcenter, !upmadcap, rank1
-	RenderSprites:
-		Image: scmadcap
-	ProvidesPrerequisite:
+# upmadcap:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Unlock Madcap
+# 	Buildable:
+# 		BuildPaletteOrder: 8033
+# 		Queue: Promotions
+# 		Description: An upgrade to the marine.
+# 		Prerequisites: ~sccommandcenter, !upmadcap, rank1
+# 	RenderSprites:
+# 		Image: scmadcap
+# 	ProvidesPrerequisite:
 
-upharakan:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Unlock Harakan
-	Buildable:
-		BuildPaletteOrder: 8036
-		Queue: Promotions
-		Description: Allows construction of the Harakan and the Matador.
-		Prerequisites: ~sccommandcenter, upmadcap, !upharakan, rank1
-	RenderSprites:
-		Image: scharakan
-	ProvidesPrerequisite:
+# upharakan:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Unlock Harakan
+# 	Buildable:
+# 		BuildPaletteOrder: 8036
+# 		Queue: Promotions
+# 		Description: Allows construction of the Harakan and the Matador.
+# 		Prerequisites: ~sccommandcenter, upmadcap, !upharakan, rank1
+# 	RenderSprites:
+# 		Image: scharakan
+# 	ProvidesPrerequisite:
 
-upsilvertongue:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Unlock Spectre and Medivac
-	Buildable:
-		BuildPaletteOrder: 8039
-		Queue: Promotions
-		Description: Unlocks the Spectre and Medivac.
-		Prerequisites: ~sccommandcenter, upharakan, !upsilvertongue, rank1
-	RenderSprites:
-		Image: scsilvertongue
-	ProvidesPrerequisite:
+# upsilvertongue:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Unlock Spectre and Medivac
+# 	Buildable:
+# 		BuildPaletteOrder: 8039
+# 		Queue: Promotions
+# 		Description: Unlocks the Spectre and Medivac.
+# 		Prerequisites: ~sccommandcenter, upharakan, !upsilvertongue, rank1
+# 	RenderSprites:
+# 		Image: scsilvertongue
+# 	ProvidesPrerequisite:
 
-uppythean:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Unlock Pythean
-	Buildable:
-		BuildPaletteOrder: 8042
-		Queue: Promotions
-		Description: Allows construction of the Pythean, a colossal transport.
-		Prerequisites: ~sccommandcenter, upsilvertongue, !uppythean, rank1
-	RenderSprites:
-		Image: scpythean
-	ProvidesPrerequisite:
+# uppythean:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Unlock Pythean
+# 	Buildable:
+# 		BuildPaletteOrder: 8042
+# 		Queue: Promotions
+# 		Description: Allows construction of the Pythean, a colossal transport.
+# 		Prerequisites: ~sccommandcenter, upsilvertongue, !uppythean, rank1
+# 	RenderSprites:
+# 		Image: scpythean
+# 	ProvidesPrerequisite:
 
-### Mech Tree
+# ### Mech Tree
 
-upmatador:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Unlock Matador
-	Buildable:
-		BuildPaletteOrder: 8034
-		Queue: Promotions
-		Description: Unlocks a Flamethrower Siege Tank.
-		Prerequisites: ~sccommandcenter, !upmatador, rank1
-	RenderSprites:
-		Image: scmatador
-	ProvidesPrerequisite:
+# upmatador:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Unlock Matador
+# 	Buildable:
+# 		BuildPaletteOrder: 8034
+# 		Queue: Promotions
+# 		Description: Unlocks a Flamethrower Siege Tank.
+# 		Prerequisites: ~sccommandcenter, !upmatador, rank1
+# 	RenderSprites:
+# 		Image: scmatador
+# 	ProvidesPrerequisite:
 
-upsccyclone:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Unlock Cyclone
-	Buildable:
-		BuildPaletteOrder: 8037
-		Queue: Promotions
-		Description: Allows construction of the Cyclone.
-		Prerequisites: ~sccommandcenter, upmatador, !upsccyclone, rank1
-	RenderSprites:
-		Image: sccyclone
-	ProvidesPrerequisite:
+# upsccyclone:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Unlock Cyclone
+# 	Buildable:
+# 		BuildPaletteOrder: 8037
+# 		Queue: Promotions
+# 		Description: Allows construction of the Cyclone.
+# 		Prerequisites: ~sccommandcenter, upmatador, !upsccyclone, rank1
+# 	RenderSprites:
+# 		Image: sccyclone
+# 	ProvidesPrerequisite:
 
-upgoliathmk2:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Unlock Goliath Mk2
-	Buildable:
-		BuildPaletteOrder: 8040
-		Queue: Promotions
-		Description: Unlocks the Goliath Mk2.
-		Prerequisites: ~sccommandcenter, upsccyclone, !upgoliathmk2, rank1
-	RenderSprites:
-		Image: scgoliath2
-	ProvidesPrerequisite:
+# upgoliathmk2:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Unlock Goliath Mk2
+# 	Buildable:
+# 		BuildPaletteOrder: 8040
+# 		Queue: Promotions
+# 		Description: Unlocks the Goliath Mk2.
+# 		Prerequisites: ~sccommandcenter, upsccyclone, !upgoliathmk2, rank1
+# 	RenderSprites:
+# 		Image: scgoliath2
+# 	ProvidesPrerequisite:
 
-upwarhound:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Unlock Warhound
-	Buildable:
-		BuildPaletteOrder: 8043
-		Queue: Promotions
-		Description: Unlocks the Warhound.
-		Prerequisites: ~sccommandcenter, upgoliathmk2, !upwarhound, rank1
-	RenderSprites:
-		Image: scwarhound
-	ProvidesPrerequisite:
+# upwarhound:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Unlock Warhound
+# 	Buildable:
+# 		BuildPaletteOrder: 8043
+# 		Queue: Promotions
+# 		Description: Unlocks the Warhound.
+# 		Prerequisites: ~sccommandcenter, upgoliathmk2, !upwarhound, rank1
+# 	RenderSprites:
+# 		Image: scwarhound
+# 	ProvidesPrerequisite:
 
-### Ship Tree
+# ### Ship Tree
 
-upraven:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Unlock Raven
-	Buildable:
-		BuildPaletteOrder: 8035
-		Queue: Promotions
-		Description: Allows construction of the Raven.
-		Prerequisites: ~sccommandcenter, !upraven, rank1
-	RenderSprites:
-		Image: scraven
-	ProvidesPrerequisite:
+# upraven:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Unlock Raven
+# 	Buildable:
+# 		BuildPaletteOrder: 8035
+# 		Queue: Promotions
+# 		Description: Allows construction of the Raven.
+# 		Prerequisites: ~sccommandcenter, !upraven, rank1
+# 	RenderSprites:
+# 		Image: scraven
+# 	ProvidesPrerequisite:
 
-upsundog:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Unlock Sundog
-	Buildable:
-		BuildPaletteOrder: 8038
-		Queue: Promotions
-		Description: Allows training of the Sundog.
-		Prerequisites: ~sccommandcenter, upraven, !upsundog, rank1
-	RenderSprites:
-		Image: scsundog
-	ProvidesPrerequisite:
+# upsundog:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Unlock Sundog
+# 	Buildable:
+# 		BuildPaletteOrder: 8038
+# 		Queue: Promotions
+# 		Description: Allows training of the Sundog.
+# 		Prerequisites: ~sccommandcenter, upraven, !upsundog, rank1
+# 	RenderSprites:
+# 		Image: scsundog
+# 	ProvidesPrerequisite:
 
-upwyvern:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Unlock Wyvern
-	Buildable:
-		BuildPaletteOrder: 8041
-		Queue: Promotions
-		Description: Allows training of the Desolator. Infantry becomes immune to radiation.
-		Prerequisites: ~sccommandcenter, upsundog, !upwyvern, rank1
-	RenderSprites:
-		Image: scwyvern
-	ProvidesPrerequisite:
+# upwyvern:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Unlock Wyvern
+# 	Buildable:
+# 		BuildPaletteOrder: 8041
+# 		Queue: Promotions
+# 		Description: Allows training of the Desolator. Infantry becomes immune to radiation.
+# 		Prerequisites: ~sccommandcenter, upsundog, !upwyvern, rank1
+# 	RenderSprites:
+# 		Image: scwyvern
+# 	ProvidesPrerequisite:
 
-upphobos:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Unlock Phobos
-	Buildable:
-		BuildPaletteOrder: 8044
-		Queue: Promotions
-		Description: Allows construction of the Phobos.
-		Prerequisites: ~sccommandcenter, upwyvern, !upphobos, rank1
-	RenderSprites:
-		Image: scphobos
-	ProvidesPrerequisite:
+# upphobos:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Unlock Phobos
+# 	Buildable:
+# 		BuildPaletteOrder: 8044
+# 		Queue: Promotions
+# 		Description: Allows construction of the Phobos.
+# 		Prerequisites: ~sccommandcenter, upwyvern, !upphobos, rank1
+# 	RenderSprites:
+# 		Image: scphobos
+# 	ProvidesPrerequisite:
 
-####################################################################################################
-#		Zerg Promotions
-####################################################################################################
+# ####################################################################################################
+# #		Zerg Promotions
+# ####################################################################################################
 
-### Assault Tree
+# ### Assault Tree
 
-uptalon:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Unlock Talon
-	Buildable:
-		BuildPaletteOrder: 8045
-		Queue: Promotions
-		Description: Unlocks an upgrade for the zergling.
-		Prerequisites: ~schatchery, !uptalon, rank1
-	RenderSprites:
-		Image: sctalon
-	ProvidesPrerequisite:
+# uptalon:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Unlock Talon
+# 	Buildable:
+# 		BuildPaletteOrder: 8045
+# 		Queue: Promotions
+# 		Description: Unlocks an upgrade for the zergling.
+# 		Prerequisites: ~schatchery, !uptalon, rank1
+# 	RenderSprites:
+# 		Image: sctalon
+# 	ProvidesPrerequisite:
 
-upspithid:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Unlock Spithid
-	Buildable:
-		BuildPaletteOrder: 8048
-		Queue: Promotions
-		Description: Unlocks Spithids.
-		Prerequisites: ~schatchery, uptalon, !upspithid, rank1
-	RenderSprites:
-		Image: scspithid
-	ProvidesPrerequisite:
+# upspithid:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Unlock Spithid
+# 	Buildable:
+# 		BuildPaletteOrder: 8048
+# 		Queue: Promotions
+# 		Description: Unlocks Spithids.
+# 		Prerequisites: ~schatchery, uptalon, !upspithid, rank1
+# 	RenderSprites:
+# 		Image: scspithid
+# 	ProvidesPrerequisite:
 
-upshriek:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Unlock Shriek
-	Buildable:
-		BuildPaletteOrder: 8051
-		Queue: Promotions
-		Description: Unlocks the shriek, a flying swarming zerg.
-		Prerequisites: ~schatchery, upspithid, !upshriek, rank1
-	RenderSprites:
-		Image: scshriek
-	ProvidesPrerequisite:
+# upshriek:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Unlock Shriek
+# 	Buildable:
+# 		BuildPaletteOrder: 8051
+# 		Queue: Promotions
+# 		Description: Unlocks the shriek, a flying swarming zerg.
+# 		Prerequisites: ~schatchery, upspithid, !upshriek, rank1
+# 	RenderSprites:
+# 		Image: scshriek
+# 	ProvidesPrerequisite:
 
-upswarmling:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Unlock Swarmling
-	Buildable:
-		BuildPaletteOrder: 8054
-		Queue: Promotions
-		Description: Unlocks the Swarmling, a swarming artillery type flying unit.
-		Prerequisites: ~schatchery, upshriek, !upswarmling, rank1
-	RenderSprites:
-		Image: scswarmling
-	ProvidesPrerequisite:
+# upswarmling:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Unlock Swarmling
+# 	Buildable:
+# 		BuildPaletteOrder: 8054
+# 		Queue: Promotions
+# 		Description: Unlocks the Swarmling, a swarming artillery type flying unit.
+# 		Prerequisites: ~schatchery, upshriek, !upswarmling, rank1
+# 	RenderSprites:
+# 		Image: scswarmling
+# 	ProvidesPrerequisite:
 
-### Assault Tree
+# ### Assault Tree
 
-upsporemaw:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Unlock Sporemaw
-	Buildable:
-		BuildPaletteOrder: 8046
-		Queue: Promotions
-		Description: Unlocks the Sporemaw.
-		Prerequisites: ~schatchery, !upsporemaw, rank1
-	RenderSprites:
-		Image: scsporemaw
-	ProvidesPrerequisite:
+# upsporemaw:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Unlock Sporemaw
+# 	Buildable:
+# 		BuildPaletteOrder: 8046
+# 		Queue: Promotions
+# 		Description: Unlocks the Sporemaw.
+# 		Prerequisites: ~schatchery, !upsporemaw, rank1
+# 	RenderSprites:
+# 		Image: scsporemaw
+# 	ProvidesPrerequisite:
 
-upgoremaw:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Unlock Goremaw
-	Buildable:
-		BuildPaletteOrder: 8049
-		Queue: Promotions
-		Description: Unlocks the Goremaw.
-		Prerequisites: ~schatchery, upsporemaw, !upgoremaw, rank1
-	RenderSprites:
-		Image: scgoremaw
-	ProvidesPrerequisite:
+# upgoremaw:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Unlock Goremaw
+# 	Buildable:
+# 		BuildPaletteOrder: 8049
+# 		Queue: Promotions
+# 		Description: Unlocks the Goremaw.
+# 		Prerequisites: ~schatchery, upsporemaw, !upgoremaw, rank1
+# 	RenderSprites:
+# 		Image: scgoremaw
+# 	ProvidesPrerequisite:
 
-upgorekraken:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Unlock Gorekraken
-	Buildable:
-		BuildPaletteOrder: 8052
-		Queue: Promotions
-		Description: Unlocks the Gorekraken.
-		Prerequisites: ~schatchery, upgoremaw, !upgorekraken, rank1
-	RenderSprites:
-		Image: scgorekraken
-	ProvidesPrerequisite:
+# upgorekraken:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Unlock Gorekraken
+# 	Buildable:
+# 		BuildPaletteOrder: 8052
+# 		Queue: Promotions
+# 		Description: Unlocks the Gorekraken.
+# 		Prerequisites: ~schatchery, upgoremaw, !upgorekraken, rank1
+# 	RenderSprites:
+# 		Image: scgorekraken
+# 	ProvidesPrerequisite:
 
-uphermit:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Unlock Hermit
-	Buildable:
-		BuildPaletteOrder: 8055
-		Queue: Promotions
-		Description: Allows spawning of the Hermit.
-		Prerequisites: ~schatchery, upgorekraken, !uphermit, rank1
-	RenderSprites:
-		Image: schermit
-	ProvidesPrerequisite:
+# uphermit:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Unlock Hermit
+# 	Buildable:
+# 		BuildPaletteOrder: 8055
+# 		Queue: Promotions
+# 		Description: Allows spawning of the Hermit.
+# 		Prerequisites: ~schatchery, upgorekraken, !uphermit, rank1
+# 	RenderSprites:
+# 		Image: schermit
+# 	ProvidesPrerequisite:
 
-### Support Tree
+# ### Support Tree
 
-upbroodweaver:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Unlock Broodweaver
-	Buildable:
-		BuildPaletteOrder: 8047
-		Queue: Promotions
-		Description: Allows spawning of the Broodweaver.
-		Prerequisites: ~schatchery, !upbroodweaver, rank1
-	RenderSprites:
-		Image: scbroodweaver
-	ProvidesPrerequisite:
+# upbroodweaver:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Unlock Broodweaver
+# 	Buildable:
+# 		BuildPaletteOrder: 8047
+# 		Queue: Promotions
+# 		Description: Allows spawning of the Broodweaver.
+# 		Prerequisites: ~schatchery, !upbroodweaver, rank1
+# 	RenderSprites:
+# 		Image: scbroodweaver
+# 	ProvidesPrerequisite:
 
-upcorruptor:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Unlock Corruptor
-	Buildable:
-		BuildPaletteOrder: 8050
-		Queue: Promotions
-		Description: Unlocks the Corruptor.
-		Prerequisites: ~schatchery, upbroodweaver, !upcorruptor, rank1
-	RenderSprites:
-		Image: sccorruptor
-	ProvidesPrerequisite:
+# upcorruptor:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Unlock Corruptor
+# 	Buildable:
+# 		BuildPaletteOrder: 8050
+# 		Queue: Promotions
+# 		Description: Unlocks the Corruptor.
+# 		Prerequisites: ~schatchery, upbroodweaver, !upcorruptor, rank1
+# 	RenderSprites:
+# 		Image: sccorruptor
+# 	ProvidesPrerequisite:
 
-updreadshroud:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Unlock Dreadshroud
-	Buildable:
-		BuildPaletteOrder: 8053
-		Queue: Promotions
-		Description: Allows spawning of the Dreadshroud.
-		Prerequisites: ~schatchery, upcorruptor, !updreadshroud, rank1
-	RenderSprites:
-		Image: scdreadshroud
-	ProvidesPrerequisite:
+# updreadshroud:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Unlock Dreadshroud
+# 	Buildable:
+# 		BuildPaletteOrder: 8053
+# 		Queue: Promotions
+# 		Description: Allows spawning of the Dreadshroud.
+# 		Prerequisites: ~schatchery, upcorruptor, !updreadshroud, rank1
+# 	RenderSprites:
+# 		Image: scdreadshroud
+# 	ProvidesPrerequisite:
 
-upbehemoth:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Unlock Behemoth
-	Buildable:
-		BuildPaletteOrder: 8056
-		Queue: Promotions
-		Description: Allows spawning of the Behemoth.
-		Prerequisites: ~schatchery, updreadshroud, !upbehemoth, rank1
-	RenderSprites:
-		Image: scbehemoth
-	ProvidesPrerequisite:
+# upbehemoth:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Unlock Behemoth
+# 	Buildable:
+# 		BuildPaletteOrder: 8056
+# 		Queue: Promotions
+# 		Description: Allows spawning of the Behemoth.
+# 		Prerequisites: ~schatchery, updreadshroud, !upbehemoth, rank1
+# 	RenderSprites:
+# 		Image: scbehemoth
+# 	ProvidesPrerequisite:
 
 ####################################################################################################
 #		UNIT PROTOSS
@@ -7826,171 +7826,171 @@ SCPATRIARCH:
 	RenderSprites:
 		PlayerPalette: player_rgba
 
-####################################################################################################
-#		Protoss Promotions
-####################################################################################################
+# ####################################################################################################
+# #		Protoss Promotions
+# ####################################################################################################
 
-### Assault Tree
+# ### Assault Tree
 
-uplegionnaire:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Unlock Legionnaire
-	Buildable:
-		BuildPaletteOrder: 8045
-		Queue: Promotions
-		Description: Unlocks the Legionnaire.
-		Prerequisites: ~scnexus, !uplegionnaire, rank1
-	RenderSprites:
-		Image: sclegionnaire
-	ProvidesPrerequisite:
+# uplegionnaire:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Unlock Legionnaire
+# 	Buildable:
+# 		BuildPaletteOrder: 8045
+# 		Queue: Promotions
+# 		Description: Unlocks the Legionnaire.
+# 		Prerequisites: ~scnexus, !uplegionnaire, rank1
+# 	RenderSprites:
+# 		Image: sclegionnaire
+# 	ProvidesPrerequisite:
 
-upatreus:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Unlock Atreus
-	Buildable:
-		BuildPaletteOrder: 8048
-		Queue: Promotions
-		Description: Unlocks the Atreus.
-		Prerequisites: ~scnexus, uplegionnaire, !upatreus, rank1
-	RenderSprites:
-		Image: scatreus
-	ProvidesPrerequisite:
+# upatreus:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Unlock Atreus
+# 	Buildable:
+# 		BuildPaletteOrder: 8048
+# 		Queue: Promotions
+# 		Description: Unlocks the Atreus.
+# 		Prerequisites: ~scnexus, uplegionnaire, !upatreus, rank1
+# 	RenderSprites:
+# 		Image: scatreus
+# 	ProvidesPrerequisite:
 
-upamaranth:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Unlock Amaranth
-	Buildable:
-		BuildPaletteOrder: 8051
-		Queue: Promotions
-		Description: Unlocks the Amaranth.
-		Prerequisites: ~scnexus, upatreus, !upamaranth, rank1
-	RenderSprites:
-		Image: scamaranth
-	ProvidesPrerequisite:
+# upamaranth:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Unlock Amaranth
+# 	Buildable:
+# 		BuildPaletteOrder: 8051
+# 		Queue: Promotions
+# 		Description: Unlocks the Amaranth.
+# 		Prerequisites: ~scnexus, upatreus, !upamaranth, rank1
+# 	RenderSprites:
+# 		Image: scamaranth
+# 	ProvidesPrerequisite:
 
-uppatriarch:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Unlock Patriarch
-	Buildable:
-		BuildPaletteOrder: 8054
-		Queue: Promotions
-		Description: Unlocks the Patriarch.
-		Prerequisites: ~scnexus, upamaranth, !uppatriarch, rank1
-	RenderSprites:
-		Image: scpatriarch
-	ProvidesPrerequisite:
+# uppatriarch:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Unlock Patriarch
+# 	Buildable:
+# 		BuildPaletteOrder: 8054
+# 		Queue: Promotions
+# 		Description: Unlocks the Patriarch.
+# 		Prerequisites: ~scnexus, upamaranth, !uppatriarch, rank1
+# 	RenderSprites:
+# 		Image: scpatriarch
+# 	ProvidesPrerequisite:
 
-### Assault Tree
+# ### Assault Tree
 
-upepigraph:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Unlock Epigraph
-	Buildable:
-		BuildPaletteOrder: 8047
-		Queue: Promotions
-		Description: Unlocks the Epigraph.
-		Prerequisites: ~scnexus, !upepigraph, rank1
-	RenderSprites:
-		Image: scepigraph
-	ProvidesPrerequisite:
+# upepigraph:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Unlock Epigraph
+# 	Buildable:
+# 		BuildPaletteOrder: 8047
+# 		Queue: Promotions
+# 		Description: Unlocks the Epigraph.
+# 		Prerequisites: ~scnexus, !upepigraph, rank1
+# 	RenderSprites:
+# 		Image: scepigraph
+# 	ProvidesPrerequisite:
 
-uplanifect:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Unlock Lanifect
-	Buildable:
-		BuildPaletteOrder: 8050
-		Queue: Promotions
-		Description: Unlocks the Lanifect.
-		Prerequisites: ~scnexus, upepigraph, !upgladius, rank1
-	RenderSprites:
-		Image: sclanifect
-	ProvidesPrerequisite:
+# uplanifect:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Unlock Lanifect
+# 	Buildable:
+# 		BuildPaletteOrder: 8050
+# 		Queue: Promotions
+# 		Description: Unlocks the Lanifect.
+# 		Prerequisites: ~scnexus, upepigraph, !upgladius, rank1
+# 	RenderSprites:
+# 		Image: sclanifect
+# 	ProvidesPrerequisite:
 
-upgladius:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Unlock Gladius
-	Buildable:
-		BuildPaletteOrder: 8053
-		Queue: Promotions
-		Description: Unlocks the Gladius.
-		Prerequisites: ~scnexus, uplanifect, !upgladius, rank1
-	RenderSprites:
-		Image: scgladius
-	ProvidesPrerequisite:
+# upgladius:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Unlock Gladius
+# 	Buildable:
+# 		BuildPaletteOrder: 8053
+# 		Queue: Promotions
+# 		Description: Unlocks the Gladius.
+# 		Prerequisites: ~scnexus, uplanifect, !upgladius, rank1
+# 	RenderSprites:
+# 		Image: scgladius
+# 	ProvidesPrerequisite:
 
-upstarsovereign:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Unlock Star Sovereign
-	Buildable:
-		BuildPaletteOrder: 8056
-		Queue: Promotions
-		Description: Unlocks the Star Sovereign.
-		Prerequisites: ~scnexus, upgladius, !upstarsovereign, rank1
-	RenderSprites:
-		Image: scstarshipsovereign
-	ProvidesPrerequisite:
+# upstarsovereign:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Unlock Star Sovereign
+# 	Buildable:
+# 		BuildPaletteOrder: 8056
+# 		Queue: Promotions
+# 		Description: Unlocks the Star Sovereign.
+# 		Prerequisites: ~scnexus, upgladius, !upstarsovereign, rank1
+# 	RenderSprites:
+# 		Image: scstarshipsovereign
+# 	ProvidesPrerequisite:
 
-### Support Tree
+# ### Support Tree
 
-uppositron:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Unlock Positron
-	Buildable:
-		BuildPaletteOrder: 8046
-		Queue: Promotions
-		Description:  nlocks the Positron.
-		Prerequisites: ~scnexus, !uppositron, rank1
-	RenderSprites:
-		Image: scpositron
-	ProvidesPrerequisite:
+# uppositron:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Unlock Positron
+# 	Buildable:
+# 		BuildPaletteOrder: 8046
+# 		Queue: Promotions
+# 		Description:  nlocks the Positron.
+# 		Prerequisites: ~scnexus, !uppositron, rank1
+# 	RenderSprites:
+# 		Image: scpositron
+# 	ProvidesPrerequisite:
 
-upanalogue:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Unlock Analogue
-	Buildable:
-		BuildPaletteOrder: 8049
-		Queue: Promotions
-		Description: Unlocks the Analogue.
-		Prerequisites: ~scnexus, uppositron , !upanalogue, rank1
-	RenderSprites:
-		Image: scanalogue
-	ProvidesPrerequisite:
+# upanalogue:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Unlock Analogue
+# 	Buildable:
+# 		BuildPaletteOrder: 8049
+# 		Queue: Promotions
+# 		Description: Unlocks the Analogue.
+# 		Prerequisites: ~scnexus, uppositron , !upanalogue, rank1
+# 	RenderSprites:
+# 		Image: scanalogue
+# 	ProvidesPrerequisite:
 
-upmanifold:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Unlock Manifold
-	Buildable:
-		BuildPaletteOrder: 8052
-		Queue: Promotions
-		Description: Unlocks the Manifold.
-		Prerequisites: ~scnexus, upanalogue, !upmanifold, rank1
-	RenderSprites:
-		Image: scmanifold
-	ProvidesPrerequisite:
+# upmanifold:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Unlock Manifold
+# 	Buildable:
+# 		BuildPaletteOrder: 8052
+# 		Queue: Promotions
+# 		Description: Unlocks the Manifold.
+# 		Prerequisites: ~scnexus, upanalogue, !upmanifold, rank1
+# 	RenderSprites:
+# 		Image: scmanifold
+# 	ProvidesPrerequisite:
 
-upidol:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Unlock Idol
-	Buildable:
-		BuildPaletteOrder: 8055
-		Queue: Promotions
-		Description: Unlocks the Idol.
-		Prerequisites: ~scnexus, upmanifold, !upidol, rank1
-	RenderSprites:
-		Image: scidol
-	ProvidesPrerequisite:
+# upidol:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Unlock Idol
+# 	Buildable:
+# 		BuildPaletteOrder: 8055
+# 		Queue: Promotions
+# 		Description: Unlocks the Idol.
+# 		Prerequisites: ~scnexus, upmanifold, !upidol, rank1
+# 	RenderSprites:
+# 		Image: scidol
+# 	ProvidesPrerequisite:
 
 ####################################################################################################
 #		UNIT ZERG
@@ -8661,7 +8661,7 @@ SCDREADSHROUD:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 50
-		Prerequisites: ~scspire,, ~updreadshroud
+		Prerequisites: ~scspire, ~updreadshroud
 		Queue: Infantry, RAInfantry
 		Description: Airborne Zerg creature.\n Strong vs Infantry, Aircraft
 	Aircraft:

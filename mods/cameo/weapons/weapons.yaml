@@ -5412,7 +5412,7 @@ bowFireAA:
 		RangeLimit: 15c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 150
-		Damage: 1500
+		Damage: 3500
 		ValidTargets: Air
 		Versus:
 			None: 150
@@ -5445,6 +5445,7 @@ bowFire:
 	Report: bowfire.aud
 	ValidTargets: Ground
 	Warhead@1Dam: SpreadDamage
+		Damage: 4500
 		ValidTargets: Ground
 		DamageTypes: Prone75Percent, TriggerProne, DefaultDeath
 	Warhead@2Eff: CreateEffect
@@ -5462,7 +5463,7 @@ wc_tower_fire:
 		VerticalRateOfTurn: 100
 	Warhead@1Dam: SpreadDamage
 		Spread: 250
-		Damage: 2500
+		Damage: 4500
 		Versus:
 			None: 125
 			Wood: 25

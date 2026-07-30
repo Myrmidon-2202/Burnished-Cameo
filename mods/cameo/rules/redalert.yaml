@@ -839,7 +839,7 @@ RAJE3:
 	Inherits@anim: ^TDRAInfantry
 	Inherits@Template: ^AntiTankAntiAirInfantryTemplate
 	Inherits@exp: ^GainsExperienceRA
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
 	Inherits@DECORATIONS: ^InfantryExperienceHospitalHazmatOverrides
 	Inherits@AntiInf: ^PrioritizeInfantry
 	Inherits@cloak: ^CloakedVehicle
@@ -1517,7 +1517,7 @@ V2RL:
 	Buildable:
 		Queue: Vehicle.Soviet
 		BuildPaletteOrder: 80
-		Prerequisites: stek
+		Prerequisites: dome.soviet
 		Description: actor-v2rl.description
 	Valued:
 		Cost: 1500
@@ -7842,7 +7842,7 @@ GAP:
 		BuildDuration: 1500
 		BuildDurationModifier: 100
 		Queue: Defence, RADefence
-		Prerequisites: ~rafact.soviet, atek
+		Prerequisites: ~rafact.allies, atek
 		Description: actor-gap.description
 	Selectable:
 		Bounds: 1024, 2048, 0, -512

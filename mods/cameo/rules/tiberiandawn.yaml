@@ -745,7 +745,7 @@ HARV.GDI:
 
 HARV.NOD:
 	Inherits: ^TDHARV
-		Buildable:
+	Buildable:
 		Prerequisites: proc.nod
 		Queue: Vehicle.Nod, RAVehicle.Nod
 		Description: template-harvester.description
@@ -924,7 +924,7 @@ BGGY:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 20
-		Prerequisites: ~afld, ~!upnodbuggy2
+		Prerequisites: ~afld
 		Queue: Vehicle.Nod, RAVehicle.Nod
 		Description: actor-bggy.description
 	Mobile:
@@ -1403,7 +1403,7 @@ MSSM:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 100
-		Prerequisites: ~tmpl, ~!upchemicalssmlauncher
+		Prerequisites: ~tmpl
 		Queue: Vehicle.Nod, RAVehicle.Nod
 		Description: actor-mssm.description
 		Icon: icon
@@ -2067,6 +2067,7 @@ PROC.GDI:
 		Actor: HARV.GDI
 		SpawnOffset: 1,2
 		Facing: 256
+	ProvidesPrerequisite@buildingname:
 
 PROC.NOD:
 	Inherits: ^TDPROC
@@ -2077,19 +2078,12 @@ PROC.NOD:
 	GrantConditionOnPrerequisite@Normal:
 		Condition: normalharvester
 		Prerequisites: !upstealthsoldier
-	GrantConditionOnPrerequisite@Stealth:
-		Condition: stealthharvester
-		Prerequisites: upstealthsoldier
 	FreeActor@Normal:
 		Actor: HARV.NOD
 		SpawnOffset: 1,2
 		Facing: 256
 		RequiresCondition: normalharvester
-	FreeActor@Stealth:
-		Actor: tanodharv
-		SpawnOffset: 1,2
-		Facing: 256
-		RequiresCondition: stealthharvester
+	ProvidesPrerequisite@buildingname:
 
 SILO:
 	Inherits: ^BaseBuilding
