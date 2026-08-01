@@ -1040,6 +1040,34 @@ WIN98_HARDWARE:
 	SpawnActorsOnSell:
 		ActorTypes: win98_user
 	ScalePowerWithHealth:
+	SpawnActorPower:
+		AllowMultiple: True
+		OrderName: demodiskstrike
+		Icons: 
+			1: demodiskstrike_icon
+		Names: 
+			1: Demo Disk Strike
+		Descriptions: 
+			1: warcraft-rainoffire-human.description
+		Prerequisites: 
+			1: win98_hardware
+		ChargeInterval: 9000
+		LifeTime: -1
+		EndChargeSpeechNotification: NuclearWeaponAvailable
+		SelectTargetSpeechNotification: SelectTarget
+		InsufficientPowerSpeechNotification: InsufficientPower
+		DisplayTimerRelationships: Ally, Neutral, Enemy
+		DisplayRadarPing: True
+		Actors: 
+			1: win98_cd
+		SupportPowerPaletteOrder: 20
+		EffectSequence: idle
+	Voiced:
+		VoiceSet: joystickvoice
+	ProvidesPrerequisite@portalprereq:
+		Prerequisite: win98_hardware
+	Voiced:
+		VoiceSet: hardwarevoice
 	# SpawnActorPower:
 	# 	AllowMultiple: True
 	# 	OrderName: demodiskstrike
@@ -1056,12 +1084,6 @@ WIN98_HARDWARE:
 	# 	Actor: win98_cd
 	# 	SupportPowerPaletteOrder: 20
 	# 	EffectSequence: idle
-	Voiced:
-		VoiceSet: joystickvoice
-	ProvidesPrerequisite@portalprereq:
-		Prerequisite: win98_hardware
-	Voiced:
-		VoiceSet: hardwarevoice
 
 win98_cd:
 	Inherits@1: ^ExistsInWorld
@@ -1085,7 +1107,7 @@ win98_cd:
 		CanSlide: true
 		CanForceLand: false
 	Armament:
-		Weapon: demodiskstrike
+		Weapon: demodiskstrike_weapon
 		LocalOffset: 200,4000,90, -900,-4200,90, 900,10000,30, 4000,-800,60, -2600,500,-30, 6600,500,40, 500,500,60, 1000,1300,50
 	AutoTarget:
 		InitialStance: AttackAnything

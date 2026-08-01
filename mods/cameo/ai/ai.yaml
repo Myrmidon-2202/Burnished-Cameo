@@ -3080,15 +3080,15 @@ Player:
 		MaxHarvesters: 24
 		AdditionalHarvesters: 1
 		ScanForIdleHarvestersInterval: 1000
-		HarvesterTypes: harv.gdi, harv.nod, tanodharv, raharv.soviet, raharv.allies, raharv.japan, ra2cmin, ra2harv, harvester, scscv, scprobe, scdrone, astro_builder, alien_builder, imperial_builder, pirate_builder, king_builder, imperial_builder, wc_h_peasant, wc_o_peon, wharv
-		RefineryTypes: proc.gdi, proc.nod, raproc.allies, raproc.soviet, jproc, ra2narefn, ra2garefn, yryarefn, screfinery, scassimilator, scextractor, tsproc, glsupply, chsupply, usasupply, refinery, refinery.atreides, wc2_human_elven_lumber_mill, wc2_orc_troll_lumber_mill, astro_harvester, astro_conyard, alien_harvester, lego_alien_conyard, imperial_lumber_mill, lego_imperial_conyard, pirate_lumber_mill, lego_pirate_conyard, king_lumber_mill, lego_king_conyard, wizard_lumber_mill, lego_wizard_conyard, wc_h_lumbermill, wc_o_lumbermill, wref
+		HarvesterTypes: harv.gdi, harv.nod, tanodharv, raharv.soviet, raharv.allies, raharv.japan, ra2cmin, ra2harv, harvester, scscv, scprobe, scdrone, astro_builder, alien_builder, imperial_builder, pirate_builder, king_builder, imperial_builder, wc_h_peasant, wc_o_peon, wharv, win98_harvester, eden_cargotruck_empty, plymouth_cargotruck_empty
+		RefineryTypes: proc.gdi, proc.nod, raproc.allies, raproc.soviet, jproc, ra2narefn, ra2garefn, yryarefn, screfinery, scassimilator, scextractor, tsproc, glsupply, chsupply, usasupply, refinery, refinery.atreides, wc2_human_elven_lumber_mill, wc2_orc_troll_lumber_mill, astro_harvester, astro_conyard, alien_harvester, lego_alien_conyard, imperial_lumber_mill, lego_imperial_conyard, pirate_lumber_mill, lego_pirate_conyard, king_lumber_mill, lego_king_conyard, wizard_lumber_mill, lego_wizard_conyard, wc_h_lumbermill, wc_o_lumbermill, wref, win98_recyclebin, eden_smelter_common, plymouth_smelter_common
 	BuildingRepairBotModule:
 		RequiresCondition: genericbot
 	McvManagerBotModuleCA:
 		RequiresCondition: genericbot
-		McvTypes: mcv.gdi, mcv.nod, ramcv.allies, ramcv.soviet, ramcv.japan, ra2amcv, ra2smcv, yrpcv, yrsmin, modcore, modcore1, modcore2, modcore3, modcore4, modcore5, modcore6, modcore7, d2k_mcv.ixian, d2k_mcv.ordos , d2k_mcv.harkonnen, d2k_mcv.atreides, d2k_mcv.corrino, sctmcv, scpmcv, sczmcv, tsmcvgdi, tsmcvnod, tsmcvmutant, tsmcvcabal, lego_astro_mcv, lego_alien_mcv, lego_imperial_mcv, lego_pirate_mcv, lego_king_mcv, lego_wizard_mcv, wc_h_mcv, wc_o_mcv, worms_mcv
-		ConstructionYardTypes: fact.gdi, fact.nod, rafact.allies, rafact.soviet, rafact.japan, ra2nacnst, ra2gacnst, yrnacnst, tsgtcnstgdi, tsgtcnstnod, tsgtcnstmutant, tsgtcnstcabalb, sccommandcenter, scnexus, schatchery, sclair, schive, glcommand, chcommand, usacommand, construction_yard.ixian, construction_yard.ordos, construction_yard.atreides, construction_yard.harkonnen, construction_yard.corrino, wc2_human_townhall, wc2_orc_greathall, astro_conyard, lego_alien_conyard, lego_imperial_conyard, lego_pirate_conyard, lego_king_conyard, lego_wizard_conyard, wc_h_townhall, wc_o_townhall, wcon
-		McvFactoryTypes: weap, afld, raweap, raweapa, modraweapj, ra2gaweap, ra2naweap, yrygweap, aa_cgweap, tsgtweap, tsgtweapmutant, tsntweap, tsntweapcabal, schatchery, scnexus, sccommandcenter, glcommand, chcommand, usacommand, heavy_factory.ixian, heavy_factory.ordos, heavy_factory.atreides, heavy_factory.harkonnen, starport.ixian, starport.ordos, starport.atreides, starport.harkonnen, starport.corrino, sc_zerg_larva, wc2_human_townhall, wc2_orc_greathall, astro_conyard, lego_alien_conyard, lego_imperial_conyard, lego_pirate_conyard, lego_king_conyard, lego_wizard_conyard, wc_h_townhall, wc_o_townhall, wcon
+		McvTypes: mcv.gdi, mcv.nod, ramcv.allies, ramcv.soviet, ramcv.japan, ra2amcv, ra2smcv, yrpcv, yrsmin, modcore, modcore1, modcore2, modcore3, modcore4, modcore5, modcore6, modcore7, d2k_mcv.ixian, d2k_mcv.ordos , d2k_mcv.harkonnen, d2k_mcv.atreides, d2k_mcv.corrino, sctmcv, scpmcv, sczmcv, tsmcvgdi, tsmcvnod, tsmcvmutant, tsmcvcabal, lego_astro_mcv, lego_alien_mcv, lego_imperial_mcv, lego_pirate_mcv, lego_king_mcv, lego_wizard_mcv, wc_h_mcv, wc_o_mcv, worms_mcv, win98_mcv, eden_convec_structure_factory, plymouth_convec_structure_factory
+		ConstructionYardTypes: fact.gdi, fact.nod, rafact.allies, rafact.soviet, rafact.japan, ra2nacnst, ra2gacnst, yrnacnst, tsgtcnstgdi, tsgtcnstnod, tsgtcnstmutant, tsgtcnstcabalb, sccommandcenter, scnexus, schatchery, sclair, schive, glcommand, chcommand, usacommand, construction_yard.ixian, construction_yard.ordos, construction_yard.atreides, construction_yard.harkonnen, construction_yard.corrino, wc2_human_townhall, wc2_orc_greathall, astro_conyard, lego_alien_conyard, lego_imperial_conyard, lego_pirate_conyard, lego_king_conyard, lego_wizard_conyard, wc_h_townhall, wc_o_townhall, wcon, win98_mycomputer, eden_factory_structure, plymouth_structure_factory
+		McvFactoryTypes: weap, afld, raweap, raweapa, modraweapj, ra2gaweap, ra2naweap, yrygweap, aa_cgweap, tsgtweap, tsgtweapmutant, tsntweap, tsntweapcabal, schatchery, scnexus, sccommandcenter, glcommand, chcommand, usacommand, heavy_factory.ixian, heavy_factory.ordos, heavy_factory.atreides, heavy_factory.harkonnen, starport.ixian, starport.ordos, starport.atreides, starport.harkonnen, starport.corrino, sc_zerg_larva, wc2_human_townhall, wc2_orc_greathall, astro_conyard, lego_alien_conyard, lego_imperial_conyard, lego_pirate_conyard, lego_king_conyard, lego_wizard_conyard, wc_h_townhall, wc_o_townhall, wcon, win98_mycomputer, eden_factory_structure, plymouth_structure_factory
 		MinBaseRadius: 5
 		MaxBaseRadius: 25
 		MinimumConstructionYardCount: 5
@@ -3096,7 +3096,7 @@ Player:
 		EnemyScanRadius: 15
 	CaptureManagerBotModuleCA:
 		RequiresCondition: genericbot && !easiestbot
-		CapturingActorTypes: e6, rae6, ra2engineer, ra2engineer.soviet, ra2engineer.yuri, ra2engineer.asian, ra2engineer.syndicate, steel_fedeng, nax_eng, tsengineer, tsengineer2, engineer, d2k_hijacker, d2k_mechanic, scscv, astro_builder, alien_builder, imperial_builder, pirate_builder, king_builder, wizard_builder, wormengineer
+		CapturingActorTypes: e6, rae6, ra2engineer, ra2engineer.soviet, ra2engineer.yuri, ra2engineer.asian, ra2engineer.syndicate, steel_fedeng, nax_eng, tsengineer, tsengineer2, engineer, d2k_hijacker, d2k_mechanic, scscv, astro_builder, alien_builder, imperial_builder, pirate_builder, king_builder, wizard_builder, wormengineer, win98_freecell
 		PriorityCapturableActorTypes: v19, hosp, fcom, miss, ramiss, rabio, oilb, v19.husk, hosp.husk, bio.husk, miss.husk, fcom.husk, oilb.husk
 		CapturableActorTypes: fact.gdi, fact.nod, proc.gdi, proc.nod, weap, afld, hq.nod, hq.gdi, tsntradr, tsntradrcabal, tsgtradr, tsgtradrmutant, eye, tsnttech, tsgttech, tsfgttech, tscabaltech, tsnttmpl, tscore, tmpl, rafact.allies, rafact.soviet, rafact.japan, raproc.allies, raproc.soviet, jproc, raweap, raweapa, modraweapj, dome.allies, dome.soviet, dome.japan, raafld, modraafld, modspaceport, atek, stek, modjtek, ra2nacnst, ra2gacnst, yrnacnst, ra2narefn, ra2garefn, ra2naweap, ra2gaweap, yrygweap, ra2gaairc, ra2naradr, ra2napsis, ra2gatech, ra2natech, yrygtech, construction_yard.ixian, heavy_factory.ixian, refinery.atreides, research_centre.ixian, starport.ixian, sccommandcenter, scfactory, scengineeringbay, scacademy, scarmory, scsciencefacility, astro_conyard, lego_alien_conyard, lego_imperial_conyard, lego_pirate_conyard, lego_king_conyard, lego_wizard_conyard
 		PriorityCaptureChance: 75
@@ -3130,7 +3130,7 @@ Player:
 		SuggestedGroundLeaderLocomotor: foot, wheeled, tracked, heavytracked
 		SuggestedNavyLeaderLocomotor: naval
 		ExcludeFromSquadsTypes: e6, rae6, ra2engineer, ra2engineer.soviet, ra2engineer.yuri, ra2engineer.asian, ra2engineer.syndicate, steel_fedeng, tsengineer, tsengineer2, engineer, d2k_hijacker, d2k_mechanic, harv.gdi, harv.nod, tanodharv, mcv.gdi, mcv.nod, raharv.soviet, raharv.allies, raharv.japan, ramcv.allies, ramcv.soviet, ramcv.japan, mnly, modcore, modcore1, modcore2, modcore3, modcore4, modcore5, modcore6, modcore7, ra2cmin, ra2harv, yrslav, yrsmin, aa_drmn, scoverlord, tsharv, ra2amcv, ra2smcv, yrpcv, tsmcvgdi, tsmcvnod, tsmcvmutant, tsmcvcabal, glworker, chharv, usahook, chhacker, harvester, carryall, carryall.reinforce, d2k_mcv.ixian, d2k_mcv.ordos, wc2_human_mcv, wc2_orc_mcv, wc2_human_peasant, wc2_orc_peon, raspy, ra2spy, ra2cleg, dtrk, ctnk, qtnk, quake_tank, ra2dtruck, ra2terror, tran.gdi, tran.nod, ratran, modhip, ra2shad, sczmcv, scpmcv, sctmcv, scscv, scprobe, scdrone, scdropship, scmedivac, scshuttle, ordos_harv, astro_builder, alien_builder, imperial_builder, pirate_builder, king_builder, wizard_builder, wc_h_peasant, wc_o_peon
-		ConstructionYardTypes: fact.gdi, fact.nod, rafact.allies, rafact.soviet, rafact.japan, ra2nacnst, ra2gacnst, yrnacnst, tsgtcnstgdi, tsgtcnstnod, tsgtcnstmutant, tsgtcnstcabal, sccommandcenter, scnexus, schatchery, sclair, schive, glcommand, chcommand, usacommand, construction_yard.ixian, construction_yard.ordos, construction_yard.atreides, construction_yard.harkonnen, construction_yard.corrino, wc2_human_townhall, wc2_orc_greathall, aa_cgcnst, steel_qacst, astro_conyard, lego_alien_conyard
+		ConstructionYardTypes: fact.gdi, fact.nod, rafact.allies, rafact.soviet, rafact.japan, ra2nacnst, ra2gacnst, yrnacnst, tsgtcnstgdi, tsgtcnstnod, tsgtcnstmutant, tsgtcnstcabal, sccommandcenter, scnexus, schatchery, sclair, schive, glcommand, chcommand, usacommand, construction_yard.ixian, construction_yard.ordos, construction_yard.atreides, construction_yard.harkonnen, construction_yard.corrino, wc2_human_townhall, wc2_orc_greathall, aa_cgcnst, steel_qacst, astro_conyard, lego_alien_conyard, win98_mycomputer
 		NavalUnitsTypes: ss, msub, dd, ca, pt, japanspeedboat, japancarrier, yamatobattleship, cncss, nodlasercorvette, ssmsub, cncdd, cncca, cncpt, ra2sqd, ra2dlph, ra2dest, ra2aegis, ra2sub, ra2hyd, ra2dred, ra2carrier, yrbsub, glgunboat, chflameboat, usagunboat, usabattleship, usacarrier, aa_gunb, aa_lsub, aa_quasfrig, aa_karrier, aa_tsun, aa_ksub, latin_triton, latin_sub, nax_tuboat, nax_muboat
 		NavalProductionTypes: raspen, ra1syrd, ra1jsyrd, cncsyrd, cncspen, yrygyard, ra2gayard, ra2nayard, glsyrd, chsyrd, usasyrd, aa_cgyard, latin_cgyard, nax_naval
 		AirUnitsTypes: gdifirehawk, mig, su57, mignuke, rapierjumpjet, modbomber, ra2falc, ra2beag, yrbpln1, ra2hind, aa_phoenix, steel_twister, steel_grun, latin_yakolev, latin_mig, d2k_air_drone, d2k_ixbomber, ornithopter.controllable
@@ -3408,17 +3408,17 @@ Player:
 		DefenseProductionMinCashRequirement: 1500
 		BuildingQueues: Building, RABuilding
 		DefenseQueues: Defence, RADefence
-		ConstructionYardTypes: fact.gdi, fact.nod, rafact.allies, rafact.soviet, rafact.japan, ra2nacnst, ra2gacnst, yrnacnst, tsgtcnstgdi, tsgtcnstnod, tsgtcnstmutant, tsgtcnstcabal, sccommandcenter, scnexus, schatchery, sclair, schive, glcommand, chcommand, usacommand, construction_yard.ixian, construction_yard.ordos, construction_yard.atreides, construction_yard.harkonnen, construction_yard.corrino, wc2_human_townhall, wc2_orc_greathall, aa_cgcnst, steel_qacst, latin_cgcnst, nax_conyard, nax2_conyard, astro_conyard, lego_alien_conyard, lego_imperial_conyard, lego_pirate_conyard, lego_king_conyard, lego_wizard_conyard, wc_h_townhall, wc_o_townhall, wcon
-		RefineryTypes: proc.gdi, proc.nod, raproc.allies, raproc.soviet, jproc, ra2narefn, ra2garefn, yryarefn, tsproc, tsprocnod, tsprocmutant, tsproccabal, screfinery, scassimilator, scextractor, glsupply, chsupply, usasupply, refinery, refinery.atreides, refinery.ordos, refinery.harkonnen, refinery.corrino, wc2_human_elven_lumber_mill, wc2_orc_troll_lumber_mill, wc2_human_townhall, wc2_orc_greathall, aa_cgrefn, steel_qref, latin_cgauto, nax_refin, nax2_refin, astro_harvester, astro_conyard, alien_harvester, lego_alien_conyard, imperial_lumber_mill, lego_imperial_conyard, lego_pirate_conyard, lego_king_conyard, lego_wizard_conyard, wc_h_townhall, wc_o_townhall, wc_h_lumbermill, wc_o_lumbermill, wref
-		PowerTypes: nuke, nuk2, powr, apwr, jpwr, ra2napowr, ra2gapowr, ra2nanrct, yryapowr, scsupplydepot, scpylon, scbotoverlord, tsgtpowr, tsntpowrmutant, tsntpowrcabal, tsgtpowrup, tsntpowr, tsntapwr, chpower, chpower2, usapower, wind_trap, wind_trap.atreides, wind_trap.ordos, wind_trap.harkonnen, wind_trap.corrino, d2k_mini_windtrap, wc2_human_farm, wc2_orc_pigfarm, aa_cgapwr, aa_cgtnkr, steel_qapowr, latin_cgpow, nax_powr, nax2_powr, scoverlord, astro_biodome, alien_hatchery, imperial_quarters, pirate_plantation, king_farm, wizard_graveyard, wc_h_farm, wc_o_farm, wnuke, wnuk2
-		BarracksTypes: pyle, hand, tent, barr, ra2gapile, ra2nahand, yryabrck, scbarracks, scgateway, schatchery, sclair, schive, tsgtpile, tsgtpile2, tsnthand, tsnthand2, glbarracks, chbarracks, usabarracks, d2k_barracks, d2k_barracks.ixian, d2k_barracks.ordos, d2k_barracks.atreides, d2k_barracks.harkonnen, d2k_barracks.corrino, wc2_human_barracks, wc2_orc_barracks, aa_cgbrck, steel_qabarr, latin_cgpile, nax_barr, nax2_barr, astro_barracks, astro_conyard, alien_barracks, lego_alien_conyard, imperial_barracks, lego_imperial_conyard, pirate_barracks, lego_pirate_conyard, king_barracks, lego_king_conyard, wizard_barracks, lego_wizard_conyard, wc_h_barracks, wc_o_barracks, wc_h_tower, wc_o_tower, whand
-		VehiclesFactoryTypes: weap, afld, raweapa, raweap, ra2gaweap, ra2naweap, yrygweap, scfactory, scroboticsfacility, schatchery, sclair, schive, tsgtweap, tsgtweapmutant, tsntweap, tsntweapcabal, glweap, chweap, usaweap, heavy_factory.ixian, starport.ixian, heavy_factory.ordos, starport.ordos, light_factory.ordos, heavy_factory.harkonnen, starport.harkonnen, light_factory.harkonnen, heavy_factory.atreides, starport.atreides, light_factory.atreides, starport.corrino, wc2_human_gnomish_inventor, wc2_orc_goblin_alchemist, aa_cgweap, steel_qaweap, latin_cgweap, nax_weap, nax2_weap, tsntweap, tsntweapcabal, tsgtweapmutant, astro_vehiclefactory, alien_vehiclefactory, imperial_vehiclefactory, pirate_vehiclefactory, king_vehiclefactory, wizard_vehiclefactory, wc_h_tower, wc_o_tower, wc_o_damnedtemple, wc_h_church, wweap
-		ProductionTypes: pyle, hand, tent, barr, ra2gapile, ra2nahand, yryabrck, scbarracks, scgateway, scspawningpool, tsgtpile, tsgtpile2, tsnthand, tsnthand2, glbarracks, chbarracks, usabarracks, d2k_barracks, d2k_barracks.ixian, d2k_barracks.atreides, d2k_barracks.harkonnen, d2k_barracks.corrino, wc2_human_barracks, wc2_orc_barracks, aa_cgbrck, steel_qabarr, latin_cgpile, nax_barr, nax2_barr, weap, afld, raweapa, raweap, ra2gaweap, ra2naweap, yrygweap, scfactory, scroboticsfacility, schatchery, sclair, schive, tsgtweap, tsgtweapmutant, tsntweap, tsntweapcabal, glweap, chweap, usaweap, heavy_factory.ixian, starport.ixian, wc2_human_gnomish_inventor, wc2_orc_goblin_alchemist, aa_cgweap, steel_qaweap, latin_cgweap, nax_weap, nax2_weap, hpad.gdi, tsnthpad, tsnthpad, tsgthpadmutant, tsgthpad, hpad.nod, rahpad, raafld, modraafld, ra2gaairc, ra2naairf, high_tech_factory.ixian, aa_cgairf, latin_cgair, nax_airfield, nax2_airfield, heavy_factory.ordos, starport.ordos, light_factory.ordos, d2k_barracks.ordos, d2k_barracks.ordos, light_factory.ordos, heavy_factory.harkonnen, starport.harkonnen, light_factory.harkonnen, heavy_factory.atreides, starport.atreides, light_factory.atreides, starport.corrino, high_tech_factory.atreides, high_tech_factory.harkonnen, high_tech_factory.corrino, astro_barracks, astro_vehiclefactory, astro_conyard, alien_barracks, alien_vehiclefactory, lego_alien_conyard, imperial_barracks, imperial_vehiclefactory, lego_imperial_conyard, pirate_barracks, pirate_vehiclefactory, lego_pirate_conyard, king_barracks, king_vehiclefactory, lego_king_conyard, wizard_barracks, wizard_vehiclefactory, lego_wizard_conyard, , wc_h_barracks, wc_o_barracks, wc_h_tower, wc_o_tower, wc_o_damnedtemple, wc_h_church, whand, wweap, worms_wormpad
+		ConstructionYardTypes: fact.gdi, fact.nod, rafact.allies, rafact.soviet, rafact.japan, ra2nacnst, ra2gacnst, yrnacnst, tsgtcnstgdi, tsgtcnstnod, tsgtcnstmutant, tsgtcnstcabal, sccommandcenter, scnexus, schatchery, sclair, schive, glcommand, chcommand, usacommand, construction_yard.ixian, construction_yard.ordos, construction_yard.atreides, construction_yard.harkonnen, construction_yard.corrino, wc2_human_townhall, wc2_orc_greathall, aa_cgcnst, steel_qacst, latin_cgcnst, nax_conyard, nax2_conyard, astro_conyard, lego_alien_conyard, lego_imperial_conyard, lego_pirate_conyard, lego_king_conyard, lego_wizard_conyard, wc_h_townhall, wc_o_townhall, wcon, win98_mycomputer, eden_factory_structure, plymouth_structure_factory
+		RefineryTypes: proc.gdi, proc.nod, raproc.allies, raproc.soviet, jproc, ra2narefn, ra2garefn, yryarefn, tsproc, tsprocnod, tsprocmutant, tsproccabal, screfinery, scassimilator, scextractor, glsupply, chsupply, usasupply, refinery, refinery.atreides, refinery.ordos, refinery.harkonnen, refinery.corrino, wc2_human_elven_lumber_mill, wc2_orc_troll_lumber_mill, wc2_human_townhall, wc2_orc_greathall, aa_cgrefn, steel_qref, latin_cgauto, nax_refin, nax2_refin, astro_harvester, astro_conyard, alien_harvester, lego_alien_conyard, imperial_lumber_mill, lego_imperial_conyard, lego_pirate_conyard, lego_king_conyard, lego_wizard_conyard, wc_h_townhall, wc_o_townhall, wc_h_lumbermill, wc_o_lumbermill, wref, win98_recyclebin, eden_smelter_common, plymouth_smelter_common
+		PowerTypes: nuke, nuk2, powr, apwr, jpwr, ra2napowr, ra2gapowr, ra2nanrct, yryapowr, scsupplydepot, scpylon, scbotoverlord, tsgtpowr, tsntpowrmutant, tsntpowrcabal, tsgtpowrup, tsntpowr, tsntapwr, chpower, chpower2, usapower, wind_trap, wind_trap.atreides, wind_trap.ordos, wind_trap.harkonnen, wind_trap.corrino, d2k_mini_windtrap, wc2_human_farm, wc2_orc_pigfarm, aa_cgapwr, aa_cgtnkr, steel_qapowr, latin_cgpow, nax_powr, nax2_powr, scoverlord, astro_biodome, alien_hatchery, imperial_quarters, pirate_plantation, king_farm, wizard_graveyard, wc_h_farm, wc_o_farm, wnuke, wnuk2, win98_powerplant, win98_powerplantadvanced, eden_tokamak, eden_solar_array, plymouth_tokamak, plymouth_solararray
+		BarracksTypes: pyle, hand, tent, barr, ra2gapile, ra2nahand, yryabrck, scbarracks, scgateway, schatchery, sclair, schive, tsgtpile, tsgtpile2, tsnthand, tsnthand2, glbarracks, chbarracks, usabarracks, d2k_barracks, d2k_barracks.ixian, d2k_barracks.ordos, d2k_barracks.atreides, d2k_barracks.harkonnen, d2k_barracks.corrino, wc2_human_barracks, wc2_orc_barracks, aa_cgbrck, steel_qabarr, latin_cgpile, nax_barr, nax2_barr, astro_barracks, astro_conyard, alien_barracks, lego_alien_conyard, imperial_barracks, lego_imperial_conyard, pirate_barracks, lego_pirate_conyard, king_barracks, lego_king_conyard, wizard_barracks, lego_wizard_conyard, wc_h_barracks, wc_o_barracks, wc_h_tower, wc_o_tower, whand, win98_barracks, plymouth_factory_arachnid
+		VehiclesFactoryTypes: weap, afld, raweapa, raweap, ra2gaweap, ra2naweap, yrygweap, scfactory, scroboticsfacility, schatchery, sclair, schive, tsgtweap, tsgtweapmutant, tsntweap, tsntweapcabal, glweap, chweap, usaweap, heavy_factory.ixian, starport.ixian, heavy_factory.ordos, starport.ordos, light_factory.ordos, heavy_factory.harkonnen, starport.harkonnen, light_factory.harkonnen, heavy_factory.atreides, starport.atreides, light_factory.atreides, starport.corrino, wc2_human_gnomish_inventor, wc2_orc_goblin_alchemist, aa_cgweap, steel_qaweap, latin_cgweap, nax_weap, nax2_weap, tsntweap, tsntweapcabal, tsgtweapmutant, astro_vehiclefactory, alien_vehiclefactory, imperial_vehiclefactory, pirate_vehiclefactory, king_vehiclefactory, wizard_vehiclefactory, wc_h_tower, wc_o_tower, wc_o_damnedtemple, wc_h_church, wweap, win98_input_devices, eden_factory_vehicle, plymouth_factory_vehicle
+		productiontypes: pyle, hand, tent, barr, ra2gapile, ra2nahand, yryabrck, scbarracks, scgateway, scspawningpool, tsgtpile, tsgtpile2, tsnthand, tsnthand2, glbarracks, chbarracks, usabarracks, d2k_barracks, d2k_barracks.ixian, d2k_barracks.atreides, d2k_barracks.harkonnen, d2k_barracks.corrino, wc2_human_barracks, wc2_orc_barracks, aa_cgbrck, steel_qabarr, latin_cgpile, nax_barr, nax2_barr, weap, afld, raweapa, raweap, ra2gaweap, ra2naweap, yrygweap, scfactory, scroboticsfacility, schatchery, sclair, schive, tsgtweap, tsgtweapmutant, tsntweap, tsntweapcabal, glweap, chweap, usaweap, heavy_factory.ixian, starport.ixian, wc2_human_gnomish_inventor, wc2_orc_goblin_alchemist, aa_cgweap, steel_qaweap, latin_cgweap, nax_weap, nax2_weap, hpad.gdi, tsnthpad, tsnthpad, tsgthpadmutant, tsgthpad, hpad.nod, rahpad, raafld, modraafld, ra2gaairc, ra2naairf, high_tech_factory.ixian, aa_cgairf, latin_cgair, nax_airfield, nax2_airfield, heavy_factory.ordos, starport.ordos, light_factory.ordos, d2k_barracks.ordos, d2k_barracks.ordos, light_factory.ordos, heavy_factory.harkonnen, starport.harkonnen, light_factory.harkonnen, heavy_factory.atreides, starport.atreides, light_factory.atreides, starport.corrino, high_tech_factory.atreides, high_tech_factory.harkonnen, high_tech_factory.corrino, astro_barracks, astro_vehiclefactory, astro_conyard, alien_barracks, alien_vehiclefactory, lego_alien_conyard, imperial_barracks, imperial_vehiclefactory, lego_imperial_conyard, pirate_barracks, pirate_vehiclefactory, lego_pirate_conyard, king_barracks, king_vehiclefactory, lego_king_conyard, wizard_barracks, wizard_vehiclefactory, lego_wizard_conyard, , wc_h_barracks, wc_o_barracks, wc_h_tower, wc_o_tower, wc_o_damnedtemple, wc_h_church, whand, wweap, worms_wormpad, win98_barracks, win98_input_devices, win98_aerial_uplink, eden_factory_vehicle, eden_factory_consumer, plymouth_factory_vehicle
 		NavalProductionTypes: cncsyrd, cncspen, raspen, ra1syrd, ra1jsyrd, yrygyard, ra2gayard, ra2nayard, aa_cgyard, latin_cgyard, nax_naval
-		SiloTypes: silo, rasilo, scsupplydepot, scpylon, scoverlord, d2k_silo, wc2_human_elven_lumber_mill, wc2_orc_troll_lumber_mill, wsilo
-		AntiAirTypes: sam, atwr, agun, rasam, hbox, jmgnest, ra2nasam, ra2naflak, yrygggun, yrngbnkr.bot, large_gun_turret, aa_cgpuls, aa_cghype, steel_fedaa, latin_sml, latin_aatur, nax_flak88, nax2_twr, scmissileturret, sccreepcolony, worms_aasite
-		DefenseTypes: gtwr, atwr, gun, nodlaserturret, obli, pbox, hbox, ragun, gap, modartyturret, ftur, tsla, modpillboxfort, ra2gapill, ra2atesla, ra2gtgcan, yrngbnkr, ra2nalasr, ra2naflak, ra2tesla, yrygggun, yrngtbnk, aa_cgflam, aa_cgpnch, aa_cgrail, aa_cgchtw, aa_cgplas, machine_gun_turret, medium_gun_turret, large_gun_turret, storm_lasher, steel_fedturret, steel_qcannon, steel_bfg10k, latin_ngdshktur, latin_ngbunk2, latin_cgup, latin_sml, nax_twr, nax_flak88, nax2_twr, nax2_sturmcann, scbunker, sccreepcolony, wc_h_guard_tower, wc_o_guard_tower, worms_aasite, worms_candle, laspy
-		FragileTypes: hq.gdi, hq.nod, eye, tmpl, dome.allies, dome.soviet, dome.japan, atek, stek, modjtek, jshrine, mslo, pdox, iron, modspaceport, ra2gaairc, ra2naradr, ra2napsis, ra2gatech, ra2natech, yrygtech, ra2gaorep, ra2gaspysat, yrgarobo, ra2nanrct, yrngindp, ra2yclon, yrygcomd, ra2gaweat, ra2gacsph, ra2namisl, ra2nairon, yrygppet, yryggntc, aa_cgradr, aa_cgtech, aa_cgionc, aa_cgchao, aa_cgmiac, outpost.ixian, outpost.ordos, outpost.atreides, outpost.harkonnen, outpost.corrino, research_centre.ixian, research_centre.atreides, research_centre.harkonnen, research_centre.corrino, starport.ixian, research_centre.ordos, starport.ordos, storm_lasher_big, oilb.building, oilb.ra2, oilb.d2k, steel_qtradr, steel_qatech, latin_radar, latin_cgspy, latin_cgup, latin_cgte, latin_ca12hit, nax_radar, nax_tek, nax_tech, nax_sausage, nax_beer, nax_rocket, nax2_radar, nax2_tech, nax2_dairy, nax2_meteorray, scengineeringbay, scacademy, scarmory, scsciencefacility, scterranmslo, wc_h_stormwind, wc_o_blackrockspire, wsheepstatue, whq, wsheepstrikecommand 
+		SiloTypes: silo, rasilo, scsupplydepot, scpylon, scoverlord, d2k_silo, wc2_human_elven_lumber_mill, wc2_orc_troll_lumber_mill, wsilo, win98_settings_gear, eden_storage_common, plymouth_storage_common
+		AntiAirTypes: sam, atwr, agun, rasam, hbox, jmgnest, ra2nasam, ra2naflak, yrygggun, yrngbnkr.bot, large_gun_turret, aa_cgpuls, aa_cghype, steel_fedaa, latin_sml, latin_aatur, nax_flak88, nax2_twr, scmissileturret, sccreepcolony, worms_aasite, win98_paint, eden_gp_railgun, plymouth_gp_rpg
+		DefenseTypes: gtwr, atwr, gun, nodlaserturret, obli, pbox, hbox, ragun, gap, modartyturret, ftur, tsla, modpillboxfort, ra2gapill, ra2atesla, ra2gtgcan, yrngbnkr, ra2nalasr, ra2naflak, ra2tesla, yrygggun, yrngtbnk, aa_cgflam, aa_cgpnch, aa_cgrail, aa_cgchtw, aa_cgplas, machine_gun_turret, medium_gun_turret, large_gun_turret, storm_lasher, steel_fedturret, steel_qcannon, steel_bfg10k, latin_ngdshktur, latin_ngbunk2, latin_cgup, latin_sml, nax_twr, nax_flak88, nax2_twr, nax2_sturmcann, scbunker, sccreepcolony, wc_h_guard_tower, wc_o_guard_tower, worms_aasite, worms_candle, laspy, win98_paint, win98_joystick, win98_processor, eden_gp_laser, eden_gp_emp, eden_gp_railgun, plymouth_gp_microwave, plymouth_gp_stickyfoam, plymouth_gp_rpg
+		FragileTypes: hq.gdi, hq.nod, eye, tmpl, dome.allies, dome.soviet, dome.japan, atek, stek, modjtek, jshrine, mslo, pdox, iron, modspaceport, ra2gaairc, ra2naradr, ra2napsis, ra2gatech, ra2natech, yrygtech, ra2gaorep, ra2gaspysat, yrgarobo, ra2nanrct, yrngindp, ra2yclon, yrygcomd, ra2gaweat, ra2gacsph, ra2namisl, ra2nairon, yrygppet, yryggntc, aa_cgradr, aa_cgtech, aa_cgionc, aa_cgchao, aa_cgmiac, outpost.ixian, outpost.ordos, outpost.atreides, outpost.harkonnen, outpost.corrino, research_centre.ixian, research_centre.atreides, research_centre.harkonnen, research_centre.corrino, starport.ixian, research_centre.ordos, starport.ordos, storm_lasher_big, oilb.building, oilb.ra2, oilb.d2k, steel_qtradr, steel_qatech, latin_radar, latin_cgspy, latin_cgup, latin_cgte, latin_ca12hit, nax_radar, nax_tek, nax_tech, nax_sausage, nax_beer, nax_rocket, nax2_radar, nax2_tech, nax2_dairy, nax2_meteorray, scengineeringbay, scacademy, scarmory, scsciencefacility, scterranmslo, wc_h_stormwind, wc_o_blackrockspire, wsheepstatue, whq, wsheepstrikecommand, win98_radar, eden_lab_advanced, eden_spaceport, plymouth_lab_advanced, plymouth_spaceport
 		BuildingIntervals:
 		#Refinery
 			proc.gdi: 1500
@@ -4146,6 +4146,77 @@ Player:
 			worms_candle: 4
 			laspy: 4
 			worms_wormpad: 2
+			##################### BuildingLimits Win98
+			win98_mycomputer: 1
+			win98_powerplant: 6
+			win98_powerplantadvanced: 4
+			win98_recyclebin: 10
+			win98_barracks: 3
+			win98_input_devices: 2
+			win98_aquanet: 1
+			win98_radar: 1
+			win98_aerial_uplink: 2
+			win98_settings_gear: 5
+			win98_processor: 8
+			win98_joystick: 3
+			win98_paint: 6
+			win98_defrag: 3
+			win98_hardware: 1
+			win98_xbox: 1
+
+			##################### BuildingLimits Outpost 2 Eden
+			eden_factory_structure: 2
+			eden_tokamak: 5
+			eden_smelter_common: 10
+			eden_agridome: 1
+			eden_residence: 1
+			eden_lab_basic: 1
+			eden_factory_vehicle: 10
+			eden_garage: 2
+			eden_nursery: 1
+			eden_university: 1
+			eden_lab_standard: 1
+			eden_dirt: 1
+			eden_rcc: 1
+			eden_factory_consumer: 3
+			eden_gorf: 1
+			eden_lab_advanced: 1
+			eden_spaceport: 1
+			eden_solar_array: 5
+			eden_smelter_rare: 1
+			eden_light_tower: 5
+			eden_mine_common: 3
+			eden_storage_common: 5
+			eden_gp_laser: 10
+			eden_gp_emp: 10
+			eden_gp_railgun: 10
+
+			##################### BuildingLimits Outpost 2 Plymouth
+			plymouth_structure_factory: 2
+			plymouth_tokamak: 5
+			plymouth_smelter_common: 10
+			plymouth_agridome: 1
+			plymouth_residence: 1
+			plymouth_basic_lab: 1
+			plymouth_factory_vehicle: 10
+			plymouth_garage: 2
+			plymouth_nursery: 1
+			plymouth_university: 1
+			plymouth_lab_standard: 1
+			plymouth_dirt: 1
+			plymouth_rcc: 1
+			plymouth_factory_arachnid: 5
+			plymouth_gorf: 1
+			plymouth_lab_advanced: 1
+			plymouth_spaceport: 1
+			plymouth_solararray: 10
+			plymouth_smelter_rare: 1
+			plymouth_light_tower: 5
+			plymouth_mine_common: 3
+			plymouth_storage_common: 5
+			plymouth_gp_microwave: 10
+			plymouth_gp_stickyfoam: 10
+			plymouth_gp_rpg: 10
 
 		BuildingFractions:
 			#################### Shared
@@ -4929,6 +5000,76 @@ Player:
 			worms_candle: 10
 			laspy: 10
 			worms_wormpad: 15
+			##################### BuildingFractions Win98
+			win98_mycomputer: 20
+			win98_powerplant: 20
+			win98_powerplantadvanced: 20
+			win98_recyclebin: 10
+			win98_barracks: 20
+			win98_input_devices: 10
+			win98_aquanet: 10
+			win98_radar: 10
+			win98_aerial_uplink: 10
+			win98_settings_gear: 15
+			win98_processor: 20
+			win98_joystick: 15
+			win98_paint: 20
+			win98_defrag: 20
+			win98_hardware: 10
+			win98_xbox: 10
+			##################### BuildingFractions Outpost 2 Eden
+			eden_factory_structure: 20
+			eden_tokamak: 20
+			eden_smelter_common: 20
+			eden_agridome: 5
+			eden_residence: 5
+			eden_lab_basic: 5
+			eden_factory_vehicle: 30
+			eden_garage: 10
+			eden_nursery: 5
+			eden_university: 5
+			eden_lab_standard: 5
+			eden_dirt: 5
+			eden_rcc: 5
+			eden_factory_consumer: 10
+			eden_gorf: 5
+			eden_lab_advanced: 5
+			eden_spaceport: 5
+			eden_solar_array: 20
+			eden_smelter_rare: 10
+			eden_light_tower: 10
+			eden_mine_common: 10
+			eden_storage_common: 10
+			eden_gp_laser: 20
+			eden_gp_emp: 10
+			eden_gp_railgun: 10
+
+			##################### BuildingFractions Outpost 2 Plymouth
+			plymouth_structure_factory: 10
+			plymouth_tokamak: 20
+			plymouth_smelter_common: 20
+			plymouth_agridome: 5
+			plymouth_residence: 5
+			plymouth_basic_lab: 5
+			plymouth_factory_vehicle: 20
+			plymouth_garage: 5
+			plymouth_nursery: 5
+			plymouth_university: 5
+			plymouth_lab_standard: 5
+			plymouth_dirt: 5
+			plymouth_rcc: 5
+			plymouth_factory_arachnid: 20
+			plymouth_gorf: 5
+			plymouth_lab_advanced: 5
+			plymouth_spaceport: 5
+			plymouth_solararray: 20
+			plymouth_smelter_rare: 10
+			plymouth_light_tower: 10
+			plymouth_mine_common: 10
+			plymouth_storage_common: 20
+			plymouth_gp_microwave: 10
+			plymouth_gp_stickyfoam: 10
+			plymouth_gp_rpg: 10
 
 	UnitBuilderBotModuleCA@generic:
 		RequiresCondition: genericbot
@@ -6588,6 +6729,63 @@ Player:
 			wcannon: 5
 			worms_ufo: 5
 			worms_apache: 5
+			######################## UnitsToBuild Win98
+			win98_mcv: 1
+			win98_harvester: 10
+			win98_user: 20
+			win98_freecell: 10
+			win98_erase: 10
+			win98_agent: 10
+			win98_spider: 5
+			win98_clippy: 1
+			win98_mouse: 5
+			win98_mine: 10
+			win98_keyboard: 3
+			win98_msn_butterfly: 10
+			win98_explorer: 10
+			win98_regedit: 10
+			win98_email_raft: 8
+			win98_benchy: 5
+			######################## UnitsToBuild Outpost 2 Eden
+			consumer_items_impulse: 2
+			consumer_items_wares: 5
+			consumer_items_luxury_wares: 2
+			eden_convec_structure_factory: 3
+			eden_cargotruck_empty: 20
+			eden_scout: 5
+			eden_lynx_laser: 20
+			eden_tiger_microwave: 10
+			eden_lynx_railgun: 20
+			eden_tiger_railgun: 10
+			eden_lynx_emp: 20
+			eden_tiger_emp: 10
+			eden_lynx_acidcloud: 20
+			eden_tiger_acidcloud: 10
+			eden_lynx_starflare: 20
+			eden_tiger_starflare: 10
+			eden_lynx_thorshammer: 20
+			eden_tiger_thorshammer: 10
+
+			######################## UnitsToBuild Outpost 2 Plymouth
+			plymouth_convec_structure_factory: 3
+			plymouth_cargotruck_empty: 20
+			plymouth_scout: 5
+			plymouth_spider: 20
+			plymouth_scorpion: 20
+			plymouth_lynx_microwave: 20
+			plymouth_tiger_microwave: 10
+			plymouth_lynx_rpg: 20
+			plymouth_tiger_rpg: 10
+			plymouth_lynx_emp: 20
+			plymouth_tiger_emp: 10
+			plymouth_lynx_stickyfoam: 20
+			plymouth_tiger_stickyfoam: 10
+			plymouth_lynx_esg: 20
+			plymouth_tiger_esg: 10
+			plymouth_lynx_starflare: 20
+			plymouth_tiger_starflare: 10
+			plymouth_lynx_supernova: 20
+			plymouth_tiger_supernova: 10
 
 		UnitLimits:
 			#################### UnitLimits Naval
@@ -6847,3 +7045,62 @@ Player:
 			wcannon: 5
 			worms_ufo: 5
 			worms_apache: 5
+
+			######################## UnitsLimits Win98
+			WIN98_MCV: 1
+			WIN98_HARVESTER: 10
+			WIN98_USER: 20
+			WIN98_FREECELL: 10
+			WIN98_ERASE: 10
+			WIN98_AGENT: 10
+			WIN98_SPIDER: 5
+			WIN98_CLIPPY: 1
+			WIN98_MOUSE: 5
+			WIN98_MINE: 10
+			WIN98_KEYBOARD: 3
+			WIN98_MSN_BUTTERFLY: 10
+			WIN98_EXPLORER: 10
+			WIN98_REGEDIT: 10
+			WIN98_EMAIL_RAFT: 8
+			WIN98_BENCHY: 5
+
+			######################## UnitsLimits Outpost 2 Eden
+			consumer_items_impulse: 2
+			consumer_items_wares: 5
+			consumer_items_luxury_wares: 2
+			eden_convec_structure_factory: 3
+			eden_cargotruck_empty: 20
+			eden_scout: 5
+			eden_lynx_laser: 20
+			eden_tiger_microwave: 10
+			eden_lynx_railgun: 20
+			eden_tiger_railgun: 10
+			eden_lynx_emp: 20
+			eden_tiger_emp: 10
+			eden_lynx_acidcloud: 20
+			eden_tiger_acidcloud: 10
+			eden_lynx_starflare: 20
+			eden_tiger_starflare: 10
+			eden_lynx_thorshammer: 20
+			eden_tiger_thorshammer: 10
+
+			######################## UnitsLimits Outpost 2 Plymouth
+			plymouth_convec_structure_factory: 3
+			plymouth_cargotruck_empty: 20
+			plymouth_scout: 5
+			plymouth_spider: 20
+			plymouth_scorpion: 20
+			plymouth_lynx_microwave: 20
+			plymouth_tiger_microwave: 10
+			plymouth_lynx_rpg: 20
+			plymouth_tiger_rpg: 10
+			plymouth_lynx_emp: 20
+			plymouth_tiger_emp: 10
+			plymouth_lynx_stickyfoam: 20
+			plymouth_tiger_stickyfoam: 10
+			plymouth_lynx_esg: 20
+			plymouth_tiger_esg: 10
+			plymouth_lynx_starflare: 20
+			plymouth_tiger_starflare: 10
+			plymouth_lynx_supernova: 20
+			plymouth_tiger_supernova: 10
