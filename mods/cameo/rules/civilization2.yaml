@@ -138,50 +138,6 @@ CIV2_DISTRICT_CAPITAL_BRONZE:
 		ActorTypes: wormuzi
 	ScalePowerWithHealth:
 	BaseBuilding:
-	Production@NORMAL:
-		Produces: Building, Defence
-		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RABuilding, RADefence
-		RequiresCondition: classicproductionqueues
-	ProductionBar@BuildingGDI:
-		ProductionType: Building
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@DefenceGDI:
-		ProductionType: Defence
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@RABuildingGDI:
-		ProductionType: RABuilding
-		RequiresCondition: classicproductionqueues
-	ProductionBar@RADefenceGDI:
-		ProductionType: RADefence
-		RequiresCondition: classicproductionqueues
-	ProductionQueue@GDIBuilding:
-		Type: Building
-		DisplayOrder: 0
-		Group: Building
-		LowPowerModifier: 200
-		ReadyAudio: ConstructionComplete
-		BlockedAudio: NoBuild
-		LimitedAudio: BuildingInProgress
-		QueuedAudio: Building
-		OnHoldAudio: OnHold
-		CancelledAudio: Cancelled
-	ProductionQueue@GDIDefense:
-		Type: Defence
-		DisplayOrder: 1
-		Group: Defence
-		LowPowerModifier: 300
-		ReadyAudio: ConstructionComplete
-		BlockedAudio: NoBuild
-		LimitedAudio: BuildingInProgress
-		QueuedAudio: Building
-		OnHoldAudio: OnHold
-		CancelledAudio: Cancelled
-	Production@Addons:
-		Produces: Addons
-	ProductionBar@Addons:
-		ProductionType: Addons
 	BaseProvider:
 		Cooldown: 75
 		Range: 14c0
@@ -376,6 +332,7 @@ CIV2_DISTRICT_PRODUCTION_BRONZE:
 	Inherits: ^Civ2Building
 	Inherits@flag: ^CIV2BuildingFlag
 	Inherits@shape: ^2x2Shape
+	Inherits@exits: ^WC2Exits_3x3
 	Inherits@CPQWP: ^CPQConditionWithPrimary
 	Inherits@prod: ^ProducesUnits
 	Inherits@barr: ^IsBarrack
@@ -404,32 +361,12 @@ CIV2_DISTRICT_PRODUCTION_BRONZE:
 	WithBuildingBib:
 		Palette: ra_temperat
 	RallyPoint:
-	Exit@1:
-		SpawnOffset: 512,1024,0
-		ExitCell: 1,2
-	Production@NORMAL:
-		Produces: Infantry
-		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RAInfantry
-		RequiresCondition: classicproductionqueues
-	ProductionQueue:
-		Type: Infantry
-		DisplayOrder: 2
-		Group: Infantry
-		LowPowerModifier: 300
-		ReadyAudio: UnitReady
-		BlockedAudio: NoBuild
-		LimitedAudio: BuildingInProgress
-		QueuedAudio: Training
-		OnHoldAudio: OnHold
-		CancelledAudio: Cancelled
-	ProductionBar@INFANTRYWORMS:
-		ProductionType: Infantry
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@RAINFANTRYWORMS:
-		ProductionType: RAInfantry
-		RequiresCondition: classicproductionqueues
+	# Exit@1:
+	# 	SpawnOffset: 512,1024,0
+	# 	ExitCell: 1,2
+	# Exit@2:
+	# 	SpawnOffset: 1500,1500,0
+	# 	ExitCell: 3,3
 	Power:
 		Amount: -20
 	ProvidesPrerequisite@buildingname:
@@ -577,6 +514,10 @@ civ2_warrior:
 		BuildDurationModifier: 100
 	ProvidesPrerequisite@upgradename:
 
+##############################
+#		CLASSICAL
+##############################
+
 CIV2_ADVANCE_CONSTRUCTION:
 	Inherits: ^Upgrade
 	Tooltip:
@@ -629,10 +570,74 @@ CIV2_ERA_CLASSIC:
 	Valued:
 		Cost: 5000
 	Buildable:
-		BuildPaletteOrder: 10
+		BuildPaletteOrder: 40
 		Prerequisites: ~civ2_district_capital_bronze, civ2_advance_construction, civ2_advance_mathematics, civ2_advance_warriorcode
 		Queue: Addons
 		Description: Moves your Civilization into the Classic era.
+		Icon: icon
+	RenderSprites:
+	ProvidesPrerequisite:
+
+##############################
+#		MEDIEVAL
+##############################
+
+CIV2_ADVANCE_INVENTION:
+	Inherits: ^Upgrade
+	Tooltip:
+		Name: Invention
+	Buildable:
+		BuildPaletteOrder: 45
+		Queue: Addons
+		BuildDuration: 1500
+		Description: Advances your Civilization in the knowledge of Invention.
+		Prerequisites: ~civ2_era_classic
+	Valued:
+		Cost: 2000
+	RenderSprites:
+		Image: civ2_advance_invention
+
+CIV2_ADVANCE_METALLURGY:
+	Inherits: ^Upgrade
+	Tooltip:
+		Name: Metallurgy
+	Buildable:
+		BuildPaletteOrder: 49
+		Queue: Addons
+		BuildDuration: 1500
+		Description: Advances your Civilization in the knowledge of Metallurgy.
+		Prerequisites: ~civ2_era_classic
+	Valued:
+		Cost: 2000
+	RenderSprites:
+		Image: civ2_advance_metallurgy
+
+CIV2_ADVANCE_NAVIGATION:
+	Inherits: ^Upgrade
+	Tooltip:
+		Name: Navigation
+	Buildable:
+		BuildPaletteOrder: 51
+		Queue: Addons
+		BuildDuration: 1500
+		Description: Advances your Civilization in the knowledge of Navigation.
+		Prerequisites: ~civ2_era_classic
+	Valued:
+		Cost: 2000
+	RenderSprites:
+		Image: civ2_advance_navigation
+
+CIV2_ERA_MEDIEVAL:
+	Inherits: ^researched_upgrade.template
+	Tooltip:
+		Name: Medieval Era
+	Valued:
+		Cost: 5000
+	Buildable:
+		BuildPaletteOrder: 80
+		Prerequisites: ~civ2_era_classic, civ2_advance_invention, civ2_advance_metallurgy, civ2_advance_navigation
+		Queue: Addons
+		Description: Moves your Civilization into the Medieval era.
 		Icon: icon
 	RenderSprites:
 	ProvidesPrerequisite:

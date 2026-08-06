@@ -270,10 +270,9 @@ civ2_warrior:
 		BuildDurationModifier: 100
 	ProvidesPrerequisite@upgradename:
 
-civ2_era_classic:
-	icon:
-		Filename: civilization_2_advances.png
-		Start: 1
+##############################
+#		CLASSICAL
+##############################
 
 civ2_advance_construction:
 	icon:
@@ -289,6 +288,35 @@ civ2_advance_warriorcode:
 	icon:
 		Filename: civilization_2_advances.png
 		Start: 30
+
+civ2_era_classic:
+	icon:
+		Filename: civilization_2_advances.png
+		Start: 1
+
+##############################
+#		MEDIEVAL
+##############################
+
+civ2_advance_invention:
+	icon:
+		Filename: civilization_2_advances.png
+		Start: 45
+
+civ2_advance_metallurgy:
+	icon:
+		Filename: civilization_2_advances.png
+		Start: 49
+
+civ2_advance_navigation:
+	icon:
+		Filename: civilization_2_advances.png
+		Start: 51
+
+civ2_era_medieval:
+	icon:
+		Filename: civilization_2_advances.png
+		Start: 2
 
 
 	####################################################################################################
