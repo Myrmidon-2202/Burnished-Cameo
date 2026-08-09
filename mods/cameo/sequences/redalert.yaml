@@ -2347,6 +2347,7 @@ rafact:
 			INTERIOR: TEMPERAT
 	icon:
 		Filename: rafacticon.png
+
 rafactj:
 	Inherits: ^WithBuildingBib2
 	Defaults:
@@ -2586,8 +2587,8 @@ dome:
 		Offset: 0,-8
 	dead:
 	bib:
-		TilesetOverrides:
-			INTERIOR: TEMPERAT
+		# TilesetOverrides:
+		# 	INTERIOR: TEMPERAT
 	icon:
 		Filename: domeicon.png
 
@@ -3282,11 +3283,13 @@ jpwr:
 		Start: 8
 		Length: 10
 		FlipX: true
+		Tick: 200
 	damaged-idle:
 		Filename: newjappowerplant.png
 		Start: 18
 		Length: 10
 		FlipX: true
+		Tick: 200
 	make:
 		Filename: newjappowerplant.png
 		Start: 0

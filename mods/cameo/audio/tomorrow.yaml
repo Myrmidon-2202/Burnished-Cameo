@@ -1,0 +1,30 @@
+maeoravoice:
+	DefaultVariant: .aud
+	Voices:
+		Select: mrighttofearme, destinyathand, miknewmomement
+		Attack: betterworld, forfreedom, mofcourse, mmywillbe
+		Action: betterworld, forfreedom, mofcourse, mmywillbe
+		Move: betterworld, forfreedom, mofcourse, mmywillbe
+		Die: mlaught
+		Build: mofcourse
+		Kill: mlaught
+
+#1, 3 inf, 0, 2 veh
+
+dtjapVoice:
+	DefaultVariant: .aud
+	Voices:
+		Select: await1j01,await1j03, report1j01, report1j03, yessir1j01, yessir1j03, readyj01, readyj03
+		Action: acknoj01, acknoj03, affirm1j01, affirm1j03, noprobj01, noprobj03, ritawayj01, ritawayj03, rogerj01, rogerj03, ugotitj01, ugotitj03
+		Die: nuyell1,nuyell4,nuyell5,nuyell6
+		Burned: yell1
+		Zapped: nuyell3
+		Poisoned: nuyell12
+
+dtjapvehVoice:
+	DefaultVariant: .aud
+	Voices:
+		Select: vehic1j00, vehic1j02 , yessir1j00, yessir1j02 , report1j00, report1j02, await1j00, await1j02, unit1j00, unit1j02
+		Action: acknoj00, acknoj02, affirm1j00, affirm1j02, mojout1j00, mojout1j02
+		Attack: acknoj00, acknoj02, affirm1j00, affirm1j02, mojout1j00, mojout1j02
+		Unload: mojout1j00, mojout1j02

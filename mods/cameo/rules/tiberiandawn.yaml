@@ -173,7 +173,7 @@ World:
 
 E1.GDI:
 	Inherits: ^E1
-	Inherits@decoration: ^GDIRankDecoration
+	# Inherits@decoration: ^GDIRankDecoration
 	Tooltip:
 		Name: GDI Minigunner
 	Buildable:
@@ -208,7 +208,7 @@ E1: #map import compatibility
 
 E1.NOD:
 	Inherits: ^E1
-	Inherits@decoration: ^NodRankDecoration
+	# Inherits@decoration: ^NodRankDecoration
 	Tooltip:
 		Name: Nod Minigunner
 	Buildable:
@@ -245,7 +245,7 @@ E2:
 	Inherits@DECORATIONS: ^InfantryExperienceHospitalHazmatOverrides
 	Inherits@AntiInf: ^PrioritizeInfantry
 	Inherits@AntiBuil: ^PrioritizeBuilding
-	Inherits@decoration: ^GDIRankDecoration
+	# Inherits@decoration: ^GDIRankDecoration
 	Valued:
 		Cost: 200
 	Tooltip:
@@ -337,7 +337,7 @@ E3.GDI:
 	Inherits: ^E3
 	Tooltip:
 		Name: GDI Rocket Soldier
-	Inherits@decoration: ^GDIRankDecoration
+	# Inherits@decoration: ^GDIRankDecoration
 	Buildable:
 		Prerequisites: ~pyle, ~!upgdimissilesoldier
 	Armament@PRIMARY: ##########
@@ -369,7 +369,7 @@ E3.Nod:
 	Inherits: ^E3
 	Tooltip:
 		Name: Nod Rocket Soldier
-	Inherits@decoration: ^NodRankDecoration
+	# Inherits@decoration: ^NodRankDecoration
 	Buildable:
 		Prerequisites: ~hand, ~!upchemicalrocket
 
@@ -382,7 +382,7 @@ E4:
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMoveMelee
 	Inherits@DECORATIONS: ^InfantryExperienceHospitalHazmatOverrides
 	Inherits@AntiBuil: ^PrioritizeBuilding
-	Inherits@decoration: ^NodRankDecoration
+	# Inherits@decoration: ^NodRankDecoration
 	Valued:
 		Cost: 200
 	Tooltip:
@@ -435,7 +435,7 @@ E5:
 	Inherits@EXP: ^GainsExperienceTD
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMoveMelee
 	Inherits@DECORATIONS: ^InfantryExperienceHospitalHazmatOverrides
-	Inherits@decoration: ^NodRankDecoration
+	# Inherits@decoration: ^NodRankDecoration
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -630,7 +630,7 @@ RMBO:
 
 # RMBO.GDI:
 # 	Inherits: ^RMBO
-# 	Inherits@decoration: ^GDIRankDecoration
+# 	# Inherits@decoration: ^GDIRankDecoration
 # 	Tooltip:
 # 		Name: GDI Commando
 # 	Buildable:
@@ -654,7 +654,7 @@ RMBO:
 
 # RMBO.NOD:
 # 	Inherits: ^RMBO
-# 	Inherits@decoration: ^NodRankDecoration
+# 	# Inherits@decoration: ^NodRankDecoration
 # 	Tooltip:
 # 		Name: Nod Commando
 # 	Buildable:
@@ -761,7 +761,7 @@ APC:
 	Inherits@AntiInf: ^PrioritizeInfantry
 	Inherits@AntiAir: ^PrioritizeAir
 	Inherits@botmicro: ^BotAutoDeployTransport
-	Inherits@decoration: ^GDIRankDecoration
+	# Inherits@decoration: ^GDIRankDecoration
 	Valued:
 		Cost: 1200
 	Tooltip:
@@ -824,7 +824,7 @@ ARTY:
 	Inherits@EXP: ^GainsExperienceTD
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Inherits@EMP: ^FrontalEMP
-	Inherits@decoration: ^NodRankDecoration
+	# Inherits@decoration: ^NodRankDecoration
 	Valued:
 		Cost: 400
 	Tooltip:
@@ -875,7 +875,7 @@ FTNK:
 	Inherits@EMP: ^FrontalEMP
 	Inherits@AntiInf: ^PrioritizeInfantry
 	Inherits@AntiBuil: ^PrioritizeBuilding
-	Inherits@decoration: ^NodRankDecoration
+	# Inherits@decoration: ^NodRankDecoration
 	Valued:
 		Cost: 800
 	Tooltip:
@@ -915,7 +915,7 @@ BGGY:
 	Inherits@EXP: ^GainsExperienceTD
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Inherits@AntiInf: ^PrioritizeInfantry
-	Inherits@decoration: ^NodRankDecoration
+	# Inherits@decoration: ^NodRankDecoration
 	Valued:
 		Cost: 300
 	Tooltip:
@@ -960,7 +960,7 @@ JEEP:
 	Inherits@EXP: ^GainsExperienceTD
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Inherits@AntiInf: ^PrioritizeInfantry
-	Inherits@decoration: ^GDIRankDecoration
+	# Inherits@decoration: ^GDIRankDecoration
 	Valued:
 		Cost: 400
 	Tooltip:
@@ -1010,7 +1010,7 @@ BIKE:
 	Inherits@AntiVeh: ^PrioritizeVehicle
 	Inherits@AntiTank: ^PrioritizeTank
 	Inherits@AntiAir: ^PrioritizeAir
-	Inherits@decoration: ^NodRankDecoration
+	# Inherits@decoration: ^NodRankDecoration
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -1051,7 +1051,7 @@ LTNK:
 	Inherits@EXP: ^GainsExperienceTD
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
 	Inherits@AntiVeh: ^PrioritizeVehicle
-	Inherits@decoration: ^NodRankDecoration
+	# Inherits@decoration: ^NodRankDecoration
 	Valued:
 		Cost: 600
 	Tooltip:
@@ -1108,7 +1108,7 @@ MTNK:
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
 	Inherits@AntiVeh: ^PrioritizeVehicle
 	Inherits@AntiTank: ^PrioritizeTank
-	Inherits@decoration: ^GDIRankDecoration
+	# Inherits@decoration: ^GDIRankDecoration
 	Valued:
 		Cost: 900
 	Tooltip:
@@ -1193,7 +1193,7 @@ HTNK:
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
 	Inherits@AntiVeh: ^PrioritizeVehicle
 	Inherits@AntiTank: ^PrioritizeTank
-	Inherits@decoration: ^GDIRankDecoration
+	# Inherits@decoration: ^GDIRankDecoration
 	Valued:
 		Cost: 1600
 	Tooltip:
@@ -1279,7 +1279,7 @@ MLRS:
 	Inherits@AntiAir: ^PrioritizeAir
 	Inherits@AntiBuil: ^PrioritizeBuilding
 	Inherits@AntiDef: ^PrioritizeDefence
-	Inherits@decoration: ^GDIRankDecoration
+	# Inherits@decoration: ^GDIRankDecoration
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -1340,7 +1340,7 @@ MLRS:
 # 	Inherits@Template: ^ArtilleryTemplate
 # 	Inherits@EXP: ^GainsExperienceTD
 # 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
-# 	Inherits@decoration: ^GDIRankDecoration
+# 	# Inherits@decoration: ^GDIRankDecoration
 # 	Valued:
 # 		Cost: 750
 # 	Tooltip:
@@ -1394,7 +1394,7 @@ MSSM:
 	Inherits@Template: ^FireSupportTemplate
 	Inherits@EXP: ^GainsExperienceTD
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
-	Inherits@decoration: ^NodRankDecoration
+	# Inherits@decoration: ^NodRankDecoration
 	Valued:
 		Cost: 800
 	Tooltip:
@@ -1462,7 +1462,7 @@ STNK:
 	Inherits@AntiTank: ^PrioritizeTank
 	Inherits@AntiAir: ^PrioritizeAir
 	Inherits@cloak: ^CloakedVehicle
-		Inherits@decoration: ^NodRankDecoration
+		# Inherits@decoration: ^NodRankDecoration
 	Valued:
 		Cost: 900
 	Tooltip:
@@ -1639,7 +1639,7 @@ HELI:
 	Inherits@AntiInf: ^PrioritizeInfantry
 	Inherits@AntiAir: ^PrioritizeAir
 	Inherits@AntiDef: ^PrioritizeDefence
-	Inherits@decoration: ^NodRankDecoration
+	# Inherits@decoration: ^NodRankDecoration
 	Inherits@eject: ^AircraftEjectOnDeath
 	Valued:
 		Cost: 1600
@@ -1718,7 +1718,7 @@ ORCA:
 	Inherits@AntiAir: ^PrioritizeAir
 	Inherits@AntiBuil: ^PrioritizeBuilding
 	Inherits@AntiDef: ^PrioritizeDefence
-	Inherits@decoration: ^GDIRankDecoration
+	# Inherits@decoration: ^GDIRankDecoration
 	Inherits@eject: ^AircraftEjectOnDeath
 	Valued:
 		Cost: 1700
@@ -2763,7 +2763,7 @@ GUN:
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Inherits@AntiTank: ^PrioritizeVehicle
 	Inherits@shape: ^1x1Shape
-	Inherits@decoration: ^NodRankDecoration
+	# Inherits@decoration: ^NodRankDecoration
 	Valued:
 		Cost: 700
 	Tooltip:
@@ -2806,7 +2806,7 @@ GUN:
 # 	Inherits@AUTOTARGET: ^AutoTargetGround
 # 	Inherits@AntiInf: ^PrioritizeInfantry
 # 	Inherits@shape: ^1x1Shape
-# 	Inherits@decoration: ^NodRankDecoration
+# 	# Inherits@decoration: ^NodRankDecoration
 # 	Valued:
 # 		Cost: 1000
 # 	Tooltip:
@@ -2850,7 +2850,7 @@ SAM:
 	Inherits@AUTOTARGET: ^AutoTargetAir
 	Inherits@shape: ^2x1Shape
 	Inherits@AntiAir: ^PrioritizeAir
-	Inherits@decoration: ^NodRankDecoration
+	# Inherits@decoration: ^NodRankDecoration
 	Valued:
 		Cost: 800
 	Tooltip:
@@ -2897,7 +2897,7 @@ OBLI:
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Inherits@detect: ^GenericGroundDetector
 	Inherits@AntiTank: ^PrioritizeTank
-	Inherits@decoration: ^NodRankDecoration
+	# Inherits@decoration: ^NodRankDecoration
 	Valued:
 		Cost: 1800
 	Tooltip:
@@ -2953,7 +2953,7 @@ GTWR:
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Inherits@AntiInf: ^PrioritizeInfantry
 	Inherits@shape: ^1x1Shape
-	Inherits@decoration: ^GDIRankDecoration
+	# Inherits@decoration: ^GDIRankDecoration
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -3000,7 +3000,7 @@ ATWR:
 	Inherits@AntiTank: ^PrioritizeVehicle
 	Inherits@AntiTank: ^PrioritizeTank
 	Inherits@shape: ^1x1Shape
-	Inherits@decoration: ^GDIRankDecoration
+	# Inherits@decoration: ^GDIRankDecoration
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -3183,7 +3183,7 @@ CNCPT:
 	Inherits@exp: ^GainsExperienceTD
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
 	Inherits@AntiAir: ^PrioritizeAir
-	Inherits@decoration: ^GDIRankDecoration
+	# Inherits@decoration: ^GDIRankDecoration
 	Valued:
 		Cost: 1600
 	Tooltip:
@@ -3239,7 +3239,7 @@ CNCPT:
 # 	Inherits@Template: ^BattleShipTemplate
 # 	Inherits@exp: ^GainsExperienceTD
 # 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
-# 	Inherits@decoration: ^GDIRankDecoration
+# 	# Inherits@decoration: ^GDIRankDecoration
 # 	Valued:
 # 		Cost: 2600
 # 	Tooltip:
@@ -3328,7 +3328,7 @@ CNCPT:
 # 	Inherits@exp: ^GainsExperienceTD
 # 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
 # 	Inherits@EMP: ^FrontalEMP
-# 	Inherits@decoration: ^GDIRankDecoration
+# 	# Inherits@decoration: ^GDIRankDecoration
 # 	Valued:
 # 		Cost: 4000
 # 	Tooltip:
