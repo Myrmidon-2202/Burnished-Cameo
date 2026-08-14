@@ -4,32 +4,32 @@ World:
 	# 	InternalName: tsgdi
 	# 	Game: Tiberian Sun
 	# 	Side: Tiberian Sun
-	# 	Description: GDI from Tiberian Sun\nFeatures:\n- Hero unit: Mammoth Mk. II\nSupport powers: Drop Pods, Ion Cannon
+	# 	Description: GDI from Tiberian Sun.Features:.- Hero unit: Mammoth Mk. II.Support powers: Drop Pods, Ion Cannon
 	# FactionCA@tsnod:
 	# 	Name: Nod TS
 	# 	InternalName: tsnod
 	# 	Game: Tiberian Sun
 	# 	Side: Tiberian Sun
-	# 	Description: Nod from Tiberian Sun\nFeatures:\n- Subterranean vehicles\n- Stealth generators\n- Tactical missiles with fast charge and flight time\nSupport powers: Cluster & Chemical Missiles
+	# 	Description: Nod from Tiberian Sun.Features:.- Subterranean vehicles.- Stealth generators.- Tactical missiles with fast charge and flight time.Support powers: Cluster & Chemical Missiles
 	# FactionCA@forgotten:
 	# 	Name: Forgotten TS
 	# 	InternalName: forgotten
 	# 	Game: Tiberian Sun
 	# 	Side: Tiberian Sun
-	# 	Description: Custom Forgotten from Tiberian Sun\nSupport powers: Mutant Commando, Wildlife Rampage
+	# 	Description: Custom Forgotten from Tiberian Sun.Support powers: Mutant Commando, Wildlife Rampage
 	# FactionCA@cabal:
 	# 	Name: CABAL TS
 	# 	InternalName: cabal
 	# 	Game: Tiberian Sun
 	# 	Side: Tiberian Sun
-	# 	Description: CABAL from Tiberian Sun Firestorm\nFeatures:\n- Subterranean vehicles\n- Stealth generators\n- Cluster & Chemical Missiles with fast charge and flight time\n- Most units immune to mind control\n- Epic unit: Core Defender\nSupport powers: Cluster & Chemical Missiles
+	# 	Description: CABAL from Tiberian Sun Firestorm.Features:.- Subterranean vehicles.- Stealth generators.- Cluster & Chemical Missiles with fast charge and flight time.- Most units immune to mind control.- Epic unit: Core Defender.Support powers: Cluster & Chemical Missiles
 	# FactionCA@RandomTS:
 	# 	Name: Any TS
 	# 	InternalName: RandomTS
 	# 	RandomFactionMembers: tsnod, tsgdi, forgotten, cabal
 	# 	Game: Tiberian Sun
 	# 	Side: Random
-	# 	Description: Random Faction\nA random faction from Tiberian Sun will be chosen when the game starts.
+	# 	Description: Random Faction.A random faction from Tiberian Sun will be chosen when the game starts.
 
 	####################################################################################################
 	#		MPSTARTUNITS
@@ -144,7 +144,7 @@ World:
 # ^HunterSeekersPower:
 	# ProduceActorPowerCA@HunterSeeker:
 	# 	Name: Deploy Hunter-Seeker
-	# 	Description: Deploys a Hunter-Seeker.\n  Instantly kills mobile targets\n  Splash damage strong vs Vehicles, Buildings\n  Requires line of sight to target
+	# 	Description: Deploys a Hunter-Seeker..  Instantly kills mobile targets.  Splash damage strong vs Vehicles, Buildings.  Requires line of sight to target
 	# 	Icon: hunterseeker
 	# 	PauseOnCondition: lowpower
 	# 	Actors: tsprobe
@@ -699,7 +699,7 @@ TSMCVGDI:
 		Prerequisites: ~tsgtweap, tsgtdeptgdi
 		Queue: Vehicle, RAVehicle
 		BuildDurationModifier: 40
-		Description: Deploys into another Construction Yard.\n  Unarmed
+		Description: Deploys into another Construction Yard..  Unarmed
 	Transforms:
 		IntoActor: tsgtcnstgdi
 		Offset: -1,-1
@@ -770,7 +770,7 @@ TSPROC:
 		BuildPaletteOrder: 20
 		Prerequisites: ~tsgtcnstgdi, tsgtpowr
 		Queue: Building, RABuilding
-		Description: Processes raw Tiberium\ninto useable resources
+		Description: Processes raw Tiberium.into useable resources
 	Building:
 		Footprint: _x_ xxx === ===
 		Dimensions: 3,4
@@ -821,7 +821,7 @@ tsprocnod:
 		BuildPaletteOrder: 20
 		Prerequisites: ~tsgtcnstnod, tsntpowr
 		Queue: Building, RABuilding
-		Description: Processes raw Tiberium\ninto useable resources
+		Description: Processes raw Tiberium.into useable resources
 	FreeActor:
 		Actor: TSHARVNOD
 		SpawnOffset: 1,2
@@ -837,7 +837,7 @@ tsproccabal:
 		BuildPaletteOrder: 20
 		Prerequisites: ~tsgtcnstcabal, tsntpowrcabal
 		Queue: Building, RABuilding
-		Description: Processes raw Tiberium\ninto useable resources
+		Description: Processes raw Tiberium.into useable resources
 	FreeActor:
 		Actor: TSHARVCABAL
 		SpawnOffset: 1,2
@@ -853,7 +853,7 @@ tsprocmutant:
 		BuildPaletteOrder: 20
 		Prerequisites: ~tsgtcnstmutant
 		Queue: Building, RABuilding
-		Description: Processes raw Tiberium\ninto useable resources
+		Description: Processes raw Tiberium.into useable resources
 	FreeActor:
 		Actor: TSHARVMUTANT
 		SpawnOffset: 1,2
@@ -886,7 +886,7 @@ tsntwast:
 		BuildLimit: 1
 		Prerequisites: ~tsgtcnstnod, tsnttech
 		Queue: Building, RABuilding
-		Description: Increases income from minerals by 25%.\nUnlocks Chemical Missile
+		Description: Increases income from minerals by 25%..Unlocks Chemical Missile
 	Building:
 		Footprint: _x_ x== ___
 		Dimensions: 3,3
@@ -1116,7 +1116,7 @@ TSNTAPWR:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 110
 		Prerequisites: ~tsgtcnstnod, tsntradr
-		Description: Provides double the power of\na standard Power Plant.
+		Description: Provides double the power of.a standard Power Plant.
 	Valued:
 		Cost: 800 #500
 	Tooltip:
@@ -1650,7 +1650,7 @@ tsgthpad:
 		BuildPaletteOrder: 50
 		Prerequisites: ~tsgtcnstgdi, tsgtradr
 		Queue: Building, RABuilding
-		Description: Produces, rearms and\nrepairs helicopters
+		Description: Produces, rearms and.repairs helicopters
 	Building:
 		Footprint: xx
 		Dimensions: 2,1
@@ -1718,7 +1718,7 @@ TSNTHPAD:
 		BuildPaletteOrder: 50
 		Prerequisites: ~tsgtcnstnod, tsntradr
 		Queue: Building, RABuilding
-		Description: Produces, rearms and\nrepairs helicopters
+		Description: Produces, rearms and.repairs helicopters
 	Building:
 		Footprint: xx
 		Dimensions: 2,1
@@ -1785,7 +1785,7 @@ tsntradr:
 		BuildPaletteOrder: 70
 		Prerequisites: ~tsgtcnstnod, tsntweap
 		Queue: Building, RABuilding
-		Description: Provides radar.\nUnlocks higher-tech units and buildings.\nProvides Support power\nRequires power to operate.
+		Description: Provides radar..Unlocks higher-tech units and buildings..Provides Support power.Requires power to operate.
 	Building:
 		Footprint: X_ xx
 		Dimensions: 2,2
@@ -1868,7 +1868,7 @@ tsgtradr:
 		BuildPaletteOrder: 70
 		Prerequisites:  ~tsgtcnstgdi, tsgtweap
 		Queue: Building, RABuilding
-		Description: Provides radar.\nUnlocks higher-tech units and buildings.\nRequires power to operate.\nCan be only built once.
+		Description: Provides radar..Unlocks higher-tech units and buildings..Requires power to operate..Can be only built once.
 	Building:
 		Footprint: X_ xx ==
 		Dimensions: 2,3
@@ -1923,7 +1923,7 @@ tsgtradrmutant:
 		BuildPaletteOrder: 70
 		Prerequisites: ~tsgtcnstmutant, tsprocmutant
 		Queue: Building, RABuilding
-		Description: Provides radar and support powers.\nUnlocks higher-tech units and buildings.\nRequires power to operate.
+		Description: Provides radar and support powers..Unlocks higher-tech units and buildings..Requires power to operate.
 	# DetonateWeaponPower:
 	# 	OrderName: MutantCommando
 	# 	Prerequisites: ~techlevel.superweapons
@@ -1931,7 +1931,7 @@ tsgtradrmutant:
 	# 	PauseOnCondition: lowpower
 	# 	Icon: mutcommando
 	# 	Name: Mutant Commando
-	# 	Description: Deploys elite Ghost Stalkers and Snipers\nvia Subterranean APC.
+	# 	Description: Deploys elite Ghost Stalkers and Snipers.via Subterranean APC.
 	# 	InsufficientPowerSpeechNotification: InsufficientPower
 	# 	IncomingSpeechNotification: EnemyUnitsApproaching
 	# 	SelectTargetSpeechNotification: SelectTarget
@@ -1950,7 +1950,7 @@ tsgtradrmutant:
 	# 	PauseOnCondition: lowpower
 	# 	Icon: mutwildlife
 	# 	Name: Wildlife Rampage
-	# 	Description: Spawns numerous Tiberium creatures\ncausing massive havoc.
+	# 	Description: Spawns numerous Tiberium creatures.causing massive havoc.
 	# 	InsufficientPowerSpeechNotification: InsufficientPower
 	# 	IncomingSpeechNotification: EnemyUnitsApproaching
 	# 	SelectTargetSpeechNotification: SelectTarget
@@ -2057,7 +2057,7 @@ tsfgttech:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 150
 		Prerequisites: ~tsgtcnstmutant, tsgtradrmutant
-		Description: Provides Forgotten advanced technologies.\nCan be only built once
+		Description: Provides Forgotten advanced technologies..Can be only built once
 		BuildLimit: 1
 	RenderSprites:
 		Image: tsfgttech
@@ -2073,7 +2073,7 @@ tscabaltech:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 150
 		Prerequisites: ~tsgtcnstcabal, tsntradrcabal
-		Description: Provides Cabal advanced technologies.\nCan be only built once
+		Description: Provides Cabal advanced technologies..Can be only built once
 		BuildLimit: 1
 	RenderSprites:
 		Image: tsnttech
@@ -2093,7 +2093,7 @@ tsnttmpl:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 150
 		Prerequisites: ~tsgtcnstnod, tsntradr, tsnttech
-		Description: Provides Nod advanced technologies.\nProvides Hunter-Seeker support power.
+		Description: Provides Nod advanced technologies..Provides Hunter-Seeker support power.
 	Tooltip:
 		Name: Nod Temple
 	Building:
@@ -2131,7 +2131,7 @@ tscore:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 150
 		Prerequisites: ~tsgtcnstcabal, tscabaltech
-		Description: Provides CABAL advanced technologies.\nProvides Hunter-Seeker support power.
+		Description: Provides CABAL advanced technologies..Provides Hunter-Seeker support power.
 	Tooltip:
 		Name: CABAL Core
 	Building:
@@ -2173,7 +2173,7 @@ tsntmisl:
 		Queue: Defence, RADefence
 		BuildPaletteOrder: 140
 		Prerequisites: ~tsgtcnstnod, tsnttech
-		Description: Provides Multi Missile and Chemical Missile\nsupport powers.
+		Description: Provides Multi Missile and Chemical Missile.support powers.
 	Tooltip:
 		Name: Missile Silo
 	Building:
@@ -2232,7 +2232,7 @@ tsntmisl:
 	# 	Cursor: nuke
 	# 	ChargeInterval: 4500
 	# 	Name: Multi Missile
-	# 	Description: Launches a tactical cluster missile.\nApplies heavy damage over a large area.
+	# 	Description: Launches a tactical cluster missile..Applies heavy damage over a large area.
 	# 	EndChargeSpeechNotification: NuclearWeaponAvailable
 	# 	SelectTargetSpeechNotification: SelectTarget
 	# 	InsufficientPowerSpeechNotification: InsufficientPower
@@ -2264,7 +2264,7 @@ tsntmisl:
 	# 	Cursor: nuke
 	# 	ChargeInterval: 3500
 	# 	Name: Chemical Missile
-	# 	Description: Launches a tactical missile with\na Tiberium warhead.\n Applies heavy damage over a small area\n Releases toxic gas clouds
+	# 	Description: Launches a tactical missile with.a Tiberium warhead.. Applies heavy damage over a small area. Releases toxic gas clouds
 	# 	EndChargeSpeechNotification: NuclearWeaponAvailable
 	# 	SelectTargetSpeechNotification: SelectTarget
 	# 	InsufficientPowerSpeechNotification: InsufficientPower
@@ -2317,7 +2317,7 @@ tsctarmr:
 		Queue: Addons
 		BuildPaletteOrder: 70
 		Prerequisites: ~tsgtcnstgdi
-		Description: upgrades level infantry.
+		Description: Upgrades level infantry.
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -2357,7 +2357,7 @@ tsgtplug:
 		Queue: Defence, RADefence
 		BuildPaletteOrder: 140
 		Prerequisites: ~tsgtcnstgdi, tsgttech
-		Description: Provides Hunter-Seeker and Ion Cannon\nsupport powers.
+		Description: Provides Hunter-Seeker and Ion Cannon.support powers.
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -2503,7 +2503,7 @@ tsgtplug3:
 # 		BuildPaletteOrder: 50
 # 		Prerequisites: ~tsgtcnstgdi
 # 		Queue: Building, RABuilding
-# 		Description: Produces, and\nrepairs boats
+# 		Description: Produces, and.repairs boats
 # 	Production@NORMAL:
 # 		Produces: Naval
 # 		RequiresCondition: !classicproductionqueues
@@ -2528,7 +2528,7 @@ tsgtplug3:
 # 		BuildPaletteOrder: 50
 # 		Prerequisites: ~tsgtcnstgdi
 # 		Queue: Building, RABuilding
-# 		Description: Produces, and\nrepairs boats
+# 		Description: Produces, and.repairs boats
 # 	Production@NORMAL:
 # 		Produces: Naval
 # 		RequiresCondition: !classicproductionqueues
@@ -2553,7 +2553,7 @@ tsgtplug3:
 # 		BuildPaletteOrder: 50
 # 		Prerequisites: ~tsgtcnstgdi
 # 		Queue: Building, RABuilding
-# 		Description: Produces, and\nrepairs boats
+# 		Description: Produces, and.repairs boats
 # 	Production@NORMAL:
 # 		Produces: Naval
 # 		RequiresCondition: !classicproductionqueues
@@ -2639,7 +2639,7 @@ tsntlasr:
 		Queue: Defence, RADefence
 		BuildPaletteOrder: 20
 		Prerequisites: ~tsgtcnstnod, tsnthand
-		Description: Basic base defense.\n  Strong vs Ground units\n  Weak vs Aircraft
+		Description: Basic base defense..  Strong vs Ground units.  Weak vs Aircraft
 	Valued:
 		Cost: 1000
 	Power:
@@ -2702,7 +2702,7 @@ tsgtctwrmg:
 		Prerequisites: ~tsgtcnstgdi, tsgtpile
 		Queue: Defence, RADefence
 		BuildDurationModifier: 40
-		Description: Basic base defense.\nDoes not require power to operate.\n  Strong vs Infantry, Light armor\n  Weak vs Aircraft
+		Description: Basic base defense..Does not require power to operate..  Strong vs Infantry, Light armor.  Weak vs Aircraft
 	RequiresBuildableArea:
 		AreaTypes: building
 	Selectable:
@@ -2750,7 +2750,7 @@ tsgtctwrrpg:
 		Prerequisites: ~tsgtcnstgdi, tsgtweap
 		Queue: Defence, RADefence
 		BuildDurationModifier: 40
-		Description: GDI anti-vehicle base defense.\nDoes not require power to operate.\n  Strong vs Armored ground units\n  Weak vs Aircraft
+		Description: GDI anti-vehicle base defense..Does not require power to operate..  Strong vs Armored ground units.  Weak vs Aircraft
 	RequiresBuildableArea:
 		AreaTypes: building
 	Selectable:
@@ -2797,7 +2797,7 @@ tsgtctwrsam:
 		Prerequisites: ~tsgtcnstgdi, tsgtradr
 		Queue: Defence, RADefence
 		BuildDurationModifier: 40
-		Description: GDI anti-air base defense.\nDoes not require power to operate.\n  Strong vs Aircraft
+		Description: GDI anti-air base defense..Does not require power to operate..  Strong vs Aircraft
 	RequiresBuildableArea:
 		AreaTypes: building
 	Selectable:
@@ -2842,7 +2842,7 @@ tsgtctwrsammutant:
 		Prerequisites: ~tsgtcnstmutant, tsgtpile2
 		Queue: Defence, RADefence
 		BuildDurationModifier: 40
-		Description: GDI anti-air base defense.\nDoes not require power to operate.\n  Strong vs Aircraft
+		Description: GDI anti-air base defense..Does not require power to operate..  Strong vs Aircraft
 	RequiresBuildableArea:
 		AreaTypes: building
 	Selectable:
@@ -2888,7 +2888,7 @@ tsntsam:
 		Prerequisites: ~tsgtcnstnod, tsnthand
 		Queue: Defence, RADefence
 		BuildDurationModifier: 40
-		Description: Nod anti-air base defense.\nRequires power to operate.\n  Strong vs Aircraft
+		Description: Nod anti-air base defense..Requires power to operate..  Strong vs Aircraft
 	RequiresBuildableArea:
 		AreaTypes: building
 	Selectable:
@@ -2938,7 +2938,7 @@ tsntstlh:
 		Queue: Defence, RADefence
 		BuildPaletteOrder: 170
 		Prerequisites: ~tsgtcnstnod, tsnttech
-		Description: Generates a cloaking field\nto hide your forces from the enemy.\nCan not be cloaked.
+		Description: Generates a cloaking field.to hide your forces from the enemy..Can not be cloaked.
 	Building:
 		Footprint: xxx XXX
 		Dimensions: 3,2
@@ -2987,7 +2987,7 @@ tsntpulsgdi:
 		Prerequisites: ~tsgtcnstgdi, tsgtradr
 		Queue: Defence, RADefence
 		BuildDurationModifier: 40
-		Description: Disables mechanical units in an area.\nRequires power to operate.
+		Description: Disables mechanical units in an area..Requires power to operate.
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -3024,7 +3024,7 @@ tsntpulsgdi:
 		Icon: emp
 		ChargeInterval: 3000
 		Name: E.M. Pulse
-		Description: Fires a pulse blast which disables\nall mechanical units in the area.
+		Description: Fires a pulse blast which disables.all mechanical units in the area.
 		EndChargeSpeechNotification: EmPulseCannonReady
 		SelectTargetSpeechNotification: SelectTarget
 	RenderRangeCircle:
@@ -3063,7 +3063,7 @@ tsntobel:
 		Prerequisites: ~tsgtcnstnod, tsnttech
 		Queue: Defence, RADefence
 		BuildDurationModifier: 63
-		Description: Advanced base defense.\nRequires power to operate.\n  Strong vs Ground units\n  Weak vs Aircraft
+		Description: Advanced base defense..Requires power to operate..  Strong vs Ground units.  Weak vs Aircraft
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -3130,7 +3130,7 @@ tsobl2:
 		Prerequisites: ~tsgtcnstnod, tsnttech
 		Queue: Defence, RADefence
 		BuildDurationModifier: 40
-		Description: Advanced air defense.\nRequires power to operate.\n  Strong vs aircraft\n  Weak vs ground units
+		Description: Advanced air defense..Requires power to operate..  Strong vs aircraft.  Weak vs ground units
 	Building:
 		Footprint: x
 	Selectable:
@@ -3205,7 +3205,7 @@ TSE1:
 		Prerequisites: ~tsgtpile
 		Queue: Infantry, RAInfantry
 		IconPalette: ra2
-		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles
+		Description: General-purpose infantry..  Strong vs Infantry.  Weak vs Vehicles
 	Mobile:
 		Speed: 60
 	Health:
@@ -3269,7 +3269,7 @@ TSMEDIC:
 	Buildable:
 		Prerequisites: ~tsgtpile
 		Queue: Infantry, RAInfantry
-		Description: Heals nearby infantry.\n  Unarmed
+		Description: Heals nearby infantry..  Unarmed
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -3361,7 +3361,7 @@ TSE2:
 		BuildPaletteOrder: 29
 		Prerequisites: ~tsgtpile
 		Queue: Infantry, RAInfantry
-		Description: Fast infantry armed with grenades.\nCan attack air \n  Strong vs Buildings, slow-moving targets
+		Description: Fast infantry armed with grenades..Can attack air .  Strong vs Buildings, slow-moving targets
 	Mobile:
 		Speed: 56
 	Health:
@@ -3428,7 +3428,7 @@ TSJUMPJET:
 		BuildPaletteOrder: 40
 		Prerequisites: ~tsgtpile, tsgtradr
 		Queue: Infantry, RAInfantry
-		Description: Airborne soldier.\nCan attack aircraft.\n  Strong vs Infantry, Light armor\n  Weak vs AA
+		Description: Airborne soldier..Can attack aircraft..  Strong vs Infantry, Light armor.  Weak vs AA
 	Voiced:
 		VoiceSet: TSJumpJet
 	Mobile:
@@ -3606,7 +3606,7 @@ TSE3:
 		BuildPaletteOrder: 20
 		Prerequisites: ~tsnthand
 		Queue: Infantry, RAInfantry
-		Description: Anti-tank/anti-aircraft infantry. \n  Strong vs Tanks, Aircraft\n  Weak vs Infantry
+		Description: Anti-tank/anti-aircraft infantry. .  Strong vs Tanks, Aircraft.  Weak vs Infantry
 	Mobile:
 		Speed: 56
 	Health:
@@ -3665,7 +3665,7 @@ elitcadre:
 		BuildPaletteOrder: 10
 		Prerequisites: ~tsnthand, tsnttech, tsntradr
 		Queue: Infantry, RAInfantry
-		Description: Elite Infantry of NOD used to fight high technology enemies \n  Strong vs Infantry, Air, Vehicles\n  Weak vs Siege, Heavy armor
+		Description: Elite Infantry of NOD used to fight high technology enemies .  Strong vs Infantry, Air, Vehicles.  Weak vs Siege, Heavy armor
 		BuildDuration: 425
 		BuildDurationModifier: 100
 	Mobile:
@@ -3730,7 +3730,7 @@ TSCYBORG:
 		BuildDurationModifier: 100
 		BuildDuration: 250
 		Queue: Infantry, RAInfantry
-		Description: Cybernetic infantry unit.\n  Strong vs Infantry, Light armor\n  Weak vs Vehicles, Aircraft
+		Description: Cybernetic infantry unit..  Strong vs Infantry, Light armor.  Weak vs Vehicles, Aircraft
 	Mobile:
 		Speed: 56
 		PauseOnCondition: disabled
@@ -3933,7 +3933,7 @@ TSREAPER:
 		Queue: Infantry, RAInfantry
 		BuildPaletteOrder: 140
 		Prerequisites: ~tsnthand2, tscabaltech
-		Description: Cyborg walker armed with missiles and nets.\n Strong vs vehicles\n Can immobilize infantry
+		Description: Cyborg walker armed with missiles and nets.. Strong vs vehicles. Can immobilize infantry
 		BuildDuration: 500
 		BuildDurationModifier: 100
 	RevealsShroud:
@@ -4003,7 +4003,7 @@ TSCYC2:
 		BuildLimit: 1
 		BuildDuration: 625
 		BuildDurationModifier: 100
-		Description: Elite cybernetic infantry unit.\n  Strong vs Infantry, Vehicles, Buildings\n  Weak vs Aircraft
+		Description: Elite cybernetic infantry unit..  Strong vs Infantry, Vehicles, Buildings.  Weak vs Aircraft
 	Mobile:
 		Speed: 52
 	Health:
@@ -4033,7 +4033,7 @@ TSDissolver:
 	Buildable:
 		BuildPaletteOrder: 20
 		Queue: Infantry, RAInfantry
-		Description: Anti-Tank Walker\nDissolves mechanical parts to regenerate itself
+		Description: Anti-Tank Walker.Dissolves mechanical parts to regenerate itself
 		Prerequisites: ~tsnthand2
 		IconPalette: ra2
 	Selectable:
@@ -4087,7 +4087,7 @@ TSUMAGON:
 		BuildPaletteOrder: 95
 		Prerequisites: ~tsgtpile2, tsfgttech
 		Queue: Infantry, RAInfantry
-		Description: Advanced anti-infantry unit.\nMaximum 10 can be trained.\n  Strong vs Infantry\n  Weak vs Vehicles
+		Description: Advanced anti-infantry unit..Maximum 10 can be trained..  Strong vs Infantry.  Weak vs Vehicles
 		BuildLimit: 10
 	Mobile:
 		Speed: 71
@@ -4153,7 +4153,7 @@ TSGHOST:
 		Prerequisites: ~tsgtpile, tsgttech
 		Queue: Infantry, RAInfantry
 		BuildLimit: 1
-		Description: Elite commando infantry, armed with\na railgun and C4.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles, Aircraft\n  Special Ability: Destroy Building with C4\nMaximum 5 can be trained.
+		Description: Elite commando infantry, armed with.a railgun and C4..  Strong vs Infantry, Buildings.  Weak vs Vehicles, Aircraft.  Special Ability: Destroy Building with C4.Maximum 5 can be trained.
 	Mobile:
 		Speed: 80
 	Armor:
@@ -4265,7 +4265,7 @@ TSMUTANT:
 		BuildDuration: 68
 		BuildDurationModifier: 100
 		Queue: Infantry, RAInfantry
-		Description: Mutant armed with dual pistols.\nWeapon has high spread.\n  Strong vs Infantry\n  Weak vs Vehicles
+		Description: Mutant armed with dual pistols..Weapon has high spread..  Strong vs Infantry.  Weak vs Vehicles
 	Mobile:
 		Speed: 71
 	Health:
@@ -4325,7 +4325,7 @@ TSMWMN:
 		BuildPaletteOrder: 20
 		Prerequisites: ~tsgtpile2
 		Queue: Infantry, RAInfantry
-		Description: Mutant armed with a carbine.\nWeapon does high, precise damage.\n  Strong vs infantry, light vehicles\n  Weak vs tanks, aircraft
+		Description: Mutant armed with a carbine..Weapon does high, precise damage..  Strong vs infantry, light vehicles.  Weak vs tanks, aircraft
 		BuildDuration: 120
 		BuildDurationModifier: 100
 	Mobile:
@@ -4391,7 +4391,7 @@ TSMUTANT3:
 		BuildPaletteOrder: 20
 		Prerequisites: ~tsgtpile2, tsgtradrmutant
 		Queue: Infantry, RAInfantry
-		Description: Elite mutant infantry, can use grenades.\n  Strong vs Infantry\n  Weak vs Vehicles
+		Description: Elite mutant infantry, can use grenades..  Strong vs Infantry.  Weak vs Vehicles
 		BuildDuration: 180
 		BuildDurationModifier: 100
 	Mobile:
@@ -4455,7 +4455,7 @@ TSWEEDGUY:
 		BuildPaletteOrder: 30
 		Prerequisites: ~tsgtpile2, tsgtradrmutant
 		Queue: Infantry, RAInfantry
-		Description: Mutant soldier with a Tiberium weapon.\nCan attack air\n  Strong vs Infantry\n  Weak vs Vehicles
+		Description: Mutant soldier with a Tiberium weapon..Can attack air.  Strong vs Infantry.  Weak vs Vehicles
 	Mobile:
 		Speed: 64
 		Locomotor: chem
@@ -4523,7 +4523,7 @@ TSDOGGIE:
 		BuildDuration: 500
 		Prerequisites: ~tsgtpile2, tsgtradrmutant
 		Queue: Infantry, RAInfantry
-		Description: Canine mutant that hurls Tiberium shards.\nCan attack aircraft\n Strong vs Vehicles\n Weak vs Infantry
+		Description: Canine mutant that hurls Tiberium shards..Can attack aircraft. Strong vs Vehicles. Weak vs Infantry
 	Mobile:
 		Speed: 100
 		Locomotor: foot
@@ -4647,7 +4647,7 @@ tsnapost:
 		Queue: Defence, RADefence
 		BuildPaletteOrder: 20
 		Prerequisites: ~scmarine
-		Description: Stops infantry and blocks enemy fire.\nCan NOT be crushed by tanks.
+		Description: Stops infantry and blocks enemy fire..Can NOT be crushed by tanks.
 	Valued:
 		Cost: 200
 	Tooltip:
@@ -4877,7 +4877,7 @@ tsldrone:
 		BuildPaletteOrder: 80
 		Prerequisites: ~scmarine
 		Queue: Vehicle, RAVehicle
-		Description: Hovering drone that can deploy\ninto a mine.
+		Description: Hovering drone that can deploy.into a mine.
 	Mobile:
 		Locomotor: hover
 		Speed: 166
@@ -4957,7 +4957,7 @@ tsprobe:
 		Type: GroundPosition
 	Buildable:
 		Queue: Vehicle.HunterSeeker
-		Description: Fire-and-forget munition.\nInstantly kills mobile targets.
+		Description: Fire-and-forget munition..Instantly kills mobile targets.
 	Valued:
 		Cost: 600
 	Tooltip:
@@ -5088,7 +5088,7 @@ TSMMCH:
 		Prerequisites: ~tsgtweap
 		BuildDurationModifier: 100
 		BuildDuration: 375
-		Description: General purpose mechanized walker.\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft
+		Description: General purpose mechanized walker..  Strong vs Vehicles.  Weak vs Infantry, Aircraft
 	Mobile:
 		Locomotor: tracked
 		Speed: 75
@@ -5161,7 +5161,7 @@ TSJUGG:
 		BuildPaletteOrder: 60
 		Prerequisites: ~tsgtweap, tsgttech
 		Queue: Vehicle, RAVehicle
-		Description: Mobile artillery mech.\nImmobile when firing.\n  Strong vs Ground units\n  Weak vs Aircraft
+		Description: Mobile artillery mech..Immobile when firing..  Strong vs Ground units.  Weak vs Aircraft
 	Health:
 		HP: 120000
 	Mobile:
@@ -5270,7 +5270,7 @@ TSHVR:
 		BuildPaletteOrder: 80
 		Prerequisites: ~tsgtweap, tsgtradr
 		Queue: Vehicle, RAVehicle
-		Description: Hovering vehicle armed with\nlong range missiles.\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry
+		Description: Hovering vehicle armed with.long range missiles..  Strong vs Vehicles, Aircraft.  Weak vs Infantry
 		BuildDuration: 300
 		BuildDurationModifier: 100
 	Mobile:
@@ -5331,7 +5331,7 @@ TSSMECH:
 		BuildDuration: 250
 		BuildDurationModifier: 100
 		Prerequisites: ~tsgtweap
-		Description: Anti-personnel walker.\n  Strong vs Infantry, Light armor\n  Weak vs Vehicles, Aircraft
+		Description: Anti-personnel walker..  Strong vs Infantry, Light armor.  Weak vs Vehicles, Aircraft
 	Mobile:
 		TurnSpeed: 80
 		Speed: 99
@@ -5383,7 +5383,7 @@ TSHMEC:
 		BuildDuration: 1250
 		BuildDurationModifier: 100
 		BuildLimit: 1
-		Description: Slow heavy walker.\nArmed with dual railguns and rocket launchers.\n Strong vs Everything\n Maximum 1 can be built.
+		Description: Slow heavy walker..Armed with dual railguns and rocket launchers.. Strong vs Everything. Maximum 1 can be built.
 	Mobile:
 		TurnSpeed: 32
 		Speed: 50
@@ -5484,7 +5484,7 @@ TSSONIC:
 		BuildDuration: 680
 		BuildDurationModifier: 100
 		Queue: Vehicle, RAVehicle
-		Description: Armored high-tech vehicle with\na long range sonic armament.\n  Strong vs Infantry, Vehicles, Buildings\n  Weak vs Aircraft
+		Description: Armored high-tech vehicle with.a long range sonic armament..  Strong vs Infantry, Vehicles, Buildings.  Weak vs Aircraft
 	Mobile:
 		TurnSpeed: 32
 		Speed: 56
@@ -5537,7 +5537,7 @@ tsaegis:
 		BuildPaletteOrder: 30
 		Prerequisites: ~scmarine
 		Queue: Naval, RANaval
-		Description: Heavy GDI anti-aircraft warship.\n Strong vs. Aircraft
+		Description: Heavy GDI anti-aircraft warship.. Strong vs. Aircraft
 	Mobile:
 		Speed: 90
 	Health:
@@ -5585,7 +5585,7 @@ TSSAPC:
 		BuildPaletteOrder: 60
 		Prerequisites: ~tsntweap, tsntradr
 		Queue: Vehicle, RAVehicle
-		Description: Troop transport that can move\nunderground to avoid detection.\n  Unarmed
+		Description: Troop transport that can move.underground to avoid detection..  Unarmed
 	Mobile:
 		Locomotor: subterranean
 		PauseOnCondition: loading || being-captured || disabled
@@ -5636,7 +5636,7 @@ TSBGGY:
 		BuildPaletteOrder: 30
 		Prerequisites: ~tsntweap
 		Queue: Vehicle, RAVehicle
-		Description: Fast scout and anti-infantry vehicle.\n  Strong vs Infantry, Light armor\n  Weak vs Vehicles, Aircraft
+		Description: Fast scout and anti-infantry vehicle..  Strong vs Infantry, Light armor.  Weak vs Vehicles, Aircraft
 	Mobile:
 		Locomotor: wheeled
 		TurnSpeed: 80
@@ -5685,7 +5685,7 @@ TSBIKE:
 		BuildPaletteOrder: 30
 		Prerequisites: ~tsntweap
 		Queue: Vehicle, RAVehicle
-		Description: Fast scout vehicle, armed with\nrockets.\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft
+		Description: Fast scout vehicle, armed with.rockets..  Strong vs Vehicles.  Weak vs Infantry, Aircraft
 	Mobile:
 		Locomotor: wheeled
 		TurnSpeed: 80
@@ -5746,7 +5746,7 @@ TSSTNK:
 		BuildPaletteOrder: 150
 		Prerequisites: ~tsntweap, tsnttech
 		Queue: Vehicle, RAVehicle
-		Description: Lightly armoured tank equipped with a \nstealth generator. Armed with missiles.\nCan be spotted by infantry at close range.\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry
+		Description: Lightly armoured tank equipped with a .stealth generator. Armed with missiles..Can be spotted by infantry at close range..  Strong vs Vehicles, Aircraft.  Weak vs Infantry
 	Mobile:
 		Speed: 108
 	Health:
@@ -5813,7 +5813,7 @@ TSREPAIR:
 		BuildPaletteOrder: 70
 		Prerequisites: ~tsntweap, tsgtdeptnod
 		Queue: Vehicle, RAVehicle
-		Description: Repairs nearby vehicles.\n  Unarmed
+		Description: Repairs nearby vehicles..  Unarmed
 	Mobile:
 		Locomotor: tracked
 		Speed: 85
@@ -5876,7 +5876,7 @@ TSTTNK:
 		BuildDuration: 300
 		Prerequisites: ~tsntweap
 		Queue: Vehicle, RAVehicle
-		Description: Nod's main battle tank.\nCan deploy to gain extra protection.\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft
+		Description: Nod's main battle tank..Can deploy to gain extra protection..  Strong vs Vehicles.  Weak vs Infantry, Aircraft
 	Mobile:
 		Locomotor: tracked
 		TurnSpeed: 96
@@ -6003,7 +6003,7 @@ TSART2:
 		BuildPaletteOrder: 60
 		Prerequisites: ~tsntweap, tsntradr
 		Queue: Vehicle, RAVehicle
-		Description: Mobile artillery.\nImmobile when firing.\n  Strong vs Ground units\n  Weak vs Aircraft
+		Description: Mobile artillery..Immobile when firing..  Strong vs Ground units.  Weak vs Aircraft
 	Mobile:
 		Locomotor: tracked
 		Speed: 71
@@ -6084,7 +6084,7 @@ TSSUBTANK:
 		BuildPaletteOrder: 60
 		Prerequisites: ~tsntweap, tsnttech
 		Queue: Vehicle, RAVehicle
-		Description: Subterranean flame tank.\nIs able to move underground.\n  Strong vs Infantry, Buildings\n  Weak vs Tanks, Aircraft
+		Description: Subterranean flame tank..Is able to move underground..  Strong vs Infantry, Buildings.  Weak vs Tanks, Aircraft
 	Mobile:
 		Locomotor: subterranean
 		Speed: 71
@@ -6143,7 +6143,7 @@ TSAPC:
 		BuildPaletteOrder: 60
 		Prerequisites: ~tsgtweap
 		Queue: Vehicle, RAVehicle
-		Description: Armored infantry transport.\nCan move on water.
+		Description: Armored infantry transport..Can move on water.
 	Mobile:
 		Locomotor: amphibius
 		Speed: 113
@@ -6210,7 +6210,7 @@ tssgen:
 		BuildPaletteOrder: 120
 		Prerequisites: ~tsntweap, tsntstlh
 		Queue: Vehicle, RAVehicle
-		Description: Cloaks nearby buildings and units.\nCan not be cloaked.\n Unarmed
+		Description: Cloaks nearby buildings and units..Can not be cloaked.. Unarmed
 	Mobile:
 		Speed: 56
 	Health:
@@ -6270,7 +6270,7 @@ tslpst:
 		BuildPaletteOrder: 120
 		Prerequisites: ~tsgtweap, tsgtradr
 		Queue: Vehicle, RAVehicle
-		Description: Detects cloaked units and buildings.\n Unarmed
+		Description: Detects cloaked units and buildings.. Unarmed
 	Mobile:
 		Speed: 85
 	Health:
@@ -6313,7 +6313,7 @@ tslpstnod:
 		BuildPaletteOrder: 110
 		Prerequisites: ~tsntweap, tsntpulsnod, tsntradr
 		Queue: Vehicle, RAVehicle
-		Description: Shuts down vehicles with an EMP blast.\n  Strong vs Vehicles, Cyborgs
+		Description: Shuts down vehicles with an EMP blast..  Strong vs Vehicles, Cyborgs
 	RenderSprites:
 		Image: tslpst
 		PlayerPalette: playerra2
@@ -6331,7 +6331,7 @@ tsmemp:
 		BuildPaletteOrder: 110
 		Prerequisites: ~tsgtweap, tsntpulsgdi, tsgtradr
 		Queue: Vehicle, RAVehicle
-		Description: Shuts down vehicles with an EMP blast.\n  Strong vs Vehicles, Cyborgs
+		Description: Shuts down vehicles with an EMP blast..  Strong vs Vehicles, Cyborgs
 	Mobile:
 		Speed: 100
 	Health:
@@ -6399,7 +6399,7 @@ TSWINI2:
 		BuildPaletteOrder: 100
 		Prerequisites: ~tsgtweapmutant
 		Queue: Vehicle, RAVehicle
-		Description: Light motor vehicle armed with\nlong range missiles.\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry
+		Description: Light motor vehicle armed with.long range missiles..  Strong vs Vehicles, Aircraft.  Weak vs Infantry
 		BuildDuration: 300
 		BuildDurationModifier: 100
 	Mobile:
@@ -6451,7 +6451,7 @@ TSCAR2:
 		BuildPaletteOrder: 40
 		Prerequisites: ~tsgtweapmutant
 		Queue: Vehicle, RAVehicle
-		Description: Fast raiding vehicle.\n  Strong vs Infantry\n  Weak vs Vehicles
+		Description: Fast raiding vehicle..  Strong vs Infantry.  Weak vs Vehicles
 	Mobile:
 		Speed: 135
 	Health:
@@ -6507,7 +6507,7 @@ TS1TNK:
 		BuildPaletteOrder: 170
 		Prerequisites: ~tsgtweapmutant
 		Queue: Vehicle, RAVehicle
-		Description: Fast, lightly armored tank.\n Strong vs Light Vehicles
+		Description: Fast, lightly armored tank.. Strong vs Light Vehicles
 		BuildDuration: 250
 		BuildDurationModifier: 100
 	Mobile:
@@ -6563,7 +6563,7 @@ TS2TNK:
 		BuildPaletteOrder: 180
 		Prerequisites: ~tsgtweapmutant, tsgtradrmutant
 		Queue: Vehicle, RAVehicle
-		Description: General-purpose Mutant tank.\n Strong vs Vehicles\n Weak vs Aircraft, Infantry
+		Description: General-purpose Mutant tank.. Strong vs Vehicles. Weak vs Aircraft, Infantry
 		BuildDuration: 375
 		BuildDurationModifier: 100
 	Mobile:
@@ -6618,7 +6618,7 @@ TS3TNK:
 		BuildPaletteOrder: 190
 		Prerequisites: ~tsgtweapmutant, tsfgttech
 		Queue: Vehicle, RAVehicle
-		Description: Mutant heavy armor.\n Strong vs Vehicles\n Weak vs Aircraft, Infantry
+		Description: Mutant heavy armor.. Strong vs Vehicles. Weak vs Aircraft, Infantry
 		BuildDuration: 550
 		BuildDurationModifier: 100
 	Mobile:
@@ -6673,7 +6673,7 @@ TSFTNK:
 		BuildPaletteOrder: 50
 		Prerequisites: ~tsgtweapmutant
 		Queue: Vehicle, RAVehicle
-		Description: Mutant incendiary tank, restored from\nFirst Tiberium War inventories.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles, Aircraft
+		Description: Mutant incendiary tank, restored from.First Tiberium War inventories..  Strong vs Infantry, Buildings.  Weak vs Vehicles, Aircraft
 	Mobile:
 		Speed: 99
 		Locomotor: tracked
@@ -6726,7 +6726,7 @@ TS4TNK:
 		Queue: Vehicle, RAVehicle
 		BuildDuration: 1250
 		BuildDurationModifier: 100
-		Description: Mutant superheavy tank, restored from\nFirst Tiberium War inventories.\n Can attack Aircraft\n Strong vs Everything
+		Description: Mutant superheavy tank, restored from.First Tiberium War inventories.. Can attack Aircraft. Strong vs Everything
 	Mobile:
 		Locomotor: heavytracked
 		Speed: 45
@@ -6794,7 +6794,7 @@ TSARTY:
 		BuildPaletteOrder: 160
 		Prerequisites: ~tsgtweapmutant, tsgtradrmutant
 		Queue: Vehicle, RAVehicle
-		Description: Mutant long ranged vehicle with heavy sabot shells.\n Strong vs Vehicles, Buildings\n Weak vs Infantry, Aircraft
+		Description: Mutant long ranged vehicle with heavy sabot shells.. Strong vs Vehicles, Buildings. Weak vs Infantry, Aircraft
 	Mobile:
 		Speed: 85
 		TurnSpeed: 8
@@ -6844,7 +6844,7 @@ tsmlrs:
 		BuildPaletteOrder: 160
 		Prerequisites: ~tsgtweapmutant, tsgtradrmutant
 		Queue: Vehicle, RAVehicle
-		Description: Mutant rocket artillery.\n Strong vs Infantry, Buildings\n Weak vs Vehicles
+		Description: Mutant rocket artillery.. Strong vs Infantry, Buildings. Weak vs Vehicles
 	Mobile:
 		Speed: 85
 		Locomotor: lighttracked
@@ -6901,7 +6901,7 @@ tsm113:
 		BuildPaletteOrder: 160
 		Prerequisites: ~tsgtweapmutant, tsgtpile2
 		Queue: Vehicle, RAVehicle
-		Description: Armored troop transport.\n Strong vs Infantry\n Weak vs Vehicles, Aircraft
+		Description: Armored troop transport.. Strong vs Infantry. Weak vs Vehicles, Aircraft
 	Mobile:
 		Speed: 132
 		PauseOnCondition: notmobile || disabled
@@ -6988,7 +6988,7 @@ TST1000:
 		BuildDurationModifier: 50
 		BuildLimit: 1
 		Queue: Infantry, RAInfantry
-		Description: Cybernetic infantry unit.\n  Strong vs Infantry, Light armor\n  Weak vs Vehicles, Aircraft
+		Description: Cybernetic infantry unit..  Strong vs Infantry, Light armor.  Weak vs Vehicles, Aircraft
 	Mobile:
 		Speed: 80
 		PauseOnCondition: disabled
@@ -7075,7 +7075,7 @@ TSDEFENDER:
 		BuildLimit: 1
 		BuildDurationModifier: 25
 		Prerequisites: ~tsntweapcabal, tscore
-		Description: Superheavy CABAL epic unit.\n Strong vs ground targets
+		Description: Superheavy CABAL epic unit.. Strong vs ground targets
 	Mobile:
 		Speed: 50
 	Passenger:
@@ -7174,7 +7174,7 @@ TSORCA:
 		BuildPaletteOrder: 10
 		Queue: Aircraft, RAAircraft
 		Prerequisites: ~tsgthpad
-		Description: Fast assault gunship with\ndual missile launchers.\n  Strong vs Aircraft, Vehicles
+		Description: Fast assault gunship with.dual missile launchers..  Strong vs Aircraft, Vehicles
 	Aircraft:
 		TurnSpeed: 80
 		Speed: 186
@@ -7258,7 +7258,7 @@ TSORCAB:
 		BuildPaletteOrder: 30
 		Prerequisites: ~tsgthpad, tsgttech
 		Queue: Aircraft, RAAircraft
-		Description: Heavy bomber.\n  Strong vs Buildings, Vehicles\n  Weak vs Infantry, Aircraft
+		Description: Heavy bomber..  Strong vs Buildings, Vehicles.  Weak vs Infantry, Aircraft
 	Aircraft:
 		CruiseAltitude: 2560
 		TurnSpeed: 40
@@ -7347,7 +7347,7 @@ TSTRNSPORT:
 		Queue: Aircraft, RAAircraft
 		BuildPaletteOrder: 60
 		Prerequisites: ~tsgthpad
-		Description: VTOL aircraft capable of lifting\nand transporting vehicles.\n  Unarmed
+		Description: VTOL aircraft capable of lifting.and transporting vehicles..  Unarmed
 	Aircraft:
 		TurnSpeed: 80
 		Speed: 149
@@ -7412,7 +7412,7 @@ TSTRNSPORTMUTANT:
 		Queue: Aircraft, RAAircraft
 		BuildPaletteOrder: 60
 		Prerequisites: ~tsgthpadmutant, tsgtdeptmutant
-		Description: VTOL aircraft capable of lifting\nand transporting vehicles.\n  Unarmed
+		Description: VTOL aircraft capable of lifting.and transporting vehicles..  Unarmed
 	Aircraft:
 		TurnSpeed: 80
 		Speed: 149
@@ -7461,7 +7461,7 @@ TSSCRIN:
 		BuildPaletteOrder: 20
 		Prerequisites: ~tsnthpad, tsnttech, tsntradr
 		Queue: Aircraft, RAAircraft
-		Description: Advanced fighter-bomber craft\nwith twin plasma cannons.\n  Strong vs Buildings, Vehicles\n  Weak vs Infantry, Aircraft
+		Description: Advanced fighter-bomber craft.with twin plasma cannons..  Strong vs Buildings, Vehicles.  Weak vs Infantry, Aircraft
 	Aircraft:
 		CruiseAltitude: 2560
 		TurnSpeed: 80
@@ -7558,7 +7558,7 @@ TSAPACHENOD:
 		BuildPaletteOrder: 20
 		Prerequisites: ~tsnthpad
 		Queue: Aircraft, RAAircraft
-		Description: Anti-personnel support gunship\narmed with dual chain guns.\n  Strong vs Infantry, Light armor, Aircraft\n  Weak vs Vehicles
+		Description: Anti-personnel support gunship.armed with dual chain guns..  Strong vs Infantry, Light armor, Aircraft.  Weak vs Vehicles
 	Aircraft:
 		TurnSpeed: 80
 		Speed: 150
@@ -7633,7 +7633,7 @@ TSAPACHEMUTANT:
 		BuildPaletteOrder: 20
 		Prerequisites: ~tsgthpadmutant, tsgtradrmutant, tsfgttech
 		Queue: Aircraft, RAAircraft
-		Description: Anti-personnel support gunship\narmed with dual chain guns.\n  Strong vs Infantry, Light armor, Aircraft\n  Weak vs Vehicles
+		Description: Anti-personnel support gunship.armed with dual chain guns..  Strong vs Infantry, Light armor, Aircraft.  Weak vs Vehicles
 	Aircraft:
 		TurnSpeed: 80
 		Speed: 150
@@ -7708,7 +7708,7 @@ TSAPACHECABAL:
 		BuildPaletteOrder: 20
 		Prerequisites: ~tsnthpad2
 		Queue: Aircraft, RAAircraft
-		Description: Anti-personnel support gunship\narmed with dual chain guns.\n  Strong vs Infantry, Light armor, Aircraft\n  Weak vs Vehicles
+		Description: Anti-personnel support gunship.armed with dual chain guns..  Strong vs Infantry, Light armor, Aircraft.  Weak vs Vehicles
 	Aircraft:
 		TurnSpeed: 80
 		Speed: 150
@@ -7803,7 +7803,7 @@ TSHELI:
 		BuildPaletteOrder: 30
 		Prerequisites: ~scmarine
 		Queue: Aircraft, RAAircraft
-		Description: Anti-personnel support gunship\narmed with guns and missiles.\n  Strong vs Infantry, Vehicles, Aircraft
+		Description: Anti-personnel support gunship.armed with guns and missiles..  Strong vs Infantry, Vehicles, Aircraft
 	Aircraft:
 		TurnSpeed: 80
 		Speed: 140
@@ -7900,7 +7900,7 @@ TSHIND:
 		BuildPaletteOrder: 10
 		Prerequisites: ~tsgthpadmutant
 		Queue: Aircraft, RAAircraft
-		Description: Anti-personnel support gunship\narmed with dual chain guns.\n  Strong vs Infantry, Light armor, Aircraft\n  Weak vs Vehicles
+		Description: Anti-personnel support gunship.armed with dual chain guns..  Strong vs Infantry, Light armor, Aircraft.  Weak vs Vehicles
 	Aircraft:
 		TurnSpeed: 80
 		Speed: 120
@@ -7989,7 +7989,7 @@ TSTRAN:
 	Buildable:
 		BuildPaletteOrder: 40
 		Queue: Aircraft, RAAircraft
-		Description: Fast infantry transport helicopter.\n Unarmed
+		Description: Fast infantry transport helicopter.. Unarmed
 		Prerequisites: ~scmarine
 	Aircraft:
 		TurnSpeed: 20
@@ -8069,7 +8069,7 @@ TSARND:
 		BuildDurationModifier: 100
 		BuildDuration: 250
 		Queue: Infantry, RAInfantry
-		Description: Cybernetic-Biologic infantry unit.\n  Strong vs Infantry, Light armor, Aircraft\n  Weak vs Vehicles
+		Description: Cybernetic-Biologic infantry unit..  Strong vs Infantry, Light armor, Aircraft.  Weak vs Vehicles
 	Health:
 		HP: 16000
 	Mobile:

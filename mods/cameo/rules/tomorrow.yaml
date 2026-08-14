@@ -1,42 +1,78 @@
 World:
 	FactionCA@dtomorrow:
-		Name: Forces of Tomorrow DoT
+		Name: F.O.T DoT
 		InternalName: dtomorrow
 		Game: Dawn of Tomorrow
-		Side: Faction
-		Description: Forces of Tomorrow\nSupport powers: Bacterial Missile Strike\nSpecial Unit: Classified
+		Side: Dawn of Tomorrow
+		Description: Forces of Tomorrow Support powers: Bacterial Missile Strike Special Unit: Classified
 	FactionCA@dtanswer:
-		Name: Company of Answers DoT
+		Name: C.O.A DoT
 		InternalName: dtanswer
 		Game: Dawn of Tomorrow
-		Side: Faction
-		Description: Company of Answers\nSupport powers: A10 Strike\nSpecial Unit: Phoenix
+		Side: Dawn of Tomorrow
+		Description: Company of Answers Support powers: A10 Strike Special Unit: Phoenix Gain extra cash from Refineries.
 	FactionCA@dtusa:
 		Name: USA DoT
 		InternalName: dtusa
 		Game: Dawn of Tomorrow
-		Side: Faction
-		Description: USA\nSupport powers: Cruise Missile Strike\nSpecial Bonus: Vehicle Rank unlocking machine Shop
+		Side: Dawn of Tomorrow
+		Description: USA Support powers: Cruise Missile Strike Special Bonus: Vehicle Rank unlocking machine Shop
 	FactionCA@dtrussia:
 		Name: Russia DoT
 		InternalName: dtrussia
 		Game: Dawn of Tomorrow
-		Side: Faction
+		Side: Dawn of Tomorrow
 		Description: Russia
 	FactionCA@dtjapan:
 		Name: Japan DoT
 		InternalName: dtjapan
 		Game: Dawn of Tomorrow
-		Side: Faction
+		Side: Dawn of Tomorrow
 		Description: Japan
+	# FactionCA@dtbrazil:
+	# 	Name: Brazil DoT
+	# 	InternalName: dtbrazil
+	# 	Game: Dawn of Tomorrow
+	# 	Side: Dawn of Tomorrow
+	# 	Description: Brazil
+	# FactionCA@dtbrazil:
+	# 	Name: Argentina DoT
+	# 	InternalName: dtargentina
+	# 	Game: Dawn of Tomorrow
+	# 	Side: Dawn of Tomorrow
+	# 	Description: Argentina
+	# FactionCA@dtaustralia:
+	# 	Name: Austrailaia DoT
+	# 	InternalName: dtaustralia
+	# 	Game: Dawn of Tomorrow
+	# 	Side: Dawn of Tomorrow
+	# 	Description: Austrailia
+	# FactionCA@dtcuba:
+	# 	Name: Cuba DoT
+	# 	InternalName: dtcuba
+	# 	Game: Dawn of Tomorrow
+	# 	Side: Dawn of Tomorrow
+	# 	Description: Cuba
+	# FactionCA@dtethiopia:
+	# 	Name: Ethiopia DoT
+	# 	InternalName: dtethiopia
+	# 	Game: Dawn of Tomorrow
+	# 	Side: Dawn of Tomorrow
+	# 	Description: Ethiopia
 	FactionCA@dtrandom:
-		Name: Any
+		Name: Random DOT
 		InternalName: RandomDT
 		RandomFactionMembers: dtomorrow, dtanswer, dtusa, dtrussia, dtjapan
 		Game: Dawn of Tomorrow
 		Side: Random
-		Description: Random Faction\nA random faction from Dawn of Tommorow will be chosen when the game starts.
-		
+		Description: A random faction from Dawn of Tomorrow factions will be chosen when the game starts.
+
+
+#########################################################################
+#		Starting Forces.
+#########################################################################
+
+
 	StartingUnits@mcvonlyradtomorrow:
 		Class: none
 		ClassName: MCV Only
@@ -129,24 +165,64 @@ Player:
 	ProvidesPrerequisite@BuildingsOwned:
 		Prerequisite: allowsMCV
 		RequiresCondition: BuildingsOwned < 5
+
+##############################################
+#                  Inherited Units
+##############################################
+
+TRUCK:
+	Inherits: ^Vehicle
+	Inherits@selection: ^SelectableSupportUnit
+	Buildable:
+		Queue: Vehicle.GDI, Vehicle.Nod
+		BuildPaletteOrder: 35
+		Prerequisites: vehicleproduction
+		BuildDuration: 500
+		Description: actor-truck.description
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: actor-truck.name
+	Health:
+		HP: 11000
+	Armor:
+		Type: Light
+	Mobile:
+		Speed: 113
+	RevealsShroud:
+		Range: 4c0
+	Encyclopedia:
+		Description: actor-truck.encyclopedia
+		Order: 220
+		Category: Vehicles
+		Scale: 3
+		PreviewOwner: GDI
+	DeliversCash:
+		Payload: 1000
+		PlayerExperience: 10
+	SpawnActorOnDeath:
+		Actor: TRUCK.Husk
+		OwnerType: InternalName
+		EffectiveOwnerFromOwner: true
+
 ##############################################
 #                  BUILDINGS
 ##############################################
 MCV.TOMORROW:
 	Inherits: ^Vehicle
+	Inherits@Template: ^SupportVehicleTemplate
 	Inherits@selection: ^SelectableSupportUnit
 	Inherits@mcv: ^MCV
-	Inherits@conyard: ^Conyard
 	Valued:
 		Cost: 2000
 	Tooltip:
 		Name: Mobile Construction Vehicle (Tomorrow)
 	Buildable:
 		BuildPaletteOrder: 100
-		Prerequisites: anyhq, ~techlevel.medium, fix
-		Queue: Vehicle, RAVehicle
+		Prerequisites:  ~anyhq, fix
+		Queue: Vehicle.Tomorrow
 		BuildDurationModifier: 40
-		Description: Deploys into another Construction Yard.\n  Unarmed
+		Description: Deploys into another Construction Yard.   Unarmed
 	Selectable:
 		Priority: 4
 		DecorationBounds: 1536, 1536
@@ -178,28 +254,28 @@ MCV.TOMORROW:
 	ProvidesPrerequisite@faction:
 		Prerequisite: mmgdi
 
-mcvtomorrow.bot:
-	Inherits: MCV.TOMORROW
-	Buildable:
-		BuildPaletteOrder: 100
-		BuildLimit: 1
-		Prerequisites: anyhq, ~techlevel.medium, fix, ~botplayer, allowsMCV
+# mcvtomorrow.bot:
+# 	Inherits: MCV.TOMORROW
+# 	Buildable:
+# 		BuildPaletteOrder: 100
+# 		BuildLimit: 1
+# 		Prerequisites:  ~anyhq, fix, ~botplayer, allowsMCV
 
 MCV.ANSWER:
 	Inherits: ^Vehicle
+	Inherits@Template: ^SupportVehicleTemplate
 	Inherits@selection: ^SelectableSupportUnit
 	Inherits@mcv: ^MCV
-	Inherits@conyard: ^Conyard
 	Valued:
 		Cost: 2000
 	Tooltip:
 		Name: Mobile Construction Vehicle (Answer)
 	Buildable:
 		BuildPaletteOrder: 100
-		Prerequisites: anyhq, ~techlevel.medium, fix
-		Queue: Vehicle, RAVehicle
+		Prerequisites:  ~anyhq, fix
+		Queue: Vehicle.Anwer
 		BuildDurationModifier: 40
-		Description: Deploys into another Construction Yard.\n  Unarmed
+		Description: Deploys into another Construction Yard.   Unarmed
 	Selectable:
 		Priority: 4
 		DecorationBounds: 1536, 1536
@@ -228,31 +304,30 @@ MCV.ANSWER:
 	Inherits@EXT: ^ExternalConditions
 	RenderSprites:
 		Image: mcv
-	ProvidesPrerequisite@faction:
-		Prerequisite: mmnod
 
-mcvanswer.bot:
-	Inherits: MCV.ANSWER
-	Buildable:
-		BuildPaletteOrder: 100
-		BuildLimit: 1
-		Prerequisites: anyhq, ~techlevel.medium, fix, ~botplayer, allowsMCV
+
+# mcvanswer.bot:
+# 	Inherits: MCV.ANSWER
+# 	Buildable:
+# 		BuildPaletteOrder: 100
+# 		BuildLimit: 1
+# 		Prerequisites:  ~anyhq, fix, ~botplayer, allowsMCV
 
 MCV.DTUSA:
 	Inherits: ^Vehicle
+	Inherits@Template: ^SupportVehicleTemplate
 	Inherits@selection: ^SelectableSupportUnit
 	Inherits@mcv: ^MCV
-	Inherits@conyard: ^Conyard
 	Valued:
 		Cost: 2000
 	Tooltip:
 		Name: Mobile Construction Vehicle (USA)
 	Buildable:
 		BuildPaletteOrder: 100
-		Prerequisites: anyhq, ~techlevel.medium, fix
-		Queue: Vehicle, RAVehicle
+		Prerequisites:  ~anyhq, fix
+		Queue: Vehicle.Dtusa
 		BuildDurationModifier: 40
-		Description: Deploys into another Construction Yard.\n  Unarmed
+		Description: Deploys into another Construction Yard.   Unarmed
 	Selectable:
 		Priority: 4
 		DecorationBounds: 1536, 1536
@@ -284,24 +359,25 @@ MCV.DTUSA:
 	ProvidesPrerequisite@faction:
 		Prerequisite: mmnod
 
-mcvdtusa.bot:
-	Inherits: MCV.DTUSA
-	Buildable:
-		BuildPaletteOrder: 100
-		BuildLimit: 1
-		Prerequisites: anyhq, ~techlevel.medium, fix, ~botplayer, allowsMCV
+
+# mcvdtusa.bot:
+# 	Inherits: MCV.DTUSA
+# 	Buildable:
+# 		BuildPaletteOrder: 100
+# 		BuildLimit: 1
+# 		Prerequisites:  ~anyhq, fix, ~botplayer, allowsMCV
 
 RAMCV.DTRUSSIA:
 	Inherits: ^Vehicle
+	Inherits@Template: ^SupportVehicleTemplate
 	Inherits@selection: ^SelectableSupportUnit
 	Inherits@mcv: ^MCV
-	Inherits@conyard: ^Conyard
 	Buildable:
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Dtrussia
 		BuildPaletteOrder: 210
-		Prerequisites: fix, ~techlevel.medium
+		Prerequisites: fix
 		BuildDurationModifier: 40
-		Description: Deploys into another Construction Yard.\n  Unarmed
+		Description: Deploys into another Construction Yard.   Unarmed
 	Valued:
 		Cost: 2000
 	Tooltip:
@@ -332,31 +408,32 @@ RAMCV.DTRUSSIA:
 	Inherits@EXT: ^ExternalConditions
 	RenderSprites:
 		Image: ramcv
+		PlayerPalette: raplayer
 	ProvidesPrerequisite@faction:
 		Prerequisite: mmsoviet
 
-ramcvdtrussia.bot:
-	Inherits: RAMCV.DTRUSSIA
-	Buildable:
-		BuildPaletteOrder: 100
-		BuildLimit: 1
-		Prerequisites: anyhq, ~techlevel.medium, fix, ~botplayer, allowsMCV
+# ramcvdtrussia.bot:
+# 	Inherits: RAMCV.DTRUSSIA
+# 	Buildable:
+# 		BuildPaletteOrder: 100
+# 		BuildLimit: 1
+# 		Prerequisites:  ~anyhq, fix, ~botplayer, allowsMCV
 
 MCV.DTJAPAN:
 	Inherits: ^Vehicle
+	Inherits@Template: ^SupportVehicleTemplate
 	Inherits@selection: ^SelectableSupportUnit
 	Inherits@mcv: ^MCV
-	Inherits@conyard: ^Conyard
 	Valued:
 		Cost: 2000
 	Tooltip:
 		Name: Mobile Construction Vehicle (Japan)
 	Buildable:
 		BuildPaletteOrder: 100
-		Prerequisites: anyhq, ~techlevel.medium, fix
-		Queue: Vehicle, RAVehicle
+		Prerequisites:  ~anyhq, fix
+		Queue: Vehicle.Dtjapan
 		BuildDurationModifier: 40
-		Description: Deploys into another Construction Yard.\n  Unarmed
+		Description: Deploys into another Construction Yard.   Unarmed
 	Selectable:
 		Priority: 4
 		DecorationBounds: 1536, 1536
@@ -385,19 +462,65 @@ MCV.DTJAPAN:
 	Inherits@EXT: ^ExternalConditions
 	RenderSprites:
 		Image: mcv
-	ProvidesPrerequisite@faction:
-		Prerequisite: mmdtjapan
+	ProvidesPrerequisite@wall:
+		Prerequisite: concretebarrier
+	Voiced:
+		VoiceSet: dtjapVehVoice
 
-mcvdtjapan.bot:
-	Inherits: MCV.DTJAPAN
-	Buildable:
-		BuildPaletteOrder: 100
-		BuildLimit: 1
-		Prerequisites: anyhq, ~techlevel.medium, fix, ~botplayer, allowsMCV
+# MCV.ARGENTINA:
+# 	Inherits: ^Vehicle
+# 	Inherits@Template: ^SupportVehicleTemplate
+# 	Inherits@selection: ^SelectableSupportUnit
+# 	Inherits@mcv: ^MCV
+# 	Valued:
+# 		Cost: 2000
+# 	Tooltip:
+# 		Name: Mobile Construction Vehicle (Japan)
+# 	Buildable:
+# 		BuildPaletteOrder: 100
+# 		Prerequisites:  ~anyhq, fix
+# 		Queue: Vehicle, RAVehicle
+# 		BuildDurationModifier: 40
+# 		Description: Deploys into another Construction Yard.   Unarmed
+# 	Selectable:
+# 		Priority: 4
+# 		DecorationBounds: 1536, 1536
+# 	Mobile:
+# 		Speed: 75
+# 		Locomotor: heavywheeled
+# 	Health:
+# 		HP: 150000
+# 	Repairable:
+# 		HpPerStep: 2182
+# 	Armor:
+# 		Type: Heavy
+# 	RevealsShroud:
+# 		Range: 7c0
+# 	Transforms:
+# 		IntoActor: fact.argentina
+# 		Offset: -1,-1
+# 		Facing: 432
+# 		TransformSounds: constru2.aud, hvydoor1.aud
+# 		NoTransformNotification: BuildingCannotPlaceAudio
+# 	#SpawnActorOnDeath:
+# 	#	Actor: MCV.Husk
+# 	#	OwnerType: InternalName
+# 	#	EffectiveOwnerFromOwner: true
+# 	SelectionDecorations:
+# 	Inherits@EXT: ^ExternalConditions
+# 	RenderSprites:
+# 		Image: ramcv
+# 	ProvidesPrerequisite@wall:
+# 		Prerequisite: concretebarrier
+
+# mcvdtjapan.bot:
+# 	Inherits: MCV.DTJAPAN
+# 	Buildable:
+# 		BuildPaletteOrder: 100
+# 		BuildLimit: 1
+# 		Prerequisites:  ~anyhq, fix, ~botplayer, allowsMCV
 
 RAFACT.DTRUSSIA:
-	GrantExternalConditionToOwner@BuildingsOwned:
-		Condition: BuildingsOwned
 	Inherits: ^BaseBuilding
 	Inherits@CPQ: ^CPQCondition
 	Inherits@aicash: ^AIConyardCash
@@ -422,12 +545,12 @@ RAFACT.DTRUSSIA:
 	RevealsShroud:
 		Range: 10c0
 	WithBuildingBib:
-	Production@NORMAL:
-		Produces: Building, Defence
-		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RABuilding, RADefence
-		RequiresCondition: classicproductionqueues
+	# Production@NORMAL:
+	# 	Produces: Building, Defence
+	# 	RequiresCondition: !classicproductionqueues
+	# Production@CLASSICPRODUCTIONQUEUES:
+	# 	Produces: RABuilding, RADefence
+	# 	RequiresCondition: classicproductionqueues
 	Transforms:
 		IntoActor: ramcv.dtrussia
 		Offset: 1,1
@@ -438,50 +561,51 @@ RAFACT.DTRUSSIA:
 	GrantConditionOnPrerequisite@GLOBALFACTUNDEPLOY:
 		Condition: factundeploy
 		Prerequisites: global-factundeploy
-	ProductionQueue@SovietBuilding:
-		Type: Building
-		DisplayOrder: 0
-		Group: Building
-		LowPowerModifier: 200
-		QueuedAudio: Building
-		ReadyAudio: ConstructionComplete
-	ProductionQueue@SovietDefense:
-		Type: Defence
-		DisplayOrder: 1
-		Group: Defence
-		LowPowerModifier: 300
-		QueuedAudio: Building
-		ReadyAudio: ConstructionComplete
+	# ProductionQueue@SovietBuilding:
+	# 	Type: Building
+	# 	DisplayOrder: 0
+	# 	Group: Building
+	# 	LowPowerModifier: 200
+	# 	QueuedAudio: Building
+	# 	ReadyAudio: ConstructionComplete
+	# ProductionQueue@SovietDefense:
+	# 	Type: Defence
+	# 	DisplayOrder: 1
+	# 	Group: Defence
+	# 	LowPowerModifier: 300
+	# 	QueuedAudio: Building
+	# 	ReadyAudio: ConstructionComplete
 	BaseBuilding:
-	ProductionBar@BuildingSoviet:
-		ProductionType: Building
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@DefenceSoviet:
-		ProductionType: Defence
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@RABuildingSoviet:
-		ProductionType: RABuilding
-		RequiresCondition: classicproductionqueues
-	ProductionBar@RADefenceSoviet:
-		ProductionType: RADefence
-		RequiresCondition: classicproductionqueues
+	# ProductionBar@BuildingSoviet:
+	# 	ProductionType: Building
+	# 	RequiresCondition: !classicproductionqueues
+	# ProductionBar@DefenceSoviet:
+	# 	ProductionType: Defence
+	# 	RequiresCondition: !classicproductionqueues
+	# ProductionBar@RABuildingSoviet:
+	# 	ProductionType: RABuilding
+	# 	RequiresCondition: classicproductionqueues
+	# ProductionBar@RADefenceSoviet:
+	# 	ProductionType: RADefence
+	# 	RequiresCondition: classicproductionqueues
 	BaseProvider:
 		Range: 14c0
 	WithBuildingPlacedAnimation:
 	Power:
 		Amount: 0
 	ProvidesPrerequisite@buildingname:
-		Prerequisite: fact
+		Prerequisite: dtfact
 	Buildable:
 		Description: Builds structures
 	ProvidesPrerequisite@factionsoviet:
-		Prerequisite: mmsoviet
+		Prerequisite: rafact.dtrussia
+	ProvidesPrerequisite@wall:
+		Prerequisite: concretebarrier
 	RenderSprites:
 		Image: rafact
+		PlayerPalette: raplayer
 
 FACT.TOMORROW:
-	GrantExternalConditionToOwner@BuildingsOwned:
-		Condition: BuildingsOwned
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^3x2Shape
 	Inherits@CPQ: ^CPQCondition
@@ -489,7 +613,6 @@ FACT.TOMORROW:
 	Inherits@conyard: ^Conyard
 	Inherits@sell: ^TDSpawnActorsOnSell
 	Selectable:
-		Bounds: 131072, 87381
 	Valued:
 		Cost: 2000
 	Tooltip:
@@ -504,12 +627,12 @@ FACT.TOMORROW:
 		Type: Wood
 	RevealsShroud:
 		Range: 10c0
-	Production@NORMAL:
-		Produces: Building, Defence
-		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RABuilding, RADefence
-		RequiresCondition: classicproductionqueues
+	# Production@NORMAL:
+	# 	Produces: Building, Defence
+	# 	RequiresCondition: !classicproductionqueues
+	# Production@CLASSICPRODUCTIONQUEUES:
+	# 	Produces: RABuilding, RADefence
+	# 	RequiresCondition: classicproductionqueues
 	Transforms:
 		RequiresCondition: factundeploy
 		PauseOnCondition: being-demolished || build-incomplete
@@ -533,41 +656,41 @@ FACT.TOMORROW:
 	GrantConditionOnPrerequisite@GLOBALFACTUNDEPLOY:
 		Condition: factundeploy
 		Prerequisites: global-factundeploy
-	ProductionQueue@GDIBuilding:
-		Type: Building
-		DisplayOrder: 0
-		Group: Building
-		LowPowerModifier: 200
-		ReadyAudio: ConstructionComplete
-		BlockedAudio: NoBuild
-		LimitedAudio: BuildingInProgress
-		QueuedAudio: Building
-		OnHoldAudio: OnHold
-		CancelledAudio: Cancelled
-	ProductionQueue@GDIDefense:
-		Type: Defence
-		DisplayOrder: 1
-		Group: Defence
-		LowPowerModifier: 300
-		ReadyAudio: ConstructionComplete
-		BlockedAudio: NoBuild
-		LimitedAudio: BuildingInProgress
-		QueuedAudio: Building
-		OnHoldAudio: OnHold
-		CancelledAudio: Cancelled
+	# ProductionQueue@GDIBuilding:
+	# 	Type: Building
+	# 	DisplayOrder: 0
+	# 	Group: Building
+	# 	LowPowerModifier: 200
+	# 	ReadyAudio: ConstructionComplete
+	# 	BlockedAudio: NoBuild
+	# 	LimitedAudio: BuildingInProgress
+	# 	QueuedAudio: Building
+	# 	OnHoldAudio: OnHold
+	# 	CancelledAudio: Cancelled
+	# ProductionQueue@GDIDefense:
+	# 	Type: Defence
+	# 	DisplayOrder: 1
+	# 	Group: Defence
+	# 	LowPowerModifier: 300
+	# 	ReadyAudio: ConstructionComplete
+	# 	BlockedAudio: NoBuild
+	# 	LimitedAudio: BuildingInProgress
+	# 	QueuedAudio: Building
+	# 	OnHoldAudio: OnHold
+	# 	CancelledAudio: Cancelled
 	BaseBuilding:
-	ProductionBar@BuildingGDI:
-		ProductionType: Building
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@DefenceGDI:
-		ProductionType: Defence
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@RABuildingGDI:
-		ProductionType: RABuilding
-		RequiresCondition: classicproductionqueues
-	ProductionBar@RADefenceGDI:
-		ProductionType: RADefence
-		RequiresCondition: classicproductionqueues
+	# ProductionBar@BuildingGDI:
+	# 	ProductionType: Building
+	# 	RequiresCondition: !classicproductionqueues
+	# ProductionBar@DefenceGDI:
+	# 	ProductionType: Defence
+	# 	RequiresCondition: !classicproductionqueues
+	# ProductionBar@RABuildingGDI:
+	# 	ProductionType: RABuilding
+	# 	RequiresCondition: classicproductionqueues
+	# ProductionBar@RADefenceGDI:
+	# 	ProductionType: RADefence
+	# 	RequiresCondition: classicproductionqueues
 	BaseProvider:
 		Range: 14c0
 	WithBuildingBib:
@@ -576,20 +699,14 @@ FACT.TOMORROW:
 	Power:
 		Amount: 0
 	ProvidesPrerequisite@buildingname:
-		Prerequisite: fact
-	Buildable:
-		Queue: Building, RABuilding
-		BuildPaletteOrder: 1000
-		Prerequisites: ~wip-content
-		Description: Builds structures
-	ProvidesPrerequisite@factiongdi:
-		Prerequisite: mmgdi
+		Prerequisite: dtfact
+	ProvidesPrerequisite@factiontomorrow:
+		Prerequisite: fact.tomorrow
 	RenderSprites:
 		Image: fact
+		# PlayerPalette: raplayer
 
 FACT.ANSWER:
-	GrantExternalConditionToOwner@BuildingsOwned:
-		Condition: BuildingsOwned
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^3x2Shape
 	Inherits@CPQ: ^CPQCondition
@@ -597,7 +714,6 @@ FACT.ANSWER:
 	Inherits@conyard: ^Conyard
 	Inherits@sell: ^TDSpawnActorsOnSell
 	Selectable:
-		Bounds: 131072, 87381
 	Valued:
 		Cost: 2000
 	Tooltip:
@@ -612,12 +728,12 @@ FACT.ANSWER:
 		Type: Wood
 	RevealsShroud:
 		Range: 10c0
-	Production@NORMAL:
-		Produces: Building, Defence
-		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RABuilding, RADefence
-		RequiresCondition: classicproductionqueues
+	# Production@NORMAL:
+	# 	Produces: Building, Defence
+	# 	RequiresCondition: !classicproductionqueues
+	# Production@CLASSICPRODUCTIONQUEUES:
+	# 	Produces: RABuilding, RADefence
+	# 	RequiresCondition: classicproductionqueues
 	Transforms:
 		RequiresCondition: factundeploy
 		PauseOnCondition: being-demolished || build-incomplete
@@ -641,41 +757,41 @@ FACT.ANSWER:
 	GrantConditionOnPrerequisite@GLOBALFACTUNDEPLOY:
 		Condition: factundeploy
 		Prerequisites: global-factundeploy
-	ProductionQueue@NodBuilding:
-		Type: Building
-		DisplayOrder: 0
-		Group: Building
-		LowPowerModifier: 200
-		ReadyAudio: ConstructionComplete
-		BlockedAudio: NoBuild
-		LimitedAudio: BuildingInProgress
-		QueuedAudio: Building
-		OnHoldAudio: OnHold
-		CancelledAudio: Cancelled
-	ProductionQueue@NodDefense:
-		Type: Defence
-		DisplayOrder: 1
-		Group: Defence
-		LowPowerModifier: 300
-		ReadyAudio: ConstructionComplete
-		BlockedAudio: NoBuild
-		LimitedAudio: BuildingInProgress
-		QueuedAudio: Building
-		OnHoldAudio: OnHold
-		CancelledAudio: Cancelled
+	# ProductionQueue@NodBuilding:
+	# 	Type: Building
+	# 	DisplayOrder: 0
+	# 	Group: Building
+	# 	LowPowerModifier: 200
+	# 	ReadyAudio: ConstructionComplete
+	# 	BlockedAudio: NoBuild
+	# 	LimitedAudio: BuildingInProgress
+	# 	QueuedAudio: Building
+	# 	OnHoldAudio: OnHold
+	# 	CancelledAudio: Cancelled
+	# ProductionQueue@NodDefense:
+	# 	Type: Defence
+	# 	DisplayOrder: 1
+	# 	Group: Defence
+	# 	LowPowerModifier: 300
+	# 	ReadyAudio: ConstructionComplete
+	# 	BlockedAudio: NoBuild
+	# 	LimitedAudio: BuildingInProgress
+	# 	QueuedAudio: Building
+	# 	OnHoldAudio: OnHold
+	# 	CancelledAudio: Cancelled
 	BaseBuilding:
-	ProductionBar@BuildingNod:
-		ProductionType: Building
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@DefenceNod:
-		ProductionType: Defence
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@RABuildingNod:
-		ProductionType: RABuilding
-		RequiresCondition: classicproductionqueues
-	ProductionBar@RADefenceNod:
-		ProductionType: RADefence
-		RequiresCondition: classicproductionqueues
+	# ProductionBar@BuildingNod:
+	# 	ProductionType: Building
+	# 	RequiresCondition: !classicproductionqueues
+	# ProductionBar@DefenceNod:
+	# 	ProductionType: Defence
+	# 	RequiresCondition: !classicproductionqueues
+	# ProductionBar@RABuildingNod:
+	# 	ProductionType: RABuilding
+	# 	RequiresCondition: classicproductionqueues
+	# ProductionBar@RADefenceNod:
+	# 	ProductionType: RADefence
+	# 	RequiresCondition: classicproductionqueues
 	BaseProvider:
 		Range: 14c0
 	WithBuildingBib:
@@ -683,21 +799,14 @@ FACT.ANSWER:
 		RequiresCondition: !build-incomplete
 	Power:
 		Amount: 0
-	ProvidesPrerequisite@buildingname:
-		Prerequisite: fact
-	Buildable:
-		Queue: Building, RABuilding
-		BuildPaletteOrder: 1000
-		Prerequisites: ~wip-content
-		Description: Builds structures
-	ProvidesPrerequisite@factionnod:
-		Prerequisite: mmnod
+	# ProvidesPrerequisite@buildingname:
+	# 	Prerequisite: dtfact
+	ProvidesPrerequisite@factionanswer:
+		Prerequisite: fact.answer
 	RenderSprites:
 		Image: fact
 
 FACT.DTUSA:
-	GrantExternalConditionToOwner@BuildingsOwned:
-		Condition: BuildingsOwned
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^3x2Shape
 	Inherits@CPQ: ^CPQCondition
@@ -705,7 +814,6 @@ FACT.DTUSA:
 	Inherits@conyard: ^Conyard
 	Inherits@sell: ^TDSpawnActorsOnSell
 	Selectable:
-		Bounds: 131072, 87381
 	Valued:
 		Cost: 2000
 	Tooltip:
@@ -720,12 +828,12 @@ FACT.DTUSA:
 		Type: Wood
 	RevealsShroud:
 		Range: 10c0
-	Production@NORMAL:
-		Produces: Building, Defence
-		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RABuilding, RADefence
-		RequiresCondition: classicproductionqueues
+	# Production@NORMAL:
+	# 	Produces: Building, Defence
+	# 	RequiresCondition: !classicproductionqueues
+	# Production@CLASSICPRODUCTIONQUEUES:
+	# 	Produces: RABuilding, RADefence
+	# 	RequiresCondition: classicproductionqueues
 	Transforms:
 		RequiresCondition: factundeploy
 		PauseOnCondition: being-demolished || build-incomplete
@@ -749,41 +857,41 @@ FACT.DTUSA:
 	GrantConditionOnPrerequisite@GLOBALFACTUNDEPLOY:
 		Condition: factundeploy
 		Prerequisites: global-factundeploy
-	ProductionQueue@NodBuilding:
-		Type: Building
-		DisplayOrder: 0
-		Group: Building
-		LowPowerModifier: 200
-		ReadyAudio: ConstructionComplete
-		BlockedAudio: NoBuild
-		LimitedAudio: BuildingInProgress
-		QueuedAudio: Building
-		OnHoldAudio: OnHold
-		CancelledAudio: Cancelled
-	ProductionQueue@NodDefense:
-		Type: Defence
-		DisplayOrder: 1
-		Group: Defence
-		LowPowerModifier: 300
-		ReadyAudio: ConstructionComplete
-		BlockedAudio: NoBuild
-		LimitedAudio: BuildingInProgress
-		QueuedAudio: Building
-		OnHoldAudio: OnHold
-		CancelledAudio: Cancelled
+	# ProductionQueue@NodBuilding:
+	# 	Type: Building
+	# 	DisplayOrder: 0
+	# 	Group: Building
+	# 	LowPowerModifier: 200
+	# 	ReadyAudio: ConstructionComplete
+	# 	BlockedAudio: NoBuild
+	# 	LimitedAudio: BuildingInProgress
+	# 	QueuedAudio: Building
+	# 	OnHoldAudio: OnHold
+	# 	CancelledAudio: Cancelled
+	# ProductionQueue@NodDefense:
+	# 	Type: Defence
+	# 	DisplayOrder: 1
+	# 	Group: Defence
+	# 	LowPowerModifier: 300
+	# 	ReadyAudio: ConstructionComplete
+	# 	BlockedAudio: NoBuild
+	# 	LimitedAudio: BuildingInProgress
+	# 	QueuedAudio: Building
+	# 	OnHoldAudio: OnHold
+	# 	CancelledAudio: Cancelled
 	BaseBuilding:
-	ProductionBar@BuildingNod:
-		ProductionType: Building
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@DefenceNod:
-		ProductionType: Defence
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@RABuildingNod:
-		ProductionType: RABuilding
-		RequiresCondition: classicproductionqueues
-	ProductionBar@RADefenceNod:
-		ProductionType: RADefence
-		RequiresCondition: classicproductionqueues
+	# ProductionBar@BuildingNod:
+	# 	ProductionType: Building
+	# 	RequiresCondition: !classicproductionqueues
+	# ProductionBar@DefenceNod:
+	# 	ProductionType: Defence
+	# 	RequiresCondition: !classicproductionqueues
+	# ProductionBar@RABuildingNod:
+	# 	ProductionType: RABuilding
+	# 	RequiresCondition: classicproductionqueues
+	# ProductionBar@RADefenceNod:
+	# 	ProductionType: RADefence
+	# 	RequiresCondition: classicproductionqueues
 	BaseProvider:
 		Range: 14c0
 	WithBuildingBib:
@@ -792,20 +900,15 @@ FACT.DTUSA:
 	Power:
 		Amount: 0
 	ProvidesPrerequisite@buildingname:
-		Prerequisite: fact
-	Buildable:
-		Queue: Building, RABuilding
-		BuildPaletteOrder: 1000
-		Prerequisites: ~wip-content
-		Description: Builds structures
-	ProvidesPrerequisite@factionnod:
-		Prerequisite: mmnod
+		Prerequisite: dtfact
+	ProvidesPrerequisite@factionusa:
+		Prerequisite: fact.dtusa
+	ProvidesPrerequisite@sandbagbarrier:
+		Prerequisite: sandbagbarrier
 	RenderSprites:
 		Image: fact
 
 FACT.DTJAPAN:
-	GrantExternalConditionToOwner@BuildingsOwned:
-		Condition: BuildingsOwned
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^3x2Shape
 	Inherits@CPQ: ^CPQCondition
@@ -813,7 +916,6 @@ FACT.DTJAPAN:
 	Inherits@conyard: ^Conyard
 	Inherits@sell: ^TDSpawnActorsOnSell
 	Selectable:
-		Bounds: 131072, 87381
 	Valued:
 		Cost: 2000
 	Tooltip:
@@ -828,12 +930,12 @@ FACT.DTJAPAN:
 		Type: Wood
 	RevealsShroud:
 		Range: 10c0
-	Production@NORMAL:
-		Produces: Building, Defence
-		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RABuilding, RADefence
-		RequiresCondition: classicproductionqueues
+	# Production@NORMAL:
+	# 	Produces: Building, Defence
+	# 	RequiresCondition: !classicproductionqueues
+	# Production@CLASSICPRODUCTIONQUEUES:
+	# 	Produces: RABuilding, RADefence
+	# 	RequiresCondition: classicproductionqueues
 	Transforms:
 		RequiresCondition: factundeploy
 		PauseOnCondition: being-demolished || build-incomplete
@@ -857,41 +959,41 @@ FACT.DTJAPAN:
 	GrantConditionOnPrerequisite@GLOBALFACTUNDEPLOY:
 		Condition: factundeploy
 		Prerequisites: global-factundeploy
-	ProductionQueue@NodBuilding:
-		Type: Building
-		DisplayOrder: 0
-		Group: Building
-		LowPowerModifier: 200
-		ReadyAudio: ConstructionComplete
-		BlockedAudio: NoBuild
-		LimitedAudio: BuildingInProgress
-		QueuedAudio: Building
-		OnHoldAudio: OnHold
-		CancelledAudio: Cancelled
-	ProductionQueue@NodDefense:
-		Type: Defence
-		DisplayOrder: 1
-		Group: Defence
-		LowPowerModifier: 300
-		ReadyAudio: ConstructionComplete
-		BlockedAudio: NoBuild
-		LimitedAudio: BuildingInProgress
-		QueuedAudio: Building
-		OnHoldAudio: OnHold
-		CancelledAudio: Cancelled
+	# ProductionQueue@NodBuilding:
+	# 	Type: Building
+	# 	DisplayOrder: 0
+	# 	Group: Building
+	# 	LowPowerModifier: 200
+	# 	ReadyAudio: ConstructionComplete
+	# 	BlockedAudio: NoBuild
+	# 	LimitedAudio: BuildingInProgress
+	# 	QueuedAudio: Building
+	# 	OnHoldAudio: OnHold
+	# 	CancelledAudio: Cancelled
+	# ProductionQueue@NodDefense:
+	# 	Type: Defence
+	# 	DisplayOrder: 1
+	# 	Group: Defence
+	# 	LowPowerModifier: 300
+	# 	ReadyAudio: ConstructionComplete
+	# 	BlockedAudio: NoBuild
+	# 	LimitedAudio: BuildingInProgress
+	# 	QueuedAudio: Building
+	# 	OnHoldAudio: OnHold
+	# 	CancelledAudio: Cancelled
 	BaseBuilding:
-	ProductionBar@BuildingNod:
-		ProductionType: Building
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@DefenceNod:
-		ProductionType: Defence
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@RABuildingNod:
-		ProductionType: RABuilding
-		RequiresCondition: classicproductionqueues
-	ProductionBar@RADefenceNod:
-		ProductionType: RADefence
-		RequiresCondition: classicproductionqueues
+	# ProductionBar@BuildingNod:
+	# 	ProductionType: Building
+	# 	RequiresCondition: !classicproductionqueues
+	# ProductionBar@DefenceNod:
+	# 	ProductionType: Defence
+	# 	RequiresCondition: !classicproductionqueues
+	# ProductionBar@RABuildingNod:
+	# 	ProductionType: RABuilding
+	# 	RequiresCondition: classicproductionqueues
+	# ProductionBar@RADefenceNod:
+	# 	ProductionType: RADefence
+	# 	RequiresCondition: classicproductionqueues
 	BaseProvider:
 		Range: 14c0
 	WithBuildingBib:
@@ -900,24 +1002,99 @@ FACT.DTJAPAN:
 	Power:
 		Amount: 0
 	ProvidesPrerequisite@buildingname:
-		Prerequisite: fact
+		Prerequisite: dtfact
 	Buildable:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 1000
 		Prerequisites: ~wip-content
 		Description: Builds structures
-	ProvidesPrerequisite@factionnod:
-		Prerequisite: mmnod
+	ProvidesPrerequisite@factionjap:
+		Prerequisite: fact.dtjapan
+	ProvidesPrerequisite@wall:
+		Prerequisite: concretebarrier
 	RenderSprites:
 		Image: dtjyard
+
+# FACT.DTARGENTINA:
+# 	Inherits: ^BaseBuilding
+# 	Inherits@shape: ^3x2Shape
+# 	Inherits@CPQ: ^CPQCondition
+# 	Inherits@aicash: ^AIConyardCash
+# 	Inherits@conyard: ^Conyard
+# 	Inherits@sell: ^TDSpawnActorsOnSell
+# 	Selectable:
+# 	Valued:
+# 		Cost: 2000
+# 	Tooltip:
+# 		Name: Junkyard (Argentina)
+# 	Building:
+# 		Footprint: xxx xxx ===
+# 		Dimensions: 3,3
+# 		LocalCenterOffset: 0,-512,0
+# 	Health:
+# 		HP: 300000
+# 	Armor:
+# 		Type: Wood
+# 	RevealsShroud:
+# 		Range: 10c0
+# 	# Production@NORMAL:
+# 	# 	Produces: Building, Defence
+# 	# 	RequiresCondition: !classicproductionqueues
+# 	# Production@CLASSICPRODUCTIONQUEUES:
+# 	# 	Produces: RABuilding, RADefence
+# 	# 	RequiresCondition: classicproductionqueues
+# 	Transforms:
+# 		RequiresCondition: factundeploy
+# 		PauseOnCondition: being-demolished || build-incomplete
+# 		IntoActor: mcv.dtjapan
+# 		Offset: 1,1
+# 		Facing: 432
+# 	TransformsIntoMobile:
+# 		RequiresCondition: factundeploy
+# 		Locomotor: heavywheeled
+# 		RequiresForceMove: true
+# 	TransformsIntoPassenger:
+# 		RequiresCondition: factundeploy
+# 		CargoType: Vehicle
+# 		RequiresForceMove: true
+# 	TransformsIntoRepairable:
+# 		RequiresCondition: factundeploy
+# 		RepairActors: fix,rafix,2100rr,scshieldbattery,ra2nadept,ra2gadept,c1fix,c2fix,c1rafix,c2rafix,c12100rr,c22100rr,cscshieldbattery,cra2nadept,cra2gadept ##########
+# 		RequiresForceMove: true
+# 	TransferTimedExternalConditionOnTransform:
+# 		Condition: invulnerability
+# 	GrantConditionOnPrerequisite@GLOBALFACTUNDEPLOY:
+# 		Condition: factundeploy
+# 		Prerequisites: global-factundeploy
+# 	BaseBuilding:
+# 	BaseProvider:
+# 		Range: 14c0
+# 	WithBuildingBib:
+# 	WithBuildingPlacedAnimation:
+# 		RequiresCondition: !build-incomplete
+# 	Power:
+# 		Amount: 0
+# 	ProvidesPrerequisite@buildingname:
+# 		Prerequisite: dtfact
+# 	Buildable:
+# 		Queue: Building, RABuilding
+# 		BuildPaletteOrder: 1000
+# 		Prerequisites: ~wip-content
+# 		Description: Builds structures
+# 	ProvidesPrerequisite@factionarg:
+# 		Prerequisite: fact.dtargentina
+# 	ProvidesPrerequisite@wall:
+# 		Prerequisite: concretebarrier
+# 	RenderSprites:
+# 		Image: dtjunkyard
+
 AFLD.ANSWER:
 	Inherits: ^BaseBuilding
 	Inherits@CPQWP: ^CPQConditionWithPrimary
 	Inherits@prod: ^ProducesUnits
 	Inherits@sell: ^TDSpawnActorsOnSell
-	Inherits@weap: ^IsWeaponFactory
+	Inherits@weap: ^IsWeaponFactoryOld
 	Selectable:
-		Bounds: 174762, 87381
 	HitShape:
 		TargetableOffsets: 0,0,0, 0,-512,256, 0,-1451,384, 0,512,128, 0,1536,85
 		Type: Rectangle
@@ -931,9 +1108,9 @@ AFLD.ANSWER:
 		Prerequisite: vehicleproduction
 	Buildable:
 		BuildPaletteOrder: 40
-		Prerequisites: dtproc
+		Prerequisites: ~fact.answer, dtproc
 		Queue: Building, RABuilding
-		Description: Provides a dropzone\nfor vehicle reinforcements
+		Description: Provides a dropzone for vehicle reinforcements
 	Building:
 		Footprint: XXX+ xxx+ ====
 		Dimensions: 4,3
@@ -947,21 +1124,21 @@ AFLD.ANSWER:
 		SpawnOffset: -1024,0,0
 		ExitCell: 3,1
 	ProductionAirdropCA@NORMAL:
-		Produces: Vehicle
+		Produces: Vehicle.Answer
 		RequiresCondition: !classicproductionqueues
 		ActorType: c17
 		EntryType: DropSiteClosestEdge
 		ExitType: StraightAhead
 		LandingFacing: 64
 		ReadyAudio: ReinforcementsArrived
-	ProductionAirdropCA@CLASSIC:
-		Produces: RAVehicle
-		RequiresCondition: classicproductionqueues
-		ActorType: c17
-		EntryType: DropSiteClosestEdge
-		ExitType: StraightAhead
-		LandingFacing: 64
-		ReadyAudio: ReinforcementsArrived
+	# ProductionAirdropCA@CLASSIC:
+	# 	Produces: RAVehicle
+	# 	RequiresCondition: classicproductionqueues
+	# 	ActorType: c17
+	# 	EntryType: DropSiteClosestEdge
+	# 	ExitType: StraightAhead
+	# 	LandingFacing: 64
+	# 	ReadyAudio: ReinforcementsArrived
 	WithBuildingBib:
 	WithIdleOverlay@DISH:
 		RequiresCondition: !build-incomplete
@@ -969,7 +1146,7 @@ AFLD.ANSWER:
 	WithDeliveryAnimation:
 		RequiresCondition: !build-incomplete
 	ProductionQueue:
-		Type: Vehicle
+		Type: Vehicle.Answer
 		DisplayOrder: 3
 		Group: Vehicle
 		LowPowerModifier: 300
@@ -979,23 +1156,28 @@ AFLD.ANSWER:
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
 	ProductionBar@VEHICLENOD:
-		ProductionType: Vehicle
+		ProductionType: Vehicle.Answer
 		RequiresCondition: !classicproductionqueues
-	ProductionBar@RAVEHICLENOD:
-		ProductionType: RAVehicle
-		RequiresCondition: classicproductionqueues
+	# ProductionBar@RAVEHICLENOD:
+	# 	ProductionType: RAVehicle
+	# 	RequiresCondition: classicproductionqueues
 	Power:
 		Amount: -40
 	ProvidesPrerequisite@buildingname:
 	RenderSprites:
 		Image: AFLD
+
+vehicleproduction:
+	Tooltip:
+		Name: Weapons Factory
+
 WEAP.TOMORROW:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^3x2Shape
 	Inherits@CPQWP: ^CPQConditionWithPrimary
 	Inherits@prod: ^ProducesUnits
 	Inherits@sell: ^TDSpawnActorsOnSell
-	Inherits@weap: ^IsWeaponFactory
+	Inherits@weap: ^IsWeaponFactoryOld
 	HitShape:
 		TargetableOffsets: 0,0,0, 0,1024,0, 0,-1024,0
 		Type: Rectangle
@@ -1009,7 +1191,7 @@ WEAP.TOMORROW:
 		Prerequisite: vehicleproduction
 	Buildable:
 		BuildPaletteOrder: 40
-		Prerequisites: dtproc
+		Prerequisites: ~fact.tomorrow, dtproc, dtpropaganda.tomorrow
 		Queue: Building, RABuilding
 		Description: Produces vehicles
 	Building:
@@ -1017,8 +1199,8 @@ WEAP.TOMORROW:
 		Dimensions: 3,3
 		LocalCenterOffset: 0,-512,0
 	Selectable:
-		Bounds: 131072, 87381
-		DecorationBounds: 131072, 116480, 0, -29098
+		Bounds: 3072, 3072, 0, -512
+		DecorationBounds: 3072, 3072, 0, -512
 	SelectionDecorations:
 	Health:
 		HP: 110000
@@ -1034,13 +1216,13 @@ WEAP.TOMORROW:
 		ExitCell: 0,1
 		ExitDelay: 3
 	Production@NORMAL:
-		Produces: Vehicle
+		Produces: Vehicle.Tomorrow
 		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RAVehicle
-		RequiresCondition: classicproductionqueues
+	# Production@CLASSICPRODUCTIONQUEUES:
+	# 	Produces: RAVehicle
+	# 	RequiresCondition: classicproductionqueues
 	ProductionQueue:
-		Type: Vehicle
+		Type: Vehicle.Tomorrow
 		DisplayOrder: 3
 		Group: Vehicle
 		LowPowerModifier: 300
@@ -1051,26 +1233,28 @@ WEAP.TOMORROW:
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
 	ProductionBar@VEHICLEGDI:
-		ProductionType: Vehicle
+		ProductionType: Vehicle.Tomorrow
 		RequiresCondition: !classicproductionqueues
-	ProductionBar@RAVEHICLEGDI:
-		ProductionType: RAVehicle
-		RequiresCondition: classicproductionqueues
+	# ProductionBar@RAVEHICLEGDI:
+	# 	ProductionType: RAVehicle
+	# 	RequiresCondition: classicproductionqueues
 	Power:
 		Amount: -40
 	ProvidesPrerequisite@buildingname:
+		Prerequisite: weap.tomorrow
 	-ActorPreviewPlaceBuildingPreview:
 	SequencePlaceBuildingPreview:
 		Sequence: place
 	RenderSprites:
 		Image: WEAP
+
 WEAP.DTUSA:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^3x2Shape
 	Inherits@CPQWP: ^CPQConditionWithPrimary
 	Inherits@prod: ^ProducesUnits
 	Inherits@sell: ^TDSpawnActorsOnSell
-	Inherits@weap: ^IsWeaponFactory
+	Inherits@weap: ^IsWeaponFactoryOld
 	HitShape:
 		TargetableOffsets: 0,0,0, 0,1024,0, 0,-1024,0
 		Type: Rectangle
@@ -1084,7 +1268,7 @@ WEAP.DTUSA:
 		Prerequisite: vehicleproduction
 	Buildable:
 		BuildPaletteOrder: 40
-		Prerequisites: dtproc
+		Prerequisites: ~fact.dtusa, dtproc
 		Queue: Building, RABuilding
 		Description: Produces vehicles
 	Building:
@@ -1092,8 +1276,8 @@ WEAP.DTUSA:
 		Dimensions: 3,3
 		LocalCenterOffset: 0,-512,0
 	Selectable:
-		Bounds: 131072, 87381
-		DecorationBounds: 131072, 116480, 0, -29098
+		Bounds: 3072, 3072, 0, -512
+		DecorationBounds: 3072, 3072, 0, -512
 	SelectionDecorations:
 	Health:
 		HP: 110000
@@ -1109,13 +1293,13 @@ WEAP.DTUSA:
 		ExitCell: 0,1
 		ExitDelay: 3
 	Production@NORMAL:
-		Produces: Vehicle
+		Produces: Vehicle.Dtusa
 		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RAVehicle
-		RequiresCondition: classicproductionqueues
+	# Production@CLASSICPRODUCTIONQUEUES:
+	# 	Produces: RAVehicle
+	# 	RequiresCondition: classicproductionqueues
 	ProductionQueue:
-		Type: Vehicle
+		Type: Vehicle.Dtusa
 		DisplayOrder: 3
 		Group: Vehicle
 		LowPowerModifier: 300
@@ -1126,11 +1310,11 @@ WEAP.DTUSA:
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
 	ProductionBar@VEHICLEGDI:
-		ProductionType: Vehicle
+		ProductionType: Vehicle.Dtusa
 		RequiresCondition: !classicproductionqueues
-	ProductionBar@RAVEHICLEGDI:
-		ProductionType: RAVehicle
-		RequiresCondition: classicproductionqueues
+	# ProductionBar@RAVEHICLEGDI:
+	# 	ProductionType: RAVehicle
+	# 	RequiresCondition: classicproductionqueues
 	Power:
 		Amount: -40
 	ProvidesPrerequisite@buildingname:
@@ -1139,13 +1323,14 @@ WEAP.DTUSA:
 		Sequence: place
 	RenderSprites:
 		Image: WEAP
+
 WEAP.DTRUSSIA:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^3x2Shape
 	Inherits@CPQWP: ^CPQConditionWithPrimary
 	Inherits@prod: ^ProducesUnits
 	Inherits@sell: ^TDSpawnActorsOnSell
-	Inherits@weap: ^IsWeaponFactory
+	Inherits@weap: ^IsWeaponFactoryOld
 	HitShape:
 		TargetableOffsets: 0,0,0, 0,1024,0, 0,-1024,0
 		Type: Rectangle
@@ -1159,7 +1344,7 @@ WEAP.DTRUSSIA:
 		Prerequisite: vehicleproduction
 	Buildable:
 		BuildPaletteOrder: 40
-		Prerequisites: dtproc
+		Prerequisites: ~rafact.dtrussia, dtproc
 		Queue: Building, RABuilding
 		Description: Produces vehicles
 	Building:
@@ -1167,8 +1352,8 @@ WEAP.DTRUSSIA:
 		Dimensions: 3,3
 		LocalCenterOffset: 0,-512,0
 	Selectable:
-		Bounds: 131072, 87381
-		DecorationBounds: 131072, 116480, 0, -29098
+		Bounds: 3072, 3072, 0, -512
+		DecorationBounds: 3072, 3072, 0, -512
 	SelectionDecorations:
 	Health:
 		HP: 110000
@@ -1184,13 +1369,13 @@ WEAP.DTRUSSIA:
 		ExitCell: 0,1
 		ExitDelay: 3
 	Production@NORMAL:
-		Produces: Vehicle
+		Produces: Vehicle.Dtrussia
 		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RAVehicle
-		RequiresCondition: classicproductionqueues
+	# Production@CLASSICPRODUCTIONQUEUES:
+	# 	Produces: RAVehicle
+	# 	RequiresCondition: classicproductionqueues
 	ProductionQueue:
-		Type: Vehicle
+		Type: Vehicle.Dtrussia
 		DisplayOrder: 3
 		Group: Vehicle
 		LowPowerModifier: 300
@@ -1201,11 +1386,11 @@ WEAP.DTRUSSIA:
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
 	ProductionBar@VEHICLEGDI:
-		ProductionType: Vehicle
+		ProductionType: Vehicle.Dtrussia
 		RequiresCondition: !classicproductionqueues
-	ProductionBar@RAVEHICLEGDI:
-		ProductionType: RAVehicle
-		RequiresCondition: classicproductionqueues
+	# ProductionBar@RAVEHICLEGDI:
+	# 	ProductionType: RAVehicle
+	# 	RequiresCondition: classicproductionqueues
 	Power:
 		Amount: -40
 	ProvidesPrerequisite@buildingname:
@@ -1214,13 +1399,14 @@ WEAP.DTRUSSIA:
 		Sequence: place
 	RenderSprites:
 		Image: WEAP
+
 WEAP.DTJAPAN:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^3x2Shape
 	Inherits@CPQWP: ^CPQConditionWithPrimary
 	Inherits@prod: ^ProducesUnits
 	Inherits@sell: ^TDSpawnActorsOnSell
-	Inherits@weap: ^IsWeaponFactory
+	Inherits@weap: ^IsWeaponFactoryOld
 	HitShape:
 		TargetableOffsets: 0,0,0, 0,1024,0, 0,-1024,0
 		Type: Rectangle
@@ -1234,7 +1420,7 @@ WEAP.DTJAPAN:
 		Prerequisite: vehicleproduction
 	Buildable:
 		BuildPaletteOrder: 40
-		Prerequisites: dtproc
+		Prerequisites: ~fact.dtjapan, dtproc
 		Queue: Building, RABuilding
 		Description: Produces vehicles
 	Building:
@@ -1242,8 +1428,8 @@ WEAP.DTJAPAN:
 		Dimensions: 3,3
 		LocalCenterOffset: 0,-512,0
 	Selectable:
-		Bounds: 131072, 87381
-		DecorationBounds: 131072, 116480, 0, -29098
+		Bounds: 3072, 3072, 0, -512
+		DecorationBounds: 3072, 3072, 0, -512
 	SelectionDecorations:
 	Health:
 		HP: 110000
@@ -1259,13 +1445,13 @@ WEAP.DTJAPAN:
 		ExitCell: 0,1
 		ExitDelay: 3
 	Production@NORMAL:
-		Produces: Vehicle
+		Produces: Vehicle.Dtjapan
 		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RAVehicle
-		RequiresCondition: classicproductionqueues
+	# Production@CLASSICPRODUCTIONQUEUES:
+	# 	Produces: RAVehicle
+	# 	RequiresCondition: classicproductionqueues
 	ProductionQueue:
-		Type: Vehicle
+		Type: Vehicle.Dtjapan
 		DisplayOrder: 3
 		Group: Vehicle
 		LowPowerModifier: 300
@@ -1276,11 +1462,11 @@ WEAP.DTJAPAN:
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
 	ProductionBar@VEHICLEGDI:
-		ProductionType: Vehicle
+		ProductionType: Vehicle.Dtjapan
 		RequiresCondition: !classicproductionqueues
-	ProductionBar@RAVEHICLEGDI:
-		ProductionType: RAVehicle
-		RequiresCondition: classicproductionqueues
+	# ProductionBar@RAVEHICLEGDI:
+	# 	ProductionType: RAVehicle
+	# 	RequiresCondition: classicproductionqueues
 	Power:
 		Amount: -40
 	ProvidesPrerequisite@buildingname:
@@ -1288,16 +1474,8 @@ WEAP.DTJAPAN:
 	SequencePlaceBuildingPreview:
 		Sequence: place
 	RenderSprites:
-		Image: WEAP
-DTNUKE:
-	Inherits: NUKE
-	RenderSprites:
-		Image: DTNUKE
-	Buildable:
-		Queue: Building, RABuilding
-		Prerequisites: fact
-	Power:
-		Amount: 250
+		Image: dtjweap
+
 DTHAND:
 	Inherits: ^Defense
 	Inherits@AUTOTARGET: ^AutoTargetGround
@@ -1306,7 +1484,7 @@ DTHAND:
 	Inherits@CPQWP: ^CPQConditionWithPrimary
 	Inherits@prod: ^ProducesUnits
 	Inherits@sell: ^TDSpawnActorsOnSell
-	Inherits@barr: ^IsBarrack
+	Inherits@barr: ^IsBarrackOld
 	HitShape:
 		UseTargetableCellsOffsets: false
 		TargetableOffsets: 0,0,0, 630,-512,0, 355,512,0, -281,-512,0, -630,512,0
@@ -1319,11 +1497,11 @@ DTHAND:
 		Name: Redoubt
 	Buildable:
 		BuildPaletteOrder: 45
-		Prerequisites: anypower
+		Prerequisites: ~fact.tomorrow, dtnuke.tomorrow
 		Queue: Building, RABuilding
 		BuildDuration: 1000
 		BuildDurationModifier: 100
-		Description: Produces Infantry\nBasic Anti-Tank base defense.\n  Strong vs Tanks, vehicles\n  Weak vs Infantry
+		Description: Produces Infantry Basic Anti-Tank base defense. Strong vs Tanks, vehicles Weak vs Infantry
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -1340,13 +1518,13 @@ DTHAND:
 		SpawnOffset: 512,1024,0
 		ExitCell: 1,2
 	Production@NORMAL:
-		Produces: Infantry
+		Produces: Infantry.Tomorrow
 		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RAInfantry
-		RequiresCondition: classicproductionqueues
+	# Production@CLASSICPRODUCTIONQUEUES:
+	# 	Produces: RAInfantry
+	# 	RequiresCondition: classicproductionqueues
 	ProductionQueue:
-		Type: Infantry
+		Type: Infantry.Tomorrow
 		DisplayOrder: 2
 		Group: Infantry
 		LowPowerModifier: 300
@@ -1357,11 +1535,11 @@ DTHAND:
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
 	ProductionBar@INFANTRYNOD:
-		ProductionType: Infantry
+		ProductionType: Infantry.Tomorrow
 		RequiresCondition: !classicproductionqueues
-	ProductionBar@RAINFANTRYNOD:
-		ProductionType: RAInfantry
-		RequiresCondition: classicproductionqueues
+	# ProductionBar@RAINFANTRYNOD:
+	# 	ProductionType: RAInfantry
+	# 	RequiresCondition: classicproductionqueues
 	Turreted:
 		TurnSpeed: 32
 		InitialFacing: 224
@@ -1381,10 +1559,69 @@ DTHAND:
 		Amount: -50
 	ProvidesPrerequisite:
 		Prerequisite: barracks
+	ProvidesPrerequisite:
 	MustBeDestroyed:
 		RequiredForShortGame: true
 	GivesBuildableArea:
 		AreaTypes: building
+
+HQ:
+	Inherits: ^BaseBuilding
+	Inherits@radar: ^RadarBuilding
+	Inherits@sell: ^TDSpawnActorsOnSell
+	Inherits@spy: ^InfiltrateForSupportPowerReset
+	Inherits@shape: ^2x2Shape
+	Building:
+		Footprint: X_ xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	SelectionDecorations:
+	WithSpriteBody:
+		PauseOnCondition: lowpower
+	WithBuildingBib:
+	RenderSprites:
+		Image: HQ
+	Tooltip:
+		Name: Communications Center
+	Buildable:
+		Description: actor-hq-gdi.description
+		Prerequisites: ~wipcontent, ~no
+		RequiresCondition: !(powerdown || infiltrated)
+	AirstrikePower:
+		PauseOnCondition: disabled
+		Prerequisites:
+			1:
+		Icons:
+			1: airstrike
+		ChargeInterval: 7500
+		SquadSizes:
+			1: 3
+		QuantizedFacings: 32
+		Names:
+			1: power-td-airstrike.name
+		Descriptions:
+			1: power-td-airstrike.description
+		EndChargeSpeechNotification: AirstrikeReady
+		SelectTargetSpeechNotification: SelectTarget
+		InsufficientPowerSpeechNotification: InsufficientPower
+		IncomingSpeechNotification: EnemyPlanesApproaching
+		UnitTypes:
+			1: a10
+		DisplayBeacon: True
+		BeaconPosters:
+			1: airstrike
+		BeaconPosterPalette: beaconposter
+		DisplayRadarPing: True
+		CameraActor: camera
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+		#UseDirectionalTarget: True
+		DirectionArrowAnimation: airstrikedirection
+		SupportPowerPaletteOrder: 10
+		DisplayTimerRelationships: Ally, Neutral, Enemy
+	SupportPowerChargeBar:
+
 HQ.TOMORROW:
 	Inherits: HQ
 	Valued:
@@ -1392,12 +1629,12 @@ HQ.TOMORROW:
 	Tooltip:
 		Name: Communications Center
 	ProvidesPrerequisite:
-		Prerequisite: anyhq
+		Prerequisite: hq.tomorrow
 	Buildable:
 		BuildPaletteOrder: 70
-		Prerequisites: dtpropaganda, ~techlevel.medium
+		Prerequisites: ~fact.tomorrow, dtpropaganda.tomorrow
 		Queue: Building, RABuilding
-		Description: Provides radar and Air Strike support power.\nUnlocks higher-tech units and buildings.\nRequires power to operate.
+		Description: Provides radar and Air Strike support power. Unlocks higher-tech units and buildings. Requires power to operate.
 	RenderSprites:
 		Image: HQ
 	-AirstrikePower:
@@ -1410,35 +1647,115 @@ HQ.ANSWER:
 	Tooltip:
 		Name: Communications Center
 	ProvidesPrerequisite:
-		Prerequisite: anyhq
+		Prerequisite: hq.answer
 	Buildable:
 		BuildPaletteOrder: 70
-		Prerequisites: atek.answer, ~techlevel.medium
+		Prerequisites: ~fact.answer, atek.answer
 		Queue: Building, RABuilding
-		Description: Unlocks higher-tech units and buildings.\nRequires power to operate.
+		Description: Unlocks higher-tech units and buildings. Requires power to operate.
 	RenderSprites:
 		Image: HQ
 	-AirstrikePower:
 	-SupportPowerChargeBar:
+
 DOME.DTRUSSIA:
-	Inherits: DOME
+	Inherits: ^BaseBuilding
+	Inherits@radar: ^RadarBuilding
+	Inherits: ^Dome
 	Valued:
 		Cost: 1000
 	Tooltip:
 		Name: Radar Dome
 	ProvidesPrerequisite:
-		Prerequisite: anyhq
+		Prerequisite: dome.dtrussia
 	Buildable:
 		BuildPaletteOrder: 70
-		Prerequisites: atek.answer, ~techlevel.medium
+		Prerequisites: ~rafact.dtrussia, atek.russia
 		Queue: Building, RABuilding
-		Description: Unlocks higher-tech units and buildings.\nRequires power to operate.
+		Description: Unlocks higher-tech units and buildings. Requires power to operate.
 	RenderSprites:
 		Image: DOME
 
+FIX.TOMORROW:
+	Inherits: ^BaseBuilding
+	Inherits@sell: ^TDSpawnActorsOnSell
+	Inherits@shape: ^3x3Shape
+	Inherits@repair: ^RepairsUnits
+	Inherits@repair: ^RepairFacility
+	HitShape:
+		TargetableOffsets: 840,0,0, 598,-640,0, 598,640,0, -1060,0,0, -768,-640,0, -768,640,0
+		Type: Polygon
+			Points: -1536,-256, -341,-940, 341,-940, 1536,-256, 1536,341, 341,1110, -341,1110, -1536,341
+	Buildable:
+		Prerequisites: ~fact.tomorrow, dtpropaganda.tomorrow
+		Queue: Building, RABuilding
+		Description: Repairs damaged vehicles and aircraft. Requires power to operate.
+	Building:
+		Footprint: _+_ +++ _+_
+		Dimensions: 3,3
+	SelectionDecorations:
+	WithBuildingBib:
+		HasMinibib: true
+	WithResupplyAnimation:
+		RequiresCondition: !build-incomplete
+	Reservable:
+	RallyPoint:
+	GivesBuildableArea: ##########
+		AreaTypes: building, cityi
+	RenderSprites:
+		Image: FIX
+	Tooltip:
+		Name: Repair Facility (Tomorrow)
+	ProvidesPrerequisite:
+		Prerequisite: fix
+
+FIX.ANSWER:
+	Inherits: FIX.TOMORROW
+	Buildable:
+		Prerequisites: ~fact.answer, atek.answer
+		Queue: Building, RABuilding
+		Description: Repairs damaged vehicles and aircraft. Requires power to operate.
+	Tooltip:
+		Name: Repair Facility (Answer)
+	ProvidesPrerequisite:
+		Prerequisite: fix
+
+FIX.JAPAN:
+	Inherits: FIX.TOMORROW
+	Buildable:
+		Prerequisites: ~fact.dtjapan, atek.japan
+		Queue: Building, RABuilding
+		Description: Repairs damaged vehicles and aircraft. Requires power to operate.
+	Tooltip:
+		Name: Repair Facility (Japan)
+	ProvidesPrerequisite:
+		Prerequisite: fix
+
+FIX.RUSSIA:
+	Inherits: FIX.TOMORROW
+	Buildable:
+		Prerequisites: ~rafact.dtrussia, atek.russia
+		Queue: Building, RABuilding
+		Description: Repairs damaged vehicles and aircraft. Requires power to operate.
+	Tooltip:
+		Name: Repair Facility (Russia)
+	ProvidesPrerequisite:
+		Prerequisite: fix
+
+FIX.USA:
+	Inherits: FIX.TOMORROW
+	Buildable:
+		Prerequisites: ~fact.dtusa, dtpropaganda.dtusa
+		Queue: Building, RABuilding
+		Description: Repairs damaged vehicles and aircraft. Requires power to operate.
+	Tooltip:
+		Name: Repair Facility (USA)
+	ProvidesPrerequisite:
+		Prerequisite: fix
+
 DTSTRIKE:
 	Inherits: ^BaseBuilding
-	Inherits@IDISABLE: ^DisabledOverlay
+	# Inherits@IDISABLE: ^DisabledOverlay
 	Inherits@sell: ^TDSpawnActorsOnSell
 	Inherits@spy: ^InfiltrateForSupportPowerReset
 	HitShape:
@@ -1452,9 +1769,9 @@ DTSTRIKE:
 		Name: Airstrike Center
 	Buildable:
 		BuildPaletteOrder: 70
-		Prerequisites: anyhq, ~techlevel.medium, !a10strikec
+		Prerequisites: ~fact.answer, hq.answer, !a10strikec
 		Queue: Building, RABuilding
-		Description: Provides radar and Air Strike support power.\nUnlocks higher-tech units and buildings.\nRequires power to operate.
+		Description: Provides radar and Air Strike support power. Unlocks higher-tech units and buildings. Requires power to operate.
 	Building:
 		Footprint: __ xx ==
 		Dimensions: 2,3
@@ -1478,21 +1795,28 @@ DTSTRIKE:
 		RequiresCondition: !lowpower
 	AirstrikePower:
 		PauseOnCondition: lowpower
-		Prerequisites: ~techlevel.superweapons
-		Icon: airstrike
+		Prerequisites: 
+			1: ~techlevel.superweapons
+		Icons:
+			1: airstrike
 		ChargeInterval: 4500
-		SquadSize: 5
+		SquadSizes:
+			1: 7
 		QuantizedFacings: 8
-		Name: Air Strike
-		Description: Deploy an aerial napalm strike.\nBurns buildings and infantry along a line.
+		Names:
+			1: Air Strike
+		Descriptions:
+			1: Deploy an aerial napalm strike. Burns buildings and infantry along a line.
 		EndChargeSpeechNotification: AirstrikeReady
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
 		IncomingSpeechNotification: EnemyPlanesApproaching
-		UnitType: a10
+		UnitTypes:
+			1: a10
 		DisplayBeacon: True
 		AllowMultiple: True
-		BeaconPoster: airstrike
+		BeaconPosters:
+			1: airstrike
 		BeaconPosterPalette: beaconposter
 		DisplayRadarPing: True
 		CameraActor: camera
@@ -1511,6 +1835,7 @@ DTSTRIKE:
 		Condition: jammed
 	ProvidesPrerequisite@swlimit:
 		Prerequisite: a10strikec
+
 DTPROC:
 	Inherits: ^BaseBuilding
 	Inherits@ref: ^Refinery
@@ -1529,9 +1854,9 @@ DTPROC:
 		Name: Tanker Refinery
 	Buildable:
 		BuildPaletteOrder: 20
-		Prerequisites: anypower
+		Prerequisites: ~dtfact
 		Queue: Building, RABuilding
-		Description: Processes raw Tiberium\ninto useable resources
+		Description: Processes raw Tiberium into useable resources
 	Building:
 		Footprint: _x_ xxx === ===
 		Dimensions: 3,4
@@ -1541,17 +1866,17 @@ DTPROC:
 	RevealsShroud:
 		Range: 6c0
 	Refinery:
+	DockHost:
 		DockAngle: 448
-		DockOffset: 0,2
+		DockOffset: -1c0, 1c0, 0
 		IsDragRequired: True
 		DragOffset: -554,512,0
 		DragLength: 12
-		TickRate: 15
 	StoresResources:
 		Capacity: 1000
 	Selectable:
-		Bounds: 131072, 101930
-		DecorationBounds: 132864, 131072
+		Bounds: 2048, 2048
+		DecorationBounds: 2048, 2048
 	CustomSellValue:
 		Value: 500
 	FreeActor:
@@ -1570,9 +1895,22 @@ DTPROC:
 		RequiresSelection: true
 		PipCount: 10
 
+DTPROC.Answer:
+	Inherits: DTPROC
+	Buildable:
+		Prerequisites: ~fact.answer
+	Tooltip:
+		Name: Tanker Refinery (Answer)
+	ResourcePurifier:
+		Modifier: 10
+	RenderSprites:
+		Image: DTPROC
+	ProvidesPrerequisite@buildingname:
+		Prerequisite: dtproc
+
 DTPROPAGANDA:
 	Inherits: ^BaseBuilding
-	Inherits@IDISABLE: ^DisabledOverlay
+	# Inherits@IDISABLE: ^DisabledOverlay
 	Inherits@shape: ^3x2Shape
 	Inherits@sell: ^TDSpawnActorsOnSell
 	HitShape:
@@ -1584,7 +1922,7 @@ DTPROPAGANDA:
 		Name: Propaganda Center
 	Buildable:
 		BuildPaletteOrder: 100
-		Prerequisites: dtproc, ~techlevel.high
+		Prerequisites: ~wipcontent
 		Queue: Building, RABuilding
 		Description: Provides some Technologies
 	Building:
@@ -1592,8 +1930,8 @@ DTPROPAGANDA:
 		Dimensions: 3,3
 		LocalCenterOffset: 0,-512,0
 	Selectable:
-		Bounds: 131072, 87381
-		DecorationBounds: 131072, 123776, 0, -21845
+		Bounds: 1024, 1024
+		DecorationBounds: 1024, 1024
 	SelectionDecorations:
 	Health:
 		HP: 210000
@@ -1618,44 +1956,99 @@ DTPROPAGANDA:
 		Range: 6c0
 		Type: propaganda
 		RequiresCondition: !disabled
+
+DTPROPAGANDA.TOMORROW:
+	Inherits: DTPROPAGANDA
+	RenderSprites:
+		Image: dtpropaganda
+		# PlayerPalette: raplayer
+	Buildable:
+		Queue: Building, RABuilding
+		Prerequisites: ~fact.tomorrow, dtproc, dtnuke.tomorrow
+	Power:
+		Amount: -40
+	ProvidesPrerequisite@buildingname:
+		Prerequisite: dtpropaganda.tomorrow
+
+DTPROPAGANDA.DTUSA:
+	Inherits: DTPROPAGANDA
+	RenderSprites:
+		Image: dtpropaganda
+		# PlayerPalette: raplayer
+	Buildable:
+		Queue: Building, RABuilding
+		Prerequisites: ~fact.dtusa, dtproc, dtnuke.dtusa
+	Power:
+		Amount: -40
+	ProvidesPrerequisite@buildingname:
+		Prerequisite: dtpropaganda.dtusa
+
+DTNUKE:
+	Inherits: NUKE
+	RenderSprites:
+		Image: DTNUKE
+	Buildable:
+		Queue: Building, RABuilding
+		Prerequisites: ~wipcontent
+	Power:
+		Amount: 250
+
+DTNUKE.dtusa:
+	Inherits: DTNUKE
+	RenderSprites:
+		Image: DTNUKE
+	Buildable:
+		Queue: Building, RABuilding
+		Prerequisites: ~fact.dtusa
+	Power:
+		Amount: 250
+	ProvidesPrerequisite@buildingname:
+		Prerequisite: dtnuke.dtusa
+
+DTNUKE.tomorrow:
+	Inherits: DTNUKE
+	RenderSprites:
+		Image: DTNUKE
+	Buildable:
+		Queue: Building, RABuilding
+		Prerequisites: ~fact.tomorrow
+	Power:
+		Amount: 250
+	ProvidesPrerequisite@buildingname:
+
 DTPOWER:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^2x2Shape
 	Inherits@power: ^PowerPlant
 	Inherits@sell: ^TDSpawnActorsOnSell
-	Selectable:
-		Bounds: 2048, 2048
 	HitShape:
-		UseTargetableCellsOffsets: false
-		TargetableOffsets: 0,0,0, 640,-384,0, 640,512,0, -710,-512,0, -710,512,0
-	Buildable:
-		Queue: Building, RABuilding
-		BuildPaletteOrder: 10
-		Prerequisites: fact
-		Description: Provides power for other structures.
+		TargetableOffsets: 630,299,0
 	Valued:
-		Cost: 500 #300
+		Cost: 500
 	Tooltip:
 		Name: Power Plant
+	Buildable:
+		BuildPaletteOrder: 10
+		Prerequisites: ~fact.dtargentina
+		Queue: Building, RABuilding
+		Description: actor-nuke.description
 	Building:
-		Footprint: xx xx ==
+		Footprint: xX xx ==
 		Dimensions: 2,3
 		LocalCenterOffset: 0,-512,0
 	Health:
-		HP: 55000 #40000
-	Armor:
-		Type: Wood
+		HP: 150000
 	RevealsShroud:
 		Range: 4c0
 	WithBuildingBib:
 	Power:
-		Amount: 120
+		Amount: 100
 	ScalePowerWithHealth:
-	WithDeathAnimation:
-		DeathSequence: dead
-		UseDeathTypeSuffix: false
 	AcceptsDeliveredExperience: ##########
 		ValidTypes: building ##########
+	ProvidesPrerequisite@buildingname:
+	ProvidesPrerequisite@power:
+		Prerequisite: dtpower
 
 DTPOWER2:
 	Inherits: ^BaseBuilding
@@ -1666,9 +2059,9 @@ DTPOWER2:
 		TargetableOffsets: -355,-1024,0
 	Buildable:
 		Queue: Building, RABuilding
-		BuildPaletteOrder: 110
-		Prerequisites: anyhq, ~techlevel.medium
-		Description: Provides double the power of\na standard Power Plant.
+		BuildPaletteOrder: 10
+		Prerequisites: ~fact.answer
+		Description: Provides double the power of a standard Power Plant.
 	Valued:
 		Cost: 800 #500
 	Tooltip:
@@ -1678,8 +2071,8 @@ DTPOWER2:
 		Dimensions: 3,3
 		LocalCenterOffset: 0,-512,0
 	Selectable:
-		Bounds: 131072, 87381
-		DecorationBounds: 131072, 123776, 0, -18176
+		Bounds: 2048, 20248
+		DecorationBounds: 2048, 2048
 	SelectionDecorations:
 	Health:
 		HP: 70000
@@ -1696,13 +2089,37 @@ DTPOWER2:
 		UseDeathTypeSuffix: false
 	AcceptsDeliveredExperience: ##########
 		ValidTypes: building ##########
+	ProvidesPrerequisite@power:
+		Prerequisite: dtpower
+
+DTRPOWER:
+	Inherits: DTPOWER
+	RenderSprites:
+		Image: dtrpower
+	Buildable:
+		Queue: Building, RABuilding
+		Prerequisites: ~rafact.dtrussia
+	Power:
+		Amount: 175
+	ProvidesPrerequisite@buildingname:
+
+DTJPOWER:
+	Inherits: NUKE
+	RenderSprites:
+		Image: dtjpower
+	Buildable:
+		Queue: Building, RABuilding
+		Prerequisites: ~fact.dtjapan
+	Power:
+		Amount: 175
+	ProvidesPrerequisite@buildingname:
 
 DTPYLE:
 	Inherits: ^BaseBuilding
 	Inherits@CPQWP: ^CPQConditionWithPrimary
 	Inherits@prod: ^ProducesUnits
 	Inherits@sell: ^TDSpawnActorsOnSell
-	Inherits@barr: ^IsBarrack
+	Inherits@barr: ^IsBarrackOld
 	HitShape:
 		UseTargetableCellsOffsets: false
 		TargetableOffsets: 0,0,0, 840,-256,0, 840,512,0, 210,-512,0, -71,512,0
@@ -1717,8 +2134,7 @@ DTPYLE:
 		Prerequisite: barracks
 	Buildable:
 		BuildPaletteOrder: 30
-		Prerequisites: anypower
-		Queue: Building, RABuilding
+		Prerequisites: ~wipcontent
 		Description: Trains infantry
 	Building:
 		Footprint: xx xx ==
@@ -1739,9 +2155,9 @@ DTPYLE:
 	Production@NORMAL:
 		Produces: Infantry
 		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RAInfantry
-		RequiresCondition: classicproductionqueues
+	# Production@CLASSICPRODUCTIONQUEUES:
+	# 	Produces: RAInfantry
+	# 	RequiresCondition: classicproductionqueues
 	GrantExternalConditionToProduced:
 		Condition: produced
 	ProductionQueue:
@@ -1758,59 +2174,113 @@ DTPYLE:
 	ProductionBar@INFANTRYGDI:
 		ProductionType: Infantry
 		RequiresCondition: !classicproductionqueues
-	ProductionBar@RAINFANTRYGDI:
-		ProductionType: RAInfantry
-		RequiresCondition: classicproductionqueues
+	# ProductionBar@RAINFANTRYGDI:
+	# 	ProductionType: RAInfantry
+	# 	RequiresCondition: classicproductionqueues
 	Power:
 		Amount: -20
 	ProvidesPrerequisite@buildingname:
 	Selectable:
-		Bounds: 87381, 76458, 0, -9088
+		Bounds: 1024, 1024
+		DecorationBounds: 1024, 1024
+
+DTPYLE.DTUSA:
+	Inherits: DTPYLE
+	Buildable:
+		BuildPaletteOrder: 30
+		Prerequisites: ~fact.dtusa, dtnuke.dtusa
+		Queue: Building, RABuilding
+		Description: Trains infantry
+	Production@NORMAL:
+		Produces: Infantry.Dtusa
+	# Production@CLASSICPRODUCTIONQUEUES:
+	# 	Produces: RAInfantry.DTA
+	ProductionQueue:
+		Type: Infantry.Dtusa
+	ProductionBar@INFANTRYGDI:
+		ProductionType: Infantry.Dtusa
+	# ProductionBar@RAINFANTRYGDI:
+	# 	ProductionType: RAInfantry
+	ProvidesPrerequisite@buildingname:
+		Prerequisite: DTPYLE.DTUSA
+	RenderSprites:
+		Image: dtpyle
+
+DTPYLE.ANSWER:
+	Inherits: DTPYLE
+	Buildable:
+		BuildPaletteOrder: 30
+		Prerequisites: ~fact.answer, dtpower
+		Queue: Building, RABuilding
+		Description: Trains infantry
+	Production@NORMAL:
+		Produces: Infantry.Answer
+	# Production@CLASSICPRODUCTIONQUEUES:
+	# 	Produces: RAInfantry
+	ProductionQueue:
+		Type: Infantry.Answer
+	ProductionBar@INFANTRYGDI:
+		ProductionType: Infantry.Answer
+	# ProductionBar@RAINFANTRYGDI:
+	# 	ProductionType: RAInfantry
+	ProvidesPrerequisite@buildingname:
+		Prerequisite: DTPYLE.ANSWER
+	RenderSprites:
+		Image: dtpyle
+
 DTPYLE.DTRUSSIA:
 	Inherits: DTPYLE
 	Buildable:
 		BuildPaletteOrder: 30
-		Prerequisites: anypower
+		Prerequisites: ~rafact.dtrussia, dtrpower
 		Queue: Building, RABuilding
 		Description: Trains infantry
 	Production@NORMAL:
-		Produces: Infantry
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RAInfantry
+		Produces: Infantry.Dtrussia
+	# Production@CLASSICPRODUCTIONQUEUES:
+	# 	Produces: RAInfantry
 	ProductionQueue:
-		Type: Infantry
+		Type: Infantry.Dtrussia
 	ProductionBar@INFANTRYGDI:
-		ProductionType: Infantry
-	ProductionBar@RAINFANTRYGDI:
-		ProductionType: RAInfantry
+		ProductionType: Infantry.Dtrussia
+	# ProductionBar@RAINFANTRYGDI:
+	# 	ProductionType: RAInfantry
+	ProvidesPrerequisite@buildingname:
+		Prerequisite: DTPYLE.DTRUSSIA
 	RenderSprites:
-		Image: dtpyle
+		Image: barr
+		PlayerPalette: raplayer
+
+
 DTPYLE.DTJAPAN:
 	Inherits: DTPYLE
 	Buildable:
 		BuildPaletteOrder: 30
-		Prerequisites: anypower
+		Prerequisites: ~fact.dtjapan, dtjpower
 		Queue: Building, RABuilding
 		Description: Trains infantry
 	Production@NORMAL:
-		Produces: Infantry
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RAInfantry
+		Produces: Infantry.Dtjapan
+	# Production@CLASSICPRODUCTIONQUEUES:
+	# 	Produces: RAInfantry
 	ProductionQueue:
-		Type: Infantry
+		Type: Infantry.Dtjapan
 	ProductionBar@INFANTRYGDI:
-		ProductionType: Infantry
-	ProductionBar@RAINFANTRYGDI:
-		ProductionType: RAInfantry
+		ProductionType: Infantry.Dtjapan
+	# ProductionBar@RAINFANTRYGDI:
+	# 	ProductionType: RAInfantry
+	ProvidesPrerequisite@buildingname:
+		Prerequisite: DTPYLE.DTJAPAN
 	RenderSprites:
-		Image: dtpyle
+		Image: pyle
+
 HPAD.TOMORROW:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^2x2Shape
 	Inherits@CPQWP: ^CPQConditionWithPrimary
 	Inherits@prod: ^ProducesUnits
 	Inherits@sell: ^TDSpawnActorsOnSell
-	Inherits@hpad: ^IsAircraftFactory
+	Inherits@hpad: ^IsAircraftFactoryOld
 	Selectable:
 		Bounds: 2048, 2048
 	HitShape:
@@ -1822,9 +2292,9 @@ HPAD.TOMORROW:
 		Name: Helipad (Tomorrow)
 	Buildable:
 		BuildPaletteOrder: 50
-		Prerequisites: dtproc
+		Prerequisites: ~fact.tomorrow, dtproc
 		Queue: Building, RABuilding
-		Description: Produces, rearms and\nrepairs helicopters
+		Description: Produces, rearms and repairs helicopters
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -1835,11 +2305,11 @@ HPAD.TOMORROW:
 	Exit@1:
 		SpawnOffset: 0,-256,0
 	Production@NORMAL:
-		Produces: Aircraft
+		Produces: Aircraft.Tomorrow
 		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RAAircraft
-		RequiresCondition: classicproductionqueues
+	# Production@CLASSICPRODUCTIONQUEUES:
+	# 	Produces: RAAircraft
+	# 	RequiresCondition: classicproductionqueues
 	Reservable:
 	RepairsUnits:
 		HpPerStep: 1000
@@ -1849,7 +2319,7 @@ HPAD.TOMORROW:
 		RequiresCondition: !build-incomplete
 	RallyPoint:
 	ProductionQueue:
-		Type: Aircraft
+		Type: Aircraft.Tomorrow
 		DisplayOrder: 4
 		Group: Aircraft
 		LowPowerModifier: 300
@@ -1860,24 +2330,25 @@ HPAD.TOMORROW:
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
 	ProductionBar@AIRCRAFTNOD:
-		ProductionType: Aircraft
+		ProductionType: Aircraft.Tomorrow
 		RequiresCondition: !classicproductionqueues
-	ProductionBar@RAAIRCRAFTNOD:
-		ProductionType: RAAircraft
-		RequiresCondition: classicproductionqueues
+	# ProductionBar@RAAIRCRAFTNOD:
+	# 	ProductionType: RAAircraft
+	# 	RequiresCondition: classicproductionqueues
 	Power:
 		Amount: -10
 	ProvidesPrerequisite@buildingname:
 		Prerequisite: hpad
 	RenderSprites:
 		Image: hpad
+
 HPAD.ANSWER:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^2x2Shape
 	Inherits@CPQWP: ^CPQConditionWithPrimary
 	Inherits@prod: ^ProducesUnits
 	Inherits@sell: ^TDSpawnActorsOnSell
-	Inherits@hpad: ^IsAircraftFactory
+	Inherits@hpad: ^IsAircraftFactoryOld
 	Selectable:
 		Bounds: 2048, 2048
 	HitShape:
@@ -1889,9 +2360,9 @@ HPAD.ANSWER:
 		Name: Helipad (Company of Answers)
 	Buildable:
 		BuildPaletteOrder: 50
-		Prerequisites: dtproc
+		Prerequisites: ~fact.answer, dtproc
 		Queue: Building, RABuilding
-		Description: Produces, rearms and\nrepairs helicopters
+		Description: Produces, rearms and repairs helicopters
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -1902,11 +2373,11 @@ HPAD.ANSWER:
 	Exit@1:
 		SpawnOffset: 0,-256,0
 	Production@NORMAL:
-		Produces: Aircraft
+		Produces: Aircraft.Answer
 		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RAAircraft
-		RequiresCondition: classicproductionqueues
+	# Production@CLASSICPRODUCTIONQUEUES:
+	# 	Produces: RAAircraft
+	# 	RequiresCondition: classicproductionqueues
 	Reservable:
 	RepairsUnits:
 		HpPerStep: 1000
@@ -1916,7 +2387,7 @@ HPAD.ANSWER:
 		RequiresCondition: !build-incomplete
 	RallyPoint:
 	ProductionQueue:
-		Type: Aircraft
+		Type: Aircraft.Answer
 		DisplayOrder: 4
 		Group: Aircraft
 		LowPowerModifier: 300
@@ -1927,24 +2398,25 @@ HPAD.ANSWER:
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
 	ProductionBar@AIRCRAFTNOD:
-		ProductionType: Aircraft
+		ProductionType: Aircraft.Answer
 		RequiresCondition: !classicproductionqueues
-	ProductionBar@RAAIRCRAFTNOD:
-		ProductionType: RAAircraft
-		RequiresCondition: classicproductionqueues
+	# ProductionBar@RAAIRCRAFTNOD:
+	# 	ProductionType: RAAircraft
+	# 	RequiresCondition: classicproductionqueues
 	Power:
 		Amount: -10
 	ProvidesPrerequisite@buildingname:
-		Prerequisite: hpad
+		Prerequisite: hpad.answer
 	RenderSprites:
 		Image: hpad
+
 HPAD.DTUSA:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^2x2Shape
 	Inherits@CPQWP: ^CPQConditionWithPrimary
 	Inherits@prod: ^ProducesUnits
 	Inherits@sell: ^TDSpawnActorsOnSell
-	Inherits@hpad: ^IsAircraftFactory
+	Inherits@hpad: ^IsAircraftFactoryOld
 	Selectable:
 		Bounds: 2048, 2048
 	HitShape:
@@ -1956,9 +2428,9 @@ HPAD.DTUSA:
 		Name: Helipad (USA)
 	Buildable:
 		BuildPaletteOrder: 50
-		Prerequisites: dtproc
+		Prerequisites: ~fact.dtusa, dtproc
 		Queue: Building, RABuilding
-		Description: Produces, rearms and\nrepairs helicopters
+		Description: Produces, rearms and repairs helicopters
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -1969,11 +2441,11 @@ HPAD.DTUSA:
 	Exit@1:
 		SpawnOffset: 0,-256,0
 	Production@NORMAL:
-		Produces: Aircraft
+		Produces: Aircraft.Dtusa
 		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RAAircraft
-		RequiresCondition: classicproductionqueues
+	# Production@CLASSICPRODUCTIONQUEUES:
+	# 	Produces: RAAircraft
+	# 	RequiresCondition: classicproductionqueues
 	Reservable:
 	RepairsUnits:
 		HpPerStep: 1000
@@ -1983,7 +2455,7 @@ HPAD.DTUSA:
 		RequiresCondition: !build-incomplete
 	RallyPoint:
 	ProductionQueue:
-		Type: Aircraft
+		Type: Aircraft.Dtusa
 		DisplayOrder: 4
 		Group: Aircraft
 		LowPowerModifier: 300
@@ -1994,24 +2466,25 @@ HPAD.DTUSA:
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
 	ProductionBar@AIRCRAFTNOD:
-		ProductionType: Aircraft
+		ProductionType: Aircraft.Dtusa
 		RequiresCondition: !classicproductionqueues
-	ProductionBar@RAAIRCRAFTNOD:
-		ProductionType: RAAircraft
-		RequiresCondition: classicproductionqueues
+	# ProductionBar@RAAIRCRAFTNOD:
+	# 	ProductionType: RAAircraft
+	# 	RequiresCondition: classicproductionqueues
 	Power:
 		Amount: -10
 	ProvidesPrerequisite@buildingname:
-		Prerequisite: hpad
+		Prerequisite: hpad.dtusa
 	RenderSprites:
 		Image: hpad
+
 HPAD.DTRUSSIA:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^2x2Shape
 	Inherits@CPQWP: ^CPQConditionWithPrimary
 	Inherits@prod: ^ProducesUnits
 	Inherits@sell: ^TDSpawnActorsOnSell
-	Inherits@hpad: ^IsAircraftFactory
+	Inherits@hpad: ^IsAircraftFactoryOld
 	Selectable:
 		Bounds: 2048, 2048
 	HitShape:
@@ -2023,9 +2496,9 @@ HPAD.DTRUSSIA:
 		Name: Helipad (Russia)
 	Buildable:
 		BuildPaletteOrder: 50
-		Prerequisites: dtproc
+		Prerequisites: ~rafact.dtrussia, dtproc
 		Queue: Building, RABuilding
-		Description: Produces, rearms and\nrepairs helicopters
+		Description: Produces, rearms and repairs helicopters
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -2036,11 +2509,11 @@ HPAD.DTRUSSIA:
 	Exit@1:
 		SpawnOffset: 0,-256,0
 	Production@NORMAL:
-		Produces: Aircraft
+		Produces: Aircraft.Dtrussia
 		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RAAircraft
-		RequiresCondition: classicproductionqueues
+	# Production@CLASSICPRODUCTIONQUEUES:
+	# 	Produces: RAAircraft
+	# 	RequiresCondition: classicproductionqueues
 	Reservable:
 	RepairsUnits:
 		HpPerStep: 1000
@@ -2050,7 +2523,7 @@ HPAD.DTRUSSIA:
 		RequiresCondition: !build-incomplete
 	RallyPoint:
 	ProductionQueue:
-		Type: Aircraft
+		Type: Aircraft.Dtrussia
 		DisplayOrder: 4
 		Group: Aircraft
 		LowPowerModifier: 300
@@ -2061,24 +2534,25 @@ HPAD.DTRUSSIA:
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
 	ProductionBar@AIRCRAFTNOD:
-		ProductionType: Aircraft
+		ProductionType: Aircraft.Dtrussia
 		RequiresCondition: !classicproductionqueues
-	ProductionBar@RAAIRCRAFTNOD:
-		ProductionType: RAAircraft
-		RequiresCondition: classicproductionqueues
+	# ProductionBar@RAAIRCRAFTNOD:
+	# 	ProductionType: RAAircraft
+	# 	RequiresCondition: classicproductionqueues
 	Power:
 		Amount: -10
 	ProvidesPrerequisite@buildingname:
-		Prerequisite: hpad
+		Prerequisite: hpad.dtrussia
 	RenderSprites:
 		Image: hpad
+
 HPAD.DTJAPAN:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^2x2Shape
 	Inherits@CPQWP: ^CPQConditionWithPrimary
 	Inherits@prod: ^ProducesUnits
 	Inherits@sell: ^TDSpawnActorsOnSell
-	Inherits@hpad: ^IsAircraftFactory
+	Inherits@hpad: ^IsAircraftFactoryOld
 	Selectable:
 		Bounds: 2048, 2048
 	HitShape:
@@ -2090,9 +2564,9 @@ HPAD.DTJAPAN:
 		Name: Helipad (Japan)
 	Buildable:
 		BuildPaletteOrder: 50
-		Prerequisites: dtproc
+		Prerequisites: ~fact.dtjapan, dtproc
 		Queue: Building, RABuilding
-		Description: Produces, rearms and\nrepairs helicopters
+		Description: Produces, rearms and repairs helicopters
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -2103,11 +2577,11 @@ HPAD.DTJAPAN:
 	Exit@1:
 		SpawnOffset: 0,-256,0
 	Production@NORMAL:
-		Produces: Aircraft
+		Produces: Aircraft.Dtjapan
 		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RAAircraft
-		RequiresCondition: classicproductionqueues
+	# Production@CLASSICPRODUCTIONQUEUES:
+	# 	Produces: RAAircraft
+	# 	RequiresCondition: classicproductionqueues
 	Reservable:
 	RepairsUnits:
 		HpPerStep: 1000
@@ -2117,7 +2591,7 @@ HPAD.DTJAPAN:
 		RequiresCondition: !build-incomplete
 	RallyPoint:
 	ProductionQueue:
-		Type: Aircraft
+		Type: Aircraft.Dtjapan
 		DisplayOrder: 4
 		Group: Aircraft
 		LowPowerModifier: 300
@@ -2128,29 +2602,77 @@ HPAD.DTJAPAN:
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
 	ProductionBar@AIRCRAFTNOD:
-		ProductionType: Aircraft
+		ProductionType: Aircraft.Dtjapan
 		RequiresCondition: !classicproductionqueues
-	ProductionBar@RAAIRCRAFTNOD:
-		ProductionType: RAAircraft
-		RequiresCondition: classicproductionqueues
+	# ProductionBar@RAAIRCRAFTNOD:
+	# 	ProductionType: RAAircraft
+	# 	RequiresCondition: classicproductionqueues
 	Power:
 		Amount: -10
 	ProvidesPrerequisite@buildingname:
-		Prerequisite: hpad
+		Prerequisite: hpad.dtjapan
 	RenderSprites:
 		Image: hpad
+
 SAM.TOMORROW:
 	Inherits: SAM
+	Tooltip:
+		Name: SAM Site
 	Buildable:
 		BuildPaletteOrder: 50
-		Prerequisites: barracks
+		Prerequisites: ~fact.tomorrow, dthand
 		Queue: Defence, RADefence
 	RenderSprites:
 		Image: SAM
+
+SAM.ANSWER:
+	Inherits: SAM
+	Tooltip:
+		Name: SAM Site
+	Buildable:
+		BuildPaletteOrder: 50
+		Prerequisites: ~fact.answer, barracks
+		Queue: Defence, RADefence
+	RenderSprites:
+		Image: SAM
+
+SAM.DTUSA:
+	Inherits: SAM
+	Tooltip:
+		Name: SAM Site
+	Buildable:
+		BuildPaletteOrder: 50
+		Prerequisites: ~fact.dtusa, barracks
+		Queue: Defence, RADefence
+	RenderSprites:
+		Image: SAM
+
+SAM.JAPAN:
+	Inherits: SAM
+	Tooltip:
+		Name: SAM Site
+	Buildable:
+		BuildPaletteOrder: 50
+		Prerequisites: ~fact.dtjapan, barracks
+		Queue: Defence, RADefence
+	RenderSprites:
+		Image: SAM
+
+SAM.RUSSIA:
+	Inherits: SAM
+	Tooltip:
+		Name: SAM Site
+	Buildable:
+		BuildPaletteOrder: 50
+		Prerequisites: ~rafact.dtrussia, barracks
+		Queue: Defence, RADefence
+	RenderSprites:
+		Image: SAM
+
 GTWR.ANSWER:
 	Inherits: GTWR
 	Buildable:
-		Prerequisites: barracks
+		Prerequisites: ~fact.answer, DTPYLE.ANSWER
 		Queue: Defence, RADefence
 	RenderSprites:
 		Image: GTWR
@@ -2160,30 +2682,47 @@ GTWR.ANSWER:
 		Modifier: 120
 	Health:
 		HP: 60000
+
+GTWR.DTUSA:
+	Inherits: GTWR
+	Buildable:
+		Prerequisites: ~fact.dtusa, DTPYLE.DTUSA
+		Queue: Defence, RADefence
+	RenderSprites:
+		Image: GTWR
+	Armament:
+		Weapon: DTHighV
+	RangeMultiplier@LongRangeGun:
+		Modifier: 120
+	Health:
+		HP: 60000
+
 PBOX.TOMORROW:
 	Inherits: PBOX
 	RenderSprites:
 		Image: PBOX
 	Buildable:
 		Queue: Defence, RADefence
-		Prerequisites: barracks, ~disabled
+		Prerequisites: ~barracks, ~disabled
 	-MapEditorData:
+
 GUN.TOMORROW:
 	Inherits: GUN
 	RenderSprites:
 		Image: GUN
 	Buildable:
 		Queue: Defence, RADefence
-		Prerequisites: barracks
+		Prerequisites: barracks, ~rafact.dtrussia
 	Armament:
 		Weapon: DTTurretGun
 	RangeMultiplier@LongRangeGun:
 		Modifier: 120
 	Health:
 		HP: 75000
+
 DTBIO:
 	Inherits: ^BaseBuilding
-	Inherits@IDISABLE: ^DisabledOverlay
+	# Inherits@IDISABLE: ^DisabledOverlay
 	Inherits@shape: ^2x2Shape
 	Inherits@sell: ^RASpawnActorsOnSell
 	Inherits@SW: ^PrimarySuperweapon
@@ -2193,7 +2732,7 @@ DTBIO:
 	Buildable:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 140
-		Prerequisites: vehicleproduction, anyhq, ~techlevel.high, !bacterialmissc
+		Prerequisites: ~fact.tomorrow, weap.tomorrow, hq.tomorrow
 		Description: Provides Tomorrow advanced technologies
 	Valued:
 		Cost: 1500
@@ -2215,39 +2754,53 @@ DTBIO:
 	ProvidesPrerequisite@buildingname:
 	ProvidesPrerequisite@tek:
 		Prerequisite: tek
-	NukePower@unlimited:
+	NukePowerCA@unlimited:
 		AllowMultiple: True
-		Prerequisites: ~techlevel.superweapons
+		Prerequisites:
+			1: ~techlevel.superweapons
 		PauseOnCondition: lowpower
-		Icon: dtabomb
+		Icons: 
+			1: dtabomb
 		Cursor: nuke
 		ChargeInterval: 9000
-		Name: Bacterial Strike
-		Description: Launch a tactical bacterial warhead.\nApplies heavy damage over a large area.
+		Names: 
+			1: Bacterial Strike
+		Descriptions:
+			1: Launch a tactical bacterial warhead. Applies heavy damage over a large area.
 		EndChargeSpeechNotification: DTBacterialStrikeAv
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
 		LaunchSpeechNotification: DTBacterialStrikeL
 		IncomingSpeechNotification: DTBacterialStrikeAp
-		MissileWeapon: DTAtomic
+		MissileWeapons:
+			1: DTAtomic
 		MissileDelay: 11
 		SpawnOffset: 3c0,0,-1c512
 		DisplayBeacon: True
-		BeaconPoster: raatomicon
+		BeaconPosters:
+			1: atomic
 		DisplayTimerRelationships: Ally, Neutral, Enemy
 		DisplayRadarPing: True
 		CameraRange: 10c0
+		CircleRanges:
+			1: 10000
 		ArrowSequence: arrow
 		ClockSequence: clock
 		CircleSequence: circles
 		SupportPowerPaletteOrder: 30
 		MissileImage: DTAtomic
+		# BeaconActor: BLASTRADIUS.atomic
+		BeaconActor: CAMERA.sw
 	SupportPowerChargeBar:
 	ProvidesPrerequisite@swlimit:
 		Prerequisite: bacterialmissc
+	RenderSprites:
+		PlayerPalette: raplayer
+
+
 ATEK.ANSWER:
 	Inherits: ^BaseBuilding
-	Inherits@IDISABLE: ^DisabledOverlay
+	# Inherits@IDISABLE: ^DisabledOverlay
 	Inherits@shape: ^2x2Shape
 	Inherits@sell: ^RASpawnActorsOnSell
 	Inherits@tech: ^IsTechnoBuilding
@@ -2256,8 +2809,8 @@ ATEK.ANSWER:
 	Buildable:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 50
-		Prerequisites: dtproc, ~techlevel.high
-		Description: Provides Allies advanced technologies.\n  Special Ability: GPS Satellite
+		Prerequisites: ~fact.answer, dtproc
+		Description: Provides Allies advanced technologies.  Special Ability: GPS Satellite
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -2278,7 +2831,7 @@ ATEK.ANSWER:
 		OneShot: true
 		ChargeInterval: 12000
 		Name: GPS Satellite
-		Description: Reveals map terrain and provides tactical\ninformation. Requires power and active radar.
+		Description: Reveals map terrain and provides tactical information. Requires power and active radar.
 		RevealDelay: 375
 		#LaunchSpeechNotification: SatelliteLaunched
 		DisplayTimerRelationships: Ally, Neutral, Enemy
@@ -2294,6 +2847,34 @@ ATEK.ANSWER:
 		Prerequisite: techcenter
 	RenderSprites:
 		Image: ATEK
+		PlayerPalette: raplayer
+
+ATEK.JAPAN:
+	Inherits: ATEK.ANSWER
+	Buildable:
+		Queue: Building, RABuilding
+		BuildPaletteOrder: 50
+		Prerequisites: ~fact.dtjapan, dtproc, dtjpower
+		Description: Provides Japan advanced technologies.  Special Ability: GPS Satellite
+	-GpsPower:
+	ProvidesPrerequisite@techcenter:
+		Prerequisite: atek.japan
+	RenderSprites:
+		Image: ATEK
+
+ATEK.RUSSIA:
+	Inherits: ATEK.ANSWER
+	Buildable:
+		Queue: Building, RABuilding
+		BuildPaletteOrder: 50
+		Prerequisites: ~rafact.dtrussia, dtproc, dtrpower
+		Description: Provides Russia advanced technologies.  Special Ability: GPS Satellite
+	-GpsPower:
+	ProvidesPrerequisite@techcenter:
+		Prerequisite: atek.russia
+	RenderSprites:
+		Image: ATEK
+
 DTWOOD:
 	Inherits: ^Wall
 	Valued:
@@ -2304,9 +2885,9 @@ DTWOOD:
 		Name: Wood Fence
 	Buildable:
 		BuildPaletteOrder: 20
-		Prerequisites: fact
+		Prerequisites: ~fact.answer
 		Queue: Defence, RADefence
-		Description: Stops infantry and light vehicles.\nCan be crushed by tanks.
+		Description: Stops infantry and light vehicles. Can be crushed by tanks.
 	Armor:
 		Type: Light
 	LineBuild:
@@ -2316,6 +2897,7 @@ DTWOOD:
 		Types: wood
 	WithWallSpriteBody:
 		Type: wood
+
 DTBARB:
 	Inherits: ^Wall
 	Valued:
@@ -2326,9 +2908,9 @@ DTBARB:
 		Name: Barbed Wire
 	Buildable:
 		BuildPaletteOrder: 20
-		Prerequisites: fact
+		Prerequisites: ~fact.tomorrow
 		Queue: Defence, RADefence
-		Description: Stops infantry and light vehicles.\nCan be crushed by tanks.
+		Description: Stops infantry and light vehicles. Can be crushed by tanks.
 	Armor:
 		Type: Light
 	LineBuild:
@@ -2338,9 +2920,10 @@ DTBARB:
 		Types: barb
 	WithWallSpriteBody:
 		Type: barb
+
 DTOBLI:
 	Inherits: ^Defense
-	Inherits@IDISABLE: ^DisabledOverlay
+	# Inherits@IDISABLE: ^DisabledOverlay
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Valued:
 		Cost: 2000
@@ -2348,12 +2931,12 @@ DTOBLI:
 		Name: Question Spire
 	Buildable:
 		BuildPaletteOrder: 60
-		Prerequisites: dtbio, ~techlevel.high
+		Prerequisites: ~fact.tomorrow, dtbio
 		Queue: Defence, RADefence
-		Description: Advanced base defense.\nRequires power to operate.\n  Strong vs all Ground units\n  Cannot target Aircraft
+		Description: Advanced base defense. Requires power to operate.   Strong vs all Ground units   Cannot target Aircraft
 	Selectable:
 		Bounds: 1024, 1024
-		DecorationBounds: 40021, 80085, 0, -18176
+		DecorationBounds: 1024, 1024
 	SelectionDecorations:
 	Health:
 		HP: 100000
@@ -2394,9 +2977,10 @@ DTSILO:
 		BuildPaletteOrder: 1000
 	Tooltip:
 		Name: Petrol Silo
+
 DTEYE:
 	Inherits: ^BaseBuilding
-	Inherits@IDISABLE: ^DisabledOverlay
+	# Inherits@IDISABLE: ^DisabledOverlay
 	Inherits@SW: ^PrimarySuperweapon
 	Inherits@sell: ^TDSpawnActorsOnSell
 	Inherits@tech: ^IsTechnoBuilding
@@ -2410,19 +2994,19 @@ DTEYE:
 	Tooltip:
 		Name: Naval Command Centre
 	ProvidesPrerequisite:
-		Prerequisite: anyhq
+		Prerequisite:  ~anyhq
 	Buildable:
 		BuildPaletteOrder: 100
-		Prerequisites: dtpropaganda, ~techlevel.high, !cruisemissc
+		Prerequisites: ~fact.dtusa, dtpropaganda.dtusa, !cruisemissc
 		Queue: Building, RABuilding
-		Description: Provides radar and Orbital Ion Cannon support power.\nRequires power to operate.
+		Description: Provides radar and Orbital Ion Cannon support power. Requires power to operate.
 	Building:
 		Footprint: X_ xx ==
 		Dimensions: 2,3
 		LocalCenterOffset: 0,-512,0
 	Selectable:
-		Bounds: 87381, 72789, 0, 16384
-		DecorationBounds: 87381, 96469, 0, -7253
+		Bounds: 2048, 2048
+		DecorationBounds: 2448, 2448, 0, 0
 	SelectionDecorations:
 	WithSpriteBody:
 		PauseOnCondition: lowpower
@@ -2440,12 +3024,16 @@ DTEYE:
 	IonCannonPower:
 		AllowMultiple: True
 		PauseOnCondition: lowpower
-		Prerequisites: ~techlevel.superweapons
-		Icon: dtioncannon
+		Prerequisites: 
+			1: ~techlevel.superweapons
+		Icons: 
+			1: dtioncannon
 		Cursor: ioncannon
 		ChargeInterval: 6000
-		Name: Cruise Missile
-		Description: Initiate an Ion Cannon strike.\nApplies instant damage to a small area.
+		Names: 
+			1: Cruise Missile
+		Descriptions: 
+			1: Initiate an Cruise Missile strike. Applies instant damage to a small area.
 		BeginChargeSpeechNotification: IonCannonCharging
 		EndChargeSpeechNotification: IonCannonReady
 		SelectTargetSpeechNotification: SelectTarget
@@ -2460,13 +3048,15 @@ DTEYE:
 	Power:
 		Amount: -150
 	ProvidesPrerequisite@buildingname:
+		Prerequisite: dteye
 	ProvidesPrerequisite@swlimit:
 		Prerequisite: cruisemissc
 	ExternalCondition@JAMMED:
 		Condition: jammed
+
 DTHQ:
 	Inherits: ^BaseBuilding
-	Inherits@IDISABLE: ^DisabledOverlay
+	# Inherits@IDISABLE: ^DisabledOverlay
 	Inherits@SW: ^PrimarySuperweapon
 	Inherits@sell: ^TDSpawnActorsOnSell
 	Inherits@tech: ^IsTechnoBuilding
@@ -2480,19 +3070,19 @@ DTHQ:
 	Tooltip:
 		Name: Naval Command Centre
 	ProvidesPrerequisite:
-		Prerequisite: anyhq
+		Prerequisite:  ~anyhq
 	Buildable:
 		BuildPaletteOrder: 100
-		Prerequisites: atek.answer, ~techlevel.high, !cruisemissc
+		Prerequisites: ~fact.dtjapan, atek.japan, !cruisemissc
 		Queue: Building, RABuilding
-		Description: Provides radar and Orbital Ion Cannon support power.\nRequires power to operate.
+		Description: Provides radar and the Cruise Missile support power. Requires power to operate.
 	Building:
 		Footprint: X_ xx ==
 		Dimensions: 2,3
 		LocalCenterOffset: 0,-512,0
 	Selectable:
-		Bounds: 87381, 72789, 0, 16384
-		DecorationBounds: 87381, 96469, 0, -7253
+		Bounds: 2048, 2048
+		DecorationBounds: 2448, 2448, 0, 0
 	SelectionDecorations:
 	WithSpriteBody:
 		PauseOnCondition: lowpower
@@ -2510,12 +3100,16 @@ DTHQ:
 	IonCannonPower:
 		AllowMultiple: True
 		PauseOnCondition: lowpower
-		Prerequisites: ~techlevel.superweapons
-		Icon: dtioncannon
+		Prerequisites: 
+			1: ~techlevel.superweapons
+		Icons: 
+			1: dtioncannon
 		Cursor: ioncannon
 		ChargeInterval: 6000
-		Name: Cruise Missile
-		Description: Initiate an Ion Cannon strike.\nApplies instant damage to a small area.
+		Names: 
+			1: Cruise Missile
+		Descriptions: 
+			1: Initiate an Cruise Missile strike. Applies instant damage to a small area.
 		BeginChargeSpeechNotification: IonCannonCharging
 		EndChargeSpeechNotification: IonCannonReady
 		SelectTargetSpeechNotification: SelectTarget
@@ -2530,10 +3124,12 @@ DTHQ:
 	Power:
 		Amount: -150
 	ProvidesPrerequisite@buildingname:
+		Prerequisite: DTHQ
 	ProvidesPrerequisite@swlimit:
 		Prerequisite: cruisemissc
 	ExternalCondition@JAMMED:
 		Condition: jammed
+
 DTSHOP:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^2x2Shape
@@ -2546,7 +3142,7 @@ DTSHOP:
 	Buildable:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 50
-		Prerequisites: vehicleproduction, dtpropaganda
+		Prerequisites: ~fact.dtusa, weap.dtusa, dtpropaganda.dtusa
 		Description: Provides new Vehicles
 	Valued:
 		Cost: 600 #300
@@ -2566,24 +3162,8 @@ DTSHOP:
 	Power:
 		Amount: -40
 	ProvidesPrerequisite@buildingname:
-DTRPOWER:
-	Inherits: DTPOWER
-	RenderSprites:
-		Image: dtrpower
-	Buildable:
-		Queue: Building, RABuilding
-		Prerequisites: fact
-	Power:
-		Amount: 175
-DTJPOWER:
-	Inherits: NUKE
-	RenderSprites:
-		Image: dtjpower
-	Buildable:
-		Queue: Building, RABuilding
-		Prerequisites: fact
-	Power:
-		Amount: 175
+		Prerequisite: dtshop
+
 DTRKPOD:
 	Inherits: ^Defense
 	Inherits@AUTOTARGET: ^AutoTargetAll
@@ -2596,9 +3176,9 @@ DTRKPOD:
 		Name: Rocket Pod
 	Buildable:
 		BuildPaletteOrder: 45
-		Prerequisites: barracks
+		Prerequisites: ~fact.dtjapan, DTPYLE.DTJAPAN
 		Queue: Defence, RADefence
-		Description: Basic Anti-Tank base defense.\n  Strong vs Tanks, vehicles\n  Weak vs Infantry
+		Description: Basic Anti-Tank base defense.   Strong vs Tanks, vehicles   Weak vs Infantry
 	Building:
 	Health:
 		HP: 65000
@@ -2608,11 +3188,14 @@ DTRKPOD:
 		Range: 6c0
 	WithBuildingBib:
 		HasMinibib: true
-	Turreted:
-		TurnSpeed: 48
-		InitialFacing: 224
+	# Turreted:
+	# 	TurnSpeed: 48
+	# 	InitialFacing: 224
 	-WithSpriteBody:
 	WithEmbeddedTurretSpriteBody:
+	Turreted:
+		TurnSpeed: 1023
+		Offset: 128,128,384
 	Armament@PRIMARY:
 		Weapon: DTTowerMissile
 		LocalOffset: 256,128,0, 256,-128,0
@@ -2625,6 +3208,7 @@ DTRKPOD:
 		Range: 3c0
 	Power:
 		Amount: -20
+
 DTLWALL:
 	Inherits: ^Wall
 	Valued:
@@ -2635,11 +3219,11 @@ DTLWALL:
 		Name: Living Wall
 	Buildable:
 		BuildPaletteOrder: 30
-		Prerequisites: dtbio
+		Prerequisites: ~fact.tomorrow, dtbio
 		Queue: Defence, RADefence
-		Description: Stops infantry and most tanks.\nBlocks some projectiles.
+		Description: Stops infantry and most tanks. Blocks some projectiles.
 	Health:
-		HP: 40000
+		HP: 100000
 	Armor:
 		Type: Heavy
 	BlocksProjectiles:
@@ -2663,7 +3247,10 @@ DTLWALL:
 #                   UNITS Common
 ###############################################
 dtharv:
-	Inherits: HARV
+	Inherits: ^Tank
+	Inherits@Template: ^HarvesterTemplate
+	Inherits@selection: ^SelectableEconomicUnit
+	Inherits@harv: ^Harvester
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -2674,7 +3261,30 @@ dtharv:
 		Prerequisites: dtproc
 		Queue: Vehicle, RAVehicle
 		BuildDurationModifier: 40
-		Description: Collects Resources for processing.\n  Unarmed
+		Description: Collects Resources for processing.
+	StoresResources:
+		Capacity: 45
+	Mobile:
+		Speed: 60
+		TurnSpeed: 12
+	Health:
+		HP: 150000
+	Repairable:
+		HpPerStep: 7500
+	ChangesHealth@SelfHealing:
+		Step: 60
+	Armor:
+		Type: Heavy
+	WithHarvestAnimation:
+	WithDockingAnimation:
+	FireWarheadsOnDeath:
+		RequiresCondition: !no-tiberium
+		Weapon: TiberiumExplosion
+	FireWarheadsOnDeath@empty:
+		RequiresCondition: no-tiberium
+		Weapon: UnitExplodeHarvEmpty
+	SelectionDecorations:
+
 dtover:
 	Inherits: ^Vehicle
 	Inherits@@EXPERIENCE: ^GainsExperienceVehicle
@@ -2687,10 +3297,10 @@ dtover:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
-		BuildPaletteOrder: 30
-		Queue: Vehicle, RAVehicle
+		BuildPaletteOrder: 10
+		Queue: Vehicle.Tomorrow, Vehicle.Dtusa
 		Prerequisites: vehicleproduction
-		Description: Fast scout and anti-infantry vehicle.\n  Strong vs Infantry\n  Weak vs Tanks
+		Description: Fast scout and anti-infantry vehicle.   Strong vs Infantry   Weak vs Tanks
 	Mobile:
 		TurnSpeed: 64
 		Speed: 170
@@ -2709,7 +3319,7 @@ dtover:
 		Weapon: BuggyGrenade
 		LocalOffset: 171,0,43
 		MuzzleSequence: muzzle
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: UnitExplodeSmall
 		EmptyWeapon: UnitExplodeSmall
 	AttackTurreted:
@@ -2723,12 +3333,353 @@ dtover:
 	ProducibleWithLevel:
 		Prerequisites: dtshop
 		InitialLevels: 1
-dttruck:
-	Inherits: TRUCK
+
+# dttruck:
+# 	Inherits: TRUCK
+# 	Buildable:
+# 		Queue: Vehicle, RAVehicle
+# 	RenderSprites:
+# 		Image: truck
+
+E1.DT:
+	Inherits: ^Soldier
+	Inherits@anim: ^TDRAInfantry
+	Inherits@Template: ^ScoutInfantryTemplate
+	Inherits@EXP: ^GainsExperienceTD
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	Inherits@DECORATIONS: ^InfantryExperienceHospitalHazmatOverrides
+	Inherits@AntiInf: ^PrioritizeInfantry
+	Valued:
+		Cost: 100
+	Tooltip:
+		Name: Minigunner
 	Buildable:
-		Queue: Vehicle, RAVehicle
+		BuildPaletteOrder: 10
+		Prerequisites: ~barracks
+		Queue: Infantry.Tomorrow, Infantry.Answer, Infantry.Dtusa
+		Description: actor-e4.description
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Mobile:
+		Speed: 60
+	Health:
+		HP: 16000
+	ChangesHealth@SelfHealing:
+		Step: 16
+	Armament@PRIMARY: ##########
+		Weapon: M16
+		LocalOffset: 128,0,256
+	Armament@GARRISONED: ##########
+		Name: garrisoned
+		Weapon: M16
+		MuzzleSequence: garrison-muzzle
+	WithInfantryBody:
+		IdleSequences: idle1,idle2
+		RequiresCondition: !parachute
+	WithInfantryBody@PARACHUTE:
+		StandSequences: parachute
+		RequiresCondition: parachute
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
 	RenderSprites:
-		Image: truck
+		Image: e1
+		PlayerPalette: raplayer
+	ProducibleWithLevel:
+		Prerequisites: dtshop
+		InitialLevels: 1
+
+E3.DT:
+	Inherits: ^Soldier
+	Inherits@anim: ^TDRAInfantry
+	Inherits@Template: ^AntiTankAntiAirInfantryTemplate
+	Inherits@EXP: ^GainsExperienceTD
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	Inherits@DECORATIONS: ^InfantryExperienceHospitalHazmatOverrides
+	Inherits@AntiVeh: ^PrioritizeVehicle
+	Inherits@AntiTank: ^PrioritizeTank
+	Inherits@AntiAir: ^PrioritizeAir
+	Valued:
+		Cost: 200
+	Tooltip:
+		Name: Bazooka
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Buildable:
+		BuildPaletteOrder: 20
+		Queue: Infantry.Answer, Infantry.Dtusa
+		Description: actor-e3.description
+	Mobile:
+		Speed: 50
+	Health:
+		HP: 9000
+	ChangesHealth@SelfHealing:
+		Step: 9
+	Armament@PRIMARY: ##########
+		Weapon: Rockets
+		LocalOffset: 256,43,341
+		FireDelay: 5
+	Armament@GARRISONED: ##########
+		Name: garrisoned
+		Weapon: Rockets
+	TakeCover:
+		ProneOffset: 180,0,-200
+	WithInfantryBody:
+		RequiresCondition: !parachute
+	WithInfantryBody@PARACHUTE:
+		StandSequences: parachute
+		RequiresCondition: parachute
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	RenderSprites:
+		Image: e3
+		PlayerPalette: raplayer
+	ProducibleWithLevel:
+		Prerequisites: dtshop
+		InitialLevels: 1
+
+E4.DT:
+	Inherits: ^Soldier
+	Inherits@anim: ^TDRAInfantry
+	Inherits@Template: ^MeleeInfantryTemplate
+	Inherits@explode: ^ExplodingInfantry
+	Inherits@EXP: ^GainsExperienceTD
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMoveMelee
+	Inherits@DECORATIONS: ^InfantryExperienceHospitalHazmatOverrides
+	Inherits@AntiBuil: ^PrioritizeBuilding
+	Valued:
+		Cost: 200
+	Tooltip:
+		Name: Flamethrower
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Buildable:
+		BuildPaletteOrder: 40
+		Prerequisites: dthand
+		Queue: Infantry.Tomorrow
+		Description: actor-e4.description
+	Mobile:
+		Speed: 60
+	Health:
+		HP: 20000
+	ChangesHealth@SelfHealing:
+		Step: 20
+	Armament:
+		Weapon: Flamethrower
+		LocalOffset: 341,0,256
+		FireDelay: 3
+		MuzzleSequence: muzzle
+	Armament@GARRISONED:
+		Name: garrisoned
+		Weapon: Flamethrower
+		MuzzleSequence: muzzle
+	FireWarheadsOnDeath:
+		Weapon: Flamethrower
+	TakeCover:
+		ProneOffset: 190,0,-198
+	WithMuzzleOverlay:
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+		RequiresCondition: !parachute
+	WithInfantryBody@PARACHUTE:
+		StandSequences: parachute
+		RequiresCondition: parachute
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	RenderSprites:
+		Image: e4
+		PlayerPalette: raplayer
+	GrantExternalConditionToTransport:
+		Condition: ifv-fire
+
+E6.DT:
+	Inherits: ^Soldier
+	Inherits@anim: ^TDRAInfantry
+	Inherits@selection: ^SelectableSupportUnit
+	Inherits@engineer: ^EngineerDefaultWeapons
+	Inherits@isengineer: ^IsEngineer
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Engineer
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Buildable:
+		BuildPaletteOrder: 30
+		Prerequisites: ~barracks
+		Queue: Infantry.Tomorrow, Infantry.Answer, Infantry.Dtusa
+		Description: actor-e6.description
+	Mobile:
+		Speed: 50
+	Health:
+		HP: 5000
+	Passenger:
+		CustomPipType: engineer
+	Garrisoner:
+		CustomPipType: engineer
+	InstantlyRepairs:
+		Types: building
+		EnterBehaviour: Dispose
+		RepairSound: urepair.wav
+	InstantlyRepairs@Tech:
+		Types: tech
+		EnterBehaviour: Dispose
+		RepairSound: urepair.wav
+	InstantlyRepairs@Civ:
+		Types: civ
+		ValidRelationships: Ally, Neutral
+		EnterBehaviour: Dispose
+		RepairSound: urepair.wav
+	RepairsBridges:
+		EnterBehaviour: Exit
+	CaptureManager:
+	GrantConditionOnPrerequisite@GLOBALREUSABLEENGINEER:
+		Condition: global-reusable-engineers
+		Prerequisites: global-reusable-engineers
+	Captures:
+		RequiresCondition: !global-reusable-engineers
+		CaptureTypes: building, defense, tech
+		PlayerExperience: 500
+		ConsumedByCapture: True
+	Captures@REUSABLE:
+		RequiresCondition: global-reusable-engineers
+		CaptureTypes: building, defense, tech
+		PlayerExperience: 500
+		CaptureDelay: 375
+		ConsumedByCapture: False
+		EnterCursor: ability
+		EnterBlockedCursor: move-blocked
+	Selectable:
+		Priority: 5
+		Class: e6
+	Voiced:
+		VoiceSet: EngineerVoice
+	AttackFrontal:
+		FacingTolerance: 0
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+		RequiresCondition: !parachute
+	WithInfantryBody@PARACHUTE:
+		StandSequences: parachute
+		RequiresCondition: parachute
+	RenderSprites:
+		Image: dte6
+	ActorStatValues:
+		Stats: Armor, Sight, Speed
+
+RAHELI.DT:
+	Inherits: ^Helicopter
+	Inherits@Template: ^HelicopterTemplate
+	Inherits@exp: ^GainsExperienceRA
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	Inherits@AntiVeh: ^PrioritizeVehicle
+	Inherits@AntiTank: ^PrioritizeTank
+	Inherits@AntiAir: ^PrioritizeAir
+	Inherits@AntiDef: ^PrioritizeDefence
+	Inherits@eject: ^AircraftEjectOnDeath
+	Buildable:
+		BuildPaletteOrder: 40
+		Prerequisites: hpad.dtjapan
+		Queue: Aircraft.Dtjapan
+		Description: actor-raheli.description
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Apache Longbow
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 35000
+	Repairable:
+		HpPerStep: 1750
+	ChangesHealth@SelfHealing:
+		Step: 14
+	Armament:
+		Weapon: Hellfire
+		LocalOffset: 50,250,-100, 50,-250,-100
+		LocalYaw: -75, 75
+		MuzzleSequence: muzzle
+		PauseOnCondition: !ammo
+		RequiresCondition: !up_cryomissiles
+	Armament@Upgrade: ##########
+		Weapon: HellfireCryo
+		LocalOffset: 50,250,-100, 50,-250,-100
+		LocalYaw: -75, 75
+		MuzzleSequence: muzzle
+		PauseOnCondition: !ammo
+		RequiresCondition: up_cryomissiles
+	AttackAircraft:
+		FacingTolerance: 20
+		AttackType: Hover
+	Aircraft:
+		Speed: 150
+		TurnSpeed: 30
+	WithIdleOverlay@ROTORAIR:
+		Offset: 0,0,85
+		Sequence: rotor
+		RequiresCondition: airborne
+		PauseOnCondition: disabled
+	WithIdleOverlay@ROTORGROUND:
+		Offset: 0,0,85
+		Sequence: slow-rotor
+		RequiresCondition: !airborne
+		PauseOnCondition: disabled
+	SelectionDecorations:
+	WithMuzzleOverlay:
+	SpawnActorOnDeath:
+		Actor: HELI.Husk
+	EjectOnDeath:
+		PilotActor: RAE3
+	LeavesTrails:
+		Offsets: -427,0,0
+		Image: smokey
+		MovingInterval: 3
+		StationaryInterval: 3
+		SpawnAtLastPosition: False
+		TrailWhileStationary: True
+		Type: CenterPosition
+		RequiresCondition: enable-smoke
+	Selectable:
+		DecorationBounds: 1280, 1280
+	Voiced:
+		VoiceSet: RAVehicleVoice
+	Parachutable: ##########
+		FallRate: 20
+		KilledOnImpassableTerrain: true
+		GroundCorpseSequence:
+		GroundCorpsePalette:
+		WaterImpactSound: splash9.aud
+		WaterCorpseSequence: small_splash
+		ParachutingCondition: parachute
+	WithParachute: ##########
+		ShadowImage: parach-shadow
+		ShadowSequence: idle
+		Image: parach
+		Sequence: idle
+		OpeningSequence: open
+		Offset: 0,0,427
+		RequiresCondition: parachute
+	AmmoPool:
+		Ammo: 3
+		AmmoCondition: ammo
+	ReloadAmmoPool:
+		Delay: 32
+		Count: 1
+	WithAmmoPipsDecoration:
+		Position: BottomLeft
+		RequiresSelection: True
+		PipCount: 3
+	GrantConditionOnDamageState@SmokeTrail:
+		Condition: enable-smoke
+	FireWarheadsOnDeath:
+		Weapon: LargeHeliExplode
+	RenderSprites:
+		Image: raheli
+		PlayerPalette: raplayer
+	Voiced:
+		VoiceSet: dtjapvehVoice
 
 #############################################
 #                   UNITS TOMORROW
@@ -2746,9 +3697,9 @@ DTE3:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 20
-		Prerequisites: barracks
-		Queue: Infantry, RAInfantry
-		Description: Anti-tank/Anti-aircraft infantry. \n  Strong vs Tanks, Aircraft\n  Weak vs Infantry
+		Prerequisites: ~barracks
+		Queue: Infantry.Tomorrow
+		Description: Anti-tank/Anti-aircraft infantry.    Strong vs Tanks, Aircraft   Weak vs Infantry
 	Mobile:
 		Speed: 42
 	Health:
@@ -2756,35 +3707,35 @@ DTE3:
 	AutoTarget:
 		ScanRadius: 6
 	Armament@PRIMARY: ##########
-		Weapon: FireRockets
+		Weapon: FireRocketstsg
 		LocalOffset: 256,43,341
 		FireDelay: 5
 	Armament@GARRISONED: ##########
 		Name: garrisoned
-		Weapon: FireRocketsG
+		Weapon: FireRocketstsg
 	TakeCover:
 		ProneOffset: 180,0,-200
 	Inherits@EXT: ^ExternalConditions ##########
 	AcceptsDeliveredExperience: ##########
 		ValidTypes: infantry ##########
 
-
 DTMUTANT:
 	Inherits: ^Soldier
+	Inherits@detect: ^GenericGroundDetector
 	Inherits@EXPERIENCE: ^GainsExperience
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Inherits@DECORATIONS: ^InfantryExperienceHospitalHazmatOverrides
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: Question Stalker
+		Name: Question Stalk
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
-		BuildPaletteOrder: 10
-		Prerequisites: dtbio
-		Queue: Infantry, RAInfantry
-		Description: Short ranged laser mutant.\n  Strong vs Everything\n  Weak vs long range artillery
+		BuildPaletteOrder: 70
+		Prerequisites: ~fact.tomorrow, dtbio
+		Queue: Infantry.Tomorrow
+		Description: Short ranged laser mutant.   Strong vs Everything   Weak vs long range artillery
 	Mobile:
 		Speed: 50
 	Health:
@@ -2795,10 +3746,10 @@ DTMUTANT:
 		ScanRadius: 10
 	Armament@PRIMARY: ##########
 		Name: primary
-		Weapon: DTMiniLaser
+		Weapon: DTMindBlast
 	Armament@GARRISONED: ##########
 		Name: garrisoned
-		Weapon: DTMiniLaser
+		Weapon: DTMindBlast
 		MuzzleSequence: garrison-muzzle
 	AttackTurreted:
 		Turrets: primary, pointdefense
@@ -2815,6 +3766,7 @@ DTMUTANT:
 		Delay: 3
 		StartIfBelow: 100
 		DamageCooldown: 3
+
 DTRMBO:
 	Inherits: ^Soldier
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -2830,9 +3782,9 @@ DTRMBO:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 50
-		Prerequisites: anyhq, ~techlevel.high, dtpropaganda
-		Queue: Infantry, RAInfantry
-		Description: Elite sniper infantry unit.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles
+		Prerequisites: hq.tomorrow, dtpropaganda.tomorrow
+		Queue: Infantry.Tomorrow
+		Description: Elite sniper infantry unit.   Strong vs Infantry, Buildings   Weak vs Vehicles
 		BuildDuration: 375
 		BuildDurationModifier: 100
 		BuildLimit: 1
@@ -2868,7 +3820,7 @@ DTRMBO:
 		IdleSequences: idle1,idle2,idle3
 	AnnounceOnKill:
 	Voiced:
-		VoiceSet: CommandoVoice
+		VoiceSet: maeoravoice
 	Inherits@EXT: ^ExternalConditions ##########
 	AcceptsDeliveredExperience: ##########
 		ValidTypes: infantry ##########
@@ -2890,10 +3842,10 @@ dtapc:
 	Buildable:
 		BuildPaletteOrder: 30
 		Prerequisites: barracks
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Tomorrow
 		BuildDuration: 500
 		BuildDurationModifier: 100
-		Description: Armed infantry transport.\nCan attack Aircraft.\n  Strong vs Vehicles\n  Weak vs Infantry
+		Description: Armed infantry transport. Can attack Aircraft.   Strong vs Vehicles   Weak vs Infantry
 	Mobile:
 		Speed: 132
 		PauseOnCondition: notmobile || disabled
@@ -2913,13 +3865,13 @@ dtapc:
 		MuzzleSequence: muzzle
 	Armament@SECONDARY:
 		Name: secondary
-		Weapon: BikeRocketsAA
+		Weapon: APCRocketT.AA
 		Recoil: 96
 		RecoilRecovery: 18
 		LocalOffset: 85,85,299, 85,-85,299
 		MuzzleSequence: muzzle
 	Armament@ROCKET:
-		Weapon: APCRocket.AA
+		Weapon: APCRocketT.AA
 		LocalOffset: 85,125,299
 	AttackFrontal:
 		FacingTolerance: 0
@@ -2928,7 +3880,9 @@ dtapc:
 		Types: Infantry, Hacker, Fremen
 		MaxWeight: 5
 		LoadingCondition: notmobile
-	Explodes:
+	EjectOnDeath:
+		PilotActor: E1.DT
+	FireWarheadsOnDeath:
 		Weapon: UnitExplodeBig
 		EmptyWeapon: UnitExplodeBig
 	Selectable:
@@ -2938,21 +3892,30 @@ dtapc:
 	WithCargoPipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: true
+
 ftnk.tomorrow:
 	Inherits: FTNK
 	RenderSprites:
 		Image: FTNK
+	EjectOnDeath:
+		PilotActor: E1.DT
 	Buildable:
-		Queue: Vehicle, RAVehicle
-		Prerequisites: dtpropaganda
+		Queue: Vehicle.Tomorrow
+		Prerequisites: dtpropaganda.tomorrow
 	-MapEditorData:
 
 mtnk.tomorrow:
 	Inherits: MTNK
+	Tooltip:
+		Name: Medium Tank
 	RenderSprites:
-		Image: MTNK
+		Image: dtmtnk
+	EjectOnDeath:
+		PilotActor: E1.DT
+	-Armament@Missile:
 	Buildable:
-		Queue: Vehicle, RAVehicle
+		Prerequisites: weap.tomorrow
+		Queue: Vehicle.Tomorrow
 	-MapEditorData:
 	Valued:
 		Cost: 1000
@@ -2966,10 +3929,10 @@ v2rl.tomorrow:
 	Inherits@EMP: ^FrontalEMP
 	Inherits@jammable: ^ArtilleryJammable
 	Buildable:
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Tomorrow
 		BuildPaletteOrder: 80
-		Prerequisites: anyhq, ~techlevel.medium
-		Description: Long-range rocket artillery.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles, Aircraft
+		Prerequisites: hq.tomorrow
+		Description: Long-range rocket artillery.   Strong vs Infantry, Buildings   Weak vs Vehicles, Aircraft
 		BuildDurationModifier: 50
 	Valued:
 		Cost: 3000
@@ -2985,12 +3948,14 @@ v2rl.tomorrow:
 		Speed: 75
 	RevealsShroud:
 		Range: 7c5
+	EjectOnDeath:
+		PilotActor: E1.DT
 	Armament@AG:
 		Weapon: DTMissileCrawler
 		ReloadingCondition: reloading
-	Armament@AA:
-		Weapon: DTMissileCrawlerAA
-		ReloadingCondition: reloading
+	# Armament@AA:
+	# 	Weapon: DTMissileCrawlerAA
+	# 	ReloadingCondition: reloading
 	AutoTarget:
 		ScanRadius: 20
 	AttackFrontal:
@@ -3005,8 +3970,8 @@ v2rl.tomorrow:
 		Sequence: empty-idle
 		Name: reloading
 	SelectionDecorations:
-	Explodes:
-		Weapon: V2Explode
+	FireWarheadsOnDeath:
+		Weapon: V2Explode2
 	Selectable:
 		DecorationBounds: 1280, 1280
 	Voiced:
@@ -3016,86 +3981,92 @@ v2rl.tomorrow:
 		ValidTypes: vehicle ##########
 	RenderSprites:
 		Image: dtv2rl
+		PlayerPalette: raplayer
 
-heli.tomorrow:
-	Inherits: HELI
-	RenderSprites:
-		Image: HELI
-	Buildable:
-		Queue: Aircraft, RAAircraft
-		Prerequisites: anyhq
-	-MapEditorData:
+
+# heli.tomorrow:
+# 	Inherits: HELI
+# 	RenderSprites:
+# 		Image: HELI
+# 	Buildable:
+# 		Queue: Aircraft.Tomorrow
+# 		Prerequisites: hq.tomorrow
+# 	-MapEditorData:
+
 tran.tomorrow:
 	Inherits: TRAN
 	RenderSprites:
 		Image: TRAN
+	EjectOnDeath:
+		PilotActor: E1.DT
 	Buildable:
-		Queue: Aircraft, RAAircraft
+		Queue: Aircraft.Tomorrow
 		Prerequisites: barracks
 	-MapEditorData:
 
-tran.tomorrow.e3:
-	Inherits: TRAN
-	Inherits@bot: ^BotMicromanageable
-	Buildable:
-		Prerequisites: barracks, ~botplayer
-		Queue: Aircraft, RAAircraft
-	Cargo:
-		InitialUnits: dte3, dte3, dte3, dte3, dte3, dte3, e1, e1, e1, e1
-		LoadedCondition: loaded
-	AttackAircraft:
-		FacingTolerance: 512
-	Armament:
-		Weapon: deploytargeting.5c0
-		RequiresCondition: botmicro && loaded
-	AutoDeployer:
-		DeployChance: 100
-		DeployTicks: 100
-	ProductionCostMultiplier:
-		Multiplier: 320
-	KillsSelf:
-		RemoveInstead: true
-		RequiresCondition: !loaded && botmicro
-		Delay: 200
-	EditorOnlyTooltip:
-		Name: Loaded Chinook (Tomorrow)
+# tran.tomorrow.e3:
+# 	Inherits: TRAN
+# 	Inherits@bot: ^BotMicromanageable
+# 	Buildable:
+# 		Prerequisites: ~barracks, ~botplayer
+# 		Queue: Aircraft, RAAircraft
+# 	Cargo:
+# 		InitialUnits: dte3, dte3, dte3, dte3, dte3, dte3, e1, e1, e1, e1
+# 		LoadedCondition: loaded
+# 	AttackAircraft:
+# 		FacingTolerance: 512
+# 	Armament:
+# 		Weapon: deploytargeting.5c0
+# 		RequiresCondition: botmicro && loaded
+# 	AutoDeployer:
+# 		DeployChance: 100
+# 		DeployTicks: 100
+# 	ProductionCostMultiplier:
+# 		Multiplier: 320
+# 	KillsSelf:
+# 		RemoveInstead: true
+# 		RequiresCondition: !loaded && botmicro
+# 		Delay: 200
+# 	EditorOnlyTooltip:
+# 		Name: Loaded Chinook (Tomorrow)
 
-tran.tomorrow.e4:
-	Inherits: tran.tomorrow.e3
-	Buildable:
-		Queue: Aircraft, RAAircraft
-		Prerequisites: barracks, ~botplayer, dtbio
-	Cargo:
-		InitialUnits: dtmutant, dtmutant, dtmutant, dtmutant, dte3, dte3, dte3, e1, e1, e1
-	EditorOnlyTooltip:
-		Name: Loaded Chinook (Tomorrow)
+# tran.tomorrow.e4:
+# 	Inherits: tran.tomorrow.e3
+# 	Buildable:
+# 		Queue: Aircraft, RAAircraft
+# 		Prerequisites: ~barracks, ~botplayer, dtbio
+# 	Cargo:
+# 		InitialUnits: dtmutant, dtmutant, dtmutant, dtmutant, dte3, dte3, dte3, e1, e1, e1
+# 	EditorOnlyTooltip:
+# 		Name: Loaded Chinook (Tomorrow)
 
-apc.tomorrow.e3:
-	Inherits: dtapc
-	Buildable:
-		Prerequisites: barracks, ~botplayer
-	Cargo:
-		InitialUnits: e1, e1, dte3, dte3, dte3
-	ProductionCostMultiplier:
-		Multiplier: 200
-	AutoDeployer:
-		DeployChance: 100
-		DeployTicks: 0
-	RenderSprites:
-		Image: dtapc
-apc.tomorrow.e4:
-	Inherits: dtapc
-	Buildable:
-		Prerequisites: barracks, ~botplayer, dtbio
-	Cargo:
-		InitialUnits: dtmutant, dtmutant, e1, dte3, dte3
-	ProductionCostMultiplier:
-		Multiplier: 250
-	AutoDeployer:
-		DeployChance: 100
-		DeployTicks: 0
-	RenderSprites:
-		Image: dtapc
+# apc.tomorrow.e3:
+# 	Inherits: dtapc
+# 	Buildable:
+# 		Prerequisites: ~barracks, ~botplayer
+# 	Cargo:
+# 		InitialUnits: e1, e1, dte3, dte3, dte3
+# 	ProductionCostMultiplier:
+# 		Multiplier: 200
+# 	AutoDeployer:
+# 		DeployChance: 100
+# 		DeployTicks: 0
+# 	RenderSprites:
+# 		Image: dtapc
+
+# apc.tomorrow.e4:
+# 	Inherits: dtapc
+# 	Buildable:
+# 		Prerequisites: ~barracks, ~botplayer, dtbio
+# 	Cargo:
+# 		InitialUnits: dtmutant, dtmutant, e1, dte3, dte3
+# 	ProductionCostMultiplier:
+# 		Multiplier: 250
+# 	AutoDeployer:
+# 		DeployChance: 100
+# 		DeployTicks: 0
+# 	RenderSprites:
+# 		Image: dtapc
 ###############################################
 #                   UNITS ANSWER
 ###############################################
@@ -3107,18 +4078,18 @@ DTE2:
 	Valued:
 		Cost: 250
 	Tooltip:
-		Name: Seal Navy
+		Name: Ex Navy Seal
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
-		BuildPaletteOrder: 10
-		Prerequisites: anyhq
-		Queue: Infantry, RAInfantry
-		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles
+		BuildPaletteOrder: 100
+		Prerequisites:
+		Queue: Infantry.Answer
+		Description: General-purpose infantry.   Strong vs Infantry   Weak vs Vehicles
 	Mobile:
 		Speed: 60
 	Health:
-		HP: 6000
+		HP: 20000
 	AutoTarget:
 		ScanRadius: 4
 	Armament@PRIMARY: ##########
@@ -3132,22 +4103,25 @@ DTE2:
 	Inherits@EXT: ^ExternalConditions ##########
 	AcceptsDeliveredExperience: ##########
 		ValidTypes: infantry ##########
-		
+
 rajeep.answer:
 	Inherits: RAJEEP
 	RenderSprites:
 		Image: RAJEEP
+	Tooltip:
+		Name: Recon Rover
 	Buildable:
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Answer
 		Prerequisites: vehicleproduction
 	-MapEditorData:
+
 heli.answer:
 	Inherits: HELI
 	RenderSprites:
 		Image: HELI
 	Buildable:
-		Queue: Aircraft, RAAircraft
-		Prerequisites: anyhq
+		Queue: Aircraft.Answer
+		Prerequisites: hq.answer
 	-MapEditorData:
 	Armament@PRIMARY:
 		Weapon: Hellfire
@@ -3167,9 +4141,9 @@ dtorca:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 20
-		Prerequisites: hpad, dtstrike, ~techlevel.medium
-		Queue: Aircraft, RAAircraft
-		Description: VTol Gunship with AG Missiles.\n  Strong vs Buildings, Infantry
+		Prerequisites: hpad.answer, dtstrike
+		Queue: Aircraft.Answer
+		Description: VTol Gunship with AG Missiles.   Strong vs Buildings, Infantry
 	Aircraft:
 		TurnSpeed: 28
 		Speed: 186
@@ -3192,7 +4166,7 @@ dtorca:
 		PersistentTargeting: false
 		AttackType: Hover
 	AmmoPool:
-		Ammo: 2
+		Ammo: 4
 		AmmoCondition: ammo
 	SpawnActorOnDeath:
 		Actor: dtorca.husk
@@ -3207,6 +4181,7 @@ dtorca:
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: True
+
 dtorca.husk:
 	Inherits: ^HelicopterHusk
 	Tooltip:
@@ -3219,75 +4194,128 @@ dtorca.husk:
 
 apc.answer:
 	Inherits: RAAPC
+	Tooltip:
+		Name: APC
 	RenderSprites:
 		Image: APC
 	Buildable:
-		Queue: Vehicle, RAVehicle
-		Prerequisites: barracks
+		Queue: Vehicle.Answer
+		Prerequisites: ~barracks
 	-MapEditorData:
 
 mrj.answer:
 	Inherits: MRJ
+	Tooltip:
+		Name: Communications Jammer
 	RenderSprites:
 		Image: MRJ
 	Buildable:
-		Queue: Vehicle, RAVehicle
-		Prerequisites: atek.answer, anyhq
-	-MapEditorData:
-arty.answer:
-	Inherits: ARTY
-	RenderSprites:
-		Image: dtarty
-	Buildable:
-		Queue: Vehicle, RAVehicle
-		Prerequisites: anyhq
+		Queue: Vehicle.Answer
+		Prerequisites: atek.answer, hq.answer
 	-MapEditorData:
 
+# arty.answer:
+# 	Inherits: ARTY
+# 	RenderSprites:
+# 		Image: dtarty
+# 	Buildable:
+# 		Queue: Vehicle.Answer
+# 		Prerequisites:  hq.answer
+# 	-MapEditorData:
 
-tran.answer.e2:
-	Inherits: tran.tomorrow.e3
-	Buildable:
-		Queue: Aircraft, RAAircraft
-		Prerequisites: barracks, ~botplayer, anyhq
-	Cargo:
-		InitialUnits: dte2, dte2, dte2, dte2, e3, e3, dte2, dte2, dte2, dte2
-	ProductionCostMultiplier:
-		Multiplier: 300
-
-tran.answer.e3:
-	Inherits: tran.tomorrow.e3
-	Buildable:
-		Queue: Aircraft, RAAircraft
-		Prerequisites: barracks, ~botplayer
-	Cargo:
-		InitialUnits: e3, e3, e3, e3, e3, e3, e3, e1, e1, e1
-	ProductionCostMultiplier:
-		Multiplier: 300
-apc.answer.e2:
-	Inherits: apc.answer
-	Buildable:
-		Prerequisites: barracks, ~botplayer, anyhq
-	Cargo:
-		InitialUnits: dte2, dte2, dte2, e3, e3
-	ProductionCostMultiplier:
-		Multiplier: 300
-	AutoDeployer:
-		DeployChance: 100
-		DeployTicks: 0
-
-dtltnk2.answer:
-	Inherits: dtltnk2
-	Buildable:
-		BuildPaletteOrder: 40
-		Queue: Vehicle, RAVehicle
-		BuildDurationModifier: 40
-		Description: Fast, light tank.\n  Strong vs Vehicles, Tanks\n  Weak vs Infantry
-		Prerequisites: atek.answer
+tran.answer:
+	Inherits: TRAN
 	RenderSprites:
-		Image: dtltnk2
+		Image: TRAN
+	Buildable:
+		Queue: Aircraft.Answer
+		Prerequisites: barracks
+	-MapEditorData:
+
+
+# tran.answer.e2:
+# 	Inherits: tran.tomorrow.e3
+# 	Buildable:
+# 		Queue: Aircraft, RAAircraft
+# 		Prerequisites: ~barracks, ~botplayer,  ~anyhq
+# 	Cargo:
+# 		InitialUnits: dte2, dte2, dte2, dte2, e3, e3, dte2, dte2, dte2, dte2
+# 	ProductionCostMultiplier:
+# 		Multiplier: 300
+
+# tran.answer.e3:
+# 	Inherits: tran.tomorrow.e3
+# 	Buildable:
+# 		Queue: Aircraft, RAAircraft
+# 		Prerequisites: ~barracks, ~botplayer
+# 	Cargo:
+# 		InitialUnits: e3, e3, e3, e3, e3, e3, e3, e1, e1, e1
+# 	ProductionCostMultiplier:
+# 		Multiplier: 300
+# apc.answer.e2:
+# 	Inherits: apc.answer
+# 	Buildable:
+# 		Prerequisites: ~barracks, ~botplayer,  ~anyhq
+# 	Cargo:
+# 		InitialUnits: dte2, dte2, dte2, e3, e3
+# 	ProductionCostMultiplier:
+# 		Multiplier: 300
+# 	AutoDeployer:
+# 		DeployChance: 100
+# 		DeployTicks: 0
+
+# dtltnk2.answer:
+# 	Inherits: dtltnk2
+# 	Buildable:
+# 		BuildPaletteOrder: 40
+# 		Queue: Vehicle.Answer
+# 		BuildDurationModifier: 40
+# 		Description: Fast, light tank.   Strong vs Vehicles, Tanks   Weak vs Infantry
+# 		Prerequisites: atek.answer
+# 	RenderSprites:
+# 		Image: dtltnk2
 ###############################################
 #                   UNITS USA
 ###############################################
+DTE2.dtusa:
+	Inherits: ^Soldier
+	Inherits@EXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@DECORATIONS: ^InfantryExperienceHospitalHazmatOverrides
+	Valued:
+		Cost: 250
+	Tooltip:
+		Name: Navy Seal
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Buildable:
+		BuildPaletteOrder: 100
+		Prerequisites:
+		Queue: Infantry.Dtusa
+		Description: General-purpose infantry.   Strong vs Infantry   Weak vs Vehicles
+	Mobile:
+		Speed: 60
+	Health:
+		HP: 6000
+	AutoTarget:
+		ScanRadius: 4
+	Armament@PRIMARY: ##########
+		Weapon: MachineGun
+	Armament@GARRISONED: ##########
+		Name: garrisoned
+		Weapon: HighV
+		MuzzleSequence: garrison-muzzle
+	WithInfantryBody:
+		IdleSequences: idle1,idle2,idle3,idle4
+	Inherits@EXT: ^ExternalConditions ##########
+	AcceptsDeliveredExperience: ##########
+		ValidTypes: infantry ##########
+	ProducibleWithLevel:
+		Prerequisites: dtshop
+		InitialLevels: 1
+	RenderSprites:
+		Image: DTE2
+
 dtltnk2:
 	Inherits: LTNK
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
@@ -3299,9 +4327,9 @@ dtltnk2:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 40
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Dtusa
 		BuildDurationModifier: 40
-		Description: Fast, light tank.\n  Strong vs Vehicles, Tanks\n  Weak vs Infantry
+		Description: Fast, light tank. Strong vs Vehicles, Tanks Weak vs Infantry
 		Prerequisites: dtshop
 	Armament@SECONDARY:
 		Name: secondary
@@ -3313,13 +4341,14 @@ dtltnk2:
 	ProducibleWithLevel:
 		Prerequisites: dtshop
 		InitialLevels: 1
+
 jeep.dtusa:
 	Inherits: JEEP
 	RenderSprites:
 		Image: JEEP.dtusa
 	Buildable:
-		Queue: Vehicle, RAVehicle
-		Prerequisites: vehicleproduction, dtshop
+		Queue: Vehicle.Dtusa
+		Prerequisites: weap.dtusa, dtshop
 	ProducibleWithLevel:
 		Prerequisites: dtshop
 		InitialLevels: 1
@@ -3334,46 +4363,49 @@ jeep.dtusa:
 
 apc.dtusa:
 	Inherits: RAAPC
+	Tooltip:
+		Name: APC
 	RenderSprites:
 		Image: APC
 	Buildable:
-		Queue: Vehicle, RAVehicle
-		Prerequisites: barracks, dtshop
+		Queue: Vehicle.Dtusa
+		Prerequisites: ~barracks, dtshop
 	-MapEditorData:
 	ProducibleWithLevel:
 		Prerequisites: dtshop
 		InitialLevels: 1
 
-apc.dtusa.e2:
-	Inherits: apc.dtusa
-	Buildable:
-		Prerequisites: barracks, ~botplayer, anyhq
-	Cargo:
-		InitialUnits: dte2, dte2, dte2, e3, e3
-	ProductionCostMultiplier:
-		Multiplier: 300
-	AutoDeployer:
-		DeployChance: 100
-		DeployTicks: 0
+# apc.dtusa.e2:
+# 	Inherits: apc.dtusa
+# 	Buildable:
+# 		Prerequisites: ~barracks, ~botplayer,  ~anyhq
+# 	Cargo:
+# 		InitialUnits: dte2, dte2, dte2, e3, e3
+# 	ProductionCostMultiplier:
+# 		Multiplier: 300
+# 	AutoDeployer:
+# 		DeployChance: 100
+# 		DeployTicks: 0
 
 arty.dtusa:
 	Inherits: ARTY
 	RenderSprites:
 		Image: dtarty
 	Buildable:
-		Queue: Vehicle, RAVehicle
-		Prerequisites: anyhq, dtshop
+		Queue: Vehicle.Dtusa
+		Prerequisites: dteye, dtshop
 	-MapEditorData:
 	ProducibleWithLevel:
 		Prerequisites: dtshop
 		InitialLevels: 1
+
 heli.dtusa:
 	Inherits: HELI
 	RenderSprites:
 		Image: HELI
 	Buildable:
-		Queue: Aircraft, RAAircraft
-		Prerequisites: dtpropaganda
+		Queue: Aircraft.Dtusa
+		Prerequisites: hpad.dtusa
 	-MapEditorData:
 	Armament@PRIMARY:
 		Weapon: Hellfire
@@ -3385,6 +4417,27 @@ heli.dtusa:
 ###############################################
 #                   UNITS Russia
 ###############################################
+E1.DTR:
+	Inherits: E1.DT
+	Buildable:
+		Queue: Infantry.Dtrussia
+	Voiced:
+		VoiceSet: RussianVoice
+
+E3.DTR:
+	Inherits: E3.DT
+	Buildable:
+		Queue: Infantry.Dtrussia
+	Voiced:
+		VoiceSet: RussianVoice
+
+E6.DTR:
+	Inherits: E6.DT
+	Buildable:
+		Queue: Infantry.Dtrussia
+	Voiced:
+		VoiceSet: RussianVoice
+
 hind.dtrussia:
 	Inherits: HELI
 	RenderSprites:
@@ -3392,13 +4445,18 @@ hind.dtrussia:
 	Tooltip:
 		Name: Hind
 	Buildable:
-		Queue: Aircraft, RAAircraft
-		Prerequisites: anyhq
+		Queue: Aircraft.Dtrussia
+		Prerequisites: hpad.dtrussia
 	-MapEditorData:
 	Armament@PRIMARY:
-		Weapon: Hellfire
+		Weapon: FireChainGun
 		LocalOffset: 0,-213,-85, 0,213,-85
 		PauseOnCondition: !ammo
+	RenderSprites:
+		PlayerPalette: raplayer
+	Voiced:
+		VoiceSet: RussianVehicleVoice
+
 dtstnk:
 	Inherits: ^Tank
 	Inherits@EXPERIENCE: ^GainsExperienceVehicle
@@ -3415,11 +4473,11 @@ dtstnk:
 		OverrideActor: dtstnk
 	Buildable:
 		BuildPaletteOrder: 30
-		Prerequisites: barracks
-		Queue: Vehicle, RAVehicle
+		Prerequisites: weap.dtrussia
+		Queue: Vehicle.Dtrussia
 		BuildDuration: 500
 		BuildDurationModifier: 100
-		Description: Armed infantry transport.\nCan attack Aircraft.\n  Strong vs Vehicles\n  Weak vs Infantry
+		Description: Armed infantry transport. Can attack Aircraft.   Strong vs Vehicles   Weak vs Infantry
 	Mobile:
 		Speed: 140
 		PauseOnCondition: notmobile || disabled
@@ -3434,13 +4492,13 @@ dtstnk:
 	Turreted:
 		TurnSpeed: 40
 	Armament@PRIMARY:
-		Weapon: 227mm.stnk
+		Weapon: 227mmT
 		Recoil: 96
 		RecoilRecovery: 18
 		LocalOffset: 85,85,299, 85,-85,299
 		MuzzleSequence: muzzle
 	Armament@ROCKET:
-		Weapon: APCRocket.AA
+		Weapon: APCRocketT.AA
 		LocalOffset: 85,125,299
 	AttackTurreted:
 	WithMuzzleOverlay:
@@ -3449,7 +4507,7 @@ dtstnk:
 		Types: Infantry, Hacker, Fremen
 		MaxWeight: 5
 		LoadingCondition: notmobile
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: UnitExplodeBig
 		EmptyWeapon: UnitExplodeBig
 	#SpawnActorOnDeath:
@@ -3466,26 +4524,58 @@ dtstnk:
 	WithCargoPipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: true
+	ProductionCostMultiplier:
+		Multiplier: 90
+		Prerequisites: atek.russia
+	Voiced:
+		VoiceSet: RussianVehicleVoice
+
+mtnk.russia:
+	Inherits: MTNK
+	Tooltip:
+		Name: Medium Tank
+	RenderSprites:
+		Image: dtmtnk
+	Buildable:
+		Prerequisites: weap.dtrussia
+		Queue: Vehicle.Dtrussia
+	-Armament@Missile:
+	-MapEditorData:
+	Valued:
+		Cost: 1000
+	Armament:
+		Weapon: DT120mm1
+	ProductionCostMultiplier:
+		Multiplier: 90
+		Prerequisites: atek.russia
+	Voiced:
+		VoiceSet: RussianVehicleVoice
 
 mssm.dtrussia:
 	Inherits: MSSM
 	Buildable:
 		BuildPaletteOrder: 100
-		Prerequisites: anyhq, atek.answer
-		Queue: Vehicle, RAVehicle
-		Description: Long-range rocket artillery.\n  Strong vs Buildings\n  Weak vs Aircraft
+		Prerequisites: weap.dtrussia, dome.dtrussia
+		Queue: Vehicle.Dtrussia
+		Description: Long-range rocket artillery.   Strong vs Buildings   Weak vs Aircraft
 		Icon: icon
+	ProductionCostMultiplier:
+		Multiplier: 90
+		Prerequisites: atek.russia
+	Voiced:
+		VoiceSet: RussianVehicleVoice
+
 dthtnk:
 	Inherits: HTNK
 	Tooltip:
-		Name: Russian Tank
+		Name: Mammoth Tank
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 60
-		Prerequisites: anyhq, atek.answer
-		Queue: Vehicle, RAVehicle
-		Description: Heavily armored Russian Tank.\nCan attack Aircraft.\n  Strong vs Everything
+		Prerequisites: weap.dtrussia, fix.russia
+		Queue: Vehicle.Dtrussia
+		Description: Heavily armored Russian Tank. Can attack Aircraft.   Strong vs Everything
 		BuildDuration: 1500
 		BuildDurationModifier: 100
 	Valued:
@@ -3507,55 +4597,83 @@ dthtnk:
 		Recoil: 175
 		RecoilRecovery: 30
 		MuzzleSequence: muzzle
+	ProductionCostMultiplier:
+		Multiplier: 90
+		Prerequisites: atek.russia
+	Voiced:
+		VoiceSet: RussianVehicleVoice
 
-dtstnk.dtrussia.e2:
-	Inherits: dtstnk
-	Buildable:
-		Prerequisites: barracks, ~botplayer
-	Cargo:
-		InitialUnits: e1, e1, e2, e2, e3
-	ProductionCostMultiplier:
-		Multiplier: 150
-	AutoDeployer:
-		DeployChance: 100
-		DeployTicks: 0
-	RenderSprites:
-		Image: dtstnk
-dtstnk.dtrussia.e3:
-	Inherits: dtstnk
-	Buildable:
-		Prerequisites: barracks, ~botplayer
-	Cargo:
-		InitialUnits: e3, e3, e3, e3, e3
-	ProductionCostMultiplier:
-		Multiplier: 200
-	AutoDeployer:
-		DeployChance: 100
-		DeployTicks: 0
-	RenderSprites:
-		Image: dtstnk
-tran.dtrussia.e2:
-	Inherits: tran.tomorrow.e3
-	Buildable:
-		Queue: Aircraft, RAAircraft
-		Prerequisites: barracks, ~botplayer
-	Cargo:
-		InitialUnits: e2, e2, e2, e2, e3, e3, e2, e2, e1, e1
-	ProductionCostMultiplier:
-		Multiplier: 300
+# dtstnk.dtrussia.e2:
+# 	Inherits: dtstnk
+# 	Buildable:
+# 		Prerequisites: ~barracks, ~botplayer
+# 	Cargo:
+# 		InitialUnits: e1, e1, e2, e2, e3
+# 	ProductionCostMultiplier:
+# 		Multiplier: 150
+# 	AutoDeployer:
+# 		DeployChance: 100
+# 		DeployTicks: 0
+# 	RenderSprites:
+# 		Image: dtstnk
 
-tran.dtrussia.e3:
-	Inherits: tran.tomorrow.e3
-	Buildable:
-		Queue: Aircraft, RAAircraft
-		Prerequisites: barracks, ~botplayer
-	Cargo:
-		InitialUnits: e3, e3, e3, e3, e3, e3, e3, e1, e1, e1
-	ProductionCostMultiplier:
-		Multiplier: 300
+# dtstnk.dtrussia.e3:
+# 	Inherits: dtstnk
+# 	Buildable:
+# 		Prerequisites: ~barracks, ~botplayer
+# 	Cargo:
+# 		InitialUnits: e3, e3, e3, e3, e3
+# 	ProductionCostMultiplier:
+# 		Multiplier: 200
+# 	AutoDeployer:
+# 		DeployChance: 100
+# 		DeployTicks: 0
+# 	RenderSprites:
+# 		Image: dtstnk
+
+# tran.dtrussia.e2:
+# 	Inherits: tran.tomorrow.e3
+# 	Buildable:
+# 		Queue: Aircraft, RAAircraft
+# 		Prerequisites: ~barracks, ~botplayer
+# 	Cargo:
+# 		InitialUnits: e2, e2, e2, e2, e3, e3, e2, e2, e1, e1
+# 	ProductionCostMultiplier:
+# 		Multiplier: 300
+
+# tran.dtrussia.e3:
+# 	Inherits: tran.tomorrow.e3
+# 	Buildable:
+# 		Queue: Aircraft, RAAircraft
+# 		Prerequisites: ~barracks, ~botplayer
+# 	Cargo:
+# 		InitialUnits: e3, e3, e3, e3, e3, e3, e3, e1, e1, e1
+# 	ProductionCostMultiplier:
+# 		Multiplier: 300
 ###############################################
 #                   UNITS JAPAN
 ###############################################
+E1.DTJ:
+	Inherits: E1.DT
+	Buildable:
+		Queue: Infantry.Dtjapan
+	Voiced:
+		VoiceSet: dtjapVoice
+
+E3.DTJ:
+	Inherits: E3.DT
+	Buildable:
+		Queue: Infantry.Dtjapan
+	Voiced:
+		VoiceSet: dtjapVoice
+
+E6.DTJ:
+	Inherits: E6.DT
+	Buildable:
+		Queue: Infantry.Dtjapan
+	Voiced:
+		VoiceSet: dtjapVoice
+
 dte5:
 	Inherits: ^Soldier
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -3569,9 +4687,9 @@ dte5:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 50
-		Prerequisites: anyhq, ~techlevel.high
-		Queue: Infantry, RAInfantry
-		Description: Advanced general-purpose infantry.\n  Strong vs all Ground units
+		Prerequisites:
+		Queue: Infantry.Dtjapan
+		Description: Advanced general-purpose infantry.   Strong vs all Ground units
 	Mobile:
 		Speed: 56
 		Locomotor: chem
@@ -3599,6 +4717,11 @@ dte5:
 	Inherits@EXT: ^ExternalConditions ##########
 	AcceptsDeliveredExperience: ##########
 		ValidTypes: infantry ##########
+	RenderSprites:
+		PlayerPalette: raplayer
+	Voiced:
+		VoiceSet: dtjapVoice
+
 dtapc2:
 	Inherits: ^Tank
 	Inherits@EXPERIENCE: ^GainsExperienceVehicle
@@ -3616,10 +4739,10 @@ dtapc2:
 	Buildable:
 		BuildPaletteOrder: 30
 		Prerequisites: barracks
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Dtjapan
 		BuildDuration: 175
 		BuildDurationModifier: 100
-		Description: Armed infantry transport.\nCan attack Aircraft.\n  Strong vs Vehicles\n  Weak vs Infantry
+		Description: Armed infantry transport. Can attack Aircraft.   Strong vs Vehicles   Weak vs Infantry
 	Mobile:
 		Speed: 132
 		PauseOnCondition: notmobile || disabled
@@ -3636,7 +4759,7 @@ dtapc2:
 		LocalOffset: 85,0,299
 		MuzzleSequence: muzzle
 	Armament@ROCKET:
-		Weapon: APCRocket.AA
+		Weapon: APCRocketT.AA
 		LocalOffset: 85,125,299
 	MineImmune:
 	AttackFrontal:
@@ -3646,7 +4769,7 @@ dtapc2:
 		Types: Infantry, Hacker, Fremen
 		MaxWeight: 5
 		LoadingCondition: notmobile
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: UnitExplodeBig
 		EmptyWeapon: UnitExplodeBig
 	Selectable:
@@ -3656,6 +4779,27 @@ dtapc2:
 	WithCargoPipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: true
+	Voiced:
+		VoiceSet: dtjapvehVoice
+
+mtnk.japan:
+	Inherits: MTNK
+	Tooltip:
+		Name: Medium Tank
+	RenderSprites:
+		Image: dtmtnk
+	Buildable:
+		Prerequisites: weap.dtjapan
+		Queue: Vehicle.Dtjapan
+	-Armament@Missile:
+	-MapEditorData:
+	Valued:
+		Cost: 1000
+	Armament:
+		Weapon: DT120mm1
+	Voiced:
+		VoiceSet: dtjapvehVoice
+
 dtltnk:
 	Inherits: 1TNK
 	Valued:
@@ -3666,9 +4810,10 @@ dtltnk:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 40
-		Queue: Vehicle, RAVehicle
+		Prerequisites: weap.dtjapan
+		Queue: Vehicle.Dtjapan
 		BuildDurationModifier: 40
-		Description: Fast, light tank.\n  Strong vs Vehicles, Tanks\n  Weak vs Infantry
+		Description: Fast, light tank.   Strong vs Vehicles, Tanks   Weak vs Infantry
 	Armament:
 		Weapon: 105mm
 		Recoil: 85
@@ -3677,68 +4822,78 @@ dtltnk:
 		MuzzleSequence: muzzle
 	FirepowerMultiplier@TankHunter:
 		Modifier: 125
+	RenderSprites:
+		-PlayerPalette: raplayer
+	Voiced:
+		VoiceSet: dtjapvehVoice
 
 msam.dtjapan:
-	Inherits: MSAM
+	Inherits: MLRS
+	Tooltip:
+		Name: MLRS
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
 	Buildable:
 		BuildPaletteOrder: 50
-		Prerequisites: anyhq
-		Queue: Vehicle, RAVehicle
-		Description: Long range rocket artillery.\n  Strong vs all Ground units.
+		Prerequisites: weap.dtjapan, DTHQ
+		Queue: Vehicle.Dtjapan
+		Description: Long range rocket artillery.   Strong vs all Ground units.
 	Armament@PRIMARY:
-		Weapon: 227mm
+		Weapon: 227mmT
 		LocalOffset: 213,128,0, 213,-128,0
 	Armament@SECONDARY:
 		Name: secondary
-		Weapon: 227mm
+		Weapon: 227mmT
 		LocalOffset: 213,-128,0, 213,128,0
 	Armament@ROCKET:
-		Weapon: BikeRocketsAA
+		Weapon: BikeRockets
 		LocalOffset: 213,-128,0, 213,128,0
 	RenderSprites:
 		Image: MSAM
+	Voiced:
+		VoiceSet: dtjapvehVoice
 
-dtapc2.dtjapan.e3:
-	Inherits: dtapc2
-	Buildable:
-		Prerequisites: barracks, ~botplayer, anyhq
-	Cargo:
-		InitialUnits: e1, dte5, e3, e3, e3
-	ProductionCostMultiplier:
-		Multiplier: 200
-	AutoDeployer:
-		DeployChance: 100
-		DeployTicks: 0
-dtapc2.dtjapan.e5:
-	Inherits: dtapc2
-	Buildable:
-		Prerequisites: barracks, ~botplayer, anyhq
-	Cargo:
-		InitialUnits: e1, e3, dte5, dte5, dte5
-	ProductionCostMultiplier:
-		Multiplier: 200
-	AutoDeployer:
-		DeployChance: 100
-		DeployTicks: 0
-tran.dtjapan.e3:
-	Inherits: tran.tomorrow.e3
-	Buildable:
-		Queue: Aircraft, RAAircraft
-		Prerequisites: barracks, ~botplayer
-	Cargo:
-		InitialUnits: e3, e3, e3, e3, e3, e3, e3, e1, e1, e1
-	ProductionCostMultiplier:
-		Multiplier: 300
-tran.dtjapan.e5:
-	Inherits: tran.tomorrow.e3
-	Buildable:
-		Queue: Aircraft, RAAircraft
-		Prerequisites: barracks, ~botplayer, anyhq
-	Cargo:
-		InitialUnits: e3, e3, dte5, dte5, dte5, dte5, dte5, dte5, dte5, dte5
-	ProductionCostMultiplier:
-		Multiplier: 350
+# dtapc2.dtjapan.e3:
+# 	Inherits: dtapc2
+# 	Buildable:
+# 		Prerequisites: ~barracks, ~botplayer,  ~anyhq
+# 	Cargo:
+# 		InitialUnits: e1, dte5, e3, e3, e3
+# 	ProductionCostMultiplier:
+# 		Multiplier: 200
+# 	AutoDeployer:
+# 		DeployChance: 100
+# 		DeployTicks: 0
+
+# dtapc2.dtjapan.e5:
+# 	Inherits: dtapc2
+# 	Buildable:
+# 		Prerequisites: ~barracks, ~botplayer,  ~anyhq
+# 	Cargo:
+# 		InitialUnits: e1, e3, dte5, dte5, dte5
+# 	ProductionCostMultiplier:
+# 		Multiplier: 200
+# 	AutoDeployer:
+# 		DeployChance: 100
+# 		DeployTicks: 0
+# tran.dtjapan.e3:
+# 	Inherits: tran.tomorrow.e3
+# 	Buildable:
+# 		Queue: Aircraft, RAAircraft
+# 		Prerequisites: ~barracks, ~botplayer
+# 	Cargo:
+# 		InitialUnits: e3, e3, e3, e3, e3, e3, e3, e1, e1, e1
+# 	ProductionCostMultiplier:
+# 		Multiplier: 300
+# tran.dtjapan.e5:
+# 	Inherits: tran.tomorrow.e3
+# 	Buildable:
+# 		Queue: Aircraft, RAAircraft
+# 		Prerequisites: ~barracks, ~botplayer,  ~anyhq
+# 	Cargo:
+# 		InitialUnits: e3, e3, dte5, dte5, dte5, dte5, dte5, dte5, dte5, dte5
+# 	ProductionCostMultiplier:
+# 		Multiplier: 350
+
 ###############################################
 #                   UNITS UNUSED FACTIONS
 ###############################################
@@ -3757,9 +4912,9 @@ dtfbik:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 50
-		Prerequisites: anyhq, ~techlevel.medium, ~disabled
+		Prerequisites:  ~anyhq, ~disabled
 		Queue: Vehicle, RAVehicle
-		Description: Heavily armored flame-throwing vehicle.\n  Strong vs Infantry, Buildings and Vehicles\n  Weak vs Tanks
+		Description: Heavily armored flame-throwing vehicle.   Strong vs Infantry, Buildings and Vehicles   Weak vs Tanks
 	Mobile:
 		TurnSpeed: 64
 		Speed: 170
@@ -3778,12 +4933,13 @@ dtfbik:
 	AttackFrontal:
 		FacingTolerance: 0
 	WithMuzzleOverlay:
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: FlametankExplode
 		EmptyWeapon: FlametankExplode
 	Inherits@EXT: ^ExternalConditions ##########
 	AcceptsDeliveredExperience: ##########
 		ValidTypes: vehicle ##########
+
 dtdtrk:
 	Inherits: ^Vehicle
 	Inherits@EXT: ^ExternalConditions
@@ -3791,8 +4947,8 @@ dtdtrk:
 	Buildable:
 		Queue: Vehicle, RAVehicle
 		BuildPaletteOrder: 160
-		Prerequisites: anyhq, ~techlevel.high
-		Description: Truck with actively armed nuclear\nexplosives. Has very weak armor.
+		Prerequisites:  ~anyhq
+		Description: Truck with actively armed nuclear explosives. Has very weak armor.
 	Valued:
 		Cost: 400
 	Tooltip:
@@ -3807,17 +4963,17 @@ dtdtrk:
 		Speed: 110
 	RevealsShroud:
 		Range: 4c0
-	Explodes@bomb:
+	FireWarheadsOnDeath@bomb:
 		Weapon: FlametankExplode
 		EmptyWeapon: FlametankExplode
 		DamageSource: Killer
 		RequiresCondition: !disabled
-	Explodes@bomb2:
+	FireWarheadsOnDeath@bomb2:
 		Weapon: Napalm
 		EmptyWeapon: Napalm
 		DamageSource: Killer
 		RequiresCondition: !disabled
-	Explodes@bomb3:
+	FireWarheadsOnDeath@bomb3:
 		Weapon: FlametankExplode
 		EmptyWeapon: FlametankExplode
 		DamageSource: Killer
@@ -3837,5 +4993,5 @@ dtdtrk:
 	-DamageMultiplier@IRONCURTAIN:
 	KillsSelf:
 		RequiresCondition: !disabled && (invulnerability || triggered)
-	ChronoshiftableWithSpriteEffect:
+	Chronoshiftable:
 		ExplodeInstead: true

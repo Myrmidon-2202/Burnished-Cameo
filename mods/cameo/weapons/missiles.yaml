@@ -487,14 +487,14 @@ APCRocket.AA:
     Burst: 1
     ReloadDelay: 90
     ValidTargets: Air
-    Projectile: MissileCA
+    Projectile: Missile
         Speed: 280
         RangeLimit: 8c0
   	Warhead@1Dam: SpreadDamage
 		Spread: 256
-		Damage: 4000      
+		Damage: 4000
         ValidTargets: Air
-        
+
 Nike:
 	Inherits: ^AntiAirMissile
 	ReloadDelay: 15

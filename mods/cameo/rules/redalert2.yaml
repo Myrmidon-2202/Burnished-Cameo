@@ -1401,7 +1401,6 @@ ra2atesla:
 	DetectCloaked:
 		Range: 4815
 	ActorStatValues:
-		Upgrades: upprismchain
 
 ra2gtgcan:
 	Inherits: ^RA2Defense
@@ -2208,7 +2207,7 @@ ra2tesla:
 	Inherits@detect: ^GenericGroundDetector
 	Inherits@sell: ^RA2SSpawnActorsOnSell
 	Inherits@TeslaTargeting: ^PrioritizeTesla
-	Inherits@arc: ^RA2ArcTesla
+	# Inherits@arc: ^RA2ArcTesla
 	Buildable:
 		Queue: Defence, RADefence
 		BuildPaletteOrder: 80
@@ -2320,7 +2319,6 @@ ra2tesla:
 		Range: 5000
 		RequiresCondition: !disabled
 	ActorStatValues:
-		Upgrades: upemptesla, uparctesla, upcoilchargers
 
 ra2teslaupgrade:
 	Tooltip:
@@ -2682,7 +2680,6 @@ ra2napsis:
 		Range: 30000
 		RequiresCondition: mindread && !disabled
 	ActorStatValues:
-		Upgrades: upyrnapsis
 
 yuriinvisibleplane:
 	Inherits: U2
@@ -3014,7 +3011,7 @@ yrygggun:
 	Inherits@RenderVoxel: ^RenderVoxel
 	Inherits@sell: ^RA2YSpawnActorsOnSell
 	Inherits@EMP: ^TurretEMP
-	Inherits@UpGat: ^YuriGatlingUpgrade
+	# Inherits@UpGat: ^YuriGatlingUpgrade
 	Inherits@detect: ^GenericAllDetector
 	Buildable:
 		Queue: Defence, RADefence
@@ -3324,7 +3321,6 @@ RA2E1:
 	Voiced:
 		VoiceSet: GIVoice
 	ActorStatValues:
-		Upgrades: upra2gi
 
 YRGGI:
 	Inherits: ^Soldier
@@ -3478,7 +3474,6 @@ YRGGI:
 	QuantizeFacingsFromSequence:
 		Sequence: stand
 	ActorStatValues:
-		Upgrades: upra2gi
 
 RA2CLEG:
 	Inherits: ^Soldier
@@ -4306,7 +4301,7 @@ ra2shk:
 	Inherits@EXPERIENCE: ^GainsExperienceRA2
 	Inherits@VOICES: ^WithFeedbackVoiceLines
 	Inherits@TeslaTargeting: ^PrioritizeTesla
-	Inherits@tesla: ^RA2ArcTesla
+	# Inherits@tesla: ^RA2ArcTesla
 	AutoTargetPriority@DEFAULT:
 		InvalidTargets: NoAutoTarget, TeslaCoil
 	AutoTargetPriority@ATTACKANYTHING:
@@ -4390,7 +4385,6 @@ ra2shk:
 		Condition: emptesla
 		Prerequisites: upemptesla
 	ActorStatValues:
-		Upgrades: upemptesla, uparctesla
 	GrantExternalConditionToTransport:
 		Condition: ifv-tesla
 
@@ -4453,7 +4447,7 @@ YRINIT:
 	Inherits@anim: ^RA2Infantry
 	Inherits@vo: ^AttackFrontalVoice
 	Inherits@VOICES: ^WithFeedbackVoiceLines
-	Inherits@genemod: ^YuriGeneMod
+	# Inherits@genemod: ^YuriGeneMod
 	Valued:
 		Cost: 200
 	Tooltip:
@@ -4503,7 +4497,6 @@ YRINIT:
 		Modifier: 120
 		RequiresCondition: upyrinit
 	ActorStatValues:
-		Upgrades: upyurigenemod, upyrinit
 	GrantExternalConditionToTransport:
 		Condition: ifv-fire
 
@@ -4516,7 +4509,7 @@ YRBRUTE:
 	Inherits@anim: ^RA2Infantry
 	Inherits@vo: ^AttackFrontalVoice
 	Inherits@VOICES: ^WithFeedbackVoiceLines
-	Inherits@genemod: ^YuriGeneMod
+	# Inherits@genemod: ^YuriGeneMod
 	Valued:
 		Cost: 400
 	Tooltip:
@@ -4554,7 +4547,6 @@ YRBRUTE:
 		Condition: upyrbrute
 		Prerequisites: upyrbrute
 	ActorStatValues:
-		Upgrades: upyurigenemod, upyrbrute
 
 YRSLAV:
 	Inherits: ^Soldier
@@ -4566,7 +4558,7 @@ YRSLAV:
 	Inherits@anim: ^RA2Infantry
 	Inherits@vo: ^AttackFrontalVoice
 	Inherits@VOICES: ^WithFeedbackVoiceLines
-	Inherits@genemod: ^YuriGeneMod
+	# Inherits@genemod: ^YuriGeneMod
 	Valued:
 		Cost: 200
 	Tooltip:
@@ -4661,7 +4653,6 @@ YRSLAV:
 		RequiresSelection: true
 		PipCount: 1
 	ActorStatValues:
-		Upgrades: upyurigenemod
 
 YRVIRUS:
 	Inherits: ^Soldier
@@ -4673,7 +4664,7 @@ YRVIRUS:
 	Inherits@vo: ^AttackFrontalVoice
 	Inherits@AntiInf: ^PrioritizeInfantry
 	Inherits@VOICES: ^WithFeedbackVoiceLines
-	Inherits@genemod: ^YuriGeneMod
+	# Inherits@genemod: ^YuriGeneMod
 	Valued:
 		Cost: 700
 	Tooltip:
@@ -4725,7 +4716,6 @@ YRVIRUS:
 		Condition: upyrvirus
 		Prerequisites: upyrvirus
 	ActorStatValues:
-		Upgrades: upyurigenemod, upyrvirus
 
 YRYURI:
 	Inherits: ^Soldier
@@ -4738,7 +4728,7 @@ YRYURI:
 	Inherits@vo: ^AttackFrontalVoice
 	Inherits@bot: ^BotAutoDeployOnLowHealth
 	Inherits@mccap: ^MindControlCap
-	Inherits@genemod: ^YuriGeneMod
+	# Inherits@genemod: ^YuriGeneMod
 	Inherits@pip: ^WithSpecialCargoPip
 	Valued:
 		Cost: 500
@@ -4816,7 +4806,6 @@ YRYURI:
 		Modifier: 116
 		RequiresCondition: upyryuri
 	ActorStatValues:
-		Upgrades: upyurigenemod, upyryuri, upmindcontrolcap
 
 YRYURIX:
 	Inherits: ^Soldier
@@ -4831,7 +4820,7 @@ YRYURIX:
 	Inherits@COMMANDOSKULL: ^CommandoSkull
 	Inherits@bot: ^BotAutoDeployOnLowHealth
 	Inherits@mccap: ^MindControlCap
-	Inherits@genemod: ^YuriGeneMod
+	# Inherits@genemod: ^YuriGeneMod
 	Selectable:
 		DecorationBounds: 512, 1440, 0, -512
 	Valued:
@@ -4976,7 +4965,6 @@ YRYURIX:
 	#-Cloneable:
 	KeepsDistance:
 	ActorStatValues:
-		Upgrades: upyurigenemod, upmindcontrolcap
 
 YRGTRP:
 	Inherits: ^Soldier
@@ -4987,8 +4975,8 @@ YRGTRP:
 	Inherits@anim: ^RA2Infantry
 	Inherits@vo: ^AttackFrontalVoice
 	Inherits@VOICES: ^WithFeedbackVoiceLines
-	Inherits@genemod: ^YuriGeneMod
-	Inherits@gat: ^YuriGatlingUpgrade
+	# Inherits@genemod: ^YuriGeneMod
+	# Inherits@gat: ^YuriGatlingUpgrade
 	Valued:
 		Cost: 400
 	Tooltip:
@@ -5059,7 +5047,6 @@ YRGTRP:
 	RenderSprites:
 		Image: yrarnd
 	ActorStatValues:
-		Upgrades: upyurigenemod, upyrgat
 
 yrbiot:
 	Inherits: ^Soldier
@@ -5069,7 +5056,7 @@ yrbiot:
 	Inherits@DECORATIONS: ^InfantryExperienceHospitalHazmatOverrides
 	Inherits@anim: ^RA2Infantry
 	Inherits@vo: ^AttackFrontalVoice
-	Inherits@genemod: ^YuriGeneMod
+	# Inherits@genemod: ^YuriGeneMod
 	Inherits@AntiInf: ^PrioritizeInfantry
 	Inherits@AntiVeh: ^PrioritizeVehicle
 	Inherits@AntiTank: ^PrioritizeTank
@@ -5107,7 +5094,6 @@ yrbiot:
 	-DamagedByTintedCells@rad:
 	-DamagedByTintedCells@genrad:
 	ActorStatValues:
-		Upgrades: upyurigenemod
 	GrantExternalConditionToTransport:
 		Condition: ifv-chem
 
@@ -5973,7 +5959,7 @@ RA2SMCV:
 	Inherits@anim: ^RA2Vehicle
 	Inherits@mcv: ^MCV
 	Inherits@SHADOWS: ^Shadows
-	Inherits@updrone: ^TerrorDroneSurprise
+	# Inherits@updrone: ^TerrorDroneSurprise
 	Tooltip:
 		Name: Soviet Mobile Construction Vehicle
 	Buildable:
@@ -6000,9 +5986,9 @@ RA2HTNK:
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Inherits@vo: ^AttackTurretedVoice
 	Inherits@EMP: ^TurretEMP
-	Inherits@updrone: ^TerrorDroneSurprise
-	Inherits@rad: ^RA2RadShells
-	Inherits@armor: ^RA2SovietArmor
+	# Inherits@updrone: ^TerrorDroneSurprise
+	# Inherits@rad: ^RA2RadShells
+	# Inherits@armor: ^RA2SovietArmor
 	Valued:
 		Cost: 800
 	Tooltip:
@@ -6075,7 +6061,6 @@ RA2HTNK:
 	RenderSprites:
 		PlayerPalette: playerra2
 	ActorStatValues:
-		Upgrades: updronesurprise, upradshells, upsovietarmor
 
 RA2HTK:
 	Inherits: ^Tank
@@ -6087,7 +6072,7 @@ RA2HTK:
 	Inherits@EMP: ^TurretEMP
 	Inherits@cargo: ^CargoVehicle
 	Inherits@bot: ^BotAutoDeployTransport
-	Inherits@updrone: ^TerrorDroneSurprise
+	# Inherits@updrone: ^TerrorDroneSurprise
 	Valued:
 		Cost: 700
 	Tooltip:
@@ -6163,9 +6148,9 @@ RA2APOC:
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
 	Inherits@vo: ^AttackTurretedVoice
 	Inherits@EMP: ^TurretEMP
-	Inherits@updrone: ^TerrorDroneSurprise
-	Inherits@rad: ^RA2RadShells
-	Inherits@armor: ^RA2SovietArmor
+	# Inherits@updrone: ^TerrorDroneSurprise
+	# Inherits@rad: ^RA2RadShells
+	# Inherits@armor: ^RA2SovietArmor
 	Valued:
 		Cost: 1750
 	Tooltip:
@@ -6252,10 +6237,9 @@ RA2APOC:
 		Payload: 900
 	RenderSprites:
 		PlayerPalette: playerra2
-	FirepowerMultiplier@RadShells:
-		Types: primary
+	# FirepowerMultiplier@RadShells:
+	# 	Types: primary
 	ActorStatValues:
-		Upgrades: updronesurprise, upradshells, upsovietarmor
 
 RA2V3:
 	Inherits: ^Vehicle
@@ -6265,7 +6249,7 @@ RA2V3:
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Inherits@vo: ^AttackFrontalVoice
 	Inherits@EMP: ^FrontalEMP
-	Inherits@updrone: ^TerrorDroneSurprise
+	# Inherits@updrone: ^TerrorDroneSurprise
 	Buildable:
 		Queue: Vehicle, RAVehicle
 		BuildPaletteOrder: 80
@@ -6334,11 +6318,10 @@ RA2V3:
 	RenderSprites:
 		PlayerPalette: playerra2
 	ActorStatValues:
-		Upgrades: updronesurprise, upradshells
 
 ra2v3rocket:
 	Inherits: ^ShootableMissile
-	Inherits@rad: ^RA2RadShells
+	# Inherits@rad: ^RA2RadShells
 	Health:
 		HP: 25000
 	BallisticMissileCA:
@@ -6387,8 +6370,8 @@ RA2TTNK:
 	Inherits@EMP: ^TurretEMP
 	Inherits@SHADOWS: ^Shadows
 	Inherits@TeslaTargeting: ^PrioritizeTesla
-	Inherits@updrone: ^TerrorDroneSurprise
-	Inherits@tesla: ^RA2ArcTesla
+	# Inherits@updrone: ^TerrorDroneSurprise
+	# Inherits@tesla: ^RA2ArcTesla
 	Valued:
 		Cost: 1800
 	Tooltip:
@@ -6445,7 +6428,6 @@ RA2TTNK:
 	RenderSprites:
 		PlayerPalette: playerra2
 	ActorStatValues:
-		Upgrades: uparctesla, updronesurprise
 
 RA2HARV:
 	Inherits: ^Tank
@@ -6458,7 +6440,7 @@ RA2HARV:
 	Inherits@vo: ^AttackTurretedVoice
 	Inherits@EMP: ^TurretEMP
 	Inherits@SHADOWS: ^Shadows
-	Inherits@updrone: ^TerrorDroneSurprise
+	# Inherits@updrone: ^TerrorDroneSurprise
 	Valued:
 		Cost: 1200
 	Tooltip:
@@ -6731,8 +6713,8 @@ YRYTNK:
 	Inherits@vo: ^AttackTurretedVoice
 	Inherits@EMP: ^TurretEMP
 	Inherits@SHADOWS: ^Shadows
-	Inherits@chaos: ^ChaosGasSurprise
-	Inherits@UpGat: ^YuriGatlingUpgrade
+	# Inherits@chaos: ^ChaosGasSurprise
+	# Inherits@UpGat: ^YuriGatlingUpgrade
 	Valued:
 		Cost: 1100
 	Tooltip:
@@ -6805,7 +6787,6 @@ YRYTNK:
 	RenderSprites:
 		PlayerPalette: playerra2
 	ActorStatValues:
-		Upgrades: upchaossurprise, upyrgat
 
 YRLTNK:
 	Inherits: ^Tank
@@ -6816,7 +6797,7 @@ YRLTNK:
 	Inherits@vo: ^AttackTurretedVoice
 	Inherits@EMP: ^TurretEMP
 	Inherits@SHADOWS: ^Shadows
-	Inherits@chaos: ^ChaosGasSurprise
+	# Inherits@chaos: ^ChaosGasSurprise
 	Tooltip:
 		Name: Lasher Tank
 	Valued:
@@ -6870,7 +6851,7 @@ YRTELE:
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
 	Inherits@vo: ^AttackTurretedVoice
 	Inherits@EMP: ^TurretEMP
-	Inherits@chaos: ^ChaosGasSurprise
+	# Inherits@chaos: ^ChaosGasSurprise
 	Valued:
 		Cost: 1300
 	Tooltip:
@@ -6937,7 +6918,6 @@ YRTELE:
 		Modifier: 125
 		RequiresCondition: upyrtele
 	ActorStatValues:
-		Upgrades: upyrtele, upchaossurprise
 
 YRCAOS:
 	Inherits: ^Vehicle
@@ -7004,7 +6984,7 @@ YRMIND:
 	Inherits@vo: ^AttackTurretedVoice
 	Inherits@EMP: ^TurretEMP
 	Inherits@MC: ^MCImmune
-	Inherits@chaos: ^ChaosGasSurprise
+	# Inherits@chaos: ^ChaosGasSurprise
 	Inherits@mccap: ^MindControlCap
 	Valued:
 		Cost: 1500
@@ -7081,7 +7061,6 @@ YRMIND:
 	RenderSprites:
 		PlayerPalette: playerra2
 	ActorStatValues:
-		Upgrades: upchaossurprise, upmindcontrolcap
 
 ############################################
 #   Red Alert 2 Naval
@@ -7417,7 +7396,7 @@ ra2asw:
 	Inherits: ^RANeutralPlane
 	Inherits@Template: ^BomberTemplate
 	Inherits@EXPERIENCE: ^GainsExperienceRA2
-	Inherits@upgrade: ^RA2AdvancedAeronautics
+	# Inherits@upgrade: ^RA2AdvancedAeronautics
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -7578,7 +7557,7 @@ ra2hornet:
 	Inherits: ^RANeutralPlane
 	Inherits@Template: ^BomberTemplate
 	Inherits@EXPERIENCE: ^GainsExperienceRA2
-	Inherits@upgrade: ^RA2AdvancedAeronautics
+	# Inherits@upgrade: ^RA2AdvancedAeronautics
 	Valued:
 		Cost: 1250
 	Tooltip:
@@ -7948,8 +7927,8 @@ RA2ZEP:
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Inherits@announce: ^AnnounceGlobal
 	Inherits@priority: ^PrioritizeBuilding
-	Inherits@rad: ^RA2RadShells
-	Inherits@armor: ^RA2SovietArmor
+	# Inherits@rad: ^RA2RadShells
+	# Inherits@armor: ^RA2SovietArmor
 	Valued:
 		Cost: 4000
 	Tooltip:
@@ -8004,7 +7983,6 @@ RA2ZEP:
 	RenderSprites:
 		PlayerPalette: playerra2
 	ActorStatValues:
-		Upgrades: upradshells, upsovietarmor
 
 yrschp:
 	Inherits: ^Helicopter
@@ -8014,7 +7992,7 @@ yrschp:
 	Inherits@Voxel: ^RenderVoxel
 	Inherits@detect: ^GenericAirDetector
 	Inherits@bot: ^BotAutoDeploySwitchMode50
-	Inherits@rad: ^RA2RadShells
+	# Inherits@rad: ^RA2RadShells
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -8125,15 +8103,15 @@ yrschp:
 	DeathSounds:
 	FirepowerMultiplier@FirerateCompensation:
 		Modifier: 33
-	FirepowerMultiplier@RadShells:
-		Types: deployed
+	# FirepowerMultiplier@RadShells:
+	# 	Types: deployed
 
 RA2FALC:
 	Inherits: ^RANeutralPlane
 	Inherits@Template: ^FighterTemplate
 	Inherits@EXPERIENCE: ^GainsExperienceRA2
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
-	Inherits@upgrade: ^RA2AdvancedAeronautics
+	# Inherits@upgrade: ^RA2AdvancedAeronautics
 	Valued:
 		Cost: 1600
 	Tooltip:
@@ -8207,13 +8185,12 @@ RA2FALC:
 	RenderSprites:
 		PlayerPalette: playerra2
 	ActorStatValues:
-		Upgrades: upra2aeronautics
 
 RA2BEAG:
 	Inherits: ^RANeutralPlane
 	Inherits@EXPERIENCE: ^GainsExperienceRA2
 	Inherits@PromotionUnitBuff: ^PromotionUnitBuff
-	Inherits@upgrade: ^RA2AdvancedAeronautics
+	# Inherits@upgrade: ^RA2AdvancedAeronautics
 	Inherits@reload: ^RearmableAircraft
 	Inherits@Template: ^BomberTemplate
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
@@ -8290,7 +8267,6 @@ RA2BEAG:
 	RenderSprites:
 		PlayerPalette: playerra2
 	ActorStatValues:
-		Upgrades: upra2aeronautics
 
 ra2shad:
 	Inherits: ^Helicopter
@@ -8551,7 +8527,6 @@ YRDISK:
 	RenderSprites:
 		PlayerPalette: playerra2
 	ActorStatValues:
-		Upgrades: upyrdisk
 
 ra2rock:
 	Inherits: ^JumpjetInfantry
@@ -8785,7 +8760,7 @@ yrbpln:
 	Inherits: ^AirstrikePlane
 	Inherits@Template: ^BomberTemplate
 	Inherits@EXPERIENCE: ^GainsExperienceRA2
-	Inherits@rad: ^RA2RadShells
+	# Inherits@rad: ^RA2RadShells
 	Inherits@turnanimation: ^RA2PlanewithTurnAnimation
 	Selectable:
 	Tooltip:
@@ -8864,7 +8839,7 @@ yrbpln1:
 	Inherits@PromotionUnitBuff: ^PromotionUnitBuff
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
 	Inherits@EXPERIENCE: ^GainsExperienceRA2
-	Inherits@rad: ^RA2RadShells
+	# Inherits@rad: ^RA2RadShells
 	Inherits@turnanimation: ^RA2PlanewithTurnAnimation
 	Selectable:
 	Tooltip:
@@ -9699,7 +9674,6 @@ ra2leopard:
 	RenderSprites:
 		PlayerPalette: playerra2
 	ActorStatValues:
-		Upgrades: updronesurprise, upradshells, upsovietarmor
 
 ra2_c_ifv:
 	Inherits: ^Tank
@@ -11761,544 +11735,544 @@ ra2shkhero:
 ## Soviets
 ### Tesla tree
 
-upemptesla:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: EMP Tesla Weapons
-	Buildable:
-		BuildPaletteOrder: 61
-		Queue: Promotions
-		Description: Tesla weapons will shut down vehicles.
-		Prerequisites: ~ra2nacnst, !upemptesla, rank1
-	RenderSprites:
-		Image: ra2shk
-	ProvidesPrerequisite:
+# upemptesla:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: EMP Tesla Weapons
+# 	Buildable:
+# 		BuildPaletteOrder: 61
+# 		Queue: Promotions
+# 		Description: Tesla weapons will shut down vehicles.
+# 		Prerequisites: ~ra2nacnst, !upemptesla, rank1
+# 	RenderSprites:
+# 		Image: ra2shk
+# 	ProvidesPrerequisite:
 
-upra2ttnk:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Unlock Tesla Tank
-	Buildable:
-		BuildPaletteOrder: 64
-		Queue: Promotions
-		Description: Allows construction of the Tesla Tank.
-		Prerequisites: ~ra2nacnst, upemptesla, !upra2ttnk, rank1
-	RenderSprites:
-		Image: ra2ttnk
-	ProvidesPrerequisite:
+# upra2ttnk:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Unlock Tesla Tank
+# 	Buildable:
+# 		BuildPaletteOrder: 64
+# 		Queue: Promotions
+# 		Description: Allows construction of the Tesla Tank.
+# 		Prerequisites: ~ra2nacnst, upemptesla, !upra2ttnk, rank1
+# 	RenderSprites:
+# 		Image: ra2ttnk
+# 	ProvidesPrerequisite:
 
-uparctesla:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Tesla Arcing
-	Buildable:
-		BuildPaletteOrder: 67
-		Queue: Promotions
-		Description: Allows tesla bolts to jump to nearby targets.
-		Prerequisites: ~ra2nacnst, upra2ttnk, rank1
-	RenderSprites:
-		Image: ra2ttnk
-	ProvidesPrerequisite:
+# uparctesla:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Tesla Arcing
+# 	Buildable:
+# 		BuildPaletteOrder: 67
+# 		Queue: Promotions
+# 		Description: Allows tesla bolts to jump to nearby targets.
+# 		Prerequisites: ~ra2nacnst, upra2ttnk, rank1
+# 	RenderSprites:
+# 		Image: ra2ttnk
+# 	ProvidesPrerequisite:
 
-^RA2ArcTesla:
-	GrantConditionOnPrerequisite@TeslaArc:
-		Condition: arctesla
-		Prerequisites: uparctesla
+# ^RA2ArcTesla:
+# 	GrantConditionOnPrerequisite@TeslaArc:
+# 		Condition: arctesla
+# 		Prerequisites: uparctesla
 
-upcoilchargers:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Tesla Coil Chargers
-	Buildable:
-		BuildPaletteOrder: 70
-		Queue: Promotions
-		Description: Provide all Tesla Coils with chargers.
-		Prerequisites: ~ra2nacnst, uparctesla, rank1
-	RenderSprites:
-		Image: ra2tesla
-	ProvidesPrerequisite:
+# upcoilchargers:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Tesla Coil Chargers
+# 	Buildable:
+# 		BuildPaletteOrder: 70
+# 		Queue: Promotions
+# 		Description: Provide all Tesla Coils with chargers.
+# 		Prerequisites: ~ra2nacnst, uparctesla, rank1
+# 	RenderSprites:
+# 		Image: ra2tesla
+# 	ProvidesPrerequisite:
 
-### Radiation tree
+# ### Radiation tree
 
-upra2terror:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Unlock Terrorist
-	Buildable:
-		BuildPaletteOrder: 62
-		Queue: Promotions
-		Description: Allows training of the Terrorist.
-		Prerequisites: ~ra2nacnst, !upra2terror, rank1
-	RenderSprites:
-		Image: ra2terror
-	ProvidesPrerequisite:
+# upra2terror:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Unlock Terrorist
+# 	Buildable:
+# 		BuildPaletteOrder: 62
+# 		Queue: Promotions
+# 		Description: Allows training of the Terrorist.
+# 		Prerequisites: ~ra2nacnst, !upra2terror, rank1
+# 	RenderSprites:
+# 		Image: ra2terror
+# 	ProvidesPrerequisite:
 
-upra2deso:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Unlock Desolator
-	Buildable:
-		BuildPaletteOrder: 65
-		Queue: Promotions
-		Description: Allows training of the Desolator. Infantry becomes immune to radiation.
-		Prerequisites: ~ra2nacnst, upra2terror, !upra2deso, rank1
-	RenderSprites:
-		Image: ra2deso
-	ProvidesPrerequisite:
+# upra2deso:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Unlock Desolator
+# 	Buildable:
+# 		BuildPaletteOrder: 65
+# 		Queue: Promotions
+# 		Description: Allows training of the Desolator. Infantry becomes immune to radiation.
+# 		Prerequisites: ~ra2nacnst, upra2terror, !upra2deso, rank1
+# 	RenderSprites:
+# 		Image: ra2deso
+# 	ProvidesPrerequisite:
 
-upra2dtruck:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Unlock Demo Truck
-	Buildable:
-		BuildPaletteOrder: 68
-		Queue: Promotions
-		Description: Allows construction of the Demo Truck.
-		Prerequisites: ~ra2nacnst, upra2deso, !upra2dtruck, rank1
-	RenderSprites:
-		Image: ra2dtruck
-	ProvidesPrerequisite:
+# upra2dtruck:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Unlock Demo Truck
+# 	Buildable:
+# 		BuildPaletteOrder: 68
+# 		Queue: Promotions
+# 		Description: Allows construction of the Demo Truck.
+# 		Prerequisites: ~ra2nacnst, upra2deso, !upra2dtruck, rank1
+# 	RenderSprites:
+# 		Image: ra2dtruck
+# 	ProvidesPrerequisite:
 
-upradshells:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Nuclear Munitions
-	Buildable:
-		BuildPaletteOrder: 71
-		Queue: Promotions
-		Description: Rhino, Apocalypse, V3, Kirov, and Siege Chopper weapons leave radiation.
-		Prerequisites: ~ra2nacnst, upra2dtruck, rank1
-	RenderSprites:
-	ProvidesPrerequisite:
+# upradshells:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Nuclear Munitions
+# 	Buildable:
+# 		BuildPaletteOrder: 71
+# 		Queue: Promotions
+# 		Description: Rhino, Apocalypse, V3, Kirov, and Siege Chopper weapons leave radiation.
+# 		Prerequisites: ~ra2nacnst, upra2dtruck, rank1
+# 	RenderSprites:
+# 	ProvidesPrerequisite:
 
-^RA2RadShells:
-	GrantConditionOnPrerequisite@RadShells:
-		Condition: upradshells
-		Prerequisites: upradshells
-	FirepowerMultiplier@RadShells:
-		Modifier: 120
-		RequiresCondition: upradshells
-	ActorStatValues:
-		Upgrades: upradshells
+# ^RA2RadShells:
+# 	GrantConditionOnPrerequisite@RadShells:
+# 		Condition: upradshells
+# 		Prerequisites: upradshells
+# 	FirepowerMultiplier@RadShells:
+# 		Modifier: 120
+# 		RequiresCondition: upradshells
+# 	ActorStatValues:
+# 		Upgrades: upradshells
 
-### Industry tree
+# ### Industry tree
 
-upra2mig:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Unlock MiG Bomber
-	Buildable:
-		BuildPaletteOrder: 63
-		Queue: Promotions
-		Description: Allows construction of the MiG Bomber.
-		Prerequisites: ~ra2nacnst, !upra2mig, rank1
-	RenderSprites:
-		Image: yrbpln
-	ProvidesPrerequisite:
+# upra2mig:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Unlock MiG Bomber
+# 	Buildable:
+# 		BuildPaletteOrder: 63
+# 		Queue: Promotions
+# 		Description: Allows construction of the MiG Bomber.
+# 		Prerequisites: ~ra2nacnst, !upra2mig, rank1
+# 	RenderSprites:
+# 		Image: yrbpln
+# 	ProvidesPrerequisite:
 
-updronesurprise:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Terror Drone Surprise
-	Buildable:
-		BuildPaletteOrder: 66
-		Queue: Promotions
-		Description: Vehicles have a chance of releasing a Terror Drone on destruction.
-		Prerequisites: ~ra2nacnst, upra2mig, !updronesurprise, rank1
-	RenderSprites:
-		Image: ra2dron
-	ProvidesPrerequisite:
+# updronesurprise:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Terror Drone Surprise
+# 	Buildable:
+# 		BuildPaletteOrder: 66
+# 		Queue: Promotions
+# 		Description: Vehicles have a chance of releasing a Terror Drone on destruction.
+# 		Prerequisites: ~ra2nacnst, upra2mig, !updronesurprise, rank1
+# 	RenderSprites:
+# 		Image: ra2dron
+# 	ProvidesPrerequisite:
 
-^TerrorDroneSurprise:
-	GrantConditionOnPrerequisite@DroneSurprise:
-		Condition: dronesurprise
-		Prerequisites: updronesurprise
-	SpawnActorOnDeath@DroneSurprise:
-		Probability: 75
-		Actor: ra2dron
-		RequiresCondition: dronesurprise && !chronobeamed
-	ActorStatValues:
-		Upgrades: updronesurprise
+# ^TerrorDroneSurprise:
+# 	GrantConditionOnPrerequisite@DroneSurprise:
+# 		Condition: dronesurprise
+# 		Prerequisites: updronesurprise
+# 	SpawnActorOnDeath@DroneSurprise:
+# 		Probability: 75
+# 		Actor: ra2dron
+# 		RequiresCondition: dronesurprise && !chronobeamed
+# 	ActorStatValues:
+# 		Upgrades: updronesurprise
 
-upyrngindp:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Unlock Industrial Plant
-	Buildable:
-		BuildPaletteOrder: 69
-		Queue: Promotions
-		Description: Enables construction of the Industrial Plant.
-		Prerequisites: ~ra2nacnst, updronesurprise, rank1
-	RenderSprites:
-		Image: yrngindp
-	ProvidesPrerequisite:
+# upyrngindp:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Unlock Industrial Plant
+# 	Buildable:
+# 		BuildPaletteOrder: 69
+# 		Queue: Promotions
+# 		Description: Enables construction of the Industrial Plant.
+# 		Prerequisites: ~ra2nacnst, updronesurprise, rank1
+# 	RenderSprites:
+# 		Image: yrngindp
+# 	ProvidesPrerequisite:
 
-upsovietarmor:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Upgrade Armor
-	Buildable:
-		BuildPaletteOrder: 72
-		Queue: Promotions
-		Description: Tanks and Kirovs take 20% less damage.
-		Prerequisites: ~ra2nacnst, upyrngindp, rank1
-	RenderSprites:
-		Image: ra2apoc
-	ProvidesPrerequisite:
+# upsovietarmor:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Upgrade Armor
+# 	Buildable:
+# 		BuildPaletteOrder: 72
+# 		Queue: Promotions
+# 		Description: Tanks and Kirovs take 20% less damage.
+# 		Prerequisites: ~ra2nacnst, upyrngindp, rank1
+# 	RenderSprites:
+# 		Image: ra2apoc
+# 	ProvidesPrerequisite:
 
-^RA2SovietArmor:
-	GrantConditionOnPrerequisite@SovietArmor:
-		Condition: upsovietarmor
-		Prerequisites: upsovietarmor
-	DamageMultiplier@SovietArmor:
-		Modifier: 80
-		RequiresCondition: upsovietarmor
+# ^RA2SovietArmor:
+# 	GrantConditionOnPrerequisite@SovietArmor:
+# 		Condition: upsovietarmor
+# 		Prerequisites: upsovietarmor
+# 	DamageMultiplier@SovietArmor:
+# 		Modifier: 80
+# 		RequiresCondition: upsovietarmor
 
-## Allies
+# ## Allies
 
-### Infantry tree
+# ### Infantry tree
 
-upra2airborne:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Unlock Airborne
-	Buildable:
-		BuildPaletteOrder: 73
-		Icon: icon2
-		Queue: Promotions
-		Description: Allows paratroopers to be accessed from the Airforce Command.
-		Prerequisites: ~ra2gacnst, !upra2airborne, rank1
-	RenderSprites:
-		Image: ra2gaairc
-	ProvidesPrerequisite:
+# upra2airborne:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Unlock Airborne
+# 	Buildable:
+# 		BuildPaletteOrder: 73
+# 		Icon: icon2
+# 		Queue: Promotions
+# 		Description: Allows paratroopers to be accessed from the Airforce Command.
+# 		Prerequisites: ~ra2gacnst, !upra2airborne, rank1
+# 	RenderSprites:
+# 		Image: ra2gaairc
+# 	ProvidesPrerequisite:
 
-upra2seal:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Unlock SEAL
-	Buildable:
-		BuildPaletteOrder: 76
-		Queue: Promotions
-		Description: Allows training of SEALs.
-		Prerequisites: ~ra2gacnst, upra2airborne, rank1
-	RenderSprites:
-		Image: ra2seal
-	ProvidesPrerequisite:
+# upra2seal:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Unlock SEAL
+# 	Buildable:
+# 		BuildPaletteOrder: 76
+# 		Queue: Promotions
+# 		Description: Allows training of SEALs.
+# 		Prerequisites: ~ra2gacnst, upra2airborne, rank1
+# 	RenderSprites:
+# 		Image: ra2seal
+# 	ProvidesPrerequisite:
 
-upra2snipe:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Unlock Sniper
-	Buildable:
-		BuildPaletteOrder: 79
-		Queue: Promotions
-		Description: Allows training of Snipers.
-		Prerequisites: ~ra2gacnst, upra2seal, rank1
-	RenderSprites:
-		Image: ra2snipe
-	ProvidesPrerequisite:
+# upra2snipe:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Unlock Sniper
+# 	Buildable:
+# 		BuildPaletteOrder: 79
+# 		Queue: Promotions
+# 		Description: Allows training of Snipers.
+# 		Prerequisites: ~ra2gacnst, upra2seal, rank1
+# 	RenderSprites:
+# 		Image: ra2snipe
+# 	ProvidesPrerequisite:
 
-upra2gi:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Upgrade GIs
-	Buildable:
-		BuildPaletteOrder: 82
-		Queue: Promotions
-		Description: Upgrade GI undeployed weapons and deployment armor.
-		Prerequisites: ~ra2gacnst, upra2snipe, rank1
-	RenderSprites:
-		Image: ra2e1
-	ProvidesPrerequisite:
+# upra2gi:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Upgrade GIs
+# 	Buildable:
+# 		BuildPaletteOrder: 82
+# 		Queue: Promotions
+# 		Description: Upgrade GI undeployed weapons and deployment armor.
+# 		Prerequisites: ~ra2gacnst, upra2snipe, rank1
+# 	RenderSprites:
+# 		Image: ra2e1
+# 	ProvidesPrerequisite:
 
-### Offensive tree
+# ### Offensive tree
 
-upra2tnkd:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Unlock Tank Destroyer
-	Buildable:
-		BuildPaletteOrder: 74
-		Queue: Promotions
-		Description: Allows construction of the Tank Destroyer.
-		Prerequisites: ~ra2gacnst, !upra2tnkd, rank1
-	RenderSprites:
-		Image: ra2tnkd
-	ProvidesPrerequisite:
+# upra2tnkd:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Unlock Tank Destroyer
+# 	Buildable:
+# 		BuildPaletteOrder: 74
+# 		Queue: Promotions
+# 		Description: Allows construction of the Tank Destroyer.
+# 		Prerequisites: ~ra2gacnst, !upra2tnkd, rank1
+# 	RenderSprites:
+# 		Image: ra2tnkd
+# 	ProvidesPrerequisite:
 
-upra2rock:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Unlock Rocketeers
-	Buildable:
-		BuildPaletteOrder: 77
-		-Queue: #Promotions
-		Description: Upgrades the Rocketeer to fire faster and take less damage.
-		Prerequisites: ~ra2gacnst, upra2tnkd, rank1
-	RenderSprites:
-		Image: ra2rock
-	ProvidesPrerequisite:
+# upra2rock:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Unlock Rocketeers
+# 	Buildable:
+# 		BuildPaletteOrder: 77
+# 		-Queue: #Promotions
+# 		Description: Upgrades the Rocketeer to fire faster and take less damage.
+# 		Prerequisites: ~ra2gacnst, upra2tnkd, rank1
+# 	RenderSprites:
+# 		Image: ra2rock
+# 	ProvidesPrerequisite:
 
-upyrrobo:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Unlock Robot Tanks
-	Buildable:
-		BuildPaletteOrder: 77
-		Queue: Promotions
-		Description: Enables the Robot Control Center and Robot Tanks.
-		Prerequisites: ~ra2gacnst, upra2tnkd, rank1
-	RenderSprites:
-		Image: yrrobo
-	ProvidesPrerequisite:
+# upyrrobo:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Unlock Robot Tanks
+# 	Buildable:
+# 		BuildPaletteOrder: 77
+# 		Queue: Promotions
+# 		Description: Enables the Robot Control Center and Robot Tanks.
+# 		Prerequisites: ~ra2gacnst, upra2tnkd, rank1
+# 	RenderSprites:
+# 		Image: yrrobo
+# 	ProvidesPrerequisite:
 
-upra2beag:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Unlock Black Eagle
-	Buildable:
-		BuildPaletteOrder: 80
-		Queue: Promotions
-		Description: Allows construction of the Black Eagle.
-		Prerequisites: ~ra2gacnst, upyrrobo, rank1
-	RenderSprites:
-		Image: ra2beag
-	ProvidesPrerequisite:
+# upra2beag:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Unlock Black Eagle
+# 	Buildable:
+# 		BuildPaletteOrder: 80
+# 		Queue: Promotions
+# 		Description: Allows construction of the Black Eagle.
+# 		Prerequisites: ~ra2gacnst, upyrrobo, rank1
+# 	RenderSprites:
+# 		Image: ra2beag
+# 	ProvidesPrerequisite:
 
-upra2aeronautics:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Advanced Aeronautics
-	Buildable:
-		BuildPaletteOrder: 83
-		Queue: Promotions
-		Description: Allied jets receive speed and armor bonuses when attacking.
-		Prerequisites: ~ra2gacnst, upra2beag, rank1
-	RenderSprites:
-		Image: ra2falc
-	ProvidesPrerequisite:
+# upra2aeronautics:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Advanced Aeronautics
+# 	Buildable:
+# 		BuildPaletteOrder: 83
+# 		Queue: Promotions
+# 		Description: Allied jets receive speed and armor bonuses when attacking.
+# 		Prerequisites: ~ra2gacnst, upra2beag, rank1
+# 	RenderSprites:
+# 		Image: ra2falc
+# 	ProvidesPrerequisite:
 
-^RA2AdvancedAeronautics:
-	GrantConditionOnPrerequisite@supersonic:
-		Condition: upaeronautics
-		Prerequisites: upra2aeronautics
-	GrantConditionOnActivity@supersonic:
-		Condition: supersonic
-	SpeedMultiplier@supersonic:
-		Modifier: 120
-		RequiresCondition: supersonic && ammo && upaeronautics
-	DamageMultiplier@supersonic:
-		RequiresCondition: supersonic && ammo && upaeronautics
-		Modifier: 85
+# ^RA2AdvancedAeronautics:
+# 	GrantConditionOnPrerequisite@supersonic:
+# 		Condition: upaeronautics
+# 		Prerequisites: upra2aeronautics
+# 	GrantConditionOnActivity@supersonic:
+# 		Condition: supersonic
+# 	SpeedMultiplier@supersonic:
+# 		Modifier: 120
+# 		RequiresCondition: supersonic && ammo && upaeronautics
+# 	DamageMultiplier@supersonic:
+# 		RequiresCondition: supersonic && ammo && upaeronautics
+# 		Modifier: 85
 
-### Defensive tree
+# ### Defensive tree
 
-upprismchain:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Prism Chaining
-	Buildable:
-		BuildPaletteOrder: 75
-		Queue: Promotions
-		Description: Allows Prism Towers to chain, boosting damage.
-		Prerequisites: ~ra2gacnst, !upprismchain, rank1
-	RenderSprites:
-		Image: ra2atesla
-	ProvidesPrerequisite:
+# upprismchain:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Prism Chaining
+# 	Buildable:
+# 		BuildPaletteOrder: 75
+# 		Queue: Promotions
+# 		Description: Allows Prism Towers to chain, boosting damage.
+# 		Prerequisites: ~ra2gacnst, !upprismchain, rank1
+# 	RenderSprites:
+# 		Image: ra2atesla
+# 	ProvidesPrerequisite:
 
-upforceshield:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Force Shield
-	Buildable:
-		Icon: forceshield
-		BuildPaletteOrder: 78
-		Queue: Promotions
-		Description: Enables the Force Shield power from the Battle Lab.
-		Prerequisites: ~ra2gacnst, upprismchain, rank1
-	RenderSprites:
-		Image: icon
-	ProvidesPrerequisite:
+# upforceshield:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Force Shield
+# 	Buildable:
+# 		Icon: forceshield
+# 		BuildPaletteOrder: 78
+# 		Queue: Promotions
+# 		Description: Enables the Force Shield power from the Battle Lab.
+# 		Prerequisites: ~ra2gacnst, upprismchain, rank1
+# 	RenderSprites:
+# 		Image: icon
+# 	ProvidesPrerequisite:
 
-upra2gaorep:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Unlock Ore Purifier
-	Buildable:
-		BuildPaletteOrder: 81
-		Queue: Promotions
-		Description: Allows construction of the Ore Purifier.
-		Prerequisites: ~ra2gacnst, upforceshield, rank1
-	RenderSprites:
-		Image: ra2gaorep
-	ProvidesPrerequisite:
+# upra2gaorep:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Unlock Ore Purifier
+# 	Buildable:
+# 		BuildPaletteOrder: 81
+# 		Queue: Promotions
+# 		Description: Allows construction of the Ore Purifier.
+# 		Prerequisites: ~ra2gacnst, upforceshield, rank1
+# 	RenderSprites:
+# 		Image: ra2gaorep
+# 	ProvidesPrerequisite:
 
-upra2gtgcan:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Unlock Grand Cannon
-	Buildable:
-		BuildPaletteOrder: 84
-		Queue: Promotions
-		Description: Allows construction of the Grand Cannon.
-		Prerequisites: ~ra2gacnst, upra2gaorep, rank1
-	RenderSprites:
-		Image: ra2gtgcan
-	ProvidesPrerequisite:
+# upra2gtgcan:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Unlock Grand Cannon
+# 	Buildable:
+# 		BuildPaletteOrder: 84
+# 		Queue: Promotions
+# 		Description: Allows construction of the Grand Cannon.
+# 		Prerequisites: ~ra2gacnst, upra2gaorep, rank1
+# 	RenderSprites:
+# 		Image: ra2gtgcan
+# 	ProvidesPrerequisite:
 
-## Yuri promotions
-### Biological tree
+# ## Yuri promotions
+# ### Biological tree
 
-upyrvirus:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Upgrade Virus
-	Buildable:
-		BuildPaletteOrder: 85
-		Queue: Promotions
-		Description: Allows Viruses to attack vehicles.
-		Prerequisites: ~yrnacnst, !upyrvirus, rank1
-	RenderSprites:
-		Image: yrvirus
-	ProvidesPrerequisite:
+# upyrvirus:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Upgrade Virus
+# 	Buildable:
+# 		BuildPaletteOrder: 85
+# 		Queue: Promotions
+# 		Description: Allows Viruses to attack vehicles.
+# 		Prerequisites: ~yrnacnst, !upyrvirus, rank1
+# 	RenderSprites:
+# 		Image: yrvirus
+# 	ProvidesPrerequisite:
 
-upyrbrute:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Upgrade Brute
-	Buildable:
-		BuildPaletteOrder: 88
-		-Queue:
-		Description: Makes Brutes more resilient.
-		Prerequisites: ~yrnacnst, upyrvirus, rank1
-	RenderSprites:
-		Image: yrbrute
-	ProvidesPrerequisite:
+# upyrbrute:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Upgrade Brute
+# 	Buildable:
+# 		BuildPaletteOrder: 88
+# 		-Queue:
+# 		Description: Makes Brutes more resilient.
+# 		Prerequisites: ~yrnacnst, upyrvirus, rank1
+# 	RenderSprites:
+# 		Image: yrbrute
+# 	ProvidesPrerequisite:
 
-upchaossurprise:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Chaos Gas Surprise
-	Buildable:
-		BuildPaletteOrder: 88
-		Queue: Promotions
-		Description: Vehicles have a chance of releasing chaos gas on destruction.
-		Prerequisites: ~yrnacnst, upyrvirus, rank1
-	RenderSprites:
-		Image: yrcaos
-	ProvidesPrerequisite:
+# upchaossurprise:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Chaos Gas Surprise
+# 	Buildable:
+# 		BuildPaletteOrder: 88
+# 		Queue: Promotions
+# 		Description: Vehicles have a chance of releasing chaos gas on destruction.
+# 		Prerequisites: ~yrnacnst, upyrvirus, rank1
+# 	RenderSprites:
+# 		Image: yrcaos
+# 	ProvidesPrerequisite:
 
-upyryaclon:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Unlock Cloning Vats
-	Buildable:
-		BuildPaletteOrder: 91
-		Queue: Promotions
-		Description: Allows construction of the Cloning Vats.
-		Prerequisites: ~yrnacnst, upchaossurprise, rank1
-	RenderSprites:
-		Image: ra2naclon
-	ProvidesPrerequisite:
+# upyryaclon:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Unlock Cloning Vats
+# 	Buildable:
+# 		BuildPaletteOrder: 91
+# 		Queue: Promotions
+# 		Description: Allows construction of the Cloning Vats.
+# 		Prerequisites: ~yrnacnst, upchaossurprise, rank1
+# 	RenderSprites:
+# 		Image: ra2naclon
+# 	ProvidesPrerequisite:
 
-^ChaosGasSurprise:
-	GrantConditionOnPrerequisite@ChaosSurprise:
-		Condition: chaossurprise
-		Prerequisites: upchaossurprise
-	FireWarheadsOnDeath@ChaosSurprise:
-		Weapon: RA2Dronegas
-		EmptyWeapon: RA2Dronegas
-		Chance: 50
-		RequiresCondition: chaossurprise && !chronobeamed
-	ActorStatValues:
-		Upgrades: upchaossurprise
+# ^ChaosGasSurprise:
+# 	GrantConditionOnPrerequisite@ChaosSurprise:
+# 		Condition: chaossurprise
+# 		Prerequisites: upchaossurprise
+# 	FireWarheadsOnDeath@ChaosSurprise:
+# 		Weapon: RA2Dronegas
+# 		EmptyWeapon: RA2Dronegas
+# 		Chance: 50
+# 		RequiresCondition: chaossurprise && !chronobeamed
+# 	ActorStatValues:
+# 		Upgrades: upchaossurprise
 
-upyurigenemod:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Genetic Modification
-	Buildable:
-		BuildPaletteOrder: 94
-		Queue: Promotions
-		Icon: ra2mutate
-		Description: Makes Yuri infantry more resilient and self-heal.
-		Prerequisites: ~yrnacnst, upyryaclon, rank1
-	RenderSprites:
-		Image: icon
-	ProvidesPrerequisite:
+# upyurigenemod:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Genetic Modification
+# 	Buildable:
+# 		BuildPaletteOrder: 94
+# 		Queue: Promotions
+# 		Icon: ra2mutate
+# 		Description: Makes Yuri infantry more resilient and self-heal.
+# 		Prerequisites: ~yrnacnst, upyryaclon, rank1
+# 	RenderSprites:
+# 		Image: icon
+# 	ProvidesPrerequisite:
 
-^YuriGeneMod:
-	GrantConditionOnPrerequisite@GeneMod:
-		Condition: genemod
-		Prerequisites: upyurigenemod
-	DamageMultiplier@GeneMod:
-		Modifier: 50
-		RequiresCondition: genemod
-	SpeedMultiplier@GeneMod:
-		Modifier: 120
-		RequiresCondition: genemod
-	ChangesHealth@GeneMod:
-		PercentageStep: 1
-		Delay: 25
-		StartIfBelow: 100
-		DamageCooldown: 1
-		RequiresCondition: genemod && damaged
-	ActorStatValues:
-		Upgrades: upyurigenemod
+# ^YuriGeneMod:
+# 	GrantConditionOnPrerequisite@GeneMod:
+# 		Condition: genemod
+# 		Prerequisites: upyurigenemod
+# 	DamageMultiplier@GeneMod:
+# 		Modifier: 50
+# 		RequiresCondition: genemod
+# 	SpeedMultiplier@GeneMod:
+# 		Modifier: 120
+# 		RequiresCondition: genemod
+# 	ChangesHealth@GeneMod:
+# 		PercentageStep: 1
+# 		Delay: 25
+# 		StartIfBelow: 100
+# 		DamageCooldown: 1
+# 		RequiresCondition: genemod && damaged
+# 	ActorStatValues:
+# 		Upgrades: upyurigenemod
 
-### Psychic tree
+# ### Psychic tree
 
-upyrinit:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Upgrade Initiate
-	Buildable:
-		BuildPaletteOrder: 86
-		Queue: Promotions
-		Description: Increases the range of Initiates.
-		Prerequisites: ~yrnacnst, !upyrinit, rank1
-	RenderSprites:
-		Image: yrinit
-	ProvidesPrerequisite:
+# upyrinit:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Upgrade Initiate
+# 	Buildable:
+# 		BuildPaletteOrder: 86
+# 		Queue: Promotions
+# 		Description: Increases the range of Initiates.
+# 		Prerequisites: ~yrnacnst, !upyrinit, rank1
+# 	RenderSprites:
+# 		Image: yrinit
+# 	ProvidesPrerequisite:
 
-upyryuri:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Upgrade Yuri Clone
-	Buildable:
-		BuildPaletteOrder: 89
-		Queue: Promotions
-		Description: Increases the range of Yuri Clones.
-		Prerequisites: ~yrnacnst, upyrinit, rank1
-	RenderSprites:
-		Image: ra2yuri
-	ProvidesPrerequisite:
+# upyryuri:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Upgrade Yuri Clone
+# 	Buildable:
+# 		BuildPaletteOrder: 89
+# 		Queue: Promotions
+# 		Description: Increases the range of Yuri Clones.
+# 		Prerequisites: ~yrnacnst, upyrinit, rank1
+# 	RenderSprites:
+# 		Image: ra2yuri
+# 	ProvidesPrerequisite:
 
-upyrnapsis:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Upgrade Psychic Sensor
-	Buildable:
-		BuildPaletteOrder: 91
-		Queue: Promotions
-		Description: Allows Psychic Sensors to detect nearby unit positions.
-		Prerequisites: ~yrnacnst, upyryuri, rank1
-	RenderSprites:
-		Image: ra2napsis
-	ProvidesPrerequisite:
+# upyrnapsis:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Upgrade Psychic Sensor
+# 	Buildable:
+# 		BuildPaletteOrder: 91
+# 		Queue: Promotions
+# 		Description: Allows Psychic Sensors to detect nearby unit positions.
+# 		Prerequisites: ~yrnacnst, upyryuri, rank1
+# 	RenderSprites:
+# 		Image: ra2napsis
+# 	ProvidesPrerequisite:
 
-upmindcontrolcap:
-	Inherits: ^promotion_upgrade.template
-	Tooltip:
-		Name: Mind Control Capacity
-	Buildable:
-		BuildPaletteOrder: 94
-		Queue: Promotions
-		Description: Increases mind controllers' capacities and control speed.
-		Prerequisites: ~yrnacnst, upyrnapsis, rank1
-	RenderSprites:
-		Image: yrmind
-	ProvidesPrerequisite:
+# upmindcontrolcap:
+# 	Inherits: ^promotion_upgrade.template
+# 	Tooltip:
+# 		Name: Mind Control Capacity
+# 	Buildable:
+# 		BuildPaletteOrder: 94
+# 		Queue: Promotions
+# 		Description: Increases mind controllers' capacities and control speed.
+# 		Prerequisites: ~yrnacnst, upyrnapsis, rank1
+# 	RenderSprites:
+# 		Image: yrmind
+# 	ProvidesPrerequisite:
 
 ^MindControlCap:
 	GrantConditionOnPrerequisite@MCCap:
@@ -12369,33 +12343,33 @@ upmindcontrolcap:
 # 		Image: yrygggun
 # 	ProvidesPrerequisite:
 
-^YuriGatlingUpgrade:
-	GrantConditionOnAttack@gatling:
-		Condition: gatling
-		ArmamentNames: primary, garrisoned
-		RequiredShotsPerInstance: 12, 24
-		MaximumInstances: 2
-		RevokeDelay: 25
-		RevokeAll: false
-		IsCyclic: false
-		RevokeOnNewTarget: false
-		RequiresCondition: !rank-elite
-	GrantConditionOnAttack@elitegatling:
-		Condition: gatling
-		ArmamentNames: primary, garrisoned
-		RequiredShotsPerInstance: 6, 12
-		MaximumInstances: 2
-		RevokeDelay: 25
-		RevokeAll: false
-		IsCyclic: false
-		RevokeOnNewTarget: false
-		RequiresCondition: rank-elite
-	GrantConditionOnPrerequisite@upgrade:
-		Condition: upyrgat
-		Prerequisites: upyrgat
-	FirepowerMultiplier@upgrade:
-		Modifier: 120
-		RequiresCondition: upyrgat
+# ^YuriGatlingUpgrade:
+# 	GrantConditionOnAttack@gatling:
+# 		Condition: gatling
+# 		ArmamentNames: primary, garrisoned
+# 		RequiredShotsPerInstance: 12, 24
+# 		MaximumInstances: 2
+# 		RevokeDelay: 25
+# 		RevokeAll: false
+# 		IsCyclic: false
+# 		RevokeOnNewTarget: false
+# 		RequiresCondition: !rank-elite
+# 	GrantConditionOnAttack@elitegatling:
+# 		Condition: gatling
+# 		ArmamentNames: primary, garrisoned
+# 		RequiredShotsPerInstance: 6, 12
+# 		MaximumInstances: 2
+# 		RevokeDelay: 25
+# 		RevokeAll: false
+# 		IsCyclic: false
+# 		RevokeOnNewTarget: false
+# 		RequiresCondition: rank-elite
+# 	GrantConditionOnPrerequisite@upgrade:
+# 		Condition: upyrgat
+# 		Prerequisites: upyrgat
+# 	FirepowerMultiplier@upgrade:
+# 		Modifier: 120
+# 		RequiresCondition: upyrgat
 
 ##############################################
 #   Red Alert 2 Civilian Vehicles

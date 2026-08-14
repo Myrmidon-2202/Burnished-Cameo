@@ -1,3 +1,30 @@
+DTMindBlast:
+	Report: mindblastattack.aud
+	ReloadDelay: 40
+	Range: 3c512
+	Projectile: InstantHit
+	Warhead@1Dam: SpreadDamage
+		Damage: 1250
+		Spread: 480
+		Falloff: 100, 0
+		Versus:
+			none: 110
+			wall: 10
+			building: 25
+			wood: 75
+			light: 40
+			heavy: 18
+			invulnerable: 0
+			cy: 20
+			harvester: 25
+		DamageTypes: Prone50Percent, TriggerProne, BulletDeath
+		DamageCalculationType: ClosestTargetablePosition
+	Warhead@2Eff: CreateEffect
+		Explosions: dtmine
+		ImpactActors: false
+	Warhead@3Concrete: DamagesConcrete
+		Damage: 1250
+
 DTMiniLaser:
 	Inherits: ^LaserWeapon
 	ReloadDelay: 33
@@ -68,20 +95,173 @@ DTChemspray:
 			None: 123
 			Wood: 66
 			Light: 99
-			Medium: 88
-			Heavy: 77
-			Concrete: 50
+			Medium: 48
+			Heavy: 37
+			Concrete: 20
 		DamageTypes: Prone50Percent, TriggerProne
 	Warhead@3Eff: CreateEffect
-		Explosions: chemball
+		-Explosions:
 		ImpactSounds: xplos.aud
+
+FireRocketstsg:
+	Inherits: ^FlakWeapon
+	Inherits: ^MediumMissile
+	Inherits: ^LightFlameWeapon
+	Inherits: ^LightMissile
+	ReloadDelay: 58
+	Range: 6692
+	Report: missile6.aud
+	Projectile: Missile
+		TrailImage: fb2
+		TrailInterval: 1
+		TrailDelay: 0
+	Warhead@FlakWeapon: SpreadDamage
+		ValidTargets: Ground, Water, Trees, Air
+		Damage: 4000
+		DamageTypes: Prone75Percent, TriggerProne, FireDeath, Incendiary
+	Warhead@FlakWeaponPercentage: HealthPercentageDamage
+		ValidTargets: Ground, Water, Trees, Air
+		Damage: 2
+		DamageTypes: Prone75Percent, TriggerProne, FireDeath, Incendiary
+	Warhead@MediumMissile: SpreadDamage
+		ValidTargets: Ground, Water, Trees, Air
+		Damage: 4000
+		DamageTypes: Prone75Percent, TriggerProne, FireDeath, Incendiary
+	Warhead@MediumMissilePercentage: HealthPercentageDamage
+		ValidTargets: Ground, Water, Trees, Air
+		Damage: 2
+		DamageTypes: Prone75Percent, TriggerProne, FireDeath, Incendiary
+	Warhead@LightFlameWeapon: SpreadDamage
+		ValidTargets: Ground, Water, Trees, Air
+		Damage: 4000
+		DamageTypes: Prone75Percent, TriggerProne, FireDeath, Incendiary
+	Warhead@LightFlameWeaponFriendlyFire: SpreadDamage
+		ValidTargets: Ground, Water, Trees, Air
+		Damage: 2000
+		DamageTypes: Prone75Percent, TriggerProne, FireDeath, Incendiary
+	Warhead@LightFlameWeaponPercentage: HealthPercentageDamage
+		ValidTargets: Ground, Water, Trees, Air
+		Damage: 2
+		DamageTypes: Prone75Percent, TriggerProne, FireDeath, Incendiary
+	Warhead@LightMissile: SpreadDamage
+		ValidTargets: Ground, Water, Trees, Air
+		Damage: 4000
+		DamageTypes: Prone75Percent, TriggerProne, FireDeath, Incendiary
+	Warhead@LightMissilePercentage: HealthPercentageDamage
+		ValidTargets: Ground, Water, Trees, Air
+		Damage: 2
+		DamageTypes: Prone75Percent, TriggerProne, FireDeath, Incendiary
+	Warhead@Smudge: LeaveSmudge
+		SmudgeType: Scorch
+		InvalidTargets: Vehicle, Structure, Wall
+	Warhead@Effect: CreateEffect
+		Explosions: small_napalm
+		ImpactSounds: firebl3.aud
+	Warhead@EffectAir: CreateEffect
+		Explosions: small_napalm
+		ImpactSounds: firebl3.aud
+
+APCRocketT.AA:
+	Inherits: MammothTusk
+	Burst: 1
+	ReloadDelay: 90
+	ValidTargets: Air
+	Projectile: Missile
+		Speed: 280
+		RangeLimit: 8c0
+	Warhead@1Dam: SpreadDamage
+		Spread: 256
+		Damage: 4000
+		ValidTargets: Air
+
+FireChainGun:
+	Inherits: ^Chaingun
+	Inherits: ^LightFlameWeapon
+	Inherits: ^IncendiaryBulletProjectile
+	ValidTargets: Ground, Water, Trees, Air
+	ReloadDelay: 8
+	Range: 5528
+	MinRange: 553
+	Report: gun13.aud
+	Warhead@LightFlameWeapon: SpreadDamage
+		ValidTargets: Ground, Water, Trees, Air
+		Damage: 1000
+	Warhead@LightFlameWeaponFriendlyFire: SpreadDamage
+		ValidTargets: Ground, Water, Trees, Air
+		Damage: 500
+	Warhead@LightFlameWeaponPercentage: HealthPercentageDamage
+		ValidTargets: Ground, Water, Trees, Air
+		Damage: 1
+	Warhead@Chaingun: SpreadDamage
+		ValidTargets: Ground, Water, Trees, Air
+		Damage: 1000
+	Warhead@ChaingunPercentage: HealthPercentageDamage
+		ValidTargets: Ground, Water, Trees, Air
+		Damage: 1
+
+V2Explode2:
+	Inherits: SCUD
+	-Report:
+
+227mmT:
+	Inherits: ^FlakWeapon
+	Inherits: ^Grenade
+	Inherits: ^HeavyMissile
+	Inherits: ^MediumMissile
+	ValidTargets: Ground, Water, Trees, Air
+	ReloadDelay: 111
+	Range: 9920
+	MinRange: 2480
+	Burst: 6
+	BurstDelays: 5
+	TargetActorCenter: true
+	Report: rocket1.aud
+	Projectile: Missile
+		Blockable: false
+		Image: DRAGON
+		Shadow: true
+		TrailImage: smokey
+		Inaccuracy: 800
+		LaunchAngle: 125
+		Speed: 500
+	Warhead@Grenade: SpreadDamage
+		ValidTargets: Ground, Water, Trees, Air
+		Damage: 2000
+	Warhead@GrenadeFriendlyFire: SpreadDamage
+		ValidTargets: Ground, Water, Trees, Air
+		Damage: 1000
+	Warhead@GrenadePercentage: HealthPercentageDamage
+		ValidTargets: Ground, Water, Trees, Air
+		Damage: 1
+	Warhead@FlakWeapon: SpreadDamage
+		ValidTargets: Ground, Water, Trees, Air
+		Damage: 2000
+	Warhead@FlakWeaponPercentage: HealthPercentageDamage
+		ValidTargets: Ground, Water, Trees, Air
+		Damage: 1
+	Warhead@HeavyMissile: SpreadDamage
+		ValidTargets: Ground, Water, Trees, Air
+		Damage: 2000
+	Warhead@HeavyMissilePercentage: HealthPercentageDamage
+		ValidTargets: Ground, Water, Trees, Air
+		Damage: 1
+	Warhead@MediumMissile: SpreadDamage
+		ValidTargets: Ground, Water, Trees, Air
+		Damage: 2000
+	Warhead@MediumMissilePercentage: HealthPercentageDamage
+		ValidTargets: Ground, Water, Trees, Air
+		Damage: 1
+	Warhead@Effect: CreateEffect
+		Explosions: med_frag
+		ImpactSounds: kaboom25.aud
+		ValidTargets: Ground, Ship, Trees
 
 DTMissileCrawler:
 	ReloadDelay: 125
 	Range: 12c5
 	MinRange: 3c0
 	Report: rocket2.aud
-	ValidTargets: Ground, Water
+	ValidTargets: Ground, Water, Air
 	Projectile: Bullet
 		Blockable: false
 		Shadow: true
@@ -126,31 +306,32 @@ DTMissileCrawler:
 		ValidTargets: Water
 		InvalidTargets: Ship, Structure, Bridge
 
-DTMissileCrawlerAA:
-	Inherits: DTMissileCrawler
-	ValidTargets: Air
-	Projectile: MissileCA
-	Warhead@1Dam: SpreadDamage
-		Spread: 500
-		Damage: 2500
-	Warhead@2Dam: SpreadDamage
-		Spread: 1c0
-		Damage: 7500
-		Falloff: 1000, 500, 333, 100, 50, 33, 10, 0
-		ValidTargets: Air
-		Versus:
-			None: 66
-			Wood: 55
-			Light: 99
-			Medium: 88
-			Heavy: 77
-			Concrete: 44
-		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath, Incendiary
+# DTMissileCrawlerAA:
+# 	Inherits: DTMissileCrawler
+# 	ValidTargets: Air
+# 	Projectile: MissileCA
+# 	Warhead@1Dam: SpreadDamage
+# 		Spread: 500
+# 		Damage: 2500
+# 	Warhead@2Dam: SpreadDamage
+# 		Spread: 1c0
+# 		Damage: 7500
+# 		Falloff: 1000, 500, 333, 100, 50, 33, 10, 0
+# 		ValidTargets: Air
+# 		Versus:
+# 			None: 66
+# 			Wood: 55
+# 			Light: 99
+# 			Medium: 88
+# 			Heavy: 77
+# 			Concrete: 44
+# 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath, Incendiary
 
 RedoubtGun:
 	Inherits: TurretGun
 	ReloadDelay: 20
 	Range: 7c512
+	Inaccuracy: 600
 	Warhead@1Dam: SpreadDamage
 		Spread: 100
 		Damage: 10000
@@ -161,6 +342,7 @@ RedoubtGun:
 			Medium: 80
 			Heavy: 70
 			Concrete: 50
+		Inaccuracy: 0
 	Warhead@2Dam: HealthPercentageDamage
 		Damage: 5
 		Spread: 0c5
@@ -223,36 +405,36 @@ DTTowerMissile:
 		Damage: 6666
 		ValidTargets: Ground
 
-SCUDAA:
-	Inherits: ^MissileWeapon
-	ReloadDelay: 300
-	Range: 10c0
-	MinRange: 1c0
-	Report: rocket2.aud
-	ValidTargets: Air
-	Projectile: MissileCA
-		HorizontalRateOfTurn: 20
-		Speed: 300
-		RangeLimit: 10c819
-		Inaccuracy: 0
-		Image: V2
-		Shadow: True
-		LaunchAngle: 62
-		TrailImage: smokey
-	Warhead@1Dam: SpreadDamage
-		Spread: 341
-		Damage: 4500
-		Falloff: 1000, 368, 135, 50, 18, 7, 0
-		ValidTargets: Air
-		Versus:
-			None: 90
-			Wood: 75
-			Light: 70
-			Medium: 55
-			Heavy: 40
-			Concrete: 100
-	-Warhead@2Smu:
-	Warhead@4EffAir: CreateEffect
-		Explosions: napalm
-		ImpactSounds: firebl3.aud
-		ImpactActors: false
+# SCUDAA:
+# 	Inherits: ^MissileWeapon
+# 	ReloadDelay: 300
+# 	Range: 10c0
+# 	MinRange: 1c0
+# 	Report: rocket2.aud
+# 	ValidTargets: Air
+# 	Projectile: Missile
+# 		HorizontalRateOfTurn: 20
+# 		Speed: 300
+# 		RangeLimit: 10c819
+# 		Inaccuracy: 0
+# 		Image: V2
+# 		Shadow: True
+# 		LaunchAngle: 62
+# 		TrailImage: smokey
+# 	Warhead@1Dam: SpreadDamage
+# 		Spread: 341
+# 		Damage: 4500
+# 		Falloff: 1000, 368, 135, 50, 18, 7, 0
+# 		ValidTargets: Air
+# 		Versus:
+# 			None: 90
+# 			Wood: 75
+# 			Light: 70
+# 			Medium: 55
+# 			Heavy: 40
+# 			Concrete: 100
+# 	-Warhead@2Smu:
+# 	Warhead@4EffAir: CreateEffect
+# 		Explosions: napalm
+# 		ImpactSounds: firebl3.aud
+# 		ImpactActors: false
