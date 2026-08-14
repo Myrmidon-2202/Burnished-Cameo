@@ -57,12 +57,20 @@ civ2_district_capital_bronze:
 		Start: 3
 	civ2_district_capital_classic:
 		Start: 11
+	civ2_district_capital_medieval:
+		Start: 27
 
 civ2_district_capital_classic:
 	Inherits: civ2_district_capital_bronze
 	icon: 
 		Filename: civilization_2_icons.png
 		Start: 7
+
+civ2_district_capital_medieval:
+	Inherits: civ2_district_capital_classic
+	icon: 
+		Filename: civilization_2_icons.png
+		Start: 11
 
 civ2_district_housing_bronze:
 	Inherits: ^CIV2BuildingFlag
@@ -86,12 +94,20 @@ civ2_district_housing_bronze:
 		Start: 0
 	civ2_district_housing_classic:
 		Start: 8
+	civ2_district_housing_medieval:
+		Start: 24
 
 civ2_district_housing_classic:
 	Inherits: civ2_district_housing_bronze
 	icon: 
 		Filename: civilization_2_icons.png
 		Start: 4
+
+civ2_district_housing_medieval:
+	Inherits: civ2_district_housing_classic
+	icon: 
+		Filename: civilization_2_icons.png
+		Start: 8
 
 civ2_district_resource_bronze:
 	Inherits: ^CIV2BuildingFlag
@@ -122,12 +138,20 @@ civ2_district_resource_bronze:
 		Start: 1
 	civ2_district_resource_classic:
 		Start: 9
+	civ2_district_resource_medieval:
+		Start: 24
 
 civ2_district_resource_classic:
 	Inherits: civ2_district_resource_bronze
 	icon: 
 		Filename: civilization_2_icons.png
 		Start: 5
+
+civ2_district_resource_medieval:
+	Inherits: civ2_district_resource_classic
+	icon: 
+		Filename: civilization_2_icons.png
+		Start: 9
 
 civ2_district_production_bronze:
 	Inherits: ^CIV2BuildingFlag

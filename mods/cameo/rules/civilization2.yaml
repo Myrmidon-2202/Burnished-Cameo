@@ -148,7 +148,7 @@ CIV2_DISTRICT_CAPITAL_BRONZE:
 	ProvidesPrerequisite@factiongdi:
 		Prerequisite: mmworms
 	WithSpriteBody:
-		RequiresCondition: !civ2_era_classic
+		RequiresCondition: !civ2_era_classic && !civ2_era_medieval
 
 	# Classic Capital Upgrade
 	GrantConditionOnPrerequisite@classic:
@@ -156,19 +156,42 @@ CIV2_DISTRICT_CAPITAL_BRONZE:
 		Prerequisites: civ2_era_classic
 	WithSpriteBody@classic:
 		Sequence: civ2_district_capital_classic
-		RequiresCondition: civ2_era_classic
+		RequiresCondition: civ2_era_classic && !civ2_era_medieval
 	PowerMultiplier@classic:
 		Modifier: 200
-		RequiresCondition: civ2_era_classic
+		RequiresCondition: civ2_era_classic && !civ2_era_medieval
 	DamageMultiplier@classic:
 		Modifier: 66
-		RequiresCondition: civ2_era_classic
+		RequiresCondition: civ2_era_classic && !civ2_era_medieval
+		# RequiresCondition: wc2_human_betterfarm && !wc2_human_bestfarm
+
+	# Medieval Capital Upgrade
+	GrantConditionOnPrerequisite@medieval:
+		Condition: civ2_era_medieval
+		Prerequisites: civ2_era_medieval
+	WithSpriteBody@medieval:
+		Sequence: civ2_district_capital_medieval
+		RequiresCondition: civ2_era_medieval
+	PowerMultiplier@medieval:
+		Modifier: 200
+		RequiresCondition: civ2_era_medieval
+	DamageMultiplier@medieval:
+		Modifier: 66
+		RequiresCondition: civ2_era_medieval
 		# RequiresCondition: wc2_human_betterfarm && !wc2_human_bestfarm
 
 CIV2_DISTRICT_CAPITAL_CLASSIC:
 	Inherits@CIV2_DISTRICT_CAPITAL_BRONZE: CIV2_DISTRICT_CAPITAL_BRONZE
 	Tooltip:
 		Name: Capital District [Classic]
+	# Buildable:
+	# 	Prerequisites: ~civ2_district_capital_bronze, ~civ2_era_classic
+	# 	Description: Main district, produces districts and research.
+
+CIV2_DISTRICT_CAPITAL_MEDIEVAL:
+	Inherits@CIV2_DISTRICT_CAPITAL_CLASSIC: CIV2_DISTRICT_CAPITAL_CLASSIC
+	Tooltip:
+		Name: Capital District [Medieval]
 	# Buildable:
 	# 	Prerequisites: ~civ2_district_capital_bronze, ~civ2_era_classic
 	# 	Description: Main district, produces districts and research.
@@ -216,29 +239,51 @@ CIV2_DISTRICT_HOUSING_BRONZE:
 	#WithIdleOverlay@BARREL2:
 	#	Sequence: barrel-overlay2
 	WithSpriteBody:
-		RequiresCondition: !civ2_era_classic
+		RequiresCondition: !civ2_era_classic && !civ2_era_medieval
 
-	# Classic House Upgrade
+	# Classic Housing Upgrade
 	GrantConditionOnPrerequisite@classic:
 		Condition: civ2_era_classic
 		Prerequisites: civ2_era_classic
 	WithSpriteBody@classic:
 		Sequence: civ2_district_housing_classic
-		RequiresCondition: civ2_era_classic
+		RequiresCondition: civ2_era_classic && !civ2_era_medieval
 	PowerMultiplier@classic:
 		Modifier: 200
-		RequiresCondition: civ2_era_classic
+		RequiresCondition: civ2_era_classic && !civ2_era_medieval
 	DamageMultiplier@classic:
 		Modifier: 66
-		RequiresCondition: civ2_era_classic
-		# RequiresCondition: wc2_human_betterfarm && !wc2_human_bestfarm
+		RequiresCondition: civ2_era_classic && !civ2_era_medieval
+
+	# Medieval Housing Upgrade
+	GrantConditionOnPrerequisite@medieval:
+		Condition: civ2_era_medieval
+		Prerequisites: civ2_era_medieval
+	WithSpriteBody@medieval:
+		Sequence: civ2_district_housing_medieval
+		RequiresCondition: civ2_era_medieval
+	PowerMultiplier@medieval:
+		Modifier: 200
+		RequiresCondition: civ2_era_medieval
+	DamageMultiplier@medieval:
+		Modifier: 66
+		RequiresCondition: civ2_era_medieval
 
 CIV2_DISTRICT_HOUSING_CLASSIC:
 	Inherits@CIV2_DISTRICT_HOUSING_BRONZE: CIV2_DISTRICT_HOUSING_BRONZE
 	Tooltip:
 		Name: Housing District [Classic]
 	Buildable:
-		Prerequisites: ~civ2_district_capital_bronze, ~civ2_era_classic
+		Prerequisites: ~civ2_era_classic, ~!civ2_era_medieval
+		Description: Provides housing (power)
+
+
+CIV2_DISTRICT_HOUSING_MEDIEVAL:
+	Inherits@CIV2_DISTRICT_HOUSING_CLASSIC: CIV2_DISTRICT_HOUSING_CLASSIC
+	Tooltip:
+		Name: Housing District [Medieval]
+	Buildable:
+		Prerequisites: ~civ2_era_medieval
 		Description: Provides housing (power)
 
 
@@ -303,7 +348,7 @@ CIV2_DISTRICT_RESOURCE_BRONZE:
 	# 	RequiresSelection: true
 	# 	PipCount: 10
 	WithSpriteBody:
-		RequiresCondition: !civ2_era_classic
+		RequiresCondition: !civ2_era_classic && !civ2_era_medieval
 
 	# Classic Resource Upgrade
 	GrantConditionOnPrerequisite@classic:
@@ -311,14 +356,27 @@ CIV2_DISTRICT_RESOURCE_BRONZE:
 		Prerequisites: civ2_era_classic
 	WithSpriteBody@classic:
 		Sequence: civ2_district_resource_classic
-		RequiresCondition: civ2_era_classic
+		RequiresCondition: civ2_era_classic && !civ2_era_medieval
 	PowerMultiplier@classic:
 		Modifier: 200
-		RequiresCondition: civ2_era_classic
+		RequiresCondition: civ2_era_classic && !civ2_era_medieval
 	DamageMultiplier@classic:
 		Modifier: 66
-		RequiresCondition: civ2_era_classic
-		# RequiresCondition: wc2_human_betterfarm && !wc2_human_bestfarm
+		RequiresCondition: civ2_era_classic && !civ2_era_medieval
+
+	# Medieval Resource Upgrade
+	GrantConditionOnPrerequisite@medieval:
+		Condition: civ2_era_medieval
+		Prerequisites: civ2_era_medieval
+	WithSpriteBody@medieval:
+		Sequence: civ2_district_resource_medieval
+		RequiresCondition: civ2_era_medieval
+	PowerMultiplier@medieval:
+		Modifier: 200
+		RequiresCondition: civ2_era_medieval
+	DamageMultiplier@medieval:
+		Modifier: 66
+		RequiresCondition: civ2_era_medieval
 
 CIV2_DISTRICT_RESOURCE_CLASSIC:
 	Inherits@CIV2_DISTRICT_RESOURCE_BRONZE: CIV2_DISTRICT_RESOURCE_BRONZE
@@ -328,6 +386,14 @@ CIV2_DISTRICT_RESOURCE_CLASSIC:
 		Prerequisites: ~civ2_district_capital_bronze, ~civ2_era_classic
 		Description: Processes raw Tiberium\ninto useable resources
 
+CIV2_DISTRICT_RESOURCE_MEDIEVAL:
+	Inherits@CIV2_DISTRICT_RESOURCE_CLASSIC: CIV2_DISTRICT_RESOURCE_CLASSIC
+	Tooltip:
+		Name: Resource District [Medieval]
+	Buildable:
+		Prerequisites: ~civ2_district_capital_classic, ~civ2_era_medieval
+		Description: Processes raw Tiberium\ninto useable resources
+
 CIV2_DISTRICT_PRODUCTION_BRONZE:
 	Inherits: ^Civ2Building
 	Inherits@flag: ^CIV2BuildingFlag
@@ -335,7 +401,7 @@ CIV2_DISTRICT_PRODUCTION_BRONZE:
 	Inherits@exits: ^WC2Exits_3x3
 	Inherits@CPQWP: ^CPQConditionWithPrimary
 	Inherits@prod: ^ProducesUnits
-	Inherits@barr: ^IsBarrack
+	Inherits@barr: ^IsBarrackOld
 	HitShape:
 		UseTargetableCellsOffsets: false
 		TargetableOffsets: 0,0,0, 630,-512,0, 355,512,0, -281,-512,0, -630,512,0
@@ -361,6 +427,26 @@ CIV2_DISTRICT_PRODUCTION_BRONZE:
 	WithBuildingBib:
 		Palette: ra_temperat
 	RallyPoint:
+	Production:
+		Produces: Infantry.CIV2
+	GrantExternalConditionToProduced:
+		Condition: produced
+	ProductionQueue:
+		Type: Infantry.CIV2
+		DisplayOrder: 2
+		Group: Infantry
+		LowPowerModifier: 150
+		ReadyAudio: UnitReady
+		ReadyTextNotification: notification-unit-ready
+		BlockedAudio: NoBuild
+		BlockedTextNotification: notification-unable-to-build-more
+		LimitedAudio: BuildingInProgress
+		LimitedTextNotification: notification-unable-to-comply-building-in-progress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar:
+		ProductionType: Infantry.CIV2
 	# Exit@1:
 	# 	SpawnOffset: 512,1024,0
 	# 	ExitCell: 1,2
@@ -466,7 +552,7 @@ civ2_warrior:
 	Buildable:
 		BuildPaletteOrder: 10
 		Prerequisites: ~civ2_district_production_bronze
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.civ2, RAInfantry.civ2
 		Description: Basic Melee Infantry. Slow but can take some damage.
 		BuildDuration: 150
 		BuildDurationModifier: 100
