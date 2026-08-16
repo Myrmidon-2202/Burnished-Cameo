@@ -28,3 +28,39 @@ dtjapvehVoice:
 		Action: acknoj00, acknoj02, affirm1j00, affirm1j02, mojout1j00, mojout1j02
 		Attack: acknoj00, acknoj02, affirm1j00, affirm1j02, mojout1j00, mojout1j02
 		Unload: mojout1j00, mojout1j02
+
+dthisVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: hhawait101, hhawait103, hhreport101, hhreport103, hhyessir101, hhyessir103, hhready01, hhready03
+		Action: hhackno01, hhackno03, hhaffirm101, hhaffirm103, hhnoprob01, hhnoprob03, hhritaway01, hhritaway03, hhroger01, hhroger03, hhugotit01, hhugotit03
+		Die: nuyell1,nuyell4,nuyell5,nuyell6
+		Burned: yell1
+		Zapped: nuyell3
+		Poisoned: nuyell12
+
+dthisvehVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: hhvehhic100, hhvehhic102 , hhyessir100, hhyessir102 , hhreport100, hhreport102, hhawait100, hhawait102, hhunit100, hhunit102
+		Action: hhackno00, hhackno02, hhaffirm100, hhaffirm102, hhmoout100, hhmoout102
+		Attack: hhackno00, hhackno02, hhaffirm100, hhaffirm102, hhmoout100, hhmoout102
+		Unload: hhmoout100, hhmoout102
+
+dtethVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: eawait101, eawait103, ereport101, ereport103, eyessir101, eyessir103, eready01, eready03
+		Action: eackno01, eackno03, eaffirm101, eaffirm103, enoprob01, enoprob03, eritaway01, eritaway03, eroger01, eroger03, eugotit01, eugotit03
+		Die: nuyell1,nuyell4,nuyell5,nuyell6
+		Burned: yell1
+		Zapped: nuyell3
+		Poisoned: nuyell12
+
+dtethvehVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: eveeic100, eveeic102 , eyessir100, eyessir102 , ereport100, ereport102, eawait100, eawait102, eunit100, eunit102
+		Action: eackno00, eackno02, eaffirm100, eaffirm102, emoout100, emoout102
+		Attack: eackno00, eackno02, eaffirm100, eaffirm102, emoout100, emoout102
+		Unload: eemoout100, emoout102

@@ -32,6 +32,7 @@ dthand:
 		UseTilesetExtension: true
 		Length: *
 		Offset: 0,0
+		scale: 1.0
 	icon: 
 		Filename: dthandicnh.tem
 		AddExtension: False
@@ -71,6 +72,7 @@ dtproc:
 	bib: bib2
 		UseTilesetExtension: true
 		Length: *
+		Scale: 1.0
 	icon: 
 		Filename: dtprocicnh.tem
 		AddExtension: False
@@ -156,7 +158,9 @@ dtpower:
 		UseTilesetExtension: true
 		TilesetOverrides:
 			INTERIOR: TEMPERAT
-	icon: powricon
+		Scale: 1.0
+	icon: 
+		Filename: powricon.png
 
 dtpower2:
 	Inherits: ^WithBuildingBib2
@@ -182,8 +186,83 @@ dtpower2:
 		UseTilesetExtension: true
 		TilesetOverrides:
 			INTERIOR: TEMPERAT
+		Scale: 1.0
 	icon: 
 		Filename: apwricon.png
+
+dtbpower:
+	Inherits: ^WithBuildingBib3
+	Defaults:
+		Filename: powerstation.shp
+		Scale: 2.0
+	idle:
+		Start: 0
+	damaged-idle:
+		Start: 1
+	make: 
+		Filename: powerstationmake.shp
+		Length: 20
+	dead: 
+		Start: 2
+		Filename: dtpower.shp
+		Tick: 800
+	bib: bib3
+		Length: *
+		UseTilesetExtension: true
+		TilesetOverrides:
+			INTERIOR: TEMPERAT
+		Scale: 1.0
+	icon: 
+		Filename: powerstationicon.shp
+
+dtapower:
+	Inherits: ^WithBuildingBib3
+	Defaults:
+		Filename: dtoutpost.shp
+		Scale: 2.0
+	idle:
+		Start: 0
+	damaged-idle:
+		Start: 1
+	make: 
+		Filename: dtoutpostmake.shp
+		Length: 26
+	dead: 
+		Start: 2
+		Filename: dtoutpost.shp
+		Tick: 800
+	# bib: bib3
+	# 	Length: *
+	# 	UseTilesetExtension: true
+	# 	TilesetOverrides:
+	# 		INTERIOR: TEMPERAT
+	icon: 
+		Filename: dtoutposticon.shp
+
+dtepower:
+	Inherits: ^WithBuildingBib3
+	Defaults:
+		Filename: powershed.shp
+		Scale: 2.0
+	idle:
+		Start: 0
+	damaged-idle:
+		Start: 1
+	make: 
+		Filename: powershedmake.shp
+		Length: 16
+	dead: 
+		Start: 2
+		Filename: powershed.shp
+		Tick: 800
+	bib: bib3
+		Length: *
+		UseTilesetExtension: true
+		TilesetOverrides:
+			INTERIOR: TEMPERAT
+		Scale: 1.0
+	icon: 
+		Filename: powershedicon.shp
 
 dtpyle:
 	Inherits: ^WithBuildingBib3
@@ -209,12 +288,40 @@ dtpyle:
 		UseTilesetExtension: true
 		Length: *
 		Scale: 1.0
-	icon: 
-		Filename: pyleicnh.tem
+	icon:
+		Filename: tenticon.png
+		# Filename: pyleicnh.tem
+		AddExtension: False
+
+dtepyle:
+	Inherits: ^WithBuildingBib3
+	Defaults:
+		Filename: ghetbarr.shp
+		Scale: 2.0
+	idle:
+		Start: 0
+		Length: 1
+	damaged-idle:
+		Start: 1
+		Length: 1
+	dead:
+		Start: 2
+	make: 
+		Filename: ghetbarrmake.shp
+		Length: 28
+		Tick: 80
+	bib:
+		Filename: bib3.tem
+		UseTilesetExtension: true
+		Length: *
+		Scale: 1.0
+	icon:
+		Filename: ghetbarricon.shp
+		# Filename: pyleicnh.tem
 		AddExtension: False
 
 dtnuke:
-	Inherits: ^WithBuildingBib2
+	Inherits: ^WithBuildingBib3
 	Defaults:
 		Filename: dtnuke.shp
 		Scale: 2.0
@@ -240,6 +347,60 @@ dtnuke:
 		Scale: 1.0
 	icon: 
 		Filename: nukeicnh.tem
+		AddExtension: False
+
+dtbatek:
+	Inherits: ^WithBuildingBib3
+	Defaults:
+		Filename: dtbattlelab.shp
+		Scale: 2.0
+	idle:
+		Start: 0
+		Length: 32
+	damaged-idle:
+		Start: 32
+		Length: 32
+	dead:
+		Start: 64
+		Length: 1
+	make: 
+		Filename: dtbattlelabmake.shp
+		Length: *
+		Scale: 2.0
+	bib: 
+		Filename: bib3
+		UseTilesetExtension: true
+		Length: *
+		Scale: 1.0
+	icon: 
+		Filename: dtbattlelabicon.shp
+		AddExtension: False
+
+dtbmrkt:
+	Inherits: ^WithBuildingBib3
+	Defaults:
+		Filename: dtmrkt.shp
+		Scale: 2.0
+	idle:
+		Start: 0
+		Length: 1
+	damaged-idle:
+		Start: 1
+		Length: 1
+	dead:
+		Start: 2
+		Length: 1
+	make: 
+		Filename: dtmrktmake.shp
+		Length: 16
+		Scale: 2.0
+	bib: 
+		Filename: bib3
+		UseTilesetExtension: true
+		Length: *
+		Scale: 1.0
+	icon: 
+		Filename: dtmrkticon.shp
 		AddExtension: False
 
 dtbio:
@@ -377,6 +538,7 @@ dtsilo:
 		Length: *
 		Tick: 80
 		Offset: 0,-1
+		Scale: 1.0
 	bib: 
 		# Filename: mbSILO.tem
 		Filename: mbIRON.tem
@@ -389,6 +551,7 @@ dtsilo:
 			CAMEO: TEMPERAT
 		Length: *
 		Offset: 0,1
+		Scale: 1.0
 	icon: 
 		Filename: dtsiloicnh.tem
 		AddExtension: False
@@ -434,6 +597,7 @@ dtrpower:
 	bib: bib3
 		UseTilesetExtension: true
 		Length: *
+		Scale: 1.0
 	icon: 
 		Filename: dtrpowercameo.shp
 		AddExtension: False
@@ -457,10 +621,11 @@ dtjpower:
 		Filename: jpowermake.shp
 		Length: *
 		Tick: 80
-	# bib: 
-	# 	Filename: bib3
-	# 	UseTilesetExtension: true
-	# 	Length: *
+	bib: 
+		Filename: bib3
+		UseTilesetExtension: true
+		Length: *
+		Scale: 1.0
 	icon: 
 		Filename: dtjpowericnh.tem
 		AddExtension: False
@@ -487,6 +652,7 @@ dtjyard:
 		Filename: dtjyardmake.shp
 		Length: *
 		Tick: 80
+		Scale: 1.0
 	bib: 
 		Filename: bib2.tem
 		UseTilesetExtension: true
@@ -499,7 +665,7 @@ dtjyard:
 dtjweap:
 	Inherits: ^WithBuildingBib2
 	Defaults:
-		Filename: jweap.shp
+		Filename: jweapbottom.shp
 		Offset: 0,-12
 		Scale: 2.0
 	idle:
@@ -535,15 +701,103 @@ dtjweap:
 		Tick: 80
 	bib:
 		Offset: 0,0
+		Scale: 1.0
 	icon:
 		Filename: jweapicon.shp
 		AddExtension: False
 		Offset: 0,0
 
+dteweap:
+	Inherits: ^WithBuildingBib2
+	Defaults:
+		Filename: ghetweapbot.shp
+		Offset: 0,-12
+		Scale: 2.0
+	idle:
+		ZOffset: -511
+	damaged-idle:
+		Start: 1
+		ZOffset: -511
+	dead:
+		Start: 2
+		Tick: 800
+	build-top:
+		Filename: ghetweaptop.shp
+		Length: 10
+		ZOffset: -1024
+	damaged-build-top:
+		Filename: ghetweaptop.shp
+		Start: 10
+		Length: 10
+		ZOffset: -1024
+	customhack:
+		Filename: ghetweaptop.shp
+		Length: 1
+	damaged-customhack:
+		Filename: ghetweaptop.shp
+		Start: 2
+		Length: 1
+	place:
+		Filename: ghetweapmake.shp
+		Start: 19
+	make:
+		Filename: ghetweapmake.shp
+		Length: 24
+		Tick: 80
+	bib:
+		Offset: 0,0
+	icon:
+		Filename: ghetweapicon.shp
+		AddExtension: False
+		Offset: 0,0
+
+dtafld:
+	Defaults:
+		Filename: dtafld.shp
+		Scale: 2.0
+	idle:
+		Filename: dtafld.shp
+		Start: 0
+		Length: 16
+		Tick: 160
+		ZOffset: -1023
+		Offset: 0,-6
+	damaged-idle:
+		Filename: dtafld.shp
+		Start: 15
+		Length: 16
+		Tick: 160
+		ZOffset: -1023
+		Offset: 0,-6
+	active:
+		Start: 0
+		Length: 16
+		Tick: 160
+		ZOffset: -1023
+		Offset: 0,-6
+	damaged-active:
+		Start: 15
+		Length: 16
+		Tick: 160
+		ZOffset: -1023
+		Offset: 0,-6
+	make:
+		Filename: dtafldmake.shp
+		Length: *
+		Offset: 0,-6
+	dead:
+		Start: 32
+		Length: 1
+		ZOffset: -1023
+		Offset: 0,-6
+	icon:
+		Filename: raafldicon.png
+
 dtjunkyard:
 	Inherits: ^WithBuildingBib2
 	Defaults:
 		Filename: junkyard.shp
+		Scale: 2.0
 	idle:
 	make:
 		Filename: rafactmake.shp
@@ -562,8 +816,61 @@ dtjunkyard:
 	bib:
 		TilesetOverrides:
 			INTERIOR: TEMPERAT
+		Scale: 1.0
 	icon:
 		Filename: rafacticon.png
+
+dtajunkyard:
+	Inherits: ^WithBuildingBib2
+	Defaults:
+		Filename: junkyard.shp
+		Scale: 2.0
+	idle:
+	make:
+		Filename: factmake.shp
+		Length: *
+	build:
+		Start: 1
+		Length: 1
+	damaged-idle:
+		Start: 2
+	damaged-build:
+		Start: 2
+		Length: 1
+	dead:
+		Filename: rafactdead.shp
+		Tick: 800
+	bib:
+		TilesetOverrides:
+			INTERIOR: TEMPERAT
+		Scale: 1.0
+	icon:
+		Filename: rafacticon.png
+
+
+dtprison:
+	Inherits: ^WithBuildingBib3
+	Defaults:
+		Filename: prison.shp
+		Scale: 2.0
+	idle:
+		Tick: 100
+	damaged-idle:
+		Start: 1
+		Tick: 100
+	dead:
+		Start: 1
+		Tick: 800
+	make: 
+		Filename: prisonmake.shp
+		Length: *
+		Tick: 80
+	bib: bib3
+		UseTilesetExtension: true
+		Length: *
+	icon:
+		Filename: prisonicon.shp
+		AddExtension: False
 
 
 dthq:
@@ -611,6 +918,7 @@ dteye:
 	bib: bib3.tem
 		UseTilesetExtension: true
 		Length: *
+		Scale: 1.0
 	icon: 
 		Filename: dteyeicnh.tem
 		AddExtension: False
@@ -647,9 +955,45 @@ dtrkpod:
 			CAMEO: TEMPERAT
 		Length: *
 		Offset: -1,-1
+		Scale: 1.0
 	icon: 
 		Filename: dtrkpodicnh.tem
 		AddExtension: False
+
+dthideout:
+	Defaults:
+		Filename: hideout.shp
+		Scale: 2.0
+	idle:
+	damaged-idle:
+		Start: 1
+	make:
+		Filename: hideoutmake.shp
+		Length: *
+	dead:
+	muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	bib:
+		Filename: mbPBOX.tem
+		TilesetFilenames:
+			DESERT: mbPBOX.des
+			WINTER: mbPBOX.win
+			SNOW: mbPBOX.sno
+			BARREN: mbPBOX.bar
+			JUNGLE: mbPBOX.jun
+			RA_SNOW: mbPBOX.sno
+			RA_DESERT: mbPBOX.des
+			RA_INTERIOR: mbPBOX.int
+			ARRAKIS: mbPBOX.des
+			ARRAKIS2: mbPBOX.des
+		Length: *
+		UseTilesetExtension: false
+		Offset: 0,-1
+		Scale: 1.0
+	icon:
+		Filename: hideouticon.png
 
 dtlwall:
 	Defaults:
@@ -773,8 +1117,8 @@ dte2:
 		Facings: 8
 		Tick: 100
 	shoot:
-		Start: 66
-		Length: 20
+		Start: 65
+		Length: 18
 		Facings: 8
 	prone-stand:
 		Start: 240
@@ -901,6 +1245,152 @@ dte2:
 		Facings: 8
 	icon: 
 		Filename: dte2icnh.tem
+		AddExtension: False
+
+dte7:
+	Inherits: ^InfantryOverlays
+	Defaults:
+		Filename: dte7.shp
+		Scale: 2.0
+	stand:
+		Facings: 8
+	stand2:
+		Start: 8
+		Facings: 8
+	run:
+		Start: 16
+		Length: 6
+		Facings: 8
+		Tick: 100
+	shoot:
+		Start: 64
+		Length: 8
+		Facings: 8
+	prone-stand:
+		Start: 240
+		Stride: 4
+		Facings: 8
+	prone-stand2:
+		Start: 240
+		Stride: 4
+		Facings: 8
+	prone-run:
+		Start: 240
+		Length: 4
+		Facings: 8
+		Tick: 100
+	# stand -> prone transition
+	liedown:
+		Start: 224
+		Length: 2
+		Facings: 8
+	# prone -> stand transition
+	standup:
+		Start: 272
+		Length: 2
+		Facings: 8
+	prone-shoot:
+		Start: 192
+		Length: 9
+		Facings: 8
+	idle1:
+		Start: 256
+		Length: 16
+		Tick: 120
+	idle2:
+		Start: 287
+		Length: 15
+		Tick: 120
+	idle3:
+		Start: 330
+		Length: 15
+		Tick: 120
+	cheer:
+		Facings: 8
+	# Dancing
+	idle4:
+		Start: 384
+		Length: 15
+		Tick: 120
+	# Shot
+	die1:
+		Start: 381
+		Length: 9
+		Tick: 80
+	# Explode
+	die2:
+		Start: 390
+		Length: 8
+		Tick: 80
+	# Fly and explode in air
+	die3:
+		Start: 398
+		Length: 8
+		Tick: 80
+	# Fly through air squish on ground
+	die4:
+		Start: 406
+		Length: 12
+		Tick: 80
+	# Burn
+	die5:
+		Start: 418
+		Length: 18
+		Tick: 80
+	# Tib
+	die6:
+		Start: 366
+		Length: 11
+		Tick: 80
+	# Electro
+	die7: 
+		Filename: electro.shp
+		Length: *
+	die-crushed: 
+		Filename: e1rot.shp
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	garrison-muzzle: 
+		Filename: minigun.shp
+		Length: 3
+		Stride: 6
+		Facings: 8
+	# swim-stand:
+	# 	Start: 144
+	# 	Length: 4
+	# 	Facings: 8
+	# swim-idle1:
+	# 	Start: 144
+	# 	Length: 4
+	# 	Facings: 8
+	# swim-idle2:
+	# 	Start: 144
+	# 	Length: 4
+	# 	Facings: 8
+	# swim-run:
+	# 	Start: 144
+	# 	Length: 4
+	# 	Facings: 8
+	# swim-die1:
+	# 	Start: 144
+	# 	Length: 4
+	# 	Facings: 8
+	# swim-die2:
+	# 	Start: 144
+	# 	Length: 4
+	# 	Facings: 8
+	# swim-shoot:
+	# 	Start: 192
+	# 	Length: 8
+	# 	Facings: 8
+	# swim-cheer:
+	# 	Start: 144
+	# 	Length: 4
+	# 	Facings: 8
+	icon: 
+		Filename: dte7icon.shp
 		AddExtension: False
 
 dtmutant:
@@ -1159,6 +1649,18 @@ dte3:
 		Filename: dte3icnh.tem
 		AddExtension: False
 
+lmcv:
+	Defaults:
+		Filename: lcv.shp
+		Scale: 2.0
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+	icon: 
+		Filename: lcvicon.shp
+		AddExtension: False
+
+
 dtltnk:
 	Defaults:
 		Filename: dtltnk.shp
@@ -1216,6 +1718,85 @@ dtmtnk:
 		Filename: 2tnkicon.shp
 		AddExtension: False
 
+dtflak:
+	Defaults:
+		Filename: dtflaktank.shp
+		Scale: 2.0
+	idle:
+		Facings: 32
+		InterpolatedFacings: 64
+	turret:
+		Start: 32
+		Facings: 32
+		InterpolatedFacings: 64
+	muzzle:
+		Filename: gunfire2.shp
+		Length: *
+		Scale: 1.0
+	muzzle2:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+		Scale: 1.0
+	icon:
+		Filename: dtflakicon.shp
+		AddExtension: False
+
+dtemp:
+	Defaults:
+		Filename: empveh.shp
+		Scale: 2.0
+	idle:
+		Facings: 32
+		InterpolatedFacings: 64
+	turret:
+		Start: 32
+		Facings: 32
+		InterpolatedFacings: 64
+	# muzzle:
+	# 	Filename: gunfire2.shp
+	# 	Length: *
+	# muzzle2:
+	# 	Filename: minigun.shp
+	# 	Length: 6
+	# 	Facings: 8
+	icon:
+		Filename: dtempicon.shp
+		AddExtension: False
+
+dtbggy:
+	Defaults:
+		Filename: snpr.shp
+		Scale: 2.0
+	idle:
+		Facings: 32
+	turret:
+		Start: 32
+		Facings: 32
+	muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: snpricon.shp
+		AddExtension: False
+
+dtgtrk:
+	Defaults:
+		Filename: gtrk.shp
+		Scale: 2.0
+	idle:
+		Facings: 32
+	turret:
+		Start: 32
+		Facings: 32
+	muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: gtrkicon.shp
+		AddExtension: False
 
 dtover:
 	Defaults:
@@ -1254,6 +1835,46 @@ dthtnk:
 		Filename: htnkicnh.tem
 		AddExtension: False
 
+dtfblt:
+	Defaults:
+		Filename: fblt.shp
+		Scale: 2.0
+	idle:
+		Facings: 32
+		InterpolatedFacings: 64
+	turret:
+		Start: 32
+		Facings: 32
+		InterpolatedFacings: 64
+	muzzle:
+		Filename: gunfire2.shp
+		Length: *
+	muzzle2:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: fblticon.shp
+		AddExtension: False
+
+dtkaty:
+	Defaults:
+		Filename: katy.shp
+		Scale: 1.6
+	idle:
+		Facings: 32
+		InterpolatedFacings: 64
+	muzzle:
+		Filename: gunfire2.shp
+		Length: *
+	muzzle2:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: katyicon.shp
+		AddExtension: False
+
 dtharv:
 	Defaults:
 		Filename: dtharv.shp
@@ -1262,8 +1883,10 @@ dtharv:
 		Facings: 32
 		UseClassicFacings: True
 	harvest:
-		Facings: 32
-		UseClassicFacings: True
+		Start: 32
+		Length: 4
+		Facings: 8
+		Tick: 80
 	dock: 
 		Filename: dtharv.shp
 		Facings: 32
@@ -1274,6 +1897,32 @@ dtharv:
 		UseClassicFacings: True
 	icon: 
 		Filename: dtharvicnh.tem
+		AddExtension: False
+
+tomapc:
+	Defaults:
+		Filename: apc.shp
+	idle:
+		Facings: 32
+		InterpolatedFacings: 64
+	turret:
+		Filename: apctur.shp
+		Scale: 2.0
+		Facings: 32
+		InterpolatedFacings: 64
+	muzzle:
+		Filename: apcmuz.shp
+		Scale: 2.0
+		Length: 3
+		Stride: 6
+		Facings: 8
+	close:
+		Start: 32
+		Length: 3
+	unload:
+		Start: 32
+	icon:
+		Filename: raapcicon.png
 		AddExtension: False
 
 dtapc:
@@ -1305,6 +1954,409 @@ dtorca:
 	icon: 
 		Filename: dtorcaicnh.tem
 		AddExtension: False
+
+dthavoc:
+	Defaults:
+		Filename: havc.shp
+		Scale: 3.0
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+	rotor: lrotor
+		Filename: lrotor.shp
+		Scale: 1.25
+		Length: 4
+	slow-rotor:
+		Filename: lrotor.shp
+		Scale: 1.25
+		Start: 4
+		Length: 8
+	muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	icon: 
+		Filename: havcicon.shp
+		AddExtension: False
+
+dtfirebug:
+	Inherits: ^InfantryOverlays
+	Defaults:
+		Filename: firebug.shp
+		Scale: 2.0
+	stand:
+		Facings: 8
+	stand2:
+		Start: 8
+		Facings: 8
+	run:
+		Start: 16
+		Length: 6
+		Facings: 8
+		Tick: 100
+	throw:
+		Start: 64
+		Length: 20
+		Facings: 8
+	# stand -> prone transition
+	liedown:
+		Start: 224
+		Length: 2
+		Facings: 8
+	# prone -> stand transition
+	standup:
+		Start: 272
+		Length: 2
+		Facings: 8
+	prone-stand:
+		Start: 240
+		Stride: 4
+		Facings: 8
+	prone-stand2:
+		Start: 240
+		Stride: 4
+		Facings: 8
+	prone-run:
+		Start: 240
+		Length: 4
+		Facings: 8
+		Tick: 100
+	prone-throw:
+		Start: 288
+		Length: 12
+		Facings: 8
+	idle1:
+		Start: 384
+		Length: 16
+		Tick: 120
+	idle2:
+		Start: 399
+		Length: 16
+		Tick: 120
+	parachute:
+		Start: 505
+	die1:
+		Start: 416
+		Length: 8
+		Tick: 80
+	die2:
+		Start: 424
+		Length: 8
+		Tick: 80
+	die3:
+		Start: 432
+		Length: 8
+		Tick: 80
+	die4:
+		Start: 440
+		Length: 12
+		Tick: 80
+	die5:
+		Start: 452
+		Length: 18
+		Tick: 80
+	die6:
+		Start: 416
+		Length: 8
+		Tick: 80
+	# Electro
+	die7: ##########
+		Filename: electro.shp
+		Length: *
+	die-crushed:
+		Filename: e2rot.shp
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	icon:
+		Filename: firebugicon.shp
+		AddExtension: False
+
+dtspy:
+	Inherits: ^InfantryOverlays
+	Defaults:
+		Filename: infiltrator.shp
+		Scale: 2.0
+	stand:
+		Facings: 8
+	stand2:
+		Start: 8
+		Facings: 8
+	run:
+		Start: 16
+		Length: 6
+		Facings: 8
+		Tick: 100
+	# stand -> prone transition
+	liedown:
+		Start: 66
+		Length: 2
+		Facings: 8
+	# prone -> stand transition
+	standup:
+		Start: 114
+		Length: 2
+		Facings: 8
+	prone-stand:
+		Start: 82
+		Stride: 4
+		Facings: 8
+	prone-stand2:
+		Start: 82
+		Stride: 4
+		Facings: 8
+	prone-run:
+		Start: 82
+		Length: 4
+		Facings: 8
+		Tick: 100
+	idle1:
+		Start: 130
+		Length: 16
+		Tick: 120
+	idle2:
+		Start: 200
+		Length: 6
+		Tick: 120
+	parachute:
+		Start: 210
+	# Shot
+	die1:
+		Start: 146
+		Length: 8
+		Tick: 80
+	# Explode
+	die2:
+		Start: 154
+		Length: 8
+		Tick: 80
+	# Fly and explode in air
+	die3:
+		Start: 162
+		Length: 8
+		Tick: 80
+	# Fly through air squish on ground
+	die4:
+		Start: 170
+		Length: 12
+		Tick: 80
+	# Burn
+	die5:
+		Start: 182
+		Length: 18
+		Tick: 80
+	# Tib
+	die6:
+		Start: 130
+		Length: 4
+		Tick: 80
+	# Electro
+	die7: ##########
+		Filename: electro.shp
+		Length: *
+	die-crushed:
+		Filename: e1rot.shp
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	icon:
+		Filename: infiltratoricon.shp
+		AddExtension: False
+
+dtbtr:
+	Defaults:
+		Filename: btr.shp
+		Scale: 2.0
+	idle:
+		Facings: 32
+		InterpolatedFacings: 64
+	turret:
+		Start: 32
+		Facings: 32
+		InterpolatedFacings: 64
+	muzzle:
+		Filename: gunfire2.shp
+		Length: *
+	muzzle2:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: btricon.shp
+		AddExtension: False
+
+dtsalt:
+	Defaults:
+		Filename: salt.shp
+		Scale: 2.0
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+	muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	icon: 
+		Filename: salticon.shp
+		AddExtension: False
+
+dtbmth:
+	Defaults:
+		Filename: btnk.shp
+		Scale: 2.0
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+	muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	icon: 
+		Filename: btnkicon.shp
+		AddExtension: False
+
+digger:
+	Defaults:
+		Filename: digger.shp
+		Scale: 2.0
+	Inherits: ^InfantryOverlays
+	idle1:
+		Start: 0
+		Facings: 8
+	idle2:
+		Start: 8
+		Facings: 8
+	stand:
+		Start: 0
+		Facings: 8
+	stand2:
+		Start: 8
+		Facings: 8
+	run:
+		Start: 16
+		Length: 9
+		Facings: 8
+		Tick: 100
+	die1:
+		Start: 176
+		Length: 1
+	shoot:
+		Start: 80
+		Length: 12
+		Facings: 8
+	icon:
+		Filename: diggericon.shp
+
+dingo:
+	Defaults:
+		Filename: dingo.shp
+		Scale: 2.0
+	idle1:
+		Start: 0
+		Facings: 8
+	idle2:
+		Start: 8
+		Facings: 8
+	stand:
+		Start: 0
+		Facings: 8
+	walk:
+		Start: 16
+		Length: 7
+		Facings: 8
+		Tick: 80
+	run:
+		Start: 16
+		Length: 7
+		Facings: 8
+		Tick: 80
+	eat:
+		Start: 80
+		Length: 14
+		Facings: 8
+	die1:
+		Start: 176
+		Length: 7
+	die2:
+		Start: 176
+		Length: 7
+	die3:
+		Start: 176
+		Length: 7
+	die4:
+		Start: 176
+		Length: 7
+	die5:
+		Start: 176
+		Length: 7
+	die6:
+		Filename: electdog.shp
+		Scale: 2
+		Length: *
+	die7:
+		Filename: electdog.shp
+		Scale: 2
+		Length: *
+	die-crushed:
+		Filename: corpse1.shp
+		Length: 6
+		Tick: 1600
+		ZOffset: -511
+		UseTilesetExtension: false
+	eat:
+	eat:
+		Start: 80
+		Length: 14
+		Facings: 8
+	icon:
+		Filename: dingoicon.shp
+
+atv:
+	Defaults:
+		Filename: atv.shp
+		Scale: 2.0
+	idle:
+		Facings: 32
+	turret:
+		Start: 32
+		Facings: 32
+	muzzle:
+		Filename: gunfire2.shp
+		Length: *
+	muzzle2:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: atvicon.shp
+		AddExtension: False
+
+dtcomanche:
+	Defaults:
+		Filename: cmnc.shp
+		Scale: 2.0
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+	rotor: lrotor
+		Filename: lrotor.shp
+		Scale: 1.25
+		Length: 4
+	slow-rotor:
+		Filename: lrotor.shp
+		Scale: 1.25
+		Start: 4
+		Length: 8
+	muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	icon: 
+		Filename: cmncicon.shp
+		AddExtension: False
+
 dtrmbo:
 	Defaults:
 		Filename: dtrmbo.shp
@@ -1445,6 +2497,67 @@ dtstnk:
 		Facings: 8
 	icon: 
 		Filename: dtstnkicnh.tem
+		AddExtension: False
+
+dtc1:
+	Defaults:
+		Filename: dtc1.shp
+		Scale: 2.0
+	stand:
+		Facings: 8
+	panic-stand:
+		Facings: 8
+	panic-run:
+		Start: 8
+		Length: 6
+		Facings: 8
+	run:
+		Start: 56
+		Length: 6
+		Facings: 8
+	shoot:
+		Start: 205
+		Length: 4
+		Facings: 8
+	cheer:
+		Start: 200
+		Length: 3
+		Facings: 8
+		Tick: 120
+	die1:
+		Start: 329
+		Length: 8
+		Tick: 80
+	die2:
+		Start: 337
+		Length: 8
+		Tick: 80
+	die3:
+		Start: 337
+		Length: 8
+		Tick: 80
+	die4:
+		Start: 345
+		Length: 12
+		Tick: 80
+	die5:
+		Start: 357
+		Length: 18
+		Tick: 80
+	die6:
+		Start: 182
+		Length: 4
+		Tick: 80
+	die7: 
+		Filename: electro.shp
+		Length: *
+	die-crushed:
+		Filename: e1rot.shp
+		Start: 16
+		Length: 4
+		Tick: 1600
+	icon: 
+		Filename: technicianicon.shp
 		AddExtension: False
 
 dte5:
@@ -1631,6 +2744,108 @@ dtapc2:
 		Filename: dtapc2icnh.shp
 		AddExtension: False
 
+dtmortar:
+	Defaults:
+		Filename: dtmortar.shp
+		Scale: 1.6
+	stand:
+		Facings: 8
+	stand2:
+		Start: 8
+		Facings: 8
+	run:
+		Start: 16
+		Length: 6
+		Facings: 8
+		Tick: 100
+	shoot:
+		Start: 64
+		Length: 20
+		Facings: 8
+	prone-stand:
+		Start: 240
+		Stride: 4
+		Facings: 8
+	prone-stand2:
+		Start: 240
+		Stride: 4
+		Facings: 8
+	prone-run:
+		Start: 240
+		Length: 4
+		Facings: 8
+		Tick: 100
+	liedown:
+		Start: 224
+		Length: 2
+		Facings: 8
+	standup:
+		Start: 272
+		Length: 2
+		Facings: 8
+	prone-shoot:
+		Start: 288
+		Length: 12
+		Facings: 8
+	idle1:
+		Start: 384
+		Length: 16
+		Tick: 120
+	idle2:
+		Start: 400
+		Length: 16
+		Tick: 120
+	idle3:
+		Start: 384
+		Length: 16
+		Tick: 120
+	idle4:
+		Start: 400
+		Length: 16
+		Tick: 120
+	die1:
+		Start: 416
+		Length: 8
+	die2:
+		Start: 424
+		Length: 8
+	die3:
+		Start: 432
+		Length: 8
+	die4:
+		Start: 440
+		Length: 12
+	die5:
+		Start: 452
+		Length: 18
+	die6:
+		Filename: e1.shp
+		Scale: 1
+		Start: 366
+		Length: 11
+		Tick: 80
+	die7:
+		Filename: electro.shp
+		Scale: 1
+		Length: *
+	die-crushed:
+		Filename: corpse1.shp
+		Scale: 1
+		Length: 6
+		Tick: 1600
+		ZOffset: -511
+	garrison-muzzle:
+		Filename: minigun.shp
+		Scale: 1
+		Length: 3
+		Stride: 6
+		Facings: 8
+	parachute:
+		Start: 8
+		Facings: 8
+	icon:
+		Filename: dtmortaricon.shp
+
 dtarty:
 	idle: 
 		Filename: arty.shp
@@ -1703,7 +2918,7 @@ dtfbik:
 		Facings: 8
 		Length: 13
 	icon: 
-		Filename: ftnkicnh.tem
+		Filename: dtfbikeicon.shp
 		AddExtension: False
 
 dtdtrk:
@@ -1745,6 +2960,13 @@ explosion:
 		Filename: tibatomsfx.shp
 	dtmine:
 		Filename: dtmine.shp
+	dtemp:
+		Filename: empspark.shp
+		Scale: 2.0
+	dtchaff:
+		Filename: empchaff.shp
+		Scale: 2.0
+
 
 icon:
 	Defaults:

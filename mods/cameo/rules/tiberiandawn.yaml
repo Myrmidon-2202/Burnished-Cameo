@@ -852,12 +852,6 @@ ARTY:
 		Weapon: ArtilleryShell
 		LocalOffset: 624,0,208
 		MuzzleSequence: muzzle
-		RequiresCondition: !up_blackmarketupgrades
-	Armament@Upgrade:
-		Weapon: ArtilleryShellUpgrade
-		LocalOffset: 624,0,208
-		MuzzleSequence: muzzle
-		RequiresCondition: up_blackmarketupgrades
 	WithMuzzleOverlay:
 	AutoTarget:
 		InitialStanceAI: Defend
@@ -2521,6 +2515,10 @@ HQ.Nod:
 	Buildable:
 		Prerequisites: ~fact.nod, proc.nod
 
+FIX:
+	Tooltip:
+		Name: Repair Facility
+
 FIX.GDI:
 	Inherits: ^BaseBuilding
 	Inherits@sell: ^TDSpawnActorsOnSell
@@ -2759,7 +2757,7 @@ TMPL:
 GUN:
 	Inherits: ^Defense
 	Inherits@Template: ^BasicDefenseTemplate
-	Inherits@exp: ^GainsExperienceTDBuilding
+	# Inherits@exp: ^GainsExperienceTDBuilding
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Inherits@AntiTank: ^PrioritizeVehicle
 	Inherits@shape: ^1x1Shape
@@ -2846,7 +2844,7 @@ GUN:
 SAM:
 	Inherits: ^Defense
 	Inherits@Template: ^AntiAirDefenseTemplate
-	Inherits@exp: ^GainsExperienceTDBuilding
+	# Inherits@exp: ^GainsExperienceTDBuilding
 	Inherits@AUTOTARGET: ^AutoTargetAir
 	Inherits@shape: ^2x1Shape
 	Inherits@AntiAir: ^PrioritizeAir
@@ -2893,7 +2891,7 @@ SAM:
 OBLI:
 	Inherits: ^Defense
 	Inherits@Template: ^AdvancedDefenseTemplate
-	Inherits@exp: ^GainsExperienceTDBuilding
+	# Inherits@exp: ^GainsExperienceTDBuilding
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Inherits@detect: ^GenericGroundDetector
 	Inherits@AntiTank: ^PrioritizeTank
@@ -2949,7 +2947,7 @@ OBLI:
 GTWR:
 	Inherits: ^Defense
 	Inherits@Template: ^BasicDefenseTemplate
-	Inherits@exp: ^GainsExperienceTDBuilding
+	# Inherits@exp: ^GainsExperienceTDBuilding
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Inherits@AntiInf: ^PrioritizeInfantry
 	Inherits@shape: ^1x1Shape
@@ -2993,7 +2991,7 @@ GTWR:
 ATWR:
 	Inherits: ^Defense
 	Inherits@Template: ^AdvancedDefenseTemplate
-	Inherits@exp: ^GainsExperienceTDBuilding
+	# Inherits@exp: ^GainsExperienceTDBuilding
 	Inherits@AUTOTARGET: ^AutoTargetAll
 	Inherits@detect: ^GenericAllDetector
 	Inherits@AntiAir: ^PrioritizeAir

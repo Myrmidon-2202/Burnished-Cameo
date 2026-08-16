@@ -6491,7 +6491,7 @@ ChronoVortexFade:
 
 PBOX:
 	Inherits: ^Defense
-	Inherits@exp: ^GainsExperienceRABuilding
+	# Inherits@exp: ^GainsExperienceRABuilding
 	Inherits@Template: ^BasicDefenseTemplate
 	Inherits@AUTOTARGET: ^AutoTargetAll
 	Inherits@AntiInf: ^PrioritizeInfantry
@@ -6541,7 +6541,7 @@ PBOX:
 
 RAGUN:
 	Inherits: ^Defense
-	Inherits@exp: ^GainsExperienceRABuilding
+	# Inherits@exp: ^GainsExperienceRABuilding
 	Inherits@Template: ^BasicDefenseTemplate
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Inherits@EMP: ^TurretEMP
@@ -6585,7 +6585,7 @@ RAGUN:
 
 AGUN:
 	Inherits: ^Defense
-	Inherits@exp: ^GainsExperienceRABuilding
+	# Inherits@exp: ^GainsExperienceRABuilding
 	Inherits@Template: ^AntiAirDefenseTemplate
 	Inherits@AUTOTARGET: ^AutoTargetAir
 	Inherits@AntiAir: ^PrioritizeAir
@@ -6632,7 +6632,7 @@ AGUN:
 
 FTUR:
 	Inherits: ^Defense
-	Inherits@exp: ^GainsExperienceRABuilding
+	# Inherits@exp: ^GainsExperienceRABuilding
 	Inherits@Template: ^BasicDefenseTemplate
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Inherits@EMP: ^TurretEMP
@@ -6686,7 +6686,7 @@ FTUR:
 
 TSLA:
 	Inherits: ^Defense
-	Inherits@exp: ^GainsExperienceRABuilding
+	# Inherits@exp: ^GainsExperienceRABuilding
 	Inherits@selection: ^AdvancedDefenseTemplate
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Inherits@detect: ^GenericGroundDetector
@@ -6738,7 +6738,7 @@ TSLA:
 
 RASAM:
 	Inherits: ^Defense
-	Inherits@exp: ^GainsExperienceRABuilding
+	# Inherits@exp: ^GainsExperienceRABuilding
 	Inherits@Template: ^AntiAirDefenseTemplate
 	Inherits@AUTOTARGET: ^AutoTargetAir
 	Inherits@shape: ^2x1Shape
@@ -6799,7 +6799,7 @@ RASAM:
 
 jmgnest:
 	Inherits: ^Defense
-	Inherits@exp: ^GainsExperienceRABuilding
+	# Inherits@exp: ^GainsExperienceRABuilding
 	Inherits@Template: ^BasicDefenseTemplate
 	Inherits@AUTOTARGET: ^AutoTargetAll
 	Inherits@detect: ^GenericAllDetector
@@ -6854,7 +6854,7 @@ jmgnest:
 
 JRAGUN:
 	Inherits: ^Defense
-	Inherits@exp: ^GainsExperienceRABuilding
+	# Inherits@exp: ^GainsExperienceRABuilding
 	Inherits@Template: ^BasicDefenseTemplate
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Inherits@EMP: ^TurretEMP
@@ -7615,7 +7615,7 @@ CTNK:
 
 HBOX:
 	Inherits: ^Defense
-	Inherits@exp: ^GainsExperienceRABuilding
+	# Inherits@exp: ^GainsExperienceRABuilding
 	Inherits@Template: ^BasicDefenseTemplate
 	Inherits@detect: ^GenericGroundDetector
 	Inherits@AUTOTARGET: ^AutoTargetAll

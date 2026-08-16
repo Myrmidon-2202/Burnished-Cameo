@@ -174,6 +174,21 @@ APCRocketT.AA:
 		Damage: 4000
 		ValidTargets: Air
 
+diggerifle:
+	Inherits: ^Chaingun
+	Inherits: ^IncendiaryBulletProjectile
+	ValidTargets: Ground, Water, Trees, Air
+	ReloadDelay: 40
+	Range: 5528
+	MinRange: 553
+	Report: gun13.aud
+	Warhead@Chaingun: SpreadDamage
+		ValidTargets: Ground, Water, Trees, Air
+		Damage: 2000
+	Warhead@ChaingunPercentage: HealthPercentageDamage
+		ValidTargets: Ground, Water, Trees, Air
+		Damage: 3
+
 FireChainGun:
 	Inherits: ^Chaingun
 	Inherits: ^LightFlameWeapon
@@ -199,9 +214,64 @@ FireChainGun:
 		ValidTargets: Ground, Water, Trees, Air
 		Damage: 1
 
+dtflak:
+	Inherits: ^SmallArms
+	Inherits: ^FlakWeapon
+	ReloadDelay: 10
+	Range: 6314
+	Report: gun20.aud
+	ValidTargets: Ground, Water, Trees, Air
+	Warhead@SmallArms: SpreadDamage
+		ValidTargets: Ground, Water, Trees
+		Damage: 1600
+	Warhead@SmallArms2: SpreadDamage
+		ValidTargets: Air
+		Damage: 1200
+	Warhead@SmallArmsPercentage: HealthPercentageDamage
+		ValidTargets: Ground, Water, Trees
+		Damage: 1
+	Warhead@FlakWeapon: SpreadDamage
+		ValidTargets: Ground, Water, Trees
+		Damage: 900
+	Warhead@FlakWeaponPercentage: HealthPercentageDamage
+		ValidTargets: Ground, Water, Trees
+		Damage: 1
+
+DTEmpBlast:
+	Report: emppulse.aud
+	ReloadDelay: 40
+	Range: 8c512
+	Projectile: InstantHit
+	ValidTargets: Vehicle, Cyborg, Structure
+	Warhead@1Dam: SpreadDamage
+		Damage: 8000
+		Spread: 480
+		Falloff: 100, 0
+		Versus:
+			none: 110
+			wall: 10
+			building: 55
+			wood: 75
+			light: 40
+			heavy: 58
+			invulnerable: 0
+			cy: 20
+			harvester: 35
+		DamageTypes: Prone50Percent, TriggerProne, BulletDeath
+		DamageCalculationType: ClosestTargetablePosition
+		ValidTargets: Vehicle, Cyborg, Structure
+	Warhead@2Eff: CreateEffect
+		Explosions: dtemp
+		ImpactActors: false
+
 V2Explode2:
 	Inherits: SCUD
 	-Report:
+
+dtPistol:
+	Range: 5c0
+	Warhead@1Dam: SpreadDamage
+		Damage: 3000
 
 227mmT:
 	Inherits: ^FlakWeapon
@@ -255,6 +325,107 @@ V2Explode2:
 		Explosions: med_frag
 		ImpactSounds: kaboom25.aud
 		ValidTargets: Ground, Ship, Trees
+
+dt90mm:
+	Inherits: ^MediumCannon
+	ReloadDelay: 47
+	Range: 5159
+	Report: cannon1.aud
+	Projectile: Bullet
+		Speed: 515
+	Warhead@MediumCannon: SpreadDamage
+		Damage: 8000
+	Warhead@MediumCannonPercentage: HealthPercentageDamage
+		Damage: 4
+	Warhead@Effect: CreateEffect
+		Explosions: small_poof
+
+CubanAssaultGunCannon:
+	Inherits: ^MediumCannon
+	Inherits: ^TankDestroyerCannon
+	ReloadDelay: 65
+	Range: 7507
+	Report: tank5.aud
+	Projectile: Bullet
+		Speed: 750
+	Warhead@MediumCannon: SpreadDamage
+		Damage: 8000
+	Warhead@MediumCannonPercentage: HealthPercentageDamage
+		Damage: 2
+	Warhead@TankDestroyerCannon: SpreadDamage
+		Damage: 8000
+	Warhead@TankDestroyerCannonPercentage: HealthPercentageDamage
+		Damage: 1
+
+OverseerGrenade:
+	Inherits: ^Grenade
+	ReloadDelay: 60
+	Range: 5184
+	Report: M203.aud
+	Projectile: Bullet
+		Speed: 333
+		ContrailStartColor: FFCC88FF
+		ContrailEndColor: FFFFFF22
+		ContrailLength: 11
+		ContrailStartWidth: 99
+		ContrailEndWidth: 33
+	Warhead@Grenade: SpreadDamage
+		Damage: 20000
+	Warhead@GrenadeFriendlyFire: SpreadDamage
+		Damage: 10000
+	# Warhead@GrenadePercentage: HealthPercentageDamage
+	# 	Damage: 20
+
+BehemothGrenade:
+	Inherits: ^Grenade
+	ReloadDelay: 20
+	Range: 5184
+	Report: M203.aud
+	Projectile: Bullet
+		Speed: 333
+		ContrailStartColor: FFCC88FF
+		ContrailEndColor: FFFFFF22
+		ContrailLength: 11
+		ContrailStartWidth: 99
+		ContrailEndWidth: 33
+	Warhead@Grenade: SpreadDamage
+		Damage: 20000
+	Warhead@GrenadeFriendlyFire: SpreadDamage
+		Damage: 10000
+	# Warhead@GrenadePercentage: HealthPercentageDamage
+	# 	Damage: 20
+
+DTFirebuggrenade:
+	Inherits: ^Grenade
+	Inherits: ^MediumFlameWeapon
+	Warhead@Effect: CreateEffect
+		Explosions: small_napalm
+		ImpactSounds: firebl3.aud
+
+
+chaffmortar:
+	Inherits@EMP: ^EMPDamage
+	Inherits: ^ShrapnelWeapon
+	Inherits: ^Grenade
+	ReloadDelay: 88
+	Range: 10828
+	MinRange: 2707
+	Report: tnkfire2.aud
+	TargetActorCenter: true
+	Projectile: Bullet
+		Speed: 175
+		Inaccuracy: 750
+		LaunchAngle: 125
+		ContrailLength: 30
+		ContrailStartWidth: 60
+		ContrailEndWidth: 15
+		ContrailStartColor: FEDCBA98
+		ContrailEndColor: 87654321
+	Warhead@EMPUnit: AffectsIntegrity
+		Damage: 100000
+	Warhead@2Eff: CreateEffect
+		Explosions: dtchaff
+		ImpactActors: false
 
 DTMissileCrawler:
 	ReloadDelay: 125
@@ -342,7 +513,6 @@ RedoubtGun:
 			Medium: 80
 			Heavy: 70
 			Concrete: 50
-		Inaccuracy: 0
 	Warhead@2Dam: HealthPercentageDamage
 		Damage: 5
 		Spread: 0c5
@@ -404,6 +574,58 @@ DTTowerMissile:
 		Spread: 666
 		Damage: 6666
 		ValidTargets: Ground
+
+katyrockets:
+	Inherits: ^FlakWeapon
+	Inherits: ^Grenade
+	Inherits: ^HeavyMissile
+	Inherits: ^MediumMissile
+	ValidTargets: Ground, Water, Trees, Air
+	ReloadDelay: 111
+	Range: 9920
+	MinRange: 2480
+	Burst: 32
+	BurstDelays: 5
+	TargetActorCenter: true
+	Report: rocket1.aud
+	Projectile: Bullet
+		Blockable: false
+		Image: DRAGON
+		Shadow: true
+		Inaccuracy: 800
+		LaunchAngle: 125
+		Speed: 500
+	Warhead@Grenade: SpreadDamage
+		ValidTargets: Ground, Water, Trees, Air
+		Damage: 2000
+	Warhead@GrenadeFriendlyFire: SpreadDamage
+		ValidTargets: Ground, Water, Trees, Air
+		Damage: 1000
+	Warhead@GrenadePercentage: HealthPercentageDamage
+		ValidTargets: Ground, Water, Trees, Air
+		Damage: 1
+	Warhead@FlakWeapon: SpreadDamage
+		ValidTargets: Ground, Water, Trees, Air
+		Damage: 2000
+	Warhead@FlakWeaponPercentage: HealthPercentageDamage
+		ValidTargets: Ground, Water, Trees, Air
+		Damage: 1
+	Warhead@HeavyMissile: SpreadDamage
+		ValidTargets: Ground, Water, Trees, Air
+		Damage: 2000
+	Warhead@HeavyMissilePercentage: HealthPercentageDamage
+		ValidTargets: Ground, Water, Trees, Air
+		Damage: 1
+	Warhead@MediumMissile: SpreadDamage
+		ValidTargets: Ground, Water, Trees, Air
+		Damage: 2000
+	Warhead@MediumMissilePercentage: HealthPercentageDamage
+		ValidTargets: Ground, Water, Trees, Air
+		Damage: 1
+	Warhead@Effect: CreateEffect
+		Explosions: med_frag
+		ImpactSounds: kaboom25.aud
+		ValidTargets: Ground, Ship, Trees
 
 # SCUDAA:
 # 	Inherits: ^MissileWeapon
