@@ -2354,14 +2354,14 @@ AFLD.CUBA:
 	Exit@3:
 		SpawnOffset: -704,768,0
 		ExitCell: 0,3
-	ProductionAirdropCA@NORMAL:
-		Produces: Vehicle.Dtcuba
-		RequiresCondition: !classicproductionqueues
-		ActorType: c17
-		EntryType: DropSiteClosestEdge
-		ExitType: StraightAhead
-		LandingFacing: 64
-		ReadyAudio: ReinforcementsArrived
+	# ProductionAirdropCA@NORMAL:
+	# 	Produces: Vehicle.Dtcuba
+	# 	RequiresCondition: !classicproductionqueues
+	# 	ActorType: c17
+	# 	EntryType: DropSiteClosestEdge
+	# 	ExitType: StraightAhead
+	# 	LandingFacing: 64
+	# 	ReadyAudio: ReinforcementsArrived
 	# ProductionAirdropCA@CLASSIC:
 	# 	Produces: RAVehicle
 	# 	RequiresCondition: classicproductionqueues
@@ -2375,16 +2375,16 @@ AFLD.CUBA:
 	# 	Sequence: idle-dish
 	# WithDeliveryAnimation:
 	# 	RequiresCondition: !build-incomplete
-	ProductionQueue:
-		Type: Vehicle.Dtcuba
-		DisplayOrder: 3
-		Group: Vehicle
-		LowPowerModifier: 300
-		BlockedAudio: NoBuild
-		LimitedAudio: BuildingInProgress
-		QueuedAudio: Training
-		OnHoldAudio: OnHold
-		CancelledAudio: Cancelled
+	# ProductionQueue:
+	# 	Type: Vehicle.Dtcuba
+	# 	DisplayOrder: 3
+	# 	Group: Vehicle
+	# 	LowPowerModifier: 300
+	# 	BlockedAudio: NoBuild
+	# 	LimitedAudio: BuildingInProgress
+	# 	QueuedAudio: Training
+	# 	OnHoldAudio: OnHold
+	# 	CancelledAudio: Cancelled
 	# ProductionBar@VEHICLENOD:
 	# 	ProductionType: Vehicle.Dtcuba
 	# 	RequiresCondition: !classicproductionqueues
@@ -2395,17 +2395,16 @@ AFLD.CUBA:
 			1: Airdrops Medium Tanks for the Cuban war effort.
 		Icons:
 			1: icon
-		IconImage: fremen
+		IconImage: paratroopers
 		AllowMultiple: True
 		PauseOnCondition: disabled
 		Prerequisites:
 			1: fact.dtcuba
-		Actors: 
-			1: mtnk.cuba, mtnk
-		Type: Vehicle
+		Actors: mtnk.cuba
+		Type: mtnk.cuba
 		ChargeInterval: 750
 		AutoFire: true
-		OrderName: fremen
+		OrderName: mtnk.cuba
 		SupportPowerPaletteOrder: 20
 		RequiresCondition: afld_cuba
 	GrantConditionOnPrerequisite@Deli:
@@ -2596,7 +2595,7 @@ DTHAND:
 		TargetableOffsets: 0,0,0, 630,-512,0, 355,512,0, -281,-512,0, -630,512,0
 	Selectable:
 		Bounds: 2048, 2048
-		DecorationBounds: 87381, 123776, 0, -18176
+		DecorationBounds: 2048, 2048
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -4305,6 +4304,8 @@ hideout:
 	Inherits: GTWR
 	Inherits@prod: ^ProducesUnits
 	Inherits@barr: ^IsBarrackOld
+	Inherits@Template: ^BasicDefenseTemplate
+	Inherits: ^BasicDefense
 	Tooltip:
 		Name: Hideout
 	Buildable:
@@ -4889,7 +4890,7 @@ DTEYE:
 		BuildPaletteOrder: 100
 		Prerequisites: ~fact.dtusa, dtpropaganda.dtusa, !cruisemissc
 		Queue: Building, RABuilding
-		Description: Provides radar and Orbital Ion Cannon support power. Requires power to operate.
+		Description: Provides radar and the Cruise Missile support power. Requires power to operate.
 	Building:
 		Footprint: X_ xx ==
 		Dimensions: 2,3
@@ -4924,11 +4925,14 @@ DTEYE:
 			1: Cruise Missile
 		Descriptions: 
 			1: Initiate an Cruise Missile strike. Applies instant damage to a small area.
+		Weapon: dtcruisemissile
 		BeginChargeSpeechNotification: IonCannonCharging
 		EndChargeSpeechNotification: IonCannonReady
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
 		OnFireSound: nukemisl.aud
+		LaunchSound: nukemisl.aud
+		IncomingSound: nukemisl.aud
 		DisplayTimerRelationships: Ally, Neutral
 		DisplayRadarPing: True
 		CameraActor: camera.small
@@ -5000,11 +5004,14 @@ DTHQ:
 			1: Cruise Missile
 		Descriptions: 
 			1: Initiate an Cruise Missile strike. Applies instant damage to a small area.
+		Weapon: dtcruisemissile
 		BeginChargeSpeechNotification: IonCannonCharging
 		EndChargeSpeechNotification: IonCannonReady
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
 		OnFireSound: nukemisl.aud
+		LaunchSound: nukemisl.aud
+		IncomingSound: nukemisl.aud
 		DisplayTimerRelationships: Ally, Neutral
 		DisplayRadarPing: True
 		CameraActor: camera.small
@@ -6010,6 +6017,8 @@ rajeep.answer:
 		Image: RAJEEP
 	Tooltip:
 		Name: Recon Rover
+	Health:
+		HP: 24500
 	Buildable:
 		Queue: Vehicle.Answer
 		Prerequisites: vehicleproduction
@@ -6316,11 +6325,22 @@ scrt.dtusa:
 	Buildable:
 		Queue: Vehicle.Dtusa
 		Prerequisites: dteye, dtshop
-		Description: Long-ranged microwave weapon. Effective against tomorrow's abominations...and most anything else.
-		UnitLimit: 1
+		Description: Long-ranged microwave weapon. It was effective against tomorrow's abominations...and likely anything else.
+		BuildLimit: 1
+	Armament:
+		Weapon: secretweapon
+		-LocalOffset:
+	AttackTurreted:
+		Voice: Attack
+	Turreted:
+		-Offset:
+	Mobile:
+		Speed: 40
 	ProducibleWithLevel:
 		Prerequisites: dtshop
 		InitialLevels: 1
+	Voiced:
+		VoiceSet: dtdrlazVoice
 
 heli.dtusa:
 	Inherits: RAHELI
@@ -6622,7 +6642,7 @@ dte5:
 		Speed: 56
 		Locomotor: chem
 	Health:
-		HP: 9000
+		HP: 17000
 	AutoTarget:
 		ScanRadius: 4
 	Armament:
@@ -6691,7 +6711,7 @@ dtapc2:
 		Speed: 132
 		PauseOnCondition: notmobile || disabled
 	Health:
-		HP: 40000
+		HP: 90000
 	Repairable:
 		HpPerStep: 1440
 	Armor:
@@ -6792,7 +6812,7 @@ msam.dtjapan:
 		Weapon: BikeRockets
 		LocalOffset: 213,-128,0, 213,128,0
 	RenderSprites:
-		Image: MSAM
+		Image: dtmlrs
 	Voiced:
 		VoiceSet: dtjapvehVoice
 
@@ -6886,10 +6906,10 @@ E7.DTA:
 	AutoTarget:
 		ScanRadius: 4
 	Armament@PRIMARY: ##########
-		Weapon: MachineGun
+		Weapon: rangerifle
 	Armament@GARRISONED: ##########
 		Name: garrisoned
-		Weapon: HighV
+		Weapon: rangerifle
 		MuzzleSequence: garrison-muzzle
 	WithInfantryBody:
 		IdleSequences: idle1,idle2,idle3,idle4
@@ -7023,7 +7043,7 @@ msam.argentina:
 		Weapon: BikeRockets
 		LocalOffset: 213,-128,0, 213,128,0
 	RenderSprites:
-		Image: MSAM
+		Image: dtmlrs
 	Voiced:
 		VoiceSet: dthisvehVoice
 
@@ -7077,7 +7097,7 @@ dtmech:
 		Queue: Infantry.Dtbrazil
 	RenderSprites:
 		Image: mech
-		PlayerPalette: raplayer
+		# PlayerPalette: raplayer
 
 dtfbik:
 	Inherits: ^Vehicle
@@ -7191,7 +7211,7 @@ DTRAE2:
 	Mobile:
 		Speed: 75
 	Health:
-		HP: 8000
+		HP: 17000
 	ChangesHealth@SelfHealing:
 		Step: 8
 	Armament:
@@ -7301,8 +7321,6 @@ hind.dtcuba:
 
 dthavoc:
 	Inherits: HIND
-	RenderSprites:
-		Image: HIND
 	Tooltip:
 		Name: Havoc
 	Buildable:
@@ -7320,6 +7338,7 @@ dthavoc:
 	-Armament@SECONDARY:
 	RenderSprites:
 		Image: dthavoc
+		-PlayerPalette: raplayer
 	Voiced:
 		VoiceSet: dthisvehVoice
 
@@ -7739,6 +7758,7 @@ dtcomanche:
 	Inherits: RAHELI
 	RenderSprites:
 		Image: dtcomanche
+		-PlayerPalette: raplayer
 	Tooltip:
 		Name: Comanche
 	Buildable:
@@ -7889,7 +7909,7 @@ dtfireball:
 	Turreted:
 		TurnSpeed: 16
 	Armament:
-		Weapon: 120mm
+		Weapon: FireballTankNapalm
 		Recoil: 128
 		RecoilRecovery: 26
 		LocalOffset: 768,0,90

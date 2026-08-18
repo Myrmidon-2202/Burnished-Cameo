@@ -1,35 +1,35 @@
 World:
-	# FactionCA@tsgdi:
-	# 	Name: GDI TS
-	# 	InternalName: tsgdi
-	# 	Game: Tiberian Sun
-	# 	Side: Tiberian Sun
-	# 	Description: GDI from Tiberian Sun.Features:.- Hero unit: Mammoth Mk. II.Support powers: Drop Pods, Ion Cannon
-	# FactionCA@tsnod:
-	# 	Name: Nod TS
-	# 	InternalName: tsnod
-	# 	Game: Tiberian Sun
-	# 	Side: Tiberian Sun
-	# 	Description: Nod from Tiberian Sun.Features:.- Subterranean vehicles.- Stealth generators.- Tactical missiles with fast charge and flight time.Support powers: Cluster & Chemical Missiles
-	# FactionCA@forgotten:
-	# 	Name: Forgotten TS
-	# 	InternalName: forgotten
-	# 	Game: Tiberian Sun
-	# 	Side: Tiberian Sun
-	# 	Description: Custom Forgotten from Tiberian Sun.Support powers: Mutant Commando, Wildlife Rampage
-	# FactionCA@cabal:
-	# 	Name: CABAL TS
-	# 	InternalName: cabal
-	# 	Game: Tiberian Sun
-	# 	Side: Tiberian Sun
-	# 	Description: CABAL from Tiberian Sun Firestorm.Features:.- Subterranean vehicles.- Stealth generators.- Cluster & Chemical Missiles with fast charge and flight time.- Most units immune to mind control.- Epic unit: Core Defender.Support powers: Cluster & Chemical Missiles
-	# FactionCA@RandomTS:
-	# 	Name: Any TS
-	# 	InternalName: RandomTS
-	# 	RandomFactionMembers: tsnod, tsgdi, forgotten, cabal
-	# 	Game: Tiberian Sun
-	# 	Side: Random
-	# 	Description: Random Faction.A random faction from Tiberian Sun will be chosen when the game starts.
+	FactionCA@tsgdi:
+		Name: GDI TS
+		InternalName: tsgdi
+		Game: Tiberian Sun
+		Side: Tiberian Sun
+		Description: GDI from Tiberian Sun.Features:.- Hero unit: Mammoth Mk. II.Support powers: Drop Pods, Ion Cannon
+	FactionCA@tsnod:
+		Name: Nod TS
+		InternalName: tsnod
+		Game: Tiberian Sun
+		Side: Tiberian Sun
+		Description: Nod from Tiberian Sun.Features:.- Subterranean vehicles.- Stealth generators.- Tactical missiles with fast charge and flight time.Support powers: Cluster & Chemical Missiles
+	FactionCA@forgotten:
+		Name: Forgotten TS
+		InternalName: forgotten
+		Game: Tiberian Sun
+		Side: Tiberian Sun
+		Description: Custom Forgotten from Tiberian Sun.Support powers: Mutant Commando, Wildlife Rampage
+	FactionCA@cabal:
+		Name: CABAL TS
+		InternalName: cabal
+		Game: Tiberian Sun
+		Side: Tiberian Sun
+		Description: CABAL from Tiberian Sun Firestorm.Features:.- Subterranean vehicles.- Stealth generators.- Cluster & Chemical Missiles with fast charge and flight time.- Most units immune to mind control.- Epic unit: Core Defender.Support powers: Cluster & Chemical Missiles
+	FactionCA@RandomTS:
+		Name: Any TS
+		InternalName: RandomTS
+		RandomFactionMembers: tsnod, tsgdi, forgotten, cabal
+		Game: Tiberian Sun
+		Side: Random
+		Description: Random Faction.A random faction from Tiberian Sun will be chosen when the game starts.
 
 	####################################################################################################
 	#		MPSTARTUNITS

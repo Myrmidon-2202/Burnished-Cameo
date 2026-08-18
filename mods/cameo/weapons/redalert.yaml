@@ -2241,7 +2241,7 @@ ZSU-23:
 		Explosions: small_poof
 
 Hellfire:
-	Inherits: ^ShrapnelWeapon
+	# Inherits: ^ShrapnelWeapon
 	Inherits: ^HeavyMissile
 	ValidTargets: Ground, Water, Trees, Air
 	ReloadDelay: 16

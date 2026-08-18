@@ -180,7 +180,6 @@ diggerifle:
 	ValidTargets: Ground, Water, Trees, Air
 	ReloadDelay: 40
 	Range: 5528
-	MinRange: 553
 	Report: gun13.aud
 	Warhead@Chaingun: SpreadDamage
 		ValidTargets: Ground, Water, Trees, Air
@@ -188,6 +187,36 @@ diggerifle:
 	Warhead@ChaingunPercentage: HealthPercentageDamage
 		ValidTargets: Ground, Water, Trees, Air
 		Damage: 3
+
+rangerifle:
+	Inherits: ^Chaingun
+	Inherits: ^IncendiaryBulletProjectile
+	ValidTargets: Ground, Water, Trees, Air
+	ReloadDelay: 30
+	Range: 5528
+	Report: gun13.aud
+	Warhead@Chaingun: SpreadDamage
+		ValidTargets: Ground, Water, Trees, Air
+		Damage: 2000
+		Spread: 0c37
+	Warhead@ChaingunPercentage: HealthPercentageDamage
+		ValidTargets: Ground, Water, Trees, Air
+		Damage: 3
+
+secretweapon:
+	ValidTargets: Ground, Water, Trees, Air
+	ReloadDelay: 60
+	Range: 8528
+	Report: obelray1.aud
+	Projectile: InstantHit
+	Warhead@1: SpreadDamage
+		ValidTargets: Ground, Water, Trees, Air
+		DamageTypes: Prone100Percent, TriggerProne, FireDeath, Incendiary
+		Damage: 11000
+	Warhead@2: HealthPercentageDamage
+		ValidTargets: Ground, Water, Trees, Air
+		DamageTypes: Prone100Percent, TriggerProne, FireDeath, Incendiary
+		Damage: 5
 
 FireChainGun:
 	Inherits: ^Chaingun
@@ -269,9 +298,15 @@ V2Explode2:
 	-Report:
 
 dtPistol:
+	Inherits: ^LightMG
+	ReloadDelay: 7
 	Range: 5c0
+	Report: gun18.aud
+	Projectile: InstantHit
 	Warhead@1Dam: SpreadDamage
-		Damage: 3000
+		Damage: 500
+		Versus:
+			None: 100
 
 227mmT:
 	Inherits: ^FlakWeapon
@@ -395,9 +430,64 @@ BehemothGrenade:
 	# Warhead@GrenadePercentage: HealthPercentageDamage
 	# 	Damage: 20
 
+FireballTankNapalm:
+	Inherits: ^MediumFlameWeapon
+	ReloadDelay: 30
+	Range: 6742
+	Report: firebl3.aud
+	Projectile: Bullet
+		Speed: 250
+		TrailImage: fb2
+		Image: FB1
+		TrailInterval: 1
+		TrailDelay: 0
+	Warhead@MediumFlameWeapon: SpreadDamage
+		Damage: 9000
+	Warhead@MediumFlameWeaponFriendlyFire: SpreadDamage
+		Damage: 4500
+	Warhead@MediumFlameWeaponPercentage: HealthPercentageDamage
+		Damage: 3
+	Warhead@Effect: CreateEffect
+		Explosions: napalm
+
+# GrenadeRA:
+# 	Inherits: ^Grenade
+# 	Inherits: ^LightFlameWeapon
+# 	ReloadDelay: 40
+# 	Range: 5791
+# 	Report: toss1.aud
+# 	Projectile: Bullet
+# 		Speed: 150
+# 		LaunchAngle: 66
+# 		ContrailLength: 11
+# 		ContrailStartWidth: 66
+# 		ContrailEndWidth: 22
+# 		ContrailStartColor: FF8888FF
+# 		ContrailEndColor: FFFFFF22
+# 	Warhead@Grenade: SpreadDamage
+# 		Damage: 4000
+# 	Warhead@GrenadeFriendlyFire: SpreadDamage
+# 		Damage: 2000
+# 	Warhead@GrenadePercentage: HealthPercentageDamage
+# 		Damage: 2
+# 	Warhead@LightFlameWeapon: SpreadDamage
+# 		Damage: 4000
+# 	Warhead@LightFlameWeaponFriendlyFire: SpreadDamage
+# 		Damage: 2000
+# 	Warhead@LightFlameWeaponPercentage: HealthPercentageDamage
+# 		Damage: 2
+
 DTFirebuggrenade:
 	Inherits: ^Grenade
 	Inherits: ^MediumFlameWeapon
+	Projectile: Bullet
+		Speed: 150
+		LaunchAngle: 66
+		ContrailLength: 11
+		ContrailStartWidth: 66
+		ContrailEndWidth: 22
+		ContrailStartColor: FFFF88FF
+		ContrailEndColor: FF884422
 	Warhead@Effect: CreateEffect
 		Explosions: small_napalm
 		ImpactSounds: firebl3.aud
@@ -423,6 +513,13 @@ chaffmortar:
 		ContrailEndColor: 87654321
 	Warhead@EMPUnit: AffectsIntegrity
 		Damage: 100000
+		Versus:
+			None: 25
+			Wood: 25
+			Light: 75
+			Medium: 150
+			Heavy: 225
+			Concrete: 200
 	Warhead@2Eff: CreateEffect
 		Explosions: dtchaff
 		ImpactActors: false
@@ -660,3 +757,30 @@ katyrockets:
 # 		Explosions: napalm
 # 		ImpactSounds: firebl3.aud
 # 		ImpactActors: false
+
+dtcruisemissile:
+	ValidTargets: Ground, Water, Air, Trees
+	Report:
+	Warhead@1Dam_impact: SpreadDamage
+		Range: 0, 1c1, 2c1, 2c512
+		Damage: 10000
+		Falloff: 1000, 1000, 250, 100
+		ValidTargets: Ground, Air, Trees
+		AffectsParent: True
+		DamageTypes: Prone50Percent, TriggerProne, BulletDeath, Incendiary
+	Warhead@2Smu_impact: LeaveSmudge
+		SmudgeType: Scorch
+		InvalidTargets: Vehicle, Structure, Wall, Husk, Trees, Creep
+	Warhead@3Smu_area: LeaveSmudge
+		SmudgeType: Scorch
+		InvalidTargets: Vehicle, Structure, Wall, Husk, Trees, Creep
+		Size: 1
+		Delay: 3
+	Warhead@4Res_area2: DestroyResource
+		Size: 2
+		Delay: 6
+	Warhead@5Smu_area2: LeaveSmudge
+		SmudgeType: Scorch
+		InvalidTargets: Vehicle, Structure, Wall, Husk, Trees, Creep
+		Size: 2,1
+		Delay: 6

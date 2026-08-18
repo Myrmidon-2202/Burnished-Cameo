@@ -3542,19 +3542,23 @@ tsntsam:
 		Filename: tssam2icon.shp
 		Offset: 0,0
 
-# tstacticalmissile:
-# 	Defaults:
-# 		ZOffset: 1023
-# 	up: mltimisl-placeholder # TODO: use voxel
-# 	down: mltimisl-placeholder # TODO: use voxel
-# 		Start: 1
+tstacticalmissile:
+	Defaults:
+		ZOffset: 1023
+	up: 
+		Filename: mltimisl-placeholder.shp # TODO: use voxel
+	down: 
+		Filename: mltimisl-placeholder.shp # TODO: use voxel
+		Start: 1
 
-# tschemtacticalmissile:
-# 	Defaults:
-# 		ZOffset: 1023
-# 	up: mltimisl-placeholder # TODO: use voxel
-# 	down: mltimisl-placeholder # TODO: use voxel
-# 		Start: 1
+tschemtacticalmissile:
+	Defaults:
+		ZOffset: 1023
+	up: 
+		Filename: mltimisl-placeholder.shp # TODO: use voxel
+	down: 
+		Filename: mltimisl-placeholder.shp # TODO: use voxel
+		Start: 1
 
 # invisibleplane:
 # 	idle: invisibleitem

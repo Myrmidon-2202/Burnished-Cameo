@@ -32,7 +32,7 @@ dthand:
 		UseTilesetExtension: true
 		Length: *
 		Offset: 0,0
-		scale: 1.0
+		Scale: 1.0
 	icon: 
 		Filename: dthandicnh.tem
 		AddExtension: False
@@ -135,6 +135,7 @@ dtstrike:
 	bib: bib3
 		UseTilesetExtension: true
 		Length: *
+		Scale: 1.0
 	icon: 
 		Filename: dtstrikeicnh.tem
 		AddExtension: False
@@ -417,11 +418,12 @@ dtbio:
 		Tick: 80
 	dead: 
 		Filename: bio.shp
-	# bib: bib3
-	# 	Length: *
-	# 	UseTilesetExtension: true
-	# 	TilesetOverrides:
-	# 		INTERIOR: TEMPERAT
+	bib: bib3
+		Length: *
+		UseTilesetExtension: true
+		TilesetOverrides:
+			INTERIOR: TEMPERAT
+		Scale: 1.0
 	icon: 
 		Filename: dttmplicnh.tem
 		AddExtension: False
@@ -570,11 +572,13 @@ dtshop:
 	dead: 
 		Filename: powrdead.shp
 		Tick: 800
+		Scale: 1.0
 	bib: bib3
 		Length: *
 		UseTilesetExtension: true
 		TilesetOverrides:
 			INTERIOR: TEMPERAT
+		Scale: 1.0
 	icon: 
 		Filename: dtshopicnh.tem
 		AddExtension: False
@@ -652,11 +656,11 @@ dtjyard:
 		Filename: dtjyardmake.shp
 		Length: *
 		Tick: 80
-		Scale: 1.0
 	bib: 
 		Filename: bib2.tem
 		UseTilesetExtension: true
 		Length: *
+		Scale: 1.0
 	icon: 
 		Filename: dtjyardicnh.tem
 		AddExtension: False
@@ -813,6 +817,7 @@ dtjunkyard:
 	dead:
 		Filename: rafactdead.shp
 		Tick: 800
+		Scale: 1.0
 	bib:
 		TilesetOverrides:
 			INTERIOR: TEMPERAT
@@ -840,6 +845,7 @@ dtajunkyard:
 	dead:
 		Filename: rafactdead.shp
 		Tick: 800
+		Scale: 1.0
 	bib:
 		TilesetOverrides:
 			INTERIOR: TEMPERAT
@@ -868,6 +874,7 @@ dtprison:
 	bib: bib3
 		UseTilesetExtension: true
 		Length: *
+		Scale: 1.0
 	icon:
 		Filename: prisonicon.shp
 		AddExtension: False
@@ -893,6 +900,7 @@ dthq:
 	bib: bib3
 		UseTilesetExtension: true
 		Length: *
+		Scale: 1.0
 	icon:
 		Filename: dthqicnh.tem
 		AddExtension: False
@@ -1118,7 +1126,7 @@ dte2:
 		Tick: 100
 	shoot:
 		Start: 65
-		Length: 18
+		Length: 20
 		Facings: 8
 	prone-stand:
 		Start: 240
@@ -1718,6 +1726,31 @@ dtmtnk:
 		Filename: 2tnkicon.shp
 		AddExtension: False
 
+dtmlrs:
+	Defaults:
+		Filename: msam.shp
+	idle:
+		Facings: 32
+		InterpolatedFacings: 64
+	turret:
+		Start: 32
+		Facings: 32
+		InterpolatedFacings: 64
+	empty-aim:
+		Start: 64
+		Facings: 32
+		InterpolatedFacings: 64
+	aim:
+		Start: 64
+		Facings: 32
+		InterpolatedFacings: 64
+	muzzle:
+		Filename: gunfire2.shp
+		Length: *
+	icon:
+		Filename: mlrsicon.shp
+		AddExtension: False
+
 dtflak:
 	Defaults:
 		Filename: dtflaktank.shp
@@ -2236,10 +2269,16 @@ digger:
 		Facings: 8
 	run:
 		Start: 16
-		Length: 9
+		Length: 8
 		Facings: 8
 		Tick: 100
 	die1:
+		Start: 176
+		Length: 1
+	die2:
+		Start: 176
+		Length: 1
+	die3:
 		Start: 176
 		Length: 1
 	shoot:
@@ -2469,14 +2508,12 @@ scrt:
 		Scale: 2.0
 	idle:
 		Facings: 32
-		UseClassicFacings: True
 	turret:
 		Start: 32
 		Facings: 32
-		UseClassicFacings: True
 	muzzle:
 	icon: 
-		Filename: dtstnkicnh.tem
+		Filename: SCRTLAZCAMEO.png
 		AddExtension: False
 
 dtstnk:

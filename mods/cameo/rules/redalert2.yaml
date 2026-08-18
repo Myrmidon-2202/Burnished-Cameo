@@ -1,29 +1,29 @@
 World:
-	# FactionCA@RA2America:
-	# 	Name: Allies RA2 #faction-ra2-allies.name
-	# 	InternalName: ra2america
-	# 	Game: Red Alert 2
-	# 	Side: Red Alert 2
-	# 	Description: faction-ra2-allies.description
-	# FactionCA@ra2russia:
-	# 	Name: Soviets RA2 #faction-ra2-soviets.name
-	# 	InternalName: ra2russia
-	# 	Game: Red Alert 2
-	# 	Side: Red Alert 2
-	# 	Description: faction-ra2-soviets.description
-	# FactionCA@yuri:
-	# 	Name: Yuri #faction-ra2-yuri.name
-	# 	InternalName: yuri
-	# 	Game: Red Alert 2
-	# 	Side: Red Alert 2
-	# 	Description: faction-ra2-yuri.description
-	# FactionCA@Randomra2:
-	# 	Name: Random RA2 #faction-ra2-random.name
-	# 	InternalName: Randomra2
-	# 	RandomFactionMembers: ra2america, ra2russia, yuri
-	# 	Game: Red Alert 2
-	# 	Side: Random
-	# 	Description: faction-ra2-random.description
+	FactionCA@RA2America:
+		Name: Allies RA2 #faction-ra2-allies.name
+		InternalName: ra2america
+		Game: Red Alert 2
+		Side: Red Alert 2
+		Description: faction-ra2-allies.description
+	FactionCA@ra2russia:
+		Name: Soviets RA2 #faction-ra2-soviets.name
+		InternalName: ra2russia
+		Game: Red Alert 2
+		Side: Red Alert 2
+		Description: faction-ra2-soviets.description
+	FactionCA@yuri:
+		Name: Yuri #faction-ra2-yuri.name
+		InternalName: yuri
+		Game: Red Alert 2
+		Side: Red Alert 2
+		Description: faction-ra2-yuri.description
+	FactionCA@Randomra2:
+		Name: Random RA2 #faction-ra2-random.name
+		InternalName: Randomra2
+		RandomFactionMembers: ra2america, ra2russia, yuri
+		Game: Red Alert 2
+		Side: Random
+		Description: faction-ra2-random.description
 	####################################################################################################
 	#		MPSTARTUNITS
 	####################################################################################################
@@ -598,7 +598,7 @@ ra2gacnst.infiltrated:
 	Inherits: ^RA2Building
 	Inherits@shape: ^4x3Shape
 	Inherits@CPQWP: ^CPQConditionWithPrimary
-	Inherits@weap: ^IsWeaponFactory
+	Inherits@weap: ^IsWeaponFactoryOld
 	Tooltip:
 		Name: War Factory
 	Building:
@@ -622,6 +622,21 @@ ra2gaweap:
 		Name: Allied War Factory
 	Buildable:
 		Prerequisites: ~ra2gacnst, ra2garefn
+	Production@ra2:
+		Produces: Vehicle.Allies2
+	ProductionQueue@ra2:
+		Type: Vehicle.Allies2
+		DisplayOrder: 2
+		Group: Vehicle
+		LowPowerModifier: 300
+		ReadyAudio: UnitReady
+		BlockedAudio: NoBuild
+		LimitedAudio: BuildingInProgress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar@ra2:
+		ProductionType: Vehicle.Allies2
 	WithIdleOverlay@flag:
 		Sequence: idle-flag
 	WithIdleOverlay@fan:
@@ -666,7 +681,7 @@ ra2gapile:
 	Inherits@shape: ^3x2Shape
 	Inherits@sell: ^RA2ASpawnActorsOnSell
 	Inherits@CPQWP: ^CPQConditionWithPrimary
-	Inherits@barr: ^IsBarrack
+	Inherits@barr: ^IsBarrackOld
 	Tooltip:
 		Name: Allied Barracks
 	ProvidesPrerequisite:
@@ -685,6 +700,21 @@ ra2gapile:
 	Exit@2:
 		SpawnOffset: 100,1200,0
 		ExitCell: 1,3
+	Production@ra2:
+		Produces: Infantry.Allies2
+	ProductionQueue@ra2:
+		Type: Infantry.Allies2
+		DisplayOrder: 2
+		Group: Infantry
+		LowPowerModifier: 300
+		ReadyAudio: UnitReady
+		BlockedAudio: NoBuild
+		LimitedAudio: BuildingInProgress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar@ra2:
+		ProductionType: Infantry.Allies2
 	SelectionDecorations:
 	GivesBuildableArea:
 		AreaTypes: building, cityi
@@ -730,7 +760,7 @@ ra2gaairc:
 	Inherits@radar: ^RadarBuilding
 	Inherits@sell: ^RA2ASpawnActorsOnSell
 	Inherits@CPQWP: ^CPQConditionWithPrimary
-	Inherits@hpad: ^IsAircraftFactory
+	Inherits@hpad: ^IsAircraftFactoryOld
 	Buildable:
 		Queue: Building, RABuilding
 		BuildDuration: 750
@@ -749,6 +779,21 @@ ra2gaairc:
 	Exit@1:
 		ExitCell: 1,1
 		Facing: 768
+	Production@ra2:
+		Produces: Aircraft.Allies2
+	ProductionQueue@ra2:
+		Type: Aircraft.Allies2
+		DisplayOrder: 2
+		Group: Aircraft
+		LowPowerModifier: 300
+		ReadyAudio: UnitReady
+		BlockedAudio: NoBuild
+		LimitedAudio: BuildingInProgress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar@ra2:
+		ProductionType: Aircraft.Allies2
 	Reservable:
 	SpawnNeighboringActors:
 		ActorTypes: dummy_dock
@@ -1585,6 +1630,21 @@ ra2naweap:
 		Name: Soviet War Factory
 	Buildable:
 		Prerequisites: ~ra2nacnst, ra2narefn
+	Production@ra2:
+		Produces: Vehicle.Soviet2
+	ProductionQueue@ra2:
+		Type: Vehicle.Soviet2
+		DisplayOrder: 2
+		Group: Vehicle
+		LowPowerModifier: 300
+		ReadyAudio: UnitReady
+		BlockedAudio: NoBuild
+		LimitedAudio: BuildingInProgress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar@ra2:
+		ProductionType: Vehicle.Soviet2
 	WithIdleOverlay@lights:
 		Sequence: idle-lights
 		RequiresCondition: !build-incomplete
@@ -1669,7 +1729,7 @@ ra2nahand:
 	Inherits@shape: ^2x2Shape
 	Inherits@sell: ^RA2SSpawnActorsOnSell
 	Inherits@CPQWP: ^CPQConditionWithPrimary
-	Inherits@barr: ^IsBarrack
+	Inherits@barr: ^IsBarrackOld
 	Selectable:
 		Bounds: 2048, 2560, 0, -256
 	SelectionDecorations:
@@ -1677,6 +1737,21 @@ ra2nahand:
 		Name: Soviet Barracks
 	ProvidesPrerequisite:
 		Prerequisite: RA2Barracks
+	Production@ra2:
+		Produces: Infantry.Soviet2
+	ProductionQueue@ra2:
+		Type: Infantry.Soviet2
+		DisplayOrder: 2
+		Group: Infantry
+		LowPowerModifier: 300
+		ReadyAudio: UnitReady
+		BlockedAudio: NoBuild
+		LimitedAudio: BuildingInProgress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar@ra2:
+		ProductionType: Infantry.Soviet2
 	Buildable:
 		Prerequisites: ~ra2nacnst, ra2napowr
 		Queue: Building, RABuilding
@@ -1856,7 +1931,7 @@ ra2naairf:
 	Inherits@CPQWP: ^CPQConditionWithPrimary
 	Inherits@shape: ^4x3Shape
 	Inherits@sell: ^RA2SSpawnActorsOnSell
-	Inherits@hpad: ^IsAircraftFactory
+	Inherits@hpad: ^IsAircraftFactoryOld
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -1865,6 +1940,21 @@ ra2naairf:
 		Prerequisites: ~ra2nacnst, ra2naradr
 		Queue: Building, RABuilding
 		Description: Produces aircraft.
+	Production@ra2:
+		Produces: Vehicle.Soviet2
+	ProductionQueue@ra2:
+		Type: Vehicle.Soviet2
+		DisplayOrder: 2
+		Group: Vehicle
+		LowPowerModifier: 300
+		ReadyAudio: UnitReady
+		BlockedAudio: NoBuild
+		LimitedAudio: BuildingInProgress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar@ra2:
+		ProductionType: Vehicle.Soviet2
 	Building:
 		Footprint: =xxx xxxx xxx=
 		Dimensions: 4,3
@@ -2415,6 +2505,21 @@ yrygweap:
 		Name: Yuri War Factory
 	Buildable:
 		Prerequisites: ~yrnacnst, yryarefn
+	Production@ra2:
+		Produces: Vehicle.Yuri
+	ProductionQueue@ra2:
+		Type: Vehicle.Yuri
+		DisplayOrder: 2
+		Group: Vehicle
+		LowPowerModifier: 300
+		ReadyAudio: UnitReady
+		BlockedAudio: NoBuild
+		LimitedAudio: BuildingInProgress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar@ra2:
+		ProductionType: Vehicle.Yuri
 	WithIdleOverlay@lights:
 		Sequence: idle-lights
 		RequiresCondition: !build-incomplete
@@ -2516,12 +2621,27 @@ yryabrck:
 	Inherits@shape: ^3x2Shape
 	Inherits@sell: ^RA2YSpawnActorsOnSell
 	Inherits@CPQWP: ^CPQConditionWithPrimary
-	Inherits@barr: ^IsBarrack
+	Inherits@barr: ^IsBarrackOld
 	SelectionDecorations:
 	Tooltip:
 		Name: Yuri Barracks
 	Buildable:
 		Prerequisites: ~yrnacnst, yryapowr
+	Production@ra2:
+		Produces: Infantry.Yuri
+	ProductionQueue@ra2:
+		Type: Infantry.Yuri
+		DisplayOrder: 2
+		Group: Infantry
+		LowPowerModifier: 300
+		ReadyAudio: UnitReady
+		BlockedAudio: NoBuild
+		LimitedAudio: BuildingInProgress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar@ra2:
+		ProductionType: Infantry.Yuri
 	Building:
 		Footprint: xxx xxx ===
 		Dimensions: 3,3
@@ -2738,15 +2858,15 @@ yrygcomd:
 	RallyPoint: ##########
 		Path: 0,2
 	Production@NORMAL:
-		Produces: Aircraft
+		Produces: Aircraft.Yrui
 		RequiresCondition: !classicproductionqueues
 		PauseOnCondition: disabled
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RAAircraft
-		RequiresCondition: classicproductionqueues
-		PauseOnCondition: disabled
+	# Production@CLASSICPRODUCTIONQUEUES:
+	# 	Produces: RAAircraft
+	# 	RequiresCondition: classicproductionqueues
+	# 	PauseOnCondition: disabled
 	ParallelProductionQueue@AIRCRAFT:
-		Type: Aircraft
+		Type: Aircraft.Yuri
 		DisplayOrder: 4
 		Group: Aircraft
 		LowPowerModifier: 300
@@ -2759,11 +2879,11 @@ yrygcomd:
 		BuildDurationModifier: 25
 		InfiniteBuildLimit: 10
 	ProductionBar@AIRCRAFT:
-		ProductionType: Aircraft
+		ProductionType: Aircraft.Yuri
 		RequiresCondition: !classicproductionqueues
-	ProductionBar@RAAIRCRAFT:
-		ProductionType: RAAircraft
-		RequiresCondition: classicproductionqueues
+	# ProductionBar@RAAIRCRAFT:
+	# 	ProductionType: RAAircraft
+	# 	RequiresCondition: classicproductionqueues
 
 ra2yclon:
 	Inherits: ^RA2Building
@@ -3212,8 +3332,8 @@ RA2E1:
 		Name: G.I.
 	Buildable:
 		BuildPaletteOrder: 10
-		Prerequisites: ~ra2gapile
-		Queue: Infantry, RAInfantry
+		Prerequisites: ra2gapile
+		Queue: Infantry.Allies2
 		Description: actor-ra2e1.description
 	Mobile:
 		Speed: 50
@@ -3340,8 +3460,8 @@ YRGGI:
 		Name: Guardian G.I.
 	Buildable:
 		BuildPaletteOrder: 20
-		Prerequisites: ~ra2gapile
-		Queue: Infantry, RAInfantry
+		Prerequisites: ra2gapile
+		Queue: Infantry.Allies2
 		Description: actor-ggi.description
 	Mobile:
 		Speed: 45
@@ -3490,8 +3610,8 @@ RA2CLEG:
 		Name: Chrono Legionnaire
 	Buildable:
 		BuildPaletteOrder: 140
-		Prerequisites: ~ra2gatech
-		Queue: Infantry, RAInfantry
+		Prerequisites: ra2gatech
+		Queue: Infantry.Allies2
 		Description: actor-cleg.description
 	Mobile:
 		Speed: 35
@@ -3563,8 +3683,8 @@ RA2SNIPE:
 		Name: Sniper
 	Buildable:
 		BuildPaletteOrder: 40
-		Prerequisites: ~ra2gaairc, ~upra2snipe
-		Queue: Infantry, RAInfantry
+		Prerequisites: ra2gaairc
+		Queue: Infantry.Allies2
 		Description: actor-ra2snipe.description
 	Mobile:
 		Speed: 55
@@ -3599,8 +3719,8 @@ RA2ENGINEER:
 	Inherits@vo: ^AttackVoice
 	Inherits@VOICES: ^WithFeedbackVoiceLines
 	Buildable:
-		Prerequisites: ~ra2gapile
-		Queue: Infantry, RAInfantry
+		Prerequisites: ra2gapile
+		Queue: InfantryAllies2
 	Voiced:
 		VoiceSet: AlliesEngineer
 	DeliversCash:
@@ -3609,8 +3729,8 @@ RA2ENGINEER:
 ra2engineer.soviet:
 	Inherits: RA2ENGINEER
 	Buildable:
-		Prerequisites: ~ra2nahand
-		Queue: Infantry, RAInfantry
+		Prerequisites: ra2nahand
+		Queue: Infantry.Soviet2
 	RenderSprites:
 		Image: ra2engineer
 	Voiced:
@@ -3619,8 +3739,8 @@ ra2engineer.soviet:
 ra2engineer.yuri:
 	Inherits: RA2ENGINEER
 	Buildable:
-		Prerequisites: ~yryabrck
-		Queue: Infantry, RAInfantry
+		Prerequisites: yryabrck
+		Queue: Infantry.Yuri
 	RenderSprites:
 		Image: ra2engineer
 	Voiced:
@@ -3640,15 +3760,15 @@ RA2TANY:
 	Inherits@AntiInf: ^PrioritizeInfantry
 	Inherits@VOICES: ^WithFeedbackVoiceLines
 	Buildable:
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Allies2
 		BuildPaletteOrder: 120
-		Prerequisites: ~ra2gatech
+		Prerequisites: ra2gatech
 		BuildLimit: 1
 		Description: template-commando.description
 	Valued:
 		Cost: 3000
 	Tooltip:
-		Name: Tanya II
+		Name: Tanya
 	Health:
 		HP: 50000
 	ChangesHealth@SelfHealing:
@@ -3699,7 +3819,6 @@ RA2SEAL:
 	Inherits: ^Soldier
 	Inherits@Template: ^MeleeInfantryTemplate
 	Inherits@EXPERIENCE: ^GainsExperienceRA2
-	Inherits@PromotionUnitBuff: ^PromotionUnitBuff
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Inherits@DECORATIONS: ^InfantryExperienceHospitalHazmatOverrides
 	Inherits@announce: ^AnnounceGlobal
@@ -3719,9 +3838,9 @@ RA2SEAL:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Allies2
 		BuildPaletteOrder: 120
-		Prerequisites: ~ra2gatech, ~upra2seal
+		Prerequisites: ra2gatech
 		Description: actor-seal.description
 	Armament@PRIMARY:
 		Weapon: RA2MP5
@@ -3770,9 +3889,9 @@ RA2SPY:
 	Inherits@VOICES: ^WithFeedbackVoiceLines
 	Inherits@pip: ^WithSpecialCargoPip
 	Buildable:
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Allies2
 		BuildPaletteOrder: 90
-		Prerequisites: ~ra2gaairc
+		Prerequisites: ra2gaairc
 		Description: actor-ra2spy.description
 	Valued:
 		Cost: 500
@@ -3815,9 +3934,9 @@ RA2ADOG:
 	Inherits@EXPERIENCE: ^GainsExperienceRA2
 	Inherits@VOICES: ^WithFeedbackVoiceLines
 	Buildable:
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Allies2
 		BuildPaletteOrder: 29
-		Prerequisites: ~ra2gapile
+		Prerequisites: ra2gapile
 		Description: actor-dog.description
 	Valued:
 		Cost: 200
@@ -3913,7 +4032,8 @@ RA2ADOG:
 RA2DOG:
 	Inherits: RA2ADOG
 	Buildable:
-		Prerequisites: ~ra2nahand
+		Prerequisites: ra2nahand
+		Queue: Infantry.Soviet2
 
 ##############################################
 #   Red Alert 2 Soviet Infantry
@@ -3931,9 +4051,9 @@ YRBORIS:
 	Inherits@EXPERIENCE: ^GainsExperienceRA2
 	Inherits@VOICES: ^WithFeedbackVoiceLines
 	Buildable:
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Soviet2
 		BuildPaletteOrder: 120
-		Prerequisites: ~ra2natech
+		Prerequisites: ra2natech
 		BuildLimit: 1
 		Description: actor-boris.description
 	Valued:
@@ -4009,8 +4129,8 @@ RA2E2:
 		Name: Conscript
 	Buildable:
 		BuildPaletteOrder: 10
-		Prerequisites: ~ra2nahand
-		Queue: Infantry, RAInfantry
+		Prerequisites: ra2nahand
+		Queue: Infantry.Soviet2
 		Description: template-scout-infantry.description
 	Mobile:
 		Speed: 57
@@ -4051,8 +4171,8 @@ RA2flakt:
 		Name: Flak Trooper
 	Buildable:
 		BuildPaletteOrder: 20
-		Prerequisites: ~ra2nahand
-		Queue: Infantry, RAInfantry
+		Prerequisites: ra2nahand
+		Queue: Infantry.Soviet2
 		Description: actor-flakt.description
 	Mobile:
 		Speed: 45
@@ -4135,8 +4255,8 @@ RA2DESO:
 		Name: Desolator
 	Buildable:
 		BuildPaletteOrder: 40
-		Prerequisites: ~ra2naradr, ~upra2deso
-		Queue: Infantry, RAInfantry
+		Prerequisites: ra2naradr
+		Queue: Infantry.Soviet2
 		Description: actor-deso.description
 	Mobile:
 		Speed: 56
@@ -4208,8 +4328,8 @@ RA2TERROR:
 		Name: Terrorist
 	Buildable:
 		BuildPaletteOrder: 40
-		Prerequisites: ~ra2nahand, ~upra2terror
-		Queue: Infantry, RAInfantry
+		Prerequisites: ra2nahand
+		Queue: Infantry.Soviet2
 		Description: actor-terror.description
 	Mobile:
 		Speed: 75
@@ -4258,8 +4378,8 @@ RA2IVAN:
 		Name: Crazy Ivan
 	Buildable:
 		BuildPaletteOrder: 90
-		Prerequisites: ~ra2naradr
-		Queue: Infantry, RAInfantry
+		Prerequisites: ra2naradr
+		Queue: Infantry.Soviet2
 		Description: actor-ivan.description
 	Mobile:
 		Speed: 100
@@ -4316,8 +4436,8 @@ ra2shk:
 		ValidRelationships: Enemy
 		Priority: 90
 	Buildable:
-		Prerequisites: ~ra2naradr
-		Queue: Infantry, RAInfantry
+		Prerequisites: ra2naradr
+		Queue: Infantry.Soviet2
 		BuildPaletteOrder: 20
 		Description: actor-shk.description
 	Valued:
@@ -4454,8 +4574,8 @@ YRINIT:
 		Name: Yuri Initiate
 	Buildable:
 		BuildPaletteOrder: 10
-		Prerequisites: ~yryabrck
-		Queue: Infantry, RAInfantry
+		Prerequisites: yryabrck
+		Queue: Infantry.Yuri
 		Description: template-scout-infantry.description
 	Mobile:
 		Speed: 66
@@ -4516,8 +4636,8 @@ YRBRUTE:
 		Name: actor-brute.name
 	Buildable:
 		BuildPaletteOrder: 20
-		Prerequisites: ~yryabrck
-		Queue: Infantry, RAInfantry
+		Prerequisites: yryabrck
+		Queue: Infantry.Yuri
 		Description: actor-brute.description
 	Mobile:
 		Speed: 80
@@ -4671,8 +4791,8 @@ YRVIRUS:
 		Name: Virus
 	Buildable:
 		BuildPaletteOrder: 50
-		Prerequisites: ~ra2napsis
-		Queue: Infantry, RAInfantry
+		Prerequisites: ra2napsis
+		Queue: Infantry.Yuri
 		Description: actor-virus.description
 	Mobile:
 		Speed: 52
@@ -4736,8 +4856,8 @@ YRYURI:
 		Name: Yuri Clone
 	Buildable:
 		BuildPaletteOrder: 45
-		Prerequisites: ~ra2napsis
-		Queue: Infantry, RAInfantry
+		Prerequisites: ra2napsis
+		Queue: Infantry.Yuri
 		Description: actor-yuri.description
 	Mobile:
 		Speed: 50
@@ -4829,8 +4949,8 @@ YRYURIX:
 		Name: actor-yurix.name
 	Buildable:
 		BuildPaletteOrder: 150
-		Prerequisites: ~yrygtech
-		Queue: Infantry, RAInfantry
+		Prerequisites: yrygtech
+		Queue: Infantry.Yuri
 		BuildLimit: 1
 		Description: actor-yurix.description
 	Mobile:
@@ -4966,136 +5086,136 @@ YRYURIX:
 	KeepsDistance:
 	ActorStatValues:
 
-YRGTRP:
-	Inherits: ^Soldier
-	Inherits@Template: ^AntiTankAntiAirInfantryTemplate
-	Inherits@EXPERIENCE: ^GainsExperienceRA2
-	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
-	Inherits@DECORATIONS: ^InfantryExperienceHospitalHazmatOverrides
-	Inherits@anim: ^RA2Infantry
-	Inherits@vo: ^AttackFrontalVoice
-	Inherits@VOICES: ^WithFeedbackVoiceLines
-	# Inherits@genemod: ^YuriGeneMod
-	# Inherits@gat: ^YuriGatlingUpgrade
-	Valued:
-		Cost: 400
-	Tooltip:
-		Name: Gatling Trooper
-	Buildable:
-		BuildPaletteOrder: 20
-		Prerequisites: ~ra2napsis
-		Queue: Infantry, RAInfantry
-		IconPalette: ra2cameo
-		Description: actor-gtrp.description
-	Mobile:
-		Speed: 45
-	Health:
-		HP: 36000
-	ChangesHealth@SelfHealing:
-		Step: 36
-	AutoTarget:
-	Armament@PRIMARY:
-		Weapon: RA2GattlingInf
-		LocalOffset: 544,100,256
-	Armament@GARRISONED:
-		Weapon: RA2GattlingInf
-		Name: garrisoned
-	ReloadDelayMultiplier@GattlingSpeed1:
-		RequiresCondition: gatling >= 1
-		Modifier: 90
-	ReloadDelayMultiplier@GattlingSpeed2:
-		RequiresCondition: gatling >= 2
-		Modifier: 90
-	ReloadDelayMultiplier@GattlingSpeed3:
-		RequiresCondition: gatling >= 3
-		Modifier: 90
-	ReloadDelayMultiplier@GattlingSpeed4:
-		RequiresCondition: gatling >= 4
-		Modifier: 90
-	ReloadDelayMultiplier@GattlingSpeed5:
-		RequiresCondition: gatling >= 5
-		Modifier: 90
-	ReloadDelayMultiplier@GattlingSpeed6:
-		RequiresCondition: gatling >= 6
-		Modifier: 90
-	ReloadDelayMultiplier@GattlingSpeed7:
-		RequiresCondition: gatling >= 7
-		Modifier: 90
-	ReloadDelayMultiplier@GattlingSpeed8:
-		RequiresCondition: gatling >= 8
-		Modifier: 90
-	ReloadDelayMultiplier@GattlingSpeed9:
-		RequiresCondition: gatling >= 9
-		Modifier: 90
-	ReloadDelayMultiplier@GattlingSpeed10:
-		RequiresCondition: gatling >= 10
-		Modifier: 90
-	GrantConditionOnAttack@gatling:
-		Condition: gatling
-		RequiredShotsPerInstance: 1,2,3,4,5,6,7,8,9,10
-		RevokeDelay: 250
-		MaximumInstances: 5
-	GrantConditionOnAttack@elitegatling:
-		Condition: gatling
-		RequiredShotsPerInstance: 1,2,3,4,5,6,7,8,9,10
-		RevokeDelay: 250
-		MaximumInstances: 5
-	AttackFrontal:
-		FacingTolerance: 2
-	Voiced:
-		VoiceSet: ArnoldVoice
-	RenderSprites:
-		Image: yrarnd
-	ActorStatValues:
+# YRGTRP:
+	# Inherits: ^Soldier
+	# Inherits@Template: ^AntiTankAntiAirInfantryTemplate
+	# Inherits@EXPERIENCE: ^GainsExperienceRA2
+	# Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	# Inherits@DECORATIONS: ^InfantryExperienceHospitalHazmatOverrides
+	# Inherits@anim: ^RA2Infantry
+	# Inherits@vo: ^AttackFrontalVoice
+	# Inherits@VOICES: ^WithFeedbackVoiceLines
+	# # Inherits@genemod: ^YuriGeneMod
+	# # Inherits@gat: ^YuriGatlingUpgrade
+	# Valued:
+	# 	Cost: 400
+	# Tooltip:
+	# 	Name: Gatling Trooper
+	# Buildable:
+	# 	BuildPaletteOrder: 20
+	# 	Prerequisites: ~ra2napsis
+	# 	Queue: Infantry, RAInfantry
+	# 	IconPalette: ra2cameo
+	# 	Description: actor-gtrp.description
+	# Mobile:
+	# 	Speed: 45
+	# Health:
+	# 	HP: 36000
+	# ChangesHealth@SelfHealing:
+	# 	Step: 36
+	# AutoTarget:
+	# Armament@PRIMARY:
+	# 	Weapon: RA2GattlingInf
+	# 	LocalOffset: 544,100,256
+	# Armament@GARRISONED:
+	# 	Weapon: RA2GattlingInf
+	# 	Name: garrisoned
+	# ReloadDelayMultiplier@GattlingSpeed1:
+	# 	RequiresCondition: gatling >= 1
+	# 	Modifier: 90
+	# ReloadDelayMultiplier@GattlingSpeed2:
+	# 	RequiresCondition: gatling >= 2
+	# 	Modifier: 90
+	# ReloadDelayMultiplier@GattlingSpeed3:
+	# 	RequiresCondition: gatling >= 3
+	# 	Modifier: 90
+	# ReloadDelayMultiplier@GattlingSpeed4:
+	# 	RequiresCondition: gatling >= 4
+	# 	Modifier: 90
+	# ReloadDelayMultiplier@GattlingSpeed5:
+	# 	RequiresCondition: gatling >= 5
+	# 	Modifier: 90
+	# ReloadDelayMultiplier@GattlingSpeed6:
+	# 	RequiresCondition: gatling >= 6
+	# 	Modifier: 90
+	# ReloadDelayMultiplier@GattlingSpeed7:
+	# 	RequiresCondition: gatling >= 7
+	# 	Modifier: 90
+	# ReloadDelayMultiplier@GattlingSpeed8:
+	# 	RequiresCondition: gatling >= 8
+	# 	Modifier: 90
+	# ReloadDelayMultiplier@GattlingSpeed9:
+	# 	RequiresCondition: gatling >= 9
+	# 	Modifier: 90
+	# ReloadDelayMultiplier@GattlingSpeed10:
+	# 	RequiresCondition: gatling >= 10
+	# 	Modifier: 90
+	# GrantConditionOnAttack@gatling:
+	# 	Condition: gatling
+	# 	RequiredShotsPerInstance: 1,2,3,4,5,6,7,8,9,10
+	# 	RevokeDelay: 250
+	# 	MaximumInstances: 5
+	# GrantConditionOnAttack@elitegatling:
+	# 	Condition: gatling
+	# 	RequiredShotsPerInstance: 1,2,3,4,5,6,7,8,9,10
+	# 	RevokeDelay: 250
+	# 	MaximumInstances: 5
+	# AttackFrontal:
+	# 	FacingTolerance: 2
+	# Voiced:
+	# 	VoiceSet: ArnoldVoice
+	# RenderSprites:
+	# 	Image: yrarnd
+	# ActorStatValues:
 
-yrbiot:
-	Inherits: ^Soldier
-	Inherits@Template: ^HeavyInfantryTemplate
-	Inherits@exp: ^GainsExperienceRA2
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
-	Inherits@DECORATIONS: ^InfantryExperienceHospitalHazmatOverrides
-	Inherits@anim: ^RA2Infantry
-	Inherits@vo: ^AttackFrontalVoice
-	# Inherits@genemod: ^YuriGeneMod
-	Inherits@AntiInf: ^PrioritizeInfantry
-	Inherits@AntiVeh: ^PrioritizeVehicle
-	Inherits@AntiTank: ^PrioritizeTank
-	Buildable:
-		Queue: Infantry, RAInfantry
-		BuildPaletteOrder: 100
-		Prerequisites: ~ra2napsis
-		Description: actor-biot.description
-	Valued:
-		Cost: 800
-	Tooltip:
-		Name: Bio Trooper
-	UpdatesPlayerStatistics:
-		AddToArmyValue: true
-	Health:
-		HP: 96000
-	ChangesHealth@SelfHealing:
-		Step: 96
-	Mobile:
-		Speed: 64
-	Armament@PRIMARY:
-		Weapon: RA2Chemspray
-		LocalOffset: 600,0,512
-		FireDelay: 5
-	Armament@Garrison:
-		Name: garrisoned
-		Weapon: RA2Chemspray
-	WithInfantryBody:
-	AttackFrontal:
-	Voiced:
-		VoiceSet: RA2DesolatorVoice
-	Selectable:
-		DecorationBounds: 768, 900, 0, -256
-	-DamagedByTerrain:
-	-DamagedByTintedCells@rad:
-	-DamagedByTintedCells@genrad:
-	ActorStatValues:
-	GrantExternalConditionToTransport:
-		Condition: ifv-chem
+# yrbiot:
+# 	Inherits: ^Soldier
+# 	Inherits@Template: ^HeavyInfantryTemplate
+# 	Inherits@exp: ^GainsExperienceRA2
+# 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+# 	Inherits@DECORATIONS: ^InfantryExperienceHospitalHazmatOverrides
+# 	Inherits@anim: ^RA2Infantry
+# 	Inherits@vo: ^AttackFrontalVoice
+# 	# Inherits@genemod: ^YuriGeneMod
+# 	Inherits@AntiInf: ^PrioritizeInfantry
+# 	Inherits@AntiVeh: ^PrioritizeVehicle
+# 	Inherits@AntiTank: ^PrioritizeTank
+# 	Buildable:
+# 		Queue: Infantry, RAInfantry
+# 		BuildPaletteOrder: 100
+# 		Prerequisites: ~ra2napsis
+# 		Description: actor-biot.description
+# 	Valued:
+# 		Cost: 800
+# 	Tooltip:
+# 		Name: Bio Trooper
+# 	UpdatesPlayerStatistics:
+# 		AddToArmyValue: true
+# 	Health:
+# 		HP: 96000
+# 	ChangesHealth@SelfHealing:
+# 		Step: 96
+# 	Mobile:
+# 		Speed: 64
+# 	Armament@PRIMARY:
+# 		Weapon: RA2Chemspray
+# 		LocalOffset: 600,0,512
+# 		FireDelay: 5
+# 	Armament@Garrison:
+# 		Name: garrisoned
+# 		Weapon: RA2Chemspray
+# 	WithInfantryBody:
+# 	AttackFrontal:
+# 	Voiced:
+# 		VoiceSet: RA2DesolatorVoice
+# 	Selectable:
+# 		DecorationBounds: 768, 900, 0, -256
+# 	-DamagedByTerrain:
+# 	-DamagedByTintedCells@rad:
+# 	-DamagedByTintedCells@genrad:
+# 	ActorStatValues:
+# 	GrantExternalConditionToTransport:
+# 		Condition: ifv-chem
 
 ##############################################
 #   Red Alert 2 Allies Vehicles
@@ -5110,7 +5230,8 @@ RA2AMCV:
 	Tooltip:
 		Name: Allied Mobile Construction Vehicle
 	Buildable:
-		Prerequisites: ~ra2gadept
+		Prerequisites: ra2gadept
+		Queue: Vehicle.Allies2
 	Transforms:
 		IntoActor: ra2gacnst
 		Offset: -1,-1
@@ -5157,8 +5278,8 @@ RA2CMIN:
 		Speed: 100
 		TurnSpeed: 20
 	Buildable:
-		Prerequisites: ~ra2garefn
-		Queue: Vehicle, RAVehicle
+		Prerequisites: ra2garefn
+		Queue: Vehicle.Allies2
 		Description: actor-cmin.description
 	WithHarvestAnimation:
 	WithDockingAnimation:
@@ -5179,6 +5300,7 @@ RA2CMIN:
 	WithHarvestOverlay@harvesting:
 		Sequence: harvesting
 		Palette: ra2effect
+
 RA2MTNK:
 	Inherits: ^Tank
 	Inherits@anim: ^RA2Vehicle
@@ -5194,8 +5316,8 @@ RA2MTNK:
 		Cost: 600
 	Buildable:
 		BuildPaletteOrder: 40
-		Prerequisites: ~ra2gaweap
-		Queue: Vehicle, RAVehicle
+		Prerequisites: ra2gaweap
+		Queue: Vehicle.Allies2
 		Description: template-mbt.description
 	Mobile:
 		Locomotor: tracked
@@ -5243,7 +5365,6 @@ YRROBO:
 	Inherits: ^Tank
 	Inherits@anim: ^RA2Vehicle
 	Inherits@Template: ^LineBreakerTemplate
-	Inherits@PromotionUnitBuff: ^PromotionUnitBuff
 	Inherits@EXPERIENCE: ^GainsExperienceRA2
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
 	Inherits@vo: ^AttackTurretedVoice
@@ -5255,8 +5376,8 @@ YRROBO:
 		Name: Robot Tank
 	Buildable:
 		BuildPaletteOrder: 70
-		Prerequisites: ~yrgarobo
-		Queue: Vehicle, RAVehicle
+		Prerequisites: yrgarobo
+		Queue: Vehicle.Allies2
 		Description: actor-robo.description
 	Mobile:
 		Locomotor: hover
@@ -5323,7 +5444,6 @@ RA2TNKD:
 	Inherits@anim: ^RA2Vehicle
 	Inherits@Template: ^FireSupportTemplate
 	Inherits@EXPERIENCE: ^GainsExperienceRA2
-	Inherits@PromotionUnitBuff: ^PromotionUnitBuff
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
 	Inherits@vo: ^AttackFrontalVoice
 	Inherits@EMP: ^FrontalEMP
@@ -5333,8 +5453,8 @@ RA2TNKD:
 		Name: Tank Destroyer
 	Buildable:
 		BuildPaletteOrder: 60
-		Prerequisites: ~upra2tnkd #~ra2gaairc
-		Queue: Vehicle, RAVehicle
+		Prerequisites: ra2gaairc
+		Queue: Vehicle.Allies2
 		Description: actor-ra2tnkd.description
 	Mobile:
 		Locomotor: tracked
@@ -5391,8 +5511,8 @@ RA2FV:
 		RequiresCondition: !ifv-mg && !ifv-repair && !ifv-sniper && !ifv-flak && !ifv-tesla && !ifv-hero && !ifv-chem && !ifv-fire && !ifv-cannon && !ifv-miss && !ifv-deso && !ifv-demo && !ifv-chrono
 	Buildable:
 		BuildPaletteOrder: 50
-		Prerequisites: ~ra2gaweap
-		Queue: Vehicle, RAVehicle
+		Prerequisites: ra2gaweap
+		Queue: Vehicle.Allies2
 		Description: actor-fv.description
 	Mobile:
 		Locomotor: wheeled
@@ -5630,8 +5750,8 @@ RA2SREF:
 		Name: Prism Tank
 	Buildable:
 		BuildPaletteOrder: 80
-		Prerequisites: ~ra2gatech
-		Queue: Vehicle, RAVehicle
+		Prerequisites: ra2gatech
+		Queue: Vehicle.Allies2
 		Description: actor-sref.description
 	Mobile:
 		Locomotor: tracked
@@ -5712,8 +5832,8 @@ RA2MGTK:
 		RequiresCondition: tree
 	Buildable:
 		BuildPaletteOrder: 60
-		Prerequisites: ~ra2gaairc
-		Queue: Vehicle, RAVehicle
+		Prerequisites: ra2gaairc
+		Queue: Vehicle.Allies2
 		Description: actor-mgtk.description
 	Mobile:
 		Locomotor: tracked
@@ -5773,86 +5893,86 @@ RA2MGTK:
 	Voiced:
 		VoiceSet: MirageTankVoice
 
-RA2HMGTK:
-	Inherits: ^Tank
-	Inherits@anim: ^RA2Vehicle
-	Inherits@Template: ^HighTechTankTemplate
-	Inherits@PromotionUnitBuff: ^PromotionUnitBuff
-	Inherits@EXPERIENCE: ^GainsExperienceRA2
-	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
-	Inherits@vo: ^AttackTurretedVoice
-	Inherits@EMP: ^TurretEMP
-	Valued:
-		Cost: 2000
-	Tooltip:
-		Name: Heavy Mirage Tank
-		RequiresCondition: !tree
-	MirageTooltip@Tree:
-		Name: Heavy Mirage Tank
-		GenericName: Tree
-		GenericVisibility: Enemy, Neutral
-		RequiresCondition: tree
-	Buildable:
-		BuildPaletteOrder: 60
-		Prerequisites: ~ra2gatech
-		Queue: Vehicle, RAVehicle
-		Description: actor-mgtk.description
-	Mobile:
-		Speed: 60
-		TurnSpeed: 12
-	Health:
-		HP: 240000
-	Repairable:
-		HpPerStep: 12000
-	ChangesHealth@SelfHealing:
-		Step: 96
-	Armor:
-		Type: Heavy
-	Turreted:
-		TurnSpeed: 12
-	Armament:
-		Name: primary
-		Weapon: RA2HeavyMirageGun
-		LocalOffset: 1024,0,128
-		Recoil: 128
-		RecoilRecovery: 16
-		RequiresCondition: !rank-elite
-		MuzzleSequence: muzzle
-		MuzzlePalette: ra2effect
-	Armament@elite:
-		Name: primary
-		Weapon: RA2HeavyMirageGun_elite
-		LocalOffset: 1024,0,128
-		Recoil: 128
-		RecoilRecovery: 16
-		RequiresCondition: rank-elite
-		MuzzleSequence: muzzle
-		MuzzlePalette: ra2effect
-	Mirage:
-		RequiresCondition: !disabled
-		InitialDelay: 25
-		RevealDelay: 25
-		RevealOn: Attack, Move
-		MirageCondition: tree
-		DefaultTargetTypes: t08, t10, t03, t02
-	WithMuzzleOverlay:
-	AttackTurreted:
-	SelectionDecorations:
-	AutoTarget:
-	Selectable:
-	WithSpriteTurret:
-		RequiresCondition: !tree
-	WithFacingSpriteBody:
-		RequiresCondition: !tree
-	WithMirageSpriteBody:
-		Name: tree
-		RequiresCondition: tree
-		IsPlayerPalette: false
-		Palette: ra_temperat
-	RenderSprites:
-		PlayerPalette: player_rgba
-	Voiced:
-		VoiceSet: MirageTankVoice
+# RA2HMGTK:
+# 	Inherits: ^Tank
+# 	Inherits@anim: ^RA2Vehicle
+# 	Inherits@Template: ^HighTechTankTemplate
+# 	Inherits@PromotionUnitBuff: ^PromotionUnitBuff
+# 	Inherits@EXPERIENCE: ^GainsExperienceRA2
+# 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+# 	Inherits@vo: ^AttackTurretedVoice
+# 	Inherits@EMP: ^TurretEMP
+# 	Valued:
+# 		Cost: 2000
+# 	Tooltip:
+# 		Name: Heavy Mirage Tank
+# 		RequiresCondition: !tree
+# 	MirageTooltip@Tree:
+# 		Name: Heavy Mirage Tank
+# 		GenericName: Tree
+# 		GenericVisibility: Enemy, Neutral
+# 		RequiresCondition: tree
+# 	Buildable:
+# 		BuildPaletteOrder: 60
+# 		Prerequisites: ~ra2gatech
+# 		Queue: Vehicle, RAVehicle
+# 		Description: actor-mgtk.description
+# 	Mobile:
+# 		Speed: 60
+# 		TurnSpeed: 12
+# 	Health:
+# 		HP: 240000
+# 	Repairable:
+# 		HpPerStep: 12000
+# 	ChangesHealth@SelfHealing:
+# 		Step: 96
+# 	Armor:
+# 		Type: Heavy
+# 	Turreted:
+# 		TurnSpeed: 12
+# 	Armament:
+# 		Name: primary
+# 		Weapon: RA2HeavyMirageGun
+# 		LocalOffset: 1024,0,128
+# 		Recoil: 128
+# 		RecoilRecovery: 16
+# 		RequiresCondition: !rank-elite
+# 		MuzzleSequence: muzzle
+# 		MuzzlePalette: ra2effect
+# 	Armament@elite:
+# 		Name: primary
+# 		Weapon: RA2HeavyMirageGun_elite
+# 		LocalOffset: 1024,0,128
+# 		Recoil: 128
+# 		RecoilRecovery: 16
+# 		RequiresCondition: rank-elite
+# 		MuzzleSequence: muzzle
+# 		MuzzlePalette: ra2effect
+# 	Mirage:
+# 		RequiresCondition: !disabled
+# 		InitialDelay: 25
+# 		RevealDelay: 25
+# 		RevealOn: Attack, Move
+# 		MirageCondition: tree
+# 		DefaultTargetTypes: t08, t10, t03, t02
+# 	WithMuzzleOverlay:
+# 	AttackTurreted:
+# 	SelectionDecorations:
+# 	AutoTarget:
+# 	Selectable:
+# 	WithSpriteTurret:
+# 		RequiresCondition: !tree
+# 	WithFacingSpriteBody:
+# 		RequiresCondition: !tree
+# 	WithMirageSpriteBody:
+# 		Name: tree
+# 		RequiresCondition: tree
+# 		IsPlayerPalette: false
+# 		Palette: ra_temperat
+# 	RenderSprites:
+# 		PlayerPalette: player_rgba
+# 	Voiced:
+# 		VoiceSet: MirageTankVoice
 
 yrbfrt:
 	Inherits: ^Tank
@@ -5873,8 +5993,8 @@ yrbfrt:
 		OverrideActor: yrbfrt
 	Buildable:
 		BuildPaletteOrder: 60
-		Prerequisites: ~ra2gatech
-		Queue: Vehicle, RAVehicle
+		Prerequisites: ra2gatech
+		Queue: Vehicle.Allies2
 		Description: template-opentopped.description
 	Mobile:
 		Speed: 60
@@ -5905,7 +6025,7 @@ yrbfrt:
 		UnloadVoice: Move
 		Types: Infantry, Hacker, Fremen
 		MaxWeight: 6
-		InitialUnits: ra2e1,ra2e1,yrggi,yrggi,yrggi,yrggi
+		InitialUnits:
 		ExclusiveDeploy: true
 		DeployType: Battlefortress
 	AttackOpenTopped:
@@ -5964,6 +6084,7 @@ RA2SMCV:
 		Name: Soviet Mobile Construction Vehicle
 	Buildable:
 		Prerequisites: ~ra2nadept
+		Queue: Vehicle.Soviet2
 	Transforms:
 		IntoActor: ra2nacnst
 		Offset: -1,-1
@@ -5995,8 +6116,8 @@ RA2HTNK:
 		Name: Rhino Heavy Tank
 	Buildable:
 		BuildPaletteOrder: 60
-		Prerequisites: ~ra2naweap
-		Queue: Vehicle, RAVehicle
+		Prerequisites: ra2naweap
+		Queue: Vehicle.Soviet2
 		Description: template-mbt.description
 	Mobile:
 		Speed: 80
@@ -6081,8 +6202,8 @@ RA2HTK:
 		OverrideActor: ra2htk
 	Buildable:
 		BuildPaletteOrder: 60
-		Prerequisites: ~ra2naweap
-		Queue: Vehicle, RAVehicle
+		Prerequisites: ra2naweap
+		Queue: Vehicle.Soviet2
 		Description: actor-htk.description
 	Mobile:
 		Locomotor: lighttracked
@@ -6138,7 +6259,7 @@ RA2HTK:
 	Cargo:
 		Types: Infantry, Hacker, Fremen
 		MaxWeight: 5
-		InitialUnits: ra2e2, ra2e2, ra2e2, ra2e2, ra2flakt
+		InitialUnits:
 
 RA2APOC:
 	Inherits: ^Tank
@@ -6157,8 +6278,8 @@ RA2APOC:
 		Name: Apocalypse Tank
 	Buildable:
 		BuildPaletteOrder: 60
-		Prerequisites: ~ra2natech
-		Queue: Vehicle, RAVehicle
+		Prerequisites: ra2natech
+		Queue: Vehicle.Soviet2
 		Description: actor-htnk.description
 	Mobile:
 		Speed: 55
@@ -6251,9 +6372,9 @@ RA2V3:
 	Inherits@EMP: ^FrontalEMP
 	# Inherits@updrone: ^TerrorDroneSurprise
 	Buildable:
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Soviet2
 		BuildPaletteOrder: 80
-		Prerequisites: ~ra2naradr
+		Prerequisites: ra2naradr
 		Description: actor-v3.description
 	Valued:
 		Cost: 900
@@ -6378,8 +6499,8 @@ RA2TTNK:
 		Name: Tesla Tank
 	Buildable:
 		BuildPaletteOrder: 60
-		Prerequisites: ~ra2naradr, ~upra2ttnk
-		Queue: Vehicle, RAVehicle
+		Prerequisites: ra2naradr, upra2ttnk
+		Queue: Vehicle.Soviet2
 		Description: actor-ttnk.description
 	Mobile:
 		Speed: 75
@@ -6446,8 +6567,8 @@ RA2HARV:
 	Tooltip:
 		Name: War Miner
 	Buildable:
-		Prerequisites: ~ra2naweap
-		Queue: Vehicle, RAVehicle
+		Prerequisites: ra2naweap
+		Queue: Vehicle.Soviet2
 		Description: actor-ra2harv.description
 	Mobile:
 		Speed: 75
@@ -6494,9 +6615,9 @@ ra2dtruck:
 	Health:
 		HP: 20000
 	Buildable:
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Soviet2
 		BuildPaletteOrder: 180
-		Prerequisites: ~ra2naradr, ~upra2dtruck
+		Prerequisites: ra2naradr
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -6527,8 +6648,8 @@ ra2dron:
 		Name: Terror Drone
 	Buildable:
 		BuildPaletteOrder: 60
-		Prerequisites: ~ra2naradr
-		Queue: Vehicle, RAVehicle
+		Prerequisites: ra2naradr
+		Queue: Vehicle.Soviet2
 		Description: actor-dron.description
 	Mobile:
 		Speed: 200
@@ -6603,7 +6724,8 @@ YRPCV:
 	Tooltip:
 		Name: Yuri Mobile Construction Vehicle
 	Buildable:
-		Prerequisites: ~yryggrnd
+		Prerequisites: yryggrnd
+		Queue: Vehicle.Yuri
 	Transforms:
 		IntoActor: yrnacnst
 		Offset: -1,-1
@@ -6635,8 +6757,8 @@ YRSMIN:
 		BuildPaletteOrder: 10
 		BuildDuration: 750
 		BuildDurationModifier: 100
-		Prerequisites: ~yrygweap
-		Queue: Vehicle, RAVehicle
+		Prerequisites: yrygweap
+		Queue: Vehicle.Yuri
 		Description: actor-smin.description
 	Selectable:
 		Priority: 4
@@ -6721,8 +6843,8 @@ YRYTNK:
 		Name: Yuri Gatling Tank
 	Buildable:
 		BuildPaletteOrder: 60
-		Prerequisites: ~yrygweap
-		Queue: Vehicle, RAVehicle
+		Prerequisites: yrygweap
+		Queue: Vehicle.Yuri
 		Description: actor-ytnk.description
 	Mobile:
 		Speed: 90
@@ -6804,8 +6926,8 @@ YRLTNK:
 		Cost: 600
 	Buildable:
 		BuildPaletteOrder: 60
-		Prerequisites: ~yrygweap
-		Queue: Vehicle, RAVehicle
+		Prerequisites: yrygweap
+		Queue: Vehicle.Yuri
 		Description: template-mbt.description
 	Mobile:
 		Locomotor: tracked
@@ -6858,8 +6980,8 @@ YRTELE:
 		Name: Magnetron
 	Buildable:
 		BuildPaletteOrder: 60
-		Prerequisites: ~ra2napsis
-		Queue: Vehicle, RAVehicle
+		Prerequisites: ra2napsis
+		Queue: Vehicle.Yuri
 		Description: actor-tele.description
 	Mobile:
 		Locomotor: tracked
@@ -6935,8 +7057,8 @@ YRCAOS:
 		Name: Chaos Drone
 	Buildable:
 		BuildPaletteOrder: 60
-		Prerequisites: ~ra2napsis
-		Queue: Vehicle, RAVehicle
+		Prerequisites: ra2napsis
+		Queue: Vehicle.Yuri
 		Description: actor-caos.description
 	Mobile:
 		Speed: 140
@@ -6992,8 +7114,8 @@ YRMIND:
 		Name: Master Mind
 	Buildable:
 		BuildPaletteOrder: 60
-		Prerequisites: ~yrygtech
-		Queue: Vehicle, RAVehicle
+		Prerequisites: yrygtech
+		Queue: Vehicle.Yrui
 		Description: actor-mind.description
 	Mobile:
 		Locomotor: tracked
@@ -7937,8 +8059,8 @@ RA2ZEP:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 99
-		Prerequisites: ~ra2natech
-		Queue: Vehicle, Aircraft, RAAircraft
+		Prerequisites: ra2natech
+		Queue: Vehicle.Soviet2, Aircraft.Soviet2
 		Description: actor-zep.description
 	Aircraft:
 		InitialFacing: 896
@@ -8001,8 +8123,8 @@ yrschp:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 98
-		Prerequisites: ~ra2naradr
-		Queue: Vehicle, Aircraft, RAAircraft
+		Prerequisites: ra2naradr
+		Queue: Vehicle.Soviet2, Aircraft.Soviet2
 		Description: actor-schp.description
 	Aircraft:
 		CanForceLand: false
@@ -8120,8 +8242,8 @@ RA2FALC:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 20
-		Prerequisites: ~ra2gaairc
-		Queue: Aircraft, RAAircraft
+		Prerequisites: ra2gaairc
+		Queue: Aircraft.Allies2
 		Description: actor-falc.description
 	Aircraft:
 		CruiseAltitude: 2560
@@ -8189,7 +8311,6 @@ RA2FALC:
 RA2BEAG:
 	Inherits: ^RANeutralPlane
 	Inherits@EXPERIENCE: ^GainsExperienceRA2
-	Inherits@PromotionUnitBuff: ^PromotionUnitBuff
 	# Inherits@upgrade: ^RA2AdvancedAeronautics
 	Inherits@reload: ^RearmableAircraft
 	Inherits@Template: ^BomberTemplate
@@ -8198,8 +8319,8 @@ RA2BEAG:
 		Name: actor-beag.name
 	Buildable:
 		BuildPaletteOrder: 20
-		Prerequisites: ~ra2gatech, ~upra2beag
-		Queue: Aircraft, RAAircraft
+		Prerequisites: ra2gatech
+		Queue: Aircraft.Allies2
 		Description: actor-beag.description
 	Valued:
 		Cost: 3200
@@ -8284,8 +8405,8 @@ ra2shad:
 		OverrideActor: ra2shad
 	Buildable:
 		BuildPaletteOrder: 20
-		Prerequisites: ~ra2gaairc
-		Queue: Aircraft, RAAircraft
+		Prerequisites: ra2gaairc
+		Queue: Aircraft.Allies2
 		Description: actor-shad.description
 	Aircraft:
 		TurnSpeed: 20
@@ -8324,7 +8445,7 @@ ra2shad:
 		RequiresCondition: !airborne
 		PauseOnCondition: disabled
 	Cargo:
-		InitialUnits: ra2e1, ra2e1, yrggi, yrggi, ra2seal
+		InitialUnits:
 		Types: Infantry, Hacker, Fremen
 		MaxWeight: 5
 		AfterLoadDelay: 0
@@ -8441,8 +8562,8 @@ YRDISK:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 120
-		Prerequisites: ~yrygtech
-		Queue: Vehicle, Aircraft, RAAircraft
+		Prerequisites: yrygtech
+		Queue: Vehicle.Yuri
 		Description: actor-disk.description
 	Aircraft:
 		InitialFacing: 896
@@ -8543,8 +8664,8 @@ ra2rock:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 20
-		Prerequisites: ~ra2gaairc
-		Queue: Infantry, RAInfantry
+		Prerequisites: ra2gaairc
+		Queue: Infantry.Allies2
 		Description: actor-ra2rock.description
 	Aircraft:
 		TurnSpeed: 36
@@ -8632,8 +8753,8 @@ yrlunr:
 	Tooltip:
 		Name: Cosmonaut
 	Buildable:
-		Queue: Aircraft, RAAircraft
-		Prerequisites: ~yrygcomd
+		Queue: Aircraft.Yuri
+		Prerequisites: yrygcomd
 	Armament@PRIMARY:
 		Weapon: RA2CosmonautLaser
 		LocalOffset: 128,196,128, 128,-196,128
@@ -8836,7 +8957,6 @@ yrbpln1:
 	Inherits: ^RANeutralPlane
 	Inherits@reload: ^RearmableAircraft
 	Inherits@Template: ^BomberTemplate
-	Inherits@PromotionUnitBuff: ^PromotionUnitBuff
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
 	Inherits@EXPERIENCE: ^GainsExperienceRA2
 	# Inherits@rad: ^RA2RadShells
@@ -8848,7 +8968,7 @@ yrbpln1:
 		Cost: 2000
 	Buildable:
 		BuildPaletteOrder: 100
-		Prerequisites: ~ra2naairf, ~upra2mig
+		Prerequisites: ra2naairf
 		Queue: Aircraft, RAAircraft
 		Description: actor-bpln.description
 	Health:
@@ -8909,90 +9029,90 @@ yrbpln1:
 		Image: yrbpln
 		PlayerPalette: playerra2
 
-ra2_tzep:
-	Inherits: ^Helicopter
-	Inherits@Template: ^HelicopterTemplate
-	Inherits@cargo: ^CargoAircraft
-	Inherits@EXPERIENCE: ^GainsExperienceRA2
-	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
-	Inherits@bot: ^BotAutoDeployTransport
-	Valued:
-		Cost: 3600
-	Tooltip:
-		Name: Transport Kirov
-	UpdatesPlayerStatistics:
-		AddToArmyValue: true
-		OverrideActor: ra2_tzep
-	Buildable:
-		BuildPaletteOrder: 20
-		Prerequisites: ~ra2naradr
-		Queue: Aircraft, RAAircraft, Vehicle
-		Description: actor-shad.description
-	Aircraft:
-		TurnSpeed: 20
-		Speed: 35
-		AltitudeVelocity: 0c50
-		RepulsionSpeed: 15
-	Health:
-		HP: 750000
-	Repairable:
-		HpPerStep: 2625
-	ChangesHealth@SelfHealing:
-		Step: 21
-	Armament@PRIMARY:
-		Weapon: BlackHawkCannon
-		LocalOffset: 150,-200,-25, 150,200,-25
-		MuzzleSequence: muzzle
-		MuzzlePalette: ra2effect
-	WithMuzzleOverlay:
-	Cargo:
-		InitialUnits: ra2e2, ra2e2, ra2e2, ra2e2, RA2flakt, RA2flakt, ra2shk, ra2shk
-		Types: Infantry, Hacker, Fremen, Vehicle
-		MaxWeight: 8
-		AfterLoadDelay: 0
-		BeforeUnloadDelay: 0
-		AfterUnloadDelay: 0
-	AttackAircraft:
-		FacingTolerance: 20
-		AttackType: Hover
-	SpawnActorOnDeath:
-		Actor: ra2_tzep.Husk
-	SelectionDecorations:
-	Selectable:
-		DecorationBounds: 1280, 1024
-	RenderSprites:
-		Image: ra2_tzep
-		PlayerPalette: playerra2
-	Voiced:
-		VoiceSet: KirovVoice
-	DeathSounds:
-	FirepowerMultiplier@FirerateCompensation:
-		Modifier: 50
-ra2_tzep.Husk:
-	Inherits: ^PlaneHusk
-	Tooltip:
-		Name: Transport Kirov
-	Aircraft:
-		TurnSpeed: 20
-		Speed: 40
-	LeavesTrails:
-		Offsets: -853,0,171
-		MovingInterval: 2
-		Image: smokey
-		StationaryInterval: 2
-		SpawnAtLastPosition: False
-		TrailWhileStationary: True
-		Type: CenterPosition
-	RenderSprites:
-		Image: ra2_tzep
-	ShakeOnDeath:
-	FallsToEarth:
-		Moves: false
-		Velocity: 43
-		Explosion: KirovExplode
-	WithShadow:
-	RenderSprites:
-		PlayerPalette: playerra2
+# ra2_tzep:
+# 	Inherits: ^Helicopter
+# 	Inherits@Template: ^HelicopterTemplate
+# 	Inherits@cargo: ^CargoAircraft
+# 	Inherits@EXPERIENCE: ^GainsExperienceRA2
+# 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+# 	Inherits@bot: ^BotAutoDeployTransport
+# 	Valued:
+# 		Cost: 3600
+# 	Tooltip:
+# 		Name: Transport Kirov
+# 	UpdatesPlayerStatistics:
+# 		AddToArmyValue: true
+# 		OverrideActor: ra2_tzep
+# 	Buildable:
+# 		BuildPaletteOrder: 20
+# 		Prerequisites: ~ra2naradr
+# 		Queue: Aircraft, RAAircraft, Vehicle
+# 		Description: actor-shad.description
+# 	Aircraft:
+# 		TurnSpeed: 20
+# 		Speed: 35
+# 		AltitudeVelocity: 0c50
+# 		RepulsionSpeed: 15
+# 	Health:
+# 		HP: 750000
+# 	Repairable:
+# 		HpPerStep: 2625
+# 	ChangesHealth@SelfHealing:
+# 		Step: 21
+# 	Armament@PRIMARY:
+# 		Weapon: BlackHawkCannon
+# 		LocalOffset: 150,-200,-25, 150,200,-25
+# 		MuzzleSequence: muzzle
+# 		MuzzlePalette: ra2effect
+# 	WithMuzzleOverlay:
+# 	Cargo:
+# 		InitialUnits:
+# 		Types: Infantry, Hacker, Fremen, Vehicle
+# 		MaxWeight: 8
+# 		AfterLoadDelay: 0
+# 		BeforeUnloadDelay: 0
+# 		AfterUnloadDelay: 0
+# 	AttackAircraft:
+# 		FacingTolerance: 20
+# 		AttackType: Hover
+# 	SpawnActorOnDeath:
+# 		Actor: ra2_tzep.Husk
+# 	SelectionDecorations:
+# 	Selectable:
+# 		DecorationBounds: 1280, 1024
+# 	RenderSprites:
+# 		Image: ra2_tzep
+# 		PlayerPalette: playerra2
+# 	Voiced:
+# 		VoiceSet: KirovVoice
+# 	DeathSounds:
+# 	FirepowerMultiplier@FirerateCompensation:
+# 		Modifier: 50
+# ra2_tzep.Husk:
+# 	Inherits: ^PlaneHusk
+# 	Tooltip:
+# 		Name: Transport Kirov
+# 	Aircraft:
+# 		TurnSpeed: 20
+# 		Speed: 40
+# 	LeavesTrails:
+# 		Offsets: -853,0,171
+# 		MovingInterval: 2
+# 		Image: smokey
+# 		StationaryInterval: 2
+# 		SpawnAtLastPosition: False
+# 		TrailWhileStationary: True
+# 		Type: CenterPosition
+# 	RenderSprites:
+# 		Image: ra2_tzep
+# 	ShakeOnDeath:
+# 	FallsToEarth:
+# 		Moves: false
+# 		Velocity: 43
+# 		Explosion: KirovExplode
+# 	WithShadow:
+# 	RenderSprites:
+# 		PlayerPalette: playerra2
 
 ####################################################################################################
 #		Red Alert 2 TechBuilding
@@ -11418,20 +11538,20 @@ ra2_tree28.Husk:
 #		Red Alert 2 Upgrades
 ####################################################################################################
 
-upra2aegismissiles:
-	Inherits: ^researched_upgrade.template
-	Tooltip:
-		Name: Aegis Cruiser Ground Missiles
-	Valued:
-		Cost: 4000
-	Buildable:
-		BuildPaletteOrder: 70
-		Queue: Upgrades
-		Description: Allows Aegis Cruisers to target ground targets.
-		Prerequisites: ~ra2gatech, ra2gayard, !upra2aegismissiles
-	RenderSprites:
-		Image: ra2aegis
-	ProvidesPrerequisite:
+# upra2aegismissiles:
+# 	Inherits: ^researched_upgrade.template
+# 	Tooltip:
+# 		Name: Aegis Cruiser Ground Missiles
+# 	Valued:
+# 		Cost: 4000
+# 	Buildable:
+# 		BuildPaletteOrder: 70
+# 		Queue: Upgrades
+# 		Description: Allows Aegis Cruisers to target ground targets.
+# 		Prerequisites: ~ra2gatech, ra2gayard, !upra2aegismissiles
+# 	RenderSprites:
+# 		Image: ra2aegis
+# 	ProvidesPrerequisite:
 
 ####################################################################################################
 #		Red Alert 2 Plane Husk

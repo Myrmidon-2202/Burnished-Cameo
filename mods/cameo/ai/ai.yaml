@@ -3086,7 +3086,7 @@ Player:
 		RequiresCondition: genericbot
 	McvManagerBotModuleCA:
 		RequiresCondition: genericbot
-		McvTypes: mcv.gdi, mcv.nod, ramcv.allies, ramcv.soviet, ramcv.japan, ra2amcv, ra2smcv, yrpcv, yrsmin, modcore, modcore1, modcore2, modcore3, modcore4, modcore5, modcore6, modcore7, d2k_mcv.ixian, d2k_mcv.ordos , d2k_mcv.harkonnen, d2k_mcv.atreides, d2k_mcv.corrino, sctmcv, scpmcv, sczmcv, tsmcvgdi, tsmcvnod, tsmcvmutant, tsmcvcabal, lego_astro_mcv, lego_alien_mcv, lego_imperial_mcv, lego_pirate_mcv, lego_king_mcv, lego_wizard_mcv, wc_h_mcv, wc_o_mcv, worms_mcv, win98_mcv, eden_convec_structure_factory, plymouth_convec_structure_factory, mcv.tomorrow, mcv.answer, mcv.dtusa, mcv.dtrussia, mcv.dtjapan, mcv.dtargentina, mcv.dtbrazil, mcv.dtcuba, mcv.dtaustralia, mcv.dtethiopia
+		McvTypes: mcv.gdi, mcv.nod, ramcv.allies, ramcv.soviet, ramcv.japan, ra2amcv, ra2smcv, yrpcv, yrsmin, modcore, modcore1, modcore2, modcore3, modcore4, modcore5, modcore6, modcore7, d2k_mcv.ixian, d2k_mcv.ordos , d2k_mcv.harkonnen, d2k_mcv.atreides, d2k_mcv.corrino, sctmcv, scpmcv, sczmcv, tsmcvgdi, tsmcvnod, tsmcvmutant, tsmcvcabal, lego_astro_mcv, lego_alien_mcv, lego_imperial_mcv, lego_pirate_mcv, lego_king_mcv, lego_wizard_mcv, wc_h_mcv, wc_o_mcv, worms_mcv, win98_mcv, eden_convec_structure_factory, plymouth_convec_structure_factory, mcv.tomorrow, mcv.answer, mcv.dtusa, mcv.dtrussia, mcv.dtjapan, mcv.dtargentina, mcv.dtbrazil, mcv.dtcuba, mcv.dtaustralia, mcv.dtethiopia, lcv, lcv.australia, lcv.ethiopia
 		ConstructionYardTypes: fact.gdi, fact.nod, rafact.allies, rafact.soviet, rafact.japan, ra2nacnst, ra2gacnst, yrnacnst, tsgtcnstgdi, tsgtcnstnod, tsgtcnstmutant, tsgtcnstcabalb, sccommandcenter, scnexus, schatchery, sclair, schive, glcommand, chcommand, usacommand, construction_yard.ixian, construction_yard.ordos, construction_yard.atreides, construction_yard.harkonnen, construction_yard.corrino, wc2_human_townhall, wc2_orc_greathall, astro_conyard, lego_alien_conyard, lego_imperial_conyard, lego_pirate_conyard, lego_king_conyard, lego_wizard_conyard, wc_h_townhall, wc_o_townhall, wcon, win98_mycomputer, eden_factory_structure, plymouth_structure_factory, fact.tomorrow, fact.answer, fact.dtusa, fact.dtrussia, fact.dtjapan, fact.dtargentina, fact.dtbrazil, fact.dtcuba, fact.dtaustralia, fact.dtethiopia
 		McvFactoryTypes: weap, afld, raweap, raweapa, modraweapj, ra2gaweap, ra2naweap, yrygweap, aa_cgweap, tsgtweap, tsgtweapmutant, tsntweap, tsntweapcabal, schatchery, scnexus, sccommandcenter, glcommand, chcommand, usacommand, heavy_factory.ixian, heavy_factory.ordos, heavy_factory.atreides, heavy_factory.harkonnen, starport.ixian, starport.ordos, starport.atreides, starport.harkonnen, starport.corrino, sc_zerg_larva, wc2_human_townhall, wc2_orc_greathall, astro_conyard, lego_alien_conyard, lego_imperial_conyard, lego_pirate_conyard, lego_king_conyard, lego_wizard_conyard, wc_h_townhall, wc_o_townhall, wcon, win98_mycomputer, eden_factory_structure, plymouth_structure_factory, afld.answer, weap.tomorrow, weap.dtusa, weap.dtrussia, weap.dtjapan, weap.dtargentina, weap.dtbrazil, weap.dtcuba, weap.dtaustralia, weap.dtethiopia
 		MinBaseRadius: 5
@@ -4631,7 +4631,7 @@ Player:
 			dtpyle.dtjapan: 7
 			dtpyle.dtargentina: 7
 			dtpyle.dtcuba: 7
-			afld.australia: 7
+			afld.australia: 9
 			dtpyle.dtethiopia: 7
 			dthand: 10
 			hq.tomorrow: 5
@@ -5141,7 +5141,7 @@ Player:
 		AirToAirUnits: heli, orca, nodvenom, gdifirehawk, yak, mig, su57, raheli, rapierjumpjet, modkami, ra2falc, yrschp, yrbpln1, ra2hind, yrdisk, ra2shad, d2k_air_drone, d2k_heavy_air_drone, d2k_farasha, astro_transport, astro_starfighter, astro_starship, alien_transport, alien_strike_ship, alien_assault_ship, imperial_flying_ship, wizard_troll_blimp
 		AirThreatUnits: heli, orca, nodvenom, gdifirehawk, tran.gdi, tran.nod, yak, mig, su57, mignuke, hind, raheli, MH60, rapierjumpjet, modkami, modbomber, modhip, ratran, ra2falc, ra2beag, yrschp, yrbpln1, ra2hind, ra2zep, yrdisk, ra2shad, d2k_air_drone, d2k_heavy_air_drone, d2k_farasha, astro_transport, astro_starfighter, astro_starship, alien_transport, alien_strike_ship, alien_assault_ship, alien_assault_ship, imperial_flying_ship, king_dwarf_glider, king_dragon, wizard_troll_blimp wizard_dragon
 		#UnitBuilderMinCredits: 0
-		UnitQueues: Infantry, Defense, Defence, RAInfantry, Vehicle, RAVehicle, Aircraft, RAAircraft, Naval, RANaval, Addons, Upgrades, Promotions, Infantry.GDI, Infantry.Nod, Vehicle.GDI, Vehicle.Nod, Aircraft.GDI, Aircraft.Nod, Infantry.Allies, Infantry.Soviet, Infantry.Japan, Vehicle.Allies, Vehicle.Soviet, Vehicle.Japan, Aircraft.Allies, Aircraft.Soviet, Aircraft.Japan, Infantry.Atreides, Infantry.Harkonnen, Infantry.Ordos, Infantry.Corrino, VehicleLight.Atreides, VehicleLight.Harkonnen, VehicleLight.Ordos, VehicleHeavy.Atreides, VehicleHeavy.Harkonnen, VehicleHeavy.Ordos, VehicleStarport.Atreides, VehicleStarport.Harkonnen, VehicleStarport.Ordos, VehicleStarport.Corrino, Aircraft.Atreides, Aircraft.Harkonnen, Aircraft.Ordos, Aircraft.Corrino, Infantry.Legobattles, Vehicle.Legobattles, InfantryHero.Legobattles, Towerupgrade, Towerupgrade2, Infantry.Answer, Infantry.Tomorrow, Infantry.Dtusa, Infantry.Dtrussia, Infantry.Dtjapan, Infantry.Dtargentina, Infantry.Dtbrazil, Infantry.Dtcuba, Infantry.Dtaustralia, Infantry.Dtethiopia, Vehicle.Answer, Vehicle.Tomorrow, Vehicle.Dtusa, Vehicle.Dtrussia, Vehicle.Dtjapan, Vehicle.Dtargentina, Vehicle.Dtbrazil, Vehicle.Dtcuba, Vehicle.Dtaustralia, Vehicle.Dtethiopia Infantry.Answer, Aircraft.Tomorrow, Aircraft.Dtusa, Aircraft.Dtrussia, Aircraft.Dtjapan, Aircraft.Dtargentina, Aircraft.Dtbrazil, Aircraft.Dtcuba, Aircraft.Dtaustralia
+		UnitQueues: Infantry, Defense, Defence, RAInfantry, Vehicle, RAVehicle, Aircraft, RAAircraft, Naval, RANaval, Addons, Upgrades, Promotions, Infantry.GDI, Infantry.Nod, Vehicle.GDI, Vehicle.Nod, Aircraft.GDI, Aircraft.Nod, Infantry.Allies, Infantry.Soviet, Infantry.Japan, Vehicle.Allies, Vehicle.Soviet, Vehicle.Japan, Aircraft.Allies, Aircraft.Soviet, Aircraft.Japan, Infantry.Atreides, Infantry.Harkonnen, Infantry.Ordos, Infantry.Corrino, VehicleLight.Atreides, VehicleLight.Harkonnen, VehicleLight.Ordos, VehicleHeavy.Atreides, VehicleHeavy.Harkonnen, VehicleHeavy.Ordos, VehicleStarport.Atreides, VehicleStarport.Harkonnen, VehicleStarport.Ordos, VehicleStarport.Corrino, Aircraft.Atreides, Aircraft.Harkonnen, Aircraft.Ordos, Aircraft.Corrino, Infantry.Legobattles, Vehicle.Legobattles, InfantryHero.Legobattles, Towerupgrade, Towerupgrade2, Infantry.Answer, Infantry.Tomorrow, Infantry.Dtusa, Infantry.Dtrussia, Infantry.Dtjapan, Infantry.Dtargentina, Infantry.Dtbrazil, Infantry.Dtcuba, Infantry.Dtaustralia, Infantry.Dtethiopia, Vehicle.Answer, Vehicle.Tomorrow, Vehicle.Dtusa, Vehicle.Dtrussia, Vehicle.Dtjapan, Vehicle.Dtargentina, Vehicle.Dtbrazil, Vehicle.Dtcuba, Vehicle.Dtaustralia, Vehicle.Dtethiopia Infantry.Answer, Aircraft.Tomorrow, Aircraft.Dtusa, Aircraft.Dtrussia, Aircraft.Dtjapan, Aircraft.Dtargentina, Aircraft.Dtbrazil, Aircraft.Dtcuba, Aircraft.Dtaustralia, Infantry.Allies2, Infantry.Soviet2, Infantry.Yuri, Vehicle.Allies2, Vehicle.Soviet2, Vehicle.Yuri, Aircraft.Allies2, Aircraft.Soviet2, Aircraft.Yuri
 		UnitDelays:
 			mcv.gdi: 5000
 			mcv.nod: 5000
@@ -6179,8 +6179,8 @@ Player:
 			dte3: 2
 			dte3.dte: 2
 			e7.dta: 3
-			digger: 5
-			dingo: 3
+			digger: 7
+			dingo: 5
 			dtchaffmortar: 3
 			dtmutant: 1
 			dtcubaspy: 1
@@ -6202,14 +6202,14 @@ Player:
 			dtstnk: 1
 			dtstnke: 3
 			dtltnk2.answer: 3
-			dtatv: 3
+			dtatv: 5
 			scrt.dtusa: 1
 			mtnk.tomorrow: 3
 			mtnk.russia: 5
 			mtnk.japan: 3
 			mtnk.argentina: 3
 			mtnk.cuba: 3
-			dtflak: 4
+			dtflak: 10
 			empdisruptor: 3
 			dtsalt: 5
 			dthtnk: 3

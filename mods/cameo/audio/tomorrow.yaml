@@ -64,3 +64,11 @@ dtethvehVoice:
 		Action: eackno00, eackno02, eaffirm100, eaffirm102, emoout100, emoout102
 		Attack: eackno00, eackno02, eaffirm100, eaffirm102, emoout100, emoout102
 		Unload: eemoout100, emoout102
+
+dtdrlazVoice:
+	DefaultVariant: .aud
+	Voices:
+		Select: secretyes
+		Move: secretofcourse
+		Action: secretofcourse
+		Attack: secrettargetaquired

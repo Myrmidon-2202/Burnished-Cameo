@@ -3611,3 +3611,24 @@ disabledicon:
 	icon:
 		Filename: disabledicon.png
 		Length: 1
+
+
+explosion:
+	Defaults:
+		Length: *
+		ZOffset: 2047
+	steel_bluepiffs:
+		Filename: steel_bluepiffs.shp
+	steel_energymuzzle:
+		Filename: steel_energymuzzle.shp
+	steel_blueexp:
+		Filename: steel_blueexp.shp
+	steel_blueexp2:
+		Filename: steel_blueexp2.shp
+	steel_bladehit:
+		Filename: steel_bladehit.shp
+	steel_ionexplosion:
+		Filename: steel_ionexplosion.shp
+		ZOffset: 2046
+	steel_ionexplosionsmall:
+		Filename: steel_ionexplosionsmall.shp

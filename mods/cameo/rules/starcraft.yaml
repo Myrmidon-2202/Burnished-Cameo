@@ -1,29 +1,29 @@
 World:
-	# FactionCA@terran:
-	# 	Name: Terran SC
-	# 	InternalName: terran
-	# 	Game: StarCraft
-	# 	Side: StarCraft
-	# 	Description: Terran wield powerful units that consume power for production, can lift buildings, and deploy Nuclear Strikes, while defenses remain operational.
-	# FactionCA@protoss:
-	# 	Name: Protoss SC
-	# 	InternalName: protoss
-	# 	Game: StarCraft
-	# 	Side: StarCraft
-	# 	Description: Protoss\nFeatures:\n- Units consume power (supply)\n- Unit production pauses on low power\n- Buildings and defenses do not require power to operate\n- Relatively resilient and powerful units\nSupport powers: Purifier Beam
-	# FactionCA@zerg:
-	# 	Name: Zerg SC
-	# 	InternalName: zerg
-	# 	Game: StarCraft
-	# 	Side: StarCraft
-	# 	Description: Zerg\nFeatures:\n- Units consume power (supply)\n- Unit production pauses on low power\n- Buildings and defenses do not require power to operate\n- Relatively powerful units\nSupport powers: Nuclear Strike
-	# FactionCA@RandomSC:
-	# 	Name: Any StarCraft
-	# 	InternalName: RandomSC
-	# 	RandomFactionMembers: terran, protoss, zerg
-	# 	Game: StarCraft
-	# 	Side: Random
-	# 	Description: Random Faction\nA random faction from StarCraft will be chosen when the game starts.
+	FactionCA@terran:
+		Name: Terran SC
+		InternalName: terran
+		Game: StarCraft
+		Side: StarCraft
+		Description: Terran wield powerful units that consume power for production, can lift buildings, and deploy Nuclear Strikes, while defenses remain operational.
+	FactionCA@protoss:
+		Name: Protoss SC
+		InternalName: protoss
+		Game: StarCraft
+		Side: StarCraft
+		Description: Protoss\nFeatures:\n- Units consume power (supply)\n- Unit production pauses on low power\n- Buildings and defenses do not require power to operate\n- Relatively resilient and powerful units\nSupport powers: Purifier Beam
+	FactionCA@zerg:
+		Name: Zerg SC
+		InternalName: zerg
+		Game: StarCraft
+		Side: StarCraft
+		Description: Zerg\nFeatures:\n- Units consume power (supply)\n- Unit production pauses on low power\n- Buildings and defenses do not require power to operate\n- Relatively powerful units\nSupport powers: Nuclear Strike
+	FactionCA@RandomSC:
+		Name: Any StarCraft
+		InternalName: RandomSC
+		RandomFactionMembers: terran, protoss, zerg
+		Game: StarCraft
+		Side: Random
+		Description: Random Faction\nA random faction from StarCraft will be chosen when the game starts.
 	####################################################################################################
 	#		SC TERRAN
 	####################################################################################################
@@ -973,7 +973,7 @@ SCBUNKER:
 		Types: Infantry, Hacker, Fremen
 		MaxWeight: 4
 		EjectOnDeath: false
-		InitialUnits: scmarine, scfirebat, scmarauder, scmarine
+		InitialUnits:
 	WithCargoSounds:
 		EnterSounds: tdrtra00.wav
 		ExitSounds: tdrtra00.wav
@@ -3643,53 +3643,53 @@ SCHARAKAN:
 	ActorStatValues:
 		Upgrades: upinfweapon, upinfarmor
 
-scmarauder:
-	Inherits: ^SCTINFANTRY
-	Inherits@speedup: ^SCUnitProductionSpeedBoost
-	Inherits@Template: ^HeavyInfantryTemplate
-	Inherits@exp: ^GainsExperienceTD
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
-	Inherits@announce: ^AnnounceOnBuild
-	Inherits@stim: ^Stimpackable
-	Inherits@armor: ^TerranInfantryWeaponUpgrades
-	Inherits@weapon: ^TerranInfantryArmorUpgrades
-	Tooltip:
-		Name: Marauder
-	Valued:
-		Cost: 1000
-	Power:
-		Amount: -50
-	Buildable:
-		Prerequisites: ~scacademy
-		Queue: Infantry, RAInfantry
-		Description: Terran tankbuster infantry.\n Strong vs Vehicles, Buildings\n Weak vs Infantry\n Uncrushable
-	Mobile:
-		Speed: 45
-	Health:
-		HP: 90000
-	ChangesHealth@SelfHealing:
-		Step: 90
-	Armament@1:
-		Weapon: MarauderMissiles
-		LocalOffset: 341,125,128
-		FireDelay: 3
-		MuzzleSequence: muzzle
-	Armament@GARRISONED1:
-		Name: garrisoned
-		Weapon: MarauderMissiles
-		FireDelay: 3
-		MuzzleSequence: muzzle
-	WithMuzzleOverlay:
-	Voiced:
-		VoiceSet: SCMarauderVoice
-	RenderSprites:
-		Image: scmarauder
-	# Selectable:
-	# 	DecorationBounds: 1280, 1280
-	RenderSprites:
-		PlayerPalette: player_rgba
-	ActorStatValues:
-		Upgrades: upinfweapon, upinfarmor
+# scmarauder:
+# 	Inherits: ^SCTINFANTRY
+# 	Inherits@speedup: ^SCUnitProductionSpeedBoost
+# 	Inherits@Template: ^HeavyInfantryTemplate
+# 	Inherits@exp: ^GainsExperienceTD
+# 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+# 	Inherits@announce: ^AnnounceOnBuild
+# 	Inherits@stim: ^Stimpackable
+# 	Inherits@armor: ^TerranInfantryWeaponUpgrades
+# 	Inherits@weapon: ^TerranInfantryArmorUpgrades
+# 	Tooltip:
+# 		Name: Marauder
+# 	Valued:
+# 		Cost: 1000
+# 	Power:
+# 		Amount: -50
+# 	Buildable:
+# 		Prerequisites: ~scacademy
+# 		Queue: Infantry, RAInfantry
+# 		Description: Terran tankbuster infantry.\n Strong vs Vehicles, Buildings\n Weak vs Infantry\n Uncrushable
+# 	Mobile:
+# 		Speed: 45
+# 	Health:
+# 		HP: 90000
+# 	ChangesHealth@SelfHealing:
+# 		Step: 90
+# 	Armament@1:
+# 		Weapon: MarauderMissiles
+# 		LocalOffset: 341,125,128
+# 		FireDelay: 3
+# 		MuzzleSequence: muzzle
+# 	Armament@GARRISONED1:
+# 		Name: garrisoned
+# 		Weapon: MarauderMissiles
+# 		FireDelay: 3
+# 		MuzzleSequence: muzzle
+# 	WithMuzzleOverlay:
+# 	Voiced:
+# 		VoiceSet: SCMarauderVoice
+# 	RenderSprites:
+# 		Image: scmarauder
+# 	# Selectable:
+# 	# 	DecorationBounds: 1280, 1280
+# 	RenderSprites:
+# 		PlayerPalette: player_rgba
+# 	ActorStatValues:
+# 		Upgrades: upinfweapon, upinfarmor
 
 SCGHOST:
 	Inherits: ^SCTINFANTRY
@@ -4018,6 +4018,13 @@ SCVULTURE:
 	Armament:
 		Weapon: VultureGrenade
 		LocalOffset: 600,0,0
+	Minelayer:
+		Mine: MINV
+		TileUnknownName: build-invalid
+	MineImmune:
+	AmmoPool:
+		Ammo: 10
+		RearmSound: minelay1.aud
 	AttackFrontal:
 		FacingTolerance: 0
 	Passenger:
@@ -4887,8 +4894,6 @@ SCVALKYRIE:
 	FireWarheadsOnDeath:
 		Weapon: HeliExplode
 		EmptyWeapon: HeliExplode
-	EjectOnDeath:
-		PilotActor: scmarauder
 	SelectionDecorations:
 	Selectable:
 		DecorationBounds: 1280, 1024
@@ -5002,7 +5007,7 @@ SCDROPSHIP:
 		BeforeUnloadDelay: 0
 		AfterUnloadDelay: 0
 		LoadedCondition: loaded
-		InitialUnits: scmarine, scmarine, scmarine, scmarine, scfirebat, scmarauder, scghost, scmedic
+		InitialUnits:
 	-SpawnActorOnDeath:
 	FireWarheadsOnDeath:
 		Weapon: HeliExplode
@@ -5075,7 +5080,7 @@ SCPYTHEAN:
 		BeforeUnloadDelay: 0
 		AfterUnloadDelay: 0
 		LoadedCondition: loaded
-		InitialUnits: scmarine, scmadcap, scfirebat, scharakan, scmarauder, scghost, scsilvertongue, scmedic
+		InitialUnits:
 	AttackOpenTopped:
 		Voice: Attack
 		Armaments: garrisoned
@@ -5173,7 +5178,7 @@ SCMEDIVAC:
 		BeforeUnloadDelay: 0
 		AfterUnloadDelay: 0
 		LoadedCondition: loaded
-		InitialUnits: scmarine, scmadcap, scfirebat, scharakan, scmarauder, scghost, scsilvertongue, scmedic
+		InitialUnits:
 	-SpawnActorOnDeath:
 	FireWarheadsOnDeath:
 		Weapon: HeliExplode
@@ -6663,7 +6668,7 @@ SCSHUTTLE:
 		BeforeUnloadDelay: 0
 		AfterUnloadDelay: 0
 		LoadedCondition: loaded
-		InitialUnits: sczealot, sclegionnaire, scdragoon, scatreus, schightemplar, scdarktemplar
+		InitialUnits:
 	-SpawnActorOnDeath:
 	FireWarheadsOnDeath:
 		Weapon: HeliExplode
