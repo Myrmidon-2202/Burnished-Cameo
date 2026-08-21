@@ -3387,25 +3387,27 @@ DTCPOWER:
 
 DTAPOWER:
 	Inherits: DTPOWER
-	Inherits: ^Defense
 	Inherits@shape: ^2x2Shape
 	Inherits@Template: ^BasicDefenseTemplate
-	Inherits@AUTOTARGET: ^AutoTargetAll
 	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits: ^Defense
 	Tooltip:
 		Name: Outback Outpost
 	RenderSprites:
 		Image: dtapower
 	Turreted:
 		TurnSpeed: 1023
+		InitialFacing: 224
 	Armament:
 		Weapon: ArtilleryShell
 	-WithBuildingBib:
 	AttackTurreted:
 		RequiresCondition: !build-incomplete
+		PauseOnCondition: disabled
 	Buildable:
 		Queue: Building, RABuilding
 		Prerequisites: ~fact.dtaustralia
+		BuildDuration: 125
 	Power:
 		Amount: 175
 	ProvidesPrerequisite@buildingname:
@@ -3512,6 +3514,8 @@ DTPYLE.DTUSA:
 	# 	ProductionType: RAInfantry
 	ProvidesPrerequisite@buildingname:
 		Prerequisite: DTPYLE.DTUSA
+	ProvidesPrerequisite@bar:
+		Prerequisite: Barracks
 	RenderSprites:
 		Image: dtpyle
 
@@ -3556,6 +3560,8 @@ DTPYLE.ANSWER:
 	# 	ProductionType: RAInfantry
 	ProvidesPrerequisite@buildingname:
 		Prerequisite: DTPYLE.ANSWER
+	ProvidesPrerequisite@bar:
+		Prerequisite: Barracks
 	RenderSprites:
 		Image: dtpyle
 
@@ -3635,6 +3641,8 @@ AFLD.AUSTRALIA:
 	Inherits@shape: ^3x2Shape
 	Inherits@sell: ^TDSpawnActorsOnSell
 	Inherits@weap: ^IsWeaponFactoryOld
+	Inherits@barr: ^IsBarrackOld
+	#test
 	Selectable:
 	# HitShape:
 		# TargetableOffsets: 0,0,0, 0,-512,256, 0,-1451,384, 0,512,128, 0,1536,85
@@ -3648,7 +3656,7 @@ AFLD.AUSTRALIA:
 	ProvidesPrerequisite:
 		Prerequisite: vehicleproduction
 	Buildable:
-		BuildPaletteOrder: 40
+		BuildPaletteOrder: 30
 		Prerequisites: ~fact.dtaustralia, dtproc
 		Queue: Building, RABuilding
 		Description: Provides a dropzone for vehicle reinforcements
@@ -4676,6 +4684,7 @@ ATEK.BRAZIL:
 		Weapon: DTTowerMissile
 	AttackTurreted:
 		RequiresCondition: !build-incomplete
+		PauseOnCondition: disabled
 	ProvidesPrerequisite@techcenter:
 		Prerequisite: atek.brazil
 	ProvidesPrerequisite@techcenter2:
@@ -4864,7 +4873,7 @@ DTSILO:
 		Image: DTSILO
 	Buildable:
 		Queue: Defence, RADefence
-		Prerequisites: dtproc
+		Prerequisites: ~dtproc
 		BuildPaletteOrder: 1000
 	Tooltip:
 		Name: Petrol Silo
@@ -5582,6 +5591,7 @@ DTMEDI:
 	Inherits: MEDI
 	Buildable:
 		Queue: Infantry.Dtusa, Infantry.Answer
+		Prerequisites: Barracks
 		Description: Anti-tank/Anti-aircraft infantry.    Strong vs Tanks, Aircraft   Weak vs Infantry
 	RenderSprites:
 		Image: medi
@@ -6006,7 +6016,7 @@ DTE2:
 		MuzzleSequence: garrison-muzzle
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
-		IdleSequences: idle1,idle2,idle3,idle4
+		# IdleSequences: idle1,idle2
 	Inherits@EXT: ^ExternalConditions ##########
 	AcceptsDeliveredExperience: ##########
 		ValidTypes: infantry ##########
@@ -6209,7 +6219,7 @@ DTE2.dtusa:
 	Mobile:
 		Speed: 60
 	Health:
-		HP: 6000
+		HP: 20000
 	AutoTarget:
 		ScanRadius: 4
 	Armament@PRIMARY: ##########
@@ -6220,7 +6230,7 @@ DTE2.dtusa:
 		MuzzleSequence: garrison-muzzle
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
-		IdleSequences: idle1,idle2,idle3,idle4
+		# IdleSequences: idle1,idle2,idle3,idle4
 	Inherits@EXT: ^ExternalConditions ##########
 	AcceptsDeliveredExperience: ##########
 		ValidTypes: infantry ##########

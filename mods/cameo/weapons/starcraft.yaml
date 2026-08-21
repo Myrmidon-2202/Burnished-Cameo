@@ -1101,7 +1101,7 @@ BCLaser:
 	Inherits: ^HeavyFlameWeapon
 	Inherits: ^LaserWeapon
 	ValidTargets: Ground, Water, Trees, Air
-	ReloadDelay: 38
+	ReloadDelay: 68
 	Range: 7700
 	Report: TPhFi100.aud
 	Projectile: Bullet
@@ -3758,70 +3758,70 @@ CreepRemover:
 	ReloadDelay: 15
 	Range: 5313
 	Report: zhyfir00.aud
-	Projectile: Bullet
-		Image: scmspore
-		ContrailStartColor: 88FF4488
-		ContrailEndColor: FFFFFF44
-		ContrailStartWidth: 25
-		ContrailEndWidth: 75
-		ContrailLength: 5
-		Speed: 2500
-		Width: 25
-		TrailImage: sczhsplash
-	Warhead@LightFlameWeapon: SpreadDamage
-		InvalidTargets: Broodling
-		ValidTargets: Ground, Water, Air
-		Damage: 2000
-	Warhead@LightFlameWeaponFriendlyFire: SpreadDamage
-		InvalidTargets: Broodling
-		ValidTargets: Ground, Water, Air
-		Damage: 1000
-	Warhead@LightFlameWeaponPercentage: HealthPercentageDamage
-		InvalidTargets: Broodling
-		ValidTargets: Ground, Water, Air
-		Damage: 1
-	Warhead@LightChemicalWeapon: SpreadDamage
-		InvalidTargets: Broodling
-		ValidTargets: Ground, Water, Air
-		Damage: 2000
-	Warhead@LightChemicalWeaponFriendlyFire: SpreadDamage
-		InvalidTargets: Broodling
-		ValidTargets: Ground, Water, Air
-		Damage: 1000
-	Warhead@LightChemicalWeaponPercentage: HealthPercentageDamage
-		InvalidTargets: Broodling
-		ValidTargets: Ground, Water, Air
-		Damage: 1
-	Warhead@LightMissile: SpreadDamage
-		InvalidTargets: Broodling
-		ValidTargets: Ground, Water, Air
-		Damage: 2000
-	Warhead@LightMissilePercentage: HealthPercentageDamage
-		InvalidTargets: Broodling
-		ValidTargets: Ground, Water, Air
-		Damage: 1
-	Warhead@SmallArms: SpreadDamage
-		InvalidTargets: Broodling
-		ValidTargets: Ground, Water, Air
-		Damage: 2000
-	Warhead@SmallArmsPercentage: HealthPercentageDamage
-		InvalidTargets: Broodling
-		ValidTargets: Ground, Water, Air
-		Damage: 1
-	Warhead@ArrowWeapon: SpreadDamage
-		InvalidTargets: Broodling
-		ValidTargets: Ground, Water, Air
-		Damage: 2000
-	Warhead@ArrowWeaponPercentage: HealthPercentageDamage
-		InvalidTargets: Broodling
-		ValidTargets: Ground, Water, Air
-		Damage: 1
-	Warhead@Effect: CreateEffect
-		Explosions: sczhsplash
-	Warhead@EffectAir: CreateEffect
-		Explosions: sczhsplash
-	Warhead@2Eff: CreateEffect
-		Explosions: scscourgeexplosion
+	# Projectile: Bullet
+	# 	Image: scmspore
+	# 	ContrailStartColor: 88FF4488
+	# 	ContrailEndColor: FFFFFF44
+	# 	ContrailStartWidth: 25
+	# 	ContrailEndWidth: 75
+	# 	ContrailLength: 5
+	# 	Speed: 2500
+	# 	Width: 25
+	# 	TrailImage: sczhsplash
+	# Warhead@LightFlameWeapon: SpreadDamage
+	# 	InvalidTargets: Broodling
+	# 	ValidTargets: Ground, Water, Air
+	# 	Damage: 2000
+	# Warhead@LightFlameWeaponFriendlyFire: SpreadDamage
+	# 	InvalidTargets: Broodling
+	# 	ValidTargets: Ground, Water, Air
+	# 	Damage: 1000
+	# Warhead@LightFlameWeaponPercentage: HealthPercentageDamage
+	# 	InvalidTargets: Broodling
+	# 	ValidTargets: Ground, Water, Air
+	# 	Damage: 1
+	# Warhead@LightChemicalWeapon: SpreadDamage
+	# 	InvalidTargets: Broodling
+	# 	ValidTargets: Ground, Water, Air
+	# 	Damage: 2000
+	# Warhead@LightChemicalWeaponFriendlyFire: SpreadDamage
+	# 	InvalidTargets: Broodling
+	# 	ValidTargets: Ground, Water, Air
+	# 	Damage: 1000
+	# Warhead@LightChemicalWeaponPercentage: HealthPercentageDamage
+	# 	InvalidTargets: Broodling
+	# 	ValidTargets: Ground, Water, Air
+	# 	Damage: 1
+	# Warhead@LightMissile: SpreadDamage
+	# 	InvalidTargets: Broodling
+	# 	ValidTargets: Ground, Water, Air
+	# 	Damage: 2000
+	# Warhead@LightMissilePercentage: HealthPercentageDamage
+	# 	InvalidTargets: Broodling
+	# 	ValidTargets: Ground, Water, Air
+	# 	Damage: 1
+	# Warhead@SmallArms: SpreadDamage
+	# 	InvalidTargets: Broodling
+	# 	ValidTargets: Ground, Water, Air
+	# 	Damage: 2000
+	# Warhead@SmallArmsPercentage: HealthPercentageDamage
+	# 	InvalidTargets: Broodling
+	# 	ValidTargets: Ground, Water, Air
+	# 	Damage: 1
+	# Warhead@ArrowWeapon: SpreadDamage
+	# 	InvalidTargets: Broodling
+	# 	ValidTargets: Ground, Water, Air
+	# 	Damage: 2000
+	# Warhead@ArrowWeaponPercentage: HealthPercentageDamage
+	# 	InvalidTargets: Broodling
+	# 	ValidTargets: Ground, Water, Air
+	# 	Damage: 1
+	# Warhead@Effect: CreateEffect
+	# 	Explosions: sczhsplash
+	# Warhead@EffectAir: CreateEffect
+	# 	Explosions: sczhsplash
+	# Warhead@2Eff: CreateEffect
+	# 	Explosions: scscourgeexplosion
 	Warhead@4Concrete: DamagesConcrete
 		Damage: 12345
 		Spread: 1234

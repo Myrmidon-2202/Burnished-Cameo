@@ -1115,6 +1115,7 @@ dte2:
 		Filename: dte2.shp
 		Scale: 2.0
 	stand:
+		Start: 0
 		Facings: 8
 	stand2:
 		Start: 8
@@ -1125,9 +1126,10 @@ dte2:
 		Facings: 8
 		Tick: 100
 	shoot:
-		Start: 65
-		Length: 20
+		Start: 64
+		Length: 19
 		Facings: 8
+		Tick: 100
 	prone-stand:
 		Start: 240
 		Stride: 4

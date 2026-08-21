@@ -3228,7 +3228,7 @@ yrygpsyt:
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Inherits@sell: ^RA2YSpawnActorsOnSell
 	Inherits@turret: ^TurretEMP
-	Inherits@mccap: ^MindControlCap
+	# Inherits@mccap: ^MindControlCap
 	Inherits@detect: ^GenericAllDetector
 	Buildable:
 		Queue: Defence, RADefence
@@ -4148,7 +4148,7 @@ RA2E2:
 		RequiresCondition: rank-elite
 	Armament@GARRISONED:
 		Name: garrisoned
-		Weapon: RA2vulcan3
+		Weapon: RA2M1CarbineE
 		MuzzleSequence: muzzle
 		MuzzlePalette: ra2effect
 	AttackFrontal:
@@ -4847,7 +4847,7 @@ YRYURI:
 	Inherits@MC: ^MCImmune
 	Inherits@vo: ^AttackFrontalVoice
 	Inherits@bot: ^BotAutoDeployOnLowHealth
-	Inherits@mccap: ^MindControlCap
+	# Inherits@mccap: ^MindControlCap
 	# Inherits@genemod: ^YuriGeneMod
 	Inherits@pip: ^WithSpecialCargoPip
 	Valued:
@@ -4939,7 +4939,7 @@ YRYURIX:
 	Inherits@announce: ^AnnounceGlobal
 	Inherits@COMMANDOSKULL: ^CommandoSkull
 	Inherits@bot: ^BotAutoDeployOnLowHealth
-	Inherits@mccap: ^MindControlCap
+	# Inherits@mccap: ^MindControlCap
 	# Inherits@genemod: ^YuriGeneMod
 	Selectable:
 		DecorationBounds: 512, 1440, 0, -512
@@ -7107,7 +7107,7 @@ YRMIND:
 	Inherits@EMP: ^TurretEMP
 	Inherits@MC: ^MCImmune
 	# Inherits@chaos: ^ChaosGasSurprise
-	Inherits@mccap: ^MindControlCap
+	# Inherits@mccap: ^MindControlCap
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -8968,8 +8968,8 @@ yrbpln1:
 		Cost: 2000
 	Buildable:
 		BuildPaletteOrder: 100
-		Prerequisites: ra2naairf
-		Queue: Aircraft, RAAircraft
+		Prerequisites: ~ra2naairf
+		Queue: Aircraft.Soviet2
 		Description: actor-bpln.description
 	Health:
 		HP: 57500
@@ -12394,20 +12394,20 @@ ra2shkhero:
 # 		Image: yrmind
 # 	ProvidesPrerequisite:
 
-^MindControlCap:
-	GrantConditionOnPrerequisite@MCCap:
-		Condition: upmccap
-		Prerequisites: upmindcontrolcap
-	MindControllerCapacityModifier@MCCap:
-		Amount: 2
-		RequiresCondition: upmccap
-	MindControllerDelayModifier@MCCap:
-		Modifier: 50
-		RequiresCondition: upmccap
-	ActorStatValues:
-		Upgrades: upmindcontrolcap
-	Targetable@Psionic:
-		TargetTypes: Psionic
+# ^MindControlCap:
+# 	GrantConditionOnPrerequisite@MCCap:
+# 		Condition: upmccap
+# 		Prerequisites: upmindcontrolcap
+# 	MindControllerCapacityModifier@MCCap:
+# 		Amount: 2
+# 		RequiresCondition: upmccap
+# 	MindControllerDelayModifier@MCCap:
+# 		Modifier: 50
+# 		RequiresCondition: upmccap
+# 	ActorStatValues:
+# 		Upgrades: upmindcontrolcap
+# 	Targetable@Psionic:
+# 		TargetTypes: Psionic
 
 ### Lunar tree
 

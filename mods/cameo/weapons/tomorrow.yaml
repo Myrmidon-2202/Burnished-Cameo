@@ -184,6 +184,16 @@ diggerifle:
 	Warhead@Chaingun: SpreadDamage
 		ValidTargets: Ground, Water, Trees, Air
 		Damage: 2000
+		Versus:
+			none: 110
+			wall: 10
+			building: 60
+			wood: 75
+			light: 70
+			heavy: 60
+			invulnerable: 0
+			cy: 20
+			harvester: 40
 	Warhead@ChaingunPercentage: HealthPercentageDamage
 		ValidTargets: Ground, Water, Trees, Air
 		Damage: 3
@@ -480,6 +490,7 @@ FireballTankNapalm:
 DTFirebuggrenade:
 	Inherits: ^Grenade
 	Inherits: ^MediumFlameWeapon
+	Report: toss1.aud
 	Projectile: Bullet
 		Speed: 150
 		LaunchAngle: 66
@@ -491,7 +502,6 @@ DTFirebuggrenade:
 	Warhead@Effect: CreateEffect
 		Explosions: small_napalm
 		ImpactSounds: firebl3.aud
-
 
 chaffmortar:
 	Inherits@EMP: ^EMPDamage
