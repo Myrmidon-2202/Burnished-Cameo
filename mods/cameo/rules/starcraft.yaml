@@ -146,8 +146,8 @@ World:
 		RequiresCondition: lowpower
 	Production@NORMAL:
 		PauseOnCondition: lowpower
-	Production@CLASSICPRODUCTIONQUEUES:
-		PauseOnCondition: lowpower
+	# Production@CLASSICPRODUCTIONQUEUES:
+	# 	PauseOnCondition: lowpower
 
 ^SCUnitProductionSpeedBoost:
 	ProductionTimeMultiplier@speedup:
@@ -813,7 +813,7 @@ SCBARRACKS:
 	Inherits@shape: ^3x2Shape
 	Inherits@CPQWP: ^CPQConditionWithPrimary
 	Inherits@supply: ^SCUnitProduction
-	Inherits@barr: ^IsBarrack
+	Inherits@barr: ^IsBarrackOld
 	Tooltip:
 		Name: Barracks
 	Power:
@@ -851,6 +851,24 @@ SCBARRACKS:
 		IntoActor: scbarracksm
 		Offset: 1,1
 		NoTransformNotification: BuildingCannotPlaceAudio
+	Production@NORMAL:
+		Produces: Infantry.Terran
+	ProductionQueue:
+		Type: Infantry.Terran
+		DisplayOrder: 2
+		Group: Infantry
+		LowPowerModifier: 150
+		ReadyAudio: UnitReady
+		ReadyTextNotification: notification-unit-ready
+		BlockedAudio: NoBuild
+		BlockedTextNotification: notification-unable-to-build-more
+		LimitedAudio: BuildingInProgress
+		LimitedTextNotification: notification-unable-to-comply-building-in-progress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar:
+		ProductionType: Infantry.Terran
 	Voiced:
 		VoiceSet: SCGenericBuildingVoice
 	RenderSprites:
@@ -876,7 +894,7 @@ SCACADEMY:
 		BuildDurationModifier: 100
 		Prerequisites: ~scbarracks
 		Queue: Building, RABuilding
-		Description: Unlocks Jim Raynor, Firebat and Medic. Researches infantry upgrades.
+		Description: Unlocks Firebat and Medic. Researches infantry upgrades.
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -1132,7 +1150,7 @@ SCFACTORY:
 	Inherits@shape: ^3x2Shape
 	Inherits@CPQWP: ^CPQConditionWithPrimary
 	Inherits@supply: ^SCUnitProduction
-	Inherits@weap: ^IsWeaponFactory
+	Inherits@weap: ^IsWeaponFactoryOld
 	Tooltip:
 		Name: Weapons Factory
 	Power:
@@ -1149,6 +1167,24 @@ SCFACTORY:
 		BuildSounds: tscupd00.aud
 	# ParallelProductionQueue@VEHICLE:
 	# 	LowPowerModifier: 10000
+	Production@NORMAL:
+		Produces: Vehicle.Terran
+	ProductionQueue:
+		Type: Vehicle.Terran
+		DisplayOrder: 2
+		Group: Vehicle
+		LowPowerModifier: 150
+		ReadyAudio: UnitReady
+		ReadyTextNotification: notification-unit-ready
+		BlockedAudio: NoBuild
+		BlockedTextNotification: notification-unable-to-build-more
+		LimitedAudio: BuildingInProgress
+		LimitedTextNotification: notification-unable-to-comply-building-in-progress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar:
+		ProductionType: Vehicle.Terran
 	ProductionCostMultiplier@terran:
 		Multiplier: 125
 	ProductionTimeMultiplier@terran:
@@ -1219,7 +1255,7 @@ SCSTARPORT:
 	Inherits@shape: ^3x2Shape
 	Inherits@CPQWP: ^CPQConditionWithPrimary
 	Inherits@supply: ^SCUnitProduction
-	Inherits@hpad: ^IsAircraftFactory
+	Inherits@hpad: ^IsAircraftFactoryOld
 	Tooltip:
 		Name: Starport
 	Power:
@@ -1236,6 +1272,24 @@ SCSTARPORT:
 		BuildSounds: tscupd00.aud
 	# ParallelProductionQueue@AIRCRAFT:
 	# 	LowPowerModifier: 10000
+	Production@NORMAL:
+		Produces: Aircraft.Terran
+	ProductionQueue:
+		Type: Aircraft.Terran
+		DisplayOrder: 2
+		Group: Aircraft
+		LowPowerModifier: 150
+		ReadyAudio: UnitReady
+		ReadyTextNotification: notification-unit-ready
+		BlockedAudio: NoBuild
+		BlockedTextNotification: notification-unable-to-build-more
+		LimitedAudio: BuildingInProgress
+		LimitedTextNotification: notification-unable-to-comply-building-in-progress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar:
+		ProductionType: Aircraft.Terran
 	Selectable:
 		Bounds: 3072, 2048
 		DecorationBounds: 3300, 2448, 0, 0
@@ -1557,7 +1611,7 @@ SCGATEWAY:
 	Inherits@shape: ^3x2Shape
 	Inherits@CPQWP: ^CPQConditionWithPrimary
 	Inherits@supply: ^SCUnitProduction
-	Inherits@barr: ^IsBarrack
+	Inherits@barr: ^IsBarrackOld
 	Inherits@explode: ^BuildingExplodeProtoss
 	Inherits@shieldgenerator: ^ProtossPersonalShield
 	Tooltip:
@@ -1576,6 +1630,24 @@ SCGATEWAY:
 		BuildSounds: pshbld03.aud
 	# ParallelProductionQueue@INFANTRY:
 	# 	LowPowerModifier: 10000
+	Production@NORMAL:
+		Produces: Infantry.Protoss
+	ProductionQueue:
+		Type: Infantry.Protoss
+		DisplayOrder: 2
+		Group: Infantry
+		LowPowerModifier: 150
+		ReadyAudio: UnitReady
+		ReadyTextNotification: notification-unit-ready
+		BlockedAudio: NoBuild
+		BlockedTextNotification: notification-unable-to-build-more
+		LimitedAudio: BuildingInProgress
+		LimitedTextNotification: notification-unable-to-comply-building-in-progress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar:
+		ProductionType: Infantry.Protoss
 	ProductionCostMultiplier@protoss:
 		Multiplier: 125
 	ProductionTimeMultiplier@protoss:
@@ -1796,7 +1868,7 @@ SCROBOTICSFACILITY:
 	Inherits@shape: ^3x2Shape
 	Inherits@CPQWP: ^CPQConditionWithPrimary
 	Inherits@supply: ^SCUnitProduction
-	Inherits@weap: ^IsWeaponFactory
+	Inherits@weap: ^IsWeaponFactoryOld
 	Inherits@explode: ^BuildingExplodeProtoss
 	Inherits@shieldgenerator: ^ProtossPersonalShield
 	Tooltip:
@@ -1815,6 +1887,24 @@ SCROBOTICSFACILITY:
 		BuildSounds: pshbld03.aud
 	# ParallelProductionQueue@VEHICLE:
 	# 	LowPowerModifier: 10000
+	Production@NORMAL:
+		Produces: Vehicle.Protoss
+	ProductionQueue:
+		Type: Vehicle.Protoss
+		DisplayOrder: 2
+		Group: Vehicle
+		LowPowerModifier: 150
+		ReadyAudio: UnitReady
+		ReadyTextNotification: notification-unit-ready
+		BlockedAudio: NoBuild
+		BlockedTextNotification: notification-unable-to-build-more
+		LimitedAudio: BuildingInProgress
+		LimitedTextNotification: notification-unable-to-comply-building-in-progress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar:
+		ProductionType: Vehicle.Protoss
 	ProductionCostMultiplier@protoss:
 		Multiplier: 125
 	ProductionTimeMultiplier@protoss:
@@ -1840,7 +1930,7 @@ SCSTARGATE:
 	Inherits@shape: ^3x2Shape
 	Inherits@CPQWP: ^CPQConditionWithPrimary
 	Inherits@supply: ^SCUnitProduction
-	Inherits@hpad: ^IsAircraftFactory
+	Inherits@hpad: ^IsAircraftFactoryOld
 	Inherits@explode: ^BuildingExplodeProtoss
 	Inherits@shieldgenerator: ^ProtossPersonalShield
 	Tooltip:
@@ -1859,6 +1949,24 @@ SCSTARGATE:
 		BuildSounds: pshbld03.aud
 	# ParallelProductionQueue@AIRCRAFT:
 	# 	LowPowerModifier: 10000
+	Production@NORMAL:
+		Produces: Aircraft.Protoss
+	ProductionQueue:
+		Type: Aircraft.Protoss
+		DisplayOrder: 2
+		Group: Aircraft
+		LowPowerModifier: 150
+		ReadyAudio: UnitReady
+		ReadyTextNotification: notification-unit-ready
+		BlockedAudio: NoBuild
+		BlockedTextNotification: notification-unable-to-build-more
+		LimitedAudio: BuildingInProgress
+		LimitedTextNotification: notification-unable-to-comply-building-in-progress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar:
+		ProductionType: Aircraft.Protoss
 	Selectable:
 		Bounds: 3072, 2048
 		DecorationBounds: 3300, 2448, 0, 0
@@ -2235,7 +2343,7 @@ SCHATCHERY:
 	Inherits@aicash: ^AIConyardCash
 	Inherits@bot: ^BotMicromanageable
 	Inherits@breedfaster: ^SCBREEDFASTER
-	#Inherits@barr: ^IsBarrack
+	#Inherits@barr: ^IsBarrackOld
 	Inherits@conyard: ^Conyard
 	Tooltip:
 		Name: Hatchery
@@ -2307,7 +2415,7 @@ SCHATCHERY:
 	ExternalCondition@JAMMED:
 		Condition: jammed
 	GivesBuildableArea: ##########
-		AreaTypes: building, cityi, hatchery
+		AreaTypes: building, cityi, hatchery, creep
 	WithMakeAnimation:
 	-WithDeathAnimation:
 	Refinery:
@@ -2358,6 +2466,8 @@ SCHATCHERY:
 		RequiresSelection: true
 		PipCount: 10
 		FullSequence: pip-yellow
+	WithCreepOverlay:
+		Adjacent: 5
 	Transforms:
 		IntoActor: sczmcv
 	RenderSprites:
@@ -2404,7 +2514,7 @@ sc_zerg_larva:
 	Valued:
 		Cost: 50
 	Mobile:
-		Speed: 30
+		Speed: 0
 		CanTurnWhileDisabled: true
 		ImmovableCondition: disable_movement
 		RequireForceMoveCondition: disable_movement
@@ -2437,17 +2547,35 @@ sc_zerg_larva:
 	HitShape:
 		Type: Circle
 			Radius: 512
-	RejectsOrders:
+	# RejectsOrders:
 	RejectsMoveToAttack:
 	WithProductionOverlay@egg:
-		Queues: RAInfantry
+		Queues: Infantry.Zerg
 		Sequence: makeunit
 		IsPlayerPalette: True
 		Offset: 0,0,0
-	ProductionBar@INFANTRY:
-		ProductionType: RAInfantry
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RAInfantry
+	# ProductionBar@INFANTRY:
+	# 	ProductionType: RAInfantry
+	# Production@CLASSICPRODUCTIONQUEUES:
+	# 	Produces: RAInfantry
+	Production@NORMAL:
+		Produces: Infantry.Zerg
+	ProductionQueue:
+		Type: Infantry.Zerg
+		DisplayOrder: 2
+		Group: Infantry
+		LowPowerModifier: 150
+		ReadyAudio: UnitReady
+		ReadyTextNotification: notification-unit-ready
+		BlockedAudio: NoBuild
+		BlockedTextNotification: notification-unable-to-build-more
+		LimitedAudio: BuildingInProgress
+		LimitedTextNotification: notification-unable-to-comply-building-in-progress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar:
+		ProductionType: Infantry.Zerg
 	FreeActor@CPQDEBUGDUMMY:
 		Actor: CPQDEBUGDUMMY
 	Exit@1:
@@ -3215,7 +3343,7 @@ SCINFESTEDCOMMANDCENTER:
 	Inherits@shape: ^2x2Shape
 	Inherits@CPQWP: ^CPQConditionWithPrimary
 	Inherits@supply: ^SCUnitProduction
-	Inherits@weap: ^IsWeaponFactory
+	Inherits@weap: ^IsWeaponFactoryOld
 	Tooltip:
 		Name: Infested Command Center
 	Building:
@@ -3229,7 +3357,7 @@ SCINFESTEDCOMMANDCENTER:
 		BuildPaletteOrder: 8020
 		Prerequisites: ~scovermind
 		Queue: Building, RABuilding
-		Description: Unlocks Siege Tanks.
+		Description: Unlocks Infested Terrans.
 		IconPalette: windows256
 	WithBuildingBib:
 	# ParallelProductionQueue@VEHICLE:
@@ -3353,8 +3481,8 @@ SCMARINE:
 	Power:
 		Amount: -10
 	Buildable:
-		Prerequisites: ~scbarracks
-		Queue: Infantry, RAInfantry
+		Prerequisites: scbarracks
+		Queue: Infantry.Terran
 		Description: Basic Terran infantry.\n Strong vs Infantry\n Weak vs Vehicles\n Can attack aircraft\n Uncrushable
 	Mobile:
 		Speed: 60
@@ -3543,8 +3671,8 @@ SCFIREBAT:
 	Power:
 		Amount: -25
 	Buildable:
-		Prerequisites: ~scacademy, ~!upharakan
-		Queue: Infantry, RAInfantry
+		Prerequisites: scacademy
+		Queue: Infantry.Terran
 		Description: Terran flamethrower infantry.\n Strong vs Infantry, Buildings\n Weak vs Vehicles\n Uncrushable
 	Mobile:
 		Speed: 52
@@ -3709,8 +3837,8 @@ SCGHOST:
 	Power:
 		Amount: -35
 	Buildable:
-		Queue: Infantry, RAInfantry
-		Prerequisites: ~scsciencefacility, ~!upsilvertongue
+		Queue: Infantry.Terran
+		Prerequisites: scsciencefacility
 		Description: Terran stealth assassin.\n Strong vs Infantry, Vehicles\n Can attack aircraft\n Can temporarily disable vehicles\n Uncrushable
 	Mobile:
 		Speed: 75
@@ -3873,8 +4001,8 @@ SCMEDIC:
 	Inherits@weapon: ^TerranInfantryArmorUpgrades
 	Inherits@Heal: ^PrioritizeHeal
 	Buildable:
-		Queue: Infantry, RAInfantry
-		Prerequisites: ~scacademy
+		Queue: Infantry.Terran
+		Prerequisites: scacademy
 		Description: Heals nearby infantry.\n Unarmed\n Uncrushable
 	Tooltip:
 		Name: Medic
@@ -3978,7 +4106,7 @@ SCJIMRAYNOR:
 	AcceptsDeliveredExperience:
 		ValidTypes: vehicle
 	Buildable:
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Terran
 	Power:
 		Amount: -20
 
@@ -4001,7 +4129,8 @@ SCVULTURE:
 	Power:
 		Amount: -45
 	Buildable:
-		Prerequisites: ~scfactory
+		Queue: Vehicle.Terran
+		Prerequisites: scfactory
 		Description: Fast scout vehicle, armed with\ngrenades.\n Strong vs Infantry\n Weak vs Vehicles, Aircraft\n Can cross water
 	Mobile:
 		Speed: 125
@@ -4063,8 +4192,9 @@ SCSIEGETANK:
 	Power:
 		Amount: -140
 	Buildable:
+		Queue: Vehicle.Terran
 		BuildPaletteOrder: 30
-		Prerequisites: ~scengineeringbay
+		Prerequisites: scengineeringbay
 		Description: Terran mobile artillery.\n Strong vs Infantry, Buildings\n Weak vs Vehicles, Aircraft\nCan deploy for increased range and splash damage
 	Mobile:
 		Speed: 75
@@ -4388,7 +4518,8 @@ SCGOLIATH:
 		Amount: -80
 	Buildable:
 		BuildPaletteOrder: 20
-		Prerequisites: ~scarmory, ~!upgoliathmk2
+		Queue: Vehicle.Terran
+		Prerequisites: scarmory
 		Description: Versatile Terran combat walker, armed with\nautocannons and AA missiles.\n Strong vs Infantry, Aircraft\n Weak vs Vehicles
 	Mobile:
 		Speed: 90
@@ -4659,8 +4790,8 @@ SCWRAITH:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
-		Prerequisites: ~scstarport, ~!upsundog
-		Queue: Aircraft, RAAircraft
+		Prerequisites: scstarport
+		Queue: Aircraft.Terran
 		Description: Light Terran attack aircraft, armed\nwith lasers and AA missiles.\n Strong vs Infantry, Aircraft\n Weak vs Buildings, Vehicles
 	Aircraft:
 		InitialFacing: 896
@@ -4866,8 +4997,8 @@ SCVALKYRIE:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
-		Prerequisites: ~scstarport, scarmory, ~!upwyvern
-		Queue: Aircraft, RAAircraft
+		Prerequisites: scstarport, scarmory
+		Queue: Aircraft.Terran
 		Description: Air Superiority Fighter that fires a burst of 8 missiles. Can only attack air.
 	Aircraft:
 		InitialFacing: 896
@@ -4987,8 +5118,8 @@ SCDROPSHIP:
 		OverrideActor: scdropship
 	Buildable:
 		BuildPaletteOrder: 20
-		Prerequisites: ~scstarport, ~!upsilvertongue
-		Queue: Aircraft, RAAircraft
+		Prerequisites: scstarport
+		Queue: Aircraft.Terran
 		Description: Fast transport for all ground units.\n Unarmed
 	Aircraft:
 		TurnSpeed: 25
@@ -5223,8 +5354,8 @@ SCBATTLECRUISER:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 40
-		Prerequisites: ~scstarport, ~scsciencefacility
-		Queue: Aircraft, RAAircraft
+		Prerequisites: scstarport, scsciencefacility
+		Queue: Aircraft.Terran
 		Description: Terran capital ship.\n Strong vs Everything
 	Aircraft:
 		InitialFacing: 896
@@ -5508,8 +5639,8 @@ SCSCIENCEVESSEL:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 40
-		Prerequisites: ~scsciencefacility
-		Queue: Aircraft, RAAircraft
+		Prerequisites: scsciencefacility
+		Queue: Aircraft.Terran
 		Description: Terran capital ship.\n Strong vs Everything
 	Aircraft:
 		InitialFacing: 896
@@ -6225,8 +6356,8 @@ SCZEALOT:
 		Amount: -15
 	Buildable:
 		BuildPaletteOrder: 20
-		Prerequisites: ~scgateway, ~!uplegionnaire
-		Queue: Infantry, RAInfantry
+		Prerequisites: scgateway
+		Queue: Infantry.Protoss
 		Description: Protoss infantry, attacks in close combat.\n Strong vs Infantry\n Weak vs Vehicles, Aircraft\n Uncrushable
 	Mobile:
 		Speed: 70
@@ -6264,12 +6395,12 @@ SCDRAGOON:
 	Tooltip:
 		Name: Dragoon
 	Valued:
-		Cost: 1200
+		Cost: 800
 	Power:
 		Amount: -60
 	Buildable:
-		Prerequisites: ~sccyberneticscore, ~!upatreus
-		Queue: Infantry, RAInfantry
+		Prerequisites: sccyberneticscore
+		Queue: Infantry.Protoss
 		Description: Protoss assault walker. Can attack air.
 	Mobile:
 		Speed: 80
@@ -6557,8 +6688,8 @@ SCHIGHTEMPLAR:
 		Amount: -40
 	Buildable:
 		BuildPaletteOrder: 20
-		Prerequisites: ~sctemplararchives
-		Queue: Infantry, RAInfantry
+		Prerequisites: sctemplararchives
+		Queue: Infantry.Protoss
 		Description: Protoss psionic warrior.\nCasts psionic storm for massive splash damage\n Strong vs clustered units\n Uncrushable
 	Mobile:
 		Speed: 70
@@ -6600,8 +6731,8 @@ SCDARKTEMPLAR:
 		Amount: -30
 	Buildable:
 		BuildPaletteOrder: 20
-		Prerequisites: ~sccitadelofadun, ~!upamaranth
-		Queue: Infantry, RAInfantry
+		Prerequisites: sccitadelofadun
+		Queue: Infantry.Protoss
 		Description: Protoss stealth warrior, attacks in close combat.\n Strong vs ground targets\n Uncrushable
 	Mobile:
 		Speed: 75
@@ -6647,8 +6778,8 @@ SCSHUTTLE:
 		OverrideActor: scshuttle
 	Buildable:
 		BuildPaletteOrder: 20
-		Prerequisites: ~scroboticsfacility
-		Queue: Vehicle, RAVehicle
+		Prerequisites: scroboticsfacility
+		Queue: Aircraft.Protoss
 		Description: Fast transport for all ground units.\n Unarmed
 	Aircraft:
 		TurnSpeed: 20
@@ -6713,8 +6844,8 @@ SCREAVER:
 		Amount: -80
 	Buildable:
 		BuildPaletteOrder: 20
-		Prerequisites: ~scroboticssupportbay
-		Queue: Vehicle, RAVehicle
+		Prerequisites: scroboticssupportbay
+		Queue: Vehicle.Protoss
 		Description: Long-range rocket artillery.\n Strong vs Vehicles, Buildings\n Weak vs Aircraft
 	Mobile:
 		Speed: 40
@@ -6795,8 +6926,8 @@ SCOBSERVER:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 30
-		Prerequisites: ~scobservatory
-		Queue: Vehicle, RAVehicle
+		Prerequisites: scobservatory
+		Queue: Vehicle.Protoss
 		Description: Stealth scout.\n Unarmed
 	Aircraft:
 		Speed: 60
@@ -6862,8 +6993,8 @@ SCARCHON:
 		Amount: -280
 	Buildable:
 		BuildPaletteOrder: 40
-		Prerequisites: ~sctemplararchives
-		Queue: Vehicle, RAVehicle
+		Prerequisites: sctemplararchives
+		Queue: Vehicle.Protoss
 		Description: Powerful heavy protoss warrior.\n Strong vs Everything
 	Mobile:
 		Speed: 75
@@ -6938,8 +7069,8 @@ SCSCOUT:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 20
-		Prerequisites: ~scstargate, ~!upepigraph
-		Queue: Aircraft, RAAircraft
+		Prerequisites: scstargate
+		Queue: Aircraft.Protoss
 		Description: Protoss fighter aircraft.\n Strong vs Aircraft
 	Aircraft:
 		Speed: 125
@@ -7186,8 +7317,8 @@ SCCORSAIR:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 20
-		Prerequisites: ~scstargate
-		Queue: Aircraft, RAAircraft
+		Prerequisites: scstargate
+		Queue: Aircraft.Protoss
 		Description: Protoss fighter aircraft.\n Strong vs Aircraft
 	Aircraft:
 		Speed: 125
@@ -7248,8 +7379,8 @@ SCCARRIER:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 20
-		Prerequisites: ~scfleetbeacon
-		Queue: Aircraft, RAAircraft
+		Prerequisites: scfleetbeacon
+		Queue: Aircraft.Protoss
 		Description: Heavy protoss warship, deploys\n5 interceptor craft.\n Strong vs Vehicles, Aircraft
 	Aircraft:
 		InitialFacing: 896
@@ -7437,8 +7568,8 @@ SCARBITER:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 30
-		Prerequisites: ~scarbitertribunal
-		Queue: Aircraft, RAAircraft
+		Prerequisites: scarbitertribunal
+		Queue: Aircraft.Protoss
 		Description: Protoss support vessel.\n Cloaks nearby friendly units\n Can cast a stasis field to freeze units
 	Aircraft:
 		InitialFacing: 896
@@ -8380,8 +8511,8 @@ SCZERGLING:
 		Amount: -5
 	Buildable:
 		BuildPaletteOrder: 20
-		Prerequisites: ~scspawningpool, ~!uptalon
-		Queue: Infantry, RAInfantry
+		Prerequisites: scspawningpool
+		Queue: Infantry.Zerg
 		Description: Fast Zerg basic assault strain.\n Strong vs Infantry\n Weak vs Vehicles, Aircraft
 	Mobile:
 		Speed: 110
@@ -8554,8 +8685,8 @@ SCHYDRALISK:
 		Amount: -25
 	Buildable:
 		BuildPaletteOrder: 40
-		Prerequisites: ~schydraliskden
-		Queue: Infantry, RAInfantry
+		Prerequisites: schydraliskden
+		Queue: Infantry.Zerg
 		Description: Zerg armored assault strain.\n Strong vs Infantry, Vehicles, Aircraft\n Weak vs Siege
 	Mobile:
 		Speed: 75
@@ -9025,8 +9156,8 @@ SCMUTALISK:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 50
-		Prerequisites: ~scspire
-		Queue: Infantry, RAInfantry
+		Prerequisites: scspire
+		Queue: Infantry.Zerg
 		Description: Airborne Zerg creature.\n Strong vs Infantry, Aircraft
 	Aircraft:
 		Speed: 160
@@ -9077,8 +9208,8 @@ SCDEVOURER:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 50
-		Prerequisites: ~scgreaterspire
-		Queue: Infantry, RAInfantry
+		Prerequisites: scgreaterspire
+		Queue: Infantry.Zerg
 		Description: Airborne Zerg creature.\n Strong vs Aircraft
 	Aircraft:
 		Speed: 90
@@ -9128,8 +9259,8 @@ SCSCOURGE:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 60
-		Prerequisites: ~scspire
-		Queue: Infantry, RAInfantry
+		Prerequisites: scspire
+		Queue: Infantry.Zerg
 		Description: Aerial suicide bomber.\n Strong vs Aircraft
 	Aircraft:
 		InitialFacing: 896
@@ -9179,8 +9310,8 @@ SCQUEEN:
 		Amount: -60
 	Buildable:
 		BuildPaletteOrder: 70
-		Prerequisites: ~scqueensnest
-		Queue: Infantry, RAInfantry
+		Prerequisites: scqueensnest
+		Queue: Infantry.Zerg
 		Description: Defensive Air Unit\nCan breed Broodlings\nCan attack air and ground\nDetector
 	Aircraft:
 		Speed: 100
@@ -9252,9 +9383,9 @@ SCGUARDIAN:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
-		Prerequisites: ~scgreaterspire
-		Queue: Infantry, RAInfantry
-		Description: Heavy Zerg bomber.\n Strong vs Vehicles, Buildings\n Weak vs Aircraft
+		Prerequisites: scgreaterspire
+		Queue: Infantry.Zerg
+		Description: Heavy Zerg siege creature.\n Strong vs Vehicles, Buildings\n Weak vs Aircraft
 	Aircraft:
 		Speed: 50
 		TurnSpeed: 10
@@ -9298,8 +9429,8 @@ SCULTRALISK:
 		Amount: -90
 	Buildable:
 		BuildPaletteOrder: 80
-		Prerequisites: ~scultraliskcavern
-		Queue: Infantry, RAInfantry
+		Prerequisites: scultraliskcavern
+		Queue: Infantry.Zerg
 		Description: Heavy Zerg assault strain.\n Strong vs Vehicles\n Weak vs Aircraft
 	Mobile:
 		Speed: 80
@@ -9566,8 +9697,8 @@ SCLURKER:
 		Amount: -65
 	Buildable:
 		BuildPaletteOrder: 90
-		Prerequisites: ~schydraliskden, ~scevolutionchamber, ~sclair
-		Queue: Infantry, RAInfantry
+		Prerequisites: schydraliskden, scevolutionchamber, sclair
+		Queue: Infantry.Zerg
 		Description: Zerg ambush strain.\nNeeds to deploy to attack\n Strong vs Infantry
 	Mobile:
 		Speed: 90
@@ -9648,15 +9779,15 @@ SCINFESTEDTERRAN:
 	Inherits@weapon: ^ZergMeleeWeaponUpgrades
 	Inherits@armor: ^ZergGroundArmorUpgrades
 	Tooltip:
-		Name: Infested Terran Bomber
+		Name: Infested Terran
 	Valued:
 		Cost: 400
 	Power:
 		Amount: -20
 	Buildable:
 		BuildPaletteOrder: 8010
-		Prerequisites: ~scinfestedcommandcenter
-		Queue: Vehicle, RAVehicle
+		Prerequisites: scinfestedcommandcenter
+		Queue: Infantry.Zerg
 		Description: Suicide bomber infantry.\n Strong vs clustered units\n Does no damage if killed
 	Mobile:
 		Speed: 90
@@ -9708,8 +9839,8 @@ SCDEFILER:
 		Amount: -70
 	Buildable:
 		BuildPaletteOrder: 8020
-		Prerequisites: ~scdefilermound
-		Queue: Infantry, RAInfantry
+		Prerequisites: scdefilermound
+		Queue: Infantry.Zerg
 		Description: Zerg support strain.\nAttack reduces targets' health over time\n Strong vs clustered units\n Special Ability: Dark Swarm
 	Mobile:
 		Speed: 50
@@ -9910,7 +10041,7 @@ SCZMCV:
 	Inherits@mcv: ^MCV
 	Inherits@armor: ^ZergGroundArmorUpgrades
 	Buildable:
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Zerg
 		Description: Builds structures and provides radar.
 		Prerequisites: ~scevolutionchamber
 	Tooltip:
