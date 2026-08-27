@@ -780,7 +780,7 @@ SCREFINERY:
 		Amount: 25
 		ShowTicks: True
 	ProvidesPrerequisite:
-		Prerequisite: sctrefineryupgradeavailable
+		Prerequisite: screfinery
 		RequiresCondition: !refineryupg
 	Pluggable:
 		Offset: 1,0
@@ -801,7 +801,7 @@ sctvespenegascollector:
 		Cost: 2500
 	Buildable:
 		Queue: Defence, RADefence
-		Prerequisites: ~sccommandcenter, sctrefineryupgradeavailable
+		Prerequisites: ~sccommandcenter, screfinery
 		Description: The Refinery generates Vespene gas Capsules and passive income.
 	Plug:
 		Type: screfinery
@@ -853,6 +853,7 @@ SCBARRACKS:
 		NoTransformNotification: BuildingCannotPlaceAudio
 	Production@NORMAL:
 		Produces: Infantry.Terran
+		PauseOnCondition: lowpower
 	ProductionQueue:
 		Type: Infantry.Terran
 		DisplayOrder: 2
@@ -1169,6 +1170,7 @@ SCFACTORY:
 	# 	LowPowerModifier: 10000
 	Production@NORMAL:
 		Produces: Vehicle.Terran
+		PauseOnCondition: lowpower
 	ProductionQueue:
 		Type: Vehicle.Terran
 		DisplayOrder: 2
@@ -1274,6 +1276,7 @@ SCSTARPORT:
 	# 	LowPowerModifier: 10000
 	Production@NORMAL:
 		Produces: Aircraft.Terran
+		PauseOnCondition: lowpower
 	ProductionQueue:
 		Type: Aircraft.Terran
 		DisplayOrder: 2
@@ -1632,6 +1635,7 @@ SCGATEWAY:
 	# 	LowPowerModifier: 10000
 	Production@NORMAL:
 		Produces: Infantry.Protoss
+		PauseOnCondition: lowpower
 	ProductionQueue:
 		Type: Infantry.Protoss
 		DisplayOrder: 2
@@ -1889,6 +1893,7 @@ SCROBOTICSFACILITY:
 	# 	LowPowerModifier: 10000
 	Production@NORMAL:
 		Produces: Vehicle.Protoss
+		PauseOnCondition: lowpower
 	ProductionQueue:
 		Type: Vehicle.Protoss
 		DisplayOrder: 2
@@ -1951,6 +1956,7 @@ SCSTARGATE:
 	# 	LowPowerModifier: 10000
 	Production@NORMAL:
 		Produces: Aircraft.Protoss
+		PauseOnCondition: lowpower
 	ProductionQueue:
 		Type: Aircraft.Protoss
 		DisplayOrder: 2
@@ -2421,7 +2427,7 @@ SCHATCHERY:
 	Refinery:
 	DockHost:
 		DockAngle: 256
-		DockOffset: 0, 1c512, 0
+		DockOffset: 0, 2c512, 0
 	##########
 	Sellable:
 	##########
@@ -2560,6 +2566,7 @@ sc_zerg_larva:
 	# 	Produces: RAInfantry
 	Production@NORMAL:
 		Produces: Infantry.Zerg
+		PauseOnCondition: lowpower
 	ProductionQueue:
 		Type: Infantry.Zerg
 		DisplayOrder: 2
@@ -2762,6 +2769,8 @@ SCCREEPCOLONY:
 	FireWarheadsOnDeath@remover:
 		Weapon: CreepRemover
 		EmptyWeapon: CreepRemover
+	WithCreepOverlay:
+		Adjacent: 5
 	Selectable:
 		Bounds: 2048, 2048
 		DecorationBounds: 2448, 2448, 0, 0
@@ -4110,6 +4119,70 @@ SCJIMRAYNOR:
 	Power:
 		Amount: -20
 
+scspidermine:
+	# Inherits: ^ZergBurrow
+	Inherits@cloak: ^CloakedVehicle
+	Inherits@Template: ^ScoutVehicleTemplate
+	Inherits@SHADOWS: ^Shadows
+	Inherits: ^Walker
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@MC: ^MCImmune
+	Tooltip:
+		Name: Spider Mine
+	Buildable:
+		Description: An unwelcome, seeking, stealthed suprise.
+	Mobile:
+		Speed: 200
+		TurnSpeed: 200
+		# RequiresCondition: targeting
+	Crushable:
+		CrushClasses: vehicle
+	RenderSprites:
+		PlayerPalette: player_rgba
+	Health:
+		HP: 5000
+	GrantConditionOnAttack:
+		Condition: targeting
+		RevokeDelay: 500
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+		RequiresCondition: !targeting
+	WithFacingSpriteBody:
+		Sequence: shoot
+		RequiresCondition: targeting
+	#WithTextDecoration@jousting:
+	#	Text: Jousting
+	#	RequiresCondition: jousting
+	Armament:
+		Weapon: DemoTruckTargeting
+	AttackFrontal:
+		FacingTolerance: 360
+	-InfectableCA:
+	RejectsOrders:
+		Reject: Move, ForceMove, AttackMove
+	SpeedMultiplier@TARGETING:
+		Modifier: 150
+		RequiresCondition: targeting
+	# Targetable:
+	# 	RequiresCondition: !parachute && !untargetable && !targeting
+	AutoTarget:
+		InitialStance: AttackAnything
+	AutoTargetPriority@DEFAULT:
+		ValidTargets: Infantry, Vehicle
+	Voiced:
+		VoiceSet: TerrorDroneVoice
+	FireWarheadsOnDeath:
+		Weapon: spidermineexplode
+		EmptyWeapon: spidermineexplode
+		RequiresCondition: targeting
+	# Targetable@vehicleexplodedamage:
+	KillsSelf:
+		RequiresCondition: !disabled && targeting
+	Targetable@dog:
+		TargetTypes: DogImmune
+	-TemporaryOwnerManager:
+
+
 SCVULTURE:
 	Inherits: ^Vehicle
 	Inherits@SC: ^SCTVEHICLE
@@ -4133,8 +4206,8 @@ SCVULTURE:
 		Prerequisites: scfactory
 		Description: Fast scout vehicle, armed with\ngrenades.\n Strong vs Infantry\n Weak vs Vehicles, Aircraft\n Can cross water
 	Mobile:
-		Speed: 125
-		TurnSpeed: 25
+		Speed: 135
+		TurnSpeed: 35
 		Locomotor: hover
 	Health:
 		HP: 80000
@@ -4148,11 +4221,11 @@ SCVULTURE:
 		Weapon: VultureGrenade
 		LocalOffset: 600,0,0
 	Minelayer:
-		Mine: MINV
+		Mine: scspidermine
 		TileUnknownName: build-invalid
 	MineImmune:
 	AmmoPool:
-		Ammo: 10
+		Ammo: 3
 		RearmSound: minelay1.aud
 	AttackFrontal:
 		FacingTolerance: 0
@@ -6395,7 +6468,7 @@ SCDRAGOON:
 	Tooltip:
 		Name: Dragoon
 	Valued:
-		Cost: 800
+		Cost: 1200
 	Power:
 		Amount: -60
 	Buildable:
@@ -6850,6 +6923,7 @@ SCREAVER:
 	Mobile:
 		Speed: 40
 		TurnSpeed: 8
+		Locomotor: wheeled
 	Health:
 		HP: 275000
 	Repairable:
@@ -8264,8 +8338,8 @@ SCDRONE:
 	Tooltip:
 		Name: Drone
 	Buildable:
-		Prerequisites: ~scextractor
-		Queue: Infantry, RAInfantry
+		Prerequisites: scextractor
+		Queue: Infantry.Zerg
 		Description: Collects resources.
 	WithDeathAnimation:
 		UseDeathTypeSuffix: false

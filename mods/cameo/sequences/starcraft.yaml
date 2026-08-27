@@ -1506,6 +1506,43 @@ scvulture:
 	icon:
 		Filename: scvultureicon.png
 
+scspidermine:
+	Inherits: ^SCSmallShadow
+	Defaults:
+		Filename: scspiderminealpha.png
+		Offset: 0,-6
+	idle:
+		Filename: scspiderminealpha.png
+		Start: 11
+	stand:
+		Filename: scspiderminealpha.png
+		Start: 11
+	run:
+		Filename: scspiderminealpha.png
+		Length: 9
+	shoot:
+		Filename: scspiderminealpha.png
+		Start: 12
+		Length: 9
+	die:
+		Filename: scspiderminealpha.png
+		Start: 12
+		Length: 9
+	deployed:
+		Filename: scspiderminealpha.png
+		Start: 11
+	deploy-idle:
+		Filename: scspiderminealpha.png
+		Start: 11
+	deploy:
+		Filename: scspiderminealpha.png
+		Start: 11
+	dot:
+		Filename: invisibleitem.shp
+		ZOffset: -9999
+	icon:
+		Filename: scspidermineicon.png
+
 scsiegetank:
 	Defaults:
 		Filename: scsiegetankidle.png
@@ -3397,7 +3434,7 @@ sc_zerg_larva:
 		Filename: scegg.png
 		Length: 12
 	icon:
-		Filename: scbroodlingicon.shp
+		Filename: sclarvaicon.png
 
 scbehemoth:
 	Defaults:

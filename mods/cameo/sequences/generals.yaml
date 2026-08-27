@@ -1,11 +1,16 @@
 upemergencyrepair1icon:
-	icon: upemergencyrepair1icon
+	icon: 
+		Filename: upemergencyrepair1icon.shp
 upemergencyrepair2icon:
-	icon: upemergencyrepair2icon
+	icon: 
+		Filename: upemergencyrepair2icon.shp
 upemergencyrepair3icon:
-	icon: upemergencyrepair3icon
+	icon: 
+		Filename: upemergencyrepair3icon.shp
 
 chhorde:
+	Defaults:
+		Filename: chhorde.shp
 	idle:
 		Length: *
 
@@ -17,15 +22,19 @@ glmcv:
 	idle:
 		Facings: 32
 		UseClassicFacings: True
-	icon: ramcvicon
+	icon: 
+		Filename: ramcvicon.shp
 
 glscrapbox:
 	idle:
 		ZOffset: -511
 genbuildcaptureicon:
-	icon: genbuildcaptureicon
+	icon: 
+		Filename: genbuildcaptureicon
 
 glabomber:
+	Defaults:
+		Filename: glabomber.shp
 	idle:
 		Facings: 32
 
@@ -54,63 +63,85 @@ gle1:
 	-die6:
 	die6:
 		Scale: 0.85
-	die7: electro ##########
+	die7: 
+		Filename: electro.shp ##########
 		Length: *
 		Scale: 0.85
 	-die-crushed:
-	die-crushed: e1rot
+	die-crushed: 
+		Filename: e1rot.shp
 		Start: 16
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
 		Scale: 0.85
-	garrison-muzzle: minigun
+	garrison-muzzle: 
+		Filename: minigun.shp
 		Length: 3
 		Stride: 6
 		Facings: 8
 		Scale: 0.85
-	icon: gle1icon
+	icon: 
+		Filename: gle1icon.shp
 
 glsabo:
 	Inherits: raspy
-	Defaults: raspy
-	icon: glsaboicon
+	Defaults: 
+		Filename: raspy.shp
+	icon: 
+		Filename: glsaboicon.shp
 
 glhijack:
 	Inherits: chhacker
-	icon: glhijackicon
+	icon: 
+		Filename: glhijackicon.shp
 
 gle1toxin:
 	Inherits: e4
-	icon: gle1toxinicon.shp
+	icon: 
+		Filename: gle1toxinicon.shp
 
 gle3:
 	Inherits: e3
-	icon: gle3icon.shp
+	icon: 
+		Filename: gle3icon.shp
 
 leange3:
 	Inherits: che3
+
 glterror:
 	Inherits: ra2terror
-	die1: ra2trst
+	die1: 
+		Filename: ra2trst.shp
 	# Explode
-	die2: ra2trst
+	die2: 
+		Filename: ra2trst.shp
 	# Fly and explode in air
-	die3: ra2trst
+	die3: 
+		Filename: ra2trst.shp
 	# Fly through air squish on ground
-	die4: ra2trst
+	die4: 
+		Filename: ra2trsts.shp
 	# Burn
-	die5: ra2trst
+	die5:
+		Filename: ra2trsts.shp
 	# Tib
-	die6: ra2trst
+	die6:
+		Filename: ra2trsts.shp
 	# Electro
-	die7: electro ##########
+	die7: 
+		Filename: electro.shp ##########
 		Length: *
-	idle1: ra2trst
-	idle2: ra2trst
-	idle3: ra2trst
-	idle4: ra2trst
-	icon: glterroristicon.png
+	idle1: 
+		Filename: ra2trst.shp
+	idle2: 
+		Filename: ra2trst.shp
+	idle3: 
+		Filename: ra2trst.shp
+	idle4: 
+		Filename: ra2trst.shp
+	icon: 
+		Filename: glterroristicon.png
 		AddExtension: false
 
 glamob:
@@ -188,26 +219,35 @@ glamob:
 		Length: 4
 		Tick: 80
 	# Electro
-	die7: electro ##########
+	die7: 
+		Filename: electro.shp ##########
 		Length: *
-	die-crushed: e1rot
+	die-crushed: 
+		Filename: e1rot.shp
 		Start: 16
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-	icon: glmobicon
-	icon_fundamentalist: glfundamentalisticon
-	dot: invisibleitem
-	muzzle: minigun
+	icon: 
+		Filename: glmobicon.shp
+	icon_fundamentalist: 
+		Filename: glfundamentalisticon.shp
+	dot: 
+		Filename: invisibleitem.shp
+	muzzle: 
+		Filename: minigun.shp
 		Length: 6
 		Facings: 8
+
 glcommand:
 	Defaults:
+		Filename: glcommand.shp
 		Offset: 0,-5
 	idle:
 	damaged-idle:
 		Start: 2
-	make: glbuildingmakebig
+	make: 
+		Filename: glbuildingmakebig.shp
 		Length: *
 	bib: bib2
 		UseTilesetExtension: true
@@ -260,17 +300,21 @@ glsupply:
 	idle:
 	damaged-idle:
 		Start: 2
-	make: glbuildingmake2x2
+	make: 
+		Filename: glbuildingmake2x2.shp
 		Length: *
 	dead:
-	icon: glsupplyicon
+	icon: 
+		Filename: glsupplyicon.shp
 		Offset: 0,0
-	idle-anim2: glstructuresmoke
+	idle-anim2: 
+		Filename: glstructuresmoke.shp
 		Start: 49
 		Length: 42
 		Offset: -18, -12
 		Tick: 175
-	damaged-idle-anim2: glstructuresmoke
+	damaged-idle-anim2: 
+		Filename: glstructuresmoke.shp
 		Start: 49
 		Length: 42
 		Offset: -18, -12

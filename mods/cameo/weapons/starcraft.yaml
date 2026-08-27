@@ -597,6 +597,30 @@ JimRaynorMachineGun:
 		ValidTargets: Ground, Water, Trees, Air
 		Damage: 2
 
+spidermineexplode:
+	Inherits: ^Grenade
+	Inherits: ^ShrapnelWeapon
+	Inherits: ^HeavyBomb
+	Range: 10
+	Warhead@Grenade: SpreadDamage
+		Damage: 30000
+	Warhead@GrenadeFriendlyFire: SpreadDamage
+		Damage: 15000
+	Warhead@GrenadePercentage: HealthPercentageDamage
+		Damage: 15
+	Warhead@ShrapnelWeapon: SpreadDamage
+		Damage: 20000
+	Warhead@ShrapnelWeaponFriendlyFire: SpreadDamage
+		Damage: 15000
+	Warhead@ShrapnelWeaponPercentage: HealthPercentageDamage
+		Damage: 15
+	Warhead@HeavyBomb: SpreadDamage
+		Damage: 30000
+	Warhead@HeavyBombPercentage: HealthPercentageDamage
+		Damage: 15
+	-Warhead@Effect1:
+	-Warhead@Effect2:
+
 VultureGrenade:
 	Inherits: ^SmallArms
 	Inherits: ^FlakWeapon
@@ -608,7 +632,7 @@ VultureGrenade:
 	Report: tvuFir00.aud
 	Projectile: Bullet
 		Speed: 447
-		LaunchAngle: 0
+		LaunchAngle: 66
 		ContrailLength: 11
 		ContrailStartWidth: 66
 		ContrailEndWidth: 22
@@ -1549,11 +1573,11 @@ HydraSpit:
 	Report: zhyfir00.aud
 	Projectile: Bullet
 		Image: scmspore
-		ContrailStartColor: 88FF4488
-		ContrailEndColor: FFFFFF44
-		ContrailStartWidth: 25
-		ContrailEndWidth: 75
-		ContrailLength: 5
+		-ContrailStartColor: 88FF4488
+		-ContrailEndColor: FFFFFF44
+		-ContrailStartWidth: 25
+		-ContrailEndWidth: 75
+		-ContrailLength: 5
 		Speed: 2500
 		Width: 25
 		TrailImage: sczhsplash

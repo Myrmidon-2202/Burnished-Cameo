@@ -174,6 +174,20 @@ APCRocketT.AA:
 		Damage: 4000
 		ValidTargets: Air
 
+SealMachineGun:
+	Inherits: ^LightMG
+	Inherits: ^SmallArms
+	Burst: 6
+	ReloadDelay: 30
+	Report: mgun11.aud
+	Warhead@1Dam: SpreadDamage
+		Damage: 1000
+		Versus:
+			Wood: 60
+			Light: 70
+	Warhead@2Eff: CreateEffect
+		Explosions: piffs
+
 diggerifle:
 	Inherits: ^Chaingun
 	Inherits: ^IncendiaryBulletProjectile
@@ -208,7 +222,7 @@ rangerifle:
 	Warhead@Chaingun: SpreadDamage
 		ValidTargets: Ground, Water, Trees, Air
 		Damage: 2000
-		Spread: 0c37
+		Spread: 1c37
 	Warhead@ChaingunPercentage: HealthPercentageDamage
 		ValidTargets: Ground, Water, Trees, Air
 		Damage: 3

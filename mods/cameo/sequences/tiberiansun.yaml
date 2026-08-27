@@ -728,14 +728,18 @@ tsapc:
 		Filename: gunfire2.shp
 		Length: 5
 
-# tsprobe:
-# 	idle: tsgghunt
-# 	shadow: tsgghunt
-# 		Start: 8
-# 		ZOffset: -511
-# 	icon: tshunterseekersicon
-# 	muzzle: gunfire2
-# 		Length: 5
+tsprobe:
+	idle: 
+		Filename: tsgghunt.shp
+	shadow: 
+		Filename: tsgghunt.shp
+		Start: 8
+		ZOffset: -511
+	icon: 
+		Filename: tshunterseekersicon.shp
+	muzzle: 
+		Filename: gunfire2.shp
+		Length: 5
 
 tssgen:
 	Defaults:
@@ -909,6 +913,8 @@ tssmech:
 		AddExtension: False
 
 tshmec:
+	Defaults:
+		Scale: 1.5
 	idle:
 		Filename: invisibleitem.shp
 	icon:
@@ -1150,7 +1156,13 @@ tsmcv:
 	idle:
 		Filename: invisibleitem.shp
 	icon:
-		Filename: tssmcvicon.shp
+		Filename: TS_GDI_MCV_Icon.png
+
+tsmcv2:
+	idle:
+		Filename: invisibleitem.shp
+	icon:
+		Filename: TS_Nod_MCV_Icon.png
 
 # tsart2turret:
 # 	idle: tsgtarty
@@ -1291,7 +1303,7 @@ tsgtcnst:
 		Offset: 0,0
 
 tsgtpowr:
-	Inherits: ^WithBuildingBib3
+	# Inherits: ^WithBuildingBib3
 	Defaults:
 		Scale: 1.5
 		Offset: 0, -12, 24
@@ -1329,7 +1341,7 @@ tsgtpowr:
 		Filename: tsgtpowr_b.shp
 		Length: 12
 		Tick: 200
-		Offset: -30, -12, 24
+		Offset: -30, -12, 24	
 	damaged-idle-powrupa:
 		Filename: tsgtpowr_b.shp
 		Length: 12
@@ -1345,7 +1357,10 @@ tsgtpowr:
 		Length: 12
 		Tick: 200
 		Offset: -16, -6, 24
+	bib:
 	make:
+		Filename: gapowrmk.shp
+		Length: 20
 	icon:
 		Filename: tspowerplanticon.png
 		Offset: 0, 0
@@ -1358,6 +1373,12 @@ drplasma2:
 		Facings: 16
 		ZOffset: 1023
 
+tsplas:
+	Defaults:
+		Filename: tsplas.png
+		Scale: 2.0
+	idle:
+		Length: 3
 # tsgtpowrup:
 # 	Inherits: tsgtpowr
 # 	Defaults: tsgtpowr
@@ -1368,6 +1389,7 @@ tsgtpile:
 	Defaults:
 		Filename: tsgtpile.shp
 		Offset: 0, -12, 24
+		Scale: 1.5
 	idle:
 		Filename: tsgtpile.shp
 		ShadowStart: 3
@@ -1410,7 +1432,7 @@ tsgtpile:
 		Length: 7
 		Tick: 100
 	make:
-		Filename: tsgtpile.shp
+		Filename: tsgtpilemk.shp
 	icon:
 		Filename: tsbarracksicon.shp
 		Offset: 0, 0
@@ -1978,6 +2000,8 @@ tsgtradr:
 		Filename: tsgtcommmk.shp
 		Length: 20
 		ShadowStart: 20
+	active:
+		Filename: invisibleitem.shp
 	icon:
 		Filename: tsgdiradaricon.shp
 		Offset: 0, 0
@@ -2010,6 +2034,8 @@ tsgtradrmutant:
 	make:
 		Filename: tamradrmk.shp
 		Length: 17
+	active:
+		Filename: invisibleitem.shp
 	icon:
 		Filename: tsgdiradaricon.shp
 		Offset: 0, 0
@@ -2071,8 +2097,11 @@ tsfgttech:
 		Filename:  tamtech_a.shp
 		Length: *
 		Tick: 240
+	active:
+		Filename: invisibleitem.shp
 	make:
 		Filename: tamtechmk.shp
+		Length: 22
 	icon:
 		Filename:  tstechicon.png
 		Offset: 0, 0
@@ -2416,6 +2445,7 @@ tsntobel:
 		Offset: 0, -24, 24
 	idle:
 		Filename: tsntobel.shp
+		Start: 0
 		ShadowStart: 3
 	damaged-idle:
 		Filename: tsntobel.shp
@@ -2437,7 +2467,41 @@ tsntobel:
 		Tick: 80
 	make:
 		Filename: tsntobelmk.shp
-	icon: obliicnh.tem
+	icon: 
+		Filename: obliicnh.tem
+		AddExtension: False
+		Offset: 0,0
+
+tscaobel:
+	Defaults:
+		Filename: tsntobel.shp
+		Offset: 0, -24, 24
+	idle:
+		Filename: tsntobel.shp
+		Start: 0
+		ShadowStart: 3
+	damaged-idle:
+		Filename: tsntobel.shp
+		Start: 1
+		ShadowStart: 4
+	dead:
+		Filename: tsntobel.shp
+		Start: 2
+		ShadowStart: 5
+		Tick: 400
+	active:
+		Filename: tscaobel_b.png
+		Length: 12
+		Tick: 200
+		ZOffset: 2
+	idle-lights:
+		Filename: tsntobel_a.shp
+		Length: 12
+		Tick: 80
+	make:
+		Filename: tsntobelmk.shp
+	icon: 
+		Filename: obliicnh.tem
 		AddExtension: False
 		Offset: 0,0
 
@@ -2726,6 +2790,7 @@ tsproc.gdi:
 		ShadowStart: 5
 		Tick: 400
 	make:
+		Filename: tsntrefnmk.shp
 	unload-overlay:
 		Filename: tsntrefn_a.shp
 		Length: *
@@ -2832,6 +2897,7 @@ tsntwast:
 		ShadowStart: 5
 		Tick: 400
 	make:
+		Filename: nawastmk.shp
 	idle-glow:
 		Filename: tsntwast_a.shp
 		Length: 20
@@ -2915,7 +2981,7 @@ tsgtsilo.gdi:
 		Length: 16
 		Tick: 120
 	make:
-		Filename: tsgtsilo.shp
+		Filename: tsgtsilomk.shp
 	icon:
 		Filename: tssilo2icon.shp
 		Offset: 0, 0
@@ -3617,42 +3683,43 @@ tspodring:
 
 tsobl2:
 	Defaults:
-		Filename: obl2.shp
+		Filename: obl2.png
 		Offset: 15, 0, 0
 	idle:
-		Filename: obl2.shp
+		Filename: obl2.png
 		ShadowStart: 3
 	damaged-idle:
-		Filename: obl2.shp
+		Filename: obl2.png
 		Start: 1
 		ShadowStart: 4
 	dead:
-		Filename: obl2.shp
+		Filename: obl2.png
 		Start: 2
 		ShadowStart: 5
 		Tick: 400
 	idle-overlay:
-		Filename: obl2_b.shp
+		Filename: obl2_b.png
 		Length: 24
 		Tick: 200
+		ZOffset: 3
 	damaged-idle-overlay:
-		Filename: obl2_b.shp
+		Filename: obl2_b.png
 		Start: 24
 		Length: 24
 		Tick: 200
 	active:
-		Filename: obl2_c.shp
+		Filename: obl2_c.png
 		Length: 24
 		Tick: 200
 		ZOffset: 3
 	damaged-active:
-		Filename: obl2_c.shp
+		Filename: obl2_c.png
 		Start: 24
 		Length: 24
 		Tick: 200
 		ZOffset: 3
 	idle-lights:
-		Filename: obl2_a.shp
+		Filename: obl2_a.png
 		Length: 12
 		Tick: 80
 	make:
@@ -3670,6 +3737,7 @@ tsdissolver:
 	stand:
 		Filename: tsdissolver.shp
 		Facings: -8
+		Scale: 2.0
 	run:
 		Filename: tsdissolver.shp
 		Start: 8

@@ -4897,6 +4897,7 @@ DTEYE:
 		Prerequisite:  ~anyhq
 	Buildable:
 		BuildPaletteOrder: 100
+		BuildDuration: 1200
 		Prerequisites: ~fact.dtusa, dtpropaganda.dtusa, !cruisemissc
 		Queue: Building, RABuilding
 		Description: Provides radar and the Cruise Missile support power. Requires power to operate.
@@ -4976,6 +4977,7 @@ DTHQ:
 		Prerequisite:  ~anyhq
 	Buildable:
 		BuildPaletteOrder: 100
+		BuildDuration: 1200
 		Prerequisites: ~fact.dtjapan, atek.japan, !cruisemissc
 		Queue: Building, RABuilding
 		Description: Provides radar and the Cruise Missile support power. Requires power to operate.
@@ -5988,6 +5990,7 @@ tran.tomorrow:
 ###############################################
 DTE2:
 	Inherits: ^Soldier
+	Inherits@anim: ^TDRAInfantry
 	Inherits@EXPERIENCE: ^GainsExperience
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Inherits@DECORATIONS: ^InfantryExperienceHospitalHazmatOverrides
@@ -6009,10 +6012,11 @@ DTE2:
 	AutoTarget:
 		ScanRadius: 4
 	Armament@PRIMARY: ##########
-		Weapon: MachineGun
+		Weapon: SealMachineGun
+		FireDelay: 10
 	Armament@GARRISONED: ##########
 		Name: garrisoned
-		Weapon: HighV
+		Weapon: SealMachineGun
 		MuzzleSequence: garrison-muzzle
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
@@ -6201,36 +6205,14 @@ tran.answer:
 #                   UNITS USA
 ###############################################
 DTE2.dtusa:
-	Inherits: ^Soldier
-	Inherits@EXPERIENCE: ^GainsExperience
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
-	Inherits@DECORATIONS: ^InfantryExperienceHospitalHazmatOverrides
-	Valued:
-		Cost: 250
+	Inherits: DTE2
 	Tooltip:
 		Name: Navy Seal
-	UpdatesPlayerStatistics:
-		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 100
 		Prerequisites:
 		Queue: Infantry.Dtusa
 		Description: General-purpose infantry.   Strong vs Infantry   Weak vs Vehicles
-	Mobile:
-		Speed: 60
-	Health:
-		HP: 20000
-	AutoTarget:
-		ScanRadius: 4
-	Armament@PRIMARY: ##########
-		Weapon: MachineGun
-	Armament@GARRISONED: ##########
-		Name: garrisoned
-		Weapon: HighV
-		MuzzleSequence: garrison-muzzle
-	WithInfantryBody:
-		DefaultAttackSequence: shoot
-		# IdleSequences: idle1,idle2,idle3,idle4
 	Inherits@EXT: ^ExternalConditions ##########
 	AcceptsDeliveredExperience: ##########
 		ValidTypes: infantry ##########
@@ -6270,6 +6252,8 @@ jeep.dtusa:
 	Inherits: JEEP
 	RenderSprites:
 		Image: JEEP.dtusa
+	Tooltip:
+		Name: Humveee
 	Buildable:
 		Queue: Vehicle.Dtusa
 		Prerequisites: weap.dtusa, dtshop
@@ -7559,7 +7543,7 @@ digger:
 	Mobile:
 		Speed: 60
 	Health:
-		HP: 36000
+		HP: 38000
 	ChangesHealth@SelfHealing:
 		Step: 16
 	Armament@PRIMARY: ##########
@@ -7593,17 +7577,16 @@ dingo:
 		Prerequisites:
 		Description: actor-dog.description
 	Valued:
-		Cost: 200
+		Cost: 300
 	Tooltip:
 		Name: Dingo Pack
-		GenericName: Dog
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Selectable:
 		Bounds: 512, 768, -48, -172
 	SelectionDecorations:
 	Health:
-		HP: 17000
+		HP: 20000
 	ChangesHealth@SelfHealing:
 		Step: 5
 	Armor:

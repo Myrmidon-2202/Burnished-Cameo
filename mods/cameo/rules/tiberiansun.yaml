@@ -16,7 +16,7 @@ World:
 		InternalName: forgotten
 		Game: Tiberian Sun
 		Side: Tiberian Sun
-		Description: Custom Forgotten from Tiberian Sun.Support powers: Mutant Commando, Wildlife Rampage
+		Description: Forgotten mutants from Tiberian Sun.Support powers: Mutant Commando, Wildlife Rampage
 	FactionCA@cabal:
 		Name: CABAL TS
 		InternalName: cabal
@@ -29,7 +29,7 @@ World:
 		RandomFactionMembers: tsnod, tsgdi, forgotten, cabal
 		Game: Tiberian Sun
 		Side: Random
-		Description: Random Faction.A random faction from Tiberian Sun will be chosen when the game starts.
+		Description: Random Faction. A random faction from Tiberian Sun will be chosen when the game starts.
 
 	####################################################################################################
 	#		MPSTARTUNITS
@@ -141,32 +141,34 @@ World:
 	Crushable:
 		CrushSound: squish6.aud
 
-# ^HunterSeekersPower:
-	# ProduceActorPowerCA@HunterSeeker:
-	# 	Name: Deploy Hunter-Seeker
-	# 	Description: Deploys a Hunter-Seeker..  Instantly kills mobile targets.  Splash damage strong vs Vehicles, Buildings.  Requires line of sight to target
-	# 	Icon: hunterseeker
-	# 	PauseOnCondition: lowpower
-	# 	Actors: tsprobe
-	# 	Type: Vehicle.HunterSeeker
-	# 	ChargeInterval: 3000
-	# 	ReadyAudio: Reinforce
-	# 	BlockedAudio:
-	# 	AutoFire: True
-	# 	IncomingSound: hunter2.aud
-	# 	LaunchSound: hunter2.aud
-	# 	OrderName: HunterSeekerSpawn
-	# 	SupportPowerPaletteOrder: 20
-	# Exit@1:
-	# 	ExitCell: 1,0
-	# Exit@2:
-	# 	ExitCell: 1,1
-	# Exit@3:
-	# 	ExitCell: 2,1
-	# Exit@4:
-	# 	ExitCell: 2,0
-	# Production@HunterSeeker:
-	# 	Produces: Vehicle.HunterSeeker
+^HunterSeekersPower:
+	ProduceActorPower@HunterSeeker:
+		Names: 
+			1: Deploy Hunter-Seeker
+		Descriptions: 
+			1: Deploys a Hunter-Seeker..  Instantly kills mobile targets.  Splash damage strong vs Vehicles, Buildings.  Requires line of sight to target
+		IconImage: hunterseeker
+		PauseOnCondition: lowpower
+		Actors: tsprobe
+		Type: tsprobe
+		ChargeInterval: 3000
+		ReadyAudio: Reinforce
+		BlockedAudio:
+		AutoFire: True
+		IncomingSound: hunter2.aud
+		LaunchSound: hunter2.aud
+		OrderName: HunterSeekerSpawn
+		SupportPowerPaletteOrder: 20
+	Exit@1:
+		ExitCell: 1,0
+	Exit@2:
+		ExitCell: 1,1
+	Exit@3:
+		ExitCell: 2,1
+	Exit@4:
+		ExitCell: 2,0
+	Production@HunterSeeker:
+		Produces: tsprobe
 
 INVISIBLEPLANE:
 	Inherits: BADR
@@ -325,6 +327,9 @@ TSGTCNST:
 		Dimensions: 3,3
 		BuildSounds: facbld1.aud
 		LocalCenterOffset: 0,-512,0
+	Buildable:
+		IconPalette: tscameo
+		IconPaletteIsPlayerPalette: False
 	Health:
 		HP: 350000
 	Armor:
@@ -392,6 +397,9 @@ TSGTCNSTGDI:
 		Cost: 2500
 	Tooltip:
 		Name: Construction Yard (GDI)
+	Buildable:
+		IconPalette: tscameo
+		IconPaletteIsPlayerPalette: False
 	Building:
 		Footprint: xxx xxx ===
 		Dimensions: 3,3
@@ -469,6 +477,9 @@ TSGTCNSTNOD:
 		Cost: 2500
 	Tooltip:
 		Name: Construction Yard (Nod)
+	Buildable:
+		IconPalette: tscameo
+		IconPaletteIsPlayerPalette: False
 	Building:
 		Footprint: xxx xxx ===
 		Dimensions: 3,3
@@ -506,7 +517,7 @@ TSGTCNSTNOD:
 		Range: 14c0
 	ProvidesPrerequisite@tsoilderrick:
 		Prerequisite: tsoilderrick
-	WithBuildingBib:
+	#WithBuildingBib:
 	WithProductionOverlay@WELDING:
 		RequiresCondition: !build-incomplete
 		Queues: Building, Defence, RABuilding, RADefence
@@ -547,6 +558,9 @@ TSGTCNSTMUTANT:
 		Cost: 2500
 	Tooltip:
 		Name: Construction Yard (Forgotten)
+	Buildable:
+		IconPalette: tscameo
+		IconPaletteIsPlayerPalette: False
 	Building:
 		Footprint: xxx xxx ===
 		Dimensions: 3,3
@@ -588,7 +602,7 @@ TSGTCNSTMUTANT:
 		Range: 14c0
 	ProvidesPrerequisite@tsoilderricksuper:
 		Prerequisite: tsoilderricksuper
-	WithBuildingBib:
+	#WithBuildingBib:
 	WithIdleOverlay@TOP:
 		RequiresCondition: !build-incomplete
 		Sequence: idle-top
@@ -629,6 +643,9 @@ TSGTCNSTCABAL:
 		Footprint: xxx xxx ===
 		Dimensions: 3,3
 		LocalCenterOffset: 0,-512,0
+	Buildable:
+		IconPalette: tscameo
+		IconPaletteIsPlayerPalette: False
 	Health:
 		HP: 1000000
 	Armor:
@@ -666,7 +683,7 @@ TSGTCNSTCABAL:
 		Range: 14c0
 	ProvidesPrerequisite@tsoilderrick:
 		Prerequisite: tsoilderrick
-	WithBuildingBib:
+	#WithBuildingBib:
 	WithIdleOverlay@TOP:
 		RequiresCondition: !build-incomplete
 		Sequence: idle-top
@@ -697,9 +714,11 @@ TSMCVGDI:
 	Buildable:
 		BuildPaletteOrder: 100
 		Prerequisites: ~tsgtweap, tsgtdeptgdi
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Tsgdi
 		BuildDurationModifier: 40
 		Description: Deploys into another Construction Yard..  Unarmed
+		IconPalette: tscameo
+		IconPaletteIsPlayerPalette: False
 	Transforms:
 		IntoActor: tsgtcnstgdi
 		Offset: -1,-1
@@ -711,38 +730,50 @@ TSMCVGDI:
 		VoiceSet: TSVehicle
 	RenderSprites:
 		Image: tsmcv
+	# RenderVoxels:
+	# 	Image: tsmcv
 	RenderVoxels:
-		Image: tsmcv
+		Image: tsmcvblack
 
 TSMCVNOD:
 	Inherits: TSMCVGDI
 	Buildable:
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Tsnod
 		Prerequisites: ~tsntweap, tsgtdeptnod
 	Transforms:
 		IntoActor: tsgtcnstnod
+	RenderSprites:
+		Image: tsmcv2
 	RenderVoxels:
 		Image: tsmcvblack
+	ProvidesPrerequisite@Nodmcv:
+		Prerequisite: tsmcvnod
 
 TSMCVMUTANT:
 	Inherits: TSMCVGDI
 	Buildable:
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Tsmutant
 		Prerequisites: ~tsgtweapmutant, tsgtdeptmutant
 	Transforms:
 		IntoActor: tsgtcnstmutant
+	RenderSprites:
+		Image: tsmcv
+	# RenderVoxels:
+	# 	Image: tsmcv
 	RenderVoxels:
-		Image: tsmcvgrey
+		Image: tsmcvblack
 
 TSMCVCABAL:
 	Inherits: TSMCVGDI
 	Buildable:
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Tscabal
 		Prerequisites: ~tsntweapcabal, tsgtdeptcabal
 	Transforms:
 		IntoActor: tsgtcnstcabal
 	Voiced:
 		VoiceSet: TSReaper
+	RenderSprites:
+		Image: tsmcv2
 	RenderVoxels:
 		Image: tsmcvblack
 
@@ -792,7 +823,7 @@ TSPROC:
 		Actor: TSHARV
 		SpawnOffset: 1,2
 		Facing: 256
-	WithBuildingBib:
+	#WithBuildingBib:
 	WithIdleOverlay@REDLIGHTS:
 		RequiresCondition: !build-incomplete
 		Sequence: idle-redlights
@@ -862,7 +893,8 @@ tsprocmutant:
 	Tooltip:
 		Name: Tiberium Refinery (Mutant)
 	RenderSprites:
-		Image: tsprocmutant
+		Image: tsproc.gdi
+		PlayerPalette: playerra2
 
 tsntwast:
 	Inherits: ^BaseBuilding
@@ -943,7 +975,7 @@ TSGTPOWR:
 		Dimensions: 2,2
 	RevealsShroud:
 		Range: 4c0
-	WithBuildingBib:
+	#WithBuildingBib:
 	ScalePowerWithHealth:
 	AcceptsDeliveredExperience: ##########
 		ValidTypes: building ##########
@@ -992,6 +1024,8 @@ TSNTPOWR:
 		BuildPaletteOrder: 10
 		Prerequisites: ~tsgtcnstnod
 		Description: Provides power for other structures.
+		IconPalette: tscameo
+		IconPaletteIsPlayerPalette: False
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -1006,7 +1040,7 @@ TSNTPOWR:
 		Type: Wood
 	RevealsShroud:
 		Range: 4c0
-	WithBuildingBib:
+	#WithBuildingBib:
 	Power:
 		Amount: 120
 	ScalePowerWithHealth:
@@ -1026,41 +1060,99 @@ TSNTPOWRMUTANT:
 	Inherits@power: ^PowerPlant
 	Selectable:
 		Bounds: 2048, 2048
-	HitShape:
-		UseTargetableCellsOffsets: false
-		TargetableOffsets: 0,0,0, 640,-384,0, 640,512,0, -710,-512,0, -710,512,0
-	Buildable:
-		Queue: Building, RABuilding
-		BuildPaletteOrder: 10
-		Prerequisites: ~tsgtcnstmutant
-		Description: Provides power for other structures.
-	WithIdleOverlay@cycle:
-		Sequence: idle-cycle
-		RequiresCondition: !build-incomplete
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: Power Plant
+		Name: Power Plant (Forgotten)
 	Health:
 		HP: 150000
+	Buildable:
+		BuildPaletteOrder: 10
+		Queue: Building, RABuilding
+		Description: Generates power
+		Prerequisites: ~tsgtcnstmutant
+		IconPalette: tscameo
+		IconPaletteIsPlayerPalette: False
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
-		LocalCenterOffset: 0,-512,0
-	Armor:
-		Type: Wood
 	RevealsShroud:
 		Range: 4c0
-	WithBuildingBib:
-	Power:
-		Amount: 120
+	#WithBuildingBib:
 	ScalePowerWithHealth:
 	AcceptsDeliveredExperience: ##########
-	ProvidesPrerequisite@buildingname:
 		ValidTypes: building ##########
+	WithIdleOverlay@LIGHTS:
+		RequiresCondition: !build-incomplete && !disabled
+		Sequence: idle-lights
+	WithIdleOverlay@PLUG:
+		RequiresCondition: !build-incomplete
+		PauseOnCondition: disabled
+		Sequence: idle-plug
+	WithIdleOverlay@PLUG2:
+		RequiresCondition: powerupgrade
+		PauseOnCondition: disabled
+		Sequence: idle-powrupa
+	WithIdleOverlay@PLUG3:
+		RequiresCondition: powerupgrade
+		PauseOnCondition: disabled
+		Sequence: idle-powrupb
+	Production:
+		Produces: Turbine.TSGDI
+		RequiresCondition: !powerupgrade
+	GrantConditionOnProduction@powerupgrade:
+		Condition: powerupgrade
+		Actors: tsgtpowr.turbine
+	PowerMultiplier@upgrade:
+		Modifier: 200
+		RequiresCondition: powerupgrade
+	Power:
+		Amount: 100
+	ProvidesPrerequisite@buildingname:
 	RenderSprites:
+		Image: TSGTPOWR
 		PlayerPalette: playerra2
-		Image: tsntpowrmutant
+	# Inherits: ^BaseBuilding
+	# Inherits@shape: ^2x2Shape
+	# Inherits@sell: ^TSSpawnActorsOnSell
+	# Inherits@power: ^PowerPlant
+	# Selectable:
+	# 	Bounds: 2048, 2048
+	# HitShape:
+	# 	UseTargetableCellsOffsets: false
+	# 	TargetableOffsets: 0,0,0, 640,-384,0, 640,512,0, -710,-512,0, -710,512,0
+	# Buildable:
+	# 	Queue: Building, RABuilding
+	# 	BuildPaletteOrder: 10
+	# 	Prerequisites: ~tsgtcnstmutant
+	# 	Description: Provides power for other structures.
+	# WithIdleOverlay@cycle:
+	# 	Sequence: idle-cycle
+	# 	RequiresCondition: !build-incomplete
+	# Valued:
+	# 	Cost: 500
+	# Tooltip:
+	# 	Name: Power Plant
+	# Health:
+	# 	HP: 150000
+	# Building:
+	# 	Footprint: xx xx
+	# 	Dimensions: 2,2
+	# 	LocalCenterOffset: 0,-512,0
+	# Armor:
+	# 	Type: Wood
+	# RevealsShroud:
+	# 	Range: 4c0
+	# #WithBuildingBib:
+	# Power:
+	# 	Amount: 120
+	# ScalePowerWithHealth:
+	# AcceptsDeliveredExperience: ##########
+	# ProvidesPrerequisite@buildingname:
+	# 	ValidTypes: building ##########
+	# RenderSprites:
+	# 	PlayerPalette: playerra2
+	# 	Image: tsntpowrmutant
 
 TSNTPOWRCABAL:
 	Inherits: ^BaseBuilding
@@ -1077,6 +1169,8 @@ TSNTPOWRCABAL:
 		BuildPaletteOrder: 10
 		Prerequisites: ~tsgtcnstcabal
 		Description: Provides power for other structures.
+		IconPalette: tscameo
+		IconPaletteIsPlayerPalette: False
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -1091,7 +1185,7 @@ TSNTPOWRCABAL:
 		Type: Wood
 	RevealsShroud:
 		Range: 4c0
-	WithBuildingBib:
+	#WithBuildingBib:
 	Power:
 		Amount: 120
 	ScalePowerWithHealth:
@@ -1117,6 +1211,8 @@ TSNTAPWR:
 		BuildPaletteOrder: 110
 		Prerequisites: ~tsgtcnstnod, tsntradr
 		Description: Provides double the power of.a standard Power Plant.
+		IconPalette: tscameo
+		IconPaletteIsPlayerPalette: False
 	Valued:
 		Cost: 800 #500
 	Tooltip:
@@ -1134,7 +1230,7 @@ TSNTAPWR:
 		Type: Wood
 	RevealsShroud:
 		Range: 4c0
-	WithBuildingBib:
+	#WithBuildingBib:
 	Power:
 		Amount: 200
 	ScalePowerWithHealth:
@@ -1162,6 +1258,8 @@ TSGTSILO:
 		Queue: Defence, RADefence
 		Description: Stores excess Tiberium.
 		Prerequisites: ~tsgtcnstgdi, tsproc
+		IconPalette: tscameo
+		IconPaletteIsPlayerPalette: False
 	Building:
 		Footprint: __ xx
 		Dimensions: 2,2
@@ -1237,7 +1335,7 @@ TSGTPILE:
 	Inherits: ^BaseBuilding
 	Inherits@CPQWP: ^CPQConditionWithPrimary
 	Inherits@sell: ^TSSpawnActorsOnSell
-	Inherits@barr: ^IsBarrack
+	Inherits@barr: ^IsBarrackOld
 	Inherits@prod: ^ProducesUnits
 	HitShape:
 		UseTargetableCellsOffsets: false
@@ -1259,9 +1357,27 @@ TSGTPILE:
 		Footprint: xx xx ==
 		Dimensions: 2,3
 		LocalCenterOffset: 0,-512,0
+	Production:
+		Produces: Infantry.Tsgdi
+	ProductionQueue:
+		Type: Infantry.Tsgdi
+		DisplayOrder: 2
+		Group: Infantry
+		LowPowerModifier: 150
+		ReadyAudio: UnitReady
+		ReadyTextNotification: notification-unit-ready
+		BlockedAudio: NoBuild
+		BlockedTextNotification: notification-unable-to-build-more
+		LimitedAudio: BuildingInProgress
+		LimitedTextNotification: notification-unable-to-comply-building-in-progress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar:
+		ProductionType: Infantry.Tsgdi
 	RevealsShroud:
 		Range: 5c0
-	WithBuildingBib:
+	#WithBuildingBib:
 	RallyPoint:
 	Exit@1:
 		SpawnOffset: -426,85,0
@@ -1295,7 +1411,7 @@ TSNTHAND:
 	Inherits@sell: ^TSSpawnActorsOnSell
 	Inherits@shape: ^2x2Shape
 	Inherits@CPQWP: ^CPQConditionWithPrimary
-	Inherits@barr: ^IsBarrack
+	Inherits@barr: ^IsBarrackOld
 	Inherits@prod: ^ProducesUnits
 	HitShape:
 		UseTargetableCellsOffsets: false
@@ -1314,9 +1430,27 @@ TSNTHAND:
 		Footprint: xx xx ==
 		Dimensions: 2,3
 		LocalCenterOffset: 0,-512,0
+	Production:
+		Produces: Infantry.Tsnod
+	ProductionQueue:
+		Type: Infantry.Tsnod
+		DisplayOrder: 2
+		Group: Infantry
+		LowPowerModifier: 150
+		ReadyAudio: UnitReady
+		ReadyTextNotification: notification-unit-ready
+		BlockedAudio: NoBuild
+		BlockedTextNotification: notification-unable-to-build-more
+		LimitedAudio: BuildingInProgress
+		LimitedTextNotification: notification-unable-to-comply-building-in-progress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar:
+		ProductionType: Infantry.Tsnod
 	RevealsShroud:
 		Range: 5c0
-	WithBuildingBib:
+	#WithBuildingBib:
 	RallyPoint:
 		Path: 1,2
 	Exit@1:
@@ -1354,6 +1488,24 @@ TSNTHAND2:
 		Icon: iconcabal
 		IconPalette: windows256
 	# ParallelProductionQueue@INFANTRY:
+	Production:
+		Produces: Infantry.Tscabal
+	ProductionQueue:
+		Type: Infantry.Tscabal
+		DisplayOrder: 2
+		Group: Infantry
+		LowPowerModifier: 150
+		ReadyAudio: UnitReady
+		ReadyTextNotification: notification-unit-ready
+		BlockedAudio: NoBuild
+		BlockedTextNotification: notification-unable-to-build-more
+		LimitedAudio: BuildingInProgress
+		LimitedTextNotification: notification-unable-to-comply-building-in-progress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar:
+		ProductionType: Infantry.Tscabal
 	RenderSprites:
 		Image: tsnthand
 		PlayerPalette: playerra2
@@ -1369,9 +1521,27 @@ tsgtpile2:
 		Description: Trains infantry
 	GrantExternalConditionToProduced:
 		Condition: produced
+	Production:
+		Produces: Infantry.Tsmutant
+	ProductionQueue:
+		Type: Infantry.Tsmutant
+		DisplayOrder: 2
+		Group: Infantry
+		LowPowerModifier: 150
+		ReadyAudio: UnitReady
+		ReadyTextNotification: notification-unit-ready
+		BlockedAudio: NoBuild
+		BlockedTextNotification: notification-unable-to-build-more
+		LimitedAudio: BuildingInProgress
+		LimitedTextNotification: notification-unable-to-comply-building-in-progress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar:
+		ProductionType: Infantry.Tsmutant
 	# ParallelProductionQueue@INFANTRY:
 	RenderSprites:
-		Image: tsgtpile2
+		Image: tsgtpile
 		PlayerPalette: playerra2
 
 tsgtweap:
@@ -1379,7 +1549,7 @@ tsgtweap:
 	Inherits@sell: ^TSSpawnActorsOnSell
 	Inherits@shape: ^3x2Shape
 	Inherits@CPQWP: ^CPQConditionWithPrimary
-	Inherits@weap: ^IsWeaponFactory
+	Inherits@weap: ^IsWeaponFactoryOld
 	Inherits@prod: ^ProducesUnits
 	HitShape:
 		TargetableOffsets: 0,0,0, 0,1024,0, 0,-1024,0
@@ -1406,7 +1576,7 @@ tsgtweap:
 	SelectionDecorations:
 	RevealsShroud:
 		Range: 4c0
-	WithBuildingBib:
+	#WithBuildingBib:
 	RallyPoint:
 		Path: 0,2
 	Exit@1:
@@ -1414,12 +1584,24 @@ tsgtweap:
 		ExitCell: 2,1
 		ExitDelay: 3
 	# ParallelProductionQueue@VEHICLE:
-	ProductionBar@VEHICLEGDI:
-		ProductionType: Vehicle
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@RAVEHICLEGDI:
-		ProductionType: RAVehicle
-		RequiresCondition: classicproductionqueues
+	Production:
+		Produces: Vehicle.Tsgdi
+	ProductionQueue:
+		Type: Vehicle.Tsgdi
+		DisplayOrder: 2
+		Group: Vehicle
+		LowPowerModifier: 150
+		ReadyAudio: UnitReady
+		ReadyTextNotification: notification-unit-ready
+		BlockedAudio: NoBuild
+		BlockedTextNotification: notification-unable-to-build-more
+		LimitedAudio: BuildingInProgress
+		LimitedTextNotification: notification-unable-to-comply-building-in-progress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar:
+		ProductionType: Vehicle.Tsgdi
 	Power:
 		Amount: -40
 	ProvidesPrerequisite@buildingname:
@@ -1449,7 +1631,7 @@ TSNTWEAP:
 	Inherits@sell: ^TSSpawnActorsOnSell
 	Inherits@shape: ^3x2Shape
 	Inherits@CPQWP: ^CPQConditionWithPrimary
-	Inherits@weap: ^IsWeaponFactory
+	Inherits@weap: ^IsWeaponFactoryOld
 	Inherits@prod: ^ProducesUnits
 	HitShape:
 		TargetableOffsets: 0,0,0, 0,1024,0, 0,-1024,0
@@ -1466,6 +1648,8 @@ TSNTWEAP:
 		Prerequisites: ~tsgtcnstnod, tsprocnod
 		Queue: Building, RABuilding
 		Description: Produces vehicles
+		IconPalette: tscameo
+		IconPaletteIsPlayerPalette: False
 	Building:
 		Footprint: xx= x== ===
 		Dimensions: 3,3
@@ -1476,7 +1660,7 @@ TSNTWEAP:
 	SelectionDecorations:
 	RevealsShroud:
 		Range: 4c0
-	WithBuildingBib:
+	#WithBuildingBib:
 	RallyPoint:
 		Path: 0,2
 	Exit@1:
@@ -1484,12 +1668,24 @@ TSNTWEAP:
 		ExitCell: 2,1
 		ExitDelay: 3
 	# ParallelProductionQueue@VEHICLE:
-	ProductionBar@VEHICLEGDI:
-		ProductionType: Vehicle
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@RAVEHICLEGDI:
-		ProductionType: RAVehicle
-		RequiresCondition: classicproductionqueues
+	Production:
+		Produces: Vehicle.Tsnod
+	ProductionQueue:
+		Type: Vehicle.Tsnod
+		DisplayOrder: 2
+		Group: Vehicle
+		LowPowerModifier: 150
+		ReadyAudio: UnitReady
+		ReadyTextNotification: notification-unit-ready
+		BlockedAudio: NoBuild
+		BlockedTextNotification: notification-unable-to-build-more
+		LimitedAudio: BuildingInProgress
+		LimitedTextNotification: notification-unable-to-comply-building-in-progress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar:
+		ProductionType: Vehicle.Tsnod
 	Power:
 		Amount: -40
 	ProvidesPrerequisite@buildingname:
@@ -1515,27 +1711,55 @@ TSNTWEAPCABAL:
 		Queue: Building, RABuilding
 		Description: Produces vehicles
 	# ParallelProductionQueue@VEHICLE:
-	ProductionBar@VEHICLEGDI:
-		ProductionType: Vehicle
-	ProductionBar@RAVEHICLEGDI:
-		ProductionType: RAVehicle
+	Production:
+		Produces: Vehicle.Tscabal
+	ProductionQueue:
+		Type: Vehicle.Tscabal
+		DisplayOrder: 2
+		Group: Vehicle
+		LowPowerModifier: 150
+		ReadyAudio: UnitReady
+		ReadyTextNotification: notification-unit-ready
+		BlockedAudio: NoBuild
+		BlockedTextNotification: notification-unable-to-build-more
+		LimitedAudio: BuildingInProgress
+		LimitedTextNotification: notification-unable-to-comply-building-in-progress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar:
+		ProductionType: Vehicle.Tscabal
 	RenderSprites:
 		Image: tsntweap
 
 TSGTWEAPMUTANT:
-	Inherits: TSNTWEAP
+	Inherits: tsgtweap
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: ~tsgtcnstmutant, tsprocmutant
 		Queue: Building, RABuilding
 		Description: Produces vehicles
 	# ParallelProductionQueue@VEHICLE:
-	ProductionBar@VEHICLEGDI:
-		ProductionType: Vehicle
-	ProductionBar@RAVEHICLEGDI:
-		ProductionType: RAVehicle
+	Production:
+		Produces: Vehicle.Tsmutant
+	ProductionQueue:
+		Type: Vehicle.Tsmutant
+		DisplayOrder: 2
+		Group: Vehicle
+		LowPowerModifier: 150
+		ReadyAudio: UnitReady
+		ReadyTextNotification: notification-unit-ready
+		BlockedAudio: NoBuild
+		BlockedTextNotification: notification-unable-to-build-more
+		LimitedAudio: BuildingInProgress
+		LimitedTextNotification: notification-unable-to-comply-building-in-progress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar:
+		ProductionType: Vehicle.Tsmutant
 	RenderSprites:
-		Image: tsntweap
+		Image: tsgtweap
 
 tsgtdeptgdi:
 	Inherits: ^BaseBuilding
@@ -1635,7 +1859,7 @@ tsgthpad:
 	Inherits@sell: ^TSSpawnActorsOnSell
 	Inherits@shape: ^2x1Shape
 	Inherits@CPQWP: ^CPQConditionWithPrimary
-	Inherits@hpad: ^IsAircraftFactory
+	Inherits@hpad: ^IsAircraftFactoryOld
 	Inherits@prod: ^ProducesUnits
 	Selectable:
 		Bounds: 2048, 2048
@@ -1665,12 +1889,24 @@ tsgthpad:
 		StartRepairingNotification: Repairing
 	RallyPoint:
 	# ParallelProductionQueue@AIRCRAFT:
-	ProductionBar@AIRCRAFTGDI:
-		ProductionType: Aircraft
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@RAAIRCRAFTGDI:
-		ProductionType: RAAircraft
-		RequiresCondition: classicproductionqueues
+	Production:
+		Produces: Aircraft.Tsgdi
+	ProductionQueue:
+		Type: Aircraft.Tsgdi
+		DisplayOrder: 2
+		Group: Aircraft
+		LowPowerModifier: 150
+		ReadyAudio: UnitReady
+		ReadyTextNotification: notification-unit-ready
+		BlockedAudio: NoBuild
+		BlockedTextNotification: notification-unable-to-build-more
+		LimitedAudio: BuildingInProgress
+		LimitedTextNotification: notification-unable-to-comply-building-in-progress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar:
+		ProductionType: Aircraft.Tsgdi
 	Power:
 		Amount: -10
 	ProvidesPrerequisite@buildingname:
@@ -1691,19 +1927,33 @@ tsgthpadmutant:
 		Queue: Building, RABuilding
 		Prerequisites: ~tsgtcnstmutant, tsgtradrmutant
 	# ParallelProductionQueue@AIRCRAFT:
-	ProductionBar@AIRCRAFTGDI:
-		ProductionType: Aircraft
-	ProductionBar@RAAIRCRAFTGDI:
-		ProductionType: RAAircraft
+	Production:
+		Produces: Aircraft.Tsmutant
+	ProductionQueue:
+		Type: Aircraft.Tsmutant
+		DisplayOrder: 2
+		Group: Aircraft
+		LowPowerModifier: 150
+		ReadyAudio: UnitReady
+		ReadyTextNotification: notification-unit-ready
+		BlockedAudio: NoBuild
+		BlockedTextNotification: notification-unable-to-build-more
+		LimitedAudio: BuildingInProgress
+		LimitedTextNotification: notification-unable-to-comply-building-in-progress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar:
+		ProductionType: Aircraft.Tsmutant
 	RenderSprites:
-		Image: tsnthpad
+		Image: tsgthpad
 
 TSNTHPAD:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^2x1Shape
 	Inherits@sell: ^TSSpawnActorsOnSell
 	Inherits@CPQWP: ^CPQConditionWithPrimary
-	Inherits@hpad: ^IsAircraftFactory
+	Inherits@hpad: ^IsAircraftFactoryOld
 	Inherits@prod: ^ProducesUnits
 	Selectable:
 		Bounds: 2048, 2048
@@ -1733,12 +1983,24 @@ TSNTHPAD:
 		StartRepairingNotification: Repairing
 	RallyPoint:
 	# ParallelProductionQueue@AIRCRAFT:
-	ProductionBar@AIRCRAFTNOD:
-		ProductionType: Aircraft
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@RAAIRCRAFTNOD:
-		ProductionType: RAAircraft
-		RequiresCondition: classicproductionqueues
+	Production:
+		Produces: Aircraft.Tsnod
+	ProductionQueue:
+		Type: Aircraft.Tsnod
+		DisplayOrder: 2
+		Group: Aircraft
+		LowPowerModifier: 150
+		ReadyAudio: UnitReady
+		ReadyTextNotification: notification-unit-ready
+		BlockedAudio: NoBuild
+		BlockedTextNotification: notification-unable-to-build-more
+		LimitedAudio: BuildingInProgress
+		LimitedTextNotification: notification-unable-to-comply-building-in-progress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar:
+		ProductionType: Aircraft.Tsnod
 	Power:
 		Amount: -10
 	ProvidesPrerequisite@buildingname:
@@ -1759,10 +2021,24 @@ TSNTHPAD2:
 		Queue: Building, RABuilding
 		Prerequisites: ~tsgtcnstcabal, tsntradrcabal
 	# ParallelProductionQueue@AIRCRAFT:
-	ProductionBar@AIRCRAFTNOD:
-		ProductionType: Aircraft
-	ProductionBar@RAAIRCRAFTNOD:
-		ProductionType: RAAircraft
+	Production:
+		Produces: Aircraft.Tscabal
+	ProductionQueue:
+		Type: Aircraft.Tscabal
+		DisplayOrder: 2
+		Group: Aircraft
+		LowPowerModifier: 150
+		ReadyAudio: UnitReady
+		ReadyTextNotification: notification-unit-ready
+		BlockedAudio: NoBuild
+		BlockedTextNotification: notification-unable-to-build-more
+		LimitedAudio: BuildingInProgress
+		LimitedTextNotification: notification-unable-to-comply-building-in-progress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar:
+		ProductionType: Aircraft.Tscabal
 	RenderSprites:
 		Image: tsnthpad
 
@@ -1797,7 +2073,7 @@ tsntradr:
 		PauseOnCondition: lowpower
 	RevealsShroud:
 		Range: 10c0
-	WithBuildingBib:
+	#WithBuildingBib:
 	ProvidesRadar:
 		RequiresCondition: !jammed && !lowpower
 	RenderDetectionCircle:
@@ -1881,7 +2157,7 @@ tsgtradr:
 		PauseOnCondition: lowpower
 	RevealsShroud:
 		Range: 10c0
-	WithBuildingBib:
+	#WithBuildingBib:
 	ProvidesRadar:
 		RequiresCondition: !jammed && !lowpower
 	RenderDetectionCircle:
@@ -1897,24 +2173,63 @@ tsgtradr:
 		RequiresCondition: !build-incomplete
 		PauseOnCondition: lowpower || disabled
 		Sequence: idle-dish
-	# DetonateWeaponPower:
+	DetonateWeaponPower:
+		OrderName: GDI Drop
+		Cursor: ability
+		PauseOnCondition: lowpower
+		Prerequisites:
+			1: ~techlevel.superweapons
+		Icons: 
+			1: droppod
+		Names: 
+			1: Drop Pods
+		Descriptions: 
+			1: Deploys elite infantry from orbit.
+		InsufficientPowerSpeechNotification: InsufficientPower
+		LaunchSpeechNotification: ReinforcementsArrived
+		SelectTargetSpeechNotification: SelectTarget
+		DisplayBeacon: False
+		DisplayRadarPing: True
+		ChargeInterval: 4500
+		IconPalette: tscameo
+		Weapons: 
+			1: TSDroppodSpawner
+		CameraActor: camera.small
+		CameraRemoveDelay: 60
+		TargetCircleRange:
+			1: 6000
+	SupportPowerChargeBar:
+	RenderSprites:
+		PlayerPalette: playerra2
+
+	# DetonateWeaponPower@sardaukar:
+	# 	Prerequisites:
+	# 		1: ~techlevel.superweapons
+	# 	Icons:
+	# 		1: sardaukar_icon
+	# 	Names:
+	# 		1: Release the Sardaukar!
+	# 	Descriptions:
+	# 		1: Deploys Corrino's Sardaukars from orbit to decimate your enemies.. Drop Pods damages area around. Provides passive income
+	# 	Weapons:
+	# 		1: SardaukarDroppodSpawner
 	# 	OrderName: GDI Drop
 	# 	Cursor: ability
-	# 	PauseOnCondition: lowpower
-	# 	Icon: droppod
-	# 	Name: Drop Pods
-	# 	Description: Deploys elite infantry from orbit.
+	# 	PauseOnCondition: disabled
 	# 	InsufficientPowerSpeechNotification: InsufficientPower
 	# 	LaunchSpeechNotification: ReinforcementsArrived
 	# 	SelectTargetSpeechNotification: SelectTarget
+	# 	DisplayBeacon: False
 	# 	DisplayRadarPing: True
-	# 	ChargeInterval: 4500
-	# 	Weapon: TSDroppodSpawner
+	# 	DisplayTimerRelationships: Ally, Neutral, Enemy
+	# 	ChargeInterval: 6000
+	# 	IncomingSpeechNotification: EnemyUnitsApproaching
 	# 	CameraActor: camera.small
+	# 	IconPalette: d2kunit
 	# 	CameraRemoveDelay: 60
-	# SupportPowerChargeBar:
-	RenderSprites:
-		PlayerPalette: playerra2
+	# 	AllowMultiple: True
+	# 	TargetCircleRange:
+	# 		1: 6000
 
 tsgtradrmutant:
 	Inherits: tsgtradr
@@ -1924,51 +2239,61 @@ tsgtradrmutant:
 		Prerequisites: ~tsgtcnstmutant, tsprocmutant
 		Queue: Building, RABuilding
 		Description: Provides radar and support powers..Unlocks higher-tech units and buildings..Requires power to operate.
-	# DetonateWeaponPower:
-	# 	OrderName: MutantCommando
-	# 	Prerequisites: ~techlevel.superweapons
-	# 	Cursor: ability
-	# 	PauseOnCondition: lowpower
-	# 	Icon: mutcommando
-	# 	Name: Mutant Commando
-	# 	Description: Deploys elite Ghost Stalkers and Snipers.via Subterranean APC.
-	# 	InsufficientPowerSpeechNotification: InsufficientPower
-	# 	IncomingSpeechNotification: EnemyUnitsApproaching
-	# 	SelectTargetSpeechNotification: SelectTarget
-	# 	DisplayRadarPing: True
-	# 	DisplayTimerStances: Ally, Neutral, Enemy
-	# 	ChargeInterval: 7500
-	# 	Weapon: MutSAPCSpawner
-	# 	ActivationDelay: 60
-	# 	CameraRemoveDelay: 90
-	# 	BeaconPoster: rapinficon
-	# DetonateWeaponPower@wildlife:
-	# 	AllowMultiple: true
-	# 	OrderName: WildlifeRampage
-	# 	Prerequisites: tek, ~techlevel.superweapons
-	# 	Cursor: ability
-	# 	PauseOnCondition: lowpower
-	# 	Icon: mutwildlife
-	# 	Name: Wildlife Rampage
-	# 	Description: Spawns numerous Tiberium creatures.causing massive havoc.
-	# 	InsufficientPowerSpeechNotification: InsufficientPower
-	# 	IncomingSpeechNotification: EnemyUnitsApproaching
-	# 	SelectTargetSpeechNotification: SelectTarget
-	# 	DisplayTimerStances: Ally, Neutral, Enemy
-	# 	DisplayRadarPing: True
-	# 	ChargeInterval: 9000
-	# 	ActivationDelay: 50
-	# 	Weapon: MutWildlifeSpawner
-	# 	CameraActor: camera
-	# 	CameraRemoveDelay: 240
-	# 	DisplayBeacon: True
-	# 	ArrowSequence: arrow
-	# 	ClockSequence: clock
-	# 	CircleSequence: circles
-	# 	BeaconPoster: rapinficon
+	DetonateWeaponPower:
+		OrderName: MutantCommando
+		Prerequisites: 
+			1: ~techlevel.superweapons
+		Cursor: ability
+		PauseOnCondition: lowpower
+		Icons: 
+			1: mutcommando
+		Names: 
+			1: Mutant Commando
+		Descriptions: 
+			1: Deploys elite Ghost Stalkers and Snipers.via Subterranean APC.
+		InsufficientPowerSpeechNotification: InsufficientPower
+		IncomingSpeechNotification: EnemyUnitsApproaching
+		SelectTargetSpeechNotification: SelectTarget
+		DisplayRadarPing: True
+		DisplayTimerStances: Ally, Neutral, Enemy
+		ChargeInterval: 7500
+		Weapons: 
+			1: MutSAPCSpawner
+		ActivationDelay: 60
+		CameraRemoveDelay: 90
+		BeaconPoster: rapinficon
+	DetonateWeaponPower@wildlife:
+		AllowMultiple: true
+		OrderName: WildlifeRampage
+		Prerequisites: 
+			1: tek, ~techlevel.superweapons
+		Cursor: ability
+		PauseOnCondition: lowpower
+		Icons: 
+			1: mutwildlife
+		Names: 
+			1: Wildlife Rampage
+		Descriptions: 
+			1: Spawns numerous Tiberium creatures.causing massive havoc.
+		InsufficientPowerSpeechNotification: InsufficientPower
+		IncomingSpeechNotification: EnemyUnitsApproaching
+		SelectTargetSpeechNotification: SelectTarget
+		DisplayTimerStances: Ally, Neutral, Enemy
+		DisplayRadarPing: True
+		ChargeInterval: 9000
+		ActivationDelay: 50
+		Weapons:
+			1: MutWildlifeSpawner
+		CameraActor: camera
+		CameraRemoveDelay: 240
+		DisplayBeacon: True
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+		BeaconPoster: rapinficon
 	ProvidesPrerequisite@buildingname:
 	RenderSprites:
-		Image: tsgtradrmutant
+		Image: tsgtradr
 		PlayerPalette: playerra2
 
 tsnttech:
@@ -1983,6 +2308,8 @@ tsnttech:
 		BuildPaletteOrder: 140
 		Prerequisites: ~tsgtcnstnod, tsntradr
 		Description: Provides Nod advanced technologies.
+		IconPalette: tscameo
+		IconPaletteIsPlayerPalette: False
 	Tooltip:
 		Name: Nod Tech Center
 	Selectable:
@@ -1995,7 +2322,7 @@ tsnttech:
 		Type: Wood
 	RevealsShroud:
 		Range: 5c0
-	WithBuildingBib:
+	#WithBuildingBib:
 	Power:
 		Amount: -150
 	ProvidesPrerequisite@buildingname:
@@ -2035,7 +2362,7 @@ tsgttech:
 		Type: Wood
 	RevealsShroud:
 		Range: 5c0
-	WithBuildingBib:
+	#WithBuildingBib:
 	Power:
 		Amount: -100
 	ProvidesPrerequisite@buildingname:
@@ -2059,8 +2386,10 @@ tsfgttech:
 		Prerequisites: ~tsgtcnstmutant, tsgtradrmutant
 		Description: Provides Forgotten advanced technologies..Can be only built once
 		BuildLimit: 1
+		IconPalette: tscameo
+		IconPaletteIsPlayerPalette: False
 	RenderSprites:
-		Image: tsfgttech
+		Image: tsgttech
 		PlayerPalette: playerra2
 
 tscabaltech:
@@ -2075,6 +2404,8 @@ tscabaltech:
 		Prerequisites: ~tsgtcnstcabal, tsntradrcabal
 		Description: Provides Cabal advanced technologies..Can be only built once
 		BuildLimit: 1
+		IconPalette: tscameo
+		IconPaletteIsPlayerPalette: False
 	RenderSprites:
 		Image: tsnttech
 		PlayerPalette: playerra2
@@ -2084,7 +2415,7 @@ tsnttmpl:
 	Inherits@sell: ^TSSpawnActorsOnSell
 	Inherits@tech: ^IsTechnoBuilding
 	Inherits@shape: ^3x2Shape
-	# Inherits@hunterseeker: ^HunterSeekersPower
+	Inherits@hunterseeker: ^HunterSeekersPower
 	Selectable:
 		Bounds: 131072, 87381
 	HitShape:
@@ -2106,7 +2437,7 @@ tsnttmpl:
 		Type: Wood
 	RevealsShroud:
 		Range: 5c0
-	WithBuildingBib:
+	#WithBuildingBib:
 	Power:
 		Amount: -100
 	ProvidesPrerequisite@buildingname:
@@ -2122,7 +2453,7 @@ tscore:
 	Inherits@sell: ^TSSpawnActorsOnSell
 	Inherits@tech: ^IsTechnoBuilding
 	Inherits@shape: ^3x2Shape
-	# Inherits@hunterseeker: ^HunterSeekersPower
+	Inherits@hunterseeker: ^HunterSeekersPower
 	Selectable:
 		Bounds: 131072, 87381
 	HitShape:
@@ -2145,7 +2476,7 @@ tscore:
 		Type: Wood
 	RevealsShroud:
 		Range: 5c0
-	WithBuildingBib:
+	#WithBuildingBib:
 	Power:
 		Amount: -100
 	ProvidesPrerequisite@buildingname:
@@ -2184,7 +2515,7 @@ tsntmisl:
 		Type: Wood
 	RevealsShroud:
 		Range: 5c0
-	WithBuildingBib:
+	#WithBuildingBib:
 	Power:
 		Amount: -150
 	WithIdleOverlay@LIGHTS:
@@ -2194,98 +2525,108 @@ tsntmisl:
 	# Armament@superweapon1:
 	# 	Name: superweapon1
 	# 	Weapon: TSTacticalMissile
-	FireArmamentPower:
-		AllowMultiple: true
-		ArmamentName: superweapon1
-		Cursor: nuke
-		Icons:
-			1: abomb #multimiss
-		TargetCircleRange: 5c0
-		ChargeInterval: 6000
-		Names:
-			1: power-nuke.raname
-		Descriptions:
-			1: power-nuke.description
-		SelectTargetSpeechNotification: SelectTarget
-		SelectTargetTextNotification: Select target.
-		InsufficientPowerSpeechNotification: InsufficientPower
-		EndChargeSpeechNotification: NuclearWeaponAvailable
-		EndChargeTextNotification: Nuclear Missile ready.
-		LaunchSpeechNotification: NuclearWeaponLaunched
-		LaunchTextNotification: Warning: Nuclear Missile launched.
-		IncomingSpeechNotification: NuclearWarheadApproaching
-		IncomingTextNotification: Warning: Nuclear Missile launched.
-		Prerequisites:
-			1: ~techlevel.superweapons
-		OrderName: NukePowerInfoOrder
-		DisplayTimerRelationships: Ally, Neutral, Enemy
-		PauseOnCondition: empdisable || disabled
-		CameraRange: 5c0
-		CameraSpawnAdvance: 25
-		CameraRemoveDelay: 350
-	# NukePower@tactmiss:
+	# FireArmamentPower:
 	# 	AllowMultiple: true
-	# 	OrderName: TSClusterMissile
-	# 	PauseOnCondition: lowpower
-	# 	Prerequisites: ~techlevel.superweapons
-	# 	Icon: multimiss
+	# 	ArmamentName: superweapon1
 	# 	Cursor: nuke
-	# 	ChargeInterval: 4500
-	# 	Name: Multi Missile
-	# 	Description: Launches a tactical cluster missile..Applies heavy damage over a large area.
-	# 	EndChargeSpeechNotification: NuclearWeaponAvailable
+	# 	Icons:
+	# 		1: abomb #multimiss
+	# 	TargetCircleRange: 5c0
+	# 	ChargeInterval: 6000
+	# 	Names:
+	# 		1: power-nuke.raname
+	# 	Descriptions:
+	# 		1: power-nuke.description
 	# 	SelectTargetSpeechNotification: SelectTarget
+	# 	SelectTargetTextNotification: Select target.
 	# 	InsufficientPowerSpeechNotification: InsufficientPower
+	# 	EndChargeSpeechNotification: NuclearWeaponAvailable
+	# 	EndChargeTextNotification: Nuclear Missile ready.
 	# 	LaunchSpeechNotification: NuclearWeaponLaunched
+	# 	LaunchTextNotification: Warning: Nuclear Missile launched.
 	# 	IncomingSpeechNotification: NuclearWarheadApproaching
-	# 	MissileWeapon: TSTacticalMissile
-	# 	MissileDelay: 5
-	# 	MissilePalette: tseffect
-	# 	FlightDelay: 100
-	# 	DetonationAltitude: 4c0
-	# 	SpawnOffset: 3c0,0,-1c512
-	# 	DisplayBeacon: True
-	# 	BeaconPoster: multimiss
-	# 	BeaconPosterPalette: beaconposter
+	# 	IncomingTextNotification: Warning: Nuclear Missile launched.
+	# 	Prerequisites:
+	# 		1: ~techlevel.superweapons
+	# 	OrderName: NukePowerInfoOrder
 	# 	DisplayTimerRelationships: Ally, Neutral, Enemy
-	# 	DisplayRadarPing: True
-	# 	CameraRange: 10c0
-	# 	CameraRemoveDelay: 60
-	# 	ArrowSequence: arrow
-	# 	ClockSequence: clocklarge
-	# 	CircleSequence: circles
-	# 	MissileImage: TSTacticalMissile
-	# NukePower@tactmiss2:
-	# 	AllowMultiple: true
-	# 	OrderName: TSChemicalMissile
-	# 	PauseOnCondition: lowpower
-	# 	Prerequisites: ~techlevel.superweapons, tsntwast
-	# 	Icon: chemicalmiss
-	# 	Cursor: nuke
-	# 	ChargeInterval: 3500
-	# 	Name: Chemical Missile
-	# 	Description: Launches a tactical missile with.a Tiberium warhead.. Applies heavy damage over a small area. Releases toxic gas clouds
-	# 	EndChargeSpeechNotification: NuclearWeaponAvailable
-	# 	SelectTargetSpeechNotification: SelectTarget
-	# 	InsufficientPowerSpeechNotification: InsufficientPower
-	# 	LaunchSpeechNotification: NuclearWeaponLaunched
-	# 	IncomingSpeechNotification: NuclearWarheadApproaching
-	# 	MissileWeapon: TSChemTacticalMissile
-	# 	MissileDelay: 5
-	# 	MissilePalette: tseffect
-	# 	FlightDelay: 100
-	# 	SpawnOffset: 3c0,0,-1c512
-	# 	DisplayBeacon: True
-	# 	BeaconPoster: chemicalmiss
-	# 	BeaconPosterPalette: beaconposter
-	# 	DisplayRadarPing: True
-	# 	DisplayTimerRelationships: Ally, Neutral
-	# 	CameraRange: 10c0
-	# 	CameraRemoveDelay: 150
-	# 	ArrowSequence: arrow
-	# 	ClockSequence: clocklarge
-	# 	CircleSequence: circles
-	# 	MissileImage: TSChemTacticalMissile
+	# 	PauseOnCondition: empdisable || disabled
+	# 	CameraRange: 5c0
+	# 	CameraSpawnAdvance: 25
+	# 	CameraRemoveDelay: 350
+	NukePowerCA@tactmiss:
+		AllowMultiple: true
+		OrderName: TSClusterMissile
+		PauseOnCondition: lowpower
+		Prerequisites: 
+			1: ~techlevel.superweapons
+		Icons: 
+			1: multimiss
+		Cursor: nuke
+		ChargeInterval: 4500
+		Names: 
+			1: Multi Missile
+		Descriptions: 
+			1: Launches a tactical cluster missile..Applies heavy damage over a large area.
+		EndChargeSpeechNotification: NuclearWeaponAvailable
+		SelectTargetSpeechNotification: SelectTarget
+		InsufficientPowerSpeechNotification: InsufficientPower
+		LaunchSpeechNotification: NuclearWeaponLaunched
+		IncomingSpeechNotification: NuclearWarheadApproaching
+		MissileWeapons: 
+			1: TSTacticalMissile
+		MissileDelay: 5
+		MissilePalette: tseffect
+		FlightDelay: 100
+		DetonationAltitude: 4c0
+		SpawnOffset: 3c0,0,-1c512
+		DisplayBeacon: True
+		BeaconPoster: multimiss
+		BeaconPosterPalette: beaconposter
+		DisplayTimerRelationships: Ally, Neutral, Enemy
+		DisplayRadarPing: True
+		CameraRange: 10c0
+		CameraRemoveDelay: 60
+		ArrowSequence: arrow
+		ClockSequence: clocklarge
+		CircleSequence: circles
+		MissileImage: TSTacticalMissile
+	NukePowerCA@tactmiss2:
+		AllowMultiple: true
+		OrderName: TSChemicalMissile
+		PauseOnCondition: lowpower
+		Prerequisites: 
+			1: ~techlevel.superweapons, tsntwast
+		Icons: 
+			1: chemicalmiss
+		Cursor: nuke
+		ChargeInterval: 3500
+		Names: 
+			1: Chemical Missile
+		Descriptions: 
+			1: Launches a tactical missile with.a Tiberium warhead.. Applies heavy damage over a small area. Releases toxic gas clouds
+		EndChargeSpeechNotification: NuclearWeaponAvailable
+		SelectTargetSpeechNotification: SelectTarget
+		InsufficientPowerSpeechNotification: InsufficientPower
+		LaunchSpeechNotification: NuclearWeaponLaunched
+		IncomingSpeechNotification: NuclearWarheadApproaching
+		MissileWeapons: 
+			1: TSChemTacticalMissile
+		MissileDelay: 5
+		MissilePalette: tseffect
+		FlightDelay: 100
+		SpawnOffset: 3c0,0,-1c512
+		DisplayBeacon: True
+		BeaconPoster: chemicalmiss
+		BeaconPosterPalette: beaconposter
+		DisplayRadarPing: True
+		DisplayTimerRelationships: Ally, Neutral
+		CameraRange: 10c0
+		CameraRemoveDelay: 150
+		ArrowSequence: arrow
+		ClockSequence: clocklarge
+		CircleSequence: circles
+		MissileImage: TSChemTacticalMissile
 	WithSupportPowerActivationOverlay@1:
 		RequiresCondition: !build-incomplete
 		Sequence: active
@@ -2305,50 +2646,50 @@ tsntmislcabal:
 		PlayerPalette: playerra2
 		Image: tsntmisl
 
-tsctarmr:
-	Inherits: ^BaseBuilding
-	Inherits@sell: ^TSSpawnActorsOnSell
-	Inherits@shape: ^3x2Shape
-	Selectable:
-		Bounds: 131072, 87381
-	HitShape:
-		TargetableOffsets: 420,-768,0, 420,768,0, -770,-768,0, -770,768,0
-	Buildable:
-		Queue: Addons
-		BuildPaletteOrder: 70
-		Prerequisites: ~tsgtcnstgdi
-		Description: Upgrades level infantry.
-	Valued:
-		Cost: 1500
-	Tooltip:
-		Name: Armory
-	Building:
-		Footprint: xxx xxx ===
-		Dimensions: 3,3
-		LocalCenterOffset: 0,-512,0
-	Health:
-		HP: 80000
-	Armor:
-		Type: Wood
-	RevealsShroud:
-		Range: 5c0
-	WithBuildingBib:
-	Power:
-		Amount: -100
-	-WithMakeAnimation:
-	ProvidesPrerequisite@buildingname:
-	ProximityExternalCondition@RANK-0:
-		Range: 9c0
-		Condition: Armory-Rank
-	RenderSprites:
-		PlayerPalette: playerra2
+# tsctarmr:
+# 	Inherits: ^BaseBuilding
+# 	Inherits@sell: ^TSSpawnActorsOnSell
+# 	Inherits@shape: ^3x2Shape
+# 	Selectable:
+# 		Bounds: 131072, 87381
+# 	HitShape:
+# 		TargetableOffsets: 420,-768,0, 420,768,0, -770,-768,0, -770,768,0
+# 	Buildable:
+# 		Queue: Addons
+# 		BuildPaletteOrder: 70
+# 		Prerequisites: ~tsgtcnstgdi
+# 		Description: Upgrades level infantry.
+# 	Valued:
+# 		Cost: 1500
+# 	Tooltip:
+# 		Name: Armory
+# 	Building:
+# 		Footprint: xxx xxx ===
+# 		Dimensions: 3,3
+# 		LocalCenterOffset: 0,-512,0
+# 	Health:
+# 		HP: 80000
+# 	Armor:
+# 		Type: Wood
+# 	RevealsShroud:
+# 		Range: 5c0
+# 	#WithBuildingBib:
+# 	Power:
+# 		Amount: -100
+# 	-WithMakeAnimation:
+# 	ProvidesPrerequisite@buildingname:
+# 	ProximityExternalCondition@RANK-0:
+# 		Range: 9c0
+# 		Condition: Armory-Rank
+# 	RenderSprites:
+# 		PlayerPalette: playerra2
 
 tsgtplug:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^3x2Shape
 	Inherits@sell: ^TSSpawnActorsOnSell
 	Inherits@SW: ^PrimarySuperweapon
-	# Inherits@hunterseeker: ^HunterSeekersPower
+	Inherits@hunterseeker: ^HunterSeekersPower
 	Selectable:
 		Bounds: 131072, 87381
 	HitShape:
@@ -2374,7 +2715,7 @@ tsgtplug:
 		Type: Wood
 	RevealsShroud:
 		Range: 5c0
-	WithBuildingBib:
+	#WithBuildingBib:
 	Power:
 		Amount: -100
 	WithIdleOverlay@DISH:
@@ -2428,24 +2769,24 @@ tsgtplug:
 		TargetCircleColor: ff000080
 	ProvidesPrerequisite@swlimit:
 		Prerequisite: tsionc
-	#Production:
-	#	Produces: UpgradeCenter.TSGDI
-	#	RequiresCondition: plugupgrade < 2
-	#ProductionQueue:
-	#	Type: UpgradeCenter.TSGDI
-	#	Group: Addon
-	#	LowPowerModifier: 200
-	#	QueueLimit: 2
-	#	ItemLimit: 2
-	#	DisplayOrder: 0
-	#GrantConditionOnProduction@plug:
-	#	Condition: plugupgrade
-	#GrantConditionOnProduction@ic:
-	#	Condition: ioncannon
-	#	Actors: tsgtplug2
-	#GrantConditionOnProduction@hs:
-	#	Condition: hunterseeker
-	#	Actors: tsgtplug3
+	Production:
+		Produces: UpgradeCenter.TSGDI
+		RequiresCondition: plugupgrade < 2
+	ProductionQueue:
+		Type: UpgradeCenter.TSGDI
+		Group: Addon
+		LowPowerModifier: 200
+		QueueLimit: 2
+		ItemLimit: 2
+		DisplayOrder: 0
+	GrantConditionOnProduction@plug:
+		Condition: plugupgrade
+	GrantConditionOnProduction@ic:
+		Condition: ioncannon
+		Actors: tsgtplug2
+	GrantConditionOnProduction@hs:
+		Condition: hunterseeker
+		Actors: tsgtplug3
 	RenderSprites:
 		PlayerPalette: playerra2
 
@@ -2601,7 +2942,7 @@ tsveinhole:
 		Type: Heavy
 	RevealsShroud:
 		Range: 6c0
-	WithBuildingBib:
+	#WithBuildingBib:
 		HasMinibib: True
 	Turreted:
 		TurnSpeed: 396
@@ -2719,10 +3060,10 @@ tsgtctwrmg:
 		Offset: 0,0,0
 	WithSpriteBody:
 	Armament@VULCPRIMARY:
-		Weapon: TurretGun
+		Weapon: TSVulcan2
 		LocalOffset: 300,60,600
 	Armament@VULCSECONDARY:
-		Weapon: TurretGun
+		Weapon: TSVulcan2
 		LocalOffset: 300,-60,600
 	AttackTurreted:
 	WithSpriteTurret:
@@ -2966,13 +3307,13 @@ tsntstlh:
 	RenderSprites:
 		PlayerPalette: playerra2
 
-tsntstlhcabal:
-	Inherits: tsntstlh
-	Buildable:
-		Prerequisites: ~tsgtcnstcabal, tscabaltech
-	RenderSprites:
-		PlayerPalette: playerra2
-		Image: tsntstlh
+# tsntstlhcabal:
+# 	Inherits: tsntstlh
+# 	Buildable:
+# 		Prerequisites: ~tsgtcnstcabal, tscabaltech
+# 	RenderSprites:
+# 		PlayerPalette: playerra2
+# 		Image: tsntstlh
 
 tsntpulsgdi:
 	Inherits: ^BaseBuilding
@@ -3002,7 +3343,7 @@ tsntpulsgdi:
 		Type: Wood
 	RevealsShroud:
 		Range: 7c0
-	WithBuildingBib:
+	#WithBuildingBib:
 	Power:
 		Amount: -100
 	ProvidesPrerequisite@buildingname:
@@ -3110,11 +3451,15 @@ tsntobel:
 
 tsntobelcabal:
 	Inherits: tsntobel
+	Tooltip:
+		Name: Cabal Obelisk
+	Armament:
+		Weapon: TSCabalObeliskLaserFire
+		LocalOffset: 0,180,1600
 	Buildable:
 		Prerequisites: ~tsgtcnstcabal, tscabaltech
 	RenderSprites:
-		PlayerPalette: playerra2
-		Image: tsntobel
+		Image: tscaobel
 
 tsobl2:
 	Inherits: ^Defense
@@ -3128,9 +3473,9 @@ tsobl2:
 	Buildable:
 		BuildPaletteOrder: 60
 		Prerequisites: ~tsgtcnstnod, tsnttech
-		Queue: Defence, RADefence
+		# Queue: Defence, RADefence
 		BuildDurationModifier: 40
-		Description: Advanced air defense..Requires power to operate..  Strong vs aircraft.  Weak vs ground units
+		Description: Advanced air defense. Requires power to operate..  Strong vs aircraft.  Weak vs ground units
 	Building:
 		Footprint: x
 	Selectable:
@@ -3170,15 +3515,16 @@ tsobl2:
 		Sequence: idle-lights
 	Power:
 		Amount: -75
-	RenderSprites:
-		PlayerPalette: playerra2
+	# RenderSprites:
+	# 	PlayerPalette: playerra2
 
 tsntobel2cabal:
 	Inherits: tsobl2
 	Buildable:
 		Prerequisites: ~tsgtcnstcabal, tscabaltech
+		Queue: Defence, RADefence
 	RenderSprites:
-		PlayerPalette: playerra2
+		# PlayerPalette: playerra2
 		Image: tsobl2
 
 #######################################
@@ -3203,7 +3549,7 @@ TSE1:
 	Buildable:
 		BuildPaletteOrder: 10
 		Prerequisites: ~tsgtpile
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Tsgdi
 		IconPalette: ra2
 		Description: General-purpose infantry..  Strong vs Infantry.  Weak vs Vehicles
 	Mobile:
@@ -3242,7 +3588,7 @@ TSE1:
 TSE1.NOD:
 	Inherits: TSE1
 	Buildable:
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Tsnod
 		Prerequisites: ~tsnthand
 	RenderSprites:
 		PlayerPalette: playerra2
@@ -3268,7 +3614,7 @@ TSMEDIC:
 	Inherits@vo: ^AttackFrontalVoice
 	Buildable:
 		Prerequisites: ~tsgtpile
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Tsgdi
 		Description: Heals nearby infantry..  Unarmed
 	Valued:
 		Cost: 500
@@ -3291,7 +3637,7 @@ TSENGINEER:
 	Inherits@anim: ^TSInfantry
 	Buildable:
 		Prerequisites: ~tsgtpile
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Tsgdi
 	Voiced:
 		VoiceSet: TSEngineer
 	DeliversCash:
@@ -3306,7 +3652,7 @@ TSENGINEER2:
 	Inherits: TSENGINEER
 	Inherits@MC: ^MCImmune
 	Buildable:
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Tsnod
 		Prerequisites: ~tsnthand
 	RenderSprites:
 		Image: tsengineer
@@ -3321,7 +3667,7 @@ TSENGINEERMUTANT:
 	Inherits: TSENGINEER
 	Inherits@MC: ^MCImmune
 	Buildable:
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Tsmutant
 		Prerequisites: ~tsgtpile2
 	Voiced:
 		VoiceSet: TSInfantry
@@ -3334,7 +3680,7 @@ TSENGINEECABAL:
 	Inherits: TSENGINEER
 	Inherits@MC: ^MCImmune
 	Buildable:
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Tscabal
 		Prerequisites: ~tsnthand2
 	Voiced:
 		VoiceSet: TSCyborg
@@ -3360,7 +3706,7 @@ TSE2:
 	Buildable:
 		BuildPaletteOrder: 29
 		Prerequisites: ~tsgtpile
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Tsgdi
 		Description: Fast infantry armed with grenades..Can attack air .  Strong vs Buildings, slow-moving targets
 	Mobile:
 		Speed: 56
@@ -3427,7 +3773,7 @@ TSJUMPJET:
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: ~tsgtpile, tsgtradr
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Tsgdi
 		Description: Airborne soldier..Can attack aircraft..  Strong vs Infantry, Light armor.  Weak vs AA
 	Voiced:
 		VoiceSet: TSJumpJet
@@ -3605,7 +3951,7 @@ TSE3:
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: ~tsnthand
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Tsnod
 		Description: Anti-tank/anti-aircraft infantry. .  Strong vs Tanks, Aircraft.  Weak vs Infantry
 	Mobile:
 		Speed: 56
@@ -3641,7 +3987,7 @@ TSE3:
 TSE3.MUTANT:
 	Inherits: TSE3
 	Buildable:
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Tsmutant
 		Prerequisites: ~tsgtpile2
 	RenderSprites:
 		PlayerPalette: playerra2
@@ -3664,7 +4010,7 @@ elitcadre:
 	Buildable:
 		BuildPaletteOrder: 10
 		Prerequisites: ~tsnthand, tsnttech, tsntradr
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Tsnod
 		Description: Elite Infantry of NOD used to fight high technology enemies .  Strong vs Infantry, Air, Vehicles.  Weak vs Siege, Heavy armor
 		BuildDuration: 425
 		BuildDurationModifier: 100
@@ -3718,6 +4064,7 @@ TSCYBORG:
 	Inherits@vo: ^AttackFrontalVoice
 	Inherits@EMPfrontal: ^FrontalEMP
 	Inherits@EMP: ^UnitDisable
+	Inherits@tibheal: ^TibHealable
 	Valued:
 		Cost: 300
 	Tooltip:
@@ -3729,7 +4076,7 @@ TSCYBORG:
 		Prerequisites: ~tsnthand2
 		BuildDurationModifier: 100
 		BuildDuration: 250
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Tscabal
 		Description: Cybernetic infantry unit..  Strong vs Infantry, Light armor.  Weak vs Vehicles, Aircraft
 	Mobile:
 		Speed: 56
@@ -3804,7 +4151,7 @@ TSCHAMSPY:
 	Inherits@EXT: ^ExternalConditions
 	Inherits@DECORATIONS: ^InfantryExperienceHospitalHazmatOverrides
 	Buildable:
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Tsnod
 		BuildPaletteOrder: 90
 		Prerequisites: ~tsnthand, tsnttech
 		Description: Cloaked spy that can infiltrate structures.
@@ -3856,7 +4203,7 @@ TSMHIJACK:
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: Mutant Hijacker
+		Name: Hijacker
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
@@ -3907,7 +4254,7 @@ TSMHIJACK:
 TSMHIJACKMUTANT:
 	Inherits: TSMHIJACK
 	Buildable:
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Tsmutant
 		Prerequisites: ~tsgtpile2, tsgtweapmutant, tsgtradrmutant
 	RenderSprites:
 		PlayerPalette: playerra2
@@ -3930,7 +4277,7 @@ TSREAPER:
 	Valued:
 		Cost: 1000 #1000
 	Buildable:
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Tscabal
 		BuildPaletteOrder: 140
 		Prerequisites: ~tsnthand2, tscabaltech
 		Description: Cyborg walker armed with missiles and nets.. Strong vs vehicles. Can immobilize infantry
@@ -3999,7 +4346,7 @@ TSCYC2:
 	Buildable:
 		BuildPaletteOrder: 25
 		Prerequisites: ~tsnthand2, tscabaltech
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Tscabal
 		BuildLimit: 1
 		BuildDuration: 625
 		BuildDurationModifier: 100
@@ -4032,7 +4379,7 @@ TSDissolver:
 		Name: Dissolver
 	Buildable:
 		BuildPaletteOrder: 20
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Tscabal
 		Description: Anti-Tank Walker.Dissolves mechanical parts to regenerate itself
 		Prerequisites: ~tsnthand2
 		IconPalette: ra2
@@ -4086,7 +4433,7 @@ TSUMAGON:
 	Buildable:
 		BuildPaletteOrder: 95
 		Prerequisites: ~tsgtpile2, tsfgttech
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Tsmutant
 		Description: Advanced anti-infantry unit..Maximum 10 can be trained..  Strong vs Infantry.  Weak vs Vehicles
 		BuildLimit: 10
 	Mobile:
@@ -4151,7 +4498,7 @@ TSGHOST:
 	Buildable:
 		BuildPaletteOrder: 90
 		Prerequisites: ~tsgtpile, tsgttech
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Tsgdi
 		BuildLimit: 1
 		Description: Elite commando infantry, armed with.a railgun and C4..  Strong vs Infantry, Buildings.  Weak vs Vehicles, Aircraft.  Special Ability: Destroy Building with C4.Maximum 5 can be trained.
 	Mobile:
@@ -4188,7 +4535,7 @@ TSGHOST:
 TSGHOSTMUTANT:
 	Inherits: TSGHOST
 	Buildable:
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Tsmutant
 		Prerequisites: ~tsgtpile2, tsfgttech
 	RenderSprites:
 		PlayerPalette: playerra2
@@ -4238,7 +4585,7 @@ tsghost.mutant:
 	Valued:
 		Cost: 1100
 	Buildable:
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Tsmutant
 		Prerequisites: ~scmarine
 		BuildLimit: 0
 	UpdatesPlayerStatistics:
@@ -4264,7 +4611,7 @@ TSMUTANT:
 		Prerequisites: ~tsgtpile2
 		BuildDuration: 68
 		BuildDurationModifier: 100
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Tsmutant
 		Description: Mutant armed with dual pistols..Weapon has high spread..  Strong vs Infantry.  Weak vs Vehicles
 	Mobile:
 		Speed: 71
@@ -4324,7 +4671,7 @@ TSMWMN:
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: ~tsgtpile2
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Tsmutant
 		Description: Mutant armed with a carbine..Weapon does high, precise damage..  Strong vs infantry, light vehicles.  Weak vs tanks, aircraft
 		BuildDuration: 120
 		BuildDurationModifier: 100
@@ -4390,7 +4737,7 @@ TSMUTANT3:
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: ~tsgtpile2, tsgtradrmutant
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Tsmutant
 		Description: Elite mutant infantry, can use grenades..  Strong vs Infantry.  Weak vs Vehicles
 		BuildDuration: 180
 		BuildDurationModifier: 100
@@ -4419,10 +4766,10 @@ TSMUTANT3:
 	Armament@GARRISONED2: ##########
 		Name: garrisoned
 		Weapon: TSGrenadeG
-	ProximityExternalCondition@Leadership:
-		Range: 3333
-		ValidRelationships: Ally
-		Condition: GDIOfficerLeadership
+	# ProximityExternalCondition@Leadership:
+	# 	Range: 3333
+	# 	ValidRelationships: Ally
+	# 	Condition: GDIOfficerLeadership
 	ProximityExternalCondition@propaganda:
 		Range: 3333
 		ValidRelationships: Ally
@@ -4453,8 +4800,8 @@ TSWEEDGUY:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 30
-		Prerequisites: ~tsgtpile2, tsgtradrmutant
-		Queue: Infantry, RAInfantry
+		Prerequisites: ~tsnthand, tsntradr
+		Queue: Infantry.Tsnod
 		Description: Mutant soldier with a Tiberium weapon..Can attack air.  Strong vs Infantry.  Weak vs Vehicles
 	Mobile:
 		Speed: 64
@@ -4522,7 +4869,7 @@ TSDOGGIE:
 		BuildDurationModifier: 100
 		BuildDuration: 500
 		Prerequisites: ~tsgtpile2, tsgtradrmutant
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Tsmutant
 		Description: Canine mutant that hurls Tiberium shards..Can attack aircraft. Strong vs Vehicles. Weak vs Infantry
 	Mobile:
 		Speed: 100
@@ -4583,6 +4930,12 @@ tsfloater:
 	Tooltip:
 		Name: Floater
 	AttackWander:
+	Buildable:
+		BuildPaletteOrder: 25
+		BuildDurationModifier: 100
+		BuildDuration: 500
+		Prerequisites: ~tsgtpile2, tsgtradrmutant
+		Queue: Infantry.Tsmutant
 	Mobile:
 		Voice: Move
 		Speed: 71
@@ -4594,6 +4947,9 @@ tsfloater:
 		LocalOffset: 384,0,0
 		-MuzzleSequence:
 	-WithMuzzleOverlay:
+	RenderSprites:
+		PlayerPalette: playerra2
+
 
 # tsvissml:
 # 	Inherits: ^Viceroid
@@ -4763,7 +5119,7 @@ TSHARV:
 		Capacity: 35
 	Buildable:
 		Prerequisites: ~tsgtweap, tsproc
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Tsgdi
 		Description: Harvests Tiberium for processing
 	WithVoxelBody:
 	WithDockingAnimation:
@@ -4784,7 +5140,7 @@ TSHARVNOD:
 		Capacity: 35
 	Buildable:
 		Prerequisites: ~tsntweap, tsprocnod
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Tsnod
 		Description: Harvests Tiberium for processing
 	WithVoxelBody:
 	WithDockingAnimation:
@@ -4808,7 +5164,7 @@ TSHARVMUTANT:
 		Capacity: 35
 	Buildable:
 		Prerequisites: ~tsgtweapmutant, tsprocmutant
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Tsmutant
 		Description: Harvests Tiberium for processing
 	WithVoxelBody:
 	WithDockingAnimation:
@@ -4831,7 +5187,7 @@ TSHARVCABAL:
 		Capacity: 35
 	Buildable:
 		Prerequisites: ~tsntweapcabal, tsproccabal
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Tscabal
 		Description: Harvests Tiberium for processing
 	WithVoxelBody:
 	WithDockingAnimation:
@@ -4993,12 +5349,10 @@ tsprobe:
 	-WithVoxelBody:
 	-WithShadow:
 	-SpawnActorOnDeath:
-	# Explodes:
-	# 	RequiresCondition: airborne && !triggered
-	# Explodes@bomb:
-	# 	Weapon: TSHSeekerExplode
-	# 	EmptyWeapon: TSHSeekerExplode
-	# 	RequiresCondition: triggered
+	FireWarheadsOnDeath@bomb:
+		Weapon: TSHSeekerExplode
+		EmptyWeapon: TSHSeekerExplode
+		RequiresCondition: airborne && !triggered
 
 TSCLOUD1:
 	Inherits@1: ^ExistsInWorld
@@ -5084,7 +5438,7 @@ TSMMCH:
 		Name: Titan
 	Buildable:
 		BuildPaletteOrder: 50
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle,Tsgdi
 		Prerequisites: ~tsgtweap
 		BuildDurationModifier: 100
 		BuildDuration: 375
@@ -5160,7 +5514,7 @@ TSJUGG:
 	Buildable:
 		BuildPaletteOrder: 60
 		Prerequisites: ~tsgtweap, tsgttech
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Tsgdi
 		Description: Mobile artillery mech..Immobile when firing..  Strong vs Ground units.  Weak vs Aircraft
 	Health:
 		HP: 120000
@@ -5269,7 +5623,7 @@ TSHVR:
 	Buildable:
 		BuildPaletteOrder: 80
 		Prerequisites: ~tsgtweap, tsgtradr
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Tsgdi
 		Description: Hovering vehicle armed with.long range missiles..  Strong vs Vehicles, Aircraft.  Weak vs Infantry
 		BuildDuration: 300
 		BuildDurationModifier: 100
@@ -5326,7 +5680,7 @@ TSSMECH:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Tsgdi
 		BuildPaletteOrder: 20
 		BuildDuration: 250
 		BuildDurationModifier: 100
@@ -5379,7 +5733,7 @@ TSHMEC:
 	Buildable:
 		BuildPaletteOrder: 140
 		Prerequisites: ~tsgtweap, tsgttech
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Tsgdi
 		BuildDuration: 1250
 		BuildDurationModifier: 100
 		BuildLimit: 1
@@ -5400,7 +5754,7 @@ TSHMEC:
 		StartIfBelow: 100
 		DamageCooldown: 25
 	Repairable:
-		HpPerStep: 3500
+		HpPerStep: 25
 	Armor:
 		Type: Heavy
 	DamageMultiplier@superheavy:
@@ -5435,8 +5789,11 @@ TSHMEC:
 		LocalOffset: 550,-420,650, 550,420,650
 		MuzzleSequence: muzzle2
 		RequiresCondition: rank-elite
+	Armament@CHINGUN:
+		Name: chingun
+		Weapon: TSVulcan
 	AttackFrontal:
-		Armaments: railgun
+		Armaments: railgun, chingun
 		FacingTolerance: 0
 	AttackFollow:
 		Armaments: missiles, aamissiles
@@ -5483,7 +5840,7 @@ TSSONIC:
 		Prerequisites: ~tsgtweap, tsgttech
 		BuildDuration: 680
 		BuildDurationModifier: 100
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Tsgdi
 		Description: Armored high-tech vehicle with.a long range sonic armament..  Strong vs Infantry, Vehicles, Buildings.  Weak vs Aircraft
 	Mobile:
 		TurnSpeed: 32
@@ -5584,7 +5941,7 @@ TSSAPC:
 	Buildable:
 		BuildPaletteOrder: 60
 		Prerequisites: ~tsntweap, tsntradr
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Tsnod
 		Description: Troop transport that can move.underground to avoid detection..  Unarmed
 	Mobile:
 		Locomotor: subterranean
@@ -5635,7 +5992,7 @@ TSBGGY:
 	Buildable:
 		BuildPaletteOrder: 30
 		Prerequisites: ~tsntweap
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Tsnod
 		Description: Fast scout and anti-infantry vehicle..  Strong vs Infantry, Light armor.  Weak vs Vehicles, Aircraft
 	Mobile:
 		Locomotor: wheeled
@@ -5684,7 +6041,7 @@ TSBIKE:
 	Buildable:
 		BuildPaletteOrder: 30
 		Prerequisites: ~tsntweap
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Tsnod
 		Description: Fast scout vehicle, armed with.rockets..  Strong vs Vehicles.  Weak vs Infantry, Aircraft
 	Mobile:
 		Locomotor: wheeled
@@ -5724,9 +6081,12 @@ TSBIKECABAL:
 	Inherits: TSBIKE
 	Buildable:
 		Prerequisites: ~tsntweapcabal
+		Queue: Vehicle.Tscabal
 	RenderSprites:
 		PlayerPalette: playerra2
 		Image: tsbike
+	Voiced:
+		VoiceSet: TSReaper
 	RenderVoxels:
 		Image: tsbike
 
@@ -5745,7 +6105,7 @@ TSSTNK:
 	Buildable:
 		BuildPaletteOrder: 150
 		Prerequisites: ~tsntweap, tsnttech
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Tsnod
 		Description: Lightly armoured tank equipped with a .stealth generator. Armed with missiles..Can be spotted by infantry at close range..  Strong vs Vehicles, Aircraft.  Weak vs Infantry
 	Mobile:
 		Speed: 108
@@ -5788,15 +6148,15 @@ TSSTNK:
 	RenderSprites:
 		PlayerPalette: playerra2
 
-TSSTNKCABAL:
-	Inherits: TSSTNK
-	Buildable:
-		Prerequisites: ~tsntweapcabal, tscabaltech
-	RenderSprites:
-		PlayerPalette: playerra2
-		Image: tsstnk
-	RenderVoxels:
-		Image: tsstnk
+# TSSTNKCABAL:
+# 	Inherits: TSSTNK
+# 	Buildable:
+# 		Prerequisites: ~tsntweapcabal, tscabaltech
+# 	RenderSprites:
+# 		PlayerPalette: playerra2
+# 		Image: tsstnk
+# 	RenderVoxels:
+# 		Image: tsstnk
 
 TSREPAIR:
 	Inherits: ^Tank
@@ -5812,7 +6172,7 @@ TSREPAIR:
 	Buildable:
 		BuildPaletteOrder: 70
 		Prerequisites: ~tsntweap, tsgtdeptnod
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Tsnod
 		Description: Repairs nearby vehicles..  Unarmed
 	Mobile:
 		Locomotor: tracked
@@ -5825,7 +6185,7 @@ TSREPAIR:
 		Type: Heavy
 	RevealsShroud:
 		Range: 5c0
-	Armament:
+	Armament@1:
 		Weapon: TSRepair
 		TargetRelationships: Ally
 		ForceTargetRelationships: None
@@ -5851,9 +6211,16 @@ TSREPAIRCABAL:
 	Inherits: TSREPAIR
 	Buildable:
 		Prerequisites: ~tsntweapcabal, tsgtdeptcabal
+		Queue: Vehicle.Tscabal
 	RenderSprites:
 		PlayerPalette: playerra2
 		Image: tsrepair
+	Armament@2:
+		Weapon: TSRepair
+		TargetRelationships: Ally
+		ForceTargetRelationships: None
+	Voiced:
+		VoiceSet: TSReaper
 	RenderVoxels:
 		Image: tsrepair
 
@@ -5875,7 +6242,7 @@ TSTTNK:
 		BuildDurationModifier: 100
 		BuildDuration: 300
 		Prerequisites: ~tsntweap
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Tsnod
 		Description: Nod's main battle tank..Can deploy to gain extra protection..  Strong vs Vehicles.  Weak vs Infantry, Aircraft
 	Mobile:
 		Locomotor: tracked
@@ -5981,9 +6348,12 @@ TSTTNKCABAL:
 	Inherits: TSTTNK
 	Buildable:
 		Prerequisites: ~tsntweapcabal
+		Queue: Vehicle.Tscabal
 	RenderSprites:
 		PlayerPalette: playerra2
 		Image: tsttnk
+	Voiced:
+		VoiceSet: TSReaper
 	RenderVoxels:
 		Image: tsttnk
 
@@ -6002,7 +6372,7 @@ TSART2:
 	Buildable:
 		BuildPaletteOrder: 60
 		Prerequisites: ~tsntweap, tsntradr
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Tscabal
 		Description: Mobile artillery..Immobile when firing..  Strong vs Ground units.  Weak vs Aircraft
 	Mobile:
 		Locomotor: tracked
@@ -6032,7 +6402,7 @@ TSART2:
 	WithVoxelBarrel:
 		RequiresCondition: immobile
 	Voiced:
-		VoiceSet: TSVehicle
+		VoiceSet: TSReaper
 	DeliversCash:
 		Payload: 350
 	AmmoPool:
@@ -6061,9 +6431,12 @@ TSART2CABAL:
 	Inherits: TSART2
 	Buildable:
 		Prerequisites: ~tsntweapcabal, tsntradrcabal
+		Queue: Vehicle.Tscabal
 	RenderSprites:
 		PlayerPalette: playerra2
 		Image: tsart2
+	Voiced:
+		VoiceSet: TSReaper
 	RenderVoxels:
 		Image: tsart2
 
@@ -6083,7 +6456,7 @@ TSSUBTANK:
 	Buildable:
 		BuildPaletteOrder: 60
 		Prerequisites: ~tsntweap, tsnttech
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Tsnod
 		Description: Subterranean flame tank..Is able to move underground..  Strong vs Infantry, Buildings.  Weak vs Tanks, Aircraft
 	Mobile:
 		Locomotor: subterranean
@@ -6119,9 +6492,12 @@ TSSUBTANKCABAL:
 	Inherits: TSSUBTANK
 	Buildable:
 		Prerequisites: ~tsntweapcabal, tscabaltech
+		Queue: Vehicle.Tscabal
 	RenderSprites:
 		PlayerPalette: playerra2
 		Image: tssubtank
+	Voiced:
+		VoiceSet: TSReaper
 	RenderVoxels:
 		Image: tssubtank
 
@@ -6142,7 +6518,7 @@ TSAPC:
 	Buildable:
 		BuildPaletteOrder: 60
 		Prerequisites: ~tsgtweap
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Tsgdi
 		Description: Armored infantry transport..Can move on water.
 	Mobile:
 		Locomotor: amphibius
@@ -6209,7 +6585,7 @@ tssgen:
 	Buildable:
 		BuildPaletteOrder: 120
 		Prerequisites: ~tsntweap, tsntstlh
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Tsnod
 		Description: Cloaks nearby buildings and units..Can not be cloaked.. Unarmed
 	Mobile:
 		Speed: 56
@@ -6248,15 +6624,15 @@ tssgen:
 	RenderSprites:
 		PlayerPalette: playerra2
 
-tssgencabal:
-	Inherits: tssgen
-	Buildable:
-		Prerequisites: ~tsntweapcabal, tsntstlhcabal
-	RenderSprites:
-		PlayerPalette: playerra2
-		Image: tssgen
-	RenderVoxels:
-		Image: tssgen
+# tssgencabal:
+# 	Inherits: tssgen
+# 	Buildable:
+# 		Prerequisites: ~tsntweapcabal, tsntstlhcabal
+# 	RenderSprites:
+# 		PlayerPalette: playerra2
+# 		Image: tssgen
+# 	RenderVoxels:
+# 		Image: tssgen
 
 tslpst:
 	Inherits: ^Tank
@@ -6269,7 +6645,7 @@ tslpst:
 	Buildable:
 		BuildPaletteOrder: 120
 		Prerequisites: ~tsgtweap, tsgtradr
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle,Tsgdi
 		Description: Detects cloaked units and buildings.. Unarmed
 	Mobile:
 		Speed: 85
@@ -6299,9 +6675,12 @@ tslpstcabal:
 	Inherits: tslpst
 	Buildable:
 		Prerequisites: ~tsntweapcabal, tsntradrcabal
+		Queue: Vehicle.Tscabal
 	RenderSprites:
 		PlayerPalette: playerra2
 		Image: tslpst
+	Voiced:
+		VoiceSet: TSReaper
 	RenderVoxels:
 		Image: tslpst
 
@@ -6312,11 +6691,53 @@ tslpstnod:
 	Buildable:
 		BuildPaletteOrder: 110
 		Prerequisites: ~tsntweap, tsntpulsnod, tsntradr
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Tsnod
 		Description: Shuts down vehicles with an EMP blast..  Strong vs Vehicles, Cyborgs
 	RenderSprites:
 		Image: tslpst
 		PlayerPalette: playerra2
+
+tsmobilefact:
+	Inherits: ^Vehicle
+	Inherits@Voxel: ^TSRenderVoxel
+	Inherits@mcv: ^MCV
+	Tooltip:
+		Name: Mobile War Factory
+	Buildable:
+		BuildPaletteOrder: 100
+		Prerequisites:
+		Queue: Vehicle.Tsgdi
+		BuildDurationModifier: 40
+		Description: Deploys into a frontline war factory
+		IconPalette: tscameo
+		IconPaletteIsPlayerPalette: False
+	Transforms:
+		IntoActor: tsgtweap
+		Offset: -1,-1
+		Facing: 384
+		TransformSounds: tsplace2.aud
+		NoTransformNotification: BuildingCannotPlaceAudio
+	WithVoxelBody:
+	Voiced:
+		VoiceSet: TSVehicle
+	RenderSprites:
+		Image: tsmcv
+		PlayerPalette: playerra2
+	# RenderVoxels:
+	# 	Image: tsmcv
+	RenderVoxels:
+		Image: tsmcvgrey
+
+tsmobilefactnod:
+	Inherits: tsmobilefact
+	Tooltip:
+		Name: Fist of Nod
+	Buildable:
+		BuildPaletteOrder: 100
+		Prerequisites:
+		Queue: Vehicle.Tsnod
+	Transforms:
+		IntoActor: TSNTWEAP
 
 tsmemp:
 	Inherits: ^Tank
@@ -6330,7 +6751,7 @@ tsmemp:
 	Buildable:
 		BuildPaletteOrder: 110
 		Prerequisites: ~tsgtweap, tsntpulsgdi, tsgtradr
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Tsgdi
 		Description: Shuts down vehicles with an EMP blast..  Strong vs Vehicles, Cyborgs
 	Mobile:
 		Speed: 100
@@ -6374,8 +6795,9 @@ tssapc.mut:
 	Buildable:
 		BuildPaletteOrder: 60
 		Prerequisites: ~tsgtweapmutant
+		Queue: Vehicle.Tsmutant
 	Cargo:
-		InitialUnits: tsmutant, tsmutant, tsmutant, tsmutant, tsmutant3
+		InitialUnits:
 	AutoDeployer:
 		DeployChance: 100
 		DeployTicks: 0
@@ -6398,7 +6820,7 @@ TSWINI2:
 	Buildable:
 		BuildPaletteOrder: 100
 		Prerequisites: ~tsgtweapmutant
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Tsmutant
 		Description: Light motor vehicle armed with.long range missiles..  Strong vs Vehicles, Aircraft.  Weak vs Infantry
 		BuildDuration: 300
 		BuildDurationModifier: 100
@@ -6435,61 +6857,61 @@ TSWINI2:
 	RenderSprites:
 		PlayerPalette: playerra2
 
-TSCAR2:
-	Inherits: ^CivilianDriveByVehicle
-	Inherits: ^Vehicle
-	Inherits@EXPERIENCE: ^GainsExperience
-	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
-	Inherits@Voxel: ^TSRenderVoxel
-	Inherits@EMP: ^TurretEMP
-	Inherits@vo: ^AttackTurretedVoice
-	Valued:
-		Cost: 350
-	Tooltip:
-		Name: Raider Car
-	Buildable:
-		BuildPaletteOrder: 40
-		Prerequisites: ~tsgtweapmutant
-		Queue: Vehicle, RAVehicle
-		Description: Fast raiding vehicle..  Strong vs Infantry.  Weak vs Vehicles
-	Mobile:
-		Speed: 135
-	Health:
-		HP: 20000
-	Repairable:
-		HpPerStep: 2637
-	Armor:
-		Type: Light
-	RevealsShroud:
-		Range: 7c0
-	Turreted:
-		TurnSpeed: 44
-		Offset: 0,0,20
-	Armament:
-		Weapon: TSRaiderCannon
-		Recoil: 128
-		RecoilRecovery: 26
-		LocalOffset: 0,121,271, 0,-121,271
-		MuzzleSequence: muzzle
-	WithMuzzleOverlay:
-	AttackTurreted:
-	Cargo:
-		InitialUnits: tsmutant, tsmutant
-	SelectionDecorations:
-	Selectable:
-	Inherits@EXT: ^ExternalConditions ##########
-	AcceptsDeliveredExperience: ##########
-		ValidTypes: vehicle ##########
-	WithVoxelBody:
-	# WithVoxelTurret:
-	Voiced:
-		VoiceSet: TSVehicle
-	DeliversCash:
-		Payload: 175
-	RenderVoxels:
-		Scale: 15
-	RenderSprites:
-		PlayerPalette: playerra2
+# TSCAR2:
+# 	Inherits: ^CivilianDriveByVehicle
+# 	Inherits: ^Vehicle
+# 	Inherits@EXPERIENCE: ^GainsExperience
+# 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+# 	Inherits@Voxel: ^TSRenderVoxel
+# 	Inherits@EMP: ^TurretEMP
+# 	Inherits@vo: ^AttackTurretedVoice
+# 	Valued:
+# 		Cost: 350
+# 	Tooltip:
+# 		Name: Raider Car
+# 	Buildable:
+# 		BuildPaletteOrder: 40
+# 		Prerequisites: ~tsgtweapmutant
+# 		Queue: Vehicle, RAVehicle
+# 		Description: Fast raiding vehicle..  Strong vs Infantry.  Weak vs Vehicles
+# 	Mobile:
+# 		Speed: 135
+# 	Health:
+# 		HP: 20000
+# 	Repairable:
+# 		HpPerStep: 2637
+# 	Armor:
+# 		Type: Light
+# 	RevealsShroud:
+# 		Range: 7c0
+# 	Turreted:
+# 		TurnSpeed: 44
+# 		Offset: 0,0,20
+# 	Armament:
+# 		Weapon: TSRaiderCannon
+# 		Recoil: 128
+# 		RecoilRecovery: 26
+# 		LocalOffset: 0,121,271, 0,-121,271
+# 		MuzzleSequence: muzzle
+# 	WithMuzzleOverlay:
+# 	AttackTurreted:
+# 	Cargo:
+# 		InitialUnits:
+# 	SelectionDecorations:
+# 	Selectable:
+# 	Inherits@EXT: ^ExternalConditions ##########
+# 	AcceptsDeliveredExperience: ##########
+# 		ValidTypes: vehicle ##########
+# 	WithVoxelBody:
+# 	# WithVoxelTurret:
+# 	Voiced:
+# 		VoiceSet: TSVehicle
+# 	DeliversCash:
+# 		Payload: 175
+# 	RenderVoxels:
+# 		Scale: 15
+# 	RenderSprites:
+# 		PlayerPalette: playerra2
 
 TS1TNK:
 	Inherits: ^Tank
@@ -6506,7 +6928,7 @@ TS1TNK:
 	Buildable:
 		BuildPaletteOrder: 170
 		Prerequisites: ~tsgtweapmutant
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Tsmutant
 		Description: Fast, lightly armored tank.. Strong vs Light Vehicles
 		BuildDuration: 250
 		BuildDurationModifier: 100
@@ -6562,7 +6984,7 @@ TS2TNK:
 	Buildable:
 		BuildPaletteOrder: 180
 		Prerequisites: ~tsgtweapmutant, tsgtradrmutant
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Tsmutant
 		Description: General-purpose Mutant tank.. Strong vs Vehicles. Weak vs Aircraft, Infantry
 		BuildDuration: 375
 		BuildDurationModifier: 100
@@ -6617,7 +7039,7 @@ TS3TNK:
 	Buildable:
 		BuildPaletteOrder: 190
 		Prerequisites: ~tsgtweapmutant, tsfgttech
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Tsmutant
 		Description: Mutant heavy armor.. Strong vs Vehicles. Weak vs Aircraft, Infantry
 		BuildDuration: 550
 		BuildDurationModifier: 100
@@ -6672,7 +7094,7 @@ TSFTNK:
 	Buildable:
 		BuildPaletteOrder: 50
 		Prerequisites: ~tsgtweapmutant
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Tsmutant
 		Description: Mutant incendiary tank, restored from.First Tiberium War inventories..  Strong vs Infantry, Buildings.  Weak vs Vehicles, Aircraft
 	Mobile:
 		Speed: 99
@@ -6720,10 +7142,9 @@ TS4TNK:
 	Tooltip:
 		Name: Mammoth Tank
 	Buildable:
-		BuildLimit: 1
 		BuildPaletteOrder: 200
 		Prerequisites: ~tsgtweapmutant, tsfgttech
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Tsmutant
 		BuildDuration: 1250
 		BuildDurationModifier: 100
 		Description: Mutant superheavy tank, restored from.First Tiberium War inventories.. Can attack Aircraft. Strong vs Everything
@@ -6778,55 +7199,55 @@ TS4TNK:
 		Scale: 15
 		Image: htnk
 
-TSARTY:
-	Inherits: ^Tank
-	Inherits@Template: ^MainBattleTankTemplate
-	Inherits@EXPERIENCE: ^GainsExperience
-	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
-	Inherits@Voxel: ^TSRenderVoxel
-	Inherits@EMP: ^FrontalEMP
-	Inherits@vo: ^AttackFrontalVoice
-	Valued:
-		Cost: 900
-	Tooltip:
-		Name: Tank Killer
-	Buildable:
-		BuildPaletteOrder: 160
-		Prerequisites: ~tsgtweapmutant, tsgtradrmutant
-		Queue: Vehicle, RAVehicle
-		Description: Mutant long ranged vehicle with heavy sabot shells.. Strong vs Vehicles, Buildings. Weak vs Infantry, Aircraft
-	Mobile:
-		Speed: 85
-		TurnSpeed: 8
-		Locomotor: lighttracked
-	Health:
-		HP: 125000
-	Repairable:
-	Armor:
-		Type: Heavy
-	RevealsShroud:
-		Range: 7c0
-	Armament:
-		Weapon: MammothTankCannon
-		Recoil: 128
-		RecoilRecovery: 26
-		LocalOffset: 624,0,208
-		MuzzleSequence: muzzle
-	Turreted:
-	WithMuzzleOverlay:
-	AttackFrontal:
-		FacingTolerance: 0
-	SelectionDecorations:
-	Selectable:
-	Inherits@EXT: ^ExternalConditions
-	WithVoxelBody:
-	WithVoxelBarrel:
-	Voiced:
-		VoiceSet: TSVehicle
-	DeliversCash:
-		Payload: 350
-	RenderVoxels:
-		Scale: 15
+# TSARTY:
+# 	Inherits: ^Tank
+# 	Inherits@Template: ^MainBattleTankTemplate
+# 	Inherits@EXPERIENCE: ^GainsExperience
+# 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+# 	Inherits@Voxel: ^TSRenderVoxel
+# 	Inherits@EMP: ^FrontalEMP
+# 	Inherits@vo: ^AttackFrontalVoice
+# 	Valued:
+# 		Cost: 900
+# 	Tooltip:
+# 		Name: Tank Killer
+# 	Buildable:
+# 		BuildPaletteOrder: 160
+# 		Prerequisites: ~tsgtweapmutant, tsgtradrmutant
+# 		Queue: Vehicle, RAVehicle
+# 		Description: Mutant long ranged vehicle with heavy sabot shells.. Strong vs Vehicles, Buildings. Weak vs Infantry, Aircraft
+# 	Mobile:
+# 		Speed: 85
+# 		TurnSpeed: 8
+# 		Locomotor: lighttracked
+# 	Health:
+# 		HP: 125000
+# 	Repairable:
+# 	Armor:
+# 		Type: Heavy
+# 	RevealsShroud:
+# 		Range: 7c0
+# 	Armament:
+# 		Weapon: MammothTankCannon
+# 		Recoil: 128
+# 		RecoilRecovery: 26
+# 		LocalOffset: 624,0,208
+# 		MuzzleSequence: muzzle
+# 	Turreted:
+# 	WithMuzzleOverlay:
+# 	AttackFrontal:
+# 		FacingTolerance: 0
+# 	SelectionDecorations:
+# 	Selectable:
+# 	Inherits@EXT: ^ExternalConditions
+# 	WithVoxelBody:
+# 	WithVoxelBarrel:
+# 	Voiced:
+# 		VoiceSet: TSVehicle
+# 	DeliversCash:
+# 		Payload: 350
+# 	RenderVoxels:
+# 		Scale: 15
 
 tsmlrs:
 	Inherits: ^Tank
@@ -6843,7 +7264,7 @@ tsmlrs:
 	Buildable:
 		BuildPaletteOrder: 160
 		Prerequisites: ~tsgtweapmutant, tsgtradrmutant
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Tsmutant
 		Description: Mutant rocket artillery.. Strong vs Infantry, Buildings. Weak vs Vehicles
 	Mobile:
 		Speed: 85
@@ -6900,7 +7321,7 @@ tsm113:
 	Buildable:
 		BuildPaletteOrder: 160
 		Prerequisites: ~tsgtweapmutant, tsgtpile2
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Tsmutant
 		Description: Armored troop transport.. Strong vs Infantry. Weak vs Vehicles, Aircraft
 	Mobile:
 		Speed: 132
@@ -6927,7 +7348,7 @@ tsm113:
 		UnloadVoice: Move
 		Types: Infantry, Hacker, Fremen
 		MaxWeight: 8
-		InitialUnits: TSMUTANT,TSMUTANT,TSMWMN,TSMUTANT3,TSE3.MUTANT,TSE3.MUTANT,TSMUTANT,TSMUTANT
+		InitialUnits:
 		ExclusiveDeploy: true
 		DeployType: Battlefortress
 	AttackOpenTopped:
@@ -6959,6 +7380,7 @@ TSSAPCCABAL:
 	RenderSprites:
 		PlayerPalette: playerra2
 		Image: tssapc
+		Queue: Infantry.Tscabal
 	RenderVoxels:
 		Image: tssapc
 
@@ -6979,7 +7401,7 @@ TST1000:
 	Valued:
 		Cost: 5000
 	Tooltip:
-		Name: Eliminator 1000
+		Name: Eliminator Mk2
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
@@ -6987,7 +7409,7 @@ TST1000:
 		Prerequisites: ~tsnthand2, tscabaltech
 		BuildDurationModifier: 50
 		BuildLimit: 1
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Tscabal
 		Description: Cybernetic infantry unit..  Strong vs Infantry, Light armor.  Weak vs Vehicles, Aircraft
 	Mobile:
 		Speed: 80
@@ -7070,7 +7492,7 @@ TSDEFENDER:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Tscabal
 		BuildPaletteOrder: 140
 		BuildLimit: 1
 		BuildDurationModifier: 25
@@ -7092,8 +7514,10 @@ TSDEFENDER:
 		LocalOffset: 1150,750,410, 1300,-750,510
 	AttackFrontal:
 		FacingTolerance: 12
+	# Voiced:
+	# 	VoiceSet: TSCyborgCommando
 	Voiced:
-		VoiceSet: TSCyborgCommando
+		VoiceSet: TSReaper
 	VoiceAnnouncement:
 		Voice: CoreDefenderBuild
 	Tooltip:
@@ -7172,7 +7596,7 @@ TSORCA:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 10
-		Queue: Aircraft, RAAircraft
+		Queue: Aircraft.Tsgdi
 		Prerequisites: ~tsgthpad
 		Description: Fast assault gunship with.dual missile launchers..  Strong vs Aircraft, Vehicles
 	Aircraft:
@@ -7257,7 +7681,7 @@ TSORCAB:
 	Buildable:
 		BuildPaletteOrder: 30
 		Prerequisites: ~tsgthpad, tsgttech
-		Queue: Aircraft, RAAircraft
+		Queue: Aircraft.Tsgdi
 		Description: Heavy bomber..  Strong vs Buildings, Vehicles.  Weak vs Infantry, Aircraft
 	Aircraft:
 		CruiseAltitude: 2560
@@ -7344,7 +7768,7 @@ TSTRNSPORT:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
-		Queue: Aircraft, RAAircraft
+		Queue: Aircraft.Tsgdi
 		BuildPaletteOrder: 60
 		Prerequisites: ~tsgthpad
 		Description: VTOL aircraft capable of lifting.and transporting vehicles..  Unarmed
@@ -7409,7 +7833,7 @@ TSTRNSPORTMUTANT:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
-		Queue: Aircraft, RAAircraft
+		Queue: Aircraft.Tsmutant
 		BuildPaletteOrder: 60
 		Prerequisites: ~tsgthpadmutant, tsgtdeptmutant
 		Description: VTOL aircraft capable of lifting.and transporting vehicles..  Unarmed
@@ -7460,7 +7884,7 @@ TSSCRIN:
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: ~tsnthpad, tsnttech, tsntradr
-		Queue: Aircraft, RAAircraft
+		Queue: Aircraft.Tsnod
 		Description: Advanced fighter-bomber craft.with twin plasma cannons..  Strong vs Buildings, Vehicles.  Weak vs Infantry, Aircraft
 	Aircraft:
 		CruiseAltitude: 2560
@@ -7516,6 +7940,7 @@ TSSCRINCABAL:
 	Inherits: TSSCRIN
 	Buildable:
 		Prerequisites: ~tsnthpad2, tsntradrcabal, tscabaltech
+		Queue: Aircraft.Tscabal
 	RenderSprites:
 		PlayerPalette: playerra2
 		Image: tsscrin
@@ -7557,7 +7982,7 @@ TSAPACHENOD:
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: ~tsnthpad
-		Queue: Aircraft, RAAircraft
+		Queue: Aircraft.Tsnod
 		Description: Anti-personnel support gunship.armed with dual chain guns..  Strong vs Infantry, Light armor, Aircraft.  Weak vs Vehicles
 	Aircraft:
 		TurnSpeed: 80
@@ -7617,80 +8042,80 @@ TSAPACHENOD:
 	RenderSprites:
 		Image: tsapache
 
-TSAPACHEMUTANT:
-	Inherits: ^Helicopter
-	Inherits@EXPERIENCE: ^GainsExperience
-	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
-	Inherits@Voxel: ^TSRenderVoxel
-	Inherits@reload: ^RearmableAircraft
-	Valued:
-		Cost: 1000
-	Tooltip:
-		Name: Harpy
-	UpdatesPlayerStatistics:
-		AddToArmyValue: true
-	Buildable:
-		BuildPaletteOrder: 20
-		Prerequisites: ~tsgthpadmutant, tsgtradrmutant, tsfgttech
-		Queue: Aircraft, RAAircraft
-		Description: Anti-personnel support gunship.armed with dual chain guns..  Strong vs Infantry, Light armor, Aircraft.  Weak vs Vehicles
-	Aircraft:
-		TurnSpeed: 80
-		Speed: 150
-	Health:
-		HP: 22500
-	Armor:
-		Type: Light
-	RevealsShroud:
-		Range: 7c0
-		Type: GroundPosition
-	Armament@PRIMARY:
-		Weapon: TSHarpyClaw
-		LocalOffset: 0,0,0
-		PauseOnCondition: !ammo
-	AutoTarget:
-		ScanRadius: 5
-	AttackAircraft:
-		FacingTolerance: 80
-		PersistentTargeting: false
-		Voice: Attack
-		PauseOnCondition: disabled
-		AttackType: Hover
-	-WithShadow:
-	SelectionDecorations:
-	Selectable:
-		DecorationBounds: 1536, 1536
-	WithVoxelBody:
-	Voiced:
-		VoiceSet: TSScrin
-	AmmoPool:
-		Ammo: 12
-		AmmoCondition: ammo
-		ReloadCount: 3
-	ReloadAmmoPool:
-		Delay: 25
-		Count: 1
-	SpawnActorOnDeath:
-		Actor: TSAPACHE.Husk
-	WithIdleOverlay@ROTORAIR:
-		Offset: 42,0,300
-		Sequence: rotor
-		RequiresCondition: airborne
-		PauseOnCondition: disabled
-	WithIdleOverlay@ROTORGROUND:
-		Offset: 42,0,300
-		Sequence: slow-rotor
-		RequiresCondition: !airborne
-		PauseOnCondition: disabled
-	RenderVoxels:
-		Scale: 15
-		Image: tsapache
-	WithAmmoPipsDecoration:
-		Position: BottomLeft
-		RequiresSelection: True
-		PipCount: 4
-	RenderSprites:
-		Image: tsapache
+# TSAPACHEMUTANT:
+# 	Inherits: ^Helicopter
+# 	Inherits@EXPERIENCE: ^GainsExperience
+# 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+# 	Inherits@Voxel: ^TSRenderVoxel
+# 	Inherits@reload: ^RearmableAircraft
+# 	Valued:
+# 		Cost: 1000
+# 	Tooltip:
+# 		Name: Harpy
+# 	UpdatesPlayerStatistics:
+# 		AddToArmyValue: true
+# 	Buildable:
+# 		BuildPaletteOrder: 20
+# 		Prerequisites: ~tsgthpadmutant, tsgtradrmutant, tsfgttech
+# 		Queue: Aircraft, RAAircraft
+# 		Description: Anti-personnel support gunship.armed with dual chain guns..  Strong vs Infantry, Light armor, Aircraft.  Weak vs Vehicles
+# 	Aircraft:
+# 		TurnSpeed: 80
+# 		Speed: 150
+# 	Health:
+# 		HP: 22500
+# 	Armor:
+# 		Type: Light
+# 	RevealsShroud:
+# 		Range: 7c0
+# 		Type: GroundPosition
+# 	Armament@PRIMARY:
+# 		Weapon: TSHarpyClaw
+# 		LocalOffset: 0,0,0
+# 		PauseOnCondition: !ammo
+# 	AutoTarget:
+# 		ScanRadius: 5
+# 	AttackAircraft:
+# 		FacingTolerance: 80
+# 		PersistentTargeting: false
+# 		Voice: Attack
+# 		PauseOnCondition: disabled
+# 		AttackType: Hover
+# 	-WithShadow:
+# 	SelectionDecorations:
+# 	Selectable:
+# 		DecorationBounds: 1536, 1536
+# 	WithVoxelBody:
+# 	Voiced:
+# 		VoiceSet: TSScrin
+# 	AmmoPool:
+# 		Ammo: 12
+# 		AmmoCondition: ammo
+# 		ReloadCount: 3
+# 	ReloadAmmoPool:
+# 		Delay: 25
+# 		Count: 1
+# 	SpawnActorOnDeath:
+# 		Actor: TSAPACHE.Husk
+# 	WithIdleOverlay@ROTORAIR:
+# 		Offset: 42,0,300
+# 		Sequence: rotor
+# 		RequiresCondition: airborne
+# 		PauseOnCondition: disabled
+# 	WithIdleOverlay@ROTORGROUND:
+# 		Offset: 42,0,300
+# 		Sequence: slow-rotor
+# 		RequiresCondition: !airborne
+# 		PauseOnCondition: disabled
+# 	RenderVoxels:
+# 		Scale: 15
+# 		Image: tsapache
+# 	WithAmmoPipsDecoration:
+# 		Position: BottomLeft
+# 		RequiresSelection: True
+# 		PipCount: 4
+# 	RenderSprites:
+# 		Image: tsapache
 
 TSAPACHECABAL:
 	Inherits: ^Helicopter
@@ -7707,7 +8132,7 @@ TSAPACHECABAL:
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: ~tsnthpad2
-		Queue: Aircraft, RAAircraft
+		Queue: Aircraft.Tscabal
 		Description: Anti-personnel support gunship.armed with dual chain guns..  Strong vs Infantry, Light armor, Aircraft.  Weak vs Vehicles
 	Aircraft:
 		TurnSpeed: 80
@@ -7802,7 +8227,7 @@ TSHELI:
 	Buildable:
 		BuildPaletteOrder: 30
 		Prerequisites: ~scmarine
-		Queue: Aircraft, RAAircraft
+		Queue: Aircraft.Tsmutant
 		Description: Anti-personnel support gunship.armed with guns and missiles..  Strong vs Infantry, Vehicles, Aircraft
 	Aircraft:
 		TurnSpeed: 80
@@ -7899,7 +8324,7 @@ TSHIND:
 	Buildable:
 		BuildPaletteOrder: 10
 		Prerequisites: ~tsgthpadmutant
-		Queue: Aircraft, RAAircraft
+		Queue: Aircraft.Tsmutant
 		Description: Anti-personnel support gunship.armed with dual chain guns..  Strong vs Infantry, Light armor, Aircraft.  Weak vs Vehicles
 	Aircraft:
 		TurnSpeed: 80
@@ -7988,7 +8413,7 @@ TSTRAN:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 40
-		Queue: Aircraft, RAAircraft
+		Queue: Aircraft.Tsmutant
 		Description: Fast infantry transport helicopter.. Unarmed
 		Prerequisites: ~scmarine
 	Aircraft:
@@ -8058,17 +8483,18 @@ TSARND:
 	Inherits@Template: ^AntiTankAntiAirInfantryTemplate
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
 	Inherits@EMPfrontal: ^FrontalEMP
+	Inherits@tibheal: ^TibHealable
 	Inherits@EMP: ^UnitDisable
 	Valued:
-		Cost: 1000
+		Cost: 800
 	Tooltip:
-		Name: Eliminator 800
+		Name: Eliminator Mk1
 	Buildable:
 		BuildPaletteOrder: 10
 		Prerequisites: ~tsnthand2
 		BuildDurationModifier: 100
 		BuildDuration: 250
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Tscabal
 		Description: Cybernetic-Biologic infantry unit..  Strong vs Infantry, Light armor, Aircraft.  Weak vs Vehicles
 	Health:
 		HP: 16000
@@ -8089,38 +8515,36 @@ TSARND:
 		Delay: 15
 		Count: 1
 	Armament@1:
-		Weapon: RA2GattlingMG1
-		PauseOnCondition: ammo <= 64
+		Weapon: TSBazooka
 		LocalOffset: 85,90,299, 85,-90,299
 		MuzzleSequence: muzzle
 	Armament@2:
-		Weapon: RA2GattlingMG2
-		PauseOnCondition: ammo <= 8 && ammo >= 65
+		Weapon: TSBazooka
 		LocalOffset: 85,90,299, 85,-90,299
 		MuzzleSequence: muzzle
-	Armament@3:
-		Weapon: RA2GattlingMG3
-		PauseOnCondition: ammo >= 9
-		LocalOffset: 85,90,299, 85,-90,299
-		MuzzleSequence: muzzle
-	Armament@1AA:
-		Weapon: RA2GattlingMG1AA
-		PauseOnCondition: ammo <= 64
-		LocalOffset: 85,90,299, 85,-90,299
-		MuzzleSequence: muzzle
-	Armament@2AA:
-		Weapon: RA2GattlingMG2AA
-		PauseOnCondition: ammo <= 8 && ammo >= 65
-		LocalOffset: 85,90,299, 85,-90,299
-		MuzzleSequence: muzzle
-	Armament@3AA:
-		Weapon: RA2GattlingMG3AA
-		PauseOnCondition: ammo >= 9
-		LocalOffset: 85,90,299, 85,-90,299
-		MuzzleSequence: muzzle
+	# Armament@3:
+	# 	Weapon: RA2GattlingMG3
+	# 	PauseOnCondition: ammo >= 9
+	# 	LocalOffset: 85,90,299, 85,-90,299
+	# 	MuzzleSequence: muzzle
+	# Armament@1AA:
+	# 	Weapon: RA2GattlingMG1AA
+	# 	PauseOnCondition: ammo <= 64
+	# 	LocalOffset: 85,90,299, 85,-90,299
+	# 	MuzzleSequence: muzzle
+	# Armament@2AA:
+	# 	Weapon: RA2GattlingMG2AA
+	# 	PauseOnCondition: ammo <= 8 && ammo >= 65
+	# 	LocalOffset: 85,90,299, 85,-90,299
+	# 	MuzzleSequence: muzzle
+	# Armament@3AA:
+	# 	Weapon: RA2GattlingMG3AA
+	# 	PauseOnCondition: ammo >= 9
+	# 	LocalOffset: 85,90,299, 85,-90,299
+	# 	MuzzleSequence: muzzle
 	Armament@GARRISONED:
 		Name: garrisoned
-		Weapon: RA2DoublePistols
+		Weapon: TSBazooka
 	AttackFrontal:
 		FacingTolerance: 0
 	WithInfantryBody:

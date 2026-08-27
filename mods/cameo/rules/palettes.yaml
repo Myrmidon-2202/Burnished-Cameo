@@ -504,6 +504,18 @@
 		BasePalette: ra_temperat
 		RemapIndex: 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95
 		BaseName: playerra
+	PaletteFromFile@tscameo:
+		Name: tscameo
+		Filename: cameo.pal
+		ShadowIndex: 1
+	PaletteFromFile@playertibsun:
+		Name: playertibsun
+		Filename: unittem.pal
+		ShadowIndex: 1
+	PlayerColorPalette@playertibsun:
+		BasePalette: playertibsun
+		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
+		BaseName: playertibsun
 	PaletteFromFile@playerra2unit:
 		Name: ra2infantry
 		Filename: ra2unit.pal
@@ -722,6 +734,11 @@
 		MaxHue: 0.37
 		ReferenceHue: 0.33
 		ReferenceSaturation: 0.925
+	ColorPickerPalette@colorpickertibsun:
+		Name: colorpickertibsun
+		BasePalette: playertibsun
+		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
+		AllowModifiers: false
 ###Custom Unit Palettes
 	PaletteFromFile@ra2cyborg:
 		Name: ra2cyborg
