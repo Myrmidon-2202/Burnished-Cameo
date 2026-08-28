@@ -539,6 +539,96 @@ elitcadre:
 		Filename: elitcadreicon.shp
 		AddExtension: False
 
+slav:
+	Inherits: ^TSBasicInfantry
+	Inherits@attack: ^TSBasicInfantryAttack
+	Defaults:
+		Filename: slav.shp
+	stand:
+		Facings: 8
+		ShadowStart: 292
+	run:
+		Start: 8
+		Length: 6
+		Facings: 8
+		ShadowStart: 300
+	idle1:
+		Start: 56
+		Length: 15
+		ShadowStart: 348
+	idle2:
+		Start: 71
+		Length: 15
+		ShadowStart: 363
+	crippled-run:
+		Start: 86
+		Length: 6
+		Facings: 8
+		ShadowStart: 378
+	crippled-stand:
+		Start: 86
+		Facings: 8
+		Stride: 6
+		ShadowStart: 456
+	attack:
+		Start: 164
+		Length: 6
+		Facings: 8
+		ShadowStart: 456
+	crippled-attack:
+		Start: 212
+		Length: 6
+		Facings: 8
+		ShadowStart: 504
+	icon:
+		Filename: slavikcameo.png
+		AddExtension: False
+
+oxanna:
+	Inherits: ^TSBasicInfantry
+	Inherits@attack: ^TSBasicInfantryAttack
+	Defaults:
+		Filename: oxanna.shp
+	stand:
+		Facings: 8
+		ShadowStart: 292
+	run:
+		Start: 8
+		Length: 6
+		Facings: 8
+		ShadowStart: 300
+	idle1:
+		Start: 56
+		Length: 15
+		ShadowStart: 348
+	idle2:
+		Start: 71
+		Length: 15
+		ShadowStart: 363
+	crippled-run:
+		Start: 86
+		Length: 6
+		Facings: 8
+		ShadowStart: 378
+	crippled-stand:
+		Start: 86
+		Facings: 8
+		Stride: 6
+		ShadowStart: 456
+	attack:
+		Start: 164
+		Length: 6
+		Facings: 8
+		ShadowStart: 456
+	crippled-attack:
+		Start: 212
+		Length: 6
+		Facings: 8
+		ShadowStart: 504
+	icon:
+		Filename: oxannacameo.png
+		AddExtension: False
+
 tscyc2:
 	Inherits: ^TSBasicInfantry
 	Defaults:
@@ -1164,6 +1254,103 @@ tsmcv2:
 	icon:
 		Filename: TS_Nod_MCV_Icon.png
 
+tsmobilefact:
+	idle:
+		Filename: invisibleitem.shp
+	icon:
+		Filename: mwaricon.shp
+
+tsmobilefact2:
+	idle:
+		Filename: invisibleitem.shp
+	icon:
+		Filename: mwaricon2.shp
+
+tsmopbilefactdep:
+	Inherits: ^WithBuildingBib2
+	Defaults:
+		Filename: mwar.shp
+		Offset: -12, -21, 22
+		# Scale: 1.3
+	idle:
+		Filename: mwar.shp
+		ShadowStart: 2
+		ZOffset: -1024
+		Offset: -12, -21, 0
+	damaged-idle:
+		Filename: mwar.shp
+		Start: 1
+		ShadowStart: 3
+		ZOffset: -1024
+		Offset: -12, -21, 0
+	idle-roof:
+		Filename: mwar_2.shp
+		ShadowStart: 2
+	damaged-idle-roof:
+		Filename: mwar_2.shp
+		Start: 1
+		ShadowStart: 3
+	dead:
+		Filename: mwar.shp
+		Start: 2
+		ShadowStart: 5
+		Tick: 400
+	idle-lights-white:
+		Filename: mwar_b.shp
+		Length: 16
+		Tick: 100
+		ZOffset: 2048
+	idle-lights-red:
+		Filename: mwar_c.shp
+		Length: 8
+		Tick: 120
+		ZOffset: 2048
+	idle-turbines:
+		Filename: mwar_a.shp
+		Length: 4
+		Tick: 80
+		ZOffset: 2048
+	damaged-idle-turbines:
+		Filename: mwar_a.shp
+		Length: 4
+		Tick: 80
+		ZOffset: 2048
+	build-door:
+		Filename: mwar_d.shp
+		Length: 9
+		ShadowStart: 9
+	damaged-build-door:
+		Filename: mwar_d.shp
+		Length: 9
+		ShadowStart: 9
+	make:
+		Filename: mwarmk.shp
+		Length: 20
+	bib2:
+		Filename: mwarbb.shp
+		Length: 1
+		ZOffset: -1024
+		Offset: -12, -21, 0
+		ZRamp: 1
+	damaged-bib2:
+		Filename: mwarbb.shp
+		Start: 1
+		Length: 1
+		ZOffset: -1024
+		Offset: -12, -21, 0
+		ZRamp: 1
+	dead-bib2:
+		Filename: mwarbb.shp
+		Start: 2
+		Length: 1
+		ZOffset: -1024
+		Offset: -12, -21, 0
+		ZRamp: 1
+	icon:
+		Filename: tsweapicon.png
+		Offset: 0, 0
+		UseTilesetCode: false
+
 # tsart2turret:
 # 	idle: tsgtarty
 # 		ShadowStart: 3
@@ -1247,7 +1434,7 @@ tsm113:
 tsgtcnst:
 	Inherits: ^WithBuildingBib2
 	Defaults:
-		Scale: 1.5
+		# Scale: 1.5
 		Offset: 0, -20, 20
 	idle:
 		Filename: tsgtcnst.shp
@@ -1305,8 +1492,9 @@ tsgtcnst:
 tsgtpowr:
 	# Inherits: ^WithBuildingBib3
 	Defaults:
-		Scale: 1.5
-		Offset: 0, -12, 24
+		# Scale: 1.5
+		# Offset: 0, -12, 24
+		Offset: 0, -24, 24
 		Filename: tsgtpowr.shp
 	idle:
 		ShadowStart: 3
@@ -1341,22 +1529,26 @@ tsgtpowr:
 		Filename: tsgtpowr_b.shp
 		Length: 12
 		Tick: 200
-		Offset: -30, -12, 24	
+		# Offset: -30, -12, 24
+		Offset: -48, -24, 36
 	damaged-idle-powrupa:
 		Filename: tsgtpowr_b.shp
 		Length: 12
 		Tick: 200
-		Offset: -30, -12, 24
+		# Offset: -30, -12, 24
+		Offset: -48, -24, 36
 	idle-powrupb:
 		Filename: tsgtpowr_b.shp
 		Length: 12
 		Tick: 200
-		Offset: -16, -6, 24
+		# Offset: -16, -6, 24
+		Offset: -24, -12, 40
 	damaged-idle-powrupb:
 		Filename: tsgtpowr_b.shp
 		Length: 12
 		Tick: 200
-		Offset: -16, -6, 24
+		# Offset: -16, -6, 24
+		Offset: -24, -12, 40
 	bib:
 	make:
 		Filename: gapowrmk.shp
@@ -1389,7 +1581,7 @@ tsgtpile:
 	Defaults:
 		Filename: tsgtpile.shp
 		Offset: 0, -12, 24
-		Scale: 1.5
+		# Scale: 1.5
 	idle:
 		Filename: tsgtpile.shp
 		ShadowStart: 3
@@ -1433,6 +1625,7 @@ tsgtpile:
 		Tick: 100
 	make:
 		Filename: tsgtpilemk.shp
+		Length: 20
 	icon:
 		Filename: tsbarracksicon.shp
 		Offset: 0, 0
@@ -1443,6 +1636,7 @@ tsgtweap:
 	Defaults:
 		Filename: tsgtweap.shp
 		Offset: -12, -21, 22
+		# Scale: 1.3
 	idle:
 		Filename: tsgtweap_1.shp
 		ShadowStart: 2
@@ -1496,6 +1690,7 @@ tsgtweap:
 		ShadowStart: 9
 	make:
 		Filename: tsgtweapmk.shp
+		Length: 20
 	bib2:
 		Filename: tsgtweapbb.shp
 		Length: 1
@@ -1524,7 +1719,7 @@ tsgtweap:
 tsntpowr:
 	Inherits: ^WithBuildingBib3
 	Defaults:
-		Scale: 1.5
+		# Scale: 1.5
 		Offset: 0, -12, 24
 	idle:
 		Filename: tsntpowr.shp
@@ -1549,6 +1744,7 @@ tsntpowr:
 		Tick: 200
 	make:
 		Filename: tsntpowrmk.shp
+		Length: 19
 	icon:
 		Filename: tsnpwricon.shp
 		Offset: 0, 0, 25
@@ -1557,7 +1753,7 @@ tsntpowr:
 tsntpowrmutant:
 	Inherits: ^WithBuildingBib3
 	Defaults:
-		Scale: 1.5
+		# Scale: 1.5
 		Offset: 0, -12, 24
 	idle:
 		Filename: tampowr.shp
@@ -1589,7 +1785,8 @@ tsntpowrmutant:
 tsntapwr:
 	Inherits: ^WithBuildingBib3
 	Defaults:
-		Offset: 12, -15, 30
+		Offset: 12, -30, 30
+		# Scale: 1.4
 	idle:
 		Filename: tsntapwr.shp
 		ShadowStart: 3
@@ -1613,6 +1810,7 @@ tsntapwr:
 		Tick: 200
 	make:
 		Filename: tsntapwrmk.shp
+		Length: 19
 	icon:
 		Filename: tsapwricon.shp
 		Offset: 0, 0
@@ -1656,6 +1854,7 @@ tsnthand:
 		Tick: 200
 	make:
 		Filename: tsnthandmk.shp
+		Length: 15
 	icon:
 		Filename: tshandicon.png
 		Offset: 0, 0
@@ -1700,6 +1899,7 @@ tsgtpile2:
 		Tick: 200
 	make:
 		Filename: tambarmk.shp
+		Length: 25
 	icon:
 		Filename: tshandicon.png
 		Offset: 0, 0
@@ -1758,6 +1958,7 @@ tsntweap:
 		ZOffset: 512
 	make:
 		Filename: tsntweapmk.shp
+		Length: 22
 	bib2:
 		Filename: tsntweapbb.shp
 		ZOffset: -1024
@@ -1807,6 +2008,7 @@ tsntradr:
 		Tick: 120
 	make:
 		Filename: tsntradrmk.shp
+		Length: 20
 	icon:
 		Filename: tsnodradaricon.shp
 		Offset: 0, 0
@@ -1838,6 +2040,7 @@ tsnttech:
 		Tick: 120
 	make:
 		Filename: tsnttechmk.shp
+		Length: 18
 	icon:
 		Filename: tsntchicon.shp
 		Offset: 0, 0
@@ -1870,6 +2073,7 @@ tsnttmpl:
 		Tick: 120
 	make:
 		Filename: tsnttmplmk.shp
+		Length: 17
 	active:
 		Filename: invisibleitem.shp
 	smoke:
@@ -2068,6 +2272,7 @@ tsgttech:
 		Tick: 240
 	make:
 		Filename: tsgttechmk.shp
+		Length: 20
 	icon:
 		Filename:  tstechicon.png
 		Offset: 0, 0
@@ -2467,8 +2672,9 @@ tsntobel:
 		Tick: 80
 	make:
 		Filename: tsntobelmk.shp
+		Length: 19
 	icon: 
-		Filename: obliicnh.tem
+		Filename: tsobliicon.shp
 		AddExtension: False
 		Offset: 0,0
 
@@ -2500,8 +2706,9 @@ tscaobel:
 		Tick: 80
 	make:
 		Filename: tsntobelmk.shp
+		Length: 19
 	icon: 
-		Filename: obliicnh.tem
+		Filename: tsobliicon.shp
 		AddExtension: False
 		Offset: 0,0
 
@@ -2714,6 +2921,7 @@ tsgthpad:
 		ZOffset: -1c511
 	make:
 		Filename: tsgthpadmk.shp
+		Length: 19
 	icon:
 		Filename: tshpadicon.shp
 		Offset: 0, 0
@@ -2769,6 +2977,7 @@ tsnthpad:
 		ZOffset: -1c511
 	make:
 		Filename: tsnthpadmk.shp
+		Length: 20
 	icon:
 		Filename: tshpad2icon.shp
 		Offset: 0, 0
@@ -2777,7 +2986,7 @@ tsnthpad:
 tsproc.gdi:
 	Inherits: ^WithBuildingBib2
 	Defaults:
-		Scale: 1.5
+		# Scale: 1.5
 		Filename: tsntrefn.shp
 		Offset: -12, -21, 20
 	idle:
@@ -2791,6 +3000,7 @@ tsproc.gdi:
 		Tick: 400
 	make:
 		Filename: tsntrefnmk.shp
+		Length: 20
 	unload-overlay:
 		Filename: tsntrefn_a.shp
 		Length: *
@@ -2827,7 +3037,7 @@ tsproc.gdi:
 tsprocmutant:
 	Inherits: ^WithBuildingBib2
 	Defaults:
-		Scale: 1.5
+		# Scale: 1.5
 		Filename: tamref.shp
 		Offset: -12, -21, 20
 	idle:
@@ -2898,6 +3108,7 @@ tsntwast:
 		Tick: 400
 	make:
 		Filename: nawastmk.shp
+		Length: 19
 	idle-glow:
 		Filename: tsntwast_a.shp
 		Length: 20
@@ -2982,6 +3193,7 @@ tsgtsilo.gdi:
 		Tick: 120
 	make:
 		Filename: tsgtsilomk.shp
+		Length: 19
 	icon:
 		Filename: tssilo2icon.shp
 		Offset: 0, 0
@@ -3074,6 +3286,7 @@ tsgtdept:
 		ZOffset: -1c511
 	make:
 		Filename: tsgtdeptmk.shp
+		Length: 10
 	icon:
 		Filename: tsdepticon.png
 		Offset: 0, 0
@@ -3103,6 +3316,7 @@ tsntmisl:
 		Tick: 120
 	make:
 		Filename: tsntmislmk.shp
+		Length: 18
 	active:
 		Filename: tsntmisl_a.shp
 		Length: 10
@@ -3195,6 +3409,7 @@ tsgtplug:
 		Tick: 120
 	make:
 		Filename: tsgtplugmk.shp
+		Length: 17
 	icon:
 		Filename: tsupgradecentericon.shp
 		Offset: 0, 0
@@ -3445,7 +3660,8 @@ tsntlasr:
 		Filename: tsntlasr.shp
 		Start: 2
 	make:
-		Filename: invisibleitem.shp
+		Filename: tsntlasrmk.shp
+		Length: 21
 	dead:
 		Filename: invisibleitem.shp
 	icon:
@@ -3567,7 +3783,8 @@ tsntpuls:
 		Facings: 32
 		Offset: 0,0
 	make:
-		Filename: invisibleitem.shp
+		Filename: tsntpulsmk.shp
+		Length: 20
 	dead:
 		Filename: invisibleitem.shp
 	active:
@@ -3597,7 +3814,8 @@ tsntsam:
 		UseClassicFacings: True
 		Offset: 0,16
 	make:
-		Filename: invisibleitem.shp
+		Filename: tsntsammk.shp
+		Length: 8
 	dead:
 		Filename: invisibleitem.shp
 	muzzle:

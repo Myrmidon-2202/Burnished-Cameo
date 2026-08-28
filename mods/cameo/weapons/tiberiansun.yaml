@@ -340,7 +340,7 @@ TSMechRailgun_elite:
 
 
 ^TSEnergyBlast:
-	ReloadDelay: 50
+	ReloadDelay: 30
 	Range: 7c0
 	Report: scrin5b.aud
 	Image: tsplas
@@ -400,6 +400,34 @@ TSCyCannon:
 		InvalidTargets: FireImmune
 		Weapon: TSCyCannonCluster
 		Amount: 1
+
+TSSlavProton:
+	Inherits: ^TSEnergyBlast
+	Range: 6c0
+	Burst: 6
+	BurstDelays: 3
+	ValidTargets: Ground, Water, Air
+	Projectile: Missile
+		Speed: 341
+		HorizontalRateOfTurn: 8
+		Blockable: false
+		Shadow: true
+		Image: drplasma2
+		RangeLimit: 12c0
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 7000
+		Versus:
+			None: 25
+			Wood: 65
+			Light: 75
+			Medium: 85
+			Heavy: 100
+			Concrete: 60
+		ValidTargets: Ground, Water, Air
+		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: small_frag
 
 TSProton:
 	Inherits: ^TSEnergyBlast
@@ -1399,8 +1427,11 @@ TSMissileBomblet:
 		SmudgeType: Crater
 
 TSChemTacticalMissile:
+	Inherits: ^TSDefaultMissile
+	Projectile: SupportPowerInstantExplode
+	Inherits@Contaminated: GLAnthraxGreen
 	Warhead@1Dam: SpreadDamage
-		Spread: 3c0
+		Spread: 5c0
 		Damage: 47000
 		Versus:
 			None: 50
