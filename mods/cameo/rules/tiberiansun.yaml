@@ -2183,7 +2183,7 @@ tsgtradrmutant:
 		CameraRemoveDelay: 90
 		BeaconPosters:
 			1: rapinficon
-		# IconPalette: tscameo
+		IconPalette: player
 	DetonateWeaponPower@wildlife:
 		AllowMultiple: true
 		OrderName: WildlifeRampage
@@ -4903,7 +4903,7 @@ TSDOGGIE:
 		Delay: 600
 		RemoveInstead: true
 	PeriodicExplosion@disappear:
-		Weapon: TunnelDisappear
+		Weapon: TunnelDisappearCritter
 		InitialDelay: 595
 	GivesExperience:
 		PlayerExperienceModifier: 0
@@ -4911,15 +4911,16 @@ TSDOGGIE:
 TSDOGGIEW:
 	Inherits: RAPT
 	Inherits@Template: ^MeleeInfantryTemplate
+	Inherits: ^TSInfantry
+	Inherits@2: ^MutSWCreature
 	Mobile:
 		Speed: 100
 		Locomotor: foot
 	Buildable:
 	Tooltip:
 		Name: Tiberian Fiend
-	Inherits: ^TSInfantry
-	Inherits@2: ^MutSWCreature
 	RenderSprites:
+		PlayerPalette: playertibsun
 		Image: tsdoggie
 	AttackWander:
 
@@ -4974,7 +4975,7 @@ tsvissml:
 	Mobile:
 		Speed: 120
 	Armament:
-		Weapon: ZClaw1
+		Weapon: TSZClaw1
 		LocalOffset: 384,0,0
 		-MuzzleSequence: muzzle
 	-WithMuzzleOverlay:
@@ -4988,7 +4989,7 @@ tsvislrg:
 		Type: None
 	AttackWander:
 	Armament:
-		Weapon: ZClaw3
+		Weapon: TSZClaw3
 		LocalOffset: 384,0,0
 		-MuzzleSequence: muzzle
 	-WithMuzzleOverlay:
@@ -6855,7 +6856,7 @@ tssapc.mut:
 		Prerequisites: ~tsgtweapmutant
 		Queue: Vehicle.Tsmutant
 	Cargo:
-		InitialUnits:
+		InitialUnits: TSGHOST, TSUMAGON, TSUMAGON, TSUMAGON, TSUMAGON
 	AutoDeployer:
 		DeployChance: 100
 		DeployTicks: 0
