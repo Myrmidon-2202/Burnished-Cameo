@@ -99,13 +99,13 @@ GLScorpionShellToxinGamma:
 		Explosions: purplesplash
 
 GlScorpionMissile:
-	Inherits: TankKiller
+	Inherits: ^MediumMissile
 	Burst: 1
 	ReloadDelay: 300
 	Range: 6c0
 	MinRange: 1c0
 	Report: vscowe2a.wav, vscowe2b.wav
-	Projectile: MissileCA
+	Projectile: Missile
 		Image: scorpionrocket
 	Warhead@1Dam: SpreadDamage
 		Damage: 10000
@@ -511,12 +511,12 @@ GLKellAttach:
 	Inherits: GenericC4
 
 GENAWP:
-	Inherits: RA2AWP
+	Inherits: ^SniperWeapon
 	ReloadDelay: 100
 	Range: 10c0
 
 GENAWPG:
-	Inherits: RA2AWPG
+	Inherits: ^SniperWeapon
 	ReloadDelay: 80
 	Range: 12c0
 
@@ -543,7 +543,7 @@ GLRocketBuggyMissiles:
 	Report: vrocweaa.wav, vrocweab.wav, vrocweac.wav, vrocwead.wav, vrocweae.wav, vrocweaf.wav
 	ValidTargets: Ground
 	TargetActorCenter: true
-	Projectile: MissileCA
+	Projectile: Missile
 		MinimumLaunchAngle: 50
 		MaximumLaunchAngle: 75
 		Speed: 500
@@ -561,7 +561,7 @@ GLRocketBuggyMissilesToxin:
 
 GLRocketBuggyMissilesExplosive:
 	Inherits: GLRocketBuggyMissiles
-	Projectile: MissileCA
+	Projectile: Missile
 		ContrailColor: FF553344
 		Image: d2k_missile2
 		Palette: d2keffect
@@ -722,6 +722,9 @@ GLASCUDTOXIN:
 	Warhead@3Eff: CreateEffect
 		Explosions: ex_big_flash_green
 
+GLV2Explode:
+	Inherits: SCUD
+
 
 #####################################################
 # Red Guard Weapons
@@ -785,7 +788,7 @@ OverlordCannonNuclear:
 		LayerName: genradiation
 
 CHGuardRifleOverlord:
-	Inherits: CHGuardRifleGarrison
+	Inherits: CHGuardRifle
 	Burst: 2
 
 CHTankHunterOverlord:
@@ -951,7 +954,7 @@ CHAtomicTorpTube:
 		RangeLimit: 20c819
 
 CHSubMortarShell:
-	Inherits: MortarShell
+	Inherits: ^Artillery
 	ReloadDelay: 100
 	Range: 12c0
 	MinRange: 3c0
@@ -1163,7 +1166,7 @@ CHMIGNuke:
 	ReloadDelay: 30
 	Range: 10c0
 	TargetActorCenter: true
-	Projectile: MissileCA
+	Projectile: Missile
 		RangeLimit: 12c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 512
@@ -1498,7 +1501,7 @@ USARangerFlashbang:
 USAMissileDefenderAG:
 	Inherits: ^AntiGroundMissile
 	ReloadDelay: 25
-	Projectile: MissileCA
+	Projectile: Missile
 		RangeLimit: 9c0
 	Report: imisweaa.wav, imisweab.wav, imisweac.wav
 	ValidTargets: Vehicle, Ship
@@ -1512,7 +1515,7 @@ USAMissileDefenderAA:
 	Inherits: ^AntiAirMissile
 	Range: 6c512
 	ReloadDelay: 25
-	Projectile: MissileCA
+	Projectile: Missile
 		Speed: 480
 		RangeLimit: 9c0
 	Report: imisweaa.wav, imisweab.wav, imisweac.wav
@@ -1548,7 +1551,7 @@ USAPatriotMissAG:
 	BurstDelays: 6
 	Range: 7c640
 	Report: bpatweaa.wav, bpatweab.wav, bpatweac.wav
-	Projectile: MissileCA
+	Projectile: Missile
 		Arm: 3
 		Inaccuracy: 0
 		Image: MISSILE
@@ -1567,7 +1570,7 @@ USAPatriotMissAA:
 	BurstDelays: 6
 	Range: 8c768
 	Report: bpatweaa.wav, bpatweab.wav, bpatweac.wav
-	Projectile: MissileCA
+	Projectile: Missile
 		Arm: 3
 		Inaccuracy: 0
 		Image: MISSILE
@@ -1589,7 +1592,7 @@ USAPatriotMissAA:
 USAEMPPatriotMissAG:
 	Inherits: USAPatriotMissAG
 	Burst: 4
-	Projectile: MissileCA
+	Projectile: Missile
 		Image: bhreddragonemp
 		HorizontalRateOfTurn: 15
 		MinimumLaunchAngle: 62
@@ -1614,7 +1617,7 @@ USAEMPPatriotMissAG:
 USAEMPPatriotMissAA:
 	Inherits: USAPatriotMissAA
 	Burst: 4
-	Projectile: MissileCA
+	Projectile: Missile
 		Image: bhreddragonemp
 		LockOnProbability: 80
 		Inaccuracy: 32
@@ -1703,7 +1706,7 @@ USAHumveeMissile:
 	ReloadDelay: 50
 	Range: 4c0
 	Report: vhumwe2a.wav, vhumwe2b.wav, vhumwe2c.wav, vhumwe2d.wav
-	Projectile: MissileCA
+	Projectile: Missile
 		Speed: 298
 		TrailImage: smokey
 		HorizontalRateOfTurn: 10
@@ -1734,7 +1737,7 @@ USAHellfireMissile:
 	Inherits: ^AntiGroundMissile
 	ReloadDelay: 25
 	Range: 4c0
-	Projectile: MissileCA
+	Projectile: Missile
 		TrailImage: smokey
 	Warhead@1Dam: SpreadDamage
 		Damage: 4000
@@ -1748,7 +1751,7 @@ USASentryDroneMG:
 		Damage: 800
 
 USAAvengerLaser:
-	Inherits: APCGun.AA
+	Inherits: ^FlakWeapon
 	ReloadDelay: 9
 	Range: 7c512
 	Report: vpalwe2d.aud
@@ -1765,7 +1768,8 @@ USAAvengerLaser:
 			Heavy: 100
 
 USAAvengerBlueLaser:
-	Inherits: CommandoGun
+	Report: 2100rotlsr.wav
+	Warhead@Validation: TargetDamage
 	ReloadDelay: 8
 	Range: 7c512
 	TargetActorCenter: true
@@ -1990,7 +1994,7 @@ USARaptorMissileAG:
 	Range: 8c0
 	MinRange: 2c512
 	Report: vmigweaa.wav, vmigweab.wav
-	Projectile: MissileCA
+	Projectile: Missile
 		Speed: 256
 		Inaccuracy: 128
 		CruiseAltitude: 2c0
@@ -2009,7 +2013,7 @@ USARaptorMissileAA:
 	Range: 8c0
 	MinRange: 2c512
 	Report: vmigweaa.wav, vmigweab.wav
-	Projectile: MissileCA
+	Projectile: Missile
 		Speed: 384
 		CruiseAltitude: 2c0
 		RangeLimit: 12c410
@@ -2105,7 +2109,7 @@ USAMissileStealth:
 	Range: 6c512
 	MinRange: 1c512
 	Report: vmigweaa.wav, vmigweab.wav
-	Projectile: MissileCA
+	Projectile: Missile
 		Speed: 256
 		Inaccuracy: 128
 		CruiseAltitude: 2c0
@@ -2441,7 +2445,7 @@ USAComancheMissile:
 	ReloadDelay: 5
 	Range: 5c0
 	Report: vcomweaa.wav, vcomweab.wav, vcomweac.wav
-	Projectile: MissileCA
+	Projectile: Missile
 		Speed: 256
 		HorizontalRateOfTurn: 10
 		RangeLimit: 8c512
@@ -2466,7 +2470,7 @@ USAComancheRockets:
 	Range: 5c0
 	Burst: 4
 	BurstDelays: 3
-	Projectile: MissileCA
+	Projectile: Missile
 		Speed: 176
 		HorizontalRateOfTurn: 5
 		Inaccuracy: 1c768
@@ -2585,7 +2589,7 @@ USATomahawk:
 	Range: 10c0
 	Report: vtomweaa.wav
 	TargetActorCenter: true
-	Projectile: MissileCA
+	Projectile: Missile
 		Arm: 0
 		Blockable: false
 		Shadow: true
@@ -2720,3 +2724,125 @@ USAAmbulanceRepair:
 		ValidRelationships: Ally
 		ValidTargets: Repair
 		DebugOverlayColor: 00FF00
+
+
+#########################################################################
+
+# Shockwave Weapons
+
+#########################################################################
+
+SCHNeutronBomb:
+	ReloadDelay: 800
+	Range: 1c0
+	Report: chute1.aud
+	Projectile: GravityBomb
+		Image: PARABOMB
+		OpenSequence: open
+		Velocity: 0, 0, -86
+		Acceleration: 0, 0, 0
+		Shadow: False
+	Warhead@1KillAircraft: SpreadDamage
+		Spread: 4c0
+		Falloff: 100, 100
+		Damage: 50000
+		ValidTargets: Air
+		DamageTypes: SmallExplosionDeath
+	Warhead@3Clear: SpreadDamage
+		Spread: 4c0
+		Damage: 25000
+		ValidTargets: Garrisoned, GarrisonedNBC, LoadedVehicle
+		ValidRelationships: Enemy
+		Amount: 6
+		DamageTypes: Prone100Percent, TriggerProne, FireDeath, Incendiary
+	Warhead@4Driver: ChangeOwnerToNeutral
+		Range: 6c0
+		ValidTargets: DriverKill
+		ValidRelationships: Enemy
+		InvalidTargets: LoadedVehicle, NeutronImmune
+	Warhead@3Eff: CreateEffect
+		Explosions: schnukeexplosion
+		ImpactSounds: sneutexp.wav
+
+SCHNeutronMineBomb:
+	Inherits: CHMineBomb
+	Warhead@1: FireCluster
+		Weapon: SCHNeutronMineSpawner
+
+SCHNeutronMineSpawner:
+	Inherits: CHMineSpawner
+	Warhead@1: SpawnActor
+		Actors: schneutronminv
+
+SUSAJeepLaser:
+	Inherits: USAPaladinLaser
+	ReloadDelay: 30
+	Range: 6c0
+	ValidTargets: Ground, Air
+	-InvalidTargets:
+	Warhead@1Dam: SpreadDamage
+		Damage: 4000
+		ValidTargets: Ground, Air
+		-InvalidTargets:
+
+SUSAJeepLaserUp:
+	Inherits: SUSAJeepLaser
+	Projectile: LaserZap
+		Color: 66FFFF
+
+SUSAAvengerLaserUp:
+	Inherits: USAAvengerLaser
+	Projectile: LaserZap
+		Color: 66FFFF
+
+SUSAComancheLaser:
+	Inherits: USAPaladinLaser
+	ReloadDelay: 15
+	Burst: 2
+	BurstDelays: 0
+	Range: 8c0
+	ValidTargets: Ground
+	-InvalidTargets:
+	Warhead@1Dam: SpreadDamage
+		Damage: 7500
+		Spread: 0c768
+		Versus:
+			None: 80
+			Wood: 40
+			Light: 100
+			Medium: 90
+			Heavy: 75
+			Concrete: 30
+		ValidTargets: Ground
+		-InvalidTargets:
+		
+SUSAComancheLaserUp:
+	Inherits: SUSAComancheLaser
+	Projectile: LaserZap
+		Color: 66FFFF
+
+SUSALaserCannonAGUp:
+	Inherits: USALaserCannonAG
+	Projectile: LaserZap
+		Color: 66FFFF
+
+SUSALaserCannonAAUp:
+	Inherits: USALaserCannonAA
+	Projectile: LaserZap
+		Color: 66FFFF
+
+USAParticleCannonDamage3:
+	Inherits: USAParticleCannonDamage
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c768
+		Damage: 4500
+		Versus:
+			None: 300
+			Wood: 250
+			Concrete: 175
+
+USAParticleCannonDamage4:
+	Inherits: USAParticleCannonDamage3
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c768
+		Damage: 6000

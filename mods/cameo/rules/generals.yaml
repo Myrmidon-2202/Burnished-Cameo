@@ -483,11 +483,11 @@ Player:
 	SpeedMultiplier@upatomictank:
 		RequiresCondition: upatomictank
 		Modifier: 125
-	Explodes@upatomictank:
+	FireWarheadsOnDeath@upatomictank:
 		Weapon: CHAtomicTankExplode
 		EmptyWeapon: CHAtomicTankExplode
 		RequiresCondition: upatomictank && !chronobeamed && !upisotopestability
-	Explodes@upatomictank2:
+	FireWarheadsOnDeath@upatomictank2:
 		Weapon: CHAtomicTankExplode2
 		EmptyWeapon: CHAtomicTankExplode2
 		RequiresCondition: upatomictank && !chronobeamed && upisotopestability
@@ -534,6 +534,205 @@ Player:
 		EnterCursor: ability
 		EnterBlockedCursor: move-blocked
 		Voice: Capture
+
+#########################################
+#           INHERITABLES
+#########################################
+^upsusafocusingcrystal:
+	GrantConditionOnPrerequisite@upsusafocusingcrystal:
+		Condition: upsusafocusingcrystal
+		Prerequisites: upsusafocusingcrystal
+	FirepowerMultiplier@upsusafocusingcrystal:
+		Modifier: 115
+		RequiresCondition: upsusafocusingcrystal
+	RangeMultiplier@upsusafocusingcrystal:
+		Modifier: 115
+		RequiresCondition: upsusafocusingcrystal
+	ReloadDelayMultiplier@upsusafocusingcrystal:
+		Modifier: 85
+		RequiresCondition: upsusafocusingcrystal
+
+^walker_stomping:
+	GrantConditionOnMovement@nomoving:
+		Condition: moving
+		ValidMovementTypes: Horizontal, Vertical, Turn
+	AmbientSound:
+		SoundFiles: exosuitmoveloop.wav
+		RequiresCondition: moving
+		Interval: 15
+
+^MigSpeedUpgrade:
+	GrantConditionOnPrerequisite@upschmigspeed:
+		Condition: upschmigspeed
+		Prerequisites: upschmigspeed
+	SpeedMultiplier@upschmigspeed:
+		RequiresCondition: upschmigspeed
+		Modifier: 125
+
+^HeliArmorUpgrade:
+	GrantConditionOnPrerequisite@upschheliarmor:
+		Condition: upschheliarmor
+		Prerequisites: upschheliarmor
+	DamageMultiplier@upschheliarmor:
+		RequiresCondition: upschheliarmor
+		Modifier: 75
+
+^upschnucleartanks:
+	GrantConditionOnPrerequisite@upschnucleartanks:
+		Condition: upschnucleartanks
+		Prerequisites: upschnucleartanks
+	SpeedMultiplier@upschnucleartanks:
+		Modifier: 125
+		RequiresCondition: upschnucleartanks
+
+^ReactiveArmorUpgrade:
+	GrantConditionOnPrerequisite@upschreactivearmor:
+		Condition: upschreactivearmor
+		Prerequisites: upschreactivearmor
+	DamageMultiplier@upschreactivearmor:
+		RequiresCondition: upschreactivearmor
+		Modifier: 75
+
+^WeaponGradeUraniumShells:
+	GrantConditionOnPrerequisite@upschweapongradeuraniumshells:
+		Condition: upschweapongradeuraniumshells
+		Prerequisites: upschweapongradeuraniumshells
+	FirepowerMultiplier@upschweapongradeuraniumshells:
+		RequiresCondition: upschweapongradeuraniumshells
+		Modifier: 125
+
+^RadiationSuits:
+	Inherits@FireImmune: ^FireImmune
+	GrantConditionOnPrerequisite@upschradiationsuits:
+		Condition: upschradiationsuits
+		Prerequisites: upschradiationsuits
+	Targetable@Immune:
+		TargetTypes: ToxinImmune
+		RequiresCondition: upschradiationsuits
+	Targetable@FireImmune:
+		RequiresCondition: upschradiationsuits
+	GrantCondition@HAZMAT:
+		RequiresCondition: (biolab && ontiberium) || upschradiationsuits
+	DamagedByTintedCells@rad:
+		RequiresCondition: !parachute || !upschradiationsuits
+	DamagedByTintedCells@genrad:
+		RequiresCondition: !parachute || !upschradiationsuits
+	DamagedByTintedCells@tib:
+		RequiresCondition: !parachute || !upschradiationsuits
+
+^IsotopeStability:
+	GrantConditionOnPrerequisite@upschisotopestability:
+		Condition: upschisotopestability
+		Prerequisites: upschisotopestability
+	FireWarheadsOnDeath@upschisotopestability:
+		Weapon: SCHDevastatorExplosion
+		EmptyWeapon: SCHDevastatorExplosion
+		RequiresCondition: !upschisotopestability
+
+^FusionReactors:
+	GrantConditionOnPrerequisite@upschfusionreactor:
+		Condition: upschfusionreactor
+		Prerequisites: upschfusionreactor
+	SpeedMultiplier@upschfusionreactor:
+		RequiresCondition: upschfusionreactor
+		Modifier: 125
+
+^InfantryInjuries:
+	GrantConditionOnDamageState@injured:
+		Condition: injured
+		ValidDamageStates: Critical
+	SpeedMultiplier@injured:
+		Modifier: 60
+		RequiresCondition: injured
+	InaccuracyMultiplier@injured:
+		Modifier: 500
+		RequiresCondition: injured
+	RangeMultiplier@injured:
+		Modifier: 80
+		RequiresCondition: injured
+	ReloadDelayMultiplier@injured:
+		Modifier: 130
+		RequiresCondition: injured
+	WithInfantryBody:
+		RequiresCondition: !injured
+	WithInfantryBody@injured:
+		StandSequences: stand-injured
+		MoveSequence: run-injured
+		DefaultAttackSequence: shoot-injured
+		RequiresCondition: injured
+
+^SCHDualMinigunSetup:
+	AttackTurreted:
+		Turrets: primary, secondary
+		Armaments: primary, secondary, primary2, secondary2
+	Armament@BELOW-AG:
+		Weapon: SCHNukeGattlingTurret
+		Name: primary
+		Turret: primary
+		LocalOffset: 750,0,0
+		MuzzleSequence: muzzle
+	Armament@BELOW-AA:
+		Weapon: SCHNukeGattlingTurretAA
+		Name: secondary
+		Turret: primary
+		LocalOffset: 750,0,-50
+		MuzzleSequence: muzzle
+		FireDelay: 20
+		PauseOnCondition: lowpower || disabled || poweroff
+	Armament@ABOVE-AG:
+		Weapon: SCHNukeGattlingTurret
+		Turret: secondary
+		Name: primary2
+		LocalOffset: 750,0,45
+		MuzzleSequence: muzzle
+		FireDelay: 20
+		PauseOnCondition: lowpower || disabled || poweroff
+	Armament@ABOVE-AA:
+		Weapon: SCHNukeGattlingTurretAA
+		Turret: secondary
+		Name: secondary2
+		LocalOffset: 750,0,-30
+		MuzzleSequence: muzzle
+	Turreted@Below:
+		Turret: primary
+		TurnSpeed: 44
+		Offset: 0,0,200
+	Turreted@Above:
+		Turret: secondary
+		TurnSpeed: 20
+		Offset: -40,0,600
+	GrantConditionOnAttack@below-aa:
+		ArmamentNames: secondary
+		Condition: below-aa
+		RevokeDelay: 40
+	GrantConditionOnAttack@upper-ag:
+		ArmamentNames: primary2
+		Condition: upper-ag
+		RevokeDelay: 40
+	WithSpriteTurret@below-ag:
+		Sequence: turret
+		RequiresCondition: !below-aa
+		Turret: primary
+	WithSpriteTurret@below-aa:
+		Sequence: turret2
+		RequiresCondition: below-aa
+		Turret: primary
+	WithSpriteTurret@above-ag:
+		Sequence: turret3
+		RequiresCondition: upper-ag
+		Turret: secondary
+	WithSpriteTurret@above-aa:
+		Sequence: turret4
+		RequiresCondition: !upper-ag
+		Turret: secondary
+
+schneutronminv:
+	Inherits: chminv.minefield
+	-GrantConditionOnPrerequisite@neutronmines:
+	FireWarheadsOnDeath@2:
+		-RequiresCondition: neutronmines
+	WithColoredOverlay@FORCESHIELD: #TODO
+		-RequiresCondition: neutronmines
 
 GLAHole4x3:
 	Inherits: ^BaseBuilding
@@ -627,18 +826,18 @@ GENE6:
 		ChargeInterval: 3000
 		Name: Emergency Repair
 		Description: Provides repair for vehicles in the target area.
-		Duration: 100
+		Durations: 100
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
 		#BeginChargeSpeechNotification: IronCurtainCharging
 		#EndChargeSpeechNotification: IronCurtainReady
 		DisplayRadarPing: True
-		Condition: repairlvl3
+		Conditions: repairlvl3
 		OnFireSound: srepaira.aud
 		Prerequisites: upemergencyrepair1, !upemergencyrepair2
 		StartFullyCharged: true
 		Dimensions: 7, 7
-		Footprint: ___x___ __xxx__ _xxxxx_ xxxxxxx _xxxxx_ __xxx__ ___x___
+		Footprints: ___x___ __xxx__ _xxxxx_ xxxxxxx _xxxxx_ __xxx__ ___x___
 	# GrantExternalConditionPower@EmergencyRepair2:
 	# 	OrderName: EmergencyRepair2
 	# 	PauseOnCondition: lowpower
@@ -708,7 +907,7 @@ GENE6:
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
 		EndChargeSpeechNotification: SpyPlaneReady
-		Actor: camera.spysat
+		Actors: camera.spysat
 		StartFullyCharged: true
 		LifeTime: 250
 		DeploySound: sspysate.aud
@@ -727,7 +926,7 @@ GENE6:
 		LifeTime: -1
 		EndChargeSpeechNotification: SpyPlaneReady
 		SelectTargetSpeechNotification: SelectTarget
-		Actor: usaspydronepower
+		Actors: usaspydronepower
 		SupportPowerPaletteOrder: 20
 		OrderName: SpydronePower
 		StartFullyCharged: true
@@ -751,8 +950,8 @@ GENE6:
 	# 	BeaconPoster: pinficon
 	# 	ArrowSequence: arrow
 	# 	ClockSequence: clocklarge
-	# 	UnitType: usabomber
-	# 	SquadSize: 1
+	# 	UnitTypes: usabomber
+	# 	SquadSizes: 1
 	# 	CircleSequence: circles
 	# 	UseDirectionalTarget: True
 	# 	DirectionArrowAnimation: airstrikedirection
@@ -776,8 +975,8 @@ GENE6:
 	# 	BeaconPoster: pinficon
 	# 	ArrowSequence: arrow
 	# 	ClockSequence: clocklarge
-	# 	UnitType: usabomber
-	# 	SquadSize: 2
+	# 	UnitTypes: usabomber
+	# 	SquadSizes: 2
 	# 	CircleSequence: circles
 	# 	UseDirectionalTarget: True
 	# 	DirectionArrowAnimation: airstrikedirection
@@ -801,13 +1000,13 @@ GENE6:
 		BeaconPoster: pinficon
 		ArrowSequence: arrow
 		ClockSequence: clocklarge
-		UnitType: usabomber
-		SquadSize: 4
+		UnitTypes: usabomber
+		SquadSizes: 4
 		CircleSequence: circles
 		UseDirectionalTarget: True
 		DirectionArrowAnimation: airstrikedirection
 		StartFullyCharged: true
-	ClassicAirstrikePower@Spectre:
+	AirstrikePower@Spectre:
 		Squad:
 			usagunship:
 				SpawnOffset: -1536,1024,0
@@ -839,6 +1038,8 @@ GENE6:
 		OrderName: AirstrikePowerSpectre
 		SupportPowerPaletteOrder: 20
 		StartFullyCharged: true
+		UnitTypes: usagunship
+		SquadSizes: 4
 	AirstrikePower@fuelbomb:
 		OrderName: USAFuelBomb
 		Icon: usafuelbomb
@@ -848,11 +1049,11 @@ GENE6:
 		SelectTargetSpeechNotification: SelectTarget
 		CameraActor: camera
 		CameraRemoveDelay: 150
-		UnitType: usabomber.fuelbomb
+		UnitTypes: usabomber.fuelbomb
 		QuantizedFacings: 8
 		DisplayBeacon: true
 		BeaconPoster: airstrike
-		SquadSize: 1
+		SquadSizes: 1
 		SquadOffset: 1792,1792,0
 		ArrowSequence: arrow
 		ClockSequence: clock
@@ -871,11 +1072,11 @@ GENE6:
 		SelectTargetSpeechNotification: SelectTarget
 		CameraActor: camera
 		CameraRemoveDelay: 150
-		UnitType: usabomber.motherbomb
+		UnitTypes: usabomber.motherbomb
 		QuantizedFacings: 8
 		DisplayBeacon: true
 		BeaconPoster: airstrike
-		SquadSize: 1
+		SquadSizes: 1
 		SquadOffset: 1792,1792,0
 		ArrowSequence: arrow
 		ClockSequence: clock
@@ -894,11 +1095,11 @@ GENE6:
 		SelectTargetSpeechNotification: SelectTarget
 		CameraActor: camera
 		CameraRemoveDelay: 150
-		UnitType: usabomber.leaflet
+		UnitTypes: usabomber.leaflet
 		QuantizedFacings: 8
 		DisplayBeacon: true
 		BeaconPoster: airstrike
-		SquadSize: 1
+		SquadSizes: 1
 		SquadOffset: 1792,1792,0
 		ArrowSequence: arrow
 		ClockSequence: clock
@@ -917,11 +1118,11 @@ GENE6:
 		SelectTargetSpeechNotification: SelectTarget
 		CameraActor: camera
 		CameraRemoveDelay: 150
-		UnitType: a10generals
+		UnitTypes: a10generals
 		QuantizedFacings: 8
 		DisplayBeacon: true
 		BeaconPoster: airstrike
-		SquadSize: 1
+		SquadSizes: 1
 		SquadOffset: 1792,1792,0
 		ArrowSequence: arrow
 		ClockSequence: clock
@@ -940,11 +1141,11 @@ GENE6:
 		SelectTargetSpeechNotification: SelectTarget
 		CameraActor: camera
 		CameraRemoveDelay: 150
-		UnitType: a10generals
+		UnitTypes: a10generals
 		QuantizedFacings: 8
 		DisplayBeacon: true
 		BeaconPoster: airstrike
-		SquadSize: 2
+		SquadSizes: 2
 		SquadOffset: 1792,1792,0
 		ArrowSequence: arrow
 		ClockSequence: clock
@@ -963,11 +1164,11 @@ GENE6:
 		SelectTargetSpeechNotification: SelectTarget
 		CameraActor: camera
 		CameraRemoveDelay: 150
-		UnitType: a10generals
+		UnitTypes: a10generals
 		QuantizedFacings: 8
 		DisplayBeacon: true
 		BeaconPoster: airstrike
-		SquadSize: 3
+		SquadSizes: 3
 		SquadOffset: 1792,1792,0
 		ArrowSequence: arrow
 		ClockSequence: clock
@@ -988,11 +1189,11 @@ GENE6:
 		SelectTargetSpeechNotification: SelectTarget
 		CameraActor: camera
 		CameraRemoveDelay: 150
-		UnitType: glanthraxbomber
+		UnitTypes: glanthraxbomber
 		QuantizedFacings: 8
 		DisplayBeacon: true
 		BeaconPoster: airstrike
-		SquadSize: 1
+		SquadSizes: 1
 		SquadOffset: 1792,1792,0
 		ArrowSequence: arrow
 		ClockSequence: clock
@@ -1056,7 +1257,7 @@ GENE6:
 		DisplayRadarPing: True
 		ChargeInterval: 8000
 		ActivationDelay: 50
-		Weapon: GLAmbush3
+		Weapons: GLAmbush3
 		CameraActor: camera
 		CameraRemoveDelay: 240
 		DisplayBeacon: True
@@ -1077,7 +1278,7 @@ GENE6:
 		DisplayRadarPing: True
 		ChargeInterval: 8000
 		ActivationDelay: 50
-		Weapon: GLAmbush3Toxin
+		Weapons: GLAmbush3Toxin
 		CameraActor: camera
 		CameraRemoveDelay: 240
 		DisplayBeacon: True
@@ -1092,15 +1293,15 @@ GENE6:
 		ChargeInterval: 3000
 		Name: GPS Scrambler
 		Description: Cloaks a large group of units.
-		Duration: 2000
+		Durations: 2000
 		SelectTargetSpeechNotification: SelectTarget
 		DisplayRadarPing: True
-		Condition: tscloak
+		Conditions: tscloak
 		OnFireSound: cloak5.aud
 		Prerequisites: upgpscram
 		StartFullyCharged: true
 		Dimensions: 7, 7
-		Footprint: ___x___ __xxx__ _xxxxx_ xxxxxxx _xxxxx_ __xxx__ ___x___
+		Footprints: ___x___ __xxx__ _xxxxx_ xxxxxxx _xxxxx_ __xxx__ ___x___
 	# GrantExternalConditionPower@Bounty1:
 	# 	OrderName: CashBounty1
 	# 	Icon: glabounty1
@@ -1135,15 +1336,15 @@ GENE6:
 		ChargeInterval: 3000
 		Name: Cash Bounty
 		Description: Makes selected targets grant 40% of value\nupon being killed or destroyed.
-		Duration: 1000
+		Durations: 1000
 		SelectTargetSpeechNotification: SelectTarget
 		DisplayRadarPing: True
-		Condition: glabounty3
+		Conditions: glabounty3
 		ValidStances: Enemy, Neutral
 		Prerequisites: upglabounty3
 		StartFullyCharged: true
 		Dimensions: 9, 9
-		Footprint: ____x____ ___xxx___ __xxxxx__ _xxxxxxx_ xxxxxxxxx _xxxxxxx_ __xxxxx__ ___xxx___ ____x____
+		Footprints: ____x____ ___xxx___ __xxxxx__ _xxxxxxx_ xxxxxxxxx _xxxxxxx_ __xxxxx__ ___xxx___ ____x____
 ^GeneralsChinaSupportPowers:
 	CashHackPower:
 		OrderName: cashhack
@@ -1181,8 +1382,8 @@ GENE6:
 		BeaconPoster: pinficon
 		ArrowSequence: arrow
 		ClockSequence: clocklarge
-		UnitType: usabomber
-		SquadSize: 1
+		UnitTypes: usabomber
+		SquadSizes: 1
 		CircleSequence: circles
 		UseDirectionalTarget: True
 		DirectionArrowAnimation: airstrikedirection
@@ -1206,8 +1407,8 @@ GENE6:
 		BeaconPoster: pinficon
 		ArrowSequence: arrow
 		ClockSequence: clocklarge
-		UnitType: usabomber
-		SquadSize: 3
+		UnitTypes: usabomber
+		SquadSizes: 3
 		CircleSequence: circles
 		UseDirectionalTarget: True
 		DirectionArrowAnimation: airstrikedirection
@@ -1256,7 +1457,7 @@ GENE6:
 		ActivationDelay: 50
 		Name: Artillery Barrage
 		Description: Off-map guns fire at the target.\nApplies heavy damage over a large area.
-		Weapon: CHBarrageSpawner3
+		Weapons: CHBarrageSpawner3
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
 		DisplayRadarPing: True
@@ -1272,11 +1473,11 @@ GENE6:
 		SelectTargetSpeechNotification: SelectTarget
 		CameraActor: camera
 		CameraRemoveDelay: 150
-		UnitType: usabomber.carpet
+		UnitTypes: usabomber.carpet
 		QuantizedFacings: 8
 		DisplayBeacon: true
 		BeaconPoster: airstrike
-		SquadSize: 1
+		SquadSizes: 1
 		SquadOffset: 1792,1792,0
 		ArrowSequence: arrow
 		ClockSequence: clock
@@ -1295,11 +1496,11 @@ GENE6:
 		SelectTargetSpeechNotification: SelectTarget
 		CameraActor: camera
 		CameraRemoveDelay: 150
-		UnitType: usabomber.emp
+		UnitTypes: usabomber.emp
 		QuantizedFacings: 8
 		DisplayBeacon: true
 		BeaconPoster: airstrike
-		SquadSize: 1
+		SquadSizes: 1
 		SquadOffset: 1792,1792,0
 		ArrowSequence: arrow
 		ClockSequence: clock
@@ -1318,11 +1519,11 @@ GENE6:
 		SelectTargetSpeechNotification: SelectTarget
 		CameraActor: camera
 		CameraRemoveDelay: 150
-		UnitType: usabomber.minebomb
+		UnitTypes: usabomber.minebomb
 		QuantizedFacings: 8
 		DisplayBeacon: true
 		BeaconPoster: airstrike
-		SquadSize: 1
+		SquadSizes: 1
 		SquadOffset: 1792,1792,0
 		ArrowSequence: arrow
 		ClockSequence: clock
@@ -1339,16 +1540,16 @@ GENE6:
 		ChargeInterval: 3000
 		Name: Frenzy
 		Description: Increases the firepower of selected vehicles.
-		Duration: 750
+		Durations: 750
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
 		OnFireSound: sfrenzya.wav
 		DisplayRadarPing: True
-		Condition: frenzypower1
+		Conditions: frenzypower1
 		Prerequisites: upfrenzy1, !upfrenzy2
 		StartFullyCharged: true
 		Dimensions: 7, 7
-		Footprint: ___x___ __xxx__ _xxxxx_ xxxxxxx _xxxxx_ __xxx__ ___x___
+		Footprints: ___x___ __xxx__ _xxxxx_ xxxxxxx _xxxxx_ __xxx__ ___x___
 	# GrantExternalConditionPower@Frenzy2:
 	# 	OrderName: FrenzyPower2
 	# 	PauseOnCondition: lowpower
@@ -1687,91 +1888,91 @@ usabomber.motherbomb:
 #	GLA
 ##################################################
 
-selectglanormal:
-	Inherits: ^upgrade.template
-	Tooltip:
-		Name: Normal General
-	Buildable:
-		BuildPaletteOrder: 1
-		BuildDuration: 0
-		Queue: Building, RABuilding
-		Description: No specialties
-		Prerequisites: ~!glaselected
-	RenderSprites:
-		Image: glglaicon
-	ProvidesPrerequisite:
-		Prerequisite: glaselected
-	ProvidesPrerequisite@2:
-		Prerequisite: selectglanormal
+# selectglanormal:
+# 	Inherits: ^upgrade.template
+# 	Tooltip:
+# 		Name: Normal General
+# 	Buildable:
+# 		BuildPaletteOrder: 1
+# 		BuildDuration: 0
+# 		Queue: Building, RABuilding
+# 		Description: No specialties
+# 		Prerequisites: ~!glaselected
+# 	RenderSprites:
+# 		Image: glglaicon
+# 	ProvidesPrerequisite:
+# 		Prerequisite: glaselected
+# 	ProvidesPrerequisite@2:
+# 		Prerequisite: selectglanormal
 
-selectglatoxin:
-	Inherits: ^upgrade.template
-	Tooltip:
-		Name: Toxin General
-	Buildable:
-		BuildPaletteOrder: 1
-		BuildDuration: 0
-		Queue: Building, RABuilding
-		Description: - Most units have toxin weapons\n- No access to stealth upgrades\n- More expensive heavy armor
-		Prerequisites: ~!glaselected
-	RenderSprites:
-		Image: gltoxingeneralicon
-	ProvidesPrerequisite:
-		Prerequisite: glaselected
-	ProvidesPrerequisite@2:
-		Prerequisite: selectglatoxin
-	ProvidesPrerequisite@3:
-		Prerequisite: uptoxinshells
-	ProvidesPrerequisite@4:
-		Prerequisite: upantraxbeta
+# selectglatoxin:
+# 	Inherits: ^upgrade.template
+# 	Tooltip:
+# 		Name: Toxin General
+# 	Buildable:
+# 		BuildPaletteOrder: 1
+# 		BuildDuration: 0
+# 		Queue: Building, RABuilding
+# 		Description: - Most units have toxin weapons\n- No access to stealth upgrades\n- More expensive heavy armor
+# 		Prerequisites: ~!glaselected
+# 	RenderSprites:
+# 		Image: gltoxingeneralicon
+# 	ProvidesPrerequisite:
+# 		Prerequisite: glaselected
+# 	ProvidesPrerequisite@2:
+# 		Prerequisite: selectglatoxin
+# 	ProvidesPrerequisite@3:
+# 		Prerequisite: uptoxinshells
+# 	ProvidesPrerequisite@4:
+# 		Prerequisite: upantraxbeta
 
-selectglademo:
-	Inherits: ^upgrade.template
-	Tooltip:
-		Name: Demolition General
-	Buildable:
-		BuildPaletteOrder: 1
-		BuildDuration: 0
-		Queue: Building, RABuilding
-		Description: - Cheaper and more effective suicide bombers\n- No access to toxin weapons\n- More expensive heavy armor
-		Prerequisites: ~!glaselected
-	RenderSprites:
-		Image: gldemogeneralicon
-	ProvidesPrerequisite:
-		Prerequisite: glaselected
-	ProvidesPrerequisite@2:
-		Prerequisite: selectglademo
-	ProvidesPrerequisite@3:
-		Prerequisite: upglatrap
+# selectglademo:
+# 	Inherits: ^upgrade.template
+# 	Tooltip:
+# 		Name: Demolition General
+# 	Buildable:
+# 		BuildPaletteOrder: 1
+# 		BuildDuration: 0
+# 		Queue: Building, RABuilding
+# 		Description: - Cheaper and more effective suicide bombers\n- No access to toxin weapons\n- More expensive heavy armor
+# 		Prerequisites: ~!glaselected
+# 	RenderSprites:
+# 		Image: gldemogeneralicon
+# 	ProvidesPrerequisite:
+# 		Prerequisite: glaselected
+# 	ProvidesPrerequisite@2:
+# 		Prerequisite: selectglademo
+# 	ProvidesPrerequisite@3:
+# 		Prerequisite: upglatrap
 
-selectglacamo:
-	Inherits: ^upgrade.template
-	Tooltip:
-		Name: Stealth General
-	Buildable:
-		BuildPaletteOrder: 1
-		BuildDuration: 0
-		Queue: Building, RABuilding
-		Description: - All defenses come with camo nets\n- All buildings can be cloaked\n- No access to heavy armor
-		Prerequisites: ~!glaselected
-	RenderSprites:
-		Image: glcamogeneralicon
-	ProvidesPrerequisite:
-		Prerequisite: glaselected
-	ProvidesPrerequisite@2:
-		Prerequisite: selectglacamo
-	ProvidesPrerequisite@3:
-		Prerequisite: uprebelcamo
-	ProvidesPrerequisite@4:
-		Prerequisite: upcamonetting
-	ProvidesPrerequisite@5:
-		Prerequisite: canselectrepair
-	ProvidesPrerequisite@6:
-		Prerequisite: glpalacehijacker
-	ProvidesPrerequisite@7:
-		Prerequisite: uphijack
-	ProvidesPrerequisite@8:
-		Prerequisite: uprebelcamo
+# selectglacamo:
+# 	Inherits: ^upgrade.template
+# 	Tooltip:
+# 		Name: Stealth General
+# 	Buildable:
+# 		BuildPaletteOrder: 1
+# 		BuildDuration: 0
+# 		Queue: Building, RABuilding
+# 		Description: - All defenses come with camo nets\n- All buildings can be cloaked\n- No access to heavy armor
+# 		Prerequisites: ~!glaselected
+# 	RenderSprites:
+# 		Image: glcamogeneralicon
+# 	ProvidesPrerequisite:
+# 		Prerequisite: glaselected
+# 	ProvidesPrerequisite@2:
+# 		Prerequisite: selectglacamo
+# 	ProvidesPrerequisite@3:
+# 		Prerequisite: uprebelcamo
+# 	ProvidesPrerequisite@4:
+# 		Prerequisite: upcamonetting
+# 	ProvidesPrerequisite@5:
+# 		Prerequisite: canselectrepair
+# 	ProvidesPrerequisite@6:
+# 		Prerequisite: glpalacehijacker
+# 	ProvidesPrerequisite@7:
+# 		Prerequisite: uphijack
+# 	ProvidesPrerequisite@8:
+# 		Prerequisite: uprebelcamo
 
 
 ##################################################
@@ -1781,7 +1982,7 @@ GLAMCV:
 	Inherits: ^Vehicle
 	Inherits@selection: ^SelectableSupportUnit
 	Inherits@mcv: ^MCV
-	Inherits@conyard: ^Conyard
+	# Inherits@conyard: ^Conyard
 	Valued:
 		Cost: 3000
 	Tooltip:
@@ -1819,6 +2020,8 @@ GLAMCV:
 		Image: glmcv
 	ProvidesPrerequisite@faction:
 		Prerequisite: mmgla
+	ProvidesPrerequisite@mcv:
+		Prerequisite: mcv
 
 GLAMCV.bot:
 	Inherits: GLAMCV
@@ -1898,9 +2101,9 @@ glcommand:
 	Production@NORMAL:
 		Produces: Building, Defence
 		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RABuilding, RADefence
-		RequiresCondition: classicproductionqueues
+	# Production@CLASSICPRODUCTIONQUEUES:
+	# 	Produces: RABuilding, RADefence
+	# 	RequiresCondition: classicproductionqueues
 	ProductionQueue@AlphaBuilding:
 		Type: Building
 		DisplayOrder: 0
@@ -1920,12 +2123,12 @@ glcommand:
 	ProductionBar@DefenceAlpha:
 		ProductionType: Defence
 		RequiresCondition: !classicproductionqueues
-	ProductionBar@RABuildingAlpha:
-		ProductionType: RABuilding
-		RequiresCondition: classicproductionqueues
-	ProductionBar@RADefenceAlpha:
-		ProductionType: RADefence
-		RequiresCondition: classicproductionqueues
+	# ProductionBar@RABuildingAlpha:
+	# 	ProductionType: RABuilding
+	# 	RequiresCondition: classicproductionqueues
+	# ProductionBar@RADefenceAlpha:
+	# 	ProductionType: RADefence
+	# 	RequiresCondition: classicproductionqueues
 	BaseProvider:
 		Range: 14c0
 	ProvidesPrerequisite@buildingname:
@@ -1944,6 +2147,11 @@ glcommand:
 		SpawnOffset: -1024,1024,0 #-1323,1280,0
 		ExitCell: 0,2
 		Facing: 135
+	-Transforms:
+	-TransformsIntoMobile:
+	-TransformsIntoPassenger:
+	-TransformsIntoRepairable:
+	-TransferTimedExternalConditionOnTransform:
 	Voiced:
 		VoiceSet: GLACommandCenterVoice
 	GrantConditionOnPrerequisite@selected:
@@ -2045,7 +2253,7 @@ glanthraxbomber:
 		Condition: upantraxgamma
 		Prerequisites: upantraxgamma
 	-ExternalCondition@STASIS:
-	-DelayedWeaponAttachable@lockdown:
+	# -DelayedWeaponAttachable@lockdown:
 	-ExternalCondition@EMP:
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
@@ -2105,6 +2313,7 @@ glbarracks:
 	Inherits@prod: ^ProducesUnits
 	Inherits@camo: ^BuildingCamoLevel2
 	Inherits@fort: ^GLAFortifiable
+	Inherits@barr: ^IsBarrackOld
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -2243,6 +2452,7 @@ glweap:
 	Inherits@prod: ^ProducesUnits
 	Inherits@camo: ^BuildingCamoLevel2
 	Inherits@fort: ^GLAFortifiable
+	Inherits@weap: ^IsWeaponFactoryOld
 	Valued:
 		Cost: 2000
 	Tooltip:
@@ -2373,7 +2583,7 @@ glpalace:
 		ProductionType: Upgrades
 	DetectCloaked:
 		Range: 2c0
-	-RenderDetectionCircle:
+	# -RenderDetectionCircle:
 	Voiced:
 		VoiceSet: GLPalaceVoice
 	Power:
@@ -2398,7 +2608,7 @@ glpalace.hole:
 
 glstorm:
 	Inherits: ^BaseBuilding
-	Inherits@IDISABLE: ^DisabledOverlay
+# 	Inherits@IDISABLE: ^DisabledOverlay
 	Inherits@shape: ^4x3Shape
 	Inherits@sw: ^PrimarySuperweapon
 	Inherits@camo: ^BuildingCamoLevel2
@@ -2478,7 +2688,7 @@ glstorm:
 		VoiceSet: GLSCUDStormVoice
 	SpawnActorOnDeath@hole:
 		Actor: glstorm.hole
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: GLBombTruckToxExplosive
 		EmptyWeapon: GLBombTruckToxExplosive
 		Type: CenterPosition
@@ -2696,7 +2906,7 @@ glsite.hole:
 
 gltunnel:
 	Inherits: ^Defense
-	Inherits@IDISABLE: ^DisabledOverlay
+# 	Inherits@IDISABLE: ^DisabledOverlay
 	Inherits@AUTOTARGET: ^AutoTargetAll
 	Inherits@shape: ^2x2Shape
 	Inherits@camo: ^BuildingCamoLevel1
@@ -2805,9 +3015,9 @@ gltrap:
 		HP: 10000
 	RevealsShroud:
 		Range: 2c0
-	WithBuildingBib:
-		HasMinibib: True
-	Explodes:
+	# -WithBuildingBib:
+		# HasMinibib: True
+	FireWarheadsOnDeath:
 		Weapon: GLBarrelExplode
 		EmptyWeapon: GLBarrelExplode
 		DamageSource: Killer
@@ -2827,7 +3037,7 @@ gltrap:
 		RequiresCondition: !build-incomplete
 	BodyOrientation:
 		QuantizedFacings: 8
-	-RenderDetectionCircle:
+	# -RenderDetectionCircle:
 	WithMuzzleOverlay:
 	Turreted:
 		TurnSpeed: 255
@@ -2843,7 +3053,7 @@ gltrap:
 	GrantConditionOnPrerequisite@selectglatoxin:
 		Condition: selectglatoxin
 		Prerequisites: selectglatoxin
-	Explodes@antraxbeta1:
+	FireWarheadsOnDeath@antraxbeta1:
 		Weapon: GLAnthraxBlue
 		EmptyWeapon: GLAnthraxBlue
 		DamageSource: Killer
@@ -2851,7 +3061,7 @@ gltrap:
 	RequiresBuildableArea:
 		AreaTypes: building
 		Adjacent: 9
-	-EngineerRepairable:
+	# -EngineerRepairable:
 	-CaptureManager:
 	-Capturable:
 	-CapturableProgressBar:
@@ -3074,6 +3284,7 @@ GLE1:
 		InitialLevels: 1
 	GainsExperience:
 		LevelUpNotification: LevelUpRA2
+
 GLE1toxin:
 	Inherits: GLE1
 	Valued:
@@ -3263,17 +3474,17 @@ glterror:
 	GrantConditionOnPrerequisite@selectglatoxin:
 		Condition: selectglatoxin
 		Prerequisites: selectglatoxin
-	Explodes@antraxbeta1:
+	FireWarheadsOnDeath@antraxbeta1:
 		Weapon: GLAnthraxBlue
 		EmptyWeapon: GLAnthraxBlue
 		DamageSource: Killer
 		RequiresCondition: selectglatoxin && !disabled
 	Armament@PRIMARY:
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: GLTerroristExplosive
 		EmptyWeapon: GLTerroristExplosive
 		RequiresCondition: !selectglademo && !disabled
-	Explodes@2:
+	FireWarheadsOnDeath@2:
 		Weapon: GLTerroristExplosive2
 		EmptyWeapon: GLTerroristExplosive2
 		RequiresCondition: selectglademo && !disabled
@@ -3484,11 +3695,11 @@ glbiker:
 		RequiresCondition: bomb && !disabled
 	KillsSelf@bomb:
 		RequiresCondition: bomb && (triggered || invulnerability)
-	Explodes@bomb:
+	FireWarheadsOnDeath@bomb:
 		Weapon: GLTerroristExplosive2
 		EmptyWeapon: GLTerroristExplosive2
 		RequiresCondition: bomb && !disabled
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: GLBikeHuskCluster
 		EmptyWeapon: GLBikeHuskCluster
 	Voiced:
@@ -3626,7 +3837,7 @@ glbggy:
 		Condition: ammoupgrade
 		Prerequisites: upbuggyammo
 		Weapon: GLBuggyHuskCluster
-	Explodes:
+	FireWarheadsOnDeath:
 		EmptyWeapon: GLBuggyHuskCluster
 	GrantConditionOnPrerequisite@selectglatoxin:
 		Condition: selectglatoxin
@@ -4111,12 +4322,12 @@ gltractor:
 	GrantConditionOnPrerequisite@upantraxgamma:
 		Condition: upantraxgamma
 		Prerequisites: upantraxgamma
-	Explodes@antrax1:
+	FireWarheadsOnDeath@antrax1:
 		Weapon: GLAnthraxGreen
 		EmptyWeapon: GLAnthraxGreen
 		DamageSource: Killer
 		RequiresCondition: !antraxbetaupgrade && !chronobeamed
-	Explodes@antraxbeta1:
+	FireWarheadsOnDeath@antraxbeta1:
 		Weapon: GLAnthraxBlue
 		EmptyWeapon: GLAnthraxBlue
 		DamageSource: Killer
@@ -4226,7 +4437,7 @@ glpickup:
 	ProducibleWithLevel@upsglreconvehicletraining:
 		Prerequisites: upsglreconvehicletraining
 		InitialLevels: 3
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: GLTechnicalHuskCluster
 		EmptyWeapon: GLTechnicalHuskCluster
 	ProductionCostMultiplier@selectglademo:
@@ -4299,16 +4510,16 @@ glscrapcar:
 	GrantConditionOnPrerequisite@selectglatoxin:
 		Condition: selectglatoxin
 		Prerequisites: selectglatoxin
-	Explodes@antraxbeta1:
+	FireWarheadsOnDeath@antraxbeta1:
 		Weapon: GLAnthraxBlue
 		EmptyWeapon: GLAnthraxBlue
 		DamageSource: Killer
 		RequiresCondition: selectglatoxin && !disabled
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: GLTerroristExplosive
 		EmptyWeapon: GLTerroristExplosive
 		RequiresCondition: !selectglademo && !disabled
-	Explodes@2:
+	FireWarheadsOnDeath@2:
 		Weapon: GLTerroristExplosive2
 		EmptyWeapon: GLTerroristExplosive2
 		RequiresCondition: selectglademo && !disabled
@@ -4399,7 +4610,7 @@ glvan:
 	ProducibleWithLevel@upsglreconvehicletraining:
 		Prerequisites: upsglreconvehicletraining
 		InitialLevels: 3
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: GLTechnicalHusk2Cluster
 		EmptyWeapon: GLTechnicalHusk2Cluster
 	ProductionCostMultiplier@selectglademo:
@@ -4465,7 +4676,7 @@ glradar:
 		RequiresCondition: !jammed && !disabled
 	ExternalCondition@JAMMED:
 		Condition: jammed
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: GLRadarvanHuskCluster
 		EmptyWeapon: GLRadarvanHuskCluster
 	SpawnActorPower@scan:
@@ -4479,7 +4690,7 @@ glradar:
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
 		EndChargeSpeechNotification: SpyPlaneReady
-		Actor: camera.radarvan
+		Actors: camera.radarvan
 		LifeTime: 250
 		DeploySound: vradscan.wav
 		LaunchSound: vradscan.wav
@@ -4633,8 +4844,8 @@ GLSCUD:
 		RequiresCondition: (!deployed && !expammo) || (deployed && !toxammo)
 		Sequence: empty-idle
 		Name: reloading
-	Explodes:
-		Weapon: V2Explode
+	FireWarheadsOnDeath:
+		Weapon: GLV2Explode
 	Selectable:
 		DecorationBounds: 1194, 1194
 		Class: glscud
@@ -4724,13 +4935,13 @@ glscud.missile:
 		ZOffset: -129
 	WithFacingSpriteBody:
 	MissileSpawnerSlave:
-	SpawnedExplodes:
+	FireWarheadsOnDeath:
 		Weapon: GLASCUD
 		EmptyWeapon: GLASCUD
 
 glscud.missiletox:
 	Inherits: glscud.missile
-	SpawnedExplodes:
+	FireWarheadsOnDeath:
 		Weapon: GLASCUDTOXIN
 		EmptyWeapon: GLASCUDTOXIN
 
@@ -4771,22 +4982,22 @@ glbombtruck:
 		Speed: 118
 	RevealsShroud:
 		Range: 4c0
-	Explodes@0:
+	FireWarheadsOnDeath@0:
 		Weapon: GLBombTruckExplosive
 		EmptyWeapon: GLBombTruckExplosive
 		DamageSource: Killer
 		RequiresCondition: !selectglademo && !selectglatoxin && !chronobeamed
-	Explodes@1:
+	FireWarheadsOnDeath@1:
 		Weapon: GLBombTruckSuperExplosive
 		EmptyWeapon: GLBombTruckSuperExplosive
 		DamageSource: Killer
 		RequiresCondition: selectglademo && !chronobeamed
-	Explodes@2:
+	FireWarheadsOnDeath@2:
 		Weapon: GLBombTruckToxExplosive
 		EmptyWeapon: GLBombTruckToxExplosive
 		DamageSource: Killer
 		RequiresCondition: selectglatoxin && !antraxbetaupgrade && !chronobeamed
-	Explodes@3:
+	FireWarheadsOnDeath@3:
 		Weapon: GLBombTruckToxExplosive2
 		EmptyWeapon: GLBombTruckToxExplosive2
 		DamageSource: Killer
@@ -4804,7 +5015,7 @@ glbombtruck:
 	-DamageMultiplier@IRONCURTAIN:
 	KillsSelf:
 		RequiresCondition: (invulnerability || triggered) && !disabled
-	ChronoshiftableWithSpriteEffect:
+	Chronoshiftable:
 		ExplodeInstead: True
 	Voiced:
 		VoiceSet: GLBombTruckVoice
@@ -4926,6 +5137,8 @@ glworker:
 		BaleUnloadDelay: 5
 		MaxUnloadQueue: 9
 		FullyLoadedSpeed: 75
+	StoresResources:
+		Capacity: 4
 	ChangesHealth:
 		Step: 500
 		Delay: 20
@@ -4985,6 +5198,7 @@ glworker:
 		Image: yrslav
 	GainsExperience:
 		LevelUpNotification: LevelUpRA2
+
 upscorpionrocket:
 	Inherits: ^upgrade.template
 	Tooltip:
@@ -5440,6 +5654,7 @@ GLSYRD:
 		RequiresCondition: classicproductionqueues
 	ProductionQueue:
 		Type: Naval
+		Group: Naval
 		DisplayOrder: 5
 	ProductionBar@NAVALGDI:
 		ProductionType: Naval
@@ -5452,8 +5667,8 @@ GLSYRD:
 		AreaTypes: building, cityi
 	RenderSprites:
 		Image: ra1syrd
-	-ProductionBar@NAVALALLIES:
-	-ProductionBar@RANAVALALLIES:
+	# -ProductionBar@NAVALALLIES:
+	# -ProductionBar@RANAVALALLIES:
 	Power:
 		Amount: 5
 
@@ -5599,85 +5814,85 @@ GLTRUK:
 #	China
 ##################################################
 
-selectchnormal:
-	Inherits: ^upgrade.template
-	Tooltip:
-		Name: Normal China
-	Buildable:
-		BuildPaletteOrder: 1
-		BuildDuration: 0
-		Queue: Building, RABuilding
-		Description: No specialties
-		Prerequisites: ~!chselected
-	RenderSprites:
-		Image: chchinaicon
-	ProvidesPrerequisite:
-		Prerequisite: chselected
-	ProvidesPrerequisite@2:
-		Prerequisite: selectchnormal
+# selectchnormal:
+# 	Inherits: ^upgrade.template
+# 	Tooltip:
+# 		Name: Normal China
+# 	Buildable:
+# 		BuildPaletteOrder: 1
+# 		BuildDuration: 0
+# 		Queue: Building, RABuilding
+# 		Description: No specialties
+# 		Prerequisites: ~!chselected
+# 	RenderSprites:
+# 		Image: chchinaicon
+# 	ProvidesPrerequisite:
+# 		Prerequisite: chselected
+# 	ProvidesPrerequisite@2:
+# 		Prerequisite: selectchnormal
 
-selectchtanks:
-	Inherits: ^upgrade.template
-	Tooltip:
-		Name: Tank General
-	Buildable:
-		BuildPaletteOrder: 1
-		BuildDuration: 0
-		Queue: Building, RABuilding
-		Description: - Cheaper and more effective tanks\n- No access to heavy artillery\n- More expensive infantry and aircraft
-		Prerequisites: ~!chselected
-	RenderSprites:
-		Image: chtankgeneralicon
-	ProvidesPrerequisite:
-		Prerequisite: chselected
-	ProvidesPrerequisite@2:
-		Prerequisite: selectchtanks
-	ProvidesPrerequisite@3:
-		Prerequisite: canselectrepair
+# selectchtanks:
+# 	Inherits: ^upgrade.template
+# 	Tooltip:
+# 		Name: Tank General
+# 	Buildable:
+# 		BuildPaletteOrder: 1
+# 		BuildDuration: 0
+# 		Queue: Building, RABuilding
+# 		Description: - Cheaper and more effective tanks\n- No access to heavy artillery\n- More expensive infantry and aircraft
+# 		Prerequisites: ~!chselected
+# 	RenderSprites:
+# 		Image: chtankgeneralicon
+# 	ProvidesPrerequisite:
+# 		Prerequisite: chselected
+# 	ProvidesPrerequisite@2:
+# 		Prerequisite: selectchtanks
+# 	ProvidesPrerequisite@3:
+# 		Prerequisite: canselectrepair
 
-selectchinf:
-	Inherits: ^upgrade.template
-	Tooltip:
-		Name: Infantry General
-	Buildable:
-		BuildPaletteOrder: 1
-		BuildDuration: 0
-		Queue: Building, RABuilding
-		Description: - More effective infantry\n- Support vehicles are armed and have greater capacity\n- No access to heavy armor
-		Prerequisites: ~!chselected
-	RenderSprites:
-		Image: chinfgeneralicon
-	ProvidesPrerequisite:
-		Prerequisite: chselected
-	ProvidesPrerequisite@2:
-		Prerequisite: selectchinf
-	ProvidesPrerequisite@3:
-		Prerequisite: canselectfrenzy
+# selectchinf:
+# 	Inherits: ^upgrade.template
+# 	Tooltip:
+# 		Name: Infantry General
+# 	Buildable:
+# 		BuildPaletteOrder: 1
+# 		BuildDuration: 0
+# 		Queue: Building, RABuilding
+# 		Description: - More effective infantry\n- Support vehicles are armed and have greater capacity\n- No access to heavy armor
+# 		Prerequisites: ~!chselected
+# 	RenderSprites:
+# 		Image: chinfgeneralicon
+# 	ProvidesPrerequisite:
+# 		Prerequisite: chselected
+# 	ProvidesPrerequisite@2:
+# 		Prerequisite: selectchinf
+# 	ProvidesPrerequisite@3:
+# 		Prerequisite: canselectfrenzy
 
-selectchatomic:
-	Inherits: ^upgrade.template
-	Tooltip:
-		Name: Nuke General
-	Buildable:
-		BuildPaletteOrder: 1
-		BuildDuration: 0
-		Queue: Building, RABuilding
-		Description: - Faster tanks with uranium shells\n- More effective nuclear weapons and upgrades\n- More expensive infantry and aircraft
-		Prerequisites: ~!chselected
-	RenderSprites:
-		Image: chnukegeneralicon
-	ProvidesPrerequisite:
-		Prerequisite: chselected
-	ProvidesPrerequisite@2:
-		Prerequisite: selectchatomic
-	ProvidesPrerequisite@3:
-		Prerequisite: upatomictank
-	ProvidesPrerequisite@4:
-		Prerequisite: upuraniumshell
-	ProvidesPrerequisite@5:
-		Prerequisite: upnukecann
-	ProvidesPrerequisite@6:
-		Prerequisite: canselectrepair
+# selectchatomic:
+# 	Inherits: ^upgrade.template
+# 	Tooltip:
+# 		Name: Nuke General
+# 	Buildable:
+# 		BuildPaletteOrder: 1
+# 		BuildDuration: 0
+# 		Queue: Building, RABuilding
+# 		Description: - Faster tanks with uranium shells\n- More effective nuclear weapons and upgrades\n- More expensive infantry and aircraft
+# 		Prerequisites: ~!chselected
+# 	RenderSprites:
+# 		Image: chnukegeneralicon
+# 	ProvidesPrerequisite:
+# 		Prerequisite: chselected
+# 	ProvidesPrerequisite@2:
+# 		Prerequisite: selectchatomic
+# 	ProvidesPrerequisite@3:
+# 		Prerequisite: upatomictank
+# 	ProvidesPrerequisite@4:
+# 		Prerequisite: upuraniumshell
+# 	ProvidesPrerequisite@5:
+# 		Prerequisite: upnukecann
+# 	ProvidesPrerequisite@6:
+# 		Prerequisite: canselectrepair
 
 ##################################################
 #	China
@@ -5687,7 +5902,6 @@ CHNMCV:
 	Inherits: ^Vehicle
 	Inherits@selection: ^SelectableSupportUnit
 	Inherits@mcv: ^MCV
-	Inherits@conyard: ^Conyard
 	Valued:
 		Cost: 3000
 	Tooltip:
@@ -5729,17 +5943,19 @@ CHNMCV:
 		Image: chmcv
 	ProvidesPrerequisite@faction:
 		Prerequisite: mmchina
+	ProvidesPrerequisite@mcv:
+		Prerequisite: mcv
 
-CHNMCV.bot:
-	Inherits: CHNMCV
-	Buildable:
-		BuildPaletteOrder: 200
-		BuildLimit: 1
-		Prerequisites: chpropaganda, ~techlevel.high, ~chselected, ~botplayer, allowsMCV
-	RenderSprites:
-		Image: chmcv
-	Voiced:
-		VoiceSet: PRCMCCVoice
+# CHNMCV.bot:
+# 	Inherits: CHNMCV
+# 	Buildable:
+# 		BuildPaletteOrder: 200
+# 		BuildLimit: 1
+# 		Prerequisites: chpropaganda, ~techlevel.high, ~chselected, ~botplayer, allowsMCV
+# 	RenderSprites:
+# 		Image: chmcv
+# 	Voiced:
+# 		VoiceSet: PRCMCCVoice
 
 chcommand:
 	GrantExternalConditionToOwner@BuildingsOwned:
@@ -5770,9 +5986,9 @@ chcommand:
 	Production@NORMAL:
 		Produces: Building, Defence
 		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RABuilding, RADefence
-		RequiresCondition: classicproductionqueues
+	# Production@CLASSICPRODUCTIONQUEUES:
+	# 	Produces: RABuilding, RADefence
+	# 	RequiresCondition: classicproductionqueues
 	ProductionQueue@AlphaBuilding:
 		Type: Building
 		DisplayOrder: 0
@@ -5792,12 +6008,12 @@ chcommand:
 	ProductionBar@DefenceAlpha:
 		ProductionType: Defence
 		RequiresCondition: !classicproductionqueues
-	ProductionBar@RABuildingAlpha:
-		ProductionType: RABuilding
-		RequiresCondition: classicproductionqueues
-	ProductionBar@RADefenceAlpha:
-		ProductionType: RADefence
-		RequiresCondition: classicproductionqueues
+	# ProductionBar@RABuildingAlpha:
+	# 	ProductionType: RABuilding
+	# 	RequiresCondition: classicproductionqueues
+	# ProductionBar@RADefenceAlpha:
+	# 	ProductionType: RADefence
+	# 	RequiresCondition: classicproductionqueues
 	BaseProvider:
 		Range: 14c0
 	ProvidesPrerequisite@buildingname:
@@ -5818,6 +6034,11 @@ chcommand:
 		SpawnOffset: -1024,1024,0 #-1323,1280,0
 		ExitCell: 0,2
 		Facing: 135
+	-Transforms:
+	-TransformsIntoMobile:
+	-TransformsIntoPassenger:
+	-TransformsIntoRepairable:
+	-TransferTimedExternalConditionOnTransform:
 	LaysMinefield@minefield:
 		Locations: 0,-1, 1,-1, 2,-1, -1,0, -1,1, -1,2, 0,3, 1,3, 2,3, 3,2, 3,1, 3,0
 	Voiced:
@@ -5849,7 +6070,7 @@ chpower:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 10
 		Prerequisites: chcommand, ~!selectchatomic, ~chselected
-		Description: Provides power.\nCan be deployed to overcharge at expense of damage to self.\nExplodes violently when destroyed
+		Description: Provides power.\nCan be deployed to overcharge at expense of damage to self.\nFireWarheadsOnDeath violently when destroyed
 	Valued:
 		Cost: 800 #500
 	Tooltip:
@@ -5874,7 +6095,7 @@ chpower:
 	WithDeathAnimation:
 		DeathSequence: dead
 		UseDeathTypeSuffix: false
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: CHAtomicWeapon
 		EmptyWeapon: CHAtomicWeapon
 	LaysMinefield@minefield:
@@ -5929,6 +6150,7 @@ chbarracks:
 	Inherits@CPQWP: ^CPQConditionWithPrimary
 	Inherits@prod: ^ProducesUnits
 	Inherits@mines: ^MinefieldUpgrade
+	Inherits@barr: ^IsBarrackOld
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -5990,7 +6212,7 @@ chbarracks:
 chgattling:
 	Inherits: ^Defense
 	Inherits@AUTOTARGET: ^AutoTargetAll
-	Inherits@IDISABLE: ^DisabledOverlay
+# 	Inherits@IDISABLE: ^DisabledOverlay
 	Inherits@EMP: ^TurretEMP
 	Inherits@chaingun: ^ChaingunUpgrade
 	Inherits@mines: ^MinefieldUpgrade
@@ -6039,7 +6261,7 @@ chgattling:
 		QuantizedFacings: 8
 	DetectCloaked:
 		Range: 5c0
-	-RenderDetectionCircle:
+	# -RenderDetectionCircle:
 	AmmoPool:
 		Ammo: 8
 		AmmoCondition: ammo
@@ -6240,6 +6462,7 @@ chweap:
 	Inherits@CPQWP: ^CPQConditionWithPrimary
 	Inherits@prod: ^ProducesUnits
 	Inherits@mines: ^MinefieldUpgrade
+	Inherits@weap: ^IsWeaponFactoryOld
 	Valued:
 		Cost: 2000
 	Tooltip:
@@ -6314,7 +6537,7 @@ chweap:
 chpropaganda:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^4x2Shape
-	Inherits@IDISABLE: ^DisabledOverlay
+# 	Inherits@IDISABLE: ^DisabledOverlay
 	Inherits@mines: ^MinefieldUpgrade
 	Inherits@UCPQ: ^UnconditionalCPQ
 	Valued:
@@ -6357,7 +6580,7 @@ chpropaganda:
 
 chpropagandatower:
 	Inherits: ^BaseBuilding
-	Inherits@IDISABLE: ^DisabledOverlay
+# 	Inherits@IDISABLE: ^DisabledOverlay
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -6397,7 +6620,7 @@ chinternetcenter:
 	GrantExternalConditionToOwner@InternetCentersOwned:
 		Condition: InternetCentersOwned
 	Inherits: ^BaseBuilding
-	Inherits@IDISABLE: ^DisabledOverlay
+# 	Inherits@IDISABLE: ^DisabledOverlay
 	Inherits@shape: ^4x2Shape
 	Inherits@mines: ^MinefieldUpgrade
 	Inherits@Bot: ^BotMicromanageable
@@ -6654,7 +6877,7 @@ chinternetcenter2:
 
 chsilo:
 	Inherits: ^BaseBuilding
-	Inherits@IDISABLE: ^DisabledOverlay
+# 	Inherits@IDISABLE: ^DisabledOverlay
 	Inherits@shape: ^3x2Shape
 	Inherits@sw: ^PrimarySuperweapon
 	Inherits@mines: ^MinefieldUpgrade
@@ -6701,7 +6924,7 @@ chsilo:
 		InsufficientPowerSpeechNotification: InsufficientPower
 		LaunchSpeechNotification: NuclearWeaponLaunched
 		IncomingSpeechNotification: NuclearWarheadApproaching
-		MissileWeapon: CHBigAtomicWeapon
+		MissileWeapons: CHBigAtomicWeapon
 		MissileDelay: 11
 		SpawnOffset: 3c0,0,-1c512
 		DisplayBeacon: True
@@ -6730,7 +6953,7 @@ chsilo:
 		Multiplier: 90
 		Prerequisites: selectchatomic
 		Queue: Building, RABuilding
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: CHAtomicWeapon
 		EmptyWeapon: CHAtomicWeapon
 	ProvidesPrerequisite@swlimit:
@@ -6742,6 +6965,7 @@ chairport:
 	Inherits@CPQWP: ^CPQConditionWithPrimary
 	Inherits@prod: ^ProducesUnits
 	Inherits@mines: ^MinefieldUpgrade
+	Inherits@hpad: ^IsAircraftFactoryOld
 	Buildable:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 130
@@ -6828,7 +7052,7 @@ CHE1:
 		Weapon: CHGuardRifle
 	Armament@GARRISONED: ##########
 		Name: garrisoned
-		Weapon: CHGuardRifleGarrison
+		Weapon: CHGuardRifle
 		MuzzleSequence: muzzle
 	AttackFrontal:
 		FacingTolerance: 0
@@ -6851,6 +7075,7 @@ CHE1:
 		Queue: Infantry, RAInfantry
 	GainsExperience:
 		LevelUpNotification: LevelUpRA2
+
 CHE2:
 	Inherits: CHE1
 	Inherits@chaingun: ^ChaingunUpgrade
@@ -7109,8 +7334,6 @@ CHHACKER2:
 		Image: chhacker
 	Voiced:
 		VoiceSet: SuperHackerVoice
-
-
 
 chlotus:
 	Inherits: ^Soldier
@@ -7402,7 +7625,7 @@ charty:
 	WithMuzzleOverlay:
 	AutoTarget:
 		InitialStanceAI: Defend
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: ArtilleryShell
 		EmptyWeapon: UnitExplode
 		LoadedChance: 75
@@ -7417,7 +7640,7 @@ charty:
 		InitialLevels: 1
 	Voiced:
 		VoiceSet: CHInfernoCannonVoice
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: FlametankExplode
 		EmptyWeapon: FlametankExplode
 	ProductionCostMultiplier@selectchatomic:
@@ -7658,6 +7881,7 @@ choverlord2:
 		RequiresCondition: !addongattling
 	ProductionQueue:
 		Type: EOverlord.CHINA
+		Group: Unit
 	ProximityExternalCondition@PROPAGANDA:
 		-RequiresCondition:
 	-Cargo:
@@ -7848,7 +8072,7 @@ chdragon:
 	GrantConditionOnPrerequisite@upbluefire:
 		Condition: flameupgrade
 		Prerequisites: upbluefire
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: FlametankExplode
 		EmptyWeapon: FlametankExplode
 	ProducibleWithLevel:
@@ -7969,6 +8193,8 @@ chharv:
 		Name: Supply Truck
 	Harvester:
 		Capacity: 16
+	StoresResources:
+		Capacity: 16
 	Health:
 		HP: 30000
 	Armor:
@@ -7986,6 +8212,7 @@ chharv:
 		DockLoopSequence: idle
 	Voiced:
 		VoiceSet: CHSupplyTruckVoice
+
 chharv.Husk:
 	Inherits: ^LightHusk
 	Tooltip:
@@ -8218,7 +8445,7 @@ chcrawl:
 	GainsExperience:
 		LevelUpNotification: LevelUpRA2
 	RenderSprites:
-	Explodes@healer:
+	FireWarheadsOnDeath@healer:
 		Weapon: FakeHealtAPC
 	WithCargoPipsDecoration:
 		Position: BottomLeft
@@ -8249,7 +8476,7 @@ chcrawl2:
 		MaxWeight: 6
 		EjectOnDeath: true
 		InitialUnits: che2, che2, che2, che2, che2, che2
-	Explodes@healer:
+	FireWarheadsOnDeath@healer:
 		Weapon: FakeHealtAPC
 	AttackOpenTopped:
 		Armaments: garrisoned
@@ -8366,7 +8593,7 @@ chnukecann:
 	ProducibleWithLevel:
 		Prerequisites: upcharty
 		InitialLevels: 1
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: CHAtomicTankExplode
 		EmptyWeapon: CHAtomicTankExplode
 		RequiresCondition: !chronobeamed
@@ -9319,6 +9546,7 @@ CHSYRD:
 		RequiresCondition: classicproductionqueues
 	ProductionQueue:
 		Type: Naval
+		Group: Naval
 		DisplayOrder: 5
 	ProductionBar@NAVALGDI:
 		ProductionType: Naval
@@ -9331,8 +9559,8 @@ CHSYRD:
 		AreaTypes: building, cityi
 	RenderSprites:
 		Image: ra1syrd
-	-ProductionBar@NAVALALLIES:
-	-ProductionBar@RANAVALALLIES:
+	# -ProductionBar@NAVALALLIES:
+	# -ProductionBar@RANAVALALLIES:
 	Power:
 		Amount: -20
 
@@ -9472,7 +9700,7 @@ chmnly:
 		Mine: chminv
 	AmmoPool:
 		Ammo: 10
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: CHMineExplosive
 	Voiced:
 		VoiceSet: PRCMCCVoice
@@ -9484,7 +9712,7 @@ chminv:
 	Inherits: ^Mine
 	RenderSprites:
 		Image: chminv
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: CHMineExplosive
 	Mine:
 		AvoidFriendly: true
@@ -9505,9 +9733,9 @@ chminv.minefield:
 	GrantConditionOnPrerequisite@neutronmines:
 		Condition: neutronmines
 		Prerequisites: upneutronmines
-	Explodes:
+	FireWarheadsOnDeath:
 		RequiresCondition: !neutronmines
-	Explodes@2:
+	FireWarheadsOnDeath@2:
 		Weapon: CHNeutronMineExplosive
 		RequiresCondition: neutronmines
 	WithColoredOverlay@FORCESHIELD: #TODO
@@ -9591,77 +9819,77 @@ upchminebomb:
 #	USA Generals
 ##################################################
 
-selectusanormal:
-	Inherits: ^upgrade.template
-	Tooltip:
-		Name: Normal USA
-	Buildable:
-		BuildPaletteOrder: 1
-		BuildDuration: 0
-		Queue: Building, RABuilding
-		Description: No specialties
-		Prerequisites: ~!usaselected
-	RenderSprites:
-		Image: usausaicon
-	ProvidesPrerequisite:
-		Prerequisite: usaselected
-	ProvidesPrerequisite@2:
-		Prerequisite: selectusanormal
+# selectusanormal:
+# 	Inherits: ^upgrade.template
+# 	Tooltip:
+# 		Name: Normal USA
+# 	Buildable:
+# 		BuildPaletteOrder: 1
+# 		BuildDuration: 0
+# 		Queue: Building, RABuilding
+# 		Description: No specialties
+# 		Prerequisites: ~!usaselected
+# 	RenderSprites:
+# 		Image: usausaicon
+# 	ProvidesPrerequisite:
+# 		Prerequisite: usaselected
+# 	ProvidesPrerequisite@2:
+# 		Prerequisite: selectusanormal
 
-selectusaairforce:
-	Inherits: ^upgrade.template
-	Tooltip:
-		Name: Airforce General
-	Buildable:
-		BuildPaletteOrder: 1
-		BuildDuration: 0
-		Queue: Building, RABuilding
-		Description: - Cheaper, more effective aircraft\n- Aircraft equipped with point defense lasers\n- Passengers can fire from inside Chinooks\n- No access to heavy armor
-		Prerequisites: ~!usaselected
-	RenderSprites:
-		Image: usaairforcegeneralicon
-	ProvidesPrerequisite:
-		Prerequisite: usaselected
-	ProvidesPrerequisite@2:
-		Prerequisite: selectusaairforce
-	ProvidesPrerequisite@3:
-		Prerequisite: upusastealth
-	ProvidesPrerequisite@4:
-		Prerequisite: canselectrepair
+# selectusaairforce:
+# 	Inherits: ^upgrade.template
+# 	Tooltip:
+# 		Name: Airforce General
+# 	Buildable:
+# 		BuildPaletteOrder: 1
+# 		BuildDuration: 0
+# 		Queue: Building, RABuilding
+# 		Description: - Cheaper, more effective aircraft\n- Aircraft equipped with point defense lasers\n- Passengers can fire from inside Chinooks\n- No access to heavy armor
+# 		Prerequisites: ~!usaselected
+# 	RenderSprites:
+# 		Image: usaairforcegeneralicon
+# 	ProvidesPrerequisite:
+# 		Prerequisite: usaselected
+# 	ProvidesPrerequisite@2:
+# 		Prerequisite: selectusaairforce
+# 	ProvidesPrerequisite@3:
+# 		Prerequisite: upusastealth
+# 	ProvidesPrerequisite@4:
+# 		Prerequisite: canselectrepair
 
-selectusalaser:
-	Inherits: ^upgrade.template
-	Tooltip:
-		Name: Laser General
-	Buildable:
-		BuildPaletteOrder: 1
-		BuildDuration: 0
-		Queue: Building, RABuilding
-		Description: - Access to advanced laser weaponry\n- Less access to conventional heavy firepower\n- Defenses more reliant on power
-		Prerequisites: ~!usaselected
-	RenderSprites:
-		Image: usalasergeneralicon
-	ProvidesPrerequisite:
-		Prerequisite: usaselected
-	ProvidesPrerequisite@2:
-		Prerequisite: selectusalaser
+# selectusalaser:
+# 	Inherits: ^upgrade.template
+# 	Tooltip:
+# 		Name: Laser General
+# 	Buildable:
+# 		BuildPaletteOrder: 1
+# 		BuildDuration: 0
+# 		Queue: Building, RABuilding
+# 		Description: - Access to advanced laser weaponry\n- Less access to conventional heavy firepower\n- Defenses more reliant on power
+# 		Prerequisites: ~!usaselected
+# 	RenderSprites:
+# 		Image: usalasergeneralicon
+# 	ProvidesPrerequisite:
+# 		Prerequisite: usaselected
+# 	ProvidesPrerequisite@2:
+# 		Prerequisite: selectusalaser
 
-selectusasuper:
-	Inherits: ^upgrade.template
-	Tooltip:
-		Name: Super Weapons General
-	Buildable:
-		BuildPaletteOrder: 1
-		BuildDuration: 0
-		Queue: Building, RABuilding
-		Description: - More effective support powers\n- No access to heavy armor
-		Prerequisites: ~!usaselected
-	RenderSprites:
-		Image: usasupergeneralicon
-	ProvidesPrerequisite:
-		Prerequisite: usaselected
-	ProvidesPrerequisite@2:
-		Prerequisite: selectusasuper
+# selectusasuper:
+# 	Inherits: ^upgrade.template
+# 	Tooltip:
+# 		Name: Super Weapons General
+# 	Buildable:
+# 		BuildPaletteOrder: 1
+# 		BuildDuration: 0
+# 		Queue: Building, RABuilding
+# 		Description: - More effective support powers\n- No access to heavy armor
+# 		Prerequisites: ~!usaselected
+# 	RenderSprites:
+# 		Image: usasupergeneralicon
+# 	ProvidesPrerequisite:
+# 		Prerequisite: usaselected
+# 	ProvidesPrerequisite@2:
+# 		Prerequisite: selectusasuper
 
 ################################################################
 #
@@ -10075,37 +10303,42 @@ usajeep:
 		LocalOffset: 171,0,85
 		MuzzleSequence: muzzle
 	AttackTurreted:
-		Armaments: primary, secondary, tertiary, tertiaryup
+		Armaments: primary, garrisoned, secondary, tertiary, tertiaryup
 	WithMuzzleOverlay:
 	WithSpriteTurret:
 	Inherits@EXT: ^ExternalConditions ##########
-	Inherits@IFV: ^IFVConditionsBunker
+	# Inherits@IFV: ^IFVConditionsBunker
+	AttackOpenTopped:
+		# Voice: Attack
+		Armaments: garrisoned
+		PortOffsets: 384,0,128, 224,-341,128, 224,341,128, 0,-341,128, 0,341,128, -224,-341,128, -224,341,128, -384,0,128
+		PauseOnCondition: chronobeamed
 	AcceptsDeliveredExperience:
 		ValidTypes: USAPilot
 	Cargo:
 		Types: Infantry, Hacker, Fremen
 		MaxWeight: 5
 		LoadingCondition: notmobile
-	Armament@mg:
-		Weapon: USARangerMGGarrison
-	Armament@mg2:
-		Weapon: USARangerMGGarrison
-	Armament@mg3:
-		Weapon: USARangerMGGarrison
-	Armament@mg4:
-		Weapon: USARangerMGGarrison
-	Armament@mg5:
-		Weapon: USARangerMGGarrison
-	Armament@missile:
-		Weapon: USAMissileDefenderGarrisoned
-	Armament@missile2:
-		Weapon: USAMissileDefenderGarrisoned
-	Armament@missile3:
-		Weapon: USAMissileDefenderGarrisoned
-	Armament@missile4:
-		Weapon: USAMissileDefenderGarrisoned
-	Armament@missile5:
-		Weapon: USAMissileDefenderGarrisoned
+	# Armament@mg:
+	# 	Weapon: USARangerMGGarrison
+	# Armament@mg2:
+	# 	Weapon: USARangerMGGarrison
+	# Armament@mg3:
+	# 	Weapon: USARangerMGGarrison
+	# Armament@mg4:
+	# 	Weapon: USARangerMGGarrison
+	# Armament@mg5:
+	# 	Weapon: USARangerMGGarrison
+	# Armament@missile:
+	# 	Weapon: USAMissileDefenderGarrisoned
+	# Armament@missile2:
+	# 	Weapon: USAMissileDefenderGarrisoned
+	# Armament@missile3:
+	# 	Weapon: USAMissileDefenderGarrisoned
+	# Armament@missile4:
+	# 	Weapon: USAMissileDefenderGarrisoned
+	# Armament@missile5:
+	# 	Weapon: USAMissileDefenderGarrisoned
 	Armament@Tow:
 		Weapon: USAHumveeMissile
 		LocalOffset: 171,0,85
@@ -10441,7 +10674,7 @@ usatomamiss:
 		MovingInterval: 2
 		Type: CenterPosition
 	MissileSpawnerSlave:
-	SpawnedExplodes:
+	FireWarheadsOnDeath:
 		Weapon: GLTerroristExplosive
 		EmptyWeapon: GLTerroristExplosive
 	RenderVoxels:
@@ -10504,7 +10737,7 @@ usacrusader:
 
 usacrusader2:
 	Inherits: usacrusader
-	Inherits@IDISABLE: ^DisabledOverlay
+# 	Inherits@IDISABLE: ^DisabledOverlay
 	Inherits@focusingcrystal: ^upsusafocusingcrystal
 	Valued:
 		Cost: 900
@@ -10917,7 +11150,7 @@ USAMCV:
 	Inherits: ^Vehicle
 	Inherits@selection: ^SelectableSupportUnit
 	Inherits@mcv: ^MCV
-	Inherits@conyard: ^Conyard
+	# Inherits@conyard: ^Conyard
 	Inherits@switchableupgrades: ^usa_switchable_upgrades
 	Inherits@compositearmorusa: ^usa_composite_armor_upgrade
 	Valued:
@@ -10959,17 +11192,19 @@ USAMCV:
 	Inherits@EXT: ^ExternalConditions
 	ProvidesPrerequisite@faction:
 		Prerequisite: mmusa
+	ProvidesPrerequisite@mcv:
+		Prerequisite: mcv
 
-USAMCV.bot:
-	Inherits: USAMCV
-	Buildable:
-		BuildPaletteOrder: 200
-		BuildLimit: 1
-		Prerequisites: usastrategy, ~techlevel.medium, ~usaselected, ~botplayer, allowsMCV
-	RenderSprites:
-		Image: usamcv
-	Voiced:
-		VoiceSet: USAMCCVoice
+# USAMCV.bot:
+# 	Inherits: USAMCV
+# 	Buildable:
+# 		BuildPaletteOrder: 200
+# 		BuildLimit: 1
+# 		Prerequisites: usastrategy, ~techlevel.medium, ~usaselected, ~botplayer, allowsMCV
+# 	RenderSprites:
+# 		Image: usamcv
+# 	Voiced:
+# 		VoiceSet: USAMCCVoice
 
 usacommand:
 	GrantExternalConditionToOwner@BuildingsOwned:
@@ -11000,9 +11235,9 @@ usacommand:
 	Production@NORMAL:
 		Produces: Building, Defence
 		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RABuilding, RADefence
-		RequiresCondition: classicproductionqueues
+	# Production@CLASSICPRODUCTIONQUEUES:
+	# 	Produces: RABuilding, RADefence
+	# 	RequiresCondition: classicproductionqueues
 	ProductionQueue@AlphaBuilding:
 		Type: Building
 		DisplayOrder: 0
@@ -11022,12 +11257,12 @@ usacommand:
 	ProductionBar@DefenceAlpha:
 		ProductionType: Defence
 		RequiresCondition: !classicproductionqueues
-	ProductionBar@RABuildingAlpha:
-		ProductionType: RABuilding
-		RequiresCondition: classicproductionqueues
-	ProductionBar@RADefenceAlpha:
-		ProductionType: RADefence
-		RequiresCondition: classicproductionqueues
+	# ProductionBar@RABuildingAlpha:
+	# 	ProductionType: RABuilding
+	# 	RequiresCondition: classicproductionqueues
+	# ProductionBar@RADefenceAlpha:
+	# 	ProductionType: RADefence
+	# 	RequiresCondition: classicproductionqueues
 	BaseProvider:
 		Range: 14c0
 	ProvidesPrerequisite@buildingname:
@@ -11047,6 +11282,11 @@ usacommand:
 		SpawnOffset: -1024,1024,0 #-1323,1280,0
 		ExitCell: 0,2
 		Facing: 135
+	-Transforms:
+	-TransformsIntoMobile:
+	-TransformsIntoPassenger:
+	-TransformsIntoRepairable:
+	-TransferTimedExternalConditionOnTransform:
 	Voiced:
 		VoiceSet: USACommandCenterVoice
 	GrantConditionOnProduction@1b:
@@ -11209,6 +11449,7 @@ usabarracks:
 	Inherits@CPQWP: ^CPQConditionWithPrimary
 	Inherits@prod: ^ProducesUnits
 	Inherits@gensound: ^GeneralsDamageBuilding
+	Inherits@barr: ^IsBarrackOld
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -11268,7 +11509,7 @@ usabarracks:
 usapatriot:
 	Inherits: ^Defense
 	Inherits@AUTOTARGET: ^AutoTargetAll
-	Inherits@IDISABLE: ^DisabledOverlay
+# 	Inherits@IDISABLE: ^DisabledOverlay
 	Inherits@EMP: ^TurretEMP
 	Inherits@gensound: ^GeneralsDamageBuilding
 	Valued:
@@ -11312,7 +11553,7 @@ usapatriot:
 	DetectCloaked:
 		Range: 5c0
 		RequiresCondition: !disabled && !lowpower
-	-RenderDetectionCircle:
+	# -RenderDetectionCircle:
 	Power:
 		Amount: -30
 	Voiced:
@@ -11356,7 +11597,7 @@ usapatriot2:
 usalasertur:
 	Inherits: ^Defense
 	Inherits@AUTOTARGET: ^AutoTargetAll
-	Inherits@IDISABLE: ^DisabledOverlay
+# 	Inherits@IDISABLE: ^DisabledOverlay
 	Inherits@EMP: ^TurretEMP
 	Inherits@gensound: ^GeneralsDamageBuilding
 	Inherits@focusingcrystal: ^upsusafocusingcrystal
@@ -11414,7 +11655,7 @@ usalasertur:
 		QuantizedFacings: 8
 	DetectCloaked:
 		Range: 5c0
-	-RenderDetectionCircle:
+	# -RenderDetectionCircle:
 	Power:
 		Amount: -40
 	Voiced:
@@ -11499,6 +11740,8 @@ usahook:
 	Tooltip:
 		Name: Chinook
 	Harvester:
+		Capacity: 16
+	StoresResources:
 		Capacity: 16
 	Health:
 		HP: 30000
@@ -11684,6 +11927,7 @@ usaweap:
 	Inherits@CPQWP: ^CPQConditionWithPrimary
 	Inherits@prod: ^ProducesUnits
 	Inherits@gensound: ^GeneralsDamageBuilding
+	Inherits@weap: ^IsWeaponFactoryOld
 	Valued:
 		Cost: 2000
 	Tooltip:
@@ -11792,11 +12036,11 @@ usastrategy:
 		SelectTargetSpeechNotification: SelectTarget
 		CameraActor: camera
 		CameraRemoveDelay: 150
-		UnitType: usabomber.carpet2
+		UnitTypes: usabomber.carpet2
 		QuantizedFacings: 8
 		DisplayBeacon: true
 		BeaconPoster: airstrike
-		SquadSize: 1
+		SquadSizes: 1
 		SquadOffset: 1792,1792,0
 		ArrowSequence: arrow
 		ClockSequence: clock
@@ -11839,6 +12083,7 @@ usaairport:
 	Inherits@prod: ^ProducesUnits
 	Inherits@CPQWP: ^CPQConditionWithPrimary
 	Inherits@gensound: ^GeneralsDamageBuilding
+	Inherits@hpad: ^IsAircraftFactoryOld
 	Buildable:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 130
@@ -11958,7 +12203,7 @@ usadropzone:
 
 usacannon:
 	Inherits: ^BaseBuilding
-	Inherits@IDISABLE: ^DisabledOverlay
+# 	Inherits@IDISABLE: ^DisabledOverlay
 	Inherits@shape: ^4x2Shape
 	Inherits@SW: ^PrimarySuperweapon
 	Inherits@gensound: ^GeneralsDamageBuilding
@@ -12001,7 +12246,7 @@ usacannon:
 		SelectTargetSpeechNotification: SelectTarget
 		DisplayTimerStances: Ally, Neutral, Enemy
 		DisplayRadarPing: True
-		Actor: usacannon.beam
+		Actors: usacannon.beam
 		SupportPowerPaletteOrder: 20
 		EffectSequence: idle
 	WithBuildingBib:
@@ -12185,7 +12430,7 @@ usagunship:
 	RenderSprites:
 		Image: usagunship
 	-ExternalCondition@STASIS:
-	-DelayedWeaponAttachable@lockdown:
+	# -DelayedWeaponAttachable@lockdown:
 	-ExternalCondition@EMP:
 
 usaspydronepower:
@@ -13214,6 +13459,7 @@ USASYRD:
 		RequiresCondition: classicproductionqueues
 	ProductionQueue:
 		Type: Naval
+		Group: Naval
 		DisplayOrder: 5
 	ProductionBar@NAVALGDI:
 		ProductionType: Naval
@@ -13226,8 +13472,8 @@ USASYRD:
 		AreaTypes: building, cityi
 	RenderSprites:
 		Image: ra1syrd
-	-ProductionBar@NAVALALLIES:
-	-ProductionBar@RANAVALALLIES:
+	# -ProductionBar@NAVALALLIES:
+	# -ProductionBar@RANAVALALLIES:
 	Power:
 		Amount: -20
 
@@ -13442,8 +13688,9 @@ usacarrier:
 		Queue: Naval, RANaval
 	GainsExperience:
 		LevelUpNotification: LevelUpRA2
+
 usaraptorcarrier:
-	Inherits: ^Plane
+	Inherits: ^RANeutralPlane
 	Inherits@EXPERIENCE: ^GainsExperience
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
 	Inherits@CM: ^CountermeasuresUpgrade
@@ -13489,8 +13736,11 @@ usaraptorcarrier:
 	RenderSprites:
 		Image: usaraptor
 	-MapEditorData:
+	SpawnActorOnDeath:
+		Actor: usaraptor.husk
 	GainsExperience:
 		LevelUpNotification: LevelUpRA2
+
 usauwusupply:
 	Inherits: TRUCK
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
@@ -13755,7 +14005,7 @@ leangmcv:
 	Inherits: ^Vehicle
 	Inherits@selection: ^SelectableSupportUnit
 	Inherits@mcv: ^MCV
-	Inherits@conyard: ^Conyard
+	# Inherits@conyard: ^Conyard
 	Valued:
 		Cost: 3000
 	Tooltip:
@@ -13797,17 +14047,19 @@ leangmcv:
 		Image: usamcv
 	ProvidesPrerequisite@faction:
 		Prerequisite: mmleang
+	ProvidesPrerequisite@mcv:
+		Prerequisite: mcv
 
-leangmcv.bot:
-	Inherits: leangmcv
-	Buildable:
-		BuildPaletteOrder: 200
-		BuildLimit: 1
-		Prerequisites: chpropaganda, ~techlevel.high, ~botplayer, allowsMCV
-	RenderSprites:
-		Image: chmcv
-	Voiced:
-		VoiceSet: PRCMCCVoice
+# leangmcv.bot:
+# 	Inherits: leangmcv
+# 	Buildable:
+# 		BuildPaletteOrder: 200
+# 		BuildLimit: 1
+# 		Prerequisites: chpropaganda, ~techlevel.high, ~botplayer, allowsMCV
+# 	RenderSprites:
+# 		Image: chmcv
+# 	Voiced:
+# 		VoiceSet: PRCMCCVoice
 
 leangcommand:
 	Inherits: chcommand
@@ -13837,16 +14089,16 @@ leangcommand:
 		ChargeInterval: 3000
 		Name: Cash Bounty
 		Description: Makes selected targets grant 40% of value\nupon being killed or destroyed.
-		Duration: 1000
+		Durations: 1000
 		SelectTargetSpeechNotification: SelectTarget
 		DisplayRadarPing: True
-		Condition: glabounty3
+		Conditions: glabounty3
 		ValidStances: Enemy, Neutral
 		Prerequisites: upglabounty3
 		StartFullyCharged: true
 		Dimensions: 9, 9
-		Footprint: ____x____ ___xxx___ __xxxxx__ _xxxxxxx_ xxxxxxxxx _xxxxxxx_ __xxxxx__ ___xxx___ ____x____
-	ClassicAirstrikePower@Spectre:
+		Footprints: ____x____ ___xxx___ __xxxxx__ _xxxxxxx_ xxxxxxxxx _xxxxxxx_ __xxxxx__ ___xxx___ ____x____
+	AirstrikePower@Spectre:
 		Squad:
 			usagunship:
 				SpawnOffset: -1536,1024,0
@@ -13877,6 +14129,8 @@ leangcommand:
 		CircleDelay: 20
 		OrderName: AirstrikePowerSpectre
 		SupportPowerPaletteOrder: 20
+		UnitTypes: usagunship
+		SquadSizes: 4
 	-GrantConditionOnPrerequisite@selected:
 	-FreeActor@selectedhack:
 	RenderSprites:
@@ -14374,6 +14628,7 @@ leangsyrd:
 		RequiresCondition: classicproductionqueues
 	ProductionQueue:
 		Type: Naval
+		Group: Naval
 		DisplayOrder: 5
 	ProductionBar@NAVALGDI:
 		ProductionType: Naval
@@ -14386,8 +14641,8 @@ leangsyrd:
 		AreaTypes: building, cityi
 	RenderSprites:
 		Image: ra1syrd
-	-ProductionBar@NAVALALLIES:
-	-ProductionBar@RANAVALALLIES:
+	# -ProductionBar@NAVALALLIES:
+	# -ProductionBar@RANAVALALLIES:
 	Power:
 		Amount: -20
 

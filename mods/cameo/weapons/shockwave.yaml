@@ -3200,7 +3200,7 @@ SCHRadiationGrenade:
 		Spread: 341
 		Damage: 2000
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
-	Warhead@3Radiation: CreateTintedCells
+	Warhead@3Radiation: CreateTintedCellsS
 		Spread: 2c0
 		Level: 100
 		LayerName: genradiation
@@ -3223,3 +3223,19 @@ SCHTankHunterNukeBomb:
 		Spread: 3c0
 		Level: 100
 		LayerName: genradiation
+
+USAParticleCannonDamage3:
+	Inherits: USAParticleCannonDamage
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c768
+		Damage: 4500
+		Versus:
+			None: 300
+			Wood: 250
+			Concrete: 175
+
+USAParticleCannonDamage4:
+	Inherits: USAParticleCannonDamage3
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c768
+		Damage: 6000
