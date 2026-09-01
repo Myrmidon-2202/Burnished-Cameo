@@ -367,6 +367,7 @@ wc_h_townhall:
 		IsDragRequired: True
 		DragOffset: -554,512,0
 		DragLength: 12
+		MaxQueueLength: 10
 	StoresResources:
 		Capacity: 1000
 	WithResourceStoragePipsDecoration:
@@ -443,6 +444,7 @@ wc_h_farm:
 		Position: BottomLeft
 		RequiresSelection: true
 		PipCount: 5
+
 wc_h_guard_tower:
 	Inherits: ^Defense
 	Inherits@AUTOTARGET: ^AutoTargetAll
@@ -629,6 +631,7 @@ wc_h_lumbermill:
 		IsDragRequired: True
 		DragOffset: -554,512,0
 		DragLength: 12
+		MaxQueueLength: 10
 	StoresResources:
 		Capacity: 1000
 	Selectable:

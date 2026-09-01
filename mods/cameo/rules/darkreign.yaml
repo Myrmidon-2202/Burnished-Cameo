@@ -43,18 +43,18 @@ World:
 		Side: Factions
 		Description: Aliens from DR EOD\nSupport powers: Nothing
 		Selectable: True
-	FactionCA@drdescendants:
-		Name: Descendants
-		InternalName: drdescendants
-		Game: Dark Reign
-		Side: Factions
-		Description: Custom Faction based on Xenites\nSupport powers: Minevah Wildlife\nBased on Xenites, pre
-		Alliance,\n Uses recycled Imperial Technology\n Enemies: Shadowhand, Imperium
-		Selectable: True
+	# FactionCA@drdescendants:
+	# 	Name: Descendants
+	# 	InternalName: drdescendants
+	# 	Game: Dark Reign
+	# 	Side: Factions
+	# 	Description: Custom Faction based on Xenites\nSupport powers: Minevah Wildlife\nBased on Xenites, pre
+	# 	Alliance,\n Uses recycled Imperial Technology\n Enemies: Shadowhand, Imperium
+	# 	Selectable: True
 	FactionCA@RandomDR:
 		Name: Any
 		InternalName: RandomDR
-		RandomFactionMembers: imperium, freedomguard, shadowhand, xenite, togran, aterrorist, eodaliens, drdescendants
+		RandomFactionMembers: imperium, freedomguard, shadowhand, xenite, togran, aterrorist, eodaliens, #drdescendants
 		Game: Dark Reign
 		Side: Random
 		Description: Random Faction\nA random faction from Dark Reign will be chosen when the game starts.
@@ -282,6 +282,7 @@ drpowr:
 		Position: BottomLeft
 		RequiresSelection: true
 		PipCount: 10
+
 drwaterl.imperium:
 	Inherits: ^BaseBuilding
 	Inherits@SHADOWS: ^Shadows
@@ -351,6 +352,7 @@ drwaterl.imperium:
 		RequiresSelection: true
 		PipCount: 17
 		FullSequence: pip-yellow
+
 drwaterl.freedom:
 	Inherits: drwaterl.imperium
 	Buildable:
@@ -362,6 +364,7 @@ drwaterl.freedom:
 		Image: drwaterl
 	FreeActor:
 		Actor: drfrigth.freedom
+
 drwaterextract.freedomguard:
 	Inherits: OILB.Building
 	Inherits: ^BaseBuilding
@@ -392,7 +395,7 @@ drwaterextract.freedomguard:
 	CaptureManager:
 	Capturable:
 		Types: building
-	EngineerRepairable:
+	# EngineerRepairable:
 	CashTrickler:
 		Interval: 1500
 		Amount: 3000
@@ -405,6 +408,7 @@ drwaterextract.freedomguard:
 	-WithDeathAnimation:
 	Power:
 		Amount: -50
+
 drwaterextract.imperium:
 	Inherits: drwaterextract.freedomguard
 	Buildable:
@@ -414,15 +418,21 @@ drwaterextract.imperium:
 		Description: Provides Passive income
 	RenderSprites:
 		Image: drwaterextract
+
 drfrigth.imperium:
-	Inherits: HARV
-	Inherits@DRShadow: ^InfantryShadows
+	# Inherits: HARV
+	Inherits: ^Tank
+	Inherits@selection: ^SelectableEconomicUnit
+	Inherits: ^Harvester
+	# Inherits@DRShadow: ^InfantryShadows
 	Tooltip:
 		Name: Freighter
 		GenericName: Harvester
 	Buildable:
 		Prerequisites: drwaterl.imperium
 		Queue: Vehicle, RAVehicle
+	StoresResources:
+		Capacity: 30
 	Selectable:
 		DecorationBounds: 1536, 1536
 	RenderSprites:
@@ -431,14 +441,19 @@ drfrigth.imperium:
 		VoiceSet: DRImperiumVoice
 
 drfrigth.freedom:
-	Inherits: HARV
-	Inherits@DRShadow: ^InfantryShadows
+	# Inherits: HARV
+	Inherits: ^Tank
+	Inherits@selection: ^SelectableEconomicUnit
+	Inherits: ^Harvester
+	# Inherits@DRShadow: ^InfantryShadows
 	Tooltip:
 		Name: Freighter
 		GenericName: Harvester
 	Buildable:
 		Prerequisites: drwaterl.freedom
 		Queue: Vehicle, RAVehicle
+	StoresResources:
+		Capacity: 30
 	Selectable:
 		DecorationBounds: 1536, 1536
 	RenderSprites:
@@ -474,9 +489,11 @@ drhoverfright.imperium:
 		Type: Heavy
 	RevealsShroud:
 		Range: 4c0
+	StoresResources:
+		Capacity: 30
 	WithHarvestAnimation:
 	WithDockingAnimation:
-	Explodes:
+	FireWarheadsOnDeath:
 		RequiresCondition: !no-tiberium
 		Weapon: TiberiumExplosion
 	SelectionDecorations:
@@ -504,6 +521,7 @@ drhoverfright.freedom:
 		Image: drhoverfright
 	Voiced:
 		VoiceSet: DRFreedomGuardVoice
+
 drspy.freedom:
 	Inherits: ^Soldier
 	Inherits@EXT: ^ExternalConditions
@@ -563,6 +581,7 @@ drspy.imperium:
 		Description: Infiltrates enemy structures for intel or\nsabotage. Exact effect depends on the\nbuilding infiltrated.\nLoses disguise when attacking.\nCan detect spies.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft\n  Special Ability: Disguise
 	Voiced:
 		VoiceSet: DRImperiumSpyVoice
+
 drcamera:
 	Inherits: ^Defense
 	Inherits@AUTOTARGET: ^AutoTargetAll
@@ -700,6 +719,7 @@ drcamera:
 		Condition: jammed
 	ProvidesRadar:
 		RequiresCondition: !jammed
+
 ^UpgradesDRFGHQType:
 	Inherits: ^UpgradesDRIHQType
 	Production@drihq1:
@@ -720,6 +740,7 @@ drcamera:
 	ProvidesPrerequisite@drihq3:
 		Prerequisite: drfghq3
 		RequiresCondition: lvl3
+
 ^UpgradesDRIBARRType:
 	Power@lvl1:
 		Amount: -20
@@ -1286,9 +1307,10 @@ drihelipad.imperium:
 	WithIdleOverlay@BOTTOM:
 		RequiresCondition: !build-incomplete
 		Sequence: idle-bottom
+
 driportal.imperium:
 	Inherits: ^BaseBuilding
-	Inherits@IDISABLE: ^DisabledOverlay
+	# Inherits@IDISABLE: ^DisabledOverlay
 	Inherits@shape: ^2x2Shape
 	Selectable:
 		Bounds: 2048, 2048
@@ -1350,7 +1372,7 @@ driportal.imperium:
 
 dririft.imperium:
 	Inherits: ^BaseBuilding
-	Inherits@IDISABLE: ^DisabledOverlay
+	# Inherits@IDISABLE: ^DisabledOverlay
 	Inherits@SW: ^PrimarySuperweapon
 	Inherits@sell: ^TDSpawnActorsOnSell
 	Inherits@tech: ^IsTechnoBuilding
@@ -2112,7 +2134,7 @@ drttnk:
 	AttackTurreted:
 	WithMuzzleOverlay:
 	WithSpriteTurret:
-	Explodes@OVERLOAD:
+	FireWarheadsOnDeath@OVERLOAD:
 		Weapon: DRTachionSuicideExplosion
 		EmptyWeapon: DRTachionSuicideExplosion
 		RequiresCondition: meltdown
@@ -2123,7 +2145,7 @@ drttnk:
 		Delay: 20
 		RequiresCondition: overload
 		GrantsCondition: meltdown
-	Explodes:
+	FireWarheadsOnDeath:
 		RequiresCondition: !overload
 	Inherits@EXT: ^ExternalConditions ##########
 	AcceptsDeliveredExperience: ##########
@@ -2220,7 +2242,7 @@ drscarab:
 	WithMuzzleOverlay:
 	AutoTarget:
 		InitialStanceAI: Defend
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: ArtilleryShell
 		EmptyWeapon: UnitExplode
 		LoadedChance: 75
@@ -3313,7 +3335,7 @@ draacannon1:
 	RenderSprites:
 drpplant1.freedomguard:
 	Inherits: ^BaseBuilding
-	Inherits@IDISABLE: ^DisabledOverlay
+	# Inherits@IDISABLE: ^DisabledOverlay
 	Inherits@shape: ^3x3Shape
 	Inherits@tech: ^IsTechnoBuilding
 	Inherits@AIDifficulties: ^AIDifficulties
@@ -4259,7 +4281,7 @@ drarty:
 	WithMuzzleOverlay:
 	AutoTarget:
 		InitialStanceAI: Defend
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: ArtilleryShell
 		EmptyWeapon: UnitExplode
 		LoadedChance: 75
@@ -5129,7 +5151,7 @@ driweap.shadowhand:
 		Image: driweap
 drmadrix.shadowhand:
 	Inherits: ^BaseBuilding
-	Inherits@IDISABLE: ^DisabledOverlay
+	# Inherits@IDISABLE: ^DisabledOverlay
 	Inherits@shape: ^3x2Shape
 	Selectable:
 		Bounds: 131072, 131072
@@ -6558,7 +6580,7 @@ drihelipad.togran:
 		Sequence: idle-bottom
 driportal.togran:
 	Inherits: ^BaseBuilding
-	Inherits@IDISABLE: ^DisabledOverlay
+	# Inherits@IDISABLE: ^DisabledOverlay
 	Inherits@shape: ^2x2Shape
 	Selectable:
 		Bounds: 2048, 2048
@@ -7030,7 +7052,7 @@ drtscout:
 	Targetable@AIRBORNE:
 		TargetTypes: Air, Aircraft
 		RequiresCondition: airborne && !chronobeamed
-	Explodes@airborne:
+	FireWarheadsOnDeath@airborne:
 		Weapon: HeliExplode
 		EmptyWeapon: HeliExplode
 		RequiresCondition: airborne
@@ -7097,7 +7119,7 @@ drticktank:
 	Targetable@AIRBORNE:
 		TargetTypes: Air, Aircraft
 		RequiresCondition: airborne && !chronobeamed
-	Explodes@airborne:
+	FireWarheadsOnDeath@airborne:
 		Weapon: HeliExplode
 		EmptyWeapon: HeliExplode
 		RequiresCondition: airborne
@@ -8228,6 +8250,7 @@ drttransport.e2:
 		DeployTicks: 0
 	RenderSprites:
 		Image: drttransport
+
 drtanker:
 	Inherits: ^Tank
 	Inherits@selection: ^SelectableEconomicUnit
@@ -8256,6 +8279,8 @@ drtanker:
 		SearchFromProcRadius: 15
 		SearchFromHarvesterRadius: 8
 		EmptyCondition: no-tiberium
+	StoresResources:
+		Capacity: 20
 	Mobile:
 		Speed: 85
 	Health:
@@ -8268,10 +8293,10 @@ drtanker:
 		Range: 4c0
 	WithHarvestAnimation:
 	WithDockingAnimation:
-	Explodes:
+	FireWarheadsOnDeath:
 		RequiresCondition: !no-tiberium
 		Weapon: TiberiumExplosion
-	Explodes@empty:
+	FireWarheadsOnDeath@empty:
 		RequiresCondition: no-tiberium
 		Weapon: UnitExplodeHarvEmpty
 	SelectionDecorations:
@@ -8326,7 +8351,7 @@ drtarty:
 	WithMuzzleOverlay:
 	AutoTarget:
 		InitialStanceAI: Defend
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: ArtilleryShell
 		EmptyWeapon: UnitExplode
 		LoadedChance: 75
@@ -9445,6 +9470,7 @@ drsalamander:
 	DetectCloaked:
 		Range: 5c0
 	RenderDetectionCircle:
+
 drassimilator:
 	Inherits@Test: ^Infantry
 	Inherits: ^Vehicle
@@ -9517,6 +9543,8 @@ drgather:
 		SearchFromProcRadius: 15
 		SearchFromHarvesterRadius: 8
 		EmptyCondition: no-tiberium
+	StoresResources:
+		Capacity: 20
 	Mobile:
 		Speed: 85
 	Health:
@@ -9529,10 +9557,10 @@ drgather:
 		Range: 4c0
 	WithHarvestAnimation:
 	WithDockingAnimation:
-	Explodes:
+	FireWarheadsOnDeath:
 		RequiresCondition: !no-tiberium
 		Weapon: TiberiumExplosion
-	Explodes@empty:
+	FireWarheadsOnDeath@empty:
 		RequiresCondition: no-tiberium
 		Weapon: UnitExplodeHarvEmpty
 	SelectionDecorations:
@@ -9541,6 +9569,7 @@ drgather:
 	RenderSprites:
 	Voiced:
 		VoiceSet: DRGathererVoice
+
 drdrednaut:
 	Inherits: ^Tank
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -10357,6 +10386,7 @@ drdpower:
 		Position: BottomLeft
 		RequiresSelection: true
 		PipCount: 10
+
 mcv.descendants:
 	Inherits: ^Soldier
 	Inherits@selection: ^SelectableSupportUnit
@@ -10404,6 +10434,7 @@ mcv.descendants:
 		VoiceSet: DRFGRigVoice
 	Passenger:
 		Weight: 1
+
 drfghq.descendants:
 	Inherits: ^DRHQStats
 	Tooltip:
@@ -10787,7 +10818,7 @@ drdissecator:
 	CaptureManager:
 	Capturable:
 		Types: building
-	EngineerRepairable:
+	# EngineerRepairable:
 	Tooltip:
 		Name: Dissecator Facility
 	TooltipDescription@ally:
@@ -10796,7 +10827,7 @@ drdissecator:
 	TooltipDescription@other:
 		Description: Capture to receive superweapon dissecator.
 		ValidRelationships: Neutral, Enemy
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: BarrelExplode
 	GpsDot:
 		String: Oil
@@ -10804,21 +10835,22 @@ drdissecator:
 	NukePower:
 		PauseOnCondition: lowpower
 		Prerequisites: ~techlevel.superweapons, !techlevel.unlimited
-		Icon: abomb
+		Icons: abomb
 		Cursor: nuke
 		ChargeInterval: 9000
-		Name: Nuclear Strike
-		Description: Launch a tactical nuclear warhead.\nApplies heavy damage over a large area.
+		Names: Nuclear Strike
+		Descriptions: Launch a tactical nuclear warhead.\nApplies heavy damage over a large area.
 		EndChargeSpeechNotification: NuclearWeaponAvailable
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
 		LaunchSpeechNotification: NuclearWeaponLaunched
 		IncomingSpeechNotification: NuclearWarheadApproaching
-		MissileWeapon: DRDissecator
+		MissileWeapons: DRDissecator
 		MissileDelay: 11
 		SpawnOffset: 3c0,0,-1c512
 		DisplayBeacon: True
-		BeaconPoster: atomic
+		BeaconPosters:
+			1: atomic
 		BeaconPosterPalette: beaconposter
 		DisplayRadarPing: True
 		CameraRange: 10c0
@@ -10829,23 +10861,29 @@ drdissecator:
 		MissileImage: DRDissecator
 	NukePower@unlimited:
 		AllowMultiple: True
-		Prerequisites: ~techlevel.unlimited
+		Prerequisites: 
+			1: ~techlevel.unlimited
 		PauseOnCondition: lowpower
-		Icon: abomb
+		Icons: 
+			1: abomb
 		Cursor: nuke
 		ChargeInterval: 9000
-		Name: Nuclear Strike
-		Description: Launch a tactical nuclear warhead.\nApplies heavy damage over a large area.
+		Names: 
+			1: Dissicator Strike
+		Descriptions: 
+			1: Launch a tactical nuclear warhead.\nApplies heavy damage over a large area.
 		EndChargeSpeechNotification: NuclearWeaponAvailable
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
 		LaunchSpeechNotification: NuclearWeaponLaunched
 		IncomingSpeechNotification: NuclearWarheadApproaching
-		MissileWeapon: DRDissecator
+		MissileWeapons: 
+			1: DRDissecator
 		MissileDelay: 11
 		SpawnOffset: 3c0,0,-1c512
 		DisplayBeacon: True
-		BeaconPoster: atomic
+		BeaconPosters: 
+			1: atomic
 		BeaconPosterPalette: beaconposter
 		DisplayRadarPing: True
 		CameraRange: 10c0
@@ -10878,7 +10916,7 @@ drwaterextract:
 	CaptureManager:
 	Capturable:
 		Types: building
-	EngineerRepairable:
+	# EngineerRepairable:
 	Tooltip:
 		Name: Water Extractor
 	TooltipDescription@ally:
@@ -10887,7 +10925,7 @@ drwaterextract:
 	TooltipDescription@other:
 		Description: Capture to receive additional funds.
 		ValidRelationships: Neutral, Enemy
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: BarrelExplode
 	GpsDot:
 		String: Oil
@@ -10916,7 +10954,7 @@ drcivplant:
 	CaptureManager:
 	Capturable:
 		Types: building
-	EngineerRepairable:
+	# EngineerRepairable:
 	Tooltip:
 		Name: Gas Power Plant
 	TooltipDescription@ally:
@@ -10925,7 +10963,7 @@ drcivplant:
 	TooltipDescription@other:
 		Description: Capture to receive additional funds.
 		ValidRelationships: Neutral, Enemy
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: BarrelExplode
 	GpsDot:
 		String: Oil
@@ -10996,6 +11034,7 @@ drarmciv:
 	RenderSprites:
 	Voiced:
 		VoiceSet: DRArmedCivilian
+
 drzombie:
 	Inherits: ^Soldier
 	Inherits@EXPERIENCE: ^GainsExperience

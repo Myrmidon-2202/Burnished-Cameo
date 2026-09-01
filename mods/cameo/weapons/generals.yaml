@@ -56,9 +56,69 @@ CHFlameRadiationB:
 
 
 GLScorpionShell:
-	Inherits: 25mm
+	Inherits: ^Grenade
+	Inherits: ^ShrapnelWeapon
+	Inherits: ^LightFlameWeapon
+	Inherits: ^MediumChemicalWeapon
+	Inherits: ^TankDestroyerCannon
+	Inherits: ^MediumCannon
 	ReloadDelay: 25
+	Range: 4477
 	Report: vscoweaa.wav, vscoweab.wav, vscoweac.wav, vscowead.wav
+	Projectile: Bullet
+		Speed: 447
+		Image: 50CAL
+		-LaunchAngle:
+	Warhead@Grenade: SpreadDamage
+		Damage: 2000
+		DamageTypes: Prone75Percent, TriggerProne, ExplosionDeath
+	Warhead@GrenadeFriendlyFire: SpreadDamage
+		Damage: 1000
+		DamageTypes: Prone75Percent, TriggerProne, ExplosionDeath
+	Warhead@GrenadePercentage: HealthPercentageDamage
+		Damage: 1
+		DamageTypes: Prone75Percent, TriggerProne, ExplosionDeath
+	Warhead@ShrapnelWeapon: SpreadDamage
+		Damage: 2000
+		DamageTypes: Prone75Percent, TriggerProne, ExplosionDeath
+	Warhead@ShrapnelWeaponFriendlyFire: SpreadDamage
+		Damage: 1000
+		DamageTypes: Prone75Percent, TriggerProne, ExplosionDeath
+	Warhead@ShrapnelWeaponPercentage: HealthPercentageDamage
+		Damage: 1
+		DamageTypes: Prone75Percent, TriggerProne, ExplosionDeath
+	Warhead@LightFlameWeapon: SpreadDamage
+		Damage: 2000
+		DamageTypes: Prone75Percent, TriggerProne, ExplosionDeath, MakeScrapbox
+	Warhead@LightFlameWeaponFriendlyFire: SpreadDamage
+		Damage: 1000
+		DamageTypes: Prone75Percent, TriggerProne, ExplosionDeath, MakeScrapbox
+	Warhead@LightFlameWeaponPercentage: HealthPercentageDamage
+		Damage: 1
+		DamageTypes: Prone75Percent, TriggerProne, ExplosionDeath, MakeScrapbox
+	Warhead@MediumChemicalWeapon: SpreadDamage
+		Damage: 2000
+		DamageTypes: Prone75Percent, TriggerProne, ExplosionDeath, MakeScrapbox
+	Warhead@MediumChemicalWeaponFriendlyFire: SpreadDamage
+		Damage: 1000
+		DamageTypes: Prone75Percent, TriggerProne, ExplosionDeath, MakeScrapbox
+	Warhead@MediumChemicalWeaponPercentage: HealthPercentageDamage
+		Damage: 1
+		DamageTypes: Prone75Percent, TriggerProne, ExplosionDeath, MakeScrapbox
+	Warhead@TankDestroyerCannon: SpreadDamage
+		Damage: 2000
+		DamageTypes: Prone75Percent, TriggerProne, ExplosionDeath, MakeScrapbox
+	Warhead@TankDestroyerCannonPercentage: HealthPercentageDamage
+		Damage: 1
+		DamageTypes: Prone75Percent, TriggerProne, ExplosionDeath, MakeScrapbox
+	Warhead@MediumCannon: SpreadDamage
+		Damage: 2000
+		DamageTypes: Prone75Percent, TriggerProne, ExplosionDeath, MakeScrapbox
+	Warhead@MediumCannonPercentage: HealthPercentageDamage
+		Damage: 1
+		DamageTypes: Prone75Percent, TriggerProne, ExplosionDeath, MakeScrapbox
+	Warhead@Effect: CreateEffect
+		ImpactSounds: xplos.aud
 	Warhead@1Dam: SpreadDamage
 		Damage: 2500
 		Versus:
@@ -115,6 +175,7 @@ GlScorpionMissile:
 			Light: 80
 			Medium: 60
 			Heavy: 50
+		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath, MakeScrapbox
 
 GlScorpionMissileToxin:
 	Inherits: GlScorpionMissile
@@ -133,14 +194,21 @@ GlScorpionMissileToxinTwin:
 #####################################################
 
 GLMarauderShell:
-	Inherits: 90mm
 	ReloadDelay: 50
+	Range: 5159
 	Report: vmarweaa.wav, vmarweab.wav, vmarweac.wav, vmarwead.wav
+	Projectile: Bullet
+		Speed: 515
+	Warhead@MediumCannonPercentage: HealthPercentageDamage
+		Damage: 4
+		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath, MakeScrapbox
 	Warhead@1Dam: SpreadDamage
-		Damage: 6000
+		Damage: 12000
 		Versus:
 			None: 10
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath, MakeScrapbox
+	Warhead@Effect: CreateEffect
+		Explosions: small_poof
 
 GLMarauderShellToxin:
 	Inherits: GLMarauderShell
@@ -666,7 +734,8 @@ GLGunboatShell:
 #####################################################
 
 GLQuadCannonGround:
-	Inherits: APCGun
+	Inherits: ^Chaingun
+	Inherits: ^FlakWeapon
 	ReloadDelay: 3
 	Range: 3c768
 	Report: vquaweaa.wav, vquaweab.wav, vquaweac.wav, vquawead.wav, vquaweae.wav, vquaweaf.wav, vquaweag.wav
@@ -683,6 +752,22 @@ GLQuadCannonGround:
 	Warhead@2Eff: CreateEffect
 		Explosions: piffs
 		ValidTargets: Ground, Water, Air
+		DamageTypes: Prone50Percent, TriggerProne, BulletDeath, MakeScrapbox
+	Warhead@Chaingun: SpreadDamage
+		ValidTargets: Ground, Water, Trees
+		Damage: 2000
+	Warhead@ChaingunPercentage: HealthPercentageDamage
+		ValidTargets: Ground, Water, Trees
+		Damage: 1
+		DamageTypes: Prone50Percent, TriggerProne, BulletDeath, MakeScrapbox
+	Warhead@FlakWeapon: SpreadDamage
+		ValidTargets: Ground, Water, Trees
+		Damage: 2000
+		DamageTypes: Prone50Percent, TriggerProne, BulletDeath, MakeScrapbox
+	Warhead@FlakWeaponPercentage: HealthPercentageDamage
+		ValidTargets: Ground, Water, Trees
+		Damage: 1
+		DamageTypes: Prone50Percent, TriggerProne, BulletDeath, MakeScrapbox
 
 GLQuadCannonAir:
 	Inherits: GLQuadCannonGround
@@ -909,7 +994,9 @@ CHNukeCannon:
 			Heavy: 100
 			Concrete: 50
 	Warhead@3Eff: CreateEffect
-		Explosions: schnukeexplosion
+		# Explosions: schnukeexplosion
+		Explosions: nuke_explosion
+
 CHNukeCannonNeutron:
 	Inherits: CHNukeCannon
 	ValidTargets: Infantry, DriverKill, LoadedVehicle, Garrisoned, GarrisonedNBC
@@ -2761,7 +2848,8 @@ SCHNeutronBomb:
 		ValidRelationships: Enemy
 		InvalidTargets: LoadedVehicle, NeutronImmune
 	Warhead@3Eff: CreateEffect
-		Explosions: schnukeexplosion
+		# Explosions: schnukeexplosion
+		Explosions: nuke_explosion
 		ImpactSounds: sneutexp.wav
 
 SCHNeutronMineBomb:

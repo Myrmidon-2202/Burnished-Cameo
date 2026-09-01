@@ -1547,18 +1547,19 @@ drterpower:
 	icon: 
 		Filename: drterpowericon.shp
 		Offset: 0,0
+
 drlastur1:
 	Defaults:
 		Filename: drlastur1.shp
-	idle: drlastur1
+	idle: 
 		Start: 1
 		Scale: 0.668
-	dead: drlastur1
+	dead: 
 		Start: 2
 		Scale: 0.668
-	make: drlastur1
+	make: 
 		Scale: 0.668
-	turret: drlastur2
+	turret:
 		Facings: 16
 		Scale: 0.668
 	muzzle: gunfire2
@@ -1567,6 +1568,7 @@ drlastur1:
 		Scale: 0.668
 	icon: 
 		Filename: drfglaserturicon.shp
+
 drtflamer:
 	Defaults:
 		Filename: drtflamer.shp
@@ -1627,12 +1629,14 @@ drtmissile:
 		Scale: 0.668
 	icon: 
 		Filename: drtmissileicon.shp
+
 drflamerflame:
 	Defaults:
 		Filename: drflamerflame.shp
 	idle:
 		Length: *
 		ZOffset: 1023
+
 drplastur1:
 	Defaults:
 		Filename: drplastur1.shp

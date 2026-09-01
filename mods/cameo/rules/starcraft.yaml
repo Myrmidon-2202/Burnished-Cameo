@@ -630,6 +630,7 @@ SCCOMMANDCENTER:
 	DockHost:
 		DockAngle: 256
 		DockOffset: 0, 1c512, 0
+		MaxQueueLength: 10
 	Selectable:
 		Bounds: 3072, 2560, 0, 0
 		DecorationBounds: 3072, 2560, 0, 0
@@ -763,6 +764,7 @@ SCREFINERY:
 	DockHost:
 		DockAngle: 448
 		DockOffset: -1c0, 1c0, 0
+		MaxQueueLength: 10
 	DamageMultiplier@refineryupg:
 		RequiresCondition: refineryupg
 		Modifier: 50
@@ -1468,6 +1470,7 @@ SCNEXUS:
 	DockHost:
 		DockAngle: 256
 		DockOffset: 0, 1c512, 0
+		MaxQueueLength: 10
 	Selectable:
 		Bounds: 3072, 2560, 0, 0
 		DecorationBounds: 3072, 2560, 0, 0
@@ -1564,6 +1567,7 @@ SCASSIMILATOR:
 	DockHost:
 		DockAngle: 448
 		DockOffset: -1c0, 1c0, 0
+		MaxQueueLength: 10
 	DamageMultiplier@assimilatorupg:
 		RequiresCondition: assimilatorupg
 		Modifier: 50
@@ -2428,6 +2432,7 @@ SCHATCHERY:
 	DockHost:
 		DockAngle: 256
 		DockOffset: 0, 2c512, 0
+		MaxQueueLength: 10
 	##########
 	Sellable:
 	##########
@@ -2838,6 +2843,7 @@ SCEXTRACTOR:
 	DockHost:
 		DockAngle: 448
 		DockOffset: -1c0, 1c0, 0
+		MaxQueueLength: 10
 	-WithDeathAnimation:
 	SpawnActorOnDeath@death1:
 		Actor: SCBROODLING

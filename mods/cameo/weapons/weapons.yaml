@@ -5618,7 +5618,7 @@ GLRebelToxin:
 			Heavy: 20
 			Wood: 10
 			Concrete: 0
-		DamageTypes: Prone100Percent, TriggerProne, DefaultDeath
+		DamageTypes: Prone100Percent, TriggerProne, DefaultDeath, MakeScrapbox
 	Warhead@3Eff: CreateEffect
 		Explosions: purplesplash
 	Warhead@Clear: SpreadDamage
@@ -5626,25 +5626,34 @@ GLRebelToxin:
 		Damage: 500
 		Amount: 2
 		ValidTargets: Garrisoned
-		DamageTypes: Prone100Percent, TriggerProne, DefaultDeath
+		DamageTypes: Prone100Percent, TriggerProne, DefaultDeath, MakeScrapbox
 
 GLRebelToxinGarrison:
 	Inherits: GLRebelToxin
 	Range: 6c0
 	Warhead@1Dam: SpreadDamage
 		Damage: 800
+		DamageTypes: Prone50Percent, TriggerProne, MakeScrapbox
 
 GLTrooperRPGMissile:
 	Inherits: ^MissileWeapon
 	Projectile: Missile
 		Inaccuracy: 200
 	Report: irpgweaa.wav, irpgweab.wav, irpgweac.wav, irpgwead.wav, irpgweae.wav
+	Warhead@1Dam: SpreadDamage
+		Damage: 1000
+		DamageTypes: Prone50Percent, TriggerProne, MakeScrapbox, ExplosionDeath
 
 GLTrooperRPGMissileG:
 	Inherits: GLTrooperRPGMissile
 	Range: 8000
 	Warhead@1Dam: SpreadDamage
 		Damage: 2000
+		DamageTypes: Prone50Percent, TriggerProne, MakeScrapbox, ExplosionDeath
+
+GLTrooperRPGMissileToxin:
+	Inherits: GLTrooperRPGMissile
+	Inherits@Toxin: GLAnthraxBlue
 
 ^MG:
 	Inherits: ^LightMG
@@ -5757,11 +5766,6 @@ TSSonicZap:
 			Medium: 40
 			Wood: 60
 		DamageTypes: Prone75Percent, TriggerProne, SmallExplosionDeath
-
-
-GLTrooperRPGMissileToxin:
-	Inherits: GLTrooperRPGMissile
-	Inherits@Toxin: GLAnthraxBlue
 
 SpiceExplosion:
 	Projectile: Bullet

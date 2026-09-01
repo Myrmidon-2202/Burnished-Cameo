@@ -1413,3 +1413,102 @@ DRMoleGun.AA:
 			Heavy: 90
 	Warhead@2Eff: CreateEffect
 		Explosions: small_explosion_air
+
+######################
+# Dark Reign Ant Weapon Inherits
+######################
+CritterClaw:
+	ReloadDelay: 20
+	Range: 1c512
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead@1Dam: SpreadDamage
+		Spread: 100
+		Damage: 1000 #3000
+		Versus:
+			None: 60
+			Wood: 20
+			Light: 50
+			Medium: 40
+			Heavy: 30
+			Concrete: 10
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath, ZombieInfection
+
+CritterClaw2:
+	ReloadDelay: 20
+	Range: 1c512
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead@1Dam: SpreadDamage
+		Spread: 100
+		Damage: 1000 #3000
+		Versus:
+			None: 60
+			Wood: 20
+			Light: 50
+			Medium: 40
+			Heavy: 30
+			Concrete: 10
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath, ZombieInfection
+
+CritterClaw3:
+	ReloadDelay: 20
+	Range: 1c512
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead@1Dam: SpreadDamage
+		Spread: 100
+		Damage: 1000 #3000
+		Versus:
+			None: 60
+			Wood: 20
+			Light: 50
+			Medium: 40
+			Heavy: 30
+			Concrete: 10
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath, ZombieInfection
+
+Mandible:
+	Inherits: CritterClaw
+	Report: antbite.aud
+	ReloadDelay: 20
+	Warhead@1Dam: SpreadDamage
+		Damage: 10000
+		DamageTypes: Prone50Percent, TriggerProne, BulletDeath
+
+MandibleMedium:
+	Inherits: CritterClaw2
+	Report: antbite.aud
+	ReloadDelay: 15
+	Warhead@1Dam: SpreadDamage
+		Damage: 15000
+		DamageTypes: Prone50Percent, TriggerProne, BulletDeath
+
+MandibleHeavy:
+	Inherits: CritterClaw3
+	Report: antbite.aud
+	ReloadDelay: 10
+	Warhead@1Dam: SpreadDamage
+		Damage: 20000
+		DamageTypes: Prone50Percent, TriggerProne, BulletDeath
+
+SuperMandible:
+	Inherits: MandibleHeavy
+	Warhead@1Dam: SpreadDamage
+		Damage: 20000
+MandibleAA:
+	Inherits: Mandible
+	ValidTargets: Air
+	ReloadDelay: 15
+	Burst: 2
+	BurstDelays: 20
+	StartBurstReport: antbite.aud
+	Warhead@1Dam: SpreadDamage
+		Damage: 10000
+		Versus:
+			None: 100
+			Light: 90
+			Medium: 60
+			Heavy: 35
+			Concrete: 20
+		ValidTargets: Air

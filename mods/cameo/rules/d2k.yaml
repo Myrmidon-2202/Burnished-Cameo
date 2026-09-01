@@ -5334,7 +5334,7 @@ engineer:
 	Inherits@anim: ^D2KPaletteRenderInfantry
 	Buildable:
 		BuildPaletteOrder: 40
-		Queues: Infantry.Atreides, Infantry.Ordos, Infantry.Harkonnen, Infantry.Corrino
+		Queue: Infantry.Atreides, Infantry.Ordos, Infantry.Harkonnen, Infantry.Corrino
 		Prerequisites:
 		IconPalette: d2kunit
 	Tooltip:

@@ -1572,7 +1572,7 @@ tsgtweap:
 		Sequence: bib2
 	RenderSprites:
 		Image: tsgtweap
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 TSNTWEAP:
 	Inherits: ^BaseBuilding
@@ -1707,6 +1707,7 @@ TSGTWEAPMUTANT:
 	ProductionBar:
 		ProductionType: Vehicle.Tsmutant
 	ProvidesPrerequisite@buildingname:
+		Prerequisite: tsgtweapmutant
 	RenderSprites:
 		Image: tsgtweap
 

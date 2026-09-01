@@ -1,3 +1,113 @@
+################
+# Sniper Inherit
+################
+
+sniper:
+	Inherits: ^InfantryOverlays
+	Defaults:
+		Scale: 2.0
+		Filename: sniper.shp
+	stand:
+		Facings: 8
+	stand2:
+		Start: 8
+		Facings: 8
+	run:
+		Start: 16
+		Length: 6
+		Facings: 8
+		Tick: 100
+	shoot:
+		Start: 64
+		Length: 8
+		Facings: 8
+	prone-stand:
+		Start: 144
+		Stride: 4
+		Facings: 8
+	prone-stand2:
+		Start: 144
+		Stride: 4
+		Facings: 8
+	prone-run:
+		Start: 144
+		Length: 4
+		Facings: 8
+		Tick: 100
+	liedown:
+		Start: 128
+		Length: 2
+		Facings: 8
+	standup:
+		Start: 176
+		Length: 2
+		Facings: 8
+	prone-shoot:
+		Start: 192
+		Length: 8
+		Facings: 8
+	idle1:
+		Start: 256
+		Length: 16
+		Tick: 120
+	idle2:
+		Start: 272
+		Length: 16
+		Tick: 120
+	idle3:
+		Start: 256
+		Length: 16
+		Tick: 120
+	idle4:
+		Start: 272
+		Length: 16
+		Tick: 120
+	cheer:
+		Start: 366
+		Length: 3
+		Facings: 8
+	die1:
+		Start: 288
+		Length: 8
+	die2:
+		Start: 298
+		Length: 8
+	die3:
+		Start: 304
+		Length: 8
+	die4:
+		Start: 312
+		Length: 12
+	die5:
+		Start: 324
+		Length: 18
+	die6:
+		Filename: e1.shp
+		Scale: 1
+		Start: 366
+		Length: 11
+		Tick: 80
+	die7:
+		Filename: electro.shp
+		Scale: 1
+		Length: *
+	die-crushed:
+		Filename: corpse1.shp
+		Scale: 1
+		Length: 6
+		Tick: 1600
+		ZOffset: -511
+	garrison-muzzle:
+		Filename: minigun.shp
+		Scale: 1
+		Length: 3
+		Stride: 6
+		Facings: 8
+	icon:
+		Filename: e1snipericon.png
+
+################
+
 upemergencyrepair1icon:
 	icon: 
 		Filename: upemergencyrepair1icon.shp
@@ -10,6 +120,7 @@ upemergencyrepair3icon:
 
 chhorde:
 	Defaults:
+		Scale: 2.0
 		Filename: chhorde.shp
 	idle:
 		Length: *
@@ -20,6 +131,7 @@ chhorde:
 
 glmcv:
 	Defaults:
+		Scale: 2.0
 		Filename: glmcv.shp
 	idle:
 		Facings: 32
@@ -29,6 +141,7 @@ glmcv:
 
 glscrapbox:
 	Defaults:
+		Scale: 2.0
 		Filename: glscrapbox.shp
 	idle:
 		ZOffset: -511
@@ -39,41 +152,43 @@ genbuildcaptureicon:
 
 glabomber:
 	Defaults:
+		Scale: 2.0
 		Filename: glabomber.shp
 	idle:
 		Facings: 32
 
 gle1:
-	# Inherits: sniper
+	Inherits: sniper
 	Defaults:
+		Scale: 2.0
 		Filename: sniper.shp
 	idle1:
 		Start: 384
 		Length: 14
 		Tick: 120
-		Scale: 0.85
+		# Scale: 0.85
 	idle2:
 		Start: 399
 		Length: 16
 		Tick: 120
-		Scale: 0.85
+		# Scale: 0.85
 	idle3:
 		Start: 384
 		Length: 14
 		Tick: 120
-		Scale: 0.85
+		# Scale: 0.85
 	idle4:
 		Start: 399
 		Length: 16
 		Tick: 120
-		Scale: 0.85
+		# Scale: 0.85
 	# -die6:
-	die6:
-		Scale: 0.85
+	# die6:
+	# 	# Scale: 0.85
 	die7: 
 		Filename: electro.shp ##########
 		Length: *
-		Scale: 0.85
+		# Scale: 0.85
 	# -die-crushed:
 	die-crushed: 
 		Filename: e1rot.shp
@@ -81,19 +196,20 @@ gle1:
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-		Scale: 0.85
+		# Scale: 0.85
 	garrison-muzzle: 
 		Filename: minigun.shp
 		Length: 3
 		Stride: 6
 		Facings: 8
-		Scale: 0.85
+		# Scale: 0.85
 	icon: 
 		Filename: gle1icon.shp
 
 glsabo:
 	Inherits: raspy
-	Defaults: 
+	Defaults:
+		Scale: 2.0 
 		Filename: raspy.shp
 	icon: 
 		Filename: glsaboicon.shp
@@ -111,6 +227,7 @@ gle1toxin:
 gle3:
 	Inherits: e3
 	Defaults:
+		Scale: 2.0
 		Filename: gle3.shp
 	icon: 
 		Filename: gle3icon.shp
@@ -154,7 +271,8 @@ glterror:
 		AddExtension: false
 
 glamob:
-	Defaults: 
+	Defaults:
+		Scale: 2.0 
 		Filename: c3.shp
 	idle:
 		Facings: 8
@@ -249,9 +367,520 @@ glamob:
 		Length: 6
 		Facings: 8
 
+sglworker:
+	Defaults:
+		Scale: 2.0
+		Filename: sglworker.shp
+	stand: 
+		Filename: sglworker.shp
+		Start: 0
+		Facings: 8
+	invisible: 
+		Filename: invisibleitem.shp
+	run: 
+		Filename: sglworker.shp
+		Start: 8
+		Length: 10
+		Facings: 8
+		Tick: 100
+	run-full:
+		Filename: sglworker.shp
+		Start: 236
+		Length: 10
+		Facings: 8
+		Tick: 100
+	harvest: 
+		Filename: sglworker.shp
+		Start: 476
+		Facings: 8
+		Length: 10
+		Tick: 110
+	dance:
+		Filename: sglworker.shp
+		Start: 128
+		Length: 10
+		Facings: 8
+		Tick: 125
+	idle: 
+		Filename: sglworker.shp
+		Start: 88
+		Length: 20
+		Tick: 135
+	stand-full: 
+		Filename: sglworker.shp
+		Start: 148
+		Facings: 8
+	die:
+		Filename: sglworker.shp
+		Start: 108
+		Length: 20
+		Tick: 110
+	dock:
+		Filename: invisibleitem.shp
+	dock-loop:
+		Filename: invisibleitem.shp
+	#dock: sglworker
+	#    Start: 156
+	#    Facings: 8
+	#    Length: -10
+	#    Tick: 110
+	#dock-loop: sglworker
+	#    Start: 156
+	#    Facings: 8
+	#    Length: -10
+	#    Tick: 110
+	make:
+		Filename: sglworker.shp
+		Start: 316
+		Facings: 8
+		Length: 10
+		Tick: 110
+	die-crushed: 
+		Filename: e1rot.shp
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	icon: 
+		Filename: workericon.png
+		AddExtension: false
+
+sglrebel:
+	Defaults:
+		Scale: 2.0
+		Filename: sglrebel.shp
+	stand:
+		Facings: 8
+	stand-injured:
+		Start: 268
+		Facings: 8
+	run-injured:
+		Start: 276
+		Length: 10
+		Facings: 8
+		Tick: 120
+	shoot-injured:
+		Start: 356
+		Length: 10
+		Facings: 8
+		Tick: 40
+	idle:
+		Start: 208
+		Length: 20
+		Tick: 135
+	idle1:
+		Start: 208
+		Length: 20
+		Tick: 135
+	idle2:
+		Start: 228
+		Length: 20
+		Tick: 135
+	idle3:
+		Start: 248
+		Length: 20
+		Tick: 135
+	run:
+		Start: 8
+		Length: 10
+		Facings: 8
+		Tick: 120
+	shoot:
+		Start: 88
+		Length: 10
+		Facings: 8
+		Tick: 40
+	die1:
+		Start: 168
+		Facings: 8
+		Length: 20
+		Tick: 120
+	die2:
+		Start: 188
+		Facings: 8
+		Length: 20
+		Tick: 120
+	muzzle: minigun.shp
+		Length: 3
+		Stride: 6
+		Facings: 8
+	garrison-muzzle: minigun.shp
+		Length: 3
+		Stride: 6
+		Facings: 8
+	die-crushed:
+		Filename: e1rot.shp
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	icon: 
+		Filename: gle1icon.shp
+
+sgltoxinrebel:
+	Inherits: sglrebel
+	Defaults:
+		Filename: sgltoxinrebel.shp
+		Scale: 2
+	-muzzle:
+	icon: 
+		Filename: gle1toxinicon.shp
+
+sgltoxinrebelgrey:
+	Inherits: sglrebel
+	Defaults:
+		Filename: sgltoxinrebelgrey.shp
+		Scale: 2
+	-muzzle:
+	icon: 
+		Filename: gle1toxinicon.shp
+
+sglrpgtrooper:
+	Defaults:
+		Scale: 1.5
+		Filename: sglrpgtrooper.shp
+	stand:
+		Facings: 8
+	idle:
+		Start: 208
+		Length: 20
+		Tick: 135
+	idle1:
+		Start: 208
+		Length: 20
+		Tick: 135
+	idle2:
+		Start: 228
+		Length: 20
+		Tick: 135
+	idle3:
+		Start: 248
+		Length: 20
+		Tick: 135
+	run:
+		Start: 8
+		Length: 10
+		Facings: 8
+		Tick: 130
+	shoot:
+		Start: 88
+		Length: 10
+		Facings: 8
+		Tick: 110
+	die1:
+		Start: 168
+		Length: 20
+		Tick: 135
+	die2:
+		Start: 188
+		Length: 20
+		Tick: 135
+	die3:
+		Start: 188
+		Length: 20
+		Tick: 135
+	die4:
+		Start: 188
+		Length: 20
+		Tick: 135
+	die5:
+		Start: 188
+		Length: 20
+		Tick: 135
+	die6:
+		Start: 188
+		Length: 20
+		Tick: 135
+	die-crushed: 
+		Filename: e1rot.shp
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	icon: 
+		Filename: gle3icon.shp
+
+sglhijack:
+	Defaults:
+		Scale: 2.0
+		Filename: sglhijack.shp
+	stand:
+		Facings: 8
+	run:
+		Start: 8
+		Facings: 8
+		Length: 10
+		Tick: 115
+	idle:
+		Start: 108
+		Length: 8
+		Tick: 140
+	die:
+		Start: 88
+		Length: 20
+		Tick: 125
+	die-crushed:
+		Filename: e1rot.shp
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	icon: 
+		Filename: glhijackicon.shp
+
+sgljarmen:
+	Defaults:
+		Scale: 2.0
+		Filename: sgljarmen.shp
+	stand:
+		Facings: 8
+	run:
+		Start: 8
+		Facings: 8
+		Length: 10
+		Tick: 120
+	shoot:
+		Start: 88
+		Facings: 8
+		Length: 10
+		Tick: 125
+	idle:
+		Start: 168
+		Length: 20
+		Tick: 130
+	idle1:
+		Start: 168
+		Length: 20
+		Tick: 130
+	idle2:
+		Start: 188
+		Length: 20
+		Tick: 130
+	idle3:
+		Start: 208
+		Length: 20
+		Tick: 130
+	stand-injured:
+		Start: 228
+		Facings: 8
+	run-injured:
+		Start: 236
+		Length: 10
+		Facings: 8
+		Tick: 125
+	shoot-injured:
+		Start: 316
+		Facings: 8
+		Length: 10
+		Tick: 125
+	die:
+		Filename: sglrebel.shp
+		Start: 168
+		Facings: 8
+		Length: 20
+		Tick: 120
+	muzzle:
+		Filename: minigun.shp
+		Length: 3
+		Stride: 6
+		Facings: 8
+	die-crushed:
+		Filename: e1rot.shp
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	icon: 
+		Filename: glkellicon.shp
+	redstar:
+		Filename: chhorde.shp
+
+sglaangrymob1:
+	Defaults:
+		Scale: 2.0
+		Filename: sglmob01a.shp
+	stand:
+		Facings: 8
+	run:
+		Start: 8
+		Length: 10
+		Facings: 8
+		Tick: 130
+	idle:
+		Start: 88
+		Length: 8
+		Tick: 130
+	idle1:
+		Start: 88
+		Length: 8
+		Tick: 130
+	idle2:
+		Start: 108
+		Length: 8
+		Tick: 130
+	die:
+		Start: 128
+		Length: 20
+		Tick: 125
+	shoot:
+		Start: 148
+		Facings: 8
+		Length: 10
+		Tick: 130
+	stand-ak: 
+		Filename: sglmob03.shp
+		Facings: 8
+	run-ak: 
+		Filename: sglmob03.shp
+		Start: 8
+		Length: 10
+		Facings: 8
+		Tick: 130
+	shoot-ak: 
+		Filename: sglmob03.shp
+		Start: 88
+		Length: 10
+		Facings: 8
+		Tick: 130
+	die-ak: 
+		Filename: sglmob03.shp
+		Start: 168
+		Length: 20
+		Tick: 130
+	die2-ak: 
+		Filename: sglmob03.shp
+		Start: 188
+		Length: 20
+		Tick: 130
+	idle-ak: 
+		Filename: sglmob03.shp
+		Start: 208
+		Length: 20
+		Tick: 130
+	idle2-ak:
+		Filename: sglmob03.shp
+		Start: 228
+		Length: 20
+		Tick: 130
+	idle3-ak:
+		Filename: sglmob03.shp
+		Start: 248
+		Length: 20
+		Tick: 130
+	die-crushed:
+		Filename: e1rot.shp
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	muzzle: 
+		Filename: minigun.shp
+		Length: 3
+		Stride: 6
+		Facings: 8
+
+sglaangrymob2:
+	Defaults:
+		Scale: 2.0
+		Filename: sglmob02a.shp
+	stand:
+		Facings: 8
+	run:
+		Start: 8
+		Length: 10
+		Facings: 8
+		Tick: 130
+	shoot:
+		Start: 88
+		Length: 10
+		Facings: 8
+		Tick: 130
+	die1:
+		Start: 168
+		Length: 20
+		Tick: 130
+	die2:
+		Start: 188
+		Length: 20
+		Tick: 130
+	die-crushed: 
+		Filename: e1rot.shp
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	idle:
+		Start: 208
+		Length: 20
+		Tick: 130
+	idle1:
+		Start: 208
+		Length: 20
+		Tick: 130
+	idle2:
+		Start: 228
+		Length: 20
+		Tick: 130
+	idle3:
+		Start: 248
+		Length: 20
+		Tick: 130
+
+sglterrorist:
+	Defaults:
+		Scale: 2.0
+		Filename: sglterrorist.shp
+	stand:
+		Facings: 8
+	run:
+		Start: 8
+		Length: 10
+		Facings: 8
+		Tick: 100
+	shoot:
+		Start: 88
+		Length: 10
+		Facings: 8
+		Tick: 130
+	die1:
+		Start: 168
+		Length: 20
+		Tick: 130
+	die2:
+		Start: 188
+		Length: 20
+		Tick: 130
+	die-crushed: 
+		Filename: e1rot.shp
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	idle1:
+		Start: 208
+		Length: 20
+		Tick: 130
+	idle2:
+		Start: 228
+		Length: 20
+		Tick: 130
+	dance:
+		Start: 248
+		Length: 20
+		Tick: 130
+	run-suicide:
+		Start: 268
+		Length: 10
+		Facings: 8
+		Tick: 90
+	icon: 
+		Filename: glterroristicon.png
+		AddExtension: false
+
 glcommand:
 	Inherits: ^WithBuildingBib2
 	Defaults:
+		Scale: 2.0
 		Filename: glcommand.shp
 		Offset: 0,-5
 	idle:
@@ -292,6 +921,7 @@ glcommand:
 glbarracks:
 	Inherits: ^WithBuildingBib2
 	Defaults:
+		Scale: 2.0
 		Filename: glbarracks.shp
 	idle:
 	damaged-idle:
@@ -321,6 +951,7 @@ glbarracks:
 
 glsupply:
 	Defaults:
+		Scale: 2.0
 		Offset: 4,-4
 		Filename: glsupply.shp
 	idle:
@@ -349,6 +980,7 @@ glsupply:
 glweap:
 	Inherits: ^WithBuildingBib1
 	Defaults:
+		Scale: 2.0
 		Offset: 0,-8
 		Filename: glweap.shp
 	idle:
@@ -396,6 +1028,7 @@ glweap:
 glpalace:
 	Inherits: ^WithBuildingBib1
 	Defaults:
+		Scale: 2.0
 		Offset: 0,-4
 		Filename: glpalace.shp
 	idle:
@@ -428,6 +1061,7 @@ glpalace:
 glstorm:
 	Inherits: ^WithBuildingBib3
 	Defaults:
+		Scale: 2.0
 		Filename: glstorm.shp
 		Offset: 0,-4
 	idle:
@@ -479,6 +1113,7 @@ glstorm:
 glblackmarket:
 	Inherits: ^WithBuildingBib3
 	Defaults:
+		Scale: 2.0
 		Filename: glblackmarket.shp
 	idle:
 	damaged-idle:
@@ -511,6 +1146,7 @@ glblackmarket:
 glhole2:
 	Inherits: ^WithBuildingBib1
 	Defaults:
+		Scale: 2.0
 		Offset: 6,12
 		Filename: glhole2.shp
 	idle:
@@ -529,6 +1165,7 @@ glhole2:
 glhole:
 	Inherits: ^WithBuildingBib3
 	Defaults:
+		Scale: 2.0
 		Filename: glhole.shp
 	idle:
 	damaged-idle:
@@ -546,6 +1183,7 @@ glhole:
 
 glsite:
 	Defaults:
+		Scale: 2.0
 		Filename: glsite.shp
 		Offset: 0,-12
 	idle:
@@ -586,6 +1224,7 @@ glsite:
 
 gltunnel:
 	Defaults:
+		Scale: 2.0
 		Filename: gltunnel.shp
 		Offset: 0,0
 	idle:
@@ -615,6 +1254,7 @@ gltunnel:
 
 gltrap:
 	Defaults:
+		Scale: 2.0
 		Filename: gldemotrap.shp
 	idle:
 		Filename: gldemotrap.shp
@@ -644,116 +1284,146 @@ gltrap:
 
 glscorpion:
 	Defaults:
+		Scale: 2.0
 		Filename: glscorpion.shp
 	idle:
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.50
+		Scale: 1.0
 	turret:
 		Filename: glscorpiontur.shp
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.50
+		Scale: 1.0
 	muzzle:
 		Filename: gunfire2.shp
 		Length: *
-		Scale: 0.50
+		Scale: 1.0
 	icon:
 		Filename: glscorpionicon.shp
 	turret2:
 		Filename: scorpionrocket.shp
 		Facings: 32
 		ZOffset: 256
-		Scale: 0.50
+		Scale: 1.0
 
 scorpionrocket:
 	Defaults:
+		Scale: 2.0
 		Filename: scorpionrocket.shp
 	idle:
 		Facings: 32
 
 glbggy:
 	Defaults:
+		Scale: 2.0
 		Filename: glbggy.shp
 	idle:
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.85
+		# Scale: 0.85
 	turret:
 		Filename: glbggytur1.shp
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.85
+		# Scale: 0.85
 	turret2:
 		Filename: glbggytursw1.shp
 		Facings: -32
 		UseClassicFacings: True
-		Scale: 0.85
+		# Scale: 0.85
 	turret3:
 		Filename: glbggytur2.shp
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.85
+		# Scale: 0.85
 	turret4:
 		Filename: glbggytursw2.shp
 		Facings: -32
 		UseClassicFacings: True
-		Scale: 0.85
+		# Scale: 0.85
 	muzzle:
 		Filename: gunfire2.shp
 		Length: *
-		Scale: 0.85
+		# Scale: 0.85
 	icon:
+		Filename: glbggyicon.shp
+
+sglbggy:
+	Defaults:
+		Scale: 2.0
+	idle:
+		Filename: glbggy.shp
+		Facings: 32
+		UseClassicFacings: True
+	turret:
+		Filename: glbggytur1.shp
+		Facings: 32
+		UseClassicFacings: True
+	turret2:
+		Filename: glbggytursw1.shp
+		Facings: -32
+		UseClassicFacings: True
+	turret3:
+		Filename: glbggytur2.shp
+		Facings: 32
+		UseClassicFacings: True
+	turret4:
+		Filename: glbggytursw2.shp
+		Facings: -32
+		UseClassicFacings: True
+	muzzle:
+		Filename: gunfire2.shp
+		Length: *
+	icon: 
 		Filename: glbggyicon.shp
 
 glquad:
 	Defaults:
+		Scale: 2.0
 		Filename: glquad.shp
 	idle:
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.94
 	turret:
 		Filename: glquadtur.shp
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.94
 	turret2:
 		Filename: glquadtur2.shp
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.94
 	turret3:
 		Filename: glquadtur3.shp
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.94
 	muzzle:
 		Filename: minigun.shp
 		Length: 6
 		Facings: 8
-		Scale: 0.94
 	icon:
 		Filename: glquadicon.shp
 
 glscud:
 	Defaults:
+		Scale: 2.0
 		Filename: glscud.shp
 	idle:
 		Filename: glscud2.shp
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 1.06
+		#Scale: 1.06
 	empty-idle:
 		Filename: glscud1.shp
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 1.06
+		#Scale: 1.06
 	icon:
 		Filename: glscudicon.shp
 
 glscudmiss:
 	Defaults:
+		Scale: 2.0
 		Filename: glscudmiss.shp
 	idle:
 		Facings: 32
@@ -761,6 +1431,7 @@ glscudmiss:
 
 glbiker:
 	Defaults:
+		Scale: 2.0
 		Filename: glbiker.shp
 	idle:
 		Facings: 32
@@ -778,69 +1449,73 @@ glbiker:
 
 glbbus:
 	Defaults:
+		Scale: 2.0
 		Filename: glbbus.shp
 	idle:
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.9
+		# Scale: 0.9
 	muzzle:
 		Filename: minigun.shp
 		Length: 6
 		Facings: 8
-		Scale: 0.9
+		# Scale: 0.9
 	icon:
 		Filename: glbbusicon.shp
 
 glmaura:
 	Defaults:
+		Scale: 2.0
 		Filename: glmaura.shp
 	idle:
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.55
+		# Scale: 0.55
 	turret:
 		Filename: glmauratur.shp
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.55
+		# Scale: 0.55
 	turret2:
 		Filename: glmauratur2.shp
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.55
+		# Scale: 0.55
 	turret3:
 		Filename: glmauratur3.shp
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.55
+		# Scale: 0.55
 	muzzle:
 		Filename: gunfire2.shp
 		Length: *
-		Scale: 0.55
+		# Scale: 0.55
 	icon:
 		Filename: glmauraicon.shp
 
 gltractor:
 	Defaults:
+		Scale: 2.0
 		Filename: gltractor.shp
 	idle:
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.9
+		# Scale: 0.9
 	turret:
 		Filename: gltractortur.shp
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.9
+		# Scale: 0.9
 	muzzle:
 		Filename: gunfire2.shp
 		Length: *
-		Scale: 0.9
+		# Scale: 0.9
 	icon:
 		Filename: gltractoricon.shp
 
 glpickup:
 	Defaults:
+		Scale: 2.0
 		Filename: glpickup.shp
 	idle:
 		Facings: 16
@@ -866,40 +1541,42 @@ glpickup:
 
 glvan:
 	Defaults:
+		Scale: 2.0
 		Filename: glvan.shp
 	idle:
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 1.08
+		# #Scale: 1.08
 	turret:
 		Filename: rajeep.shp
 		Start: 32
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 1.08
+		# #Scale: 1.08
 	turret2:
 		Filename: glpickuptur2.shp
 		Facings: 32
 		UseClassicFacings: True
-	Scale: 1.08
+	# #Scale: 1.08
 	turret3:
 		Filename: glpickuptur3.shp
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 1.08
+		# #Scale: 1.08
 	muzzle:
 		Filename: minigun.shp
 		Length: 6
 		Facings: 8
-		Scale: 1.08
+		# #Scale: 1.08
 	icon:
 		Filename: gltechvanicon.shp
 
 glkell:
 	Inherits: gle1
 	Defaults:
+		Scale: 2.0
 		Filename: glkell.shp
-		Scale: 0.85
+		# Scale: 0.85
 	icon:
 		Filename: glkellicon.shp
 	redstar:
@@ -907,60 +1584,63 @@ glkell:
 
 glradar:
 	Defaults:
+		Scale: 2.0
 		Filename: glradar.shp
 	idle:
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 1.01
+		#Scale: 1.01
 	spinner:
 		Filename: glradarspin.shp
 		Length: *
-		Scale: 1.01
+		#Scale: 1.01
 	icon:
 		Filename: glradaricon.shp
 
 glbombtruck:
 	Defaults:
+		Scale: 1.5
 		Filename: glbombtruck.shp
 	idle:
 		Facings: -32
 		Start: 64
 		UseClassicFacings: True
-		Scale: 0.90
+		# Scale: 0.90
 	idle1:
 		Facings: -32
 		UseClassicFacings: True
-		Scale: 0.90
+		# Scale: 0.90
 	idle2:
 		Facings: -32
 		Start: 32
 		UseClassicFacings: True
-		Scale: 0.90
+		# Scale: 0.90
 	icon:
 		Filename: glbombtruckicon.shp
 
 glgunboat:
 	Defaults:
+		Scale: 2.0
 		Filename: glgunboat.shp
 	idle:
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.70
+		# Scale: 0.70
 	turret:
 		Filename: rajeep.shp
 		Start: 32
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.70
+		# Scale: 0.70
 	turretmiss:
 		Filename: rassam.shp
 		Facings: 32
-		Scale: 0.70
+		# Scale: 0.70
 	muzzle:
 		Filename: minigun.shp
 		Length: 6
 		Facings: 8
-		Scale: 0.70
+		# Scale: 0.70
 	icon:
 		Filename: glgunboaticon.shp
 
@@ -1074,22 +1754,23 @@ glcamogeneralicon:
 
 glscrapcar:
 	Defaults:
+		Scale: 2.0
 		Filename: glscrapcar.shp
 	idle:
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.83
+		# Scale: 0.83
 	turret:
 		Filename: rajeep.shp
 		Start: 32
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.83
+		# Scale: 0.83
 	muzzle:
 		Filename: minigun.shp
 		Length: 6
 		Facings: 8
-		Scale: 0.83
+		# Scale: 0.83
 	icon:
 		Filename: glscrapcaricon.shp
 
@@ -1130,6 +1811,7 @@ chnukegeneralicon:
 
 chmcv:
 	Defaults:
+		Scale: 2.0
 		Filename: chmcv.shp
 	idle:
 		Facings: 32
@@ -1140,6 +1822,7 @@ chmcv:
 chcommand:
 	Inherits: ^WithBuildingBib3
 	Defaults:
+		Scale: 2.0
 		Offset: 0,-5
 		Filename: chcommand.shp
 	idle:
@@ -1154,12 +1837,13 @@ chcommand:
 		Length: *
 		Offset: 0,24
 	icon:
-		Filename: glcommandicon.shp
+		Filename: chcommandicon.shp
 		Offset: 0,0
 
 chpower:
 	Inherits: ^WithBuildingBib3
 	Defaults:
+		Scale: 2.0
 		Filename: chpower.shp
 	idle:
 		Offset: 0,-10
@@ -1197,6 +1881,7 @@ chpower:
 chpower2:
 	Inherits: ^WithBuildingBib3
 	Defaults:
+		Scale: 2.0
 		Filename: chpower2.shp
 	idle:
 		Offset: 0,-10
@@ -1233,6 +1918,7 @@ chpower2:
 chbarracks:
 	Inherits: ^WithBuildingBib2
 	Defaults:
+		Scale: 2.0
 		Filename: chbarracks.shp
 	idle:
 	damaged-idle:
@@ -1250,6 +1936,7 @@ chbarracks:
 
 chsupply:
 	Defaults:
+		Scale: 2.0
 		Filename: chsupply.shp
 		Offset: 0,-2
 	idle:
@@ -1266,6 +1953,7 @@ chsupply:
 chweap:
 	Inherits: ^WithBuildingBib1
 	Defaults:
+		Scale: 2.0
 		Filename: chweap.shp
 		Offset: 0,-8
 	idle:
@@ -1295,6 +1983,7 @@ chweap:
 chpropaganda:
 	Inherits: ^WithBuildingBib1
 	Defaults:
+		Scale: 2.0
 		Filename: chpropaganda.shp
 		Offset: 4,2
 	idle:
@@ -1315,6 +2004,7 @@ chpropaganda:
 
 chpropagandatower:
 	Defaults:
+		Scale: 2.0
 		Offset: 0,-14
 		Filename: chpropagandatower.shp
 	idle:
@@ -1336,6 +2026,7 @@ chpropagandatower:
 chinternetcenter:
 	Inherits: ^WithBuildingBib1
 	Defaults:
+		Scale: 2.0
 		Filename: chinternetcenter.shp
 	idle:
 	damaged-idle:
@@ -1356,6 +2047,7 @@ chinternetcenter:
 chsilo:
 	Inherits: ^WithBuildingBib2
 	Defaults:
+		Scale: 2.0
 		Offset: 0,-6
 		Filename: chsilo.shp
 	idle:
@@ -1382,6 +2074,7 @@ chsilo:
 
 chairport:
 	Defaults:
+		Scale: 2.0
 		Filename: chairport.shp
 	idle:
 		Filename: chairport.shp
@@ -1403,6 +2096,8 @@ chairport:
 		Offset: 0,0
 
 chgattling:
+	Defaults:
+		Scale: 2.0
 	idle: 
 		Filename: chgattling.shp
 	dead:
@@ -1423,6 +2118,7 @@ chgattling:
 
 chbunker:
 	Defaults:
+		Scale: 2.0
 		Offset: 0,-7
 		Filename: chbunker.shp
 	idle:
@@ -1445,8 +2141,9 @@ chbunker:
 che1:
 	Inherits: gle1
 	Defaults:
+		Scale: 2.0
 		Filename: sniper.shp
-		Scale: 0.85
+		# Scale: 0.85
 	icon:
 		Filename: che1icon.shp
 	redstar:
@@ -1459,6 +2156,7 @@ che1:
 che2:
 	Inherits: gle1
 	Defaults:
+		Scale: 2.0
 		Filename: che2.shp
 	icon:
 		Filename: che2icon.shp
@@ -1472,6 +2170,7 @@ che2:
 che3:
 	Inherits: gle3
 	Defaults:
+		Scale: 2.0
 		Filename: gle3.shp
 	icon:
 		Filename: che3icon.shp
@@ -1485,6 +2184,7 @@ che3:
 
 chhacker:
 	Defaults:
+		Scale: 2.0
 		Filename: chhacker.shp
 	stand:
 		Facings: 8
@@ -1562,12 +2262,396 @@ chhacker:
 
 chlotus:
 	Inherits: chhacker
-	Defaults: 
+	Defaults:
+		Scale: 2.0 
 		Filename: chlotus.shp
 	icon:
 		Filename: chlotusicon.shp
 
+schredguard:
+	Defaults:
+		Scale: 2.0
+	stand: 
+		Filename: chredg.shp
+		Facings: 8
+	stand-injured:
+		Filename: chredg.shp
+		Facings: 8
+	run:
+		Filename: chredg.shp
+		Start: 48
+		Length: 10
+		Facings: 8
+		Tick: 90
+	run-injured:
+		Filename: chredg.shp
+		Start: 128
+		Length: 10
+		Facings: 8
+		Tick: 100
+	shoot:
+		Filename: chredg.shp
+		Start: 208
+		Length: 10
+		Facings: 8
+		Tick: 90
+	shoot-injured:
+		Filename: chredg.shp
+		Start: 288
+		Length: 6
+		Facings: 8
+		Tick: 100
+	idle1: 
+		Filename: chredg.shp
+		Start: 8
+		Length: 20
+		Tick: 100
+	idle2: 
+		Filename: chredg.shp
+		Start: 28
+		Length: 20
+		Tick: 100
+	idle3: 
+		Filename: chredg.shp
+		Start: 368
+		Length: 20
+	garrison-muzzle: 
+		Filename: minigun.shp
+		Length: 3
+		Stride: 6
+		Facings: 8
+	muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	# Shot
+	die1:
+		Filename: gle3.shp
+		Start: 397
+		Length: 9
+		Tick: 80
+	# Explode
+	die2:
+		Filename: gle3.shp
+		Start: 406
+		Length: 8
+		Tick: 80
+	# Fly and explode in air
+	die3: 
+		Filename: gle3.shp
+		Start: 414
+		Length: 8
+		Tick: 80
+	# Fly through air squish on ground
+	die4: 
+		Filename: gle3.shp
+		Start: 422
+		Length: 12
+		Tick: 80
+	# Burn
+	die5:
+		Filename: gle3.shp
+		Start: 434
+		Length: 18
+		Tick: 80
+	# Tib
+	die6: 
+		Filename: gle3.shp
+		Start: 382
+		Length: 11
+		Tick: 80
+	# Electro
+	die7:
+		Filename: electro.shp
+		Length: *
+	die-crushed: 
+		Filename: e3rot.shp
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	icon: che1icon
+		Filename: che1icon.shp
+	icon_nuke: chnuclearredguard_icon
+		Filename: chnuclearredguard_icon.shp
+
+schtankhunter:
+	Defaults:
+		Scale: 2.0
+	stand:
+		Filename: chthunt.shp
+		Facings: 8
+	stand-injured:
+		Filename: chthunt.shp
+		Facings: 8
+	run: 
+		Filename: chthunt.shp
+		Start: 8
+		Length: 10
+		Facings: 8
+	shoot: 
+		Filename: chthunt.shp
+		Start: 128
+		Length: 10
+		Facings: 8
+	idle1: 
+		Filename: chthunt.shp
+		Start: 88
+		Length: 20
+		Tick: 100
+	idle2: 
+		Filename: chthunt.shp
+		Start: 108
+		Length: 20
+		Tick: 100
+	idle3: 
+		Filename: chthunt.shp
+		Start: 208
+		Length: 20
+		Tick: 100
+	# Shot
+	die1: 
+		Filename: gle3.shp
+		Start: 397
+		Length: 9
+		Tick: 80
+	# Explode
+	die2: 
+		Filename: gle3.shp
+		Start: 406
+		Length: 8
+		Tick: 80
+	# Fly and explode in air
+	die3: 
+		Filename: gle3.shp
+		Start: 414
+		Length: 8
+		Tick: 80
+	# Fly through air squish on ground
+	die4: 
+		Filename: gle3.shp
+		Start: 422
+		Length: 12
+		Tick: 80
+	# Burn
+	die5: 
+		Filename: gle3.shp
+		Start: 434
+		Length: 18
+		Tick: 80
+	# Tib
+	die6: 
+		Filename: gle3.shp
+		Start: 382
+		Length: 11
+		Tick: 80
+	# Electro
+	die7: 
+		Filename: electro.shp ##########
+		Length: *
+	die-crushed:
+		Filename: e3rot.shp
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	icon: 
+		Filename: che3icon.shp
+	icon_nuke: 
+		Filename: chnucleartankhunter_icon.shp
+	ammo_he:
+		Filename: chsiegesoldier_ammo.shp
+		Start: 1
+	ammo_c4:
+		Filename: ammo_c4_icon.shp
+
+sche3:
+	Inherits: schtankhunter
+	Defaults:
+		Scale: 2.0
+
+schtankhunter_nuke:
+	Inherits: schtankhunter
+	Defaults:
+		Scale: 2.0
+
+schhacker:
+	Defaults:
+		Scale: 2.0
+		Filename: chhacker.shp
+	stand: 
+		Filename: schhacker.shp
+		Facings: 8
+	run:
+		Filename: schhacker.shp
+		Start: 8
+		Length: 10
+		Facings: 8
+		Tick: 80
+	sitdown:
+		Filename: schhacker.shp
+		Start: 128
+		Length: 10
+		Tick: 120
+	deployed:
+		Filename: schhacker.shp
+		Start: 138
+		Length: 10
+		Facings: 8
+		Tick: 120
+	idle1: 
+		Filename: schhacker.shp
+		Start: 88
+		Length: 20
+		Tick: 100
+	idle2: 
+		Filename: schhacker.shp
+		Start: 108
+		Length: 20
+		Tick: 100
+	die1: 
+		Filename: chhacker.shp
+		Start: 329
+		Length: 8
+		Tick: 80
+	# Explode
+	die2:
+		Filename: chhacker.shp
+		Start: 337
+		Length: 8
+		Tick: 80
+	# Fly and explode in air
+	die3:
+		Filename: chhacker.shp
+		Start: 337
+		Length: 8
+		Tick: 80
+	# Fly through air squish on ground
+	die4:
+		Filename: chhacker.shp
+		Start: 345
+		Length: 12
+		Tick: 80
+	# Burn
+	die5:
+		Filename: chhacker.shp
+		Start: 357
+		Length: 18
+		Tick: 80
+	# Tib
+	die6: 
+		Filename: chhacker.shp
+		Start: 182
+		Length: 4
+		Tick: 80
+	# Electro
+	die7: 
+		Filename: electro.shp ##########
+		Length: *
+	die-crushed: 
+		Filename: e1rot.shp
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	dot:
+		Filename: invisibleitem.shp
+		ZOffset: -9999
+	icon:
+		Filename: chhackericon.shp
+	icon_nuke: 
+		Filename: chnuclearhacker_icon.shp
+
+schlotus:
+	Inherits: schhacker
+	Defaults:
+		Scale: 2.0
+		Filename: schlotus.shp
+	stand: 
+		Filename: schlotus.shp
+		Facings: 8
+	run: 
+		Filename: schlotus.shp
+		Start: 8
+		Length: 11
+		Facings: 8
+	run-injured:
+		Start: 136
+		Length: 12
+		Facings: 8
+	idle1: 
+		Filename: schlotus.shp
+		Start: 96
+		Length: 20
+	idle2:
+		Filename: schlotus.shp
+		Start: 117
+		Length: 20
+	deployed:
+		Filename: schlotus.shp
+		Start: 252
+		Length: 10
+		Facings: 8
+	sitdown:
+		Filename: schlotus.shp
+		Start: 332
+		Length: 20
+	die1: 
+		Filename: chlotus.shp
+		Start: 329
+		Length: 8
+		Tick: 80
+	# Explode
+	die2: 
+		Filename: chlotus.shp
+		Start: 337
+		Length: 8
+		Tick: 80
+	# Fly and explode in air
+	die3: 
+		Filename: chlotus.shp
+		Start: 337
+		Length: 8
+		Tick: 80
+	# Fly through air squish on ground
+	die4:
+		Filename: chlotus.shp
+		Start: 345
+		Length: 12
+		Tick: 80
+	# Burn
+	die5:
+		Filename: chlotus.shp
+		Start: 357
+		Length: 18
+		Tick: 80
+	# Tib
+	die6:
+		Filename: chlotus.shp
+		Start: 182
+		Length: 4
+		Tick: 80
+	# Electro
+	die7: 
+		Filename: electro.shp ##########
+		Length: *
+	die-crushed: 
+		Filename: e1rot.shp
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	dot:
+		Filename: invisibleitem.shp
+		ZOffset: -9999
+	icon:
+		Filename: chlotusicon.shp
+	icon_nuke: 
+		Filename: chnuclearblacklotus_icon.shp
+
 chbattle:
+	Defaults:
+		Scale: 2.0
 	idle:
 		Filename: chbattle.shp
 		Facings: 32
@@ -1586,6 +2670,7 @@ chbattle:
 
 chmig:
 	Defaults:
+		Scale: 2.0
 		Filename: chmig.shp
 	idle:
 		Facings: 32
@@ -1597,6 +2682,7 @@ chmig:
 
 charty:
 	Defaults:
+		Scale: 2.0
 		Filename: charty.shp
 	idle:
 		Facings: 32
@@ -1614,44 +2700,47 @@ charty:
 
 choverlord:
 	Defaults:
+		Scale: 2.0
 		Filename: choverlord.shp
 	idle:
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 1.12
+		#Scale: 1.12
 	turret:
 		Filename: choverlordtur.shp
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 1.12
+		#Scale: 1.12
 	turretgat:
 		Filename: choverlordtur2.shp
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 1.12
+		#Scale: 1.12
 	turretbun:
 		Filename: choverlordtur3.shp
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 1.12
+		#Scale: 1.12
 	turretpro: 
 		Filename: choverlordtur4.shp
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 1.12
+		#Scale: 1.12
 	muzzle: 
 		Filename: gunfire2.shp
 		Length: 5
-		Scale: 1.12
+		#Scale: 1.12
 	muzzle2: 
 		Filename: minigun.shp
 		Length: 6
 		Facings: 8
-		Scale: 1.12
+		#Scale: 1.12
 	icon:
 		Filename: choverlordicon.shp
 
 choverlord2:
+	Defaults:
+		Scale: 2.0
 	idle:
 		Filename: choverlord.shp
 		Facings: 32
@@ -1688,25 +2777,27 @@ choverlordaddon3:
 
 chdragon:
 	Defaults:
+		Scale: 2.0
 		Filename: chdragon.shp
 	idle:
 		Facings: 32
 		UseClassicFacings: True
-	Scale: 1.1
+	#Scale: 1.1
 	turret:
 		Filename: chdragontur.shp
 		Facings: 32
 		UseClassicFacings: True
-	Scale: 1.1
+	#Scale: 1.1
 	muzzle:
 		Filename: gunfire2.shp
 		Length: *
-	Scale: 1.1
+	#Scale: 1.1
 	icon: 
 		Filename: chdragonicon.shp
 
 chgtnk:
 	Defaults:
+		Scale: 2.0
 		Filename: chgtnk.shp
 	idle:
 		Facings: 32
@@ -1720,23 +2811,24 @@ chgtnk:
 		Length: 6
 		Facings: 8
 	icon:
-		filename: chgtnkicon.shp
+		Filename: chgtnkicon.shp
 
 chcrawl:
 	Defaults:
+		Scale: 2.0
 		Filename: chcrawl.shp
 	idle:
 		Facings: 32
 		UseClassicFacings: True
-	Scale: 0.89
+	# Scale: 0.89
 	close:
 		Facings: 32
 		UseClassicFacings: True
-	Scale: 0.89
+	# Scale: 0.89
 	unload:
 		Facings: 32
 		UseClassicFacings: True
-	Scale: 0.89
+	# Scale: 0.89
 	icon:
 		Filename: chcrawlicon.shp
 
@@ -1745,6 +2837,7 @@ chcrawl2:
 
 chnukecann:
 	Defaults:
+		Scale: 2.0
 		Filename: chnukecannon.shp
 	idle:
 		Filename: invisibleitem.shp
@@ -1768,6 +2861,7 @@ chnukecann:
 
 chharv:
 	Defaults:
+		Scale: 2.0
 		Filename: chharv.shp
 	idle:
 		Facings: 32
@@ -1778,11 +2872,13 @@ chharv:
 
 chharvfull:
 	Defaults:
+		Scale: 2.0
 		Filename: chharvfull.shp
 	Inherits: chharv
 
 choutpost:
 	Defaults:
+		Scale: 2.0
 		Filename: choutpost.shp
 	idle:
 		Facings: -32
@@ -1799,6 +2895,7 @@ choutpost:
 
 checm:
 	Defaults:
+		Scale: 2.0
 		Filename: checm.shp
 	idle:
 		Facings: 32
@@ -1869,6 +2966,7 @@ upsathack2:
 
 chbigatomicweapon:
 	Defaults:
+		Scale: 2.0
 		Length: *
 		ZOffset: 1023
 	up:
@@ -1903,6 +3001,7 @@ chautoloadericon:
 
 chflameboat:
 	Defaults:
+		Scale: 2.0
 		Filename: chflameboat.shp
 	idle:
 		Facings: 32
@@ -1919,25 +3018,27 @@ chflameboat:
 
 chasub:
 	Defaults:
+		Scale: 2.0
 		Filename: chasub.shp
 	idle:
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.80
+		# Scale: 0.80
 	turret:
 		Filename: chdragontur.shp
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.80
+		# Scale: 0.80
 	muzzle:
 		Filename: gunfire2.shp
 		Length: *
-		Scale: 0.80
+		# Scale: 0.80
 	icon:
 		Filename: chnuclearsubicon.shp
 
 chhelix:
 	Defaults:
+		Scale: 2.0
 		Filename: chhelix.shp
 	idle:
 		Facings: 32
@@ -1970,6 +3071,7 @@ chhelix:
 
 chminv:
 	Defaults:
+		Scale: 2.0
 		Filename: chminv.shp
 	idle:
 		ZOffset: -512
@@ -2004,6 +3106,7 @@ chneutronmines:
 ####################################################################################################
 usagunship:
 	Defaults:
+		Scale: 2.0
 		Filename: usagunship.shp
 	idle:
 		Facings: 32
@@ -2012,6 +3115,7 @@ usagunship:
 
 usabomber:
 	Defaults:
+		Scale: 2.0
 		Filename: usabomber.shp
 	idle:
 		Facings: 32
@@ -2021,17 +3125,20 @@ usabomber:
 
 usabomberbomb:
 	Defaults:
+		Scale: 2.0
 		Filename: usabomberbomb.shp
 	idle:
 		Facings: 4
 
 usaleaflet:
 	Defaults:
+		Scale: 2.0
 		Filename: usaleaflet.shp
 	idle:
 
 usamcv:
 	Defaults:
+		Scale: 2.0
 		Filename: usamcv.shp
 	idle:
 		Facings: 32
@@ -2042,6 +3149,7 @@ usamcv:
 usacommand:
 	Inherits: ^WithBuildingBib2
 	Defaults:
+		Scale: 2.0
 		Filename: usacommand.shp
 		Offset: 0,-5
 	idle:
@@ -2054,12 +3162,13 @@ usacommand:
 		Length: *
 		Offset: 0,24
 	icon:
-		Filename: glcommandicon.shp
+		Filename: usacommandicon.shp
 		Offset: 0,0
 
 usapower:
 	Inherits: ^WithBuildingBib3
 	Defaults:
+		Scale: 2.0
 		Filename: usapower.shp
 	idle:
 		Offset: 0,-10
@@ -2098,6 +3207,7 @@ usapower:
 usabarracks:
 	Inherits: ^WithBuildingBib2
 	Defaults:
+		Scale: 2.0
 		Filename: usabarracks.shp
 	idle:
 	damaged-idle:
@@ -2117,6 +3227,7 @@ usabarracks:
 usaweap:
 	Inherits: ^WithBuildingBib1
 	Defaults:
+		Scale: 2.0
 		Filename: usaweap.shp
 		Offset: 0,-8
 	idle:
@@ -2137,6 +3248,7 @@ usaweap:
 usastrategy:
 	Inherits: ^WithBuildingBib1
 	Defaults:
+		Scale: 2.0
 		Filename: usastrategy.shp
 		Offset: 2,0
 	idle:
@@ -2162,6 +3274,7 @@ usastrategy:
 usacannon:
 	Inherits: ^WithBuildingBib1
 	Defaults:
+		Scale: 2.0
 		Filename: usacannon.shp
 		Offset: 0,-4
 	idle:
@@ -2195,6 +3308,7 @@ usacannon:
 usacannon2:
 	Inherits: ^WithBuildingBib2
 	Defaults:
+		Scale: 2.0
 		Filename: usacannon2.shp
 		Offset: 0,-12
 	idle:
@@ -2220,6 +3334,7 @@ usacannon2:
 
 usaairport:
 	Defaults:
+		Scale: 2.0
 		Filename: usaairport.shp
 	idle:
 		ZOffset: -1023
@@ -2242,6 +3357,7 @@ usaairport:
 usadropzone:
 	Inherits: ^WithBuildingBib3
 	Defaults:
+		Scale: 2.0
 		Filename: usadropzone.shp
 	idle:
 	damaged-idle:
@@ -2270,6 +3386,7 @@ usadropzone:
 
 usasupply:
 	Defaults:
+		Scale: 2.0
 		Filename: usasupply.shp
 		Offset: 0,0
 	idle:
@@ -2284,6 +3401,8 @@ usasupply:
 		Offset: 0,0
 
 usapatriot:
+	Defaults:
+		Scale: 2.0
 	idle: 
 		Filename: usapatriot.shp
 	dead:
@@ -2303,6 +3422,8 @@ usapatriot:
 		Filename: usapatrioticon.shp
 
 usalasertur:
+	Defaults:
+		Scale: 2.0
 	idle:
 		Filename: usapatriot.shp
 	dead:
@@ -2322,6 +3443,8 @@ usalasertur:
 		Filename: usalaserturicon.shp
 
 usae1:
+	Defaults:
+		Scale: 2.0
 	Inherits: ra2e1
 	muzzle:
 		Filename: minigun.shp
@@ -2330,15 +3453,138 @@ usae1:
 	icon:
 		Filename: usarangericon.shp
 
+ranger:
+	Inherits: usae1
+	Defaults:
+		Scale: 2.0
+	stand: 
+		Filename: usaranger.shp
+		Start: 8
+		Facings: 8
+	stand2:
+		Start: 8
+		Facings: 8
+	stand-injured: 
+		Filename: usaranger.shp
+		Facings: 8
+	run: 
+		Filename: usaranger.shp
+		Start: 16
+		Length: 10
+		Facings: 8
+	run-injured:
+		Filename: usaranger.shp
+		Start: 96
+		Length: 10
+		Facings: 8
+		Tick: 100
+	shoot: 
+		Filename: usaranger.shp
+		Start: 216
+		Length: 6
+		Facings: 8
+	shoot-injured: 
+		Filename: usaranger.shp
+		Start: 264
+		Length: 6
+		Facings: 8
+		Tick: 100
+	idle1: 
+		Filename: usaranger.shp
+		Start: 176
+		Length: 20
+	idle2: 
+		Filename: usaranger.shp
+		Start: 196
+		Length: 20
+	garrison-muzzle: 
+		Filename: minigun.shp
+		Length: 3
+		Stride: 6
+		Facings: 8
+	halo: 
+		Filename: usahaloinfantry.shp
+		Facings: -8
+	muzzle: 
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	die-crushed: 
+		Filename: e1rot.shp
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	icon_laser: 
+		Filename: usalaserranger_icon.shp
+
 usae3:
 	Inherits: gle3
 	Defaults:
+		Scale: 2.0
 		Filename: usae3.shp
 	icon:
 		Filename: usae3icon.shp
 
+usamissiledefender:
+	Inherits: usae3
+	Defaults:
+		Scale: 2.0
+	stand: 
+		Filename: usamissiledefender.shp
+		Start: 0
+		Facings: 8
+	run:
+		Filename: usamissiledefender.shp
+		Start: 8
+		Length: 10
+		Facings: 8
+	shoot:
+		Filename: usamissiledefender.shp
+		Start: 128
+		Length: 10
+		Facings: 8
+	# idle: 
+	# 	Filename: usamissiledefender.shp
+	# 	Start: 88
+	# 	Length: 20
+	idle1:
+		Filename: usamissiledefender.shp
+		Start: 88
+		Length: 20
+	idle2: 
+		Filename: usamissiledefender.shp
+		Start: 108
+		Length: 20
+	idle3: 
+		Filename: usamissiledefender.shp
+		Start: 208
+		Length: 20
+	garrison-muzzle: 
+		Filename: minigun.shp
+		Length: 3
+		Stride: 6
+		Facings: 8
+	halo:
+		Filename: usahaloinfantry.shp
+		Facings: -8
+	die-crushed: 
+		Filename: e1rot.shp
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	icon_emp: 
+		Filename: usaempmissiledefender_icon.shp
+	icon_laser: 
+		Filename: usalasermissiledefender_icon.shp
+	icon_bluearrow: 
+		Filename: usabluearrowdefender_icon.shp
+
 usaburton:
 	Inherits: rmbo
+	Defaults:
+		Scale: 2.0
 		Filename: usaburton.shp
 	icon:
 		Filename: usaburtonicon.shp
@@ -2348,129 +3594,268 @@ usaburton:
 		Filename: usaburtonmodes.shp
 		Start: 1
 
+susaburton:
+	Inherits: usaburton
+	Defaults:
+		Scale: 2.0
+		Filename: susaburton.shp
+	stand: 
+		Filename: susaburton.shp
+		Start: 0
+		Facings: 8
+	stand-injured: 
+		Filename: susaburton.shp
+		Start: 0
+		Facings: 8
+	muzzle: 
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	run: 
+		Filename: susaburton.shp
+		Start: 8
+		Length: 10
+		Facings: 8
+	run-injured: 
+		Filename: susaburton.shp
+		Start: 88
+		Length: 10
+		Facings: 8
+		Tick: 100
+	shoot-injured: 
+		Filename: susaburton.shp
+		Start: 240
+		Length: 10
+		Facings: 8
+		Tick: 100
+	shoot: 
+		Filename: susaburton.shp
+		Start: 320
+		Length: 10
+		Facings: 8
+	knife:
+		Filename: susaburton.shp
+		Start: 400
+		Length: 10
+		Facings: 8
+		Tick: 110
+	idle1:
+		Filename: susaburton.shp
+		Start: 168
+		Length: 20
+	idle2:
+		Filename: susaburton.shp
+		Start: 188
+		Length: 12
+	garrison-muzzle: 
+		Filename: minigun.shp
+		Length: 3
+		Stride: 6
+		Facings: 8
+	die-crushed:
+		Filename: e1rot.shp
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	icon_laser: 
+		Filename: usalaserburton_icon.shp
+
 usapath:
 	Inherits: ^InfantryOverlays
 	Defaults:
+		Scale: 2.0
 		Filename: usapath.shp
 	stand:
 		Facings: 16
-		Scale: 0.85
+		# Scale: 0.85
 	stand2:
 		Facings: 16
-		Scale: 0.85
+		# Scale: 0.85
 	run:
 		Facings: 16
-		Scale: 0.85
+		# Scale: 0.85
 	shoot:
 		Facings: 16
-		Scale: 0.85
+		# Scale: 0.85
 	prone-stand:
 		Facings: 16
-		Scale: 0.85
+		# Scale: 0.85
 	prone-stand2:
 		Facings: 16
-		Scale: 0.85
+		# Scale: 0.85
 	prone-run:
 		Facings: 16
-		Scale: 0.85
+		# Scale: 0.85
 	# stand -> prone transition
 	liedown:
 		Facings: 16
-		Scale: 0.85
+		# Scale: 0.85
 	# prone -> stand transition
 	standup:
 		Facings: 16
-		Scale: 0.85
+		# Scale: 0.85
 	prone-shoot:
 		Facings: 16
-		Scale: 0.85
+		# Scale: 0.85
 	idle1:
 		Facings: 16
-		Scale: 0.85
+		# Scale: 0.85
 	idle2:
 		Facings: 16
-		Scale: 0.85
+		# Scale: 0.85
 	idle3:
 		Facings: 16
-		Scale: 0.85
+		# Scale: 0.85
 	cheer:
 		Facings: 16
-		Scale: 0.85
+		# Scale: 0.85
 	# Dancing
 	idle4:
 		Facings: 16
-		Scale: 0.85
+		# Scale: 0.85
 	# Shot
 	die1:
 		Filename: e1.shp
 		Start: 381
 		Length: 9
 		Tick: 80
-		Scale: 0.85
+		# Scale: 0.85
 	# Explode
 	die2:
 		Filename: e1.shp
 		Start: 390
 		Length: 8
 		Tick: 80
-		Scale: 0.85
+		# Scale: 0.85
 	# Fly and explode in air
 	die3:
 		Filename: e1.shp
 		Start: 398
 		Length: 8
 		Tick: 80
-		Scale: 0.85
+		# Scale: 0.85
 	# Fly through air squish on ground
 	die4:
 		Filename: e1.shp
 		Start: 406
 		Length: 12
 		Tick: 80
-		Scale: 0.85
+		# Scale: 0.85
 	# Burn
 	die5:
 		Filename: e1.shp
 		Start: 418
 		Length: 18
 		Tick: 80
-		Scale: 0.85
+		# Scale: 0.85
 	# Tib
 	die6:
 		Filename: e1.shp
 		Start: 366
 		Length: 11
 		Tick: 80
-		Scale: 0.85
+		# Scale: 0.85
 	# Electro
 	die7:
 		Filename: electro.shp
 		Length: *
-		Scale: 0.85
+		# Scale: 0.85
 	die-crushed: 
 		Filename: e1rot.shp
 		Start: 16
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-		Scale: 0.85
+		# Scale: 0.85
 	garrison-muzzle:
 		Filename: minigun.shp
 		Length: 3
 		Stride: 6
 		Facings: 8
-		Scale: 0.85
+		# Scale: 0.85
 	icon:
+		Filename: usapathicon.shp
+
+susapathfinder:
+	Inherits: usapath
+	Defaults: 
+		Filename: usapathfinder.shp
+		Scale: 2.0
+	stand:
+		Start: 0
+		Facings: 8
+	stand2:
+		Start: 0
+		Facings: 8
+	run:
+		Start: 8
+		Length: 10
+		Facings: 8
+	shoot:
+		Start: 88
+		Length: 10
+		Facings: 8
+	prone-stand:
+		Start: 255
+		Facings: 8
+	prone-stand2:
+		Start: 255
+		Facings: 8
+	prone-run:
+		Start: 263
+		Length: 10
+		Facings: 8
+	# stand -> prone transition
+	liedown:
+		Start: 240
+		Length: 2
+		Facings: 8
+	# prone -> stand transition
+	standup:
+		Start: 223
+		Length: 2
+		Facings: 8
+	prone-shoot:
+		Start: 343
+		Length: 10
+		Facings: 8
+	idle1:
+		Start: 168
+		Length: 20
+		Facings: 1
+	garrison-muzzle: 
+		Filename: minigun.shp
+		Length: 3
+		Stride: 6
+		Facings: 8
+	die:
+		Start: 208
+		Length: 15
+		Tick: 95
+	die-crushed: 
+		Filename: e1rot.shp
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	muzzle: minigun.shp
+		Length: 6
+		Facings: 8
+	icon: 
 		Filename: usapathicon.shp
 
 usapilot:
 	Inherits: gnrl
 	Defaults:
+		Scale: 2.0
 		Filename: gnrl.shp
 	icon: 
 		Filename: Gen_PilotIcon.png
 
 usajeep:
+	Defaults:
+		Scale: 2.0
 	idle: 
 		Filename: usajeep.shp
 		Facings: 32
@@ -2496,26 +3881,30 @@ usajeep:
 		Filename: usahumveeicon.shp
 
 usauwusupply:
+	Defaults:
+		Scale: 2.0
 	idle: 
 		Filename: usauwusupply.shp
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.90
+		# Scale: 0.90
 	turret:
 		Filename: jeep.shp
 		Start: 32
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.90
+		# Scale: 0.90
 	muzzle:
 		Filename: minigun.shp
 		Length: 6
 		Facings: 8
-		Scale: 0.90
+		# Scale: 0.90
 	icon:
 		Filename: usauwusupplyicon.shp
 
 usaambulan:
+	Defaults:
+		Scale: 2.0
 	idle: 
 		Filename: usaambulan.shp
 		Facings: 32
@@ -2542,6 +3931,7 @@ usaambulan:
 
 usadrone:
 	Defaults:
+		Scale: 2.0
 		Filename: usadrone.shp
 	idle:
 		Facings: 32
@@ -2558,6 +3948,7 @@ usadrone:
 
 usahellfire:
 	Defaults:
+		Scale: 2.0
 		Filename: usahellfire.shp
 	idle:
 		Facings: 32
@@ -2569,45 +3960,49 @@ usahellfire:
 		Filename: usahellfireicon.shp
 
 usaspydrone:
+	Defaults:
+		Scale: 0.5
 	idle: 
 		Filename: a10.shp
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.15
+		# Scale: 0.15
 	shoot:
 		Filename: a10.shp
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.15
+		# Scale: 0.15
 	icon:
 		Filename: usascoutdroneicon.shp
 
 usattnk:
 	Defaults:
+		Scale: 2.0
 		Filename: usattnk.shp
 	idle:
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.85
+		# Scale: 0.85
 	turret:
 		Filename: usattnktm.shp
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.85
+		# Scale: 0.85
 	turret-reload: 
 		Filename: usattnkt.shp
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.85
+		# Scale: 0.85
 	muzzle: 
 		Filename: gunfire2.shp
 		Length: 5
-		Scale: 0.85
+		# Scale: 0.85
 	icon: 
 		Filename: usattnkicon.shp
 
 usacrusader:
 	Defaults:
+		Scale: 2.0
 		Filename: usacrusader.shp
 	idle:
 		Facings: 32
@@ -2625,6 +4020,8 @@ usacrusader:
 		Filename: chhorde.shp
 
 usacrusader2:
+	Defaults:
+		Scale: 2.0
 	idle:
 		Filename: usacrusader.shp
 		Facings: 32
@@ -2643,20 +4040,21 @@ usacrusader2:
 
 usapala:
 	Defaults:
+		Scale: 2.0
 		Filename: usapala.shp
 	idle:
 		Facings: 32
 		UseClassicFacings: True
-	Scale: 0.9
+	# Scale: 0.9
 	turret:
 		Filename: usapalatur.shp
 		Facings: 32
 		UseClassicFacings: True
-	Scale: 0.9
+	# Scale: 0.9
 	muzzle:
 		Filename: gunfire2.shp
 		Length: 5
-	Scale: 0.9
+	# Scale: 0.9
 	icon: 
 		Filename: usapalaicon.shp
 	redstar:
@@ -2664,26 +4062,27 @@ usapala:
 
 usasentry:
 	Defaults:
+		Scale: 1.5
 		Filename: usasentry.shp
 	idle:
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.88
+		# Scale: 0.88
 	turret: 
 		Filename: usasentrytur2.shp
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.88
+		# Scale: 0.88
 	turretnone: 
 		Filename: usasentrytur1.shp
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.88
+		# Scale: 0.88
 	muzzle: 
 		Filename: minigun.shp
 		Length: 6
 		Facings: 8
-		Scale: 0.88
+		# Scale: 0.88
 	icon: 
 		Filename: usasentryicon.shp
 	redstar: 
@@ -2691,20 +4090,21 @@ usasentry:
 
 usaavenger:
 	Defaults:
+		Scale: 2.0
 		Filename: usaavenger.shp
 	idle:
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.88
+		# Scale: 0.88
 	turret: 
 		Filename: usaavengertur.shp
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.88
+		# Scale: 0.88
 	muzzle: 
 		Filename: gunfire2.shp
 		Length: 5
-		Scale: 0.88
+		# Scale: 0.88
 	icon: 
 		Filename: usaavengericon.shp
 	redstar:
@@ -2712,11 +4112,12 @@ usaavenger:
 
 usamicro:
 	Defaults:
+		Scale: 2.0
 		Filename: usamicro.shp
 	idle:
 		Facings: 32
 		UseClassicFacings: True
-	Scale: 0.87
+	# Scale: 0.87
 	turret:
 		Filename: invisibleitem.shp
 	muzzle:
@@ -2753,13 +4154,15 @@ usamicro:
 				Filename: flame-ne.shp
 				Length: *
 				Offset: -7,8
-		Scale: 0.87
+		# Scale: 0.87
 	icon: 
 		Filename: usamicrowavetankicon.shp
 	redstar: 
 		Filename: chhorde.shp
 
 usahook:
+	Defaults:
+		Scale: 2.0
 	idle-body: 
 		Filename: usachinook.shp
 		Facings: 32
@@ -2798,11 +4201,13 @@ usahook:
 
 gendriverdead:
 	Defaults:
+		Scale: 2.0
 		Filename: gendriverdead.shp
 	idle:
 
 usaparticlesfx:
 	Defaults:
+		Scale: 2.0
 		Filename: usaparticlesfx.shp
 	idle:
 		Length: *
@@ -2811,6 +4216,8 @@ usaparticlesfx:
 		Tick: 120
 
 usaparticlesfx2:
+	Defaults:
+		Scale: 2.0
 	idle: 
 		Filename: usaparticlesfx.shp
 		Start: 6
@@ -2821,6 +4228,7 @@ usaparticlesfx2:
 
 usaparticlesfx3:
 	Defaults:
+		Scale: 2.0
 		Filename: usaparticlesfx3.shp
 	idle:
 		Length: *
@@ -2829,6 +4237,8 @@ usaparticlesfx3:
 		Tick: 120
 
 usaparticlesfx4:
+	Defaults:
+		Scale: 2.0
 	idle: 
 		Filename: usaparticlesfx3.shp
 		Start: 6
@@ -2838,7 +4248,8 @@ usaparticlesfx4:
 		Tick: 120
 
 usacannon.beam:
-	Defaults: 
+	Defaults:
+		Scale: 2.0 
 		Filename: usaparticlesfx.shp
 		Offset: 0, -78
 		ZOffset: 1023
@@ -2887,6 +4298,7 @@ usacannon.beam:
 
 usaraptor:
 	Defaults:
+		Scale: 2.0
 		Filename: usaraptor.shp
 	idle:
 		Facings: 32
@@ -2897,10 +4309,12 @@ usaraptor:
 usaraptor2:
 	Inherits: usaraptor
 	Defaults:
+		Scale: 2.0
 		Filename: usaraptor2.shp
 
 usaaurora:
 	Defaults:
+		Scale: 2.0
 		Filename: usaaurora.shp
 	idle:
 		Facings: 32
@@ -2910,6 +4324,7 @@ usaaurora:
 
 usaaurora2:
 	Defaults:
+		Scale: 2.0
 		Filename: usaaurora2.shp
 	idle:
 		Facings: 32
@@ -2921,6 +4336,7 @@ usaaurora2:
 
 usastealth:
 	Defaults:
+		Scale: 2.0
 		Filename: usastealth.shp
 	idle:
 		Facings: 32
@@ -2929,6 +4345,8 @@ usastealth:
 		Filename: usastealthicon.shp
 
 usacomanche:
+	Defaults:
+		Scale: 2.0
 	idle:
 		Filename: usacomanche.shp
 		Facings: 32
@@ -2949,6 +4367,7 @@ usacomanche:
 	
 usafirebase:
 	Defaults:
+		Scale: 2.0
 		Offset: 0,0
 		Filename: usafirebase.shp
 	idle:
@@ -3023,6 +4442,7 @@ usabunkerbustericon:
 
 usabattleship:
 	Defaults:
+		Scale: 2.0
 		Filename: usabattleship.shp
 	idle:
 		Facings: 32
@@ -3037,18 +4457,19 @@ usabattleship:
 
 usacarrier:
 	Defaults:
+		Scale: 2.0
 		Filename: usacarrier.shp
 	idle:
 		Facings: 32
-		Scale: 0.80
+		# Scale: 0.80
 	turret: 
 		Filename: usabattleshiptur.shp
 		Facings: 32
-		Scale: 0.80
+		# Scale: 0.80
 	muzzle: 
 		Filename: gunfire2.shp
 		Length: *
-		Scale: 0.80
+		# Scale: 0.80
 	icon: 
 		Filename: usacarriericon.shp
 
