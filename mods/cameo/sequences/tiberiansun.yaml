@@ -1489,6 +1489,11 @@ tsgtcnst:
 		Filename: tsfacticon.shp
 		Offset: 0,0
 
+tsntcnst:
+	Inherits: tsgtcnst
+	icon:
+		Filename: tsnodfacticon.png
+
 tsgtpowr:
 	# Inherits: ^WithBuildingBib3
 	Defaults:

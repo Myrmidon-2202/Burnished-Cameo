@@ -218,6 +218,7 @@ drpowr:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 10
 		Description: Provides power for other structures.\nRefines Ores and gems into credits
+		Prerequisites: ~drhq
 	Valued:
 		Cost: 600 #300
 	Tooltip:
@@ -238,9 +239,15 @@ drpowr:
 		Amount: 150
 	StoresResources:
 		Capacity: 10000
+	DockHost:
+		DockAngle: 448
+		DockOffset: 0,2,0
+		IsDragRequired: True
+		DragOffset: -554,512,0
+		DragLength: 12
 	Refinery:
 		DockAngle: 448
-		DockOffset: 0,2
+		DockOffset: 0,2,0
 		IsDragRequired: True
 		DragOffset: -554,512,0
 		DragLength: 12
@@ -313,7 +320,10 @@ drwaterl.imperium:
 		Range: 5c0
 	Refinery:
 		DockAngle: 256
-		DockOffset: 1,2
+		DockOffset: 1,2,0
+	DockHost:
+		DockAngle: 256
+		DockOffset: 1,2,0
 	StoresResources:
 		Capacity: 2000 #2000
 	DrawLineToTarget:
@@ -840,6 +850,7 @@ drcamera:
 		Actors: pscdrpplant2
 	ProvidesPrerequisite@drihq2:
 		Prerequisite: drpplant2
+
 ^DRHQStats:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^3x2Shape
@@ -871,6 +882,12 @@ drcamera:
 		Footprint: xxx xxx =xx
 		Dimensions: 3,3
 		LocalCenterOffset: 0,-512,0
+	-Transforms:
+	-TransformsIntoMobile:
+	-TransformsIntoPassenger:
+	-TransformsIntoRepairable:
+	-TransferTimedExternalConditionOnTransform:
+
 drwall1:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^2x2Shape
@@ -920,6 +937,7 @@ drwall2:
 	RevealsShroud:
 		Range: 3c0
 	RenderSprites:
+
 dre6:
 	Inherits: E6
 	Tooltip:
@@ -985,6 +1003,7 @@ mcv.imperium:
 		VoiceSet: DRIRigVoice
 	Passenger:
 		Weight: 1
+
 drihq.imperium:
 	Inherits: ^DRHQStats
 	Tooltip:
@@ -1042,6 +1061,7 @@ drihq.imperium:
 	RenderSprites:
 		Image: drihq
 	Inherits@upgrade: ^UpgradesDRIHQType
+
 pscdrihq2:
 	Tooltip:
 		Name: HQ Tier 2

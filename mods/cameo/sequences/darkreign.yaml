@@ -173,7 +173,7 @@ driweap:
 		Filename: driweapicon.shp
 
 driweap2:
-	icon: driweap2icon
+	icon:
 		Filename: driweap2.shp
 
 drihq:
@@ -193,51 +193,52 @@ drihq:
 		ZOffset: 1024
 		Scale: 0.67
 	idle-bottom: 
-		Filename: drihq_bib
+		Filename: drihq_bib.shp
 		Start: 1
 		ZOffset: -1024
 		Scale: 0.67
 	damaged-idle-bottom: 
-		Filename: drihq_bib
+		Filename: drihq_bib.shp
 		Start: 2
 		ZOffset: -1024
 		Scale: 0.67
-	idle-top2: drihq2
+	idle-top2: 
+		Filename: drihq2.shp
 		Start: 1
 		ZOffset: 1024
 		Scale: 0.67
 	damaged-idle-top2: 
-		Filename: drihq2
+		Filename: drihq2.shp
 		Start: 2
 		ZOffset: 1024
 		Scale: 0.67
 	idle-bottom2: 
-		Filename: drihq2_bib
+		Filename: drihq2_bib.shp
 		Start: 1
 		ZOffset: -1024
 		Scale: 0.67
 	damaged-idle-bottom2: 
-		Filename: drihq2_bib
+		Filename: drihq2_bib.shp
 		Start: 2
 		ZOffset: -1024
 		Scale: 0.67
 	idle-top3: 
-		Filename: drihq3
+		Filename: drihq3.shp
 		Start: 1
 		ZOffset: 1024
 		Scale: 0.67
 	damaged-idle-top3: 
-		Filename: drihq3
+		Filename: drihq3.shp
 		Start: 2
 		ZOffset: 1024
 		Scale: 0.67
 	idle-bottom3: 
-		Filename: drihq3_bib
+		Filename: drihq3_bib.shp
 		Start: 1
 		ZOffset: -1024
 		Scale: 0.67
 	damaged-idle-bottom3: 
-		Filename: drihq3_bib
+		Filename: drihq3_bib.shp
 		Start: 2
 		ZOffset: -1024
 		Scale: 0.67
@@ -264,34 +265,44 @@ drthq:
 	damaged-idle-top:
 		Start: 2
 		ZOffset: 1024
-	idle-bottom: drthq_bib
+	idle-bottom: 
+		Filename: drthq_bib.shp
 		Start: 1
 		ZOffset: -1024
-	damaged-idle-bottom: drthq_bib
+	damaged-idle-bottom: 
+		Filename: drthq_bib.shp
 		Start: 2
 		ZOffset: -1024
-	idle-top2: drthq
+	idle-top2: 
+		Filename: drthq.shp
 		Start: 1
 		ZOffset: 1024
-	damaged-idle-top2: drthq
+	damaged-idle-top2: 
+		Filename: drthq.shp
 		Start: 2
 		ZOffset: 1024
-	idle-bottom2: drthq_bib
+	idle-bottom2: 
+		Filename: drthq_bib.shp
 		Start: 1
 		ZOffset: -1024
-	damaged-idle-bottom2: drthq_bib
+	damaged-idle-bottom2: 
+		Filename: drthq_bib.shp
 		Start: 2
 		ZOffset: -1024
-	idle-top3: drthq
+	idle-top3: 
+		Filename: drthq.shp
 		Start: 1
 		ZOffset: 1024
-	damaged-idle-top3: drthq
+	damaged-idle-top3: 
+		Filename: drthq.shp
 		Start: 2
 		ZOffset: 1024
-	idle-bottom3: drthq_bib
+	idle-bottom3: 
+		Filename: drthq_bib.shp
 		Start: 1
 		ZOffset: -1024
-	damaged-idle-bottom3: drthq_bib
+	damaged-idle-bottom3: 
+		Filename: drthq_bib.shp
 		Start: 2
 		ZOffset: -1024
 	dead:
@@ -326,59 +337,73 @@ drterhq:
 		Start: 2
 		ZOffset: 1024
 		Scale: 0.67
-	idle-bottom: drterhq_bib
+	idle-bottom: 
+		Filename: drterhq_bib.shp
 		Start: 1
 		ZOffset: -1024
 		Scale: 0.67
-	damaged-idle-bottom: drterhq_bib
+	damaged-idle-bottom: 
+		Filename: drterhq_bib.shp
 		Start: 2
 		ZOffset: -1024
 		Scale: 0.67
-	idle-top2: drterhq2
-		Start: 1
-		ZOffset: 1024
-		Scale: 0.67
-	damaged-idle-top2: drterhq2
-		Start: 2
-		ZOffset: 1024
-		Scale: 0.67
-	idle-bottom2: drterhq2_bib
-		Start: 1
-		ZOffset: -1024
-		Scale: 0.67
-	damaged-idle-bottom2: drterhq2_bib
-		Start: 2
-		ZOffset: -1024
-		Scale: 0.67
-	idle-top3: drterhq3
+	idle-top2: 
+		Filename: drterhq2.shp
 		Start: 1
 		ZOffset: 1024
 		Scale: 0.67
-	damaged-idle-top3: drterhq3
+	damaged-idle-top2: 
+		Filename: drterhq2.shp
 		Start: 2
 		ZOffset: 1024
 		Scale: 0.67
-	idle-bottom3: drterhq3_bib
+	idle-bottom2: 
+		Filename: drterhq2_bib.shp
 		Start: 1
 		ZOffset: -1024
 		Scale: 0.67
-	damaged-idle-bottom3: drterhq3_bib
+	damaged-idle-bottom2: 
+		Filename: drterhq2_bib.shp
 		Start: 2
 		ZOffset: -1024
 		Scale: 0.67
-	idle-fan: drterhq_fan
+	idle-top3: 
+		Filename: drterhq3.shp
+		Start: 1
+		ZOffset: 1024
+		Scale: 0.67
+	damaged-idle-top3: 
+		Filename: drterhq3.shp
+		Start: 2
+		ZOffset: 1024
+		Scale: 0.67
+	idle-bottom3: 
+		Filename: drterhq3_bib.shp
+		Start: 1
+		ZOffset: -1024
+		Scale: 0.67
+	damaged-idle-bottom3: 
+		Filename: drterhq3_bib.shp
+		Start: 2
+		ZOffset: -1024
+		Scale: 0.67
+	idle-fan: 
+		Filename: drterhq_fan.shp
 		Length: *
 		ZOffset: 1048
 		Scale: 0.67
-	damaged-idle-fan: drterhq_fan
+	damaged-idle-fan: 
+		Filename: drterhq_fan.shp
 		Length: *
 		ZOffset: 1048
 		Scale: 0.67
-	idle-fan2: drterhq_fan2
+	idle-fan2: 
+		Filename: drterhq_fan2.shp
 		Length: *
 		ZOffset: 1048
 		Scale: 0.67
-	damaged-idle-fan2: drterhq_fan2
+	damaged-idle-fan2: 
+		Filename: drterhq_fan2.shp
 		Length: *
 		ZOffset: 1048
 		Scale: 0.67
@@ -390,6 +415,7 @@ drterhq:
 	icon: 
 		Offset: 0,0
 		Filename: drihq2icon.shp
+
 dribarr:
 	Defaults:
 		Filename: dribarr.shp
@@ -406,27 +432,33 @@ dribarr:
 		Start: 2
 		ZOffset: 1024
 		Scale: 0.67
-	idle-bottom: dribarr_bib
+	idle-bottom: 
+		Filename: dribarr_bib.shp
 		Start: 1
 		ZOffset: -1024
 		Scale: 0.67
-	damaged-idle-bottom: dribarr_bib
+	damaged-idle-bottom: 
+		Filename: dribarr_bib.shp
 		Start: 2
 		ZOffset: -1024
 		Scale: 0.67
-	idle-top2: dribarr2
+	idle-top2: 
+		Filename: dribarr2.shp
 		Start: 1
 		ZOffset: 1024
 		Scale: 0.67
-	damaged-idle-top2: dribarr2
+	damaged-idle-top2: 
+		Filename: dribarr2.shp
 		Start: 2
 		ZOffset: 1024
 		Scale: 0.67
-	idle-bottom2: dribarr2_bib
+	idle-bottom2: 
+		Filename: dribarr2_bib.shp
 		Start: 1
 		ZOffset: -1024
 		Scale: 0.67
-	damaged-idle-bottom2: dribarr2_bib
+	damaged-idle-bottom2: 
+		Filename: dribarr2_bib.shp
 		Start: 2
 		ZOffset: -1024
 		Scale: 0.67
@@ -438,6 +470,7 @@ dribarr:
 	icon: 
 		Offset: 0,0
 		Filename: dribarricon.shp
+
 dribarr2:
 	icon: 
 		Filename: dribarr2icon.shp
@@ -465,16 +498,19 @@ drihelipad:
 		Start: 2
 		ZOffset: 1024
 		Scale: 0.67
-	idle-bottom: drihelipad_bib
+	idle-bottom: 
+		Filename: drihelipad_bib.shp
 		Start: 1
 		ZOffset: -1024
 		Scale: 0.67
-	damaged-idle-bottom: drihelipad_bib
+	damaged-idle-bottom: 
+		Filename: drihelipad_bib.shp
 		Start: 2
 		ZOffset: -1024
 		Scale: 0.67
 	icon: 
 		Filename: drihpadicon.shp
+
 driportal:
 	Defaults:
 		Filename: driportal.shp
@@ -492,24 +528,29 @@ driportal:
 		Filename: invisibleitem.shp
 	bib: 
 		Filename: invisibleitem.shp
-	idle-top: driportal
+	idle-top: 
+		Filename: driportal.shp
 		Start: 1
 		ZOffset: 1024
 		Scale: 0.67
-	damaged-idle-top: driportal
+	damaged-idle-top: 
+		Filename: driportal.shp
 		Start: 2
 		ZOffset: 1024
 		Scale: 0.67
-	idle-bottom: driportal_bib
+	idle-bottom: 
+		Filename: driportal_bib.shp
 		Start: 1
 		ZOffset: -1024
 		Scale: 0.67
-	damaged-idle-bottom: driportal_bib
+	damaged-idle-bottom: 
+		Filename: driportal_bib.shp
 		Start: 2
 		ZOffset: -1024
 		Scale: 0.67
 	icon: 
 		Filename: drportalicon.shp
+
 drmatrix:
 	Defaults:
 		Filename: drmatrix.shp
@@ -527,23 +568,28 @@ drmatrix:
 		Filename: invisibleitem.shp
 	bib: 
 		Filename: invisibleitem.shp
-	idle-top: drmatrix
+	idle-top: 
+		Filename: drmatrix.shp
 		Start: 1
 		ZOffset: 1024
 		Scale: 0.67
-	damaged-idle-top: drmatrix
+	damaged-idle-top: 
+		Filename: drmatrix.shp
 		Start: 2
 		ZOffset: 1024
 		Scale: 0.67
-	idle-bottom: drmatrix_bib
+	idle-bottom: 
+		Filename: drmatrix_bib.shp
 		Start: 1
 		ZOffset: -1024
 		Scale: 0.67
-	damaged-idle-bottom: drmatrix_bib
+	damaged-idle-bottom: 
+		Filename: drmatrix_bib.shp
 		Start: 2
 		ZOffset: -1024
 		Scale: 0.67
-	idle-lights: drmatrix_lights
+	idle-lights: 
+		Filename: drmatrix_lights.shp
 		Length: *
 		ZOffset: 1048
 		Tick: 200
@@ -552,6 +598,7 @@ drmatrix:
 		Filename: invisibleitem.shp
 	icon: 
 		Filename: drmatrixicon.shp
+
 dririft:
 	Defaults:
 		Filename: dririft.shp
@@ -569,19 +616,23 @@ dririft:
 		Filename: invisibleitem.shp
 	bib: 
 		Filename: invisibleitem.shp
-	idle-top: dririft
+	idle-top: 
+		Filename: dririft.shp
 		Start: 1
 		ZOffset: 1024
 		Scale: 0.67
-	damaged-idle-top: dririft
+	damaged-idle-top: 
+		Filename: dririft.shp
 		Start: 2
 		ZOffset: 1024
 		Scale: 0.67
-	idle-bottom: dririft_bib
+	idle-bottom: 
+		Filename: dririft_bib.shp
 		Start: 1
 		ZOffset: -1024
 		Scale: 0.67
-	damaged-idle-bottom: dririft_bib
+	damaged-idle-bottom: 
+		Filename: dririft_bib.shp
 		Start: 2
 		ZOffset: -1024
 		Scale: 0.67
@@ -597,50 +648,62 @@ drfghq:
 	damaged-idle: 
 		Filename: invisibleitem.shp
 	idle-top:
+		Filename: drfghq.shp
 		Start: 1
 		ZOffset: 1024
 		Scale: 0.67
 	damaged-idle-top:
+		Filename: drfghq.shp
 		Start: 2
 		ZOffset: 1024
 		Scale: 0.67
-	idle-bottom: drfghq_bib
+	idle-bottom: 
+		Filename: drfghq_bib.shp
 		Start: 1
 		ZOffset: -1024
 		Scale: 0.67
-	damaged-idle-bottom: drfghq_bib
+	damaged-idle-bottom:
+		Filename: drfghq_bib.shp
 		Start: 2
 		ZOffset: -1024
 		Scale: 0.67
-	idle-top2: drfghq2
+	idle-top2:
+		Filename: drfghq2.shp
 		Start: 1
 		ZOffset: 1024
 		Scale: 0.67
-	damaged-idle-top2: drfghq2
+	damaged-idle-top2: 
+		Filename: drfghq2.shp
 		Start: 2
 		ZOffset: 1024
 		Scale: 0.67
-	idle-bottom2: drfghq2_bib
+	idle-bottom2: 
+		Filename: drfghq2_bib.shp
 		Start: 1
 		ZOffset: -1024
 		Scale: 0.67
-	damaged-idle-bottom2: drfghq2_bib
+	damaged-idle-bottom2: 
+		Filename: drfghq2_bib.shp
 		Start: 2
 		ZOffset: -1024
 		Scale: 0.67
-	idle-top3: drfghq3
+	idle-top3:
+		Filename: drfghq3.shp
 		Start: 1
 		ZOffset: 1024
 		Scale: 0.67
-	damaged-idle-top3: drfghq3
+	damaged-idle-top3: 
+		Filename: drfghq3.shp
 		Start: 2
 		ZOffset: 1024
 		Scale: 0.67
-	idle-bottom3: drfghq3_bib
+	idle-bottom3:
+		Filename: drfghq3_bib.shp
 		Start: 1
 		ZOffset: -1024
 		Scale: 0.67
-	damaged-idle-bottom3: drfghq3_bib
+	damaged-idle-bottom3:
+		Filename: drfghq3_bib.shp
 		Start: 2
 		ZOffset: -1024
 		Scale: 0.67
@@ -652,6 +715,7 @@ drfghq:
 	icon: 
 		Offset: 0,0
 		Filename: drhqicon.shp
+
 drfghq2:
 	icon: 
 		Filename: drfghq2icon.shp
@@ -678,30 +742,36 @@ drfgweap:
 		Start: 2
 		ZOffset: 1024
 		Scale: 0.67
-	idle-bottom: drfgweap_bib
+	idle-bottom:
+		Filename: drfgweap_bib.shp
 		Start: 1
 		ZOffset: -1024
 		Scale: 0.67
-	damaged-idle-bottom: drfgweap_bib
+	damaged-idle-bottom: 
+		Filename: drfgweap_bib.shp
 		Start: 2
 		ZOffset: -1024
 		Scale: 0.67
-	idle-top2: drfgweap2
+	idle-top2:
+		Filename: drfgweap2.shp
 		Start: 1
 		ZOffset: 1024
 		Offset: 0,-1
 		Scale: 0.67
-	damaged-idle-top2: drfgweap2
+	damaged-idle-top2: 
+		Filename: drfgweap2.shp
 		Start: 2
 		ZOffset: 1024
 		Offset: 0,-1
 		Scale: 0.67
-	idle-bottom2: drfgweap2_bib
+	idle-bottom2: 
+		Filename: drfgweap2_bib.shp
 		Start: 1
 		ZOffset: -1024
 		Offset: 0,-1
 		Scale: 0.67
-	damaged-idle-bottom2: drfgweap2_bib
+	damaged-idle-bottom2:
+		Filename: drfgweap2_bib.shp
 		Start: 2
 		ZOffset: -1024
 		Offset: 0,-1
@@ -714,6 +784,7 @@ drfgweap:
 	icon: 
 		Offset: 0,0
 		Filename: drfgweapicon.shp
+
 drfgweap2:
 	icon: 
 		Filename: drfgweap2icon.shp
@@ -736,30 +807,36 @@ drdweap:
 		Start: 2
 		ZOffset: 1024
 		Scale: 0.67
-	idle-bottom: drdweap_bib
+	idle-bottom: 
+		Filename: drdweap_bib.shp
 		Start: 1
 		ZOffset: -1024
 		Scale: 0.67
-	damaged-idle-bottom: drdweap_bib
+	damaged-idle-bottom: 
+		Filename: drdweap_bib.shp
 		Start: 2
 		ZOffset: -1024
 		Scale: 0.67
-	idle-top2: drfgweap2
+	idle-top2: 
+		Filename: drfgweap2.shp
 		Start: 1
 		ZOffset: 1024
 		Offset: 0,-6
 		Scale: 0.67
-	damaged-idle-top2: drfgweap2
+	damaged-idle-top2: 
+		Filename: drfgweap2.shp
 		Start: 2
 		ZOffset: 1024
 		Offset: 0,-6
 		Scale: 0.67
-	idle-bottom2: drdweap_bib
+	idle-bottom2:
+		Filename: drdweap_bib.shp
 		Start: 1
 		ZOffset: -1024
 		Offset: 0,-6
 		Scale: 0.67
-	damaged-idle-bottom2: drdweap_bib
+	damaged-idle-bottom2: 
+		Filename: drdweap_bib.shp
 		Start: 2
 		ZOffset: -1024
 		Offset: 0,-6
@@ -772,6 +849,7 @@ drdweap:
 	icon: 
 		Offset: 0,0
 		Filename: drdweapicon.shp
+
 drterweap:
 	Defaults:
 		Filename: drterweap.shp
@@ -790,30 +868,36 @@ drterweap:
 		Start: 2
 		ZOffset: 1024
 		Scale: 0.67
-	idle-bottom: drterweap_bib
+	idle-bottom: 
+		Filename: drterweap_bib.shp
 		Start: 1
 		ZOffset: -1024
 		Scale: 0.67
-	damaged-idle-bottom: drterweap_bib
+	damaged-idle-bottom: 
+		Filename: drterweap_bib.shp
 		Start: 2
 		ZOffset: -1024
 		Scale: 0.67
-	idle-top2: drterweap
+	idle-top2: 
+		Filename: drterweap.shp
 		Start: 1
 		ZOffset: 1024
 		Offset: 0,-6
 		Scale: 0.67
-	damaged-idle-top2: drterweap
+	damaged-idle-top2:
+		Filename: drterweap.shp
 		Start: 2
 		ZOffset: 1024
 		Offset: 0,-6
 		Scale: 0.67
-	idle-bottom2: drterweap_bib
+	idle-bottom2:
+		Filename: drterweap_bib.shp
 		Start: 1
 		ZOffset: -1024
 		Offset: 0,-6
 		Scale: 0.67
-	damaged-idle-bottom2: drterweap_bib
+	damaged-idle-bottom2: 
+		Filename: drterweap_bib.shp
 		Start: 2
 		ZOffset: -1024
 		Offset: 0,-6
@@ -823,17 +907,20 @@ drterweap:
 		Scale: 0.67
 	make:
 		Scale: 0.67
-	idle-liquid: drterweap_liquid
+	idle-liquid: 
+		Filename: drterweap_liquid.shp
 		Length: *
 		ZOffset: 1048
 		Scale: 0.67
-	damaged-idle-liquid: drterweap_liquid
+	damaged-idle-liquid: 
+		Filename: drterweap_liquid.shp
 		Length: *
 		ZOffset: 1048
 		Scale: 0.67
 	icon: 
 		Offset: 0,0
 		Filename: drterweapicon.shp
+
 drdcamp:
 	Defaults:
 		Filename: drdcamp.shp
@@ -850,25 +937,31 @@ drdcamp:
 	damaged-idle-top:
 		Start: 2
 		Scale: 0.67
-	idle-bottom: drdcamp
+	idle-bottom: 
+		# Filename: drdcamp_bib.shp
 		Start: 1
 		Scale: 0.67
-	damaged-idle-bottom: drdcamp
+	damaged-idle-bottom: 
+		# Filename: drdcamp_bib.shp
 		Start: 2
 		Scale: 0.67
-	idle-top2: drdcamp
+	idle-top2: 
+		Filename: drdcamp.shp
 		Start: 1
 		Offset: 0,-1
 		Scale: 0.67
-	damaged-idle-top2: drdcamp
+	damaged-idle-top2:
+		Filename: drdcamp.shp
 		Start: 2
 		Offset: 0,-1
 		Scale: 0.67
-	idle-bottom2: drdcamp
+	idle-bottom2: 
+		# Filename: drdcamp_bib.shp
 		Start: 1
 		Offset: 0,-1
 		Scale: 0.67
-	damaged-idle-bottom2: drdcamp
+	damaged-idle-bottom2: 
+		# Filename: drdcamp_bib.shp
 		Start: 2
 		Offset: 0,-1
 		Scale: 0.67
@@ -880,6 +973,7 @@ drdcamp:
 	icon: 
 		Offset: 0,0
 		Filename: drdcampicon.shp
+
 drdpower:
 	Defaults:
 		Filename: drdpower.shp
@@ -898,6 +992,7 @@ drdpower:
 	icon: 
 		Offset: 0,0
 		Filename: drdpowericon.shp
+
 drdsupport:
 	Defaults:
 		Filename: drdsupport.shp
@@ -935,11 +1030,13 @@ drterwaterl:
 		Start: 2
 		ZOffset: 1024
 		Scale: 0.67
-	idle-bottom: drterwaterl_bib
+	idle-bottom: 
+		Filename: drterwaterl_bib.shp
 		Start: 1
 		ZOffset: -1024
 		Scale: 0.67
-	damaged-idle-bottom: drterwaterl_bib
+	damaged-idle-bottom: 
+		Filename: drterwaterl_bib.shp
 		Start: 2
 		ZOffset: -1024
 		Scale: 0.67
@@ -951,6 +1048,7 @@ drterwaterl:
 	icon: 
 		Offset: 0,0
 		Filename: drterwaterlicon.shp
+
 driscrap:
 	Defaults:
 		Filename: driscrap.shp
@@ -969,6 +1067,7 @@ driscrap:
 	icon: 
 		Offset: 0,0
 		Filename: driscrapicon.shp
+
 drfgbarr:
 	Defaults:
 		Filename: drfgbarr.shp
@@ -985,27 +1084,33 @@ drfgbarr:
 		Start: 2
 		ZOffset: 1024
 		Scale: 0.67
-	idle-bottom: drfgbarr_bib
+	idle-bottom: 
+		Filename: drfgbarr_bib.shp
 		Start: 1
 		ZOffset: -1024
 		Scale: 0.67
-	damaged-idle-bottom: drfgbarr_bib
+	damaged-idle-bottom: 
+		Filename: drfgbarr_bib.shp
 		Start: 2
 		ZOffset: -1024
 		Scale: 0.67
-	idle-top2: drfgbarr2
+	idle-top2: 
+		Filename: drfgbarr2.shp
 		Start: 1
 		ZOffset: 1024
 		Scale: 0.67
-	damaged-idle-top2: drfgbarr2
+	damaged-idle-top2: 
+		Filename: drfgbarr2.shp
 		Start: 2
 		ZOffset: 1024
 		Scale: 0.67
-	idle-bottom2: drfgbarr2_bib
+	idle-bottom2: 
+		Filename: drfgbarr2_bib.shp
 		Start: 1
 		ZOffset: -1024
 		Scale: 0.67
-	damaged-idle-bottom2: drfgbarr2_bib
+	damaged-idle-bottom2: 
+		Filename: drfgbarr2_bib.shp
 		Start: 2
 		ZOffset: -1024
 		Scale: 0.67
@@ -1016,6 +1121,7 @@ drfgbarr:
 	icon: 
 		Offset: 0,0
 		Filename: drfgbarricon.shp
+
 drfgbarr2:
 	icon: 
 		Filename: drfgbarr2icon.shp
@@ -1030,38 +1136,46 @@ drpplant1:
 	damaged-idle:
 		Start: 2
 		Scale: 0.67
-	idle-top: drpplant1
+	idle-top: 
+		Filename: drpplant1.shp
 		Start: 1
 		ZOffset: 1024
 		Scale: 0.67
-	damaged-idle-top: drpplant1
+	damaged-idle-top: 
+		Filename: drpplant1.shp
 		Start: 2
 		ZOffset: 1024
 		Scale: 0.67
-	idle-bottom: drpplant1_bib
+	idle-bottom: 
+		Filename: drpplant1_bib.shp
 		Start: 1
 		ZOffset: -1024
 		Scale: 0.67
-	damaged-idle-bottom: drpplant1_bib
+	damaged-idle-bottom: 
+		Filename: drpplant1_bib.shp
 		Start: 2
 		ZOffset: -1024
 		Scale: 0.67
-	idle-top2: drpplant2
+	idle-top2: 
+		Filename: drpplant2.shp
 		Start: 1
 		ZOffset: 1024
 		Offset: 0,-1
 		Scale: 0.67
-	damaged-idle-top2: drpplant2
+	damaged-idle-top2: 
+		Filename: drpplant2.shp
 		Start: 2
 		ZOffset: 1024
 		Offset: 0,-1
 		Scale: 0.67
-	idle-bottom2: drpplant2_bib
+	idle-bottom2: 
+		Filename: drpplant2_bib.shp
 		Start: 1
 		ZOffset: -1024
 		Offset: 0,-1
 		Scale: 0.67
-	damaged-idle-bottom2: drpplant2_bib
+	damaged-idle-bottom2: 
+		Filename: drpplant2_bib.shp
 		Start: 2
 		ZOffset: -1024
 		Offset: 0,-1
@@ -1074,247 +1188,302 @@ drpplant1:
 	icon: 
 		Offset: 0,0
 		Filename: drpplanticon.shp
+
 drpplant2:
 	icon: 
 		Filename: drpplant2icon.shp
+
 drfgrep:
 	Defaults:
 		Filename: drfgrep.shp
-	idle: drfgrep_bib
+	idle: 
+		Filename: drfgrep_bib.shp
 		ZOffset: -1c511
 		Start: 1
 		Scale: 0.67
-	damaged-idle: drfgrep_bib
+	damaged-idle: 
+		Filename: drfgrep_bib.shp
 		Start: 2
 		ZOffset: -1c511
 		Scale: 0.67
-	active: drfgrep_bib
+	active: 
+		Filename: drfgrep_bib.shp
 		Length: 1
 		ZOffset: -1c511
 		Scale: 0.67
-	damaged-active: drfgrep_bib
+	damaged-active:
+		Filename: drfgrep_bib.shp
 		Start: 2
 		ZOffset: -1c511
 		Scale: 0.67
-	dead: drfgrep_bib
+	dead:
+		Filename: drfgrep_bib.shp
 		Start: 2
 		ZOffset: -1c511
 		Tick: 800
 		Scale: 0.67
 	make:
 		Scale: 0.67
-	idle-top: drfgrep
+	idle-top: 
+		Filename: drfgrep.shp
 		Start: 1
 		ZOffset: 1024
 		Scale: 0.67
-	damaged-idle-top: drfgrep
+	damaged-idle-top: 
+		Filename: drfgrep.shp
 		Start: 2
 		ZOffset: 1024
 		Scale: 0.67
 	icon: 
 		Filename: drfgrepicon.shp
+
 drirep:
 	Defaults:
 		Filename: drirep.shp
-	idle: drirep_bib
+	idle:
+		Filename: drirep_bib.shp
 		ZOffset: -1c511
 		Start: 1
 		Scale: 0.67
-	damaged-idle: drirep_bib
+	damaged-idle:
+		Filename: drirep_bib.shp
 		Start: 2
 		ZOffset: -1c511
 		Scale: 0.67
-	active: drirep_bib
+	active: 
+		Filename: drirep_bib.shp
 		Length: 1
 		ZOffset: -1c511
 		Scale: 0.67
-	damaged-active: drirep_bib
+	damaged-active: 
+		Filename: drirep_bib.shp
 		Start: 2
 		ZOffset: -1c511
 		Scale: 0.67
-	dead: drirep_bib
+	dead: 
+		Filename: drirep_bib.shp
 		Start: 2
 		ZOffset: -1c511
 		Tick: 800
 		Scale: 0.67
 	make:
 		Scale: 0.67
-	idle-top: drirep
+	idle-top: 
+		Filename: drirep.shp
 		Start: 1
 		ZOffset: 1024
 		Scale: 0.67
-	damaged-idle-top: drirep
+	damaged-idle-top: 
+		Filename: drirep.shp
 		Start: 2
 		ZOffset: 1024
 		Scale: 0.67
 	icon: 
 		Filename: drirepicon.shp
+
 drterrep:
 	Defaults:
 		Filename: drterrep.shp
-	idle: drterrep_bib
+	idle: 
+		Filename: drterrep_bib.shp
 		ZOffset: -1c511
 		Start: 1
 		Scale: 0.68
-	damaged-idle: drterrep_bib
+	damaged-idle: 
+		Filename: drterrep_bib.shp
 		Start: 2
 		ZOffset: -1044
 		Scale: 0.68
-	active: drterrep_bib
+	active: 
+		Filename: drterrep_bib.shp
 		Length: 1
 		ZOffset: -1044
 		Scale: 0.68
-	damaged-active: drterrep_bib
+	damaged-active: 
+		Filename: drterrep_bib.shp
 		Start: 2
 		ZOffset: -1044
 		Scale: 0.68
-	dead: drterrep_bib
+	dead: 
+		Filename: drterrep_bib.shp
 		Start: 2
 		ZOffset: -1044
 			Scale: 0.68
 	make:
 		Scale: 0.68
-	idle-bottom: drterrep_bib
+	idle-bottom:
+		Filename: drterrep_bib.shp
 		Start: 1
 		ZOffset: -1024
 		Scale: 0.68
-	damaged-idle-bottom: drterrep_bib
+	damaged-idle-bottom: 
+		Filename: drterrep_bib.shp
 		Start: 2
 		ZOffset: -1024
 		Scale: 0.68
-	idle-top: drterrep
+	idle-top:
+		Filename: drterrep.shp
 		Start: 1
 		ZOffset: 1024
 		Scale: 0.68
-	damaged-idle-top: drterrep
+	damaged-idle-top:
+		Filename: drterrep.shp
 		Start: 2
 		ZOffset: 1024
 		Scale: 0.68
-	idle-top2: drterrep2
+	idle-top2:
+		Filename: drterrep2.shp
 		Start: 1
 		ZOffset: 1024
 		Offset: 0,-6
 		Scale: 0.68
-	damaged-idle-top2: drterrep2
+	damaged-idle-top2: 
+		Filename: drterrep2.shp
 		Start: 2
 		ZOffset: 1024
 		Offset: 0,-6
 		Scale: 0.68
-	idle-bottom2: drterrep2_bib
+	idle-bottom2: 
+		Filename: drterrep2_bib.shp
 		Start: 1
 		ZOffset: -1024
 		Offset: 0,-6
 		Scale: 0.68
-	damaged-idle-bottom2: drterrep2_bib
+	damaged-idle-bottom2: 
+		Filename: drterrep2_bib.shp
 		Start: 2
 		ZOffset: -1024
 		Offset: 0,-6
 		Scale: 0.68
 	icon: 
 		Filename: drterrepicon.shp
+
 drihosp:
 	Defaults:
 		Filename: drihosp.shp
-	idle: drihosp_bib
+	idle: 
+		Filename: drihosp_bib.shp
 		ZOffset: -1c511
 		Start: 1
 		Scale: 0.67
-	damaged-idle: drihosp_bib
+	damaged-idle: 
+		Filename: drihosp_bib.shp
 		Start: 2
 		ZOffset: -1c511
 		Scale: 0.67
-	active: drihosp_bib
+	active: 
+		Filename: drihosp_bib.shp
 		Length: 1
 		ZOffset: -1c511
 		Scale: 0.67
-	damaged-active: drihosp_bib
+	damaged-active: 
+		Filename: drihosp_bib.shp
 		Start: 2
 		ZOffset: -1c511
 		Scale: 0.67
-	dead: drihosp_bib
+	dead: 
+		Filename: drihosp_bib.shp
 		Start: 2
 		ZOffset: -1c511
 		Tick: 800
 		Scale: 0.67
 	make:
 		Scale: 0.67
-	idle-top: drihosp
+	idle-top: 
+		Filename: drihosp.shp
 		Start: 1
 		ZOffset: 1024
 		Scale: 0.67
-	damaged-idle-top: drihosp
+	damaged-idle-top: 
+		Filename: drihosp.shp
 		Start: 2
 		ZOffset: 1024
 		Scale: 0.67
 	icon: 
 		Filename: drihospicon.shp
+
 drfghosp:
 	Defaults:
 		Filename: drfghosp.shp
-	idle: drfghosp_bib
+	idle: 
+		Filename: drfghosp_bib.shp
 		ZOffset: -1c511
 		Start: 1
 		Scale: 0.67
-	damaged-idle: drfghosp_bib
+	damaged-idle: 
+		Filename: drfghosp_bib.shp
 		Start: 2
 		ZOffset: -1c511
 		Scale: 0.67
-	active: drfghosp_bib
+	active: 
+		Filename: drfghosp_bib.shp
 		Length: 1
 		ZOffset: -1c511
 		Scale: 0.67
-	damaged-active: drfghosp_bib
+	damaged-active: 
+		Filename: drfghosp_bib.shp
 		Start: 2
 		ZOffset: -1c511
 		Scale: 0.67
-	dead: drfghosp_bib
+	dead: 
+		Filename: drfghosp_bib.shp
 		Start: 2
 		ZOffset: -1c511
 		Tick: 800
 		Scale: 0.67
 	make:
 		Scale: 0.67
-	idle-top: drfghosp
+	idle-top: 
+		Filename: drfghosp.shp
 		Start: 1
 		ZOffset: 1024
 		Scale: 0.67
-	damaged-idle-top: drfghosp
+	damaged-idle-top: 
+		Filename: drfghosp.shp
 		Start: 2
 		ZOffset: 1024
 		Scale: 0.67
 	icon: 
 		Filename: drfghospicon.shp
+
 drterhosp:
 	Defaults:
 		Filename: drterhosp.shp
-	idle: drterhosp_bib
+	idle: 
+		Filename: drterhosp_bib.shp
 		ZOffset: -1c511
 		Start: 1
 		Scale: 0.67
-	damaged-idle: drterhosp_bib
+	damaged-idle: 
+		Filename: drterhosp_bib.shp
 		Start: 2
 		ZOffset: -1c511
 		Scale: 0.67
-	active: drterhosp_bib
+	active: 
+		Filename: drterhosp_bib.shp
 		Length: 1
 		ZOffset: -1c511
 		Scale: 0.67
-	damaged-active: drterhosp_bib
+	damaged-active: 
+		Filename: drterhosp_bib.shp
 		Start: 2
 		ZOffset: -1c511
 		Scale: 0.67
-	dead: drterhosp_bib
+	dead: 
+		Filename: drterhosp_bib.shp
 		Start: 2
 		ZOffset: -1c511
 		Tick: 800
 		Scale: 0.67
 	make:
 		Scale: 0.67
-	idle-top: drterhosp
+	idle-top: 
+		Filename: drterhosp.shp
 		Start: 1
 		ZOffset: 1024
 		Scale: 0.67
-	damaged-idle-top: drterhosp
+	damaged-idle-top: 
+		Filename: drterhosp.shp
 		Start: 2
 		ZOffset: 1024
 		Scale: 0.67
@@ -1339,30 +1508,36 @@ drbiocom:
 		Start: 2
 		ZOffset: 1024
 		Scale: 0.67
-	idle-bottom: drbiocom_bib
+	idle-bottom: 
+		Filename: drbiocom_bib.shp
 		Start: 1
 		ZOffset: -1024
 		Scale: 0.67
-	damaged-idle-bottom: drbiocom_bib
+	damaged-idle-bottom: 
+		Filename: drbiocom_bib.shp
 		Start: 2
 		ZOffset: -1024
 		Scale: 0.67
-	idle-top2: drbiocom2
+	idle-top2: 
+		Filename: drbiocom2.shp
 		Start: 1
 		ZOffset: 1024
 		Offset: 0,-1
 		Scale: 0.67
-	damaged-idle-top2: drbiocom2
+	damaged-idle-top2: 
+		Filename: drbiocom2.shp
 		Start: 2
 		ZOffset: 1024
 		Offset: 0,-1
 		Scale: 0.67
-	idle-bottom2: drbiocom2_bib
+	idle-bottom2: 
+		Filename: drbiocom2_bib.shp
 		Start: 1
 		ZOffset: -1024
 		Offset: 0,-1
 		Scale: 0.67
-	damaged-idle-bottom2: drbiocom2_bib
+	damaged-idle-bottom2:
+		Filename: drbiocom2_bib.shp
 		Start: 2
 		ZOffset: -1024
 		Offset: 0,-1
@@ -1375,6 +1550,7 @@ drbiocom:
 	icon: 
 		Filename: drbiocomicon.shp
 		Offset: 0,0
+
 drbiocom2:
 	icon: 
 		Filename: drbiocom2icon.shp
@@ -1402,16 +1578,19 @@ drfghelipad:
 		Start: 2
 		ZOffset: 1024
 		Scale: 0.67
-	idle-bottom: drfghelipad_bib
+	idle-bottom:
+		Filename: drfghelipad_bib.shp
 		Start: 1
 		ZOffset: -1024
 		Scale: 0.67
-	damaged-idle-bottom: drfghelipad_bib
+	damaged-idle-bottom:
+		Filename: drfghelipad_bib.shp
 		Start: 2
 		ZOffset: -1024
 		Scale: 0.67
 	icon: 
 		Filename: drfghpadicon.shp
+
 drwaterl:
 	Defaults:
 		Filename: drwaterl.shp
@@ -1431,11 +1610,13 @@ drwaterl:
 		Start: 2
 		ZOffset: 1024
 		Scale: 0.668
-	idle-bottom: drwaterl_bib
+	idle-bottom: 
+		Filename: drwaterl_bib.shp
 		Start: 1
 		ZOffset: -1024
 		Scale: 0.668
-	damaged-idle-bottom: drwaterl_bib
+	damaged-idle-bottom:
+		Filename: drwaterl_bib.shp
 		Start: 2
 		ZOffset: -1024
 		Scale: 0.668
@@ -1465,15 +1646,18 @@ drpowr:
 		Start: 2
 		ZOffset: 1024
 		Scale: 0.668
-	idle-bottom: drpowr_bib
+	idle-bottom: 
+		Filename: drpowr_bib.shp
 		Start: 1
 		ZOffset: -1024
 		Scale: 0.668
-	damaged-idle-bottom: drpowr_bib
+	damaged-idle-bottom:
+		Filename: drpowr_bib.shp
 		Start: 2
 		ZOffset: -1024
 		Scale: 0.668
-	idle-lights: drpowr_lights
+	idle-lights:
+		Filename: drpowr_lights.shp
 		Length: *
 		ZOffset: 1048
 		Tick: 200
@@ -1491,6 +1675,7 @@ drpowr:
 	icon: 
 		Filename: drpowricon.shp
 		Offset: 0,0
+
 drtpower:
 	Defaults:
 		Filename: drtpower.shp
@@ -1507,11 +1692,13 @@ drtpower:
 	damaged-idle-top:
 		Length: *
 		Scale: 0.668
-	idle-bottom: drtpower_bib
+	idle-bottom: 
+		Filename: drtpower_bib.shp
 		Start: 1
 		ZOffset: -1024
 		Scale: 0.668
-	damaged-idle-bottom: drtpower_bib
+	damaged-idle-bottom: 
+		Filename: drtpower_bib.shp
 		Start: 2
 		ZOffset: -1024
 		Scale: 0.668
@@ -1535,10 +1722,12 @@ drterpower:
 		Length: *
 	damaged-idle-top:
 		Length: *
-	idle-bottom: drterpower_bib
+	idle-bottom: 
+		Filename: drterpower_bib.shp
 		Start: 1
 		ZOffset: -1024
-	damaged-idle-bottom: drterpower_bib
+	damaged-idle-bottom: 
+		Filename: drterpower_bib.shp
 		Start: 2
 		ZOffset: -1024
 	dead:
@@ -1560,9 +1749,10 @@ drlastur1:
 	make: 
 		Scale: 0.668
 	turret:
+		Filename: drlastur2.shp
 		Facings: 16
 		Scale: 0.668
-	muzzle: gunfire2
+	muzzle: 
 		Filename: gunfire2.shp
 		Length: *
 		Scale: 0.668
@@ -1572,58 +1762,72 @@ drlastur1:
 drtflamer:
 	Defaults:
 		Filename: drtflamer.shp
-	idle: drtflamer
+	idle: 
+		Filename: drtflamer.shp
 		Start: 1
 		Scale: 0.668
-	dead: drtflamer
+	dead: 
+		Filename: drtflamer.shp
 		Start: 2
 		Scale: 0.668
-	make: drtflamer
+	make: 
+		Filename: drtflamer.shp
 		Scale: 0.668
-	turret: drtflamertur
+	turret: 
+		Filename: drtflamertur.shp
 		Facings: 16
 		Scale: 0.668
-	muzzle: gunfire2
+	muzzle: 
 		Filename: gunfire2.shp
 		Length: *
 		Scale: 0.668
 	icon: 
 		Filename: drtflamericon.shp
+
 drtsentry:
 	Defaults:
 		Filename: drtsentry.shp
-	idle: drtsentry
+	idle: 
+		Filename: drtsentry.shp
 		Start: 1
 		Scale: 0.668
-	dead: drtsentry
+	dead: 
+		Filename: drtsentry.shp
 		Start: 2
 		Scale: 0.668
-	make: drtsentry
+	make: 
+		Filename: drtsentry.shp
 		Scale: 0.668
-	turret: drtsentrytur
+	turret: 
+		Filename: drtsentrytur.shp
 		Facings: 16
 		Scale: 0.668
-	muzzle: gunfire2
+	muzzle:
 		Filename: gunfire2.shp
 		Length: *
 		Scale: 0.668
 	icon: 
 		Filename: drsentryicon.shp
+
 drtmissile:
 	Defaults:
 		Filename: drtmissile.shp
-	idle: drtmissile
+	idle:
+		Filename: drtmissile.shp
 		Start: 1
 		Scale: 0.668
-	dead: drtmissile
+	dead: 
+		Filename: drtmissile.shp
 		Start: 2
 		Scale: 0.668
-	make: drtmissile
+	make:
+		Filename: drtmissile.shp
 		Scale: 0.668
-	turret: drtmissiletur
+	turret:
+		Filename: drtmissiletur.shp
 		Facings: 16
 		Scale: 0.668
-	muzzle: gunfire2
+	muzzle: 
 		Filename: gunfire2.shp
 		Length: *
 		Scale: 0.668
@@ -1640,34 +1844,43 @@ drflamerflame:
 drplastur1:
 	Defaults:
 		Filename: drplastur1.shp
-	idle: drplasmacannon
+	idle: 
+		Filename: drplasmacannon.shp
 		Start: 1
 		Scale: 0.668
-	dead: drplasmacannon
+	dead: 
+		Filename: drplasmacannon.shp
 		Start: 2
 		Scale: 0.668
-	make: drplasmacannon
+	make: 
+		Filename: drplasmacannon.shp
 		Scale: 0.668
-	turret: drplasmacannontur
+	turret: 
+		Filename: drplasmacannontur.shp
 		Facings: 16
 		Scale: 0.668
-	muzzle: gunfire2
+	muzzle:
 		Filename: gunfire2.shp
 		Length: *
 	icon: 
 		Filename: drplasmaturicon.shp
+
 drterrturret:
 	Defaults:
 		Filename: drterrturret.shp
-	idle: drterrturret
+	idle:
+		Filename: drterrturret.shp
 		Start: 1
 		Scale: 0.668
-	dead: drterrturret
+	dead:
+		Filename: drterrturret.shp
 		Start: 2
 		Scale: 0.668
-	make: drterrturret
+	make:
+		Filename: drterrturret.shp
 		Scale: 0.668
-	turret: drterrturrettur
+	turret: 
+		Filename: drterrturrettur.shp
 		Facings: 16
 		Scale: 0.668
 	muzzle: gunfire2
@@ -1676,10 +1889,12 @@ drterrturret:
 		Scale: 0.668
 	icon: 
 		Filename: drterturreticon.shp
+
 drcamera:
 	Defaults:
 		Filename: drcamera.shp
-	idle: drcamera
+	idle: 
+		Filename: drcamera.shp
 		Scale: 0.668
 	dead: 
 		Filename: invisibleitem.shp
@@ -1701,18 +1916,22 @@ drcamera:
 draacannon1:
 	Defaults:
 		Filename: draacannon1.shp
-	idle: draacannon1
+	idle: 
+		Filename: draacannon1.shp
 		Start: 1
 		Scale: 0.668
-	dead: draacannon1
+	dead: 
+		Filename: draacannon1.shp
 		Start: 2
 		Scale: 0.668
-	make: drlastur1
+	make: 
+		Filename: drlastur1.shp
 		Scale: 0.668
-	turret: draacannon2
+	turret: 
+		Filename: draacannon2.shp
 		Facings: 16
 		Scale: 0.668
-	muzzle: gunfire2
+	muzzle:
 		Filename: gunfire2.shp
 		Length: *
 		Scale: 0.668
@@ -1722,18 +1941,22 @@ draacannon1:
 drrailtur1:
 	Defaults:
 		Filename: drrailtur1.shp
-	idle: drrailtur1
+	idle: 
+		Filename: drrailtur1.shp
 		Start: 1
 		Scale: 0.668
-	dead: drrailtur1
+	dead: 
+		Filename: drrailtur1.shp
 		Start: 2
 		Scale: 0.668
-	make: drrailtur1
+	make: 
+		Filename: drrailtur1.shp
 		Scale: 0.668
-	turret: drrailtur2
+	turret: 
+		Filename: drrailtur2.shp
 		Facings: 16
 		Scale: 0.668
-	muzzle: gunfire2
+	muzzle:
 		Filename: gunfire2.shp
 		Length: *
 		Scale: 0.668
@@ -1743,36 +1966,44 @@ drrailtur1:
 drneutronturret:
 	Defaults:
 		Filename: drneutronturret.shp
-	idle: drneutronturret
+	idle: 
+		Filename: drneutronturret.shp
 		Start: 1
 		Scale: 0.668
-	dead: drneutronturret
+	dead: 
+		Filename: drneutronturret.shp
 		Start: 2
 		Scale: 0.668
-	make: drneutronturret
+	make: 
+		Filename: drneutronturret.shp
 		Scale: 0.668
-	turret: drneutronturrettur
+	turret: 
+		Filename: drneutronturrettur.shp
 		Facings: 16
 		Scale: 0.668
-	muzzle: gunfire2
+	muzzle:
 		Filename: gunfire2.shp
 		Length: *
 	icon: 
 		Filename: drneutronturreticon.shp
+
 driaaturret:
 	Defaults:
 		Filename: driaaturret.shp
-	idle: driaaturret
+	idle:
+		Filename: driaaturret.shp
 		Start: 1
 		Scale: 0.668
-	dead: driaaturret
+	dead: 
+		Filename: driaaturret.shp
 		Start: 2
 		Scale: 0.668
-	make: driaaturret
+	make:
+		Filename: driaaturret.shp
 		Scale: 0.668
 	turret: 
 		Filename: invisibleitem.shp
-	muzzle: gunfire2
+	muzzle:
 		Filename: gunfire2.shp
 		Length: *
 	icon: 
@@ -1782,7 +2013,8 @@ drwall1:
 	Defaults:
 		Filename: drwall1.shp
 		Offset: -9,-12
-	idle: drwall1
+	idle:
+		Filename: drwall1.shp
 		Scale: 0.67
 	damaged-idle: drwall1
 		Start: 1
@@ -1797,6 +2029,7 @@ drwall1:
 	icon: 
 		Filename: drwall1icon.shp
 		Offset: 0,0
+
 drwall2:
 	Defaults:
 		Filename: drwall2.shp
@@ -1816,35 +2049,45 @@ drwall2:
 	icon: 
 		Filename: drwall2icon.shp
 		Offset: 0,0
+
 drfence1:
 	Defaults:
 		Filename: drfence1.shp
 		Offset: -9,-12
-	idle: drwall1
-	damaged-idle: drwall1
+	idle: 
+		Filename: drwall1.shp
+	damaged-idle: 
+		Filename: drwall1.shp
 		Start: 1
-	critical-idle: drwall1
+	critical-idle: 
+		Filename: drwall1.shp
 		Start: 1
 	make:
 	dead:
 	icon: 
 		Filename: drwall1icon.shp
 		Offset: 0,0
+
 drfence2:
 	Defaults:
 		Filename: drfence2.shp
 		Offset: -9,-12
-	idle: drwall2
-	damaged-idle: drwall2
+	idle:
+		Filename: drwall2.shp
+	damaged-idle: 
+		Filename: drwall2.shp
 		Start: 1
-	critical-idle: drwall2
+	critical-idle: 
+		Filename: drwall2.shp
 		Start: 1
 	make:
 	dead:
 	icon: 
 		Filename: drwall2icon.shp
 		Offset: 0,0
+
 drdissecator:
+	Inherits: ^WithBuildingBib3
 	Defaults:
 		Filename: drdissecator.shp
 		Offset: 0,-6
@@ -1856,7 +2099,8 @@ drdissecator:
 		Scale: 0.67
 	make:
 		Scale: 0.67
-	bib: bib3
+	bib: 
+		Filename: bib3.shp
 		Length: *
 		Offset: 0,0
 		UseTilesetExtension: true
@@ -1872,6 +2116,7 @@ drdissecator:
 		Filename: invisibleitem.shp
 
 drwaterextract:
+	Inherits: ^WithBuildingBib3
 	Defaults:
 		Filename: drwaterextract.shp
 		Offset: 0,-6
@@ -1885,7 +2130,8 @@ drwaterextract:
 		Scale: 0.668
 	dead:
 		Scale: 0.668
-	bib: bib3
+	bib: 
+		Filename: bib3.shp
 		Length: *
 		Offset: 0,0
 		UseTilesetExtension: true
@@ -1893,6 +2139,7 @@ drwaterextract:
 		Filename: drwaterextracticon.shp
 
 drcivplant:
+	Inherits: ^WithBuildingBib3
 	Defaults:
 		Filename: drcivplant.shp
 		Offset: 0,-6
@@ -1904,7 +2151,8 @@ drcivplant:
 		Scale: 0.67
 	make:
 		Scale: 0.67
-	bib: bib3
+	bib: 
+		Filename: bib3.shp
 		Length: *
 		Offset: 0,0
 		UseTilesetExtension: true
@@ -2024,12 +2272,14 @@ drenergybullet:
 	idle:
 		Facings: 16
 		ZOffset: 1023
+
 drtmissilemissile:
 	Defaults:
 		Filename: drtmissilemissile.shp
 	idle:
 		Facings: 16
 		ZOffset: 1023
+
 drneutron:
 	Defaults:
 		Filename: drneutron.shp
@@ -2090,17 +2340,20 @@ drscarab:
 		Length: *
 	icon: 
 		Filename: drscarabicon.shp
+
 drscarabfake:
 	Defaults:
 		Filename: drscarab.shp
-	idle: drscarab
+	idle:
+		Filename: drscarab.shp
 		Facings: 16
 		Scale: 0.68
-	idle-alt: drscarab
+	idle-alt:
+		Filename: drscarab.shp
 		Start: 16
 		Facings: 4
 		Scale: 0.68
-	muzzle: gunfire2
+	muzzle:
 		Filename: gunfire2.shp
 		Length: *
 		Scale: 0.68
@@ -2110,10 +2363,11 @@ drscarabfake:
 drscarab2:
 	Defaults:
 		Filename: drscarab2.shp
-	idle: drscarab
+	idle:
+		Filename: drscarab.shp
 		Start: 16
 		Facings: 4
-	muzzle: gunfire2
+	muzzle:
 		Filename: gunfire2.shp
 		Length: *
 	icon: 
@@ -2126,48 +2380,52 @@ drarty:
 	idle:
 		Facings: 16
 		Scale: 0.68
-	muzzle: gunfire2
+	muzzle:
 		Filename: gunfire2.shp
 		Length: *
 		Scale: 0.68
 	icon: 
 		Filename: drartyicon.shp
+
 drtarty:
 	Defaults:
 		Filename: drtarty.shp
 	idle:
 		Facings: 16
 		Scale: 0.68
-	muzzle: gunfire2
+	muzzle:
 		Filename: gunfire2.shp
 		Length: *
 		Scale: 0.68
 	icon: 
 		Filename: drtartyicon.shp
+
 drghazi:
 	Defaults:
 		Filename: drghazi.shp
 	idle:
 		Facings: 16
 		Scale: 0.68
-	muzzle: gunfire2
+	muzzle:
 		Filename: gunfire2.shp
 		Length: *
 		Scale: 0.68
 	icon: 
 		Filename: drghaziicon.shp
+
 drphunisher:
 	Defaults:
 		Filename: drphunisher.shp
 	idle:
 		Facings: 16
 		Scale: 0.68
-	muzzle: gunfire2
+	muzzle:
 		Filename: gunfire2.shp
 		Length: *
 		Scale: 0.68
 	icon: 
 		Filename: drphunishericon.shp
+
 drgant:
 	Inherits: ^DRCreatureInfantry
 	Defaults:
@@ -2193,13 +2451,14 @@ drgant:
 		Length: 10
 		Facings: 8
 		Scale: 0.68
-	muzzle: minigun
+	muzzle:
 		Filename: minigun.shp
 		Length: 6
 		Facings: 8
 		Scale: 0.68
 	icon: 
 		Filename: drganticon.shp
+
 drgrendel:
 	Inherits: ^DRCreatureInfantry
 	Defaults:
@@ -2223,7 +2482,7 @@ drgrendel:
 		Length: 10
 		Facings: 8
 		Scale: 0.68
-	muzzle: minigun
+	muzzle:
 		Filename: minigun.shp
 		Length: 6
 		Facings: 8
@@ -2254,7 +2513,7 @@ drgrider:
 		Length: 10
 		Facings: 8
 		Scale: 0.68
-	muzzle: minigun
+	muzzle:
 		Filename: minigun.shp
 		Length: 6
 		Facings: 8
@@ -2279,6 +2538,7 @@ drmad:
 		Scale: 0.68
 	icon: 
 		Filename: drmadicon.shp
+
 drmadd:
 	Defaults:
 		Filename: drmadd.shp
@@ -2287,10 +2547,12 @@ drmadd:
 		Scale: 0.68
 	icon: 
 		Filename: drmadicon.shp
+
 drmadfake:
 	Defaults:
 		Filename: drmadfake.shp
-	idle: drmad
+	idle:	
+		Filename: drmad.shp
 		Facings: 16
 		Scale: 0.68
 	icon: 
@@ -2314,13 +2576,14 @@ drrat2:
 		Start: 16
 		Facings: 16
 		Scale: 0.68
-	muzzle: minigun
+	muzzle:
 		Filename: minigun.shp
 		Length: 6
 		Facings: 8
 		Scale: 0.68
 	icon: 
 		Filename: drrat2icon.shp
+
 drttransport:
 	Defaults:
 		Filename: drttransport.shp
@@ -2367,6 +2630,7 @@ drptnk:
 		Scale: 0.68
 	icon: 
 		Filename: drptnkicon.shp
+
 drptnkd:
 	Defaults:
 		Filename: drptnkd.shp
@@ -2381,17 +2645,20 @@ drptnkd:
 		Length: 3
 	icon: 
 		Filename: drptnkicon.shp
+
 drptnkfake:
 	Defaults:
 		Filename: drptnkfake.shp
-	idle: drptnk
+	idle: 
+		Filename: drptnk.shp
 		Facings: 16
 		Scale: 0.68
-	turret: drptnk
+	turret: 
+		Filename: drptnk.shp
 		Start: 16
 		Facings: 16
 		Scale: 0.68
-	muzzle: drptnk
+	muzzle:
 		Filename: drptnk.shp
 		Start: 32
 		Facings: 16
@@ -2410,13 +2677,14 @@ drfanboat:
 		Start: 16
 		Facings: 16
 		Scale: 0.68
-	muzzle: minigun
+	muzzle:
 		Filename: minigun.shp
 		Length: 6
 		Facings: 8
 		Scale: 0.68
 	icon: 
 		Filename: drfanboaticon.shp
+
 drtermcv:
 	Defaults:
 		Filename: drtermcv.shp
@@ -2442,7 +2710,7 @@ drntnk:
 		Start: 16
 		Facings: 16
 		Scale: 0.68
-	muzzle: minigun
+	muzzle:
 		Filename: minigun.shp
 		Length: 6
 		Facings: 8
@@ -2456,20 +2724,24 @@ drimpapc:
 	idle:
 		Facings: 16
 		Scale: 0.68
-	turret: drminilastur
+	turret: 
+		Filename: drminilastur.shp
 		Facings: 16
 		Scale: 0.68
 	muzzle: 
 		Filename: invisibleitem.shp
 	icon: 
 		Filename: drimpapcicon.shp
+
 drimpapcfake:
 	Defaults:
 		Filename: drimpapcfake.shp
-	idle: drimpapc
+	idle:
+		Filename: drimpapc.shp
 		Facings: 16
 		Scale: 0.68
-	turret: drminilastur
+	turret:
+		Filename: drminilastur.shp
 		Facings: 16
 		Scale: 0.68
 	muzzle: 
@@ -2479,7 +2751,7 @@ drimpapcfake:
 
 drgemenis1:
 	Defaults:
-		Filename: .shp
+		Filename: drgemenis1.shp
 	idle:
 		Facings: 16
 		Scale: 0.68
@@ -2487,10 +2759,12 @@ drgemenis1:
 		Start: 16
 		Facings: 16
 		Scale: 0.68
-	idle-alt: drgemenis2
+	idle-alt: 
+		Filename: drgemenis2.shp
 		Facings: 16
 		Scale: 0.68
-	turret-alt: drgemenis2
+	turret-alt: 
+		Filename: drgemenis2.shp
 		Start: 16
 		Facings: 16
 		Scale: 0.68
@@ -2525,7 +2799,7 @@ drrtnk:
 		Facings: 16
 		Offset: 0,5
 		Scale: 0.68
-	icon: drrtnkicon
+	icon:
 		Filename: drrtnkicon.shp
 
 drttnk:
@@ -2544,17 +2818,20 @@ drttnk:
 		Length: 2
 	icon: 
 		Filename: drttnkicon.shp
+
 drttnkfake:
 	Defaults:
 		Filename: drttnkfake.shp
-	idle: drttnk
+	idle: 
+		Filename: drttnk.shp
 		Facings: 16
 		Scale: 0.68
-	turret: drttnk
+	turret: 
+		Filename: drttnk.shp
 		Start: 16
 		Facings: 16
 		Scale: 0.68
-	muzzle: drttnk
+	muzzle:
 		Filename: drttnk.shp
 		Start: 32
 		Facings: 16
@@ -2583,13 +2860,14 @@ drfury:
 		Facings: 8
 		Tick: 150
 		Scale: 0.68
-	muzzle: minigun
+	muzzle:
 		Filename: minigun.shp
 		Length: 6
 		Facings: 8
 		Scale: 0.68
 	icon: 
 		Filename: drfuryicon.shp
+
 drsonic:
 	Defaults:
 		Filename: drsonic.shp
@@ -2604,13 +2882,14 @@ drsonic:
 		Facings: 8
 		Start: 8
 		Scale: 0.68
-	muzzle: minigun
+	muzzle:
 		Filename: minigun.shp
 		Length: 6
 		Facings: 8
 		Scale: 0.68
 	icon: 
 		Filename: drsonicicon.shp
+
 drphasemine:
 	Defaults:
 		Filename: drphasemine.shp
@@ -2622,13 +2901,14 @@ drphasemine:
 		Facings: 8
 		Start: 1
 		Scale: 0.68
-	muzzle: minigun
+	muzzle:
 		Filename: minigun.shp
 		Length: 6
 		Facings: 8
 		Scale: 0.68
 	icon: 
 		Filename: drphasemineicon.shp
+
 drstnk:
 	Defaults:
 		Filename: drstnk.shp
@@ -2648,13 +2928,14 @@ drstnk:
 		Length: 3
 		Facings: 16
 		Scale: 0.68
-	muzzle: minigun
+	muzzle:
 		Filename: minigun.shp
 		Length: 6
 		Facings: 8
 		Scale: 0.68
 	icon: 
 		Filename: drskirmishicon.shp
+
 drmtnk:
 	Defaults:
 		Filename: drmtnk.shp
@@ -2676,13 +2957,14 @@ drmtnk:
 		Length: 3
 		Facings: 16
 		Scale: 0.68
-	muzzle: minigun
+	muzzle:
 		Filename: minigun.shp
 		Length: 6
 		Facings: 8
 		Scale: 0.68
 	icon: 
 		Filename: drmtnkicon.shp
+
 drrig:
 	Defaults:
 		Filename: drrig.shp
@@ -2802,7 +3084,7 @@ drtscout:
 		Length: 6
 		Facings: 8
 		Scale: 0.68
-	muzzle: minigun
+	muzzle:
 		Filename: minigun.shp
 		Length: 6
 		Facings: 8
@@ -2827,7 +3109,8 @@ drvortextank:
 		Start: 32
 		Facings: 16
 		Scale: 0.68
-	turret-alt: drvortextanktur2
+	turret-alt: 
+		Filename: drvortextanktur2.shp
 		Facings: 16
 		Scale: 0.68
 	run:
@@ -2835,13 +3118,14 @@ drvortextank:
 		Length: 3
 		Facings: 8
 		Scale: 0.68
-	muzzle: minigun
+	muzzle:
 		Filename: minigun.shp
 		Length: 6
 		Facings: 8
 		Scale: 0.68
 	icon: 
 		Filename: drvortextankicon.shp
+
 drflamedeath:
 	Defaults:
 		Filename: drflamedeath.shp
@@ -2853,20 +3137,22 @@ drflamedeath:
 		Start: 48
 		Facings: 8
 		Scale: 0.68
-	turret: drflamedeathtur
+	turret:
+		Filename: drflamedeathtur.shp
 		Facings: 16
 		Scale: 0.68
 	run:
 		Length: 6
 		Facings: 8
 		Scale: 0.68
-	muzzle: minigun
+	muzzle:
 		Filename: minigun.shp
 		Length: 6
 		Facings: 8
 		Scale: 0.68
 	icon: 
 		Filename: drflamedeathicon.shp
+
 drquake:
 	Defaults:
 		Filename: drquake.shp
@@ -2885,7 +3171,7 @@ drquake:
 		Length: 3
 		Facings: 16
 		Scale: 0.68
-	muzzle: minigun
+	muzzle:
 		Filename: minigun.shp
 		Length: 6
 		Facings: 8
@@ -2907,7 +3193,7 @@ dramp:
 		Length: 6
 		Facings: 8
 		Scale: 0.68
-	muzzle: minigun
+	muzzle:
 		Filename: minigun.shp
 		Length: 6
 		Facings: 8
@@ -2928,7 +3214,7 @@ drspid:
 		Length: 3
 		Facings: 16
 		Scale: 0.68
-	muzzle: minigun
+	muzzle:
 		Filename: minigun.shp
 		Length: 6
 		Facings: 8
@@ -2939,6 +3225,7 @@ drspid:
 		Scale: 0.68
 	icon: 
 		Filename: drspidicon.shp
+
 drskater:
 	Defaults:
 		Filename: drskater.shp
@@ -2953,7 +3240,7 @@ drskater:
 		Length: 8
 		Facings: 8
 		Scale: 0.68
-	muzzle: minigun
+	muzzle:
 		Filename: minigun.shp
 		Length: 6
 		Facings: 8
@@ -4294,46 +4581,54 @@ drjack:
 		Facings: 8
 		Scale: 0.68
 	# Shot
-	die1: e1
+	die1:
+		Filename: e1.shp
 		Start: 381
 		Length: 9
 		Tick: 80
 		Scale: 0.68
 	# Explode
-	die2: e1
+	die2: 
+		Filename: e1.shp
 		Start: 390
 		Length: 8
 		Tick: 80
 		Scale: 0.68
 	# Fly and explode in air
-	die3: e1
+	die3:
+		Filename: e1.shp
 		Start: 398
 		Length: 8
 		Tick: 80
 		Scale: 0.68
 	# Fly through air squish on ground
-	die4: e1
+	die4: 
+		Filename: e1.shp
 		Start: 406
 		Length: 12
 		Tick: 80
 		Scale: 0.68
 	# Burn
-	die5: e1
+	die5: 
+		Filename: e1.shp
 		Start: 418
 		Length: 18
 		Tick: 80
 		Scale: 0.68
 	# Tib
-	die6: e1
+	die6:
+		Filename: e1.shp
 		Start: 366
 		Length: 11
 		Tick: 80
 		Scale: 0.68
 	# Electro
-	die7: electro ##########
+	die7: 
+		Filename: electro.shp
 		Length: *
 		Scale: 0.68
-	die-crushed: e1rot.shp
+	die-crushed: 
+		Filename: e1rot.shp
 		Start: 16
 		Length: 4
 		Tick: 1600
@@ -4450,6 +4745,7 @@ drmech:
 		Scale: 0.68
 	icon: 
 		Filename: drmechicon.shp
+
 drmedi:
 	Inherits: ^DRCommonInfantry
 	Defaults:
@@ -4479,7 +4775,7 @@ drmedi:
 		Facings: 8
 		Scale: 0.68
 	icon: 
-		Filename:drmediicon .shp
+		Filename: drmediicon.shp
 
 drarmciv:
 	Inherits: ^DRCommonInfantry
@@ -4573,6 +4869,7 @@ drhades:
 		Scale: 0.68
 	icon: 
 		Filename: drhadesicon.shp
+
 drspiner:
 	Defaults:
 		Filename: drspiner.shp
@@ -4582,6 +4879,7 @@ drspiner:
 		Scale: 0.68
 	icon: 
 		Filename: drspinericon.shp
+
 drtertran:
 	Defaults:
 		Filename: drtertran.shp
@@ -4589,6 +4887,7 @@ drtertran:
 		Facings: 16
 	icon: 
 		Filename: drtertranicon.shp
+
 drskyfort:
 	Defaults:
 		Filename: drskyfort.shp
@@ -4606,6 +4905,7 @@ drempdisable:
 		Scale: 0.70
 	icon: 
 		Filename: drempdisableicon.shp
+
 drcyclone:
 	Defaults:
 		Filename: drcyclone.shp
@@ -4623,6 +4923,7 @@ drskybike:
 		Scale: 0.68
 	icon: 
 		Filename: drskybikeicon.shp
+
 droutrider:
 	Defaults:
 		Filename: droutrider.shp
@@ -4778,12 +5079,13 @@ drsatanglobi:
 		Length: 7
 		Facings: 16
 		Tick: 100
-	icon: e1icnh.tem
+	icon: 
+		Filename: e1icnh.tem
 		AddExtension: False
 
 drhoverfright:
 	Defaults:
-		Filename: .shp
+		Filename: drhoverfright.shp
 	idle:
 		Facings: 16
 		Scale: 0.68
@@ -4799,7 +5101,8 @@ drhoverfright:
 		Start: 16
 		Length: 15
 		Scale: 0.68
-	turret: drminilastur
+	turret:
+		Filename: drminilastur.shp
 		Facings: 16
 		Scale: 0.68
 	icon: 
@@ -4825,6 +5128,7 @@ drfrigth:
 		Scale: 0.668
 	icon: 
 		Filename: drfrigthicon.shp
+
 drtanker:
 	Defaults:
 		Filename: drtanker.shp
@@ -4854,7 +5158,7 @@ drtanker:
 		Start: 16
 		Length: 15
 		Scale: 0.68
-	muzzle: minigun
+	muzzle:
 		Filename: minigun.shp
 		Length: 6
 		Facings: 8
@@ -4871,15 +5175,18 @@ drshreder:
 		Scale: 0.68
 	icon: 
 		Filename: drshredericon.shp
+
 drshrederfake:
 	Defaults:
-		Filename: drshrederfake.shp
-	idle: drshreder
+		Filename: drshreder.shp
+	idle: 
+		Filename: drshreder.shp
 		Facings: 16
 		Length: 4
 	Scale: 0.68
 	icon: 
 		Filename: drshredericonfake.shp
+
 drshadowblade:
 	Defaults:
 		Filename: drshadowblade.shp
@@ -4991,7 +5298,7 @@ drgloth:
 		Length: 3
 		Facings: 8
 		Tick: 100
-	muzzle: minigun
+	muzzle:
 		Filename: minigun.shp
 		Length: 6
 		Facings: 8
@@ -5010,7 +5317,7 @@ drgloth2:
 		Length: 3
 		Facings: 8
 		Tick: 100
-	muzzle: minigun
+	muzzle:
 		Filename: minigun.shp
 		Length: 6
 		Facings: 8
@@ -5346,13 +5653,15 @@ drdrednaut:
 	idle:
 		Facings: 8
 		Scale: 0.68
-	turret: drminilastur
+	turret: 
+		Filename: drminilastur.shp
 		Facings: 16
 		Scale: 0.68
 	muzzle: 
 		Filename: invisibleitem.shp
 	icon: 
 		Filename: drdrednauticon.shp
+
 drmissboat:
 	Defaults:
 		Filename: drmissboat.shp
@@ -5368,6 +5677,7 @@ drmissboat:
 		Filename: invisibleitem.shp
 	icon: 
 		Filename: drmissboaticon.shp
+
 drrouter:
 	Defaults:
 		Filename: drrouter.shp
@@ -5394,6 +5704,7 @@ drrouter:
 		Scale: 0.68
 	icon: 
 		Filename: drroutericon.shp
+
 drmecha:
 	Defaults:
 		Filename: drmecha.shp
@@ -5420,6 +5731,7 @@ drmecha:
 		Scale: 0.68
 	icon: 
 		Filename: drmechaicon.shp
+
 drsalamander:
 	Inherits: ^DRCreatureInfantry
 	Defaults:
@@ -5435,13 +5747,14 @@ drsalamander:
 		Facings: 8
 		Start: 8
 		Scale: 0.68
-	muzzle: minigun
+	muzzle:
 		Filename: minigun.shp
 		Length: 6
 		Facings: 8
 		Scale: 0.68
 	icon: 
 		Filename: drsalamandericon.shp
+
 drassimilator:
 	Inherits: ^DRCreatureInfantry
 	Defaults:
@@ -5457,7 +5770,7 @@ drassimilator:
 		Facings: 8
 		Start: 8
 		Scale: 0.68
-	muzzle: minigun
+	muzzle:
 		Filename: minigun.shp
 		Length: 6
 		Facings: 8
@@ -5475,13 +5788,14 @@ drmole:
 		Start: 8
 		Facings: 16
 		Scale: 0.68
-	muzzle: minigun
+	muzzle:
 		Filename: minigun.shp
 		Length: 6
 		Facings: 8
 		Scale: 0.68
 	icon: 
 		Filename: drmoleicon.shp
+
 drarunner:
 	Defaults:
 		Filename: drarunner.shp
@@ -5492,7 +5806,7 @@ drarunner:
 		Start: 8
 		Facings: 16
 		Scale: 0.68
-	muzzle: minigun
+	muzzle:
 		Filename: minigun.shp
 		Length: 6
 		Facings: 8
@@ -5524,43 +5838,53 @@ drahq:
 		Start: 2
 		ZOffset: 1024
 		Scale: 0.67
-	idle-bottom: drahq_bib
+	idle-bottom: 
+		Filename: drahq_bib.shp
 		Start: 1
 		ZOffset: -1024
 		Scale: 0.67
-	damaged-idle-bottom: drahq_bib
+	damaged-idle-bottom: 
+		Filename: drahq_bib.shp
 		Start: 2
 		ZOffset: -1024
 		Scale: 0.67
-	idle-top2: drahq2
+	idle-top2: 
+		Filename: drahq2.shp
 		Start: 1
 		ZOffset: 1024
 		Scale: 0.67
-	damaged-idle-top2: drahq2
+	damaged-idle-top2: 
+		Filename: drahq2.shp
 		Start: 2
 		ZOffset: 1024
 		Scale: 0.67
-	idle-bottom2: drahq2_bib
+	idle-bottom2: 
+		Filename: drahq2_bib.shp
 		Start: 1
 		ZOffset: -1024
 		Scale: 0.67
-	damaged-idle-bottom2: drahq2_bib
+	damaged-idle-bottom2: 
+		Filename: drahq2_bib.shp
 		Start: 2
 		ZOffset: -1024
 		Scale: 0.67
-	idle-top3: drahq3
+	idle-top3: 
+		Filename: drahq3.shp
 		Start: 1
 		ZOffset: 1024
 		Scale: 0.67
-	damaged-idle-top3: drahq3
+	damaged-idle-top3: 
+		Filename: drahq3.shp
 		Start: 2
 		ZOffset: 1024
 		Scale: 0.67
-	idle-bottom3: drahq3_bib
+	idle-bottom3: 
+		Filename: drahq3_bib.shp
 		Start: 1
 		ZOffset: -1024
 		Scale: 0.67
-	damaged-idle-bottom3: drahq3_bib
+	damaged-idle-bottom3: 
+		Filename: drahq3_bib.shp
 		Start: 2
 		ZOffset: -1024
 		Scale: 0.67
@@ -5572,6 +5896,7 @@ drahq:
 	icon: 
 		Offset: 0,0
 		Filename: drahqicon.shp
+
 drapower:
 	Defaults:
 		Filename: drapower.shp
@@ -5606,6 +5931,7 @@ drapower:
 	icon: 
 		Offset: 0,0
 		Filename: drapowericon.shp
+
 drabarr:
 	Defaults:
 		Filename: drabarr.shp
@@ -5644,6 +5970,7 @@ drabarr:
 	icon: 
 		Offset: 0,0
 		Filename: dribarricon.shp
+
 draweap:
 	Defaults:
 		Filename: draweap.shp
@@ -5662,32 +5989,38 @@ draweap:
 		ZOffset: 1024
 		Offset: 0,-1
 		Scale: 0.67
-	idle-bottom: draweap_bib
+	idle-bottom: 
+		Filename: draweap_bib.shp
 		Start: 1
 		ZOffset: -1024
 		Offset: 0,-1
 		Scale: 0.67
-	damaged-idle-bottom: draweap_bib
+	damaged-idle-bottom: 
+		Filename: draweap_bib.shp
 		Start: 2
 		ZOffset: -1024
 		Offset: 0,-1
 		Scale: 0.67
-	idle-top2: draweap2
+	idle-top2: 
+		Filename: draweap2.shp
 		Start: 1
 		ZOffset: 1024
 		Offset: 0,-1
 		Scale: 0.67
-	damaged-idle-top2: draweap2
+	damaged-idle-top2:
+		Filename: draweap2.shp
 		Start: 2
 		ZOffset: 1024
 		Offset: 0,-1
 		Scale: 0.67
-	idle-bottom2: draweap2_bib
+	idle-bottom2: 
+		Filename: draweap2_bib.shp
 		Start: 1
 		ZOffset: -1024
 		Offset: 0,-1
 		Scale: 0.67
-	damaged-idle-bottom2: draweap2_bib
+	damaged-idle-bottom2: 
+		Filename: draweap2_bib.shp
 		Start: 2
 		ZOffset: -1024
 		Offset: 0,-1
@@ -5700,6 +6033,7 @@ draweap:
 	icon: 
 		Offset: 0,0
 		Filename: draweapicon.shp
+
 drabarr:
 	Defaults:
 		Filename: drabarr.shp
@@ -5716,27 +6050,33 @@ drabarr:
 		Start: 2
 		ZOffset: 1024
 		Scale: 0.67
-	idle-bottom: drabarr_bib
+	idle-bottom: 
+		Filename: drabarr_bib.shp
 		Start: 1
 		ZOffset: -1024
 		Scale: 0.67
-	damaged-idle-bottom: drabarr_bib
+	damaged-idle-bottom: 
+		Filename: drabarr_bib.shp
 		Start: 2
 		ZOffset: -1024
 		Scale: 0.67
-	idle-top2: drabarr
+	idle-top2: 
+		Filename: drabarr.shp
 		Start: 1
 		ZOffset: 1024
 		Scale: 0.67
-	damaged-idle-top2: drabarr
+	damaged-idle-top2:
+		Filename: drabarr.shp
 		Start: 2
 		ZOffset: 1024
 		Scale: 0.67
-	idle-bottom2: drabarr_bib
+	idle-bottom2: 
+		Filename: drabarr_bib.shp
 		Start: 1
 		ZOffset: -1024
 		Scale: 0.67
-	damaged-idle-bottom2: drabarr_bib
+	damaged-idle-bottom2: 
+		Filename: drabarr_bib.shp
 		Start: 2
 		ZOffset: -1024
 		Scale: 0.67
@@ -5748,6 +6088,7 @@ drabarr:
 	icon: 
 		Offset: 0,0
 		Filename: drabarricon.shp
+
 drlife:
 	Defaults:
 		Filename: drlife.shp
@@ -5776,6 +6117,7 @@ drlife:
 	icon: 
 		Offset: 0,0
 		Filename: drlifeicon.shp
+
 drbattery:
 	Defaults:
 		Filename: drbattery.shp
@@ -5787,7 +6129,8 @@ drbattery:
 		Scale: 0.668
 	make: 
 		Scale: 0.668
-	turret: drbatterytur.shp
+	turret: 
+		Filename: drbatterytur.shp
 		Facings: 16
 		Scale: 0.668
 	muzzle: 
@@ -5796,6 +6139,7 @@ drbattery:
 		Scale: 0.668
 	icon: 
 		Filename: drbatteryicon.shp
+
 draplastur:
 	Defaults:
 		Filename: draplastur.shp
@@ -5807,7 +6151,8 @@ draplastur:
 		Scale: 0.668
 	make: 
 		Scale: 0.668
-	turret: draplasturtur.shp
+	turret:
+		Filename: draplasturtur.shp
 		Facings: 16
 		Scale: 0.668
 	muzzle: 
@@ -5816,6 +6161,7 @@ draplastur:
 		Scale: 0.668
 	icon: 
 		Filename: draplasturicon.shp
+
 drhive:
 	Defaults:
 		Filename: drhive.shp
