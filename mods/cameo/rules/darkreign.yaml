@@ -3,44 +3,44 @@ World:
 		Name: Imperium DR
 		InternalName: imperium
 		Game: Dark Reign
-		Side: Factions
+		Side: Dark Reign
 		Description: Imperium from DR TFoW\nSupport powers: Rift Generator, Teleportation\nVery technologically advanced faction, their army widely uses hovercraft technology,\n they also use quite sadistic weapons to eliminate their enemies,\n they can also create decoys to confuse the enemy\n Enemies: Freedom Guard, Xenites, Tograns
 	FactionCA@freedomguard:
 		Name: Freedom Guard DR
 		InternalName: freedomguard
 		Game: Dark Reign
-		Side: Factions
+		Side: Dark Reign
 		Description: Freedom Guard from DR TFoW\nSupport powers: Nothing\n\nSuperweapon unit: Shock Wave\nThe Freedom Guard uses a wide arsenal of units,\n among them it has camouflage technology,\n phase technology, and railgun weaponry, it has a wide tactical variety \n Enemies: Imperium, ShadowHand
 	FactionCA@shadowhand:
 		Name: ShadowHand DR
 		InternalName: shadowhand
 		Game: Dark Reign
-		Side: Factions
+		Side: Dark Reign
 		Description: ShadowHand from DR RoSH\nSupport powers: Rift Generator\nSuperweapon unit: EMP Device\nThe Elite of the Imperium, share some technologies with the Imperium,\n however Shadowhand's arsenal is cybernetic and heavier, most of their strong units require an AI called Osiris\n Enemies: Freedom Guard, Xenites
 	FactionCA@xenite:
 		Name: Xenites DR
 		InternalName: xenite
 		Game: Dark Reign
-		Side: Factions
+		Side: Dark Reign
 		Description: Xenite from DR RoSH\nSupport powers: Nothing\nSuperweapon unit: Shock Wave\n Originally from the planet Minevah and allies of the Freedom Guard, they share a lot of Freedom Guard technology, \n the faction uses Minevah creatures instead of heavy tanks, due to the lack of technology of the Railguns, they also use variants of Freedom Guard units somewhat more advanced.\n Enemies: Imperium, ShadowHand
 	FactionCA@togran:
 		Name: Tograns DR
 		InternalName: togran
 		Game: Dark Reign
-		Side: Factions
+		Side: Dark Reign
 		Description: Freedom Guard from Fanmade, Auran\nSupport powers: Nothing\nThe Arsenal comes from units not used by Auran, the game developer, so the units are not canon.\nThe Tograns are a very little militarized religion, they really were dedicated to developing the Togra project,\n they would not develop an army until the conflict between the Imperium and the Freedom Guard ended with the leader of the Tograns.\n Enemies: Imperium, Freedom Guard
 	FactionCA@aterrorist:
 		Name: Terrorist Side DR
 		InternalName: aterrorist
 		Game: Dark Reign
-		Side: Factions
+		Side: Dark Reign
 		Description: Terrorists from Auran\nSupport powers: Nothing\nSpecial Faction, uses Guerrilla Tactics.\nUnits evolve when they rank up
 		Selectable: True
 	FactionCA@eodaliens:
 		Name: Aliens EOD
 		InternalName: eodaliens
 		Game: Dark Reign
-		Side: Factions
+		Side: Dark Reign
 		Description: Aliens from DR EOD\nSupport powers: Nothing
 		Selectable: True
 	# FactionCA@drdescendants:
@@ -164,23 +164,23 @@ World:
 		Factions: eodaliens
 		BaseActor: mcv.eodalien
 		SupportActors: drramnoth,drramnoth,drramnoth,drramnoth,drramnoth,drsalamander,drdrednaut,drrouter,drrouter,drrouter
-	StartingUnits@mcvonlydrdescendants:
-		Class: none
-		ClassName: MCV Only
-		Factions: drdescendants
-		BaseActor: mcv.descendants
-	StartingUnits@defaultdrdescendants:
-		Class: light
-		ClassName: Light Support
-		Factions: drdescendants
-		BaseActor: mcv.descendants
-		SupportActors: drraid,drraid,drraid,drgant,drgant,drbiond,drbiond,drtrainer
-	StartingUnits@heavydrdescendants:
-		Class: heavy
-		ClassName: Heavy Support
-		Factions: drdescendants
-		BaseActor: mcv.descendants
-		SupportActors: drraid,drraid,drraid,drgant,drgant,drbiond,drbiond,drgant,drptnkd,drptnkd,drtrainer
+	# StartingUnits@mcvonlydrdescendants:
+	# 	Class: none
+	# 	ClassName: MCV Only
+	# 	Factions: drdescendants
+	# 	BaseActor: mcv.descendants
+	# StartingUnits@defaultdrdescendants:
+	# 	Class: light
+	# 	ClassName: Light Support
+	# 	Factions: drdescendants
+	# 	BaseActor: mcv.descendants
+	# 	SupportActors: drraid,drraid,drraid,drgant,drgant,drbiond,drbiond,drtrainer
+	# StartingUnits@heavydrdescendants:
+	# 	Class: heavy
+	# 	ClassName: Heavy Support
+	# 	Factions: drdescendants
+	# 	BaseActor: mcv.descendants
+	# 	SupportActors: drraid,drraid,drraid,drgant,drgant,drbiond,drbiond,drgant,drptnkd,drptnkd,drtrainer
 	StartingUnits@mcvonlydrterror:
 		Class: none
 		ClassName: MCV Only
@@ -225,6 +225,8 @@ drpowr:
 		Name: Taelon Generator
 	ProvidesPrerequisite:
 		Prerequisite: anypower
+	ProvidesPrerequisite@StructureName:
+		Prerequisite: drpowr
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -295,7 +297,7 @@ drwaterl.imperium:
 	Inherits@SHADOWS: ^Shadows
 	Buildable:
 		BuildPaletteOrder: 60
-		Prerequisites: anypower
+		Prerequisites: ~drpowr, ~imperiumwater
 		Queue: Building, RABuilding
 		Description: Refines Ore and Gems\ninto credits.
 	Valued:
@@ -367,7 +369,7 @@ drwaterl.freedom:
 	Inherits: drwaterl.imperium
 	Buildable:
 		BuildPaletteOrder: 60
-		Prerequisites: anypower
+		Prerequisites: ~drpowr, ~freedomwater
 		Queue: Building, RABuilding
 		Description: Refines Ore and Gems\ninto credits.
 	RenderSprites:
@@ -384,7 +386,7 @@ drwaterextract.freedomguard:
 	Buildable:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 120
-		Prerequisites: drfghq3, ~techlevel.medium
+		Prerequisites: drfghq3, ~techlevel.medium, ~freedomwater
 		Description: Provides Passive income
 	Valued:
 		Cost: 5000
@@ -423,7 +425,7 @@ drwaterextract.imperium:
 	Inherits: drwaterextract.freedomguard
 	Buildable:
 		BuildPaletteOrder: 120
-		Prerequisites: drihq3, ~techlevel.medium
+		Prerequisites: drihq3, ~techlevel.medium, ~imperiumwater
 		Queue: Building, RABuilding
 		Description: Provides Passive income
 	RenderSprites:
@@ -431,43 +433,63 @@ drwaterextract.imperium:
 
 drfrigth.imperium:
 	# Inherits: HARV
-	Inherits: ^Tank
+	Inherits@Tank: ^Tank
 	Inherits@selection: ^SelectableEconomicUnit
-	Inherits: ^Harvester
+	Inherits@Harv: ^Harvester
 	# Inherits@DRShadow: ^InfantryShadows
 	Tooltip:
 		Name: Freighter
 		GenericName: Harvester
 	Buildable:
+		BuildPaletteOrder: 10
 		Prerequisites: drwaterl.imperium
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Imperium, Vehicle.Shadowhand
 	StoresResources:
 		Capacity: 30
+	Health:
+		HP: 140000
+	Mobile:
+		TurnSpeed: 32
+		Speed: 120
+	Armor:
+		Type: Heavy
 	Selectable:
 		DecorationBounds: 1536, 1536
 	RenderSprites:
 		Image: drfrigth
+	ActorStatValues:
+		Stats: Armor, Sight, Speed
 	Voiced:
 		VoiceSet: DRImperiumVoice
 
-drfrigth.freedom:
+drfrigth.imperium:
 	# Inherits: HARV
-	Inherits: ^Tank
+	Inherits@Tank: ^Tank
 	Inherits@selection: ^SelectableEconomicUnit
-	Inherits: ^Harvester
+	Inherits@Harv: ^Harvester
 	# Inherits@DRShadow: ^InfantryShadows
 	Tooltip:
 		Name: Freighter
 		GenericName: Harvester
 	Buildable:
+		BuildPaletteOrder: 10
 		Prerequisites: drwaterl.freedom
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Freedom, Vehicle.Xenite, Vehicle.Togran
 	StoresResources:
 		Capacity: 30
+	Health:
+		HP: 140000
+	Mobile:
+		TurnSpeed: 32
+		Speed: 120
+	Armor:
+		Type: Heavy
 	Selectable:
 		DecorationBounds: 1536, 1536
 	RenderSprites:
 		Image: drfrigth
+	ActorStatValues:
+		Stats: Armor, Sight, Speed
 	Voiced:
 		VoiceSet: DRFreedomGuardVoice
 
@@ -485,7 +507,7 @@ drhoverfright.imperium:
 	Buildable:
 		BuildPaletteOrder: 15
 		Prerequisites: driweap2, drwaterl.imperium
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Imperium, Vehicle.Shadowhand
 		Description: Collects Resources for processing.\n  Unarmed
 	Mobile:
 		Locomotor: hover
@@ -517,6 +539,8 @@ drhoverfright.imperium:
 		RecoilRecovery: 17
 	AttackTurreted:
 	WithSpriteTurret:
+	ActorStatValues:
+		Stats: Armor, Sight, Speed
 	RenderSprites:
 		Image: drhoverfright
 	Voiced:
@@ -526,7 +550,7 @@ drhoverfright.freedom:
 	Inherits: drhoverfright.imperium
 	Buildable:
 		Prerequisites: drfgweap2, drwaterl.freedom
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Freedom, Vehicle.Xenite, Vehicle.Togran
 	RenderSprites:
 		Image: drhoverfright
 	Voiced:
@@ -537,7 +561,7 @@ drspy.freedom:
 	Inherits@EXT: ^ExternalConditions
 	Inherits@DRShadow: ^InfantryShadows
 	Buildable:
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Freedom, Infantry.Xenite
 		BuildPaletteOrder: 25
 		Prerequisites: drfgbarr2
 		Description: Infiltrates enemy structures for intel or\nsabotage. Exact effect depends on the\nbuilding infiltrated.\nLoses disguise when attacking.\nCan detect spies.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft\n  Special Ability: Disguise
@@ -585,7 +609,7 @@ drspy.freedom:
 drspy.imperium:
 	Inherits: drspy.freedom
 	Buildable:
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Imperium, Infantry.Shadowhand
 		BuildPaletteOrder: 25
 		Prerequisites: dribarr2
 		Description: Infiltrates enemy structures for intel or\nsabotage. Exact effect depends on the\nbuilding infiltrated.\nLoses disguise when attacking.\nCan detect spies.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft\n  Special Ability: Disguise
@@ -603,7 +627,7 @@ drcamera:
 		Name: Camera Tower
 	Buildable:
 		BuildPaletteOrder: 40
-		Prerequisites: anypower
+		Prerequisites: ~drpowr
 		Queue: Defence, RADefence
 		BuildDurationModifier: 40
 		Description: Detection purpose Turret
@@ -805,9 +829,13 @@ drcamera:
 	ProductionQueue@drihq1:
 		Type: driweap.Imperium
 	GrantConditionOnProduction@drihq1:
+#		ADDED
+		Condition: lvl2
 		Actors: pscdriweap
 	ProvidesPrerequisite@drihq2:
 		Prerequisite: driweap2
+		RequiresCondition: lvl2
+
 ^UpgradesDRFGBARRType:
 	Inherits: ^UpgradesDRIBARRType
 	Production@drihq1:
@@ -818,6 +846,7 @@ drcamera:
 		Actors: pscdrfgbarr
 	ProvidesPrerequisite@drihq2:
 		Prerequisite: drfgbarr2
+
 ^UpgradesDRFGWEAPType:
 	Inherits: ^UpgradesDRIWEAPType
 	Production@drihq1:
@@ -828,6 +857,7 @@ drcamera:
 		Actors: pscdrfgweap
 	ProvidesPrerequisite@drihq2:
 		Prerequisite: drfgweap2
+
 ^UpgradesDRBIOType:
 	Inherits: ^UpgradesDRIBARRType
 	Production@drihq1:
@@ -840,6 +870,7 @@ drcamera:
 		Prerequisite: drbiocom2
 	ProvidesPrerequisite@drfgbarr2:
 		Prerequisite: drfgbarr2
+
 ^UpgradesDRFGPHASEType:
 	Inherits: ^UpgradesDRIWEAPType
 	Production@drihq1:
@@ -899,6 +930,7 @@ drwall1:
 		Name: Concrete Wall
 	Buildable:
 		BuildPaletteOrder: 10
+		Prerequisites: drpowr
 		Queue: Defence, RADefence
 		Description: Blocks Units
 	Building:
@@ -924,6 +956,7 @@ drwall2:
 		Name: Concrete Wall
 	Buildable:
 		BuildPaletteOrder: 10
+		Prerequisites: drpowr
 		Queue: Defence, RADefence
 		Description: Blocks Units
 	Building:
@@ -944,8 +977,8 @@ dre6:
 		Name: Engineering Rig
 	Buildable:
 		BuildPaletteOrder: 10000
-		Prerequisites: anypower
-		Queue: Infantry, RAInfantry
+		Prerequisites: drpowr
+		Queue: Infantry.Freedom, Infantry.Imperium, Infantry.Xenite, Infantry.Shadowhand, Infantry.Togran, Infantry.Terrorist
 	RenderSprites:
 		Image: drrig
 ##############################################################################
@@ -968,7 +1001,7 @@ mcv.imperium:
 		Name: Construction Rig (Imperium)
 	Buildable:
 		BuildPaletteOrder: 100
-		Prerequisites: drihq2, ~techlevel.medium
+		Prerequisites: drihq2, ~techlevel.medium, ~drpowr
 		Queue: Building, RABuilding
 		BuildDurationModifier: 40
 		Description: Deploys into another Construction Yard.\n  Unarmed
@@ -1008,49 +1041,49 @@ drihq.imperium:
 	Inherits: ^DRHQStats
 	Tooltip:
 		Name: HQ (Imperium)
-	Production@NORMAL:
-		Produces: Building, Defence
-		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RABuilding, RADefence
-		RequiresCondition: classicproductionqueues
+	# Production@NORMAL:
+	# 	Produces: Building, Defence
+	# 	RequiresCondition: !classicproductionqueues
+	# Production@CLASSICPRODUCTIONQUEUES:
+	# 	Produces: RABuilding, RADefence
+	# 	RequiresCondition: classicproductionqueues
 	GrantConditionOnPrerequisite@GLOBALFACTUNDEPLOY:
 		Condition: factundeploy
 		Prerequisites: global-factundeploy
-	ProductionQueue@GDIBuilding:
-		Type: Building
-		DisplayOrder: 0
-		Group: Building
-		LowPowerModifier: 200
-		ReadyAudio: ConstructionComplete
-		BlockedAudio: NoBuild
-		LimitedAudio: BuildingInProgress
-		QueuedAudio: Building
-		OnHoldAudio: OnHold
-		CancelledAudio: Cancelled
-	ProductionQueue@GDIDefense:
-		Type: Defence
-		DisplayOrder: 1
-		Group: Defence
-		LowPowerModifier: 300
-		ReadyAudio: ConstructionComplete
-		BlockedAudio: NoBuild
-		LimitedAudio: BuildingInProgress
-		QueuedAudio: Building
-		OnHoldAudio: OnHold
-		CancelledAudio: Cancelled
-	ProductionBar@BuildingGDI:
-		ProductionType: Building
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@DefenceGDI:
-		ProductionType: Defence
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@RABuildingGDI:
-		ProductionType: RABuilding
-		RequiresCondition: classicproductionqueues
-	ProductionBar@RADefenceGDI:
-		ProductionType: RADefence
-		RequiresCondition: classicproductionqueues
+	# ProductionQueue@GDIBuilding:
+	# 	Type: Building
+	# 	DisplayOrder: 0
+	# 	Group: Building
+	# 	LowPowerModifier: 200
+	# 	ReadyAudio: ConstructionComplete
+	# 	BlockedAudio: NoBuild
+	# 	LimitedAudio: BuildingInProgress
+	# 	QueuedAudio: Building
+	# 	OnHoldAudio: OnHold
+	# 	CancelledAudio: Cancelled
+	# ProductionQueue@GDIDefense:
+	# 	Type: Defence
+	# 	DisplayOrder: 1
+	# 	Group: Defence
+	# 	LowPowerModifier: 300
+	# 	ReadyAudio: ConstructionComplete
+	# 	BlockedAudio: NoBuild
+	# 	LimitedAudio: BuildingInProgress
+	# 	QueuedAudio: Building
+	# 	OnHoldAudio: OnHold
+	# 	CancelledAudio: Cancelled
+	# ProductionBar@BuildingGDI:
+	# 	ProductionType: Building
+	# 	RequiresCondition: !classicproductionqueues
+	# ProductionBar@DefenceGDI:
+	# 	ProductionType: Defence
+	# 	RequiresCondition: !classicproductionqueues
+	# ProductionBar@RABuildingGDI:
+	# 	ProductionType: RABuilding
+	# 	RequiresCondition: classicproductionqueues
+	# ProductionBar@RADefenceGDI:
+	# 	ProductionType: RADefence
+	# 	RequiresCondition: classicproductionqueues
 	Buildable:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 1000
@@ -1058,6 +1091,10 @@ drihq.imperium:
 		Description: Builds structures
 	ProvidesPrerequisite@factiongdi:
 		Prerequisite: mmimperium
+	ProvidesPrerequisite@Imperiumwater:
+		Prerequisite: imperiumwater
+	ProvidesPrerequisite@Imperiumtech:
+		Prerequisite: imperiumtech
 	RenderSprites:
 		Image: drihq
 	Inherits@upgrade: ^UpgradesDRIHQType
@@ -1069,7 +1106,7 @@ pscdrihq2:
 		BuildPaletteOrder: 10
 		Queue: drihq1.Imperium
 		Description: Upgrades the HQ for New Technology.
-		Prerequisites: vehicleproduction, barracks
+		Prerequisites: ~imperiumtech
 	Valued:
 		Cost: 1000
 	RenderSprites:
@@ -1086,7 +1123,7 @@ pscdrihq3:
 		BuildPaletteOrder: 10
 		Queue: drihq2.Imperium
 		Description: Upgrades the HQ for New Technology.
-		Prerequisites: dribarr2, driweap2
+		Prerequisites: ~imperiumtech
 	Valued:
 		Cost: 1500
 	RenderSprites:
@@ -1115,7 +1152,7 @@ dribarr.imperium:
 		Prerequisite: barracks
 	Buildable:
 		BuildPaletteOrder: 40
-		Prerequisites: drhq
+		Prerequisites: drhq, ~mmimperium
 		Queue: Building, RABuilding
 		Description: Produces infantry
 	Building:
@@ -1155,13 +1192,10 @@ dribarr.imperium:
 		SpawnOffset: 1024,-1024,0
 		Facing: 128
 	Production@NORMAL:
-		Produces: Infantry
+		Produces: Infantry.Imperium
 		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RAInfantry
-		RequiresCondition: classicproductionqueues
 	ProductionQueue:
-		Type: Infantry
+		Type: Infantry.Imperium
 		DisplayOrder: 3
 		Group: Infantry
 		LowPowerModifier: 300
@@ -1172,15 +1206,13 @@ dribarr.imperium:
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
 	ProductionBar@VEHICLEGDI:
-		ProductionType: Infantry
+		ProductionType: Infantry.Imperium
 		RequiresCondition: !classicproductionqueues
-	ProductionBar@RAVEHICLEGDI:
-		ProductionType: RAInfantry
-		RequiresCondition: classicproductionqueues
 	ProvidesPrerequisite@buildingname:
 	RenderSprites:
 		Image: dribarr
 	Inherits@upgrade: ^UpgradesDRIBARRType
+
 pscdribarr:
 	Tooltip:
 		Name: Barracks Tier 2
@@ -1195,6 +1227,8 @@ pscdribarr:
 		Image: dribarr2
 	Interactable:
 	AlwaysVisible:
+	ProvidesPrerequisite@buildingname:
+		Prerequisite: dribarr2
 	KillsSelf:
 		RemoveInstead: true
 
@@ -1216,7 +1250,7 @@ driweap.imperium:
 		Prerequisite: vehicleproduction
 	Buildable:
 		BuildPaletteOrder: 40
-		Prerequisites: drwaterl.imperium
+		Prerequisites: drwaterl.imperium, ~mmimperium
 		Queue: Building, RABuilding
 		Description: Produces vehicles
 	Building:
@@ -1237,13 +1271,10 @@ driweap.imperium:
 		ExitCell: 0,1
 		ExitDelay: 3
 	Production@NORMAL:
-		Produces: Vehicle
+		Produces: Vehicle.Imperium
 		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RAVehicle
-		RequiresCondition: classicproductionqueues
 	ProductionQueue:
-		Type: Vehicle
+		Type: Vehicle.Imperium
 		DisplayOrder: 3
 		Group: Vehicle
 		LowPowerModifier: 300
@@ -1254,15 +1285,13 @@ driweap.imperium:
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
 	ProductionBar@VEHICLEGDI:
-		ProductionType: Vehicle
+		ProductionType: Vehicle.Imperium
 		RequiresCondition: !classicproductionqueues
-	ProductionBar@RAVEHICLEGDI:
-		ProductionType: RAVehicle
-		RequiresCondition: classicproductionqueues
 	Inherits@upgrade: ^UpgradesDRIWEAPType
 	ProvidesPrerequisite@buildingname:
 	RenderSprites:
 		Image: driweap
+
 pscdriweap:
 	Tooltip:
 		Name: Weapons Factory Tier 2
@@ -1270,20 +1299,23 @@ pscdriweap:
 		BuildPaletteOrder: 10
 		Queue: driweap.Imperium
 		Description: Upgrades the Factory for New Vehicles.
-		Prerequisites: drihq2
+		Prerequisites: ~~imperiumtech
 	Valued:
 		Cost: 1500
 	RenderSprites:
 		Image: driweap2
 	Interactable:
 	AlwaysVisible:
+	ProvidesPrerequisite@buildingname:
+		Prerequisite: driweap2
 	KillsSelf:
 		RemoveInstead: true
+
 drihelipad.imperium:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^2x2Shape
 	Inherits@CPQWP: ^CPQConditionWithPrimary
-	Inherits@hpad: ^IsAircraftFactory
+	Inherits@hpad: ^IsAircraftFactoryOld
 	Selectable:
 		Bounds: 2048, 2048
 	HitShape:
@@ -1295,7 +1327,7 @@ drihelipad.imperium:
 		Name: Rearming
 	Buildable:
 		BuildPaletteOrder: 50
-		Prerequisites: drihq3
+		Prerequisites: drihq3, ~mmimperium
 		Queue: Building, RABuilding
 		Description: Rearms and\nrepairs Helicopters\nAllows for production of Helicopters
 	Building:
@@ -1337,7 +1369,7 @@ driportal.imperium:
 	Buildable:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 120
-		Prerequisites: drihq3, ~techlevel.superweapons
+		Prerequisites: drihq3, ~techlevel.superweapons, ~mmimperium
 		BuildLimit: 1
 		Description: Teleports a group of units across the\nmap for a short time.\nRequires power to operate.\nMaximum 1 can be built.\n  Special Ability: Chronoshift
 	Valued:
@@ -1357,10 +1389,13 @@ driportal.imperium:
 	ChronoshiftPower@chronoshift:
 		OrderName: Chronoshift
 		PauseOnCondition: lowpower
-		Icon: chrono
+		Icons: 
+			1: chrono
 		ChargeInterval: 3000
-		Name: Chronoshift
-		Description: Teleports a group of units across\nthe map for 20 seconds.
+		Names: 
+			1: Chronoshift
+		Descriptions: 
+			1: Teleports a group of units across\nthe map for 20 seconds.
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
 		#BeginChargeSpeechNotification: ChronosphereCharging
@@ -1407,7 +1442,7 @@ dririft.imperium:
 		Name: Rift Generator
 	Buildable:
 		BuildPaletteOrder: 100
-		Prerequisites: driportal.imperium, ~techlevel.high, ~!drriftlimit
+		Prerequisites: driportal.imperium, ~techlevel.high, ~!drriftlimit, ~mmimperium
 		Queue: Building, RABuilding
 		Description: Provides radar and Orbital Ion Cannon support power.\nRequires power to operate.
 	Building:
@@ -1428,11 +1463,14 @@ dririft.imperium:
 		AllowMultiple: True
 		PauseOnCondition: lowpower
 		Prerequisites: ~techlevel.superweapons
-		Icon: ioncannon
+		Icons: 
+			1: ioncannon
 		Cursor: ioncannon
 		ChargeInterval: 6750
-		Name: Black Hole
-		Description: Initiate an Ion Cannon strike.\nApplies instant damage to a small area.
+		Names: 
+			1: Black Hole
+		Descriptions: 
+			1: Initiate an Ion Cannon strike.\nApplies instant damage to a small area.
 		BeginChargeSpeechNotification: IonCannonCharging
 		EndChargeSpeechNotification: IonCannonReady
 		SelectTargetSpeechNotification: SelectTarget
@@ -1442,7 +1480,8 @@ dririft.imperium:
 		DisplayRadarPing: True
 		CameraActor: camera.small
 		SupportPowerPaletteOrder: 20
-		Weapon: DRRiftBlackhole
+		Weapons: 
+			1: DRRiftBlackhole
 	SupportPowerChargeBar:
 	Power:
 		Amount: -150
@@ -1459,6 +1498,7 @@ dririft.imperium:
 	WithIdleOverlay@BOTTOM:
 		RequiresCondition: !build-incomplete
 		Sequence: idle-bottom
+
 drplastur1:
 	Inherits: ^Defense
 	Inherits@AUTOTARGET: ^AutoTargetAll
@@ -1470,7 +1510,7 @@ drplastur1:
 		Name: Plasma Turret
 	Buildable:
 		BuildPaletteOrder: 40
-		Prerequisites: anypower
+		Prerequisites: anypower, ~mmimperium
 		Queue: Defence, RADefence
 		BuildDurationModifier: 40
 		Description: All-purpose defensive structure.\n  Strong vs Aircraft, Infantry\n  Weak vs Tanks
@@ -1515,7 +1555,7 @@ drneutronturret:
 		Name: Neutron Turret
 	Buildable:
 		BuildPaletteOrder: 40
-		Prerequisites: drihq2
+		Prerequisites: drihq2, ~mmimperium
 		Queue: Defence, RADefence
 		Description: Antiground defensive structure.\n  Strong vs Infantry, Tanks\n  Weak vs Aircraft
 	RequiresBuildableArea:
@@ -1614,7 +1654,7 @@ drirep:
 		Name: Repair Facility
 	Buildable:
 		BuildPaletteOrder: 60
-		Prerequisites: vehicleproduction
+		Prerequisites: vehicleproduction, ~drhq
 		Queue: Building, RABuilding
 		Description: Repairs vehicles
 	Building:
@@ -1644,6 +1684,7 @@ drirep:
 		RequiresCondition: !build-incomplete
 		Sequence: idle-top
 	RenderSprites:
+
 drihosp:
 	Inherits: ^BaseBuilding
 	HitShape:
@@ -1656,7 +1697,7 @@ drihosp:
 		Name: Hospital
 	Buildable:
 		BuildPaletteOrder: 60
-		Prerequisites: barracks
+		Prerequisites: barracks, ~drhq
 		Queue: Building, RABuilding
 		Description: Repairs vehicles
 	Building:
@@ -1729,7 +1770,7 @@ drguardian:
 	Buildable:
 		BuildPaletteOrder: 10
 		Prerequisites: barracks
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Imperium
 		Description: Known as the Guardians of Order in the peaceful era\nbefore the Freedom Guard uprising, the basic\nImperium infantry unit is armed with a laser rifle\nand wears a powered armour suit.\n\nType: Walker\nSpeed: Slow\nWeapon: Laser Rifle\nRange: Short\nArmor: Light
 		BuildDuration: 100
 		BuildDurationModifier: 100
@@ -1772,7 +1813,7 @@ drbion:
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: barracks
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Imperium, Infantry.Shadowhand
 		Description: A fearless mechanical killer, the Bion is armoured like a walking tank.\nThis one-man cyborg death squad carries a massive plasma rifle,\nand can fire at both ground and air units.\n\nType: Walker\nSpeed: Slow\nWeapon: Plasma Rifle\nRange: Short\nArmor: Medium
 		BuildDuration: 300
 		BuildDurationModifier: 100
@@ -1822,7 +1863,7 @@ drext:
 	Buildable:
 		BuildPaletteOrder: 30
 		Prerequisites: barracks, dribarr2
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Imperium, Infantry.Shadowhand
 		Description: These infantry units are equipped with antigravity generators\nwhich allow them to hover over water.\nAs infantry, they can also move over steep gradients that are generally inaccessible to hover vehicles.\nExterminators are armed with chemical grenades that dissolve metal.\nThey are very effective at attacking armour.\n\nType: Hover/Walker\nSpeed: Medium\nWeapon: Chemical Grenade\nRange: Short\nArmor: Light
 	Mobile:
 		Locomotor: hover
@@ -1856,7 +1897,7 @@ drzombie2:
 		Name: Suicide Zombie
 	Buildable:
 		BuildPaletteOrder: 30
-		Prerequisites: barracks
+		Prerequisites: ~unbuildable
 		Queue: None
 	Mobile:
 		Speed: 85
@@ -1881,7 +1922,7 @@ drptnk:
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: vehicleproduction, ~techlevel.medium
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Imperium
 		BuildDuration: 1020
 		BuildDurationModifier: 40
 		Description: Backbone of the Imperium war effort, the Plasma Tank\nis tough and packs a formidable plasma cannon. The Imperium overruns\nthe enemy with endless waves of these ruinous machines\n\nType: Hover\nSpeed: Medium\nWeapon: Plasma Canon\nRange: Medium\nArmor: Heavy
@@ -1915,6 +1956,7 @@ drptnk:
 	RenderSprites:
 	Voiced:
 		VoiceSet: DRImperiumVoice
+
 drsctnk:
 	Inherits: ^Vehicle
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -1930,7 +1972,7 @@ drsctnk:
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: vehicleproduction
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Imperium, Vehicle.Shadowhand
 		Description: This fast moving hover vehicle is armed with a laser and\nis fairly effective against both infantry and armour. However, it is not very sturdy,\nand is used primarily for front line reconnaissance.\n\nType: Hover\nSpeed: Medium\nWeapon: Laser Canon\nRange: Medium\nArmor: Medium
 	Mobile:
 		Locomotor: hover
@@ -1958,6 +2000,7 @@ drsctnk:
 	DetectCloaked:
 		Range: 5c0
 	RenderDetectionCircle:
+
 drimpapc:
 	Inherits: ^Tank
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -1973,7 +2016,7 @@ drimpapc:
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: vehicleproduction
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Imperium, Vehicle.Shadowhand
 		BuildDuration: 1020
 		BuildDurationModifier: 40
 		Description: Armed with a laser rifle, the Troop Transport can\ncarry up to five infantry units at a time.\n\nType: Hover\nSpeed: Medium\nWeapon: Laser Rifle\nRange: Short\nArmor: Medium
@@ -2027,7 +2070,7 @@ dramp:
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: vehicleproduction, drihosp, ~techlevel.medium
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Imperium
 		Description: The Imperium’s version of first aid, this lunatic\ncyborg fires darts into dying infantry units that boost the target’s\nhealth to full, but leave the unit poisoned so that its health will steadily decrease\nuntil the unit dies. The Amper can also be used as an offensive weapon,\nbringing slow death to enemy infantry.\n\nType: Walker\nSpeed: Slow\nWeapon: Serum\nRange: Short\nArmor: Light
 	Mobile:
 		Speed: 64
@@ -2083,7 +2126,7 @@ drshreder:
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: vehicleproduction, ~techlevel.medium
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Imperium
 		Description: A huge, hovering nightmare, the Shredder tears through infantry like a runaway saw.\nAlthough it has no ranged attack, it is fast, heavily armoured, and inflicts severe damage on any\ninfantry units foolish enough to get near it.\n\nType: Hover\nSpeed: Medium\nWeapon: Blades\nRange: Contact\nArmor: Medium
 		BuildDuration: 250
 		BuildDurationModifier: 100
@@ -2127,7 +2170,7 @@ drttnk:
 	Buildable:
 		BuildPaletteOrder: 60
 		Prerequisites: driweap2, ~techlevel.medium
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Imperium
 		BuildDurationModifier: 100
 		BuildDuration: 1125
 		Description: The Tachion Tank is the largest, most heavily armed beast on the battlefield.\nIt’s a ponderous mountain of havoc that has the last word in any argument.\nWhen the enemy does manage to overpower one of these juggernaughts,\nit has the ability to selfdestruct and take any nearby units down with it.\n\nType: Hover\nSpeed: Medium\nWeapon: Tachion Cannon\nRange: Long\nArmor: Very Heavy
@@ -2189,7 +2232,7 @@ drmad:
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: driweap2, ~techlevel.medium
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Imperium, Vehicle.Shadowhand
 		Description: The M.A.D. fires bladed orbs at enemy air units.\nLike the Freedom Guard Flak Jack, it cannot fire at ground units and\nshould be defended against land attack\n\nType: Hover\nSpeed: Medium\nWeapon: Bladed Orbs\nRange: Long\nArmor: Light
 	Mobile:
 		Locomotor: hover
@@ -2235,7 +2278,7 @@ drscarab:
 	Buildable:
 		BuildPaletteOrder: 60
 		Prerequisites: driweap2, ~techlevel.medium
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Imperium, Vehicle.Shadowhand
 		Description: This long range weapon fires a fragmenting projectile that breaks\ninto numerous burning particles over its target. This vehicle is slow and lightly\narmoured, but it can enclose itself in a retractable armoured exoskeleton when it gets in trouble.\nThe unit cannot fire while this armour is engaged, but can weather a considerable beating while waiting for reinforcements.\n\nType: Hover\nSpeed: Slow\nWeapon: Artillery\nRange: Extrme\nArmor: Medium
 	Mobile:
 		Locomotor: hover
@@ -2289,34 +2332,36 @@ drscarab:
 	DamageMultiplier@ALT:
 		RequiresCondition: deployed
 		Modifier: 20
-drimpapc.e1:
-	Inherits: drimpapc
-	Buildable:
-		Prerequisites: barracks, ~botplayer
-		Queue: Vehicle, RAVehicle
-	Cargo:
-		InitialUnits: drguardian, drguardian, drguardian, drguardian, drguardian
-	ProductionCostMultiplier:
-		Multiplier: 180
-	AutoDeployer:
-		DeployChance: 100
-		DeployTicks: 0
-	RenderSprites:
-		Image: drimpapc
-drimpapc.e2:
-	Inherits: drimpapc
-	Buildable:
-		Prerequisites: barracks, ~hardbotplayer
-		Queue: Vehicle, RAVehicle
-	Cargo:
-		InitialUnits: drbion, drbion, drbion, drbion, drbion
-	ProductionCostMultiplier:
-		Multiplier: 250
-	AutoDeployer:
-		DeployChance: 100
-		DeployTicks: 0
-	RenderSprites:
-		Image: drimpapc
+
+# drimpapc.e1:
+# 	Inherits: drimpapc
+# 	Buildable:
+# 		Prerequisites: barracks, ~botplayer
+# 		Queue: Vehicle, RAVehicle
+# 	Cargo:
+# 		InitialUnits: drguardian, drguardian, drguardian, drguardian, drguardian
+# 	ProductionCostMultiplier:
+# 		Multiplier: 180
+# 	AutoDeployer:
+# 		DeployChance: 100
+# 		DeployTicks: 0
+# 	RenderSprites:
+# 		Image: drimpapc
+
+# drimpapc.e2:
+# 	Inherits: drimpapc
+# 	Buildable:
+# 		Prerequisites: barracks, ~hardbotplayer
+# 		Queue: Vehicle, RAVehicle
+# 	Cargo:
+# 		InitialUnits: drbion, drbion, drbion, drbion, drbion
+# 	ProductionCostMultiplier:
+# 		Multiplier: 250
+# 	AutoDeployer:
+# 		DeployChance: 100
+# 		DeployTicks: 0
+# 	RenderSprites:
+# 		Image: drimpapc
 
 drhostage:
 	Inherits: ^Vehicle
@@ -2329,7 +2374,7 @@ drhostage:
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: vehicleproduction
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Imperium
 		BuildDuration: 750
 		BuildDurationModifier: 100
 		Description: This diabolical Imperium vehicle snatches infantry units, lobotomises\nthem and converts them into Suicide Zombies. Shortly after the infantry unit is run over and captured,\nit is released, now under the player’s control and with a high-powered explosive strapped\nto its back. Enjoy.\n\nType: Wheeled\nSpeed: Medium\nWeapon: Vivisector\nRange: Contact\nArmor: Heavy
@@ -2375,263 +2420,263 @@ drhostage:
 		Position: BottomLeft
 		RequiresSelection: True
 #Fake Vehicles
-drptnkfake:
-	Inherits: ^Tank
-	Inherits@CLOAK: ^AcceptsCloakCrate
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
-	Inherits@DRShadow: ^InfantryShadows
-	Valued:
-		Cost: 350
-	Tooltip:
-		Name: Fake Plasma Tank
-	UpdatesPlayerStatistics:
-		AddToArmyValue: true
-	Buildable:
-		BuildPaletteOrder: 200
-		Prerequisites: vehicleproduction, ~techlevel.medium
-		Queue: Vehicle, RAVehicle
-		BuildDuration: 350
-		Description: Dummy unit that is used to immitate real one
-		BuildDurationModifier: 40
-	Mobile:
-		Locomotor: hover
-		TurnSpeed: 32
-		Speed: 126
-	Hovers:
-	Health:
-		HP: 42000
-	Repairable:
-		HpPerStep: 2273
-	Armor:
-		Type: Heavy
-	RevealsShroud:
-		Range: 6c0
-	Turreted:
-		TurnSpeed: 28
-		Offset: 0,0,22
-	Armament:
-		Weapon: DRNullWeapon
-	AttackTurreted:
-	WithSpriteTurret:
-	RenderSprites:
-	Voiced:
-		VoiceSet: DRImperiumVoice
-	ChangesHealth@FAKEUNIT:
-		PercentageStep: -2
-		Delay: 450
-		StartIfBelow: 150
-		DamageCooldown: 0
-	DamageMultiplier@FAKE:
-		Modifier: 150
+# drptnkfake:
+# 	Inherits: ^Tank
+# 	Inherits@CLOAK: ^AcceptsCloakCrate
+# 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+# 	Inherits@DRShadow: ^InfantryShadows
+# 	Valued:
+# 		Cost: 350
+# 	Tooltip:
+# 		Name: Fake Plasma Tank
+# 	UpdatesPlayerStatistics:
+# 		AddToArmyValue: true
+# 	Buildable:
+# 		BuildPaletteOrder: 200
+# 		Prerequisites: vehicleproduction, ~techlevel.medium
+# 		Queue: Vehicle, RAVehicle
+# 		BuildDuration: 350
+# 		Description: Dummy unit that is used to immitate real one
+# 		BuildDurationModifier: 40
+# 	Mobile:
+# 		Locomotor: hover
+# 		TurnSpeed: 32
+# 		Speed: 126
+# 	Hovers:
+# 	Health:
+# 		HP: 42000
+# 	Repairable:
+# 		HpPerStep: 2273
+# 	Armor:
+# 		Type: Heavy
+# 	RevealsShroud:
+# 		Range: 6c0
+# 	Turreted:
+# 		TurnSpeed: 28
+# 		Offset: 0,0,22
+# 	Armament:
+# 		Weapon: DRNullWeapon
+# 	AttackTurreted:
+# 	WithSpriteTurret:
+# 	RenderSprites:
+# 	Voiced:
+# 		VoiceSet: DRImperiumVoice
+# 	ChangesHealth@FAKEUNIT:
+# 		PercentageStep: -2
+# 		Delay: 450
+# 		StartIfBelow: 150
+# 		DamageCooldown: 0
+# 	DamageMultiplier@FAKE:
+# 		Modifier: 150
 
-drimpapcfake:
-	Inherits: ^Tank
-	Inherits@CLOAK: ^AcceptsCloakCrate
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
-	Inherits@DRShadow: ^InfantryShadows
-	Valued:
-		Cost: 300
-	Tooltip:
-		Name: Fake Invader Troop Transport
-	UpdatesPlayerStatistics:
-		AddToArmyValue: true
-	Buildable:
-		BuildPaletteOrder: 1000
-		Prerequisites: vehicleproduction
-		Queue: Vehicle, RAVehicle
-		BuildDuration: 300
-		BuildDurationModifier: 40
-		Description: Dummy unit that is used to immitate real one
-	Mobile:
-		Locomotor: hover
-		TurnSpeed: 32
-		Speed: 150
-	Hovers:
-	Health:
-		HP: 25000
-	Repairable:
-		HpPerStep: 2273
-	Armor:
-		Type: Light
-	RevealsShroud:
-		Range: 6c0
-	Turreted:
-		TurnSpeed: 32
-		Offset: 0,0,22
-	Armament:
-		Weapon: DRNullWeapon
-	AttackTurreted:
-	WithSpriteTurret:
-	RenderSprites:
-	Voiced:
-		VoiceSet: DRImperiumVoice
-	ChangesHealth@FAKEUNIT:
-		PercentageStep: -2
-		Delay: 450
-		StartIfBelow: 150
-		DamageCooldown: 0
-	DamageMultiplier@FAKE:
-		Modifier: 150
+# drimpapcfake:
+# 	Inherits: ^Tank
+# 	Inherits@CLOAK: ^AcceptsCloakCrate
+# 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+# 	Inherits@DRShadow: ^InfantryShadows
+# 	Valued:
+# 		Cost: 300
+# 	Tooltip:
+# 		Name: Fake Invader Troop Transport
+# 	UpdatesPlayerStatistics:
+# 		AddToArmyValue: true
+# 	Buildable:
+# 		BuildPaletteOrder: 1000
+# 		Prerequisites: vehicleproduction
+# 		Queue: Vehicle, RAVehicle
+# 		BuildDuration: 300
+# 		BuildDurationModifier: 40
+# 		Description: Dummy unit that is used to immitate real one
+# 	Mobile:
+# 		Locomotor: hover
+# 		TurnSpeed: 32
+# 		Speed: 150
+# 	Hovers:
+# 	Health:
+# 		HP: 25000
+# 	Repairable:
+# 		HpPerStep: 2273
+# 	Armor:
+# 		Type: Light
+# 	RevealsShroud:
+# 		Range: 6c0
+# 	Turreted:
+# 		TurnSpeed: 32
+# 		Offset: 0,0,22
+# 	Armament:
+# 		Weapon: DRNullWeapon
+# 	AttackTurreted:
+# 	WithSpriteTurret:
+# 	RenderSprites:
+# 	Voiced:
+# 		VoiceSet: DRImperiumVoice
+# 	ChangesHealth@FAKEUNIT:
+# 		PercentageStep: -2
+# 		Delay: 450
+# 		StartIfBelow: 150
+# 		DamageCooldown: 0
+# 	DamageMultiplier@FAKE:
+# 		Modifier: 150
 
-drshrederfake:
-	Inherits: ^Vehicle
-	Inherits@CLOAK: ^AcceptsCloakCrate
-	Inherits@DRShadow: ^InfantryShadows
-	Valued:
-		Cost: 350
-	Tooltip:
-		Name: Fake Shredder
-	Buildable:
-		BuildPaletteOrder: 1000
-		Prerequisites: vehicleproduction, ~techlevel.medium
-		Queue: Vehicle, RAVehicle
-		Description: Dummy unit that is used to immitate real one
-	Mobile:
-		Locomotor: hover
-		TurnSpeed: 60
-		Speed: 150
-	Hovers:
-	Health:
-		HP: 25000
-	Repairable:
-		HpPerStep: 1200
-	Armor:
-		Type: Heavy
-	RevealsShroud:
-		Range: 7c0
-	RenderSprites:
-	Voiced:
-		VoiceSet: DRShredderVoice
-	ChangesHealth@FAKEUNIT:
-		PercentageStep: -1
-		Delay: 450
-		StartIfBelow: 150
-		DamageCooldown: 0
-	DamageMultiplier@FAKE:
-		Modifier: 150
+# drshrederfake:
+# 	Inherits: ^Vehicle
+# 	Inherits@CLOAK: ^AcceptsCloakCrate
+# 	Inherits@DRShadow: ^InfantryShadows
+# 	Valued:
+# 		Cost: 350
+# 	Tooltip:
+# 		Name: Fake Shredder
+# 	Buildable:
+# 		BuildPaletteOrder: 1000
+# 		Prerequisites: vehicleproduction, ~techlevel.medium
+# 		Queue: Vehicle, RAVehicle
+# 		Description: Dummy unit that is used to immitate real one
+# 	Mobile:
+# 		Locomotor: hover
+# 		TurnSpeed: 60
+# 		Speed: 150
+# 	Hovers:
+# 	Health:
+# 		HP: 25000
+# 	Repairable:
+# 		HpPerStep: 1200
+# 	Armor:
+# 		Type: Heavy
+# 	RevealsShroud:
+# 		Range: 7c0
+# 	RenderSprites:
+# 	Voiced:
+# 		VoiceSet: DRShredderVoice
+# 	ChangesHealth@FAKEUNIT:
+# 		PercentageStep: -1
+# 		Delay: 450
+# 		StartIfBelow: 150
+# 		DamageCooldown: 0
+# 	DamageMultiplier@FAKE:
+# 		Modifier: 150
 
-drttnkfake:
-	Inherits: ^Tank
-	Inherits@CLOAK: ^AcceptsCloakCrate
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
-	Inherits@DRShadow: ^InfantryShadows
-	Valued:
-		Cost: 750
-	Tooltip:
-		Name: Fake Tachion Tank
-	UpdatesPlayerStatistics:
-		AddToArmyValue: true
-	Buildable:
-		BuildPaletteOrder: 1020
-		Prerequisites: driweap2, ~techlevel.medium
-		Queue: Vehicle, RAVehicle
-		BuildDurationModifier: 40
-		Description: Dummy unit that is used to immitate real one
-	Mobile:
-		Locomotor: hover
-		TurnSpeed: 32
-		Speed: 102
-	Hovers:
-	Health:
-		HP: 55000
-	Repairable:
-		HpPerStep: 2273
-	Armor:
-		Type: Heavy
-	RevealsShroud:
-		Range: 6c0
-	Turreted:
-		TurnSpeed: 28
-	Armament:
-		Weapon: DRNullWeapon
-	AttackTurreted:
-	WithSpriteTurret:
-	RenderSprites:
-	Voiced:
-		VoiceSet: DRTachyonVoice
-	ChangesHealth@FAKEUNIT:
-		PercentageStep: -2
-		Delay: 450
-		StartIfBelow: 150
-		DamageCooldown: 0
-	DamageMultiplier@FAKE:
-		Modifier: 150
+# drttnkfake:
+# 	Inherits: ^Tank
+# 	Inherits@CLOAK: ^AcceptsCloakCrate
+# 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+# 	Inherits@DRShadow: ^InfantryShadows
+# 	Valued:
+# 		Cost: 750
+# 	Tooltip:
+# 		Name: Fake Tachion Tank
+# 	UpdatesPlayerStatistics:
+# 		AddToArmyValue: true
+# 	Buildable:
+# 		BuildPaletteOrder: 1020
+# 		Prerequisites: driweap2, ~techlevel.medium
+# 		Queue: Vehicle, RAVehicle
+# 		BuildDurationModifier: 40
+# 		Description: Dummy unit that is used to immitate real one
+# 	Mobile:
+# 		Locomotor: hover
+# 		TurnSpeed: 32
+# 		Speed: 102
+# 	Hovers:
+# 	Health:
+# 		HP: 55000
+# 	Repairable:
+# 		HpPerStep: 2273
+# 	Armor:
+# 		Type: Heavy
+# 	RevealsShroud:
+# 		Range: 6c0
+# 	Turreted:
+# 		TurnSpeed: 28
+# 	Armament:
+# 		Weapon: DRNullWeapon
+# 	AttackTurreted:
+# 	WithSpriteTurret:
+# 	RenderSprites:
+# 	Voiced:
+# 		VoiceSet: DRTachyonVoice
+# 	ChangesHealth@FAKEUNIT:
+# 		PercentageStep: -2
+# 		Delay: 450
+# 		StartIfBelow: 150
+# 		DamageCooldown: 0
+# 	DamageMultiplier@FAKE:
+# 		Modifier: 150
 
-drmadfake:
-	Inherits: ^Tank
-	Inherits@CLOAK: ^AcceptsCloakCrate
-	Inherits@DRShadow: ^InfantryShadows
-	Valued:
-		Cost: 400
-	Tooltip:
-		Name: Fake Mobile Air Defense
-	UpdatesPlayerStatistics:
-		AddToArmyValue: true
-	Buildable:
-		BuildPaletteOrder: 1000
-		Prerequisites: driweap2, ~techlevel.medium
-		Queue: Vehicle, RAVehicle
-		Description: Dummy unit that is used to immitate real one
-	Mobile:
-		Locomotor: hover
-		TurnSpeed: 32
-		Speed: 126
-	Hovers:
-	Health:
-		HP: 25000
-	Repairable:
-		HpPerStep: 2273
-	Armor:
-		Type: Heavy
-	RevealsShroud:
-		Range: 6c0
-	RenderSprites:
-	Voiced:
-		VoiceSet: DRImperiumVoice
-	ChangesHealth@FAKEUNIT:
-		PercentageStep: -2
-		Delay: 450
-		StartIfBelow: 150
-		DamageCooldown: 0
-	DamageMultiplier@FAKE:
-		Modifier: 150
+# drmadfake:
+# 	Inherits: ^Tank
+# 	Inherits@CLOAK: ^AcceptsCloakCrate
+# 	Inherits@DRShadow: ^InfantryShadows
+# 	Valued:
+# 		Cost: 400
+# 	Tooltip:
+# 		Name: Fake Mobile Air Defense
+# 	UpdatesPlayerStatistics:
+# 		AddToArmyValue: true
+# 	Buildable:
+# 		BuildPaletteOrder: 1000
+# 		Prerequisites: driweap2, ~techlevel.medium
+# 		Queue: Vehicle, RAVehicle
+# 		Description: Dummy unit that is used to immitate real one
+# 	Mobile:
+# 		Locomotor: hover
+# 		TurnSpeed: 32
+# 		Speed: 126
+# 	Hovers:
+# 	Health:
+# 		HP: 25000
+# 	Repairable:
+# 		HpPerStep: 2273
+# 	Armor:
+# 		Type: Heavy
+# 	RevealsShroud:
+# 		Range: 6c0
+# 	RenderSprites:
+# 	Voiced:
+# 		VoiceSet: DRImperiumVoice
+# 	ChangesHealth@FAKEUNIT:
+# 		PercentageStep: -2
+# 		Delay: 450
+# 		StartIfBelow: 150
+# 		DamageCooldown: 0
+# 	DamageMultiplier@FAKE:
+# 		Modifier: 150
 
-drscarabfake:
-	Inherits: ^Tank
-	Inherits@CLOAK: ^AcceptsCloakCrate
-	Inherits@DRShadow: ^InfantryShadows
-	Valued:
-		Cost: 650
-	Tooltip:
-		Name: Fake S.C.A.R.A.B.
-	Buildable:
-		BuildPaletteOrder: 1000
-		Prerequisites: driweap2, ~techlevel.medium
-		Queue: Vehicle, RAVehicle
-		Description: Dummy unit that is used to immitate real one
-	Mobile:
-		Locomotor: hover
-		TurnSpeed: 20
-		Speed: 70
-	Hovers:
-	Health:
-		HP: 32000
-	Repairable:
-		HpPerStep: 569
-	Armor:
-		Type: Heavy
-	RevealsShroud:
-		Range: 5c0
-	RenderSprites:
-	Voiced:
-		VoiceSet: DRImperiumVoice
-	ChangesHealth@FAKEUNIT:
-		PercentageStep: -2
-		Delay: 450
-		StartIfBelow: 150
-		DamageCooldown: 0
-	DamageMultiplier@FAKE:
-		Modifier: 150
+# drscarabfake:
+# 	Inherits: ^Tank
+# 	Inherits@CLOAK: ^AcceptsCloakCrate
+# 	Inherits@DRShadow: ^InfantryShadows
+# 	Valued:
+# 		Cost: 650
+# 	Tooltip:
+# 		Name: Fake S.C.A.R.A.B.
+# 	Buildable:
+# 		BuildPaletteOrder: 1000
+# 		Prerequisites: driweap2, ~techlevel.medium
+# 		Queue: Vehicle, RAVehicle
+# 		Description: Dummy unit that is used to immitate real one
+# 	Mobile:
+# 		Locomotor: hover
+# 		TurnSpeed: 20
+# 		Speed: 70
+# 	Hovers:
+# 	Health:
+# 		HP: 32000
+# 	Repairable:
+# 		HpPerStep: 569
+# 	Armor:
+# 		Type: Heavy
+# 	RevealsShroud:
+# 		Range: 5c0
+# 	RenderSprites:
+# 	Voiced:
+# 		VoiceSet: DRImperiumVoice
+# 	ChangesHealth@FAKEUNIT:
+# 		PercentageStep: -2
+# 		Delay: 450
+# 		StartIfBelow: 150
+# 		DamageCooldown: 0
+# 	DamageMultiplier@FAKE:
+# 		Modifier: 150
 
 #Aircraft
 drcyclone:
@@ -2648,7 +2693,7 @@ drcyclone:
 	Buildable:
 		BuildPaletteOrder: 120
 		Prerequisites: driweap2, drihelipad, ~techlevel.medium
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Imperium, Vehicle.Shadowhand
 		Description: The Cyclone embodies the core of the Imperium aerial force.\nThe unit is fairly rugged and can engage both air and ground units.\nHowever, the Cyclone’s neutron cannon has a limited energy source and must\nrecharge at the Re-Arming Deck.\n\nType: Flyer\nSpeed: Fast\nWeapon: Neutron Cannon\nRange: Medium\nArmor: Medium
 	Aircraft:
 		TurnSpeed: 32
@@ -2685,6 +2730,7 @@ drcyclone:
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: True
+
 drskyfort:
 	Inherits: ^Helicopter
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -2698,7 +2744,7 @@ drskyfort:
 	Buildable:
 		BuildPaletteOrder: 130
 		Prerequisites: driweap2, drihelipad, ~techlevel.medium
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Imperium
 		Description: Death from above. This floating platform of wreckage houses the largest\nplasma cannon known to humanity. It’s slow to recharge but makes a lasting impact.\n\nType: Flyer\nSpeed: Slow\nWeapon: Pulse Plasma Cannon\nRange: Contact\nArmor: Heavy
 	Aircraft:
 		TurnSpeed: 32
@@ -2752,7 +2798,7 @@ drdrone:
 	Buildable:
 		BuildPaletteOrder: 30
 		Prerequisites: drihq2, ~techlevel.medium
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Imperium, Vehicle.Shadowhand
 		Description: This small unmanned drone is lightly armoured and has\nno offensive capability. It is used solely to scout enemy targets.\n\nType: Flyer\nSpeed: Medium\nWeapon: None\nRange: N/A\nArmor: Light
 	Aircraft:
 		TurnSpeed: 20
@@ -2797,7 +2843,7 @@ mcv.freedomguard:
 	Inherits: ^Soldier
 	Inherits@selection: ^SelectableSupportUnit
 	Inherits@mcv: ^MCV
-	Inherits@conyard: ^Conyard
+	# Inherits@conyard: ^Conyard
 	Inherits@DRShadow: ^InfantryShadows
 	Valued:
 		Cost: 2000
@@ -2805,7 +2851,7 @@ mcv.freedomguard:
 		Name: Construction Rig (FreedomGuard)
 	Buildable:
 		BuildPaletteOrder: 100
-		Prerequisites: drfghq2, ~techlevel.medium
+		Prerequisites: drfghq2, ~techlevel.medium, ~mmfreedomguard
 		Queue: Building, RABuilding
 		BuildDurationModifier: 40
 		Description: Deploys into another Construction Yard.\n  Unarmed
@@ -2840,50 +2886,51 @@ mcv.freedomguard:
 		VoiceSet: DRFGRigVoice
 	Passenger:
 		Weight: 1
+
 drfghq.freedomguard:
 	Inherits: ^DRHQStats
 	Tooltip:
 		Name: HQ (Freedom Guard)
-	Production@NORMAL:
-		Produces: Building, Defence
-		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RABuilding, RADefence
-		RequiresCondition: classicproductionqueues
-	ProductionQueue@GDIBuilding:
-		Type: Building
-		DisplayOrder: 0
-		Group: Building
-		LowPowerModifier: 200
-		ReadyAudio: ConstructionComplete
-		BlockedAudio: NoBuild
-		LimitedAudio: BuildingInProgress
-		QueuedAudio: Building
-		OnHoldAudio: OnHold
-		CancelledAudio: Cancelled
-	ProductionQueue@GDIDefense:
-		Type: Defence
-		DisplayOrder: 1
-		Group: Defence
-		LowPowerModifier: 300
-		ReadyAudio: ConstructionComplete
-		BlockedAudio: NoBuild
-		LimitedAudio: BuildingInProgress
-		QueuedAudio: Building
-		OnHoldAudio: OnHold
-		CancelledAudio: Cancelled
-	ProductionBar@BuildingGDI:
-		ProductionType: Building
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@DefenceGDI:
-		ProductionType: Defence
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@RABuildingGDI:
-		ProductionType: RABuilding
-		RequiresCondition: classicproductionqueues
-	ProductionBar@RADefenceGDI:
-		ProductionType: RADefence
-		RequiresCondition: classicproductionqueues
+	# Production@NORMAL:
+	# 	Produces: Building, Defence
+	# 	RequiresCondition: !classicproductionqueues
+	# Production@CLASSICPRODUCTIONQUEUES:
+	# 	Produces: RABuilding, RADefence
+	# 	RequiresCondition: classicproductionqueues
+	# ProductionQueue@GDIBuilding:
+	# 	Type: Building
+	# 	DisplayOrder: 0
+	# 	Group: Building
+	# 	LowPowerModifier: 200
+	# 	ReadyAudio: ConstructionComplete
+	# 	BlockedAudio: NoBuild
+	# 	LimitedAudio: BuildingInProgress
+	# 	QueuedAudio: Building
+	# 	OnHoldAudio: OnHold
+	# 	CancelledAudio: Cancelled
+	# ProductionQueue@GDIDefense:
+	# 	Type: Defence
+	# 	DisplayOrder: 1
+	# 	Group: Defence
+	# 	LowPowerModifier: 300
+	# 	ReadyAudio: ConstructionComplete
+	# 	BlockedAudio: NoBuild
+	# 	LimitedAudio: BuildingInProgress
+	# 	QueuedAudio: Building
+	# 	OnHoldAudio: OnHold
+	# 	CancelledAudio: Cancelled
+	# ProductionBar@BuildingGDI:
+	# 	ProductionType: Building
+	# 	RequiresCondition: !classicproductionqueues
+	# ProductionBar@DefenceGDI:
+	# 	ProductionType: Defence
+	# 	RequiresCondition: !classicproductionqueues
+	# ProductionBar@RABuildingGDI:
+	# 	ProductionType: RABuilding
+	# 	RequiresCondition: classicproductionqueues
+	# ProductionBar@RADefenceGDI:
+	# 	ProductionType: RADefence
+	# 	RequiresCondition: classicproductionqueues
 	Buildable:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 1000
@@ -2912,6 +2959,9 @@ drfghq.freedomguard:
 		IntoActor: drfgmcv.drfghq3.freedomguard
 		Offset: 1,1
 		Facing: 432
+	ProvidesPrerequisite@Freedomwater:
+		Prerequisite: freedomwater
+
 pscdrfghq2:
 	Tooltip:
 		Name: HQ Tier 2
@@ -2919,7 +2969,7 @@ pscdrfghq2:
 		BuildPaletteOrder: 10
 		Queue: drfghq1.FreedomGuard
 		Description: Upgrades the HQ for New Technology.
-		Prerequisites: ~vehicleproduction, ~barracks
+		# Prerequisites: ~vehicleproduction, ~barracks, ~mmfreedomguard
 	Valued:
 		Cost: 1200
 	RenderSprites:
@@ -2936,7 +2986,7 @@ pscdrfghq3:
 		BuildPaletteOrder: 10
 		Queue: drfghq2.FreedomGuard
 		Description: Upgrades the HQ for New Technology.
-		Prerequisites: ~drfgbarr2, ~drfgweap2
+		# Prerequisites: ~drfgbarr2, ~drfgweap2, ~mmfreedomguard
 	Valued:
 		Cost: 1500
 	RenderSprites:
@@ -2965,7 +3015,7 @@ drfgbarr.freedomguard:
 		Prerequisite: barracks
 	Buildable:
 		BuildPaletteOrder: 40
-		Prerequisites: drhq
+		Prerequisites: drhq, ~mmfreedomguard
 		Queue: Building, RABuilding
 		Description: Produces infantry
 	Building:
@@ -3005,13 +3055,10 @@ drfgbarr.freedomguard:
 		SpawnOffset: 1024,-1024,0
 		Facing: 128
 	Production@NORMAL:
-		Produces: Infantry
+		Produces: Infantry.Freedom
 		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RAInfantry
-		RequiresCondition: classicproductionqueues
 	ProductionQueue:
-		Type: Infantry
+		Type: Infantry.Freedom
 		DisplayOrder: 3
 		Group: Infantry
 		LowPowerModifier: 300
@@ -3022,11 +3069,8 @@ drfgbarr.freedomguard:
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
 	ProductionBar@VEHICLEGDI:
-		ProductionType: Infantry
+		ProductionType: Infantry.Freedom
 		RequiresCondition: !classicproductionqueues
-	ProductionBar@RAVEHICLEGDI:
-		ProductionType: RAInfantry
-		RequiresCondition: classicproductionqueues
 	ProvidesPrerequisite@buildingname:
 	RenderSprites:
 		Image: drfgbarr
@@ -3043,6 +3087,7 @@ drfgbarr.freedomguard:
 		IntoActor: drfgmcv.drfgbarr2.freedomguard
 		Offset: 1,1
 		Facing: 432
+
 pscdrfgbarr:
 	Tooltip:
 		Name: Barracks Tier 2
@@ -3050,7 +3095,7 @@ pscdrfgbarr:
 		BuildPaletteOrder: 10
 		Queue: drfgbarr.FreedomGuard
 		Description: Upgrades the Barracks for New Infantry.
-		Prerequisites: drfghq2
+		# Prerequisites: drfghq2, ~mmfreedomguard
 	Valued:
 		Cost: 750
 	RenderSprites:
@@ -3059,6 +3104,7 @@ pscdrfgbarr:
 	AlwaysVisible:
 	KillsSelf:
 		RemoveInstead: true
+
 drfgweap.freedomguard:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^3x2Shape
@@ -3078,7 +3124,7 @@ drfgweap.freedomguard:
 		Prerequisite: vehicleproduction
 	Buildable:
 		BuildPaletteOrder: 40
-		Prerequisites: drwaterl.freedom
+		Prerequisites: drwaterl.freedom, ~mmfreedomguard
 		Queue: Building, RABuilding
 		Description: Produces vehicles
 	Building:
@@ -3099,13 +3145,10 @@ drfgweap.freedomguard:
 		ExitCell: 0,1
 		ExitDelay: 3
 	Production@NORMAL:
-		Produces: Vehicle
+		Produces: Vehicle.Freedom
 		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RAVehicle
-		RequiresCondition: classicproductionqueues
 	ProductionQueue:
-		Type: Vehicle
+		Type: Vehicle.Freedom
 		DisplayOrder: 3
 		Group: Vehicle
 		LowPowerModifier: 300
@@ -3116,11 +3159,8 @@ drfgweap.freedomguard:
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
 	ProductionBar@VEHICLEGDI:
-		ProductionType: Vehicle
+		ProductionType: Vehicle.Freedom
 		RequiresCondition: !classicproductionqueues
-	ProductionBar@RAVEHICLEGDI:
-		ProductionType: RAVehicle
-		RequiresCondition: classicproductionqueues
 	Inherits@upgrade: ^UpgradesDRFGWEAPType
 	ProvidesPrerequisite@buildingname:
 	RenderSprites:
@@ -3137,6 +3177,7 @@ drfgweap.freedomguard:
 		IntoActor: drfgmcv.drfgweap2.freedomguard
 		Offset: 1,1
 		Facing: 432
+
 pscdrfgweap:
 	Tooltip:
 		Name: Assembly Plant Tier 2
@@ -3144,7 +3185,8 @@ pscdrfgweap:
 		BuildPaletteOrder: 10
 		Queue: drfgweap.FreedomGuard
 		Description: Upgrades the Factory for New Vehicles.
-		Prerequisites: drfghq2
+		# Prerequisites: drfghq2, ~mmfreedomguard
+		Prerequisites: ~freedomwater
 	Valued:
 		Cost: 1500
 	RenderSprites:
@@ -3153,11 +3195,12 @@ pscdrfgweap:
 	AlwaysVisible:
 	KillsSelf:
 		RemoveInstead: true
+
 drfghelipad.freedomguard:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^2x2Shape
 	Inherits@CPQWP: ^CPQConditionWithPrimary
-	Inherits@hpad: ^IsAircraftFactory
+	Inherits@hpad: ^IsAircraftFactoryOld
 	Selectable:
 		Bounds: 2048, 2048
 	HitShape:
@@ -3169,7 +3212,7 @@ drfghelipad.freedomguard:
 		Name: Rearming
 	Buildable:
 		BuildPaletteOrder: 50
-		Prerequisites: drfghq3
+		Prerequisites: drfghq3, ~mmfreedomguard
 		Queue: Building, RABuilding
 		Description: Produces, rearms and\nrepairs helicopters
 	Building:
@@ -3201,6 +3244,7 @@ drfghelipad.freedomguard:
 	WithIdleOverlay@BOTTOM:
 		RequiresCondition: !build-incomplete
 		Sequence: idle-bottom
+
 drlastur1:
 	Inherits: ^Defense
 	Inherits@AUTOTARGET: ^AutoTargetAll
@@ -3211,7 +3255,7 @@ drlastur1:
 		Name: Laser Turret
 	Buildable:
 		BuildPaletteOrder: 40
-		Prerequisites: anypower
+		Prerequisites: anypower, ~mmfreedomguard
 		Queue: Defence, RADefence
 		BuildDurationModifier: 40
 		Description: All-purpose defensive structure.\n  Strong vs Aircraft, Tanks\n  Weak vs Infantry
@@ -3243,6 +3287,7 @@ drlastur1:
 	Power:
 		Amount: -20
 	RenderSprites:
+
 drrailtur1:
 	Inherits: ^Defense
 	Inherits@shape: ^2x2Shape
@@ -3254,7 +3299,7 @@ drrailtur1:
 		Name: Railgun Platform
 	Buildable:
 		BuildPaletteOrder: 40
-		Prerequisites: anypower, drfghq2
+		Prerequisites: anypower, drfghq2, ~mmfreedomguard
 		Queue: Defence, RADefence
 		BuildDurationModifier: 40
 		Description: All-purpose defensive structure.\n  Strong vs Aircraft, Tanks\n  Weak vs Infantry
@@ -3312,6 +3357,7 @@ drrailtur1:
 		Turret: primary
 	WithSpriteTurret@SECONDARY:
 		Turret: secondary
+
 draacannon1:
 	Inherits: ^Defense
 	Inherits@AUTOTARGET: ^AutoTargetAll
@@ -3321,7 +3367,7 @@ draacannon1:
 		Name: AA Cannon
 	Buildable:
 		BuildPaletteOrder: 40
-		Prerequisites: anypower, drfghq2
+		Prerequisites: anypower, drfghq2, ~mmfreedomguard
 		Queue: Defence, RADefence
 		BuildDurationModifier: 40
 		Description: All-purpose defensive structure.\n  Strong vs Aircraft, Tanks\n  Weak vs Infantry
@@ -3353,6 +3399,7 @@ draacannon1:
 	Power:
 		Amount: -40
 	RenderSprites:
+
 drpplant1.freedomguard:
 	Inherits: ^BaseBuilding
 	# Inherits@IDISABLE: ^DisabledOverlay
@@ -3364,7 +3411,7 @@ drpplant1.freedomguard:
 	Buildable:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 120
-		Prerequisites: barracks
+		Prerequisites: barracks, ~mmfreedomguard
 		Description: Enables Freedom Guard Phase Tecnology
 	Valued:
 		Cost: 1500
@@ -3430,6 +3477,7 @@ drpplant1.freedomguard:
 		AggregateHealth: false
 		RequiresCondition: lvl2 && easybot
 		PauseOnCondition: disabled
+
 pscdrpplant2:
 	Tooltip:
 		Name: Phase Plant Tier 2
@@ -3437,7 +3485,7 @@ pscdrpplant2:
 		BuildPaletteOrder: 10
 		Queue: drpplant1.FreedomGuard
 		Description: Upgrades the Barracks for New Infantry.
-		Prerequisites: drfghq3
+		Prerequisites: drfghq3, ~mmfreedomguard
 	Valued:
 		Cost: 1200
 	RenderSprites:
@@ -3446,6 +3494,7 @@ pscdrpplant2:
 	AlwaysVisible:
 	KillsSelf:
 		RemoveInstead: true
+
 drfgrep:
 	Inherits: ^BaseBuilding
 	HitShape:
@@ -3458,7 +3507,7 @@ drfgrep:
 		Name: Repair Facility
 	Buildable:
 		BuildPaletteOrder: 60
-		Prerequisites: vehicleproduction
+		Prerequisites: vehicleproduction, ~mmfreedomguard
 		Queue: Building, RABuilding
 		Description: Repairs vehicles
 	Building:
@@ -3488,6 +3537,7 @@ drfgrep:
 		RequiresCondition: !build-incomplete
 		Sequence: idle-top
 	RenderSprites:
+
 drfghosp:
 	Inherits: ^BaseBuilding
 	HitShape:
@@ -3500,7 +3550,7 @@ drfghosp:
 		Name: Hospital
 	Buildable:
 		BuildPaletteOrder: 60
-		Prerequisites: barracks
+		Prerequisites: barracks, ~mmfreedomguard
 		Queue: Building, RABuilding
 		Description: Repairs vehicles
 	Building:
@@ -3530,6 +3580,7 @@ drfghosp:
 		RequiresCondition: !build-incomplete
 		Sequence: idle-top
 	RenderSprites:
+
 drnavyard.freedomguard:
 	Inherits: ^BaseBuilding
 	Inherits@CPQWP: ^CPQConditionWithPrimary
@@ -3550,7 +3601,7 @@ drnavyard.freedomguard:
 		Name: Naval Yard
 	Buildable:
 		BuildPaletteOrder: 50
-		Prerequisites: drwaterl.freedom
+		Prerequisites: drwaterl.freedom, ~mmfreedomguard
 		Queue: Building, RABuilding
 		Description: Produces and\nrepairs submarines
 	Building:
@@ -3581,11 +3632,8 @@ drnavyard.freedomguard:
 		Facing: 128
 		ExitCell: 2,0
 	Production@NORMAL:
-		Produces: Naval
+		Produces: Naval.Freedom
 		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RANaval
-		RequiresCondition: classicproductionqueues
 	Reservable:
 	RepairsUnits:
 		HpPerStep: 1000
@@ -3593,7 +3641,7 @@ drnavyard.freedomguard:
 		StartRepairingNotification: Repairing
 	RallyPoint:
 	ProductionQueue:
-		Type: Naval
+		Type: Naval.Freedom
 		DisplayOrder: 5
 		Group: Aircraft
 		LowPowerModifier: 300
@@ -3604,11 +3652,8 @@ drnavyard.freedomguard:
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
 	ProductionBar@NAVALSOVIET:
-		ProductionType: Naval
+		ProductionType: Naval.Freedom
 		RequiresCondition: !classicproductionqueues
-	ProductionBar@RANAVALSOVIET:
-		ProductionType: RANaval
-		RequiresCondition: classicproductionqueues
 	Power:
 		Amount: -30
 	ProvidesPrerequisite@buildingname:
@@ -3618,6 +3663,7 @@ drnavyard.freedomguard:
 		TargetTypes: Ground, Water, C4, Structure
 	RenderSprites:
 		Image: drnavyard
+
 #Upgraded Buildings (Editor Purpose)
 drfghq2.freedomguard:
 	Inherits: drfghq.freedomguard
@@ -3667,7 +3713,7 @@ drraid:
 	Buildable:
 		BuildPaletteOrder: 10
 		Prerequisites: barracks
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Freedom, Infantry.Xenite
 		Description: Stalwart of the Freedom Guard cause, the Raider is armed with a laser rifle.\nOnce the Phasing Facility is constructed, the Raider gains the ability to phase underground.\n\nType: Walker\nSpeed: SLow\nWeapon: Laser Rifle\nRange: Short\nArmor: Light
 	Mobile:
 		Speed: 78
@@ -3704,6 +3750,7 @@ drraid:
 	GrantConditionOnPrerequisite@phase:
 		Condition: phase
 		Prerequisites: drpplant1.freedomguard
+
 drscout:
 	Inherits: ^Soldier
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -3718,7 +3765,7 @@ drscout:
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: barracks
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Freedom, Infantry.Xenite
 		Description: Used mainly for front line surveillance, the Scout is able to morph into\ninanimate objects such as trees and rocks to conceal her position. The Scout is relatively fast but wears\nno body armour, so combat is not her specialty\n\nType: Walker\nSpeed: Medium\nWeapon: None\nRange: N/A\nArmor: Light
 	Mobile:
 		Speed: 128
@@ -3750,6 +3797,7 @@ drscout:
 	DetectCloaked:
 		Range: 5c0
 	RenderDetectionCircle:
+
 drmercenary:
 	Inherits: ^Soldier
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -3765,7 +3813,7 @@ drmercenary:
 	Buildable:
 		BuildPaletteOrder: 25
 		Prerequisites: barracks
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Freedom
 		Description: Recruited from outside the Freedom Guard ranks, these paid guns carry a massive shoulder mounted rail gun.\nHighly trained and ruthless, the Mercenary is tougher and deadlier than the Raider. The Mercenary can phase\nonce the Phasing Facility has been built\n\nType: Walker\nSpeed: SLow\nWeapon: Rail Gun\nRange: Short\nArmor: Medium
 		BuildDuration: 300
 		BuildDurationModifier: 100
@@ -3806,6 +3854,7 @@ drmercenary:
 	GrantConditionOnPrerequisite@phase:
 		Condition: phase
 		Prerequisites: drpplant1.freedomguard
+
 drsnipe:
 	Inherits: ^Soldier
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -3821,7 +3870,7 @@ drsnipe:
 	Buildable:
 		BuildPaletteOrder: 10
 		Prerequisites: drfgbarr2
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Freedom, Infantry.Xenite
 		Description: With a long range electro-magnetic needle gun, the Sniper is lethal against\ninfantry targets. Like the Scout, the Sniper can morph into objects for camouflage.\n\nType: Walker\nSpeed: Medium\nWeapon: Sniper Rail\nRange: Long\nArmor: Light
 	Mobile:
 		Speed: 80
@@ -3856,9 +3905,15 @@ drsnipe:
 	WithMirageSpriteBody:
 		Name: tree
 		RequiresCondition: tree
+	WithMirageSpriteBody:
+		Name: tree
+		RequiresCondition: tree
+		IsPlayerPalette: false
+		Palette: ra_temperat
 	DetectCloaked:
 		Range: 6c0
 	RenderDetectionCircle:
+
 drmartyr:
 	Inherits: ^Soldier
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -3874,7 +3929,7 @@ drmartyr:
 	Buildable:
 		BuildPaletteOrder: 30
 		Prerequisites: barracks
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Freedom
 		Description: Freedom Guard soldiers who are approaching their 25th birthday, and therefore certain\ndeath, are outfitted with a high-powered explosive device and then sent screaming into the enemy to die for the cause.\nSometimes soldiers not popular with their commanding officers are “volunteered” for this service before their 25th birthday\n\nType: Walker\nSpeed: Medium\nWeapon: Plasma Bomb\nRange: None\nArmor: Light
 	Mobile:
 		Speed: 130
@@ -3919,7 +3974,7 @@ drsabot:
 	Buildable:
 		BuildPaletteOrder: 10
 		Prerequisites: drfgbarr2
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Freedom, Infantry.Xenite
 		Description: The Saboteur can damage any building to half its maximum health.\n\nType: Walker\nSpeed: Slow\nWeapon: None\nRange: N/A\nArmor: Light
 	Mobile:
 		Speed: 70
@@ -3951,7 +4006,7 @@ drmech:
 	Inherits@EXT: ^ExternalConditions
 	Inherits@DRShadow: ^InfantryShadows
 	Buildable:
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Freedom, Infantry.Xenite
 		BuildPaletteOrder: 100
 		Prerequisites: drfgrep, ~techlevel.medium
 		Description: The Mechanic functions similarly to the Field Medic\nrepairing damaged vehicles in the field. The Mechanic has no attack capability\n\nType: Walker\nSpeed: Slow\nWeapon: None\nRange: N/A\nArmor: Light
@@ -3995,11 +4050,12 @@ drmech:
 	AutoTargetPriority@DEFAULT:
 		ValidTargets: Vehicle, lockdowned, ivanattached
 	RenderSprites:
+
 drmedi:
 	Inherits: ^Soldier
 	Inherits@DRShadow: ^InfantryShadows
 	Buildable:
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Freedom, Infantry.Xenite
 		Prerequisites: drfghosp, ~techlevel.medium
 		BuildPaletteOrder: 110
 		Description: The Field Medic can restore the health of\nwounded infantry units and administer an antitoxin to\ncounteract the effects of the Amper. The Field Medic will\nautomatically heal damaged units that are nearby or can\nbe directed to heal a specific unit. The Field Medic has no\nattack capability and does not wear body armour.\n\nType: Walker\nSpeed: Slow\nWeapon: None\nRange: N/A\nArmor: Light
@@ -4036,6 +4092,7 @@ drmedi:
 		ValidTargets: Infantry, plagued
 	Inherits@EXT: ^ExternalConditions
 	RenderSprites:
+
 drjebradec:
 	Inherits: ^Soldier
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -4052,7 +4109,7 @@ drjebradec:
 		BuildLimit: 1
 		BuildPaletteOrder: 100
 		Prerequisites: drfghq3
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Freedom
 		Description: Hero Infantry.\n  Strong vs Infantry, Vehicles\n  Weak vs Aircraft
 	Mobile:
 		Speed: 71
@@ -4077,6 +4134,7 @@ drjebradec:
 	RenderSprites:
 	Voiced:
 		VoiceSet: DRJebRadecVoice
+
 #Vehicle
 drspid:
 	Inherits: ^Vehicle
@@ -4089,7 +4147,7 @@ drspid:
 	Buildable:
 		BuildPaletteOrder: 30
 		Prerequisites: vehicleproduction
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Freedom, Vehicle.Xenite
 		BuildDuration: 1020
 		BuildDurationModifier: 40
 		Description: This all terrain vehicle is the cornerstone of\nthe Freedom Guard ground force. Fast and inexpensive, it\nis able to tackle all types of terrain. Armed with a double\nrail gun, it is fairly effective against armour but somewhat\nvulnerable to infantry\n\nType: Special Wheeled\nSpeed: Fast\nWeapon: Rail Gun\nRange: Medium\nArmor: Medium
@@ -4132,7 +4190,7 @@ drstnk:
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: vehicleproduction
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Freedom, Vehicle.Xenite
 		Description: The Skirmish Tank is the foundation upon\nwhich any successful military outfit is built. Properly\naccessorised, the Skirmish Tank can make a splash at an\nintimate midnight raid, a small summer skirmish, or even\na full-scale gala massacre.\n\nType: Tracked\nSpeed: Medium\nWeapon: Missile Launcher\nRange: Medium\nArmor: Medium
 	Mobile:
 		Speed: 126
@@ -4170,7 +4228,7 @@ drrat:
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: vehicleproduction
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Freedom
 		Description: The Freedom Guard\ntroop transport has the ability to camouflage itself to\nmatch the surrounding terrain. The R.A.T. is unarmed, but\nmove over water, although at a considerably reduced speed.\n\nType: Wheeled\nSpeed: Medium\nWeapon: None\nRange: N/A\nArmor: Medium
 	Mobile:
 		Locomotor: amphibius
@@ -4210,10 +4268,10 @@ drrat:
 	SpeedMultiplier@water:
 		Modifier: 60
 		RequiresCondition: swimming
-
 	WithCargoPipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: true
+
 drrtnk:
 	Inherits: ^Tank
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -4229,7 +4287,7 @@ drrtnk:
 	Buildable:
 		BuildPaletteOrder: 60
 		Prerequisites: drfgweap2, ~techlevel.high
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Freedom
 		BuildDurationModifier: 100
 		BuildDuration: 1500
 		Description: The pinnacle of Freedom Guard\narmour, the Triple Rail uses hover technology stolen from\nthe Imperium to allow movement over a broader range\nof terrain types. Hauling three electro-magnetic projectile\naccelerator cannons, or rail guns, this tank is a savage\nconsumer of Imperium armour.\n\nType: Hover\nSpeed: Medium\nWeapon: Triple Rail Gun\nRange: Long\nArmor: Heavy
@@ -4277,7 +4335,7 @@ drarty:
 	Buildable:
 		BuildPaletteOrder: 60
 		Prerequisites: drfgweap2, ~techlevel.medium
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Freedom, Vehicle.Xenite
 		Description: The Hellstorm Artillery fires a longrange, area-effect explosive. Its range is more than four\ntimes longer than any other unit. A battery of Artillery is\ncapable of single-handedly destroying an enemy base, but,\nthe vehicle is slow and lightly armoured, so undefended\nArtillery is fodder in close combat.\n\nType: Tracked\nSpeed: Slow\nWeapon: Artillery\nRange: Extreme\nArmor: Medium
 	Mobile:
 		TurnSpeed: 16
@@ -4311,6 +4369,7 @@ drarty:
 	RenderSprites:
 	Voiced:
 		VoiceSet: DRArtilleryVoice
+
 drtnkh:
 	Inherits: ^Vehicle
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
@@ -4322,7 +4381,7 @@ drtnkh:
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: vehicleproduction
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Freedom
 		BuildDuration: 1020
 		BuildDurationModifier: 40
 		Description: This quick, deadly vehicle emits a massive\nshort range electric discharge. The Tank Hunter is\ndevastating in close combat but has no ranged weapon\nand is vulnerable in situations where it cannot close on its prey\n\nType: Tracked\nSpeed: Medium\nWeapon: Electrical Discharge\nRange: Short\nArmor: Light
@@ -4364,7 +4423,7 @@ drphasetnk:
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: vehicleproduction, drpplant1.freedomguard
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Freedom, Vehicle.Xenite
 		BuildDuration: 1020
 		BuildDurationModifier: 40
 		Description: Laser Twin Cannon Tank.\n  Powerful Firepower.\n  Strong vs Ground Units\n  Weak vs Aircraft\n Can Phase
@@ -4509,6 +4568,7 @@ drphasetran.brutalbot:
 	UpdatesPlayerStatistics:
 		OverrideActor: tssapc
 	MobSpawnerSlave:
+
 drjack:
 	Inherits: ^Soldier
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -4524,7 +4584,7 @@ drjack:
 	Buildable:
 		BuildPaletteOrder: 30
 		Prerequisites: drfgweap2, ~techlevel.medium
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Freedom, Vehicle.Xenite
 		Description: A revamped Construction Rig outfitted with two\nshoulder mounted particle launchers. The Flak Jack\nsalvages metal from the battlefield and converts it into\nmicroscopic metallic particles that it fires in clouds which\ncause sustained damage to air units. The unit has no\ndefensive capability against ground attack, and should be\nprotected at all times\n\nType: Walker\nSpeed: Slow\nWeapon: Chaff\nRange: Long\nArmor: Light
 	Mobile:
 		Speed: 85
@@ -4552,6 +4612,7 @@ drjack:
 	Passenger:
 		CargoType: Infantry
 		Weight: 2
+
 drquake:
 	Inherits: ^Vehicle
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
@@ -4563,7 +4624,7 @@ drquake:
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: drfghq3, drpplant2
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Freedom, Vehicle.Xenite
 		BuildDuration: 1500
 		BuildDurationModifier: 100
 		Description: A single-use unit that creates an immense\nearth wave that travels across the map, causing severe\ndamage to everything in its wake. The Shock Wave unit\n embeds in the ground and detonates, self-destructing\nin the discharge. The Shock Wave is expensive and slow to\nbuild but well worth the wait\nBuild Limit: 1\n\nType: Tracked\nSpeed: Slow\nWeapon: Seismic Wave\nRange: Special\nArmor: Medium
@@ -4598,48 +4659,49 @@ drquake:
 		RequiresCondition: triggered
 		Delay: 10
 
-drrat.e1:
-	Inherits: drrat
-	Buildable:
-		Prerequisites: barracks, ~botplayer
-		Queue: Vehicle, RAVehicle
-	Cargo:
-		InitialUnits: drraid, drraid, drraid, drraid, drraid
-	ProductionCostMultiplier:
-		Multiplier: 180
-	AutoDeployer:
-		DeployChance: 100
-		DeployTicks: 0
-	RenderSprites:
-		Image: drrat
-drrat.e2:
-	Inherits: drrat
-	Buildable:
-		Prerequisites: barracks, ~hardbotplayer
-		Queue: ehicle.FreedomGuard, RAVehicle
-	Cargo:
-		InitialUnits: drmercenary, drmercenary, drmercenary, drmercenary, drmercenary
-	ProductionCostMultiplier:
-		Multiplier: 250
-	AutoDeployer:
-		DeployChance: 100
-		DeployTicks: 0
-	RenderSprites:
-		Image: drrat
-drrat.e3:
-	Inherits: drrat
-	Buildable:
-		Prerequisites: barracks, ~hardbotplayer, drfgbarr2
-		Queue: ehicle.FreedomGuard, RAVehicle
-	Cargo:
-		InitialUnits: drsabot, drsabot, drsabot, drsabot, drsabot
-	ProductionCostMultiplier:
-		Multiplier: 300
-	AutoDeployer:
-		DeployChance: 100
-		DeployTicks: 0
-	RenderSprites:
-		Image: drrat
+# drrat.e1:
+# 	Inherits: drrat
+# 	Buildable:
+# 		Prerequisites: barracks, ~botplayer
+# 		Queue: Vehicle, RAVehicle
+# 	Cargo:
+# 		InitialUnits: drraid, drraid, drraid, drraid, drraid
+# 	ProductionCostMultiplier:
+# 		Multiplier: 180
+# 	AutoDeployer:
+# 		DeployChance: 100
+# 		DeployTicks: 0
+# 	RenderSprites:
+# 		Image: drrat
+
+# drrat.e2:
+# 	Inherits: drrat
+# 	Buildable:
+# 		Prerequisites: barracks, ~hardbotplayer
+# 		Queue: ehicle.FreedomGuard, RAVehicle
+# 	Cargo:
+# 		InitialUnits: drmercenary, drmercenary, drmercenary, drmercenary, drmercenary
+# 	ProductionCostMultiplier:
+# 		Multiplier: 250
+# 	AutoDeployer:
+# 		DeployChance: 100
+# 		DeployTicks: 0
+# 	RenderSprites:
+# 		Image: drrat
+# drrat.e3:
+# 	Inherits: drrat
+# 	Buildable:
+# 		Prerequisites: barracks, ~hardbotplayer, drfgbarr2
+# 		Queue: ehicle.FreedomGuard, RAVehicle
+# 	Cargo:
+# 		InitialUnits: drsabot, drsabot, drsabot, drsabot, drsabot
+# 	ProductionCostMultiplier:
+# 		Multiplier: 300
+# 	AutoDeployer:
+# 		DeployChance: 100
+# 		DeployTicks: 0
+# 	RenderSprites:
+# 		Image: drrat
 #Aircraft
 drskybike:
 	Inherits: ^Helicopter
@@ -4655,7 +4717,7 @@ drskybike:
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: drfgweap2, drfghelipad, ~techlevel.medium
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Freedom, Vehicle.Xenite
 		Description: Using a modified Spider Bike chassis, the\nFreedom Guard were able to produce cheap, fast aerial\nunits which could attack enemy ground troops and other\nflyers. Although quicker than the Imperium Cyclone, the\nSky Bike is not as heavily armoured and is outgunned in\neven combat. The speed of the Sky Bike, however, allows\nit to dictate the circumstance of conflict. This unit fires\nhigh-velocity mini-missiles and, like the Outrider, must rearm at the Re-Arming Deck\n\nType: Flyer\nSpeed: Fast\nWeapon: Mini Missiles\nRange: Short\nArmor: Light
 	Aircraft:
 		TurnSpeed: 36
@@ -4708,7 +4770,7 @@ droutrider:
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: drfgweap2, drfghelipad, ~techlevel.medium
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Freedom
 		Description: This ground attack aerial unit is slower and less\nmanoeuvrable than the Sky Bike, but considerably tougher\nand fires air to ground missiles. Deadly effective against\nImperium armour, it cannot engage other air units and\nshould be escorted by air defence units. The Outrider has\nlimited ammunition and must re-arm at the Re-Arming Deck\n\nType: Flyer\nSpeed: Fast\nWeapon: Guided Missile\nRange: Long\nArmor: Heavy
 	Aircraft:
 		TurnSpeed: 36
@@ -4859,7 +4921,7 @@ drfanboat:
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: anypower
-		Queue: Naval, RANaval
+		Queue: Naval.Freedom
 		Description: Light scout & support ship.\nCan detect submarines.
 	Valued:
 		Cost: 500
@@ -4913,7 +4975,7 @@ mcv.shadowhand:
 	Inherits: ^Vehicle
 	Inherits@selection: ^SelectableSupportUnit
 	Inherits@mcv: ^MCV
-	Inherits@conyard: ^Conyard
+	# Inherits@conyard: ^Conyard
 	Inherits@DRShadow: ^InfantryShadows
 	Valued:
 		Cost: 2000
@@ -4921,7 +4983,7 @@ mcv.shadowhand:
 		Name: Construction Rig (Shadowhand)
 	Buildable:
 		BuildPaletteOrder: 100
-		Prerequisites: drihq2, ~techlevel.medium
+		Prerequisites: drihq2, ~techlevel.medium, ~mmshadowhand
 		Queue: Building, RABuilding
 		BuildDurationModifier: 40
 		Description: Deploys into another Construction Yard.\n  Unarmed
@@ -4960,53 +5022,54 @@ mcv.shadowhand:
 		VoiceSet: DRIRigVoice
 	Passenger:
 		Weight: 1
+
 drihq.shadowhand:
 	Inherits: ^DRHQStats
 	Tooltip:
 		Name: HQ (Shadowhand)
-	Production@NORMAL:
-		Produces: Building, Defence
-		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RABuilding, RADefence
-		RequiresCondition: classicproductionqueues
+	# Production@NORMAL:
+	# 	Produces: Building, Defence
+	# 	RequiresCondition: !classicproductionqueues
+	# Production@CLASSICPRODUCTIONQUEUES:
+	# 	Produces: RABuilding, RADefence
+	# 	RequiresCondition: classicproductionqueues
 	GrantConditionOnPrerequisite@GLOBALFACTUNDEPLOY:
 		Condition: factundeploy
 		Prerequisites: global-factundeploy
-	ProductionQueue@GDIBuilding:
-		Type: Building
-		DisplayOrder: 0
-		Group: Building
-		LowPowerModifier: 200
-		ReadyAudio: ConstructionComplete
-		BlockedAudio: NoBuild
-		LimitedAudio: BuildingInProgress
-		QueuedAudio: Building
-		OnHoldAudio: OnHold
-		CancelledAudio: Cancelled
-	ProductionQueue@GDIDefense:
-		Type: Defence
-		DisplayOrder: 1
-		Group: Defence
-		LowPowerModifier: 300
-		ReadyAudio: ConstructionComplete
-		BlockedAudio: NoBuild
-		LimitedAudio: BuildingInProgress
-		QueuedAudio: Building
-		OnHoldAudio: OnHold
-		CancelledAudio: Cancelled
-	ProductionBar@BuildingGDI:
-		ProductionType: Building
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@DefenceGDI:
-		ProductionType: Defence
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@RABuildingGDI:
-		ProductionType: RABuilding
-		RequiresCondition: classicproductionqueues
-	ProductionBar@RADefenceGDI:
-		ProductionType: RADefence
-		RequiresCondition: classicproductionqueues
+	# ProductionQueue@GDIBuilding:
+	# 	Type: Building
+	# 	DisplayOrder: 0
+	# 	Group: Building
+	# 	LowPowerModifier: 200
+	# 	ReadyAudio: ConstructionComplete
+	# 	BlockedAudio: NoBuild
+	# 	LimitedAudio: BuildingInProgress
+	# 	QueuedAudio: Building
+	# 	OnHoldAudio: OnHold
+	# 	CancelledAudio: Cancelled
+	# ProductionQueue@GDIDefense:
+	# 	Type: Defence
+	# 	DisplayOrder: 1
+	# 	Group: Defence
+	# 	LowPowerModifier: 300
+	# 	ReadyAudio: ConstructionComplete
+	# 	BlockedAudio: NoBuild
+	# 	LimitedAudio: BuildingInProgress
+	# 	QueuedAudio: Building
+	# 	OnHoldAudio: OnHold
+	# 	CancelledAudio: Cancelled
+	# ProductionBar@BuildingGDI:
+	# 	ProductionType: Building
+	# 	RequiresCondition: !classicproductionqueues
+	# ProductionBar@DefenceGDI:
+	# 	ProductionType: Defence
+	# 	RequiresCondition: !classicproductionqueues
+	# ProductionBar@RABuildingGDI:
+	# 	ProductionType: RABuilding
+	# 	RequiresCondition: classicproductionqueues
+	# ProductionBar@RADefenceGDI:
+	# 	ProductionType: RADefence
+	# 	RequiresCondition: classicproductionqueues
 	ProvidesPrerequisite@buildingname:
 		Prerequisite: drhq
 	Buildable:
@@ -5016,9 +5079,12 @@ drihq.shadowhand:
 		Description: Builds structures
 	ProvidesPrerequisite@factiongdi:
 		Prerequisite: mmshadowhand
+	ProvidesPrerequisite@Imperiumtech:
+		Prerequisite: imperiumtech
 	RenderSprites:
 		Image: drihq
 	Inherits@upgrade: ^UpgradesDRIHQType
+
 dribarr.shadowhand:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^3x3Shape
@@ -5038,7 +5104,7 @@ dribarr.shadowhand:
 		Prerequisite: barracks
 	Buildable:
 		BuildPaletteOrder: 40
-		Prerequisites: drhq
+		Prerequisites: drhq, ~mmshadowhand
 		Queue: Building, RABuilding
 		Description: Produces infantry
 	Building:
@@ -5078,13 +5144,10 @@ dribarr.shadowhand:
 		SpawnOffset: 1024,-1024,0
 		Facing: 128
 	Production@NORMAL:
-		Produces: Infantry
+		Produces: Infantry.Shadowhand
 		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RAInfantry
-		RequiresCondition: classicproductionqueues
 	ProductionQueue:
-		Type: Infantry
+		Type: Infantry.Shadowhand
 		DisplayOrder: 3
 		Group: Infantry
 		LowPowerModifier: 300
@@ -5095,15 +5158,13 @@ dribarr.shadowhand:
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
 	ProductionBar@VEHICLEGDI:
-		ProductionType: Infantry
+		ProductionType: Infantry.Shadowhand
 		RequiresCondition: !classicproductionqueues
-	ProductionBar@RAVEHICLEGDI:
-		ProductionType: RAInfantry
-		RequiresCondition: classicproductionqueues
 	ProvidesPrerequisite@buildingname:
 	RenderSprites:
 		Image: dribarr
 	Inherits@upgrade: ^UpgradesDRIBARRType
+
 driweap.shadowhand:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^3x2Shape
@@ -5122,7 +5183,7 @@ driweap.shadowhand:
 		Prerequisite: vehicleproduction
 	Buildable:
 		BuildPaletteOrder: 40
-		Prerequisites: drwaterl.imperium
+		Prerequisites: drwaterl.imperium, ~mmshadowhand
 		Queue: Building, RABuilding
 		Description: Produces vehicles
 	Building:
@@ -5143,13 +5204,10 @@ driweap.shadowhand:
 		ExitCell: 0,1
 		ExitDelay: 3
 	Production@NORMAL:
-		Produces: Vehicle
+		Produces: Vehicle.Shadowhand
 		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RAVehicle
-		RequiresCondition: classicproductionqueues
 	ProductionQueue:
-		Type: Vehicle
+		Type: Vehicle.Shadowhand
 		DisplayOrder: 3
 		Group: Vehicle
 		LowPowerModifier: 300
@@ -5160,15 +5218,13 @@ driweap.shadowhand:
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
 	ProductionBar@VEHICLEGDI:
-		ProductionType: Vehicle
+		ProductionType: Vehicle.Shadowhand
 		RequiresCondition: !classicproductionqueues
-	ProductionBar@RAVEHICLEGDI:
-		ProductionType: RAVehicle
-		RequiresCondition: classicproductionqueues
 	Inherits@upgrade: ^UpgradesDRIWEAPType
 	ProvidesPrerequisite@buildingname:
 	RenderSprites:
 		Image: driweap
+
 drmadrix.shadowhand:
 	Inherits: ^BaseBuilding
 	# Inherits@IDISABLE: ^DisabledOverlay
@@ -5178,7 +5234,7 @@ drmadrix.shadowhand:
 	Buildable:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 120
-		Prerequisites: barracks
+		Prerequisites: barracks, ~mmshadowhand
 		Description: Enables Shadowhand Robotic Units
 	Valued:
 		Cost: 1500
@@ -5253,7 +5309,7 @@ drreaper:
 	Buildable:
 		BuildPaletteOrder: 30
 		Prerequisites: barracks, drmadrix.shadowhand
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Shadowhand
 		Description: Shock Sniper Infantry.\n  Strong vs Light Vehicles and Creatures \n  Weak vs Infantry
 	Mobile:
 		Speed: 50
@@ -5295,7 +5351,7 @@ drgemenis1:
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: vehicleproduction, ~techlevel.medium, drmadrix.shadowhand
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Shadowhand
 		Description: Fast, light tank.\n  Strong vs Vehicles, Tanks\n  Weak vs Infantry, Aircraft
 	Mobile:
 		Locomotor: hover
@@ -5355,6 +5411,7 @@ drgemenis1:
 	DamageMultiplier@ALT:
 		RequiresCondition: deployed
 		Modifier: 150
+
 drfury:
 	Inherits: ^Vehicle
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
@@ -5366,7 +5423,7 @@ drfury:
 	Buildable:
 		BuildPaletteOrder: 61
 		Prerequisites: driweap2, ~techlevel.medium, drmadrix.shadowhand
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Shadowhand
 		Description: Speedy, heavy mech.\n  Powerful Firepower.\n  Strong vs Ground Units\n  Weak vs Aircraft
 	Mobile:
 		Speed: 85
@@ -5410,6 +5467,7 @@ drimpapc.e3:
 		DeployTicks: 0
 	RenderSprites:
 		Image: drimpapc
+
 drshadowblade:
 	Inherits: ^Vehicle
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -5425,8 +5483,8 @@ drshadowblade:
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: vehicleproduction, ~techlevel.medium
-		Queue: Vehicle, RAVehicle
-		Description: Sadic Anti Infantry, armed with\n Blades.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+		Queue: Vehicle.Shadowhand
+		Description: Sadistic Anti Infantry, armed with\n Blades.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
 	Mobile:
 		Locomotor: hover
 		TurnSpeed: 60
@@ -5467,7 +5525,7 @@ drhades:
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: driweap2, drihelipad, ~techlevel.medium
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Shadowhand
 		Description: Helicopter Gunship with Chainguns.\n  Strong vs Infantry, Light Vehicles and\n  Aircraft\n  Weak vs Tanks
 	Aircraft:
 		TurnSpeed: 32
@@ -5517,7 +5575,7 @@ drempdisable:
 	Buildable:
 		BuildPaletteOrder: 130
 		Prerequisites: driweap2, drihelipad, ~techlevel.medium
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Shadowhand
 		Description: Base Disable Unit.\n  Place it in the enemy's central building\n  Weak vs AA
 	Aircraft:
 		TurnSpeed: 32
@@ -5578,7 +5636,7 @@ mcv.xenite:
 		Name: Construction Rig (Xenite)
 	Buildable:
 		BuildPaletteOrder: 100
-		Prerequisites: drfghq2, ~techlevel.medium
+		Prerequisites: drfghq2, ~techlevel.medium, ~mmxenite
 		Queue: Building, RABuilding
 		BuildDurationModifier: 40
 		Description: Deploys into another Construction Yard.\n  Unarmed
@@ -5613,50 +5671,51 @@ mcv.xenite:
 		VoiceSet: DRFGRigVoice
 	Passenger:
 		Weight: 1
+
 drfghq.xenite:
 	Inherits: ^DRHQStats
 	Tooltip:
 		Name: HQ (Xenite)
-	Production@NORMAL:
-		Produces: Building, Defence
-		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RABuilding, RADefence
-		RequiresCondition: classicproductionqueues
-	ProductionQueue@GDIBuilding:
-		Type: Building
-		DisplayOrder: 0
-		Group: Building
-		LowPowerModifier: 200
-		ReadyAudio: ConstructionComplete
-		BlockedAudio: NoBuild
-		LimitedAudio: BuildingInProgress
-		QueuedAudio: Building
-		OnHoldAudio: OnHold
-		CancelledAudio: Cancelled
-	ProductionQueue@GDIDefense:
-		Type: Defence
-		DisplayOrder: 1
-		Group: Defence
-		LowPowerModifier: 300
-		ReadyAudio: ConstructionComplete
-		BlockedAudio: NoBuild
-		LimitedAudio: BuildingInProgress
-		QueuedAudio: Building
-		OnHoldAudio: OnHold
-		CancelledAudio: Cancelled
-	ProductionBar@BuildingGDI:
-		ProductionType: Building
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@DefenceGDI:
-		ProductionType: Defence
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@RABuildingGDI:
-		ProductionType: RABuilding
-		RequiresCondition: classicproductionqueues
-	ProductionBar@RADefenceGDI:
-		ProductionType: RADefence
-		RequiresCondition: classicproductionqueues
+	# Production@NORMAL:
+	# 	Produces: Building, Defence
+	# 	RequiresCondition: !classicproductionqueues
+	# Production@CLASSICPRODUCTIONQUEUES:
+	# 	Produces: RABuilding, RADefence
+	# 	RequiresCondition: classicproductionqueues
+	# ProductionQueue@GDIBuilding:
+	# 	Type: Building
+	# 	DisplayOrder: 0
+	# 	Group: Building
+	# 	LowPowerModifier: 200
+	# 	ReadyAudio: ConstructionComplete
+	# 	BlockedAudio: NoBuild
+	# 	LimitedAudio: BuildingInProgress
+	# 	QueuedAudio: Building
+	# 	OnHoldAudio: OnHold
+	# 	CancelledAudio: Cancelled
+	# ProductionQueue@GDIDefense:
+	# 	Type: Defence
+	# 	DisplayOrder: 1
+	# 	Group: Defence
+	# 	LowPowerModifier: 300
+	# 	ReadyAudio: ConstructionComplete
+	# 	BlockedAudio: NoBuild
+	# 	LimitedAudio: BuildingInProgress
+	# 	QueuedAudio: Building
+	# 	OnHoldAudio: OnHold
+	# 	CancelledAudio: Cancelled
+	# ProductionBar@BuildingGDI:
+	# 	ProductionType: Building
+	# 	RequiresCondition: !classicproductionqueues
+	# ProductionBar@DefenceGDI:
+	# 	ProductionType: Defence
+	# 	RequiresCondition: !classicproductionqueues
+	# ProductionBar@RABuildingGDI:
+	# 	ProductionType: RABuilding
+	# 	RequiresCondition: classicproductionqueues
+	# ProductionBar@RADefenceGDI:
+	# 	ProductionType: RADefence
+	# 	RequiresCondition: classicproductionqueues
 	ProvidesPrerequisite@buildingname:
 		Prerequisite: drhq
 	Buildable:
@@ -5666,9 +5725,12 @@ drfghq.xenite:
 		Description: Builds structures
 	ProvidesPrerequisite@factiongdi:
 		Prerequisite: mmxenite
+	ProvidesPrerequisite@Freedomwater:
+		Prerequisite: freedomwater
 	RenderSprites:
 		Image: drfghq
 	Inherits@upgrade: ^UpgradesDRFGHQType
+
 drbiocom.xenite:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^3x2Shape
@@ -5688,7 +5750,7 @@ drbiocom.xenite:
 		Prerequisite: barracks
 	Buildable:
 		BuildPaletteOrder: 40
-		Prerequisites: drhq
+		Prerequisites: drhq, ~mmxenite
 		Queue: Building, RABuilding
 		Description: Produces infantry
 	Building:
@@ -5724,13 +5786,10 @@ drbiocom.xenite:
 		SpawnOffset: 1024,-1024,0
 		Facing: 128
 	Production@NORMAL:
-		Produces: Infantry
+		Produces: Infantry.Xenite
 		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RAInfantry
-		RequiresCondition: classicproductionqueues
 	ProductionQueue:
-		Type: Infantry
+		Type: Infantry.Xenite
 		DisplayOrder: 3
 		Group: Infantry
 		LowPowerModifier: 300
@@ -5741,11 +5800,8 @@ drbiocom.xenite:
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
 	ProductionBar@VEHICLEGDI:
-		ProductionType: Infantry
+		ProductionType: Infantry.Xenite
 		RequiresCondition: !classicproductionqueues
-	ProductionBar@RAVEHICLEGDI:
-		ProductionType: RAInfantry
-		RequiresCondition: classicproductionqueues
 	ProvidesPrerequisite@buildingname:
 	RenderSprites:
 		Image: drbiocom
@@ -5755,6 +5811,7 @@ drbiocom.xenite:
 		Condition: trainercontrol
 	WithRangeCircle:
 		Range: 7c0
+
 pscbiocom2:
 	Tooltip:
 		Name: Bio Compotech Tier 2
@@ -5762,7 +5819,7 @@ pscbiocom2:
 		BuildPaletteOrder: 10
 		Queue: drbiocom.Xenite
 		Description: Upgrades the Barracks for New Infantry.
-		Prerequisites: drfghq2
+		Prerequisites: drfghq2, ~mmxenite
 	Valued:
 		Cost: 750
 	RenderSprites:
@@ -5790,7 +5847,7 @@ drfgweap.xenite:
 		Prerequisite: vehicleproduction
 	Buildable:
 		BuildPaletteOrder: 40
-		Prerequisites: drwaterl.freedom
+		Prerequisites: drwaterl.freedom, ~mmxenite
 		Queue: Building, RABuilding
 		Description: Produces vehicles
 	Building:
@@ -5811,13 +5868,10 @@ drfgweap.xenite:
 		ExitCell: 0,1
 		ExitDelay: 3
 	Production@NORMAL:
-		Produces: Vehicle
+		Produces: Vehicle.Xenite
 		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RAVehicle
-		RequiresCondition: classicproductionqueues
 	ProductionQueue:
-		Type: Vehicle
+		Type: Vehicle.Xenite
 		DisplayOrder: 3
 		Group: Vehicle
 		LowPowerModifier: 300
@@ -5828,11 +5882,8 @@ drfgweap.xenite:
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
 	ProductionBar@VEHICLEGDI:
-		ProductionType: Vehicle
+		ProductionType: Vehicle.Xenite
 		RequiresCondition: !classicproductionqueues
-	ProductionBar@RAVEHICLEGDI:
-		ProductionType: RAVehicle
-		RequiresCondition: classicproductionqueues
 	Inherits@upgrade: ^UpgradesDRFGWEAPType
 	ProvidesPrerequisite@buildingname:
 	RenderSprites:
@@ -5880,7 +5931,7 @@ drtrainer:
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: barracks
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Xenite
 		Description: Animal Control Infantry.\n  Strong vs Creatures\n  Weak vs Vehicles, Infantry\n Can Control Dinosaurs, Grendels, Gants and Other Creatures
 	Mobile:
 		Speed: 56
@@ -5923,7 +5974,7 @@ drgant:
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: barracks
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Xenite
 		Description: Melee Attack Unit.\n  Strong vs Infantry\n  Weak vs Aircraft, Heavy Vehicles\n Requires Control
 	Mobile:
 		Speed: 120
@@ -5992,7 +6043,7 @@ drgrendel:
 	Buildable:
 		BuildPaletteOrder: 30
 		Prerequisites: drbiocom2
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Xenite
 		Description: Electric Attack Unit.\n  Strong vs Infantry\n  Weak vs Aircraft, Heavy Vehicles\n Requires Control
 	Mobile:
 		Speed: 90
@@ -6049,7 +6100,6 @@ drgrendel:
 		Bounds: 1024, 1024
 		DecorationBounds: 1280, 1280
 
-
 drgrider:
 	Inherits@Test: ^Infantry
 	Inherits: ^Vehicle
@@ -6062,7 +6112,7 @@ drgrider:
 	Buildable:
 		BuildPaletteOrder: 30
 		Prerequisites: drbiocom2
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Xenite
 		Description: Animal Control Unit.\n Electric Attack Unit.\n  Strong vs Infantry\n  Weak vs Aircraft, Heavy Vehicles
 	Mobile:
 		Speed: 90
@@ -6135,7 +6185,7 @@ drrat2:
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: vehicleproduction
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Xenite
 		Description: Fast scout vehicle, armed with\n Light Laser.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
 	Mobile:
 		Locomotor: amphibius
@@ -6176,34 +6226,34 @@ drrat2:
 		Position: BottomLeft
 		RequiresSelection: true
 
-drrat2.e1:
-	Inherits: drrat2
-	Buildable:
-		Prerequisites: barracks, ~botplayer
-		Queue: Vehicle, RAVehicle
-	Cargo:
-		InitialUnits: drraid, drraid, drraid, drraid, drraid
-	ProductionCostMultiplier:
-		Multiplier: 180
-	AutoDeployer:
-		DeployChance: 100
-		DeployTicks: 0
-	RenderSprites:
-		Image: drrat2
-drrat2.e2:
-	Inherits: drrat2
-	Buildable:
-		Prerequisites: barracks, ~hardbotplayer, drfgbarr2
-		Queue: ehicle.Xenite, RAVehicle
-	Cargo:
-		InitialUnits: drsabot, drsabot, drsabot, drsabot, drsabot
-	ProductionCostMultiplier:
-		Multiplier: 300
-	AutoDeployer:
-		DeployChance: 100
-		DeployTicks: 0
-	RenderSprites:
-		Image: drrat2
+# drrat2.e1:
+# 	Inherits: drrat2
+# 	Buildable:
+# 		Prerequisites: barracks, ~botplayer
+# 		Queue: Vehicle, RAVehicle
+# 	Cargo:
+# 		InitialUnits: drraid, drraid, drraid, drraid, drraid
+# 	ProductionCostMultiplier:
+# 		Multiplier: 180
+# 	AutoDeployer:
+# 		DeployChance: 100
+# 		DeployTicks: 0
+# 	RenderSprites:
+# 		Image: drrat2
+# drrat2.e2:
+# 	Inherits: drrat2
+# 	Buildable:
+# 		Prerequisites: barracks, ~hardbotplayer, drfgbarr2
+# 		Queue: Vehicle.Xenite, RAVehicle
+# 	Cargo:
+# 		InitialUnits: drsabot, drsabot, drsabot, drsabot, drsabot
+# 	ProductionCostMultiplier:
+# 		Multiplier: 300
+# 	AutoDeployer:
+# 		DeployChance: 100
+# 		DeployTicks: 0
+# 	RenderSprites:
+# 		Image: drrat2
 #Aircraft
 dravenger:
 	Inherits: ^Helicopter
@@ -6219,7 +6269,7 @@ dravenger:
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: drfghelipad
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Xenite
 		Description: Helicopter Gunship with Chainguns.\n  Strong vs Infantry, Light Vehicles and\n  Aircraft\n  Weak vs Tanks
 	Aircraft:
 		TurnSpeed: 36
@@ -6269,6 +6319,7 @@ drtpower:
 		Bounds: 1024, 1024
 	Buildable:
 		Queue: Building, RABuilding
+		Prerequisites: ~drthq
 		BuildPaletteOrder: 10
 		Description: Provides power for other structures.
 	Valued:
@@ -6313,6 +6364,7 @@ drtpower:
 	WithShadow:
 		Offset: 192, 0, 0
 		ZOffset: -512
+
 mcv.togran:
 	Inherits: ^Soldier
 	Inherits@selection: ^SelectableSupportUnit
@@ -6325,7 +6377,7 @@ mcv.togran:
 		Name: Construction Rig (Tograns)
 	Buildable:
 		BuildPaletteOrder: 100
-		Prerequisites: drihq2, ~techlevel.medium
+		Prerequisites: drihq2, ~techlevel.medium, ~drthq
 		Queue: Building, RABuilding
 		BuildDurationModifier: 40
 		Description: Deploys into another Construction Yard.\n  Unarmed
@@ -6356,59 +6408,62 @@ mcv.togran:
 	WithInfantryBody:
 	ProvidesPrerequisite@faction:
 		Prerequisite: mmtogran
+	ProvidesPrerequisite@Freedomwater:
+		Prerequisite: freedomwater
 	Voiced:
 		VoiceSet: DRIRigVoice
 	Passenger:
 		Weight: 1
+
 drihq.togran:
 	Inherits: ^DRHQStats
 	Tooltip:
 		Name: HQ Ship (Tograns)
-	Production@NORMAL:
-		Produces: Building, Defence
-		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RABuilding, RADefence
-		RequiresCondition: classicproductionqueues
+	# Production@NORMAL:
+	# 	Produces: Building, Defence
+	# 	RequiresCondition: !classicproductionqueues
+	# Production@CLASSICPRODUCTIONQUEUES:
+	# 	Produces: RABuilding, RADefence
+	# 	RequiresCondition: classicproductionqueues
 	GrantConditionOnPrerequisite@GLOBALFACTUNDEPLOY:
 		Condition: factundeploy
 		Prerequisites: global-factundeploy
-	ProductionQueue@GDIBuilding:
-		Type: Building
-		DisplayOrder: 0
-		Group: Building
-		LowPowerModifier: 200
-		ReadyAudio: ConstructionComplete
-		BlockedAudio: NoBuild
-		LimitedAudio: BuildingInProgress
-		QueuedAudio: Building
-		OnHoldAudio: OnHold
-		CancelledAudio: Cancelled
-	ProductionQueue@GDIDefense:
-		Type: Defence
-		DisplayOrder: 1
-		Group: Defence
-		LowPowerModifier: 300
-		ReadyAudio: ConstructionComplete
-		BlockedAudio: NoBuild
-		LimitedAudio: BuildingInProgress
-		QueuedAudio: Building
-		OnHoldAudio: OnHold
-		CancelledAudio: Cancelled
-	ProductionBar@BuildingGDI:
-		ProductionType: Building
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@DefenceGDI:
-		ProductionType: Defence
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@RABuildingGDI:
-		ProductionType: RABuilding
-		RequiresCondition: classicproductionqueues
-	ProductionBar@RADefenceGDI:
-		ProductionType: RADefence
-		RequiresCondition: classicproductionqueues
+	# ProductionQueue@GDIBuilding:
+	# 	Type: Building
+	# 	DisplayOrder: 0
+	# 	Group: Building
+	# 	LowPowerModifier: 200
+	# 	ReadyAudio: ConstructionComplete
+	# 	BlockedAudio: NoBuild
+	# 	LimitedAudio: BuildingInProgress
+	# 	QueuedAudio: Building
+	# 	OnHoldAudio: OnHold
+	# 	CancelledAudio: Cancelled
+	# ProductionQueue@GDIDefense:
+	# 	Type: Defence
+	# 	DisplayOrder: 1
+	# 	Group: Defence
+	# 	LowPowerModifier: 300
+	# 	ReadyAudio: ConstructionComplete
+	# 	BlockedAudio: NoBuild
+	# 	LimitedAudio: BuildingInProgress
+	# 	QueuedAudio: Building
+	# 	OnHoldAudio: OnHold
+	# 	CancelledAudio: Cancelled
+	# ProductionBar@BuildingGDI:
+	# 	ProductionType: Building
+	# 	RequiresCondition: !classicproductionqueues
+	# ProductionBar@DefenceGDI:
+	# 	ProductionType: Defence
+	# 	RequiresCondition: !classicproductionqueues
+	# ProductionBar@RABuildingGDI:
+	# 	ProductionType: RABuilding
+	# 	RequiresCondition: classicproductionqueues
+	# ProductionBar@RADefenceGDI:
+	# 	ProductionType: RADefence
+	# 	RequiresCondition: classicproductionqueues
 	ProvidesPrerequisite@buildingname:
-		Prerequisite: drhq
+		Prerequisite: drthq
 	Buildable:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 1000
@@ -6419,6 +6474,7 @@ drihq.togran:
 	RenderSprites:
 		Image: drthq
 	Inherits@upgrade: ^UpgradesDRIHQType
+
 dribarr.togran:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^3x3Shape
@@ -6439,7 +6495,7 @@ dribarr.togran:
 		Prerequisite: barracks
 	Buildable:
 		BuildPaletteOrder: 40
-		Prerequisites: drhq
+		Prerequisites: drhq, ~drthq
 		Queue: Building, RABuilding
 		Description: Produces infantry
 	Building:
@@ -6460,13 +6516,10 @@ dribarr.togran:
 		ExitCell: 3,3
 		ExitDelay: 3
 	Production@NORMAL:
-		Produces: Infantry
+		Produces: Infantry.Togran
 		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RAInfantry
-		RequiresCondition: classicproductionqueues
 	ProductionQueue:
-		Type: Infantry
+		Type: Infantry.Togran
 		DisplayOrder: 3
 		Group: Infantry
 		LowPowerModifier: 300
@@ -6477,15 +6530,13 @@ dribarr.togran:
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
 	ProductionBar@VEHICLEGDI:
-		ProductionType: Infantry
+		ProductionType: Infantry.Togran
 		RequiresCondition: !classicproductionqueues
-	ProductionBar@RAVEHICLEGDI:
-		ProductionType: RAInfantry
-		RequiresCondition: classicproductionqueues
 	ProvidesPrerequisite@buildingname:
 	RenderSprites:
 		Image: dribarr
 	Inherits@upgrade: ^UpgradesDRIBARRType
+
 driweap.togran:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^3x2Shape
@@ -6504,7 +6555,7 @@ driweap.togran:
 		Prerequisite: vehicleproduction
 	Buildable:
 		BuildPaletteOrder: 40
-		Prerequisites: drwaterl.freedom
+		Prerequisites: drwaterl.freedom, ~drthq
 		Queue: Building, RABuilding
 		Description: Produces vehicles
 	Building:
@@ -6525,13 +6576,10 @@ driweap.togran:
 		ExitCell: 0,1
 		ExitDelay: 3
 	Production@NORMAL:
-		Produces: Vehicle
+		Produces: Vehicle.Togran
 		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RAVehicle
-		RequiresCondition: classicproductionqueues
 	ProductionQueue:
-		Type: Vehicle
+		Type: Vehicle.Togran
 		DisplayOrder: 3
 		Group: Vehicle
 		LowPowerModifier: 300
@@ -6542,15 +6590,13 @@ driweap.togran:
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
 	ProductionBar@VEHICLEGDI:
-		ProductionType: Vehicle
+		ProductionType: Vehicle.Togran
 		RequiresCondition: !classicproductionqueues
-	ProductionBar@RAVEHICLEGDI:
-		ProductionType: RAVehicle
-		RequiresCondition: classicproductionqueues
 	Inherits@upgrade: ^UpgradesDRIWEAPType
 	ProvidesPrerequisite@buildingname:
 	RenderSprites:
 		Image: driweap
+
 drihelipad.togran:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^2x2Shape
@@ -6566,7 +6612,7 @@ drihelipad.togran:
 		Name: Rearming
 	Buildable:
 		BuildPaletteOrder: 50
-		Prerequisites: drihq3
+		Prerequisites: drihq3, ~drthq
 		Queue: Building, RABuilding
 		Description: Rearms and\nrepairs Helicopters\nAllows for production of Helicopters
 	Building:
@@ -6598,6 +6644,7 @@ drihelipad.togran:
 	WithIdleOverlay@BOTTOM:
 		RequiresCondition: !build-incomplete
 		Sequence: idle-bottom
+
 driportal.togran:
 	Inherits: ^BaseBuilding
 	# Inherits@IDISABLE: ^DisabledOverlay
@@ -6607,7 +6654,7 @@ driportal.togran:
 	Buildable:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 120
-		Prerequisites: drihq3, ~techlevel.superweapons
+		Prerequisites: drihq3, ~techlevel.superweapons, ~drthq
 		BuildLimit: 1
 		Description: Teleports a group of units across the\nmap for a short time.\nRequires power to operate.\nMaximum 1 can be built.\n  Special Ability: Chronoshift
 	Valued:
@@ -6627,10 +6674,13 @@ driportal.togran:
 	ChronoshiftPower@chronoshift:
 		OrderName: Chronoshift
 		PauseOnCondition: lowpower
-		Icon: chrono
+		Icons: 
+			1: chrono
 		ChargeInterval: 3000
-		Name: Chronoshift
-		Description: Teleports a group of units across\nthe map for 20 seconds.
+		Names: 
+			1: Chronoshift
+		Descriptions: 
+			1: Teleports a group of units across\nthe map for 20 seconds.
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
 		#BeginChargeSpeechNotification: ChronosphereCharging
@@ -6659,6 +6709,7 @@ driportal.togran:
 	WithIdleOverlay@BOTTOM:
 		RequiresCondition: !build-incomplete
 		Sequence: idle-bottom
+
 drtflamer:
 	Inherits: ^Defense
 	Inherits@AUTOTARGET: ^AutoTargetAll
@@ -6669,7 +6720,7 @@ drtflamer:
 		Name: Flamer Turret
 	Buildable:
 		BuildPaletteOrder: 40
-		Prerequisites: anypower
+		Prerequisites: anypower, ~drthq
 		Queue: Defence, RADefence
 		BuildDurationModifier: 40
 		Description: All-purpose defensive structure.\n  Strong vs Aircraft, Tanks\n  Weak vs Infantry
@@ -6701,6 +6752,7 @@ drtflamer:
 	Power:
 		Amount: -20
 	RenderSprites:
+
 drtsentry:
 	Inherits: ^Defense
 	Inherits@AUTOTARGET: ^AutoTargetAll
@@ -6711,7 +6763,7 @@ drtsentry:
 		Name: Sentry Turret
 	Buildable:
 		BuildPaletteOrder: 40
-		Prerequisites: anypower
+		Prerequisites: anypower, ~drthq
 		Queue: Defence, RADefence
 		BuildDurationModifier: 40
 		Description: All-purpose defensive structure.\n  Strong vs Aircraft, Tanks\n  Weak vs Infantry
@@ -6744,6 +6796,7 @@ drtsentry:
 	Power:
 		Amount: -40
 	RenderSprites:
+
 drtmissile:
 	Inherits: ^Defense
 	Inherits@shape: ^2x2Shape
@@ -6756,7 +6809,7 @@ drtmissile:
 		Name: Missile Turret
 	Buildable:
 		BuildPaletteOrder: 40
-		Prerequisites: drihq2
+		Prerequisites: drihq2, ~drthq
 		Queue: Defence, RADefence
 		Description: Antiground defensive structure.\n  Strong vs Infantry, Tanks\n  Weak vs Aircraft
 		BuildDuration: 600
@@ -6807,6 +6860,7 @@ drihq2.togran:
 		Condition: lvl2
 	Buildable:
 		Queue: Null
+
 drihq3.togran:
 	Inherits: drihq.togran
 	GrantCondition@Addlevel2:
@@ -6815,18 +6869,21 @@ drihq3.togran:
 		Condition: lvl3
 	Buildable:
 		Queue: Null
+
 dribarr2.togran:
 	Inherits: dribarr.togran
 	GrantCondition@Addlevel2:
 		Condition: lvl2
 	Buildable:
 		Queue: Null
+
 driweap2.togran:
 	Inherits: driweap.togran
 	GrantCondition@Addlevel2:
 		Condition: lvl2
 	Buildable:
 		Queue: Null
+
 #Infantry
 drshok:
 	Inherits: ^Soldier
@@ -6843,7 +6900,7 @@ drshok:
 	Buildable:
 		BuildPaletteOrder: 10
 		Prerequisites: barracks
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Togran
 		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles
 	Mobile:
 		Speed: 78
@@ -6884,7 +6941,7 @@ drbiocontrol:
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: barracks
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Togran
 		Description: Anti-Ground infantry.\n  Strong vs Infantry, Light Vehicles\n  Weak vs Fast Units. \n Can Attack Aircraft
 	Mobile:
 		Speed: 66
@@ -6914,12 +6971,13 @@ drbiocontrol:
 	Voiced:
 		VoiceSet: DRBioTroops
 	-TakeCover:
+
 drreaper2:
 	Inherits: drreaper
 	Buildable:
 		BuildPaletteOrder: 30
 		Prerequisites: barracks, dribarr2
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Togran
 		Description: Anti-Ground infantry.\n  Strong vs Infantry, Light Vehicles\n  Weak vs Fast Units. \n Can Attack Aircraft
 	Valued:
 		Cost: 500
@@ -6931,6 +6989,7 @@ drreaper2:
 		Weapon: DRPlasmaReaperWeapon
 	RenderSprites:
 		Image: drreaper
+
 drphasemine:
 	Inherits: ^Vehicle
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
@@ -6942,7 +7001,7 @@ drphasemine:
 	Buildable:
 		BuildPaletteOrder: 61
 		Prerequisites: vehicleproduction, ~techlevel.medium
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Togran
 		Description: Speedy, heavy mech.\n  Powerful Firepower.\n  Strong vs Ground Units\n  Weak vs Aircraft
 	Mobile:
 		Speed: 85
@@ -6993,7 +7052,7 @@ drntnk:
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: vehicleproduction
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Togran
 		BuildDuration: 1020
 		BuildDurationModifier: 40
 		Description: Fast, light tank.\n  Strong vs Vehicles, Tanks\n  Weak vs Infantry, Aircraft
@@ -7028,6 +7087,7 @@ drntnk:
 	RenderSprites:
 	Voiced:
 		VoiceSet: DRFreedomGuardVoice
+
 drtscout:
 	Inherits: ^Vehicle
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
@@ -7039,7 +7099,7 @@ drtscout:
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: vehicleproduction
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Togran
 		Description: Speedy, heavy mech.\n  Powerful Firepower.\n  Strong vs Ground Units\n  Weak vs Aircraft
 	Mobile:
 		Speed: 140
@@ -7094,6 +7154,7 @@ drtscout:
 	DetectCloaked:
 		Range: 5c0
 	RenderDetectionCircle:
+
 drticktank:
 	Inherits: ^Vehicle
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
@@ -7101,11 +7162,11 @@ drticktank:
 	Valued:
 		Cost: 800
 	Tooltip:
-		Name: Tick Tank
+		Name: Togran Walker
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: vehicleproduction
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Togran
 		Description: Speedy, heavy mech.\n  Powerful Firepower.\n  Strong vs Ground Units\n  Weak vs Aircraft
 	Mobile:
 		Speed: 108
@@ -7158,6 +7219,7 @@ drticktank:
 	RenderSprites:
 	Voiced:
 		VoiceSet: DRFreedomGuardVoice
+
 drvortextank:
 	Inherits: ^Vehicle
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
@@ -7169,7 +7231,7 @@ drvortextank:
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: driweap2
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Togran
 		Description: Speedy, heavy tank.\n  Powerful Firepower.\n  Strong vs Ground Units\n  Weak vs Aircraft\n  When deploy can attack with a Black Hole
 		BuildDuration: 1050
 		BuildDurationModifier: 100
@@ -7221,6 +7283,7 @@ drvortextank:
 		DeployChance: 50
 		DeployTicks: 450
 		DeployTrigger: Attack
+
 drflamedeath:
 	Inherits: ^Vehicle
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
@@ -7233,7 +7296,7 @@ drflamedeath:
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: driweap2
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Togran
 		Description: Speedy, heavy mech.\n  Powerful Firepower.\n  Strong vs Ground Units\n  Weak vs Aircraft
 		BuildDuration: 400
 		BuildDurationModifier: 100
@@ -7259,6 +7322,7 @@ drflamedeath:
 	RenderSprites:
 	Voiced:
 		VoiceSet: DRTripleRailVoice
+
 drsonic:
 	Inherits: ^Vehicle
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
@@ -7270,7 +7334,7 @@ drsonic:
 	Buildable:
 		BuildPaletteOrder: 61
 		Prerequisites: driweap2, ~techlevel.medium
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Togran
 		BuildDuration: 1125
 		BuildDurationModifier: 100
 		Description: Speedy, heavy mech.\n  Powerful Firepower.\n  Strong vs Ground Units\n  Weak vs Aircraft
@@ -7378,6 +7442,7 @@ drihq3.togran.m:
 	WithIdleOverlay@FAN2:
 		RequiresCondition: lvl3
 		Sequence: idle-fan2
+
 ^UpgradesDRTERWEAPType:
 	Inherits: ^UpgradesDRIWEAPType
 	Production@drihq1:
@@ -7388,11 +7453,15 @@ drihq3.togran.m:
 		Actors: pscdrterrep
 	ProvidesPrerequisite@drihq2:
 		Prerequisite: drterrep2
+
+drterrep2:
+	Tooltip:
+		Name: Upgraded Repair Station
+
 mcv.aterrorist:
 	Inherits: ^Soldier
 	Inherits@selection: ^SelectableSupportUnit
 	Inherits@mcv: ^MCV
-	Inherits@conyard: ^Conyard
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Valued:
 		Cost: 2500
@@ -7400,8 +7469,8 @@ mcv.aterrorist:
 		Name: Construction Crane (Terrorist)
 	Buildable:
 		BuildPaletteOrder: 100
-		Prerequisites: drfghq2, ~techlevel.medium, drterrep
-		Queue: Vehicle, RAVehicle
+		Prerequisites: drfghq2, ~techlevel.medium, drterrep, ~mmterrorist
+		Queue: Vehicle.Terrorist
 		BuildDurationModifier: 40
 		Description: Deploys into another Construction Yard.\n  Armed With Lasers\n  Better than an Construction Biot\n Special for Large Travels
 	Selectable:
@@ -7434,6 +7503,8 @@ mcv.aterrorist:
 		Image: drtermcv
 	ProvidesPrerequisite@faction:
 		Prerequisite: mmaterrorist
+	ProvidesPrerequisite@Freedomwater:
+		Prerequisite: freedomwater
 	Armament:
 		Weapon: DRRastaLaser
 		LocalOffset: 350,-230,100, 350,230,100
@@ -7445,11 +7516,11 @@ mcv.aterrorist:
 	WithSpriteTurret:
 	Voiced:
 		VoiceSet: DRConstructionCrawlerVoice
+
 mcv2.aterrorist:
 	Inherits: ^Soldier
 	Inherits@selection: ^SelectableSupportUnit
 	Inherits@mcv: ^MCV
-	Inherits@conyard: ^Conyard
 	Inherits@DRShadow: ^InfantryShadows
 	Valued:
 		Cost: 1200
@@ -7458,7 +7529,7 @@ mcv2.aterrorist:
 	Buildable:
 		BuildPaletteOrder: 100
 		Prerequisites: drterrep, ~techlevel.medium
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Terrorist
 		BuildDurationModifier: 40
 		Description: Deploys into another Construction Yard.\n  Unarmed.\n Are a Lite Construction Rig are\n Cheaper but Slower
 	Selectable:
@@ -7492,10 +7563,12 @@ mcv2.aterrorist:
 		VoiceSet: DRConstructionBiotVoice
 	Passenger:
 		Weight: 1
+
 drterpower:
 	Inherits: drtpower
 	Buildable:
 		Queue: Building, RABuilding
+		Prerequisites: ~mmterrorist
 		BuildPaletteOrder: 10
 		Description: Provides power for other structures.
 	Tooltip:
@@ -7503,54 +7576,55 @@ drterpower:
 
 drterhq.terror:
 	Inherits: ^DRHQStats
+	Inherits@conyard: ^Conyard
 	Tooltip:
 		Name: HQ (Terrorist)
 	Building:
 		Footprint: xxx xxx =xx
 		Dimensions: 3,3
 		LocalCenterOffset: 0,-512,0
-	Production@NORMAL:
-		Produces: Building, Defence, Infantry
+	Production@TerroristInfo:
+		Produces: Infantry.Terrorist
 		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RABuilding, RADefence, RAInfantry
-		RequiresCondition: classicproductionqueues
-	ProductionQueue@GDIBuilding:
-		Type: Building
-		DisplayOrder: 0
-		Group: Building
-		LowPowerModifier: 200
-		ReadyAudio: ConstructionComplete
-		BlockedAudio: NoBuild
-		LimitedAudio: BuildingInProgress
-		QueuedAudio: Building
-		OnHoldAudio: OnHold
-		CancelledAudio: Cancelled
-	ProductionQueue@GDIDefense:
-		Type: Defence
-		DisplayOrder: 1
-		Group: Defence
-		LowPowerModifier: 300
-		ReadyAudio: ConstructionComplete
-		BlockedAudio: NoBuild
-		LimitedAudio: BuildingInProgress
-		QueuedAudio: Building
-		OnHoldAudio: OnHold
-		CancelledAudio: Cancelled
-	ProductionBar@BuildingGDI:
-		ProductionType: Building
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@DefenceGDI:
-		ProductionType: Defence
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@RABuildingGDI:
-		ProductionType: RABuilding
-		RequiresCondition: classicproductionqueues
-	ProductionBar@RADefenceGDI:
-		ProductionType: RADefence
-		RequiresCondition: classicproductionqueues
+	# Production@CLASSICPRODUCTIONQUEUES:
+	# 	Produces: RABuilding, RADefence, RAInfantry
+	# 	RequiresCondition: classicproductionqueues
+	# ProductionQueue@GDIBuilding:
+	# 	Type: Building
+	# 	DisplayOrder: 0
+	# 	Group: Building
+	# 	LowPowerModifier: 200
+	# 	ReadyAudio: ConstructionComplete
+	# 	BlockedAudio: NoBuild
+	# 	LimitedAudio: BuildingInProgress
+	# 	QueuedAudio: Building
+	# 	OnHoldAudio: OnHold
+	# 	CancelledAudio: Cancelled
+	# ProductionQueue@GDIDefense:
+	# 	Type: Defence
+	# 	DisplayOrder: 1
+	# 	Group: Defence
+	# 	LowPowerModifier: 300
+	# 	ReadyAudio: ConstructionComplete
+	# 	BlockedAudio: NoBuild
+	# 	LimitedAudio: BuildingInProgress
+	# 	QueuedAudio: Building
+	# 	OnHoldAudio: OnHold
+	# 	CancelledAudio: Cancelled
+	# ProductionBar@BuildingGDI:
+	# 	ProductionType: Building
+	# 	RequiresCondition: !classicproductionqueues
+	# ProductionBar@DefenceGDI:
+	# 	ProductionType: Defence
+	# 	RequiresCondition: !classicproductionqueues
+	# ProductionBar@RABuildingGDI:
+	# 	ProductionType: RABuilding
+	# 	RequiresCondition: classicproductionqueues
+	# ProductionBar@RADefenceGDI:
+	# 	ProductionType: RADefence
+	# 	RequiresCondition: classicproductionqueues
 	ProductionQueue@TERRORINF:
-		Type: Infantry
+		Type: Infantry.Terrorist
 		DisplayOrder: 3
 		Group: Infantry
 		LowPowerModifier: 300
@@ -7561,21 +7635,26 @@ drterhq.terror:
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
 	ProductionBar@TERRORINF:
-		ProductionType: Infantry
+		ProductionType: Infantry.Terrorist
 		RequiresCondition: !classicproductionqueues
-	ProductionBar@RATERRORINF:
-		ProductionType: RAInfantry
-		RequiresCondition: classicproductionqueues
 	Buildable:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 1000
 		Prerequisites: ~wip-content
 		Description: Builds structures
-	ProvidesPrerequisite@factiongdi:
-		Prerequisite: mmxenite
+	ProvidesPrerequisite@Darkreignfaction:
+		Prerequisite: mmterrorist
+	ProvidesPrerequisite@buildingname:
+		Prerequisite: dterrorhq
 	RenderSprites:
 		Image: drterhq
 	Inherits@upgrade: ^UpgradesDRTERHQType
+	-Transforms:
+	-TransformsIntoMobile:
+	-TransformsIntoPassenger:
+	-TransformsIntoRepairable:
+	-TransferTimedExternalConditionOnTransform:
+
 pscdrterhq2:
 	Tooltip:
 		Name: HQ Tier 2
@@ -7583,7 +7662,8 @@ pscdrterhq2:
 		BuildPaletteOrder: 10
 		Queue: drterhq1.DRTerrorist
 		Description: Upgrades the HQ for New Technology.
-		Prerequisites: ~vehicleproduction
+		# Prerequisites: ~vehicleproduction, ~mmterrorist
+		Prerequisites: ~mmterrorist
 	Valued:
 		Cost: 1200
 	RenderSprites:
@@ -7600,7 +7680,8 @@ pscdrterhq3:
 		BuildPaletteOrder: 10
 		Queue: drterhq2.DRTerrorist
 		Description: Upgrades the HQ for New Technology.
-		Prerequisites: ~vehicleproduction, ~drfghq2
+		# Prerequisites: ~vehicleproduction, ~drfghq2, ~mmterrorist
+		Prerequisites: ~mmterrorist
 	Valued:
 		Cost: 1500
 	RenderSprites:
@@ -7624,11 +7705,11 @@ drterweap.terror:
 		Cost: 2500
 	Tooltip:
 		Name: Terror Compotech
-	ProvidesPrerequisite:
-		Prerequisite: vehicleproduction
+	# ProvidesPrerequisite:
+	# 	Prerequisite: vehicleproduction
 	Buildable:
 		BuildPaletteOrder: 40
-		Prerequisites: drterwaterl.terror
+		Prerequisites: drterwaterl.terror, ~mmterrorist
 		Queue: Building, RABuilding
 		Description: Produces vehicles
 	Building:
@@ -7649,13 +7730,10 @@ drterweap.terror:
 		ExitCell: 0,1
 		ExitDelay: 3
 	Production@NORMAL:
-		Produces: Vehicle
+		Produces: Vehicle.Terrorist
 		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RAVehicle
-		RequiresCondition: classicproductionqueues
 	ProductionQueue:
-		Type: Vehicle
+		Type: Vehicle.Terrorist
 		DisplayOrder: 3
 		Group: Vehicle
 		LowPowerModifier: 300
@@ -7666,11 +7744,8 @@ drterweap.terror:
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
 	ProductionBar@VEHICLEGDI:
-		ProductionType: Vehicle
+		ProductionType: Vehicle.Terrorist
 		RequiresCondition: !classicproductionqueues
-	ProductionBar@RAVEHICLEGDI:
-		ProductionType: RAVehicle
-		RequiresCondition: classicproductionqueues
 	ProvidesPrerequisite@buildingname:
 	WithIdleOverlay@TOP1:
 		Sequence: idle-top
@@ -7682,26 +7757,29 @@ drterweap.terror:
 		Sequence: idle-liquid
 	Power:
 		Amount: -40
+
 drwaterextract.terror:
 	Inherits: drwaterextract.freedomguard
 	Buildable:
 		BuildPaletteOrder: 120
-		Prerequisites: drfghq3, ~techlevel.medium
+		Prerequisites: drfghq3, ~techlevel.medium, ~mmterrorist
 		Queue: Building, RABuilding
 		Description: Provides Passive income
 	RenderSprites:
 		Image: drwaterextract
+
 drterwaterl.terror:
 	Inherits: drwaterl.imperium
 	Buildable:
 		BuildPaletteOrder: 60
-		Prerequisites: anypower
+		Prerequisites: anypower, ~mmterrorist
 		Queue: Building, RABuilding
 		Description: Refines Ore and Gems\ninto credits.
 	RenderSprites:
 		Image: drterwaterl
 	FreeActor:
 		Actor: drtanker
+
 drterrep:
 	Inherits: ^BaseBuilding
 	HitShape:
@@ -7714,7 +7792,7 @@ drterrep:
 		Name: Repair Station
 	Buildable:
 		BuildPaletteOrder: 60
-		Prerequisites: vehicleproduction
+		Prerequisites: drterweap.terror, ~mmterrorist
 		Queue: Building, RABuilding
 		Description: Repairs vehicles
 	Building:
@@ -7753,7 +7831,8 @@ pscdrterrep:
 		BuildPaletteOrder: 10
 		Queue: drterrep.DRTerrorist
 		Description: Upgrades the Repair Station for Support New Vehicles.
-		Prerequisites: drfghq3
+		# Prerequisites: drfghq3, ~mmterrorist
+		Prerequisites: ~mmterrorist
 	Valued:
 		Cost: 1500
 	RenderSprites:
@@ -7762,6 +7841,7 @@ pscdrterrep:
 	AlwaysVisible:
 	KillsSelf:
 		RemoveInstead: true
+
 drterhosp:
 	Inherits: ^BaseBuilding
 	HitShape:
@@ -7774,7 +7854,7 @@ drterhosp:
 		Name: Hospital
 	Buildable:
 		BuildPaletteOrder: 60
-		Prerequisites: anypower
+		Prerequisites: anypower, ~mmterrorist
 		Queue: Building, RABuilding
 		Description: Heals infantry
 	Building:
@@ -7804,6 +7884,7 @@ drterhosp:
 		RequiresCondition: !build-incomplete
 		Sequence: idle-top
 	RenderSprites:
+
 drnavyard.terror:
 	Inherits: ^BaseBuilding
 	Inherits@CPQWP: ^CPQConditionWithPrimary
@@ -7824,7 +7905,7 @@ drnavyard.terror:
 		Name: Naval Yard
 	Buildable:
 		BuildPaletteOrder: 50
-		Prerequisites: drterwaterl.terror
+		Prerequisites: drterwaterl.terror, ~mmterrorist
 		Queue: Building, RABuilding
 		Description: Produces and\nrepairs ships
 	Building:
@@ -7855,11 +7936,8 @@ drnavyard.terror:
 		Facing: 128
 		ExitCell: 2,0
 	Production@NORMAL:
-		Produces: Naval
+		Produces: Naval.Terrorist
 		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RANaval
-		RequiresCondition: classicproductionqueues
 	Reservable:
 	RepairsUnits:
 		HpPerStep: 1000
@@ -7867,7 +7945,7 @@ drnavyard.terror:
 		StartRepairingNotification: Repairing
 	RallyPoint:
 	ProductionQueue:
-		Type: Naval
+		Type: Naval.Terrorist
 		DisplayOrder: 5
 		Group: Aircraft
 		LowPowerModifier: 300
@@ -7878,11 +7956,8 @@ drnavyard.terror:
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
 	ProductionBar@NAVALSOVIET:
-		ProductionType: Naval
+		ProductionType: Naval.Terrorist
 		RequiresCondition: !classicproductionqueues
-	ProductionBar@RANAVALSOVIET:
-		ProductionType: RANaval
-		RequiresCondition: classicproductionqueues
 	Power:
 		Amount: -30
 	ProvidesPrerequisite@buildingname:
@@ -7892,6 +7967,7 @@ drnavyard.terror:
 		TargetTypes: Ground, Water, C4, Structure
 	RenderSprites:
 		Image: drnavyard
+
 drterrturret:
 	Inherits: ^Defense
 	Inherits@AUTOTARGET: ^AutoTargetAll
@@ -7903,7 +7979,7 @@ drterrturret:
 		Name: Auto Turret
 	Buildable:
 		BuildPaletteOrder: 40
-		Prerequisites: anypower
+		Prerequisites: anypower, ~mmterrorist
 		Queue: Defence, RADefence
 		BuildDurationModifier: 40
 		Description: All-purpose defensive structure.\n  Strong vs Aircraft, Infantry\n  Weak vs Tanks
@@ -7954,7 +8030,7 @@ drrasta:
 	Buildable:
 		BuildPaletteOrder: 10
 		Prerequisites: anypower
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Terrorist
 		Description: The Low Rank Infantry\nThe Second Veterancy adquire Grenade Launcher\nThe Next Veterancy adquire Better Laser Gun\nThe Ultimate Veterancy transform into Jail Breaker\nThe Jail Breaker with veterancy can sabotage and attach C4 in vehicles.\n\nType: Infantry\nSpeed: Slow\nWeapon: Small Laser, Gremades, C4s\nRange: Medium\nArmor: None
 	Mobile:
 		Speed: 80
@@ -8007,7 +8083,7 @@ drjailbrk:
 	Buildable:
 		BuildPaletteOrder: 10
 		Prerequisites: anypower, ~testing
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Terrorist
 		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles
 	Mobile:
 		Speed: 120
@@ -8058,7 +8134,7 @@ drfatso:
 	Buildable:
 		BuildPaletteOrder: 10
 		Prerequisites: drfghq2
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Terrorist
 		Description: A heavy guy, armed with rockets and machinegun\nYou can deploy it and convert it in a Artillery.\n\nType: Infantry\nSpeed: Slow\nWeapon: Machinegun Laser, Rocket Artillery\nRange: Long (deployed) Short (undeployed)\nArmor: Heavy (deployed) None (undeployed)
 	Mobile:
 		Speed: 50
@@ -8146,7 +8222,7 @@ drskater:
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: anypower
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Terrorist
 		Description: The Skater are a Scout Infantry\nThe Fist Veterancy adquire Camouflage\nThe Second Veterancy adquire Spy Habilities.\n\nType: Hover\nSpeed: Medium\nWeapon: Small Laser\nRange: Medium\nArmor: Light
 	Mobile:
 		Locomotor: hover
@@ -8187,6 +8263,7 @@ drskater:
 		Notification: BuildingInfiltrated
 		PlayerExperience: 50
 		RequiresCondition: rank-veteran >= 2
+
 #Vehicle
 drttransport:
 	Inherits: ^Tank
@@ -8201,8 +8278,8 @@ drttransport:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 20
-		Prerequisites: vehicleproduction
-		Queue: Vehicle, RAVehicle
+		Prerequisites: drterweap.terror
+		Queue: Vehicle.Terrorist
 		Description: Fast scout vehicle, armed with\n Light Laser.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
 	Mobile:
 		Locomotor: amphibius
@@ -8242,34 +8319,36 @@ drttransport:
 	WithCargoPipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: true
-drttransport.e1:
-	Inherits: drttransport
-	Buildable:
-		Prerequisites: barracks, ~botplayer
-		Queue: Vehicle, RAVehicle
-	Cargo:
-		InitialUnits: drrasta, drrasta, drrasta, drrasta, drrasta
-	ProductionCostMultiplier:
-		Multiplier: 300
-	AutoDeployer:
-		DeployChance: 100
-		DeployTicks: 0
-	RenderSprites:
-		Image: drttransport
-drttransport.e2:
-	Inherits: drttransport
-	Buildable:
-		Prerequisites: barracks, ~hardbotplayer, drfgbarr2
-		Queue: ehicle.DRTerrorist, RAVehicle
-	Cargo:
-		InitialUnits: drrasta, drrasta, drrasta, drrasta, drfatso
-	ProductionCostMultiplier:
-		Multiplier: 320
-	AutoDeployer:
-		DeployChance: 100
-		DeployTicks: 0
-	RenderSprites:
-		Image: drttransport
+
+# drttransport.e1:
+# 	Inherits: drttransport
+# 	Buildable:
+# 		Prerequisites: barracks, ~botplayer
+# 		Queue: Vehicle, RAVehicle
+# 	Cargo:
+# 		InitialUnits: drrasta, drrasta, drrasta, drrasta, drrasta
+# 	ProductionCostMultiplier:
+# 		Multiplier: 300
+# 	AutoDeployer:
+# 		DeployChance: 100
+# 		DeployTicks: 0
+# 	RenderSprites:
+# 		Image: drttransport
+
+# drttransport.e2:
+# 	Inherits: drttransport
+# 	Buildable:
+# 		Prerequisites: barracks, ~hardbotplayer, drfgbarr2
+# 		Queue: ehicle.DRTerrorist, RAVehicle
+# 	Cargo:
+# 		InitialUnits: drrasta, drrasta, drrasta, drrasta, drfatso
+# 	ProductionCostMultiplier:
+# 		Multiplier: 320
+# 	AutoDeployer:
+# 		DeployChance: 100
+# 		DeployTicks: 0
+# 	RenderSprites:
+# 		Image: drttransport
 
 drtanker:
 	Inherits: ^Tank
@@ -8286,7 +8365,7 @@ drtanker:
 	Buildable:
 		BuildPaletteOrder: 10
 		Prerequisites: drterwaterl.terror
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Terrorist
 		BuildDurationModifier: 40
 		Description: Collects Tiberium for processing.\n  Unarmed
 	Selectable:
@@ -8332,6 +8411,7 @@ drtanker:
 	RenderSprites:
 	Voiced:
 		VoiceSet: DRTankerVoice
+
 drtarty:
 	Inherits: ^Tank
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -8347,7 +8427,7 @@ drtarty:
 	Buildable:
 		BuildPaletteOrder: 60
 		Prerequisites: drfghq2, ~techlevel.medium
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Terrorist
 		Description: Long-range artillery.\n  Strong vs Infantry, Vehicles and Buildings
 	Mobile:
 		TurnSpeed: 16
@@ -8405,7 +8485,7 @@ drmtnk:
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: drfghq2
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Terrorist
 		Description: Speedy, heavy mech.\n  Powerful Firepower.\n  Strong vs Ground Units\n  Weak vs Aircraft
 	Mobile:
 		Speed: 102
@@ -8459,7 +8539,7 @@ drspiner:
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: drterrep2, ~techlevel.medium
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Terrorist
 		Description: Helicopter\n\nType: Flyer\nSpeed: Fast\nWeapon: Guided Missile\nRange: Long\nArmor: Heavy
 	Aircraft:
 		TurnSpeed: 36
@@ -8512,7 +8592,7 @@ drtertran:
 	Buildable:
 		BuildPaletteOrder: 10
 		Prerequisites: drterrep2, ~techlevel.medium
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Terrorist
 		Description: Fast Infantry Transport Helicopter.\n  Unarmed
 	Aircraft:
 		TurnSpeed: 20
@@ -8553,7 +8633,7 @@ drghazi:
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: anypower
-		Queue: Naval, RANaval
+		Queue: Naval.Terrorist
 		Description: Light scout & support ship.\nCan detect submarines.
 	Valued:
 		Cost: 600
@@ -8595,6 +8675,7 @@ drghazi:
 	Voiced:
 		VoiceSet: DRGhaziVoice
 	RenderSprites:
+
 drphunisher:
 	Inherits: ^BoatUnit
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -8604,7 +8685,7 @@ drphunisher:
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: anypower
-		Queue: Naval, RANaval
+		Queue: Naval.Terrorist
 		Description: Light scout & support ship.\nCan detect submarines.
 	Valued:
 		Cost: 700
@@ -8660,7 +8741,7 @@ mcv.eodalien:
 		Name: Construction Gloth (Aliens)
 	Buildable:
 		BuildPaletteOrder: 100
-		Prerequisites: drihq2, ~techlevel.medium
+		Prerequisites: drihq2, ~techlevel.medium, ~mmdralien
 		Queue: Building, RABuilding
 		BuildDurationModifier: 40
 		Description: Deploys into another Construction Yard.\n  Unarmed
@@ -8694,6 +8775,7 @@ mcv.eodalien:
 		Prerequisite: mmdralien
 	Voiced:
 		VoiceSet: DRGlothVoice
+
 mcv2.eodalien:
 	Inherits: ^Vehicle
 	Inherits@selection: ^SelectableSupportUnit
@@ -8705,7 +8787,7 @@ mcv2.eodalien:
 		Name: Armed Gloth (Aliens)
 	Buildable:
 		BuildPaletteOrder: 100
-		Prerequisites: drihq2, ~techlevel.medium
+		Prerequisites: drihq2, ~techlevel.medium, ~mmdralien
 		Queue: Building, RABuilding
 		BuildDurationModifier: 40
 		Description: Deploys into another Construction Yard.\n  Unarmed
@@ -8744,6 +8826,7 @@ mcv2.eodalien:
 		LocalOffset: 0,0,0
 	AttackFrontal:
 		FacingTolerance: 0
+
 drahq.eodalien:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^3x2Shape
@@ -8766,54 +8849,59 @@ drahq.eodalien:
 		Type: Wood
 	RevealsShroud:
 		Range: 10c0
-	Production@NORMAL:
-		Produces: Building, Defence
-		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RABuilding, RADefence
-		RequiresCondition: classicproductionqueues
+	# Production@NORMAL:
+	# 	Produces: Building, Defence
+	# 	RequiresCondition: !classicproductionqueues
+	# Production@CLASSICPRODUCTIONQUEUES:
+	# 	Produces: RABuilding, RADefence
+	# 	RequiresCondition: classicproductionqueues
 	GrantConditionOnPrerequisite@GLOBALFACTUNDEPLOY:
 		Condition: factundeploy
 		Prerequisites: global-factundeploy
-	ProductionQueue@GDIBuilding:
-		Type: Building
-		DisplayOrder: 0
-		Group: Building
-		LowPowerModifier: 200
-		ReadyAudio: ConstructionComplete
-		BlockedAudio: NoBuild
-		LimitedAudio: BuildingInProgress
-		QueuedAudio: Building
-		OnHoldAudio: OnHold
-		CancelledAudio: Cancelled
-	ProductionQueue@GDIDefense:
-		Type: Defence
-		DisplayOrder: 1
-		Group: Defence
-		LowPowerModifier: 300
-		ReadyAudio: ConstructionComplete
-		BlockedAudio: NoBuild
-		LimitedAudio: BuildingInProgress
-		QueuedAudio: Building
-		OnHoldAudio: OnHold
-		CancelledAudio: Cancelled
+	# ProductionQueue@GDIBuilding:
+	# 	Type: Building
+	# 	DisplayOrder: 0
+	# 	Group: Building
+	# 	LowPowerModifier: 200
+	# 	ReadyAudio: ConstructionComplete
+	# 	BlockedAudio: NoBuild
+	# 	LimitedAudio: BuildingInProgress
+	# 	QueuedAudio: Building
+	# 	OnHoldAudio: OnHold
+	# 	CancelledAudio: Cancelled
+	# ProductionQueue@GDIDefense:
+	# 	Type: Defence
+	# 	DisplayOrder: 1
+	# 	Group: Defence
+	# 	LowPowerModifier: 300
+	# 	ReadyAudio: ConstructionComplete
+	# 	BlockedAudio: NoBuild
+	# 	LimitedAudio: BuildingInProgress
+	# 	QueuedAudio: Building
+	# 	OnHoldAudio: OnHold
+	# 	CancelledAudio: Cancelled
 	BaseBuilding:
-	ProductionBar@BuildingGDI:
-		ProductionType: Building
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@DefenceGDI:
-		ProductionType: Defence
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@RABuildingGDI:
-		ProductionType: RABuilding
-		RequiresCondition: classicproductionqueues
-	ProductionBar@RADefenceGDI:
-		ProductionType: RADefence
-		RequiresCondition: classicproductionqueues
+	# ProductionBar@BuildingGDI:
+	# 	ProductionType: Building
+	# 	RequiresCondition: !classicproductionqueues
+	# ProductionBar@DefenceGDI:
+	# 	ProductionType: Defence
+	# 	RequiresCondition: !classicproductionqueues
+	# ProductionBar@RABuildingGDI:
+	# 	ProductionType: RABuilding
+	# 	RequiresCondition: classicproductionqueues
+	# ProductionBar@RADefenceGDI:
+	# 	ProductionType: RADefence
+	# 	RequiresCondition: classicproductionqueues
+	-Transforms:
+	-TransformsIntoMobile:
+	-TransformsIntoPassenger:
+	-TransformsIntoRepairable:
+	-TransferTimedExternalConditionOnTransform:
 	BaseProvider:
 		Range: 14c0
-	ProvidesPrerequisite@buildingname:
-		Prerequisite: drhq
+	# ProvidesPrerequisite@buildingname:
+	# 	Prerequisite: drhq
 	Buildable:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 1000
@@ -8821,6 +8909,8 @@ drahq.eodalien:
 		Description: Builds structures
 	ProvidesPrerequisite@factiongdi:
 		Prerequisite: mmdralien
+	ProvidesPrerequisite@Imperiumtech:
+		Prerequisite: imperiumtech
 	RenderSprites:
 		Image: drahq
 	Inherits@upgrade: ^UpgradesDRIHQType
@@ -8830,6 +8920,7 @@ drahq.eodalien:
 		SpawnOffset: -1024,1024,0 #-1323,1280,0
 		ExitCell: 0,2
 		Facing: 540
+
 drapower:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^2x2Shape
@@ -8840,6 +8931,7 @@ drapower:
 		TargetableOffsets: 0,0,0, 640,-384,0, 640,512,0, -710,-512,0, -710,512,0
 	Buildable:
 		Queue: Building, RABuilding
+		Prerequisites: ~mmdralien
 		BuildPaletteOrder: 10
 		Description: Provides power for other structures.\nRefines Ores and gems into credits
 	Valued:
@@ -8886,6 +8978,7 @@ drapower:
 		Position: BottomLeft
 		RequiresSelection: true
 		PipCount: 10
+
 draweap.eodalien:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^3x2Shape
@@ -8900,11 +8993,11 @@ draweap.eodalien:
 		Cost: 2000
 	Tooltip:
 		Name: Tech Factory
-	ProvidesPrerequisite:
-		Prerequisite: vehicleproduction
+	# ProvidesPrerequisite:
+	# 	Prerequisite: vehicleproduction
 	Buildable:
 		BuildPaletteOrder: 40
-		Prerequisites: drlife.eodalien
+		Prerequisites: drlife.eodalien, ~mmdralien
 		Queue: Building, RABuilding
 		Description: Produces vehicles
 	Building:
@@ -8925,13 +9018,10 @@ draweap.eodalien:
 		ExitCell: 0,1
 		ExitDelay: 3
 	Production@NORMAL:
-		Produces: Vehicle
+		Produces: Vehicle.Eodalien
 		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RAVehicle
-		RequiresCondition: classicproductionqueues
 	ProductionQueue:
-		Type: Vehicle
+		Type: Vehicle.Eodalien
 		DisplayOrder: 3
 		Group: Vehicle
 		LowPowerModifier: 300
@@ -8942,15 +9032,13 @@ draweap.eodalien:
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
 	ProductionBar@VEHICLEGDI:
-		ProductionType: Vehicle
+		ProductionType: Vehicle.Eodalien
 		RequiresCondition: !classicproductionqueues
-	ProductionBar@RAVEHICLEGDI:
-		ProductionType: RAVehicle
-		RequiresCondition: classicproductionqueues
 	Inherits@upgrade: ^UpgradesDRIWEAPType
 	ProvidesPrerequisite@buildingname:
 	RenderSprites:
 		Image: draweap
+
 drabarr.eodalien:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^3x3Shape
@@ -8971,7 +9059,7 @@ drabarr.eodalien:
 		Prerequisite: barracks
 	Buildable:
 		BuildPaletteOrder: 40
-		Prerequisites: drhq
+		Prerequisites: drhq, ~mmdralien
 		Queue: Building, RABuilding
 		Description: Produces infantry
 	Building:
@@ -8992,13 +9080,10 @@ drabarr.eodalien:
 		ExitCell: 3,3
 		ExitDelay: 3
 	Production@NORMAL:
-		Produces: Infantry
+		Produces: Infantry.Eodalien
 		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RAInfantry
-		RequiresCondition: classicproductionqueues
 	ProductionQueue:
-		Type: Infantry
+		Type: Infantry.Eodalien
 		DisplayOrder: 3
 		Group: Infantry
 		LowPowerModifier: 300
@@ -9009,20 +9094,18 @@ drabarr.eodalien:
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
 	ProductionBar@VEHICLEGDI:
-		ProductionType: Infantry
+		ProductionType: Infantry.Eodalien
 		RequiresCondition: !classicproductionqueues
-	ProductionBar@RAVEHICLEGDI:
-		ProductionType: RAInfantry
-		RequiresCondition: classicproductionqueues
 	ProvidesPrerequisite@buildingname:
 	RenderSprites:
 		Image: drabarr
 	Inherits@upgrade: ^UpgradesDRIBARRType
+
 drlife.eodalien:
 	Inherits: ^BaseBuilding
 	Buildable:
 		BuildPaletteOrder: 60
-		Prerequisites: anypower
+		Prerequisites: anypower, ~mmdralien
 		Queue: Building, RABuilding
 		Description: Refines Ore and Gems\ninto credits.
 	Valued:
@@ -9050,6 +9133,7 @@ drlife.eodalien:
 		DockOffset: 1,2
 	StoresResources:
 		Capacity: 2000 #2000
+	DockHost:
 	DrawLineToTarget:
 	CustomSellValue:
 		Value: 500 #600
@@ -9086,6 +9170,7 @@ drlife.eodalien:
 		RequiresSelection: true
 		PipCount: 17
 		FullSequence: pip-yellow
+
 draplastur:
 	Inherits: ^Defense
 	Inherits@AUTOTARGET: ^AutoTargetAll
@@ -9094,10 +9179,10 @@ draplastur:
 	Valued:
 		Cost: 600
 	Tooltip:
-		Name: Plasma Turret
+		Name: Flare Turret
 	Buildable:
 		BuildPaletteOrder: 40
-		Prerequisites: anypower
+		Prerequisites: anypower, ~mmdralien
 		Queue: Defence, RADefence
 		BuildDurationModifier: 40
 		Description: All-purpose defensive structure.\n  Strong vs Aircraft, Infantry\n  Weak vs Tanks
@@ -9129,6 +9214,7 @@ draplastur:
 	Power:
 		Amount: -20
 	RenderSprites:
+
 drbattery:
 	Inherits: ^Defense
 	Inherits@shape: ^2x2Shape
@@ -9141,7 +9227,7 @@ drbattery:
 		Name: Missile Battery
 	Buildable:
 		BuildPaletteOrder: 40
-		Prerequisites: drihq2
+		Prerequisites: drihq2, ~mmdralien
 		Queue: Defence, RADefence
 		Description: Antiground defensive structure.\n  Strong vs Infantry, Tanks\n  Weak vs Aircraft
 		BuildDuration: 600
@@ -9185,6 +9271,7 @@ drbattery:
 		RecoilRecovery: 34
 		MuzzleSequence: muzzle
 	WithSpriteTurret@PRIMARY:
+
 drhive.eodalien:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^2x2Shape
@@ -9201,7 +9288,7 @@ drhive.eodalien:
 		Name: Hive
 	Buildable:
 		BuildPaletteOrder: 50
-		Prerequisites: drihq3
+		Prerequisites: drihq3, ~mmdralien
 		Queue: Building, RABuilding
 		Description: Produces, rearms and\nrepairs helicopters
 	Building:
@@ -9233,6 +9320,7 @@ drhive.eodalien:
 	WithIdleOverlay@BOTTOM:
 		RequiresCondition: !build-incomplete
 		Sequence: idle-bottom
+
 drnavyard.eodalien:
 	Inherits: ^BaseBuilding
 	Inherits@CPQWP: ^CPQConditionWithPrimary
@@ -9253,7 +9341,7 @@ drnavyard.eodalien:
 		Name: Naval Yard
 	Buildable:
 		BuildPaletteOrder: 50
-		Prerequisites: drlife.eodalien
+		Prerequisites: drlife.eodalien, ~mmdralien
 		Queue: Building, RABuilding
 		Description: Produces and\nrepairs submarines
 	Building:
@@ -9284,11 +9372,8 @@ drnavyard.eodalien:
 		Facing: 128
 		ExitCell: 2,0
 	Production@NORMAL:
-		Produces: Naval
+		Produces: Naval.Eodalien
 		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RANaval
-		RequiresCondition: classicproductionqueues
 	Reservable:
 	RepairsUnits:
 		HpPerStep: 1000
@@ -9296,7 +9381,7 @@ drnavyard.eodalien:
 		StartRepairingNotification: Repairing
 	RallyPoint:
 	ProductionQueue:
-		Type: Naval
+		Type: Naval.Eodalien
 		DisplayOrder: 5
 		Group: Aircraft
 		LowPowerModifier: 300
@@ -9307,11 +9392,8 @@ drnavyard.eodalien:
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
 	ProductionBar@NAVALSOVIET:
-		ProductionType: Naval
+		ProductionType: Naval.Eodalien
 		RequiresCondition: !classicproductionqueues
-	ProductionBar@RANAVALSOVIET:
-		ProductionType: RANaval
-		RequiresCondition: classicproductionqueues
 	Power:
 		Amount: -30
 	ProvidesPrerequisite@buildingname:
@@ -9336,7 +9418,7 @@ drramnoth:
 	Buildable:
 		BuildPaletteOrder: 10
 		Prerequisites: barracks
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Eodalien
 		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles
 	Mobile:
 		Speed: 78
@@ -9361,6 +9443,7 @@ drramnoth:
 	RenderSprites:
 	Voiced:
 		VoiceSet: DRRamnothVoice
+
 drmamnoth:
 	Inherits: ^Soldier
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -9375,7 +9458,7 @@ drmamnoth:
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: barracks
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Eodalien
 		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles
 	Mobile:
 		Speed: 78
@@ -9415,7 +9498,7 @@ drrelmnoth:
 	Buildable:
 		BuildPaletteOrder: 30
 		Prerequisites: barracks, dribarr2
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Eodalien
 		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles
 	Mobile:
 		Locomotor: hover
@@ -9455,7 +9538,7 @@ drsalamander:
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: barracks
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Eodalien
 		Description: Melee Attack Unit.\n  Strong vs Infantry\n  Weak vs Aircraft, Heavy Vehicles
 	Mobile:
 		Speed: 120
@@ -9502,7 +9585,7 @@ drassimilator:
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: barracks, dribarr2
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Eodalien
 		Description: Melee Attack Unit.\n  Strong vs Infantry\n  Weak vs Aircraft, Heavy Vehicles
 	Mobile:
 		Speed: 150
@@ -9549,8 +9632,8 @@ drgather:
 		GenericName: Harvester
 	Buildable:
 		BuildPaletteOrder: 10
-		Prerequisites: vehicleproduction, drlife.eodalien
-		Queue: Vehicle, RAVehicle
+		Prerequisites: drterweap.terror, drlife.eodalien
+		Queue: Vehicle.Eodalien
 		BuildDurationModifier: 40
 		Description: Collects Tiberium for processing.\n  Unarmed
 	Selectable:
@@ -9604,7 +9687,7 @@ drdrednaut:
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: vehicleproduction
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Eodalien
 		BuildDuration: 1020
 		BuildDurationModifier: 40
 		Description: Fast, light tank.\n  Strong vs Vehicles, Tanks\n  Weak vs Infantry, Aircraft
@@ -9646,6 +9729,7 @@ drdrednaut:
 	WithCargoPipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: true
+
 drmole:
 	Inherits: ^Vehicle
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
@@ -9656,7 +9740,7 @@ drmole:
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: vehicleproduction
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Eodalien
 		Description: Speedy, heavy mech.\n  Powerful Firepower.\n  Strong vs Ground Units\n  Weak vs Aircraft
 	Mobile:
 		Speed: 126
@@ -9689,17 +9773,18 @@ drmole:
 		PauseOnCondition: cloak-force-disabled || disabled
 		IsPlayerPalette: true
 		UncloakOn: Attack, Unload, Infiltrate, Demolish, Move
+
 drarunner:
 	Inherits: ^Vehicle
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
 	Valued:
 		Cost: 900
 	Tooltip:
-		Name: Assault Wheel Runner
+		Name: Assault Wheel
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: vehicleproduction
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Eodalien
 		Description: Speedy, heavy mech.\n  Powerful Firepower.\n  Strong vs Ground Units\n  Weak vs Aircraft
 	Mobile:
 		Speed: 200
@@ -9731,13 +9816,13 @@ drhealer:
 	Valued:
 		Cost: 600
 	Tooltip:
-		Name: Healer Robot
+		Name: Healer Sprite
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: vehicleproduction
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Eodalien
 		BuildDuration: 1020
 		BuildDurationModifier: 40
 		Description: Fast, light tank.\n  Strong vs Vehicles, Tanks\n  Weak vs Infantry, Aircraft
@@ -9779,6 +9864,7 @@ drhealer:
 	RenderSprites:
 	Voiced:
 		VoiceSet: DRShredderVoice
+
 drrouter:
 	Inherits: ^Vehicle
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
@@ -9789,7 +9875,7 @@ drrouter:
 	Buildable:
 		BuildPaletteOrder: 61
 		Prerequisites: vehicleproduction
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Eodalien
 		Description: Speedy, medium mech.\n  Powerful Firepower.\n  Strong vs Ground Units\n  Weak vs Aircraft
 	Mobile:
 		Speed: 120
@@ -9818,17 +9904,18 @@ drrouter:
 	RenderSprites:
 	Voiced:
 		VoiceSet: DRDrednautVoice
+
 drmecha:
 	Inherits: ^Vehicle
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
 	Valued:
 		Cost: 1200
 	Tooltip:
-		Name: Mecha
+		Name: Mechagon
 	Buildable:
 		BuildPaletteOrder: 61
 		Prerequisites: vehicleproduction, driweap2
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Eodalien
 		Description: Speedy, medium mech.\n  Powerful Firepower.\n  Strong vs Ground Units\n  Weak vs Aircraft
 	Mobile:
 		Speed: 100
@@ -9858,34 +9945,34 @@ drmecha:
 	Voiced:
 		VoiceSet: DRDrednautVoice
 
-drdrednaut.e1:
-	Inherits: drdrednaut
-	Buildable:
-		Prerequisites: barracks, ~botplayer
-		Queue: Vehicle, RAVehicle
-	Cargo:
-		InitialUnits: drramnoth, drramnoth, drramnoth, drmamnoth, drmamnoth
-	ProductionCostMultiplier:
-		Multiplier: 180
-	AutoDeployer:
-		DeployChance: 100
-		DeployTicks: 0
-	RenderSprites:
-		Image: drdrednaut
-drdrednaut.e2:
-	Inherits: drdrednaut
-	Buildable:
-		Prerequisites: barracks, ~hardbotplayer
-		Queue: Vehicle, RAVehicle
-	Cargo:
-		InitialUnits: drramnoth, drramnoth, drramnoth, drrelmnoth, drrelmnoth
-	ProductionCostMultiplier:
-		Multiplier: 250
-	AutoDeployer:
-		DeployChance: 100
-		DeployTicks: 0
-	RenderSprites:
-		Image: drdrednaut
+# drdrednaut.e1:
+# 	Inherits: drdrednaut
+# 	Buildable:
+# 		Prerequisites: barracks, ~botplayer
+# 		Queue: Vehicle, RAVehicle
+# 	Cargo:
+# 		InitialUnits: drramnoth, drramnoth, drramnoth, drmamnoth, drmamnoth
+# 	ProductionCostMultiplier:
+# 		Multiplier: 180
+# 	AutoDeployer:
+# 		DeployChance: 100
+# 		DeployTicks: 0
+# 	RenderSprites:
+# 		Image: drdrednaut
+# drdrednaut.e2:
+# 	Inherits: drdrednaut
+# 	Buildable:
+# 		Prerequisites: barracks, ~hardbotplayer
+# 		Queue: Vehicle, RAVehicle
+# 	Cargo:
+# 		InitialUnits: drramnoth, drramnoth, drramnoth, drrelmnoth, drrelmnoth
+# 	ProductionCostMultiplier:
+# 		Multiplier: 250
+# 	AutoDeployer:
+# 		DeployChance: 100
+# 		DeployTicks: 0
+# 	RenderSprites:
+# 		Image: drdrednaut
 #Aircraft
 drlynoth:
 	Inherits: ^Helicopter
@@ -9901,7 +9988,7 @@ drlynoth:
 	Buildable:
 		BuildPaletteOrder: 100
 		Prerequisites: vehicleproduction, driweap2, drhive
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Eodalien
 		Description: Helicopter Gunship with Chainguns.\n  Strong vs Infantry, Light Vehicles and\n  Aircraft\n  Weak vs Tanks
 	Aircraft:
 		TurnSpeed: 36
@@ -9954,7 +10041,7 @@ drcarrier:
 	Buildable:
 		BuildPaletteOrder: 140
 		Prerequisites: vehicleproduction, driweap2, drhive
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Eodalien
 		Description: Heavy Bomber Aircraft.\n  Strong vs Ground Units and Buildings\n  Weak vs AA Aircraft
 	Aircraft:
 		InitialFacing: 896
@@ -10047,6 +10134,7 @@ drcarrier:
 	WithCargoPipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: true
+
 drlynoth.carrier:
 	Inherits: drlynoth
 	-Buildable:
@@ -10061,6 +10149,7 @@ drlynoth.carrier:
 		MinMoveDelay: 25
 		MaxMoveDelay: 30
 		RequiresCondition: !trainercontrol
+
 drblazer:
 	Inherits: ^Helicopter
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -10075,7 +10164,7 @@ drblazer:
 	Buildable:
 		BuildPaletteOrder: 110
 		Prerequisites: vehicleproduction, driweap2, drhive
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Eodalien
 		Description: Helicopter Gunship with Chainguns.\n  Strong vs Infantry, Light Vehicles and\n  Aircraft\n  Weak vs Tanks
 	Aircraft:
 		TurnSpeed: 36
@@ -10115,7 +10204,6 @@ drblazer:
 		RequiresSelection: True
 		PipCount: 5
 
-
 drbomber:
 	Inherits: ^Helicopter
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -10130,8 +10218,8 @@ drbomber:
 	Buildable:
 		BuildPaletteOrder: 120
 		Prerequisites: vehicleproduction, driweap2, drhive
-		Queue: Vehicle, RAVehicle
-		Description: Helicopter Gunship with Chainguns.\n  Strong vs Infantry, Light Vehicles and\n  Aircraft\n  Weak vs Tanks
+		Queue: Vehicle.Eodalien
+		Description: Helicopter Gunship with Missiles.\n  Strong vs Infantry, Light Vehicles and\n  Aircraft\n  Weak vs Tanks
 	Aircraft:
 		TurnSpeed: 36
 		Speed: 210
@@ -10166,6 +10254,7 @@ drbomber:
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: True
+
 drthunder:
 	Inherits: ^Helicopter
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -10180,8 +10269,8 @@ drthunder:
 	Buildable:
 		BuildPaletteOrder: 150
 		Prerequisites: vehicleproduction, driweap2, drhive
-		Queue: Vehicle, RAVehicle
-		Description: Helicopter Gunship with Chainguns.\n  Strong vs Infantry, Light Vehicles and\n  Aircraft\n  Weak vs Tanks
+		Queue: Vehicle.Eodalien
+		Description: Helicopter Gunship with Quake Weapons.\n  Strong vs Infantry, Light Vehicles and\n  Aircraft\n  Weak vs Tanks
 	Aircraft:
 		TurnSpeed: 36
 		Speed: 60
@@ -10223,6 +10312,7 @@ drthunder:
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: True
+
 drcarrier.e1:
 	Inherits: drcarrier
 	Buildable:
@@ -10234,12 +10324,14 @@ drcarrier.e1:
 		Multiplier: 180
 	RenderSprites:
 		Image: drcarrier
+
 drcarrier.e2:
 	Inherits: drcarrier.e1
 	Buildable:
 		Prerequisites: vehicleproduction, driweap2, drhive, ~hardbotplayer
 	ProductionCostMultiplier:
 		Multiplier: 100
+
 #Naval
 drmissboat:
 	Inherits: ^BoatUnit
@@ -10255,7 +10347,7 @@ drmissboat:
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: vehicleproduction, driweap2
-		Queue: Naval, RANaval
+		Queue: Naval.Eodalien
 		BuildDuration: 1020
 		BuildDurationModifier: 40
 		Description: Fast, light tank.\n  Strong vs Vehicles, Tanks\n  Weak vs Infantry, Aircraft
@@ -10291,6 +10383,7 @@ drmissboat:
 	RenderSprites:
 	Voiced:
 		VoiceSet: DRDrednautVoice
+
 drpboat:
 	Inherits: ^BoatUnit
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -10305,7 +10398,7 @@ drpboat:
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: vehicleproduction, driweap2
-		Queue: Naval, RANaval
+		Queue: Naval.Eodalien
 		BuildDuration: 1020
 		BuildDurationModifier: 40
 		Description: Fast, light tank.\n  Strong vs Vehicles, Tanks\n  Weak vs Infantry, Aircraft
@@ -10355,468 +10448,468 @@ drpboat:
 ##      Credits: Activision, Dark Reign Rise of Shadowhand
 ##
 ##############################################################################
-drdpower:
-	Inherits: ^BaseBuilding
-	Inherits@shape: ^2x2Shape
-	Inherits@SHADOWS: ^Shadows
-	Selectable:
-		Bounds: 2048, 2048
-	HitShape:
-		UseTargetableCellsOffsets: false
-		TargetableOffsets: 0,0,0, 640,-384,0, 640,512,0, -710,-512,0, -710,512,0
-	Buildable:
-		Queue: Building, RABuilding
-		BuildPaletteOrder: 10
-		Description: Provides power for other structures
-	Valued:
-		Cost: 400 #300
-	Tooltip:
-		Name: Scrap Power Plant
-	ProvidesPrerequisite:
-		Prerequisite: anypower
-	Building:
-		Footprint: xx xx ==
-		Dimensions: 2,3
-		LocalCenterOffset: 0,-512,0
-	Health:
-		HP: 80000
-	Armor:
-		Type: Wood
-	RevealsShroud:
-		Range: 4c0
-	Power:
-		Amount: 150
-	StoresResources:
-		Capacity: 5000
-	Targetable:
-		TargetTypes: Ground, Structure, C4, DetonateAttack, SpyInfiltrate
-	ScalePowerWithHealth:
-	WithDeathAnimation:
-		DeathSequence: dead
-		UseDeathTypeSuffix: false
-	Inherits@EXPERIENCE: ^GainsExperience ##########
-	Inherits@POWERMULTIPLIER: ^PowerMultiplier ##########
-	AcceptsDeliveredExperience: ##########
-		ValidTypes: building ##########
-	RenderSprites:
-	WithShadow:
-		Offset: 192, 0, 0
-		ZOffset: -512
-	WithResourceStoragePipsDecoration:
-		Position: BottomLeft
-		RequiresSelection: true
-		PipCount: 10
+# drdpower:
+# 	Inherits: ^BaseBuilding
+# 	Inherits@shape: ^2x2Shape
+# 	Inherits@SHADOWS: ^Shadows
+# 	Selectable:
+# 		Bounds: 2048, 2048
+# 	HitShape:
+# 		UseTargetableCellsOffsets: false
+# 		TargetableOffsets: 0,0,0, 640,-384,0, 640,512,0, -710,-512,0, -710,512,0
+# 	Buildable:
+# 		Queue: Building, RABuilding
+# 		BuildPaletteOrder: 10
+# 		Description: Provides power for other structures
+# 	Valued:
+# 		Cost: 400 #300
+# 	Tooltip:
+# 		Name: Scrap Power Plant
+# 	ProvidesPrerequisite:
+# 		Prerequisite: anypower
+# 	Building:
+# 		Footprint: xx xx ==
+# 		Dimensions: 2,3
+# 		LocalCenterOffset: 0,-512,0
+# 	Health:
+# 		HP: 80000
+# 	Armor:
+# 		Type: Wood
+# 	RevealsShroud:
+# 		Range: 4c0
+# 	Power:
+# 		Amount: 150
+# 	StoresResources:
+# 		Capacity: 5000
+# 	Targetable:
+# 		TargetTypes: Ground, Structure, C4, DetonateAttack, SpyInfiltrate
+# 	ScalePowerWithHealth:
+# 	WithDeathAnimation:
+# 		DeathSequence: dead
+# 		UseDeathTypeSuffix: false
+# 	Inherits@EXPERIENCE: ^GainsExperience ##########
+# 	Inherits@POWERMULTIPLIER: ^PowerMultiplier ##########
+# 	AcceptsDeliveredExperience: ##########
+# 		ValidTypes: building ##########
+# 	RenderSprites:
+# 	WithShadow:
+# 		Offset: 192, 0, 0
+# 		ZOffset: -512
+# 	WithResourceStoragePipsDecoration:
+# 		Position: BottomLeft
+# 		RequiresSelection: true
+# 		PipCount: 10
 
-mcv.descendants:
-	Inherits: ^Soldier
-	Inherits@selection: ^SelectableSupportUnit
-	Inherits@mcv: ^MCV
-	Inherits@conyard: ^Conyard
-	Inherits@DRShadow: ^InfantryShadows
-	Valued:
-		Cost: 2000
-	Tooltip:
-		Name: Construction Rig (Descendants)
-	Buildable:
-		BuildPaletteOrder: 100
-		Prerequisites: drfghq2, ~techlevel.medium
-		Queue: Building, RABuilding
-		BuildDurationModifier: 40
-		Description: Deploys into another Construction Yard.\n  Unarmed
-	Selectable:
-		Priority: 4
-		DecorationBounds: 1536, 1536
-	Mobile:
-		Speed: 71
-		Locomotor: heavywheeled
-	Health:
-		HP: 140000
-	Repairable:
-		HpPerStep: 2182
-	Armor:
-		Type: Heavy
-	RevealsShroud:
-		Range: 7c0
-	Transforms:
-		IntoActor: drfghq.descendants
-		Offset: -1,-1
-		Facing: 432
-		TransformSounds: constru2.aud, hvydoor1.aud
-		NoTransformNotification: BuildingCannotPlaceAudio
-	SelectionDecorations:
-	Inherits@EXT: ^ExternalConditions
-	RenderSprites:
-		Image: drrig
-	WithInfantryBody:
-	ProvidesPrerequisite@faction:
-		Prerequisite: mmdescendants
-	Voiced:
-		VoiceSet: DRFGRigVoice
-	Passenger:
-		Weight: 1
+# mcv.descendants:
+# 	Inherits: ^Soldier
+# 	Inherits@selection: ^SelectableSupportUnit
+# 	Inherits@mcv: ^MCV
+# 	Inherits@conyard: ^Conyard
+# 	Inherits@DRShadow: ^InfantryShadows
+# 	Valued:
+# 		Cost: 2000
+# 	Tooltip:
+# 		Name: Construction Rig (Descendants)
+# 	Buildable:
+# 		BuildPaletteOrder: 100
+# 		Prerequisites: drfghq2, ~techlevel.medium
+# 		Queue: Building, RABuilding
+# 		BuildDurationModifier: 40
+# 		Description: Deploys into another Construction Yard.\n  Unarmed
+# 	Selectable:
+# 		Priority: 4
+# 		DecorationBounds: 1536, 1536
+# 	Mobile:
+# 		Speed: 71
+# 		Locomotor: heavywheeled
+# 	Health:
+# 		HP: 140000
+# 	Repairable:
+# 		HpPerStep: 2182
+# 	Armor:
+# 		Type: Heavy
+# 	RevealsShroud:
+# 		Range: 7c0
+# 	Transforms:
+# 		IntoActor: drfghq.descendants
+# 		Offset: -1,-1
+# 		Facing: 432
+# 		TransformSounds: constru2.aud, hvydoor1.aud
+# 		NoTransformNotification: BuildingCannotPlaceAudio
+# 	SelectionDecorations:
+# 	Inherits@EXT: ^ExternalConditions
+# 	RenderSprites:
+# 		Image: drrig
+# 	WithInfantryBody:
+# 	ProvidesPrerequisite@faction:
+# 		Prerequisite: mmdescendants
+# 	Voiced:
+# 		VoiceSet: DRFGRigVoice
+# 	Passenger:
+# 		Weight: 1
 
-drfghq.descendants:
-	Inherits: ^DRHQStats
-	Tooltip:
-		Name: HQ (Descendants)
-	Building:
-		Footprint: xxx xxx =xx
-		Dimensions: 3,3
-		LocalCenterOffset: 0,-512,0
-	Production@NORMAL:
-		Produces: Building, Defence
-		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RABuilding, RADefence
-		RequiresCondition: classicproductionqueues
-	ProductionQueue@GDIBuilding:
-		Type: Building
-		DisplayOrder: 0
-		Group: Building
-		LowPowerModifier: 200
-		ReadyAudio: ConstructionComplete
-		BlockedAudio: NoBuild
-		LimitedAudio: BuildingInProgress
-		QueuedAudio: Building
-		OnHoldAudio: OnHold
-		CancelledAudio: Cancelled
-	ProductionQueue@GDIDefense:
-		Type: Defence
-		DisplayOrder: 1
-		Group: Defence
-		LowPowerModifier: 300
-		ReadyAudio: ConstructionComplete
-		BlockedAudio: NoBuild
-		LimitedAudio: BuildingInProgress
-		QueuedAudio: Building
-		OnHoldAudio: OnHold
-		CancelledAudio: Cancelled
-	ProductionBar@BuildingGDI:
-		ProductionType: Building
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@DefenceGDI:
-		ProductionType: Defence
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@RABuildingGDI:
-		ProductionType: RABuilding
-		RequiresCondition: classicproductionqueues
-	ProductionBar@RADefenceGDI:
-		ProductionType: RADefence
-		RequiresCondition: classicproductionqueues
-	Buildable:
-		Queue: Building, RABuilding
-		BuildPaletteOrder: 1000
-		Prerequisites: ~wip-content
-		Description: Builds structures
-	ProvidesPrerequisite@factiongdi:
-		Prerequisite: mmxenite
-	RenderSprites:
-		Image: drfghq
-	Inherits@upgrade: ^UpgradesDRFGHQType
-drdweap.descendants:
-	Inherits: ^BaseBuilding
-	Inherits@shape: ^3x2Shape
-	Inherits@CPQWP: ^CPQConditionWithPrimary
-	Inherits@prod: ^ProducesUnits
-	HitShape:
-		TargetableOffsets: 0,0,0, 0,1024,0, 0,-1024,0
-		Type: Rectangle
-			TopLeft: -1536, -1024
-			BottomRight: 1536, 512
-	Valued:
-		Cost: 2000
-	Tooltip:
-		Name: Scrap Garage
-	ProvidesPrerequisite:
-		Prerequisite: vehicleproduction
-	ProvidesPrerequisite@hq3:
-		Prerequisite: ~drfgweap2
-	Buildable:
-		BuildPaletteOrder: 40
-		Prerequisites: drwaterl.freedom
-		Queue: Building, RABuilding
-		Description: Produces vehicles
-	Building:
-		Footprint: xxx === ===
-		Dimensions: 3,3
-		LocalCenterOffset: 0,-512,0
-	Selectable:
-		Bounds: 131072, 87381
-		DecorationBounds: 131072, 116480, 0, -29098
-	SelectionDecorations:
-	Health:
-		HP: 140000
-	RevealsShroud:
-		Range: 4c0
-	RallyPoint:
-	Exit@1:
-		SpawnOffset: -512,-512,0
-		ExitCell: 0,1
-		ExitDelay: 3
-	Production@NORMAL:
-		Produces: Vehicle
-		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RAVehicle
-		RequiresCondition: classicproductionqueues
-	ProductionQueue:
-		Type: Vehicle
-		DisplayOrder: 3
-		Group: Vehicle
-		LowPowerModifier: 300
-		ReadyAudio: UnitReady
-		BlockedAudio: NoBuild
-		LimitedAudio: BuildingInProgress
-		QueuedAudio: Training
-		OnHoldAudio: OnHold
-		CancelledAudio: Cancelled
-	ProductionBar@VEHICLEGDI:
-		ProductionType: Vehicle
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@RAVEHICLEGDI:
-		ProductionType: RAVehicle
-		RequiresCondition: classicproductionqueues
-	ProvidesPrerequisite@buildingname:
-	WithIdleOverlay@TOP1:
-		Sequence: idle-top
-	WithIdleOverlay@BOTTOM1:
-		Sequence: idle-bottom
-	RenderSprites:
-		Image: drdweap
-drdcamp.descendants:
-	Inherits: ^BaseBuilding
-	Inherits@shape: ^3x2Shape
-	Inherits@CPQWP: ^CPQConditionWithPrimary
-	Inherits@prod: ^ProducesUnits
-	Inherits@barr: ^IsBarrack
-	HitShape:
-		TargetableOffsets: 0,0,0, 0,1024,0, 0,-1024,0
-		Type: Rectangle
-			TopLeft: -1536, -1024
-			BottomRight: 1536, 512
-	Valued:
-		Cost: 500
-	Tooltip:
-		Name: Campament
-	ProvidesPrerequisite:
-		Prerequisite: barracks
-	Buildable:
-		BuildPaletteOrder: 40
-		Prerequisites: drhq
-		Queue: Building, RABuilding
-		Description: Produces infantry
-	Building:
-		Footprint: _=_ xxx ===
-		Dimensions: 3,3
-		LocalCenterOffset: 0,-512,0
-	Selectable:
-		Bounds: 131072, 87381
-		DecorationBounds: 131072, 116480, 0, -29098
-	SelectionDecorations:
-	Health:
-		HP: 80000
-	RevealsShroud:
-		Range: 4c0
-	RallyPoint:
-	Exit@1:
-		SpawnOffset: -512,-512,0
-		ExitCell: 0,1
-		ExitDelay: 3
-	Production@NORMAL:
-		Produces: Infantry
-		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RAInfantry
-		RequiresCondition: classicproductionqueues
-	ProductionQueue:
-		Type: Infantry
-		DisplayOrder: 3
-		Group: Infantry
-		LowPowerModifier: 300
-		ReadyAudio: UnitReady
-		BlockedAudio: NoBuild
-		LimitedAudio: BuildingInProgress
-		QueuedAudio: Training
-		OnHoldAudio: OnHold
-		CancelledAudio: Cancelled
-	ProductionBar@VEHICLEGDI:
-		ProductionType: Infantry
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@RAVEHICLEGDI:
-		ProductionType: RAInfantry
-		RequiresCondition: classicproductionqueues
-	ProvidesPrerequisite@buildingname:
-	ProvidesPrerequisite@hq3:
-		Prerequisite: ~drfgbarr2
-	RenderSprites:
-		Image: drdcamp
-	ProximityExternalCondition:
-		Range: 7c0
-		Condition: trainercontrol
-	WithRangeCircle:
-		Range: 7c0
-drdsupport:
-	Inherits: ^BaseBuilding
-	Inherits@shape: ^2x2Shape
-	Inherits@SHADOWS: ^Shadows
-	Selectable:
-		Bounds: 2048, 2048
-	HitShape:
-		UseTargetableCellsOffsets: false
-		TargetableOffsets: 0,0,0, 640,-384,0, 640,512,0, -710,-512,0, -710,512,0
-	Buildable:
-		Queue: Building, RABuilding
-		BuildPaletteOrder: 40
-		Prerequisites: drfghq2
-		Description: Provides power for other structures
-	Valued:
-		Cost: 500 #300
-	Tooltip:
-		Name: Support Tent
-	Building:
-		Footprint: xx xx ==
-		Dimensions: 2,3
-		LocalCenterOffset: 0,-512,0
-	Health:
-		HP: 80000
-	Armor:
-		Type: Wood
-	RevealsShroud:
-		Range: 4c0
-	Power:
-		Amount: -20
-	ScalePowerWithHealth:
-	WithDeathAnimation:
-		DeathSequence: dead
-		UseDeathTypeSuffix: false
-	RenderSprites:
-	WithShadow:
-		Offset: 192, 0, 0
-		ZOffset: -512
-	ProvidesPrerequisite@drihq2:
-		Prerequisite: drbiocom2
-	ProvidesPrerequisite@drfgbarr2:
-		Prerequisite: drfgbarr2
-	ProvidesPrerequisite@buildingname:
-driscrap:
-	Inherits: ^BaseBuilding
-	Inherits@shape: ^3x2Shape
-	Inherits@SHADOWS: ^Shadows
-	Selectable:
-		Bounds: 2048, 2048
-	HitShape:
-		UseTargetableCellsOffsets: false
-		TargetableOffsets: 0,0,0, 640,-384,0, 640,512,0, -710,-512,0, -710,512,0
-	Buildable:
-		Queue: Building, RABuilding
-		BuildPaletteOrder: 50
-		Prerequisites: drfghq2
-		Description: Provides power for other structures
-	Valued:
-		Cost: 1200 #300
-	Tooltip:
-		Name: Imperium Scrap
-	Building:
-		Footprint: xx xx ==
-		Dimensions: 2,3
-		LocalCenterOffset: 0,-512,0
-	Health:
-		HP: 120000
-	Armor:
-		Type: Wood
-	RevealsShroud:
-		Range: 4c0
-	Power:
-		Amount: -40
-	ScalePowerWithHealth:
-	WithDeathAnimation:
-		DeathSequence: dead
-		UseDeathTypeSuffix: false
-	RenderSprites:
-	WithShadow:
-		Offset: 192, 0, 0
-		ZOffset: -512
-	ProvidesPrerequisite@drfgweap2:
-		Prerequisite: drfgweap2
-	ProvidesPrerequisite@buildingname:
-drbiond:
-	Inherits: drbion
-	Valued:
-		Cost: 400
-	Tooltip:
-		Name: Rearmed Bion
-	UpdatesPlayerStatistics:
-		AddToArmyValue: true
-	Buildable:
-		BuildPaletteOrder: 20
-		Prerequisites: driscrap
-		Queue: Infantry, RAInfantry
-		Description: A Rearmed bion, Maked with Scrap and Death Bions.\nThis one-man cyborg death squad carries a massive plasma rifle,\nand can fire at both ground and air units.\n\nType: Walker\nSpeed: Slow\nWeapon: Plasma Rifle\nRange: Short\nArmor: Medium
-		BuildDuration: 300
-		BuildDurationModifier: 100
+# drfghq.descendants:
+# 	Inherits: ^DRHQStats
+# 	Tooltip:
+# 		Name: HQ (Descendants)
+# 	Building:
+# 		Footprint: xxx xxx =xx
+# 		Dimensions: 3,3
+# 		LocalCenterOffset: 0,-512,0
+# 	Production@NORMAL:
+# 		Produces: Building, Defence
+# 		RequiresCondition: !classicproductionqueues
+# 	Production@CLASSICPRODUCTIONQUEUES:
+# 		Produces: RABuilding, RADefence
+# 		RequiresCondition: classicproductionqueues
+# 	ProductionQueue@GDIBuilding:
+# 		Type: Building
+# 		DisplayOrder: 0
+# 		Group: Building
+# 		LowPowerModifier: 200
+# 		ReadyAudio: ConstructionComplete
+# 		BlockedAudio: NoBuild
+# 		LimitedAudio: BuildingInProgress
+# 		QueuedAudio: Building
+# 		OnHoldAudio: OnHold
+# 		CancelledAudio: Cancelled
+# 	ProductionQueue@GDIDefense:
+# 		Type: Defence
+# 		DisplayOrder: 1
+# 		Group: Defence
+# 		LowPowerModifier: 300
+# 		ReadyAudio: ConstructionComplete
+# 		BlockedAudio: NoBuild
+# 		LimitedAudio: BuildingInProgress
+# 		QueuedAudio: Building
+# 		OnHoldAudio: OnHold
+# 		CancelledAudio: Cancelled
+# 	ProductionBar@BuildingGDI:
+# 		ProductionType: Building
+# 		RequiresCondition: !classicproductionqueues
+# 	ProductionBar@DefenceGDI:
+# 		ProductionType: Defence
+# 		RequiresCondition: !classicproductionqueues
+# 	ProductionBar@RABuildingGDI:
+# 		ProductionType: RABuilding
+# 		RequiresCondition: classicproductionqueues
+# 	ProductionBar@RADefenceGDI:
+# 		ProductionType: RADefence
+# 		RequiresCondition: classicproductionqueues
+# 	Buildable:
+# 		Queue: Building, RABuilding
+# 		BuildPaletteOrder: 1000
+# 		Prerequisites: ~wip-content
+# 		Description: Builds structures
+# 	ProvidesPrerequisite@factiongdi:
+# 		Prerequisite: mmxenite
+# 	RenderSprites:
+# 		Image: drfghq
+# 	Inherits@upgrade: ^UpgradesDRFGHQType
+# drdweap.descendants:
+# 	Inherits: ^BaseBuilding
+# 	Inherits@shape: ^3x2Shape
+# 	Inherits@CPQWP: ^CPQConditionWithPrimary
+# 	Inherits@prod: ^ProducesUnits
+# 	HitShape:
+# 		TargetableOffsets: 0,0,0, 0,1024,0, 0,-1024,0
+# 		Type: Rectangle
+# 			TopLeft: -1536, -1024
+# 			BottomRight: 1536, 512
+# 	Valued:
+# 		Cost: 2000
+# 	Tooltip:
+# 		Name: Scrap Garage
+# 	ProvidesPrerequisite:
+# 		Prerequisite: vehicleproduction
+# 	ProvidesPrerequisite@hq3:
+# 		Prerequisite: ~drfgweap2
+# 	Buildable:
+# 		BuildPaletteOrder: 40
+# 		Prerequisites: drwaterl.freedom
+# 		Queue: Building, RABuilding
+# 		Description: Produces vehicles
+# 	Building:
+# 		Footprint: xxx === ===
+# 		Dimensions: 3,3
+# 		LocalCenterOffset: 0,-512,0
+# 	Selectable:
+# 		Bounds: 131072, 87381
+# 		DecorationBounds: 131072, 116480, 0, -29098
+# 	SelectionDecorations:
+# 	Health:
+# 		HP: 140000
+# 	RevealsShroud:
+# 		Range: 4c0
+# 	RallyPoint:
+# 	Exit@1:
+# 		SpawnOffset: -512,-512,0
+# 		ExitCell: 0,1
+# 		ExitDelay: 3
+# 	Production@NORMAL:
+# 		Produces: Vehicle
+# 		RequiresCondition: !classicproductionqueues
+# 	Production@CLASSICPRODUCTIONQUEUES:
+# 		Produces: RAVehicle
+# 		RequiresCondition: classicproductionqueues
+# 	ProductionQueue:
+# 		Type: Vehicle
+# 		DisplayOrder: 3
+# 		Group: Vehicle
+# 		LowPowerModifier: 300
+# 		ReadyAudio: UnitReady
+# 		BlockedAudio: NoBuild
+# 		LimitedAudio: BuildingInProgress
+# 		QueuedAudio: Training
+# 		OnHoldAudio: OnHold
+# 		CancelledAudio: Cancelled
+# 	ProductionBar@VEHICLEGDI:
+# 		ProductionType: Vehicle
+# 		RequiresCondition: !classicproductionqueues
+# 	ProductionBar@RAVEHICLEGDI:
+# 		ProductionType: RAVehicle
+# 		RequiresCondition: classicproductionqueues
+# 	ProvidesPrerequisite@buildingname:
+# 	WithIdleOverlay@TOP1:
+# 		Sequence: idle-top
+# 	WithIdleOverlay@BOTTOM1:
+# 		Sequence: idle-bottom
+# 	RenderSprites:
+# 		Image: drdweap
+# drdcamp.descendants:
+# 	Inherits: ^BaseBuilding
+# 	Inherits@shape: ^3x2Shape
+# 	Inherits@CPQWP: ^CPQConditionWithPrimary
+# 	Inherits@prod: ^ProducesUnits
+# 	Inherits@barr: ^IsBarrack
+# 	HitShape:
+# 		TargetableOffsets: 0,0,0, 0,1024,0, 0,-1024,0
+# 		Type: Rectangle
+# 			TopLeft: -1536, -1024
+# 			BottomRight: 1536, 512
+# 	Valued:
+# 		Cost: 500
+# 	Tooltip:
+# 		Name: Campament
+# 	ProvidesPrerequisite:
+# 		Prerequisite: barracks
+# 	Buildable:
+# 		BuildPaletteOrder: 40
+# 		Prerequisites: drhq
+# 		Queue: Building, RABuilding
+# 		Description: Produces infantry
+# 	Building:
+# 		Footprint: _=_ xxx ===
+# 		Dimensions: 3,3
+# 		LocalCenterOffset: 0,-512,0
+# 	Selectable:
+# 		Bounds: 131072, 87381
+# 		DecorationBounds: 131072, 116480, 0, -29098
+# 	SelectionDecorations:
+# 	Health:
+# 		HP: 80000
+# 	RevealsShroud:
+# 		Range: 4c0
+# 	RallyPoint:
+# 	Exit@1:
+# 		SpawnOffset: -512,-512,0
+# 		ExitCell: 0,1
+# 		ExitDelay: 3
+# 	Production@NORMAL:
+# 		Produces: Infantry
+# 		RequiresCondition: !classicproductionqueues
+# 	Production@CLASSICPRODUCTIONQUEUES:
+# 		Produces: RAInfantry
+# 		RequiresCondition: classicproductionqueues
+# 	ProductionQueue:
+# 		Type: Infantry
+# 		DisplayOrder: 3
+# 		Group: Infantry
+# 		LowPowerModifier: 300
+# 		ReadyAudio: UnitReady
+# 		BlockedAudio: NoBuild
+# 		LimitedAudio: BuildingInProgress
+# 		QueuedAudio: Training
+# 		OnHoldAudio: OnHold
+# 		CancelledAudio: Cancelled
+# 	ProductionBar@VEHICLEGDI:
+# 		ProductionType: Infantry
+# 		RequiresCondition: !classicproductionqueues
+# 	ProductionBar@RAVEHICLEGDI:
+# 		ProductionType: RAInfantry
+# 		RequiresCondition: classicproductionqueues
+# 	ProvidesPrerequisite@buildingname:
+# 	ProvidesPrerequisite@hq3:
+# 		Prerequisite: ~drfgbarr2
+# 	RenderSprites:
+# 		Image: drdcamp
+# 	ProximityExternalCondition:
+# 		Range: 7c0
+# 		Condition: trainercontrol
+# 	WithRangeCircle:
+# 		Range: 7c0
+# drdsupport:
+# 	Inherits: ^BaseBuilding
+# 	Inherits@shape: ^2x2Shape
+# 	Inherits@SHADOWS: ^Shadows
+# 	Selectable:
+# 		Bounds: 2048, 2048
+# 	HitShape:
+# 		UseTargetableCellsOffsets: false
+# 		TargetableOffsets: 0,0,0, 640,-384,0, 640,512,0, -710,-512,0, -710,512,0
+# 	Buildable:
+# 		Queue: Building, RABuilding
+# 		BuildPaletteOrder: 40
+# 		Prerequisites: drfghq2
+# 		Description: Provides power for other structures
+# 	Valued:
+# 		Cost: 500 #300
+# 	Tooltip:
+# 		Name: Support Tent
+# 	Building:
+# 		Footprint: xx xx ==
+# 		Dimensions: 2,3
+# 		LocalCenterOffset: 0,-512,0
+# 	Health:
+# 		HP: 80000
+# 	Armor:
+# 		Type: Wood
+# 	RevealsShroud:
+# 		Range: 4c0
+# 	Power:
+# 		Amount: -20
+# 	ScalePowerWithHealth:
+# 	WithDeathAnimation:
+# 		DeathSequence: dead
+# 		UseDeathTypeSuffix: false
+# 	RenderSprites:
+# 	WithShadow:
+# 		Offset: 192, 0, 0
+# 		ZOffset: -512
+# 	ProvidesPrerequisite@drihq2:
+# 		Prerequisite: drbiocom2
+# 	ProvidesPrerequisite@drfgbarr2:
+# 		Prerequisite: drfgbarr2
+# 	ProvidesPrerequisite@buildingname:
+# driscrap:
+# 	Inherits: ^BaseBuilding
+# 	Inherits@shape: ^3x2Shape
+# 	Inherits@SHADOWS: ^Shadows
+# 	Selectable:
+# 		Bounds: 2048, 2048
+# 	HitShape:
+# 		UseTargetableCellsOffsets: false
+# 		TargetableOffsets: 0,0,0, 640,-384,0, 640,512,0, -710,-512,0, -710,512,0
+# 	Buildable:
+# 		Queue: Building, RABuilding
+# 		BuildPaletteOrder: 50
+# 		Prerequisites: drfghq2
+# 		Description: Provides power for other structures
+# 	Valued:
+# 		Cost: 1200 #300
+# 	Tooltip:
+# 		Name: Imperium Scrap
+# 	Building:
+# 		Footprint: xx xx ==
+# 		Dimensions: 2,3
+# 		LocalCenterOffset: 0,-512,0
+# 	Health:
+# 		HP: 120000
+# 	Armor:
+# 		Type: Wood
+# 	RevealsShroud:
+# 		Range: 4c0
+# 	Power:
+# 		Amount: -40
+# 	ScalePowerWithHealth:
+# 	WithDeathAnimation:
+# 		DeathSequence: dead
+# 		UseDeathTypeSuffix: false
+# 	RenderSprites:
+# 	WithShadow:
+# 		Offset: 192, 0, 0
+# 		ZOffset: -512
+# 	ProvidesPrerequisite@drfgweap2:
+# 		Prerequisite: drfgweap2
+# 	ProvidesPrerequisite@buildingname:
+# drbiond:
+# 	Inherits: drbion
+# 	Valued:
+# 		Cost: 400
+# 	Tooltip:
+# 		Name: Rearmed Bion
+# 	UpdatesPlayerStatistics:
+# 		AddToArmyValue: true
+# 	Buildable:
+# 		BuildPaletteOrder: 20
+# 		Prerequisites: driscrap
+# 		Queue: Infantry, RAInfantry
+# 		Description: A Rearmed bion, Maked with Scrap and Death Bions.\nThis one-man cyborg death squad carries a massive plasma rifle,\nand can fire at both ground and air units.\n\nType: Walker\nSpeed: Slow\nWeapon: Plasma Rifle\nRange: Short\nArmor: Medium
+# 		BuildDuration: 300
+# 		BuildDurationModifier: 100
 
-drptnkd:
-	Inherits: drptnk
-	Inherits@EXPERIENCE: ^GainsExperience
-	Inherits@CLOAK: ^AcceptsCloakCrate
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
-	Inherits@DRShadow: ^InfantryShadows
-	Valued:
-		Cost: 800
-	Tooltip:
-		Name: Rearmed Plasma Tank
-	UpdatesPlayerStatistics:
-		AddToArmyValue: true
-	Buildable:
-		BuildPaletteOrder: 40
-		Prerequisites: driscrap, ~techlevel.medium
-		Queue: Vehicle, RAVehicle
-		BuildDuration: 1020
-		BuildDurationModifier: 40
-		Description: Backbone of the Imperium war effort, the Plasma Tank\nis tough and packs a formidable plasma cannon. The Imperium overruns\nthe enemy with endless waves of these ruinous machines\n\nType: Hover\nSpeed: Medium\nWeapon: Plasma Canon\nRange: Medium\nArmor: Heavy
-	Mobile:
-		Locomotor: hover
-		TurnSpeed: 32
-		Speed: 80
-	Voiced:
-		VoiceSet: DRFreedomGuardVoice
-drmadd:
-	Inherits: drmad
-	Valued:
-		Cost: 800
-	Tooltip:
-		Name: Rearmed MAD
-	UpdatesPlayerStatistics:
-		AddToArmyValue: true
-	Buildable:
-		BuildPaletteOrder: 40
-		Prerequisites: driscrap, ~techlevel.medium
-		Queue: Vehicle, RAVehicle
-		Description: The M.A.D. fires bladed orbs at enemy air units.\nLike the Freedom Guard Flak Jack, it cannot fire at ground units and\nshould be defended against land attack\n\nType: Hover\nSpeed: Medium\nWeapon: Bladed Orbs\nRange: Long\nArmor: Light
-	Voiced:
-		VoiceSet: DRFreedomGuardVoice
-driaaturret.descendants:
-	Inherits: driaaturret
-	Valued:
-		Cost: 1300
-	Tooltip:
-		Name: AA Defence Site
-	Buildable:
-		BuildPaletteOrder: 40
-		Prerequisites: driscrap
-		Queue: Defence, RADefence
-		Description: Antiground defensive structure.\n  Strong vs Infantry, Tanks\n  Weak vs Aircraft
-	RenderSprites:
-		Image: driaaturret
-drmechd:
-	Inherits: drmech
-	Buildable:
-		Queue: Infantry, RAInfantry
-		BuildPaletteOrder: 100
-		Prerequisites: drdsupport, ~techlevel.medium
-		Description: The Mechanic functions similarly to the Field Medic\nrepairing damaged vehicles in the field. The Mechanic has no attack capability\n\nType: Walker\nSpeed: Slow\nWeapon: None\nRange: N/A\nArmor: Light
-	RenderSprites:
-		Image: drmech
+# drptnkd:
+# 	Inherits: drptnk
+# 	Inherits@EXPERIENCE: ^GainsExperience
+# 	Inherits@CLOAK: ^AcceptsCloakCrate
+# 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+# 	Inherits@DRShadow: ^InfantryShadows
+# 	Valued:
+# 		Cost: 800
+# 	Tooltip:
+# 		Name: Rearmed Plasma Tank
+# 	UpdatesPlayerStatistics:
+# 		AddToArmyValue: true
+# 	Buildable:
+# 		BuildPaletteOrder: 40
+# 		Prerequisites: driscrap, ~techlevel.medium
+# 		Queue: Vehicle, RAVehicle
+# 		BuildDuration: 1020
+# 		BuildDurationModifier: 40
+# 		Description: Backbone of the Imperium war effort, the Plasma Tank\nis tough and packs a formidable plasma cannon. The Imperium overruns\nthe enemy with endless waves of these ruinous machines\n\nType: Hover\nSpeed: Medium\nWeapon: Plasma Canon\nRange: Medium\nArmor: Heavy
+# 	Mobile:
+# 		Locomotor: hover
+# 		TurnSpeed: 32
+# 		Speed: 80
+# 	Voiced:
+# 		VoiceSet: DRFreedomGuardVoice
+# drmadd:
+# 	Inherits: drmad
+# 	Valued:
+# 		Cost: 800
+# 	Tooltip:
+# 		Name: Rearmed MAD
+# 	UpdatesPlayerStatistics:
+# 		AddToArmyValue: true
+# 	Buildable:
+# 		BuildPaletteOrder: 40
+# 		Prerequisites: driscrap, ~techlevel.medium
+# 		Queue: Vehicle, RAVehicle
+# 		Description: The M.A.D. fires bladed orbs at enemy air units.\nLike the Freedom Guard Flak Jack, it cannot fire at ground units and\nshould be defended against land attack\n\nType: Hover\nSpeed: Medium\nWeapon: Bladed Orbs\nRange: Long\nArmor: Light
+# 	Voiced:
+# 		VoiceSet: DRFreedomGuardVoice
+# driaaturret.descendants:
+# 	Inherits: driaaturret
+# 	Valued:
+# 		Cost: 1300
+# 	Tooltip:
+# 		Name: AA Defence Site
+# 	Buildable:
+# 		BuildPaletteOrder: 40
+# 		Prerequisites: driscrap
+# 		Queue: Defence, RADefence
+# 		Description: Antiground defensive structure.\n  Strong vs Infantry, Tanks\n  Weak vs Aircraft
+# 	RenderSprites:
+# 		Image: driaaturret
+# drmechd:
+# 	Inherits: drmech
+# 	Buildable:
+# 		Queue: Infantry, RAInfantry
+# 		BuildPaletteOrder: 100
+# 		Prerequisites: drdsupport, ~techlevel.medium
+# 		Description: The Mechanic functions similarly to the Field Medic\nrepairing damaged vehicles in the field. The Mechanic has no attack capability\n\nType: Walker\nSpeed: Slow\nWeapon: None\nRange: N/A\nArmor: Light
+# 	RenderSprites:
+# 		Image: drmech
 ##############################################################################
 ##
 ##      Darkreign Civilians or Misc

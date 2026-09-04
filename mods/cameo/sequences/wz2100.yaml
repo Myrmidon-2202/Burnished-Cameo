@@ -4,6 +4,7 @@
 
 2100hq:
 	Defaults:
+		Filename: 2100hq.shp
 		Offset: 0,-11
 	idle:
 		Start: 9
@@ -21,25 +22,33 @@
 
 2100power:
 	Defaults:
+		Filename: 2100power.shp
 		Offset: 0,-6
-	idle: 2100power2
-	damaged-idle: 2100power2
+	idle: 
+		Filename: 2100power2.shp
+	damaged-idle:
+		Filename: 2100power2.shp
 	idle2: 2100power2
 		Start: 1
-	damaged-idle2: 2100power2
+	damaged-idle2: 
+		Filename: 2100power2.shp
 		Start: 1
 	make:
 		Length: *
 		Tick: 80
-	bib: bib2
+	bib: 
+		Filename: bib2.tem
 		UseTilesetExtension: true
 		Length: *
 		Offset: 0,0
-	icon: 2100powericon.shp
+	icon: 
+		Filename: 2100powericon.shp
 		AddExtension: False
 		Offset: 0,0
 
 2100oil:
+	Defaults:
+		Filename: 2100oil.shp
 	idle:
 		Start: 5
 		Length: 22
@@ -47,12 +56,14 @@
 	make:
 		Length: 5
 		Tick: 80
-	icon: 2100oilicon.shp
+	icon: 
+		Filename: 2100oilicon.shp
 		AddExtension: False
 		Offset: 0,0
 
 2100rr:
 	Defaults:
+		Filename: 2100rr.shp
 		Offset: 0,-12
 	idle:
 		Facings: 32
@@ -67,31 +78,41 @@
 		UseTilesetExtension: true
 		Length: *
 		Offset: 0,0
-	icon: 2100rricon.shp
+	icon: 
+		Filename: 2100rricon.shp
 		AddExtension: False
 		Offset: 0,0
 
 2100fy1:
 	Defaults:
+		Filename: 2100fy1.shp
 		Offset: 0,-1
-	idle: 2100fy
-	damaged-idle: 2100fy
-	idle2: 2100fy
+	idle: 
+		Filename: 2100fy.shp
+	damaged-idle:
+		Filename: 2100fy.shp
+	idle2:
+		Filename: 2100fy.shp
 		Start: 1
-	damaged-idle2: 2100fy
+	damaged-idle2:
+		Filename: 2100fy.shp
 		Start: 1
-	idle3: 2100fy
+	idle3:
+		Filename: 2100fy.shp
 		Start: 2
-	damaged-idle3: 2100fy
+	damaged-idle3:
+		Filename: 2100fy.shp
 		Start: 2
 	make:
 		Length: *
 		Tick: 80
-	bib: bib1
+	bib: 
+		Filename: bib1.tem
 		UseTilesetExtension: true
 		Length: *
 		Offset: 0,0
-	icon: 2100fy1icon.shp
+	icon:
+		Filename: 2100fy1icon.shp
 		AddExtension: False
 		Offset: 0,0
 
