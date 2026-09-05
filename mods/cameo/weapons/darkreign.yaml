@@ -133,6 +133,7 @@ DRSniperRifle:
 			Medium: 40
 			Heavy: 20
 			Concrete: 30
+
 DRJebRadecRifle:
 	Inherits: ^DRLightLaser
 	ReloadDelay: 9
@@ -178,6 +179,7 @@ DRGeminisLightLaser:
 	Inherits: DRGeminisMediumLaser
 	ReloadDelay: 8
 	Range: 5c0
+
 DRBioConntrolEnergy:
 	Inherits: DRGeminisLightLaser
 	ReloadDelay: 8
@@ -188,13 +190,13 @@ DRBioConntrolEnergy:
 		Explosions: drbluerailex
 	Warhead@3Eff: CreateEffect
 		Explosions: drbluerailex
-		
+
 DRBioConntrolEnergyAA:
 	Inherits: DRBioConntrolEnergy
 	ValidTargets: Air
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Air
-		
+
 DRTickTankLaser:
 	Inherits: DRGeminisLightLaser
 	ReloadDelay: 30
@@ -209,7 +211,7 @@ DRTickTankLaser:
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		Damage: 4000
-		
+
 DRTickTankLaserAA:
 	Inherits: DRTickTankLaser
 	ValidTargets: Air
@@ -297,6 +299,7 @@ DRNeutronTurret:
 	Projectile: Bullet
 		Image: drneutron
 		Speed: 1300
+
 Warhead@1Dam: SpreadDamage
 	Spread: 1000
 	Damage: 16200
@@ -544,6 +547,10 @@ DRPolyGrenade:
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 	Warhead@3Eff: CreateEffect
 		Explosions: dracidexp
+	Warhead@resdeath: DestroyResource
+		Size: 2
+		ResourceAmount: 10
+		ResourceTypes: Tiberium, BlueTiberium, RedTiberium, GoldTiberium, Ore, Gems, SCMinerals, GESupplies, SWPCarbon, SWRCarbon, SWDCarbon, SWPNova, SWCNova, SWPMin, SWCMin, Spice, SCGas, SCGas2, SCGas3, SCMineralsChunk, SCRMinerals, DRWater, DRTaelon, D2Spice, D2SpiceDense, SWFarms, OP2Ore2, OP2Ore, RA2Ore, RA2Gems, RA2Silver, RA2Copper
 
 DRScarabShell:
 	Inherits: ArtilleryShell

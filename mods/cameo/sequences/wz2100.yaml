@@ -13,7 +13,7 @@
 	make:
 		Length: 10
 		Tick: 80
-	bib: bib2
+	bib: bib2.tem
 		UseTilesetExtension: true
 		Length: *
 		Offset: 0,24
@@ -37,7 +37,7 @@
 		Length: *
 		Tick: 80
 	bib: 
-		Filename: bib2.tem
+		Filename: bib2.tem.tem
 		UseTilesetExtension: true
 		Length: *
 		Offset: 0,0
@@ -74,7 +74,8 @@
 	make:
 		Length: *
 		Tick: 80
-	bib: bib2
+	bib: 
+		Filename: bib2.tem
 		UseTilesetExtension: true
 		Length: *
 		Offset: 0,0
@@ -107,7 +108,7 @@
 		Length: *
 		Tick: 80
 	bib: 
-		Filename: bib1.tem
+		Filename: bib1.tem.tem
 		UseTilesetExtension: true
 		Length: *
 		Offset: 0,0
@@ -117,6 +118,8 @@
 		Offset: 0,0
 
 2100fy2:
+	Defaults:
+		Filename: 2100fy2.shp
 	idle:
 		Start: 9
 	damaged-idle:
@@ -124,30 +127,41 @@
 	make:
 		Length: *
 		Tick: 80
-	bib: bib1
+	bib:
+		Filename: bib1.tem.tem
 		UseTilesetExtension: true
 		Length: *
-	icon: 2100fy2icon.shp
+	icon: 
+		Filename: 2100fy2icon.shp
 		AddExtension: False
 
 2100rf:
-	idle: 2100rf2
-	damaged-idle: 2100rf2
-	idle2: 2100rf2
+	Defaults:
+		Filename: 2100rf.shp
+	idle:
+		Filename: 2100rf2
+	damaged-idle:
+		Filename: 2100rf2
+	idle2:
+		Filename: 2100rf2
 		Start: 1
-	damaged-idle2: 2100rf2
+	damaged-idle2:
+		Filename: 2100rf2
 		Start: 1
 	make:
 		Length: *
 		Tick: 80
-	bib: bib2
+	bib:
+		Filename: bib2.tem.tem
 		UseTilesetExtension: true
 		Length: *
-	icon: 2100rficon.shp
+	icon:
+		Filename: 2100rficon.shp
 		AddExtension: False
 
 2100crc:
 	Defaults:
+		Filename: 2100crc.shp
 		Offset: 0,-11
 	idle:
 		Start: 9
@@ -156,20 +170,23 @@
 	make:
 		Length: *
 		Tick: 80
-	bib: bib2
+	bib:
+		Filename: bib2.tem
 		UseTilesetExtension: true
 		Length: *
 		Offset: 0,0
 	icon: 2100crcicon.shp
 		AddExtension: False
 		Offset: 0,0
+
 2100las:
 	Defaults:
 		Offset: 0,-11
 	idle:
 	damaged-idle:
 	make:
-	bib: bib2
+	bib:
+		Filename: bib2.tem
 		UseTilesetExtension: true
 		Length: *
 		Offset: 0,0
@@ -179,291 +196,371 @@
 
 2100wall:
 	Defaults:
+		Filename: 2100wall.shp
 		Offset: 0,-6
 	idle:
 		Length: 16
-	make: 2100wallmake
+	make:
+		Filename: 2100wallmake.shp
 		Length: *
 		Tick: 80
 		Offset: 0,-7
-	icon: 2100wallicon.shp
+	icon:
+		Filename: 2100wallicon.shp
 		AddExtension: False
 		Offset: 0,0
+
 2100wcmg:
 	Defaults:
+		Filename: 2100wcmg.shp
 		Offset: 0,-6
-	turret: 2100heavymgdefense
+	turret:
+		Filename: 2100heavymgdefense.shp
 		Facings: 32
 		UseClassicFacings: True
 		Offset: 0,0
-	idle: 2100wall
+	idle:
+		Filename: 2100wall.shp
 		Start: 3
 		ZOffset: -512
-	damaged-idle: 2100wall
+	damaged-idle:
+		Filename: 2100wall.shp
 		Start: 3
 		ZOffset: -512
-	make: 2100wallmake
+	make:
+		Filename: 2100wallmake.shp
 		Length: *
 		Tick: 80
 		Offset: 0,-7
-	muzzle: gunfire2
+	muzzle:
+		Filename: gunfire2.shp
 		Length: *
-	icon: 2100wclicon.shp
+	icon:
+		Filename: 2100wclicon.shp
 		AddExtension: False
 		Offset: 0,0
 
 2100wcl:
 	Defaults:
+		Filename: 2100wcl.shp
 		Offset: 0,-6
-	turret: 2100litcannondefense
+	turret:
+		Filename: 2100litcannondefense
 		Facings: 32
 		UseClassicFacings: True
 		Offset: 0,0
-	idle: 2100wall
+	idle:
+		Filename: 2100wall
 		Start: 3
 		ZOffset: -512
-	damaged-idle: 2100wall
+	damaged-idle:
+		Filename: 2100wall
 		Start: 3
 		ZOffset: -512
-	make: 2100wallmake
+	make:
+		Filename: 2100wallmake.shp
 		Length: *
 		Tick: 80
 		Offset: 0,-7
-	muzzle: gunfire2
+	muzzle:
+		Filename: gunfire2.shp
 		Length: *
-	icon: 2100wclicon.shp
+	icon:
+		Filename: 2100wclicon.shp
 		AddExtension: False
 		Offset: 0,0
 
 2100wcm:
 	Defaults:
+		Filename: 2100wcm.shp
 		Offset: 0,-6
-	turret: 2100medcannondefense
+	turret:
+		Filename: 2100medcannondefense.shp
 		Facings: 32
 		UseClassicFacings: True
 		Offset: 0,0
-	idle: 2100wall
+	idle:
+		Filename: 2100wall.shp
 		Start: 3
 		ZOffset: -512
-	damaged-idle: 2100wall
+	damaged-idle:
+		Filename: 2100wall.shp
 		Start: 3
 		ZOffset: -512
-	make: 2100wallmake
+	make:
+		Filename: 2100wallmake.shp
 		Length: *
 		Tick: 80
 		Offset: 0,-7
-	muzzle: gunfire2
+	muzzle:
+		Filename: gunfire2.shp
 		Length: *
-	icon: 2100wcmicon.shp
+	icon:
+		Filename: 2100wcmicon.shp
 		AddExtension: False
 		Offset: 0,0
 
 2100wch:
 	Defaults:
+		Filename: 2100wch.shp
 		Offset: 0,-6
-	turret: 2100heavycannondefense
+	turret:
+		Filename: 2100heavycannondefense.shp
 		Facings: 32
 		UseClassicFacings: True
 		Offset: 0,0
-	idle: 2100wall
+	idle:
+		Filename: 2100wall.shp
 		Start: 3
 		ZOffset: -512
-	damaged-idle: 2100wall
+	damaged-idle:
+		Filename: 2100wall.shp
 		Start: 3
 		ZOffset: -512
-	make: 2100wallmake
+	make:
+		Filename: 2100wallmake.shp
 		Length: *
 		Tick: 80
 		Offset: 0,-7
-	muzzle: gunfire2
+	muzzle:
+		Filename: gunfire2.shp
 		Length: *
-	icon: 2100wchicon.shp
+	icon:
+		Filename: 2100wchicon.shp
 		AddExtension: False
 		Offset: 0,0
 
 2100mb:
+	Defaults:
+		Filename: 2100mb.shp
 	idle:
 	damaged-idle:
 	make:
 		Length: *
 		Tick: 80
-	muzzle: minigun
+	muzzle:
+		Filename: minigun.shp
 		Length: 6
 		Facings: 8
-	icon: 2100mbicon.shp
+	icon:
+		Filename: 2100mbicon.shp
 		AddExtension: False
 
 2100fb:
 	Defaults:
 		Offset: 0,-6
-	turret: 2100flamerdefense
+	turret:
+		Filename: 2100flamerdefense.shp
 		Facings: 32
 		UseClassicFacings: True
 		Offset: 0,0
-	idle: 2100tb
+	idle:
+		Filename: 2100tb.shp
 		ZOffset: -512
-	damaged-idle: 2100tb
+	damaged-idle:
+		Filename: 2100tb.shp
 		ZOffset: -512
 	make:
 	muzzle:
 		Combine:
 			flame-n:
+				Filename: flame-n.shp
 				Length: *
 				Offset: 3,6
 			flame-nw:
+				Filename: flame-nw.shp
 				Length: *
 				Offset: 8,7
 			flame-w:
+				Filename: flame-w.shp
 				Length: *
 				Offset: 8,2
 			flame-sw:
+				Filename: flame-sw.shp
 				Length: *
 				Offset: 7,-2
 			flame-s:
+				Filename: flame-s.shp
 				Length: *
 				Offset: 3,-2
 			flame-se:
+				Filename: flame-se.shp
 				Length: *
 				Offset: -5,-2
 			flame-e:
+				Filename: flame-e.shp
 				Length: *
 				Offset: -7,2
 			flame-ne:
+				Filename: flame-ne.shp
 				Length: *
 				Offset: -7,8
 		Facings: 8
 		Length: 13
-	icon: 2100fbicon.shp
+	icon:
+		Filename: 2100fbicon.shp
 		AddExtension: False
 		Offset: 0,0
 
 2100mt:
-	Defaults: 2100tower2
+	Defaults:
+		Filename: 2100tower2.shp
 		Offset: 0,-12
 	idle:
 		Start: 4
-	turret: 2100heavymgdefense
+	turret:
+		Filename: 2100heavymgdefense.shp
 		Facings: 32
 		UseClassicFacings: True
 		Offset: 0,0
 	make:
 		Length: *
-	muzzle: minigun
+	muzzle:
+		Filename: minigun.shp
 		Length: 6
 		Facings: 8
-	icon: 2100rticon.shp
+	icon:
+		Filename: 2100rticon.shp
 		AddExtension: False
 		Offset: 0,0
+
 2100radt:
-	Defaults: 2100tower2
+	Defaults:
+		Filename: 2100tower2.shp
 		Offset: 0,-12
 	idle:
 		Start: 4
-	turret: 2100radarpandefense
+	turret:
+		Filename: 2100radarpandefense.shp
 		Facings: 32
 		UseClassicFacings: True
 		Offset: 0,0
 	make:
 		Length: *
-	muzzle: minigun
+	muzzle:
+		Filename: minigun.shp
 		Length: 6
 		Facings: 8
-	icon: 2100rticon.shp
+	icon:
+		Filename: 2100rticon.shp
 		AddExtension: False
 		Offset: 0,0
 
 2100rt:
-	Defaults: 2100tower
+	Defaults:
+		Filename: 2100tower.shp
 		Offset: 0,-12
 	idle:
 		Start: 4
-	turret: 2100rkpoddefense
+	turret:
+		Filename: 2100rkpoddefense.shp
 		Facings: 32
 		UseClassicFacings: True
 		Offset: 0,0
 	make:
 		Length: *
-	muzzle: gunfire2
+	muzzle:
+		Filename: gunfire2.shp
 		Tick: 80
 		Length: *
-	icon: 2100rticon.shp
+	icon:
+		Filename: 2100rticon.shp
 		AddExtension: False
 		Offset: 0,0
 
 2100tt:
-	Defaults: 2100tower
+	Defaults:
+		Filename: 2100tower.shp
 		Offset: 0,-12
 	idle:
 		Start: 4
-	turret: 2100tankkillerdefense
+	turret:
+		Filename: 2100tankkillerdefense.shp
 		Facings: 32
 		UseClassicFacings: True
 		Offset: 0,0
 	make:
 		Length: *
-	muzzle: gunfire2
+	muzzle:
+		Filename: gunfire2.shp
 		Tick: 80
 		Length: *
-	icon: 2100tticon.shp
+	icon:
+		Filename: 2100tticon.shp
 		AddExtension: False
 		Offset: 0,0
 
 2100mp:
+	Defaults:
+		Filename: 2100mp.shp
 	idle:
 	make:
 		Length: *
 		Tick: 80
-	muzzle: gunfire2
+	muzzle:
+		Filename: gunfire2.shp
 		Length: *
-	icon: 2100mpicon.shp
+	icon:
+		Filename: 2100mpicon.shp
 		AddExtension: False
 
 2100pp:
+	Defaults:
+		Filename: 2100pp.shp
 	idle:
 	make:
 		Length: *
 		Tick: 80
-	muzzle: gunfire2
+	muzzle: gunfire2.shp
 		Length: *
 	icon: 2100ppicon.shp
 		AddExtension: False
 
 2100aa:
+	Defaults:
+		Filename: 2100aa.shp
 	idle:
 	make:
-	turret: 2100aaturret
+	turret:
+		Filename: 2100aaturret.shp
 		Facings: 32
 		UseClassicFacings: True
 		Offset: 0,-6
-	muzzle: minigun
+	muzzle:
+		Filename: minigun.shp
 		Length: 6
 		Facings: 8
 		Offset: 0,6
-	icon: 2100aaicon.shp
+	icon:
+		Filename: 2100aaicon.shp
 		AddExtension: False
 
 cto2100fy:
 	Defaults:
+		Filename: cto2100fy.shp
 		Offset: 0,-4
 	idle:
 	idle2:
 		Start: 1
 	idle3:
 		Start: 2
-	make: 2100fy1
+	make:
+		Filename: 2100fy1.shp
 		Length: *
 		Tick: 80
-	bib: bib1
+	bib: bib1.tem
 		UseTilesetExtension: true
 		Length: *
 		Offset: 0,0
-	icon: 2100icon.shp
+	icon:
+		Filename: 2100icon.shp
 		AddExtension: False
 		Offset: 0,0
 
 cto2100power:
 	Defaults:
 		Offset: 0,8
+		Filename: cto2100power.shp
 	idle:
 		Start: 9
 	damaged-idle:
@@ -471,73 +568,95 @@ cto2100power:
 	make:
 		Length: *
 		Tick: 80
-	oil1: 2100oil
+	oil1:
+		Filename: 2100oil.shp
 		Start: 5
 		Length: 22
 		Tick: 120
 		Offset: -36,36
-	oil2: 2100oil
+	oil2:
+		Filename: 2100oil.shp
 		Start: 5
 		Length: 22
 		Tick: 120
 		Offset: -12,36
-	oil3: 2100oil
+	oil3:
+		Filename: 2100oil.shp
 		Start: 5
 		Length: 22
 		Tick: 120
 		Offset: 12,36
-	oil4: 2100oil
+	oil4:
+		Filename: 2100oil.shp
 		Start: 5
 		Length: 22
 		Tick: 120
 		Offset: 36,36
-	bib: bib1
+	bib:
+		Filename: bib1.tem
 		UseTilesetExtension: true
 		Length: *
 		Offset: 0,0
-	icon: 2100powericon.shp
+	icon:
+		Filename: 2100powericon.shp
 		AddExtension: False
 		Offset: 0,0
 
 2100cf:
 	Defaults:
+		Filename: 2100cf.shp
 		Offset: 0,-8
 	idle:
 	damaged-idle:
 	dead:
 	make:
-	bib: bib3
+	bib:
+		Filename: bib3.tem
 		UseTilesetExtension: true
 		Length: *
 		Offset: 0,0
-	icon: 2100cficon
+	icon:
+		Filename: 2100cficon.shp
 		Offset: 0,0
+
 2100vfy1:
-	Defaults: cto2100fy
+	Defaults:
+		Filename: cto2100fy.shp
 		Offset: 0,-1
-	idle: 2100vfy
-	damaged-idle: 2100vfy
-	idle2: 2100vfy
+	idle:
+		Filename: 2100vfy.shp
+	damaged-idle:
+		Filename: 2100vfy.shp
+	idle2:
+		Filename: 2100vfy.shp
 		Start: 1
-	damaged-idle2: 2100vfy
+	damaged-idle2:
+		Filename: 2100vfy.shp
 		Start: 1
-	idle3: 2100vfy
+	idle3:
+		Filename: 2100vfy.shp
 		Start: 2
-	damaged-idle3: 2100vfy
+	damaged-idle3:
+		Filename: 2100vfy.shp
 		Start: 2
-	make: 2100fy1
+	make:
+		Filename: 2100fy1.shp
 		Length: *
 		Tick: 80
-	bib: bib1
+	bib:
+		Filename: bib1.tem
 		UseTilesetExtension: true
 		Length: *
 		Offset: 0,0
-	icon: 2100vfy1icon.shp
+	icon:
+		Filename: 2100vfy1icon.shp
 		AddExtension: False
 		Offset: 0,0
 
 
 2100vtolpad:
+	Defaults:
+		Defaults: 2100vtolpad.shp
 	idle:
 		ZOffset: -1023
 	damaged-idle:
@@ -548,8 +667,10 @@ cto2100power:
 		ZOffset: -1023
 	dead:
 		ZOffset: -1023
-	make: 2100vtolpad
-	icon: 2100vtolpadicon
+	make:
+		Filename: 2100vtolpad.shp
+	icon:
+		Filename: 2100vtolpadicon.shp
 
 ####################################################################################################
 #		SCAVENGER Buildings
@@ -557,28 +678,38 @@ cto2100power:
 
 2100chopshop:
 	Defaults:
+		Filename: 2100chopshop.shp
 		Offset: 0,12
 	idle: invisibleitem
 	damaged-idle: invisibleitem
-	idle1: 2100chopshop
-	damaged-idle1: 2100chopshop
-	idle2: 2100chopshop2
-	damaged-idle2: 2100chopshop2
-	idle3: 2100chopshopadv
-	damaged-idle3: 2100chopshopadv
+	idle1:
+		Filename: 2100chopshop.shp
+	damaged-idle1:
+		Filename: 2100chopshop.shp
+	idle2:
+		Filename: 2100chopshop2.shp
+	damaged-idle2:
+		Filename: 2100chopshop2.shp
+	idle3:
+		Filename: 2100chopshopadv.shp
+	damaged-idle3:
+		Filename: 2100chopshopadv.shp
 	dead:
 	make:
 		Length: *
 		Tick: 80
-	bib: bib1
+	bib:
+		Filename: bib1.tem
 		UseTilesetExtension: true
 		Length: *
 		Offset: 0,0
-	icon: 2100chopshopicon
+	icon:
+		Filename: 2100chopshopicon.shp
 		Offset: 0,0
 
 2100chopshopadv:
-	Defaults: 2100scavheavyfactory
+	Defaults:
+		Filename: 2100scavheavyfactory.shp
 		Offset: 6,12
 	idle:
 	damaged-idle:
@@ -586,15 +717,18 @@ cto2100power:
 	make:
 		Length: *
 		Tick: 80
-	bib: bib1
+	bib:
+		Filename: bib1.tem
 		UseTilesetExtension: true
 		Length: *
 		Offset: 0,0
-	icon: 2100chopshopadvicon
+	icon:
+		Filename: 2100chopshopadvicon.shp
 		Offset: 0,0
 
 2100scavpowr:
 	Defaults:
+		Filename: 2100scavpower.shp
 		Offset: 0,6
 	idle:
 		Length: *
@@ -603,14 +737,18 @@ cto2100power:
 	make:
 		Length: *
 		Tick: 80
-	bib: bib2
+	bib:
+		Filename: bib2.tem
 		UseTilesetExtension: true
 		Length: *
 		Offset: 0,0
-	icon: 2100scavpowricon
+	icon:
+		Filename: 2100scavpowricon.shp
 		Offset: 0,0
+
 2100scavware:
 	Defaults:
+		Filename: 2100scavware.shp
 		Offset: 0,6
 	idle:
 		Length: *
@@ -619,25 +757,30 @@ cto2100power:
 	make:
 		Length: *
 		Tick: 80
-	bib: bib2
+	bib:
+		Filename: bib2.tem
 		UseTilesetExtension: true
 		Length: *
 		Offset: 0,0
-	icon: 2100scavwareicon
+	icon:
+		Filename: 2100scavwareicon
 		Offset: 0,0
 
 2100scavturret:
 	Defaults:
+		Filename: 2100scavturret.shp
 		Offset: 0,-6
 	idle:
 		Length: 16
 	dead:
 	make:
 		Tick: 80
-	muzzle: minigun
+	muzzle:
+		Filename: minigun.shp
 		Length: 6
 		Facings: 8
-	bib: mbGTWR
+	bib:
+		Filename: mbGTWR.tem
 		UseTilesetExtension: true
 		TilesetOverrides:
 			WINTER: TEMPERAT
@@ -647,96 +790,123 @@ cto2100power:
 			CAMEO: TEMPERAT
 		Length: *
 		Offset: 0,-2
-	icon: 2100scavturreticon
+	icon:
+		Filename: 2100scavturreticon.shp
 		Offset: 0,0
 
 2100scavhangar:
+	Defaults:
+		Filename: 2100scavhangar.shp
 	idle:
 	damaged-idle:
 	dead:
 	make:
 		Length: *
 		Tick: 80
-	bib: bib2
+	bib:
+		Filename: bib2.tem
 		UseTilesetExtension: true
 		Length: *
-	icon: 2100scavhangaricon
+	icon:
+		Filename: 2100scavhangaricon.shp
 		Offset: 0,0
 
 
 2100scavpill:
+	Defaults:
+		Filename: 2100scavpill.shp
 	idle:
 	damaged-idle:
 	make:
 		Length: *
 		Tick: 80
 	dead:
-	muzzle: minigun
+	muzzle: minigun.shp
 		Length: 6
 		Facings: 8
-	bib: mbPBOX
+	bib:
+		Filename: mbPBOX.tem
 		Length: *
 		UseTilesetExtension: false
 		Offset: 0,-2
-	icon: 2100scavpillicon
+	icon:
+		Filename: 2100scavpillicon.shp
 
 2100scavmort:
+	Defaults:
+		Filename: 2100scavmort.shp
 	idle:
 	dead:
 	make:
 		Length: *
 		Tick: 80
-	muzzle: gunfire2
+	muzzle:
+		Filename: gunfire2.shp
 		Length: *
-	icon: 2100scavmorticon
+	icon:
+		Filename: 2100scavmorticon.shp
 
 2100scavrt:
-	idle: 2100scavmort
-	dead: 2100scavmort
-	make: 2100scavmort
+	Defaults:
+		Filename: 2100scavrt.shp
+	idle:
+		Filename: 2100scavmort.shp
+	dead:
+		Filename:2100scavmort.shp
+	make:
+		Filename:2100scavmort.shp
 		Length: *
 		Tick: 80
-	turret: 2100rvw
+	turret:
+		Filename: 2100rvw.shp
 		Start: 32
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: gunfire2
+	muzzle:
+		Filename: gunfire2.shp
 		Length: *
-	icon: 2100scavrticon
+	icon:
+		Filename: 2100scavrticon.shp
 
 2100scavtech:
 	Defaults:
 		Offset: 0,-6
+		Filename: 2100scavtech.shp
 	idle:
 	damaged-idle:
 	dead:
 	make:
 		Length: *
 		Tick: 80
-	bib: bib2
+	bib:
+		Filename: bib2.tem
 		UseTilesetExtension: true
 		Length: *
-	icon: 2100scavtechicon
+	icon:
+		Filename: 2100scavtechicon.shp
 		Offset: 0,0
 
 2100scavwall:
 	Defaults:
 		Offset: 0,-6
+		Filename: 2100scavwall.shp
 	idle:
 		Length: 16
 	dead:
 	make:
 		Tick: 80
-	icon: 2100scavwallicon
+	icon:
+		Filename: 2100scavwallicon.shp
 		Offset: 0,0
 
-
 2100scavft:
-	Defaults: 2100tower2
+	Defaults:
+		Filename: 2100tower2.shp
 		Offset: 0,-12
 	idle:
 		Start: 4
-	turret: 2100flamerdefense
+	turret:
+		Filename: 2100flamerdefense.shp 
 		Facings: 32
 		UseClassicFacings: True
 		Offset: 0,0
@@ -745,32 +915,41 @@ cto2100power:
 	muzzle:
 		Combine:
 			flame-n:
+				Filename: flame-n.shp
 				Length: *
 				Offset: 3,6
 			flame-nw:
+				Filename: flame-nw.shp
 				Length: *
 				Offset: 8,7
 			flame-w:
+				Filename: flame-w.shp
 				Length: *
 				Offset: 8,2
 			flame-sw:
+				Filename: flame-sw.shp
 				Length: *
 				Offset: 7,-2
 			flame-s:
+				Filename: flame-s.shp
 				Length: *
 				Offset: 3,-2
 			flame-se:
+				Filename: flame-se.shp
 				Length: *
 				Offset: -5,-2
 			flame-e:
+				Filename: flame-e.shp
 				Length: *
 				Offset: -7,2
 			flame-ne:
+				Filename: flame-ne.shp
 				Length: *
 				Offset: -7,8
 		Facings: 8
 		Length: 13
-	icon: 2100rticon.shp
+	icon:
+		Filename: 2100rticon.shp
 		AddExtension: False
 		Offset: 0,0
 
@@ -779,490 +958,773 @@ cto2100power:
 ####################################################################################################
 
 2100mcv:
-	idle: 2100pythontracks
+	Defaults:
+		Filename: 2100mcv.shp
+	idle:
+		Filename: 2100pythontracks.shp
 		Facings: 32
 		UseClassicFacings: True
 		Scale: 0.75
-	turret: 2100trucktur
+	turret:
+		Filename: 2100trucktur.shp
 		Facings: 32
 		UseClassicFacings: True
 		Scale: 0.75
-	icon: 2100mcvicon
+	icon:
+		Filename: 2100mcvicon.shp
 
 2100repairtruck:
-	idle: 2100viperwheels
+	Defaults:
+		Filename: 2100repairtruck.shp
+	idle:
+		Filename: 2100viperwheels.shp
 		Facings: 32
 		UseClassicFacings: True
-	turret: 2100trucktur
+	turret:
+		Filename: 2100trucktur.shp
 		Facings: 32
 		UseClassicFacings: True
-	icon: 2100repairtruckicon
+	icon:
+		Filename: 2100repairtruckicon.shp
 
 2100healtruck:
-	idle: 2100viperwheels
+	Defaults:
+		Filename: 2100healtruck.shp
+	idle:
+		Filename: 2100viperwheels.shp
 		Facings: 32
 		UseClassicFacings: True
-	turret: 2100healertur
+	turret:
+		Filename: 2100healertur.shp
 		Facings: 32
 		UseClassicFacings: True
-	icon: 2100healtruckicon
+	icon:
+		Filename: 2100healtruckicon.shp
+
 2100radartruck:
-	idle: 2100viperwheels
+	Defaults:
+		Filename: 2100radartruck.shp
+	idle:
+		Filename: 2100viperwheels.shp
 		Facings: 32
 		UseClassicFacings: True
-	turret: 2100radarpan
+	turret:
+		Filename: 2100radarpan.shp
 		Facings: 32
 		UseClassicFacings: True
-	icon: 2100icon
+	icon:
+		Filename: 2100icon.shp
 
 2100mvw:
-	idle: 2100viperwheels
+	Defaults:
+		Filename: 2100mvw.shp
+	idle:
+		Filename: 2100viperwheels.shp
 		Facings: 32
 		UseClassicFacings: True
-	turret: 2100lmg1
+	turret:
+		Filename: 2100lmg1.shp
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: minigun
+	muzzle:
+		Filename: minigun.shp
 		Length: 6
 		Facings: 8
-	icon: 2100mvwicon
+	icon:
+		Filename: 2100mvwicon.shp
 
 2100rvw:
-	idle: 2100viperwheels
+	Defaults:
+		Filename: 2100rvw.shp
+	idle:
+		Filename: 2100viperwheels.shp
 		Facings: 32
 		UseClassicFacings: True
-	turret: 2100rkpod
+	turret:
+		Filename: 2100rkpod.shp
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: minigun
+	muzzle:
+		Filename: minigun.shp
 		Length: 6
 		Facings: 8
-	icon: 2100rvwicon
+	icon:
+		Filename: 2100rvwicon.shp
+
 2100fvw:
-	idle: 2100viperwheels
+	Defaults:
+		Filename: 2100fvw.shp
+	idle:
+		Filename: 2100viperwheels.shp
 		Facings: 32
 		UseClassicFacings: True
-	turret: 2100flamertur
+	turret:
+		Filename: 2100flamertur.shp
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: minigun
+	muzzle:
+		Filename: minigun.shp
 		Length: 6
 		Facings: 8
-	icon: 2100fvwicon
+	icon:
+		Filename: 2100fvwicon.shp
+
 2100lcvw:
-	idle: 2100viperwheels
+	Defaults:
+		Filename: 2100cvw.shp
+	idle:
+		Filename: 2100viperwheels.shp
 		Facings: 32
 		UseClassicFacings: True
-	turret: 2100litcannon
+	turret:
+		Filename: 2100litcannon.shp
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: minigun
+	muzzle:
+		Filename: minigun.shp
 		Length: 6
 		Facings: 8
-	icon: 2100lcvwicon
+	icon:
+		Filename: 2100lcvwicon.shp
 
 2100mch:
-	idle: 2100cobrahtrack
+	Defaults:
+		Filename: 2100mch.shp
+	idle:
+		Filename: 2100cobrahtrack.shp
 		Facings: 32
 		UseClassicFacings: True
-	turret: 2100medcannon
+	turret:
+		Filename: 2100medcannon.shp
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: gunfire2
+	muzzle:
+		Filename: gunfire2.shp
 		Length: *
-	icon: 2100mchicon
+	icon:
+		Filename: 2100mchicon.shp
+
 2100nedch:
-	idle: 2100cobrahtrack
+	Defaults:
+		Filename: 2100nedch.shp
+	idle:
+		Filename: 2100cobrahtrack.shp
 		Facings: 32
 		UseClassicFacings: True
-	turret: 2100needle
+	turret:
+		Filename: 2100needle.shp
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: gunfire2
+	muzzle:
+		Filename: gunfire2.shp
 		Length: *
-	icon: 2100nedchicon
+	icon:
+		Filename: 2100nedchicon.shp
+
 2100bnkch:
-	idle: 2100cobrahtrack
+	Defaults:
+		Filename: 2100bnkch.shp
+	idle:
+		Filename: 2100cobrahtrack.shp
 		Facings: 32
 		UseClassicFacings: True
-	turret: 2100bunkerkill
+	turret:
+		Filename: 2100bunkerkill.shp
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: gunfire2
+	muzzle:
+		Filename: gunfire2.shp
 		Length: *
-	icon: 2100icon
+	icon:
+		Filename: 2100icon.shp
+
 2100bomch:
-	idle: 2100cobrahtrack
+	Defaults:
+		Filename: 2100bomch.shp
+	idle:
+		Filename: 2100cobrahtrack.shp
 		Facings: 32
 		UseClassicFacings: True
-	turret: 2100bombard
+	turret:
+		Filename: 2100bombard.shp
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: gunfire2
+	muzzle:
+		Filename: gunfire2.shp
 		Length: *
-	icon: 2100icon
+	icon:
+		Filename: 2100icon.shp
+
 2100aartch:
-	idle: 2100cobrahtrack
+	Defaults:
+		Filename: 2100aartch.shp
+	idle:
+		Filename: 2100cobrahtrack.shp
 		Facings: 32
 		UseClassicFacings: True
-	turret: 2100antiarty
+	turret:
+		Filename: 2100antiarty.shp
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: gunfire2
+	muzzle:
+		Filename: gunfire2.shp
 		Length: *
-	icon: 2100icon
+	icon:
+		Filename: 2100icon.shp
+
 2100hvch:
-	idle: 2100cobrahtrack
+	Defaults:
+		Filename: 2100hvch.shp
+	idle:
+		Filename: 2100cobrahtrack.shp
 		Facings: 32
 		UseClassicFacings: True
-	turret: 2100hypervelcannon
+	turret:
+		Filename: 2100hypervelcannon.shp
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: gunfire2
+	muzzle:
+		Filename: gunfire2.shp
 		Length: *
-	icon: 2100hvchicon
+	icon:
+		Filename: 2100hvchicon.shp
+
 2100flach:
-	idle: 2100cobrahtrack
+	Defaults:
+		Filename: 2100flach.shp
+	idle:
+		Filename: 2100cobrahtrack.shp
 		Facings: 32
 		UseClassicFacings: True
-	turret: 2100aaflak
+	turret:
+		Filename: 2100aaflak.shp
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: gunfire2
+	muzzle:
+		Filename: gunfire2.shp
 		Length: *
-	icon: 2100flachicon
+	icon:
+		Filename: 2100flachicon.shp
+
 2100mgch:
-	idle: 2100cobrahtrack
+	Defaults:
+		Filename: 2100mgch.shp
+	idle:
+		Filename: 2100cobrahtrack.shp
 		Facings: 32
 		UseClassicFacings: True
-	turret: 2100heavymg
+	turret:
+		Filename: 2100heavymg.shp
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: minigun
+	muzzle:
+		Filename: minigun.shp
 		Length: 6
 		Facings: 8
-	icon: 2100mgchicon
+	icon:
+		Filename: 2100mgchicon.shp
 
 2100tch:
-	idle: 2100cobrahtrack
+	Defaults:
+		Filename: 2100tch.shp
+	idle:
+		Filename: 2100cobrahtrack.shp
 		Facings: 32
 		UseClassicFacings: True
-	turret: 2100tankkiller
+	turret:
+		Filename: 2100tankkiller.shp
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: gunfire2
+	muzzle:
+		Filename: gunfire2.shp
 		Length: *
-	icon: 2100tchicon
+	icon:
+		Filename: 2100tchicon.shp
+
 2100t2ch:
-	idle: 2100cobrahtrack
+	Defaults:
+		Filename: 2100t2ch.shp
+	idle:
+		Filename: 2100cobrahtrack.shp
 		Facings: 32
 		UseClassicFacings: True
-	turret: 2100tankkiller2
+	turret:
+		Filename: 2100tankkiller2.shp
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: gunfire2
+	muzzle:
+		Filename: gunfire2.shp
 		Length: *
-	icon: 2100icon
+	icon:
+		Filename: 2100icon.shp
+
 2100moch:
-	idle: 2100cobrahtrack
+	Defaults:
+		Filename: 2100moch.shp
+	idle:
+		Filename: 2100cobrahtrack.shp
 		Facings: 32
 		UseClassicFacings: True
-	turret: 2100scavmortar
+	turret:
+		Filename: 2100scavmortar.shp
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: gunfire2
+	muzzle:
+		Filename: gunfire2.shp
 		Length: *
-	icon: 2100mochicon
+	icon:
+		Filename: 2100mochicon.shp
+
 2100imoch:
-	idle: 2100cobrahtrack
+	Defaults:
+		Filename: 2100imoch.shp
+	idle:
+		Filename: 2100cobrahtrack.shp
 		Facings: 32
 		UseClassicFacings: True
-	turret: 2100mortari
+	turret:
+		Filename: 2100mortari.shp
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: gunfire2
+	muzzle:
+		Filename: gunfire2.shp
 		Length: *
-	icon: 2100icon
+	icon:
+		Filename: 2100icon.shp
 
 2100rach:
-	idle: 2100cobrahtrack
+	Defaults:
+		Filename: 2100rach.shp
+	idle:
+		Filename: 2100cobrahtrack.shp
 		Facings: 32
 		UseClassicFacings: True
-	turret: 2100rocketarray
+	turret:
+		Filename: 2100rocketarray.shp
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: gunfire2
+	muzzle:
+		Filename: gunfire2.shp
 		Length: *
-	icon: 2100rachicon
+	icon:
+		Filename: 2100rachicon.shp
+
 2100ifch:
-	idle: 2100cobrahtrack
+	Defaults:
+		Filename: 2100ifch.shp
+	idle:
+		Filename: 2100cobrahtrack.shp
 		Facings: 32
 		UseClassicFacings: True
-	turret: 2100inferno
+	turret:
+		Filename: 2100inferno.shp
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: gunfire2
+	muzzle:
+		Filename: gunfire2.shp
 		Length: *
-	icon: 2100ifchicon
+	icon:
+		Filename: 2100ifchicon.shp
+
 2100aach:
-	idle: 2100cobrahtrack
+	Defaults:
+		Filename: 2100aach.shp
+	idle:
+		Filename: 2100cobrahtrack.shp
 		Facings: 32
 		UseClassicFacings: True
-	turret: 2100hurricane
+	turret:
+		Filename: 2100hurricane.shp
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: minigun
+	muzzle:
+		Filename: minigun.shp
 		Length: 6
 		Facings: 8
-	icon: 2100aachicon
+	icon:
+		Filename: 2100aachicon.shp
+
 2100supplytruck:
-	idle: truck
+	Defaults:
+		Filename: 2100supplytruck.shp
+	idle:
+		Filename: truck.shp
 		Facings: 32
 		UseClassicFacings: True
-	icon: 2100truckicon
+	icon:
+		Filename: 2100truckicon.shp
 
 2100apt:
+	Defaults:
+		Filename: 2100apt.shp
 	idle: 2100pythontracks
 		Facings: 32
 		UseClassicFacings: True
 	turret: 2100assaultmg
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: minigun
+	muzzle: minigun.shp
 		Length: 6
 		Facings: 8
 	icon: 2100apticon
+
 2100a2pt:
-	idle: 2100pythontracks
+	idle:
+		Filename: 2100pythontracks.shp
 		Facings: 32
 		UseClassicFacings: True
-	turret: 2100assaultmg2
+	turret:
+		Filename: 2100assaultmg2.shp
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: minigun
+	muzzle:
+		Filename: minigun.shp
 		Length: 6
 		Facings: 8
-	icon: 2100a2pticon
+	icon:
+		Filename: 2100a2pticon.shp
 
 2100hpt:
-	idle: 2100pythontracks
+	Defaults:
+		Filename: 2100hpt.shp
+	idle:
+		Filename: 2100pythontracks.shp
 		Facings: 32
 		UseClassicFacings: True
-	turret: 2100heavycannon
+	turret:
+		Filename: 2100heavycannon.shp
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: gunfire2
+	muzzle:
+		Filename: gunfire2.shp
 		Length: *
-	icon: 2100hpticon
+	icon:
+		Filename: 2100hpticon.shp
+
 2100acpt:
-	idle: 2100pythontracks
+	Defaults:
+		Filename: 2100acpt.shp
+	idle:
+		Filename: 2100pythontracks.shp
 		Facings: 32
 		UseClassicFacings: True
-	turret: 2100assaultcann
+	turret:
+		Filename: 2100assaultcann.shp
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: gunfire2
+	muzzle:
+		Filename: gunfire2.shp
 		Length: *
-	icon: 2100acpticon
+	icon:
+		Filename: 2100acpticon
+
 2100ac2pt:
-	idle: 2100pythontracks
+	Defaults:
+		Filename: 2100ac2pt.shp
+	idle:
+		Filename: 2100pythontracks.shp
 		Facings: 32
 		UseClassicFacings: True
-	turret: 2100assaultcann2
+	turret:
+		Filename: 2100assaultcann2.shp
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: gunfire2
+	muzzle:
+		Filename: gunfire2.shp
 		Length: *
-	icon: 2100ac2pticon
+	icon:
+		Filename: 2100ac2pticon.shp
+
 2100cpt:
-	idle: 2100pythontracks
+	Defaults:
+		Filename: 2100cpt.shp
+	idle:
+		Filename: 2100pythontracks.shp
 		Facings: 32
 		UseClassicFacings: True
-	turret: 2100commander
+	turret:
+		Filename: 2100commander.shp
 		Facings: 32
 		UseClassicFacings: True
-	icon: 2100commandicon
-	muzzle: minigun
+	icon:
+		Filename: 2100commandicon.shp
+	muzzle:
+		Filename: minigun.shp
 		Length: 6
 		Facings: 8
 
 2100mchov:
-	idle: 2100cobrahovercraft
+	Defaults:
+		Filename: 2100mchov.shp
+	idle:
+		Filename: 2100cobrahovercraft.shp
 		Facings: 32
 		UseClassicFacings: True
-	turret: 2100medcannon
+	turret:
+		Filename: 2100medcannon.shp
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: gunfire2
+	muzzle:
+		Filename: gunfire2.shp
 		Length: *
-	icon: 2100mchovicon
+	icon:
+		Filename: 2100mchovicon.shp
+
 2100aphov:
-	idle: 2100pythonhovercraft
+	defaults:
+		Filename: 2100aphov.shp
+	idle:
+		Filename: 2100pythonhovercraft.shp
 		Facings: 32
 		UseClassicFacings: True
-	turret: 2100assaultmg
+	turret:
+		Filename: 2100assaultmg.shp
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: minigun
+	muzzle:
+		Filename: minigun.shp
 		Length: 6
 		Facings: 8
-	icon: 2100aphovicon
+	icon: 
+		Filename: 2100aphovicon
+
 2100hphov:
-	idle: 2100pythonhovercraft
+	Defaults:
+		Filename: 2100hphov.shp
+	idle:
+		Filename: 2100pythonhovercraft
 		Facings: 32
 		UseClassicFacings: True
-	turret: 2100heavycannon
+	turret:
+		Filename: 2100heavycannon
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: gunfire2
+	muzzle:
+		Filename: gunfire2.shp
 		Length: *
-	icon: 2100hphovicon
+	icon:
+		Filename: 2100hphovicon.shp
 
 2100rippt:
-	idle: 2100pythontracks
+	Defaults:
+		Filename: 2100rippt.shp
+	idle:
+		Filename: 2100pythontracks.shp
 		Facings: 32
 		UseClassicFacings: True
-	turret: 2100ripple
+	turret:
+		Filename: 2100ripple.shp
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: minigun
+	muzzle:
+		Filename: minigun.shp
 		Length: 6
 		Facings: 8
-	icon: 2100icon
+	icon:
+		Filename: 2100icon.shp
+
 2100hotpt:
-	idle: 2100pythontracks
+	Defaults:
+		Filename: 2100hotpt.shp
+	idle:
+		Filename: 2100pythontracks.shp
 		Facings: 32
 		UseClassicFacings: True
-	turret: 2100hotwizer
+	turret:
+		Filename: 2100hotwizer
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: minigun
+	muzzle:
+		Filename: minigun.shp
 		Length: 6
 		Facings: 8
-	icon: 2100icon
+	icon:
+		Filename: 2100icon.shp
+
 2100pepperch:
-	idle: 2100cobrahtrack
+	Defaults:
+		Filename: 2100pepperch.shp
+	idle:
+		Filename: 2100cobrahtrack.shp
 		Facings: 32
 		UseClassicFacings: True
-	turret: 2100pepper
+	turret:
+		Filename: 2100pepper.shp
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: gunfire2
+	muzzle:
+		Filename: gunfire2.shp
 		Length: *
-	icon: 2100icon
+	icon:
+		Filename: 2100icon.shp
 ###################################################################################################
 #		2100 TheProject Aircraft
 ####################################################################################################
 2100mvvtol:
-	idle: 2100vipervtol
+	Defaults:
+		Filename: 2100mvvtol.shp
+	idle:
+		Filename: 2100vipervtol.shp
 		Facings: 32
 		UseClassicFacings: True
-	turret: 2100lmg1
+	turret:
+		Filename: 2100lmg1.shp
 		Facings: 32
 		UseClassicFacings: True
 		ZOffset: -256
-	muzzle: minigun
+	muzzle:
+		Filename: minigun.shp
 		Length: 6
 		Facings: 8
-	icon: 2100mvvtolicon
+	icon:
+		Filename: 2100mvvtolicon.shp
+
 2100rvvtol:
-	idle: 2100vipervtol
+	Defaults:
+		Filename: 2100rvvtol.shp
+	idle:
+		Filename: 2100vipervtol.shp
 		Facings: 32
 		UseClassicFacings: True
-	turret: 2100rkpod
+	turret:
+		Filename: 2100rkpod.shp
 		Facings: 32
 		UseClassicFacings: True
 		ZOffset: -256
-	muzzle: minigun
+	muzzle:
+		Filename: minigun.shp
 		Length: 6
 		Facings: 8
-	icon: 2100rvvtolicon
+	icon:
+		Filename: 2100rvvtolicon.shp
+
 2100lcvtol:
-	idle: 2100cobravtol
+	Defaults:
+		Filename: 2100lcvtol.shp
+	idle:
+		Filename: 2100cobravtol.shp
 		Facings: 32
 		UseClassicFacings: True
-	turret: 2100litcannon
+	turret:
+		Filename: 2100litcannon.shp
 		Facings: 32
 		UseClassicFacings: True
 		ZOffset: -256
-	muzzle: minigun
+	muzzle:
+		Filename: minigun.shp
 		Length: 6
 		Facings: 8
-	icon: heliicnh.tem
+	icon:
+		Filename: heliicnh.tem
 		AddExtension: False
+
 2100tcvtol:
-	idle: 2100cobravtol
+	Defaults:
+		Filename: 2100tcvtol.shp
+	idle:
+		Filename: 2100cobravtol.shp
 		Facings: 32
 		UseClassicFacings: True
-	turret: 2100tankkiller
+	turret:
+		Filename: 2100tankkiller.shp
 		Facings: 32
 		UseClassicFacings: True
 		ZOffset: -256
-	muzzle: minigun
+	muzzle:
+		Filename: minigun.shp
 		Length: 6
 		Facings: 8
-	icon: heliicnh.tem
+	icon:
+		Filename: heliicnh.tem
 		AddExtension: False
 
 ####################################################################################################
 #		2100 Collective Vehicles
 ####################################################################################################
 2100repairtruckc:
-	idle: 2100bugwheels
+	Defaults:
+		Filename: 2100repairtruck.shp
+	idle:
+		Filename: 2100bugwheels.shp
 		Facings: 32
 		UseClassicFacings: True
-	turret: 2100trucktur
+	turret:
+		Filename: 2100trucktur.shp
 		Facings: 32
 		UseClassicFacings: True
-	icon: 2100repairtruckcicon
+	icon:
+		Filename: 2100repairtruckcicon.shp
 
 2100healtruckc:
-	idle: 2100bugwheels
+	Defaults:
+		Filename: 2100healtruckc.shp
+	idle:
+		Filename: 2100bugwheels.shp
 		Facings: 32
 		UseClassicFacings: True
-	turret: 2100healertur
+	turret:
+		Filename: 2100healertur.shp
 		Facings: 32
 		UseClassicFacings: True
-	icon: 2100healtruckcicon
-
+	icon:
+		Filename: 2100healtruckcicon.shp
 
 2100radartruckc:
-	idle: 2100bugwheels
+	Defaults:
+		Filename: 2100radartruckc.shp
+	idle:
+		Filename: 2100bugwheels.shp
 		Facings: 32
 		UseClassicFacings: True
-	turret: 2100radarpan
+	turret:
+		Filename: 2100radarpan.shp
 		Facings: 32
 		UseClassicFacings: True
-	icon: 2100icon
+	icon:
+		Filename: 2100icon.shp
+
 2100mbuw:
-	idle: 2100bugwheels
+	Defaults:
+		Filename: 2100mbuw.shp
+	idle:
+		Filename: 2100bugwheels.shp
 		Facings: 32
 		UseClassicFacings: True
 		Scale: 0.60
-	turret: 2100lmg1
+	turret:
+		Filename: 2100lmg1.shp
 		Facings: 32
 		UseClassicFacings: True
 		Scale: 0.60
-	muzzle: minigun
+	muzzle:
+		Filename: minigun.shp
 		Length: 6
 		Facings: 8
 		Scale: 0.60
-	icon: 2100mbuwicon
+	icon:
+		Filename: 2100mbuwicon.shp
 
 2100rbuw:
-	idle: 2100bugwheels
+	Defaults:
+		Filename: 2100rbu.shp
+	idle:
+		Filename: 2100bugwheels.shp
 		Facings: 32
 		UseClassicFacings: True
 		Scale: 0.60
-	turret: 2100rkpod
+	turret:
+		Filename: 2100rkpod.shp
 		Facings: 32
 		UseClassicFacings: True
 		Scale: 0.60
-	muzzle: minigun
+	muzzle:
+		Filename: minigun.shp
 		Length: 6
 		Facings: 8
 		Scale: 0.60
-	icon: 2100rbuwicon
+	icon:
+		Filename: 2100rbuwicon.shp
+
 2100fbuw:
 	idle: 2100bugwheels
 		Facings: 32
@@ -1272,7 +1734,7 @@ cto2100power:
 		Facings: 32
 		UseClassicFacings: True
 		Scale: 0.60
-	muzzle: minigun
+	muzzle: minigun.shp
 		Length: 6
 		Facings: 8
 		Scale: 0.60
@@ -1287,7 +1749,7 @@ cto2100power:
 		Facings: 32
 		UseClassicFacings: True
 		Scale: 0.60
-	muzzle: gunfire2
+	muzzle: gunfire2.shp
 		Length: *
 		Scale: 0.60
 	icon: 2100rabuwicon
@@ -1298,7 +1760,7 @@ cto2100power:
 	turret: 2100medcannon
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: gunfire2
+	muzzle: gunfire2.shp
 		Length: *
 	icon: 2100mschicon
 
@@ -1309,20 +1771,28 @@ cto2100power:
 	turret: 2100needle
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: gunfire2
+	muzzle: gunfire2.shp
 		Length: *
 	icon: 2100nedschicon
+
 2100mgsch:
-	idle: 2100scorpionhtrack
+	Defaults:
+		Filename: 2100mgsch.shp
+	idle:
+		Filename: 2100scorpionhtrack.shp
 		Facings: 32
 		UseClassicFacings: True
-	turret: 2100heavymg
+	turret:
+		Filename: 2100heavymg.shp
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: minigun
+	muzzle:
+		Filename: minigun.shp
 		Length: 6
 		Facings: 8
-	icon: 2100mgschicon
+	icon:
+		Filename: 2100mgschicon.shp
+
 2100tsch:
 	idle: 2100scorpionhtrack
 		Facings: 32
@@ -1330,7 +1800,7 @@ cto2100power:
 	turret: 2100tankkiller
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: gunfire2
+	muzzle: gunfire2.shp
 		Length: *
 	icon: 2100tschicon
 2100t2sch:
@@ -1340,7 +1810,7 @@ cto2100power:
 	turret: 2100tankkiller2
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: gunfire2
+	muzzle: gunfire2.shp
 		Length: *
 	icon: 2100icon
 2100rsch:
@@ -1350,7 +1820,7 @@ cto2100power:
 	turret: 2100rkpod
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: gunfire2
+	muzzle: gunfire2.shp
 		Length: *
 	icon: 2100rschicon
 2100lcsch:
@@ -1360,7 +1830,7 @@ cto2100power:
 	turret: 2100litcannon
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: gunfire2
+	muzzle: gunfire2.shp
 		Length: *
 	icon: 2100lcschicon
 2100mosch:
@@ -1370,7 +1840,7 @@ cto2100power:
 	turret: 2100scavmortar
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: gunfire2
+	muzzle: gunfire2.shp
 		Length: *
 	icon: 2100moschicon
 2100ifsch:
@@ -1380,7 +1850,7 @@ cto2100power:
 	turret: 2100inferno
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: gunfire2
+	muzzle: gunfire2.shp
 		Length: *
 	icon: 2100ifschicon
 2100hvsch:
@@ -1390,7 +1860,7 @@ cto2100power:
 	turret: 2100hypervelcannon
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: gunfire2
+	muzzle: gunfire2.shp
 		Length: *
 	icon: 2100hvschicon
 2100flasch:
@@ -1400,7 +1870,7 @@ cto2100power:
 	turret: 2100aaflak
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: gunfire2
+	muzzle: gunfire2.shp
 		Length: *
 	icon: 2100flaschicon
 2100amat:
@@ -1410,7 +1880,7 @@ cto2100power:
 	turret: 2100assaultmg
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: minigun
+	muzzle: minigun.shp
 		Length: 6
 		Facings: 8
 	icon: 2100amaticon
@@ -1421,7 +1891,7 @@ cto2100power:
 	turret: 2100hurricane
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: minigun
+	muzzle: minigun.shp
 		Length: 6
 		Facings: 8
 	icon: 2100aamaticon
@@ -1432,7 +1902,7 @@ cto2100power:
 	turret: 2100assaultmg2
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: minigun
+	muzzle: minigun.shp
 		Length: 6
 		Facings: 8
 	icon: 2100a2maticon
@@ -1444,7 +1914,7 @@ cto2100power:
 	turret: 2100heavycannon
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: gunfire2
+	muzzle: gunfire2.shp
 		Length: *
 	icon: 2100hmaticon
 
@@ -1455,7 +1925,7 @@ cto2100power:
 	turret: 2100assaultcann
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: gunfire2
+	muzzle: gunfire2.shp
 		Length: *
 	icon: 2100acmaticon
 2100ac2mat:
@@ -1465,7 +1935,7 @@ cto2100power:
 	turret: 2100assaultcann2
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: gunfire2
+	muzzle: gunfire2.shp
 		Length: *
 	icon: 2100ac2maticon
 2100cmat:
@@ -1476,7 +1946,7 @@ cto2100power:
 		Facings: 32
 		UseClassicFacings: True
 	icon: 2100commandicon
-	muzzle: minigun
+	muzzle: minigun.shp
 		Length: 6
 		Facings: 8
 2100mschov:
@@ -1486,7 +1956,7 @@ cto2100power:
 	turret: 2100medcannon
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: gunfire2
+	muzzle: gunfire2.shp
 		Length: *
 	icon: 2100mschovicon
 2100amahov:
@@ -1496,7 +1966,7 @@ cto2100power:
 	turret: 2100assaultmg
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: minigun
+	muzzle: minigun.shp
 		Length: 6
 		Facings: 8
 	icon: 2100amahovicon
@@ -1507,7 +1977,7 @@ cto2100power:
 	turret: 2100heavycannon
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: gunfire2
+	muzzle: gunfire2.shp
 		Length: *
 	icon: 2100hmahovicon
 
@@ -1518,7 +1988,7 @@ cto2100power:
 	turret: 2100bunkerkill
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: gunfire2
+	muzzle: gunfire2.shp
 		Length: *
 	icon: 2100icon
 2100ripmat:
@@ -1528,7 +1998,7 @@ cto2100power:
 	turret: 2100ripple
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: minigun
+	muzzle: minigun.shp
 		Length: 6
 		Facings: 8
 	icon: 2100icon
@@ -1539,7 +2009,7 @@ cto2100power:
 	turret: 2100hotwizer
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: minigun
+	muzzle: minigun.shp
 		Length: 6
 		Facings: 8
 	icon: 2100icon
@@ -1550,7 +2020,7 @@ cto2100power:
 	turret: 2100pepper
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: gunfire2
+	muzzle: gunfire2.shp
 		Length: *
 	icon: 2100icon
 ####################################################################################################
@@ -1564,7 +2034,7 @@ cto2100power:
 		Facings: 32
 		UseClassicFacings: True
 		ZOffset: -256
-	muzzle: minigun
+	muzzle: minigun.shp
 		Length: 6
 		Facings: 8
 	icon: 2100mbuvtolicon
@@ -1576,7 +2046,7 @@ cto2100power:
 		Facings: 32
 		UseClassicFacings: True
 		ZOffset: -256
-	muzzle: minigun
+	muzzle: minigun.shp
 		Length: 6
 		Facings: 8
 	icon: 2100rbuvtolicon
@@ -1588,7 +2058,7 @@ cto2100power:
 		Facings: 32
 		UseClassicFacings: True
 		ZOffset: -256
-	muzzle: minigun
+	muzzle: minigun.shp
 		Length: 6
 		Facings: 8
 	icon: heliicnh.tem
@@ -1601,7 +2071,7 @@ cto2100power:
 		Facings: 32
 		UseClassicFacings: True
 		ZOffset: -256
-	muzzle: minigun
+	muzzle: minigun.shp
 		Length: 6
 		Facings: 8
 	icon: heliicnh.tem
@@ -1645,7 +2115,7 @@ cto2100power:
 		Facings: 32
 		UseClassicFacings: True
 		Scale: 0.60
-	muzzle: minigun
+	muzzle: minigun.shp
 		Length: 6
 		Facings: 8
 		Scale: 0.60
@@ -1659,7 +2129,7 @@ cto2100power:
 		Facings: 32
 		UseClassicFacings: True
 		Scale: 0.60
-	muzzle: minigun
+	muzzle: minigun.shp
 		Length: 6
 		Facings: 8
 		Scale: 0.60
@@ -1673,7 +2143,7 @@ cto2100power:
 		Facings: 32
 		UseClassicFacings: True
 		Scale: 0.60
-	muzzle: minigun
+	muzzle: minigun.shp
 		Length: 6
 		Facings: 8
 		Scale: 0.60
@@ -1688,7 +2158,7 @@ cto2100power:
 		Facings: 32
 		UseClassicFacings: True
 		Scale: 0.60
-	muzzle: gunfire2
+	muzzle: gunfire2.shp
 		Length: *
 		Scale: 0.60
 	icon: 2100ralewicon
@@ -1699,7 +2169,7 @@ cto2100power:
 	turret: 2100medcannon
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: gunfire2
+	muzzle: gunfire2.shp
 		Length: *
 	icon: 2100mphhicon
 2100nedphh:
@@ -1709,7 +2179,7 @@ cto2100power:
 	turret: 2100needle
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: gunfire2
+	muzzle: gunfire2.shp
 		Length: *
 	icon: 2100nedphhicon
 2100mgphh:
@@ -1719,7 +2189,7 @@ cto2100power:
 	turret: 2100heavymg
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: minigun
+	muzzle: minigun.shp
 		Length: 6
 		Facings: 8
 	icon: 2100mgphhicon
@@ -1730,7 +2200,7 @@ cto2100power:
 	turret: 2100tankkiller
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: gunfire2
+	muzzle: gunfire2.shp
 		Length: *
 	icon: 2100tphhicon
 2100t2phh:
@@ -1740,7 +2210,7 @@ cto2100power:
 	turret: 2100tankkiller2
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: gunfire2
+	muzzle: gunfire2.shp
 		Length: *
 	icon: 2100icon
 2100mophh:
@@ -1750,7 +2220,7 @@ cto2100power:
 	turret: 2100scavmortar
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: gunfire2
+	muzzle: gunfire2.shp
 		Length: *
 	icon: 2100mophhicon
 
@@ -1761,7 +2231,7 @@ cto2100power:
 	turret: 2100inferno
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: gunfire2
+	muzzle: gunfire2.shp
 		Length: *
 	icon: 2100ifphhicon
 2100aaphh:
@@ -1771,7 +2241,7 @@ cto2100power:
 	turret: 2100hurricane
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: minigun
+	muzzle: minigun.shp
 		Length: 6
 		Facings: 8
 	icon: 2100aaphhicon
@@ -1782,7 +2252,7 @@ cto2100power:
 	turret: 2100hypervelcannon
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: gunfire2
+	muzzle: gunfire2.shp
 		Length: *
 	icon: 2100hvphhicon
 2100flaphh:
@@ -1792,7 +2262,7 @@ cto2100power:
 	turret: 2100aaflak
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: gunfire2
+	muzzle: gunfire2.shp
 		Length: *
 	icon: 2100flaphhicon
 2100atit:
@@ -1802,7 +2272,7 @@ cto2100power:
 	turret: 2100assaultmg
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: minigun
+	muzzle: minigun.shp
 		Length: 6
 		Facings: 8
 	icon: 2100atiticon
@@ -1813,7 +2283,7 @@ cto2100power:
 	turret: 2100assaultmg2
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: minigun
+	muzzle: minigun.shp
 		Length: 6
 		Facings: 8
 	icon: 2100a2titicon
@@ -1825,7 +2295,7 @@ cto2100power:
 	turret: 2100heavycannon
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: gunfire2
+	muzzle: gunfire2.shp
 		Length: *
 	icon: 2100htiticon
 2100actit:
@@ -1835,7 +2305,7 @@ cto2100power:
 	turret: 2100assaultcann
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: gunfire2
+	muzzle: gunfire2.shp
 		Length: *
 	icon: 2100actiticon
 2100ac2tit:
@@ -1845,7 +2315,7 @@ cto2100power:
 	turret: 2100assaultcann2
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: gunfire2
+	muzzle: gunfire2.shp
 		Length: *
 	icon: 2100ac2titicon
 2100ctit:
@@ -1856,7 +2326,7 @@ cto2100power:
 		Facings: 32
 		UseClassicFacings: True
 	icon: 2100commandicon
-	muzzle: minigun
+	muzzle: minigun.shp
 		Length: 6
 		Facings: 8
 2100mphhov:
@@ -1866,7 +2336,7 @@ cto2100power:
 	turret: 2100medcannon
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: gunfire2
+	muzzle: gunfire2.shp
 		Length: *
 	icon: 2100mphhovicon
 2100atihov:
@@ -1876,7 +2346,7 @@ cto2100power:
 	turret: 2100assaultmg
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: minigun
+	muzzle: minigun.shp
 		Length: 6
 		Facings: 8
 	icon: 2100atihovicon
@@ -1887,7 +2357,7 @@ cto2100power:
 	turret: 2100heavycannon
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: gunfire2
+	muzzle: gunfire2.shp
 		Length: *
 	icon: 2100htihovicon
 
@@ -1898,7 +2368,7 @@ cto2100power:
 	turret: 2100bunkerkill
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: gunfire2
+	muzzle: gunfire2.shp
 		Length: *
 	icon: 2100icon
 2100riptit:
@@ -1908,7 +2378,7 @@ cto2100power:
 	turret: 2100ripple
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: minigun
+	muzzle: minigun.shp
 		Length: 6
 		Facings: 8
 	icon: 2100icon
@@ -1919,7 +2389,7 @@ cto2100power:
 	turret: 2100hotwizer
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: minigun
+	muzzle: minigun.shp
 		Length: 6
 		Facings: 8
 	icon: 2100icon
@@ -1930,7 +2400,7 @@ cto2100power:
 	turret: 2100pepper
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: gunfire2
+	muzzle: gunfire2.shp
 		Length: *
 	icon: 2100icon
 ####################################################################################################
@@ -1944,7 +2414,7 @@ cto2100power:
 		Facings: 32
 		UseClassicFacings: True
 		ZOffset: -256
-	muzzle: minigun
+	muzzle: minigun.shp
 		Length: 6
 		Facings: 8
 	icon: 2100mlevtolicon
@@ -1956,7 +2426,7 @@ cto2100power:
 		Facings: 32
 		UseClassicFacings: True
 		ZOffset: -256
-	muzzle: minigun
+	muzzle: minigun.shp
 		Length: 6
 		Facings: 8
 	icon: 2100rlevtolicon
@@ -1968,7 +2438,7 @@ cto2100power:
 		Facings: 32
 		UseClassicFacings: True
 		ZOffset: -256
-	muzzle: minigun
+	muzzle: minigun.shp
 		Length: 6
 		Facings: 8
 	icon: heliicnh.tem
@@ -1981,7 +2451,7 @@ cto2100power:
 		Facings: 32
 		UseClassicFacings: True
 		ZOffset: -256
-	muzzle: minigun
+	muzzle: minigun.shp
 		Length: 6
 		Facings: 8
 	icon: heliicnh.tem
@@ -2025,7 +2495,7 @@ cto2100power:
 		Facings: 32
 		UseClassicFacings: True
 		Scale: 0.60
-	muzzle: minigun
+	muzzle: minigun.shp
 		Length: 6
 		Facings: 8
 		Scale: 0.60
@@ -2039,7 +2509,7 @@ cto2100power:
 		Facings: 32
 		UseClassicFacings: True
 		Scale: 0.60
-	muzzle: minigun
+	muzzle: minigun.shp
 		Length: 6
 		Facings: 8
 		Scale: 0.60
@@ -2053,7 +2523,7 @@ cto2100power:
 		Facings: 32
 		UseClassicFacings: True
 		Scale: 0.60
-	muzzle: minigun
+	muzzle: minigun.shp
 		Length: 6
 		Facings: 8
 		Scale: 0.60
@@ -2066,7 +2536,7 @@ cto2100power:
 	turret: 2100medcannon
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: gunfire2
+	muzzle: gunfire2.shp
 		Length: *
 	icon: 2100mrthicon
 2100mgrth:
@@ -2076,7 +2546,7 @@ cto2100power:
 	turret: 2100heavymg
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: minigun
+	muzzle: minigun.shp
 		Length: 6
 		Facings: 8
 	icon: 2100mgrthicon
@@ -2087,7 +2557,7 @@ cto2100power:
 	turret: 2100needle
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: gunfire2
+	muzzle: gunfire2.shp
 		Length: *
 	icon: 2100nedrthicon
 2100trth:
@@ -2097,7 +2567,7 @@ cto2100power:
 	turret: 2100tankkiller
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: gunfire2
+	muzzle: gunfire2.shp
 		Length: *
 	icon: 2100trthicon
 2100t2rth:
@@ -2107,7 +2577,7 @@ cto2100power:
 	turret: 2100tankkiller2
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: gunfire2
+	muzzle: gunfire2.shp
 		Length: *
 	icon: 2100trthicon
 2100morth:
@@ -2117,7 +2587,7 @@ cto2100power:
 	turret: 2100scavmortar
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: gunfire2
+	muzzle: gunfire2.shp
 		Length: *
 	icon: 2100morthicon
 2100rarth:
@@ -2127,7 +2597,7 @@ cto2100power:
 	turret: 2100rocketarray
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: gunfire2
+	muzzle: gunfire2.shp
 		Length: *
 	icon: 2100rarthicon
 2100ifrth:
@@ -2137,7 +2607,7 @@ cto2100power:
 	turret: 2100inferno
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: gunfire2
+	muzzle: gunfire2.shp
 		Length: *
 	icon: 2100ifrthicon
 
@@ -2148,7 +2618,7 @@ cto2100power:
 	turret: 2100hypervelcannon
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: gunfire2
+	muzzle: gunfire2.shp
 		Length: *
 	icon: 2100hvrthicon
 2100flarth:
@@ -2158,7 +2628,7 @@ cto2100power:
 	turret: 2100aaflak
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: gunfire2
+	muzzle: gunfire2.shp
 		Length: *
 	icon: 2100flarthicon
 2100avet:
@@ -2168,7 +2638,7 @@ cto2100power:
 	turret: 2100assaultmg
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: minigun
+	muzzle: minigun.shp
 		Length: 6
 		Facings: 8
 	icon: 2100aveticon
@@ -2179,7 +2649,7 @@ cto2100power:
 	turret: 2100hurricane
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: minigun
+	muzzle: minigun.shp
 		Length: 6
 		Facings: 8
 	icon: 2100aaveticon
@@ -2190,7 +2660,7 @@ cto2100power:
 	turret: 2100assaultmg2
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: minigun
+	muzzle: minigun.shp
 		Length: 6
 		Facings: 8
 	icon: 2100a2veticon
@@ -2202,7 +2672,7 @@ cto2100power:
 	turret: 2100heavycannon
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: gunfire2
+	muzzle: gunfire2.shp
 		Length: *
 	icon: 2100hveticon
 
@@ -2213,7 +2683,7 @@ cto2100power:
 	turret: 2100assaultcann
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: gunfire2
+	muzzle: gunfire2.shp
 		Length: *
 	icon: 2100acveticon
 2100ac2vet:
@@ -2223,7 +2693,7 @@ cto2100power:
 	turret: 2100assaultcann2
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: gunfire2
+	muzzle: gunfire2.shp
 		Length: *
 	icon: 2100ac2veticon
 2100cvet:
@@ -2234,7 +2704,7 @@ cto2100power:
 		Facings: 32
 		UseClassicFacings: True
 	icon: 2100commandicon
-	muzzle: minigun
+	muzzle: minigun.shp
 		Length: 6
 		Facings: 8
 2100nexvet:
@@ -2245,7 +2715,7 @@ cto2100power:
 		Facings: 32
 		UseClassicFacings: True
 	icon: 2100icon
-	muzzle: minigun
+	muzzle: minigun.shp
 		Length: 6
 		Facings: 8
 2100mrthov:
@@ -2255,7 +2725,7 @@ cto2100power:
 	turret: 2100medcannon
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: gunfire2
+	muzzle: gunfire2.shp
 		Length: *
 	icon: 2100mrthovicon
 2100avehov:
@@ -2265,7 +2735,7 @@ cto2100power:
 	turret: 2100assaultmg
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: minigun
+	muzzle: minigun.shp
 		Length: 6
 		Facings: 8
 	icon: 2100avehovicon
@@ -2276,7 +2746,7 @@ cto2100power:
 	turret: 2100heavycannon
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: gunfire2
+	muzzle: gunfire2.shp
 		Length: *
 	icon: 2100hvehovicon
 2100ripvet:
@@ -2286,7 +2756,7 @@ cto2100power:
 	turret: 2100ripple
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: minigun
+	muzzle: minigun.shp
 		Length: 6
 		Facings: 8
 	icon: 2100icon
@@ -2297,7 +2767,7 @@ cto2100power:
 	turret: 2100hotwizer
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: minigun
+	muzzle: minigun.shp
 		Length: 6
 		Facings: 8
 	icon: 2100icon
@@ -2308,7 +2778,7 @@ cto2100power:
 	turret: 2100pepper
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: gunfire2
+	muzzle: gunfire2.shp
 		Length: *
 	icon: 2100icon
 ####################################################################################################
@@ -2322,7 +2792,7 @@ cto2100power:
 		Facings: 32
 		UseClassicFacings: True
 		ZOffset: -256
-	muzzle: minigun
+	muzzle: minigun.shp
 		Length: 6
 		Facings: 8
 	icon: 2100mrevtolicon
@@ -2334,7 +2804,7 @@ cto2100power:
 		Facings: 32
 		UseClassicFacings: True
 		ZOffset: -256
-	muzzle: minigun
+	muzzle: minigun.shp
 		Length: 6
 		Facings: 8
 	icon: 2100rrevtolicon
@@ -2346,7 +2816,7 @@ cto2100power:
 		Facings: 32
 		UseClassicFacings: True
 		ZOffset: -256
-	muzzle: minigun
+	muzzle: minigun.shp
 		Length: 6
 		Facings: 8
 	icon: heliicnh.tem
@@ -2359,7 +2829,7 @@ cto2100power:
 		Facings: 32
 		UseClassicFacings: True
 		ZOffset: -256
-	muzzle: minigun
+	muzzle: minigun.shp
 		Length: 6
 		Facings: 8
 	icon: heliicnh.tem
@@ -2382,7 +2852,7 @@ cto2100power:
 	run: 2100cyborglegs
 		Length: 11
 		Facings: 8
-	muzzle: minigun
+	muzzle: minigun.shp
 		Length: 6
 		Facings: 8
 	icon: 2100cymgicon
@@ -2401,7 +2871,7 @@ cto2100power:
 	run: 2100cyborglegs
 		Length: 11
 		Facings: 8
-	muzzle: minigun
+	muzzle: minigun.shp
 		Length: 6
 		Facings: 8
 	icon: 2100cycanicon
@@ -2421,7 +2891,7 @@ cto2100power:
 	run: 2100cyborglegs
 		Length: 11
 		Facings: 8
-	muzzle: minigun
+	muzzle: minigun.shp
 		Length: 6
 		Facings: 8
 	icon: 2100cylanicon
@@ -2440,7 +2910,7 @@ cto2100power:
 	run: 2100cyborglegs
 		Length: 11
 		Facings: 8
-	muzzle: minigun
+	muzzle: minigun.shp
 		Length: 6
 		Facings: 8
 	icon: 2100icon
@@ -2460,7 +2930,7 @@ cto2100power:
 	run: 2100cyborglegs
 		Length: 11
 		Facings: 8
-	muzzle: minigun
+	muzzle: minigun.shp
 		Length: 6
 		Facings: 8
 	icon: 2100icon
@@ -2480,7 +2950,7 @@ cto2100power:
 	run: 2100cyborglegs
 		Length: 11
 		Facings: 8
-	muzzle: minigun
+	muzzle: minigun.shp
 		Length: 6
 		Facings: 8
 	icon: 2100icon
@@ -2495,7 +2965,7 @@ cto2100power:
 		Facings: 32
 	skin3: 2100scavcar3
 		Facings: 32
-	muzzle: minigun
+	muzzle: minigun.shp
 		Length: 6
 		Facings: 8
 	icon: 2100trikeicon
@@ -2503,7 +2973,7 @@ cto2100power:
 	idle:
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: minigun
+	muzzle: minigun.shp
 		Length: 6
 		Facings: 8
 	icon: 2100trikeicon
@@ -2514,7 +2984,7 @@ cto2100power:
 	turret: 2100rkpoddefense
 		Facings: 32
 		UseClassicFacings: True
-	muzzle: minigun
+	muzzle: minigun.shp
 		Length: 6
 		Facings: 8
 	icon: 2100trike2icon
@@ -2524,7 +2994,7 @@ cto2100power:
 		Facings: 32
 		UseClassicFacings: True
 		Scale: 0.65
-	muzzle: minigun
+	muzzle: minigun.shp
 		Length: 6
 		Facings: 8
 		Scale: 0.65
@@ -2535,7 +3005,7 @@ cto2100power:
 		Facings: 32
 		UseClassicFacings: True
 		Scale: 0.65
-	muzzle: minigun
+	muzzle: minigun.shp
 		Length: 6
 		Facings: 8
 		Scale: 0.65
@@ -2545,7 +3015,7 @@ cto2100power:
 		Facings: 32
 		UseClassicFacings: True
 		Scale: 0.65
-	muzzle: minigun
+	muzzle: minigun.shp
 		Length: 6
 		Facings: 8
 		Scale: 0.65
@@ -2556,7 +3026,7 @@ cto2100power:
 		Facings: 32
 		UseClassicFacings: True
 		Scale: 0.65
-	muzzle: minigun
+	muzzle: minigun.shp
 		Length: 6
 		Facings: 8
 		Scale: 0.65
@@ -2599,7 +3069,7 @@ cto2100power:
 2100tractor2:
 	idle: 2100tractor
 		Facings: 32
-	muzzle: minigun
+	muzzle: minigun.shp
 		Length: 6
 		Facings: 8
 	turret: 2100heavymgdefense
@@ -2615,7 +3085,7 @@ cto2100power:
 		Facings: 32
 	turret: 2100campertur
 		Facings: 32
-	muzzle: gunfire2
+	muzzle: gunfire2.shp
 		Length: *
 	icon: 2100campericon
 2100camper2:
@@ -2627,7 +3097,7 @@ cto2100power:
 		Facings: 32
 	turret: 2100rkpoddefense
 		Facings: 32
-	muzzle: gunfire2
+	muzzle: gunfire2.shp
 		Length: *
 	icon: 2100camper2icon
 2100camper3:
@@ -2639,7 +3109,7 @@ cto2100power:
 		Facings: 32
 	turret: 2100needle
 		Facings: 32
-	muzzle: gunfire2
+	muzzle: gunfire2.shp
 		Length: *
 	icon: 2100camper3icon
 2100hcamper:
@@ -2651,7 +3121,7 @@ cto2100power:
 		Facings: 32
 	turret: 2100campertur
 		Facings: 32
-	muzzle: gunfire2
+	muzzle: gunfire2.shp
 		Length: *
 	icon: 2100hcampericon
 2100hcamper2:
@@ -2663,7 +3133,7 @@ cto2100power:
 		Facings: 32
 	turret: 2100rkpoddefense
 		Facings: 32
-	muzzle: gunfire2
+	muzzle: gunfire2.shp
 		Length: *
 	icon: 2100hcamper2icon
 
@@ -2673,7 +3143,7 @@ cto2100power:
 		UseClassicFacings: True
 	turret: 2100campertur
 		Facings: 32
-	muzzle: gunfire2
+	muzzle: gunfire2.shp
 		Length: *
 	icon: 2100truckicon
 
@@ -2683,7 +3153,7 @@ cto2100power:
 		Facings: 32
 	turret: 2100campertur
 		Facings: 32
-	muzzle: gunfire2
+	muzzle: gunfire2.shp
 		Length: *
 	icon: 2100busicon
 2100bus2:
@@ -2691,7 +3161,7 @@ cto2100power:
 		Facings: 32
 	turret: 2100medcannon
 		Facings: 32
-	muzzle: gunfire2
+	muzzle: gunfire2.shp
 		Length: *
 	icon: 2100bus2icon
 2100bus3:
@@ -2699,7 +3169,7 @@ cto2100power:
 		Facings: 32
 	turret: 2100hypervelcannon
 		Facings: 32
-	muzzle: gunfire2
+	muzzle: gunfire2.shp
 		Length: *
 	icon: 2100bus3icon
 2100bus4:
@@ -2707,7 +3177,7 @@ cto2100power:
 		Facings: 32
 	turret: 2100assaultmg2
 		Facings: 32
-	muzzle: gunfire2
+	muzzle: gunfire2.shp
 		Length: *
 	icon: 2100bus4icon
 2100bus5:
@@ -2715,7 +3185,7 @@ cto2100power:
 		Facings: 32
 	turret: 2100assaultmg
 		Facings: 32
-	muzzle: gunfire2
+	muzzle: gunfire2.shp
 		Length: *
 	icon: 2100bus5icon
 2100scavtruck:
@@ -2808,7 +3278,7 @@ cto2100power:
 	idle:
 		Facings: 32
 		Scale: 0.62
-	muzzle: minigun
+	muzzle: minigun.shp
 		Length: 6
 		Facings: 8
 		Scale: 0.62
@@ -2825,7 +3295,7 @@ cto2100power:
 		Facings: 32
 	turret: 2100scavtankill
 		Facings: 32
-	muzzle: gunfire2
+	muzzle: gunfire2.shp
 		Length: *
 	icon: 2100ftrukicon
 2100ftruk2:
@@ -2833,7 +3303,7 @@ cto2100power:
 		Facings: 32
 	turret: 2100inferno
 		Facings: 32
-	muzzle: gunfire2
+	muzzle: gunfire2.shp
 		Length: *
 	icon: 2100ftruk2icon
 2100ftruk3:
@@ -2841,7 +3311,7 @@ cto2100power:
 		Facings: 32
 	turret: 2100bunkerkill
 		Facings: 32
-	muzzle: gunfire2
+	muzzle: gunfire2.shp
 		Length: *
 	icon: 2100ftruk3icon
 
@@ -2850,9 +3320,10 @@ cto2100power:
 		Facings: 32
 	turret: 2100scavtankill
 		Facings: 32
-	muzzle: gunfire2
+	muzzle: gunfire2.shp
 		Length: *
 	icon: 2100hftruckicon
+
 2100icecream:
 	idle:
 		Facings: 32
@@ -2860,7 +3331,7 @@ cto2100power:
 	turret: 2100scavmortar
 		Facings: 32
 		Scale: 0.7
-	muzzle: gunfire2
+	muzzle: gunfire2.shp
 		Length: *
 		Scale: 0.7
 	icon: 2100icecreamicon
@@ -2873,6 +3344,7 @@ cto2100power:
 		Facings: 32
 		Scale: 0.60
 	icon: 2100craneicon
+
 2100crane2:
 	idle:
 		Facings: 32
@@ -2890,7 +3362,7 @@ cto2100power:
 	turret: 2100heavycannon
 		Facings: 32
 		Scale: 0.60
-	muzzle: gunfire2
+	muzzle: gunfire2.shp
 		Length: *
 		Scale: 0.60
 	icon: 2100trailericon
@@ -2904,7 +3376,7 @@ cto2100power:
 		Facings: 32
 		UseClassicFacings: True
 		Scale: 0.60
-	muzzle: minigun
+	muzzle: minigun.shp
 		Length: 6
 		Facings: 8
 		Scale: 0.60
@@ -2921,7 +3393,7 @@ cto2100power:
 	slow-rotor: lrotor
 		Start: 4
 		Length: 8
-	muzzle: minigun
+	muzzle: minigun.shp
 		Length: 6
 		Facings: 8
 	icon: 2100choppericon.shp
@@ -2938,7 +3410,7 @@ cto2100power:
 		Start: 4
 		Length: 8
 		Scale: 0.9
-	muzzle: minigun
+	muzzle: minigun.shp
 		Length: 6
 		Facings: 8
 		Scale: 0.9
@@ -3073,32 +3545,49 @@ cto2100power:
 ####################################################################################################
 
 2100rocket:
+	Defaults:
+		Filename: 2100rocket.shp
 	idle:
 
 2100commandodebuff:
+	Defaults:
+		Filename: 2100commandodebuff.shp
 	idle:
 
 2100commandocall:
+	Defaults:
+		Filename: 2100commandocall.shp
 	idle:
 
 mgeffect:
+	Defaults:
+		Filename: mgeffect.shp
 	idle:
 		Facings: -64
 		ZOffset: 1023
+
 2100missilekiller:
+	Defaults:
+		Filename: 2100missilekiller
 	idle:
 		Facings: 16
 		ZOffset: 1023
-		
+
 psc2100factory1:
-	icon: psc2100factory1
+	icon:
+		Filename: psc2100factory1.shp
 psc2100factory2:
-	icon: psc2100factory2
+	icon:
+		Filename: psc2100factory2.shp
 psc2100power:
-	icon: psc2100power
+	icon:
+		Filename: psc2100power.shp
 psc2100chopshop1:
-	icon: psc2100chopshop1
+	icon:
+		Filename: psc2100chopshop1.shp
 psc2100chopshop2:
-	icon: psc2100chopshop2
+	icon:
+		Filename: psc2100chopshop2.shp
 psc2100spower:
-	icon: psc2100spower
+	icon:
+		Filename: psc2100spower.shp

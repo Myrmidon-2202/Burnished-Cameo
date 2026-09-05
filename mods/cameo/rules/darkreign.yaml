@@ -1,36 +1,36 @@
 World:
 	FactionCA@imperium:
-		Name: Imperium DR
+		Name: Imperium
 		InternalName: imperium
 		Game: Dark Reign
 		Side: Dark Reign
 		Description: Imperium from DR TFoW\nSupport powers: Rift Generator, Teleportation\nVery technologically advanced faction, their army widely uses hovercraft technology,\n they also use quite sadistic weapons to eliminate their enemies,\n they can also create decoys to confuse the enemy\n Enemies: Freedom Guard, Xenites, Tograns
 	FactionCA@freedomguard:
-		Name: Freedom Guard DR
+		Name: F.G
 		InternalName: freedomguard
 		Game: Dark Reign
 		Side: Dark Reign
 		Description: Freedom Guard from DR TFoW\nSupport powers: Nothing\n\nSuperweapon unit: Shock Wave\nThe Freedom Guard uses a wide arsenal of units,\n among them it has camouflage technology,\n phase technology, and railgun weaponry, it has a wide tactical variety \n Enemies: Imperium, ShadowHand
 	FactionCA@shadowhand:
-		Name: ShadowHand DR
+		Name: ShadowHand
 		InternalName: shadowhand
 		Game: Dark Reign
 		Side: Dark Reign
 		Description: ShadowHand from DR RoSH\nSupport powers: Rift Generator\nSuperweapon unit: EMP Device\nThe Elite of the Imperium, share some technologies with the Imperium,\n however Shadowhand's arsenal is cybernetic and heavier, most of their strong units require an AI called Osiris\n Enemies: Freedom Guard, Xenites
 	FactionCA@xenite:
-		Name: Xenites DR
+		Name: Xenites
 		InternalName: xenite
 		Game: Dark Reign
 		Side: Dark Reign
 		Description: Xenite from DR RoSH\nSupport powers: Nothing\nSuperweapon unit: Shock Wave\n Originally from the planet Minevah and allies of the Freedom Guard, they share a lot of Freedom Guard technology, \n the faction uses Minevah creatures instead of heavy tanks, due to the lack of technology of the Railguns, they also use variants of Freedom Guard units somewhat more advanced.\n Enemies: Imperium, ShadowHand
 	FactionCA@togran:
-		Name: Tograns DR
+		Name: Tograns
 		InternalName: togran
 		Game: Dark Reign
 		Side: Dark Reign
 		Description: Freedom Guard from Fanmade, Auran\nSupport powers: Nothing\nThe Arsenal comes from units not used by Auran, the game developer, so the units are not canon.\nThe Tograns are a very little militarized religion, they really were dedicated to developing the Togra project,\n they would not develop an army until the conflict between the Imperium and the Freedom Guard ended with the leader of the Tograns.\n Enemies: Imperium, Freedom Guard
 	FactionCA@aterrorist:
-		Name: Terrorist Side DR
+		Name: Terrorists
 		InternalName: aterrorist
 		Game: Dark Reign
 		Side: Dark Reign
@@ -208,6 +208,7 @@ World:
 drpowr:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^2x2Shape
+	Inherits@ref: ^Refinery
 	Inherits@SHADOWS: ^Shadows
 	Selectable:
 		Bounds: 2048, 2048
@@ -243,13 +244,13 @@ drpowr:
 		Capacity: 10000
 	DockHost:
 		DockAngle: 448
-		DockOffset: 0,2,0
+		DockOffset: 0, 1c0, 0
 		IsDragRequired: True
 		DragOffset: -554,512,0
 		DragLength: 12
 	Refinery:
 		DockAngle: 448
-		DockOffset: 0,2,0
+		DockOffset: 0, 1c0, 0
 		IsDragRequired: True
 		DragOffset: -554,512,0
 		DragLength: 12
@@ -295,9 +296,10 @@ drpowr:
 drwaterl.imperium:
 	Inherits: ^BaseBuilding
 	Inherits@SHADOWS: ^Shadows
+	Inherits@ref: ^Refinery
 	Buildable:
 		BuildPaletteOrder: 60
-		Prerequisites: ~drpowr, ~imperiumwater
+		Prerequisites: drpowr, ~imperiumwater
 		Queue: Building, RABuilding
 		Description: Refines Ore and Gems\ninto credits.
 	Valued:
@@ -309,8 +311,7 @@ drwaterl.imperium:
 		Dimensions: 3,4
 		LocalCenterOffset: 0,-512,0
 	Selectable:
-		Bounds: 131072, 91008, 0, 21845
-		DecorationBounds: 131072, 127402, 0, -3626
+		Bounds: 2048, 2048
 	SelectionDecorations:
 	Targetable:
 		TargetTypes: Ground, Structure, C4, DetonateAttack, SpyInfiltrate
@@ -322,10 +323,17 @@ drwaterl.imperium:
 		Range: 5c0
 	Refinery:
 		DockAngle: 256
-		DockOffset: 1,2,0
+		DockOffset: 0, 1c0, 0
+	# DockHost:
+	# 	DockAngle: 256
+	# 	DockOffset: 1,2,0
 	DockHost:
+		# Type: Unload
 		DockAngle: 256
-		DockOffset: 1,2,0
+		DockOffset: 0, 1c0, 0
+		# IsDragRequired: True
+		# DragOffset: -554,512,0
+		# DragLength: 12
 	StoresResources:
 		Capacity: 2000 #2000
 	DrawLineToTarget:
@@ -369,7 +377,7 @@ drwaterl.freedom:
 	Inherits: drwaterl.imperium
 	Buildable:
 		BuildPaletteOrder: 60
-		Prerequisites: ~drpowr, ~freedomwater
+		Prerequisites: drpowr, ~freedomwater
 		Queue: Building, RABuilding
 		Description: Refines Ore and Gems\ninto credits.
 	RenderSprites:
@@ -462,7 +470,7 @@ drfrigth.imperium:
 	Voiced:
 		VoiceSet: DRImperiumVoice
 
-drfrigth.imperium:
+drfrigth.freedom:
 	# Inherits: HARV
 	Inherits@Tank: ^Tank
 	Inherits@selection: ^SelectableEconomicUnit
@@ -521,6 +529,8 @@ drhoverfright.imperium:
 		Type: Heavy
 	RevealsShroud:
 		Range: 4c0
+	Harvester:
+		Capacity: 30
 	StoresResources:
 		Capacity: 30
 	WithHarvestAnimation:
@@ -603,6 +613,8 @@ drspy.freedom:
 		Types: SpyInfiltrate
 		Notification: BuildingInfiltrated
 		PlayerExperience: 50
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Experience
 	RenderSprites:
 		Image: drspy
 
@@ -818,23 +830,68 @@ drcamera:
 		RequiresCondition: lvl2
 		Modifier: 75
 
+# ^UpgradesDRIWEAPType:
+# 	Inherits: ^UpgradesDRIBARRType
+# 	Power@lvl1:
+# 		Amount: -40
+# 	Power@lvl2:
+# 		Amount: -60
+# 	Production@drihq1:
+# 		Produces: driweap.Imperium
+# 	ProductionQueue@drihq1:
+# 		Type: driweap.Imperium
+# 	GrantConditionOnProduction@drihq1:
+# #		ADDED
+# 		Condition: lvl2
+# 		Actors: pscdriweap
+# 	ProvidesPrerequisite@drihq2:
+# 		Prerequisite: driweap2
+# 		RequiresCondition: lvl2
+
 ^UpgradesDRIWEAPType:
-	Inherits: ^UpgradesDRIBARRType
 	Power@lvl1:
 		Amount: -40
+		RequiresCondition: !lvl2
 	Power@lvl2:
 		Amount: -60
+		RequiresCondition: lvl2
+	WithIdleOverlay@TOP1:
+		RequiresCondition: !lvl2
+		Sequence: idle-top
+	WithIdleOverlay@BOTTOM1:
+		RequiresCondition: !lvl2
+		Sequence: idle-bottom
+	WithIdleOverlay@TOP2:
+		RequiresCondition: lvl2
+		Sequence: idle-top2
+	WithIdleOverlay@BOTTOM2:
+		RequiresCondition: lvl2
+		Sequence: idle-bottom2
 	Production@drihq1:
 		Produces: driweap.Imperium
+		RequiresCondition: !lvl2
 	ProductionQueue@drihq1:
 		Type: driweap.Imperium
+		Group: Addon
+		LowPowerModifier: 200
+		ReadyAudio: ConstructionComplete
+		BlockedAudio: NoBuild
+		LimitedAudio: BuildingInProgress
+		QueuedAudio: Building
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+		DisplayOrder: 0
+		QueueLimit: 1
+		Sticky: False
 	GrantConditionOnProduction@drihq1:
-#		ADDED
 		Condition: lvl2
 		Actors: pscdriweap
 	ProvidesPrerequisite@drihq2:
 		Prerequisite: driweap2
 		RequiresCondition: lvl2
+	DamageMultiplier@drihq2:
+		RequiresCondition: lvl2
+		Modifier: 75
 
 ^UpgradesDRFGBARRType:
 	Inherits: ^UpgradesDRIBARRType
@@ -889,7 +946,8 @@ drcamera:
 	Inherits@aicash: ^AIConyardCash
 	Inherits@conyard: ^Conyard
 	Selectable:
-		Bounds: 131072, 87381
+		Bounds: 4096, 4096
+		DecorationBounds: 4096, 4096
 	Valued:
 		Cost: 2000
 	Health:
@@ -923,14 +981,15 @@ drwall1:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^2x2Shape
 	Selectable:
-		Bounds: 131072, 87381
+		Bounds: 1024, 1024
+		DecorationBounds: 1024, 1024
 	Valued:
 		Cost: 50
 	Tooltip:
 		Name: Concrete Wall
 	Buildable:
 		BuildPaletteOrder: 10
-		Prerequisites: drpowr
+		Prerequisites: ~drpowr
 		Queue: Defence, RADefence
 		Description: Blocks Units
 	Building:
@@ -949,14 +1008,15 @@ drwall2:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^2x2Shape
 	Selectable:
-		Bounds: 131072, 87381
+		Bounds: 1024, 1024
+		DecorationBounds: 1024, 1024
 	Valued:
 		Cost: 50
 	Tooltip:
 		Name: Concrete Wall
 	Buildable:
 		BuildPaletteOrder: 10
-		Prerequisites: drpowr
+		Prerequisites: ~drpowr
 		Queue: Defence, RADefence
 		Description: Blocks Units
 	Building:
@@ -1001,7 +1061,7 @@ mcv.imperium:
 		Name: Construction Rig (Imperium)
 	Buildable:
 		BuildPaletteOrder: 100
-		Prerequisites: drihq2, ~techlevel.medium, ~drpowr
+		Prerequisites: drihq2, ~techlevel.medium, ~drpowr, ~mmimperium
 		Queue: Building, RABuilding
 		BuildDurationModifier: 40
 		Description: Deploys into another Construction Yard.\n  Unarmed
@@ -1106,7 +1166,7 @@ pscdrihq2:
 		BuildPaletteOrder: 10
 		Queue: drihq1.Imperium
 		Description: Upgrades the HQ for New Technology.
-		Prerequisites: ~imperiumtech
+		Prerequisites: ~imperiumtech, vehicleproduction, barracks
 	Valued:
 		Cost: 1000
 	RenderSprites:
@@ -1123,7 +1183,7 @@ pscdrihq3:
 		BuildPaletteOrder: 10
 		Queue: drihq2.Imperium
 		Description: Upgrades the HQ for New Technology.
-		Prerequisites: ~imperiumtech
+		Prerequisites: ~imperiumtech, dribarr2, driweap2
 	Valued:
 		Cost: 1500
 	RenderSprites:
@@ -1138,7 +1198,7 @@ dribarr.imperium:
 	Inherits@shape: ^3x3Shape
 	Inherits@CPQWP: ^CPQConditionWithPrimary
 	Inherits@prod: ^ProducesUnits
-	Inherits@barr: ^IsBarrack
+	Inherits@barr: ^IsBarrackOld
 	HitShape:
 		TargetableOffsets: 0,0,0, 0,1024,0, 0,-1024,0
 		Type: Rectangle
@@ -1160,8 +1220,8 @@ dribarr.imperium:
 		Dimensions: 3,3
 		LocalCenterOffset: 0,-512,0
 	Selectable:
-		Bounds: 131072, 87381
-		DecorationBounds: 131072, 116480, 0, -29098
+		Bounds: 2048, 2048
+		DecorationBounds: 2048, 2048
 	SelectionDecorations:
 	Health:
 		HP: 80000
@@ -1258,8 +1318,7 @@ driweap.imperium:
 		Dimensions: 3,3
 		LocalCenterOffset: 0,-512,0
 	Selectable:
-		Bounds: 131072, 87381
-		DecorationBounds: 131072, 116480, 0, -29098
+		Bounds: 4096, 4096
 	SelectionDecorations:
 	Health:
 		HP: 140000
@@ -1299,7 +1358,7 @@ pscdriweap:
 		BuildPaletteOrder: 10
 		Queue: driweap.Imperium
 		Description: Upgrades the Factory for New Vehicles.
-		Prerequisites: ~~imperiumtech
+		Prerequisites: ~imperiumtech, drihq2
 	Valued:
 		Cost: 1500
 	RenderSprites:
@@ -1324,10 +1383,10 @@ drihelipad.imperium:
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: Rearming
+		Name: Rearming Deck
 	Buildable:
 		BuildPaletteOrder: 50
-		Prerequisites: drihq3, ~mmimperium
+		Prerequisites: drihq3, ~imperiumtech
 		Queue: Building, RABuilding
 		Description: Rearms and\nrepairs Helicopters\nAllows for production of Helicopters
 	Building:
@@ -1366,6 +1425,7 @@ driportal.imperium:
 	Inherits@shape: ^2x2Shape
 	Selectable:
 		Bounds: 2048, 2048
+		DecorationBounds: 2048, 2048
 	Buildable:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 120
@@ -1450,8 +1510,8 @@ dririft.imperium:
 		Dimensions: 2,3
 		LocalCenterOffset: 0,-512,0
 	Selectable:
-		Bounds: 87381, 72789, 0, 16384
-		DecorationBounds: 87381, 96469, 0, -7253
+		Bounds: 2048, 2048
+		DecorationBounds: 2048, 2048
 	SelectionDecorations:
 	WithSpriteBody:
 		PauseOnCondition: lowpower
@@ -1462,14 +1522,15 @@ dririft.imperium:
 	IonCannonPower:
 		AllowMultiple: True
 		PauseOnCondition: lowpower
-		Prerequisites: ~techlevel.superweapons
-		Icons: 
+		Prerequisites: 
+			1: ~techlevel.superweapons
+		Icons:
 			1: ioncannon
 		Cursor: ioncannon
 		ChargeInterval: 6750
-		Names: 
+		Names:
 			1: Black Hole
-		Descriptions: 
+		Descriptions:
 			1: Initiate an Ion Cannon strike.\nApplies instant damage to a small area.
 		BeginChargeSpeechNotification: IonCannonCharging
 		EndChargeSpeechNotification: IonCannonReady
@@ -1480,8 +1541,7 @@ dririft.imperium:
 		DisplayRadarPing: True
 		CameraActor: camera.small
 		SupportPowerPaletteOrder: 20
-		Weapons: 
-			1: DRRiftBlackhole
+		Weapon: DRRiftBlackhole
 	SupportPowerChargeBar:
 	Power:
 		Amount: -150
@@ -1510,7 +1570,7 @@ drplastur1:
 		Name: Plasma Turret
 	Buildable:
 		BuildPaletteOrder: 40
-		Prerequisites: anypower, ~mmimperium
+		Prerequisites: anypower, ~imperiumtech
 		Queue: Defence, RADefence
 		BuildDurationModifier: 40
 		Description: All-purpose defensive structure.\n  Strong vs Aircraft, Infantry\n  Weak vs Tanks
@@ -1555,7 +1615,7 @@ drneutronturret:
 		Name: Neutron Turret
 	Buildable:
 		BuildPaletteOrder: 40
-		Prerequisites: drihq2, ~mmimperium
+		Prerequisites: drihq2, ~imperiumtech
 		Queue: Defence, RADefence
 		Description: Antiground defensive structure.\n  Strong vs Infantry, Tanks\n  Weak vs Aircraft
 	RequiresBuildableArea:
@@ -1605,7 +1665,7 @@ driaaturret:
 		Name: AA Defence Site
 	Buildable:
 		BuildPaletteOrder: 40
-		Prerequisites: drihq2
+		Prerequisites: ~drihq2
 		Queue: Defence, RADefence
 		Description: Antiground defensive structure.\n  Strong vs Infantry, Tanks\n  Weak vs Aircraft
 	RequiresBuildableArea:
@@ -1654,15 +1714,15 @@ drirep:
 		Name: Repair Facility
 	Buildable:
 		BuildPaletteOrder: 60
-		Prerequisites: vehicleproduction, ~drhq
+		Prerequisites: vehicleproduction, ~imperiumtech
 		Queue: Building, RABuilding
 		Description: Repairs vehicles
 	Building:
 		Footprint: x+_ +++ _+x
 		Dimensions: 3,3
 	Selectable:
-		Bounds: 116480, 61866, 0, 5461
-		DecorationBounds: 131072, 87381
+		Bounds: 2048, 2048
+		DecorationBounds: 2048, 2048
 	SelectionDecorations:
 	Health:
 		HP: 90000
@@ -1697,15 +1757,15 @@ drihosp:
 		Name: Hospital
 	Buildable:
 		BuildPaletteOrder: 60
-		Prerequisites: barracks, ~drhq
+		Prerequisites: barracks, ~imperiumtech
 		Queue: Building, RABuilding
 		Description: Repairs vehicles
 	Building:
 		Footprint: x+_ +++ _+x
 		Dimensions: 3,3
 	Selectable:
-		Bounds: 116480, 61866, 0, 5461
-		DecorationBounds: 131072, 87381
+		Bounds: 2048, 2048
+		DecorationBounds: 2048, 2048
 	SelectionDecorations:
 	Health:
 		HP: 90000
@@ -1795,6 +1855,8 @@ drguardian:
 	AcceptsDeliveredExperience: ##########
 		ValidTypes: infantry ##########
 	RenderSprites:
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 	Voiced:
 		VoiceSet: DRImperiumVoice
 
@@ -1842,6 +1904,8 @@ drbion:
 	AcceptsDeliveredExperience: ##########
 		ValidTypes: infantry ##########
 	RenderSprites:
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 	Voiced:
 		VoiceSet: DRBionVoice
 	-TakeCover:
@@ -1888,6 +1952,8 @@ drext:
 	AcceptsDeliveredExperience: ##########
 		ValidTypes: infantry ##########
 	RenderSprites:
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 	Voiced:
 		VoiceSet: DRExtVoice
 
@@ -1903,6 +1969,8 @@ drzombie2:
 		Speed: 85
 	RenderSprites:
 		Image: drmartyr
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 	Voiced:
 		VoiceSet: DRZombieVoice
 
@@ -1954,6 +2022,8 @@ drptnk:
 	AcceptsDeliveredExperience: ##########
 		ValidTypes: vehicle ##########
 	RenderSprites:
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 	Voiced:
 		VoiceSet: DRImperiumVoice
 
@@ -2000,6 +2070,8 @@ drsctnk:
 	DetectCloaked:
 		Range: 5c0
 	RenderDetectionCircle:
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
 drimpapc:
 	Inherits: ^Tank
@@ -2058,6 +2130,8 @@ drimpapc:
 	WithCargoPipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: true
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
 dramp:
 	Inherits: ^Vehicle
@@ -2110,6 +2184,8 @@ dramp:
 		VoiceSet: DRAmperVoice
 	InaccuracyMultiplier@Sniper:
 		Modifier: 50
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
 drshreder:
 	Inherits: ^Vehicle
@@ -2154,6 +2230,8 @@ drshreder:
 		ValidTypes: vehicle
 	Voiced:
 		VoiceSet: DRShredderVoice
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
 drttnk:
 	Inherits: ^Tank
@@ -2216,6 +2294,8 @@ drttnk:
 	RenderSprites:
 	Voiced:
 		VoiceSet: DRTachyonVoice
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
 drmad:
 	Inherits: ^Tank
@@ -2262,6 +2342,8 @@ drmad:
 	RenderSprites:
 	Voiced:
 		VoiceSet: DRImperiumVoice
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
 drscarab:
 	Inherits: ^Tank
@@ -2332,6 +2414,8 @@ drscarab:
 	DamageMultiplier@ALT:
 		RequiresCondition: deployed
 		Modifier: 20
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
 # drimpapc.e1:
 # 	Inherits: drimpapc
@@ -2419,264 +2503,267 @@ drhostage:
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: True
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
+
 #Fake Vehicles
-# drptnkfake:
-# 	Inherits: ^Tank
-# 	Inherits@CLOAK: ^AcceptsCloakCrate
-# 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
-# 	Inherits@DRShadow: ^InfantryShadows
-# 	Valued:
-# 		Cost: 350
-# 	Tooltip:
-# 		Name: Fake Plasma Tank
-# 	UpdatesPlayerStatistics:
-# 		AddToArmyValue: true
-# 	Buildable:
-# 		BuildPaletteOrder: 200
-# 		Prerequisites: vehicleproduction, ~techlevel.medium
-# 		Queue: Vehicle, RAVehicle
-# 		BuildDuration: 350
-# 		Description: Dummy unit that is used to immitate real one
-# 		BuildDurationModifier: 40
-# 	Mobile:
-# 		Locomotor: hover
-# 		TurnSpeed: 32
-# 		Speed: 126
-# 	Hovers:
-# 	Health:
-# 		HP: 42000
-# 	Repairable:
-# 		HpPerStep: 2273
-# 	Armor:
-# 		Type: Heavy
-# 	RevealsShroud:
-# 		Range: 6c0
-# 	Turreted:
-# 		TurnSpeed: 28
-# 		Offset: 0,0,22
-# 	Armament:
-# 		Weapon: DRNullWeapon
-# 	AttackTurreted:
-# 	WithSpriteTurret:
-# 	RenderSprites:
-# 	Voiced:
-# 		VoiceSet: DRImperiumVoice
-# 	ChangesHealth@FAKEUNIT:
-# 		PercentageStep: -2
-# 		Delay: 450
-# 		StartIfBelow: 150
-# 		DamageCooldown: 0
-# 	DamageMultiplier@FAKE:
-# 		Modifier: 150
+drptnkfake:
+	Inherits: ^Tank
+	Inherits@CLOAK: ^AcceptsCloakCrate
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@DRShadow: ^InfantryShadows
+	Valued:
+		Cost: 350
+	Tooltip:
+		Name: Fake Plasma Tank
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Buildable:
+		BuildPaletteOrder: 200
+		Prerequisites: vehicleproduction, ~techlevel.medium
+		Queue: Vehicle.Imperium, Vehicle.Shadowhand
+		BuildDuration: 350
+		Description: Dummy unit that is used to immitate real one
+		BuildDurationModifier: 40
+	Mobile:
+		Locomotor: hover
+		TurnSpeed: 32
+		Speed: 126
+	Hovers:
+	Health:
+		HP: 42000
+	Repairable:
+		HpPerStep: 2273
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 6c0
+	Turreted:
+		TurnSpeed: 28
+		Offset: 0,0,22
+	Armament:
+		Weapon: DRNullWeapon
+	AttackTurreted:
+	WithSpriteTurret:
+	RenderSprites:
+	Voiced:
+		VoiceSet: DRImperiumVoice
+	ChangesHealth@FAKEUNIT:
+		PercentageStep: -2
+		Delay: 450
+		StartIfBelow: 150
+		DamageCooldown: 0
+	DamageMultiplier@FAKE:
+		Modifier: 150
 
-# drimpapcfake:
-# 	Inherits: ^Tank
-# 	Inherits@CLOAK: ^AcceptsCloakCrate
-# 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
-# 	Inherits@DRShadow: ^InfantryShadows
-# 	Valued:
-# 		Cost: 300
-# 	Tooltip:
-# 		Name: Fake Invader Troop Transport
-# 	UpdatesPlayerStatistics:
-# 		AddToArmyValue: true
-# 	Buildable:
-# 		BuildPaletteOrder: 1000
-# 		Prerequisites: vehicleproduction
-# 		Queue: Vehicle, RAVehicle
-# 		BuildDuration: 300
-# 		BuildDurationModifier: 40
-# 		Description: Dummy unit that is used to immitate real one
-# 	Mobile:
-# 		Locomotor: hover
-# 		TurnSpeed: 32
-# 		Speed: 150
-# 	Hovers:
-# 	Health:
-# 		HP: 25000
-# 	Repairable:
-# 		HpPerStep: 2273
-# 	Armor:
-# 		Type: Light
-# 	RevealsShroud:
-# 		Range: 6c0
-# 	Turreted:
-# 		TurnSpeed: 32
-# 		Offset: 0,0,22
-# 	Armament:
-# 		Weapon: DRNullWeapon
-# 	AttackTurreted:
-# 	WithSpriteTurret:
-# 	RenderSprites:
-# 	Voiced:
-# 		VoiceSet: DRImperiumVoice
-# 	ChangesHealth@FAKEUNIT:
-# 		PercentageStep: -2
-# 		Delay: 450
-# 		StartIfBelow: 150
-# 		DamageCooldown: 0
-# 	DamageMultiplier@FAKE:
-# 		Modifier: 150
+drimpapcfake:
+	Inherits: ^Tank
+	Inherits@CLOAK: ^AcceptsCloakCrate
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@DRShadow: ^InfantryShadows
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Fake Invader Troop Transport
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Buildable:
+		BuildPaletteOrder: 1000
+		Prerequisites: vehicleproduction
+		Queue: Vehicle.Imperium, Vehicle.Shadowhand
+		BuildDuration: 300
+		BuildDurationModifier: 40
+		Description: Dummy unit that is used to immitate real one
+	Mobile:
+		Locomotor: hover
+		TurnSpeed: 32
+		Speed: 150
+	Hovers:
+	Health:
+		HP: 25000
+	Repairable:
+		HpPerStep: 2273
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 6c0
+	Turreted:
+		TurnSpeed: 32
+		Offset: 0,0,22
+	Armament:
+		Weapon: DRNullWeapon
+	AttackTurreted:
+	WithSpriteTurret:
+	RenderSprites:
+	Voiced:
+		VoiceSet: DRImperiumVoice
+	ChangesHealth@FAKEUNIT:
+		PercentageStep: -2
+		Delay: 450
+		StartIfBelow: 150
+		DamageCooldown: 0
+	DamageMultiplier@FAKE:
+		Modifier: 150
 
-# drshrederfake:
-# 	Inherits: ^Vehicle
-# 	Inherits@CLOAK: ^AcceptsCloakCrate
-# 	Inherits@DRShadow: ^InfantryShadows
-# 	Valued:
-# 		Cost: 350
-# 	Tooltip:
-# 		Name: Fake Shredder
-# 	Buildable:
-# 		BuildPaletteOrder: 1000
-# 		Prerequisites: vehicleproduction, ~techlevel.medium
-# 		Queue: Vehicle, RAVehicle
-# 		Description: Dummy unit that is used to immitate real one
-# 	Mobile:
-# 		Locomotor: hover
-# 		TurnSpeed: 60
-# 		Speed: 150
-# 	Hovers:
-# 	Health:
-# 		HP: 25000
-# 	Repairable:
-# 		HpPerStep: 1200
-# 	Armor:
-# 		Type: Heavy
-# 	RevealsShroud:
-# 		Range: 7c0
-# 	RenderSprites:
-# 	Voiced:
-# 		VoiceSet: DRShredderVoice
-# 	ChangesHealth@FAKEUNIT:
-# 		PercentageStep: -1
-# 		Delay: 450
-# 		StartIfBelow: 150
-# 		DamageCooldown: 0
-# 	DamageMultiplier@FAKE:
-# 		Modifier: 150
+drshrederfake:
+	Inherits: ^Vehicle
+	Inherits@CLOAK: ^AcceptsCloakCrate
+	Inherits@DRShadow: ^InfantryShadows
+	Valued:
+		Cost: 350
+	Tooltip:
+		Name: Fake Shredder
+	Buildable:
+		BuildPaletteOrder: 1000
+		Prerequisites: vehicleproduction, ~techlevel.medium
+		Queue: Vehicle.Imperium, Vehicle.Shadowhand
+		Description: Dummy unit that is used to immitate real one
+	Mobile:
+		Locomotor: hover
+		TurnSpeed: 60
+		Speed: 150
+	Hovers:
+	Health:
+		HP: 25000
+	Repairable:
+		HpPerStep: 1200
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 7c0
+	RenderSprites:
+	Voiced:
+		VoiceSet: DRShredderVoice
+	ChangesHealth@FAKEUNIT:
+		PercentageStep: -1
+		Delay: 450
+		StartIfBelow: 150
+		DamageCooldown: 0
+	DamageMultiplier@FAKE:
+		Modifier: 150
 
-# drttnkfake:
-# 	Inherits: ^Tank
-# 	Inherits@CLOAK: ^AcceptsCloakCrate
-# 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
-# 	Inherits@DRShadow: ^InfantryShadows
-# 	Valued:
-# 		Cost: 750
-# 	Tooltip:
-# 		Name: Fake Tachion Tank
-# 	UpdatesPlayerStatistics:
-# 		AddToArmyValue: true
-# 	Buildable:
-# 		BuildPaletteOrder: 1020
-# 		Prerequisites: driweap2, ~techlevel.medium
-# 		Queue: Vehicle, RAVehicle
-# 		BuildDurationModifier: 40
-# 		Description: Dummy unit that is used to immitate real one
-# 	Mobile:
-# 		Locomotor: hover
-# 		TurnSpeed: 32
-# 		Speed: 102
-# 	Hovers:
-# 	Health:
-# 		HP: 55000
-# 	Repairable:
-# 		HpPerStep: 2273
-# 	Armor:
-# 		Type: Heavy
-# 	RevealsShroud:
-# 		Range: 6c0
-# 	Turreted:
-# 		TurnSpeed: 28
-# 	Armament:
-# 		Weapon: DRNullWeapon
-# 	AttackTurreted:
-# 	WithSpriteTurret:
-# 	RenderSprites:
-# 	Voiced:
-# 		VoiceSet: DRTachyonVoice
-# 	ChangesHealth@FAKEUNIT:
-# 		PercentageStep: -2
-# 		Delay: 450
-# 		StartIfBelow: 150
-# 		DamageCooldown: 0
-# 	DamageMultiplier@FAKE:
-# 		Modifier: 150
+drttnkfake:
+	Inherits: ^Tank
+	Inherits@CLOAK: ^AcceptsCloakCrate
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@DRShadow: ^InfantryShadows
+	Valued:
+		Cost: 750
+	Tooltip:
+		Name: Fake Tachion Tank
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Buildable:
+		BuildPaletteOrder: 1020
+		Prerequisites: driweap2, ~techlevel.medium
+		Queue: Vehicle.Imperium, Vehicle.Shadowhand
+		BuildDurationModifier: 40
+		Description: Dummy unit that is used to immitate real one
+	Mobile:
+		Locomotor: hover
+		TurnSpeed: 32
+		Speed: 102
+	Hovers:
+	Health:
+		HP: 55000
+	Repairable:
+		HpPerStep: 2273
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 6c0
+	Turreted:
+		TurnSpeed: 28
+	Armament:
+		Weapon: DRNullWeapon
+	AttackTurreted:
+	WithSpriteTurret:
+	RenderSprites:
+	Voiced:
+		VoiceSet: DRTachyonVoice
+	ChangesHealth@FAKEUNIT:
+		PercentageStep: -2
+		Delay: 450
+		StartIfBelow: 150
+		DamageCooldown: 0
+	DamageMultiplier@FAKE:
+		Modifier: 150
 
-# drmadfake:
-# 	Inherits: ^Tank
-# 	Inherits@CLOAK: ^AcceptsCloakCrate
-# 	Inherits@DRShadow: ^InfantryShadows
-# 	Valued:
-# 		Cost: 400
-# 	Tooltip:
-# 		Name: Fake Mobile Air Defense
-# 	UpdatesPlayerStatistics:
-# 		AddToArmyValue: true
-# 	Buildable:
-# 		BuildPaletteOrder: 1000
-# 		Prerequisites: driweap2, ~techlevel.medium
-# 		Queue: Vehicle, RAVehicle
-# 		Description: Dummy unit that is used to immitate real one
-# 	Mobile:
-# 		Locomotor: hover
-# 		TurnSpeed: 32
-# 		Speed: 126
-# 	Hovers:
-# 	Health:
-# 		HP: 25000
-# 	Repairable:
-# 		HpPerStep: 2273
-# 	Armor:
-# 		Type: Heavy
-# 	RevealsShroud:
-# 		Range: 6c0
-# 	RenderSprites:
-# 	Voiced:
-# 		VoiceSet: DRImperiumVoice
-# 	ChangesHealth@FAKEUNIT:
-# 		PercentageStep: -2
-# 		Delay: 450
-# 		StartIfBelow: 150
-# 		DamageCooldown: 0
-# 	DamageMultiplier@FAKE:
-# 		Modifier: 150
+drmadfake:
+	Inherits: ^Tank
+	Inherits@CLOAK: ^AcceptsCloakCrate
+	Inherits@DRShadow: ^InfantryShadows
+	Valued:
+		Cost: 400
+	Tooltip:
+		Name: Fake Mobile Air Defense
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Buildable:
+		BuildPaletteOrder: 1000
+		Prerequisites: driweap2, ~techlevel.medium
+		Queue: Vehicle.Imperium, Vehicle.Shadowhand
+		Description: Dummy unit that is used to immitate real one
+	Mobile:
+		Locomotor: hover
+		TurnSpeed: 32
+		Speed: 126
+	Hovers:
+	Health:
+		HP: 25000
+	Repairable:
+		HpPerStep: 2273
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 6c0
+	RenderSprites:
+	Voiced:
+		VoiceSet: DRImperiumVoice
+	ChangesHealth@FAKEUNIT:
+		PercentageStep: -2
+		Delay: 450
+		StartIfBelow: 150
+		DamageCooldown: 0
+	DamageMultiplier@FAKE:
+		Modifier: 150
 
-# drscarabfake:
-# 	Inherits: ^Tank
-# 	Inherits@CLOAK: ^AcceptsCloakCrate
-# 	Inherits@DRShadow: ^InfantryShadows
-# 	Valued:
-# 		Cost: 650
-# 	Tooltip:
-# 		Name: Fake S.C.A.R.A.B.
-# 	Buildable:
-# 		BuildPaletteOrder: 1000
-# 		Prerequisites: driweap2, ~techlevel.medium
-# 		Queue: Vehicle, RAVehicle
-# 		Description: Dummy unit that is used to immitate real one
-# 	Mobile:
-# 		Locomotor: hover
-# 		TurnSpeed: 20
-# 		Speed: 70
-# 	Hovers:
-# 	Health:
-# 		HP: 32000
-# 	Repairable:
-# 		HpPerStep: 569
-# 	Armor:
-# 		Type: Heavy
-# 	RevealsShroud:
-# 		Range: 5c0
-# 	RenderSprites:
-# 	Voiced:
-# 		VoiceSet: DRImperiumVoice
-# 	ChangesHealth@FAKEUNIT:
-# 		PercentageStep: -2
-# 		Delay: 450
-# 		StartIfBelow: 150
-# 		DamageCooldown: 0
-# 	DamageMultiplier@FAKE:
-# 		Modifier: 150
+drscarabfake:
+	Inherits: ^Tank
+	Inherits@CLOAK: ^AcceptsCloakCrate
+	Inherits@DRShadow: ^InfantryShadows
+	Valued:
+		Cost: 650
+	Tooltip:
+		Name: Fake S.C.A.R.A.B.
+	Buildable:
+		BuildPaletteOrder: 1000
+		Prerequisites: driweap2, ~techlevel.medium
+		Queue: Vehicle.Imperium, Vehicle.Shadowhand
+		Description: Dummy unit that is used to immitate real one
+	Mobile:
+		Locomotor: hover
+		TurnSpeed: 20
+		Speed: 70
+	Hovers:
+	Health:
+		HP: 32000
+	Repairable:
+		HpPerStep: 569
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 5c0
+	RenderSprites:
+	Voiced:
+		VoiceSet: DRImperiumVoice
+	ChangesHealth@FAKEUNIT:
+		PercentageStep: -2
+		Delay: 450
+		StartIfBelow: 150
+		DamageCooldown: 0
+	DamageMultiplier@FAKE:
+		Modifier: 150
 
 #Aircraft
 drcyclone:
@@ -2730,6 +2817,8 @@ drcyclone:
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: True
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
 drskyfort:
 	Inherits: ^Helicopter
@@ -2784,6 +2873,8 @@ drskyfort:
 		Position: BottomLeft
 		RequiresSelection: True
 		PipCount: 4
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
 drdrone:
 	Inherits: ^Helicopter
@@ -2822,7 +2913,8 @@ drdrone:
 	DeathSounds:
 	SelectionDecorations:
 	Selectable:
-		DecorationBounds: 43690, 43690
+		Bounds: 1024, 2014
+		DecorationBounds: 1024, 1024
 	Voiced:
 		VoiceSet: DRDroneVoice
 	Wanders:
@@ -2831,6 +2923,8 @@ drdrone:
 		MaxMoveDelay: 80
 		RequiresCondition: botmicro
 	RenderSprites:
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Experience
 ##############################################################################
 ##
 ##      Darkreign Freedom Guard
@@ -2882,8 +2976,12 @@ mcv.freedomguard:
 	WithInfantryBody:
 	ProvidesPrerequisite@faction:
 		Prerequisite: mmfreedomguard
+	ProvidesPrerequisite@Freedomtech:
+		Prerequisite: freedomtech
 	Voiced:
 		VoiceSet: DRFGRigVoice
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 	Passenger:
 		Weight: 1
 
@@ -2969,7 +3067,7 @@ pscdrfghq2:
 		BuildPaletteOrder: 10
 		Queue: drfghq1.FreedomGuard
 		Description: Upgrades the HQ for New Technology.
-		# Prerequisites: ~vehicleproduction, ~barracks, ~mmfreedomguard
+		Prerequisites: ~vehicleproduction, ~barracks, ~freedomtech
 	Valued:
 		Cost: 1200
 	RenderSprites:
@@ -2986,7 +3084,7 @@ pscdrfghq3:
 		BuildPaletteOrder: 10
 		Queue: drfghq2.FreedomGuard
 		Description: Upgrades the HQ for New Technology.
-		# Prerequisites: ~drfgbarr2, ~drfgweap2, ~mmfreedomguard
+		Prerequisites: drfgbarr2, drfgweap2, ~freedomtech
 	Valued:
 		Cost: 1500
 	RenderSprites:
@@ -3001,7 +3099,7 @@ drfgbarr.freedomguard:
 	Inherits@shape: ^3x3Shape
 	Inherits@CPQWP: ^CPQConditionWithPrimary
 	Inherits@prod: ^ProducesUnits
-	Inherits@barr: ^IsBarrack
+	Inherits@barr: ^IsBarrackOld
 	HitShape:
 		TargetableOffsets: 0,0,0, 0,1024,0, 0,-1024,0
 		Type: Rectangle
@@ -3023,8 +3121,8 @@ drfgbarr.freedomguard:
 		Dimensions: 3,3
 		LocalCenterOffset: 0,-512,0
 	Selectable:
-		Bounds: 131072, 87381
-		DecorationBounds: 131072, 116480, 0, -29098
+		Bounds: 2048, 2048
+		DecorationBounds: 2048, 2048
 	SelectionDecorations:
 	Health:
 		HP: 80000
@@ -3095,7 +3193,7 @@ pscdrfgbarr:
 		BuildPaletteOrder: 10
 		Queue: drfgbarr.FreedomGuard
 		Description: Upgrades the Barracks for New Infantry.
-		# Prerequisites: drfghq2, ~mmfreedomguard
+		Prerequisites: drfghq2, ~freedomtech
 	Valued:
 		Cost: 750
 	RenderSprites:
@@ -3110,7 +3208,7 @@ drfgweap.freedomguard:
 	Inherits@shape: ^3x2Shape
 	Inherits@CPQWP: ^CPQConditionWithPrimary
 	Inherits@prod: ^ProducesUnits
-	Inherits@weap: ^IsWeaponFactory
+	Inherits@weap: ^IsWeaponFactoryOld
 	HitShape:
 		TargetableOffsets: 0,0,0, 0,1024,0, 0,-1024,0
 		Type: Rectangle
@@ -3132,8 +3230,8 @@ drfgweap.freedomguard:
 		Dimensions: 3,3
 		LocalCenterOffset: 0,-512,0
 	Selectable:
-		Bounds: 131072, 87381
-		DecorationBounds: 131072, 116480, 0, -29098
+		Bounds: 4096, 4096
+		DecorationBounds: 4096, 4096
 	SelectionDecorations:
 	Health:
 		HP: 140000
@@ -3185,8 +3283,8 @@ pscdrfgweap:
 		BuildPaletteOrder: 10
 		Queue: drfgweap.FreedomGuard
 		Description: Upgrades the Factory for New Vehicles.
-		# Prerequisites: drfghq2, ~mmfreedomguard
-		Prerequisites: ~freedomwater
+		Prerequisites: drfghq2, ~freedomtech
+		# Prerequisites: ~freedomwater
 	Valued:
 		Cost: 1500
 	RenderSprites:
@@ -3209,10 +3307,10 @@ drfghelipad.freedomguard:
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: Rearming
+		Name: Rearming Deck
 	Buildable:
 		BuildPaletteOrder: 50
-		Prerequisites: drfghq3, ~mmfreedomguard
+		Prerequisites: drfghq3, ~freedomtech
 		Queue: Building, RABuilding
 		Description: Produces, rearms and\nrepairs helicopters
 	Building:
@@ -3255,7 +3353,7 @@ drlastur1:
 		Name: Laser Turret
 	Buildable:
 		BuildPaletteOrder: 40
-		Prerequisites: anypower, ~mmfreedomguard
+		Prerequisites: anypower, ~freedomtech
 		Queue: Defence, RADefence
 		BuildDurationModifier: 40
 		Description: All-purpose defensive structure.\n  Strong vs Aircraft, Tanks\n  Weak vs Infantry
@@ -3299,7 +3397,7 @@ drrailtur1:
 		Name: Railgun Platform
 	Buildable:
 		BuildPaletteOrder: 40
-		Prerequisites: anypower, drfghq2, ~mmfreedomguard
+		Prerequisites: anypower, drfghq2, ~freedomtech
 		Queue: Defence, RADefence
 		BuildDurationModifier: 40
 		Description: All-purpose defensive structure.\n  Strong vs Aircraft, Tanks\n  Weak vs Infantry
@@ -3407,7 +3505,8 @@ drpplant1.freedomguard:
 	Inherits@tech: ^IsTechnoBuilding
 	Inherits@AIDifficulties: ^AIDifficulties
 	Selectable:
-		Bounds: 131072, 131072
+		Bounds: 2048, 2048
+		DecorationBounds: 2048, 2048
 	Buildable:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 120
@@ -3507,15 +3606,15 @@ drfgrep:
 		Name: Repair Facility
 	Buildable:
 		BuildPaletteOrder: 60
-		Prerequisites: vehicleproduction, ~mmfreedomguard
+		Prerequisites: vehicleproduction, ~freedomtech
 		Queue: Building, RABuilding
 		Description: Repairs vehicles
 	Building:
 		Footprint: x+_ +++ _+x
 		Dimensions: 3,3
 	Selectable:
-		Bounds: 116480, 61866, 0, 5461
-		DecorationBounds: 131072, 87381
+		Bounds: 2048, 2048
+		DecorationBounds: 2048, 2048
 	SelectionDecorations:
 	Health:
 		HP: 90000
@@ -3544,13 +3643,15 @@ drfghosp:
 		TargetableOffsets: 840,0,0, 598,-640,0, 598,640,0, -1060,0,0, -768,-640,0, -768,640,0
 		Type: Polygon
 			Points: -1536,-256, -341,-940, 341,-940, 1536,-256, 1536,341, 341,1110, -341,1110, -1536,341
+	Selectable:
+		Bounds: 2048, 2048
 	Valued:
 		Cost: 750
 	Tooltip:
 		Name: Hospital
 	Buildable:
 		BuildPaletteOrder: 60
-		Prerequisites: barracks, ~mmfreedomguard
+		Prerequisites: barracks, ~freedomtech
 		Queue: Building, RABuilding
 		Description: Repairs vehicles
 	Building:
@@ -3591,7 +3692,8 @@ drnavyard.freedomguard:
 			TopLeft: -1536, -1536
 			BottomRight: 1536, 1536
 	Selectable:
-		Bounds: 131072, 131072
+		Bounds: 2048, 2048
+		DecorationBounds: 2048, 2048
 	HitShape:
 		UseTargetableCellsOffsets: false
 		TargetableOffsets: 0,0,0, 768,-512,0, 768,512,0, -281,-512,0, -630,512,0
@@ -3601,7 +3703,7 @@ drnavyard.freedomguard:
 		Name: Naval Yard
 	Buildable:
 		BuildPaletteOrder: 50
-		Prerequisites: drwaterl.freedom, ~mmfreedomguard
+		Prerequisites: drwaterl.freedom, ~freedomtech
 		Queue: Building, RABuilding
 		Description: Produces and\nrepairs submarines
 	Building:
@@ -3750,6 +3852,8 @@ drraid:
 	GrantConditionOnPrerequisite@phase:
 		Condition: phase
 		Prerequisites: drpplant1.freedomguard
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
 drscout:
 	Inherits: ^Soldier
@@ -3797,6 +3901,8 @@ drscout:
 	DetectCloaked:
 		Range: 5c0
 	RenderDetectionCircle:
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Experience
 
 drmercenary:
 	Inherits: ^Soldier
@@ -3854,6 +3960,8 @@ drmercenary:
 	GrantConditionOnPrerequisite@phase:
 		Condition: phase
 		Prerequisites: drpplant1.freedomguard
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
 drsnipe:
 	Inherits: ^Soldier
@@ -3913,6 +4021,8 @@ drsnipe:
 	DetectCloaked:
 		Range: 6c0
 	RenderDetectionCircle:
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
 drmartyr:
 	Inherits: ^Soldier
@@ -3958,6 +4068,8 @@ drmartyr:
 	RenderSprites:
 	Voiced:
 		VoiceSet: DRMartyrVoice
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
 drsabot:
 	Inherits: ^Soldier
@@ -4000,6 +4112,8 @@ drsabot:
 	RenderSprites:
 	Voiced:
 		VoiceSet: DRSaboteurVoice
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
 drmech:
 	Inherits: ^Soldier
@@ -4050,6 +4164,8 @@ drmech:
 	AutoTargetPriority@DEFAULT:
 		ValidTargets: Vehicle, lockdowned, ivanattached
 	RenderSprites:
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
 drmedi:
 	Inherits: ^Soldier
@@ -4092,6 +4208,8 @@ drmedi:
 		ValidTargets: Infantry, plagued
 	Inherits@EXT: ^ExternalConditions
 	RenderSprites:
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Experience
 
 drjebradec:
 	Inherits: ^Soldier
@@ -4134,6 +4252,8 @@ drjebradec:
 	RenderSprites:
 	Voiced:
 		VoiceSet: DRJebRadecVoice
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
 #Vehicle
 drspid:
@@ -4178,6 +4298,8 @@ drspid:
 	RenderSprites:
 	Voiced:
 		VoiceSet: DRFreedomGuardVoice
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
 drstnk:
 	Inherits: ^Vehicle
@@ -4214,6 +4336,8 @@ drstnk:
 	RenderSprites:
 	Voiced:
 		VoiceSet: DRFreedomGuardVoice
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
 drrat:
 	Inherits: ^Vehicle
@@ -4271,6 +4395,8 @@ drrat:
 	WithCargoPipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: true
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
 drrtnk:
 	Inherits: ^Tank
@@ -4319,6 +4445,8 @@ drrtnk:
 	RenderSprites:
 	Voiced:
 		VoiceSet: DRTripleRailVoice
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
 drarty:
 	Inherits: ^Tank
@@ -4369,6 +4497,8 @@ drarty:
 	RenderSprites:
 	Voiced:
 		VoiceSet: DRArtilleryVoice
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
 drtnkh:
 	Inherits: ^Vehicle
@@ -4411,6 +4541,8 @@ drtnkh:
 	RenderSprites:
 	Voiced:
 		VoiceSet: DRFreedomGuardVoice
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
 drphasetnk:
 	Inherits: ^Vehicle
@@ -4461,6 +4593,8 @@ drphasetnk:
 		PauseOnCondition: cloak-force-disabled || base-reveal || disabled
 		IsPlayerPalette: true
 		UncloakOn: Attack, Unload, Infiltrate, Demolish, Move
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
 drphasetran:
 	Inherits: ^Tank
@@ -4612,6 +4746,8 @@ drjack:
 	Passenger:
 		CargoType: Infantry
 		Weight: 2
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
 drquake:
 	Inherits: ^Vehicle
@@ -5079,6 +5215,8 @@ drihq.shadowhand:
 		Description: Builds structures
 	ProvidesPrerequisite@factiongdi:
 		Prerequisite: mmshadowhand
+	ProvidesPrerequisite@Imperiumwater:
+		Prerequisite: imperiumwater
 	ProvidesPrerequisite@Imperiumtech:
 		Prerequisite: imperiumtech
 	RenderSprites:
@@ -5090,7 +5228,7 @@ dribarr.shadowhand:
 	Inherits@shape: ^3x3Shape
 	Inherits@CPQWP: ^CPQConditionWithPrimary
 	Inherits@prod: ^ProducesUnits
-	Inherits@barr: ^IsBarrack
+	Inherits@barr: ^IsBarrackOld
 	HitShape:
 		TargetableOffsets: 0,0,0, 0,1024,0, 0,-1024,0
 		Type: Rectangle
@@ -5112,8 +5250,8 @@ dribarr.shadowhand:
 		Dimensions: 3,3
 		LocalCenterOffset: 0,-512,0
 	Selectable:
-		Bounds: 131072, 87381
-		DecorationBounds: 131072, 116480, 0, -29098
+		Bounds: 2048, 2048
+		DecorationBounds: 2048, 2048
 	SelectionDecorations:
 	Health:
 		HP: 80000
@@ -5191,8 +5329,8 @@ driweap.shadowhand:
 		Dimensions: 3,3
 		LocalCenterOffset: 0,-512,0
 	Selectable:
-		Bounds: 131072, 87381
-		DecorationBounds: 131072, 116480, 0, -29098
+		Bounds: 2048, 2048
+		DecorationBounds: 2048, 2048
 	SelectionDecorations:
 	Health:
 		HP: 140000
@@ -5230,7 +5368,8 @@ drmadrix.shadowhand:
 	# Inherits@IDISABLE: ^DisabledOverlay
 	Inherits@shape: ^3x2Shape
 	Selectable:
-		Bounds: 131072, 131072
+		Bounds: 2048, 2048
+		DecorationBounds: 2048, 2048
 	Buildable:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 120
@@ -5335,6 +5474,9 @@ drreaper:
 	Voiced:
 		VoiceSet: DRReaperVoice
 	-TakeCover:
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
+
 #Vehicle
 drgemenis1:
 	Inherits: ^Tank
@@ -5411,6 +5553,8 @@ drgemenis1:
 	DamageMultiplier@ALT:
 		RequiresCondition: deployed
 		Modifier: 150
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
 drfury:
 	Inherits: ^Vehicle
@@ -5452,21 +5596,23 @@ drfury:
 	RenderSprites:
 	Voiced:
 		VoiceSet: DRFuryVoice
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
-drimpapc.e3:
-	Inherits: drimpapc
-	Buildable:
-		Prerequisites: barracks, ~hardbotplayer, drmadrix.shadowhand
-		Queue: Vehicle, RAVehicle
-	Cargo:
-		InitialUnits: drreaper, drreaper, drreaper, drreaper, drreaper
-	ProductionCostMultiplier:
-		Multiplier: 300
-	AutoDeployer:
-		DeployChance: 100
-		DeployTicks: 0
-	RenderSprites:
-		Image: drimpapc
+# drimpapc.e3:
+# 	Inherits: drimpapc
+# 	Buildable:
+# 		Prerequisites: barracks, ~hardbotplayer, drmadrix.shadowhand
+# 		Queue: Vehicle, RAVehicle
+# 	Cargo:
+# 		InitialUnits: drreaper, drreaper, drreaper, drreaper, drreaper
+# 	ProductionCostMultiplier:
+# 		Multiplier: 300
+# 	AutoDeployer:
+# 		DeployChance: 100
+# 		DeployTicks: 0
+# 	RenderSprites:
+# 		Image: drimpapc
 
 drshadowblade:
 	Inherits: ^Vehicle
@@ -5509,6 +5655,8 @@ drshadowblade:
 		ValidTypes: vehicle
 	Voiced:
 		VoiceSet: DRShredderVoice
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
 #Aircraft
 drhades:
@@ -5562,6 +5710,9 @@ drhades:
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: True
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
+
 drempdisable:
 	Inherits: ^Helicopter
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -5615,6 +5766,8 @@ drempdisable:
 		Position: BottomLeft
 		RequiresSelection: True
 		PipCount: 4
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
 ##############################################################################
 ##
@@ -5727,6 +5880,8 @@ drfghq.xenite:
 		Prerequisite: mmxenite
 	ProvidesPrerequisite@Freedomwater:
 		Prerequisite: freedomwater
+	ProvidesPrerequisite@Freedomtech:
+		Prerequisite: freedomtech
 	RenderSprites:
 		Image: drfghq
 	Inherits@upgrade: ^UpgradesDRFGHQType
@@ -5736,7 +5891,7 @@ drbiocom.xenite:
 	Inherits@shape: ^3x2Shape
 	Inherits@CPQWP: ^CPQConditionWithPrimary
 	Inherits@prod: ^ProducesUnits
-	Inherits@barr: ^IsBarrack
+	Inherits@barr: ^IsBarrackOld
 	HitShape:
 		TargetableOffsets: 0,0,0, 0,1024,0, 0,-1024,0
 		Type: Rectangle
@@ -5758,8 +5913,8 @@ drbiocom.xenite:
 		Dimensions: 3,3
 		LocalCenterOffset: 0,-512,0
 	Selectable:
-		Bounds: 131072, 87381
-		DecorationBounds: 131072, 116480, 0, -29098
+		Bounds: 2048, 2048
+		DecorationBounds: 2048, 2048
 	SelectionDecorations:
 	Health:
 		HP: 80000
@@ -5855,8 +6010,8 @@ drfgweap.xenite:
 		Dimensions: 3,3
 		LocalCenterOffset: 0,-512,0
 	Selectable:
-		Bounds: 131072, 87381
-		DecorationBounds: 131072, 116480, 0, -29098
+		Bounds: 4096, 4096
+		DecorationBounds: 4096, 4096
 	SelectionDecorations:
 	Health:
 		HP: 140000
@@ -5961,6 +6116,8 @@ drtrainer:
 		Condition: trainercontrol
 	WithRangeCircle:
 		Range: 6c0
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Experience
 
 drgant:
 	Inherits@Test: ^Infantry
@@ -6029,6 +6186,8 @@ drgant:
 		VoiceSet: DRGantVoice
 	Selectable:
 		Bounds: 1024, 1024
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
 
 drgrendel:
@@ -6099,6 +6258,8 @@ drgrendel:
 	Selectable:
 		Bounds: 1024, 1024
 		DecorationBounds: 1280, 1280
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
 drgrider:
 	Inherits@Test: ^Infantry
@@ -6167,6 +6328,8 @@ drgrider:
 	Selectable:
 		Bounds: 1024, 1024
 		DecorationBounds: 1280, 1280
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
 
 #Vehicle
@@ -6225,6 +6388,8 @@ drrat2:
 	WithCargoPipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: true
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
 # drrat2.e1:
 # 	Inherits: drrat2
@@ -6304,6 +6469,8 @@ dravenger:
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: True
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 ##############################################################################
 ##
 ##      Darkreign Togra (Fanmade & Auran)
@@ -6325,9 +6492,9 @@ drtpower:
 	Valued:
 		Cost: 100 #300
 	Tooltip:
-		Name: Solar Reactor
-	ProvidesPrerequisite:
-		Prerequisite: anypower
+		Name: Solar Generator
+	ProvidesPrerequisite@BaseTech:
+		Prerequisite: drpowr
 	Building:
 		Footprint: x
 		Dimensions: 1,1
@@ -6408,8 +6575,6 @@ mcv.togran:
 	WithInfantryBody:
 	ProvidesPrerequisite@faction:
 		Prerequisite: mmtogran
-	ProvidesPrerequisite@Freedomwater:
-		Prerequisite: freedomwater
 	Voiced:
 		VoiceSet: DRIRigVoice
 	Passenger:
@@ -6464,6 +6629,8 @@ drihq.togran:
 	# 	RequiresCondition: classicproductionqueues
 	ProvidesPrerequisite@buildingname:
 		Prerequisite: drthq
+	ProvidesPrerequisite@Freedomwater:
+		Prerequisite: freedomwater
 	Buildable:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 1000
@@ -6471,6 +6638,8 @@ drihq.togran:
 		Description: Builds structures
 	ProvidesPrerequisite@factiongdi:
 		Prerequisite: mmtogran
+	ProvidesPrerequisite@Freedomwater:
+		Prerequisite: freedomwater
 	RenderSprites:
 		Image: drthq
 	Inherits@upgrade: ^UpgradesDRIHQType
@@ -6480,8 +6649,8 @@ dribarr.togran:
 	Inherits@shape: ^3x3Shape
 	Inherits@CPQWP: ^CPQConditionWithPrimary
 	Inherits@prod: ^ProducesUnits
-	Inherits@weap: ^IsWeaponFactory
-	Inherits@barr: ^IsBarrack
+	# Inherits@weap: ^IsWeaponFactory
+	Inherits@barr: ^IsBarrackOld
 	HitShape:
 		TargetableOffsets: 0,0,0, 0,1024,0, 0,-1024,0
 		Type: Rectangle
@@ -6495,7 +6664,7 @@ dribarr.togran:
 		Prerequisite: barracks
 	Buildable:
 		BuildPaletteOrder: 40
-		Prerequisites: drhq, ~drthq
+		Prerequisites: ~drthq
 		Queue: Building, RABuilding
 		Description: Produces infantry
 	Building:
@@ -6503,8 +6672,8 @@ dribarr.togran:
 		Dimensions: 3,3
 		LocalCenterOffset: 0,-512,0
 	Selectable:
-		Bounds: 131072, 87381
-		DecorationBounds: 131072, 116480, 0, -29098
+		Bounds: 2048, 2048
+		DecorationBounds: 2048, 2048
 	SelectionDecorations:
 	Health:
 		HP: 80000
@@ -6563,8 +6732,8 @@ driweap.togran:
 		Dimensions: 3,3
 		LocalCenterOffset: 0,-512,0
 	Selectable:
-		Bounds: 131072, 87381
-		DecorationBounds: 131072, 116480, 0, -29098
+		Bounds: 4096, 4096
+		DecorationBounds: 4096, 4096
 	SelectionDecorations:
 	Health:
 		HP: 140000
@@ -6609,7 +6778,7 @@ drihelipad.togran:
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: Rearming
+		Name: Rearming Deck
 	Buildable:
 		BuildPaletteOrder: 50
 		Prerequisites: drihq3, ~drthq
@@ -6685,7 +6854,8 @@ driportal.togran:
 		InsufficientPowerSpeechNotification: InsufficientPower
 		#BeginChargeSpeechNotification: ChronosphereCharging
 		#EndChargeSpeechNotification: ChronosphereReady
-		Duration: 400
+		Durations:
+			1: -1
 		KillCargo: true
 		DisplayRadarPing: True
 		SelectionCursor: ability
@@ -6925,6 +7095,8 @@ drshok:
 	RenderSprites:
 	Voiced:
 		VoiceSet: DRBioTroops
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
 drbiocontrol:
 	Inherits: ^Soldier
@@ -6971,6 +7143,8 @@ drbiocontrol:
 	Voiced:
 		VoiceSet: DRBioTroops
 	-TakeCover:
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
 drreaper2:
 	Inherits: drreaper
@@ -6984,7 +7158,7 @@ drreaper2:
 	Health:
 		HP: 25000
 	Tooltip:
-		Name: Plasma Reaper
+		Name: Reprogrammed Reaper
 	Armament@PRIMARY:
 		Weapon: DRPlasmaReaperWeapon
 	RenderSprites:
@@ -7035,6 +7209,8 @@ drphasemine:
 		PauseOnCondition: cloak-force-disabled || base-reveal || disabled
 		IsPlayerPalette: true
 		UncloakOn: Attack, Unload, Infiltrate, Demolish, Move
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
 #Vehicle
 drntnk:
@@ -7087,6 +7263,8 @@ drntnk:
 	RenderSprites:
 	Voiced:
 		VoiceSet: DRFreedomGuardVoice
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
 drtscout:
 	Inherits: ^Vehicle
@@ -7154,6 +7332,8 @@ drtscout:
 	DetectCloaked:
 		Range: 5c0
 	RenderDetectionCircle:
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
 drticktank:
 	Inherits: ^Vehicle
@@ -7162,7 +7342,7 @@ drticktank:
 	Valued:
 		Cost: 800
 	Tooltip:
-		Name: Togran Walker
+		Name: Tick Tank
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: vehicleproduction
@@ -7219,6 +7399,8 @@ drticktank:
 	RenderSprites:
 	Voiced:
 		VoiceSet: DRFreedomGuardVoice
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
 drvortextank:
 	Inherits: ^Vehicle
@@ -7283,6 +7465,8 @@ drvortextank:
 		DeployChance: 50
 		DeployTicks: 450
 		DeployTrigger: Attack
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
 drflamedeath:
 	Inherits: ^Vehicle
@@ -7322,6 +7506,8 @@ drflamedeath:
 	RenderSprites:
 	Voiced:
 		VoiceSet: DRTripleRailVoice
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
 drsonic:
 	Inherits: ^Vehicle
@@ -7359,6 +7545,9 @@ drsonic:
 	RenderSprites:
 	Voiced:
 		VoiceSet: DRSonicVoice
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
+
 #Aircraft
 drihq.togran.m:
 	Inherits: ^Helicopter
@@ -7366,8 +7555,8 @@ drihq.togran.m:
 	Tooltip:
 		Name: HQ Ship
 	Selectable:
-		Bounds: 131072, 87381
-		DecorationBounds: 131072, 105557, 0, -21845
+		Bounds: 2048, 2048
+		DecorationBounds: 2048, 2048
 	Health:
 		HP: 210000
 	Armor:
@@ -7571,6 +7760,8 @@ drterpower:
 		Prerequisites: ~mmterrorist
 		BuildPaletteOrder: 10
 		Description: Provides power for other structures.
+	ProvidesPrerequisite:
+		Prerequisite: anypower
 	Tooltip:
 		Name: Wind Generator
 
@@ -7717,8 +7908,8 @@ drterweap.terror:
 		Dimensions: 3,3
 		LocalCenterOffset: 0,-512,0
 	Selectable:
-		Bounds: 131072, 87381
-		DecorationBounds: 131072, 116480, 0, -29098
+		Bounds: 4096, 4096
+		DecorationBounds: 4096, 4096
 	SelectionDecorations:
 	Health:
 		HP: 240000
@@ -7799,8 +7990,8 @@ drterrep:
 		Footprint: +x+ x+x +x+
 		Dimensions: 3,3
 	Selectable:
-		Bounds: 116480, 61866, 0, 5461
-		DecorationBounds: 131072, 87381
+		Bounds: 2048, 2048
+		DecorationBounds: 2048, 2048
 	SelectionDecorations:
 	Health:
 		HP: 90000
@@ -7861,8 +8052,8 @@ drterhosp:
 		Footprint: xxx ++x ++x
 		Dimensions: 3,3
 	Selectable:
-		Bounds: 116480, 61866, 0, 5461
-		DecorationBounds: 131072, 87381
+		Bounds: 2048, 2048
+		DecorationBounds: 2048, 2048
 	SelectionDecorations:
 	Health:
 		HP: 90000
@@ -7895,7 +8086,8 @@ drnavyard.terror:
 			TopLeft: -1536, -1536
 			BottomRight: 1536, 1536
 	Selectable:
-		Bounds: 131072, 131072
+		Bounds: 2048, 2048
+		DecorationBounds: 2048, 2048
 	HitShape:
 		UseTargetableCellsOffsets: false
 		TargetableOffsets: 0,0,0, 768,-512,0, 768,512,0, -281,-512,0, -630,512,0
@@ -8068,6 +8260,8 @@ drrasta:
 	FreeActor@Srank:
 		RequiresCondition: rank-veteran >= 4
 		Actor: drjailbrk
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
 drjailbrk:
 	Inherits: ^Soldier
@@ -8209,6 +8403,8 @@ drfatso:
 	RenderSprites:
 	Voiced:
 		VoiceSet: DRFatSoldierVoice
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
 drskater:
 	Inherits: ^Vehicle
@@ -8223,7 +8419,7 @@ drskater:
 		BuildPaletteOrder: 40
 		Prerequisites: anypower
 		Queue: Infantry.Terrorist
-		Description: The Skater are a Scout Infantry\nThe Fist Veterancy adquire Camouflage\nThe Second Veterancy adquire Spy Habilities.\n\nType: Hover\nSpeed: Medium\nWeapon: Small Laser\nRange: Medium\nArmor: Light
+		Description: The Skater is a Scout Infantry\nThe Fist Veterancy adquires Camouflage \nThe Second Veterancy adquire Spy Habilities.\n\nType: Hover\nSpeed: Medium\nWeapon: Small Laser\nRange: Medium\nArmor: Light
 	Mobile:
 		Locomotor: hover
 		Speed: 132
@@ -8263,6 +8459,8 @@ drskater:
 		Notification: BuildingInfiltrated
 		PlayerExperience: 50
 		RequiresCondition: rank-veteran >= 2
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
 #Vehicle
 drttransport:
@@ -8319,6 +8517,8 @@ drttransport:
 	WithCargoPipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: true
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
 # drttransport.e1:
 # 	Inherits: drttransport
@@ -8411,6 +8611,8 @@ drtanker:
 	RenderSprites:
 	Voiced:
 		VoiceSet: DRTankerVoice
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
 drtarty:
 	Inherits: ^Tank
@@ -8473,6 +8675,8 @@ drtarty:
 	RangeMultiplier@RANK-ELITE:
 		RequiresCondition: rank-elite
 		Modifier: 150
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
 drmtnk:
 	Inherits: ^Vehicle
@@ -8524,6 +8728,8 @@ drmtnk:
 	RangeMultiplier@RANK-ELITE:
 		RequiresCondition: rank-elite
 		Modifier: 150
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 #Aircraft
 drspiner:
 	Inherits: ^Helicopter
@@ -8579,6 +8785,8 @@ drspiner:
 		Position: BottomLeft
 		RequiresSelection: True
 		PipCount: 5
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
 drtertran:
 	Inherits: ^Helicopter
@@ -8623,6 +8831,9 @@ drtertran:
 	WithCargoPipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: true
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
+
 #Naval
 drghazi:
 	Inherits: ^BoatUnit
@@ -8675,6 +8886,8 @@ drghazi:
 	Voiced:
 		VoiceSet: DRGhaziVoice
 	RenderSprites:
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
 drphunisher:
 	Inherits: ^BoatUnit
@@ -8723,6 +8936,8 @@ drphunisher:
 	Voiced:
 		VoiceSet: DRPunisherVoice
 	RenderSprites:
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 ##############################################################################
 ##
 ##      Darkreign Aliens (EOD)
@@ -8775,6 +8990,8 @@ mcv.eodalien:
 		Prerequisite: mmdralien
 	Voiced:
 		VoiceSet: DRGlothVoice
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
 mcv2.eodalien:
 	Inherits: ^Vehicle
@@ -8826,6 +9043,8 @@ mcv2.eodalien:
 		LocalOffset: 0,0,0
 	AttackFrontal:
 		FacingTolerance: 0
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
 drahq.eodalien:
 	Inherits: ^BaseBuilding
@@ -8834,7 +9053,8 @@ drahq.eodalien:
 	Inherits@aicash: ^AIConyardCash
 	Inherits: ^Conyard
 	Selectable:
-		Bounds: 131072, 87381
+		Bounds: 4096, 4096
+		DecorationBounds: 4096, 4096
 	Valued:
 		Cost: 2000
 	Tooltip:
@@ -8983,6 +9203,7 @@ draweap.eodalien:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^3x2Shape
 	Inherits@CPQWP: ^CPQConditionWithPrimary
+	Inherits@weap: ^IsWeaponFactoryOld
 	Inherits@prod: ^ProducesUnits
 	HitShape:
 		TargetableOffsets: 0,0,0, 0,1024,0, 0,-1024,0
@@ -9005,8 +9226,8 @@ draweap.eodalien:
 		Dimensions: 3,3
 		LocalCenterOffset: 0,-512,0
 	Selectable:
-		Bounds: 131072, 87381
-		DecorationBounds: 131072, 116480, 0, -29098
+		Bounds: 4096, 4096
+		DecorationBounds: 4096, 4096
 	SelectionDecorations:
 	Health:
 		HP: 140000
@@ -9036,6 +9257,8 @@ draweap.eodalien:
 		RequiresCondition: !classicproductionqueues
 	Inherits@upgrade: ^UpgradesDRIWEAPType
 	ProvidesPrerequisite@buildingname:
+	ProvidesPrerequisite@alienbuildingname:
+		Prerequisite: draweap.eodalien
 	RenderSprites:
 		Image: draweap
 
@@ -9044,8 +9267,7 @@ drabarr.eodalien:
 	Inherits@shape: ^3x3Shape
 	Inherits@CPQWP: ^CPQConditionWithPrimary
 	Inherits@prod: ^ProducesUnits
-	Inherits@weap: ^IsWeaponFactory
-	Inherits@barr: ^IsBarrack
+	Inherits@barr: ^IsBarrackOld
 	HitShape:
 		TargetableOffsets: 0,0,0, 0,1024,0, 0,-1024,0
 		Type: Rectangle
@@ -9059,7 +9281,7 @@ drabarr.eodalien:
 		Prerequisite: barracks
 	Buildable:
 		BuildPaletteOrder: 40
-		Prerequisites: drhq, ~mmdralien
+		Prerequisites: ~mmdralien
 		Queue: Building, RABuilding
 		Description: Produces infantry
 	Building:
@@ -9067,8 +9289,8 @@ drabarr.eodalien:
 		Dimensions: 3,3
 		LocalCenterOffset: 0,-512,0
 	Selectable:
-		Bounds: 131072, 87381
-		DecorationBounds: 131072, 116480, 0, -29098
+		Bounds: 2048, 2048
+		DecorationBounds: 2048, 2048
 	SelectionDecorations:
 	Health:
 		HP: 80000
@@ -9103,6 +9325,7 @@ drabarr.eodalien:
 
 drlife.eodalien:
 	Inherits: ^BaseBuilding
+	Inherits@ref: ^Refinery
 	Buildable:
 		BuildPaletteOrder: 60
 		Prerequisites: anypower, ~mmdralien
@@ -9117,8 +9340,8 @@ drlife.eodalien:
 		Dimensions: 3,4
 		LocalCenterOffset: 0,-512,0
 	Selectable:
-		Bounds: 131072, 91008, 0, 21845
-		DecorationBounds: 131072, 127402, 0, -3626
+		Bounds: 2048, 2048
+		DecorationBounds: 2048, 2048
 	SelectionDecorations:
 	Targetable:
 		TargetTypes: Ground, Structure, C4, DetonateAttack, SpyInfiltrate
@@ -9130,7 +9353,7 @@ drlife.eodalien:
 		Range: 5c0
 	Refinery:
 		DockAngle: 256
-		DockOffset: 1,2
+		DockOffset: 0, 1c0, 0
 	StoresResources:
 		Capacity: 2000 #2000
 	DockHost:
@@ -9331,7 +9554,8 @@ drnavyard.eodalien:
 			TopLeft: -1536, -1536
 			BottomRight: 1536, 1536
 	Selectable:
-		Bounds: 131072, 131072
+		Bounds: 2048, 2048
+		DecorationBounds: 2048, 2048
 	HitShape:
 		UseTargetableCellsOffsets: false
 		TargetableOffsets: 0,0,0, 768,-512,0, 768,512,0, -281,-512,0, -630,512,0
@@ -9443,6 +9667,8 @@ drramnoth:
 	RenderSprites:
 	Voiced:
 		VoiceSet: DRRamnothVoice
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
 drmamnoth:
 	Inherits: ^Soldier
@@ -9483,6 +9709,8 @@ drmamnoth:
 	RenderSprites:
 	Voiced:
 		VoiceSet: DRRamnothVoice
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
 drrelmnoth:
 	Inherits: ^Soldier
@@ -9525,6 +9753,8 @@ drrelmnoth:
 	RenderSprites:
 	Voiced:
 		VoiceSet: DRRelmnothVoice
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
 drsalamander:
 	Inherits@Test: ^Infantry
@@ -9573,6 +9803,8 @@ drsalamander:
 	DetectCloaked:
 		Range: 5c0
 	RenderDetectionCircle:
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
 drassimilator:
 	Inherits@Test: ^Infantry
@@ -9620,6 +9852,9 @@ drassimilator:
 		VoiceSet: DRAssimilatorVoice
 	Selectable:
 		Bounds: 1024, 1024
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
+
 #Vehicle
 drgather:
 	Inherits: ^Tank
@@ -9672,6 +9907,8 @@ drgather:
 	RenderSprites:
 	Voiced:
 		VoiceSet: DRGathererVoice
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Experience
 
 drdrednaut:
 	Inherits: ^Tank
@@ -9686,7 +9923,7 @@ drdrednaut:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 40
-		Prerequisites: vehicleproduction
+		Prerequisites: draweap.eodalien
 		Queue: Vehicle.Eodalien
 		BuildDuration: 1020
 		BuildDurationModifier: 40
@@ -9729,6 +9966,8 @@ drdrednaut:
 	WithCargoPipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: true
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
 drmole:
 	Inherits: ^Vehicle
@@ -9739,7 +9978,7 @@ drmole:
 		Name: Mole Tank
 	Buildable:
 		BuildPaletteOrder: 40
-		Prerequisites: vehicleproduction
+		Prerequisites: draweap.eodalien
 		Queue: Vehicle.Eodalien
 		Description: Speedy, heavy mech.\n  Powerful Firepower.\n  Strong vs Ground Units\n  Weak vs Aircraft
 	Mobile:
@@ -9773,6 +10012,8 @@ drmole:
 		PauseOnCondition: cloak-force-disabled || disabled
 		IsPlayerPalette: true
 		UncloakOn: Attack, Unload, Infiltrate, Demolish, Move
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
 drarunner:
 	Inherits: ^Vehicle
@@ -9783,7 +10024,7 @@ drarunner:
 		Name: Assault Wheel
 	Buildable:
 		BuildPaletteOrder: 40
-		Prerequisites: vehicleproduction
+		Prerequisites: draweap.eodalien
 		Queue: Vehicle.Eodalien
 		Description: Speedy, heavy mech.\n  Powerful Firepower.\n  Strong vs Ground Units\n  Weak vs Aircraft
 	Mobile:
@@ -9807,6 +10048,8 @@ drarunner:
 	RenderSprites:
 	Voiced:
 		VoiceSet: DRDrednautVoice
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
 drhealer:
 	Inherits: ^Tank
@@ -9821,7 +10064,7 @@ drhealer:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 40
-		Prerequisites: vehicleproduction
+		Prerequisites: draweap.eodalien
 		Queue: Vehicle.Eodalien
 		BuildDuration: 1020
 		BuildDurationModifier: 40
@@ -9864,6 +10107,8 @@ drhealer:
 	RenderSprites:
 	Voiced:
 		VoiceSet: DRShredderVoice
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
 drrouter:
 	Inherits: ^Vehicle
@@ -9874,7 +10119,7 @@ drrouter:
 		Name: Router
 	Buildable:
 		BuildPaletteOrder: 61
-		Prerequisites: vehicleproduction
+		Prerequisites: draweap.eodalien
 		Queue: Vehicle.Eodalien
 		Description: Speedy, medium mech.\n  Powerful Firepower.\n  Strong vs Ground Units\n  Weak vs Aircraft
 	Mobile:
@@ -9904,6 +10149,8 @@ drrouter:
 	RenderSprites:
 	Voiced:
 		VoiceSet: DRDrednautVoice
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
 drmecha:
 	Inherits: ^Vehicle
@@ -9914,7 +10161,7 @@ drmecha:
 		Name: Mechagon
 	Buildable:
 		BuildPaletteOrder: 61
-		Prerequisites: vehicleproduction, driweap2
+		Prerequisites: draweap.eodalien, driweap2
 		Queue: Vehicle.Eodalien
 		Description: Speedy, medium mech.\n  Powerful Firepower.\n  Strong vs Ground Units\n  Weak vs Aircraft
 	Mobile:
@@ -9944,6 +10191,8 @@ drmecha:
 	RenderSprites:
 	Voiced:
 		VoiceSet: DRDrednautVoice
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
 # drdrednaut.e1:
 # 	Inherits: drdrednaut
@@ -9987,7 +10236,7 @@ drlynoth:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 100
-		Prerequisites: vehicleproduction, driweap2, drhive
+		Prerequisites: draweap.eodalien, driweap2, drhive
 		Queue: Vehicle.Eodalien
 		Description: Helicopter Gunship with Chainguns.\n  Strong vs Infantry, Light Vehicles and\n  Aircraft\n  Weak vs Tanks
 	Aircraft:
@@ -10027,6 +10276,8 @@ drlynoth:
 		Position: BottomLeft
 		RequiresSelection: True
 		PipCount: 5
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
 drcarrier:
 	Inherits: ^Helicopter
@@ -10040,7 +10291,7 @@ drcarrier:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 140
-		Prerequisites: vehicleproduction, driweap2, drhive
+		Prerequisites: draweap.eodalien, driweap2, drhive
 		Queue: Vehicle.Eodalien
 		Description: Heavy Bomber Aircraft.\n  Strong vs Ground Units and Buildings\n  Weak vs AA Aircraft
 	Aircraft:
@@ -10134,6 +10385,8 @@ drcarrier:
 	WithCargoPipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: true
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
 drlynoth.carrier:
 	Inherits: drlynoth
@@ -10163,7 +10416,7 @@ drblazer:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 110
-		Prerequisites: vehicleproduction, driweap2, drhive
+		Prerequisites: draweap.eodalien, driweap2, drhive
 		Queue: Vehicle.Eodalien
 		Description: Helicopter Gunship with Chainguns.\n  Strong vs Infantry, Light Vehicles and\n  Aircraft\n  Weak vs Tanks
 	Aircraft:
@@ -10203,6 +10456,8 @@ drblazer:
 		Position: BottomLeft
 		RequiresSelection: True
 		PipCount: 5
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
 drbomber:
 	Inherits: ^Helicopter
@@ -10217,7 +10472,7 @@ drbomber:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 120
-		Prerequisites: vehicleproduction, driweap2, drhive
+		Prerequisites: draweap.eodalien, driweap2, drhive
 		Queue: Vehicle.Eodalien
 		Description: Helicopter Gunship with Missiles.\n  Strong vs Infantry, Light Vehicles and\n  Aircraft\n  Weak vs Tanks
 	Aircraft:
@@ -10254,6 +10509,8 @@ drbomber:
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: True
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
 drthunder:
 	Inherits: ^Helicopter
@@ -10268,7 +10525,7 @@ drthunder:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 150
-		Prerequisites: vehicleproduction, driweap2, drhive
+		Prerequisites: draweap.eodalien, driweap2, drhive
 		Queue: Vehicle.Eodalien
 		Description: Helicopter Gunship with Quake Weapons.\n  Strong vs Infantry, Light Vehicles and\n  Aircraft\n  Weak vs Tanks
 	Aircraft:
@@ -10312,11 +10569,13 @@ drthunder:
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: True
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
 drcarrier.e1:
 	Inherits: drcarrier
 	Buildable:
-		Prerequisites: vehicleproduction, driweap2, drhive, ~botplayer
+		Prerequisites: draweap.eodalien, driweap2, drhive, ~botplayer
 		Queue: Vehicle, RAVehicle
 	Cargo:
 		InitialUnits: drlynoth, drlynoth, drlynoth, drlynoth, drlynoth
@@ -10328,7 +10587,7 @@ drcarrier.e1:
 drcarrier.e2:
 	Inherits: drcarrier.e1
 	Buildable:
-		Prerequisites: vehicleproduction, driweap2, drhive, ~hardbotplayer
+		Prerequisites: draweap.eodalien, driweap2, drhive, ~hardbotplayer
 	ProductionCostMultiplier:
 		Multiplier: 100
 
@@ -10346,7 +10605,7 @@ drmissboat:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 40
-		Prerequisites: vehicleproduction, driweap2
+		Prerequisites: draweap.eodalien, driweap2
 		Queue: Naval.Eodalien
 		BuildDuration: 1020
 		BuildDurationModifier: 40
@@ -10383,6 +10642,8 @@ drmissboat:
 	RenderSprites:
 	Voiced:
 		VoiceSet: DRDrednautVoice
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
 drpboat:
 	Inherits: ^BoatUnit
@@ -10397,7 +10658,7 @@ drpboat:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 40
-		Prerequisites: vehicleproduction, driweap2
+		Prerequisites: draweap.eodalien, driweap2
 		Queue: Naval.Eodalien
 		BuildDuration: 1020
 		BuildDurationModifier: 40
@@ -10441,6 +10702,8 @@ drpboat:
 		PauseOnCondition: cloak-force-disabled || disabled
 		IsPlayerPalette: true
 		UncloakOn: Attack, Unload, Infiltrate, Demolish, Move
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 ##############################################################################
 ##
 ##      Darkreign Descendants (Fanmade)
@@ -11147,6 +11410,8 @@ drarmciv:
 	RenderSprites:
 	Voiced:
 		VoiceSet: DRArmedCivilian
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
 drzombie:
 	Inherits: ^Soldier
@@ -11192,6 +11457,7 @@ drzombie:
 	RenderSprites:
 	Voiced:
 		VoiceSet: DRZombieVoice
+
 drsatanclawz:
 	Inherits: ^Soldier
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -11232,6 +11498,8 @@ drsatanclawz:
 	RenderSprites:
 	Voiced:
 		VoiceSet: DRSantaVoice
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
 
 drsatanclawzevent:
 	Inherits: drsatanclawz
@@ -11512,7 +11780,8 @@ drfarm:
 	Inherits: ^CivBuilding
 	Inherits@shape: ^3x2Shape
 	Selectable:
-		Bounds: 131072, 87381
+		Bounds: 2048, 2048
+		DecorationBounds: 2048, 2048
 	Building:
 		Footprint: xxx xxx ===
 		Dimensions: 3,3
@@ -11533,7 +11802,8 @@ drfarm2:
 	Inherits: ^CivBuilding
 	Inherits@shape: ^3x2Shape
 	Selectable:
-		Bounds: 131072, 87381
+		Bounds: 2048, 2048
+		DecorationBounds: 2048, 2048
 	Building:
 		Footprint: xxx xxx xxx
 		Dimensions: 3,3
@@ -11554,7 +11824,8 @@ drfarm3:
 	Inherits: ^CivBuilding
 	Inherits@shape: ^3x2Shape
 	Selectable:
-		Bounds: 131072, 87381
+		Bounds: 2048, 2048
+		DecorationBounds: 2048, 2048
 	Building:
 		Footprint: xxx xxx xxx
 		Dimensions: 3,3
@@ -11575,7 +11846,8 @@ drrural:
 	Inherits: ^CivBuilding
 	Inherits@shape: ^3x2Shape
 	Selectable:
-		Bounds: 131072, 87381
+		Bounds: 2048, 2048
+		DecorationBounds: 2048, 2048
 	Building:
 		Footprint: xxx xxx xxx
 		Dimensions: 3,3
@@ -11591,7 +11863,8 @@ drcomercial:
 	Inherits: ^CivBuilding
 	Inherits@shape: ^3x2Shape
 	Selectable:
-		Bounds: 131072, 87381
+		Bounds: 2048, 2048
+		DecorationBounds: 2048, 2048
 	Building:
 		Footprint: xxx xxx xxx
 		Dimensions: 3,3
@@ -11607,7 +11880,8 @@ drctech:
 	Inherits: ^CivBuilding
 	Inherits@shape: ^3x2Shape
 	Selectable:
-		Bounds: 131072, 87381
+		Bounds: 2048, 2048
+		DecorationBounds: 2048, 2048
 	Building:
 		Footprint: xxx xxx xxx
 		Dimensions: 3,3
@@ -11623,7 +11897,8 @@ drconcessionaire:
 	Inherits: ^CivBuilding
 	Inherits@shape: ^3x2Shape
 	Selectable:
-		Bounds: 131072, 87381
+		Bounds: 2048, 2048
+		DecorationBounds: 2048, 2048
 	Building:
 		Footprint: xxx xxx ===
 		Dimensions: 3,3
@@ -11639,7 +11914,8 @@ drtents:
 	Inherits: ^CivBuilding
 	Inherits@shape: ^3x2Shape
 	Selectable:
-		Bounds: 131072, 87381
+		Bounds: 2048, 2048
+		DecorationBounds: 2048, 2048
 	Building:
 		Footprint: xxx xxx xxx
 		Dimensions: 3,3
@@ -11710,7 +11986,7 @@ drihq3:
 
 drfghelipad:
 	Tooltip:
-		Name: Rearming
+		Name: Rearming Deck
 
 drihelipad:
 	Inherits: drfghelipad

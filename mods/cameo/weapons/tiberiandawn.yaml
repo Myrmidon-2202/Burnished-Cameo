@@ -84,9 +84,9 @@ Grenade:
 		ContrailStartColor: FFFF88FF
 		ContrailEndColor: FF884422
 	Warhead@Grenade: SpreadDamage
-		Damage: 8000
-	Warhead@GrenadeFriendlyFire: SpreadDamage
 		Damage: 4000
+	Warhead@GrenadeFriendlyFire: SpreadDamage
+		Damage: 2000
 	Warhead@GrenadePercentage: HealthPercentageDamage
 		Damage: 4
 
@@ -110,9 +110,9 @@ Flamethrower:
 	Range: 2085
 	Report: flamer2.aud
 	Warhead@LightFlameWeapon: SpreadDamage
-		Damage: 10000
+		Damage: 60000
 	Warhead@LightFlameWeaponFriendlyFire: SpreadDamage
-		Damage: 5000
+		Damage: 3000
 	Warhead@LightFlameWeaponPercentage: HealthPercentageDamage
 		Damage: 5
 
