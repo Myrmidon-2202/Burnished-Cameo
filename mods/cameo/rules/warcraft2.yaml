@@ -23,27 +23,27 @@
 # Total Cost (Gold * 0.25) + (Wood * 0.5) + (Oil * 0.5) WC2 = ORA Cost
 
 World:
-	# FactionCA@human2:
-	# 	Name: Human WC2
-	# 	InternalName: human2
-	# 	Game: Warcraft 2
-	# 	Side: Warcraft 2
-	# 	Description: Human\nLeaders of the Alliance\nMighty and intelligent.\nSupport Powers: Holy Vision, Blizzard
-	# 	Selectable: True
-	# FactionCA@orc2:
-	# 	Name: Orc WC2
-	# 	InternalName: orc2
-	# 	Game: Warcraft 2
-	# 	Side: Warcraft 2
-	# 	Description: Orc\nLeaders of the Horde\nBrutish and crafty.\nSupport Powers: Eye of Kilrogg, Death and Decay
-	# 	Selectable: True
-	# FactionCA@RandomWC2:
-	# 	Name: Any WC2
-	# 	InternalName: RandomWC2
-	# 	RandomFactionMembers: human2, orc2
-	# 	Game: Warcraft 2
-	# 	Side: Random
-	# 	Description: Random Faction\nA random faction from Warcraft 2 will be chosen when the game starts.
+	FactionCA@human2:
+		Name: Human WC2
+		InternalName: human2
+		Game: Warcraft 2
+		Side: Warcraft 2
+		Description: Human\nLeaders of the Alliance\nMighty and intelligent.\nSupport Powers: Holy Vision, Blizzard
+		Selectable: True
+	FactionCA@orc2:
+		Name: Orc WC2
+		InternalName: orc2
+		Game: Warcraft 2
+		Side: Warcraft 2
+		Description: Orc\nLeaders of the Horde\nBrutish and crafty.\nSupport Powers: Eye of Kilrogg, Death and Decay
+		Selectable: True
+	FactionCA@RandomWC2:
+		Name: Any WC2
+		InternalName: RandomWC2
+		RandomFactionMembers: human2, orc2
+		Game: Warcraft 2
+		Side: Random
+		Description: Random Faction\nA random faction from Warcraft 2 will be chosen when the game starts.
 	####################################################################################################
 	#	   Warcraft 2
 	####################################################################################################

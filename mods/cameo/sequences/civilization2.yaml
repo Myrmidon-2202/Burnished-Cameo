@@ -139,7 +139,7 @@ civ2_district_resource_bronze:
 	civ2_district_resource_classic:
 		Start: 9
 	civ2_district_resource_medieval:
-		Start: 24
+		Start: 25
 
 civ2_district_resource_classic:
 	Inherits: civ2_district_resource_bronze
@@ -174,12 +174,20 @@ civ2_district_production_bronze:
 		Start: 2
 	civ2_district_production_classic:
 		Start: 10
+	civ2_district_production_medieval:
+		Start: 26
 
 civ2_district_production_classic:
 	Inherits: civ2_district_production_bronze
 	icon: 
 		Filename: civilization_2_icons.png
 		Start: 6
+
+civ2_district_production_medieval:
+	Inherits: civ2_district_production_classic
+	icon: 
+		Filename: civilization_2_icons.png
+		Start: 10
 
 ####################################################################################################
 #		UNIT CIV2

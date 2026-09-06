@@ -277,7 +277,6 @@ CIV2_DISTRICT_HOUSING_CLASSIC:
 		Prerequisites: ~civ2_era_classic, ~!civ2_era_medieval
 		Description: Provides housing (power)
 
-
 CIV2_DISTRICT_HOUSING_MEDIEVAL:
 	Inherits@CIV2_DISTRICT_HOUSING_CLASSIC: CIV2_DISTRICT_HOUSING_CLASSIC
 	Tooltip:
@@ -285,7 +284,6 @@ CIV2_DISTRICT_HOUSING_MEDIEVAL:
 	Buildable:
 		Prerequisites: ~civ2_era_medieval
 		Description: Provides housing (power)
-
 
 CIV2_DISTRICT_RESOURCE_BRONZE:
 	Inherits: ^Civ2Building
@@ -383,7 +381,7 @@ CIV2_DISTRICT_RESOURCE_CLASSIC:
 	Tooltip:
 		Name: Resource District [Classic]
 	Buildable:
-		Prerequisites: ~civ2_district_capital_bronze, ~civ2_era_classic
+		Prerequisites: ~civ2_era_classic, ~!civ2_era_medieval
 		Description: Processes raw Tiberium\ninto useable resources
 
 CIV2_DISTRICT_RESOURCE_MEDIEVAL:
@@ -391,7 +389,7 @@ CIV2_DISTRICT_RESOURCE_MEDIEVAL:
 	Tooltip:
 		Name: Resource District [Medieval]
 	Buildable:
-		Prerequisites: ~civ2_district_capital_classic, ~civ2_era_medieval
+		Prerequisites: ~civ2_era_medieval
 		Description: Processes raw Tiberium\ninto useable resources
 
 CIV2_DISTRICT_PRODUCTION_BRONZE:
@@ -401,7 +399,7 @@ CIV2_DISTRICT_PRODUCTION_BRONZE:
 	Inherits@exits: ^WC2Exits_3x3
 	Inherits@CPQWP: ^CPQConditionWithPrimary
 	Inherits@prod: ^ProducesUnits
-	Inherits@barr: ^IsBarrackOld
+	Inherits@barr: ^IsBarrack
 	HitShape:
 		UseTargetableCellsOffsets: false
 		TargetableOffsets: 0,0,0, 630,-512,0, 355,512,0, -281,-512,0, -630,512,0
@@ -413,7 +411,7 @@ CIV2_DISTRICT_PRODUCTION_BRONZE:
 		Prerequisite: barracks
 	Buildable:
 		BuildPaletteOrder: 30
-		Prerequisites: ~civ2_district_capital_bronze, civ2_district_housing_bronze
+		Prerequisites: ~civ2_district_capital_bronze, civ2_district_housing_bronze, ~!civ2_era_classic
 		Queue: Building, RABuilding
 		Description: Trains infantry
 	Building:
@@ -427,26 +425,29 @@ CIV2_DISTRICT_PRODUCTION_BRONZE:
 	WithBuildingBib:
 		Palette: ra_temperat
 	RallyPoint:
-	Production:
-		Produces: Infantry.CIV2
-	GrantExternalConditionToProduced:
-		Condition: produced
-	ProductionQueue:
-		Type: Infantry.CIV2
-		DisplayOrder: 2
-		Group: Infantry
-		LowPowerModifier: 150
-		ReadyAudio: UnitReady
-		ReadyTextNotification: notification-unit-ready
-		BlockedAudio: NoBuild
-		BlockedTextNotification: notification-unable-to-build-more
-		LimitedAudio: BuildingInProgress
-		LimitedTextNotification: notification-unable-to-comply-building-in-progress
-		QueuedAudio: Training
-		OnHoldAudio: OnHold
-		CancelledAudio: Cancelled
-	ProductionBar:
-		ProductionType: Infantry.CIV2
+	Exit@1:
+		SpawnOffset: 512,1024,0
+		ExitCell: 1,2
+	# Production:
+	# 	Produces: Infantry.CIV2
+	# GrantExternalConditionToProduced:
+	# 	Condition: produced
+	# ProductionQueue:
+	# 	Type: Infantry.CIV2
+	# 	DisplayOrder: 2
+	# 	Group: Infantry
+	# 	LowPowerModifier: 150
+	# 	ReadyAudio: UnitReady
+	# 	ReadyTextNotification: notification-unit-ready
+	# 	BlockedAudio: NoBuild
+	# 	BlockedTextNotification: notification-unable-to-build-more
+	# 	LimitedAudio: BuildingInProgress
+	# 	LimitedTextNotification: notification-unable-to-comply-building-in-progress
+	# 	QueuedAudio: Training
+	# 	OnHoldAudio: OnHold
+	# 	CancelledAudio: Cancelled
+	# ProductionBar:
+	# 	ProductionType: Infantry.CIV2
 	# Exit@1:
 	# 	SpawnOffset: 512,1024,0
 	# 	ExitCell: 1,2
@@ -475,14 +476,35 @@ CIV2_DISTRICT_PRODUCTION_BRONZE:
 	DamageMultiplier@classic:
 		Modifier: 66
 		RequiresCondition: civ2_era_classic
-		# RequiresCondition: wc2_human_betterfarm && !wc2_human_bestfarm
+
+	# Medieval Production Upgrade
+	GrantConditionOnPrerequisite@medieval:
+		Condition: civ2_era_medieval
+		Prerequisites: civ2_era_medieval
+	WithSpriteBody@medieval:
+		Sequence: civ2_district_production_medieval
+		RequiresCondition: civ2_era_medieval
+	PowerMultiplier@medieval:
+		Modifier: 200
+		RequiresCondition: civ2_era_medieval
+	DamageMultiplier@medieval:
+		Modifier: 66
+		RequiresCondition: civ2_era_medieval
 
 CIV2_DISTRICT_PRODUCTION_CLASSIC:
 	Inherits@CIV2_DISTRICT_PRODUCTION_BRONZE: CIV2_DISTRICT_PRODUCTION_BRONZE
 	Tooltip:
 		Name: Production District [Classic]
 	Buildable:
-		Prerequisites: ~civ2_district_capital_bronze, ~civ2_era_classic
+		Prerequisites: ~civ2_era_classic, ~!civ2_era_medieval
+		Description: Trains infantry
+
+CIV2_DISTRICT_PRODUCTION_MEDIEVAL:
+	Inherits@CIV2_DISTRICT_PRODUCTION_CLASSIC: CIV2_DISTRICT_PRODUCTION_CLASSIC
+	Tooltip:
+		Name: Production District [Medieval]
+	Buildable:
+		Prerequisites: ~civ2_era_medieval
 		Description: Trains infantry
 
 ####################################################################################################
@@ -552,10 +574,10 @@ civ2_warrior:
 	Buildable:
 		BuildPaletteOrder: 10
 		Prerequisites: ~civ2_district_production_bronze
-		Queue: Infantry.civ2, RAInfantry.civ2
+		Queue: Infantry, RAInfantry
 		Description: Basic Melee Infantry. Slow but can take some damage.
 		BuildDuration: 150
-		BuildDurationModifier: 100
+		# BuildDurationModifier: 100
 	Mobile:
 		Speed: 56
 	DamageMultiplier@DamageReduction:
