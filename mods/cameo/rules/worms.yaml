@@ -1146,9 +1146,7 @@ WORMUZI:
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
 		-IdleSequences: idle1,idle2,idle3,idle4
-	FireWarheadsOnDeath:
-		Weapon: WormSuicideExplode
-		EmptyWeapon: WormSuicideExplode
+
 WORMGRENADE:
 	Inherits: ^Soldier
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -1190,6 +1188,7 @@ WORMGRENADE:
 	FireWarheadsOnDeath:
 		Weapon: WormSuicideExplode
 		EmptyWeapon: WormSuicideExplode
+
 WORMBAZOOKA:
 	Inherits: ^Soldier
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -1235,9 +1234,7 @@ WORMBAZOOKA:
 		RequiresCondition: charging
 		SoundFiles: wormshoming.wav
 		Interval: 30, 40
-	FireWarheadsOnDeath:
-		Weapon: WormSuicideExplode
-		EmptyWeapon: WormSuicideExplode
+
 WORMFLAMER:
 	Inherits: ^Soldier
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -1351,6 +1348,7 @@ WORMDYNAMITE:
 	FireWarheadsOnDeath:
 		Weapon: WormSuicideExplode
 		EmptyWeapon: WormSuicideExplode
+
 WHARV:
 	Inherits: ^Tank
 	Inherits@selection: ^SelectableEconomicUnit
