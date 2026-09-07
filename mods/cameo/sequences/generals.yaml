@@ -778,6 +778,8 @@ sglaangrymob1:
 		Length: 3
 		Stride: 6
 		Facings: 8
+	icon: 
+		Filename: glmobicon.shp
 
 sglaangrymob2:
 	Defaults:
@@ -825,6 +827,8 @@ sglaangrymob2:
 		Start: 248
 		Length: 20
 		Tick: 130
+	icon: 
+		Filename: glmobicon.shp
 
 sglterrorist:
 	Defaults:
@@ -890,10 +894,10 @@ glcommand:
 		Filename: glbuildingmakebig.shp
 		Length: *
 	bib:
-		Filename: bib2
-		UseTilesetExtension: true
-		Length: *
-		Offset: 0,24
+		# Filename: bib2
+		# UseTilesetExtension: true
+		# Length: *
+		# Offset: 0,24
 	idle-anim1:
 		Filename: glcommandanim1.shp
 		Length: 7
@@ -931,9 +935,9 @@ glbarracks:
 		Filename: glbuildingmakebig.shp
 		Length: *
 	bib:
-		Filename: bib2
-		UseTilesetExtension: true
-		Length: *
+		# Filename: bib2
+		# UseTilesetExtension: true
+		# Length: *
 	idle-anim2:
 		Filename: glstructuresmoke.shp
 		Start: 49
@@ -991,10 +995,10 @@ glweap:
 		Filename: glbuildingmakebig.shp
 		Length: *
 	bib:
-		Filename: bib1
-		UseTilesetExtension: true
-		Length: *
-		Offset: 0,0
+		# Filename: bib1
+		# UseTilesetExtension: true
+		# Length: *
+		# Offset: 0,0
 	icon:
 		Filename: glweapicon.shp
 		Offset: 0,0
@@ -1039,9 +1043,9 @@ glpalace:
 		Filename: glbuildingmakebig.shp
 		Length: *
 	bib:
-		Filename: bib1
-		UseTilesetExtension: true
-		Length: *
+		# Filename: bib1
+		# UseTilesetExtension: true
+		# Length: *
 	icon:
 		Filename: glpalaceicon.shp
 		Offset: 0,0
@@ -1078,10 +1082,10 @@ glstorm:
 		Filename: glbuildingmakebig.shp
 		Length: *
 	bib:
-		Filename: bib2
-		UseTilesetExtension: true
-		Length: *
-		Offset: 0,0
+		# Filename: bib2
+		# UseTilesetExtension: true
+		# Length: *
+		# Offset: 0,0
 	icon:
 		Filename: glstormicon.shp
 		Offset: 0,0
@@ -1123,11 +1127,11 @@ glblackmarket:
 		Length: *
 	dead:
 	bib:
-		Filename: bib3.shp
-		Length: *
-		UseTilesetExtension: true
-		TilesetOverrides:
-			INTERIOR: TEMPERAT
+		# Filename: bib3.shp
+		# Length: *
+		# UseTilesetExtension: true
+		# TilesetOverrides:
+		# 	INTERIOR: TEMPERAT
 	icon:
 		Filename: glblackmarketicon.shp
 	idle-anim2:
@@ -1155,9 +1159,9 @@ glhole2:
 	dead:
 	make:
 	bib:
-		Filename: bib1.shp
-		UseTilesetExtension: true
-		Length: *
+		# Filename: bib1.shp
+		# UseTilesetExtension: true
+		# Length: *
 	icon:
 		Filename: glpalaceicon.shp
 		Offset: 0,0
@@ -1173,11 +1177,11 @@ glhole:
 	make:
 	dead:
 	bib:
-		Filename: bib3
-		Length: *
-		UseTilesetExtension: true
-		TilesetOverrides:
-			INTERIOR: TEMPERAT
+		# Filename: bib3
+		# Length: *
+		# UseTilesetExtension: true
+		# TilesetOverrides:
+		# 	INTERIOR: TEMPERAT
 	icon:
 		Filename: glblackmarketicon.shp
 
@@ -1832,10 +1836,10 @@ chcommand:
 		Filename: chbuildingmakebig.shp
 		Length: *
 	bib:
-		Filename: bib2
-		UseTilesetExtension: true
-		Length: *
-		Offset: 0,24
+		# Filename: bib2
+		# UseTilesetExtension: true
+		# Length: *
+		# Offset: 0,24
 	icon:
 		Filename: chcommandicon.shp
 		Offset: 0,0
@@ -1857,10 +1861,10 @@ chpower:
 		Tick: 800
 		Offset: 0,-10
 	bib:
-		Filename: bib3
-		UseTilesetExtension: true
-		Length: *
-		Offset: 0,-14
+		# Filename: bib3
+		# UseTilesetExtension: true
+		# Length: *
+		# Offset: 0,-14
 	icon:
 		Filename: chpowericon.shp
 	iconadv:
@@ -1894,10 +1898,10 @@ chpower2:
 		Tick: 800
 		Offset: 0,-10
 	bib:
-		Filename: bib3
-		UseTilesetExtension: true
-		Length: *
-		Offset: 0,-14
+		# Filename: bib3
+		# UseTilesetExtension: true
+		# Length: *
+		# Offset: 0,-14
 	icon:
 		Filename: chadvpowericon.shp 
 	iconadv:
@@ -1928,9 +1932,9 @@ chbarracks:
 		Filename: chbuildingmakebig.shp
 		Length: *
 	bib:
-		Filename: bib2
-		UseTilesetExtension: true
-		Length: *
+		# Filename: bib2
+		# UseTilesetExtension: true
+		# Length: *
 	icon:
 		Filename: chbarracksicon.shp
 
@@ -1964,10 +1968,10 @@ chweap:
 		Filename: chbuildingmakebig.shp
 		Length: *
 	bib:
-		Filename: bib1
-		UseTilesetExtension: true
-		Length: *
-		Offset: 0,-6
+		# Filename: bib1
+		# UseTilesetExtension: true
+		# Length: *
+		# Offset: 0,-6
 	idle-anim1:
 		Filename: chweapanim1.shp
 		Length: 6
@@ -1994,10 +1998,10 @@ chpropaganda:
 		Filename: chbuildingmakebig.shp
 		Length: *
 	bib:
-		Filename: bib1
-		UseTilesetExtension: true
-		Length: *
-		Offset: 0,8
+		# Filename: bib1
+		# UseTilesetExtension: true
+		# Length: *
+		# Offset: 0,8
 	icon:
 		Filename: chpropagandaicon.shp
 		Offset: 0,0
@@ -2036,10 +2040,10 @@ chinternetcenter:
 		Filename: chbuildingmakebig.shp
 		Length: *
 	bib:
-		Filename: bib1
-		UseTilesetExtension: true
-		Length: *
-		Offset: 0,6
+		# Filename: bib1
+		# UseTilesetExtension: true
+		# Length: *
+		# Offset: 0,6
 	icon:
 		Filename: chinternetcentericon.shp
 		Offset: 0,0
@@ -2064,10 +2068,10 @@ chsilo:
 		Filename: chbuildingmakebig.shp
 		Length: *
 	bib:
-		Filename: bib2
-		UseTilesetExtension: true
-		Length: *
-		Offset: 0,0
+		# Filename: bib2
+		# UseTilesetExtension: true
+		# Length: *
+		# Offset: 0,0
 	icon:
 		Filename: chsiloicon.shp
 		Offset: 0,0
@@ -3157,10 +3161,10 @@ usacommand:
 		Filename: chbuildingmakebig.shp
 		Length: *
 	bib:
-		Filename: bib2.shp
-		UseTilesetExtension: true
-		Length: *
-		Offset: 0,24
+		# Filename: bib2.shp
+		# UseTilesetExtension: true
+		# Length: *
+		# Offset: 0,24
 	icon:
 		Filename: usacommandicon.shp
 		Offset: 0,0
@@ -3182,9 +3186,9 @@ usapower:
 		Tick: 800
 		Offset: 0,-10
 	bib:
-		Filename: bib3
-		UseTilesetExtension: true
-		Length: *
+		# Filename: bib3
+		# UseTilesetExtension: true
+		# Length: *
 	icon: 
 		Filename: usapowericon.shp
 	icon_laser:
@@ -3217,10 +3221,10 @@ usabarracks:
 		Filename: chbuildingmakebig.shp
 		Length: *
 	bib:
-		Filename: bib2
-		UseTilesetExtension: true
-		Length: *
-		Offset: 0,6
+		# Filename: bib2
+		# UseTilesetExtension: true
+		# Length: *
+		# Offset: 0,6
 	icon:
 		Filename: usabarracksicon.shp
 
@@ -3237,10 +3241,10 @@ usaweap:
 		Filename: chbuildingmakebig.shp
 		Length: *
 	bib:
-		Filename: bib1
-		UseTilesetExtension: true
-		Length: *
-		Offset: 0,0
+		# Filename: bib1
+		# UseTilesetExtension: true
+		# Length: *
+		# Offset: 0,0
 	icon:
 		Filename: usaweapicon.shp
 		Offset: 0,0
@@ -3259,10 +3263,10 @@ usastrategy:
 		Filename: chbuildingmakebig.shp
 		Length: *
 	bib: 
-		Filename: bib1
-		UseTilesetExtension: true
-		Length: *
-		Offset: 0,4
+		# Filename: bib1
+		# UseTilesetExtension: true
+		# Length: *
+		# Offset: 0,4
 	icon:
 		Filename: usastrategyicon.shp
 		Offset: 0,0
@@ -3296,9 +3300,9 @@ usacannon:
 	laser-up:
 		Filename: usacannon_laserup.shp
 	bib:
-		Filename: bib1
-		UseTilesetExtension: true
-		Length: *
+		# Filename: bib1
+		# UseTilesetExtension: true
+		# Length: *
 	icon:
 		Filename: usacannonicon.shp
 		Offset: 0,0
@@ -3324,10 +3328,10 @@ usacannon2:
 		Filename: chbuildingmakebig.shp
 		Length: *
 	bib: 
-		Filename: bib2
-		UseTilesetExtension: true
-		Length: *
-		Offset: 0,0
+		# Filename: bib2
+		# UseTilesetExtension: true
+		# Length: *
+		# Offset: 0,0
 	icon: 
 		Filename: usacannon2icon.shp
 		Offset: 0,0
@@ -3366,11 +3370,11 @@ usadropzone:
 		Length: *
 	dead:
 	bib:
-		Filename: bib3
-		Length: *
-		UseTilesetExtension: true
-		TilesetOverrides:
-			INTERIOR: TEMPERAT
+		# Filename: bib3
+		# Length: *
+		# UseTilesetExtension: true
+		# TilesetOverrides:
+		# 	INTERIOR: TEMPERAT
 	icon:
 		Filename: usadropzoneicon.shp
 	idle-anim2:

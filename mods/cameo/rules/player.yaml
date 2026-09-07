@@ -124,7 +124,7 @@ Player:
 		Description: Players receive cash bonuses when killing enemy units
 		DisplayOrder: 10
 		Prerequisites: global-bounty
-		Enabled: true
+		Enabled: false
 	LobbyPrerequisiteDropdown@QUEUETYPE:
 		ID: queuetype
 		Label: Queue Type

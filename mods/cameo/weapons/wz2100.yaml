@@ -248,8 +248,30 @@ ScavHighVEffect:
 	Inherits: ^MachinegunsEffects
 	ReloadDelay: 7
 	Range: 6c0
+
+ScavHeliAAGun:
+	Inherits: ^HeavyMG
+	ReloadDelay: 20
+	Burst: 2
+	BurstDelays: 0
+	Range: 4c0
+	MinRange: 0c768
+	Report: gun5.aud
+	Projectile: Bullet
+		Blockable: false
+	Warhead@1Dam: SpreadDamage
+		Spread: 256
+		Damage: 2000
+		Versus:
+			None: 100
+			Wood: 50
+			Light: 75
+            Medium: 50
+			Heavy: 25
+		DamageTypes: Prone80Percent, TriggerProne, RippedApartDeath
+
 ScavChopperAG:
-	Inherits: HeliAGGun
+	Inherits: ScavHeliAAGun
 	Report: asltmg.aud
 ScavChopperAGEffect:
 	Inherits: ^MachinegunsEffects
@@ -257,7 +279,7 @@ ScavChopperAGEffect:
 	Range: 4c0
 	MinRange: 0c768
 ScavChopperAA:
-	Inherits: HeliAAGun
+	Inherits: ScavHeliAAGun
 	Report: asltmg.aud
 ScavChopperAAEffect:
 	Inherits: ScavChopperAGEffect
@@ -585,7 +607,7 @@ IceCreamMortar:
 	Range: 7c512
 	Report: rocket.aud
 	ValidTargets: Ground, Air
-	Projectile: MissileCA
+	Projectile: Missile
 		Arm: 0
 		Blockable: true
 		Inaccuracy: 128
@@ -625,7 +647,7 @@ IceCreamMortar:
 RocketTower:
 	Inherits: 2100Rockets
 	Range: 10c0
-	Projectile: MissileCA
+	Projectile: Missile
 		RangeLimit: 20c0
 		Blockable: false
 
@@ -644,7 +666,7 @@ ScavAGM:
 	Range: 5c0
 	MinRange: 1c256
 	ValidTargets: Ground
-	Projectile: MissileCA
+	Projectile: Missile
 		Arm: 1
 		HorizontalRateOfTurn: 20
 		Speed: 256
@@ -663,7 +685,7 @@ ScavAGM:
 ScavAAM:
 	Inherits: ScavAGM
 	ValidTargets: Air
-	Projectile: MissileCA
+	Projectile: Missile
 		Arm: 0
 		Speed: 298
 	Warhead@1Dam: SpreadDamage
@@ -680,7 +702,7 @@ TankKillerTower:
 	Burst: 2
 	BurstDelays: 15
 	TargetActorCenter: true
-	Projectile: MissileCA
+	Projectile: Missile
 		Blockable: false
 		Image: 2100missilekiller
 		TrailImage: smokey
@@ -704,11 +726,11 @@ TankKiller:
 	Inherits: TankKillerTower
 	ReloadDelay: 90
 	Range: 7c512
-	Projectile: MissileCA
+	Projectile: Missile
 		Blockable: true
 2100LancerTower:
 	Inherits: TankKillerTower
-	Projectile: MissileCA
+	Projectile: Missile
 		Blockable: false
 		Image: 2100missilekiller
 		ContrailLength: 1
@@ -731,7 +753,7 @@ TankKiller:
 	Inherits: 2100LancerTower
 	ReloadDelay: 90
 	Range: 7c512
-	Projectile: MissileCA
+	Projectile: Missile
 		Blockable: true
 2100LancerCyborg:
 	Inherits: 2100Lancer
@@ -758,7 +780,7 @@ ScavJeepRK:
 	Range: 6c0
 	Burst: 6
 	BurstDelays: 5
-	Projectile: MissileCA
+	Projectile: Missile
 		Inaccuracy: 1c256
 		RangeLimit: 8c204
 	Warhead@1Dam: SpreadDamage
@@ -774,7 +796,7 @@ ScavBuggyRK:
 	Range: 9c0
 	Burst: 8
 	BurstDelays: 5
-	Projectile: MissileCA
+	Projectile: Missile
 		Inaccuracy: 1c256
 		RangeLimit: 13c204
 	Warhead@1Dam: SpreadDamage
@@ -786,7 +808,7 @@ ScavBuggyRK:
 	Range: 36c0
 	Burst: 7
 	BurstDelays: 5
-	Projectile: MissileCA
+	Projectile: Missile
 		Inaccuracy: 2
 		RangeLimit: 37c204
 		Image: 2100missilekiller

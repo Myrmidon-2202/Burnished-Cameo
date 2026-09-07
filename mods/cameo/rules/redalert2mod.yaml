@@ -99,23 +99,23 @@ World:
 	# 	Game: Red Alert 2
 	# 	Side: RA2 Mod
 	# 	Description: Latin American Crime Syndicate with old Soviet Technology #faction-ra2-yuri.description
-	StartingUnits@mcvsyndicate:
-		Class: none
-		ClassName: MCV Only
-		Factions: syndicate
-		BaseActor: latin_mcv
-	StartingUnits@defaultsyndicate:
-		Class: light
-		ClassName: Light Support
-		Factions: syndicate
-		BaseActor: latin_mcv
-		SupportActors: latin_mili,latin_mili,latin_mili,latin_fftr,latin_fftr,nax_wirbelwind,nax_tiger
-	StartingUnits@heavysyndicate:
-		Class: heavy
-		ClassName: Heavy Support
-		Factions: syndicate
-		BaseActor: latin_mcv
-		SupportActors: latin_mili,latin_mili,latin_mili,latin_fftr,latin_fftr,nax_wirbelwind,nax_tiger,nax_tiger,nax_tiger,aa_ptnk,nax_wirbelwind
+	# StartingUnits@mcvsyndicate:
+	# 	Class: none
+	# 	ClassName: MCV Only
+	# 	Factions: syndicate
+	# 	BaseActor: latin_mcv
+	# StartingUnits@defaultsyndicate:
+	# 	Class: light
+	# 	ClassName: Light Support
+	# 	Factions: syndicate
+	# 	BaseActor: latin_mcv
+	# 	SupportActors: latin_mili,latin_mili,latin_mili,latin_fftr,latin_fftr,nax_wirbelwind,nax_tiger
+	# StartingUnits@heavysyndicate:
+	# 	Class: heavy
+	# 	ClassName: Heavy Support
+	# 	Factions: syndicate
+	# 	BaseActor: latin_mcv
+	# 	SupportActors: latin_mili,latin_mili,latin_mili,latin_fftr,latin_fftr,nax_wirbelwind,nax_tiger,nax_tiger,nax_tiger,aa_ptnk,nax_wirbelwind
 	# FactionCA@futuretech:
 	# 	Name: (WIP)Future Tech
 	# 	InternalName: futuretech

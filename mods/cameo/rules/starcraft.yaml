@@ -1070,6 +1070,19 @@ SCMISSILETURRET:
 	RenderSprites:
 		PlayerPalette: player_rgba
 
+SCBUNKERD:
+	Inherits: SCBUNKER
+	Buildable:
+		Queue: Defence.Terran, RADefence.Terran
+		BuildPaletteOrder: 1000
+		Prerequisites: barracks, ~techlevel.low, ~botplayer, ~wipnocontent
+	Valued:
+		Cost: 1000
+	Cargo:
+		InitialUnits: scmarine,scmarine,scmarine,scmarine
+	RenderSprites:
+		Image: scbunker
+
 # SCSENTINEL:
 # 	Inherits: ^Defense
 # 	Inherits@Template: ^AdvancedDefenseTemplate
@@ -1895,10 +1908,10 @@ SCROBOTICSFACILITY:
 		BuildSounds: pshbld03.aud
 	# ParallelProductionQueue@VEHICLE:
 	# 	LowPowerModifier: 10000
-	Production@NORMAL:
+	Production@Protoss:
 		Produces: Vehicle.Protoss
 		PauseOnCondition: lowpower
-	ProductionQueue:
+	ProductionQueue@Protoss:
 		Type: Vehicle.Protoss
 		DisplayOrder: 2
 		Group: Vehicle
@@ -1912,7 +1925,7 @@ SCROBOTICSFACILITY:
 		QueuedAudio: Training
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
-	ProductionBar:
+	ProductionBar@Protoss:
 		ProductionType: Vehicle.Protoss
 	ProductionCostMultiplier@protoss:
 		Multiplier: 125
@@ -4335,11 +4348,16 @@ SCSIEGETANK:
 		Sequence: deployed
 		Turret: deployed
 		RequiresCondition: deployed
+	# WithFacingSpriteBody:
+	# 	RequiresCondition: !deployed
+	# WithMakeAnimation:
+	# WithMoveAnimation:
+	# 	MoveSequence: run
 	WithFacingSpriteBody:
-		RequiresCondition: !deployed
 	WithMakeAnimation:
 	WithMoveAnimation:
 		MoveSequence: run
+		RequiresCondition: !deployed
 	RenderRangeCircle:
 	WithRangeCircle:
 		Range: 3980
@@ -6858,7 +6876,7 @@ SCSHUTTLE:
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: scroboticsfacility
-		Queue: Aircraft.Protoss
+		Queue: Vehicle.Protoss
 		Description: Fast transport for all ground units.\n Unarmed
 	Aircraft:
 		TurnSpeed: 20
@@ -7081,7 +7099,7 @@ SCARCHON:
 		TurnSpeed: 15
 		Locomotor: hover
 	Health:
-		HP: 350000
+		HP: 500
 	Repairable:
 		HpPerStep: 17500
 	ChangesHealth@SelfHealing:

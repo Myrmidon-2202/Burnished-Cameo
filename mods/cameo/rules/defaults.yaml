@@ -3204,6 +3204,7 @@
 		RepairStep: 200
 		PlayerExperience: 10
 		RepairingNotification: Repairing
+		RepairCondition: repairing
 	WithDeathAnimation:
 		DeathSequence: dead
 		UseDeathTypeSuffix: false
@@ -3253,6 +3254,8 @@
 		Position: Center
 		Palette: player
 		IsPlayerPalette: True
+		Offsets:
+			powerdown: -10, 0
 	GrantCondition@disable:
 		Condition: disabled
 		RequiresCondition: (empdisable || superfreeze || chronobeamed || diskdrain || being-captured) && !invulnerability
@@ -3299,11 +3302,11 @@
 	GrantConditionOnBotOwner@defensebot:
 		Condition: defensebot
 		Bots: defenseai
-	RepairableBuilding:
-		RepairCondition: repairing
-	WithBuildingRepairDecoration:
-		Offsets:
-			powerdown: -10, 0
+	# RepairableBuilding:
+	# 	RepairCondition: repairing
+	# WithBuildingRepairDecoration:
+	# 	Offsets:
+	# 		powerdown: -10, 0
 	ActorStatValues:
 		Stats: Armor, Sight, Power
 	WithIdleOverlay@shield1:
@@ -3941,7 +3944,7 @@
 
 ^Defense:
 	Inherits: ^BaseBuilding
-	Inherits: ^BasicDefense
+	Inherits@defense2: ^BasicDefense
 	-GivesBuildableArea:
 	-CommandBarBlacklist:
 	-AcceptsDeliveredCash:
@@ -5206,7 +5209,7 @@
 ^ExternalConditions:
 	Inherits@commando: ^CommandoDebuff
 	Inherits@defplague: ^DefilerPlague
-	Inherits@commando: ^CommandoCallable
+	Inherits@commando2: ^CommandoCallable
 	Inherits@darkswarm: ^DarkSwarmable
 	Inherits@industry: ^IndustrySpeed
 	Inherits@police: ^CityCombatCallable

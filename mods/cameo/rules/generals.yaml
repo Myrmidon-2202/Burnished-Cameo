@@ -1086,12 +1086,14 @@ GENE6:
 		SelectTargetSpeechNotification: SelectTarget
 		CameraActor: camera
 		CameraRemoveDelay: 150
-		UnitTypes: usabomber.fuelbomb
+		UnitTypes: 
+			1: usabomber.fuelbomb
 		QuantizedFacings: 8
 		DisplayBeacon: true
 		BeaconPosters: 
 			1: airstrike
-		SquadSizes: 1
+		SquadSizes: 
+			1: 1
 		SquadOffset: 1792,1792,0
 		ArrowSequence: arrow
 		ClockSequence: clock
@@ -1114,12 +1116,14 @@ GENE6:
 		SelectTargetSpeechNotification: SelectTarget
 		CameraActor: camera
 		CameraRemoveDelay: 150
-		UnitTypes: usabomber.motherbomb
+		UnitTypes: 
+			1: usabomber.motherbomb
 		QuantizedFacings: 8
 		DisplayBeacon: true
 		BeaconPosters: 
 			1: airstrike
-		SquadSizes: 1
+		SquadSizes: 
+			1: 1
 		SquadOffset: 1792,1792,0
 		ArrowSequence: arrow
 		ClockSequence: clock
@@ -1142,12 +1146,14 @@ GENE6:
 		SelectTargetSpeechNotification: SelectTarget
 		CameraActor: camera
 		CameraRemoveDelay: 150
-		UnitTypes: usabomber.leaflet
+		UnitTypes:
+			1: usabomber.leaflet
 		QuantizedFacings: 8
 		DisplayBeacon: true
 		BeaconPosters: 
 			1: airstrike
-		SquadSizes: 1
+		SquadSizes: 
+			1: 1
 		SquadOffset: 1792,1792,0
 		ArrowSequence: arrow
 		ClockSequence: clock
@@ -1170,12 +1176,14 @@ GENE6:
 		SelectTargetSpeechNotification: SelectTarget
 		CameraActor: camera
 		CameraRemoveDelay: 150
-		UnitTypes: a10generals
+		UnitTypes:
+			1: 10generals
 		QuantizedFacings: 8
 		DisplayBeacon: true
-		BeaconPosters: 
+		BeaconPosters:
 			1: airstrike
-		SquadSizes: 1
+		SquadSizes:
+			1: 1
 		SquadOffset: 1792,1792,0
 		ArrowSequence: arrow
 		ClockSequence: clock
@@ -1198,12 +1206,14 @@ GENE6:
 		SelectTargetSpeechNotification: SelectTarget
 		CameraActor: camera
 		CameraRemoveDelay: 150
-		UnitTypes: a10generals
+		UnitTypes:
+			1: a10generals
 		QuantizedFacings: 8
 		DisplayBeacon: true
 		BeaconPosters: 
 			1: airstrike
-		SquadSizes: 2
+		SquadSizes:
+			1: 2
 		SquadOffset: 1792,1792,0
 		ArrowSequence: arrow
 		ClockSequence: clock
@@ -1226,7 +1236,8 @@ GENE6:
 		SelectTargetSpeechNotification: SelectTarget
 		CameraActor: camera
 		CameraRemoveDelay: 150
-		UnitTypes: a10generals
+		UnitTypes:
+			1: a10generals
 		QuantizedFacings: 8
 		DisplayBeacon: true
 		BeaconPosters: 
@@ -1260,9 +1271,9 @@ GENE6:
 		UnitTypes: glanthraxbomber
 		QuantizedFacings: 8
 		DisplayBeacon: true
-		BeaconPosters: 
+		BeaconPosters:
 			1: airstrike
-		SquadSizes: 
+		SquadSizes:
 			1: 1
 		SquadOffset: 1792,1792,0
 		ArrowSequence: arrow
@@ -1625,9 +1636,10 @@ GENE6:
 		UnitTypes: usabomber.emp
 		QuantizedFacings: 8
 		DisplayBeacon: true
-		BeaconPosters: 
+		BeaconPosters:
 			1: airstrike
-		SquadSizes: 1
+		SquadSizes:
+			1: 1
 		SquadOffset: 1792,1792,0
 		ArrowSequence: arrow
 		ClockSequence: clock
@@ -1653,9 +1665,9 @@ GENE6:
 			1: usabomber.minebomb
 		QuantizedFacings: 8
 		DisplayBeacon: true
-		BeaconPosters: 
+		BeaconPosters:
 			1: airstrike
-		SquadSizes: 
+		SquadSizes:
 			1: 1
 		SquadOffset: 1792,1792,0
 		ArrowSequence: arrow
@@ -3310,7 +3322,7 @@ glamob:
 		Image: glamob
 
 ^default.angry_mob:
-	Inherits: E1
+	Inherits: ^E1
 	Inherits@MC: ^MCImmune
 	Inherits@vo: ^AttackFrontalVoice
 	Inherits@demo: ^DemolitionUpgrade
@@ -12327,18 +12339,24 @@ usastrategy:
 		VoiceSet: USAStrategyCenterVoice
 	AirstrikePower@carpet:
 		OrderName: CHCarpetBombing
-		Icon: usacarpet
+		Icons: 
+			1: usacarpet
 		ChargeInterval: 6000
-		Name: Carpet Bombing
-		Description: A stealth bomber strikes targets along a line.
+		Names: 
+			1: Carpet Bombing
+		Descriptions:
+			1: A stealth bomber strikes targets along a line.
 		SelectTargetSpeechNotification: SelectTarget
 		CameraActor: camera
 		CameraRemoveDelay: 150
-		UnitTypes: usabomber.carpet2
+		UnitTypes:
+			1: usabomber.carpet2
 		QuantizedFacings: 8
 		DisplayBeacon: true
-		BeaconPoster: airstrike
-		SquadSizes: 1
+		BeaconPosters: 
+			1: airstrike
+		SquadSizes:
+			1: 1
 		SquadOffset: 1792,1792,0
 		ArrowSequence: arrow
 		ClockSequence: clock
@@ -14433,7 +14451,8 @@ leangcommand:
 				SpawnOffset: -1536,1024,0
 				TargetOffset: -536,0,0
 		PauseOnCondition: lowpower
-		Prerequisites: ~techlevel.superweapons, upusagunship
+		Prerequisites: 
+			1: ~techlevel.superweapons, upusagunship
 		Icons:
 			1: usagunshipicon
 		ChargeInterval: 6000
@@ -14447,7 +14466,7 @@ leangcommand:
 		IncomingSpeechNotification: EnemyPlanesApproaching
 		QuantizedFacings: 8
 		DisplayBeacon: True
-		BeaconPosters: 
+		BeaconPosters:
 			1: airstrike
 		BeaconPosterPalette: beaconposter
 		DisplayRadarPing: True
@@ -14463,7 +14482,8 @@ leangcommand:
 		OrderName: AirstrikePowerSpectre
 		SupportPowerPaletteOrder: 20
 		UnitTypes: usagunship
-		SquadSizes: 4
+		SquadSizes:
+			1: 4
 	-GrantConditionOnPrerequisite@selected:
 	-FreeActor@selectedhack:
 	RenderSprites:
