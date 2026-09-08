@@ -3448,7 +3448,7 @@ usalasertur:
 
 usae1:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.0
 	Inherits: ra2e1
 	muzzle:
 		Filename: minigun.shp
@@ -3466,6 +3466,7 @@ ranger:
 		Start: 8
 		Facings: 8
 	stand2:
+		Filename: usaranger.shp
 		Start: 8
 		Facings: 8
 	stand-injured: 

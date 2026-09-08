@@ -121,7 +121,6 @@ Rules:
 	# cameo|rules/redalert2mod.yaml
 	cameo|rules/d2k.yaml
 	cameo|rules/starcraft.yaml
-	cameo|rules/warcraft2.yaml
 	# cameo|rules/advancewars.yaml
 	# cameo|rules/camea.yaml
 	# cameo|rules/casino.yaml
@@ -144,7 +143,8 @@ Rules:
 	# cameo|rules/n64.yaml
 	cameo|rules/tiberiansun.yaml
 	cameo|rules/warcraft1.yaml
-	# cameo|rules/wz2100.yaml
+	cameo|rules/warcraft2.yaml
+	cameo|rules/wz2100.yaml
 	cameo|rules/worms.yaml
 	cameo|rules/win98.yaml
 	# cameo|rules/ships.yaml
@@ -195,7 +195,7 @@ Sequences:
 	# cameo|sequences/advancewars.yaml
 	# cameo|sequences/simcity.yaml
 	# cameo|sequences/wh40k.yaml
-	# cameo|sequences/wz2100.yaml
+	cameo|sequences/wz2100.yaml
 	# cameo|sequences/shockwave.yaml
 	# cameo|sequences/315custom.yaml
 	# cameo|sequences/valentine.yaml
@@ -259,7 +259,7 @@ Weapons:
 	cameo|weapons/generals.yaml
 	# cameo|weapons/advancewars.yaml
 	# cameo|weapons/wh40k.yaml
-	# cameo|weapons/wz2100.yaml
+	cameo|weapons/wz2100.yaml
 	# cameo|weapons/simcity.yaml
 	# cameo|weapons/shockwave.yaml
 	# cameo|weapons/elementals.yaml

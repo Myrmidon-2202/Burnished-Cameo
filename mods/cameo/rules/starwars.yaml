@@ -4554,7 +4554,7 @@ swe1dark:
 	Valued:
 		Cost: 300
 	Tooltip:
-		Name: Dark Trooper
+		Name: Dark Trooper Phase 1
 	Buildable:
 		BuildPaletteOrder: 60
 		Prerequisites: barracks, swfort
@@ -4572,6 +4572,58 @@ swe1dark:
 		Speed: 75
 	Health:
 		HP: 15000
+
+# swe1dark2:
+# 	Inherits: E1
+# 	Inherits@laserup: ^SWLaserUpgrades
+# 	Inherits@infup: ^SWInfantryUpgrades
+# 	Valued:
+# 		Cost: 300
+# 	Tooltip:
+# 		Name: Dark Trooper Phase 2
+# 	Buildable:
+# 		BuildPaletteOrder: 60
+# 		Prerequisites: barracks, swfort
+# 		Queue: Infantry, RAInfantry
+# 		Description: Heavy infantry.\n  Strong vs Infantry\n  Weak vs Vehicles
+# 	Armament@PRIMARY: ##########
+# 		Weapon: SWLaserG2
+# 	Armament@GARRISONED: ##########
+# 		Name: garrisoned
+# 		Weapon: SWLaserG2
+# 		MuzzleSequence: garrison-muzzle
+# 	Voiced:
+# 		VoiceSet: SWTrooperVoice
+# 	Mobile:
+# 		Speed: 75
+# 	Health:
+# 		HP: 15000
+
+# swe1dark3:
+# 	Inherits: E1
+# 	Inherits@laserup: ^SWLaserUpgrades
+# 	Inherits@infup: ^SWInfantryUpgrades
+# 	Valued:
+# 		Cost: 300
+# 	Tooltip:
+# 		Name: Dark Trooper Phase 3
+# 	Buildable:
+# 		BuildPaletteOrder: 60
+# 		Prerequisites: barracks, swfort
+# 		Queue: Infantry, RAInfantry
+# 		Description: Heavy infantry.\n  Strong vs Infantry\n  Weak vs Vehicles
+# 	Armament@PRIMARY: ##########
+# 		Weapon: SWLaserG2
+# 	Armament@GARRISONED: ##########
+# 		Name: garrisoned
+# 		Weapon: SWLaserG2
+# 		MuzzleSequence: garrison-muzzle
+# 	Voiced:
+# 		VoiceSet: SWTrooperVoice
+# 	Mobile:
+# 		Speed: 75
+# 	Health:
+# 		HP: 15000
 
 swe1clone:
 	Inherits: E1

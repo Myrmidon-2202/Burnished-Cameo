@@ -44,6 +44,12 @@ SWTuskLaser:
 	Warhead@1Dam: SpreadDamage
 		Damage: 3000
 
+SWLaserG2:
+	Inherits: SWLaser
+	ReloadDelay: 50
+	Range: 8c0
+	Burst: 8
+
 SWLaserV:
 	Inherits: SWLaser
 	ReloadDelay: 24

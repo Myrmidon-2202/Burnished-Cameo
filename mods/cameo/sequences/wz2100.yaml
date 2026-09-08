@@ -6,6 +6,7 @@
 
 2100hq:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100hq.shp
 		Offset: 0,-11
 	idle:
@@ -15,7 +16,8 @@
 	make:
 		Length: 10
 		Tick: 80
-	bib: bib2.tem
+	bib: 
+		Filename: bib2.tem
 		UseTilesetExtension: true
 		Length: *
 		Offset: 0,24
@@ -25,6 +27,7 @@
 
 2100power:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100power.shp
 		Offset: 0,-6
 	idle: 
@@ -40,7 +43,7 @@
 		Length: *
 		Tick: 80
 	bib: 
-		Filename: bib2.tem.tem
+		Filename: bib2.tem
 		UseTilesetExtension: true
 		Length: *
 		Offset: 0,0
@@ -51,6 +54,7 @@
 
 2100oil:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100oil.shp
 	idle:
 		Start: 5
@@ -66,6 +70,7 @@
 
 2100rr:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100rr.shp
 		Offset: 0,-12
 	idle:
@@ -89,6 +94,7 @@
 
 2100fy1:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100fy1.shp
 		Offset: 0,-1
 	idle: 
@@ -111,7 +117,7 @@
 		Length: *
 		Tick: 80
 	bib: 
-		Filename: bib1.tem.tem
+		Filename: bib1.tem
 		UseTilesetExtension: true
 		Length: *
 		Offset: 0,0
@@ -122,6 +128,7 @@
 
 2100fy2:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100fy2.shp
 	idle:
 		Start: 9
@@ -131,7 +138,7 @@
 		Length: *
 		Tick: 80
 	bib:
-		Filename: bib1.tem.tem
+		Filename: bib1.tem
 		UseTilesetExtension: true
 		Length: *
 	icon: 
@@ -140,22 +147,23 @@
 
 2100rf:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100rf.shp
 	idle:
-		Filename: 2100rf2
+		Filename: 2100rf2.shp
 	damaged-idle:
-		Filename: 2100rf2
+		Filename: 2100rf2.shp
 	idle2:
-		Filename: 2100rf2
+		Filename: 2100rf2.shp
 		Start: 1
 	damaged-idle2:
-		Filename: 2100rf2
+		Filename: 2100rf2.shp
 		Start: 1
 	make:
 		Length: *
 		Tick: 80
 	bib:
-		Filename: bib2.tem.tem
+		Filename: bib2.tem
 		UseTilesetExtension: true
 		Length: *
 	icon:
@@ -164,6 +172,7 @@
 
 2100crc:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100crc.shp
 		Offset: 0,-11
 	idle:
@@ -185,6 +194,8 @@
 
 2100las:
 	Defaults:
+		Scale: 2.0
+		Filename: 2100las.shp
 		Offset: 0,-11
 	idle:
 	damaged-idle:
@@ -201,6 +212,7 @@
 
 2100wall:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100wall.shp
 		Offset: 0,-6
 	idle:
@@ -217,6 +229,7 @@
 
 2100wcmg:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100wcmg.shp
 		Offset: 0,-6
 	turret:
@@ -247,19 +260,20 @@
 
 2100wcl:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100wcl.shp
 		Offset: 0,-6
 	turret:
-		Filename: 2100litcannondefense
+		Filename: 2100litcannondefense.shp
 		Facings: 32
 		UseClassicFacings: True
 		Offset: 0,0
 	idle:
-		Filename: 2100wall
+		Filename: 2100wall.shp
 		Start: 3
 		ZOffset: -512
 	damaged-idle:
-		Filename: 2100wall
+		Filename: 2100wall.shp
 		Start: 3
 		ZOffset: -512
 	make:
@@ -277,6 +291,7 @@
 
 2100wcm:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100wcm.shp
 		Offset: 0,-6
 	turret:
@@ -307,6 +322,7 @@
 
 2100wch:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100wch.shp
 		Offset: 0,-6
 	turret:
@@ -337,6 +353,7 @@
 
 2100mb:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100mb.shp
 	idle:
 	damaged-idle:
@@ -353,6 +370,8 @@
 
 2100fb:
 	Defaults:
+		Scale: 2.0
+		Filename: 2100fb.shp
 		Offset: 0,-6
 	turret:
 		Filename: 2100flamerdefense.shp
@@ -409,6 +428,7 @@
 
 2100mt:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100tower2.shp
 		Offset: 0,-12
 	idle:
@@ -431,6 +451,7 @@
 
 2100radt:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100tower2.shp
 		Offset: 0,-12
 	idle:
@@ -453,6 +474,7 @@
 
 2100rt:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100tower.shp
 		Offset: 0,-12
 	idle:
@@ -475,6 +497,7 @@
 
 2100tt:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100tower.shp
 		Offset: 0,-12
 	idle:
@@ -497,6 +520,7 @@
 
 2100mp:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100mp.shp
 	idle:
 	make:
@@ -511,6 +535,7 @@
 
 2100pp:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100pp.shp
 	idle:
 	make:
@@ -525,6 +550,7 @@
 
 2100aa:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100aa.shp
 	idle:
 	make:
@@ -544,6 +570,7 @@
 
 cto2100fy:
 	Defaults:
+		Scale: 2.0
 		Filename: cto2100fy.shp
 		Offset: 0,-4
 	idle:
@@ -566,6 +593,7 @@ cto2100fy:
 
 cto2100power:
 	Defaults:
+		Scale: 2.0
 		Offset: 0,8
 		Filename: cto2100power.shp
 	idle:
@@ -611,6 +639,7 @@ cto2100power:
 
 2100cf:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100cf.shp
 		Offset: 0,-8
 	idle:
@@ -628,6 +657,7 @@ cto2100power:
 
 2100vfy1:
 	Defaults:
+		Scale: 2.0
 		Filename: cto2100fy.shp
 		Offset: 0,-1
 	idle:
@@ -662,7 +692,8 @@ cto2100power:
 
 2100vtolpad:
 	Defaults:
-		Defaults: 2100vtolpad.shp
+		Scale: 2.0
+		Filename: 2100vtolpad.shp
 	idle:
 		ZOffset: -1023
 	damaged-idle:
@@ -686,6 +717,7 @@ cto2100power:
 
 2100chopshop:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100chopshop.shp
 		Offset: 0,12
 	idle:
@@ -718,6 +750,7 @@ cto2100power:
 
 2100chopshopadv:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100scavheavyfactory.shp
 		Offset: 6,12
 	idle:
@@ -737,7 +770,8 @@ cto2100power:
 
 2100scavpowr:
 	Defaults:
-		Filename: 2100scavpower.shp
+		Scale: 2.0
+		Filename: 2100scavpowr.shp
 		Offset: 0,6
 	idle:
 		Length: *
@@ -757,6 +791,7 @@ cto2100power:
 
 2100scavware:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100scavware.shp
 		Offset: 0,6
 	idle:
@@ -772,11 +807,12 @@ cto2100power:
 		Length: *
 		Offset: 0,0
 	icon:
-		Filename: 2100scavwareicon
+		Filename: 2100scavwareicon.shp
 		Offset: 0,0
 
 2100scavturret:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100scavturret.shp
 		Offset: 0,-6
 	idle:
@@ -805,6 +841,7 @@ cto2100power:
 
 2100scavhangar:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100scavhangar.shp
 	idle:
 	damaged-idle:
@@ -822,6 +859,7 @@ cto2100power:
 
 2100scavpill:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100scavpill.shp
 	idle:
 	damaged-idle:
@@ -843,6 +881,7 @@ cto2100power:
 
 2100scavmort:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100scavmort.shp
 	idle:
 	dead:
@@ -857,13 +896,14 @@ cto2100power:
 
 2100scavrt:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100scavrt.shp
 	idle:
 		Filename: 2100scavmort.shp
 	dead:
-		Filename:2100scavmort.shp
+		Filename: 2100scavmort.shp
 	make:
-		Filename:2100scavmort.shp
+		Filename: 2100scavmort.shp
 		Length: *
 		Tick: 80
 	turret:
@@ -879,6 +919,7 @@ cto2100power:
 
 2100scavtech:
 	Defaults:
+		Scale: 2.0
 		Offset: 0,-6
 		Filename: 2100scavtech.shp
 	idle:
@@ -897,6 +938,7 @@ cto2100power:
 
 2100scavwall:
 	Defaults:
+		Scale: 2.0
 		Offset: 0,-6
 		Filename: 2100scavwall.shp
 	idle:
@@ -910,6 +952,7 @@ cto2100power:
 
 2100scavft:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100tower2.shp
 		Offset: 0,-12
 	idle:
@@ -970,6 +1013,7 @@ cto2100power:
 
 2100mcv:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100mcv.shp
 	idle:
 		Filename: 2100pythontracks.shp
@@ -986,6 +1030,7 @@ cto2100power:
 
 2100repairtruck:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100repairtruck.shp
 	idle:
 		Filename: 2100viperwheels.shp
@@ -1000,6 +1045,7 @@ cto2100power:
 
 2100healtruck:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100healtruck.shp
 	idle:
 		Filename: 2100viperwheels.shp
@@ -1014,6 +1060,7 @@ cto2100power:
 
 2100radartruck:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100radartruck.shp
 	idle:
 		Filename: 2100viperwheels.shp
@@ -1028,6 +1075,7 @@ cto2100power:
 
 2100mvw:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100mvw.shp
 	idle:
 		Filename: 2100viperwheels.shp
@@ -1046,6 +1094,7 @@ cto2100power:
 
 2100rvw:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100rvw.shp
 	idle:
 		Filename: 2100viperwheels.shp
@@ -1064,6 +1113,7 @@ cto2100power:
 
 2100fvw:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100fvw.shp
 	idle:
 		Filename: 2100viperwheels.shp
@@ -1082,6 +1132,7 @@ cto2100power:
 
 2100lcvw:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100cvw.shp
 	idle:
 		Filename: 2100viperwheels.shp
@@ -1100,6 +1151,7 @@ cto2100power:
 
 2100mch:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100mch.shp
 	idle:
 		Filename: 2100cobrahtrack.shp
@@ -1117,6 +1169,7 @@ cto2100power:
 
 2100nedch:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100nedch.shp
 	idle:
 		Filename: 2100cobrahtrack.shp
@@ -1134,6 +1187,7 @@ cto2100power:
 
 2100bnkch:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100bnkch.shp
 	idle:
 		Filename: 2100cobrahtrack.shp
@@ -1151,6 +1205,7 @@ cto2100power:
 
 2100bomch:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100bomch.shp
 	idle:
 		Filename: 2100cobrahtrack.shp
@@ -1168,6 +1223,7 @@ cto2100power:
 
 2100aartch:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100aartch.shp
 	idle:
 		Filename: 2100cobrahtrack.shp
@@ -1185,6 +1241,7 @@ cto2100power:
 
 2100hvch:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100hvch.shp
 	idle:
 		Filename: 2100cobrahtrack.shp
@@ -1202,6 +1259,7 @@ cto2100power:
 
 2100flach:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100flach.shp
 	idle:
 		Filename: 2100cobrahtrack.shp
@@ -1219,6 +1277,7 @@ cto2100power:
 
 2100mgch:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100mgch.shp
 	idle:
 		Filename: 2100cobrahtrack.shp
@@ -1237,6 +1296,7 @@ cto2100power:
 
 2100tch:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100tch.shp
 	idle:
 		Filename: 2100cobrahtrack.shp
@@ -1254,6 +1314,7 @@ cto2100power:
 
 2100t2ch:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100t2ch.shp
 	idle:
 		Filename: 2100cobrahtrack.shp
@@ -1271,6 +1332,7 @@ cto2100power:
 
 2100moch:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100moch.shp
 	idle:
 		Filename: 2100cobrahtrack.shp
@@ -1288,6 +1350,7 @@ cto2100power:
 
 2100imoch:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100imoch.shp
 	idle:
 		Filename: 2100cobrahtrack.shp
@@ -1305,6 +1368,7 @@ cto2100power:
 
 2100rach:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100rach.shp
 	idle:
 		Filename: 2100cobrahtrack.shp
@@ -1322,6 +1386,7 @@ cto2100power:
 
 2100ifch:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100ifch.shp
 	idle:
 		Filename: 2100cobrahtrack.shp
@@ -1339,6 +1404,7 @@ cto2100power:
 
 2100aach:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100aach.shp
 	idle:
 		Filename: 2100cobrahtrack.shp
@@ -1357,6 +1423,7 @@ cto2100power:
 
 2100supplytruck:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100supplytruck.shp
 	idle:
 		Filename: truck.shp
@@ -1367,6 +1434,7 @@ cto2100power:
 
 2100apt:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100apt.shp
 	idle:
 		Filename: 2100pythontracks.shp
@@ -1385,6 +1453,7 @@ cto2100power:
 
 2100a2pt:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100a2pt.shp
 	idle:
 		Filename: 2100pythontracks.shp
@@ -1403,6 +1472,7 @@ cto2100power:
 
 2100hpt:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100hpt.shp
 	idle:
 		Filename: 2100pythontracks.shp
@@ -1420,6 +1490,7 @@ cto2100power:
 
 2100acpt:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100acpt.shp
 	idle:
 		Filename: 2100pythontracks.shp
@@ -1433,10 +1504,11 @@ cto2100power:
 		Filename: gunfire2.shp
 		Length: *
 	icon:
-		Filename: 2100acpticon
+		Filename: 2100acpticon.shp
 
 2100ac2pt:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100ac2pt.shp
 	idle:
 		Filename: 2100pythontracks.shp
@@ -1454,6 +1526,7 @@ cto2100power:
 
 2100cpt:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100cpt.shp
 	idle:
 		Filename: 2100pythontracks.shp
@@ -1472,6 +1545,7 @@ cto2100power:
 
 2100mchov:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100mchov.shp
 	idle:
 		Filename: 2100cobrahovercraft.shp
@@ -1489,8 +1563,7 @@ cto2100power:
 
 2100aphov:
 	Defaults:
-		Filename: 2100aphov.shp
-	defaults:
+		Scale: 2.0
 		Filename: 2100aphov.shp
 	idle:
 		Filename: 2100pythonhovercraft.shp
@@ -1505,17 +1578,18 @@ cto2100power:
 		Length: 6
 		Facings: 8
 	icon: 
-		Filename: 2100aphovicon
+		Filename: 2100aphovicon.shp
 
 2100hphov:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100hphov.shp
 	idle:
-		Filename: 2100pythonhovercraft
+		Filename: 2100pythonhovercraft.shp
 		Facings: 32
 		UseClassicFacings: True
 	turret:
-		Filename: 2100heavycannon
+		Filename: 2100heavycannon.shp
 		Facings: 32
 		UseClassicFacings: True
 	muzzle:
@@ -1526,6 +1600,7 @@ cto2100power:
 
 2100rippt:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100rippt.shp
 	idle:
 		Filename: 2100pythontracks.shp
@@ -1544,13 +1619,14 @@ cto2100power:
 
 2100hotpt:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100hotpt.shp
 	idle:
 		Filename: 2100pythontracks.shp
 		Facings: 32
 		UseClassicFacings: True
 	turret:
-		Filename: 2100hotwizer
+		Filename: 2100hotwizer.shp
 		Facings: 32
 		UseClassicFacings: True
 	muzzle:
@@ -1562,6 +1638,7 @@ cto2100power:
 
 2100pepperch:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100pepperch.shp
 	idle:
 		Filename: 2100cobrahtrack.shp
@@ -1585,6 +1662,7 @@ cto2100power:
 
 2100mvvtol:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100mvvtol.shp
 	idle:
 		Filename: 2100vipervtol.shp
@@ -1604,6 +1682,7 @@ cto2100power:
 
 2100rvvtol:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100rvvtol.shp
 	idle:
 		Filename: 2100vipervtol.shp
@@ -1623,6 +1702,7 @@ cto2100power:
 
 2100lcvtol:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100lcvtol.shp
 	idle:
 		Filename: 2100cobravtol.shp
@@ -1643,6 +1723,7 @@ cto2100power:
 
 2100tcvtol:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100tcvtol.shp
 	idle:
 		Filename: 2100cobravtol.shp
@@ -1669,6 +1750,7 @@ cto2100power:
 
 2100repairtruckc:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100repairtruck.shp
 	idle:
 		Filename: 2100bugwheels.shp
@@ -1683,6 +1765,7 @@ cto2100power:
 
 2100healtruckc:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100healtruckc.shp
 	idle:
 		Filename: 2100bugwheels.shp
@@ -1697,6 +1780,7 @@ cto2100power:
 
 2100radartruckc:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100radartruckc.shp
 	idle:
 		Filename: 2100bugwheels.shp
@@ -1711,6 +1795,7 @@ cto2100power:
 
 2100mbuw:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100mbuw.shp
 	idle:
 		Filename: 2100bugwheels.shp
@@ -1732,6 +1817,7 @@ cto2100power:
 
 2100rbuw:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100rbu.shp
 	idle:
 		Filename: 2100bugwheels.shp
@@ -1753,6 +1839,7 @@ cto2100power:
 
 2100fbuw:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100fbuw.shp
 	idle:
 		Filename: 2100bugwheels.shp
@@ -1774,6 +1861,7 @@ cto2100power:
 
 2100rabuw:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100rabuw.shp
 	idle:
 		Filename: 2100bugwheels.shp
@@ -1794,6 +1882,7 @@ cto2100power:
 
 2100msch:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100msch.shp
 	idle:
 		Filename: 2100scorpionhtrack.shp
@@ -1811,6 +1900,7 @@ cto2100power:
 
 2100nedsch:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100nedsch.shp
 	idle:
 		Filename: 2100scorpionhtrack.shp
@@ -1828,6 +1918,7 @@ cto2100power:
 
 2100mgsch:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100mgsch.shp
 	idle:
 		Filename: 2100scorpionhtrack.shp
@@ -1846,6 +1937,7 @@ cto2100power:
 
 2100tsch:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100tsch.shp
 	idle:
 		Filename: 2100scorpionhtrack.shp
@@ -1863,6 +1955,7 @@ cto2100power:
 
 2100t2sch:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100t2sch.shp
 	idle:
 		Filename: 2100scorpionhtrack.shp
@@ -1880,6 +1973,7 @@ cto2100power:
 
 2100rsch:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100rsch.shp
 	idle:
 		Filename: 2100scorpionhtrack.shp
@@ -1897,6 +1991,7 @@ cto2100power:
 
 2100lcsch:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100lcsch.shp
 	idle:
 		Filename: 2100scorpionhtrack.shp
@@ -1914,6 +2009,7 @@ cto2100power:
 
 2100mosch:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100mosch.shp
 	idle:
 		Filename: 2100scorpionhtrack.shp
@@ -1931,6 +2027,7 @@ cto2100power:
 
 2100ifsch:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100ifsch.shp
 	idle:
 		Filename: 2100scorpionhtrack.shp
@@ -1948,6 +2045,7 @@ cto2100power:
 
 2100hvsch:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100hvsch.shp
 	idle:
 		Filename: 2100scorpionhtrack.shp
@@ -1965,6 +2063,7 @@ cto2100power:
 
 2100flasch:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100flasch.shp
 	idle:
 		Filename: 2100scorpionhtrack.shp
@@ -1982,6 +2081,7 @@ cto2100power:
 
 2100amat:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100amat.shp
 	idle:
 		Filename: 2100mantistracks.shp
@@ -2000,6 +2100,7 @@ cto2100power:
 
 2100aamat:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100aamat.shp
 	idle:
 		Filename: 2100mantistracks.shp
@@ -2018,6 +2119,7 @@ cto2100power:
 
 2100a2mat:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100a2mat.shp
 	idle:
 		Filename: 2100mantistracks.shp
@@ -2036,6 +2138,7 @@ cto2100power:
 
 2100hmat:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100hmat.shp
 	idle:
 		Filename: 2100mantistracks.shp
@@ -2053,6 +2156,7 @@ cto2100power:
 
 2100acmat:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100acmat.shp
 	idle:
 		Filename: 2100mantistracks.shp
@@ -2070,6 +2174,7 @@ cto2100power:
 
 2100ac2mat:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100ac2mat.shp
 	idle:
 		Filename: 2100mantistracks.shp
@@ -2087,6 +2192,7 @@ cto2100power:
 
 2100cmat:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100cmat.shp
 	idle:
 		Filename: 2100mantistracks.shp
@@ -2105,6 +2211,7 @@ cto2100power:
 
 2100mschov:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100mschov.shp
 	idle:
 		Filename: 2100scorpionhovercraft.shp
@@ -2122,6 +2229,7 @@ cto2100power:
 
 2100amahov:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100amahov.shp
 	idle:
 		Filename: 2100mantishovercraft.shp
@@ -2140,6 +2248,7 @@ cto2100power:
 
 2100hmahov:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100hmahov.shp
 	idle:
 		Filename: 2100mantishovercraft.shp
@@ -2157,6 +2266,7 @@ cto2100power:
 
 2100bnksch:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100bnksch.shp
 	idle:
 		Filename: 2100scorpionhtrack.shp
@@ -2174,6 +2284,7 @@ cto2100power:
 
 2100ripmat:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100ripmat.shp
 	idle:
 		Filename: 2100mantistracks.shp
@@ -2192,6 +2303,7 @@ cto2100power:
 
 2100hotmat:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100hotmat.shp
 	idle:
 		Filename: 2100mantistracks.shp
@@ -2210,6 +2322,7 @@ cto2100power:
 
 2100peppersch:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100peppersch.shp
 	idle:
 		Filename: 2100scorpionhtrack.shp
@@ -2233,6 +2346,7 @@ cto2100power:
 
 2100mbuvtol:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100mbuvtol.shp
 	idle:
 		Filename: 2100bugvtol.shp
@@ -2252,6 +2366,7 @@ cto2100power:
 
 2100rbuvtol:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100rbuvtol.shp
 	idle:
 		Filename: 2100bugvtol.shp
@@ -2271,6 +2386,7 @@ cto2100power:
 
 2100lscvtol:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100lscvtol.shp
 	idle:
 		Filename: 2100scorpionvtol.shp
@@ -2291,6 +2407,7 @@ cto2100power:
 
 2100tscvtol:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100tscvtol.shp
 	idle:
 		Filename: 2100scorpionvtol.shp
@@ -2317,6 +2434,7 @@ cto2100power:
 
 2100repairtruckp:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100repairtruckp.shp
 	idle:
 		Filename: 2100leopardwheels.shp
@@ -2331,6 +2449,7 @@ cto2100power:
 
 2100healtruckp:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100healtruckp.shp
 	idle:
 		Filename: 2100leopardwheels.shp
@@ -2345,6 +2464,7 @@ cto2100power:
 
 2100radartruckp:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100radartruckp.shp
 	idle:
 		Filename: 2100leopardwheels.shp
@@ -2359,6 +2479,7 @@ cto2100power:
 
 2100mlew:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100mlew.shp
 	idle:
 		Filename: 2100leopardwheels.shp
@@ -2380,6 +2501,7 @@ cto2100power:
 
 2100rlew:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100rlew.shp
 	idle:
 		Filename: 2100leopardwheels.shp
@@ -2401,6 +2523,7 @@ cto2100power:
 
 2100flew:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100flew.shp
 	idle:
 		Filename: 2100leopardwheels.shp
@@ -2422,6 +2545,7 @@ cto2100power:
 
 2100ralew:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100ralew.shp
 	idle:
 		Filename: 2100leopardwheels.shp
@@ -2442,6 +2566,7 @@ cto2100power:
 
 2100mphh:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100mphh.shp
 	idle:
 		Filename: 2100phanterhtracks.shp
@@ -2459,6 +2584,7 @@ cto2100power:
 
 2100nedphh:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100nedphh.shp
 	idle:
 		Filename: 2100phanterhtracks.shp
@@ -2476,6 +2602,7 @@ cto2100power:
 
 2100mgphh:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100mgphh.shp
 	idle:
 		Filename: 2100phanterhtracks.shp
@@ -2494,6 +2621,7 @@ cto2100power:
 
 2100tphh:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100tphh.shp
 	idle:
 		Filename: 2100phanterhtracks.shp
@@ -2511,6 +2639,7 @@ cto2100power:
 
 2100t2phh:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100t2phh.shp
 	idle:
 		Filename: 2100phanterhtracks.shp
@@ -2528,6 +2657,7 @@ cto2100power:
 
 2100mophh:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100mophh.shp
 	idle:
 		Filename: 2100phanterhtracks.shp
@@ -2545,6 +2675,7 @@ cto2100power:
 
 2100ifphh:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100ifphh.shp
 	idle:
 		Filename: 2100phanterhtracks.shp
@@ -2562,6 +2693,7 @@ cto2100power:
 
 2100aaphh:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100aaphh.shp
 	idle:
 		Filename: 2100phanterhtracks.shp
@@ -2580,6 +2712,7 @@ cto2100power:
 
 2100hvphh:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100hvphh.shp
 	idle:
 		Filename: 2100phanterhtracks.shp
@@ -2597,6 +2730,7 @@ cto2100power:
 
 2100flaphh:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100flaphh.shp
 	idle:
 		Filename: 2100phanterhtracks.shp
@@ -2614,6 +2748,7 @@ cto2100power:
 
 2100atit:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100atit.shp
 	idle:
 		Filename: 2100tigertracks.shp
@@ -2632,6 +2767,7 @@ cto2100power:
 
 2100a2tit:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100a2tit.shp
 	idle:
 		Filename: 2100tigertracks.shp
@@ -2650,6 +2786,7 @@ cto2100power:
 
 2100htit:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100htit.shp
 	idle:
 		Filename: 2100tigertracks.shp
@@ -2667,6 +2804,7 @@ cto2100power:
 
 2100actit:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100actit.shp
 	idle:
 		Filename: 2100tigertracks.shp
@@ -2684,6 +2822,7 @@ cto2100power:
 
 2100ac2tit:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100ac2tit.shp
 	idle:
 		Filename: 2100tigertracks.shp
@@ -2701,6 +2840,7 @@ cto2100power:
 
 2100ctit:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100ctit.shp
 	idle:
 		Filename: 2100tigertracks.shp
@@ -2719,6 +2859,7 @@ cto2100power:
 
 2100mphhov:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100mphhov.shp
 	idle:
 		Filename: 2100phanterhovercraft.shp
@@ -2736,6 +2877,7 @@ cto2100power:
 
 2100atihov:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100atihov.shp
 	idle:
 		Filename: 2100tigerhovercraft.shp
@@ -2754,6 +2896,7 @@ cto2100power:
 
 2100htihov:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100htihov.shp
 	idle:
 		Filename: 2100tigerhovercraft.shp
@@ -2771,6 +2914,7 @@ cto2100power:
 
 2100bnkphh:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100bnkphh.shp
 	idle:
 		Filename: 2100phanterhtracks.shp
@@ -2788,6 +2932,7 @@ cto2100power:
 
 2100riptit:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100riptit.shp
 	idle:
 		Filename: 2100tigertracks.shp
@@ -2806,6 +2951,7 @@ cto2100power:
 
 2100hottit:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100hottit.shp
 	idle:
 		Filename: 2100tigertracks.shp
@@ -2824,6 +2970,7 @@ cto2100power:
 
 2100pepperphh:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100pepperphh.shp
 	idle:
 		Filename: 2100phanterhtracks.shp
@@ -2847,6 +2994,7 @@ cto2100power:
 
 2100mlevtol:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100mlevtol.shp
 	idle:
 		Filename: 2100leopardvtol.shp
@@ -2866,6 +3014,7 @@ cto2100power:
 
 2100rlevtol:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100rlevtol.shp
 	idle:
 		Filename: 2100leopardvtol.shp
@@ -2885,6 +3034,7 @@ cto2100power:
 
 2100lphvtol:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100lphvtol.shp
 	idle:
 		Filename: 2100panthervtol.shp
@@ -2905,6 +3055,7 @@ cto2100power:
 
 2100tphvtol:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100tphvtol.shp
 	idle:
 		Filename: 2100panthervtol.shp
@@ -2931,6 +3082,7 @@ cto2100power:
 
 2100repairtruckn:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100repairtruckn.shp
 	idle:
 		Filename: 2100retaliatonwheels.shp
@@ -2945,6 +3097,7 @@ cto2100power:
 
 2100healtruckn:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100healtruckn.shp
 	idle:
 		Filename: 2100retaliatonwheels.shp
@@ -2959,6 +3112,7 @@ cto2100power:
 
 2100radartruckn:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100radartruckn.shp
 	idle:
 		Filename: 2100retaliatonwheels.shp
@@ -2973,6 +3127,7 @@ cto2100power:
 
 2100mrew:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100mrew.shp
 	idle:
 		Filename: 2100retaliatonwheels.shp
@@ -2994,6 +3149,7 @@ cto2100power:
 
 2100rrew:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100rrew.shp
 	idle:
 		Filename: 2100retaliatonwheels.shp
@@ -3015,6 +3171,7 @@ cto2100power:
 
 2100frew:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100frew.shp
 	idle:
 		Filename: 2100retaliatonwheels.shp
@@ -3036,6 +3193,7 @@ cto2100power:
 
 2100mrth:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100mrth.shp
 	idle:
 		Filename: 2100retributionhtracks.shp
@@ -3053,6 +3211,7 @@ cto2100power:
 
 2100mgrth:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100mgrth.shp
 	idle:
 		Filename: 2100retributionhtracks.shp
@@ -3071,6 +3230,7 @@ cto2100power:
 
 2100nedrth:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100nedrth.shp
 	idle:
 		Filename: 2100retributionhtracks.shp
@@ -3088,6 +3248,7 @@ cto2100power:
 
 2100trth:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100trth.shp
 	idle:
 		Filename: 2100retributionhtracks.shp
@@ -3105,6 +3266,7 @@ cto2100power:
 
 2100t2rth:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100t2rth.shp
 	idle:
 		Filename: 2100retributionhtracks.shp
@@ -3122,6 +3284,7 @@ cto2100power:
 
 2100morth:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100morth.shp
 	idle:
 		Filename: 2100retributionhtracks.shp
@@ -3139,6 +3302,7 @@ cto2100power:
 
 2100rarth:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100rarth.shp
 	idle:
 		Filename: 2100retributionhtracks.shp
@@ -3156,6 +3320,7 @@ cto2100power:
 
 2100ifrth:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100ifrth.shp
 	idle:
 		Filename: 2100retributionhtracks.shp
@@ -3173,6 +3338,7 @@ cto2100power:
 
 2100hvrth:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100hvrth.shp
 	idle:
 		Filename: 2100retributionhtracks.shp
@@ -3190,6 +3356,7 @@ cto2100power:
 
 2100flarth:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100flarth.shp
 	idle:
 		Filename: 2100retributionhtracks.shp
@@ -3207,6 +3374,7 @@ cto2100power:
 
 2100avet:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100avet.shp
 	idle:
 		Filename: 2100vengeancetracks.shp
@@ -3225,6 +3393,7 @@ cto2100power:
 
 2100aavet:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100aavet.shp
 	idle:
 		Filename: 2100vengeancetracks.shp
@@ -3243,6 +3412,7 @@ cto2100power:
 
 2100a2vet:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100a2vet.shp
 	idle:
 		Filename: 2100vengeancetracks.shp
@@ -3261,6 +3431,7 @@ cto2100power:
 
 2100hvet:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100hvet.shp
 	idle:
 		Filename: 2100vengeancetracks.shp
@@ -3278,6 +3449,7 @@ cto2100power:
 
 2100acvet:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100acvet.shp
 	idle:
 		Filename: 2100vengeancetracks.shp
@@ -3295,6 +3467,7 @@ cto2100power:
 
 2100ac2vet:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100ac2vet.shp
 	idle:
 		Filename: 2100vengeancetracks.shp
@@ -3312,6 +3485,7 @@ cto2100power:
 
 2100cvet:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100cvet.shp
 	idle:
 		Filename: 2100vengeancetracks.shp
@@ -3330,6 +3504,7 @@ cto2100power:
 
 2100nexvet:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100nexvet.shp
 	idle:
 		Filename: 2100vengeancetracks.shp
@@ -3348,6 +3523,7 @@ cto2100power:
 
 2100mrthov:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100mrthov.shp
 	idle:
 		Filename: 2100retributionhovercraft.shp
@@ -3365,6 +3541,7 @@ cto2100power:
 
 2100avehov:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100avehov.shp
 	idle:
 		Filename: 2100vengeancehovercraft.shp
@@ -3383,6 +3560,7 @@ cto2100power:
 
 2100hvehov:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100hvehov.shp
 	idle:
 		Filename: 2100vengeancehovercraft.shp
@@ -3400,6 +3578,7 @@ cto2100power:
 
 2100ripvet:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100ripvet.shp
 	idle:
 		Filename: 2100vengeancetracks.shp
@@ -3418,6 +3597,7 @@ cto2100power:
 
 2100hotvet:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100hotvet.shp
 	idle:
 		Filename: 2100vengeancetracks.shp
@@ -3436,6 +3616,7 @@ cto2100power:
 
 2100pepperrth:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100pepperrth.shp
 	idle:
 		Filename: 2100retributionhtracks.shp
@@ -3459,6 +3640,7 @@ cto2100power:
 
 2100mrevtol:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100mrevtol.shp
 	idle:
 		Filename: 2100retaliatonvtol.shp
@@ -3478,6 +3660,7 @@ cto2100power:
 
 2100rrevtol:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100rrevtol.shp
 	idle:
 		Filename: 2100retaliatonvtol.shp
@@ -3497,6 +3680,7 @@ cto2100power:
 
 2100lrtvtol:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100lrtvtol.shp
 	idle:
 		Filename: 2100retributionvtol.shp
@@ -3517,6 +3701,7 @@ cto2100power:
 
 2100trtvtol:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100trtvtol.shp
 	idle:
 		Filename: 2100retributionvtol.shp
@@ -3543,13 +3728,15 @@ cto2100power:
 
 2100cymg:
 	Defaults:
+		Scale: 1.1
 		Filename: 2100cymg.shp
 	idle:
 		Filename: 2100cyborglegs.shp
 		Length: 11
 		Facings: 8
 		Tick: 9999
-	stand: 2100cyborglegs
+	stand:
+		Filename: 2100cyborglegs.shp
 		Length: 11
 		Facings: 8
 		Tick: 9999
@@ -3557,7 +3744,8 @@ cto2100power:
 		Filename: 2100cyborgmg.shp
 		Facings: 32
 		UseClassicFacings: True
-	run: 2100cyborglegs
+	run:
+		Filename: 2100cyborglegs.shp
 		Length: 11
 		Facings: 8
 	muzzle:
@@ -3569,13 +3757,15 @@ cto2100power:
 
 2100cycan:
 	Defaults:
+		Scale: 1.1
 		Filename: 2100cycan.shp
 	idle:
 		Filename: 2100cyborglegs.shp
 		Length: 11
 		Facings: 8
 		Tick: 9999
-	stand: 2100cyborglegs
+	stand:
+		Filename: 2100cyborglegs.shp
 		Length: 11
 		Facings: 8
 		Tick: 9999
@@ -3583,7 +3773,8 @@ cto2100power:
 		Filename: 2100cyborgcannon.shp
 		Facings: 32
 		UseClassicFacings: True
-	run: 2100cyborglegs
+	run:
+		Filename: 2100cyborglegs.shp
 		Length: 11
 		Facings: 8
 	muzzle:
@@ -3595,13 +3786,15 @@ cto2100power:
 
 2100cylan:
 	Defaults:
+		Scale: 1.1
 		Filename: 2100cylan.shp
 	idle:
 		Filename: 2100cyborglegs.shp
 		Length: 11
 		Facings: 8
 		Tick: 9999
-	stand: 2100cyborglegs
+	stand:
+		Filename: 2100cyborglegs.shp
 		Length: 11
 		Facings: 8
 		Tick: 9999
@@ -3609,7 +3802,8 @@ cto2100power:
 		Filename: 2100cyborglancer.shp
 		Facings: 32
 		UseClassicFacings: True
-	run: 2100cyborglegs
+	run:
+		Filename: 2100cyborglegs.shp
 		Length: 11
 		Facings: 8
 	muzzle:
@@ -3621,13 +3815,15 @@ cto2100power:
 
 2100cymor:
 	Defaults:
+		Scale: 1.1
 		Filename: 2100cymor.shp
 	idle:
 		Filename: 2100cyborglegs.shp
 		Length: 11
 		Facings: 8
 		Tick: 9999
-	stand: 2100cyborglegs
+	stand:
+		Filename: 2100cyborglegs.shp
 		Length: 11
 		Facings: 8
 		Tick: 9999
@@ -3635,7 +3831,8 @@ cto2100power:
 		Filename: 2100cyborgmortar.shp
 		Facings: 32
 		UseClassicFacings: True
-	run: 2100cyborglegs
+	run:
+		Filename: 2100cyborglegs.shp
 		Length: 11
 		Facings: 8
 	muzzle:
@@ -3647,13 +3844,15 @@ cto2100power:
 
 2100cyfla:
 	Defaults:
+		Scale: 1.1
 		Filename: 2100cyfla.shp
 	idle:
 		Filename: 2100cyborglegs.shp
 		Length: 11
 		Facings: 8
 		Tick: 9999
-	stand: 2100cyborglegs
+	stand:
+		Filename: 2100cyborglegs.shp
 		Length: 11
 		Facings: 8
 		Tick: 9999
@@ -3661,7 +3860,8 @@ cto2100power:
 		Filename: 2100cyborgflamer.shp
 		Facings: 32
 		UseClassicFacings: True
-	run: 2100cyborglegs
+	run:
+		Filename: 2100cyborglegs.shp
 		Length: 11
 		Facings: 8
 	muzzle:
@@ -3673,13 +3873,15 @@ cto2100power:
 
 2100cybui:
 	Defaults:
+		Scale: 1.1
 		Filename: 2100cybui.shp
 	idle:
 		Filename: 2100cyborglegs.shp
 		Length: 11
 		Facings: 8
 		Tick: 9999
-	stand: 2100cyborglegs
+	stand:
+		Filename: 2100cyborglegs.shp
 		Length: 11
 		Facings: 8
 		Tick: 9999
@@ -3687,7 +3889,8 @@ cto2100power:
 		Filename: 2100cyborgbuilder.shp
 		Facings: 32
 		UseClassicFacings: True
-	run: 2100cyborglegs
+	run:
+		Filename: 2100cyborglegs.shp
 		Length: 11
 		Facings: 8
 	muzzle:
@@ -3705,13 +3908,16 @@ cto2100power:
 
 2100scavcar:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100scavcar.shp
 	idle:
 		Facings: 32
 		UseClassicFacings: True
-	skin2: 2100scavcar2
+	skin2:
+		Filename: 2100scavcar2.shp
 		Facings: 32
-	skin3: 2100scavcar3
+	skin3:
+		Filename: 2100scavcar3.shp
 		Facings: 32
 	muzzle:
 		Filename: minigun.shp
@@ -3722,6 +3928,7 @@ cto2100power:
 
 2100trike:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100trike.shp
 	idle:
 		Facings: 32
@@ -3735,6 +3942,7 @@ cto2100power:
 
 2100trike2:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100trike2.shp
 	idle:
 		Filename: 2100trike.shp
@@ -3753,93 +3961,98 @@ cto2100power:
 
 2100jeep:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100jeep.shp
 	idle:
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.65
 	muzzle:
 		Filename: minigun.shp
 		Length: 6
 		Facings: 8
-		Scale: 0.65
 	icon:
 		Filename: 2100jeepicon.shp
 
 2100jeepmsl:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100jeepmsl.shp
 	idle:
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.65
 	muzzle:
 		Filename: minigun.shp
 		Length: 6
 		Facings: 8
-		Scale: 0.65
 	icon:
 		Filename: 2100jeepmslicon.shp
 
 2100buggy:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100buggy.shp
 	idle:
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.65
 	muzzle:
 		Filename: minigun.shp
 		Length: 6
 		Facings: 8
-		Scale: 0.65
 	icon:
 		Filename: 2100buggyicon.shp
 
 2100buggyrk:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100buggyrk.shp
 	idle:
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.65
 	muzzle:
 		Filename: minigun.shp
 		Length: 6
 		Facings: 8
-		Scale: 0.65
 	icon:
 		Filename: 2100buggyrkicon.shp
 
 2100tractor:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100tractor.shp
 	idle:
 		Facings: 32
 	muzzle:
 		Combine:
 			flame-n:
+				Filename: flame-n.shp
 				Length: *
 				Offset: 3,6
 			flame-nw:
+				Filename: flame-nw.shp
 				Length: *
 				Offset: 8,7
 			flame-w:
+				Filename: flame-w.shp
 				Length: *
 				Offset: 8,2
 			flame-sw:
+				Filename: flame-sw.shp
 				Length: *
 				Offset: 7,-2
 			flame-s:
+				Filename: flame-s.shp
 				Length: *
 				Offset: 3,-2
 			flame-se:
+				Filename: flame-se.shp
 				Length: *
 				Offset: -5,-2
 			flame-e:
+				Filename: flame-e.shp
 				Length: *
 				Offset: -7,2
 			flame-ne:
+				Filename: flame-ne.shp
 				Length: *
 				Offset: -7,8
 		Facings: 8
@@ -3852,6 +4065,7 @@ cto2100power:
 
 2100tractor2:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100tractor2.shp
 	idle:
 		Filename: 2100tractor.shp
@@ -3868,12 +4082,15 @@ cto2100power:
 
 2100camper:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100camper.shp
 	idle:
 		Facings: 32
-	skin2: 2100camper2
+	skin2:
+		Filename: 2100camper2.shp
 		Facings: 32
-	skin3: 2100camper3
+	skin3:
+		Filename: 2100camper3.shp
 		Facings: 32
 	turret:
 		Filename: 2100campertur.shp
@@ -3886,13 +4103,16 @@ cto2100power:
 
 2100camper2:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100camper2.shp
 	idle:
 		Filename: 2100camper.shp
 		Facings: 32
-	skin2: 2100camper2
+	skin2:
+		Filename: 2100camper2.shp
 		Facings: 32
-	skin3: 2100camper3
+	skin3:
+		Filename: 2100camper3.shp
 		Facings: 32
 	turret:
 		Filename: 2100rkpoddefense.shp
@@ -3905,12 +4125,15 @@ cto2100power:
 
 2100camper3:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100camper3.shp
 	idle:
 		Facings: 32
-	skin2: 2100camper2
+	skin2:
+		Filename: 2100camper2.shp
 		Facings: 32
-	skin3: 2100camper3
+	skin3:
+		Filename: 2100camper3.shp
 		Facings: 32
 	turret:
 		Filename: 2100needle.shp
@@ -3923,13 +4146,16 @@ cto2100power:
 
 2100hcamper:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100hcamper.shp
 	idle:
 		Filename: 2100camperhover.shp
 		Facings: 32
-	skin2: 2100camperhover
+	skin2:
+		Filename: 2100camperhover.shp
 		Facings: 32
-	skin3: 2100camperhover
+	skin3:
+		Filename: 2100camperhover.shp
 		Facings: 32
 	turret:
 		Filename: 2100campertur.shp
@@ -3942,13 +4168,16 @@ cto2100power:
 
 2100hcamper2:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100hcamper2.shp
 	idle:
 		Filename: 2100camperhover.shp
 		Facings: 32
-	skin2: 2100camperhover
+	skin2:
+		Filename: 2100camperhover.shp
 		Facings: 32
-	skin3: 2100camperhover
+	skin3:
+		Filename: 2100camperhover.shp
 		Facings: 32
 	turret:
 		Filename: 2100rkpoddefense.shp
@@ -3961,6 +4190,7 @@ cto2100power:
 
 2100supplytruckarmed:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100supplytruckarmed.shp
 	idle:
 		Filename: truck.shp
@@ -3977,6 +4207,7 @@ cto2100power:
 
 2100bus:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100bus.shp
 	idle:
 		Facings: 32
@@ -3991,6 +4222,7 @@ cto2100power:
 
 2100bus2:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100bus2.shp
 	idle:
 		Filename: 2100bus.shp
@@ -4006,6 +4238,7 @@ cto2100power:
 
 2100bus3:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100bus3.shp
 	idle:
 		Filename: 2100bus.shp
@@ -4021,6 +4254,7 @@ cto2100power:
 
 2100bus4:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100bus4.shp
 	idle:
 		Filename: 2100bus.shp
@@ -4036,6 +4270,7 @@ cto2100power:
 
 2100bus5:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100bus5.shp
 	idle:
 		Filename: 2100bus.shp
@@ -4051,6 +4286,7 @@ cto2100power:
 
 2100scavtruck:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100scavtruck.shp
 	idle:
 		Facings: 32
@@ -4059,39 +4295,50 @@ cto2100power:
 		Scale: 0.62
 		Combine:
 			flame-n:
+				Filename: flame-n.shp
 				Length: *
 				Offset: 3,6
 			flame-nw:
+				Filename: flame-nw.shp
 				Length: *
 				Offset: 8,7
 			flame-w:
+				Filename: flame-w.shp
 				Length: *
 				Offset: 8,2
 			flame-sw:
+				Filename: flame-sw.shp
 				Length: *
 				Offset: 7,-2
 			flame-s:
+				Filename: flame-s.shp
 				Length: *
 				Offset: 3,-2
 			flame-se:
+				Filename: flame-se.shp
 				Length: *
 				Offset: -5,-2
 			flame-e:
+				Filename: flame-e.shp
 				Length: *
 				Offset: -7,2
 			flame-ne:
+				Filename: flame-ne.shp
 				Length: *
 				Offset: -7,8
 		Facings: 8
 		Length: 13
-	turret1: 2100flamertur
+	turret1:
+		Filename: 2100flamertur.shp
 		Facings: 32
 		Scale: 0.62
-	turret2: 2100tankkiller
+	turret2:
+		Filename: 2100tankkiller.shp
 		Facings: 32
 		Scale: 0.62
 		UseClassicFacings: True
-	turret3: 2100rocketarray
+	turret3:
+		Filename: 2100rocketarray.shp
 		Facings: 32
 		Scale: 0.62
 		UseClassicFacings: True
@@ -4100,6 +4347,7 @@ cto2100power:
 
 2100tanker:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100tanker.shp
 	idle:
 		Facings: 32
@@ -4108,35 +4356,45 @@ cto2100power:
 		Scale: 0.62
 		Combine:
 			flame-n:
+				Filename: flame-n.shp
 				Length: *
 				Offset: 3,6
 			flame-nw:
+				Filename: flame-nw.shp
 				Length: *
 				Offset: 8,7
 			flame-w:
+				Filename: flame-w.shp
 				Length: *
 				Offset: 8,2
 			flame-sw:
+				Filename: flame-sw.shp
 				Length: *
 				Offset: 7,-2
 			flame-s:
+				Filename: flame-s.shp
 				Length: *
 				Offset: 3,-2
 			flame-se:
+				Filename: flame-se.shp
 				Length: *
 				Offset: -5,-2
 			flame-e:
+				Filename: flame-e.shp
 				Length: *
 				Offset: -7,2
 			flame-ne:
+				Filename: flame-ne.shp
 				Length: *
 				Offset: -7,8
 		Facings: 8
 		Length: 13
-	turret1: 2100flamertur
+	turret1:
+		Filename: 2100flamertur.shp
 		Facings: 32
 		Scale: 0.62
-	turret2: 2100inferno
+	turret2:
+		Filename: 2100inferno.shp
 		Facings: 32
 		UseClassicFacings: True
 		Scale: 0.62
@@ -4145,7 +4403,8 @@ cto2100power:
 
 2100tanker2:
 	Defaults:
-		Filename: 2100tanker2.shp
+		Scale: 2.0
+		Filename: 2100tanker.shp
 	idle:
 		Facings: 32
 		Scale: 0.62
@@ -4154,10 +4413,12 @@ cto2100power:
 		Length: 6
 		Facings: 8
 		Scale: 0.62
-	turret1: 2100assaultmg2
+	turret1:
+		Filename: 2100assaultmg.shp
 		Facings: 32
 		Scale: 0.62
-	turret2: 2100assaultmg
+	turret2:
+		Filename: 2100assaultmg.shp
 		Facings: 32
 		UseClassicFacings: True
 		Scale: 0.62
@@ -4166,6 +4427,7 @@ cto2100power:
 
 2100ftruk:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100ftruk.shp
 	idle:
 		Facings: 32
@@ -4180,7 +4442,8 @@ cto2100power:
 
 2100ftruk2:
 	Defaults:
-		Filename: 2100ftruk2.shp
+		Scale: 2.0
+		Filename: 2100ftruk.shp
 	idle:
 		Filename: 2100ftruk.shp
 		Facings: 32
@@ -4191,11 +4454,12 @@ cto2100power:
 		Filename: gunfire2.shp
 		Length: *
 	icon:
-		Filename: 2100ftruk2icon.shp
+		Filename: 2100ftrukicon.shp
 
 2100ftruk3:
 	Defaults:
-		Filename: 2100ftruk3.shp
+		Scale: 2.0
+		Filename: 2100ftruk.shp
 	idle:
 		Filename: 2100ftruk.shp
 		Facings: 32
@@ -4206,10 +4470,11 @@ cto2100power:
 		Filename: gunfire2.shp
 		Length: *
 	icon:
-		Filename: 2100ftruk3icon.shp
+		Filename: 2100ftrukicon.shp
 
 2100hftruk:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100hftruk.shp
 	idle:
 		Filename: 2100hftruk.shp
@@ -4225,6 +4490,7 @@ cto2100power:
 
 2100icecream:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100icecream.shp
 	idle:
 		Facings: 32
@@ -4242,6 +4508,7 @@ cto2100power:
 
 2100crane:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100crane.shp
 	idle:
 		Facings: 32
@@ -4255,19 +4522,21 @@ cto2100power:
 
 2100crane2:
 	Defaults:
-		Filename: 2100crane2.shp
+		Scale: 2.0
+		Filename: 2100crane.shp
 	idle:
 		Facings: 32
 		Scale: 0.60
 	turret:
-		Filename: 2100crane2tur.shp
+		Filename: 2100cranetur.shp
 		Facings: 32
 		Scale: 0.60
 	icon:
-		Filename: 2100crane2icon.shp
+		Filename: 2100craneicon.shp
 
 2100trailer:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100trailer.shp
 	idle:
 		Facings: 32
@@ -4285,6 +4554,7 @@ cto2100power:
 
 2100scavtank:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100scavtank.shp
 	idle:
 		Filename: 2100scavtank.shp
@@ -4312,10 +4582,12 @@ cto2100power:
 
 2100chopper:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100chopper.shp
 	idle:
 		Facings: 32
-	rotor: lrotor
+	rotor:
+		Filename: lrotor.shp
 		Length: 4
 	slow-rotor: lrotor
 		Start: 4
@@ -4330,14 +4602,17 @@ cto2100power:
 
 2100polmav:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100polmav.shp
 	idle:
 		Facings: 32
 		Scale: 0.9
-	rotor: lrotor
+	rotor:
+		Filename: lrotor.shp
 		Length: 4
 		Scale: 0.9
-	slow-rotor: lrotor
+	slow-rotor:
+		Filename: lrotor.shp
 		Start: 4
 		Length: 8
 		Scale: 0.9
@@ -4386,312 +4661,364 @@ cto2100power:
 
 2100upviper:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100upviper.shp
 	icon:
 		Filename: 2100upviper.shp
 
 2100upbug:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100upbug.shp
 	icon:
 		Filename: 2100upbug.shp
 
 2100upcobra:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100upcobra.shp
 	icon:
 		Filename: 2100upcobra.shp
 
 2100uppython:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100uppython.shp
 	icon:
 		Filename: 2100uppython.shp
 
 2100upscorpion:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100upscorpion.shp
 	icon:
 		Filename: 2100upscorpion.shp
 
 2100upmantis:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100upmantis.shp
 	icon:
 		Filename: 2100upmantis.shp
 
 2100upleopard:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100upleopard.shp
 	icon:
 		Filename: 2100upleopard.shp
 
 2100uppanther:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100uppanther.shp
 	icon:
 		Filename: 2100uppanther.shp
 
 2100uptiger:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100uptiger.shp
 	icon:
 		Filename: 2100uptiger.shp
 
 2100upretaliaton:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100upretaliaton.shp
 	icon:
 		Filename: 2100upretaliaton.shp
 
 2100upretribution:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100upretribution.shp
 	icon:
 		Filename: 2100upretribution.shp
 
 2100upvengeance:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100upvengeance.shp
 	icon:
 		Filename: 2100upvengeance.shp
 
 2100uplmg:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100uplmg.shp
 	icon:
 		Filename: 2100uplmg.shp
 
 2100uptwinmg:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100uptwinmg.shp
 	icon:
 		Filename: 2100uptwinmg.shp
 
 2100upheavymg:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100upheavymg.shp
 	icon:
 		Filename: 2100upheavymg.shp
 
 2100upassaultmg:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100upassaultmg.shp
 	icon:
 		Filename: 2100upassaultmg.shp
 
 2100uptwinassaultmg:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100uptwinassaultmg.shp
 	icon:
 		Filename: 2100uptwinassaultmg.shp
 
 2100uphurricane:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100uphurricane.shp
 	icon:
 		Filename: 2100uphurricane.shp
 
 2100uplrk:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100uplrk.shp
 	icon:
 		Filename: 2100uplrk.shp
 
 2100uplancer:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100uplancer.shp
 	icon:
 		Filename: 2100uplancer.shp
 
 2100uptankkiller:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100uptankkiller.shp
 	icon:
 		Filename: 2100uptankkiller.shp
 
 2100upbunkerbuster:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100upbunkerbuster.shp
 	icon:
 		Filename: 2100upbunkerbuster.shp
 
 2100rkarray:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100rkarray.shp
 	icon:
 		Filename: 2100rkarray.shp
 
 2100upaa:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100upaa.shp
 	icon:
 		Filename: 2100upaa.shp
 
 2100upflamer:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100upflamer.shp
 	icon:
 		Filename: 2100upflamer.shp
 
 2100upinferno:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100upinferno.shp
 	icon:
 		Filename: 2100upinferno.shp
 
 2100uphtrack:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100uphtrack.shp
 	icon:
 		Filename: 2100uphtrack.shp
 
 2100uptracks:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100uptracks.shp
 	icon:
 		Filename: 2100uptracks.shp
 
 2100uphover:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100uphover.shp
 	icon:
 		Filename: 2100uphover.shp
 
 2100upvtols:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100upvtols.shp
 	icon:
 		Filename: 2100upvtols.shp
 
 2100uplcannon:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100uplcannon.shp
 	icon:
 		Filename: 2100uplcannon.shp
 
 2100upmcannon:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100upmcannon.shp
 	icon:
 		Filename: 2100upmcannon.shp
 
 2100uphycannon:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100uphycannon.shp
 	icon:
 		Filename: 2100uphycannon.shp
 
 2100upflak:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100upflak.shp
 	icon:
 		Filename: 2100upflak.shp
 
 2100upneedle:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100upneedle.shp
 	icon:
 		Filename: 2100upneedle.shp
 
 2100uphcannon:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100uphcannon.shp
 	icon:
 		Filename: 2100uphcannon.shp
 
 2100upacannon:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100upacannon.shp
 	icon:
 		Filename: 2100upacannon.shp
 
 2100upa2cannon:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100upa2cannon.shp
 	icon:
 		Filename: 2100upa2cannon.shp
 
 2100upmortar:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100upmortar.shp
 	icon:
 		Filename: 2100upmortar.shp
 
 2100upbombard:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100upbombard.shp
 	icon:
 		Filename: 2100upbombard.shp
 
 2100uppeppericon:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100uppeppericon.shp
 	icon:
 		Filename: 2100peppericon.shp
 
 2100uphotwizer:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100uphotwizer.shp
 	icon:
 		Filename: 2100uphotwizer.shp
 
 2100upengine:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100upengine.shp
 	icon:
 		Filename: 2100upengine.shp
 
 2100upmgbunker:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100upmgbunker.shp
 	icon:
 		Filename: 2100upmgbunker.shp
 
 2100uparmor:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100uparmor.shp
 	icon:
 		Filename: 2100uparmor.shp
 
 2100upwall:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100upwall.shp
 	icon:
 		Filename: 2100upwall.shp
 
 2100upstructure:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100upstructure.shp
 	icon:
 		Filename: 2100upstructure.shp
 
 2100upengineer:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100upengineer.shp
 	icon:
 		Filename: 2100upengineer.shp
 
 2100upsypnaticdata:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100upsypnaticdata.shp
 	icon:
 		Filename: 2100upsypnaticdata.shp
 
 2100uppowermodule:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100uppowermodule.shp
 	icon:
 		Filename: 2100uppowermodule.shp
 
 2100upfactorymodule:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100upfactorymodule.shp
 	icon:
 		Filename: 2100upfactorymodule.shp
 
 2100upresearchmodule:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100upresearchmodule.shp
 	icon:
 		Filename: 2100upresearchmodule.shp
@@ -4704,21 +5031,25 @@ cto2100power:
 
 2100rocket:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100rocket.shp
 	idle:
 
 2100commandodebuff:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100commandodebuff.shp
 	idle:
 
 2100commandocall:
 	Defaults:
+		Scale: 2.0
 		Filename: 2100commandocall.shp
 	idle:
 
 mgeffect:
 	Defaults:
+		Scale: 2.0
 		Filename: mgeffect.shp
 	idle:
 		Facings: -64
@@ -4726,43 +5057,50 @@ mgeffect:
 
 2100missilekiller:
 	Defaults:
-		Filename: 2100missilekiller
+		Scale: 2.0
+		Filename: 2100missilekiller.shp
 	idle:
 		Facings: 16
 		ZOffset: 1023
 
 psc2100factory1:
 	Defaults:
+		Scale: 2.0
 		Filename: psc2100factory1.shp
 	icon:
 		Filename: psc2100factory1.shp
 
 psc2100factory2:
 	Defaults:
+		Scale: 2.0
 		Filename: psc2100factory2.shp
 	icon:
 		Filename: psc2100factory2.shp
 
 psc2100power:
 	Defaults:
+		Scale: 2.0
 		Filename: psc2100power.shp
 	icon:
 		Filename: psc2100power.shp
 
 psc2100chopshop1:
 	Defaults:
+		Scale: 2.0
 		Filename: psc2100chopshop1.shp
 	icon:
 		Filename: psc2100chopshop1.shp
 
 psc2100chopshop2:
 	Defaults:
+		Scale: 2.0
 		Filename: psc2100chopshop2.shp
 	icon:
 		Filename: psc2100chopshop2.shp
 
 psc2100spower:
 	Defaults:
+		Scale: 2.0
 		Filename: psc2100spower.shp
 	icon:
 		Filename: psc2100spower.shp
