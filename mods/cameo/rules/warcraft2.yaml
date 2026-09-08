@@ -26,22 +26,22 @@ World:
 	FactionCA@human2:
 		Name: Human WC2
 		InternalName: human2
-		Game: Warcraft 2
-		Side: Warcraft 2
+		Game: Warcraft
+		Side: Warcraft
 		Description: Human\nLeaders of the Alliance\nMighty and intelligent.\nSupport Powers: Holy Vision, Blizzard
 		Selectable: True
 	FactionCA@orc2:
 		Name: Orc WC2
 		InternalName: orc2
-		Game: Warcraft 2
-		Side: Warcraft 2
+		Game: Warcraft
+		Side: Warcraft
 		Description: Orc\nLeaders of the Horde\nBrutish and crafty.\nSupport Powers: Eye of Kilrogg, Death and Decay
 		Selectable: True
 	FactionCA@RandomWC2:
 		Name: Any WC2
 		InternalName: RandomWC2
 		RandomFactionMembers: human2, orc2
-		Game: Warcraft 2
+		Game: Warcraft
 		Side: Random
 		Description: Random Faction\nA random faction from Warcraft 2 will be chosen when the game starts.
 	####################################################################################################
@@ -2510,28 +2510,58 @@ wc2_human_mage_tower:
 		Footprints:
 			1: __x__ _xxx_ xxxxx _xxx_ __x__
 	# Blizzard super weapon
+	# IonCannonPower@BLIZZARD:
+	# 	OrderName: wc2_blizzard
+	# 	PauseOnCondition: lowpower
+	# 	Prerequisites: ~techlevel.superweapons
+	# 	Icon: blizzard
+	# 	Cursor: ioncannon
+	# 	ChargeInterval: 7500
+	# 	Name: Blizzard
+	# 	Description: Rain down icy death in a large area.
+	# 	BeginChargeSpeechNotification: IonCannonCharging
+	# 	EndChargeSpeechNotification: IonCannonReady
+	# 	SelectTargetSpeechNotification: SelectTarget
+	# 	InsufficientPowerSpeechNotification: InsufficientPower
+	# 	OnFireSound: wc2_icestorm.aud
+	# 	DisplayTimerRelationships: Ally, Neutral, Enemy
+	# 	DisplayRadarPing: True
+	# 	CameraActor: camera.small
+	# 	SupportPowerPaletteOrder: 90
+	# 	Weapon: wc2blizzardSuper
+	# 	WeaponDelay: 0
+	# 	Effect: wc2_effect_blizzard
+	# 	EffectSequence: hit
 	IonCannonPower@BLIZZARD:
-		OrderName: wc2_blizzard
 		PauseOnCondition: lowpower
-		Prerequisites: ~techlevel.superweapons
-		Icon: blizzard
+		Prerequisites:
+			1: ~techlevel.superweapons
+		Icons:
+			1: blizzard
 		Cursor: ioncannon
 		ChargeInterval: 7500
-		Name: Blizzard
-		Description: Rain down icy death in a large area.
+		WeaponDelay: 0
+		Weapon: wc2blizzardSuper
+		Names:
+			1: Blizzard
+		Descriptions:
+			1: Rain down icy death in a large area.
 		BeginChargeSpeechNotification: IonCannonCharging
 		EndChargeSpeechNotification: IonCannonReady
+		EndChargeTextNotification: Ion Cannon ready.
 		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
 		InsufficientPowerSpeechNotification: InsufficientPower
 		OnFireSound: wc2_icestorm.aud
 		DisplayTimerRelationships: Ally, Neutral, Enemy
 		DisplayRadarPing: True
-		CameraActor: camera.small
-		SupportPowerPaletteOrder: 90
-		Weapon: wc2blizzardSuper
-		WeaponDelay: 0
+		CameraRange: 6000
+		CameraRemoveDelay: 125
+		CameraActor: CAMERA.small
+		SupportPowerPaletteOrder: 20
 		Effect: wc2_effect_blizzard
 		EffectSequence: hit
+	SupportPowerChargeBar:
 
 wc2_human_gryphon_aviary:
 	Inherits@WC2BUILDING: ^WC2HumanBuilding
@@ -4188,28 +4218,58 @@ wc2_orc_temple_of_the_damned:
 		Footprints:
 			1: __x__ _xxx_ xxxxx _xxx_ __x__
 	# Death and decay super weapon
+	# IonCannonPower@DEATHANDDECAY:
+	# 	OrderName: wc2_deathanddecay
+	# 	PauseOnCondition: lowpower
+	# 	Prerequisites: ~techlevel.superweapons
+	# 	Icon: deathanddecay
+	# 	Cursor: ioncannon
+	# 	ChargeInterval: 7500
+	# 	Name: Death and decay
+	# 	Description: Rots and kills in a large area.
+	# 	BeginChargeSpeechNotification: IonCannonCharging
+	# 	EndChargeSpeechNotification: IonCannonReady
+	# 	SelectTargetSpeechNotification: SelectTarget
+	# 	InsufficientPowerSpeechNotification: InsufficientPower
+	# 	OnFireSound: wc2_decay.aud
+	# 	DisplayTimerRelationships: Ally, Neutral, Enemy
+	# 	DisplayRadarPing: True
+	# 	CameraActor: camera.small
+	# 	SupportPowerPaletteOrder: 90
+	# 	Weapon: wc2deathanddecaySuper
+	# 	WeaponDelay: 0
+	# 	Effect: wc2_effect_death_and_decay
+	# 	EffectSequence: idle
 	IonCannonPower@DEATHANDDECAY:
-		OrderName: wc2_deathanddecay
 		PauseOnCondition: lowpower
-		Prerequisites: ~techlevel.superweapons
-		Icon: deathanddecay
+		Prerequisites:
+			1: ~techlevel.superweapons
+		Icons:
+			1: deathanddecay
 		Cursor: ioncannon
 		ChargeInterval: 7500
-		Name: Death and decay
-		Description: Rots and kills in a large area.
+		WeaponDelay: 0
+		Weapon: wc2deathanddecaySuper
+		Names:
+			1: Death and decay
+		Descriptions:
+			1: Rots and kills in a large area.
 		BeginChargeSpeechNotification: IonCannonCharging
 		EndChargeSpeechNotification: IonCannonReady
+		EndChargeTextNotification: Ion Cannon ready.
 		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
 		InsufficientPowerSpeechNotification: InsufficientPower
 		OnFireSound: wc2_decay.aud
 		DisplayTimerRelationships: Ally, Neutral, Enemy
 		DisplayRadarPing: True
-		CameraActor: camera.small
-		SupportPowerPaletteOrder: 90
-		Weapon: wc2deathanddecaySuper
-		WeaponDelay: 0
-		Effect: wc2_effect_death_and_decay
-		EffectSequence: idle
+		CameraRange: 6000
+		CameraRemoveDelay: 125
+		CameraActor: CAMERA.small
+		SupportPowerPaletteOrder: 20
+	 	Effect: wc2_effect_death_and_decay
+	 	EffectSequence: idle
+	SupportPowerChargeBar:
 
 wc2_orc_dragon_roost:
 	Inherits@WC2BUILDING: ^WC2OrcBuilding

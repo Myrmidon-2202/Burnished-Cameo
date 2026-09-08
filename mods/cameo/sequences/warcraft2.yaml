@@ -457,6 +457,7 @@ wc2_effect_death_knight_attack:
 wc2_effect_blizzard:
 	Defaults:
 		Filename: wc2_effect_blizzard.shp
+		Scale: 2.0
 	idle1:
 		Start: 0
 		Length: 1
@@ -515,6 +516,7 @@ wc2_effect_death_and_decay:
 		Start: 0
 		Length: 8
 		Tick: 80
+		Scale: 2.0
 
 wc2_cannon_projectile_medium:
 	idle:
