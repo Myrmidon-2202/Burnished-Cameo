@@ -6851,50 +6851,50 @@ jmgnest:
 	DetectCloaked:
 		Range: 3348
 
-JRAGUN:
-	Inherits: ^Defense
-	# Inherits@exp: ^GainsExperienceRABuilding
-	Inherits@Template: ^BasicDefenseTemplate
-	Inherits@AUTOTARGET: ^AutoTargetGround
-	Inherits@EMP: ^TurretEMP
-	Inherits@AntiTank: ^PrioritizeVehicle
-	Buildable:
-		Queue: Defence, RADefence
-		BuildPaletteOrder: 70
-		Prerequisites: ~rafact.japan, modtentj
-		Description: actor-gun.description
-	Valued:
-		Cost: 800
-	Tooltip:
-		Name: Japanese Tank Turret
-	Building:
-		BuildSounds: placbldg.aud, build5.aud
-	Health:
-		HP: 100000
-	WithBuildingBib:
-		HasMinibib: true
-	Turreted:
-		TurnSpeed: 48
-		InitialFacing: 224
-		RealignDelay: -1
-	-WithSpriteBody:
-	WithEmbeddedTurretSpriteBody:
-	Armament:
-		Weapon: RATurretGun
-		LocalOffset: 512,0,112
-		MuzzleSequence: muzzle
-	AttackTurreted:
-		RequiresCondition: !build-incomplete
-	WithMuzzleOverlay:
-	RenderSprites:
-		PlayerPalette: raplayer
-		Image: ragun
-	WithDeathAnimation:
-		DeathSequencePalette: raplayer
-	Power:
-		Amount: -40
-	RevealsShroud:
-		Range: 8683
+# JRAGUN:
+# 	Inherits: ^Defense
+# 	# Inherits@exp: ^GainsExperienceRABuilding
+# 	Inherits@Template: ^BasicDefenseTemplate
+# 	Inherits@AUTOTARGET: ^AutoTargetGround
+# 	Inherits@EMP: ^TurretEMP
+# 	Inherits@AntiTank: ^PrioritizeVehicle
+# 	Buildable:
+# 		Queue: Defence, RADefence
+# 		BuildPaletteOrder: 70
+# 		Prerequisites: ~rafact.japan, modtentj
+# 		Description: actor-gun.description
+# 	Valued:
+# 		Cost: 800
+# 	Tooltip:
+# 		Name: Japanese Harui
+# 	Building:
+# 		BuildSounds: placbldg.aud, build5.aud
+# 	Health:
+# 		HP: 100000
+# 	WithBuildingBib:
+# 		HasMinibib: true
+# 	Turreted:
+# 		TurnSpeed: 48
+# 		InitialFacing: 224
+# 		RealignDelay: -1
+# 	-WithSpriteBody:
+# 	WithEmbeddedTurretSpriteBody:
+# 	Armament:
+# 		Weapon: RATurretGun
+# 		LocalOffset: 512,0,112
+# 		MuzzleSequence: muzzle
+# 	AttackTurreted:
+# 		RequiresCondition: !build-incomplete
+# 	WithMuzzleOverlay:
+# 	RenderSprites:
+# 		PlayerPalette: raplayer
+# 		Image: modartyturret
+# 	WithDeathAnimation:
+# 		DeathSequencePalette: raplayer
+# 	Power:
+# 		Amount: -40
+# 	RevealsShroud:
+# 		Range: 8683
 
 # jballistat:
 # 	Inherits: ^Defense
@@ -7738,88 +7738,88 @@ SAPC:
 	FireWarheadsOnDeath:
 		Weapon: UnitExplode
 
-# modartyturret:
-# 	Inherits: ^Defense
-# 	Inherits@exp: ^GainsExperienceRABuilding
-# 	Inherits@Template: ^AdvancedDefenseTemplate
-# 	Inherits@detect: ^GenericGroundDetector
-# 	Inherits@AUTOTARGET: ^AutoTargetAll
-# 	Inherits@shape: ^2x2Shape
-# 	Inherits@gar: ^ClearableGarrisonNeutronOnly
-# 	Inherits@AntiInf: ^PrioritizeInfantry
-# 	Inherits@AntiVeh: ^PrioritizeVehicle
-#		Buildable:
-# 		Queue: Defence, RADefence
-# 		BuildPaletteOrder: 90
-# 		Prerequisites: ~upbastion
-# 		Description: actor-bastion.description
-# 	Valued:
-# 		Cost: 2000
-# 	Tooltip:
-# 		Name: Bastion Artillery Bunker
-# 	Building:
-# 		Footprint: xx xx
-# 		Dimensions: 2,2
-# 	Health:
-# 		HP: 350000
-# 	WithBuildingBib:
-# 	Turreted:
-# 		TurnSpeed: 1000
-# 		Offset: 0,0,100
-# 		RealignDelay: -1
-# 		Turret: primary
-# 	Turreted@cannon:
-# 		TurnSpeed: 10
-# 		Offset: 0,0,200
-# 		RealignDelay: -1
-# 		Turret: cannon
-# 		RequiresCondition: !disabled && !lowpower
-# 	Armament:
-# 		Weapon: 155mmBastion
-# 		LocalOffset: 1000,0,900
-# 		MuzzleSequence: muzzle
-# 		Turret: cannon
-# 		Name: cannon
-# 		RequiresCondition: !disabled && !lowpower && !up_cryomissiles
-# 	Armament@Upgrade: ##########
-# 		Weapon: 155mmBastionCryo
-# 		LocalOffset: 1000,0,900
-# 		MuzzleSequence: muzzle
-# 		Turret: cannon
-# 		Name: cannon
-# 		RequiresCondition: !disabled && !lowpower && up_cryomissiles
-# 	Cargo:
-# 		Types: Infantry, Hacker, Fremen
-# 		MaxWeight: 5
-# 	AttackTurreted:
-# 		Turrets: primary, cannon
-# 		Armaments: primary, cannon
-# 		RequiresCondition: !build-incomplete
-# 	AttackGarrisoned:
-# 		Armaments: garrisoned
-# 		PortOffsets: 768,0,256, 448,-682,256, -448,-682,256, -768,0,256, -448,682,256, 448,682,256
-# 		PortYaws: 0, 176, 341, 512, 682, 853
-# 		PortCones: 88, 88, 88, 88, 88, 88
-# 		PauseOnCondition: disabled
-# 	RenderRangeCircle:
-# 	WithMuzzleOverlay:
-# 	WithSpriteTurret@cannon:
-# 		Turret: cannon
-# 	RenderSprites:
-# 		Image: modartyturret
-# 		PlayerPalette: player_rgba
-# 	-WithDeathAnimation:
-# 	#WithRangeCircle:
-# 	#	Color: FFFF0088
-# 	#	Range: 13333
-# 	DamageMultiplier@2x2Shape:
-# 		Modifier: 50
-# 	Power:
-# 		Amount: -100
-# 	RevealsShroud:
-# 		Range: 10184
-# 	DetectCloaked:
-# 		Range: 5092
+modartyturret:
+	Inherits: ^Defense
+	Inherits@exp: ^GainsExperienceRABuilding
+	Inherits@Template: ^AdvancedDefenseTemplate
+	Inherits@detect: ^GenericGroundDetector
+	Inherits@AUTOTARGET: ^AutoTargetAll
+	Inherits@shape: ^2x2Shape
+	Inherits@gar: ^ClearableGarrisonNeutronOnly
+	Inherits@AntiInf: ^PrioritizeInfantry
+	Inherits@AntiVeh: ^PrioritizeVehicle
+	Buildable:
+		Queue: Defence, RADefence
+		BuildPaletteOrder: 90
+		Prerequisites: ~rafact.japan, modtentj
+		Description: actor-bastion.description
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Japanese Harui
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Health:
+		HP: 350000
+	WithBuildingBib:
+	Turreted:
+		TurnSpeed: 1000
+		Offset: 0,0,100
+		RealignDelay: -1
+		Turret: primary
+	Turreted@cannon:
+		TurnSpeed: 10
+		Offset: 0,0,200
+		RealignDelay: -1
+		Turret: cannon
+		RequiresCondition: !disabled && !lowpower
+	Armament:
+		Weapon: 155mmBastion
+		LocalOffset: 1000,0,900
+		MuzzleSequence: muzzle
+		Turret: cannon
+		Name: cannon
+		RequiresCondition: !disabled && !lowpower && !up_cryomissiles
+	Armament@Upgrade: ##########
+		Weapon: 155mmBastionCryo
+		LocalOffset: 1000,0,900
+		MuzzleSequence: muzzle
+		Turret: cannon
+		Name: cannon
+		RequiresCondition: !disabled && !lowpower && up_cryomissiles
+	Cargo:
+		Types: Infantry, Hacker, Fremen
+		MaxWeight: 5
+	AttackTurreted:
+		Turrets: primary, cannon
+		Armaments: primary, cannon
+		RequiresCondition: !build-incomplete
+	AttackGarrisoned:
+		Armaments: garrisoned
+		PortOffsets: 768,0,256, 448,-682,256, -448,-682,256, -768,0,256, -448,682,256, 448,682,256
+		PortYaws: 0, 176, 341, 512, 682, 853
+		PortCones: 88, 88, 88, 88, 88, 88
+		PauseOnCondition: disabled
+	RenderRangeCircle:
+	WithMuzzleOverlay:
+	WithSpriteTurret@cannon:
+		Turret: cannon
+	RenderSprites:
+		Image: modartyturret
+		PlayerPalette: player_rgba
+	-WithDeathAnimation:
+	#WithRangeCircle:
+	#	Color: FFFF0088
+	#	Range: 13333
+	DamageMultiplier@2x2Shape:
+		Modifier: 50
+	Power:
+		Amount: -100
+	RevealsShroud:
+		Range: 10184
+	DetectCloaked:
+		Range: 5092
 
 GAP:
 	Inherits: ^Defense

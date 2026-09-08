@@ -1242,7 +1242,7 @@ wind_trap.corrino:
 # 	RevealOnDeath:
 # 		Radius: 3c768
 # 	-WithDeathAnimation:
-# 	ThrowsShrapnel:
+# 	FireProjectilesOnDeath:
 # 		Weapons: Debris2
 # 		Pieces: 1, 1
 # 		Range: 0c512, 1c256
@@ -1654,7 +1654,7 @@ d2k_barracks:
 # 		Actor: facedancer
 # 	SpawnActorOnDeath@death4:
 # 		Actor: facedancer
-# 	ThrowsShrapnel:
+# 	FireProjectilesOnDeath:
 # 		Weapons: Debris2, Debris3
 # 		Pieces: 1, 2
 # 		Range: 1c512, 2c768
@@ -2061,7 +2061,7 @@ d2k_munitions.ixian:
 # 	GrantConditionOnPrerequisite@UPGRADEABLE:
 # 		Prerequisites: upgrade_light
 # 	-WithDeathAnimation:
-# 	ThrowsShrapnel:
+# 	FireProjectilesOnDeath:
 # 		Weapons: Debris2, Debris3
 # 		Pieces: 3, 7
 # 		Range: 1c512, 2c768
@@ -4091,7 +4091,7 @@ large_gun_turret:
 # 		Weapon: D2KAPMine
 # 		EmptyWeapon: D2KAPMine
 # 	ActorPreviewPlaceBuildingPreview:
-# 	ThrowsShrapnel:
+# 	FireProjectilesOnDeath:
 # 		Weapons: Debris2, Debris3
 # 		Pieces: 2, 4
 # 		Range: 1c512, 2c768
@@ -4167,7 +4167,7 @@ large_gun_turret:
 # 		Weapon: D2KATMine
 # 		EmptyWeapon: D2KATMine
 # 	ActorPreviewPlaceBuildingPreview:
-# 	ThrowsShrapnel:
+# 	FireProjectilesOnDeath:
 # 		Weapons: Debris2, Debris3
 # 		Pieces: 3, 5
 # 		Range: 1c512, 2c768
@@ -4401,7 +4401,7 @@ large_gun_turret:
 # 		RequiresCondition: atreides || harkonnen || ordos
 # 	ProvidesPrerequisite@buildingname:
 # 	-WithDeathAnimation:
-# 	ThrowsShrapnel:
+# 	FireProjectilesOnDeath:
 # 		Weapons: Debris, Debris2, Debris3
 # 		Pieces: 8, 14
 # 		Range: 1c512, 2c768
@@ -4891,7 +4891,7 @@ palace.corrino:
 # 		IconPalette: d2kunit
 # 		CameraRemoveDelay: 60
 # 		AllowMultiple: True
-# 	ThrowsShrapnel:
+# 	FireProjectilesOnDeath:
 # 		Weapons: Debris, Debris2, Debris3
 # 		Pieces: 9, 15
 # 		Range: 1c512, 2c768
@@ -5087,7 +5087,7 @@ palace.corrino:
 # 		DirectionArrowAnimation: airstrikedirection
 # 		StartFullyCharged: false
 # 		IncomingSpeechNotification: EnemyUnitsApproaching
-# 	ThrowsShrapnel:
+# 	FireProjectilesOnDeath:
 # 		Weapons: Debris, Debris2, Debris3
 # 		Pieces: 9, 15
 # 		Range: 1c512, 2c768
@@ -5335,7 +5335,7 @@ engineer:
 	Buildable:
 		BuildPaletteOrder: 40
 		Queue: Infantry.Atreides, Infantry.Ordos, Infantry.Harkonnen, Infantry.Corrino
-		Prerequisites:
+		Prerequisites: ~d2k_barracks
 		IconPalette: d2kunit
 	Tooltip:
 		Name: Engineer
@@ -7366,7 +7366,7 @@ d2k_atreides_apc:
 # 		DeployedCondition: triggered
 # 	KillsSelf@Triggered:
 # 		RequiresCondition: triggered
-# 	ThrowsShrapnel:
+# 	FireProjectilesOnDeath:
 # 		Weapons: Debris, Debris2, Debris3, Debris4
 # 		Pieces: 4, 8
 # 		Range: 1c0, 3c768
@@ -8626,7 +8626,7 @@ phoenix:
 	RenderSprites:
 		Image: d2k_gunship
 		PlayerPalette: player_rgba
-	# ThrowsShrapnel:
+	# FireProjectilesOnDeath:
 	# 	Weapons: Debris2, Debris3
 	# 	Pieces: 2, 3
 	# 	Range: 2c0, 4c0
@@ -8734,7 +8734,7 @@ d2k_combat_fleet:
 		Actor: d2k_combat_fleet.husk
 		OwnerType: InternalName
 		EffectiveOwnerFromOwner: true
-	# ThrowsShrapnel:
+	# FireProjectilesOnDeath:
 	# 	Weapons: Debris, Debris2, Debris3, Debris4
 	# 	Pieces: 3, 5
 	# 	Range: 2c0, 5c0
@@ -8798,7 +8798,7 @@ d2k_kwny_fighter:
 		Actor: d2k_kwny_fighter.husk
 		OwnerType: InternalName
 		EffectiveOwnerFromOwner: true
-	# ThrowsShrapnel:
+	# FireProjectilesOnDeath:
 	# 	Weapons: Debris, Debris2, Debris3, Debris4
 	# 	Pieces: 3, 5
 	# 	Range: 2c0, 5c0
@@ -8866,7 +8866,7 @@ d2k_airdefenseplatform:
 		OwnerType: InternalName
 		EffectiveOwnerFromOwner: true
 	RenderSprites:
-	# ThrowsShrapnel:
+	# FireProjectilesOnDeath:
 	# 	Weapons: Debris, Debris2
 	# 	Pieces: 2, 3
 	# 	Range: 1c0, 3c0
@@ -10717,7 +10717,7 @@ ordos_deviatormk2:
 
 # 		Weapon: D2KUnitExplodeLarge
 # 		EmptyWeapon: D2KUnitExplodeLarge
-# 	ThrowsShrapnel:
+# 	FireProjectilesOnDeath:
 # 		Weapons: Debris, Debris2, Debris3, Debris4
 # 		Pieces: 3, 5
 # 		Range: 1c256, 2c256
@@ -12747,7 +12747,7 @@ combat_tank_o.husk:
 # 	-WithMakeAnimation:
 # 	-WithBuildingRepairDecoration:
 # 	-WithDeathAnimation:
-# 	ThrowsShrapnel:
+# 	FireProjectilesOnDeath:
 # 		Weapons: Debris, Debris2, Debris3, Debris4
 # 		Pieces: 4, 6
 # 		Range: 1c512, 3c0

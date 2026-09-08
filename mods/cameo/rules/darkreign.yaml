@@ -6638,8 +6638,8 @@ drihq.togran:
 		Description: Builds structures
 	ProvidesPrerequisite@factiongdi:
 		Prerequisite: mmtogran
-	ProvidesPrerequisite@Freedomwater:
-		Prerequisite: freedomwater
+	ProvidesPrerequisite@Imperiumtech:
+		Prerequisite: imperiumtech
 	RenderSprites:
 		Image: drthq
 	Inherits@upgrade: ^UpgradesDRIHQType
@@ -6890,7 +6890,7 @@ drtflamer:
 		Name: Flamer Turret
 	Buildable:
 		BuildPaletteOrder: 40
-		Prerequisites: anypower, ~drthq
+		Prerequisites: drpowr, ~drthq
 		Queue: Defence, RADefence
 		BuildDurationModifier: 40
 		Description: All-purpose defensive structure.\n  Strong vs Aircraft, Tanks\n  Weak vs Infantry
@@ -6933,7 +6933,7 @@ drtsentry:
 		Name: Sentry Turret
 	Buildable:
 		BuildPaletteOrder: 40
-		Prerequisites: anypower, ~drthq
+		Prerequisites: drpowr, ~drthq
 		Queue: Defence, RADefence
 		BuildDurationModifier: 40
 		Description: All-purpose defensive structure.\n  Strong vs Aircraft, Tanks\n  Weak vs Infantry

@@ -4957,27 +4957,24 @@ modartyturret:
 	Inherits: ^WithBuildingBib3
 	Defaults:
 		Filename: AlliedBastionIdle.png
+		Scale: 0.4
 	idle:
 		Offset: 0,-6
-		Scale: 0.7
 	damaged-idle:
 		Start: 1
 		Offset: 0,-6
-		Scale: 0.7
 	turret:
 		Filename: AlliedBastionTurret.png
 		Facings: 64
-		Scale: 0.7
 	make:
 		Filename: AlliedBastionBuildup.png
 		Length: *
 		Offset: 0,-6
 		Tick: 150
-		Scale: 0.7
 	muzzle:
 		Filename: gunfire2.shp
 		Length: 5
-		Scale: 2.1
+		Scale: 1.0
 	dead:
 	bib:
 		Offset: 0, 1
