@@ -7167,7 +7167,7 @@ chsilo:
 		Produces: Upgrades
 	ProductionBar@Upgrades:
 		ProductionType: Upgrades
-	NukePower@unlimited:
+	NukePowerCA@unlimited:
 		AllowMultiple: True
 		Prerequisitess: 
 			1: ~techlevel.superweapons
@@ -7190,7 +7190,7 @@ chsilo:
 		MissileDelay: 11
 		SpawnOffset: 3c0,0,-1c512
 		DisplayBeacon: True
-		BeaconPosters: 
+		BeaconPosters:
 			1: raatomicon
 		DisplayTimerStances: Ally, Neutral, Enemy
 		DisplayRadarPing: True
@@ -7661,6 +7661,7 @@ chlotus:
 	MindControllerCA:
 		ArmamentNames: control
 		Capacity: 1
+		RequiresCondition: !disabled
 		ControllingCondition: controlling
 	ReloadArmamentsBar:
 		Armaments: control

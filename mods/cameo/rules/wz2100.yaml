@@ -22,7 +22,7 @@ World:
 		InternalName: nexus
 		Side: Warzone 2100
 		Game: Warzone 2100
-		Description: Rogue A.I, seeking domination over all.\nFeatures:\n- It has all the elements of Project outside of other chassis\n- Most units are vehicular\n- Buildings and defenses do not require power to operate\nSupport powers: Laser Satellite\nEarly Body Unlocks: Retaliation, Retribution, Vengeance\nPrice of NEXUS vehicles are the most expensive but units take longer to kill compared to Collective variants
+		Description: Rogue A.I, seeking domininion over all.\nFeatures:\n- It has all the elements of Project outside of other chassis\n- Most units are vehicular\n- Buildings and defenses do not require power to operate\nSupport powers: Laser Satellite\nEarly Body Unlocks: Retaliation, Retribution, Vengeance\nPrice of NEXUS vehicles are the most expensive but units take longer to kill compared to Collective variants
 	FactionCA@scav:
 		Name: Scavengers
 		InternalName: scavenger
@@ -116,7 +116,13 @@ Player:
 	ProvidesPrerequisite@numberofoilderricks12:
 		Prerequisite: numberofoilderricks12
 		RequiresCondition: (OilDerricksOwned >= 12)
-		
+	ProvidesPrerequisite@factionalpha:
+		Prerequisite: mmalpha
+		Factions: alpha, paradigm, collective, nexus
+	ProvidesPrerequisite@factionscav:
+		Prerequisite: mmscavenger
+		Factions: scavenger
+
 ####################################################################################################
 #		2100 Structures
 ####################################################################################################
@@ -244,6 +250,9 @@ Player:
 		SpawnOffset: 1,2
 		Facing: 256
 		RequiresCondition: littlebuilderenable
+	Selectable:
+		Bounds: 6032, 4096
+		DecorationBounds: 6032, 4096
 	-Transforms:
 	-TransformsIntoMobile:
 	-TransformsIntoPassenger:
@@ -345,7 +354,8 @@ Player:
 		Amount: -25
 	CashTrickler:
 		Interval: 50
-		Amount: 100
+		# Amount: 100
+		Amount: 250
 		ShowTicks: True
 		PauseOnCondition: disabled
 		UseResourceStorage: true
@@ -754,6 +764,8 @@ Player:
 		Produces: Upgrades
 	ProductionBar:
 		ProductionType: Upgrades
+	ProvidesPrerequisite@research:
+		Prerequisite: wzresearch
 	ProvidesPrerequisite@alpha:
 		Prerequisite: bodies.alpha
 		Factions: alpha
@@ -1798,6 +1810,9 @@ psc2100factory2:
 		SpawnOffset: 1,2
 		Facing: 256
 		RequiresCondition: littlebuilderenable
+	Selectable:
+		Bounds: 6032, 4096
+		DecorationBounds: 6032, 4096
 	-Transforms:
 	-TransformsIntoMobile:
 	-TransformsIntoPassenger:
@@ -2388,7 +2403,8 @@ psc2100factory2:
 	Inherits@EMP: ^TurretEMP
 	Inherits@AP: ^2100ConcreteArmorUpgrades
 	Selectable:
-		Bounds: 43690, 65536
+		Bounds: 1024, 1024
+		DecorationBounds: 1024, 1024
 	Valued:
 		Cost: 400
 	Tooltip:
@@ -2584,6 +2600,8 @@ psc2100factory2:
 		RequiresSelection: true
 		PipCount: 5
 		FullSequence: pip-yellow
+	ProvidesPrerequisite@research:
+		Prerequisite: wzresearch
 ####################################################################################################
 #		SCAVENGER Defence
 ####################################################################################################
@@ -8718,7 +8736,7 @@ up2100uplmg1:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
 		Description: Unlock Machinegun Weapon
-		Prerequisites: ~!up2100uplmg1
+		Prerequisites: ~!up2100uplmg1, ~wzresearch
 	Valued:
 		Cost: 50
 	RenderSprites:
@@ -8814,7 +8832,7 @@ up2100upflamer1:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
 		Description: Unlock Machinegun Weapon
-		Prerequisites: ~!up2100upflamer1
+		Prerequisites: ~!up2100upflamer1, ~wzresearch
 	Valued:
 		Cost: 150
 	RenderSprites:
@@ -8867,6 +8885,7 @@ up2100upflamer4:
 		Image: 2100upflamer
 	ProvidesPrerequisite:
 		Prerequisite: up2100upflamer4
+
 up2100upflamer5:
 	Inherits: ^upgrade.template
 	Tooltip:
@@ -8882,6 +8901,7 @@ up2100upflamer5:
 		Image: 2100upflamer
 	ProvidesPrerequisite:
 		Prerequisite: up2100upflamer5
+
 up2100upflamer6:
 	Inherits: ^upgrade.template
 	Tooltip:
@@ -8897,6 +8917,7 @@ up2100upflamer6:
 		Image: 2100upflamer
 	ProvidesPrerequisite:
 		Prerequisite: up2100upflamer6
+
 up2100upinferno1:
 	Inherits: ^upgrade.template
 	Tooltip:
@@ -8912,6 +8933,7 @@ up2100upinferno1:
 		Image: 2100upinferno
 	ProvidesPrerequisite:
 		Prerequisite: up2100upinferno1
+
 up2100upinferno2:
 	Inherits: ^upgrade.template
 	Tooltip:
@@ -9041,7 +9063,7 @@ up2100upengine1:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
 		Description: Vehicles gains %5 more speed
-		Prerequisites: ~!up2100upengine1
+		Prerequisites: ~!up2100upengine1, ~wzresearch
 	Valued:
 		Cost: 250
 	RenderSprites:
@@ -9125,6 +9147,7 @@ up2100uplrk2:
 		Image: 2100uplrk
 	ProvidesPrerequisite:
 		Prerequisite: up2100uplrk2
+
 up2100uplrk3:
 	Inherits: ^upgrade.template
 	Tooltip:
@@ -9140,6 +9163,7 @@ up2100uplrk3:
 		Image: 2100uplrk
 	ProvidesPrerequisite:
 		Prerequisite: up2100uplrk3
+
 up2100uplrk4:
 	Inherits: ^upgrade.template
 	Tooltip:
@@ -9299,13 +9323,14 @@ up2100uparmor1:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
 		Description: Vehicles gains %10 more HP
-		Prerequisites: ~!up2100uparmor1
+		Prerequisites: ~!up2100uparmor1, ~wzresearch
 	Valued:
 		Cost: 500
 	RenderSprites:
 		Image: 2100uparmor
 	ProvidesPrerequisite:
 		Prerequisite: up2100uparmor1
+
 up2100uparmor2:
 	Inherits: ^upgrade.template
 	Tooltip:
@@ -9321,6 +9346,7 @@ up2100uparmor2:
 		Image: 2100uparmor
 	ProvidesPrerequisite:
 		Prerequisite: up2100uparmor2
+
 up2100uparmor3:
 	Inherits: ^upgrade.template
 	Tooltip:
@@ -9336,6 +9362,7 @@ up2100uparmor3:
 		Image: 2100uparmor
 	ProvidesPrerequisite:
 		Prerequisite: up2100uparmor3
+
 up2100uparmor4:
 	Inherits: ^upgrade.template
 	Tooltip:
@@ -9351,6 +9378,7 @@ up2100uparmor4:
 		Image: 2100uparmor
 	ProvidesPrerequisite:
 		Prerequisite: up2100uparmor4
+
 up2100uparmor5:
 	Inherits: ^upgrade.template
 	Tooltip:
@@ -9366,6 +9394,7 @@ up2100uparmor5:
 		Image: 2100uparmor
 	ProvidesPrerequisite:
 		Prerequisite: up2100uparmor5
+
 up2100uparmor6:
 	Inherits: ^upgrade.template
 	Tooltip:
@@ -9381,6 +9410,7 @@ up2100uparmor6:
 		Image: 2100uparmor
 	ProvidesPrerequisite:
 		Prerequisite: up2100uparmor6
+
 up2100uparmor7:
 	Inherits: ^upgrade.template
 	Tooltip:
@@ -9396,6 +9426,7 @@ up2100uparmor7:
 		Image: 2100uparmor
 	ProvidesPrerequisite:
 		Prerequisite: up2100uparmor7
+
 up2100upengineer1:
 	Inherits: ^upgrade.template
 	Tooltip:
@@ -9411,6 +9442,7 @@ up2100upengineer1:
 		Image: 2100upengineer
 	ProvidesPrerequisite:
 		Prerequisite: up2100upengineer1
+
 up2100upengineer2:
 	Inherits: ^upgrade.template
 	Tooltip:
@@ -9435,7 +9467,7 @@ up2100upwall1:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
 		Description: Unlock Walls
-		Prerequisites: ~!up2100upwall1
+		Prerequisites: ~!up2100upwall1, ~wzresearch
 	Valued:
 		Cost: 250
 	RenderSprites:

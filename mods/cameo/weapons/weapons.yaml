@@ -389,7 +389,7 @@
 		Speed: 600
 		Acceleration: 4
 		HomingActivationDelay: 1
-		RangeLimit: 20000
+		RangeLimit: 10000
 		PointDefenseTypes: Missile
 	Warhead@LightMissile: SpreadDamage
 		ValidTargets: Ground, Water, Trees, Air
@@ -3127,7 +3127,7 @@ DefuseKit:
 		Spread: 250
 		Damage: 5000
 		Versus:
-			None: 50
+			None: 20
 			Wood: 70
 			Light: 80
 			Medium: 90
@@ -3168,7 +3168,7 @@ DefuseKit:
 		Inaccuracy: 2c512
 	Warhead@1Dam: SpreadDamage
 		Spread: 500
-		Damage: 20000
+		Damage: 10000
 		Versus:
 			None: 200
 			Wood: 75
@@ -3199,15 +3199,15 @@ DefuseKit:
 		ContrailLength: 0
 		Speed: 400
 		Acceleration: 100
-		RangeLimit: 18c0
+		RangeLimit: 8c0
 		PointDefenseType: Missile
 		AllowSnapping: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 500
-		Damage: 5000
+		Damage: 4000
 		ValidTargets: Ground, Air
 		Versus:
-			None: 33
+			None: 30
 			Wood: 100
 			Light: 200
 			Medium: 167
@@ -3220,8 +3220,8 @@ DefuseKit:
 		Delay: 1
 		DamageTypes: Prone100Percent, TriggerProne, FireDeath, Incendiary
 		Versus:
-			None: 70
-			Wood: 60
+			None: 25
+			Wood: 50
 			Light: 80
 			Medium: 90
 			Heavy: 100

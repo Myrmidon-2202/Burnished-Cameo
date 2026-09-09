@@ -198,6 +198,7 @@ Player:
 	WithCargoPipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: true
+
 ^SWFortressBuilding:
 	Inherits: ^BunkerBaseBuilding
 	Inherits@shape: ^4x4Shape
@@ -272,6 +273,7 @@ Player:
 	ProvidesPrerequisite@buildingname:
 	RenderSprites:
 		Image: swfort
+
 swsilo:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^2x1Shape
@@ -456,12 +458,12 @@ swfact.empire:
 		Type: Wood
 	RevealsShroud:
 		Range: 10c0
-	Production@NORMAL:
-		Produces: Building, Defence
-		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RABuilding, RADefence
-		RequiresCondition: classicproductionqueues
+	# Production@NORMAL:
+	# 	Produces: Building, Defence
+	# 	RequiresCondition: !classicproductionqueues
+	# Production@CLASSICPRODUCTIONQUEUES:
+	# 	Produces: RABuilding, RADefence
+	# 	RequiresCondition: classicproductionqueues
 	Transforms:
 		RequiresCondition: factundeploy
 		PauseOnCondition: being-demolished || build-incomplete
@@ -485,41 +487,41 @@ swfact.empire:
 	GrantConditionOnPrerequisite@GLOBALFACTUNDEPLOY:
 		Condition: factundeploy
 		Prerequisites: global-factundeploy
-	ProductionQueue@GDIBuilding:
-		Type: Building
-		DisplayOrder: 0
-		Group: Building
-		LowPowerModifier: 200
-		ReadyAudio: ConstructionComplete
-		BlockedAudio: NoBuild
-		LimitedAudio: BuildingInProgress
-		QueuedAudio: Building
-		OnHoldAudio: OnHold
-		CancelledAudio: Cancelled
-	ProductionQueue@GDIDefense:
-		Type: Defence
-		DisplayOrder: 1
-		Group: Defence
-		LowPowerModifier: 300
-		ReadyAudio: ConstructionComplete
-		BlockedAudio: NoBuild
-		LimitedAudio: BuildingInProgress
-		QueuedAudio: Building
-		OnHoldAudio: OnHold
-		CancelledAudio: Cancelled
+	# ProductionQueue@GDIBuilding:
+	# 	Type: Building
+	# 	DisplayOrder: 0
+	# 	Group: Building
+	# 	LowPowerModifier: 200
+	# 	ReadyAudio: ConstructionComplete
+	# 	BlockedAudio: NoBuild
+	# 	LimitedAudio: BuildingInProgress
+	# 	QueuedAudio: Building
+	# 	OnHoldAudio: OnHold
+	# 	CancelledAudio: Cancelled
+	# ProductionQueue@GDIDefense:
+	# 	Type: Defence
+	# 	DisplayOrder: 1
+	# 	Group: Defence
+	# 	LowPowerModifier: 300
+	# 	ReadyAudio: ConstructionComplete
+	# 	BlockedAudio: NoBuild
+	# 	LimitedAudio: BuildingInProgress
+	# 	QueuedAudio: Building
+	# 	OnHoldAudio: OnHold
+	# 	CancelledAudio: Cancelled
 	BaseBuilding:
-	ProductionBar@BuildingGDI:
-		ProductionType: Building
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@DefenceGDI:
-		ProductionType: Defence
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@RABuildingGDI:
-		ProductionType: RABuilding
-		RequiresCondition: classicproductionqueues
-	ProductionBar@RADefenceGDI:
-		ProductionType: RADefence
-		RequiresCondition: classicproductionqueues
+	# ProductionBar@BuildingGDI:
+	# 	ProductionType: Building
+	# 	RequiresCondition: !classicproductionqueues
+	# ProductionBar@DefenceGDI:
+	# 	ProductionType: Defence
+	# 	RequiresCondition: !classicproductionqueues
+	# ProductionBar@RABuildingGDI:
+	# 	ProductionType: RABuilding
+	# 	RequiresCondition: classicproductionqueues
+	# ProductionBar@RADefenceGDI:
+	# 	ProductionType: RADefence
+	# 	RequiresCondition: classicproductionqueues
 	BaseProvider:
 		Range: 14c0
 	WithBuildingBib:
@@ -721,6 +723,7 @@ swpyle:
 		Bounds: 87381, 76458, 0, -9088
 	RenderSprites:
 		Image: swibarr
+
 swfort:
 	Inherits: ^SWFortressBuilding
 	Inherits@sell: ^SWSpawnActorsOnSellEmpire
@@ -731,6 +734,7 @@ swfort:
 		InitialUnits: swe3troop, swe3troop, swe3troop, swe3troop, swe2, swe1dark, swe1troop, swgreedo
 	RenderSprites:
 		Image: swfort
+
 swhqe:
 	Inherits: swhq
 	Inherits@sell: ^SWSpawnActorsOnSellEmpire
@@ -746,20 +750,26 @@ swhqe:
 		Image: swihq
 	AirstrikePower:
 		PauseOnCondition: lowpower
-		Prerequisites: ~techlevel.superweapons
-		Icon: airstrike
+		Prerequisites:
+			1: ~techlevel.superweapons
+		Icons:
+			1: airstrike
 		ChargeInterval: 7500
-		SquadSize: 3
+		SquadSizes:
+			1: 3
 		QuantizedFacings: 8
-		Name: Air Strike
-		Description: Deploy an aerial napalm strike.\nBurns buildings and infantry along a line.
+		Names:
+			1: Air Strike
+		Descriptions:
+			1: Deploy an aerial napalm strike.\nBurns buildings and infantry along a line.
 		EndChargeSpeechNotification: AirstrikeReady
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
 		IncomingSpeechNotification: EnemyPlanesApproaching
 		UnitType: swa10
 		DisplayBeacon: True
-		BeaconPoster: airstrike
+		BeaconPosters:
+			1: airstrike
 		BeaconPosterPalette: beaconposter
 		DisplayRadarPing: True
 		CameraActor: camera
@@ -775,6 +785,7 @@ swhqe:
 		Produces: Upgrades
 	ProductionBar@Upgrades:
 		ProductionType: Upgrades
+
 swweap:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^3x2Shape
@@ -847,6 +858,7 @@ swweap:
 	ProvidesPrerequisite@buildingname:
 	RenderSprites:
 		Image: sweweap
+
 sweproc:
 	Inherits: ^BaseBuilding
 	Inherits@ref: ^Refinery
@@ -1194,7 +1206,6 @@ swfood:
 		Condition: swupirrigation
 		Prerequisites: swupirrigation
 
-
 swstarport:
 	Inherits: ^BaseBuilding
 	Inherits@CPQWP: ^CPQConditionWithPrimary
@@ -1303,12 +1314,12 @@ swfact.rebels:
 		Type: Wood
 	RevealsShroud:
 		Range: 10c0
-	Production@NORMAL:
-		Produces: Building, Defence
-		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RABuilding, RADefence
-		RequiresCondition: classicproductionqueues
+	# Production@NORMAL:
+	# 	Produces: Building, Defence
+	# 	RequiresCondition: !classicproductionqueues
+	# Production@CLASSICPRODUCTIONQUEUES:
+	# 	Produces: RABuilding, RADefence
+	# 	RequiresCondition: classicproductionqueues
 	Transforms:
 		RequiresCondition: factundeploy
 		PauseOnCondition: being-demolished || build-incomplete
@@ -1332,41 +1343,41 @@ swfact.rebels:
 	GrantConditionOnPrerequisite@GLOBALFACTUNDEPLOY:
 		Condition: factundeploy
 		Prerequisites: global-factundeploy
-	ProductionQueue@NodBuilding:
-		Type: Building
-		DisplayOrder: 0
-		Group: Building
-		LowPowerModifier: 200
-		ReadyAudio: ConstructionComplete
-		BlockedAudio: NoBuild
-		LimitedAudio: BuildingInProgress
-		QueuedAudio: Building
-		OnHoldAudio: OnHold
-		CancelledAudio: Cancelled
-	ProductionQueue@NodDefense:
-		Type: Defence
-		DisplayOrder: 1
-		Group: Defence
-		LowPowerModifier: 300
-		ReadyAudio: ConstructionComplete
-		BlockedAudio: NoBuild
-		LimitedAudio: BuildingInProgress
-		QueuedAudio: Building
-		OnHoldAudio: OnHold
-		CancelledAudio: Cancelled
+	# ProductionQueue@NodBuilding:
+	# 	Type: Building
+	# 	DisplayOrder: 0
+	# 	Group: Building
+	# 	LowPowerModifier: 200
+	# 	ReadyAudio: ConstructionComplete
+	# 	BlockedAudio: NoBuild
+	# 	LimitedAudio: BuildingInProgress
+	# 	QueuedAudio: Building
+	# 	OnHoldAudio: OnHold
+	# 	CancelledAudio: Cancelled
+	# ProductionQueue@NodDefense:
+	# 	Type: Defence
+	# 	DisplayOrder: 1
+	# 	Group: Defence
+	# 	LowPowerModifier: 300
+	# 	ReadyAudio: ConstructionComplete
+	# 	BlockedAudio: NoBuild
+	# 	LimitedAudio: BuildingInProgress
+	# 	QueuedAudio: Building
+	# 	OnHoldAudio: OnHold
+	# 	CancelledAudio: Cancelled
 	BaseBuilding:
-	ProductionBar@BuildingNod:
-		ProductionType: Building
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@DefenceNod:
-		ProductionType: Defence
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@RABuildingNod:
-		ProductionType: RABuilding
-		RequiresCondition: classicproductionqueues
-	ProductionBar@RADefenceNod:
-		ProductionType: RADefence
-		RequiresCondition: classicproductionqueues
+	# ProductionBar@BuildingNod:
+	# 	ProductionType: Building
+	# 	RequiresCondition: !classicproductionqueues
+	# ProductionBar@DefenceNod:
+	# 	ProductionType: Defence
+	# 	RequiresCondition: !classicproductionqueues
+	# ProductionBar@RABuildingNod:
+	# 	ProductionType: RABuilding
+	# 	RequiresCondition: classicproductionqueues
+	# ProductionBar@RADefenceNod:
+	# 	ProductionType: RADefence
+	# 	RequiresCondition: classicproductionqueues
 	BaseProvider:
 		Range: 14c0
 	WithBuildingBib:
@@ -1385,6 +1396,7 @@ swfact.rebels:
 		Prerequisite: mmswrebels
 	RenderSprites:
 		Image: swrefact
+
 swmcv.rebels:
 	Inherits: swmcv.empire
 	Tooltip:
@@ -1411,6 +1423,7 @@ swsheltre:
 	Inherits: swshelt
 	Buildable:
 		Queue: Building, RABuilding
+
 swhand:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^2x2Shape
@@ -1476,13 +1489,14 @@ swhand:
 	SelectionDecorations:
 	RenderSprites:
 		Image: swrebarr
+
 swfortre:
 	Inherits: ^SWFortressBuilding
 	Buildable:
 		Prerequisites: swproc, swhand, anyhq
 		Queue: Building, RABuilding
 	Cargo:
-		InitialUnits: swe3, swe3, swe3, swe3, swe3, swe2, swe1, swrmbo
+		InitialUnits:
 	RenderSprites:
 		Image: swfortre
 	Production@NORMAL:
@@ -1495,6 +1509,7 @@ swfortre:
 		ProductionType: Infantry
 	ProductionBar@RAINFANTRYGDI:
 		ProductionType: RAInfantry
+
 swweapre:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^3x2Shape
@@ -1569,6 +1584,7 @@ swweapre:
 		Image: swreweap
 	ProvidesPrerequisite@scrapvehicles:
 		Prerequisite: starwarsscrapvehicles
+
 swhqre:
 	Inherits: swhq
 	Inherits@sell: ^SWSpawnActorsOnSell
@@ -1585,19 +1601,22 @@ swhqre:
 	AirstrikePower:
 		PauseOnCondition: lowpower
 		Prerequisites: ~techlevel.superweapons
-		Icon: airstrike
+		Icons: airstrike
 		ChargeInterval: 4500
 		SquadSize: 7
 		QuantizedFacings: 8
-		Name: Air Strike
-		Description: Deploy an aerial napalm strike.\nBurns buildings and infantry along a line.
+		Names:
+			1: Air Strike
+		Descriptions:
+			1: Deploy an aerial napalm strike.\nBurns buildings and infantry along a line.
 		EndChargeSpeechNotification: AirstrikeReady
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
 		IncomingSpeechNotification: EnemyPlanesApproaching
-		UnitType: swa10xwing
+		UnitTypes: swa10xwing
 		DisplayBeacon: True
-		BeaconPoster: airstrike
+		BeaconPosters:
+			1: airstrike
 		BeaconPosterPalette: beaconposter
 		DisplayRadarPing: True
 		CameraActor: camera
@@ -1613,6 +1632,7 @@ swhqre:
 		Produces: Upgrades
 	ProductionBar@Upgrades:
 		ProductionType: Upgrades
+
 swreproc:
 	Inherits: sweproc
 	Inherits@sell: ^SWSpawnActorsOnSell
@@ -1756,12 +1776,12 @@ swfact.republic:
 		Type: Wood
 	RevealsShroud:
 		Range: 10c0
-	Production@NORMAL:
-		Produces: Building, Defence
-		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RABuilding, RADefence
-		RequiresCondition: classicproductionqueues
+	# Production@NORMAL:
+	# 	Produces: Building, Defence
+	# 	RequiresCondition: !classicproductionqueues
+	# Production@CLASSICPRODUCTIONQUEUES:
+	# 	Produces: RABuilding, RADefence
+	# 	RequiresCondition: classicproductionqueues
 	Transforms:
 		RequiresCondition: factundeploy
 		PauseOnCondition: being-demolished || build-incomplete
@@ -1785,41 +1805,41 @@ swfact.republic:
 	GrantConditionOnPrerequisite@GLOBALFACTUNDEPLOY:
 		Condition: factundeploy
 		Prerequisites: global-factundeploy
-	ProductionQueue@NodBuilding:
-		Type: Building
-		DisplayOrder: 0
-		Group: Building
-		LowPowerModifier: 200
-		ReadyAudio: ConstructionComplete
-		BlockedAudio: NoBuild
-		LimitedAudio: BuildingInProgress
-		QueuedAudio: Building
-		OnHoldAudio: OnHold
-		CancelledAudio: Cancelled
-	ProductionQueue@NodDefense:
-		Type: Defence
-		DisplayOrder: 1
-		Group: Defence
-		LowPowerModifier: 300
-		ReadyAudio: ConstructionComplete
-		BlockedAudio: NoBuild
-		LimitedAudio: BuildingInProgress
-		QueuedAudio: Building
-		OnHoldAudio: OnHold
-		CancelledAudio: Cancelled
+	# ProductionQueue@NodBuilding:
+	# 	Type: Building
+	# 	DisplayOrder: 0
+	# 	Group: Building
+	# 	LowPowerModifier: 200
+	# 	ReadyAudio: ConstructionComplete
+	# 	BlockedAudio: NoBuild
+	# 	LimitedAudio: BuildingInProgress
+	# 	QueuedAudio: Building
+	# 	OnHoldAudio: OnHold
+	# 	CancelledAudio: Cancelled
+	# ProductionQueue@NodDefense:
+	# 	Type: Defence
+	# 	DisplayOrder: 1
+	# 	Group: Defence
+	# 	LowPowerModifier: 300
+	# 	ReadyAudio: ConstructionComplete
+	# 	BlockedAudio: NoBuild
+	# 	LimitedAudio: BuildingInProgress
+	# 	QueuedAudio: Building
+	# 	OnHoldAudio: OnHold
+	# 	CancelledAudio: Cancelled
 	BaseBuilding:
-	ProductionBar@BuildingNod:
-		ProductionType: Building
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@DefenceNod:
-		ProductionType: Defence
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@RABuildingNod:
-		ProductionType: RABuilding
-		RequiresCondition: classicproductionqueues
-	ProductionBar@RADefenceNod:
-		ProductionType: RADefence
-		RequiresCondition: classicproductionqueues
+	# ProductionBar@BuildingNod:
+	# 	ProductionType: Building
+	# 	RequiresCondition: !classicproductionqueues
+	# ProductionBar@DefenceNod:
+	# 	ProductionType: Defence
+	# 	RequiresCondition: !classicproductionqueues
+	# ProductionBar@RABuildingNod:
+	# 	ProductionType: RABuilding
+	# 	RequiresCondition: classicproductionqueues
+	# ProductionBar@RADefenceNod:
+	# 	ProductionType: RADefence
+	# 	RequiresCondition: classicproductionqueues
 	BaseProvider:
 		Range: 14c0
 	WithBuildingBib:
@@ -1838,6 +1858,7 @@ swfact.republic:
 		Prerequisite: mmswrepublic
 	RenderSprites:
 		Image: swrfact
+
 swmcv.republic:
 	Inherits: swmcv.empire
 	Tooltip:
@@ -1865,6 +1886,7 @@ swsheltr:
 	Inherits@sell: ^SWSpawnActorsOnSellRepublic
 	Buildable:
 		Queue: Building, RABuilding
+
 swpyler:
 	Inherits: ^BaseBuilding
 	Inherits@CPQWP: ^CPQConditionWithPrimary
@@ -1930,6 +1952,7 @@ swpyler:
 		Bounds: 87381, 76458, 0, -9088
 	RenderSprites:
 		Image: swrbarr
+
 swfortr:
 	Inherits: ^SWFortressBuilding
 	Inherits@sell: ^SWSpawnActorsOnSellRepublic
@@ -1950,6 +1973,7 @@ swfortr:
 		ProductionType: Infantry
 	ProductionBar@RAINFANTRYGDI:
 		ProductionType: RAInfantry
+
 swweapr:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^3x2Shape
@@ -2022,6 +2046,7 @@ swweapr:
 	ProvidesPrerequisite@buildingname:
 	RenderSprites:
 		Image: swrweap
+
 swrproc:
 	Inherits: sweproc
 	Inherits@sell: ^SWSpawnActorsOnSellRepublic
@@ -2032,6 +2057,7 @@ swrproc:
 		Description: Processes raw Minerals\ninto useable resources
 	FreeActor:
 		Actor: swrharv
+
 swhqr:
 	Inherits: swhq
 	Inherits@sell: ^SWSpawnActorsOnSellRepublic
@@ -2047,12 +2073,16 @@ swhqr:
 		Image: swrhq
 	ParatroopersPower@ra2paratroopers:
 		PauseOnCondition: lowpower
-		Prerequisites: anyhq
+		Prerequisites:
+			1: anyhq
 		OrderName: USA Paratroopers
-		Icon: paratroopers
+		Icons:
+			1: paratroopers
 		ChargeInterval: 6000
-		Name: Airborne
-		Description: Cargo planes drop a squad of infantry\nanywhere on the map.
+		Names:
+			1: Airborne
+		Descriptions:
+			1: Cargo planes drop a squad of infantry\nanywhere on the map.
 		DropItems: swe1clone,swe1clone,swe1clone,swe3clone,swe3clone,swe1clone,swe1clone,swe1clone,swe3clone,swe3clone,swe1clone,swe1clone,swe1clone,swe3clone,swe3clone,swe1clone,swe1clone,swe1clone,swe3clone,swe3clone,swe1clone,swe1clone,swe1clone,swe3clone,swe3clone,swe1clone,swe1clone,swe1clone,swe3clone,swe3clone,swe1clone,swe1clone,swe1clone,swe3clone,swe3clone,swe1clone,swe1clone,swe1clone,swe3clone,swe3clone,swe1clone,swe1clone,swe1clone,swe3clone,swe3clone
 		ReinforcementsArrivedSpeechNotification: ReinforcementsArrived
 		SelectTargetSpeechNotification: SelectTarget
@@ -2060,11 +2090,13 @@ swhqr:
 		QuantizedFacings: 8
 		CameraActor: camera.paradrop
 		DisplayBeacon: true
-		BeaconPoster: pinficon
+		BeaconPosters:
+			1: pinficon
 		ArrowSequence: arrow
 		ClockSequence: clocklarge
 		UnitType: swbadr
-		SquadSize: 5
+		SquadSizes:
+			1: 5
 		CircleSequence: circles
 		UseDirectionalTarget: True
 		DirectionArrowAnimation: airstrikedirection
@@ -2098,7 +2130,6 @@ swfoodr:
 	Buildable:
 		Prerequisites: swproc, swpyler, anyhq
 		Queue: Building, RABuilding
-
 
 swstarportr:
 	Inherits: ^BaseBuilding
@@ -2208,12 +2239,12 @@ swfact.separatist:
 		Type: Wood
 	RevealsShroud:
 		Range: 10c0
-	Production@NORMAL:
-		Produces: Building, Defence
-		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RABuilding, RADefence
-		RequiresCondition: classicproductionqueues
+	# Production@NORMAL:
+	# 	Produces: Building, Defence
+	# 	RequiresCondition: !classicproductionqueues
+	# Production@CLASSICPRODUCTIONQUEUES:
+	# 	Produces: RABuilding, RADefence
+	# 	RequiresCondition: classicproductionqueues
 	Transforms:
 		RequiresCondition: factundeploy
 		PauseOnCondition: being-demolished || build-incomplete
@@ -2237,41 +2268,41 @@ swfact.separatist:
 	GrantConditionOnPrerequisite@GLOBALFACTUNDEPLOY:
 		Condition: factundeploy
 		Prerequisites: global-factundeploy
-	ProductionQueue@NodBuilding:
-		Type: Building
-		DisplayOrder: 0
-		Group: Building
-		LowPowerModifier: 200
-		ReadyAudio: ConstructionComplete
-		BlockedAudio: NoBuild
-		LimitedAudio: BuildingInProgress
-		QueuedAudio: Building
-		OnHoldAudio: OnHold
-		CancelledAudio: Cancelled
-	ProductionQueue@NodDefense:
-		Type: Defence
-		DisplayOrder: 1
-		Group: Defence
-		LowPowerModifier: 300
-		ReadyAudio: ConstructionComplete
-		BlockedAudio: NoBuild
-		LimitedAudio: BuildingInProgress
-		QueuedAudio: Building
-		OnHoldAudio: OnHold
-		CancelledAudio: Cancelled
+	# ProductionQueue@NodBuilding:
+	# 	Type: Building
+	# 	DisplayOrder: 0
+	# 	Group: Building
+	# 	LowPowerModifier: 200
+	# 	ReadyAudio: ConstructionComplete
+	# 	BlockedAudio: NoBuild
+	# 	LimitedAudio: BuildingInProgress
+	# 	QueuedAudio: Building
+	# 	OnHoldAudio: OnHold
+	# 	CancelledAudio: Cancelled
+	# ProductionQueue@NodDefense:
+	# 	Type: Defence
+	# 	DisplayOrder: 1
+	# 	Group: Defence
+	# 	LowPowerModifier: 300
+	# 	ReadyAudio: ConstructionComplete
+	# 	BlockedAudio: NoBuild
+	# 	LimitedAudio: BuildingInProgress
+	# 	QueuedAudio: Building
+	# 	OnHoldAudio: OnHold
+	# 	CancelledAudio: Cancelled
 	BaseBuilding:
-	ProductionBar@BuildingNod:
-		ProductionType: Building
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@DefenceNod:
-		ProductionType: Defence
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@RABuildingNod:
-		ProductionType: RABuilding
-		RequiresCondition: classicproductionqueues
-	ProductionBar@RADefenceNod:
-		ProductionType: RADefence
-		RequiresCondition: classicproductionqueues
+	# ProductionBar@BuildingNod:
+	# 	ProductionType: Building
+	# 	RequiresCondition: !classicproductionqueues
+	# ProductionBar@DefenceNod:
+	# 	ProductionType: Defence
+	# 	RequiresCondition: !classicproductionqueues
+	# ProductionBar@RABuildingNod:
+	# 	ProductionType: RABuilding
+	# 	RequiresCondition: classicproductionqueues
+	# ProductionBar@RADefenceNod:
+	# 	ProductionType: RADefence
+	# 	RequiresCondition: classicproductionqueues
 	BaseProvider:
 		Range: 14c0
 	WithBuildingBib:
@@ -2290,6 +2321,7 @@ swfact.separatist:
 		Prerequisite: mmswseparatist
 	RenderSprites:
 		Image: swdfact
+
 swmcv.separatist:
 	Inherits: swmcv.empire
 	Tooltip:
@@ -2319,6 +2351,7 @@ swsheltd:
 	Inherits@sell: ^SWSpawnActorsOnSellDroid
 	Buildable:
 		Queue: Building, RABuilding
+
 swdsilo:
 	Inherits: swsilo
 	Inherits@sell: ^SWSpawnActorsOnSellDroid
@@ -2326,6 +2359,7 @@ swdsilo:
 		BuildPaletteOrder: 35
 		Prerequisites: swproc
 		Queue: Defence, RADefence
+
 swfortd:
 	Inherits: ^SWFortressBuilding
 	Inherits@sell: ^SWSpawnActorsOnSellDroid
@@ -2419,6 +2453,7 @@ swweapd:
 	ProvidesPrerequisite@buildingname:
 	RenderSprites:
 		Image: swdweap
+
 swhqs:
 	Inherits: swhq
 	Inherits@sell: ^SWSpawnActorsOnSellDroid
@@ -2434,20 +2469,25 @@ swhqs:
 		Image: swdhq
 	AirstrikePower:
 		PauseOnCondition: lowpower
-		Prerequisites: ~techlevel.superweapons
-		Icon: airstrike
+		Prerequisites:
+			1: ~techlevel.superweapons
+		Icons:
+			1: airstrike
 		ChargeInterval: 6000
 		SquadSize: 9
 		QuantizedFacings: 8
-		Name: Air Strike
-		Description: Deploy an aerial napalm strike.\nBurns buildings and infantry along a line.
+		Names:
+			1: Air Strike
+		Descriptions:
+			1: Deploy an aerial napalm strike.\nBurns buildings and infantry along a line.
 		EndChargeSpeechNotification: AirstrikeReady
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
 		IncomingSpeechNotification: EnemyPlanesApproaching
-		UnitType: swa10droid
+		UnitTypes: swa10droid
 		DisplayBeacon: True
-		BeaconPoster: airstrike
+		BeaconPosters:
+			1: airstrike
 		BeaconPosterPalette: beaconposter
 		DisplayRadarPing: True
 		CameraActor: camera
@@ -2463,6 +2503,7 @@ swhqs:
 		Produces: Upgrades
 	ProductionBar@Upgrades:
 		ProductionType: Upgrades
+
 swdproc:
 	Inherits: sweproc
 	Inherits@sell: ^SWSpawnActorsOnSellDroid
@@ -2532,7 +2573,7 @@ swbarrdroid:
 	ProvidesPrerequisite@buildingname:
 	Selectable:
 		Bounds: 2048, 2048
-		DecorationBounds: 87381, 123776, 0, -18176
+		DecorationBounds: 2048, 2048
 	SelectionDecorations:
 	RenderSprites:
 		Image: swdbarr
@@ -2570,7 +2611,7 @@ swforth:
 		Prerequisites: swproc, swpyleh, anyhq
 		Queue: Building, RABuilding
 	Cargo:
-		InitialUnits: swe3, swe3, swe3, swe3, swe3, swe2, swrmbo.hutt, swgreedo
+		InitialUnits:
 	RenderSprites:
 		Image: swfortd
 	Production@NORMAL:
@@ -2696,15 +2737,19 @@ swmcv.huttBot:
 ^SWSpawnActorsOnSell:
 	SpawnActorsOnSell:
 		ActorTypes: swe6,swe1,swe1,swe1,swe1,swe3,swe3
+
 ^SWSpawnActorsOnSellEmpire:
 	SpawnActorsOnSell:
 		ActorTypes: swe6,swe1troop,swe1troop,swe1troop,swe1troop,swe3troop,swe3troop
+
 ^SWSpawnActorsOnSellRepublic:
 	SpawnActorsOnSell:
 		ActorTypes: swe6,swe3clone,swe3clone,swe3clone,swe3clone,swe3clone,swe3clone
+
 ^SWSpawnActorsOnSellDroid:
 	SpawnActorsOnSell:
 		ActorTypes: swe6,swe1droid,swe1droid,swe1droid,swe1droid,swe3droid,swe3droid,swdroidb2
+
 swfact.hutt:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^3x2Shape
@@ -2728,12 +2773,12 @@ swfact.hutt:
 		Type: Wood
 	RevealsShroud:
 		Range: 10c0
-	Production@NORMAL:
-		Produces: Building, Defence
-		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RABuilding, RADefence
-		RequiresCondition: classicproductionqueues
+	# Production@NORMAL:
+	# 	Produces: Building, Defence
+	# 	RequiresCondition: !classicproductionqueues
+	# Production@CLASSICPRODUCTIONQUEUES:
+	# 	Produces: RABuilding, RADefence
+	# 	RequiresCondition: classicproductionqueues
 	Transforms:
 		RequiresCondition: factundeploy
 		PauseOnCondition: being-demolished || build-incomplete
@@ -2757,41 +2802,41 @@ swfact.hutt:
 	GrantConditionOnPrerequisite@GLOBALFACTUNDEPLOY:
 		Condition: factundeploy
 		Prerequisites: global-factundeploy
-	ProductionQueue@NodBuilding:
-		Type: Building
-		DisplayOrder: 0
-		Group: Building
-		LowPowerModifier: 200
-		ReadyAudio: ConstructionComplete
-		BlockedAudio: NoBuild
-		LimitedAudio: BuildingInProgress
-		QueuedAudio: Building
-		OnHoldAudio: OnHold
-		CancelledAudio: Cancelled
-	ProductionQueue@NodDefense:
-		Type: Defence
-		DisplayOrder: 1
-		Group: Defence
-		LowPowerModifier: 300
-		ReadyAudio: ConstructionComplete
-		BlockedAudio: NoBuild
-		LimitedAudio: BuildingInProgress
-		QueuedAudio: Building
-		OnHoldAudio: OnHold
-		CancelledAudio: Cancelled
+	# ProductionQueue@NodBuilding:
+	# 	Type: Building
+	# 	DisplayOrder: 0
+	# 	Group: Building
+	# 	LowPowerModifier: 200
+	# 	ReadyAudio: ConstructionComplete
+	# 	BlockedAudio: NoBuild
+	# 	LimitedAudio: BuildingInProgress
+	# 	QueuedAudio: Building
+	# 	OnHoldAudio: OnHold
+	# 	CancelledAudio: Cancelled
+	# ProductionQueue@NodDefense:
+	# 	Type: Defence
+	# 	DisplayOrder: 1
+	# 	Group: Defence
+	# 	LowPowerModifier: 300
+	# 	ReadyAudio: ConstructionComplete
+	# 	BlockedAudio: NoBuild
+	# 	LimitedAudio: BuildingInProgress
+	# 	QueuedAudio: Building
+	# 	OnHoldAudio: OnHold
+	# 	CancelledAudio: Cancelled
 	BaseBuilding:
-	ProductionBar@BuildingNod:
-		ProductionType: Building
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@DefenceNod:
-		ProductionType: Defence
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@RABuildingNod:
-		ProductionType: RABuilding
-		RequiresCondition: classicproductionqueues
-	ProductionBar@RADefenceNod:
-		ProductionType: RADefence
-		RequiresCondition: classicproductionqueues
+	# ProductionBar@BuildingNod:
+	# 	ProductionType: Building
+	# 	RequiresCondition: !classicproductionqueues
+	# ProductionBar@DefenceNod:
+	# 	ProductionType: Defence
+	# 	RequiresCondition: !classicproductionqueues
+	# ProductionBar@RABuildingNod:
+	# 	ProductionType: RABuilding
+	# 	RequiresCondition: classicproductionqueues
+	# ProductionBar@RADefenceNod:
+	# 	ProductionType: RADefence
+	# 	RequiresCondition: classicproductionqueues
 	BaseProvider:
 		Range: 14c0
 	WithBuildingBib:
@@ -2810,6 +2855,7 @@ swfact.hutt:
 		Prerequisite: mmswhutt
 	RenderSprites:
 		Image: swdfact
+
 swproc:
 	Inherits: PROC
 	Inherits@sell: ^SWSpawnActorsOnSell
@@ -2826,6 +2872,7 @@ swproc:
 		Actor: SWHARV
 		SpawnOffset: 1,2
 		Facing: 256
+
 swpyleh:
 	Inherits: ^BaseBuilding
 	Inherits@CPQWP: ^CPQConditionWithPrimary
@@ -3012,6 +3059,7 @@ swafldh:
 	SeedsResource@M:
 		ResourceType: SWPNova
 		Interval: 660
+
 swhpad.empire:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^2x2Shape
@@ -3145,6 +3193,7 @@ swhpad.rebels:
 		Prerequisite: hpad
 	RenderSprites:
 		Image: swhpad
+
 swhpad.swseparatist:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^2x2Shape
@@ -3278,6 +3327,7 @@ swhpad.republic:
 		Prerequisite: hpad
 	RenderSprites:
 		Image: swhpad
+
 swhpad.hutt:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^2x2Shape
@@ -3344,6 +3394,7 @@ swhpad.hutt:
 		Prerequisite: hpad
 	RenderSprites:
 		Image: swdhpad
+
 swhqh:
 	Inherits: swhq
 	Buildable:
@@ -3354,20 +3405,25 @@ swhqh:
 		Image: swdhq
 	AirstrikePower:
 		PauseOnCondition: lowpower
-		Prerequisites: ~techlevel.superweapons
-		Icon: airstrike
+		Prerequisites:
+			1: ~techlevel.superweapons
+		Icons:
+			1: airstrike
 		ChargeInterval: 3000
-		SquadSize: 5
+		SquadSizes: 5
 		QuantizedFacings: 8
-		Name: Air Strike
-		Description: Deploy an aerial napalm strike.\nBurns buildings and infantry along a line.
+		Names:
+			1: Air Strike
+		Descriptions:
+			1: Deploy an aerial napalm strike.\nBurns buildings and infantry along a line.
 		EndChargeSpeechNotification: AirstrikeReady
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
 		IncomingSpeechNotification: EnemyPlanesApproaching
-		UnitType: swa10xwing
+		UnitTypes: swa10xwing
 		DisplayBeacon: True
-		BeaconPoster: airstrike
+		BeaconPosters:
+			1: airstrike
 		BeaconPosterPalette: beaconposter
 		DisplayRadarPing: True
 		CameraActor: camera
@@ -3383,6 +3439,7 @@ swhqh:
 		Produces: Upgrades
 	ProductionBar@Upgrades:
 		ProductionType: Upgrades
+
 SWFIX:
 	Inherits: ^BaseBuilding
 	Inherits@sell: ^TDSpawnActorsOnSell
@@ -3428,6 +3485,7 @@ SWFIX:
 		AreaTypes: building, cityi
 	RenderSprites:
 		Image: fix
+
 sweye:
 	Inherits: ^BaseBuilding
 	Inherits@IDISABLE: ^DisabledOverlay
@@ -3473,12 +3531,16 @@ sweye:
 	IonCannonPower:
 		AllowMultiple: True
 		PauseOnCondition: lowpower
-		Prerequisites: ~techlevel.superweapons
-		Icon: ioncannon
+		Prerequisites: 
+			1: ~techlevel.superweapons
+		Icons: 
+			1: ioncannon
 		Cursor: ioncannon
 		ChargeInterval: 6000
-		Name: Ion Cannon
-		Description: Initiate an Ion Cannon strike.\nApplies instant damage to a small area.
+		Names: 
+			1: Orbital Strike
+		Descriptions: 
+			1: Initiate an orbital strike from the fleet above.\nApplies instant damage to a small area.
 		BeginChargeSpeechNotification: IonCannonCharging
 		EndChargeSpeechNotification: IonCannonReady
 		SelectTargetSpeechNotification: SelectTarget
@@ -3500,6 +3562,7 @@ sweye:
 		Prerequisite: tek
 	RenderSprites:
 		Image: sweyer
+
 sweyee:
 	Inherits: sweye
 	Buildable:
@@ -3510,12 +3573,16 @@ sweyee:
 	IonCannonPower:
 		AllowMultiple: True
 		PauseOnCondition: lowpower
-		Prerequisites: ~techlevel.superweapons
-		Icon: ioncannon
+		Prerequisites: 
+			1: ~techlevel.superweapons
+		Icons: 
+			1: ioncannon
 		Cursor: ioncannon
 		ChargeInterval: 8500
-		Name: Death Star
-		Description: Initiate an Death Star strike.\nApplies instant damage to a small area.
+		Names: 
+			1: Death Star
+		Descriptions:
+			1: Initiate an Death Star strike.\nApplies instant damage to a small area.
 		BeginChargeSpeechNotification: SWIonCannonCharging
 		EndChargeSpeechNotification: SWIonCannonReady
 		SelectTargetSpeechNotification: SelectTarget
@@ -3529,6 +3596,7 @@ sweyee:
 		Effect: swionsfx
 	RenderSprites:
 		Image: sweye
+
 swtmpl:
 	Inherits: ^BaseBuilding
 	Inherits@IDISABLE: ^DisabledOverlay
@@ -3565,25 +3633,31 @@ swtmpl:
 	DetectCloaked:
 		Range: 5c0
 		RequiresCondition: !lowpower
-	NukePower:
+	NukePowerCA:
 		AllowMultiple: True
 		PauseOnCondition: lowpower
-		Prerequisites: ~techlevel.superweapons
-		Icon: abomb
+		Prerequisites: 
+			1: ~techlevel.superweapons
+		Icons:
+			1: abomb
 		Cursor: nuke
 		ChargeInterval: 9000
-		Name: Nuclear Strike
-		Description: Launch a tactical nuclear warhead.\nApplies heavy damage over a large area.
+		Names:
+			1: Nuclear Strike
+		Descriptions:
+			1: Launch a tactical nuclear warhead.\nApplies heavy damage over a large area.
 		EndChargeSpeechNotification: NuclearWeaponAvailable
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
 		LaunchSpeechNotification: NuclearWeaponLaunched
 		IncomingSpeechNotification: NuclearWarheadApproaching
-		MissileWeapon: SWAtomic
+		MissileWeapons: 
+			1: SWAtomic
 		MissileDelay: 11
 		SpawnOffset: 3c0,0,-1c512
 		DisplayBeacon: True
-		BeaconPoster: atomic
+		BeaconPosters: 
+			1: atomic
 		BeaconPosterPalette: beaconposter
 		DisplayTimerRelationships: Ally, Neutral, Enemy
 		DisplayRadarPing: True
@@ -3607,6 +3681,7 @@ swtmpl:
 		Prerequisite: nodnuke
 	ProvidesPrerequisite@2:
 		Prerequisite: tek
+
 swdtmpl:
 	Inherits: ^BaseBuilding
 	Inherits@IDISABLE: ^DisabledOverlay
@@ -3643,25 +3718,31 @@ swdtmpl:
 	DetectCloaked:
 		Range: 5c0
 		RequiresCondition: !lowpower
-	NukePower:
+	NukePowerCA:
 		AllowMultiple: True
 		PauseOnCondition: lowpower
-		Prerequisites: ~techlevel.superweapons
-		Icon: abomb
+		Prerequisites:
+			1: ~techlevel.superweapons
+		Icons:
+			1: abomb
 		Cursor: nuke
 		ChargeInterval: 9000
-		Name: Nuclear Strike
-		Description: Launch a tactical nuclear warhead.\nApplies heavy damage over a large area.
+		Names:
+			1: Nuclear Strike
+		Descriptions:
+			1: Launch a tactical nuclear warhead.\nApplies heavy damage over a large area.
 		EndChargeSpeechNotification: NuclearWeaponAvailable
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
 		LaunchSpeechNotification: NuclearWeaponLaunched
 		IncomingSpeechNotification: NuclearWarheadApproaching
-		MissileWeapon: SWAtomic
+		MissileWeapons:
+			1: SWAtomic
 		MissileDelay: 11
 		SpawnOffset: 3c0,0,-1c512
 		DisplayBeacon: True
-		BeaconPoster: atomic
+		BeaconPosters:
+			1: atomic
 		BeaconPosterPalette: beaconposter
 		DisplayTimerRelationships: Ally, Neutral, Enemy
 		DisplayRadarPing: True
@@ -3685,6 +3766,7 @@ swdtmpl:
 		Prerequisite: nodnuke
 	ProvidesPrerequisite@2:
 		Prerequisite: tek
+
 swpalace:
 	Inherits: ^Defense
 	Inherits@IDISABLE: ^DisabledOverlay
@@ -3722,25 +3804,30 @@ swpalace:
 	DetectCloaked:
 		Range: 5c0
 		RequiresCondition: !lowpower
-	NukePower:
+	NukePowerCA:
 		AllowMultiple: True
 		PauseOnCondition: lowpower
 		Prerequisites: ~techlevel.superweapons
-		Icon: abomb
+		Icons:
+			1: abomb
 		Cursor: nuke
 		ChargeInterval: 9000
-		Name: Nuclear Strike
-		Description: Launch a tactical nuclear warhead.\nApplies heavy damage over a large area.
+		Names:
+			1: Nuclear Strike
+		Descriptions:
+			1: Launch a tactical nuclear warhead.\nApplies heavy damage over a large area.
 		EndChargeSpeechNotification: NuclearWeaponAvailable
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
 		LaunchSpeechNotification: NuclearWeaponLaunched
 		IncomingSpeechNotification: NuclearWarheadApproaching
-		MissileWeapon: SWAtomic
+		MissileWeapons:
+			1: SWAtomic
 		MissileDelay: 11
 		SpawnOffset: 3c0,0,-1c512
 		DisplayBeacon: True
-		BeaconPoster: atomic
+		BeaconPosters:
+			1: atomic
 		BeaconPosterPalette: beaconposter
 		DisplayTimerRelationships: Ally, Neutral, Enemy
 		DisplayRadarPing: True
@@ -3920,6 +4007,7 @@ SWSAM:
 		Sequence: place
 	RenderSprites:
 		Image: sam
+
 SWOBLI:
 	Inherits: ^Defense
 	Inherits@IDISABLE: ^DisabledOverlay
@@ -3967,6 +4055,7 @@ SWOBLI:
 		Amount: -75
 	RenderSprites:
 		Image: obli
+
 SWGTWR:
 	Inherits: ^Defense
 	Inherits@AUTOTARGET: ^AutoTargetGround
@@ -4079,6 +4168,7 @@ SWSBAG:
 		Type: sandbag
 	RenderSprites:
 		Image: sbag
+
 SWCYCL:
 	Inherits: ^Wall
 	Valued:
@@ -4102,6 +4192,7 @@ SWCYCL:
 		Type: chain
 	RenderSprites:
 		Image: cycl
+
 SWBRIK:
 	Inherits: ^Wall
 	Valued:
@@ -4235,6 +4326,7 @@ swsite.soldier:
 		VoiceSet: SWTuskVoice
 	-MapEditorData:
 	-ActorLostNotification:
+
 swsite.bantha:
 	Inherits: ^Soldier
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
@@ -4278,6 +4370,7 @@ swntpuls:
 		Queue: Defence, RADefence
 	RenderSprites:
 		Image: tsntpuls
+
 swcloneplant:
 	Inherits: ^BaseBuilding
 	HitShape:
@@ -4362,6 +4455,7 @@ swindustrialplant:
 		Image: yrngindp
 	ProvidesPrerequisite:
 		Prerequisite: yrngindp
+
 swaatower:
 	Inherits: ^Defense
 	Inherits@AUTOTARGET: ^AutoTargetAll
@@ -4428,9 +4522,9 @@ swaddonupgrade1:
 		Name: Composite Armor
 	Buildable:
 		BuildPaletteOrder: 10
-		Queue: ScrapAddons.SWHUTT
+		Queue: Addons
 		Description: add 50% of armor.
-		Prerequisites: scrapvehicles
+		Prerequisites: ~scrapvehicles
 	Valued:
 		Cost: 150
 	RenderSprites:
@@ -4445,9 +4539,9 @@ swaddonupgrade2:
 		Name: Camo
 	Buildable:
 		BuildPaletteOrder: 10
-		Queue: ScrapAddons.SWHUTT
+		Queue: Addons
 		Description: add Camo to Unit.
-		Prerequisites: scrapvehicles
+		Prerequisites: ~scrapvehicles
 	Valued:
 		Cost: 600
 	RenderSprites:
@@ -4462,7 +4556,7 @@ swaddonupgrade3:
 		Name: Accelerator
 	Buildable:
 		BuildPaletteOrder: 10
-		Queue: ScrapAddons.SWHUTT
+		Queue: Addons
 		Description: Add 30% of Speed.
 		Prerequisites: scrapvehicles
 	Valued:
@@ -5089,6 +5183,7 @@ swe3:
 		Modifier: 120
 	RenderSprites:
 		Image: swe3rebel
+
 swe3troop:
 	Inherits: ^Soldier
 	Inherits@laserup: ^SWLaserUpgrades
@@ -5122,6 +5217,7 @@ swe3troop:
 	DamageMultiplier@upe1troop:
 		RequiresCondition: upe1troop
 		Modifier: 85
+
 swe3clone:
 	Inherits: ^Soldier
 	Inherits@clonesup: ^SWCloneUpgrades
@@ -5149,6 +5245,7 @@ swe3clone:
 	Armament@GARRISONED: ##########
 		Name: garrisoned
 		Weapon: SWCloneBazookaG
+
 swe3droid:
 	Inherits: ^Soldier
 	Inherits@MC: ^MCImmune
@@ -5207,6 +5304,7 @@ swe3droid:
 	DamageMultiplier@upswe1droid:
 		RequiresCondition: upswe1droid
 		Modifier: 85
+
 swe4:
 	Inherits: E4
 	Inherits@infup: ^SWInfantryUpgrades
@@ -5221,6 +5319,7 @@ swe4:
 		Description: Advanced Anti-infantry unit.\n  Strong vs Infantry, Buildings\n  Weak vs Tanks
 	RenderSprites:
 		Image: e4
+
 swe6:
 	Inherits: E6
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
@@ -5247,6 +5346,7 @@ swe6:
 		ForceTargetRelationships: None
 	Voiced:
 		VoiceSet: SWR2Voice
+
 swe6e:
 	Inherits: swe6
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
@@ -5262,6 +5362,7 @@ swe6e:
 		Image: swe6e
 	Voiced:
 		VoiceSet: SWR2Voice
+
 swrmbo:
 	Inherits: RMBO
 	Inherits@laserup: ^SWLaserUpgrades
@@ -5273,7 +5374,7 @@ swrmbo:
 	Buildable:
 		BuildPaletteOrder: 50
 		Prerequisites: swfort, ~techlevel.high
-		Queue: Infantry, RAInfantry
+		# Queue: Infantry.Ra, Infantry.Ge
 		Description: Elite sniper infantry unit.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles
 	Armament:
 		Weapon: Sniper
@@ -5285,6 +5386,7 @@ swrmbo:
 		Cursor: c4
 	Voiced:
 		VoiceSet: SWMercenaryVoice
+
 swgreedo:
 	Inherits: E1
 	Inherits@laserup: ^SWLaserUpgrades
@@ -5320,6 +5422,7 @@ swgreedo:
 		VoiceSet: SWGreedoVoice
 	Mobile:
 		Speed: 75
+
 swbike:
 	Inherits: ^Vehicle
 	Inherits@@EXPERIENCE: ^GainsExperience
@@ -5379,6 +5482,7 @@ swbike:
 	SpeedMultiplier@upswbike:
 		RequiresCondition: upswbike
 		Modifier: 140
+
 swbggy:
 	Inherits: ^Vehicle
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -5489,6 +5593,7 @@ swjeep:
 	DamageMultiplier@upswjeep:
 		RequiresCondition: upswjeep
 		Modifier: 80
+
 swspider:
 	Inherits: ^Vehicle
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -5533,6 +5638,7 @@ swspider:
 		IdleSequences: idle
 	Voiced:
 		VoiceSet: SWDroidVoice
+
 swmtnk:
 	Inherits: ^Tank
 	Inherits@GAINSEXPERIENCE: ^GainsExperience
@@ -5658,6 +5764,7 @@ swhtnk:
 		Position: BottomLeft
 		RequiresSelection: true
 		PipCount: 5
+
 swarty:
 	Inherits: ARTY
 	Inherits@SHADOWS: ^Shadows
@@ -5687,6 +5794,7 @@ swarty:
 	WithShadow:
 		Offset: 108, 24, 0
 		ZOffset: -512
+
 swarty2:
 	Inherits: swarty
 	Tooltip:
@@ -5711,6 +5819,7 @@ swarty2:
 		HP: 15000
 	Valued:
 		Cost: 1000
+
 swarty3:
 	Inherits: ARTY
 	Inherits@SHADOWS: ^Shadows
@@ -5739,6 +5848,7 @@ swarty3:
 	WithShadow:
 		Offset: 108, 24, 0
 		ZOffset: -512
+
 swarty4:
 	Inherits: swarty3
 	Tooltip:
@@ -5763,6 +5873,7 @@ swarty4:
 		HP: 20000
 	Valued:
 		Cost: 1000
+
 swarty5:
 	Inherits: swarty
 	Inherits@SHADOWS: ^Shadows
@@ -5774,6 +5885,7 @@ swarty5:
 		Description: Long-range artillery.\n  Strong vs Infantry, Vehicles and Buildings
 	RenderSprites:
 		Image: swarty5
+
 swarty6:
 	Inherits: swarty2
 	Tooltip:
@@ -5859,7 +5971,6 @@ swltnk:
 		RequiresSelection: True
 		PipCount: 6
 
-
 swheli:
 	Inherits: ^Helicopter
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -5926,7 +6037,6 @@ swheli:
 		Position: BottomLeft
 		RequiresSelection: True
 		PipCount: 5
-
 
 swdroidheli:
 	Inherits: ^Helicopter
@@ -6005,7 +6115,6 @@ swdroidheli:
 		RequiresSelection: True
 		PipCount: 4
 
-
 swxwing:
 	Inherits: ^Helicopter
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -6021,7 +6130,7 @@ swxwing:
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: hpad, anyhq, swfort, ~techlevel.medium
-		Queue: Aircraft, RAAircraft
+		Queue: Aircraft.Ra
 		Description: Fighter Aircraft with Medium Lasers and Missiles.\n  Strong vs Infantry, Light Vehicles and\n  Aircraft\n  Weak vs Tanks
 		BuildDurationModifier: 50
 	Aircraft:
@@ -6078,7 +6187,6 @@ swxwing:
 		Position: BottomLeft
 		RequiresSelection: True
 		PipCount: 6
-
 
 swstarfighter:
 	Inherits: ^Helicopter
@@ -6152,7 +6260,6 @@ swstarfighter:
 		Position: BottomLeft
 		RequiresSelection: True
 		PipCount: 6
-
 
 swstarfighterj:
 	Inherits: ^Helicopter
@@ -6231,7 +6338,6 @@ swstarfighterj:
 		RequiresSelection: True
 		PipCount: 8
 
-
 swfalc:
 	Inherits: ^Helicopter
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -6248,7 +6354,7 @@ swfalc:
 		BuildLimit: 1
 		BuildPaletteOrder: 20
 		Prerequisites: hpad, anyhq, swfort, tek, ~techlevel.medium
-		Queue: Aircraft, RAAircraft
+		Queue: Aircraft.Ra
 		Description: Hero Aircraft.\nwith Lasers, Heavy Lasers, etc.\n  Strong vs Infantry, Light Vehicles and\n  Aircraft\n  Weak vs Tanks
 		BuildDuration: 4500
 		BuildDurationModifier: 100
@@ -6401,7 +6507,6 @@ sworca:
 		RequiresSelection: True
 		PipCount: 8
 
-
 swtrifighter:
 	Inherits: ^Helicopter
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -6476,7 +6581,6 @@ swtrifighter:
 		RequiresSelection: True
 		PipCount: 6
 
-
 swywing:
 	Inherits: ^Helicopter
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -6538,7 +6642,6 @@ swywing:
 		Position: BottomLeft
 		RequiresSelection: True
 		PipCount: 2
-
 
 swharv:
 	Inherits: ^Tank
@@ -7183,6 +7286,7 @@ swexecutor:
 		SlaveDisposalOnKill: KillSlaves
 		SpawnAllAtOnce: false
 	RenderSprites:
+
 swexecutor.husk:
 	Inherits: ^HelicopterHusk
 	Tooltip:
@@ -7335,6 +7439,7 @@ swinterceptor:
 	HitShape:
 	RenderSprites:
 		Image: sworca
+
 swintercepto2:
 	Inherits: ^Plane
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -7382,6 +7487,7 @@ swintercepto2:
 	HitShape:
 	RenderSprites:
 		Image: swxwing
+
 swintercepto3:
 	Inherits: ^Plane
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -7429,6 +7535,7 @@ swintercepto3:
 	HitShape:
 	RenderSprites:
 		Image: swstarfighter
+
 swdarty:
 	Inherits: ^Tank
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -7481,6 +7588,7 @@ swdarty:
 		ValidTypes: vehicle ##########
 	Voiced:
 		VoiceSet: SWBigDroidVoice
+
 swquad:
 	Inherits: ^Vehicle
 	Inherits@GAINSEXPERIENCE: ^GainsExperience
@@ -7544,7 +7652,6 @@ swquad:
 	ReloadDelayMultiplier@Salvaged2:
 		RequiresCondition: scrap_create_bonus == 2
 		Modifier: 50
-
 
 sw4tnk:
 	Inherits: ^Tank
@@ -7624,6 +7731,7 @@ sw4tnk:
 	WithCargoPipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: true
+
 swaa:
 	Inherits: ^Tank
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -7677,6 +7785,7 @@ swaa:
 	-WithFacingSpriteBody:
 	WithInfantryBody:
 		IdleSequences: idle
+
 swjugger:
 	Inherits: ^Tank
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -7752,6 +7861,7 @@ swjugger:
 	WithCargoPipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: true
+
 sw3tnk:
 	Inherits: ^Tank
 	Inherits@GAINSEXPERIENCE: ^GainsExperience
@@ -7817,6 +7927,7 @@ sw3tnk:
 	ExternalCondition@SCRAP_CREATE_BONUS:
 		Condition: scrap_create_bonus
 		TotalCap: 2
+
 sw1tnkre:
 	Inherits: ^Tank
 	Inherits@GAINSEXPERIENCE: ^GainsExperience
@@ -7878,6 +7989,7 @@ sw1tnkre:
 	ExternalCondition@SCRAP_CREATE_BONUS:
 		Condition: scrap_create_bonus
 		TotalCap: 2
+
 swftnk:
 	Inherits: FTNK
 	Inherits@EXPERIENCE: ^GainsExperienceMelee
@@ -7890,6 +8002,7 @@ swftnk:
 		Image: swftnk
 	Armament:
 		Weapon: SWBigFlamer
+
 swpummel:
 	Inherits: ^Tank
 	Inherits@EXPERIENCE: ^GainsExperienceMelee
@@ -7928,6 +8041,7 @@ swpummel:
 	Inherits@EXT: ^ExternalConditions ##########
 	AcceptsDeliveredExperience: ##########
 		ValidTypes: vehicle ##########
+
 swpummeld:
 	Inherits: swpummel
 	Buildable:
@@ -7967,6 +8081,7 @@ swftnk2:
 	-WithFacingSpriteBody:
 	WithInfantryBody:
 		IdleSequences: idle
+
 swmsam:
 	Inherits: ^Tank
 	Inherits@GAINSEXPERIENCE: ^GainsExperience
@@ -8015,6 +8130,7 @@ swmsam:
 	Inherits@EXT: ^ExternalConditions ##########
 	AcceptsDeliveredExperience: ##########
 		ValidTypes: vehicle ##########
+
 sw1tnk:
 	Inherits: ^Tank
 	Inherits@GAINSEXPERIENCE: ^GainsExperience
@@ -8065,6 +8181,7 @@ sw1tnk:
 	WithInfantryBody:
 		IdleSequences: idle
 	RenderSprites:
+
 swhijack:
 	Inherits: glhijack
 	Buildable:
@@ -8073,6 +8190,7 @@ swhijack:
 		Queue: Infantry, RAInfantry
 	RenderSprites:
 		Image: glhijack
+
 swtran:
 	Inherits: ^Helicopter
 	Valued:
@@ -8115,6 +8233,7 @@ swtran:
 	WithCargoPipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: true
+
 swtran.e2:
 	Inherits: swtran
 	Inherits@bot: ^BotMicromanageable
@@ -8160,6 +8279,7 @@ swtran.e1:
 		Delay: 200
 	EditorOnlyTooltip:
 		Name: Loaded Lambda (E1)
+
 swbantha2:
 	Inherits: ^Tank
 	Inherits@selection: ^SelectableEconomicUnit
@@ -8311,6 +8431,7 @@ swa10xwing:
 			WithAmmoPipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: True
+
 swbadr:
 	Inherits: ^RANeutralPlane
 	-Huntable:
@@ -8409,6 +8530,7 @@ swa10droid:
 			WithAmmoPipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: True
+
 swa10_husk:
 	Inherits: ^PlaneHusk
 	Aircraft:
@@ -8477,6 +8599,7 @@ swstardc17:
 	WithCargoPipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: true
+
 swexecc17:
 	Inherits: ^Plane
 	Tooltip:
@@ -8509,7 +8632,7 @@ swrmbo.hutt:
 	Valued:
 		Cost: 350
 	Tooltip:
-		Name: Lite Mercenary
+		Name: Journeyman Mercenary
 	Buildable:
 		BuildPaletteOrder: 10
 		Prerequisites: ~techlevel.low
@@ -8558,6 +8681,7 @@ sw2tnk.hutt:
 	RangeMultiplier@Salvage2:
 		RequiresCondition: scrap_create_bonus >= 2
 		Modifier: 120
+
 swrandom.generator:
 	Inherits: swftnk
 	GrantRandomCondition:
@@ -8579,6 +8703,7 @@ swrandom.generator:
 	Buildable:
 		BuildLimit: 10
 		Queue: false
+
 swptnk:
 	Inherits: ^Tank
 	Inherits@GAINSEXPERIENCE: ^GainsExperience
@@ -8644,6 +8769,7 @@ swptnk:
 	RangeMultiplier@Salvage2:
 		RequiresCondition: scrap_create_bonus >= 2
 		Modifier: 170
+
 swjabbaparty:
 	Inherits: ^Vehicle
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -8870,6 +8996,7 @@ swupphase2clone:
 		Image: swupphase2clone
 	ProvidesPrerequisite:
 		Prerequisite: swupphase2clone
+
 swupdroidarmor1:
 	Inherits: ^upgrade.template
 	Tooltip:
