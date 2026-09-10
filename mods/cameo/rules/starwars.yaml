@@ -3,31 +3,31 @@ World:
 		Name: Galactic Empire SW
 		InternalName: swempire
 		Game: Star Wars
-		Side: Factions
+		Side: Star Wars
 		Description: Galactic Empire from Star Wars\nBased on CnC Meets Star Wars\nSupport powers: Mercenary Airstrike, Ion Cannon, Force Shield\n- Super unit: Star Destroyer
 	FactionCA@swrebels:
 		Name: Rebel Alliance SW
 		InternalName: swrebels
 		Game: Star Wars
-		Side: Factions
+		Side: Star Wars
 		Description: Rebel Alliance from Star Wars\nBased on CnC Meets Star Wars\nSupport powers: Mercenary Airstrike, Atomic Bomb, Force Shield\n- Hero unit: Millenary Falcon
 	FactionCA@swrepublic:
 		Name: Republic SW
 		InternalName: swrepublic
 		Game: Star Wars
-		Side: Factions
+		Side: Star Wars
 		Description: Republic from Clone Wars\nBased on CnC Meets Star Wars\nSupport powers: Mercenary Airstrike, Ion Cannon, Force Shield
 	FactionCA@swseparatist:
 		Name: Separatist SW
 		InternalName: swseparatist
 		Game: Star Wars
-		Side: Factions
+		Side: Star Wars
 		Description: Separatists from Clone Wars\nBased on CnC Meets Star Wars\nSupport powers: Mercenary Airstrike, Atomic Bomb, Force Shield\nFeatures:\n- Most units immune to mind control\n- Cheap Infantry Droids\n- Shield Droideka\n- *Weak to EMP weapons
 	FactionCA@swhutt:
 		Name: Hutt Clan SW
 		InternalName: swhutt
 		Game: Star Wars
-		Side: Factions
+		Side: Star Wars
 		Description: Hutt Clan from Star Wars\nBased on CnC Meets Star Wars\nSupport powers: Mercenary Airstrike, Atomic Bomb, Force Shield\nFeatures:\n- You can buy all kinds of units derived from other SW factions\n- *Mechanical Units are somewhat limited\n- Has multiple sabotage units\n- Broad Economic Power
 	FactionCA@RandomSW:
 		Name: Any
@@ -355,7 +355,7 @@ swnuk2:
 	Inherits@shape: ^2x2Shape
 	Inherits@power: ^PowerPlant
 	Inherits@sell: ^SWSpawnActorsOnSell
-	Inherits@forceshield: ^ForceShieldPower
+	# Inherits@forceshield: ^ForceShieldPower
 	Selectable:
 		Bounds: 2048, 2048
 	HitShape:
@@ -386,7 +386,7 @@ swnuk2:
 
 swhq:
 	Inherits: ^BaseBuilding
-	Inherits@IDISABLE: ^DisabledOverlay
+	# Inherits@IDISABLE: ^DisabledOverlay
 	Inherits@sell: ^SWSpawnActorsOnSell
 	Inherits@spy: ^InfiltrateForSupportPowerReset
 	HitShape:
@@ -766,7 +766,7 @@ swhqe:
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
 		IncomingSpeechNotification: EnemyPlanesApproaching
-		UnitType: swa10
+		UnitTypes: swa10
 		DisplayBeacon: True
 		BeaconPosters:
 			1: airstrike
@@ -1603,7 +1603,7 @@ swhqre:
 		Prerequisites: ~techlevel.superweapons
 		Icons: airstrike
 		ChargeInterval: 4500
-		SquadSize: 7
+		SquadSizes: 7
 		QuantizedFacings: 8
 		Names:
 			1: Air Strike
@@ -2094,7 +2094,7 @@ swhqr:
 			1: pinficon
 		ArrowSequence: arrow
 		ClockSequence: clocklarge
-		UnitType: swbadr
+		UnitTypes: swbadr
 		SquadSizes:
 			1: 5
 		CircleSequence: circles
@@ -2474,7 +2474,7 @@ swhqs:
 		Icons:
 			1: airstrike
 		ChargeInterval: 6000
-		SquadSize: 9
+		SquadSizes: 9
 		QuantizedFacings: 8
 		Names:
 			1: Air Strike
@@ -2857,7 +2857,9 @@ swfact.hutt:
 		Image: swdfact
 
 swproc:
-	Inherits: PROC
+	Inherits: ^BaseBuilding
+	Inherits: ^Refinery
+	Inherits@shape: ^3x3Shape
 	Inherits@sell: ^SWSpawnActorsOnSell
 	Valued:
 		Cost: 1500
@@ -3488,7 +3490,7 @@ SWFIX:
 
 sweye:
 	Inherits: ^BaseBuilding
-	Inherits@IDISABLE: ^DisabledOverlay
+	# Inherits@IDISABLE: ^DisabledOverlay
 	Inherits@SW: ^PrimarySuperweapon
 	Inherits@sell: ^TDSpawnActorsOnSell
 	HitShape:
@@ -3599,7 +3601,7 @@ sweyee:
 
 swtmpl:
 	Inherits: ^BaseBuilding
-	Inherits@IDISABLE: ^DisabledOverlay
+	# Inherits@IDISABLE: ^DisabledOverlay
 	Inherits@shape: ^3x2Shape
 	Inherits@SW: ^PrimarySuperweapon
 	Inherits@sell: ^TDSpawnActorsOnSell
@@ -3684,7 +3686,7 @@ swtmpl:
 
 swdtmpl:
 	Inherits: ^BaseBuilding
-	Inherits@IDISABLE: ^DisabledOverlay
+	# Inherits@IDISABLE: ^DisabledOverlay
 	Inherits@shape: ^3x2Shape
 	Inherits@SW: ^PrimarySuperweapon
 	Inherits@sell: ^TDSpawnActorsOnSell
@@ -3769,7 +3771,7 @@ swdtmpl:
 
 swpalace:
 	Inherits: ^Defense
-	Inherits@IDISABLE: ^DisabledOverlay
+	# Inherits@IDISABLE: ^DisabledOverlay
 	Inherits@shape: ^3x2Shape
 	Inherits@AUTOTARGET: ^AutoTargetAll
 	Inherits@SW: ^PrimarySuperweapon
@@ -3959,7 +3961,7 @@ swdgun:
 
 SWSAM:
 	Inherits: ^Defense
-	Inherits@IDISABLE: ^DisabledOverlay
+	# Inherits@IDISABLE: ^DisabledOverlay
 	Inherits@AUTOTARGET: ^AutoTargetAir
 	Inherits@shape: ^2x1Shape
 	Selectable:
@@ -3999,7 +4001,7 @@ SWSAM:
 		RequiresCondition: !build-incomplete
 		PauseOnCondition: lowpower || disabled
 	WithMuzzleOverlay:
-	-RenderDetectionCircle:
+	# -RenderDetectionCircle:
 	Power:
 		Amount: -20
 	-ActorPreviewPlaceBuildingPreview:
@@ -4010,7 +4012,7 @@ SWSAM:
 
 SWOBLI:
 	Inherits: ^Defense
-	Inherits@IDISABLE: ^DisabledOverlay
+	# Inherits@IDISABLE: ^DisabledOverlay
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Valued:
 		Cost: 1500
@@ -4037,7 +4039,7 @@ SWOBLI:
 	WithChargeSpriteBody:
 		Sequence: active
 	Armament:
-		Weapon: Laser
+		Weapon: HuttLaser
 		LocalOffset: 0,-85,1280
 	AttackCharges:
 		RequiresCondition: !build-incomplete
@@ -4096,7 +4098,7 @@ SWGTWR:
 
 SWATWR:
 	Inherits: ^Defense
-	Inherits@IDISABLE: ^DisabledOverlay
+	# Inherits@IDISABLE: ^DisabledOverlay
 	Inherits@AUTOTARGET: ^AutoTargetAll
 	Valued:
 		Cost: 2500
@@ -4363,11 +4365,58 @@ swsite.bantha:
 	-ActorLostNotification:
 
 swntpuls:
-	Inherits: tsntpuls
+	Inherits: ^BaseBuilding
+	Inherits@shape: ^2x2Shape
+	Inherits@sell: ^TSSpawnActorsOnSell
+	Inherits@EMP: ^TurretEMP
+	Selectable:
+		Bounds: 2048, 2048
 	Buildable:
 		BuildPaletteOrder: 140
 		Prerequisites: anyhq, ~techlevel.medium
 		Queue: Defence, RADefence
+		Description: Disables mechanical units in an area.\nRequires power to operate.
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: E.M. Pulse Cannon
+	Building:
+		Footprint: == xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 50000
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 7c0
+	WithBuildingBib:
+	Power:
+		Amount: -100
+	ProvidesPrerequisite@buildingname:
+	Turreted:
+	WithSpriteTurret:
+		RequiresCondition: !build-incomplete
+		Sequence: turret
+	AttackTurreted:
+		OpportunityFire: false
+		PersistentTargeting: false
+	Armament:
+		Weapon: TSEMPulseCannon
+		LocalOffset: 212,0,1768
+		LocalYaw: 0,100
+	AttackOrderPower:
+		OrderName: EMPPower
+		PauseOnCondition: disabled || lowpower
+		Cursor: attackmove
+		Icon: emp
+		ChargeInterval: 3000
+		Name: E.M. Pulse
+		Description: Fires a pulse blast which disables\nall mechanical units in the area.
+		EndChargeSpeechNotification: EmPulseCannonReady
+		SelectTargetSpeechNotification: SelectTarget
+	RenderRangeCircle:
+	SupportPowerChargeBar:
 	RenderSprites:
 		Image: tsntpuls
 
@@ -4611,14 +4660,14 @@ swe1:
 	RenderSprites:
 		Image: swe1rebel
 
-swe1troop:
+swe1inf:
 	Inherits: E1
 	Inherits@laserup: ^SWLaserUpgrades
 	Inherits@infup: ^SWInfantryUpgrades
 	Valued:
 		Cost: 150
 	Tooltip:
-		Name: Trooper
+		Name: Imperial Army Trooper
 	Buildable:
 		BuildPaletteOrder: 10
 		Prerequisites: barracks
@@ -4632,6 +4681,36 @@ swe1troop:
 		MuzzleSequence: garrison-muzzle
 	Health:
 		HP: 7500
+	Voiced:
+		VoiceSet: SWTrooperVoice
+	GrantConditionOnPrerequisite@upe1troop:
+		Condition: upe1troop
+		Prerequisites: upe1troop
+	DamageMultiplier@upe1troop:
+		RequiresCondition: upe1troop
+		Modifier: 85
+
+swe1troop:
+	Inherits: E1
+	Inherits@laserup: ^SWLaserUpgrades
+	Inherits@infup: ^SWInfantryUpgrades
+	Valued:
+		Cost: 150
+	Tooltip:
+		Name: Stormtrooper
+	Buildable:
+		BuildPaletteOrder: 10
+		Prerequisites: barracks
+		Queue: Infantry, RAInfantry
+		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles
+	Armament@PRIMARY: ##########
+		Weapon: SWLaser
+	Armament@GARRISONED: ##########
+		Name: garrisoned
+		Weapon: SWLaserG
+		MuzzleSequence: garrison-muzzle
+	Health:
+		HP: 9500
 	Voiced:
 		VoiceSet: SWTrooperVoice
 	GrantConditionOnPrerequisite@upe1troop:
@@ -6668,6 +6747,8 @@ swharv:
 		SearchFromProcRadius: 15
 		SearchFromHarvesterRadius: 8
 		EmptyCondition: no-tiberium
+	StoresResources:
+		Capacity: 25
 	Mobile:
 		Speed: 70
 	Health:
@@ -6680,10 +6761,10 @@ swharv:
 		Range: 4c0
 	WithHarvestAnimation:
 	WithDockingAnimation:
-	Explodes:
+	FireWarheadsOnDeath:
 		RequiresCondition: !no-tiberium
 		Weapon: TiberiumExplosion
-	Explodes@empty:
+	FireWarheadsOnDeath@empty:
 		RequiresCondition: no-tiberium
 		Weapon: UnitExplode
 	SelectionDecorations:
@@ -6715,6 +6796,8 @@ swiharv:
 		SearchFromProcRadius: 15
 		SearchFromHarvesterRadius: 8
 		EmptyCondition: no-tiberium
+	StoresResources:
+		Capacity: 20
 	Health:
 		HP: 60000
 	Armor:
@@ -6734,10 +6817,10 @@ swiharv:
 		Delay: 25
 		StartIfBelow: 50
 		DamageCooldown: 500
-	Explodes:
+	FireWarheadsOnDeath:
 		RequiresCondition: !no-tiberium
 		Weapon: OreExplosion
-	Explodes@empty:
+	FireWarheadsOnDeath@empty:
 		RequiresCondition: no-tiberium
 		Weapon: UnitExplodeHarvEmpty
 	WithHarvesterSpriteBody:
@@ -6976,7 +7059,7 @@ swlaat.e1:
 		Image: swlaat
 
 swc17:
-	Inherits: ^Plane
+	Inherits: ^RANeutralPlane
 	Tooltip:
 		Name: Rebel Transport Vessel
 	Aircraft:
@@ -7006,6 +7089,7 @@ swc17:
 		Offset: -261,650,0
 		TrailLength: 15
 	-MapEditorData:
+	-SpawnActorOnDeath
 	RenderSprites:
 	WithCargoPipsDecoration:
 		Position: BottomLeft
@@ -7050,7 +7134,7 @@ swc17player:
 		AfterLoadDelay: 0
 		BeforeUnloadDelay: 0
 		AfterUnloadDelay: 0
-		InitialUnits: sw3tnk, sw1tnkre, swarty4, swarty3, swquad, swbggy, swbike, swftnk, swe1, swe1, swe2, swe2, swe3, swe3, swe3
+		InitialUnits:
 		LoadedCondition: loaded
 	-SpawnActorOnDeath:
 	SelectionDecorations:
@@ -7201,7 +7285,7 @@ swstard:
 	SpeedMultiplier@supersonic:
 		Modifier: 150
 		RequiresCondition: supersonic && ammo
-	Explodes@upatomictank:
+	FireWarheadsOnDeath@upatomictank:
 		Weapon: CHAtomicTankExplode
 		EmptyWeapon: CHAtomicTankExplode
 	CarrierMaster:
@@ -7275,7 +7359,7 @@ swexecutor:
 	SpeedMultiplier@supersonic:
 		Modifier: 150
 		RequiresCondition: supersonic && ammo
-	Explodes@upatomictank:
+	FireWarheadsOnDeath@upatomictank:
 		Weapon: CHAtomicTankExplode
 		EmptyWeapon: CHAtomicTankExplode
 	CarrierMaster:
@@ -7373,7 +7457,7 @@ swaclamator:
 	SpeedMultiplier@supersonic:
 		Modifier: 175
 		RequiresCondition: supersonic && ammo
-	Explodes@upatomictank:
+	FireWarheadsOnDeath@upatomictank:
 		Weapon: CHAtomicTankExplode
 		EmptyWeapon: CHAtomicTankExplode
 	CarrierMaster:
@@ -7390,7 +7474,7 @@ swaclamator:
 		DamageCooldown: 1
 
 swinterceptor:
-	Inherits: ^Plane
+	Inherits: ^RANeutralPlane
 	Inherits@EXPERIENCE: ^GainsExperience
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
 	Inherits@explode: ^HeliExplodeProtoss
@@ -7436,12 +7520,13 @@ swinterceptor:
 		VoiceSet: SCCarrierVoice
 	-ActorLostNotification:
 	-UpdatesPlayerStatistics:
+	-SpawnActorOnDeath:
 	HitShape:
 	RenderSprites:
 		Image: sworca
 
 swintercepto2:
-	Inherits: ^Plane
+	Inherits: ^RANeutralPlane
 	Inherits@EXPERIENCE: ^GainsExperience
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
 	Inherits@explode: ^HeliExplodeProtoss
@@ -7484,12 +7569,13 @@ swintercepto2:
 		VoiceSet: SCCarrierVoice
 	-ActorLostNotification:
 	-UpdatesPlayerStatistics:
+	-SpawnActorOnDeath:
 	HitShape:
 	RenderSprites:
 		Image: swxwing
 
 swintercepto3:
-	Inherits: ^Plane
+	Inherits: ^RANeutralPlane
 	Inherits@EXPERIENCE: ^GainsExperience
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
 	Inherits@explode: ^HeliExplodeProtoss
@@ -7532,6 +7618,7 @@ swintercepto3:
 		VoiceSet: SCCarrierVoice
 	-ActorLostNotification:
 	-UpdatesPlayerStatistics:
+	-SpawnActorOnDeath:
 	HitShape:
 	RenderSprites:
 		Image: swstarfighter
@@ -7579,7 +7666,7 @@ swdarty:
 	WithMuzzleOverlay:
 	AutoTarget:
 		InitialStanceAI: Defend
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: ArtilleryShell
 		EmptyWeapon: UnitExplode
 		LoadedChance: 75
@@ -8486,7 +8573,6 @@ swbadr:
 	GivesExperience:
 		Experience: 1000
 	-ExternalCondition@STASIS:
-	-DelayedWeaponAttachable@lockdown:
 	-ExternalCondition@EMP:
 	RenderSprites:
 		Image: swlaat
@@ -8576,7 +8662,7 @@ swdroidheli_husk:
 		Velocity: 0c125
 
 swstardc17:
-	Inherits: ^Plane
+	Inherits: ^RANeutralPlane
 	Tooltip:
 		Name: Cargo Ship
 	Aircraft:
@@ -8594,6 +8680,7 @@ swstardc17:
 	DamageMultiplier@INVULNERABLE:
 		Modifier: 0
 	-MapEditorData:
+	-SpawnActorOnDeath
 	RenderSprites:
 		Image: swexecutor
 	WithCargoPipsDecoration:
@@ -8601,7 +8688,7 @@ swstardc17:
 		RequiresSelection: true
 
 swexecc17:
-	Inherits: ^Plane
+	Inherits: ^RANeutralPlane
 	Tooltip:
 		Name: Cargo Ship
 	Aircraft:
@@ -8619,6 +8706,7 @@ swexecc17:
 	DamageMultiplier@INVULNERABLE:
 		Modifier: 0
 	-MapEditorData:
+	-SpawnActorOnDeath
 	RenderSprites:
 		Image: swexecutor
 	WithCargoPipsDecoration:
@@ -8632,7 +8720,7 @@ swrmbo.hutt:
 	Valued:
 		Cost: 350
 	Tooltip:
-		Name: Journeyman Mercenary
+		Name: Scab Mercenary
 	Buildable:
 		BuildPaletteOrder: 10
 		Prerequisites: ~techlevel.low
@@ -8648,6 +8736,8 @@ swrmbo.hutt:
 		Cursor: c4
 	RenderSprites:
 		Image: swrmbo
+
+# swmando:
 
 sw2tnk.hutt:
 	Inherits: sw2tnk
@@ -8686,15 +8776,15 @@ swrandom.generator:
 	Inherits: swftnk
 	GrantRandomCondition:
 		Conditions: makemin, makenova, makecarbon, makecarbon, makecarbon, makecarbon
-	Explodes@makemin:
+	FireWarheadsOnDeath@makemin:
 		RequiresCondition: makemin
 		Weapon: SWRandomMin
 		EmptyWeapon: SWRandomMin
-	Explodes@makenova:
+	FireWarheadsOnDeath@makenova:
 		RequiresCondition: makenova
 		Weapon: SWRandomNova
 		EmptyWeapon: SWRandomNova
-	Explodes@makecarbon:
+	FireWarheadsOnDeath@makecarbon:
 		RequiresCondition: makecarbon
 		Weapon: SWRandomCarbon
 		EmptyWeapon: SWRandomCarbon

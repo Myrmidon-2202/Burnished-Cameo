@@ -313,7 +313,7 @@ swrweap:
 		Length: *
 		Tick: 80
 	bib: 
-		Filename: bib1.shp
+		Filename: bib1.tem
 		UseTilesetExtension: true
 		Length: *
 	icon: 
@@ -403,7 +403,7 @@ swpower:
 		Length: *
 		Tick: 80
 	bib: 
-		Filename: invisibleitem.tem
+		Filename: invisibleitem.shp
 	icon: 
 		Filename: swpowericon.shp
 
@@ -638,7 +638,8 @@ swsilo:
 		Tick: 80
 		Offset: 0,-1
 	bib: 
-		Filename: mbSILO.tem
+		# Filename: mbSILO.tem
+		Filename: mbIRON.tem
 		UseTilesetExtension: true
 		TilesetOverrides:
 			WINTER: TEMPERAT
@@ -677,7 +678,7 @@ swdsilo:
 		Tick: 80
 		Offset: 0,-1
 	bib: 
-		Filename: mbSILO.tem
+		Filename: mbIRON.tem
 		UseTilesetExtension: true
 		TilesetOverrides:
 			WINTER: TEMPERAT
@@ -841,7 +842,7 @@ swdhq:
 		Length: *
 		Tick: 80
 	bib: 
-		Filename: bib2
+		Filename: bib2.tem
 		UseTilesetExtension: true
 		Length: *
 	icon: 
@@ -1042,9 +1043,11 @@ swgtwr:
 		Tick: 800
 	make:
 		Combine:
-			gtwrmake:
+			gtwrmake1:
+				Filename: gtwrmake.shp
 				Length: 17
-			gtwrmake:
+			gtwrmake2:
+				Filename: gtwrmake.shp
 				Start: 19
 		Length: 18
 		Tick: 80
@@ -1269,14 +1272,14 @@ swsite:
 	Defaults:
 		Filename: swsite.shp
 	idle: 
-		Filename: v36.des.shp
+		Filename: v36.des
 		AddExtension: false
 	damaged-idle: 
-		Filename: v36.des.shp
+		Filename: v36.des
 		Start: 1
 		AddExtension: false
 	dead: 
-		Filename: v36.des.shp
+		Filename: v36.des
 		Start: 1
 		AddExtension: false
 	make: 
@@ -1446,7 +1449,7 @@ swnurseh:
 swnurseh.bot:
 	Inherits: swnurseh
 	Defaults:
-		Filename: swnurseh.shp
+		Filename: swnurser.shp
 	
 swfood:
 	Defaults:
@@ -2982,7 +2985,7 @@ swdharvfull:
 		Filename: swdharvicon.shp
 
 swvice:
-	Inherits: ^InfantryOverlays
+	# Inherits: ^InfantryOverlays
 	Defaults:
 		Filename: swvice.shp
 	idle: 

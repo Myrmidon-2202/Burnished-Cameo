@@ -603,7 +603,7 @@ spidermineexplode:
 	Inherits: ^HeavyBomb
 	Range: 10
 	Warhead@Grenade: SpreadDamage
-		Damage: 30000
+		Damage: 50000
 	Warhead@GrenadeFriendlyFire: SpreadDamage
 		Damage: 15000
 	Warhead@GrenadePercentage: HealthPercentageDamage
@@ -632,7 +632,7 @@ VultureGrenade:
 	Report: tvuFir00.aud
 	Projectile: Bullet
 		Speed: 447
-		LaunchAngle: 66
+		LaunchAngle: 77
 		ContrailLength: 11
 		ContrailStartWidth: 66
 		ContrailEndWidth: 22
