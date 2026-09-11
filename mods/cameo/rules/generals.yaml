@@ -3087,6 +3087,9 @@ glsite.soldier:
 		DefaultAttackSequence: shoot
 	Voiced:
 		VoiceSet: RPGTrooperVoice
+	RenderSprites:
+		PlayerPalette: ra2infantry
+		Image: sglrpgtrooper
 	-MapEditorData:
 	-ActorLostNotification:
 
@@ -5520,7 +5523,7 @@ upglfort:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
 		Description: Increases durability of all buildings.
-		Prerequisites: ~!upglfort
+		Prerequisites: ~!upglfort, ~glaselected
 	Valued:
 		Cost: 1000
 	RenderSprites:
@@ -7164,7 +7167,7 @@ chsilo:
 		Produces: Upgrades
 	ProductionBar@Upgrades:
 		ProductionType: Upgrades
-	NukePower@unlimited:
+	NukePowerCA@unlimited:
 		AllowMultiple: True
 		Prerequisitess: 
 			1: ~techlevel.superweapons
@@ -7187,7 +7190,7 @@ chsilo:
 		MissileDelay: 11
 		SpawnOffset: 3c0,0,-1c512
 		DisplayBeacon: True
-		BeaconPosters: 
+		BeaconPosters:
 			1: raatomicon
 		DisplayTimerStances: Ally, Neutral, Enemy
 		DisplayRadarPing: True
@@ -7655,9 +7658,11 @@ chlotus:
 		Name: secondary
 		Weapon: CHSuperLotusCharge
 		RequiresCondition: selectchinf
-	MindController:
+	MindControllerCA:
 		ArmamentNames: control
 		Capacity: 1
+		RequiresCondition: !disabled
+		ControllingCondition: controlling
 	ReloadArmamentsBar:
 		Armaments: control
 	Armament@GARRISONED:
@@ -9278,7 +9283,7 @@ upsathack:
 		BuildPaletteOrder: 250
 		Queue: Upgrades
 		Description: Reveals all command centers.
-		Prerequisites: ~!upsathack, ~chinternetcenter
+		Prerequisites: ~!upsathack, ~chinternetcenter, ~chselected
 	Valued:
 		Cost: 1000
 	RenderSprites:
@@ -9294,7 +9299,7 @@ upsathack2:
 		BuildPaletteOrder: 250
 		Queue: Upgrades
 		Description: Reveals all buildings and troop movements.
-		Prerequisites: ~!upsathack2, upsathack
+		Prerequisites: ~!upsathack2, upsathack, ~chselected
 	Valued:
 		Cost: 2000
 	RenderSprites:
@@ -10038,7 +10043,7 @@ uplandmines:
 		BuildPaletteOrder: 190
 		Queue: Upgrades
 		Description: Protects buildings with landmines.
-		Prerequisites: ~!uplandmines
+		Prerequisites: ~!uplandmines, ~chselected
 	Valued:
 		Cost: 1500
 	RenderSprites:
@@ -10272,6 +10277,7 @@ usae1:
 		DeathSequencePalette: ra2infantry
 	GainsExperience:
 		LevelUpNotification: LevelUpRA2
+	-TakeCover:
 
 usae3:
 	Inherits: E3
@@ -10336,6 +10342,7 @@ usae3:
 	RenderSprites:
 		PlayerPalette: ra2infantry
 		Image: usamissiledefender
+	-TakeCover:
 
 usapath:
 	Inherits: ^Soldier
@@ -10484,6 +10491,7 @@ usaburton:
 	RenderSprites:
 		PlayerPalette: ra2infantry
 		Image: susaburton
+	-TakeCover:
 
 # usaburton.bot:
 # 	Inherits: usaburton
@@ -10544,6 +10552,7 @@ usapilot:
 		InitialLevels: 1
 	GainsExperience:
 		LevelUpNotification: LevelUpRA2
+	-TakeCover:
 
 usapilot.lvl2:
 	Inherits: usapilot
@@ -11019,7 +11028,7 @@ usacrusader:
 	RevealsShroud:
 		Range: 6c0
 	Turreted:
-		TurnSpeed: 5
+		TurnSpeed: 10
 		Offset: -50,0,150
 	Armament@Normal:
 		Weapon: USACrusaderCannon
@@ -11068,7 +11077,7 @@ usacrusader2:
 	Power:
 		Amount: -5
 	Turreted:
-		TurnSpeed: 5
+		TurnSpeed: 10
 		Offset: -50,0,200
 	AttackTurreted:
 		PauseOnCondition: disabled || lowpower
@@ -11110,7 +11119,7 @@ usapala:
 	RevealsShroud:
 		Range: 6c0
 	Turreted:
-		TurnSpeed: 5
+		TurnSpeed: 10
 		Offset: -50,0,200
 	Armament@Normal:
 		Weapon: USAPaladinCannon
@@ -12026,6 +12035,7 @@ usasupply:
 		RequiresSelection: true
 		PipCount: 17
 		FullSequence: pip-yellow
+
 usahook:
 	Inherits: ^Helicopter
 	Inherits@harv: ^Harvester
@@ -12038,7 +12048,7 @@ usahook:
 	Targetable@helicopter:
 		TargetTypes: Helicopter
 	Buildable:
-		Queue: Aircraft, RAAircraft
+		Queue: Aircraft.Usa
 		BuildPaletteOrder: 10
 		Prerequisites: usasupply, ~!susa_air, ~!susa_armor
 		Description: Resource collector and troop transport.\n  Unarmed
@@ -12707,6 +12717,45 @@ usacannon.beam:
 		RemoveInstead: true
 		Delay: 300
 
+# susacannon_super:
+# 	Inherits: usacannon
+# 	Tooltip:
+# 		Name: Advanced Particle Cannon
+# 	Valued:
+# 		Cost: 4000
+# 	Buildable:
+# 		Queue: Building, RABuilding
+# 		Prerequisites: ~susa_super, usastrategy, ~techlevel.high, !particlecannon
+# 		Description: Provides Particle Cannon support power.\nDeals more damage than regular Particle Cannon.\nRequires power to operate.
+# 		Icon: icon_super
+# 	RenderSprites:
+# 		Image: usacannon
+# 	WithIdleOverlay@particle:
+# 		Palette: d2kunit
+# 		Sequence: super
+
+# susacannon_laser:
+# 	Inherits: usacannon
+# 	Inherits@focusingcrystal: ^upsusafocusingcrystal
+# 	Tooltip:
+# 		Name: Laser Uplink Cannon
+# 	Valued:
+# 		Cost: 5000
+# 	Buildable:
+# 		Queue: Building, RABuilding
+# 		Prerequisites: ~susa_laser, usastrategy, ~techlevel.high, !particlecannon
+# 		Description: Provides Laser Uplink Cannon support power.\nIt's very effective against Buildings\nRequires power to operate.
+# 	RenderSprites:
+# 		Image: usacannon
+# 	WithIdleOverlay@particle:
+# 		Palette: effect
+# 		Sequence: laser
+# 		RequiresCondition: !upsusafocusingcrystal
+# 	WithIdleOverlay@particleup:
+# 		Palette: effect
+# 		Sequence: laser-up
+# 		RequiresCondition: upsusafocusingcrystal
+
 usagunship:
 	Inherits: ^RANeutralPlane
 	-Huntable:
@@ -13219,7 +13268,7 @@ usaaurora:
 usaaurora2:
 	Inherits: usaaurora
 	Buildable:
-		Queue: Aircraft, RAAircraft
+		Queue: Aircraft.Usa
 		BuildPaletteOrder: 50
 		Prerequisites: usaairport, usastrategy, ~selectusasuper
 	Tooltip:

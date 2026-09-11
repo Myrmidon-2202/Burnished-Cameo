@@ -44,6 +44,12 @@ SWTuskLaser:
 	Warhead@1Dam: SpreadDamage
 		Damage: 3000
 
+SWLaserG2:
+	Inherits: SWLaser
+	ReloadDelay: 50
+	Range: 8c0
+	Burst: 8
+
 SWLaserV:
 	Inherits: SWLaser
 	ReloadDelay: 24
@@ -238,7 +244,7 @@ SWBikeLaserShell:
 SWPodLaser:
 	Inherits: SWATTELaser
 	Burst: 2
-	Projectile: MissileCA
+	Projectile: Missile
 		HorizontalRateOfTurn: 25
 		Speed: 400
 		Inaccuracy: 200
@@ -289,10 +295,19 @@ SWTB2BlaserAA:
 	Warhead@1Dam: SpreadDamage
 		Damage: 500
 		ValidTargets: Air
-		
+
+HuttLaser:
+	Inherits: ^LaserWeapon
+	ReloadDelay: 120
+	Burst: 2
+	Range: 10c512
+	Report: obelray1.aud
+	Warhead@1Dam: SpreadDamage
+		Damage: 12000
+
 SWCloneBazooka:
 	Inherits: ^MissileWeapon
-	Projectile: MissileCA
+	Projectile: Missile
 		Arm: 1
 		HorizontalRateOfTurn: 20
 		Speed: 256
@@ -305,6 +320,7 @@ SWCloneBazooka:
 		ValidTargets: Ground, Water, Air
 	Warhead@1Dam: SpreadDamage
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
+
 SWCloneBazookaG:
 	Inherits: SWCloneBazooka
 	ReloadDelay: 75
@@ -318,7 +334,7 @@ SWPatriot:
 	Range: 10c0
 	Report: swrocket1.aud
 	ValidTargets: Air
-	Projectile: MissileCA
+	Projectile: Missile
 		Image: swmissile
 		Arm: 1
 		Speed: 300
@@ -344,7 +360,7 @@ SWOrcaAGMissiles:
 	Range: 7c512
 	MinRange: 1c256
 	ValidTargets: Ground
-	Projectile: MissileCA
+	Projectile: Missile
 		Arm: 1
 		Speed: 333
 		RangeLimit: 10c0
@@ -368,13 +384,12 @@ SWOrcaAGMissiles:
 SWOrcaAAMissiles:
 	Inherits: SWOrcaAGMissiles
 	ValidTargets: Air
-	Projectile: MissileCA
+	Projectile: Missile
 		Inaccuracy: 444
 		Arm: 0
 		Speed: 444
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Air
-	-Warhead@2Smu:
 
 SWTriFighterAGMissiles:
 	Inherits: SWOrcaAGMissiles
@@ -390,7 +405,7 @@ SWTowerMissile:
 	Range: 10c0
 	Report: swrocket1.aud
 	ValidTargets: Ground
-	Projectile: MissileCA
+	Projectile: Missile
 		Inaccuracy: 555
 		HorizontalRateOfTurn: 25
 		Speed: 555
@@ -419,7 +434,7 @@ SWTowerAAMissile:
 	Range: 10c0
 	Report: rocket2.aud
 	ValidTargets: Air
-	Projectile: MissileCA
+	Projectile: Missile
 		Inaccuracy: 555
 		HorizontalRateOfTurn: 33
 		Speed: 555
@@ -435,7 +450,6 @@ SWTowerAAMissile:
 			Medium: 99
 			Heavy: 111
 			Concrete: 55
-	-Warhead@2Smu:
 	Warhead@4EffAir: CreateEffect
 		Explosions: small_building
 		
@@ -446,7 +460,7 @@ SWAclamatorMissile:
 	Range: 7c5
 	Burst: 4
 	Report: rocket2.aud
-	Projectile: MissileCA
+	Projectile: Missile
 		HorizontalRateOfTurn: 30
 		Speed: 300
 		RangeLimit: 15c0
@@ -481,7 +495,7 @@ SWStarDestroyerMissile:
 	Range: 8c0
 	Burst: 4
 	Report: rocket2.aud
-	Projectile: MissileCA
+	Projectile: Missile
 		HorizontalRateOfTurn: 30
 		Speed: 300
 		RangeLimit: 15c0
@@ -591,7 +605,7 @@ SWDDroidLaser:
 SWT2BMissle:
 	Inherits: ^MissileWeapon
 	Range: 6c0
-	Projectile: MissileCA
+	Projectile: Missile
 		Arm: 1
 		HorizontalRateOfTurn: 20
 		Speed: 256
@@ -625,7 +639,7 @@ SWATATLaser:
 	ReloadDelay: 33
 	Report: swtnkfire4.aud
 	Range: 8c256
-	Projectile: MissileCA
+	Projectile: Missile
 		HorizontalRateOfTurn: 20
 		Speed: 512
 		RangeLimit: 12c512
@@ -657,7 +671,7 @@ SWMonCalamariLaser:
 	ReloadDelay: 80
 	Report: swxwinglaser.wav
 	Range: 7c0
-	Projectile: MissileCA
+	Projectile: Missile
 		HorizontalRateOfTurn: 20
 		Speed: 400
 		RangeLimit: 15c0
@@ -785,6 +799,7 @@ SWBomb:
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: Crater
 		InvalidTargets: Vehicle, Structure, Wall, Husk, Trees
+
 SWArtilleryShell:
 	Inherits: ArtilleryShell
 	Report: swgrenade.aud
@@ -801,12 +816,15 @@ SWArtilleryShell:
 		ValidTargets: Vehicle, Cyborg
 		Duration: 125
 		Range: 250
+
 SWArtilleryShell2:
 	Inherits: SWArtilleryShell
 	Range: 12c512
+
 SWArtilleryShell3:
 	Inherits: SWArtilleryShell
 	Range: 15c0
+
 SWNapalm:
 	ReloadDelay: 10
 	Burst: 3
@@ -836,6 +854,7 @@ SWNapalm:
 			Medium: 90
 			Heavy: 80
 			Concrete: 50
+
 SWNapalm2:
 	ReloadDelay: 10
 	Burst: 5
@@ -860,6 +879,7 @@ SWNapalm2:
 			Medium: 90
 			Heavy: 80
 			Concrete: 50
+
 SWNapalm3:
 	ReloadDelay: 10
 	Burst: 4
@@ -884,6 +904,7 @@ SWNapalm3:
 			Medium: 90
 			Heavy: 80
 			Concrete: 50
+
 SWAtomic:
 	Inherits: Atomic
 	Report: swnukemisl.aud
@@ -895,16 +916,17 @@ SWAtomic:
 SWDeathStar:
 	Inherits: IonCannon
 	Warhead@1Dam_impact: SpreadDamage
-		Range: 1c1, 3c1, 4c1, 5c1
+		Range: 5c1
 		Damage: 15000
 	Warhead@2Eff_impact: CreateEffect
 		ImpactSounds: nukexplo.aud
+
 SWLAATMissile:
 	Inherits: ^MissileWeapon
 	ReloadDelay: 12
 	Range: 5c0
 	MinRange: 1c256
-	Projectile: MissileCA
+	Projectile: Missile
 		Arm: 1
 		HorizontalRateOfTurn: 20
 		Speed: 256
@@ -939,7 +961,7 @@ SWDroidRockets:
 	Report: vrocweaa.wav, vrocweab.wav, vrocweac.wav, vrocwead.wav, vrocweae.wav, vrocweaf.wav
 	ValidTargets: Ground
 	TargetActorCenter: true
-	Projectile: MissileCA
+	Projectile: Missile
 		LockOnProbability: 50
 		LockOnInaccuracy: 1c512
 		MinimumLaunchAngle: 10
@@ -976,7 +998,7 @@ SWDroidRockets:
 SWDroidRocketsAA:
 	Inherits: SWDroidRockets
 	ValidTargets: Air
-	Projectile: MissileCA
+	Projectile: Missile
 		Inaccuracy: 0c512
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Air
@@ -1036,6 +1058,7 @@ SWYWingShell:
 		ValidTargets: Vehicle, Cyborg, Structure
 		Duration: 200
 		Range: 2c0
+
 SWJediSword:
 	Inherits: ^TSLaser
 	ReloadDelay: 6
@@ -1045,6 +1068,7 @@ SWJediSword:
 		Damage: 3000
 	Projectile: LaserZap
 		Color: 39D5FF
+
 SWSithSword:
 	Inherits: ^TSLaser
 	ReloadDelay: 6
@@ -1054,6 +1078,7 @@ SWSithSword:
 		Damage: 3000
 	Projectile: LaserZap
 		Color: BF0000
+
 SWR2D2Tesla:
 	Inherits: ^TeslaWeapon
 	ReloadDelay: 70
@@ -1063,25 +1088,26 @@ SWR2D2Tesla:
 		Versus:
 			Wood: 73
 			Heavy: 60
+	
 SWExecutorLaser:
 	Inherits: SWATATLaser
 	Range: 9c768
 	Burst: 16
+
 SWRandomMin:
 	Inherits: ^DamagingExplosionHE
 	Warhead@1Dam: SpreadDamage
 		Spread: 9
 		Damage: 5
-	-Warhead@3Smu:
 	Warhead@4Res: CreateResource
 		AddsResourceType: SWCMin
 		Size: 2,2
+
 SWRandomNova:
 	Inherits: ^DamagingExplosionHE
 	Warhead@1Dam: SpreadDamage
 		Spread: 9
 		Damage: 5
-	-Warhead@3Smu:
 	Warhead@4Res: CreateResource
 		AddsResourceType: SWCNova
 		Size: 2,2
@@ -1091,10 +1117,10 @@ SWRandomCarbon:
 	Warhead@1Dam: SpreadDamage
 		Spread: 9
 		Damage: 5
-	-Warhead@3Smu:
 	Warhead@4Res: CreateResource
 		AddsResourceType: SWRCarbon
 		Size: 3,3
+
 SWPummel:
 	Inherits: ^TSLaser
 	ReloadDelay: 4
@@ -1106,6 +1132,7 @@ SWPummel:
 		ValidTargets: Structure, Wall
 	Projectile: LaserZap
 		Color: 83FF33
+
 SWPummelVehicle:
 	Inherits: SWPummel
 	ValidTargets: Vehicle

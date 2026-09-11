@@ -9,7 +9,8 @@ swfact:
 	damaged-idle:
 	damaged-build:
 	dead:
-	make: swdfactmake.shp
+	make: 
+		Filename: swdfactmake.shp
 		Length: *
 		Tick: 80
 	bib: 
@@ -72,6 +73,7 @@ swrfact:
 		Filename: facticnh.shp
 	idle-overlay: 
 		Filename: customoverlay.shp
+
 swrefact:
 	Defaults:
 		Filename: swrefact.shp
@@ -97,6 +99,7 @@ swrefact:
 		Filename: facticnh.shp
 	idle-overlay: 
 		Filename: customoverlay.shp
+
 swibarr:
 	Defaults:
 		Filename: swibarr.shp
@@ -113,6 +116,7 @@ swibarr:
 		Length: *
 	icon: 
 		Filename: swbarricon.shp
+
 swrbarr:
 	Defaults:
 		Filename: swrbarr.shp
@@ -129,6 +133,7 @@ swrbarr:
 		Length: *
 	icon: 
 		Filename: swbarricon.shp
+
 swrebarr:
 	Defaults:
 		Filename: swrebarr.shp
@@ -145,6 +150,7 @@ swrebarr:
 		Length: *
 	icon: 
 		Filename: swbarricon.shp
+
 swdbarr:
 	Defaults:
 		Filename: swdbarr.shp
@@ -161,6 +167,7 @@ swdbarr:
 		Length: *
 	icon: 
 		Filename: swbarricon.shp
+
 swdfact:
 	Defaults:
 		Filename: swdfact.shp
@@ -207,6 +214,7 @@ swfort:
 	icon: 
 		Filename: swforticon.shp
 		Offset: 0,0
+
 swfortre:
 	Defaults:
 		Filename: swfortre.shp
@@ -227,6 +235,7 @@ swfortre:
 	icon: 
 		Filename: swforticon.shp
 		Offset: 0,0
+
 swfortd:
 	Defaults:
 		Filename: swfortd.shp
@@ -268,6 +277,7 @@ swfortr:
 	icon: 
 		Filename: swforticon.shp
 		Offset: 0,0
+
 sweweap:
 	Defaults:
 		Filename: sweweap.shp
@@ -288,6 +298,7 @@ sweweap:
 	icon: 
 		Filename: swweapicon.shp
 		Offset: 0,0
+
 swrweap:
 	Defaults:
 		Filename: swrweap.shp
@@ -302,12 +313,13 @@ swrweap:
 		Length: *
 		Tick: 80
 	bib: 
-		Filename: bib1.shp
+		Filename: bib1.tem
 		UseTilesetExtension: true
 		Length: *
 	icon: 
 		Filename: swweapicon.shp
 		Offset: 0,0
+
 swreweap:
 	Defaults:
 		Filename: swreweap.shp
@@ -328,6 +340,7 @@ swreweap:
 	icon: 
 		Filename: swweapicon.shp
 		Offset: 0,0
+
 swdweap:
 	Defaults:
 		Filename: swdweap.shp
@@ -378,6 +391,7 @@ swnuke:
 	icon: 
 		Filename: swnukeicnh.tem
 		AddExtension: False
+
 swpower:
 	Defaults:
 		Filename: swpower.shp
@@ -389,9 +403,10 @@ swpower:
 		Length: *
 		Tick: 80
 	bib: 
-		Filename: invisibleitem.tem
+		Filename: invisibleitem.shp
 	icon: 
 		Filename: swpowericon.shp
+
 swshelt:
 	Defaults:
 		Filename: swshelt.shp
@@ -408,6 +423,7 @@ swshelt:
 		Length: *
 	icon: 
 		Filename: swshelticon.shp
+
 swsheltr:
 	Defaults:
 		Filename: swsheltr.shp
@@ -424,6 +440,7 @@ swsheltr:
 		Length: *
 	icon: 
 		Filename: swshelticon.shp
+
 swsheltd:
 	Defaults:
 		Filename: swsheltd.shp
@@ -457,6 +474,7 @@ swsheltre:
 		Length: *
 	icon: 
 		Filename: swshelticon.shp
+
 sweproc:
 	Defaults:
 		Filename: sweproc.shp
@@ -481,6 +499,7 @@ sweproc:
 		Filename: proctwr.shp
 		Length: 6
 		Offset: -30,-17
+
 swreproc:
 	Defaults:
 		Filename: swreproc.shp
@@ -526,10 +545,11 @@ swrproc:
 		Filename: proctwr.shp
 		Length: 6
 		Offset: -30,-17
-	damaged-
-		Filename: resources: proctwr.shp
+	damaged-resources: 
+		Filename: proctwr.shp
 		Length: 6
 		Offset: -30,-17
+
 swdproc:
 	Defaults:
 		Filename: swdproc.shp
@@ -554,6 +574,7 @@ swdproc:
 		Filename: proctwr.shp
 		Length: 6
 		Offset: -30,-17
+
 swproc:
 	Defaults:
 		Filename: swproc.shp
@@ -617,7 +638,8 @@ swsilo:
 		Tick: 80
 		Offset: 0,-1
 	bib: 
-		Filename: mbSILO.tem
+		# Filename: mbSILO.tem
+		Filename: mbIRON.tem
 		UseTilesetExtension: true
 		TilesetOverrides:
 			WINTER: TEMPERAT
@@ -630,6 +652,7 @@ swsilo:
 	icon: 
 		Filename: swsiloicnh.tem
 		AddExtension: False
+
 swdsilo:
 	Defaults:
 		Filename: swdsilo.shp
@@ -655,7 +678,7 @@ swdsilo:
 		Tick: 80
 		Offset: 0,-1
 	bib: 
-		Filename: mbSILO.tem
+		Filename: mbIRON.tem
 		UseTilesetExtension: true
 		TilesetOverrides:
 			WINTER: TEMPERAT
@@ -692,6 +715,7 @@ swhand:
 		Filename: swhandicnh.tem
 		AddExtension: False
 		Offset: 0,0
+
 swtrade:
 	Defaults:
 		Filename: swtrade.shp
@@ -714,6 +738,7 @@ swtrade:
 	icon: 
 		Filename: swtradeicon.shp
 		Offset: 0,0
+
 swbarrdroid:
 	Defaults:
 		Filename: swbarrdroid.shp
@@ -736,6 +761,7 @@ swbarrdroid:
 	icon: 
 		Filename: swdroidfacticon.shp
 		Offset: 0,0
+
 swafld:
 	Defaults:
 		Filename: swafld.shp
@@ -804,6 +830,7 @@ swhq:
 	icon: 
 		Filename: swhqicnh.tem
 		AddExtension: False
+
 swdhq:
 	Defaults:
 		Filename: swdhq.shp
@@ -815,7 +842,7 @@ swdhq:
 		Length: *
 		Tick: 80
 	bib: 
-		Filename: bib2
+		Filename: bib2.tem
 		UseTilesetExtension: true
 		Length: *
 	icon: 
@@ -837,6 +864,7 @@ swihq:
 		Length: *
 	icon: 
 		Filename: swwarcentericon.shp
+
 swrehq:
 	Defaults:
 		Filename: swrehq.shp
@@ -853,6 +881,7 @@ swrehq:
 		Length: *
 	icon: 
 		Filename: swwarcentericon.shp
+
 swrhq:
 	Defaults:
 		Filename: swrhq.shp
@@ -869,6 +898,7 @@ swrhq:
 		Length: *
 	icon: 
 		Filename: swwarcentericon.shp
+
 swnuk2:
 	Defaults:
 		Filename: swnuk2.shp
@@ -1013,9 +1043,11 @@ swgtwr:
 		Tick: 800
 	make:
 		Combine:
-			gtwrmake:
+			gtwrmake1:
+				Filename: gtwrmake.shp
 				Length: 17
-			gtwrmake:
+			gtwrmake2:
+				Filename: gtwrmake.shp
 				Start: 19
 		Length: 18
 		Tick: 80
@@ -1118,9 +1150,11 @@ sweye:
 	icon: 
 		Filename: sweyeicnh.tem
 		AddExtension: False
+
 sweyer:
 	Defaults:
-		Filename: sweyer.shp
+		# Filename: sweyer.shp
+		Filename: swresearchr.shp
 	idle: 
 		Filename: swresearchr.shp
 	damaged-idle: 
@@ -1172,6 +1206,7 @@ swtmpl:
 		Filename: swtmplicnh.tem
 		AddExtension: False
 		Offset: 0,0
+
 swdtmpl:
 	Defaults:
 		Filename: swdtmpl.shp
@@ -1202,6 +1237,7 @@ swdtmpl:
 	icon: 
 		Filename: swdtmplicon.shp
 		Offset: 0,0
+
 swpalace:
 	Defaults:
 		Filename:  swpalacemake.shp
@@ -1231,18 +1267,19 @@ swpalace:
 	icon: 
 		Filename: swjabbapalaceicon.shp
 		Offset: 0,0
+
 swsite:
 	Defaults:
 		Filename: swsite.shp
 	idle: 
-		Filename: v36.des.shp
+		Filename: v36.des
 		AddExtension: false
 	damaged-idle: 
-		Filename: v36.des.shp
+		Filename: v36.des
 		Start: 1
 		AddExtension: false
 	dead: 
-		Filename: v36.des.shp
+		Filename: v36.des
 		Start: 1
 		AddExtension: false
 	make: 
@@ -1412,7 +1449,7 @@ swnurseh:
 swnurseh.bot:
 	Inherits: swnurseh
 	Defaults:
-		Filename: swnurseh.shp
+		Filename: swnurser.shp
 	
 swfood:
 	Defaults:
@@ -1607,6 +1644,7 @@ swarty:
 		Length: *
 	icon: 
 		Filename: swartyicon.shp
+
 swarty2:
 	Defaults:
 		Filename: swarty2.shp
@@ -1618,6 +1656,7 @@ swarty2:
 		Length: *
 	icon: 
 		Filename: swarty2icon.shp
+
 swarty3:
 	Defaults:
 		Filename: swarty3.shp
@@ -1629,6 +1668,7 @@ swarty3:
 		Length: *
 	icon: 
 		Filename: swartyicon.shp
+
 swarty4:
 	Defaults:
 		Filename: swarty4.shp
@@ -1640,6 +1680,7 @@ swarty4:
 		Length: *
 	icon: 
 		Filename: swarty2icon.shp
+
 swarty5:
 	Defaults:
 		Filename: swarty5.shp
@@ -1651,6 +1692,7 @@ swarty5:
 		Length: *
 	icon: 
 		Filename: swartyicon.shp
+
 swarty6:
 	Defaults:
 		Filename: swarty6.shp
@@ -1662,6 +1704,7 @@ swarty6:
 		Length: *
 	icon: 
 		Filename: swarty2icon.shp
+
 swftnk:
 	Defaults:
 		Filename: swftnk.shp
@@ -1671,27 +1714,35 @@ swftnk:
 	muzzle:
 		Combine:
 			flame-n:
+				Filename: flame-n.shp
 				Length: *
 				Offset: 3,6
 			flame-nw:
+				Filename: flame-nw.shp
 				Length: *
 				Offset: 8,7
 			flame-w:
+				Filename: flame-w.shp
 				Length: *
 				Offset: 8,2
 			flame-sw:
+				Filename: flame-sw.shp
 				Length: *
 				Offset: 7,-2
 			flame-s:
+				Filename: flame-s.shp
 				Length: *
 				Offset: 3,-2
 			flame-se:
+				Filename: flame-se.shp
 				Length: *
 				Offset: -5,-2
 			flame-e:
+				Filename: flame-e.shp
 				Length: *
 				Offset: -7,2
 			flame-ne:
+				Filename: flame-ne.shp
 				Length: *
 				Offset: -7,8
 		Facings: 8
@@ -1707,6 +1758,7 @@ swpummel:
 		UseClassicFacings: True
 	icon: 
 		Filename: swpummelicon.shp
+
 swpummeld:
 	Defaults:
 		Filename: swpummeld.shp
@@ -1715,6 +1767,7 @@ swpummeld:
 		UseClassicFacings: True
 	icon: 
 		Filename: swpummeldicon.shp
+
 swftnk2:
 	Defaults:
 		Filename: swftnk2.shp
@@ -1729,33 +1782,42 @@ swftnk2:
 	muzzle:
 		Combine:
 			flame-n:
+				Filename: flame-n.shp
 				Length: *
 				Offset: 3,6
 			flame-nw:
+				Filename: flame-nw.shp
 				Length: *
 				Offset: 8,7
 			flame-w:
+				Filename: flame-w.shp
 				Length: *
 				Offset: 8,2
 			flame-sw:
+				Filename: flame-sw.shp
 				Length: *
 				Offset: 7,-2
 			flame-s:
+				Filename: flame-s.shp
 				Length: *
 				Offset: 3,-2
 			flame-se:
+				Filename: flame-se.shp
 				Length: *
 				Offset: -5,-2
 			flame-e:
+				Filename: flame-e.shp
 				Length: *
 				Offset: -7,2
 			flame-ne:
+				Filename: flame-ne.shp
 				Length: *
 				Offset: -7,8
 		Facings: 8
 		Length: 13
 	icon: 
 		Filename: swftnk2icon.shp
+
 swe1:
 	Inherits: e1
 	Defaults:
@@ -1763,277 +1825,232 @@ swe1:
 	icon: 
 		Filename: swe1icnh.tem
 		AddExtension: False
+
 swe1rebel:
 	Inherits: ^InfantryOverlays
 	Defaults:
-		Filename:  swrebel.shp
+		Filename: swrebel.shp
 	stand:
 		Facings: -8
-		Scale: 0.7
 	stand2:
 		Facings: -8
-		Scale: 0.7
 	run:
 		Start: 8
 		Length: 6
 		Facings: 8
 		Tick: 100
-		Scale: 0.7
 	shoot:
 		Start: 80
 		Length: 2
 		Facings: 8
-		Scale: 0.7
 	prone-stand:
 		Start: 56
 		Facings: -8
-		Scale: 0.7
 	prone-stand2:
 		Start: 56
 		Facings: -8
-		Scale: 0.7
 	prone-run:
 		Start: 64
 		Length: 2
 		Facings: 8
 		Tick: 120
-		Scale: 0.7
 	# stand -> prone transition
 	liedown:
 		Start: 56
 		Facings: -8
-		Scale: 0.7
 	# prone -> stand transition
 	standup:
 		Start: 56
 		Facings: -8
-		Scale: 0.7
 	prone-shoot:
 		Start: 96
 		Length: 2
 		Facings: 8
-		Scale: 0.7
 	idle1:
 		Start: 8
 		Length: 6
 		Facings: 8
-		Scale: 0.7
 	idle2:
 		Start: 8
 		Length: 6
 		Facings: 8
-		Scale: 0.7
 	idle3:
 		Start: 8
 		Length: 6
 		Facings: 8
-		Scale: 0.7
 	cheer:
 		Facings: -8
-		Scale: 0.7
 	# Dancing
 	idle4:
 		Start: 8
 		Length: 6
 		Facings: 8
-		Scale: 0.7
 	# Shot
 	die1: 
 		Filename: e1.shp
 		Start: 381
 		Length: 9
 		Tick: 80
-		Scale: 0.7
 	# Explode
 	die2: 
 		Filename: e1.shp
 		Start: 390
 		Length: 8
 		Tick: 80
-		Scale: 0.7
 	# Fly and explode in air
 	die3: 
 		Filename: e1.shp
 		Start: 398
 		Length: 8
 		Tick: 80
-		Scale: 0.7
 	# Fly through air squish on ground
 	die4: 
 		Filename: e1.shp
 		Start: 406
 		Length: 12
 		Tick: 80
-		Scale: 0.7
 	# Burn
 	die5: 
 		Filename: e1.shp
 		Start: 418
 		Length: 18
 		Tick: 80
-		Scale: 0.7
 	# Tib
 	die6: 
 		Filename: e1.shp
 		Start: 366
 		Length: 11
 		Tick: 80
-		Scale: 0.7
 	# Electro
 	die7: 
 		Filename: electro.shp 
 		Length: *
-		Scale: 0.7
 	die-crushed: 
 		Filename: e1rot.shp
 		Start: 16
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-		Scale: 0.7
 	garrison-muzzle: 
 		Filename: minigun.shp
 		Length: 3
 		Stride: 6
 		Facings: 8
-		Scale: 0.7
 	icon: 
 		Filename: swe1icnh.tem
 		AddExtension: False
+
 swe3rebel:
 	Inherits: ^InfantryOverlays
 	Defaults:
 		Filename:  swe3rebel.shp
 	stand:
 		Facings: -8
-		Scale: 0.7
 	stand2:
 		Facings: -8
-		Scale: 0.7
 	run:
 		Start: 8
 		Length: 6
 		Facings: 8
 		Tick: 100
-		Scale: 0.7
 	shoot:
 		Facings: -8
-		Scale: 0.7
 	prone-stand:
 		Start: 56
 		Facings: -8
-		Scale: 0.7
 	prone-stand2:
 		Start: 56
 		Facings: -8
-		Scale: 0.7
 	prone-run:
 		Start: 64
 		Length: 2
 		Facings: 8
 		Tick: 120
-		Scale: 0.7
 	# stand -> prone transition
 	liedown:
 		Start: 56
 		Facings: -8
-		Scale: 0.7
 	# prone -> stand transition
 	standup:
 		Start: 56
 		Facings: -8
-		Scale: 0.7
 	prone-shoot:
 		Start: 56
 		Facings: -8
-		Scale: 0.7
 	idle1:
 		Start: 8
 		Length: 6
 		Facings: 8
-		Scale: 0.7
 	idle2:
 		Start: 8
 		Length: 6
 		Facings: 8
-		Scale: 0.7
 	idle3:
 		Start: 8
 		Length: 6
 		Facings: 8
-		Scale: 0.7
 	cheer:
 		Facings: -8
-		Scale: 0.7
 	# Dancing
 	idle4:
 		Start: 8
 		Length: 6
 		Facings: 8
-		Scale: 0.7
 	# Shot
 	die1: 
 		Filename: e1.shp
 		Start: 381
 		Length: 9
 		Tick: 80
-		Scale: 0.7
 	# Explode
 	die2: 
 		Filename: e1.shp
 		Start: 390
 		Length: 8
 		Tick: 80
-		Scale: 0.7
 	# Fly and explode in air
 	die3: 
 		Filename: e1.shp
 		Start: 398
 		Length: 8
 		Tick: 80
-		Scale: 0.7
 	# Fly through air squish on ground
 	die4: 
 		Filename: e1.shp
 		Start: 406
 		Length: 12
 		Tick: 80
-		Scale: 0.7
 	# Burn
 	die5: 
 		Filename: e1.shp
 		Start: 418
 		Length: 18
 		Tick: 80
-		Scale: 0.7
 	# Tib
 	die6: 
 		Filename: e1.shp
 		Start: 366
 		Length: 11
 		Tick: 80
-		Scale: 0.7
 	# Electro
 	die7: 
 		Filename: electro.shp
 		Length: *
-		Scale: 0.7
 	die-crushed: 
 		Filename: e1rot.shp
 		Start: 16
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-		Scale: 0.7
 	garrison-muzzle: 
 		Filename: minigun.shp
 		Length: 3
 		Stride: 6
 		Facings: 8
-		Scale: 0.7
 	icon: 
 		Filename: swe3icon.shp
 		AddExtension: False
+
 swe6:
 	Inherits: ^InfantryOverlays
 	Defaults:
@@ -2110,6 +2127,7 @@ swe6:
 		Length: 15
 	icon: 
 		Filename: swr2icon.shp
+
 swe6e:
 	Inherits: swe6
 	Defaults:
@@ -2156,6 +2174,7 @@ swe1droid:
 		Length: 3
 		Stride: 6
 		Facings: 8
+
 swe1troop:
 	Inherits: e1
 	Defaults:
@@ -2163,6 +2182,7 @@ swe1troop:
 	icon: 
 		Filename: swe1icnh.tem
 		AddExtension: False
+
 swe1clone:
 	Inherits: e1
 	Defaults:
@@ -2170,6 +2190,7 @@ swe1clone:
 	icon: 
 		Filename: swe1cloneicon.shp
 		AddExtension: False
+
 swe1dark:
 	Inherits: e1
 	Defaults:
@@ -2177,6 +2198,7 @@ swe1dark:
 	icon: 
 		Filename: swe1icnh.tem
 		AddExtension: False
+
 swe1tusk:
 	Inherits: e1
 	Defaults:
@@ -2184,6 +2206,7 @@ swe1tusk:
 	icon: 
 		Filename: swe1icnh.tem
 		AddExtension: False
+
 swdroidb2:
 	Inherits: tscyborg
 	Defaults:
@@ -2320,6 +2343,7 @@ swddroid:
 	icon: 
 		Filename: swddroidicon.shp
 		AddExtension: False
+
 swbantha:
 	Inherits: ^InfantryOverlays
 	Defaults:
@@ -2413,6 +2437,7 @@ swbantha:
 	icon: 
 		Filename: e1icnh.tem
 		AddExtension: False
+
 swjedi:
 	Defaults:
 		Filename:  swjedi.shp
@@ -2496,6 +2521,7 @@ swjedi:
 	icon: 
 		Filename: swjediicon.shp
 		AddExtension: False
+
 swsith:
 	Inherits: swjedi
 	Defaults:
@@ -2503,6 +2529,7 @@ swsith:
 	icon: 
 		Filename: swsithicon.shp
 		AddExtension: False
+
 swe3:
 	Inherits: e3
 	Defaults:
@@ -2510,6 +2537,7 @@ swe3:
 	icon: 
 		Filename: swe3icon.shp
 		AddExtension: False
+
 swe3troop:
 	Inherits: e3
 	Defaults:
@@ -2517,6 +2545,7 @@ swe3troop:
 	icon: 
 		Filename: swe3troopicon.shp
 		AddExtension: False
+
 swe3clone:
 	Inherits: e3
 	Defaults:
@@ -2524,6 +2553,7 @@ swe3clone:
 	icon: 
 		Filename: swe3cloneicon.shp
 		AddExtension: False
+
 swe3droid:
 	Inherits: e3
 	Defaults:
@@ -2545,12 +2575,14 @@ swredlaser:
 	idle:
 		Facings: 32
 		ZOffset: 1023
+
 swbluelaser:
 	Defaults:
 		Filename: swbluelaser.shp
 	idle:
 		Facings: 32
 		ZOffset: 1023
+
 swmissile:
 	Defaults:
 		Filename: swmissile.shp
@@ -2565,6 +2597,7 @@ swionsfx:
 		Length: *
 		Offset: 0, -156
 		ZOffset: 1023
+
 swatomic:
 	Defaults:
 		Filename: swatomic.shp
@@ -2574,6 +2607,7 @@ swatomic:
 		Filename: swatomicup.shp
 	down: 
 		Filename: swatomicdn.shp
+
 swbike:
 	Defaults:
 		Filename: swbike.shp
@@ -2694,6 +2728,7 @@ swheli:
 	icon: 
 		Filename: swheliicnh.tem
 		AddExtension: False
+
 swdroidheli:
 	Defaults:
 		Filename: swdroidheli.shp
@@ -2706,10 +2741,12 @@ swdroidheli:
 		UseClassicFacings: True
 	icon: 
 		Filename: swdroidheliicon.shp
+
 swdroidheli_husk:
 	Inherits: swdroidheli
 	Defaults:
 		Filename: swdroidheli.shp
+
 swxwing:
 	Defaults:
 		Filename: swxwing.shp
@@ -2723,10 +2760,12 @@ swxwing:
 	icon: 
 		Filename: swxwingicon.shp
 		AddExtension: False
+
 swxwing_husk:
 	Inherits: swxwing
 	Defaults:
 		Filename: swxwing.shp
+
 swstarfighter:
 	Defaults:
 		Filename: swstarfighter.shp
@@ -2738,6 +2777,7 @@ swstarfighter:
 		UseClassicFacings: True
 	icon: 
 		Filename: swstarfightericon.shp
+
 swstarfighterj:
 	Defaults:
 		Filename: swstarfighterj.shp
@@ -2749,6 +2789,7 @@ swstarfighterj:
 		UseClassicFacings: True
 	icon: 
 		Filename: swstarfighterjicon.shp
+
 swfalc:
 	Defaults:
 		Filename: swfalc.shp
@@ -2944,29 +2985,28 @@ swdharvfull:
 		Filename: swdharvicon.shp
 
 swvice:
-	Inherits: ^InfantryOverlays
+	# Inherits: ^InfantryOverlays
 	Defaults:
 		Filename: swvice.shp
 	idle: 
 		Filename: swvice.shp
 		Length: *
-		Scale: 0.7
 	icon: 
 		Filename: swviceicon.shp
+
 sworca:
 	Defaults:
 		Filename: sworca.shp
 	idle:
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.7
 	move:
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.7
 	icon: 
 		Filename: sworcaicnh.tem
 		AddExtension: False
+
 swtrifighter:
 	Defaults:
 		Filename: swtrifighter.shp
@@ -2978,6 +3018,7 @@ swtrifighter:
 		UseClassicFacings: True
 	icon: 
 		Filename: swtrifightericon.shp
+
 swtran:
 	Defaults:
 		Filename: swtran.shp
@@ -3013,10 +3054,12 @@ swa10:
 	icon: 
 		Filename: a10icnh.tem
 		AddExtension: False
+
 swa10_husk:
 	Inherits: swa10
 	Defaults:
 		Filename: swa10.shp
+
 swywing:
 	Defaults:
 		Filename: swywing.shp
@@ -3033,6 +3076,7 @@ swywing:
 	icon: 
 		Filename: swywingicon.shp
 		AddExtension: False
+
 swcrawl:
 	Defaults:
 		Filename: swcrawl.shp
@@ -3047,6 +3091,7 @@ swcrawl:
 		UseClassicFacings: True
 	icon: 
 		Filename: swcrawlicon.shp
+
 swmsam:
 	Defaults:
 		Filename: swmsam.shp
@@ -3058,6 +3103,7 @@ swmsam:
 		Length: *
 	icon: 
 		Filename: swmsamicon.shp
+
 sw1tnk:
 	Defaults:
 		Filename: sw1tnk.shp
@@ -3087,6 +3133,7 @@ sw1tnk:
 		Scale: 0.9
 	icon: 
 		Filename: sw1tnkicon.shp
+
 swptnk:
 	Defaults:
 		Filename: swptnk.shp
@@ -3125,6 +3172,7 @@ sw2tnk:
 	icon: 
 		Filename: sw2tnkicon.shp
 		AddExtension: False
+
 sw3tnk:
 	Defaults:
 		Filename: sw3tnk.shp
@@ -3140,6 +3188,7 @@ sw3tnk:
 		Length: *
 	icon: 
 		Filename: sw3tnkicon.shp
+
 sw1tnkre:
 	Defaults:
 		Filename: sw1tnkre.shp
@@ -3155,6 +3204,7 @@ sw1tnkre:
 		Length: *
 	icon: 
 		Filename: sw1tnkreicon.shp
+
 sw4tnk:
 	Defaults:
 		Filename: sw4tnk.shp
@@ -3179,6 +3229,7 @@ sw4tnk:
 		Length: *
 	icon: 
 		Filename: sw4tnkicon.shp
+
 swaa:
 	Defaults:
 		Filename: swaa.shp
@@ -3199,6 +3250,7 @@ swaa:
 		Length: *
 	icon: 
 		Filename: swaaicon.shp
+
 swjugger:
 	Defaults:
 		Filename: swjugger.shp
@@ -3214,6 +3266,7 @@ swjugger:
 		Length: *
 	icon: 
 		Filename: swjuggericon.shp
+
 swspider:
 	Defaults:
 		Filename: swspider.shp
@@ -3268,6 +3321,7 @@ swc17:
 		Scale: 1.8
 	icon: 
 		Filename: swc17icon.shp
+
 swstard:
 	Defaults:
 		Filename: swstard.shp
@@ -3276,6 +3330,7 @@ swstard:
 		UseClassicFacings: True
 	icon: 
 		Filename: swstardicon.shp
+
 swexecutor:
 	Defaults:
 		Filename: swexecutor.shp
@@ -3285,6 +3340,7 @@ swexecutor:
 		Scale: 1.5
 	icon: 
 		Filename: swstardicon.shp
+
 swexecutordie:
 	Defaults:
 		Filename: swexecutordie.shp
@@ -3292,6 +3348,7 @@ swexecutordie:
 		Facings: 16
 	icon: 
 		Filename: swstardicon.shp
+
 swaclamator:
 	Defaults:
 		Filename: swaclamator.shp
@@ -3300,6 +3357,7 @@ swaclamator:
 		UseClassicFacings: True
 	icon: 
 		Filename: swaclamatoricon.shp
+
 swdarty:
 	Defaults:
 		Filename: swdarty.shp
@@ -3312,6 +3370,7 @@ swdarty:
 	icon: 
 		Filename: swdartyicon.shp
 		AddExtension: False
+
 swquad:
 	Defaults:
 		Filename: swquad.shp
@@ -3327,6 +3386,7 @@ swquad:
 		Length: 2
 	icon: 
 		Filename: swtb2tankicon.shp
+
 swgreedo:
 	Inherits: chhacker
 	Defaults:
@@ -3346,6 +3406,7 @@ swgreedo:
 		Length: 3
 		Stride: 6
 		Facings: 8
+
 swjabbaparty:
 	Defaults:
 		Filename: swjabbaparty.shp
@@ -3365,6 +3426,7 @@ swjumpjet:
 		Filename:  swjumpjet.shp
 	icon: 
 		Filename: swjumpjeticon.shp
+
 swbantha2:
 	Defaults:
 		Filename: swbantha2.shp
@@ -3373,6 +3435,7 @@ swbantha2:
 		UseClassicFacings: True
 	icon: 
 		Filename: swbanthaicon.shp
+
 swnerf:
 	Defaults:
 		Filename: swnerf.shp

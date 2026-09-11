@@ -910,6 +910,7 @@ FlamerBunker:
 		Palette: alpha25
 		Weapon: CHFlame
 		InvalidTargets: Water
+
 2100Flamer:
 	Inherits: Flamer
 	Burst: 5
@@ -932,9 +933,9 @@ FlamerBunker:
 			Heavy: 20
 	Warhead@2Clear: SpreadDamage
 		Spread: 0c512
-		Damage: 500
+		Damage: 200
 		ValidTargets: Garrisoned
-		Amount: 4
+		Amount: 6
 		DamageTypes: Prone100Percent, TriggerProne, FireDeath, Incendiary
 	Warhead@Shr: FireShrapnel
 		InvalidTargets: FireImmune

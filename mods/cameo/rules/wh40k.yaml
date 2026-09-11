@@ -23,27 +23,27 @@ World:
 		Game: Dawn of War
 		Side: Factions
 		Description: Chaos from WH40K\nBased on Dawn of War\nSupport powers: Horror Teleport\n- Super Weapon unit: Prince Demon
-	FactionCA@wh40ktau:
-		Name: Tau WH40K
-		InternalName: tau
-		Game: Dawn of War
-		Side: Factions
-		Description: Tau from WH40K\nBased on Dawn of War\nSupport powers: Air Cast Airstrike\n- Super Weapon unit: Greater Knarloc
-		Selectable: False
-	FactionCA@wh40keldar:
-		Name: Eldar WH40K
-		InternalName: eldar
-		Game: Dawn of War
-		Side: Factions
-		Description: Eldar from WH40K\nBased on Dawn of War
-		Selectable: False
-	FactionCA@wh40knecron:
-		Name: Necrons WH40K
-		InternalName: necron
-		Game: Dawn of War
-		Side: Factions
-		Description: Necron from WH40K\nBased on Dawn of War
-		Selectable: False
+	# FactionCA@wh40ktau:
+	# 	Name: Tau WH40K
+	# 	InternalName: tau
+	# 	Game: Dawn of War
+	# 	Side: Factions
+	# 	Description: Tau from WH40K\nNon-Canon Race that appeared in Dawn of War\nSupport powers: Air Cast Airstrike\n- Super Weapon unit: Greater Knarloc
+	# 	Selectable: False
+	# FactionCA@wh40keldar:
+	# 	Name: Eldar WH40K
+	# 	InternalName: eldar
+	# 	Game: Dawn of War
+	# 	Side: Factions
+	# 	Description: Eldar from WH40K\nBased on Dawn of War
+	# 	Selectable: False
+	# FactionCA@wh40knecron:
+	# 	Name: Necrons WH40K
+	# 	InternalName: necron
+	# 	Game: Dawn of War
+	# 	Side: Factions
+	# 	Description: Necron from WH40K\nBased on Dawn of War
+	# 	Selectable: False
 	FactionCA@RandomDOW:
 		Name: Any
 		InternalName: RandomDOW
@@ -266,7 +266,7 @@ wh40kstrategy.oldwip:
 	TooltipDescription@other:
 		Description: Capture to receive additional funds.
 		ValidRelationships: Neutral, Enemy
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: BarrelExplode
 	GpsDot:
 		String: Oil
@@ -1711,7 +1711,7 @@ wh40kheavybolt:
 	Inherits: ^Defense
 	Inherits@shape: ^2x2Shape
 	Inherits@AUTOTARGET: ^AutoTargetAll
-	Inherits@IDISABLE: ^DisabledOverlay
+	#Inherits@IDISABLE: ^DisabledOverlay
 	Inherits@EMP: ^TurretEMP
 	Valued:
 		Cost: 1000
@@ -1769,7 +1769,7 @@ wh40kheavybolt2:
 	Inherits: ^Defense
 	Inherits@shape: ^2x2Shape
 	Inherits@AUTOTARGET: ^AutoTargetAll
-	Inherits@IDISABLE: ^DisabledOverlay
+	#Inherits@IDISABLE: ^DisabledOverlay
 	Inherits@EMP: ^TurretEMP
 	Valued:
 		Cost: 1500
@@ -3835,6 +3835,7 @@ wh40kbanewolf:
 	RenderSprites:
 	Voiced:
 		VoiceSet: WH40KImperialVehicleVoice
+
 wh40kharv:
 	Inherits: ^Tank
 	Inherits@selection: ^SelectableEconomicUnit
@@ -3860,6 +3861,8 @@ wh40kharv:
 		SearchFromProcRadius: 15
 		SearchFromHarvesterRadius: 8
 		EmptyCondition: no-tiberium
+	StoresResources:
+		Capacity: 30
 	Mobile:
 		Speed: 80
 	Health:
@@ -3872,10 +3875,10 @@ wh40kharv:
 		Range: 4c0
 	WithHarvestAnimation:
 	WithDockingAnimation:
-	Explodes:
+	FireWarheadsOnDeath:
 		RequiresCondition: !no-tiberium
 		Weapon: TiberiumExplosion
-	Explodes@empty:
+	FireWarheadsOnDeath@empty:
 		RequiresCondition: no-tiberium
 		Weapon: UnitExplodeHarvEmpty
 	SelectionDecorations:
@@ -3924,7 +3927,7 @@ wh40kbasilisk:
 	WithMuzzleOverlay:
 	AutoTarget:
 		InitialStanceAI: Defend
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: ArtilleryShell
 		EmptyWeapon: UnitExplode
 		LoadedChance: 75
@@ -4155,7 +4158,7 @@ wh40ksentinel:
 		RequiresCondition: ifv-demo && !disabled
 	KillsSelf@ivan:
 		RequiresCondition: ifv-demo && (triggered || invulnerability)
-	Explodes@ivan:
+	FireWarheadsOnDeath@ivan:
 		Weapon: RA2DemoBomb
 		EmptyWeapon: RA2DemoBomb
 		RequiresCondition: ifv-demo && !disabled
@@ -4340,7 +4343,7 @@ wh40kbaneblade:
 		ValidRelationships: Neutral, Enemy
 		RequiresCondition: swreveal
 wh40kmaurader.napalm:
-	Inherits: ^Plane
+	Inherits: ^RANeutralPlane
 	Tooltip:
 		Name: Maraunder Bomber
 	Valued:
@@ -5400,7 +5403,7 @@ wh40kbolterturret:
 	Inherits: ^Defense
 	Inherits@shape: ^2x2Shape
 	Inherits@AUTOTARGET: ^AutoTargetAll
-	Inherits@IDISABLE: ^DisabledOverlay
+	#Inherits@IDISABLE: ^DisabledOverlay
 	Inherits@EMP: ^TurretEMP
 	Valued:
 		Cost: 900
@@ -5458,7 +5461,7 @@ wh40kbolterturret2:
 	Inherits: ^Defense
 	Inherits@shape: ^2x2Shape
 	Inherits@AUTOTARGET: ^AutoTargetAll
-	Inherits@IDISABLE: ^DisabledOverlay
+	#Inherits@IDISABLE: ^DisabledOverlay
 	Inherits@EMP: ^TurretEMP
 	Valued:
 		Cost: 1400
@@ -6707,7 +6710,7 @@ wh40klandspeed:
 	Targetable@AIRBORNE:
 		TargetTypes: Air, Aircraft
 		RequiresCondition: airborne && !chronobeamed
-	Explodes@airborne:
+	FireWarheadsOnDeath@airborne:
 		Weapon: HeliExplode
 		EmptyWeapon: HeliExplode
 		RequiresCondition: airborne
@@ -7025,7 +7028,7 @@ wh40kdreadh:
 		Amount: -60
 
 wh40kthunderhawk:
-	Inherits: ^Plane
+	Inherits: ^RANeutralPlane
 	Tooltip:
 		Name: Thunderhawk
 	Aircraft:
@@ -7045,6 +7048,7 @@ wh40kthunderhawk:
 	WithCargoPipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: true
+
 wh40kharvm:
 	Inherits: ^Tank
 	Inherits@selection: ^SelectableEconomicUnit
@@ -7070,6 +7074,8 @@ wh40kharvm:
 		SearchFromProcRadius: 15
 		SearchFromHarvesterRadius: 8
 		EmptyCondition: no-tiberium
+	StoresResources:
+		Capacity: 35
 	Mobile:
 		Speed: 80
 	Health:
@@ -7082,10 +7088,10 @@ wh40kharvm:
 		Range: 4c0
 	WithHarvestAnimation:
 	WithDockingAnimation:
-	Explodes:
+	FireWarheadsOnDeath:
 		RequiresCondition: !no-tiberium
 		Weapon: TiberiumExplosion
-	Explodes@empty:
+	FireWarheadsOnDeath@empty:
 		RequiresCondition: no-tiberium
 		Weapon: UnitExplodeHarvEmpty
 	SelectionDecorations:
@@ -7355,6 +7361,7 @@ wh40krhino.e4:
 	ProducibleWithLevel@wh40kveteranupgrade2:
 		Prerequisites: wh40kveteranupgrade2
 		InitialLevels: 1
+
 ^WH40KMarineVehicleUpgrades:
 	GrantConditionOnPrerequisite@wh40kupcapincrease2:
 		Condition: wh40kupcapincrease2
@@ -7362,6 +7369,7 @@ wh40krhino.e4:
 	ProductionTimeMultiplier@wh40kupcapincrease2:
 		RequiresCondition: wh40kupcapincrease2
 		Modifier: 70
+
 wh40kupmonastery:
 	Inherits: ^upgrade.template
 	Tooltip:
@@ -7377,6 +7385,7 @@ wh40kupmonastery:
 		Image: wh40kupmonastery
 	ProvidesPrerequisite:
 		Prerequisite: wh40kupmonastery
+
 wh40kupmonastery2:
 	Inherits: ^upgrade.template
 	Tooltip:
@@ -7408,6 +7417,7 @@ wh40kupcapincrease:
 		Image: wh40kupcapincrease
 	ProvidesPrerequisite:
 		Prerequisite: wh40kupcapincrease
+
 wh40kupcapincrease2:
 	Inherits: ^upgrade.template
 	Tooltip:
@@ -7439,6 +7449,7 @@ wh40kupbionics:
 		Image: wh40kupbionics
 	ProvidesPrerequisite:
 		Prerequisite: wh40kupbionics
+
 wh40kupbionics2:
 	Inherits: ^upgrade.template
 	Tooltip:
@@ -7454,6 +7465,7 @@ wh40kupbionics2:
 		Image: wh40kupbionics2
 	ProvidesPrerequisite:
 		Prerequisite: wh40kupbionics2
+
 wh40ktargetfinder1:
 	Inherits: ^upgrade.template
 	Tooltip:
@@ -7469,6 +7481,7 @@ wh40ktargetfinder1:
 		Image: wh40ktargetfinder1
 	ProvidesPrerequisite:
 		Prerequisite: wh40ktargetfinder1
+
 wh40ktargetfinder2:
 	Inherits: ^upgrade.template
 	Tooltip:
@@ -7484,6 +7497,7 @@ wh40ktargetfinder2:
 		Image: wh40ktargetfinder2
 	ProvidesPrerequisite:
 		Prerequisite: wh40ktargetfinder2
+
 wh40kpowerswords:
 	Inherits: ^upgrade.template
 	Tooltip:
@@ -7499,6 +7513,7 @@ wh40kpowerswords:
 		Image: wh40kpowerswords
 	ProvidesPrerequisite:
 		Prerequisite: wh40kpowerswords
+
 wh40kpowerfists:
 	Inherits: ^upgrade.template
 	Tooltip:
@@ -7514,6 +7529,7 @@ wh40kpowerfists:
 		Image: wh40kpowerfists
 	ProvidesPrerequisite:
 		Prerequisite: wh40kpowerfists
+
 wh40kscoutinfiltration:
 	Inherits: ^upgrade.template
 	Tooltip:
@@ -7529,6 +7545,7 @@ wh40kscoutinfiltration:
 		Image: wh40kscoutinfiltration
 	ProvidesPrerequisite:
 		Prerequisite: wh40kscoutinfiltration
+
 wh40kskullprobestealth:
 	Inherits: ^upgrade.template
 	Tooltip:
@@ -7544,6 +7561,7 @@ wh40kskullprobestealth:
 		Image: wh40kskullprobestealth
 	ProvidesPrerequisite:
 		Prerequisite: wh40kskullprobestealth
+
 wh40kveteranupgrade1:
 	Inherits: ^upgrade.template
 	Tooltip:
@@ -7559,6 +7577,7 @@ wh40kveteranupgrade1:
 		Image: wh40kveteranupgrade1
 	ProvidesPrerequisite:
 		Prerequisite: wh40kveteranupgrade1
+
 wh40kveteranupgrade2:
 	Inherits: ^upgrade.template
 	Tooltip:
@@ -7574,6 +7593,7 @@ wh40kveteranupgrade2:
 		Image: wh40kveteranupgrade2
 	ProvidesPrerequisite:
 		Prerequisite: wh40kveteranupgrade2
+
 wh40kupmachineculticon:
 	Inherits: ^upgrade.template
 	Tooltip:
@@ -7589,6 +7609,7 @@ wh40kupmachineculticon:
 		Image: wh40kupmachineculticon
 	ProvidesPrerequisite:
 		Prerequisite: wh40kupmachineculticon
+
 wh40kupfraggrenade:
 	Inherits: ^upgrade.template
 	Tooltip:
@@ -7604,6 +7625,7 @@ wh40kupfraggrenade:
 		Image: wh40kupfraggrenade
 	ProvidesPrerequisite:
 		Prerequisite: wh40kupfraggrenade
+
 wh40kfuriuscharge:
 	Inherits: ^upgrade.template
 	Tooltip:
@@ -7738,6 +7760,7 @@ wh40kmarine_rank:
 	Armament@GRENADE: ##########
 		Weapon: Wh40kMarineGrenade
 		RequiresCondition: wh40kupfraggrenade
+
 wh40kscoutsquad_rank:
 	Inherits@1: wh40kguardsquad
 	MobSpawnerMaster:
@@ -7824,6 +7847,7 @@ wh40kmcvo:
 	Inherits@EXT: ^ExternalConditions
 	ProvidesPrerequisite@faction:
 		Prerequisite: mmorkz
+
 ^ArmedBaseBuilding:
 	Inherits: ^Defense
 	Inherits@AUTOTARGET: ^AutoTargetAll
@@ -7981,6 +8005,7 @@ wh40ksettlement:
 		Prerequisites: wh40kmoresluggas
 	Voiced:
 		VoiceSet: WH40KOrkSettlementVoice
+
 wh40kpowero:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^2x2Shape
@@ -8031,6 +8056,7 @@ wh40kpowero:
 		RequiresCondition: wh40kupenergy2
 	Voiced:
 		VoiceSet: WH40KOrkGeneratorVoice
+
 wh40kbarro:
 	Inherits: ^ArmedBaseBuilding
 	Inherits@shape: ^2x2Shape
@@ -8132,11 +8158,12 @@ wh40kbarro:
 		Turrets: primary, secondary
 	Voiced:
 		VoiceSet: WH40KOrkBarracksVoice
+
 wh40kwhaaag:
 	Inherits: ^Defense
 	Inherits@shape: ^2x2Shape
 	Inherits@AUTOTARGET: ^AutoTargetAll
-	Inherits@IDISABLE: ^DisabledOverlay
+	#Inherits@IDISABLE: ^DisabledOverlay
 	Inherits@EMP: ^TurretEMP
 	Inherits@dakka: ^WH40KDakkaUpgrade
 	Valued:
@@ -8652,6 +8679,8 @@ wh40kgretchin:
 		BaleUnloadAmount: 2
 		FullyLoadedSpeed: 100
 		MaxUnloadQueue: 9
+	StoresResources:
+		Capacity: 2
 	WithHarvestAnimation:
 	WithDockingAnimation:
 	WithSpriteBody:
@@ -8774,7 +8803,7 @@ wh40kstormboyz:
 		Speed: 126
 	Hovers:
 		RequiresCondition: (airborne || swimming) && !disabled
-	Explodes@airborne:
+	FireWarheadsOnDeath@airborne:
 		Weapon: HeliExplode
 		EmptyWeapon: HeliExplode
 		RequiresCondition: airborne
@@ -10774,6 +10803,8 @@ wh40kharvc:
 		SearchFromProcRadius: 15
 		SearchFromHarvesterRadius: 8
 		EmptyCondition: no-tiberium
+	StoresResources:
+		Capacity: 35
 	Mobile:
 		Speed: 80
 	Health:
@@ -10786,10 +10817,10 @@ wh40kharvc:
 		Range: 4c0
 	WithHarvestAnimation:
 	WithDockingAnimation:
-	Explodes:
+	FireWarheadsOnDeath:
 		RequiresCondition: !no-tiberium
 		Weapon: TiberiumExplosion
-	Explodes@empty:
+	FireWarheadsOnDeath@empty:
 		RequiresCondition: no-tiberium
 		Weapon: UnitExplodeHarvEmpty
 	SelectionDecorations:
@@ -10986,6 +11017,7 @@ wh40kchaosrhino:
 	WithCargoPipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: true
+
 wh40kdefiler:
 	Inherits: ^Vehicle
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
@@ -11115,8 +11147,9 @@ wh40khelltalon:
 	Voiced:
 		VoiceSet: WH40KChaosVehicleVoice
 	RenderSprites:
+
 wh40khelltalon.toxins:
-	Inherits: ^Plane
+	Inherits: ^RANeutralPlane
 	Tooltip:
 		Name: Hell Talon Toxin Bomber
 	Valued:
@@ -11719,7 +11752,7 @@ wh40kraptor:
 		Speed: 126
 	Hovers:
 		RequiresCondition: (airborne || swimming) && !disabled
-	Explodes@airborne:
+	FireWarheadsOnDeath@airborne:
 		Weapon: HeliExplode
 		EmptyWeapon: HeliExplode
 		RequiresCondition: airborne
@@ -13064,7 +13097,7 @@ wh40kbolterturretc:
 	Inherits: ^Defense
 	Inherits@shape: ^2x2Shape
 	Inherits@AUTOTARGET: ^AutoTargetAll
-	Inherits@IDISABLE: ^DisabledOverlay
+	#Inherits@IDISABLE: ^DisabledOverlay
 	Inherits@EMP: ^TurretEMP
 	Valued:
 		Cost: 900
@@ -13122,7 +13155,7 @@ wh40kbolterturret2c:
 	Inherits: ^Defense
 	Inherits@shape: ^2x2Shape
 	Inherits@AUTOTARGET: ^AutoTargetAll
-	Inherits@IDISABLE: ^DisabledOverlay
+	#Inherits@IDISABLE: ^DisabledOverlay
 	Inherits@EMP: ^TurretEMP
 	Valued:
 		Cost: 1400
@@ -13404,6 +13437,7 @@ wh40kpowere:
 	PowerMultiplier@wh40kupenergy2:
 		Modifier: 150
 		RequiresCondition: wh40kupenergy2
+
 wh40kbarre:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^2x2Shape
@@ -13474,6 +13508,7 @@ wh40kbarre:
 	DetectCloaked:
 		Range: 5c0
 		RequiresCondition: !lowpower
+
 wh40kgate:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^2x2Shape
@@ -13545,7 +13580,7 @@ wh40kgate:
 	BaseProvider:
 		Range: 8c0
 #######################################
-# Tau Infantry
+# Eldar Infantry
 #######################################
 wh40kguardian:
 	Inherits: ^Soldier
@@ -14212,6 +14247,7 @@ wh40kfirewarrior:
 		ConsumedByCapture: False
 		EnterCursor: ability
 		EnterBlockedCursor: move-blocked
+
 wh40kpathfinder:
 	Inherits: wh40kfirewarrior
 	Valued:
@@ -14312,6 +14348,7 @@ wh40kkroot:
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: True
+
 wh40kkrootshaper:
 	Inherits: wh40kkroot
 	Inherits@sargent: ^WH40KSargent
@@ -14330,6 +14367,7 @@ wh40kkrootshaper:
 		BuildLimit: 10
 	RenderSprites:
 		Image: wh40kkrootshaper
+
 wh40kxv15:
 	Inherits: ^Soldier
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -14392,6 +14430,7 @@ wh40kxv15:
 		UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
 		PauseOnCondition: cloak-force-disabled || base-reveal
 		IsPlayerPalette: true
+
 wh40kshavre:
 	Inherits: wh40kxv15
 	Inherits@sargent: ^WH40KSargent
@@ -14415,6 +14454,7 @@ wh40kshavre:
 		Name: garrisoned
 		Weapon: WH40KShavreRifle
 		MuzzleSequence: garrison-muzzle
+
 wh40kfirewarriorsargent:
 	Inherits: wh40kfirewarrior
 	Inherits@sargent: ^WH40KSargent
@@ -14501,6 +14541,7 @@ wh40kdevilfish:
 	WithCargoPipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: true
+
 wh40kskyray:
 	Inherits: ^Tank
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -14551,6 +14592,7 @@ wh40kskyray:
 	RenderSprites:
 	Voiced:
 		VoiceSet: WH40KImperialVehicleVoice
+
 wh40khammerhead:
 	Inherits: ^Tank
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -14612,6 +14654,7 @@ wh40khammerhead:
 	RenderSprites:
 	Voiced:
 		VoiceSet: WH40KImperialVehicleVoice
+
 wh40kdronesquad:
 	Inherits@1: ^ExistsInWorld
 	Inherits@3: ^SpriteActor
@@ -14673,6 +14716,7 @@ wh40kdronesquad:
 		Image: wh40kdronesquad
 	Voiced:
 		VoiceSet: WH40KCultistVoice
+
 wh40kdronesquadslav:
 	Inherits: ^Tank
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -14721,10 +14765,12 @@ wh40kdronesquadslav:
 	RejectsOrders:
 	-Passenger:
 	MobSpawnerSlave:
+
 wh40kdronesquadslav2:
 	Inherits: wh40kdronesquadslav
 	RenderSprites:
 		Image: wh40kdronesquad2
+
 wh40kdronehard:
 	Inherits: ^Tank
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -14781,6 +14827,7 @@ wh40kdronehard:
 		ExitByBudding: false
 		AggregateHealth: false
 		SpawnAllAtOnce: false
+
 wh40kharvt:
 	Inherits: ^Tank
 	Inherits@selection: ^SelectableEconomicUnit
@@ -14801,12 +14848,14 @@ wh40kharvt:
 		DecorationBounds: 1536, 1536
 	Harvester:
 		PipCount: 9
-		Capacity: 35
+		Capacity: 30
 		BaleLoadDelay: 4
 		BaleUnloadDelay: 1
 		SearchFromProcRadius: 15
 		SearchFromHarvesterRadius: 8
 		EmptyCondition: no-tiberium
+	StoresResources:
+		Capacity: 30
 	Mobile:
 		Speed: 80
 	Health:
@@ -14819,10 +14868,10 @@ wh40kharvt:
 		Range: 4c0
 	WithHarvestAnimation:
 	WithDockingAnimation:
-	Explodes:
+	FireWarheadsOnDeath:
 		RequiresCondition: !no-tiberium
 		Weapon: TiberiumExplosion
-	Explodes@empty:
+	FireWarheadsOnDeath@empty:
 		RequiresCondition: no-tiberium
 		Weapon: UnitExplodeHarvEmpty
 	SelectionDecorations:
