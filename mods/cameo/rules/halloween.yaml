@@ -6,9 +6,14 @@ World:
 		Side: Factions
 		Description: Halloween
 	####################################################################################################
-	#		Valentines
+	#		Halloween
 	####################################################################################################
 	
+	#Halloween Cultist Commented out
+	#halloween_franky Commented out
+	#DetonateWeaponPower@roast: Commented out
+	#halloween_blob Commented out
+
 	StartingUnits@mcvonlyhalloween:
 		Class: none
 		ClassName: MCV Only
@@ -81,6 +86,62 @@ Player:
 		Prerequisite: faction_halloween
 		Factions: Halloween
 
+####################################################################################################
+#		Forced Inherit
+####################################################################################################
+
+PINKY_FI:
+	Inherits: ^Monster
+	Inherits@3: ^SpriteActor
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: Vehicle
+		BuildAtProductionType: Vehicle
+		BuildPaletteOrder: 215
+		Prerequisites: fix, atek, ~vehicles.allies, ~techlevel.high, ~bio
+		Description: A Demon that shoots devastation fireballs\nclearing waves of infantry and buildings in its path.\nStrong vs Everything
+	-WithDamageOverlay:
+	Valued:
+		Cost: 100
+	Tooltip:
+		Name: Demon
+	Health:
+		HP: 80000
+	Armor:
+		Type: Wood
+	Mobile:
+		Voice: Move
+		Speed: 55
+		Locomotor: heavytracked
+	Selectable:
+		Voice: Select
+		Bounds: 49152, 56405, 0, 9088
+	AutoTarget:
+	Armament@PRIMARY:
+		LocalOffset: 600,0,0
+		Weapon: FireBurst_FI
+		FireDelay: 1
+	Voiced:
+		VoiceSet: PinkVoices
+		Volume: 10
+	AnnounceOnKill:
+		Voice: Kill
+	DeathSounds:
+		Voice: Die
+		VolumeMultiplier: 3
+	SelectionDecorations:
+	WithDeathAnimation:
+		DeathSequencePalette: pinky
+		DeathPaletteIsPlayerPalette: false
+	# -Explodes:
+	RenderSprites:
+		Image: pinky_fi
+		Palette: pinky
+	BodyOrientation:
+	Chronoshiftable:
+		ExplodeInstead: True
+	DetectCloaked:
+
 halloween_blackcitadel:
 	GrantExternalConditionToOwner@BuildingsOwned:
 		Condition: BuildingsOwned
@@ -107,6 +168,12 @@ halloween_blackcitadel:
 		Type: Wood
 	RevealsShroud:
 		Range: 9c0
+	Transforms:
+		IntoActor: halloween_mcv
+		Offset: -1,-1
+		Facing: 432
+		TransformSounds: constru2.aud, hvydoor1.aud
+		NoTransformNotification: BuildingCannotPlaceAudio
 	Production@NORMAL:
 		Produces: Building, Defence
 		RequiresCondition: !classicproductionqueues
@@ -163,22 +230,22 @@ halloween_blackcitadel:
 		Actor: halloween_rockgolem_small
 	SpawnActorOnDeath@death4:
 		Actor: halloween_rockgolem_small
-	DetonateWeaponPower@roast:
-		OrderName: HalloweenSkeletonRoast
-		PauseOnCondition: lowpower
-		Icon: wh40ksluggaicon
-		Cursor: ability
-		ChargeInterval: 14000
-		Name: Skeleton Roasting
-		ActivationDelay: 25
-		Description: Teleports a large group of units\nacross the map.
-		Weapon: halloween_skeleton_roasting
-		CameraActor: camera.placeholderhack
-		CameraRemoveDelay: 0
-		SelectTargetSpeechNotification: SelectTarget
-		InsufficientPowerSpeechNotification: InsufficientPower
-		DisplayRadarPing: True
-		Prerequisites: halloween_upgrade.ghost
+	# DetonateWeaponPower@roast:
+	# 	OrderName: HalloweenSkeletonRoast
+	# 	PauseOnCondition: lowpower
+	# 	Icon: wh40ksluggaicon
+	# 	Cursor: ability
+	# 	ChargeInterval: 14000
+	# 	Name: Skeleton Roasting
+	# 	ActivationDelay: 25
+	# 	Description: Teleports a large group of units\nacross the map.
+	# 	Weapon: halloween_skeleton_roasting
+	# 	CameraActor: camera.placeholderhack
+	# 	CameraRemoveDelay: 0
+	# 	SelectTargetSpeechNotification: SelectTarget
+	# 	InsufficientPowerSpeechNotification: InsufficientPower
+	# 	DisplayRadarPing: True
+	# 	Prerequisites: halloween_upgrade.ghost
 	Voiced:
 		VoiceSet: Halloween_Necropolis_Voice
 halloween_crypto:
@@ -403,7 +470,7 @@ halloween_graveyard.turbine:
 		RemoveInstead: true
 
 halloween_daemonpit:
-	Inherits: ^BunkerBaseBuilding
+	# Inherits: ^BunkerBaseBuilding
 	Inherits@shape: ^4x3Shape
 	Inherits@CPQWP: ^CPQConditionWithPrimary
 	Inherits@prod: ^ProducesUnits
@@ -466,7 +533,7 @@ halloween_daemonpit:
 	ProvidesPrerequisite@vehicleproduction:
 		Prerequisite: vehicleproduction
 	RenderSprites:
-		Image: wh40kdaemonpit
+		Image: wh40kdaemonpit_fi
 	SpawnActorOnDeath@death1:
 		Actor: halloween_rockgolem_small
 	SpawnActorOnDeath@death2:
@@ -845,7 +912,7 @@ halloween_dkghost_small:
 		Speed: 70
 	Hovers:
 		RequiresCondition: (airborne || swimming) && !disabled
-	Explodes@airborne:
+	FireWarheadsOnDeath:
 		Weapon: HeliExplode
 		EmptyWeapon: HeliExplode
 		RequiresCondition: airborne
@@ -872,7 +939,7 @@ halloween_dkghost_small:
 	AutoTarget:
 		ScanRadius: 4
 	Armament@PRIMARY: ##########
-		Weapon: ZClaw1
+		Weapon: ZClaw1_FI
 		RequiresCondition: !airborne && !chronobeamed
 	Armament@GARRISONED: ##########
 		Name: garrisoned
@@ -904,7 +971,7 @@ halloween_dkghost_small:
 	GrantConditionOnPrerequisite@ghost:
 		Prerequisites: halloween_upgrade.ghost
 		Condition: halloween_upgrade.ghost
-	Explodes@ghost:
+	FireWarheadsOnDeath:
 		Weapon: halloween_ghost_spawner
 		EmptyWeapon: halloween_ghost_spawner
 		RequiresCondition: halloween_upgrade.ghost
@@ -929,7 +996,7 @@ halloween_bat:
 		Speed: 70
 	Hovers:
 		RequiresCondition: (airborne || swimming) && !disabled
-	Explodes@airborne:
+	FireWarheadsOnDeath:
 		Weapon: HeliExplode
 		EmptyWeapon: HeliExplode
 		RequiresCondition: airborne
@@ -983,7 +1050,7 @@ halloween_bat:
 	GrantConditionOnPrerequisite@ghost:
 		Prerequisites: halloween_upgrade.ghost
 		Condition: halloween_upgrade.ghost
-	Explodes@ghost:
+	FireWarheadsOnDeath:
 		Weapon: halloween_ghost_spawner
 		EmptyWeapon: halloween_ghost_spawner
 		RequiresCondition: halloween_upgrade.ghost
@@ -1024,7 +1091,7 @@ halloween_skeleton:
 	GrantConditionOnPrerequisite@ghost:
 		Prerequisites: halloween_upgrade.ghost
 		Condition: halloween_upgrade.ghost
-	Explodes@ghost:
+	FireWarheadsOnDeath:
 		Weapon: halloween_ghost_spawner
 		EmptyWeapon: halloween_ghost_spawner
 		RequiresCondition: halloween_upgrade.ghost
@@ -1062,7 +1129,7 @@ halloween_demon:
 	GrantConditionOnPrerequisite@ghost:
 		Prerequisites: halloween_upgrade.ghost
 		Condition: halloween_upgrade.ghost
-	Explodes@ghost:
+	FireWarheadsOnDeath:
 		Weapon: halloween_ghost_spawner
 		EmptyWeapon: halloween_ghost_spawner
 		RequiresCondition: halloween_upgrade.ghost
@@ -1084,8 +1151,9 @@ halloween_demon:
 	DamageMultiplier@mana:
 		Modifier: 75
 		RequiresCondition: halloween_upgrade.mana
+
 halloween_pinky:
-	Inherits: PINKY
+	Inherits: PINKY_FI
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Tooltip:
 		Name: Pinky Demon
@@ -1112,7 +1180,7 @@ halloween_pinky:
 	GrantConditionOnPrerequisite@ghost:
 		Prerequisites: halloween_upgrade.ghost
 		Condition: halloween_upgrade.ghost
-	Explodes@ghost:
+	FireWarheadsOnDeath:
 		Weapon: halloween_ghost_spawner_bigunit
 		EmptyWeapon: halloween_ghost_spawner_bigunit
 		RequiresCondition: halloween_upgrade.ghost
@@ -1156,7 +1224,7 @@ halloween_cow:
 	GrantConditionOnPrerequisite@ghost:
 		Prerequisites: halloween_upgrade.ghost
 		Condition: halloween_upgrade.ghost
-	Explodes@ghost:
+	FireWarheadsOnDeath:
 		Weapon: halloween_ghost_spawner
 		EmptyWeapon: halloween_ghost_spawner
 		RequiresCondition: halloween_upgrade.ghost
@@ -1170,18 +1238,20 @@ halloween_cow:
 	FirepowerMultiplier@axe:
 		Modifier: 125
 		RequiresCondition: halloween_upgrade.axe
-halloween_cultist:
-	Inherits: wh40kcultistsquad
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
-	Buildable:
-		Queue: Vehicle, RAVehicle
-		BuildPaletteOrder: 30
-		BuildDurationModifier: 60
-		Prerequisites: halloween_daemonpit
-	Valued:
-		Cost: 650
-	RenderSprites:
-		Image: wh40kcultistsquad
+
+# halloween_cultist:
+# 	Inherits: wh40kcultistsquad
+# 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+# 	Buildable:
+# 		Queue: Vehicle, RAVehicle
+# 		BuildPaletteOrder: 30
+# 		BuildDurationModifier: 60
+# 		Prerequisites: halloween_daemonpit
+# 	Valued:
+# 		Cost: 650
+# 	RenderSprites:
+# 		Image: wh40kcultistsquad
+
 halloween_rockgolem:
 	Inherits: ^DINO
 	Tooltip:
@@ -1210,7 +1280,7 @@ halloween_rockgolem:
 	GrantConditionOnPrerequisite@ghost:
 		Prerequisites: halloween_upgrade.ghost
 		Condition: halloween_upgrade.ghost
-	Explodes@ghost:
+	FireWarheadsOnDeath:
 		Weapon: halloween_ghost_spawner_bigunit
 		EmptyWeapon: halloween_ghost_spawner_bigunit
 		RequiresCondition: halloween_upgrade.ghost
@@ -1248,7 +1318,7 @@ halloween_rockgolem_small:
 	GrantConditionOnPrerequisite@ghost:
 		Prerequisites: halloween_upgrade.ghost
 		Condition: halloween_upgrade.ghost
-	Explodes@ghost:
+	FireWarheadsOnDeath:
 		Weapon: halloween_ghost_spawner
 		EmptyWeapon: halloween_ghost_spawner
 		RequiresCondition: halloween_upgrade.ghost
@@ -1309,36 +1379,38 @@ halloween_spider:
 	GrantConditionOnPrerequisite@ghost:
 		Prerequisites: halloween_upgrade.ghost
 		Condition: halloween_upgrade.ghost
-	Explodes@ghost:
+	FireWarheadsOnDeath:
 		Weapon: halloween_ghost_spawner
 		EmptyWeapon: halloween_ghost_spawner
 		RequiresCondition: halloween_upgrade.ghost
-halloween_franky:
-	Inherits: wolfe3
-	Valued:
-		Cost: 900
-	Tooltip:
-		Name: Frankenstein
-	Buildable:
-		BuildPaletteOrder: 30
-		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles
-		Prerequisites: ~techlevel.medium
-		Queue: Infantry, RAInfantry
-	Mobile:
-		Speed: 46
-	Health:
-		HP: 25000
-	RenderSprites:
-	-Crushable:
-	RenderSprites:
-		Image: halloween_franky
-	GrantConditionOnPrerequisite@ghost:
-		Prerequisites: halloween_upgrade.ghost
-		Condition: halloween_upgrade.ghost
-	Explodes@ghost:
-		Weapon: halloween_ghost_spawner
-		EmptyWeapon: halloween_ghost_spawner
-		RequiresCondition: halloween_upgrade.ghost
+
+# halloween_franky:
+# 	Inherits: wolfe3
+# 	Valued:
+# 		Cost: 900
+# 	Tooltip:
+# 		Name: Frankenstein
+# 	Buildable:
+# 		BuildPaletteOrder: 30
+# 		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles
+# 		Prerequisites: ~techlevel.medium
+# 		Queue: Infantry, RAInfantry
+# 	Mobile:
+# 		Speed: 46
+# 	Health:
+# 		HP: 25000
+# 	RenderSprites:
+# 	-Crushable:
+# 	RenderSprites:
+# 		Image: halloween_franky
+# 	GrantConditionOnPrerequisite@ghost:
+# 		Prerequisites: halloween_upgrade.ghost
+# 		Condition: halloween_upgrade.ghost
+# 	Explodes@ghost:
+# 		Weapon: halloween_ghost_spawner
+# 		EmptyWeapon: halloween_ghost_spawner
+# 		RequiresCondition: halloween_upgrade.ghost
+
 halloween_clown:
 	Inherits: ^Soldier
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -1388,10 +1460,11 @@ halloween_clown:
 	GrantConditionOnPrerequisite@ghost:
 		Prerequisites: halloween_upgrade.ghost
 		Condition: halloween_upgrade.ghost
-	Explodes@ghost:
+	FireWarheadsOnDeath:
 		Weapon: halloween_ghost_spawner
 		EmptyWeapon: halloween_ghost_spawner
 		RequiresCondition: halloween_upgrade.ghost
+
 halloween_clown2:
 	Inherits: ^Soldier
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -1441,10 +1514,11 @@ halloween_clown2:
 	GrantConditionOnPrerequisite@ghost:
 		Prerequisites: halloween_upgrade.ghost
 		Condition: halloween_upgrade.ghost
-	Explodes@ghost:
+	FireWarheadsOnDeath:
 		Weapon: halloween_ghost_spawner
 		EmptyWeapon: halloween_ghost_spawner
 		RequiresCondition: halloween_upgrade.ghost
+
 halloween_clown3:
 	Inherits: ^Soldier
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -1514,7 +1588,7 @@ halloween_clown3:
 	GrantConditionOnPrerequisite@ghost:
 		Prerequisites: halloween_upgrade.ghost
 		Condition: halloween_upgrade.ghost
-	Explodes@ghost:
+	FireWarheadsOnDeath:
 		Weapon: halloween_ghost_spawner
 		EmptyWeapon: halloween_ghost_spawner
 		RequiresCondition: halloween_upgrade.ghost
@@ -1566,7 +1640,7 @@ halloween_sweettooth:
 		Condition: halloween_upgrade.ghost
 	Voiced:
 		VoiceSet: Halloween_Clowncar_Voice
-	Explodes@ghost:
+	FireWarheadsOnDeath:
 		Weapon: halloween_ghost_spawner_bigunit
 		EmptyWeapon: halloween_ghost_spawner_bigunit
 		RequiresCondition: halloween_upgrade.ghost
@@ -1617,7 +1691,7 @@ halloween_clowncar:
 	GainsExperience:
 		LevelUpNotification: LevelUpRA2
 	RenderSprites:
-	Explodes@healer:
+	FireWarheadsOnDeath:
 		Weapon: FakeHealtAPC
 	WithCargoPipsDecoration:
 		Position: BottomLeft
@@ -1757,7 +1831,7 @@ halloween_skeleton_archer:
 	GrantConditionOnPrerequisite@ghost:
 		Prerequisites: halloween_upgrade.ghost
 		Condition: halloween_upgrade.ghost
-	Explodes@ghost:
+	FireWarheadsOnDeath:
 		Weapon: halloween_ghost_spawner
 		EmptyWeapon: halloween_ghost_spawner
 		RequiresCondition: halloween_upgrade.ghost
@@ -1770,128 +1844,129 @@ halloween_skeleton_archer:
 	RangeMultiplier@bows:
 		Modifier: 120
 		RequiresCondition: halloween_upgrade.bows
-halloween_blob:
-	Inherits: ^Viceroid
-	Inherits@EXPERIENCE: ^GainsExperience
-	Buildable:
-		BuildLimit: 1
-		Queue: Vehicle, RAVehicle
-		BuildPaletteOrder: 100
-		BuildDuration: 1500
-		BuildDurationModifier: 100
-		Description: Mutated abomination and eats everything.\n  Strong vs Infantry, Buildings\n  Weak vs Aircraft
-	Tooltip:
-		Name: Hungry Blob
-	UpdatesPlayerStatistics:
-		AddToArmyValue: true
-	ActorLostNotification:
-	Inherits@EXT: ^ExternalConditions ##########
-	-Armament:
-	ReloadDelayMultiplier@cow:
-		Modifier: 20
-	Armament:
-		Weapon: halloween_SlimeChomp
-		LocalOffset: 384,0,0
-	Valued:
-		Cost: 5000
-	Health:
-		HP: 250000
-	Mobile:
-		Speed: 75
-	Armor:
-		Type: Medium
-	WithSpriteBody:
-		Sequence: idle
-		RequiresCondition: rank-veteran == 0
-	WithSpriteBody@level2:
-		Sequence: idle2
-		RequiresCondition: rank-veteran == 1
-	WithSpriteBody@level3:
-		Sequence: idle3
-		RequiresCondition: rank-veteran == 2
-	WithSpriteBody@level4:
-		Sequence: idle4
-		RequiresCondition: rank-veteran == 3
-	WithSpriteBody@level5:
-		Sequence: idle5
-		RequiresCondition: rank-veteran >= 4
-	SpeedMultiplier@RANK-1:
-		RequiresCondition: rank-veteran == 1
-		Modifier: 95
-	SpeedMultiplier@RANK-2:
-		RequiresCondition: rank-veteran == 2
-		Modifier: 90
-	SpeedMultiplier@RANK-3:
-		RequiresCondition: rank-veteran == 3
-		Modifier: 85
-	SpeedMultiplier@RANK-ELITE:
-		RequiresCondition: rank-elite
-		Modifier: 80
-	DamageMultiplier@RANK-1:
-		RequiresCondition: rank-veteran == 1
-		Modifier: 85
-	DamageMultiplier@RANK-2:
-		RequiresCondition: rank-veteran == 2
-		Modifier: 70
-	DamageMultiplier@RANK-3:
-		RequiresCondition: rank-veteran == 3
-		Modifier: 55
-	DamageMultiplier@RANK-ELITE:
-		RequiresCondition: rank-elite
-		Modifier: 40
-	FirepowerMultiplier@RANK-1:
-		RequiresCondition: rank-veteran == 1
-		Modifier: 125
-	FirepowerMultiplier@RANK-2:
-		RequiresCondition: rank-veteran == 2
-		Modifier: 150
-	FirepowerMultiplier@RANK-3:
-		RequiresCondition: rank-veteran == 3
-		Modifier: 175
-	FirepowerMultiplier@RANK-ELITE:
-		RequiresCondition: rank-elite
-		Modifier: 200
-	SpawnActorOnDeath@1:
-		Actor: halloween_blob
-		RequiresCondition: rank-veteran >= 1
-	SpawnActorOnDeath@2:
-		Actor: halloween_blob
-		RequiresCondition: rank-veteran >= 2
-	SpawnActorOnDeath@3:
-		Actor: halloween_blob
-		RequiresCondition: rank-veteran >= 3
-	SpawnActorOnDeath@4:
-		Actor: halloween_blob
-		RequiresCondition: rank-veteran >= 4
-	ThrowsShrapnel@zero:
-		Weapons: halloween_blob_debris
-		Pieces: 2, 3
-		Range: 1c512, 2c512
-	ThrowsShrapnel@1:
-		Weapons: halloween_blob_debris
-		Pieces: 3, 4
-		Range: 1c512, 2c512
-		RequiresCondition: rank-veteran >= 1
-	ThrowsShrapnel@2:
-		Weapons: halloween_blob_debris
-		Pieces: 4, 5
-		Range: 1c512, 2c512
-		RequiresCondition: rank-veteran >= 2
-	ThrowsShrapnel@3:
-		Weapons: halloween_blob_debris
-		Pieces: 5, 6
-		Range: 1c512, 2c512
-		RequiresCondition: rank-veteran >= 3
-	ThrowsShrapnel@4:
-		Weapons: halloween_blob_debris
-		Pieces: 6, 7
-		Range: 1c512, 2c512
-		RequiresCondition: rank-veteran >= 4
-	ChangesHealth:
-		Step: 100
-		Delay: 1
-		StartIfBelow: 100
-		DamageCooldown: 1
+# halloween_blob:
+# 	Inherits: ^Viceroid
+# 	Inherits@EXPERIENCE: ^GainsExperience
+# 	Buildable:
+# 		BuildLimit: 1
+# 		Queue: Vehicle, RAVehicle
+# 		BuildPaletteOrder: 100
+# 		BuildDuration: 1500
+# 		BuildDurationModifier: 100
+# 		Description: Mutated abomination and eats everything.\n  Strong vs Infantry, Buildings\n  Weak vs Aircraft
+# 	Tooltip:
+# 		Name: Hungry Blob
+# 	UpdatesPlayerStatistics:
+# 		AddToArmyValue: true
+# 	ActorLostNotification:
+# 	Inherits@EXT: ^ExternalConditions ##########
+# 	-Armament:
+# 	ReloadDelayMultiplier@cow:
+# 		Modifier: 20
+# 	Armament:
+# 		Weapon: halloween_SlimeChomp
+# 		LocalOffset: 384,0,0
+# 	Valued:
+# 		Cost: 5000
+# 	Health:
+# 		HP: 250000
+# 	Mobile:
+# 		Speed: 75
+# 	Armor:
+# 		Type: Medium
+# 	WithSpriteBody:
+# 		Sequence: idle
+# 		RequiresCondition: rank-veteran == 0
+# 	WithSpriteBody@level2:
+# 		Sequence: idle2
+# 		RequiresCondition: rank-veteran == 1
+# 	WithSpriteBody@level3:
+# 		Sequence: idle3
+# 		RequiresCondition: rank-veteran == 2
+# 	WithSpriteBody@level4:
+# 		Sequence: idle4
+# 		RequiresCondition: rank-veteran == 3
+# 	WithSpriteBody@level5:
+# 		Sequence: idle5
+# 		RequiresCondition: rank-veteran >= 4
+# 	SpeedMultiplier@RANK-1:
+# 		RequiresCondition: rank-veteran == 1
+# 		Modifier: 95
+# 	SpeedMultiplier@RANK-2:
+# 		RequiresCondition: rank-veteran == 2
+# 		Modifier: 90
+# 	SpeedMultiplier@RANK-3:
+# 		RequiresCondition: rank-veteran == 3
+# 		Modifier: 85
+# 	SpeedMultiplier@RANK-ELITE:
+# 		RequiresCondition: rank-elite
+# 		Modifier: 80
+# 	DamageMultiplier@RANK-1:
+# 		RequiresCondition: rank-veteran == 1
+# 		Modifier: 85
+# 	DamageMultiplier@RANK-2:
+# 		RequiresCondition: rank-veteran == 2
+# 		Modifier: 70
+# 	DamageMultiplier@RANK-3:
+# 		RequiresCondition: rank-veteran == 3
+# 		Modifier: 55
+# 	DamageMultiplier@RANK-ELITE:
+# 		RequiresCondition: rank-elite
+# 		Modifier: 40
+# 	FirepowerMultiplier@RANK-1:
+# 		RequiresCondition: rank-veteran == 1
+# 		Modifier: 125
+# 	FirepowerMultiplier@RANK-2:
+# 		RequiresCondition: rank-veteran == 2
+# 		Modifier: 150
+# 	FirepowerMultiplier@RANK-3:
+# 		RequiresCondition: rank-veteran == 3
+# 		Modifier: 175
+# 	FirepowerMultiplier@RANK-ELITE:
+# 		RequiresCondition: rank-elite
+# 		Modifier: 200
+# 	SpawnActorOnDeath@1:
+# 		Actor: halloween_blob
+# 		RequiresCondition: rank-veteran >= 1
+# 	SpawnActorOnDeath@2:
+# 		Actor: halloween_blob
+# 		RequiresCondition: rank-veteran >= 2
+# 	SpawnActorOnDeath@3:
+# 		Actor: halloween_blob
+# 		RequiresCondition: rank-veteran >= 3
+# 	SpawnActorOnDeath@4:
+# 		Actor: halloween_blob
+# 		RequiresCondition: rank-veteran >= 4
+# 	# ThrowsShrapnel@zero:
+# 	# 	Weapons: halloween_blob_debris
+# 	# 	Pieces: 2, 3
+# 	# 	Range: 1c512, 2c512
+# 	# ThrowsShrapnel@1:
+# 	# 	Weapons: halloween_blob_debris
+# 	# 	Pieces: 3, 4
+# 	# 	Range: 1c512, 2c512
+# 	# 	RequiresCondition: rank-veteran >= 1
+# 	# ThrowsShrapnel@2:
+# 	# 	Weapons: halloween_blob_debris
+# 	# 	Pieces: 4, 5
+# 	# 	Range: 1c512, 2c512
+# 	# 	RequiresCondition: rank-veteran >= 2
+# 	# ThrowsShrapnel@3:
+# 	# 	Weapons: halloween_blob_debris
+# 	# 	Pieces: 5, 6
+# 	# 	Range: 1c512, 2c512
+# 	# 	RequiresCondition: rank-veteran >= 3
+# 	# ThrowsShrapnel@4:
+# 	# 	Weapons: halloween_blob_debris
+# 	# 	Pieces: 6, 7
+# 	# 	Range: 1c512, 2c512
+# 	# 	RequiresCondition: rank-veteran >= 4
+# 	ChangesHealth:
+# 		Step: 100
+# 		Delay: 1
+# 		StartIfBelow: 100
+# 		DamageCooldown: 1
+
 halloween_upgrade.ghost:
 	AlwaysVisible:
 	Interactable:
@@ -2006,6 +2081,7 @@ halloween_upgrade.mana:
 	RenderSprites:
 		Image: halloween_upgrade.mana
 	ProvidesPrerequisite@upgradename:
+
 halloween_worm:
 	Inherits: ^Tank
 	Inherits@selection: ^SelectableEconomicUnit
@@ -2025,12 +2101,13 @@ halloween_worm:
 		DecorationBounds: 1536, 1536
 	Harvester:
 		PipCount: 7
-		Capacity: 5
 		BaleLoadDelay: 4
 		BaleUnloadDelay: 1
 		SearchFromProcRadius: 15
 		SearchFromHarvesterRadius: 8
 		EmptyCondition: no-tiberium
+	StoresResources:
+		Capacity: 5
 	Mobile:
 		Speed: 120
 	Health:

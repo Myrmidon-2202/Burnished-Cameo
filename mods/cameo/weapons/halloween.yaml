@@ -1,3 +1,59 @@
+####################################################################################################
+#		Forced Inherit
+####################################################################################################
+
+FireBurst_FI:
+	ReloadDelay: 120
+	Range: 7c0
+	Report: DemonShoot.aud
+	Projectile: Bullet
+		Blockable: false
+		LaunchAngle: 50
+		Inaccuracy: 0c128
+		Image: fireball
+		TrailImage: fb4
+		Speed: 200
+		ContrailLength: 5
+	Warhead@1Dam_impact: SpreadDamage
+		Spread: 512
+		Damage: 32000
+		ValidTargets: Ground, Water, Trees
+		Versus:
+			None: 90
+			Wood: 75
+			Light: 60
+            Medium: 57
+			Heavy: 55
+			Concrete: 50
+		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
+	Warhead@2Smu: LeaveSmudge
+		SmudgeType: Crater
+		Size: 3
+	Warhead@3Eff: CreateEffect
+		Explosions: plasma_puff
+		ImpactSounds: FireBurstImpact.
+
+ZClaw1_FI:
+	ReloadDelay: 30
+	Range: 1c512
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead@1Dam: SpreadDamage
+		Spread: 64 #213
+		Damage: 1000 #3000
+		Versus:
+			None: 97
+			Wood: 30 #10
+			Light: 50 #30
+			Medium: 40
+			Heavy: 30 #10
+			Concrete: 10
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+
+####################################################################################################
+#		Halloween
+####################################################################################################
+
 Halloween_ClownBalloon:
 	Inherits: ^MissileWeapon
 	ReloadDelay: 40
@@ -5,7 +61,7 @@ Halloween_ClownBalloon:
 	MinRange: 0c512
 	Report: halloween_clown_balloninflate2.wav
 	ValidTargets: Ground, Air
-	Projectile: MissileCA
+	Projectile: Missile
 		Image: halloween_clown_balloon
 		-TrailImage: smokey
 		ContrailLength: 1
@@ -231,7 +287,7 @@ halloween_bullethell4:
 	Range: 8888
 	ValidTargets: Ground
 	InvalidTargets: Ally
-	Projectile: MissileCA
+	Projectile: Missile
 		Arm: 5
 		Speed: 50
 		LaunchAngle: 25

@@ -1,47 +1,136 @@
+	####################################################################################################
+	#		Forced Inherit
+	####################################################################################################
+	
+pinky_fi:
+	Defaults:
+		Scale: 2.0
+		Filename: pinky.shp
+	idle:
+		Start: 0
+		Length: 4
+		Facings: 32
+		Tick: 180
+		Offset: 1,6
+	run:
+		Start: 128
+		Length: 15
+		Tick: 100
+		Facings: 16
+		Offset: 1,6
+	shoot:
+		Start: 368
+		Length: 10
+		Facings: 16
+		Tick: 100
+		Offset: 1,6
+	die:
+		Start: 528
+		Length: 46
+		Facings: 1
+		Tick: 100
+		Offset: 1,6
+	icon: 
+		Filename: ra2doomunitsicon.shp
+		Start: 1
+	muzzle: 
+		Filename: piffpiff.shp
+		Start: 0
+		Length: 1
+
+wh40kdaemonpit_fi:
+	Defaults:
+		Scale: 2.0
+		Filename: wh40kdaemonpit.shp
+		Offset: 0,-8
+	idle:
+	damaged-idle:
+	dead:
+	make: 
+		Filename: wh40kbmake.shp
+		Length: *
+		Tick: 80
+	bib: 
+		Filename: bib1.tem
+		UseTilesetExtension: true
+		Length: *
+		Offset: 0,0
+	icon: 
+		Filename: wh40kdaemonpiticon.shp
+		Offset: 0,0
+
+	####################################################################################################
+	#		Halloween
+	####################################################################################################
+
 halloween_blackcitadel:
+	Defaults:
+		Scale: 2.0
+		Filename: halloween_blackcitadel.shp
 	idle:
 		Length: *
 	damaged-idle:
 		Length: *
-	icon: halloween_cameos.shp
+	icon: 
+		Filename: halloween_cameos.shp
 		Start: 0
 		AddExtension: False
 	
-xmas_elves_refinery:
-	idle:
-	damaged-idle:
-		Start: 1
-	icon: xmas_elves_refinery_icon
+# xmas_elves_refinery:
+# 	idle:
+# 	damaged-idle:
+# 		Start: 1
+# 	icon: xmas_elves_refinery_icon
 	
 halloween_crypto:
+	Defaults:
+		Scale: 2.0
+		Filename: halloween_crypto.shp
 	idle:
 		Start: 4
 	damaged-idle:
 		Start: 4
-	icon: halloween_cameos.shp
+	icon: 
+		Filename: halloween_cameos.shp
 		Start: 2
 		AddExtension: False
+
 halloween_clowntent:
+	Defaults:
+		Scale: 2.0
+		Filename: halloween_clowntent.shp
 	idle:
 		Start: 2
 	damaged-idle:
 		Start: 2
-	icon: halloween_cameos.shp
+	icon: 
+		Filename: halloween_cameos.shp
 		Start: 3
 		AddExtension: False
+
 halloween_carousel:
+	Defaults:
+		Scale: 1.5
+		Filename: halloween_carousel.shp
 	idle:
 		Start: 5
 	damaged-idle:
 		Start: 5
-	idle-lights: halloween_carousel_top
+	idle-lights: 
+		Filename: halloween_carousel_top.shp
 		Length: *
-	damaged-idle-lights: halloween_carousel_top
+	damaged-idle-lights: 
+		Filename: halloween_carousel_top.shp
 		Length: *
-	icon: halloween_cameos.shp
+	icon: 
+		Filename: halloween_cameos.shp
 		Start: 5
 		AddExtension: False
+
 halloween_cauldron:
+	Defaults:
+		Scale: 2.0
+		Filename: halloween_cauldron.shp
 	idle:
 		ZOffset: -1c511
 	damaged-idle:
@@ -57,27 +146,43 @@ halloween_cauldron:
 		UseTilesetExtension: true
 		TilesetOverrides:
 			INTERIOR: TEMPERAT
-	icon: halloween_cameos.shp
+	icon: 
+		Filename: halloween_cameos.shp
 		Start: 4
 		AddExtension: False
+
 explosion:
 	Defaults:
+		Scale: 2.0
 		Length: *
 		ZOffset: 2047
-	halloween_roast: halloween_roast
-	halloween_blob_splat: halloween_blob_splat
+	halloween_roast: 
+		Filename: halloween_roast.shp
+	halloween_blob_splat: 
+		Filename: halloween_blob_splat.shp
 icon:
 	Defaults:
+		Scale: 2.0
 		AddExtension: false
 
 halloween_bullethell_blue:
+	Defaults:
+		Scale: 2.0
+		Filename: halloween_bullethell_blue.shp
 	idle:
 		ZOffset: 1023
+
 halloween_bullethell_red:
+	Defaults:
+		Scale: 2.0
+		Filename: halloween_bullethell_red.shp
 	idle:
 		ZOffset: 1023
 
 halloween_dkghost_small:
+	Defaults:
+		Scale: 2.0
+		Filename: halloween_dkghost_small.shp
 	Inherits: ^InfantryOverlays
 	stand:
 		Facings: -8
@@ -158,14 +263,20 @@ halloween_dkghost_small:
 	die-crushed:
 		Start: 48
 		Length: 12
-	garrison-muzzle: minigun
+	garrison-muzzle: 
+		Filename: minigun.shp
 		Length: 3
 		Stride: 6
 		Facings: 8
-	icon: halloween_cameos.shp
+	icon: 
+		Filename: halloween_cameos.shp
 		Start: 9
 		AddExtension: False
+
 halloween_bat:
+	Defaults:
+		Scale: 2.0
+		Filename: halloween_bat.shp
 	Inherits: ^InfantryOverlays
 	stand:
 		Facings: 8
@@ -216,45 +327,58 @@ halloween_bat:
 		Facings: 8
 		Length: 8
 	# Shot
-	die1: sczergling
+	die1: 
+		Filename: sczergling.shp
 		Start: 192
 		Length: 7
 	# Explode
-	die2: sczergling
+	die2: 
+		Filename: sczergling.shp
 		Start: 192
 		Length: 7
 	# Fly and explode in air
-	die3: sczergling
+	die3: 
+		Filename: sczergling.shp
 		Start: 192
 		Length: 7
 	# Fly through air squish on ground
-	die4: sczergling
+	die4: 
+		Filename: sczergling.shp
 		Start: 192
 		Length: 7
 	# Burn
-	die5: sczergling
+	die5:
+		Filename: sczergling.shp
 		Start: 192
 		Length: 7
 	# Tib
-	die6: sczergling
+	die6: 
+		Filename: sczergling.shp
 		Start: 192
 		Length: 7
 	# Electro
-	die7: sczergling
+	die7: 
+		Filename: sczergling.shp
 		Start: 192
 		Length: 7
-	die-crushed: sczergling
+	die-crushed: 
+		Filename: sczergling.shp
 		Start: 192
 		Length: 7
-	garrison-muzzle: minigun
+	garrison-muzzle: 
+		Filename: minigun.shp
 		Length: 3
 		Stride: 6
 		Facings: 8
-	icon: halloween_cameos.shp
+	icon: 
+		Filename: halloween_cameos.shp
 		Start: 28
 		AddExtension: False
 
 halloween_silo:
+	Defaults:
+		Scale: 2.0
+		Filename: halloween_silo.shp
 	idle:
 	damaged-idle:
 	stages:
@@ -268,8 +392,13 @@ halloween_silo:
 	bib: mbRASILO
 		Length: *
 		UseTilesetExtension: false
-	icon: rasiloicon
+	icon: 
+		Filename: rasiloicon.shp
+
 halloween_clown:
+	Defaults:
+		Scale: 2.0
+		Filename: halloween_clown.shp
 	Inherits: ^InfantryOverlays
 	stand:
 		Facings: -8
@@ -323,57 +452,72 @@ halloween_clown:
 		Facings: 8
 		Tick: 100
 	# Shot
-	die1: e1
+	die1: 
+		Filename: e1.shp
 		Start: 381
 		Length: 9
 		Tick: 80
 	# Explode
-	die2: e1
+	die2: 
+		Filename: e1.shp
 		Start: 390
 		Length: 8
 		Tick: 80
 	# Fly and explode in air
-	die3: e1
+	die3: 
+		Filename: e1.shp
 		Start: 398
 		Length: 8
 		Tick: 80
 	# Fly through air squish on ground
-	die4: e1
+	die4: 
+		Filename: e1.shp
 		Start: 406
 		Length: 12
 		Tick: 80
 	# Burn
-	die5: e1
+	die5: 
+		Filename: e1.shp
 		Start: 418
 		Length: 18
 		Tick: 80
 	# Tib
-	die6: e1
+	die6: 
+		Filename: e1.shp
 		Start: 366
 		Length: 11
 		Tick: 80
 	# Electro
 	die7: electro ##########
 		Length: *
-	die-crushed: e1rot
+	die-crushed: 
+		Filename: e1rot.shp
 		Start: 16
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-	garrison-muzzle: minigun
+	garrison-muzzle: 
+		Filename: minigun.shp
 		Length: 3
 		Stride: 6
 		Facings: 8
-	icon: halloween_cameos.shp
+	icon: 
+		Filename: halloween_cameos.shp
 		Start: 15
 		AddExtension: False
 
 halloween_clown_balloon:
+	Defaults:
+		Scale: 2.0
+		Filename: halloween_clown_balloon.shp
 	idle:
 		ZOffset: 1023
 		Length: *
 
 halloween_clown2:
+	Defaults:
+		Scale: 2.0
+		Filename: halloween_clown2.shp
 	Inherits: ^InfantryOverlays
 	stand:
 		Facings: -8
@@ -427,51 +571,64 @@ halloween_clown2:
 		Facings: 8
 		Tick: 100
 	# Shot
-	die1: e1
+	die1: 
+		Filename: e1.shp
 		Start: 381
 		Length: 9
 		Tick: 80
 	# Explode
-	die2: e1
+	die2: 
+		Filename: e1.shp
 		Start: 390
 		Length: 8
 		Tick: 80
 	# Fly and explode in air
-	die3: e1
+	die3: 
+		Filename: e1.shp
 		Start: 398
 		Length: 8
 		Tick: 80
 	# Fly through air squish on ground
-	die4: e1
+	die4: 
+		Filename: e1.shp
 		Start: 406
 		Length: 12
 		Tick: 80
 	# Burn
-	die5: e1
+	die5: 
+		Filename: e1.shp
 		Start: 418
 		Length: 18
 		Tick: 80
 	# Tib
-	die6: e1
+	die6: 
+		Filename: e1.shp
 		Start: 366
 		Length: 11
 		Tick: 80
 	# Electro
 	die7: electro ##########
 		Length: *
-	die-crushed: e1rot
+	die-crushed: 
+		Filename: e1rot.shp
 		Start: 16
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-	garrison-muzzle: minigun
+	garrison-muzzle: 
+		Filename: minigun.shp
 		Length: 3
 		Stride: 6
 		Facings: 8
-	icon: halloween_cameos.shp
+	icon: 
+		Filename: halloween_cameos.shp
 		Start: 16
 		AddExtension: False
+
 halloween_clown3:
+	Defaults:
+		Scale: 2.0
+		Filename: halloween_clown3.shp
 	Inherits: ^InfantryOverlays
 	stand:
 		Facings: -8
@@ -525,110 +682,151 @@ halloween_clown3:
 		Facings: 8
 		Tick: 100
 	# Shot
-	die1: e1
+	die1: 
+		Filename: e1.shp
 		Start: 381
 		Length: 9
 		Tick: 80
 	# Explode
-	die2: e1
+	die2: 
+		Filename: e1.shp
 		Start: 390
 		Length: 8
 		Tick: 80
 	# Fly and explode in air
-	die3: e1
+	die3: 
+		Filename: e1.shp
 		Start: 398
 		Length: 8
 		Tick: 80
 	# Fly through air squish on ground
-	die4: e1
+	die4: 
+		Filename: e1.shp
 		Start: 406
 		Length: 12
 		Tick: 80
 	# Burn
-	die5: e1
+	die5: 
+		Filename: e1.shp
 		Start: 418
 		Length: 18
 		Tick: 80
 	# Tib
-	die6: e1
+	die6: 
+		Filename: e1.shp
 		Start: 366
 		Length: 11
 		Tick: 80
 	# Electro
 	die7: electro ##########
 		Length: *
-	die-crushed: e1rot
+	die-crushed: 
+		Filename: e1rot.shp
 		Start: 16
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-	garrison-muzzle: minigun
+	garrison-muzzle: 
+		Filename: minigun.shp
 		Length: 3
 		Stride: 6
 		Facings: 8
-	icon: halloween_cameos.shp
+	icon: 
+		Filename: halloween_cameos.shp
 		Start: 22
 		AddExtension: False
+
 halloween_sweettooth:
+	Defaults:
+		Scale: 2.0
+		Filename: halloween_sweettooth.shp
 	idle:
 		Facings: -32
 		UseClassicFacings: True
-	muzzle: minigun
+	muzzle: 
+		Filename: minigun.shp
 		Length: 3
 		Stride: 6
 		Facings: 8
-	icon: halloween_cameos.shp
+	icon: 
+		Filename: halloween_cameos.shp
 		Start: 14
 		AddExtension: False
+
 halloween_clowncar:
+	Defaults:
+		Scale: 2.0
+		Filename: halloween_clowncar.shp
 	idle:
 		Facings: -32
 		UseClassicFacings: True
-    Scale: 0.89
+		Scale: 0.89
 	close:
 		Facings: -32
 		UseClassicFacings: True
-    Scale: 0.89
+		Scale: 0.89
 	unload:
 		Facings: -32
 		UseClassicFacings: True
     Scale: 0.89
-	icon: halloween_cameos.shp
+	icon: 
+		Filename: halloween_cameos.shp
 		Start: 29
 		AddExtension: False
-halloween_blob:
-	Inherits: ^InfantryOverlays
-	idle:
-		Length: *
-	idle2: halloween_blobx2
-		Length: *
-		Tick: 120
-	idle3: halloween_blobx3
-		Length: *
-		Tick: 140
-	idle4: halloween_blobx4
-		Length: *
-		Tick: 160
-	idle5: halloween_blobx5
-		Length: *
-		Tick: 180
-	muzzle: minigun
-		Length: 3
-		Stride: 6
-		Facings: 8
-	icon: halloween_cameos.shp
-		Start: 30
-		AddExtension: False
+
+# halloween_blob:
+# 	Inherits: ^InfantryOverlays
+# 	Defaults:
+		Scale: 2.0
+# 		Filename: halloween_blob.shp
+# 	idle:
+# 		Length: *
+# 	idle2: 
+# 		Filename: halloween_blobx2.shp
+# 		Length: *
+# 		Tick: 120
+# 	idle3: 
+# 		Filename: halloween_blobx3.shp
+# 		Length: *
+# 		Tick: 140
+# 	idle4: 
+# 		Filename: halloween_blobx4.shp
+# 		Length: *
+# 		Tick: 160
+# 	idle5:
+# 		Filename: halloween_blobx5.shp
+# 		Length: *
+# 		Tick: 180
+# 	muzzle: 
+# 		Filename: minigun.shp
+# 		Length: 3
+# 		Stride: 6
+# 		Facings: 8
+# 	icon: 
+# 		Filename: halloween_cameos.shp
+# 		Start: 30
+# 		AddExtension: False
+
 halloween_blob_husk:
+	Defaults:
+		Scale: 2.0
+		Filename: halloween_blob_husk.shp
 	idle:
 		ZOffset: 1023
 		Length: *
+
 halloween_skull:
+	Defaults:
+		Scale: 2.0
+		Filename: halloween_skull.shp
 	idle:
 		Facings: 64
 		ZOffset: 1023
 
 halloween_graveyard:
+	Defaults:
+		Scale: 2.0
+		Filename: halloween_graveyard.shp
 	idle:
 		Tick: 1000
 	damaged-idle:
@@ -643,10 +841,15 @@ halloween_graveyard:
 	bib: bib3
 		UseTilesetExtension: true
 		Length: *
-	icon: halloween_cameos.shp
+	icon: 
+		Filename: halloween_cameos.shp
 		Start: 1
 		AddExtension: False
+
 halloween_tower:
+	Defaults:
+		Scale: 2.0
+		Filename: halloween_tower.shp
 	idle:
 		Offset: 0,-13
 	damaged-idle:
@@ -662,11 +865,15 @@ halloween_tower:
 	bib: mbTSLA
 		Length: *
 		UseTilesetExtension: false
-	icon: halloween_cameos.shp
+	icon: 
+		Filename: halloween_cameos.shp
 		Start: 6
 		AddExtension: False
 
 halloween_spirittower:
+	Defaults:
+		Scale: 2.0
+		Filename: halloween_spirittower.shp
 	idle:
 		Offset: 0,-13
 		Length: *
@@ -688,69 +895,93 @@ halloween_spirittower:
 	bib: mbTSLA
 		Length: *
 		UseTilesetExtension: false
-	icon: halloween_cameos.shp
+	icon: 
+		Filename: halloween_cameos.shp
 		Start: 7
 		AddExtension: False
+
 halloween_rockgolem:
-	stand: halloween_rockgolem_walk
+	Defaults:
+		Scale: 2.0
+		Filename: halloween_rockgolem.shp
+	stand: 
+		Filename: halloween_rockgolem_walk.shp
 		Facings: -8
 		Length: 10
 		Tick: 999
-    Scale: 0.75
-	stand2: halloween_rockgolem_walk
+		Scale: 0.75
+	stand2: 
+		Filename: halloween_rockgolem_walk.shp
 		Facings: -8
 		Length: 10
 		Tick: 999
-    Scale: 0.75
-	run: halloween_rockgolem_walk
+		Scale: 0.75
+	run: 
+		Filename: halloween_rockgolem_walk.shp
 		Facings: -8
 		Length: 10
 		Tick: 90
-    Scale: 0.75
-	attack: halloween_rockgolem_attack
+		Scale: 0.75
+	attack: 
+		Filename: halloween_rockgolem_attack.shp
 		Facings: -8
 		Length: 10
 		Tick: 90
-    Scale: 0.75
-	die: halloween_rockgolem_die2
+		Scale: 0.75
+	die: 
+		Filename: halloween_rockgolem_die2.shp
 		Facings: -8
 		Length: 10
 		Tick: 90
-    Scale: 0.75
-	icon: halloween_cameos.shp
+		Scale: 0.75
+	icon: 
+		Filename: halloween_cameos.shp
 		Start: 12
 		AddExtension: False
 
 halloween_rockgolem2:
-	stand: halloween_rockgolem_walk
+	Defaults:
+		Scale: 2.0
+		Filename: halloween_rockgolem2.shp
+	stand: 
+		Filename: halloween_rockgolem_walk.shp
 		Facings: -8
 		Length: 10
 		Tick: 999
-    Scale: 0.45
-	stand2: halloween_rockgolem_walk
+		Scale: 0.45
+	stand2: 
+		Filename: halloween_rockgolem_walk.shp
 		Facings: -8
 		Length: 10
 		Tick: 999
-    Scale: 0.45
-	run: halloween_rockgolem_walk
+		Scale: 0.45
+	run: 
+		Filename: halloween_rockgolem_walk.shp
 		Facings: -8
 		Length: 10
 		Tick: 90
-    Scale: 0.45
-	attack: halloween_rockgolem_attack
+		Scale: 0.45
+	attack: 
+		Filename: halloween_rockgolem_attack.shp
 		Facings: -8
 		Length: 10
 		Tick: 90
-    Scale: 0.45
-	die: halloween_rockgolem_die3
+		Scale: 0.45
+	die: 
+		Filename: halloween_rockgolem_die3.shp
 		Facings: -8
 		Length: 10
 		Tick: 90
-    Scale: 0.45
-	icon: halloween_cameos.shp
+		Scale: 0.45
+	icon: 
+		Filename: halloween_cameos.shp
 		Start: 12
 		AddExtension: False
+
 halloween_pirateship:
+	Defaults:
+		Scale: 2.0
+		Filename: halloween_pirateship.shp
 	idle:
 		Facings: -8
 		Length: 30
@@ -759,10 +990,15 @@ halloween_pirateship:
 		Facings: -8
 		Length: 30
 		Tick: 9999
-	icon: halloween_cameos.shp
+	icon: 
+		Filename: halloween_cameos.shp
 		Start: 13
 		AddExtension: False
+
 halloween_skeleton_archer:
+	Defaults:
+		Scale: 2.0
+		Filename: halloween_skeleton_archer.shp
 	Inherits: ^InfantryOverlays
 	stand:
 		Facings: 8
@@ -857,131 +1093,175 @@ halloween_skeleton_archer:
 		Start: 288
 		Length: 12
 		Tick: 80
-	garrison-muzzle: minigun
+	garrison-muzzle: 
+		Filename: minigun.shp
 		Length: 3
 		Stride: 6
 		Facings: 8
-	icon: halloween_cameos.shp
+	icon: 
+		Filename: halloween_cameos.shp
 		Start: 10
 		AddExtension: False
+
 halloween_skeleton:
+	Defaults:
+		Scale: 2.0
+		Filename: halloween_skeleton.shp
 	Inherits: wc_o_skeleton
-	icon: halloween_cameos.shp
+	icon: 
+		Filename: halloween_cameos.shp
 		Start: 8
 		AddExtension: False
+
 halloween_demon:
+	Defaults:
+		Scale: 2.0
+		Filename: halloween_demon.shp
 	Inherits: wc_o_demon
 	Defaults:
-    Scale: 1.2
-	icon: halloween_cameos.shp
+		Scale: 2.0
+	icon: 
+		Filename: halloween_cameos.shp
 		Start: 18
 		AddExtension: False
+
 halloween_cow:
+	Defaults:
+		Scale: 2.0
+		Filename: halloween_cow.shp
 	stand:
 		Tick: 9999
 		Length: 8
 		Facings: -8
-    Scale: 0.8
+		Scale: 0.8
 	run:
 		Length: 8
 		Facings: -8
-    Scale: 0.8
+		Scale: 0.8
 	shoot:
 		Start: 64
 		Length: 19
 		Facings: -8
 		Tick: 100
-    Scale: 0.8
+		Scale: 0.8
 	die:
 		Start: 216
 		Length: 14
 		Tick: 80
-    Scale: 0.8
+		Scale: 0.8
 	die-crushed:
 		Start: 216
 		Length: 14
 		Tick: 80
-    Scale: 0.8
-	icon: halloween_cameos.shp
+		Scale: 0.8
+	icon: 
+		Filename: halloween_cameos.shp
 		Start: 21
 		AddExtension: False
+
 halloween_upgrade.ghost:
-	icon: halloween_cameos.shp
+	icon: 
+		Filename: halloween_cameos.shp
 		Start: 19
 		AddExtension: False
 halloween_upgrade.boiling:
-	icon: halloween_cameos.shp
+	icon: 
+		Filename: halloween_cameos.shp
 		Start: 23
 		AddExtension: False
 halloween_upgrade.axe:
-	icon: halloween_cameos.shp
+	icon: 
+		Filename: halloween_cameos.shp
 		Start: 24
 		AddExtension: False
 halloween_upgrade.sword:
-	icon: halloween_cameos.shp
+	icon: 
+		Filename: halloween_cameos.shp
 		Start: 25
 		AddExtension: False
 halloween_upgrade.bows:
-	icon: halloween_cameos.shp
+	icon: 
+		Filename: halloween_cameos.shp
 		Start: 26
 		AddExtension: False
 halloween_upgrade.mana:
-	icon: halloween_cameos.shp
+	icon: 
+		Filename: halloween_cameos.shp
 		Start: 27
 		AddExtension: False
-halloween_franky:
-	Inherits: wolfe3
-	Defaults: wolfe3
-	icon: halloween_cameos.shp
-		Start: 11
-		AddExtension: False
+# halloween_franky:
+# 	Inherits: wolfe3
+# 	Defaults:
+#		Scale: 2.0 wolfe3
+# 	icon: halloween_cameos.shp
+# 		Start: 11
+# 		AddExtension: False
 
 halloween_pinky:
-	Inherits: pinky
-	Defaults: pinky
-    Scale: 0.7
-	icon: halloween_cameos.shp
+	Defaults:
+		Scale: 2.0
+		Filename: halloween_pinky.shp
+	Inherits: pinky_fi
+	icon: 
+		Filename: halloween_cameos.shp
 		Start: 17
 		AddExtension: False
 
 halloween_worm:
-	idle: halloween_worm_walk
+	Defaults:
+		Scale: 2.0
+		Filename: halloween_worm.shp
+	idle: 
+		Filename: halloween_worm_walk.shp
 		Length: 6
 		Facings: -8
-	harvest: halloween_worm_idle
+	harvest: 
+		Filename: halloween_worm_idle.shp
 		Length: 8
 		Facings: -8
-	dock: halloween_worm_idle
+	dock: 
+		Filename: halloween_worm_idle.shp
 		Length: 8
 		Facings: -8
-	dock-loop: halloween_worm_idle
+	dock-loop: 
+		Filename: halloween_worm_idle.shp
 		Length: 8
 		Facings: -8
-	icon: halloween_cameos.shp
+	icon: 
+		Filename: halloween_cameos.shp
 		Start: 20
 		AddExtension: False
+
 halloween_mcv:
-	idle: halloween_worm_walk
+	idle:
+		Filename: halloween_worm_walk.shp
 		Length: 6
 		Facings: -8
-    Scale: 2.0
-	harvest: halloween_worm_idle
+		Scale: 2.0
+	harvest:
+		Filename: halloween_worm_idle.shp
 		Length: 8
 		Facings: -8
-    Scale: 2.0
-	dock: halloween_worm_idle
+		Scale: 2.0
+	dock:
+		Filename: halloween_worm_idle.shp
 		Length: 8
 		Facings: -8
-    Scale: 2.0
-	dock-loop: halloween_worm_idle
+		Scale: 2.0
+	dock-loop:
+		Filename: halloween_worm_idle.shp
 		Length: 8
 		Facings: -8
-    Scale: 2.0
-	icon: halloween_cameos.shp
+		Scale: 2.0
+	icon:
+		Filename: halloween_cameos.shp
 		Start: 0
 		AddExtension: False
 
 halloween_spider:
+	Defaults:
+		Scale: 2.0
+		Filename: halloween_spider.shp
 	Inherits: ^WCInfantry
 	stand:
 		Start: 0	
@@ -1004,6 +1284,7 @@ halloween_spider:
 		Start: 320
 		Length: 16
 		Tick: 80
-	icon: wc_chrome
+	icon: 
+		Filename: wc_chrome.shp
 		Start: 39
 		AddExtension: true
