@@ -3,6 +3,7 @@
 ########################################################
 swfact:
 	Defaults:
+		Scale: 2.0
 		Filename: swfact.shp
 	build:
 	idle:
@@ -24,6 +25,7 @@ swfact:
 
 swifact:
 	Defaults:
+		Scale: 2.0
 		Filename: swifact.shp
 	build: 
 		Filename: swifactnew.shp
@@ -50,6 +52,7 @@ swifact:
 
 swrfact:
 	Defaults:
+		Scale: 2.0
 		Filename: swrfact.shp
 	build: 
 		Filename: swrfactnew.shp
@@ -76,6 +79,7 @@ swrfact:
 
 swrefact:
 	Defaults:
+		Scale: 2.0
 		Filename: swrefact.shp
 	build: 
 		Filename: swrefact.shp
@@ -102,6 +106,7 @@ swrefact:
 
 swibarr:
 	Defaults:
+		Scale: 2.0
 		Filename: swibarr.shp
 	idle:
 	damaged-idle:
@@ -119,6 +124,7 @@ swibarr:
 
 swrbarr:
 	Defaults:
+		Scale: 2.0
 		Filename: swrbarr.shp
 	idle:
 	damaged-idle:
@@ -136,6 +142,7 @@ swrbarr:
 
 swrebarr:
 	Defaults:
+		Scale: 2.0
 		Filename: swrebarr.shp
 	idle:
 	damaged-idle:
@@ -153,6 +160,7 @@ swrebarr:
 
 swdbarr:
 	Defaults:
+		Scale: 2.0
 		Filename: swdbarr.shp
 	idle:
 	damaged-idle:
@@ -170,6 +178,7 @@ swdbarr:
 
 swdfact:
 	Defaults:
+		Scale: 2.0
 		Filename: swdfact.shp
 	build: 
 		Filename: swdfactnew.shp
@@ -196,6 +205,7 @@ swdfact:
 
 swfort:
 	Defaults:
+		Scale: 2.0
 		Filename: swfort.shp
 		Offset: 0,-12
 	idle:
@@ -217,6 +227,7 @@ swfort:
 
 swfortre:
 	Defaults:
+		Scale: 2.0
 		Filename: swfortre.shp
 		Offset: 0,-12
 	idle:
@@ -238,6 +249,7 @@ swfortre:
 
 swfortd:
 	Defaults:
+		Scale: 2.0
 		Filename: swfortd.shp
 		Offset: 0,-12
 	idle:
@@ -259,6 +271,7 @@ swfortd:
 
 swfortr:
 	Defaults:
+		Scale: 2.0
 		Filename: swfortr.shp
 		Offset: 0,-12
 	idle:
@@ -280,6 +293,7 @@ swfortr:
 
 sweweap:
 	Defaults:
+		Scale: 2.0
 		Filename: sweweap.shp
 		Offset: 0,-12
 	idle:
@@ -301,6 +315,7 @@ sweweap:
 
 swrweap:
 	Defaults:
+		Scale: 2.0
 		Filename: swrweap.shp
 		Offset: 0,-12
 	idle:
@@ -322,6 +337,7 @@ swrweap:
 
 swreweap:
 	Defaults:
+		Scale: 2.0
 		Filename: swreweap.shp
 		Offset: 0,-12
 	idle:
@@ -343,6 +359,7 @@ swreweap:
 
 swdweap:
 	Defaults:
+		Scale: 2.0
 		Filename: swdweap.shp
 		Offset: 0,-12
 	idle: 
@@ -369,6 +386,7 @@ swdweap:
 
 swnuke:
 	Defaults:
+		Scale: 2.0
 		Filename: swnuke.shp
 	idle:
 		Length: 4
@@ -394,6 +412,7 @@ swnuke:
 
 swpower:
 	Defaults:
+		Scale: 2.0
 		Filename: swpower.shp
 	idle:
 	damaged-idle:
@@ -409,6 +428,7 @@ swpower:
 
 swshelt:
 	Defaults:
+		Scale: 2.0
 		Filename: swshelt.shp
 	idle:
 	damaged-idle:
@@ -426,6 +446,7 @@ swshelt:
 
 swsheltr:
 	Defaults:
+		Scale: 2.0
 		Filename: swsheltr.shp
 	idle:
 	damaged-idle:
@@ -443,6 +464,7 @@ swsheltr:
 
 swsheltd:
 	Defaults:
+		Scale: 2.0
 		Filename: swsheltd.shp
 	idle:
 	damaged-idle:
@@ -460,6 +482,7 @@ swsheltd:
 
 swsheltre:
 	Defaults:
+		Scale: 2.0
 		Filename: swsheltre.shp
 	idle:
 	damaged-idle:
@@ -477,6 +500,7 @@ swsheltre:
 
 sweproc:
 	Defaults:
+		Scale: 2.0
 		Filename: sweproc.shp
 	idle:
 	damaged-idle:
@@ -502,6 +526,7 @@ sweproc:
 
 swreproc:
 	Defaults:
+		Scale: 2.0
 		Filename: swreproc.shp
 	idle:
 	damaged-idle:
@@ -527,6 +552,7 @@ swreproc:
 
 swrproc:
 	Defaults:
+		Scale: 2.0
 		Filename: swrproc.shp
 	idle:
 	damaged-idle:
@@ -552,6 +578,7 @@ swrproc:
 
 swdproc:
 	Defaults:
+		Scale: 2.0
 		Filename: swdproc.shp
 	idle:
 	damaged-idle:
@@ -577,6 +604,7 @@ swdproc:
 
 swproc:
 	Defaults:
+		Scale: 2.0
 		Filename: swproc.shp
 	idle:
 		Length: 6
@@ -615,6 +643,7 @@ swproc:
 
 swsilo:
 	Defaults:
+		Scale: 2.0
 		Filename: swsilo.shp
 	idle:
 		Offset: 0,-1
@@ -655,6 +684,7 @@ swsilo:
 
 swdsilo:
 	Defaults:
+		Scale: 2.0
 		Filename: swdsilo.shp
 	idle:
 		Offset: 0,-1
@@ -694,6 +724,7 @@ swdsilo:
 
 swhand:
 	Defaults:
+		Scale: 2.0
 		Filename: swhand.shp
 		Offset: 0,-8
 	idle:
@@ -718,6 +749,7 @@ swhand:
 
 swtrade:
 	Defaults:
+		Scale: 2.0
 		Filename: swtrade.shp
 		Offset: 0,-8
 	idle:
@@ -741,6 +773,7 @@ swtrade:
 
 swbarrdroid:
 	Defaults:
+		Scale: 2.0
 		Filename: swbarrdroid.shp
 		Offset: 0,-8
 	idle:
@@ -764,6 +797,7 @@ swbarrdroid:
 
 swafld:
 	Defaults:
+		Scale: 2.0
 		Filename: swafld.shp
 	idle:
 		Tick: 120
@@ -808,6 +842,7 @@ swafld:
 
 swhq:
 	Defaults:
+		Scale: 2.0
 		Filename: swhq.shp
 	idle:
 		Length: 16
@@ -833,6 +868,7 @@ swhq:
 
 swdhq:
 	Defaults:
+		Scale: 2.0
 		Filename: swdhq.shp
 	idle:
 	damaged-idle:
@@ -850,6 +886,7 @@ swdhq:
 
 swihq:
 	Defaults:
+		Scale: 2.0
 		Filename: swihq.shp
 	idle:
 	damaged-idle:
@@ -867,6 +904,7 @@ swihq:
 
 swrehq:
 	Defaults:
+		Scale: 2.0
 		Filename: swrehq.shp
 	idle:
 	damaged-idle:
@@ -884,6 +922,7 @@ swrehq:
 
 swrhq:
 	Defaults:
+		Scale: 2.0
 		Filename: swrhq.shp
 	idle:
 	damaged-idle:
@@ -901,6 +940,7 @@ swrhq:
 
 swnuk2:
 	Defaults:
+		Scale: 2.0
 		Filename: swnuk2.shp
 	idle:
 		Length: 4
@@ -926,6 +966,7 @@ swnuk2:
 
 swhpad:
 	Defaults:
+		Scale: 2.0
 		Filename: swhpad.shp
 	idle:
 		ZOffset: -1023
@@ -956,6 +997,7 @@ swhpad:
 
 swgun:
 	Defaults:
+		Scale: 2.0
 		Filename: swgun.shp
 	idle:
 		Facings: 32
@@ -995,6 +1037,7 @@ swgun:
 		AddExtension: False
 swdgun:
 	Defaults:
+		Scale: 2.0
 		Filename: swdgun.shp
 	idle:
 		Facings: 32
@@ -1034,6 +1077,7 @@ swdgun:
 
 swgtwr:
 	Defaults:
+		Scale: 2.0
 		Filename: swgtwr.shp
 	idle:
 	damaged-idle:
@@ -1072,6 +1116,7 @@ swgtwr:
 
 swatwr:
 	Defaults:
+		Scale: 2.0
 		Filename: swatwr.shp
 		Offset: 0,-13
 	idle:
@@ -1105,6 +1150,7 @@ swatwr:
 
 swdhpad:
 	Defaults:
+		Scale: 2.0
 		Filename: swdhpad.shp
 	idle:
 		ZOffset: -1023
@@ -1132,6 +1178,7 @@ swdhpad:
 
 sweye:
 	Defaults:
+		Scale: 2.0
 		Filename: sweye.shp
 	idle: 
 		Filename: swresearch.shp
@@ -1153,6 +1200,7 @@ sweye:
 
 sweyer:
 	Defaults:
+		Scale: 2.0
 		# Filename: sweyer.shp
 		Filename: swresearchr.shp
 	idle: 
@@ -1175,8 +1223,10 @@ sweyer:
 
 swtmpl:
 	Defaults:
+		Scale: 2.0
 		Filename: swtmpl.shp
 	Defaults:
+		Scale: 2.0
 		Filename: 
 		Offset: 0,-12
 	idle: 
@@ -1209,6 +1259,7 @@ swtmpl:
 
 swdtmpl:
 	Defaults:
+		Scale: 2.0
 		Filename: swdtmpl.shp
 		Offset: 0,-12
 	idle: 
@@ -1240,6 +1291,7 @@ swdtmpl:
 
 swpalace:
 	Defaults:
+		Scale: 2.0
 		Filename:  swpalacemake.shp
 		Offset: 0,-12
 	idle:
@@ -1270,6 +1322,7 @@ swpalace:
 
 swsite:
 	Defaults:
+		Scale: 2.0
 		Filename: swsite.shp
 	idle: 
 		Filename: v36.des
@@ -1309,6 +1362,7 @@ swsite:
 
 swcloneplant:
 	Defaults:
+		Scale: 2.0
 		Filename: swcloneplant.shp
 		Offset: -2,2
 	idle:
@@ -1326,6 +1380,7 @@ swcloneplant:
 
 swaatower:
 	Defaults:
+		Scale: 2.0
 		Filename:  2100tower.shp
 		Offset: 0,-12
 	idle:
@@ -1347,6 +1402,7 @@ swaatower:
 
 swnurse:
 	Defaults:
+		Scale: 2.0
 		Filename: swnurse.shp
 	idle: 
 		Filename: swnurse.shp
@@ -1367,10 +1423,12 @@ swnurse:
 swnurse.bot:
 	Inherits: swnurse
 	Defaults:
+		Scale: 2.0
 		Filename: swnurse.shp
 	
 swnursere:
 	Defaults:
+		Scale: 2.0
 		Filename: swnursere.shp
 	idle: 
 		Filename: swnursere.shp
@@ -1391,10 +1449,12 @@ swnursere:
 swnursere.bot:
 	Inherits: swnursere
 	Defaults:
+		Scale: 2.0
 		Filename: swnursere.shp
 
 swnursed:
 	Defaults:
+		Scale: 2.0
 		Filename: swnursed.shp
 	idle: 
 		Filename: swnursed.shp
@@ -1415,10 +1475,12 @@ swnursed:
 swnursed.bot:
 	Inherits: swnursed
 	Defaults:
+		Scale: 2.0
 		Filename: swnursed.shp
 
 swnurser:
 	Defaults:
+		Scale: 2.0
 		Filename: swnurser.shp
 	idle: 
 		Filename: swnurser.shp
@@ -1439,20 +1501,24 @@ swnurser:
 swnurser.bot:
 	Inherits: swnurser
 	Defaults:
+		Scale: 2.0
 		Filename: swnurser.shp
 	
 swnurseh:
 	Inherits: swnurser
 	Defaults:
+		Scale: 2.0
 		Filename: swnurser.shp
 	
 swnurseh.bot:
 	Inherits: swnurseh
 	Defaults:
+		Scale: 2.0
 		Filename: swnurser.shp
 	
 swfood:
 	Defaults:
+		Scale: 2.0
 		Filename: swfood.shp
 	idle: 
 		Filename: swfood.shp
@@ -1472,6 +1538,7 @@ swfood:
 
 swfoodre:
 	Defaults:
+		Scale: 2.0
 		Filename: swfoodre.shp
 	idle: 
 		Filename: swfoodre.shp
@@ -1491,6 +1558,7 @@ swfoodre:
 
 swfoodr:
 	Defaults:
+		Scale: 2.0
 		Filename: swfoodr.shp
 	idle: 
 		Filename: swfoodr.shp
@@ -1510,6 +1578,7 @@ swfoodr:
 
 swfoodd:
 	Defaults:
+		Scale: 2.0
 		Filename: swfoodd.shp
 	idle: 
 		Filename: swfoodd.shp
@@ -1530,10 +1599,12 @@ swfoodd:
 swfoodh:
 	Inherits: swfoodd
 	Defaults:
+		Scale: 2.0
 		Filename: swfoodd.shp
 	
 swstarport:
 	Defaults:
+		Scale: 2.0
 		Filename: swstarport.shp
 		Offset: 0,-12
 	idle:
@@ -1556,6 +1627,7 @@ swstarport:
 
 swstarportre:
 	Defaults:
+		Scale: 2.0
 		Filename: swstarportre.shp
 		Offset: 0,-12
 	idle:
@@ -1578,6 +1650,7 @@ swstarportre:
 
 swstarportr:
 	Defaults:
+		Scale: 2.0
 		Filename: swstarportr.shp
 		Offset: 0,-12
 	idle:
@@ -1600,6 +1673,7 @@ swstarportr:
 
 swstarportd:
 	Defaults:
+		Scale: 2.0
 		Filename: swstarportd.shp
 		Offset: 0,-12
 	idle:
@@ -1624,6 +1698,7 @@ swstarportd:
 ########################################################
 swdmcv:
 	Defaults:
+		Scale: 2.0
 		Filename: swdmcv.shp
 	idle:
 		Facings: 32
@@ -1635,6 +1710,7 @@ swdmcv:
 
 swarty:
 	Defaults:
+		Scale: 2.0
 		Filename: swarty.shp
 	idle:
 		Facings: -32
@@ -1647,6 +1723,7 @@ swarty:
 
 swarty2:
 	Defaults:
+		Scale: 2.0
 		Filename: swarty2.shp
 	idle:
 		Facings: -32
@@ -1659,6 +1736,7 @@ swarty2:
 
 swarty3:
 	Defaults:
+		Scale: 2.0
 		Filename: swarty3.shp
 	idle:
 		Facings: -32
@@ -1671,6 +1749,7 @@ swarty3:
 
 swarty4:
 	Defaults:
+		Scale: 2.0
 		Filename: swarty4.shp
 	idle:
 		Facings: -32
@@ -1683,6 +1762,7 @@ swarty4:
 
 swarty5:
 	Defaults:
+		Scale: 2.0
 		Filename: swarty5.shp
 	idle:
 		Facings: -32
@@ -1695,6 +1775,7 @@ swarty5:
 
 swarty6:
 	Defaults:
+		Scale: 2.0
 		Filename: swarty6.shp
 	idle:
 		Facings: -32
@@ -1707,6 +1788,7 @@ swarty6:
 
 swftnk:
 	Defaults:
+		Scale: 2.0
 		Filename: swftnk.shp
 	idle:
 		Facings: -32
@@ -1752,6 +1834,7 @@ swftnk:
 		AddExtension: False
 swpummel:
 	Defaults:
+		Scale: 2.0
 		Filename: swpummel.shp
 	idle:
 		Facings: -32
@@ -1761,6 +1844,7 @@ swpummel:
 
 swpummeld:
 	Defaults:
+		Scale: 2.0
 		Filename: swpummeld.shp
 	idle:
 		Facings: -32
@@ -1770,6 +1854,7 @@ swpummeld:
 
 swftnk2:
 	Defaults:
+		Scale: 2.0
 		Filename: swftnk2.shp
 	idle:
 		Facings: -32
@@ -1821,14 +1906,25 @@ swftnk2:
 swe1:
 	Inherits: e1
 	Defaults:
+		Scale: 2.0
 		Filename:  e1.shp
 	icon: 
 		Filename: swe1icnh.tem
 		AddExtension: False
 
+swe1armytroop:
+	Inherits: e1
+	Defaults:
+		Scale: 2.0
+		Filename:  swe1troop.shp
+	icon: 
+		Filename: swarmytroopericon.shp
+		AddExtension: False
+
 swe1rebel:
 	Inherits: ^InfantryOverlays
 	Defaults:
+		Scale: 2.0
 		Filename: swrebel.shp
 	stand:
 		Facings: -8
@@ -1943,6 +2039,7 @@ swe1rebel:
 swe3rebel:
 	Inherits: ^InfantryOverlays
 	Defaults:
+		Scale: 2.0
 		Filename:  swe3rebel.shp
 	stand:
 		Facings: -8
@@ -2054,6 +2151,7 @@ swe3rebel:
 swe6:
 	Inherits: ^InfantryOverlays
 	Defaults:
+		Scale: 2.0
 		Filename: swe6.shp
 	stand:
 		Facings: 16
@@ -2131,6 +2229,7 @@ swe6:
 swe6e:
 	Inherits: swe6
 	Defaults:
+		Scale: 2.0
 		Filename:  swe6e.shp
 	icon: 
 		Filename: swr4icon.shp
@@ -2138,6 +2237,7 @@ swe6e:
 swrmbo:
 	Inherits: rmbo
 	Defaults:
+		Scale: 2.0
 		Filename:  swrmbo.shp
 	icon: 
 		Filename: swrmboicnh.tem
@@ -2146,6 +2246,7 @@ swrmbo:
 swe1droid:
 	Inherits: e4
 	Defaults:
+		Scale: 2.0
 		Filename:  swe1droid.shp
 	icon: 
 		Filename: swe1droidicon.shp
@@ -2178,6 +2279,7 @@ swe1droid:
 swe1troop:
 	Inherits: e1
 	Defaults:
+		Scale: 2.0
 		Filename:  swe1troop.shp
 	icon: 
 		Filename: swe1icnh.tem
@@ -2186,6 +2288,7 @@ swe1troop:
 swe1clone:
 	Inherits: e1
 	Defaults:
+		Scale: 2.0
 		Filename:  swe1troop.shp
 	icon: 
 		Filename: swe1cloneicon.shp
@@ -2194,6 +2297,7 @@ swe1clone:
 swe1dark:
 	Inherits: e1
 	Defaults:
+		Scale: 2.0
 		Filename:  swe1dark.shp
 	icon: 
 		Filename: swe1icnh.tem
@@ -2202,6 +2306,7 @@ swe1dark:
 swe1tusk:
 	Inherits: e1
 	Defaults:
+		Scale: 2.0
 		Filename:  swe1tusk.shp
 	icon: 
 		Filename: swe1icnh.tem
@@ -2210,6 +2315,7 @@ swe1tusk:
 swdroidb2:
 	Inherits: tscyborg
 	Defaults:
+		Scale: 2.0
 		Filename:  tscyborg.shp
 	icon: 
 		Filename: swdroid2.shp
@@ -2218,6 +2324,7 @@ swdroidb2:
 swddroid:
 	Inherits: ^InfantryOverlays
 	Defaults:
+		Scale: 2.0
 		Filename: swddroid.shp
 	stand: 
 		Filename: swddroid.shp
@@ -2347,6 +2454,7 @@ swddroid:
 swbantha:
 	Inherits: ^InfantryOverlays
 	Defaults:
+		Scale: 2.0
 		Filename: swbantha.shp
 	stand:
 		Facings: 32
@@ -2440,6 +2548,7 @@ swbantha:
 
 swjedi:
 	Defaults:
+		Scale: 2.0
 		Filename:  swjedi.shp
 	Inherits: ^InfantryOverlays
 	stand:
@@ -2525,6 +2634,7 @@ swjedi:
 swsith:
 	Inherits: swjedi
 	Defaults:
+		Scale: 2.0
 		Filename:  rathf.shp
 	icon: 
 		Filename: swsithicon.shp
@@ -2533,6 +2643,7 @@ swsith:
 swe3:
 	Inherits: e3
 	Defaults:
+		Scale: 2.0
 		Filename:  swe3.shp
 	icon: 
 		Filename: swe3icon.shp
@@ -2541,6 +2652,7 @@ swe3:
 swe3troop:
 	Inherits: e3
 	Defaults:
+		Scale: 2.0
 		Filename:  swe3troop.shp
 	icon: 
 		Filename: swe3troopicon.shp
@@ -2549,6 +2661,7 @@ swe3troop:
 swe3clone:
 	Inherits: e3
 	Defaults:
+		Scale: 2.0
 		Filename:  swe3troop.shp
 	icon: 
 		Filename: swe3cloneicon.shp
@@ -2557,6 +2670,7 @@ swe3clone:
 swe3droid:
 	Inherits: e3
 	Defaults:
+		Scale: 2.0
 		Filename:  swe3droid.shp
 	icon: 
 		Filename: sw3droidicon.shp
@@ -2564,6 +2678,7 @@ swe3droid:
 
 swgreenlaser:
 	Defaults:
+		Scale: 2.0
 		Filename: swgreenlaser.shp
 	idle:
 		Facings: 32
@@ -2571,6 +2686,7 @@ swgreenlaser:
 
 swredlaser:
 	Defaults:
+		Scale: 2.0
 		Filename: swredlaser.shp
 	idle:
 		Facings: 32
@@ -2578,6 +2694,7 @@ swredlaser:
 
 swbluelaser:
 	Defaults:
+		Scale: 2.0
 		Filename: swbluelaser.shp
 	idle:
 		Facings: 32
@@ -2585,6 +2702,7 @@ swbluelaser:
 
 swmissile:
 	Defaults:
+		Scale: 2.0
 		Filename: swmissile.shp
 	idle:
 		Facings: 32
@@ -2592,6 +2710,7 @@ swmissile:
 
 swionsfx:
 	Defaults:
+		Scale: 2.0
 		Filename: swionsfx.shp
 	idle:
 		Length: *
@@ -2600,6 +2719,7 @@ swionsfx:
 
 swatomic:
 	Defaults:
+		Scale: 2.0
 		Filename: swatomic.shp
 		Length: *
 		ZOffset: 1023
@@ -2610,6 +2730,7 @@ swatomic:
 
 swbike:
 	Defaults:
+		Scale: 2.0
 		Filename: swbike.shp
 	idle:
 		Facings: 32
@@ -2624,6 +2745,7 @@ swbike:
 
 swbggy:
 	Defaults:
+		Scale: 2.0
 		Filename: swbggy.shp
 	idle:
 		Facings: 32
@@ -2638,6 +2760,7 @@ swbggy:
 
 swjeep:
 	Defaults:
+		Scale: 2.0
 		Filename: swjeep.shp
 	idle:
 		Facings: 32
@@ -2652,6 +2775,7 @@ swjeep:
 
 swltnk:
 	Defaults:
+		Scale: 2.0
 		Filename: swltnk.shp
 	idle:
 		Facings: 32
@@ -2665,6 +2789,7 @@ swltnk:
 
 swmtnk:
 	Defaults:
+		Scale: 2.0
 		Filename: swmtnk.shp
 	idle: 
 		Filename: swatst.shp
@@ -2691,6 +2816,7 @@ swmtnk:
 
 swhtnk:
 	Defaults:
+		Scale: 2.0
 		Filename: swhtnk.shp
 	idle: 
 		Filename: swatat.shp
@@ -2718,6 +2844,7 @@ swhtnk:
 
 swheli:
 	Defaults:
+		Scale: 2.0
 		Filename: swheli.shp
 	idle:
 		Facings: 32
@@ -2731,6 +2858,7 @@ swheli:
 
 swdroidheli:
 	Defaults:
+		Scale: 2.0
 		Filename: swdroidheli.shp
 	idle: 
 		Filename: swdroidheli.shp
@@ -2745,10 +2873,12 @@ swdroidheli:
 swdroidheli_husk:
 	Inherits: swdroidheli
 	Defaults:
+		Scale: 2.0
 		Filename: swdroidheli.shp
 
 swxwing:
 	Defaults:
+		Scale: 2.0
 		Filename: swxwing.shp
 	idle: 
 		Filename: swxwing.shp
@@ -2764,10 +2894,12 @@ swxwing:
 swxwing_husk:
 	Inherits: swxwing
 	Defaults:
+		Scale: 2.0
 		Filename: swxwing.shp
 
 swstarfighter:
 	Defaults:
+		Scale: 2.0
 		Filename: swstarfighter.shp
 	idle:
 		Facings: 32
@@ -2780,6 +2912,7 @@ swstarfighter:
 
 swstarfighterj:
 	Defaults:
+		Scale: 2.0
 		Filename: swstarfighterj.shp
 	idle:
 		Facings: -32
@@ -2792,6 +2925,7 @@ swstarfighterj:
 
 swfalc:
 	Defaults:
+		Scale: 2.0
 		Filename: swfalc.shp
 	idle:
 		Facings: 32
@@ -2805,6 +2939,7 @@ swfalc:
 		Offset: 0,0
 swharv:
 	Defaults:
+		Scale: 2.0
 		Filename: swharv.shp
 	idle:
 		Facings: 32
@@ -2826,6 +2961,7 @@ swharv:
 
 swiharv:
 	Defaults:
+		Scale: 2.0
 		Filename: swiharv.shp
 	idle:
 		Facings: -32
@@ -2844,6 +2980,7 @@ swiharv:
 
 swiharvfull:
 	Defaults:
+		Scale: 2.0
 		Filename:  swiharv.shp
 	idle:
 		Facings: -32
@@ -2866,6 +3003,7 @@ swiharvfull:
 
 swreharv:
 	Defaults:
+		Scale: 2.0
 		Filename: swreharv.shp
 	idle:
 		Facings: -32
@@ -2884,6 +3022,7 @@ swreharv:
 
 swreharvfull:
 	Defaults:
+		Scale: 2.0
 		Filename:  swreharv.shp
 	idle:
 		Facings: -32
@@ -2906,6 +3045,7 @@ swreharvfull:
 
 swrharv:
 	Defaults:
+		Scale: 2.0
 		Filename: swrharv.shp
 	idle:
 		Facings: -32
@@ -2924,6 +3064,7 @@ swrharv:
 
 swrharvfull:
 	Defaults:
+		Scale: 2.0
 		Filename:  swrharv.shp
 	idle:
 		Facings: -32
@@ -2946,6 +3087,7 @@ swrharvfull:
 
 swdharv:
 	Defaults:
+		Scale: 2.0
 		Filename: swdharv.shp
 	idle:
 		Facings: -32
@@ -2964,6 +3106,7 @@ swdharv:
 
 swdharvfull:
 	Defaults:
+		Scale: 2.0
 		Filename:  swdharv.shp
 	idle:
 		Facings: -32
@@ -2987,6 +3130,7 @@ swdharvfull:
 swvice:
 	# Inherits: ^InfantryOverlays
 	Defaults:
+		Scale: 2.0
 		Filename: swvice.shp
 	idle: 
 		Filename: swvice.shp
@@ -2996,6 +3140,7 @@ swvice:
 
 sworca:
 	Defaults:
+		Scale: 2.0
 		Filename: sworca.shp
 	idle:
 		Facings: 32
@@ -3009,6 +3154,7 @@ sworca:
 
 swtrifighter:
 	Defaults:
+		Scale: 2.0
 		Filename: swtrifighter.shp
 	idle:
 		Facings: 32
@@ -3021,6 +3167,7 @@ swtrifighter:
 
 swtran:
 	Defaults:
+		Scale: 2.0
 		Filename: swtran.shp
 	idle:
 		Facings: 32
@@ -3039,6 +3186,7 @@ swtran:
 
 swa10:
 	Defaults:
+		Scale: 2.0
 		Filename: swa10.shp
 	idle: 
 		Filename: swa10.shp
@@ -3058,10 +3206,12 @@ swa10:
 swa10_husk:
 	Inherits: swa10
 	Defaults:
+		Scale: 2.0
 		Filename: swa10.shp
 
 swywing:
 	Defaults:
+		Scale: 2.0
 		Filename: swywing.shp
 	idle:
 		Facings: 32
@@ -3079,6 +3229,7 @@ swywing:
 
 swcrawl:
 	Defaults:
+		Scale: 2.0
 		Filename: swcrawl.shp
 	idle:
 		Facings: -32
@@ -3094,6 +3245,7 @@ swcrawl:
 
 swmsam:
 	Defaults:
+		Scale: 2.0
 		Filename: swmsam.shp
 	idle:
 		Facings: -32
@@ -3106,36 +3258,33 @@ swmsam:
 
 sw1tnk:
 	Defaults:
+		Scale: 2.0
 		Filename: sw1tnk.shp
 	idle: 
 		Filename: swatrt.shp
 		Facings: -32
-		Scale: 0.9
 	stand: 
 		Filename: swatrt.shp
 		Facings: -32
-		Scale: 0.9
 	turret: 
 		Filename: swatrt.shp
 		Start: 72
 		Facings: -32
-		Scale: 0.9
 	run: 
 		Filename: swatrt.shp
 		Start: 32
 		Length: 5
 		Facings: 8
 		Tick: 220
-		Scale: 0.9
 	muzzle: 
 		Filename: gunfire2.shp
 		Length: *
-		Scale: 0.9
 	icon: 
 		Filename: sw1tnkicon.shp
 
 swptnk:
 	Defaults:
+		Scale: 2.0
 		Filename: swptnk.shp
 	idle: 
 		Filename: swmtnk.shp
@@ -3162,6 +3311,7 @@ swptnk:
 
 sw2tnk:
 	Defaults:
+		Scale: 2.0
 		Filename: sw2tnk.shp
 	idle:
 		Facings: -32
@@ -3175,6 +3325,7 @@ sw2tnk:
 
 sw3tnk:
 	Defaults:
+		Scale: 2.0
 		Filename: sw3tnk.shp
 	idle:
 		Facings: -32
@@ -3191,6 +3342,7 @@ sw3tnk:
 
 sw1tnkre:
 	Defaults:
+		Scale: 2.0
 		Filename: sw1tnkre.shp
 	idle:
 		Facings: -32
@@ -3207,6 +3359,7 @@ sw1tnkre:
 
 sw4tnk:
 	Defaults:
+		Scale: 2.0
 		Filename: sw4tnk.shp
 	idle: 
 		Filename: swatte.shp
@@ -3232,6 +3385,7 @@ sw4tnk:
 
 swaa:
 	Defaults:
+		Scale: 2.0
 		Filename: swaa.shp
 	idle:
 		Facings: -32
@@ -3253,6 +3407,7 @@ swaa:
 
 swjugger:
 	Defaults:
+		Scale: 2.0
 		Filename: swjugger.shp
 	idle:
 		Facings: -32
@@ -3269,6 +3424,7 @@ swjugger:
 
 swspider:
 	Defaults:
+		Scale: 2.0
 		Filename: swspider.shp
 	idle: 
 		Filename: swspider2.shp
@@ -3292,6 +3448,7 @@ swspider:
 
 swlaat:
 	Defaults:
+		Scale: 2.0
 		Filename: swlaat.shp
 	idle: 
 		Filename: swlaat.shp
@@ -3310,10 +3467,12 @@ swlaat:
 swlaat_husk:
 	Inherits: swlaat
 	Defaults:
+		Scale: 2.0
 		Filename: swlaat.shp
 	
 swc17:
 	Defaults:
+		Scale: 2.0
 		Filename: swc17.shp
 	idle:
 		Facings: 32
@@ -3324,6 +3483,7 @@ swc17:
 
 swstard:
 	Defaults:
+		Scale: 2.0
 		Filename: swstard.shp
 	idle:
 		Facings: 32
@@ -3333,6 +3493,7 @@ swstard:
 
 swexecutor:
 	Defaults:
+		Scale: 2.0
 		Filename: swexecutor.shp
 	idle:
 		Facings: 32
@@ -3343,6 +3504,7 @@ swexecutor:
 
 swexecutordie:
 	Defaults:
+		Scale: 2.0
 		Filename: swexecutordie.shp
 	idle:
 		Facings: 16
@@ -3351,6 +3513,7 @@ swexecutordie:
 
 swaclamator:
 	Defaults:
+		Scale: 2.0
 		Filename: swaclamator.shp
 	idle:
 		Facings: 32
@@ -3360,6 +3523,7 @@ swaclamator:
 
 swdarty:
 	Defaults:
+		Scale: 2.0
 		Filename: swdarty.shp
 	idle:
 		Facings: 32
@@ -3373,6 +3537,7 @@ swdarty:
 
 swquad:
 	Defaults:
+		Scale: 2.0
 		Filename: swquad.shp
 	idle:
 		Facings: 32
@@ -3390,6 +3555,7 @@ swquad:
 swgreedo:
 	Inherits: chhacker
 	Defaults:
+		Scale: 2.0
 		Filename: swgreedo.shp
 	icon: 
 		Filename: swgreedoicon.shp
@@ -3409,6 +3575,7 @@ swgreedo:
 
 swjabbaparty:
 	Defaults:
+		Scale: 2.0
 		Filename: swjabbaparty.shp
 	idle:
 		Facings: -32
@@ -3423,12 +3590,14 @@ swjabbaparty:
 swjumpjet:
 	Inherits: tsjumpjet
 	Defaults:
+		Scale: 2.0
 		Filename:  swjumpjet.shp
 	icon: 
 		Filename: swjumpjeticon.shp
 
 swbantha2:
 	Defaults:
+		Scale: 2.0
 		Filename: swbantha2.shp
 	idle:
 		Facings: -32
@@ -3438,6 +3607,7 @@ swbantha2:
 
 swnerf:
 	Defaults:
+		Scale: 2.0
 		Filename: swnerf.shp
 	idle:
 		Facings: -32
@@ -3449,60 +3619,70 @@ swnerf:
 ########################################################
 swupinfarmor1:
 	Defaults:
+		Scale: 2.0
 		Filename: swupinfarmor1.shp
 	icon: 
 		Filename: swupinfarmor1.shp
 
 swuplaser1:
 	Defaults:
+		Scale: 2.0
 		Filename: swuplaser1.shp
 	icon: 
 		Filename: swuplaser1.shp
 
 swupveharmor1:
 	Defaults:
+		Scale: 2.0
 		Filename: swupveharmor1.shp
 	icon: 
 		Filename: swupveharmor1.shp
 
 swupvehspeed1:
 	Defaults:
+		Scale: 2.0
 		Filename: swupvehspeed1.shp
 	icon: 
 		Filename: swupvehspeed1.shp
 
 swupphase2clone:
 	Defaults:
+		Scale: 2.0
 		Filename: swupphase2clone.shp
 	icon: 
 		Filename: swupphase2clone.shp
 
 swupdroidarmor1:
 	Defaults:
+		Scale: 2.0
 		Filename: swupdroidarmor1.shp
 	icon: 
 		Filename: swupdroidarmor1.shp
 
 swupstimulant:
 	Defaults:
+		Scale: 2.0
 		Filename: swupstimulant.shp
 	icon: 
 		Filename: swupstimulant.shp
 
 swupgenetics:
 	Defaults:
+		Scale: 2.0
 		Filename: swupgenetics.shp
 	icon: 
 		Filename: swupgenetics.shp
 
 swupcloning:
 	Defaults:
+		Scale: 2.0
 		Filename: swupcloning.shp
 	icon: 
 		Filename: swupcloning.shp
 
 swupirrigation:
 	Defaults:
+		Scale: 2.0
 		Filename: swupirrigation.shp
 	icon: 
 		Filename: swupirrigation.shp

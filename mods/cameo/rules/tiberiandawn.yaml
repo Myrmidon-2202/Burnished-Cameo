@@ -2459,7 +2459,7 @@ HQ.GDI:
 	AirstrikePower:
 		PauseOnCondition: disabled
 		Prerequisites:
-			1:
+			1: ~techlevel.superweapons
 		Icons:
 			1: airstrike
 		ChargeInterval: 7500

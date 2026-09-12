@@ -121,7 +121,7 @@ World:
 	RenderVoxels:
 		Scale: 15
 		NormalsPalette: ts-normals
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 		LightAmbientColor: 0.6, 0.6, 0.6
 		LightDiffuseColor: 0.4, 0.4, 0.4
 		LightPitch: 142
@@ -129,7 +129,7 @@ World:
 
 ^TSInfantry:
 	WithDeathAnimation:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 		DeathTypes:
 			DefaultDeath: 1
 			BulletDeath: 2
@@ -281,7 +281,7 @@ OILB.TS:
 		RequiresCondition: !build-incomplete
 		Sequence: idle-lights
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 OILB.TS.MUTANT:
 	Inherits: OILB.TS
@@ -304,7 +304,7 @@ OILB.TS.MUTANT:
 		Palette: tseffect
 	RenderSprites:
 		Image: tibdrill
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 #######################################
 # TS MCV
@@ -460,7 +460,7 @@ TSGTCNSTGDI:
 	ProvidesPrerequisite@buildingname:
 	RenderSprites:
 		Image: tsgtcnst
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 TSGTCNSTNOD:
 	GrantExternalConditionToOwner@BuildingsOwned:
@@ -541,7 +541,7 @@ TSGTCNSTNOD:
 	ProvidesPrerequisite@buildingname:
 	RenderSprites:
 		Image: tsntcnst
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 TSGTCNSTMUTANT:
 	GrantExternalConditionToOwner@BuildingsOwned:
@@ -622,7 +622,7 @@ TSGTCNSTMUTANT:
 	ProvidesPrerequisite@buildingname:
 	RenderSprites:
 		Image: tsgtcnst
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 TSGTCNSTCABAL:
 	GrantExternalConditionToOwner@BuildingsOwned:
@@ -703,7 +703,7 @@ TSGTCNSTCABAL:
 	ProvidesPrerequisite@buildingname:
 	RenderSprites:
 		Image: tsntcnst
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 TSMCVGDI:
 	Inherits: ^Vehicle
@@ -847,7 +847,7 @@ TSPROC:
 		PipCount: 10
 	RenderSprites:
 		Image: tsproc.gdi
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 tsprocnod:
 	Inherits: TSPROC
@@ -897,7 +897,7 @@ tsprocmutant:
 		Name: Tiberium Refinery (Mutant)
 	RenderSprites:
 		Image: tsproc.gdi
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 tsntwast:
 	Inherits: ^BaseBuilding
@@ -953,7 +953,7 @@ tsntwast:
 	ResourcePurifier:
 		Modifier: 25
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 TSGTPOWR:
 	Inherits: ^BaseBuilding
@@ -1010,7 +1010,7 @@ TSGTPOWR:
 		Amount: 100
 	ProvidesPrerequisite@buildingname:
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 	Pluggable:
 		# Offset: 1,0
 		Conditions:
@@ -1075,7 +1075,7 @@ TSNTPOWR:
 		RequiresCondition: !build-incomplete && !disabled
 		Sequence: idle-lights
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 TSNTPOWRMUTANT:
 	Inherits: TSGTPOWR
@@ -1142,7 +1142,7 @@ TSNTPOWRCABAL:
 		RequiresCondition: !build-incomplete && !disabled
 		Sequence: idle-lights
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 		Image: tsntpowr
 
 TSNTAPWR:
@@ -1186,7 +1186,7 @@ TSNTAPWR:
 		RequiresCondition: !build-incomplete && !disabled
 		Sequence: idle-lights
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 # TSGTSILO:
 # 	Inherits: ^BaseBuilding
@@ -1234,7 +1234,7 @@ TSNTAPWR:
 # 		RequiresSelection: true
 # 		PipCount: 5
 # 	RenderSprites:
-# 		PlayerPalette: playerra2
+# 		PlayerPalette: playertibsun
 # 	RenderSprites:
 # 		Image: tsgtsilo.gdi
 
@@ -1350,7 +1350,7 @@ TSGTPILE:
 		RequiresCondition: !build-incomplete
 		Sequence: idle-flag
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 TSNTHAND:
 	Inherits: ^BaseBuilding
@@ -1420,7 +1420,7 @@ TSNTHAND:
 		RequiresCondition: !build-incomplete
 		Sequence: idle-light
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 TSNTHAND2:
 	Inherits: TSNTHAND
@@ -1454,7 +1454,7 @@ TSNTHAND2:
 		ProductionType: Infantry.Tscabal
 	RenderSprites:
 		Image: tsnthand
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 tsgtpile2:
 	Inherits: TSNTHAND
@@ -1489,7 +1489,7 @@ tsgtpile2:
 	# ParallelProductionQueue@INFANTRY:
 	RenderSprites:
 		Image: tsgtpile
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 tsgtweap:
 	Inherits: ^BaseBuilding
@@ -1649,7 +1649,7 @@ TSNTWEAP:
 		RequiresCondition: !build-incomplete
 		Sequence: bib2
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 TSNTWEAPCABAL:
 	Inherits: TSNTWEAP
@@ -1772,7 +1772,7 @@ tsgtdeptgdi:
 		UseDeathTypeSuffix: false
 	RenderSprites:
 		Image: tsgtdept
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 # tsgtdeptnod:
 # 	Inherits: tsgtdeptgdi
@@ -1782,7 +1782,7 @@ tsgtdeptgdi:
 # 		Prerequisites: ~tsgtcnstnod, tsntweap
 # 	RenderSprites:
 # 		Image: tsgtdept
-# 		PlayerPalette: playerra2
+# 		PlayerPalette: playertibsun
 
 tsgtdeptmutant:
 	Inherits: tsgtdeptgdi
@@ -1792,7 +1792,7 @@ tsgtdeptmutant:
 		Prerequisites: ~tsgtcnstmutant, tsgtweapmutant
 	RenderSprites:
 		Image: tsgtdept
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 tsgtdeptcabal:
 	Inherits: tsgtdeptgdi
@@ -1802,7 +1802,7 @@ tsgtdeptcabal:
 		Prerequisites: ~tsgtcnstcabal, tsntweapcabal
 	RenderSprites:
 		Image: tsgtdept
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 tsgthpad:
 	Inherits: ^BaseBuilding
@@ -1867,7 +1867,7 @@ tsgthpad:
 		RequiresCondition: !build-incomplete
 		Sequence: idle-lights
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 tsgthpadmutant:
 	Inherits: tsgthpad
@@ -1961,7 +1961,7 @@ TSNTHPAD:
 		RequiresCondition: !build-incomplete
 		Sequence: idle-lights
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 TSNTHPAD2:
 	Inherits: TSNTHPAD
@@ -2065,14 +2065,14 @@ tsntradr:
 	# 	CameraRemoveDelay: 60
 	# 	AllowMultiple: True
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 tsntradrcabal:
 	Inherits: tsntradr
 	Buildable:
 		Prerequisites: ~tsgtcnstcabal, tsproccabal
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 		Image: tsntradr
 
 tsgtradr:
@@ -2259,7 +2259,7 @@ tsnttech:
 		RequiresCondition: !build-incomplete && !disabled
 		Sequence: idle-lights
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 tsgttech:
 	Inherits: ^BaseBuilding
@@ -2297,7 +2297,7 @@ tsgttech:
 	ProvidesPrerequisite:
 		Prerequisite: tstek
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 tsfgttech:
 	Inherits: tsgttech
@@ -2315,7 +2315,7 @@ tsfgttech:
 		IconPaletteIsPlayerPalette: False
 	RenderSprites:
 		Image: tsgttech
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 tscabaltech:
 	Inherits: tsgttech
@@ -2333,7 +2333,7 @@ tscabaltech:
 		IconPaletteIsPlayerPalette: False
 	RenderSprites:
 		Image: tsnttech
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 tsnttmpl:
 	Inherits: ^BaseBuilding
@@ -2371,7 +2371,7 @@ tsnttmpl:
 		Sequence: idle-lights
 	SupportPowerChargeBar:
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 tscore:
 	Inherits: ^BaseBuilding
@@ -2416,7 +2416,7 @@ tscore:
 		Sequence: idle-lights3
 	SupportPowerChargeBar:
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 tsntmisl:
 	Inherits: ^BaseBuilding
@@ -2565,14 +2565,14 @@ tsntmisl:
 	ProvidesPrerequisite@buildingname:
 	SupportPowerChargeBar:
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 tsntmislcabal:
 	Inherits: tsntmisl
 	Buildable:
 		Prerequisites: ~tsgtcnstcabal, tscore
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 		Image: tsntmisl
 
 # tsctarmr:
@@ -2611,7 +2611,7 @@ tsntmislcabal:
 # 		Range: 9c0
 # 		Condition: Armory-Rank
 # 	RenderSprites:
-# 		PlayerPalette: playerra2
+# 		PlayerPalette: playertibsun
 
 tsgtplug:
 	Inherits: ^BaseBuilding
@@ -2717,7 +2717,7 @@ tsgtplug:
 		Condition: hunterseeker
 		Actors: tsgtplug3
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 tsgtplug2:
 	Tooltip:
@@ -2733,7 +2733,7 @@ tsgtplug2:
 	KillsSelf:
 		RemoveInstead: true
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 tsgtplug3:
 	Tooltip:
@@ -2749,7 +2749,7 @@ tsgtplug3:
 	KillsSelf:
 		RemoveInstead: true
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 #######################################
 #######################################
@@ -2790,7 +2790,7 @@ tsgtplug3:
 # 		RequiresCondition: classicproductionqueues
 # 	RenderSprites:
 # 		Image: yrygyard
-# 		PlayerPalette: playerra2
+# 		PlayerPalette: playertibsun
 
 # tsgtyard:
 # 	Inherits: ra2gayard
@@ -2815,7 +2815,7 @@ tsgtplug3:
 # 		RequiresCondition: classicproductionqueues
 # 	RenderSprites:
 # 		Image: ra2gayard
-# 		PlayerPalette: playerra2
+# 		PlayerPalette: playertibsun
 
 # tsgtyard2:
 # 	Inherits: ra2gayard
@@ -2840,7 +2840,7 @@ tsgtplug3:
 # 		RequiresCondition: classicproductionqueues
 # 	RenderSprites:
 # 		Image: ra2gayard
-# 		PlayerPalette: playerra2
+# 		PlayerPalette: playertibsun
 
 #######################################
 # TS Defensive
@@ -2945,7 +2945,7 @@ tsntlasr:
 	-WithVoxelBody:
 	-Cloak@TDcloak:
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 tsntlasrcabal:
 	Inherits: tsntlasr
@@ -2954,7 +2954,7 @@ tsntlasrcabal:
 	RenderVoxels:
 		Image: tsntlasr
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 		Image: tsntlasr
 
 tsgtctwrmg:
@@ -3003,7 +3003,7 @@ tsgtctwrmg:
 	Power:
 		Amount: -20
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 tsgtctwrmg2:
 	Inherits: tsgtctwrmg
@@ -3061,7 +3061,7 @@ tsgtctwrrpg:
 	Power:
 		Amount: -20
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 tsgtctwrrpg2:
 	Inherits: tsgtctwrrpg
@@ -3117,7 +3117,7 @@ tsgtctwrsam:
 	Power:
 		Amount: -30
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 tsgtctwrsammutant:
 	Inherits: ^Defense
@@ -3162,7 +3162,7 @@ tsgtctwrsammutant:
 	Power:
 		Amount: -30
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 		Image: tsgtctwrsam
 
 tsntsam:
@@ -3208,14 +3208,14 @@ tsntsam:
 	Power:
 		Amount: -30
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 tsntsamcabal:
 	Inherits: tsntsam
 	Buildable:
 		Prerequisites: ~tsgtcnstcabal, tsnthand2
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 		Image: tsntsam
 
 tsntstlh:
@@ -3256,14 +3256,14 @@ tsntstlh:
 	-ExternalCondition@TSCLOAK:
 	ProvidesPrerequisite@buildingname:
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 # tsntstlhcabal:
 # 	Inherits: tsntstlh
 # 	Buildable:
 # 		Prerequisites: ~tsgtcnstcabal, tscabaltech
 # 	RenderSprites:
-# 		PlayerPalette: playerra2
+# 		PlayerPalette: playertibsun
 # 		Image: tsntstlh
 
 tsntpulsgdi:
@@ -3322,7 +3322,7 @@ tsntpulsgdi:
 	RenderRangeCircle:
 	SupportPowerChargeBar:
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 		Image: tsntpuls
 
 tsntpulsnod:
@@ -3401,7 +3401,7 @@ tsntobel:
 		Amount: -100
 	RenderSprites:
 		Image: tsntobel
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 tsntobelcabal:
 	Inherits: tsntobel
@@ -3470,7 +3470,7 @@ tsobl2:
 	Power:
 		Amount: -75
 	# RenderSprites:
-	# 	PlayerPalette: playerra2
+	# 	PlayerPalette: playertibsun
 
 tsntobel2cabal:
 	Inherits: tsobl2
@@ -3478,7 +3478,7 @@ tsntobel2cabal:
 		Prerequisites: ~tsgtcnstcabal, tscabaltech
 		Queue: Defence, RADefence
 	RenderSprites:
-		# PlayerPalette: playerra2
+		# PlayerPalette: playertibsun
 		Image: tsobl2
 
 #######################################
@@ -3534,7 +3534,7 @@ TSE1:
 	Voiced:
 		VoiceSet: TSInfantry
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 	WithDeathAnimation:
 		DeathSequencePalette: ra2player
 		CrushedSequencePalette: ra2effect
@@ -3545,7 +3545,7 @@ TSE1.NOD:
 		Queue: Infantry.Tsnod
 		Prerequisites: ~tsnthand
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 		Image: tse1.nod
 
 TSE1PARA:
@@ -3561,7 +3561,7 @@ TSE1PARA:
 	UpdatesPlayerStatistics:
 		OverrideActor: tse1
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 TSMEDIC:
 	Inherits: MEDI
@@ -3582,7 +3582,7 @@ TSMEDIC:
 	Voiced:
 		VoiceSet: TSMedic
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 	WithDeathAnimation:
 		DeathSequencePalette: ra2player
 		CrushedSequencePalette: ra2effect
@@ -3598,7 +3598,7 @@ TSENGINEER:
 	DeliversCash:
 		Payload: 250
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 	WithDeathAnimation:
 		DeathSequencePalette: ra2player
 		CrushedSequencePalette: ra2effect
@@ -3615,7 +3615,7 @@ TSENGINEER2:
 		VoiceSet: TSInfantry
 	-TemporaryOwnerManager:
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 		Image: altengi
 
 TSENGINEERMUTANT:
@@ -3628,7 +3628,7 @@ TSENGINEERMUTANT:
 		VoiceSet: TSInfantry
 	-TemporaryOwnerManager:
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 		Image: tsengineer
 
 TSENGINEECABAL:
@@ -3641,7 +3641,7 @@ TSENGINEECABAL:
 		VoiceSet: TSCyborg
 	-TemporaryOwnerManager:
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 		Image: altengi
 
 TSE2:
@@ -3696,7 +3696,7 @@ TSE2:
 	Voiced:
 		VoiceSet: TSInfantry
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 TSE2PARA:
 	Inherits: TSE2
@@ -3709,7 +3709,7 @@ TSE2PARA:
 	Parachutable: ##########
 		FallRate: 999
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 TSJUMPJET:
 	Inherits: ^Soldier
@@ -3797,7 +3797,7 @@ TSJUMPJET:
 		Name: garrisoned
 		Weapon: TSJumpCannon
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 tsjumpjet2:
 	Inherits: ^JumpjetInfantry
@@ -3856,7 +3856,7 @@ tsjumpjet2:
 	FirepowerMultiplier@FirerateCompensation:
 		Modifier: 40
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 	Transforms:
 		IntoActor: tsjumpjet
 		Offset: 0,0
@@ -3867,7 +3867,7 @@ tsjumpjet2:
 		DeathSequencePalette: ra2player
 		CrushedSequencePalette: ra2effect
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 		Image: tsjumpjet
 
 TSJUMPJET.Husk:
@@ -3888,7 +3888,7 @@ TSJUMPJET.Husk:
 	RenderSprites:
 		Image: tsjumpjet
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 TSE3:
 	Inherits: ^Soldier
@@ -3938,7 +3938,7 @@ TSE3:
 		Name: garrisoned
 		Weapon: TSBazookaG
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 TSE3.MUTANT:
 	Inherits: TSE3
@@ -3946,7 +3946,7 @@ TSE3.MUTANT:
 		Queue: Infantry.Tsmutant
 		Prerequisites: ~tsgtpile2
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 		Image: tse3
 
 elitcadre:
@@ -4138,7 +4138,7 @@ TSCYBORG:
 	Selectable:
 		Class: tscyborg
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 	WithDeathAnimation:
 		DeathSequencePalette: ra2player
 		CrushedSequencePalette: ra2effect
@@ -4188,7 +4188,7 @@ TSCHAMSPY:
 	Voiced:
 		VoiceSet: TSSpy
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 	WithDeathAnimation:
 		DeathSequencePalette: ra2player
 		CrushedSequencePalette: ra2effect
@@ -4246,7 +4246,7 @@ TSMHIJACK:
 		VoiceSet: TSHijacker
 	-DamagedByTerrain:
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 	WithDeathAnimation:
 		DeathSequencePalette: ra2player
 		CrushedSequencePalette: ra2effect
@@ -4257,7 +4257,7 @@ TSMHIJACKMUTANT:
 		Queue: Infantry.Tsmutant
 		Prerequisites: ~tsgtpile2, tsgtweapmutant, tsgtradrmutant
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 		Image: tsmhijack
 
 TSREAPER:
@@ -4318,7 +4318,7 @@ TSREAPER:
 		StartIfBelow: 100
 		DamageCooldown: 1
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 	WithDeathAnimation:
 		DeathSequencePalette: ra2player
 		CrushedSequencePalette: ra2effect
@@ -4459,7 +4459,7 @@ TSUMAGON:
 	Selectable:
 		Class: tsumagon
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 	WithDeathAnimation:
 		DeathSequencePalette: ra2player
 		CrushedSequencePalette: ra2effect
@@ -4527,7 +4527,7 @@ TSGHOST:
 	Selectable:
 		Class: tsghost
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 	WithDeathAnimation:
 		DeathSequencePalette: ra2player
 		CrushedSequencePalette: ra2effect
@@ -4538,7 +4538,7 @@ TSGHOSTMUTANT:
 		Queue: Infantry.Tsmutant
 		Prerequisites: ~tsgtpile2, tsfgttech
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 		Image: tsghost
 
 tsghost.r4:
@@ -4637,7 +4637,7 @@ TSMUTANT:
 		Name: garrisoned
 		Weapon: TSVulcanTower
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 	WithDeathAnimation:
 		DeathSequencePalette: ra2player
 		CrushedSequencePalette: ra2effect
@@ -4701,7 +4701,7 @@ TSMWMN:
 		Name: garrisoned
 		Weapon: TSRPGTower
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 	WithDeathAnimation:
 		DeathSequencePalette: ra2player
 		CrushedSequencePalette: ra2effect
@@ -4777,7 +4777,7 @@ TSMUTANT3:
 	WithRangeCircle:
 		Range: 3333
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 	WithDeathAnimation:
 		DeathSequencePalette: ra2player
 		CrushedSequencePalette: ra2effect
@@ -4832,7 +4832,7 @@ TSWEEDGUY:
 	Targetable@Immune:
 		TargetTypes: ToxinImmune
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 	WithDeathAnimation:
 		DeathSequencePalette: ra2player
 		CrushedSequencePalette: ra2effect
@@ -4889,7 +4889,7 @@ TSDOGGIE:
 	Crushable:
 		CrushClasses: vehicle
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 	WithDeathAnimation:
 		DeathSequencePalette: ra2player
 		CrushedSequencePalette: ra2effect
@@ -4957,7 +4957,7 @@ tsfloater:
 		-MuzzleSequence:
 	-WithMuzzleOverlay:
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 
 tsvissml:
@@ -5049,7 +5049,7 @@ tsnapost:
 		RequiresCondition: !build-incomplete && !disabled
 		Condition: active-posts
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 tsnafnce:
 	Inherits: ^Wall
@@ -5112,7 +5112,7 @@ tsnafnce:
 	Interactable:
 		Bounds: 1024, 1024
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 #######################################
 # TS Shared Vehicles
@@ -5302,7 +5302,7 @@ tsldrone:
 		IsPlayerPalette: true
 		PauseOnCondition: cloak-force-disabled || base-reveal
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 tsprobe:
 	Inherits: ^Helicopter
@@ -5353,7 +5353,7 @@ tsprobe:
 	KillsSelf:
 		RequiresCondition: triggered
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 	-RenderVoxels:
 	-WithVoxelBody:
 	-WithShadow:
@@ -5499,7 +5499,7 @@ TSMMCH:
 	RenderVoxels:
 		Scale: 10
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 TSJUGG:
 	Inherits: ^Tank
@@ -5615,7 +5615,7 @@ TSJUGG:
 		DeployTriggers:
 			Attack: 50
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 TSHVR:
 	Inherits: ^Tank
@@ -5672,7 +5672,7 @@ TSHVR:
 	RenderVoxels:
 		Scale: 15
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 TSSMECH:
 	Inherits: ^Vehicle
@@ -5721,7 +5721,7 @@ TSSMECH:
 	Voiced:
 		VoiceSet: TSMech
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 TSHMEC:
 	Inherits: ^Tank
@@ -5830,7 +5830,7 @@ TSHMEC:
 	Capturable:
 		Types: thiefproof
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 TSSONIC:
 	Inherits: ^Tank
@@ -5884,7 +5884,7 @@ TSSONIC:
 		Scale: 15
 	-RangeMultiplier@usasearchndestroy:
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 tsaegis:
 	Inherits: ^BoatUnit
@@ -5929,7 +5929,7 @@ tsaegis:
 	RenderSprites:
 		Image: ra2aegis
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 #######################################
 # TS Nod Vehicles
@@ -6034,7 +6034,7 @@ TSBGGY:
 	DeliversCash:
 		Payload: 250
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 TSBIKE:
 	Inherits: ^Vehicle
@@ -6084,7 +6084,7 @@ TSBIKE:
 	DeliversCash:
 		Payload: 250
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 TSBIKECABAL:
 	Inherits: TSBIKE
@@ -6092,7 +6092,7 @@ TSBIKECABAL:
 		Prerequisites: ~tsntweapcabal
 		Queue: Vehicle.Tscabal
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 		Image: tsbike
 	Voiced:
 		VoiceSet: TSReaper
@@ -6155,14 +6155,14 @@ TSSTNK:
 		Condition: cloak-force-disabled
 		ValidDamageStates: Critical
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 # TSSTNKCABAL:
 # 	Inherits: TSSTNK
 # 	Buildable:
 # 		Prerequisites: ~tsntweapcabal, tscabaltech
 # 	RenderSprites:
-# 		PlayerPalette: playerra2
+# 		PlayerPalette: playertibsun
 # 		Image: tsstnk
 # 	RenderVoxels:
 # 		Image: tsstnk
@@ -6214,7 +6214,7 @@ TSREPAIR:
 	AutoTargetPriority@DEFAULT:
 		ValidTargets: Vehicles
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 TSREPAIRCABAL:
 	Inherits: TSREPAIR
@@ -6222,7 +6222,7 @@ TSREPAIRCABAL:
 		Prerequisites: ~tsntweapcabal, tsgtdeptcabal
 		Queue: Vehicle.Tscabal
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 		Image: tsrepair
 	Armament@2:
 		Weapon: TSRepair
@@ -6351,7 +6351,7 @@ TSTTNK:
 	DeliversCash:
 		Payload: 350
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 TSTTNKCABAL:
 	Inherits: TSTTNK
@@ -6359,7 +6359,7 @@ TSTTNKCABAL:
 		Prerequisites: ~tsntweapcabal
 		Queue: Vehicle.Tscabal
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 		Image: tsttnk
 	Voiced:
 		VoiceSet: TSReaper
@@ -6434,7 +6434,7 @@ TSART2:
 		Position: BottomLeft
 		RequiresSelection: True
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 TSART2CABAL:
 	Inherits: TSART2
@@ -6442,7 +6442,7 @@ TSART2CABAL:
 		Prerequisites: ~tsntweapcabal, tsntradrcabal
 		Queue: Vehicle.Tscabal
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 		Image: tsart2
 	Voiced:
 		VoiceSet: TSReaper
@@ -6499,7 +6499,7 @@ TSSUBTANK:
 	RenderVoxels:
 		Scale: 15
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 TSSUBTANKCABAL:
 	Inherits: TSSUBTANK
@@ -6507,7 +6507,7 @@ TSSUBTANKCABAL:
 		Prerequisites: ~tsntweapcabal, tscabaltech
 		Queue: Vehicle.Tscabal
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 		Image: tssubtank
 	Voiced:
 		VoiceSet: TSReaper
@@ -6585,7 +6585,7 @@ TSAPC:
 		Position: BottomLeft
 		RequiresSelection: true
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 tssgen:
 	Inherits: ^Tank
@@ -6635,14 +6635,14 @@ tssgen:
 	WithRangeCircle:
 		Range: 7c0
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 # tssgencabal:
 # 	Inherits: tssgen
 # 	Buildable:
 # 		Prerequisites: ~tsntweapcabal, tsntstlhcabal
 # 	RenderSprites:
-# 		PlayerPalette: playerra2
+# 		PlayerPalette: playertibsun
 # 		Image: tssgen
 # 	RenderVoxels:
 # 		Image: tssgen
@@ -6682,7 +6682,7 @@ tslpst:
 		Range: 12c0
 	RenderSprites:
 		Image: tslpst
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 tslpstcabal:
 	Inherits: tslpst
@@ -6690,7 +6690,7 @@ tslpstcabal:
 		Prerequisites: ~tsntweapcabal, tsntradrcabal
 		Queue: Vehicle.Tscabal
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 		Image: tslpst
 	Voiced:
 		VoiceSet: TSReaper
@@ -6708,7 +6708,7 @@ tslpstnod:
 		Description: Shuts down vehicles with an EMP blast..  Strong vs Vehicles, Cyborgs
 	RenderSprites:
 		Image: tslpst
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 deploytsgtweap:
 	Inherits: tsgtweap
@@ -6722,7 +6722,7 @@ deploytsgtweap:
 		NoTransformNotification: BuildingCannotPlaceAudio
 	RenderSprites:
 		Image: tsmopbilefactdep
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 	RenderVoxels:
 		Image: tsmopbilefactdep
 
@@ -6759,7 +6759,7 @@ tsmobilefact:
 		VoiceSet: TSVehicle
 	RenderSprites:
 		Image: tsmobilefact
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 	# RenderVoxels:
 	# 	Image: tsmcv
 	RenderVoxels:
@@ -6783,7 +6783,7 @@ deploytsntweap:
 		ProductionType: Vehicle.Tsnod
 	RenderSprites:
 		Image: tsmopbilefactdep
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 tsmobilefactnod:
 	Inherits: tsmobilefact
@@ -6797,7 +6797,7 @@ tsmobilefactnod:
 		IntoActor: deploytsntweap
 	RenderSprites:
 		Image: tsmobilefact2
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 tsmemp:
 	Inherits: ^Tank
@@ -6840,7 +6840,7 @@ tsmemp:
 		Image: tsm_emp
 		Scale: 15
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 #######################################
 # TS Forgotten Vehicles
@@ -6915,7 +6915,7 @@ TSWINI2:
 	RenderVoxels:
 		Scale: 15
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 # TSCAR2:
 # 	Inherits: ^CivilianDriveByVehicle
@@ -6971,7 +6971,7 @@ TSWINI2:
 # 	RenderVoxels:
 # 		Scale: 15
 # 	RenderSprites:
-# 		PlayerPalette: playerra2
+# 		PlayerPalette: playertibsun
 
 TS1TNK:
 	Inherits: ^Tank
@@ -7027,7 +7027,7 @@ TS1TNK:
 	RenderVoxels:
 		Scale: 15
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 TS2TNK:
 	Inherits: ^Tank
@@ -7438,7 +7438,7 @@ TSSAPCCABAL:
 	Buildable:
 		Prerequisites: ~tsntweapcabal, tsntradrcabal
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 		Image: tssapc
 		Queue: Infantry.Tscabal
 	RenderVoxels:
@@ -7533,7 +7533,7 @@ TST1000:
 		DamageCooldown: 1
 	RenderSprites:
 		Image: tst1000
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 TSDEFENDER:
 	Inherits: ^Tank
@@ -7635,7 +7635,7 @@ TSDEFENDER:
 	Capturable:
 		Types: thiefproof
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 
 #######################################
 # TS Aircraft
@@ -8002,7 +8002,7 @@ TSSCRINCABAL:
 		Prerequisites: ~tsnthpad2, tsntradrcabal, tscabaltech
 		Queue: Aircraft.Tscabal
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 		Image: tsscrin
 	RenderVoxels:
 		Image: tsscrin
@@ -8642,5 +8642,5 @@ TSARND:
 	WithDeathAnimation:
 		UseDeathTypeSuffix: false
 	RenderSprites:
-		PlayerPalette: playerra2
+		PlayerPalette: playertibsun
 

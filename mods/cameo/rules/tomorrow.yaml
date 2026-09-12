@@ -1,60 +1,60 @@
 World:
 	FactionCA@dtomorrow:
-		Name: F.O.T DoT
+		Name: F.O.T
 		InternalName: dtomorrow
 		Game: Dawn of Tomorrow
 		Side: Dawn of Tomorrow
 		Description: Forces of Tomorrow Support powers: Bacterial Missile Strike Special Unit: Classified
 	FactionCA@dtanswer:
-		Name: C.O.A DoT
+		Name: C.O.A
 		InternalName: dtanswer
 		Game: Dawn of Tomorrow
 		Side: Dawn of Tomorrow
 		Description: Company of Answers Support powers: A10 Strike Special Unit: Phoenix Gain extra cash from Refineries.
 	FactionCA@dtusa:
-		Name: USA DoT
+		Name: USA
 		InternalName: dtusa
 		Game: Dawn of Tomorrow
 		Side: Dawn of Tomorrow
 		Description: USA Support powers: Cruise Missile Strike Special Bonus: Vehicle Rank unlocking machine Shop
 	FactionCA@dtrussia:
-		Name: Russia DoT
+		Name: Russia
 		InternalName: dtrussia
 		Game: Dawn of Tomorrow
 		Side: Dawn of Tomorrow
 		Description: Russia
 	FactionCA@dtjapan:
-		Name: Japan DoT
+		Name: Japan
 		InternalName: dtjapan
 		Game: Dawn of Tomorrow
 		Side: Dawn of Tomorrow
 		Description: Japan
 	FactionCA@dtargentina:
-		Name: Argentina DoT
+		Name: Argentina
 		InternalName: dtargentina
 		Game: Dawn of Tomorrow
 		Side: Dawn of Tomorrow
 		Description: Argentina
 	FactionCA@dtbrazil:
-		Name: Brazil DoT
+		Name: Brazil
 		InternalName: dtbrazil
 		Game: Dawn of Tomorrow
 		Side: Dawn of Tomorrow
 		Description: Brazil
 	FactionCA@dtcuba:
-		Name: Cuba DoT
+		Name: Cuba
 		InternalName: dtcuba
 		Game: Dawn of Tomorrow
 		Side: Dawn of Tomorrow
 		Description: Cuba
 	FactionCA@dtaustralia:
-		Name: Australia DoT
+		Name: Australia
 		InternalName: dtaustralia
 		Game: Dawn of Tomorrow
 		Side: Dawn of Tomorrow
 		Description: Australia
 	FactionCA@dtethiopia:
-		Name: Ethiopia DoT
+		Name: Ethiopia
 		InternalName: dtethiopia
 		Game: Dawn of Tomorrow
 		Side: Dawn of Tomorrow
@@ -437,7 +437,7 @@ MCV.TOMORROW:
 		Name: Mobile Construction Vehicle (Tomorrow)
 	Buildable:
 		BuildPaletteOrder: 100
-		Prerequisites:  ~anyhq, fix
+		Prerequisites: ~anyhq, fix
 		Queue: Vehicle.Tomorrow
 		BuildDurationModifier: 40
 		Description: Deploys into another Construction Yard.   Unarmed
@@ -490,7 +490,7 @@ MCV.ANSWER:
 		Name: Mobile Construction Vehicle (Answer)
 	Buildable:
 		BuildPaletteOrder: 100
-		Prerequisites:  ~anyhq, fix
+		Prerequisites: ~anyhq, fix
 		Queue: Vehicle.Anwer
 		BuildDurationModifier: 40
 		Description: Deploys into another Construction Yard.   Unarmed
@@ -541,7 +541,7 @@ MCV.DTUSA:
 		Name: Mobile Construction Vehicle (USA)
 	Buildable:
 		BuildPaletteOrder: 100
-		Prerequisites:  ~anyhq, fix
+		Prerequisites: ~anyhq, fix
 		Queue: Vehicle.Dtusa
 		BuildDurationModifier: 40
 		Description: Deploys into another Construction Yard.   Unarmed
@@ -647,7 +647,7 @@ MCV.DTJAPAN:
 		Name: Mobile Construction Vehicle (Japan)
 	Buildable:
 		BuildPaletteOrder: 100
-		Prerequisites:  ~anyhq, fix
+		Prerequisites: ~anyhq, fix
 		Queue: Vehicle.Dtjapan
 		BuildDurationModifier: 40
 		Description: Deploys into another Construction Yard.   Unarmed
@@ -844,7 +844,7 @@ MCV.DTAUSTRALIA:
 		Name: Mobile Construction Vehicle (Australia)
 	Buildable:
 		BuildPaletteOrder: 100
-		Prerequisites:  ~anyhq, fix
+		Prerequisites: ~anyhq, fix
 		Queue: Vehicle.Dtaustralia
 		BuildDurationModifier: 40
 		Description: Deploys into another Construction Yard.   Unarmed
@@ -4894,7 +4894,7 @@ DTEYE:
 	Tooltip:
 		Name: Naval Command Centre
 	ProvidesPrerequisite:
-		Prerequisite:  ~anyhq
+		Prerequisite: ~anyhq
 	Buildable:
 		BuildPaletteOrder: 100
 		BuildDuration: 1200
@@ -4974,7 +4974,7 @@ DTHQ:
 	Tooltip:
 		Name: Naval Command Centre
 	ProvidesPrerequisite:
-		Prerequisite:  ~anyhq
+		Prerequisite: ~anyhq
 	Buildable:
 		BuildPaletteOrder: 100
 		BuildDuration: 1200

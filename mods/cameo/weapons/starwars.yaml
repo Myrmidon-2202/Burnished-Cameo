@@ -584,8 +584,8 @@ SWDDroidLaser:
 	BurstDelays: 2
 	Range: 4c0
 	Warhead@1Dam: SpreadDamage
-		Spread: 25
-		Damage: 2500
+		Spread: 10
+		Damage: 1500
 		Versus:
 			None: 70
 			Wood: 60
@@ -602,6 +602,7 @@ SWDDroidLaser:
 		ImpactSounds: xplos.aud
 		ImpactActors: false
 		ValidTargets: Ground, Water, Air
+
 SWT2BMissle:
 	Inherits: ^MissileWeapon
 	Range: 6c0
@@ -618,12 +619,19 @@ SWT2BMissle:
 		ValidTargets: Ground, Water, Air
 	Warhead@1Dam: SpreadDamage
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath, MakeScrapbox
+
 SWT2BMissle2:
 	Inherits: SWT2BMissle
 	Burst: 2
+
 SWT2BMissle3:
 	Inherits: SWT2BMissle
 	Burst: 3
+
+SWATSTGRENADES:
+	Inherits: ^Grenade
+	Burst: 3
+
 SWATSTLaser:
 	Inherits: SWGreenLaser
 	Report: swtnkfire4.aud
@@ -638,7 +646,7 @@ SWATATLaser:
 	Inherits: SWGreenLaser
 	ReloadDelay: 33
 	Report: swtnkfire4.aud
-	Range: 8c256
+	Range: 9c256
 	Projectile: Missile
 		HorizontalRateOfTurn: 20
 		Speed: 512
