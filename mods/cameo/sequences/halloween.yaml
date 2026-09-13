@@ -81,6 +81,30 @@ halloween_blackcitadel:
 # 	damaged-idle:
 # 		Start: 1
 # 	icon: xmas_elves_refinery_icon
+
+halloween_graveyard:
+	Defaults:
+		Scale: 2.0
+		Filename: halloween_graveyard.shp
+	idle:
+		Tick: 1000
+	damaged-idle:
+		Tick: 1000
+	idle2:
+		Start: 1
+	damaged-idle2:
+		Start: 1
+	dead:
+		Tick: 800
+	make:
+	bib: 
+		Filename: bib3.tem
+		UseTilesetExtension: true
+		Length: *
+	icon: 
+		Filename: halloween_cameos.shp
+		Start: 1
+		AddExtension: False
 	
 halloween_crypto:
 	Defaults:
@@ -141,7 +165,8 @@ halloween_cauldron:
 		ZOffset: 0
 	make:
 	dead:
-	bib: bib2
+	bib: 
+		Filename: bib2.tem
 		Length: *
 		UseTilesetExtension: true
 		TilesetOverrides:
@@ -823,29 +848,6 @@ halloween_skull:
 		Facings: 64
 		ZOffset: 1023
 
-halloween_graveyard:
-	Defaults:
-		Scale: 2.0
-		Filename: halloween_graveyard.shp
-	idle:
-		Tick: 1000
-	damaged-idle:
-		Tick: 1000
-	idle2:
-		Start: 1
-	damaged-idle2:
-		Start: 1
-	dead:
-		Tick: 800
-	make:
-	bib: bib3
-		UseTilesetExtension: true
-		Length: *
-	icon: 
-		Filename: halloween_cameos.shp
-		Start: 1
-		AddExtension: False
-
 halloween_tower:
 	Defaults:
 		Scale: 2.0
@@ -892,7 +894,8 @@ halloween_spirittower:
 		Offset: 0,-13
 		Length: *
 	dead:
-	bib: mbTSLA
+	bib: 
+		Filename: mbTSLA.tem
 		Length: *
 		UseTilesetExtension: false
 	icon: 

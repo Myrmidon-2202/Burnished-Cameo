@@ -142,6 +142,39 @@ PINKY_FI:
 		ExplodeInstead: True
 	DetectCloaked:
 
+^BunkerBaseBuilding_fi:
+	Inherits: ^Defense
+	Inherits@AUTOTARGET: ^AutoTargetAll
+	GivesBuildableArea:
+		AreaTypes: building
+	AcceptsDeliveredCash:
+		ValidTypes: NormalCash
+	Capturable:
+		Types: building
+	MustBeDestroyed:
+		RequiredForShortGame: true
+	Cargo:
+		Types: Infantry, Hacker, Fremen
+		MaxWeight: 5
+		EjectOnDeath: false
+	AttackOpenTopped:
+		Armaments: garrisoned
+		PortOffsets: 768,0,612, 448,-682,612, -448,-682,612, -768,0,612, -448,682,612, 448,682,612
+		PauseOnCondition: chronobeamed
+	Turreted:
+		TurnSpeed: 1023
+	-QuantizeFacingsFromSequence:
+	BodyOrientation:
+		QuantizedFacings: 8
+	RangeMultiplier@Extrarange:
+		Modifier: 175
+	DetectCloaked:
+		Range: 4c0
+		RequiresCondition: !lowpower
+	WithCargoPipsDecoration:
+		Position: BottomLeft
+		RequiresSelection: true
+
 halloween_blackcitadel:
 	GrantExternalConditionToOwner@BuildingsOwned:
 		Condition: BuildingsOwned
@@ -161,7 +194,7 @@ halloween_blackcitadel:
 		BuildPaletteOrder: 10
 		Queue: Building, RABuilding
 		Description: Enables buildings construction
-		Prerequisites: halloween_daemonpit, ~disabled
+		Prerequisites: ~disabled
 	Health:
 		HP: 250000
 	Armor:
@@ -177,34 +210,34 @@ halloween_blackcitadel:
 	Production@NORMAL:
 		Produces: Building, Defence
 		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RABuilding, RADefence
-		RequiresCondition: classicproductionqueues
-	ProductionQueue@AlphaBuilding:
-		Type: Building
-		DisplayOrder: 0
-		Group: Building
-		QueuedAudio: Building
-		ReadyAudio: ConstructionComplete
-	ProductionQueue@AlphaDefense:
-		Type: Defence
-		DisplayOrder: 1
-		Group: Defence
-		QueuedAudio: Building
-		ReadyAudio: ConstructionComplete
-	BaseBuilding:
-	ProductionBar@BuildingAlpha:
-		ProductionType: Building
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@DefenceAlpha:
-		ProductionType: Defence
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@RABuildingAlpha:
-		ProductionType: RABuilding
-		RequiresCondition: classicproductionqueues
-	ProductionBar@RADefenceAlpha:
-		ProductionType: RADefence
-		RequiresCondition: classicproductionqueues
+	# Production@CLASSICPRODUCTIONQUEUES:
+	# 	Produces: RABuilding, RADefence
+	# 	RequiresCondition: classicproductionqueues
+	# ProductionQueue@AlphaBuilding:
+	# 	Type: Building
+	# 	DisplayOrder: 0
+	# 	Group: Building
+	# 	QueuedAudio: Building
+	# 	ReadyAudio: ConstructionComplete
+	# ProductionQueue@AlphaDefense:
+	# 	Type: Defence
+	# 	DisplayOrder: 1
+	# 	Group: Defence
+	# 	QueuedAudio: Building
+	# 	ReadyAudio: ConstructionComplete
+	# BaseBuilding:
+	# ProductionBar@BuildingAlpha:
+	# 	ProductionType: Building
+	# 	RequiresCondition: !classicproductionqueues
+	# ProductionBar@DefenceAlpha:
+	# 	ProductionType: Defence
+	# 	RequiresCondition: !classicproductionqueues
+	# ProductionBar@RABuildingAlpha:
+	# 	ProductionType: RABuilding
+	# 	RequiresCondition: classicproductionqueues
+	# ProductionBar@RADefenceAlpha:
+	# 	ProductionType: RADefence
+	# 	RequiresCondition: classicproductionqueues
 	BaseProvider:
 		Range: 12c0
 	ProvidesPrerequisite@buildingname:
@@ -248,6 +281,7 @@ halloween_blackcitadel:
 	# 	Prerequisites: halloween_upgrade.ghost
 	Voiced:
 		VoiceSet: Halloween_Necropolis_Voice
+
 halloween_crypto:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^3x2Shape
@@ -263,6 +297,7 @@ halloween_crypto:
 		BuildPaletteOrder: 30
 		Queue: Building, RABuilding
 		Description: Trains Undeads\nProvides energy to build more units
+		Prerequisites: ~halloween_blackcitadel
 	Building:
 		Footprint: xxx xxx ===
 		Dimensions: 3,3
@@ -323,6 +358,7 @@ halloween_crypto:
 		Actor: halloween_rockgolem_small
 	Voiced:
 		VoiceSet: Halloween_Crypt_Voice
+
 halloween_clowntent:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^3x2Shape
@@ -337,8 +373,8 @@ halloween_clowntent:
 	Buildable:
 		BuildPaletteOrder: 30
 		Queue: Building, RABuilding
-		Description: Trains Clowns\nProvides energy to build more units
-		Prerequisites: halloween_crypto
+		Description: Trains Clowns
+		Prerequisites: ~halloween_blackcitadel, halloween_crypto 
 	Building:
 		Footprint: xxx xxx ===
 		Dimensions: 3,3
@@ -397,6 +433,7 @@ halloween_clowntent:
 		Actor: halloween_clown
 	SpawnActorOnDeath@death2:
 		Actor: halloween_clown2
+
 halloween_graveyard:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^2x2Shape
@@ -411,7 +448,7 @@ halloween_graveyard:
 		Name: Graveyard
 	Buildable:
 		BuildPaletteOrder: 10
-		Prerequisites: halloween_blackcitadel
+		Prerequisites: ~halloween_blackcitadel
 		Queue: Building, RABuilding
 		Description: Generates soul power
 	Building:
@@ -425,6 +462,7 @@ halloween_graveyard:
 	WithBuildingBib:
 	Power:
 		Amount: 120
+	ProvidesPrerequisite@buildingname:
 	ScalePowerWithHealth:
 	AcceptsDeliveredExperience: ##########
 		ValidTypes: building ##########
@@ -470,7 +508,7 @@ halloween_graveyard.turbine:
 		RemoveInstead: true
 
 halloween_daemonpit:
-	# Inherits: ^BunkerBaseBuilding
+	Inherits: ^BunkerBaseBuilding_fi
 	Inherits@shape: ^4x3Shape
 	Inherits@CPQWP: ^CPQConditionWithPrimary
 	Inherits@prod: ^ProducesUnits
@@ -483,7 +521,7 @@ halloween_daemonpit:
 		Name: Daemon Pit
 	Buildable:
 		BuildPaletteOrder: 50
-		Prerequisites: halloween_clowntent, halloween_crypto
+		Prerequisites: ~halloween_blackcitadel, halloween_clowntent, halloween_crypto
 		Queue: Building, RABuilding
 		Description: Produces powerful demons, and monsters
 	Building:
@@ -542,6 +580,7 @@ halloween_daemonpit:
 		Actor: halloween_rockgolem_small
 	SpawnActorOnDeath@death4:
 		Actor: halloween_rockgolem_small
+
 halloween_tower:
 	Inherits: ^Defense
 	Inherits@IDISABLE: ^DisabledOverlay
@@ -551,7 +590,7 @@ halloween_tower:
 	Buildable:
 		Queue: Defence, RADefence
 		BuildPaletteOrder: 80
-		Prerequisites: halloween_crypto
+		Prerequisites: ~halloween_blackcitadel, halloween_crypto
 		Description: Advanced base defense.\nRequires power to operate.\nCan detect cloaked units.\n  Strong vs Vehicles, Infantry\n  Weak vs Aircraft
 	Valued:
 		Cost: 800
@@ -606,6 +645,7 @@ halloween_tower:
 	RangeMultiplier@bows:
 		Modifier: 120
 		RequiresCondition: halloween_upgrade.bows
+
 halloween_spirittower:
 	Inherits: ^Defense
 	Inherits@IDISABLE: ^DisabledOverlay
@@ -618,15 +658,15 @@ halloween_spirittower:
 	Buildable:
 		Queue: Defence, RADefence
 		BuildPaletteOrder: 80
-		Prerequisites: halloween_cauldron
+		Prerequisites: ~halloween_blackcitadel, halloween_cauldron
 		Description: Advanced base defense.\nRequires power to operate.\nCan detect cloaked units.\n  Strong vs Vehicles, Infantry\n  Weak vs Aircraft
 	Valued:
 		Cost: 1200
 	Tooltip:
 		Name: Spirit Tower
 	Selectable:
-		Bounds: 76458, 76458
-		DecorationBounds: 43690, 72789, 0, -14549
+		Bounds: 2048, 2048
+	# DecorationBounds: 1024, 1024, 0, -1024
 	SelectionDecorations:
 	Health:
 		HP: 70000
@@ -683,7 +723,7 @@ halloween_carousel:
 		BuildPaletteOrder: 120
 		Queue: Building, RABuilding
 		Description: Provides Passive income
-		Prerequisites: halloween_clowntent
+		Prerequisites: ~halloween_blackcitadel, halloween_clowntent
 		BuildDuration: 1000
 		BuildDurationModifier: 100
 	Building:
@@ -826,7 +866,7 @@ halloween_cauldron:
 	Buildable:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 60
-		Prerequisites: anypower
+		Prerequisites: ~halloween_blackcitadel, halloween_graveyard
 		Description: Refines Ore and Gems\ninto credits.
 	Valued:
 		Cost: 1400 #1400
@@ -837,8 +877,7 @@ halloween_cauldron:
 		Dimensions: 3,4
 		LocalCenterOffset: 0,-512,0
 	Selectable:
-		Bounds: 131072, 91008, 0, 21845
-		DecorationBounds: 131072, 127402, 0, -3626
+		Bounds: 4096, 4096, 0, 4096
 	SelectionDecorations:
 	Health:
 		HP: 90000
@@ -892,6 +931,7 @@ halloween_cauldron:
 		RequiresSelection: true
 		PipCount: 17
 		FullSequence: pip-yellow
+
 halloween_dkghost_small:
 	Inherits: ^Soldier
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -906,6 +946,7 @@ halloween_dkghost_small:
 	Buildable:
 		BuildPaletteOrder: 10
 		Queue: Infantry, RAInfantry
+		Prerequisites: ~halloween_crypto
 		Description: A Ghost, with melee attack, can fly
 	Mobile:
 		Locomotor: jumpjet
@@ -976,6 +1017,7 @@ halloween_dkghost_small:
 		EmptyWeapon: halloween_ghost_spawner
 		RequiresCondition: halloween_upgrade.ghost
 		Chance: 45
+
 halloween_bat:
 	Inherits: ^Soldier
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -990,6 +1032,7 @@ halloween_bat:
 	Buildable:
 		BuildPaletteOrder: 10
 		Queue: Infantry, RAInfantry
+		Prerequisites: ~halloween_crypto
 		Description: Can fly, spits blood
 	Mobile:
 		Locomotor: jumpjet
@@ -1055,6 +1098,7 @@ halloween_bat:
 		EmptyWeapon: halloween_ghost_spawner
 		RequiresCondition: halloween_upgrade.ghost
 		Chance: 45
+
 halloween_skeleton:
 	Inherits: wc_o_skeleton
 	Inherits@upgrade_shields: ^wc_h_str_shield
@@ -1062,6 +1106,7 @@ halloween_skeleton:
 	Inherits@MC: ^MCImmune
 	Buildable:
 		Queue: Infantry, RAInfantry
+		Prerequisites: ~halloween_crypto
 		BuildPaletteOrder: 5
 		BuildDurationModifier: 100
 		BuildDuration: 60
@@ -1101,6 +1146,7 @@ halloween_skeleton:
 	FirepowerMultiplier@sword:
 		Modifier: 125
 		RequiresCondition: halloween_upgrade.sword
+
 halloween_demon:
 	Inherits@WD: wc_o_demon
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
@@ -1110,7 +1156,7 @@ halloween_demon:
 		Queue: Vehicle, RAVehicle
 		BuildPaletteOrder: 60
 		BuildDurationModifier: 50
-		Prerequisites: ~techlevel.medium, halloween_daemonpit
+		Prerequisites: ~halloween_daemonpit
 		Description: Slow powerful demon. Attacks in close combat.
 	Armament:
 		Weapon: demonSlice
@@ -1163,10 +1209,12 @@ halloween_pinky:
 		Image: halloween_pinky
 	Buildable:
 		Queue: Vehicle, RAVehicle
+		Prerequisites: ~halloween_daemonpit
 		BuildPaletteOrder: 20
 		BuildDurationModifier: 60
-		Prerequisites: halloween_daemonpit
 		Description: This is PINKY
+	Selectable:
+		Bounds: 1536, 1536
 	Health:
 		HP: 55000
 	Valued:
@@ -1196,6 +1244,7 @@ halloween_pinky:
 	DamageMultiplier@mana:
 		Modifier: 75
 		RequiresCondition: halloween_upgrade.mana
+
 halloween_cow:
 	Inherits@WD: wc_o_demon
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
@@ -1205,7 +1254,7 @@ halloween_cow:
 		Queue: Infantry, RAInfantry
 		BuildPaletteOrder: 60
 		BuildDurationModifier: 50
-		Prerequisites: halloween_daemonpit
+		Prerequisites: ~halloween_crypto
 		Description: Slow powerful cow. Attacks in close combat.
 	Armament:
 		Weapon: demonSlice
@@ -1269,7 +1318,7 @@ halloween_rockgolem:
 		Queue: Infantry, RAInfantry
 		BuildPaletteOrder: 60
 		BuildDurationModifier: 50
-		Prerequisites: ~techlevel.medium
+		Prerequisites: ~halloween_crypto
 		Description: A large Rock Golem, throws rocks.
 	Inherits@EXT: ^ExternalConditions ##########
 	SpawnActorOnDeath@death1:
@@ -1285,7 +1334,7 @@ halloween_rockgolem:
 		EmptyWeapon: halloween_ghost_spawner_bigunit
 		RequiresCondition: halloween_upgrade.ghost
 	Selectable:
-		Bounds: 65536, 65536
+		Bounds: 1024, 1024
 	GrantConditionOnPrerequisite@mana:
 		Prerequisites: halloween_upgrade.mana
 		Condition: halloween_upgrade.mana
@@ -1298,6 +1347,7 @@ halloween_rockgolem:
 	DamageMultiplier@mana:
 		Modifier: 75
 		RequiresCondition: halloween_upgrade.mana
+
 halloween_rockgolem_small:
 	Inherits: RAPT
 	-Buildable:
@@ -1334,6 +1384,7 @@ halloween_rockgolem_small:
 	DamageMultiplier@mana:
 		Modifier: 75
 		RequiresCondition: halloween_upgrade.mana
+
 halloween_spider:
 	Inherits: ^Soldier
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -1349,7 +1400,7 @@ halloween_spider:
 		Queue: Infantry, RAInfantry
 		BuildPaletteOrder: 20
 		BuildDurationModifier: 50
-		Prerequisites: ~techlevel.medium
+		Prerequisites: ~halloween_crypto
 		Description: A evil Spider.
 	Mobile:
 		Speed: 56
@@ -1426,8 +1477,8 @@ halloween_clown:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 60
-		Prerequisites: barracks
 		Queue: Infantry, RAInfantry
+		Prerequisites: ~halloween_clowntent
 		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles
 	Mobile:
 		Speed: 70
@@ -1480,8 +1531,8 @@ halloween_clown2:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 60
-		Prerequisites: barracks
 		Queue: Infantry, RAInfantry
+		Prerequisites: ~halloween_clowntent
 		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles
 	Mobile:
 		Speed: 75
@@ -1538,7 +1589,7 @@ halloween_clown3:
 		BuildDuration: 1500
 		BuildDurationModifier: 100
 		BuildPaletteOrder: 60
-		Prerequisites: halloween_daemonpit
+		Prerequisites: ~halloween_clowntent
 		Queue: Infantry, RAInfantry
 		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles
 	Mobile:
@@ -1592,6 +1643,7 @@ halloween_clown3:
 		Weapon: halloween_ghost_spawner
 		EmptyWeapon: halloween_ghost_spawner
 		RequiresCondition: halloween_upgrade.ghost
+
 halloween_sweettooth:
 	Inherits: ^Vehicle
 	Inherits@EXPERIENCE: ^GainsExperienceVehicle
@@ -1605,7 +1657,7 @@ halloween_sweettooth:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 30
-		Prerequisites: halloween_clowntent
+		Prerequisites: ~halloween_clowntent
 		Queue: Infantry, RAInfantry
 		Description: Fast scout vehicle, armed with\nrockets.\nCan attack Aircraft.\n  Strong vs Vehicles, Tanks\n  Weak vs Infantry
 	Mobile:
@@ -1644,6 +1696,7 @@ halloween_sweettooth:
 		Weapon: halloween_ghost_spawner_bigunit
 		EmptyWeapon: halloween_ghost_spawner_bigunit
 		RequiresCondition: halloween_upgrade.ghost
+
 halloween_clowncar:
 	Inherits: ^Vehicle
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -1659,7 +1712,7 @@ halloween_clowncar:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 30
-		Prerequisites: halloween_clowntent, ~!selectchinf
+		Prerequisites: ~halloween_clowntent, ~!selectchinf
 		Queue: Infantry, RAInfantry
 		Description: Heavy infantry transport.\n Unarmed
 	Mobile:
@@ -1696,6 +1749,7 @@ halloween_clowncar:
 	WithCargoPipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: true
+
 halloween_pirateship:
 	Inherits: ^Helicopter
 	Inherits@EXPERIENCE: ^GainsExperienceRA2
@@ -1709,7 +1763,7 @@ halloween_pirateship:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 99
-		Prerequisites: halloween_daemonpit
+		Prerequisites: ~halloween_daemonpit
 		Queue: Infantry, RAInfantry
 		Description: Heavy bomber airship.\n  Strong vs Buildings, Infantry\n  Weak vs Aircraft
 	Aircraft:
@@ -1736,7 +1790,7 @@ halloween_pirateship:
 	WithShadow:
 	SelectionDecorations:
 	Selectable:
-		DecorationBounds: 1536, 1536
+		Bounds: 1536, 1536
 	SpawnActorOnDeath:
 		Actor: halloween_pirateship.Husk
 	Voiced:
@@ -1769,6 +1823,7 @@ halloween_pirateship:
 		Actor: halloween_skeleton_archer
 	SpawnActorOnDeath@5:
 		Actor: halloween_skeleton_archer
+
 halloween_pirateship.Husk:
 	Inherits: ^PlaneHusk
 	Tooltip:
@@ -1792,6 +1847,7 @@ halloween_pirateship.Husk:
 		Velocity: 43
 		Explosion: KirovExplode
 	WithShadow:
+
 halloween_skeleton_archer:
 	Inherits: ^Soldier
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -1806,7 +1862,7 @@ halloween_skeleton_archer:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 20
-		Prerequisites: ~techlevel.medium
+		Prerequisites: ~halloween_crypto
 		Queue: Infantry, RAInfantry
 		Description: Anti-tank/Anti-aircraft infantry. \n  Strong vs Tanks, Aircraft\n  Weak vs Infantry
 	Mobile:
@@ -1986,6 +2042,7 @@ halloween_upgrade.ghost:
 	RenderSprites:
 		Image: halloween_upgrade.ghost
 	ProvidesPrerequisite@upgradename:
+
 halloween_upgrade.boiling:
 	AlwaysVisible:
 	Interactable:
@@ -1994,7 +2051,7 @@ halloween_upgrade.boiling:
 		Name: Boiling Oil
 	Buildable:
 		BuildPaletteOrder: 250
-		Prerequisites: halloween_daemonpit
+		Prerequisites: ~halloween_daemonpit
 		Queue: Vehicle, RAVehicle
 		BuildLimit: 1
 		BuildDuration: 750
@@ -2005,6 +2062,7 @@ halloween_upgrade.boiling:
 	RenderSprites:
 		Image: halloween_upgrade.boiling
 	ProvidesPrerequisite@upgradename:
+
 halloween_upgrade.axe:
 	AlwaysVisible:
 	Interactable:
@@ -2013,7 +2071,7 @@ halloween_upgrade.axe:
 		Name: War Axes
 	Buildable:
 		BuildPaletteOrder: 250
-		Prerequisites: halloween_daemonpit
+		Prerequisites: ~halloween_daemonpit
 		Queue: Vehicle, RAVehicle
 		BuildLimit: 1
 		BuildDuration: 750
@@ -2024,6 +2082,7 @@ halloween_upgrade.axe:
 	RenderSprites:
 		Image: halloween_upgrade.axe
 	ProvidesPrerequisite@upgradename:
+
 halloween_upgrade.sword:
 	AlwaysVisible:
 	Interactable:
@@ -2032,7 +2091,7 @@ halloween_upgrade.sword:
 		Name: BroadSwords
 	Buildable:
 		BuildPaletteOrder: 250
-		Prerequisites: halloween_daemonpit
+		Prerequisites: ~halloween_daemonpit
 		Queue: Vehicle, RAVehicle
 		BuildLimit: 1
 		BuildDuration: 750
@@ -2043,6 +2102,7 @@ halloween_upgrade.sword:
 	RenderSprites:
 		Image: halloween_upgrade.sword
 	ProvidesPrerequisite@upgradename:
+
 halloween_upgrade.bows:
 	AlwaysVisible:
 	Interactable:
@@ -2051,7 +2111,7 @@ halloween_upgrade.bows:
 		Name: Battle Bow
 	Buildable:
 		BuildPaletteOrder: 250
-		Prerequisites: halloween_daemonpit
+		Prerequisites: ~halloween_daemonpit
 		Queue: Vehicle, RAVehicle
 		BuildLimit: 1
 		BuildDuration: 750
@@ -2062,6 +2122,7 @@ halloween_upgrade.bows:
 	RenderSprites:
 		Image: halloween_upgrade.bows
 	ProvidesPrerequisite@upgradename:
+
 halloween_upgrade.mana:
 	AlwaysVisible:
 	Interactable:
@@ -2070,7 +2131,7 @@ halloween_upgrade.mana:
 		Name: Mana
 	Buildable:
 		BuildPaletteOrder: 250
-		Prerequisites: halloween_daemonpit
+		Prerequisites: ~halloween_daemonpit
 		Queue: Vehicle, RAVehicle
 		BuildLimit: 1
 		BuildDuration: 1000
@@ -2093,12 +2154,12 @@ halloween_worm:
 		GenericName: Worm
 	Buildable:
 		BuildPaletteOrder: 10
-		Prerequisites: halloween_cauldron
+		Prerequisites: ~halloween_cauldron
 		Queue: Infantry, RAInfantry
 		BuildDurationModifier: 40
 		Description: Collects Tiberium for processing.\n  Unarmed
 	Selectable:
-		DecorationBounds: 1536, 1536
+		Bounds: 1536, 1536
 	Harvester:
 		PipCount: 7
 		BaleLoadDelay: 4
@@ -2136,7 +2197,7 @@ halloween_mcv:
 		Name: Mobile Construction Worm (Halloween)
 	Buildable:
 		BuildPaletteOrder: 100
-		Prerequisites: halloween_daemonpit
+		Prerequisites: ~halloween_daemonpit
 		Queue: Vehicle, RAVehicle
 		BuildDurationModifier: 40
 		Description: Deploys into another Construction Yard.\n  Unarmed
