@@ -310,7 +310,7 @@ WH40KHellhoundFlamer:
 	-Warhead@2Smu:
 
 WH40KBasiliskGun:
-	Inherits: ^sow_siege
+	Inherits: ^Artillery
 	ReloadDelay: 70
 	Burst: 1
 	Range: 16c512
@@ -318,7 +318,7 @@ WH40KBasiliskGun:
 	Report: wh40kartblast.aud
 	Projectile: Bullet
 		Speed: 325
-		Image: mt_siege_shot
+		# Image: mt_siege_shot
 		LaunchAngle: 56
 		Inaccuracy: 0c256
 	Warhead@1Dam: SpreadDamage
@@ -332,7 +332,7 @@ WH40KBasiliskGun:
 		Spread: 420
 		Damage: 18470
 WH40KSentinelCannon:
-	Inherits: RA2sabot
+	Inherits: ^TankDestroyerCannon
 	Range: 7c0
 	Report: TTaFir00.aud
 	Projectile: LaserZap
@@ -373,8 +373,99 @@ WH40KOrkBuildingDakka:
 			Heavy: 12
 		ValidTargets: Ground, Air
 		Damage: 500
+
+Tail2:
+	ReloadDelay: 30
+	Range: 1c0
+	Report: dinoatk1.aud
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead@1Dam: SpreadDamage
+		Spread: 64 #213
+		Damage: 12000 #18000
+		Versus:
+			None: 97
+			Wood: 30 #10
+			Light: 50 #30
+			Medium: 40
+			Heavy: 30 #10
+			Concrete: 20 #10
+		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath
+
+Horn2:
+	ReloadDelay: 20
+	Range: 1c0
+	Report: dinoatk1.aud
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead@1Dam: SpreadDamage
+		Spread: 64 #213
+		Damage: 8000 #12000
+		Versus:
+			None: 97
+			Wood: 30 #10
+			Light: 50 #30
+			Medium: 40
+			Heavy: 30 #10
+			Concrete: 20 #10
+		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath
+
+Teeth2:
+	ReloadDelay: 30
+	ValidTargets: Ground, Water, Trees, Air
+	Range: 2c0
+	Report: dinoatk1.aud
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead@1Dam: SpreadDamage
+		Spread: 64 #213
+		Damage: 12000 #18000
+		Versus:
+			None: 97
+			Wood: 30 #10
+			Light: 50 #30
+			Medium: 40
+			Heavy: 30 #10
+			Concrete: 20 #10
+		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath
+		ValidTargets: Ground, Water, Trees, Air
+
+Claw2:
+	ReloadDelay: 20
+	Range: 1c0
+	Report: dinoatk1.aud
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead@1Dam: SpreadDamage
+		Spread: 64 #213
+		Damage: 6000
+		Versus:
+			None: 97
+			Wood: 30 #10
+			Light: 50 #30
+			Medium: 40
+			Heavy: 30 #10
+			Concrete: 20 #10
+		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath
+
+Munch:
+	Report: Munchymunchy.aud
+	ReloadDelay: 20
+	Range: 1c512
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead@1Dam: SpreadDamage
+		Damage: 3000
+		Versus:
+			Wood: 10
+			Light: 30
+			Medium: 20
+			Heavy: 10
+			Concrete: 10
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+
 WH40KPsykerTesla:
-	Inherits: RA2PortaTesla
+	Inherits: ^TeslaWeapon
 	ReloadDelay: 400
 	Report: wh40kpsykergun1.aud
 	Range: 7c0
@@ -384,6 +475,7 @@ WH40KPsykerTesla:
 		Amount: 5
 		AimChance: 100
 		AimTargetStances: Enemy, Neutral
+
 WH40KSmoke:
 	ReloadDelay: 2
 	Range: 5c0
@@ -503,7 +595,7 @@ WH40KDreadPunch:
 		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath
 
 WH40KPredatorLasgun:
-	Inherits: RA2sabot
+	Inherits: ^TankDestroyerCannon
 	ReloadDelay: 30
 	Range: 7c0
 	Report: TTaFir00.aud
@@ -522,7 +614,7 @@ WH40KPredatorLasgun:
 		Damage: 2
 
 WH40KPredatorLasgunSmall:
-	Inherits: RA2sabot
+	Inherits: ^TankDestroyerCannon
 	ReloadDelay: 30
 	Range: 7c0
 	Report: TTaFir00.aud
@@ -576,6 +668,7 @@ WH40KWartrakkMissile:
 	Range: 9c0
 	Warhead@1Dam: SpreadDamage
 		Damage: 10000
+
 WH40KBigmekTankZzap:
 	Inherits: ^TeslaWeapon
 	ValidTargets: Vehicle
@@ -988,7 +1081,7 @@ WH40KSkyray227mm:
 		Explosions: scphotonexplosion
 
 WH40KHammerheadLasgun:
-	Inherits: RA2sabot
+	Inherits: ^TankDestroyerCannon
 	ReloadDelay: 2
 	Range: 7c0
 	Report: TTaFir00.aud

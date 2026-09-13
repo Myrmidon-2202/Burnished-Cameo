@@ -1,1118 +1,766 @@
 wh40ksargentbonus:
-	Defaults:
-		Filename: wh40ksargentbonus.shp
 	idle:
 		Length: *
 
 wh40kmcv:
-	Defaults:
-		Filename: wh40kmcv.shp
-	idle:
-		Filename: ramcv.shp
+	idle: ramcv
 		Facings: 32
 		UseClassicFacings: True
-	icon:
-		Filename: wh40kfieldcommandicon.shp
+	icon: wh40kfieldcommandicon
 
 wh40kfieldcommand:
-	Defaults:
-		Filename: wh40kfieldcommand.shp
 	build:
 	idle:
 	damaged-idle:
 	damaged-build:
 	dead:
-	make:
-		Filename: factmake.shp
-	bib:
-		Filename: bib2.tem
+	make: factmake
+	bib: bib2
 		UseTilesetExtension: true
 		Length: *
-	icon:
-		Filename: wh40kfieldcommandicon.shp
-	idle-overlay:
-		Filename: customoverlay.shp
-
+	icon: wh40kfieldcommandicon
+	idle-overlay: customoverlay
 wh40kstronghold:
-	Defaults:
-		Filename: wh40kstronghold.shp
 	build:
 	idle:
 	damaged-idle:
 	damaged-build:
 	dead:
-	make:
-		Filename: factmake.shp
-	bib:
-		Filename: bib2.tem
+	make: factmake
+	bib: bib2
 		UseTilesetExtension: true
 		Length: *
-	icon:
-		Filename: wh40kstrongholdicon.shp
-	idle-overlay:
-		Filename: customoverlay.shp
-
+	icon: wh40kstrongholdicon
+	idle-overlay: customoverlay
 wh40kstrongholdc:
-	Defaults:
-		Filename: wh40kstrongholdc.shp
 	build:
 	idle:
 	damaged-idle:
 	damaged-build:
 	dead:
-	make:
-		Filename: wh40kbmake.shp
+	make: wh40kbmake
 		Length: *
 		Tick: 80
-	bib:
-		Filename: bib2.tem
+	bib: bib2
 		UseTilesetExtension: true
 		Length: *
-	icon:
-		Filename: wh40kstrongholdicon.shp
-	idle-overlay:
-		Filename: customoverlay.shp
-
+	icon: wh40kstrongholdicon
+	idle-overlay: customoverlay
 wh40ksettlement:
-	Defaults:
-		Filename: wh40ksettlement.shp
 	build:
 	idle:
 	damaged-idle:
 	damaged-build:
 	dead:
-	make:
-		Filename: factmake.shp
-	bib:
-		Filename: bib2.tem
+	make: factmake
+	bib: bib2
 		UseTilesetExtension: true
 		Length: *
-	icon:
-		Filename: wh40kfieldcommandicon.shp
-	idle-overlay:
-		Filename: customoverlay.shp
-
+	icon: wh40kfieldcommandicon
+	idle-overlay: customoverlay
 wh40kwebway:
-	Defaults:
-		Filename: wh40kwebway.shp
 	build:
 	idle:
 	damaged-idle:
 	damaged-build:
 	dead:
-	make:
-		Filename: wh40kbmake.shp
+	make: wh40kbmake
 		Length: *
 		Tick: 80
-	bib:
-		Filename: bib2.tem
+	bib: bib2
 		UseTilesetExtension: true
 		Length: *
-	icon:
-		Filename: wh40kstrongholdicon.shp
-	idle-overlay:
-		Filename: customoverlay.shp
-
+	icon: wh40kstrongholdicon
+	idle-overlay: customoverlay
 wh40ktauhq:
-	Defaults:
-		Filename: wh40ktauhq.shp
 	build:
 	idle:
 	damaged-idle:
 	damaged-build:
 	dead:
-	make:
-		Filename: wh40kbmake.shp
+	make: wh40kbmake
 		Length: *
 		Tick: 80
-	bib:
-		Filename: bib2.tem
+	bib: bib2
 		UseTilesetExtension: true
 		Length: *
-	icon:
-		Filename: wh40kstrongholdicon.shp
-	idle-overlay:
-		Filename: customoverlay.shp
-
+	icon: wh40kstrongholdicon
+	idle-overlay: customoverlay
 wh40kproc:
-	Defaults:
-		Filename: wh40kproc.shp
 	idle:
 		ZOffset: -1c511
 	damaged-idle:
 		ZOffset: -1c511
-	make:
-		Filename: wh40kimperialblgmake3x3.shp
+	make: wh40kimperialblgmake3x3
 		Length: *
 		Tick: 80
 	dead:
-	bib:
-		Filename: bib2.tem
+	bib: bib2
 		Length: *
 		UseTilesetExtension: true
 		TilesetOverrides:
 			INTERIOR: TEMPERAT
-	icon:
-		Filename: raprocicon.png
-
+	icon: raprocicon
 wh40kproco:
-	Defaults:
-		Filename: wh40kproco.shp
 	idle:
 		ZOffset: -1c511
 	damaged-idle:
 		ZOffset: -1c511
-	make:
-		Filename: wh40kbommabuild.shp
+	make: wh40kbommabuild
 		Length: *
 		Tick: 80
 	dead:
-	bib:
-		Filename: bib2.tem
+	bib: bib2
 		Length: *
 		UseTilesetExtension: true
 		TilesetOverrides:
 			INTERIOR: TEMPERAT
-	icon:
-		Filename: raprocicon.png
-	turret:
-		Filename: wh40kgretchintur1.shp
+	icon: raprocicon
+	turret: wh40kgretchintur1
 		Facings: -32
-	muzzle:
-		Filename: minigun.shp
+	muzzle: minigun
 		Length: 6
 		Facings: 8
-
 wh40kprocm:
-	Defaults:
-		Filename: wh40kprocm.shp
 	idle:
 		ZOffset: -1c511
 	damaged-idle:
 		ZOffset: -1c511
-	make:
-		Filename: wh40kprocmmake.shp
+	make: wh40kprocmmake
 		Length: *
 		Tick: 80
 	dead:
-	bib:
-		Filename: bib2.tem
+	bib: bib2
 		Length: *
 		UseTilesetExtension: true
 		TilesetOverrides:
 			INTERIOR: TEMPERAT
-	icon:
-		Filename: raprocicon.png
-	turret:
-		Filename: wh40kgretchintur1.shp
+	icon: raprocicon
+	turret: wh40kgretchintur1
 		Facings: -32
-	muzzle:
-		Filename: minigun.shp
+	muzzle: minigun
 		Length: 6
 		Facings: 8
-
 wh40kprocc:
-	Defaults:
-		Filename: wh40kprocc.shp
 	idle:
 		ZOffset: -1c511
 	damaged-idle:
 		ZOffset: -1c511
-	make:
-		Filename: wh40kbmake.shp
+	make: wh40kbmake
 		Length: *
 		Tick: 80
 	dead:
-	bib:
-		Filename: bib2.tem
+	bib: bib2
 		Length: *
 		UseTilesetExtension: true
 		TilesetOverrides:
 			INTERIOR: TEMPERAT
-	icon:
-		Filename: raprocicon.png
-	turret:
-		Filename: wh40kgretchintur1.shp
+	icon: raprocicon
+	turret: wh40kgretchintur1
 		Facings: -32
-	muzzle:
-		Filename: minigun.shp
+	muzzle: minigun
 		Length: 6
 		Facings: 8
-
 wh40kproct:
-	Defaults:
-		Filename: wh40kproct.shp
 	idle:
 		ZOffset: -1c511
 	damaged-idle:
 		ZOffset: -1c511
-	make:
-		Filename: wh40kbmake.shp
+	make: wh40kbmake
 		Length: *
 		Tick: 80
 	dead:
-	bib:
-		Filename: bib2.tem
+	bib: bib2
 		Length: *
 		UseTilesetExtension: true
 		TilesetOverrides:
 			INTERIOR: TEMPERAT
-	icon:
-		Filename: raprocicon.png
-	turret:
-		Filename: wh40kgretchintur1.shp
+	icon: raprocicon
+	turret: wh40kgretchintur1
 		Facings: -32
-	muzzle:
-		Filename: minigun.shp
+	muzzle: minigun
 		Length: 6
 		Facings: 8
-
 wh40kbarr:
-	Defaults:
-		Filename: wh40kbarr.shp
 	idle:
 	damaged-idle:
-	make:
-		Filename: wh40kimperialblgmake2x2.shp
+	make: wh40kimperialblgmake2x2
 		Length: *
 		Tick: 80
 	dead:
-	bib:
-		Filename: bib3.tem
+	bib: bib3
 		Length: *
 		UseTilesetExtension: true
 		TilesetOverrides:
 			INTERIOR: TEMPERAT
-	icon:
-		Filename: wh40kbarricon.shp
-
+	icon: wh40kbarricon
 wh40kbarrm:
-	Defaults:
-		Filename: wh40kbarrm.shp
 	idle:
 	damaged-idle:
-	make:
-		Filename: wh40kbarrmmake.shp
+	make: wh40kbarrmmake
 		Length: *
 		Tick: 80
 	dead:
-	bib:
-		Filename: bib3.tem
+	bib: bib3
 		Length: *
 		UseTilesetExtension: true
 		TilesetOverrides:
 			INTERIOR: TEMPERAT
-	icon:
-		Filename: wh40kbarrmicon.shp
-
+	icon: wh40kbarrmicon
 wh40kbarrc:
-	Defaults:
-		Filename: wh40kbarrc.shp
 	idle:
 	damaged-idle:
-	make:
-		Filename: wh40kbmake.shp
+	make: wh40kbmake
 		Length: *
 		Tick: 80
 	dead:
-	bib:
-		Filename: bib3.tem
+	bib: bib3
 		Length: *
 		UseTilesetExtension: true
 		TilesetOverrides:
 			INTERIOR: TEMPERAT
-	icon:
-		Filename: wh40kbarrcicon.shp
-
+	icon: wh40kbarrcicon
 wh40kbarro:
-	Defaults:
-		Filename: wh40kbarro.shp
 	idle:
 	damaged-idle:
-	make:
-		Filename: wh40kbommabuild.shp
+	make: wh40kbommabuild
 		Length: *
 		Tick: 80
 	dead:
-	bib:
-		Filename: bib3.tem
+	bib: bib3
 		Length: *
 		UseTilesetExtension: true
 		TilesetOverrides:
 			INTERIOR: TEMPERAT
-	icon:
-		Filename: wh40kbarroicon.shp
-	turret:
-		Filename: wh40kgretchintur1.shp
+	icon: wh40kbarroicon
+	turret: wh40kgretchintur1
 		Facings: -32
-	muzzle:
-		Filename: minigun.shp
+	muzzle: minigun
 		Length: 6
 		Facings: 8
-
 wh40kbarrt:
-	Defaults:
-		Filename: wh40kbarrt.shp
 	idle:
 	damaged-idle:
-	make:
-		Filename: wh40kbarrmmake.shp
+	make: wh40kbarrmmake
 		Length: *
 		Tick: 80
 	dead:
-	bib:
-		Filename: bib3.tem
+	bib: bib3
 		Length: *
 		UseTilesetExtension: true
 		TilesetOverrides:
 			INTERIOR: TEMPERAT
-	icon:
-		Filename: wh40kbarrmicon.shp
-
+	icon: wh40kbarrmicon
 wh40kbarre:
-	Defaults:
-		Filename: wh40kbarre.shp
 	idle:
 	damaged-idle:
-	make:
-		Filename: wh40kbmake.shp
+	make: wh40kbmake
 		Length: *
 		Tick: 80
 	dead:
-	bib:
-		Filename: bib3.tem
+	bib: bib3
 		Length: *
 		UseTilesetExtension: true
 		TilesetOverrides:
 			INTERIOR: TEMPERAT
-	icon:
-		Filename: wh40kbarrcicon.shp
-
+	icon: wh40kbarrcicon
 wh40kkrootshapcenter:
-	Defaults:
-		Filename: wh40kkrootshapcenter.shp
 	idle:
 	damaged-idle:
-	make:
-		Filename: wh40kbarrmmake.shp
+	make: wh40kbarrmmake
 		Length: *
 		Tick: 80
 	dead:
-	bib:
-		Filename: bib3.tem
+	bib: bib3
 		Length: *
 		UseTilesetExtension: true
 		TilesetOverrides:
 			INTERIOR: TEMPERAT
-	icon:
-		Filename: wh40kbarrmicon.shp
-
+	icon: wh40kbarrmicon
 wh40kgate:
-	Defaults:
-		Filename: wh40kgate.shp
 	idle:
 	damaged-idle:
-	make:
-		Filename: wh40kbarrmmake.shp
+	make: wh40kbarrmmake
 		Length: *
 		Tick: 80
 	dead:
-	bib:
-		Filename: bib3.tem
+	bib: bib3
 		Length: *
 		UseTilesetExtension: true
 		TilesetOverrides:
 			INTERIOR: TEMPERAT
-	icon:
-		Filename: wh40kbarrmicon.shp
-
+	icon: wh40kbarrmicon
 wh40ksacredart:
-	Defaults:
-		Filename: wh40ksacredart.shp
 	idle:
 	damaged-idle:
-	make:
-		Filename: wh40ksacredartmake.shp
+	make: wh40ksacredartmake
 		Length: *
 		Tick: 80
 	dead:
-	bib:
-		Filename: bib3.tem
+	bib: bib3
 		Length: *
 		UseTilesetExtension: true
 		TilesetOverrides:
 			INTERIOR: TEMPERAT
-	icon:
-		Filename: wh40ksacredarticon.shp
-
+	icon: wh40ksacredarticon
 wh40ksacrifical:
-	Defaults:
-		Filename: wh40ksacrifical.shp
 	idle:
 	damaged-idle:
-	make:
-		Filename: wh40kbmake.shp
+	make: wh40kbmake
 		Length: *
 		Tick: 80
 	dead:
-	bib:
-		Filename: bib3.tem
+	bib: bib3
 		Length: *
 		UseTilesetExtension: true
 		TilesetOverrides:
 			INTERIOR: TEMPERAT
-	icon:
-		Filename: wh40ksacrificalicon.shp
-
+	icon: wh40ksacrificalicon
 wh40korbitalrelay:
-	Defaults:
-		Filename: wh40korbitalrelay.shp
 	idle:
 	damaged-idle:
-	make:
-		Filename: wh40korbitalrelaymake.shp
+	make: wh40korbitalrelaymake
 		Length: *
 		Tick: 80
 	dead:
-	bib:
-		Filename: bib3.tem
+	bib: bib3
 		Length: *
 		UseTilesetExtension: true
 		TilesetOverrides:
 			INTERIOR: TEMPERAT
-	icon:
-		Filename: wh40korbitalrelayicon.shp
+	icon: wh40korbitalrelayicon
 
 wh40kpower:
-	Defaults:
-		Filename: wh40kpower.shp
 	idle:
 	damaged-idle:
-	make:
-		Filename: wh40kimperialblgmake2x2.shp
+	make: wh40kimperialblgmake2x2
 		Length: *
 		Tick: 80
 	dead:
-	bib:
-		Filename: bib3.tem
+	bib: bib3
 		Length: *
 		UseTilesetExtension: true
 		TilesetOverrides:
 			INTERIOR: TEMPERAT
-	icon:
-		Filename: wh40kpowericon.shp
-
+	icon: wh40kpowericon
 wh40kpowerm:
-	Defaults:
-		Filename: wh40kpowerm.shp
 	idle:
 	damaged-idle:
-	make:
-		Filename: wh40kpowermmake.shp
+	make: wh40kpowermmake
 		Length: *
 		Tick: 80
 	dead:
-	bib:
-		Filename: bib3.tem
+	bib: bib3
 		Length: *
 		UseTilesetExtension: true
 		TilesetOverrides:
 			INTERIOR: TEMPERAT
-	icon:
-		Filename: wh40kpowermicon.shp
-
+	icon: wh40kpowermicon
 wh40kpowero:
-	Defaults:
-		Filename: wh40kpowero.shp
 	idle:
 	damaged-idle:
-	make:
-		Filename: wh40kbommabuild.shp
+	make: wh40kbommabuild
 		Length: *
 		Tick: 80
 	dead:
-	bib:
-		Filename: bib3.tem
+	bib: bib3
 		Length: *
 		UseTilesetExtension: true
 		TilesetOverrides:
 			INTERIOR: TEMPERAT
-	icon:
-		Filename: wh40kpoweroicon.shp
-
+	icon: wh40kpoweroicon
 wh40kpowerc:
-	Defaults:
-		Filename: wh40kpowerc.shp
 	idle:
 	damaged-idle:
-	make:
-		Filename: wh40kbmake.shp
+	make: wh40kbmake
 		Length: *
 		Tick: 80
 	dead:
-	bib:
-		Filename: bib3.tem
+	bib: bib3
 		Length: *
 		UseTilesetExtension: true
 		TilesetOverrides:
 			INTERIOR: TEMPERAT
-	icon:
-		Filename: wh40kpowercicon.shp
-
+	icon: wh40kpowercicon
 wh40kpowere:
-	Defaults:
-		Filename: wh40kpowere.shp
 	idle:
 	damaged-idle:
-	make:
-		Filename: wh40kpowermmake.shp
+	make: wh40kpowermmake
 		Length: *
 		Tick: 80
 	dead:
-	bib:
-		Filename: bib3.tem
+	bib: bib3
 		Length: *
 		UseTilesetExtension: true
 		TilesetOverrides:
 			INTERIOR: TEMPERAT
-	icon:
-		Filename: wh40kpowermicon.shp
-
+	icon: wh40kpowermicon
 wh40kpowert:
-	Defaults:
-		Filename: wh40kpowert.shp
 	idle:
 	damaged-idle:
-	make:
-		Filename: wh40kpowermmake.shp
+	make: wh40kpowermmake
 		Length: *
 		Tick: 80
 	dead:
-	bib:
-		Filename: bib3.tem
+	bib: bib3
 		Length: *
 		UseTilesetExtension: true
 		TilesetOverrides:
 			INTERIOR: TEMPERAT
-	icon:
-		Filename: wh40kpowermicon.shp
-
+	icon: wh40kpowermicon
 wh40kpowern:
-	Defaults:
-		Filename: wh40kpowern.shp
 	idle:
 	damaged-idle:
-	make:
-		Filename: wh40kpowermmake.shp
+	make: wh40kpowermmake
 		Length: *
 		Tick: 80
 	dead:
-	bib:
-		Filename: bib3.tem
+	bib: bib3
 		Length: *
 		UseTilesetExtension: true
 		TilesetOverrides:
 			INTERIOR: TEMPERAT
-	icon:
-		Filename: wh40kpowermicon.shp
-
+	icon: wh40kpowermicon
 wh40karmory:
-	Defaults:
-		Filename: wh40karmory.shp
 	idle:
 	damaged-idle:
-	make:
-		Filename: wh40kimperialblgmake2x2.shp
+	make: wh40kimperialblgmake2x2
 		Length: *
 		Tick: 80
 	dead:
-	bib:
-		Filename: bib3.tem
+	bib: bib3
 		Length: *
 		UseTilesetExtension: true
 		TilesetOverrides:
 			INTERIOR: TEMPERAT
-	icon:
-		Filename: wh40karmoryicon.shp
-
+	icon: wh40karmoryicon
 wh40karmorym:
-	Defaults:
-		Filename: wh40karmorym.shp
 	idle:
 	damaged-idle:
 	make:
 	dead:
-	bib:
-		Filename: bib3.tem
+	bib: bib3
 		Length: *
 		UseTilesetExtension: true
 		TilesetOverrides:
 			INTERIOR: TEMPERAT
-	icon:
-		Filename: wh40karmorymicon.shp
-
+	icon: wh40karmorymicon
 wh40karmoryo:
-	Defaults:
-		Filename: wh40karmoryo.shp
 	idle:
 	damaged-idle:
-	make:
-		Filename: wh40kbommabuild.shp
+	make: wh40kbommabuild
 		Length: *
 		Tick: 80
 	dead:
-	bib:
-		Filename: bib3.tem
+	bib: bib3
 		Length: *
 		UseTilesetExtension: true
 		TilesetOverrides:
 			INTERIOR: TEMPERAT
-	icon:
-		Filename: wh40karmoryoicon.shp
-	turret:
-		Filename: wh40kgretchintur1.shp
+	icon: wh40karmoryoicon
+	turret: wh40kgretchintur1
 		Facings: -32
-	muzzle:
-		Filename: minigun.shp
+	muzzle: minigun
 		Length: 6
 		Facings: 8
-
 wh40karmoryc:
-	Defaults:
-		Filename: wh40karmoryc.shp
 	idle:
 	damaged-idle:
-	make:
-		Filename: wh40kbmake.shp
+	make: wh40kbmake
 		Length: *
 		Tick: 80
 	dead:
-	bib:
-		Filename: bib3.tem
+	bib: bib3
 		Length: *
 		UseTilesetExtension: true
 		TilesetOverrides:
 			INTERIOR: TEMPERAT
-	icon:
-		Filename: wh40karmorycicon.shp
-
+	icon: wh40karmorycicon
 wh40karmoryt:
-	Defaults:
-		Filename: wh40karmoryt.shp
 	idle:
 	damaged-idle:
-	make:
-		Filename: wh40kbmake.shp
+	make: wh40kbmake
 		Length: *
 		Tick: 80
 	dead:
-	bib:
-		Filename: bib3.tem
+	bib: bib3
 		Length: *
 		UseTilesetExtension: true
 		TilesetOverrides:
 			INTERIOR: TEMPERAT
-	icon:
-		Filename: wh40karmorycicon.shp
-
+	icon: wh40karmorycicon
 wh40kweap:
 	Defaults:
-		Filename: wh40kweap.shp
-	Defaults:
 		Offset: 0,-8
 	idle:
 	damaged-idle:
 	dead:
-	make:
-		Filename: wh40kimperialblgmake3x3.shp
+	make: wh40kimperialblgmake3x3
 		Length: *
 		Tick: 80
-	bib:
-		Filename: bib1.tem
+	bib: bib1
 		UseTilesetExtension: true
 		Length: *
 		Offset: 0,0
-	icon:
-		Filename: wh40kweapicon.shp
+	icon: wh40kweapicon
 		Offset: 0,0
-
 wh40kweapo:
 	Defaults:
-		Filename: wh40kweapo.shp
-	Defaults:
 		Offset: 0,-8
 	idle:
 	damaged-idle:
 	dead:
-	make:
-		Filename: wh40kbommabuild.shp
+	make: wh40kbommabuild
 		Length: *
 		Tick: 80
-	bib:
-		Filename: bib1.tem
+	bib: bib1
 		UseTilesetExtension: true
 		Length: *
 		Offset: 0,0
-	icon:
-		Filename: wh40kweapoicon.shp
+	icon: wh40kweapoicon
 		Offset: 0,0
-	turret:
-		Filename: wh40kgretchintur2.shp
+	turret: wh40kgretchintur2
 		Facings: -32
-	muzzle:
-		Filename: minigun.shp
+	muzzle: minigun
 		Length: 6
 		Facings: 8
-
 wh40kmachinecult:
 	Defaults:
-		Filename: wh40kmachinecult.shp
-	Defaults:
 		Offset: 0,-8
 	idle:
 	damaged-idle:
 	dead:
-	make:
-		Filename: wh40kmachinecultmake.shp
+	make: wh40kmachinecultmake
 		Length: *
-	bib:
-		Filename: bib1.tem
+	bib: bib1
 		UseTilesetExtension: true
 		Length: *
 		Offset: 0,0
-	icon:
-		Filename: wh40kmachineculticon.shp
+	icon: wh40kmachineculticon
 		Offset: 0,0
-
 wh40kmachinepit:
 	Defaults:
-		Filename: wh40kmachinepit.shp
-	Defaults:
 		Offset: 0,-8
 	idle:
 	damaged-idle:
 	dead:
-	make:
-		Filename: wh40kbmake.shp
+	make: wh40kbmake
 		Length: *
-	bib:
-		Filename: bib1.tem
+	bib: bib1
 		UseTilesetExtension: true
 		Length: *
 		Offset: 0,0
-	icon:
-		Filename: wh40kmachinepiticon.shp
+	icon: wh40kmachinepiticon
 		Offset: 0,0
-
 wh40kvehiclebeacon:
 	Defaults:
-		Filename: wh40kvehiclebeacon.shp
-	Defaults:
 		Offset: 0,-8
 	idle:
 	damaged-idle:
 	dead:
-	make:
-		Filename: wh40kbmake.shp
+	make: wh40kbmake
 		Length: *
-	bib:
-		Filename: bib1.tem
+	bib: bib1
 		UseTilesetExtension: true
 		Length: *
 		Offset: 0,0
-	icon:
-		Filename: wh40kmachinepiticon.shp
+	icon: wh40kmachinepiticon
 		Offset: 0,0
 
 wh40kkauyon:
 	Defaults:
-		Filename: wh40kkauyon.shp
-	Defaults:
 		Offset: 0,-8
 	idle:
 	damaged-idle:
 	dead:
-	make:
-		Filename: wh40kbmake.shp
+	make: wh40kbmake
 		Length: *
-	bib:
-		Filename: bib1.tem
+	bib: bib1
 		UseTilesetExtension: true
 		Length: *
 		Offset: 0,0
-	icon:
-		Filename: wh40kmachinepiticon.shp
+	icon: wh40kmachinepiticon
 		Offset: 0,0
 
 wh40kmontka:
 	Defaults:
-		Filename: wh40kmontka.shp
-	Defaults:
 		Offset: 0,-8
 	idle:
 	damaged-idle:
 	dead:
-	make:
-		Filename: wh40kbmake.shp
+	make: wh40kbmake
 		Length: *
-	bib:
-		Filename: bib1.tem
+	bib: bib1
 		UseTilesetExtension: true
 		Length: *
 		Offset: 0,0
-	icon:
-		Filename: wh40kmachinepiticon.shp
+	icon: wh40kmachinepiticon
 		Offset: 0,0
 
 wh40kcoalition:
 	Defaults:
-		Filename: wh40kcoalition.shp
-	Defaults:
 		Offset: 0,-8
 	idle:
 	damaged-idle:
 	dead:
-	make:
-		Filename: wh40kbmake.shp
+	make: wh40kbmake
 		Length: *
-	bib:
-		Filename: bib1.tem
+	bib: bib1
 		UseTilesetExtension: true
 		Length: *
 		Offset: 0,0
-	icon:
-		Filename: wh40kmachinepiticon.shp
+	icon: wh40kmachinepiticon
 		Offset: 0,0
-
 wh40kmars:
 	Defaults:
-		Filename: wh40kmars.shp
-	Defaults:
 		Offset: 0,-8
 	idle:
 	damaged-idle:
 	dead:
-	make:
-		Filename: wh40kimperialblgmake3x3.shp
+	make: wh40kimperialblgmake3x3
 		Length: *
 		Tick: 80
-	bib:
-		Filename: bib1.tem
+	bib: bib1
 		UseTilesetExtension: true
 		Length: *
 		Offset: 0,0
-	icon:
-		Filename: wh40kmarsicon.shp
+	icon: wh40kmarsicon
 		Offset: 0,0
-
 wh40kdaemonpit:
 	Defaults:
-		Filename: wh40kdaemonpit.shp
-	Defaults:
 		Offset: 0,-8
 	idle:
 	damaged-idle:
 	dead:
-	make:
-		Filename: wh40kbmake.shp
+	make: wh40kbmake
 		Length: *
 		Tick: 80
-	bib:
-		Filename: bib1.tem
+	bib: bib1
 		UseTilesetExtension: true
 		Length: *
 		Offset: 0,0
-	icon:
-		Filename: wh40kdaemonpiticon.shp
+	icon: wh40kdaemonpiticon
 		Offset: 0,0
 
 wh40kheavybolt:
-	Defaults:
-		Filename: wh40kheavybolt.shp
-	idle:
-		Filename: wh40kheavybolt.shp
-	dead:
-		Filename: wh40kheavybolt.shp
-	make:
-		Filename: wh40kimperialblgmake2x2.shp
+	idle: wh40kheavybolt
+	dead: wh40kheavybolt
+	make: wh40kimperialblgmake2x2
 		Length: *
 		Tick: 80
-	turret:
-		Filename: wh40kheavybolttur.shp
+	turret: wh40kheavybolttur
 		Facings: -32
-	muzzle:
-		Filename: minigun.shp
+	muzzle: minigun
 		Length: 6
 		Facings: 8
-	icon:
-		Filename: wh40kheavybolticon.shp
-
+	icon: wh40kheavybolticon
 wh40kheavybolt2:
-	Defaults:
-		Filename: wh40kheavybolt2.shp
-	idle:
-		Filename: wh40kheavybolt.shp
-	dead:
-		Filename: wh40kheavybolt.shp
-	make:
-		Filename: wh40kimperialblgmake2x2.shp
+	idle: wh40kheavybolt
+	dead: wh40kheavybolt
+	make: wh40kimperialblgmake2x2
 		Length: *
 		Tick: 80
-	turret:
-		Filename: wh40kheavybolttur2.shp
+	turret: wh40kheavybolttur2
 		Facings: -32
-	muzzle:
-		Filename: minigun.shp
+	muzzle: minigun
 		Length: 6
 		Facings: 8
-	icon:
-		Filename: wh40kheavybol2ticon.shp
-
+	icon: wh40kheavybol2ticon
 wh40kbolterturret:
-	Defaults:
-		Filename: wh40kbolterturret.shp
-	idle:
-		Filename: wh40kbolterturret.shp
+	idle: wh40kbolterturret
 		Scale: 0.90
-	dead:
-		Filename: wh40kbolterturret.shp
+	dead: wh40kbolterturret
 		Scale: 0.90
-	make:
-		Filename: wh40kbolterturretmake.shp
+	make: wh40kbolterturretmake
 		Length: *
 		Tick: 80
 		Scale: 0.90
-	turret:
-		Filename: wh40kbolterturrettur.shp
+	turret: wh40kbolterturrettur
 		Facings: -32
 		Scale: 0.90
-	muzzle:
-		Filename: minigun.shp
+	muzzle: minigun
 		Length: 6
 		Facings: 8
 		Scale: 0.90
-	icon:
-		Filename: wh40kbolterturicon.shp
-
+	icon: wh40kbolterturicon
 wh40kbolterturret2:
-	Defaults:
-		Filename: wh40kbolterturret2.shp
-	idle:
-		Filename: wh40kbolterturret.shp
+	idle: wh40kbolterturret
 		Scale: 0.90
-	dead:
-		Filename: wh40kbolterturret.shp
+	dead: wh40kbolterturret
 		Scale: 0.90
-	make:
-		Filename: wh40kbolterturretmake.shp
+	make: wh40kbolterturretmake
 		Length: *
 		Tick: 80
 		Scale: 0.90
-	turret:
-		Filename: wh40kbolterturrettur2.shp
+	turret: wh40kbolterturrettur2
 		Facings: -32
 		Scale: 0.90
-	muzzle:
-		Filename: minigun.shp
+	muzzle: minigun
 		Length: 6
 		Facings: 8
 		Scale: 0.90
-	icon:
-		Filename: wh40kbolterturicon2.shp
-
+	icon: wh40kbolterturicon2
 wh40kbolterturretc:
-	Defaults:
-		Filename: wh40kbolterturretc.shp
-	idle:
-		Filename: wh40kbolterturretc.shp
+	idle: wh40kbolterturretc
 		Scale: 0.90
-	dead:
-		Filename: wh40kbolterturretc.shp
+	dead: wh40kbolterturretc
 		Scale: 0.90
-	make:
-		Filename: wh40kbmake.shp
+	make: wh40kbmake
 		Length: *
 		Tick: 80
 		Scale: 0.90
-	turret:
-		Filename: wh40kbolterturrettur.shp
+	turret: wh40kbolterturrettur
 		Facings: -32
 		Scale: 0.90
-	muzzle:
-		Filename: minigun.shp
+	muzzle: minigun
 		Length: 6
 		Facings: 8
 		Scale: 0.90
-	icon:
-		Filename: wh40kbolterturicon.shp
-
+	icon: wh40kbolterturicon
 wh40kbolterturret2c:
-	Defaults:
-		Filename: wh40kbolterturret2c.shp
-	idle:
-		Filename: wh40kbolterturretc.shp
+	idle: wh40kbolterturretc
 		Scale: 0.90
-	dead:
-		Filename: wh40kbolterturretc.shp
+	dead: wh40kbolterturretc
 		Scale: 0.90
-	make:
-		Filename: wh40kbmake.shp
+	make: wh40kbmake
 		Length: *
 		Tick: 80
 		Scale: 0.90
-	turret:
-		Filename: wh40kbolterturrettur2.shp
+	turret: wh40kbolterturrettur2
 		Facings: -32
 		Scale: 0.90
-	muzzle:
-		Filename: minigun.shp
+	muzzle: minigun
 		Length: 6
 		Facings: 8
 		Scale: 0.90
-	icon:
-		Filename: wh40kbolterturicon2.shp
+	icon: wh40kbolterturicon2
 
 wh40kguard:
-	Defaults:
-		Filename: wh40kguard.shp
 	Inherits: ra2seal
-	icon:
-		Filename: wh40kguardicon.shp
+	Defaults: wh40kguard
+	icon: wh40kguardicon.shp
 		AddExtension: False
-	garrison-muzzle:
-		Filename: minigun.shp
+	garrison-muzzle: minigun
 		Length: 3
 		Stride: 6
 		Facings: 8
-
 wh40kguardsquad:
-	Defaults:
-		Filename: wh40kguardsquad.shp
 	Inherits: wh40kguard
-	icon:
-		Filename: wh40kguardsquad.shp
+	Defaults: wh40kguard
+	icon: wh40kguardsquad.shp
 		AddExtension: False
-	dot:
-		Filename: invisibleitem.shp
-	idle:
-		Filename: invisibleitem.shp
-
+	dot: invisibleitem
+	idle: invisibleitem
 wh40kpsyker:
-	Defaults:
-		Filename: wh40kpsyker.shp
 	Inherits: ra2yuri
-	icon:
-		Filename: wh40kpsykericon.shp
+	Defaults: ra2yuri
+	icon: wh40kpsykericon.shp
 		AddExtension: False
-	garrison-muzzle:
-		Filename: minigun.shp
+	garrison-muzzle: minigun
 		Length: 3
 		Stride: 6
 		Facings: 8
-
 wh40kkars:
-	Defaults:
-		Filename: wh40kkars.shp
 	Inherits: ^InfantryOverlays
 	stand:
 		Facings: 8
@@ -1164,61 +812,49 @@ wh40kkars:
 		Facings: 8
 		Tick: 100
 	# Shot
-	die1:
-		Filename: e1.shp
+	die1: e1
 		Start: 381
 		Length: 9
 		Tick: 80
 	# Explode
-	die2:
-		Filename: e1.shp
+	die2: e1
 		Start: 390
 		Length: 8
 		Tick: 80
 	# Fly and explode in air
-	die3:
-		Filename: e1.shp
+	die3: e1
 		Start: 398
 		Length: 8
 		Tick: 80
 	# Fly through air squish on ground
-	die4:
-		Filename: e1.shp
+	die4: e1
 		Start: 406
 		Length: 12
 		Tick: 80
 	# Burn
-	die5:
-		Filename: e1.shp
+	die5: e1
 		Start: 418
 		Length: 18
 		Tick: 80
 	# Tib
-	die6:
-		Filename: e1.shp
+	die6: e1
 		Start: 366
 		Length: 11
 		Tick: 80
 	# Electro
 	die7: electro ##########
 		Length: *
-	die-crushed:
-		Filename: e1rot.shp
+	die-crushed: e1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-	garrison-muzzle:
-		Filename: minigun.shp
+	garrison-muzzle: minigun
 		Length: 3
 		Stride: 6
 		Facings: 8
-	icon:
-		Filename: wh40kkarsicon.shp
-
+	icon: wh40kkarsicon
 wh40kpriest:
-	Defaults:
-		Filename: wh40kpriest.shp
 	Inherits: ^InfantryOverlays
 	stand:
 		Facings: -8
@@ -1272,61 +908,49 @@ wh40kpriest:
 		Facings: 8
 		Tick: 100
 	# Shot
-	die1:
-		Filename: e1.shp
+	die1: e1
 		Start: 381
 		Length: 9
 		Tick: 80
 	# Explode
-	die2:
-		Filename: e1.shp
+	die2: e1
 		Start: 390
 		Length: 8
 		Tick: 80
 	# Fly and explode in air
-	die3:
-		Filename: e1.shp
+	die3: e1
 		Start: 398
 		Length: 8
 		Tick: 80
 	# Fly through air squish on ground
-	die4:
-		Filename: e1.shp
+	die4: e1
 		Start: 406
 		Length: 12
 		Tick: 80
 	# Burn
-	die5:
-		Filename: e1.shp
+	die5: e1
 		Start: 418
 		Length: 18
 		Tick: 80
 	# Tib
-	die6:
-		Filename: e1.shp
+	die6: e1
 		Start: 366
 		Length: 11
 		Tick: 80
 	# Electro
 	die7: electro ##########
 		Length: *
-	die-crushed:
-		Filename: e1rot.shp
+	die-crushed: e1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-	garrison-muzzle:
-		Filename: minigun.shp
+	garrison-muzzle: minigun
 		Length: 3
 		Stride: 6
 		Facings: 8
-	icon:
-		Filename: wh40kpriesticon.shp
-
+	icon: wh40kpriesticon
 wh40kcommandsquad:
-	Defaults:
-		Filename: wh40kcommandsquad.shp
 	Inherits: ^InfantryOverlays
 	stand:
 		Length: 8
@@ -1391,72 +1015,57 @@ wh40kcommandsquad:
 		Facings: 8
 		Tick: 999
 	# Shot
-	die1:
-		Filename: e1.shp
+	die1: e1
 		Start: 381
 		Length: 9
 		Tick: 80
 	# Explode
-	die2:
-		Filename: e1.shp
+	die2: e1
 		Start: 390
 		Length: 8
 		Tick: 80
 	# Fly and explode in air
-	die3:
-		Filename: e1.shp
+	die3: e1
 		Start: 398
 		Length: 8
 		Tick: 80
 	# Fly through air squish on ground
-	die4:
-		Filename: e1.shp
+	die4: e1
 		Start: 406
 		Length: 12
 		Tick: 80
 	# Burn
-	die5:
-		Filename: e1.shp
+	die5: e1
 		Start: 418
 		Length: 18
 		Tick: 80
 	# Tib
-	die6:
-		Filename: e1.shp
+	die6: e1
 		Start: 366
 		Length: 11
 		Tick: 80
 	# Electro
 	die7: electro ##########
 		Length: *
-	die-crushed:
-		Filename: e1rot.shp
+	die-crushed: e1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-	garrison-muzzle:
-		Filename: minigun.shp
+	garrison-muzzle: minigun
 		Length: 3
 		Stride: 6
 		Facings: 8
-	dot:
-		Filename: invisibleitem.shp
-	idle:
-		Filename: invisibleitem.shp
-	icon:
-		Filename: wh40kcommandsquadicon.shp
-
+	dot: invisibleitem
+	idle: invisibleitem
+	icon: wh40kcommandsquadicon
 wh40kmarine:
-	Defaults:
-		Filename: wh40kmarine.shp
 	Inherits: ^InfantryOverlays
 	stand:
 		Facings: -8
 	stand2:
 		Facings: -8
-	run:
-		Filename: wh40kmarinewalk.shp
+	run: wh40kmarinewalk
 		Length: 8
 		Facings: 8
 		Tick: 100
@@ -1469,8 +1078,7 @@ wh40kmarine:
 		Facings: -8
 	prone-stand2:
 		Facings: -8
-	prone-run:
-		Filename: wh40kmarinewalk.shp
+	prone-run: wh40kmarinewalk
 		Length: 8
 		Facings: 8
 		Tick: 100
@@ -1485,13 +1093,11 @@ wh40kmarine:
 		Facings: 8
 		Length: 2
 		Tick: 150
-	idle1:
-		Filename: wh40kmarinewalk.shp
+	idle1: wh40kmarinewalk
 		Length: 8
 		Facings: 8
 		Tick: 100
-	idle2:
-		Filename: wh40kmarinewalk.shp
+	idle2: wh40kmarinewalk
 		Length: 8
 		Facings: 8
 		Tick: 100
@@ -1509,125 +1115,93 @@ wh40kmarine:
 		Facings: 8
 		Tick: 100
 	# Shot
-	die1:
-		Filename: e1.shp
+	die1: e1
 		Start: 381
 		Length: 9
 		Tick: 80
 	# Explode
-	die2:
-		Filename: e1.shp
+	die2: e1
 		Start: 390
 		Length: 8
 		Tick: 80
 	# Fly and explode in air
-	die3:
-		Filename: e1.shp
+	die3: e1
 		Start: 398
 		Length: 8
 		Tick: 80
 	# Fly through air squish on ground
-	die4:
-		Filename: e1.shp
+	die4: e1
 		Start: 406
 		Length: 12
 		Tick: 80
 	# Burn
-	die5:
-		Filename: e1.shp
+	die5: e1
 		Start: 418
 		Length: 18
 		Tick: 80
 	# Tib
-	die6:
-		Filename: e1.shp
+	die6: e1
 		Start: 366
 		Length: 11
 		Tick: 80
 	# Electro
 	die7: electro ##########
 		Length: *
-	die-crushed:
-		Filename: e1rot.shp
+	die-crushed: e1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-	garrison-muzzle:
-		Filename: minigun.shp
+	garrison-muzzle: minigun
 		Length: 3
 		Stride: 6
 		Facings: 8
-	icon:
-		Filename: wh40kmarineicon.shp
-
+	icon: wh40kmarineicon
 wh40kmarineplasma:
-	Defaults:
-		Filename: wh40kmarineplasma.shp
 	Inherits: wh40kmarine
-	icon:
-		Filename: wh40kmarineplasmaicon.shp
-
+	Defaults: wh40kmarine
+	icon: wh40kmarineplasmaicon
 wh40kmarinesargent:
-	Defaults:
-		Filename: wh40kmarinesargent.shp
 	Inherits: wh40kmarine
-	icon:
-		Filename: wh40kmarinesargenticon.shp
-
+	Defaults: wh40kmarine
+	icon: wh40kmarinesargenticon
 wh40kmarineflamer:
-	Defaults:
-		Filename: wh40kmarineflamer.shp
 	Inherits: wh40kmarinebolter
-	icon:
-		Filename: wh40kmarineflamericon.shp
+	Defaults: wh40kmarineflamer
+	icon: wh40kmarineflamericon
 	muzzle:
 		Combine:
 			flame-n:
-				Filename: flame-n.shp
 				Length: *
 				Offset: 1,6
 			flame-nw:
-				Filename: flame-nw.shp
 				Length: *
 				Offset: 8,7
 			flame-w:
-				Filename: flame-w.shp
 				Length: *
 				Offset: 8,2
 			flame-sw:
-				Filename: flame-sw.shp
 				Length: *
 				Offset: 7,-2
 			flame-s:
-				Filename: flame-s.shp
 				Length: *
 				Offset: 1,-2
 			flame-se:
-				Filename: flame-se.shp
 				Length: *
 				Offset: -5,-2
 			flame-e:
-				Filename: flame-e.shp
 				Length: *
 				Offset: -7,2
 			flame-ne:
-				Filename: flame-ne.shp
 				Length: *
 				Offset: -7,8
 		Facings: 8
 		Length: 13
-
 wh40kmarinerocket:
-	Defaults:
-		Filename: wh40kmarinerocket.shp
 	Inherits: wh40kmarine
-	icon:
-		Filename: wh40kmarinerocketicon.shp
-
+	Defaults: wh40kmarine
+	icon: wh40kmarinerocketicon
 wh40kmarinebolter:
-	Defaults:
-		Filename: wh40kmarinebolter.shp
 	Inherits: ^InfantryOverlays
 	stand:
 		Facings: -8
@@ -1679,61 +1253,49 @@ wh40kmarinebolter:
 		Facings: 8
 		Tick: 100
 	# Shot
-	die1:
-		Filename: e1.shp
+	die1: e1
 		Start: 381
 		Length: 9
 		Tick: 80
 	# Explode
-	die2:
-		Filename: e1.shp
+	die2: e1
 		Start: 390
 		Length: 8
 		Tick: 80
 	# Fly and explode in air
-	die3:
-		Filename: e1.shp
+	die3: e1
 		Start: 398
 		Length: 8
 		Tick: 80
 	# Fly through air squish on ground
-	die4:
-		Filename: e1.shp
+	die4: e1
 		Start: 406
 		Length: 12
 		Tick: 80
 	# Burn
-	die5:
-		Filename: e1.shp
+	die5: e1
 		Start: 418
 		Length: 18
 		Tick: 80
 	# Tib
-	die6:
-		Filename: e1.shp
+	die6: e1
 		Start: 366
 		Length: 11
 		Tick: 80
 	# Electro
 	die7: electro ##########
 		Length: *
-	die-crushed:
-		Filename: e1rot.shp
+	die-crushed: e1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-	garrison-muzzle:
-		Filename: minigun.shp
+	garrison-muzzle: minigun
 		Length: 3
 		Stride: 6
 		Facings: 8
-	icon:
-		Filename: wh40kmarineboltericon.shp
-
+	icon: wh40kmarineboltericon
 wh40kchaosmarine:
-	Defaults:
-		Filename: wh40kchaosmarine.shp
 	Inherits: ^InfantryOverlays
 	stand:
 		Facings: -8
@@ -1787,129 +1349,88 @@ wh40kchaosmarine:
 		Facings: 8
 		Tick: 100
 	# Shot
-	die1:
-		Filename: e1.shp
+	die1: e1
 		Start: 381
 		Length: 9
 		Tick: 80
 	# Explode
-	die2:
-		Filename: e1.shp
+	die2: e1
 		Start: 390
 		Length: 8
 		Tick: 80
 	# Fly and explode in air
-	die3:
-		Filename: e1.shp
+	die3: e1
 		Start: 398
 		Length: 8
 		Tick: 80
 	# Fly through air squish on ground
-	die4:
-		Filename: e1.shp
+	die4: e1
 		Start: 406
 		Length: 12
 		Tick: 80
 	# Burn
-	die5:
-		Filename: e1.shp
+	die5: e1
 		Start: 418
 		Length: 18
 		Tick: 80
 	# Tib
-	die6:
-		Filename: e1.shp
+	die6: e1
 		Start: 366
 		Length: 11
 		Tick: 80
 	# Electro
 	die7: electro ##########
 		Length: *
-	die-crushed:
-		Filename: e1rot.shp
+	die-crushed: e1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-	garrison-muzzle:
-		Filename: minigun.shp
+	garrison-muzzle: minigun
 		Length: 3
 		Stride: 6
 		Facings: 8
-	icon:
-		Filename: wh40kchaosmarineicon.shp
-
+	icon: wh40kchaosmarineicon
 wh40kchaosmarineplasma:
-	Defaults:
-		Filename: wh40kchaosmarineplasma.shp
 	Inherits: wh40kchaosmarine
-	icon:
-		Filename: wh40kplasmachaosicon.shp
-
+	Defaults: wh40kchaosmarine
+	icon: wh40kplasmachaosicon
 wh40kchaosmarinechamp:
-	Defaults:
-		Filename: wh40kchaosmarinechamp.shp
 	Inherits: wh40kchaosmarine
-	icon:
-		Filename: wh40kplasmachaosicon.shp
-
+	Defaults: wh40kchaosmarine
+	icon: wh40kplasmachaosicon
 wh40kboltchaosmarine:
-	Defaults:
-		Filename: wh40kboltchaosmarine.shp
 	Inherits: wh40kchaosmarine
-	icon:
-		Filename: wh40kmarineboltericon.shp
-
+	Defaults: wh40kboltchaosmarine
+	icon: wh40kmarineboltericon
 wh40kcultist:
-	Defaults:
-		Filename: wh40kcultist.shp
 	Inherits: wh40kchaosmarine
-	icon:
-		Filename: wh40kcultisticon.shp
-
+	Defaults: wh40kcultist
+	icon: wh40kcultisticon
 wh40kcultistsquad:
-	Defaults:
-		Filename: wh40kcultistsquad.shp
 	Inherits: wh40kcultist
-	icon:
-		Filename: wh40kcultistsquad.shp
+	Defaults: wh40kcultist
+	icon: wh40kcultistsquad.shp
 		AddExtension: False
-	dot:
-		Filename: invisibleitem.shp
-	idle:
-		Filename: invisibleitem.shp
-
+	dot: invisibleitem
+	idle: invisibleitem
 wh40kcultistgrenadier:
-	Defaults:
-		Filename: wh40kcultistgrenadier.shp
 	Inherits: wh40kchaosmarine
-	icon:
-		Filename: wh40kgrenadechaosicon.shp
-
+	Defaults: wh40kcultist
+	icon: wh40kgrenadechaosicon
 wh40kcultistplasma:
-	Defaults:
-		Filename: wh40kcultistplasma.shp
 	Inherits: wh40kchaosmarine
-	icon:
-		Filename: wh40kplasmachaosicon.shp
-
+	Defaults: wh40kcultist
+	icon: wh40kplasmachaosicon
 wh40kdemon:
-	Defaults:
-		Filename: wh40kdemon.shp
 	Inherits: wh40kchaosmarine
-	icon:
-		Filename: wh40kdemonicon.shp
-
+	Defaults: wh40kdemon
+	icon: wh40kdemonicon
 wh40kheretic:
-	Defaults:
-		Filename: wh40kheretic.shp
 	Inherits: wh40kchaosmarine
-	icon:
-		Filename: wh40khereticicon.shp
-
+	Defaults: wh40kheretic
+	icon: wh40khereticicon
 wh40kraptor:
-	Defaults:
-		Filename: wh40kraptor.shp
 	Inherits: ^InfantryOverlays
 	stand:
 		Facings: -32
@@ -1945,118 +1466,89 @@ wh40kraptor:
 	idle4:
 		Facings: -32
 	# Shot
-	die1:
-		Filename: e1.shp
+	die1: e1
 		Start: 381
 		Length: 9
 		Tick: 80
 	# Explode
-	die2:
-		Filename: e1.shp
+	die2: e1
 		Start: 390
 		Length: 8
 		Tick: 80
 	# Fly and explode in air
-	die3:
-		Filename: e1.shp
+	die3: e1
 		Start: 398
 		Length: 8
 		Tick: 80
 	# Fly through air squish on ground
-	die4:
-		Filename: e1.shp
+	die4: e1
 		Start: 406
 		Length: 12
 		Tick: 80
 	# Burn
-	die5:
-		Filename: e1.shp
+	die5: e1
 		Start: 418
 		Length: 18
 		Tick: 80
 	# Tib
-	die6:
-		Filename: e1.shp
+	die6: e1
 		Start: 366
 		Length: 11
 		Tick: 80
 	# Electro
 	die7: electro ##########
 		Length: *
-	die-crushed:
-		Filename: e1rot.shp
+	die-crushed: e1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-	garrison-muzzle:
-		Filename: minigun.shp
+	garrison-muzzle: minigun
 		Length: 3
 		Stride: 6
 		Facings: 8
-	icon:
-		Filename: wh40kraptoricon.shp
-
+	icon: wh40kraptoricon
 wh40kraptor2:
-	Defaults:
-		Filename: wh40kraptor2.shp
 	Inherits: wh40kraptor
-	icon:
-		Filename: wh40kflamerchaosicon.shp
+	Defaults: wh40kraptor2
+	icon: wh40kflamerchaosicon
 	muzzle:
 		Combine:
 			flame-n:
-				Filename: flame-n.shp
 				Length: *
 				Offset: 1,6
 			flame-nw:
-				Filename: flame-nw.shp
 				Length: *
 				Offset: 8,7
 			flame-w:
-				Filename: flame-w.shp
 				Length: *
 				Offset: 8,2
 			flame-sw:
-				Filename: flame-sw.shp
 				Length: *
 				Offset: 7,-2
 			flame-s:
-				Filename: flame-s.shp
 				Length: *
 				Offset: 1,-2
 			flame-se:
-				Filename: flame-se.shp
 				Length: *
 				Offset: -5,-2
 			flame-e:
-				Filename: flame-e.shp
 				Length: *
 				Offset: -7,2
 			flame-ne:
-				Filename: flame-ne.shp
 				Length: *
 				Offset: -7,8
 		Facings: 8
 		Length: 13
-
 wh40kpossessed:
-	Defaults:
-		Filename: wh40kpossessed.shp
 	Inherits: wh40kchaosmarine
-	icon:
-		Filename: wh40kpossessedicon.shp
-
+	Defaults: wh40kpossessed
+	icon: wh40kpossessedicon
 wh40koliberator:
-	Defaults:
-		Filename: wh40koliberator.shp
 	Inherits: wh40kchaosmarine
-	icon:
-		Filename: wh40koliberatoricon.shp
-
+	Defaults: wh40koliberator
+	icon: wh40koliberatoricon
 wh40kbloodthirster:
-	Defaults:
-		Filename: wh40kbloodthirster.shp
 	Inherits: ^InfantryOverlays
 	stand:
 		Facings: -16
@@ -2144,30 +1636,21 @@ wh40kbloodthirster:
 		Start: 120
 		Length: 6
 		Tick: 80
-	die-crushed:
-		Filename: e1rot.shp
+	die-crushed: e1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-	garrison-muzzle:
-		Filename: minigun.shp
+	garrison-muzzle: minigun
 		Length: 3
 		Stride: 6
 		Facings: 8
-	icon:
-		Filename: wh40kbloodthirstericon.shp
-
+	icon: wh40kbloodthirstericon
 wh40kprincedemon:
-	Defaults:
-		Filename: wh40kprincedemon.shp
 	Inherits: wh40kbloodthirster
-	icon:
-		Filename: wh40kbloodthirstericon.shp
-
+	Defaults: wh40kprincedemon
+	icon: wh40kbloodthirstericon
 wh40kservitor:
-	Defaults:
-		Filename: wh40kservitor.shp
 	Inherits: ^InfantryOverlays
 	stand:
 		Facings: -16
@@ -2215,61 +1698,49 @@ wh40kservitor:
 		Length: 5
 		Tick: 100
 	# Shot
-	die1:
-		Filename: e1.shp
+	die1: e1
 		Start: 381
 		Length: 9
 		Tick: 80
 	# Explode
-	die2:
-		Filename: e1.shp
+	die2: e1
 		Start: 390
 		Length: 8
 		Tick: 80
 	# Fly and explode in air
-	die3:
-		Filename: e1.shp
+	die3: e1
 		Start: 398
 		Length: 8
 		Tick: 80
 	# Fly through air squish on ground
-	die4:
-		Filename: e1.shp
+	die4: e1
 		Start: 406
 		Length: 12
 		Tick: 80
 	# Burn
-	die5:
-		Filename: e1.shp
+	die5: e1
 		Start: 418
 		Length: 18
 		Tick: 80
 	# Tib
-	die6:
-		Filename: e1.shp
+	die6: e1
 		Start: 366
 		Length: 11
 		Tick: 80
 	# Electro
 	die7: electro ##########
 		Length: *
-	die-crushed:
-		Filename: e1rot.shp
+	die-crushed: e1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-	garrison-muzzle:
-		Filename: minigun.shp
+	garrison-muzzle: minigun
 		Length: 3
 		Stride: 6
 		Facings: 8
-	icon:
-		Filename: wh40kservitoricon.shp
-
+	icon: wh40kservitoricon
 wh40kscout:
-	Defaults:
-		Filename: wh40kscout.shp
 	Inherits: ^InfantryOverlays
 	stand:
 		Facings: -8
@@ -2321,118 +1792,89 @@ wh40kscout:
 		Facings: 8
 		Tick: 100
 	# Shot
-	die1:
-		Filename: e1.shp
+	die1: e1
 		Start: 381
 		Length: 9
 		Tick: 80
 	# Explode
-	die2:
-		Filename: e1.shp
+	die2: e1
 		Start: 390
 		Length: 8
 		Tick: 80
 	# Fly and explode in air
-	die3:
-		Filename: e1.shp
+	die3: e1
 		Start: 398
 		Length: 8
 		Tick: 80
 	# Fly through air squish on ground
-	die4:
-		Filename: e1.shp
+	die4: e1
 		Start: 406
 		Length: 12
 		Tick: 80
 	# Burn
-	die5:
-		Filename: e1.shp
+	die5: e1
 		Start: 418
 		Length: 18
 		Tick: 80
 	# Tib
-	die6:
-		Filename: e1.shp
+	die6: e1
 		Start: 366
 		Length: 11
 		Tick: 80
 	# Electro
 	die7: electro ##########
 		Length: *
-	die-crushed:
-		Filename: e1rot.shp
+	die-crushed: e1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-	garrison-muzzle:
-		Filename: minigun.shp
+	garrison-muzzle: minigun
 		Length: 3
 		Stride: 6
 		Facings: 8
-	icon:
-		Filename: wh40kscouticon.shp
-
+	icon: wh40kscouticon
 wh40kscoutplasma:
-	Defaults:
-		Filename: wh40kscoutplasma.shp
 	Inherits: wh40kscout
-	icon:
-		Filename: wh40kmarineplasmaicon.shp
-
+	Defaults: wh40kscout
+	icon: wh40kmarineplasmaicon
 wh40kscoutflamer:
-	Defaults:
-		Filename: wh40kscoutflamer.shp
 	Inherits: wh40kscout
-	icon:
-		Filename: wh40kmarineflamericon.shp
+	Defaults: wh40kscoutflamer
+	icon: wh40kmarineflamericon
 	muzzle:
 		Combine:
 			flame-n:
-				Filename: flame-n.shp
 				Length: *
 				Offset: 1,6
 			flame-nw:
-				Filename: flame-nw.shp
 				Length: *
 				Offset: 8,7
 			flame-w:
-				Filename: flame-w.shp
 				Length: *
 				Offset: 8,2
 			flame-sw:
-				Filename: flame-sw.shp
 				Length: *
 				Offset: 7,-2
 			flame-s:
-				Filename: flame-s.shp
 				Length: *
 				Offset: 1,-2
 			flame-se:
-				Filename: flame-se.shp
 				Length: *
 				Offset: -5,-2
 			flame-e:
-				Filename: flame-e.shp
 				Length: *
 				Offset: -7,2
 			flame-ne:
-				Filename: flame-ne.shp
 				Length: *
 				Offset: -7,8
 		Facings: 8
 		Length: 13
-
 wh40kscoutsniper:
-	Defaults:
-		Filename: wh40kscoutsniper.shp
 	Inherits: wh40kscout
-	icon:
-		Filename: wh40kscoutsnipericon.shp
-
+	Defaults: wh40kscoutsniper
+	icon: wh40kscoutsnipericon
 wh40kforcecmd:
-	Defaults:
-		Filename: wh40kforcecmd.shp
 	Inherits: ^InfantryOverlays
 	stand:
 		Facings: -8
@@ -2486,61 +1928,49 @@ wh40kforcecmd:
 		Facings: 8
 		Tick: 100
 	# Shot
-	die1:
-		Filename: e1.shp
+	die1: e1
 		Start: 381
 		Length: 9
 		Tick: 80
 	# Explode
-	die2:
-		Filename: e1.shp
+	die2: e1
 		Start: 390
 		Length: 8
 		Tick: 80
 	# Fly and explode in air
-	die3:
-		Filename: e1.shp
+	die3: e1
 		Start: 398
 		Length: 8
 		Tick: 80
 	# Fly through air squish on ground
-	die4:
-		Filename: e1.shp
+	die4: e1
 		Start: 406
 		Length: 12
 		Tick: 80
 	# Burn
-	die5:
-		Filename: e1.shp
+	die5: e1
 		Start: 418
 		Length: 18
 		Tick: 80
 	# Tib
-	die6:
-		Filename: e1.shp
+	die6: e1
 		Start: 366
 		Length: 11
 		Tick: 80
 	# Electro
 	die7: electro ##########
 		Length: *
-	die-crushed:
-		Filename: e1rot.shp
+	die-crushed: e1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-	garrison-muzzle:
-		Filename: minigun.shp
+	garrison-muzzle: minigun
 		Length: 3
 		Stride: 6
 		Facings: 8
-	icon:
-		Filename: wh40kforcecmdicon.shp
-
+	icon: wh40kforcecmdicon
 wh40kchaptain:
-	Defaults:
-		Filename: wh40kchaptain.shp
 	Inherits: ^InfantryOverlays
 	stand:
 		Facings: -8
@@ -2594,61 +2024,49 @@ wh40kchaptain:
 		Facings: 8
 		Tick: 100
 	# Shot
-	die1:
-		Filename: e1.shp
+	die1: e1
 		Start: 381
 		Length: 9
 		Tick: 80
 	# Explode
-	die2:
-		Filename: e1.shp
+	die2: e1
 		Start: 390
 		Length: 8
 		Tick: 80
 	# Fly and explode in air
-	die3:
-		Filename: e1.shp
+	die3: e1
 		Start: 398
 		Length: 8
 		Tick: 80
 	# Fly through air squish on ground
-	die4:
-		Filename: e1.shp
+	die4: e1
 		Start: 406
 		Length: 12
 		Tick: 80
 	# Burn
-	die5:
-		Filename: e1.shp
+	die5: e1
 		Start: 418
 		Length: 18
 		Tick: 80
 	# Tib
-	die6:
-		Filename: e1.shp
+	die6: e1
 		Start: 366
 		Length: 11
 		Tick: 80
 	# Electro
 	die7: electro ##########
 		Length: *
-	die-crushed:
-		Filename: e1rot.shp
+	die-crushed: e1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-	garrison-muzzle:
-		Filename: minigun.shp
+	garrison-muzzle: minigun
 		Length: 3
 		Stride: 6
 		Facings: 8
-	icon:
-		Filename: wh40kchaptainicon.shp
-
+	icon: wh40kchaptainicon
 wh40klibrarian:
-	Defaults:
-		Filename: wh40klibrarian.shp
 	Inherits: ^InfantryOverlays
 	stand:
 		Facings: -8
@@ -2702,68 +2120,55 @@ wh40klibrarian:
 		Facings: 8
 		Tick: 100
 	# Shot
-	die1:
-		Filename: e1.shp
+	die1: e1
 		Start: 381
 		Length: 9
 		Tick: 80
 	# Explode
-	die2:
-		Filename: e1.shp
+	die2: e1
 		Start: 390
 		Length: 8
 		Tick: 80
 	# Fly and explode in air
-	die3:
-		Filename: e1.shp
+	die3: e1
 		Start: 398
 		Length: 8
 		Tick: 80
 	# Fly through air squish on ground
-	die4:
-		Filename: e1.shp
+	die4: e1
 		Start: 406
 		Length: 12
 		Tick: 80
 	# Burn
-	die5:
-		Filename: e1.shp
+	die5: e1
 		Start: 418
 		Length: 18
 		Tick: 80
 	# Tib
-	die6:
-		Filename: e1.shp
+	die6: e1
 		Start: 366
 		Length: 11
 		Tick: 80
 	# Electro
 	die7: electro ##########
 		Length: *
-	die-crushed:
-		Filename: e1rot.shp
+	die-crushed: e1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-	garrison-muzzle:
-		Filename: minigun.shp
+	garrison-muzzle: minigun
 		Length: 3
 		Stride: 6
 		Facings: 8
-	icon:
-		Filename: wh40klibrarianicon.shp
-
+	icon: wh40klibrarianicon
 wh40kapotecary:
-	Defaults:
-		Filename: wh40kapotecary.shp
 	Inherits: ^InfantryOverlays
 	stand:
 		Facings: -8
 	stand2:
 		Facings: -8
-	run:
-		Filename: wh40kapotecarywalk.shp
+	run: wh40kapotecarywalk
 		Length: 8
 		Facings: 8
 		Tick: 100
@@ -2776,8 +2181,7 @@ wh40kapotecary:
 		Facings: -8
 	prone-stand2:
 		Facings: -8
-	prone-run:
-		Filename: wh40kapotecarywalk.shp
+	prone-run: wh40kapotecarywalk
 		Length: 8
 		Facings: 8
 		Tick: 100
@@ -2792,13 +2196,11 @@ wh40kapotecary:
 		Facings: 8
 		Length: 2
 		Tick: 150
-	idle1:
-		Filename: wh40kapotecarywalk.shp
+	idle1: wh40kapotecarywalk
 		Length: 8
 		Facings: 8
 		Tick: 100
-	idle2:
-		Filename: wh40kapotecarywalk.shp
+	idle2: wh40kapotecarywalk
 		Length: 8
 		Facings: 8
 		Tick: 100
@@ -2816,61 +2218,50 @@ wh40kapotecary:
 		Facings: 8
 		Tick: 100
 	# Shot
-	die1:
-		Filename: e1.shp
+	die1: e1
 		Start: 381
 		Length: 9
 		Tick: 80
 	# Explode
-	die2:
-		Filename: e1.shp
+	die2: e1
 		Start: 390
 		Length: 8
 		Tick: 80
 	# Fly and explode in air
-	die3:
-		Filename: e1.shp
+	die3: e1
 		Start: 398
 		Length: 8
 		Tick: 80
 	# Fly through air squish on ground
-	die4:
-		Filename: e1.shp
+	die4: e1
 		Start: 406
 		Length: 12
 		Tick: 80
 	# Burn
-	die5:
-		Filename: e1.shp
+	die5: e1
 		Start: 418
 		Length: 18
 		Tick: 80
 	# Tib
-	die6:
-		Filename: e1.shp
+	die6: e1
 		Start: 366
 		Length: 11
 		Tick: 80
 	# Electro
 	die7: electro ##########
 		Length: *
-	die-crushed:
-		Filename: e1rot.shp
+	die-crushed: e1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-	garrison-muzzle:
-		Filename: minigun.shp
+	garrison-muzzle: minigun
 		Length: 3
 		Stride: 6
 		Facings: 8
-	icon:
-		Filename: wh40kapotecaryicon.shp
+	icon: wh40kapotecaryicon
 
 wh40kgrayknight:
-	Defaults:
-		Filename: wh40kgrayknight.shp
 	Inherits: ^InfantryOverlays
 	stand:
 		Facings: -8
@@ -2927,61 +2318,49 @@ wh40kgrayknight:
 		Facings: 8
 		Tick: 100
 	# Shot
-	die1:
-		Filename: e1.shp
+	die1: e1
 		Start: 381
 		Length: 9
 		Tick: 80
 	# Explode
-	die2:
-		Filename: e1.shp
+	die2: e1
 		Start: 390
 		Length: 8
 		Tick: 80
 	# Fly and explode in air
-	die3:
-		Filename: e1.shp
+	die3: e1
 		Start: 398
 		Length: 8
 		Tick: 80
 	# Fly through air squish on ground
-	die4:
-		Filename: e1.shp
+	die4: e1
 		Start: 406
 		Length: 12
 		Tick: 80
 	# Burn
-	die5:
-		Filename: e1.shp
+	die5: e1
 		Start: 418
 		Length: 18
 		Tick: 80
 	# Tib
-	die6:
-		Filename: e1.shp
+	die6: e1
 		Start: 366
 		Length: 11
 		Tick: 80
 	# Electro
 	die7: electro ##########
 		Length: *
-	die-crushed:
-		Filename: e1rot.shp
+	die-crushed: e1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-	garrison-muzzle:
-		Filename: minigun.shp
+	garrison-muzzle: minigun
 		Length: 3
 		Stride: 6
 		Facings: 8
-	icon:
-		Filename: wh40kgrayknighticon.shp
-
+	icon: wh40kgrayknighticon
 wh40ksorcerer:
-	Defaults:
-		Filename: wh40ksorcerer.shp
 	Inherits: ^InfantryOverlays
 	stand:
 		Facings: -8
@@ -3035,68 +2414,53 @@ wh40ksorcerer:
 		Facings: 8
 		Tick: 100
 	# Shot
-	die1:
-		Filename: e1.shp
+	die1: e1
 		Start: 381
 		Length: 9
 		Tick: 80
 	# Explode
-	die2:
-		Filename: e1.shp
+	die2: e1
 		Start: 390
 		Length: 8
 		Tick: 80
 	# Fly and explode in air
-	die3:
-		Filename: e1.shp
+	die3: e1
 		Start: 398
 		Length: 8
 		Tick: 80
 	# Fly through air squish on ground
-	die4:
-		Filename: e1.shp
+	die4: e1
 		Start: 406
 		Length: 12
 		Tick: 80
 	# Burn
-	die5:
-		Filename: e1.shp
+	die5: e1
 		Start: 418
 		Length: 18
 		Tick: 80
 	# Tib
-	die6:
-		Filename: e1.shp
+	die6: e1
 		Start: 366
 		Length: 11
 		Tick: 80
 	# Electro
 	die7: electro ##########
 		Length: *
-	die-crushed:
-		Filename: e1rot.shp
+	die-crushed: e1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-	garrison-muzzle:
-		Filename: minigun.shp
+	garrison-muzzle: minigun
 		Length: 3
 		Stride: 6
 		Facings: 8
-	icon:
-		Filename: wh40ksorcerericon.shp
-
+	icon: wh40ksorcerericon
 wh40kchaoslord:
-	Defaults:
-		Filename: wh40kchaoslord.shp
 	Inherits: wh40ksorcerer
-	icon:
-		Filename: wh40kchaoslordicon.shp
-
+	Defaults: wh40kchaoslord
+	icon: wh40kchaoslordicon
 wh40kberserk:
-	Defaults:
-		Filename: wh40kberserk.shp
 	Inherits: ^InfantryOverlays
 	stand:
 		Facings: -8
@@ -3153,61 +2517,49 @@ wh40kberserk:
 		Facings: 8
 		Tick: 100
 	# Shot
-	die1:
-		Filename: e1.shp
+	die1: e1
 		Start: 381
 		Length: 9
 		Tick: 80
 	# Explode
-	die2:
-		Filename: e1.shp
+	die2: e1
 		Start: 390
 		Length: 8
 		Tick: 80
 	# Fly and explode in air
-	die3:
-		Filename: e1.shp
+	die3: e1
 		Start: 398
 		Length: 8
 		Tick: 80
 	# Fly through air squish on ground
-	die4:
-		Filename: e1.shp
+	die4: e1
 		Start: 406
 		Length: 12
 		Tick: 80
 	# Burn
-	die5:
-		Filename: e1.shp
+	die5: e1
 		Start: 418
 		Length: 18
 		Tick: 80
 	# Tib
-	die6:
-		Filename: e1.shp
+	die6: e1
 		Start: 366
 		Length: 11
 		Tick: 80
 	# Electro
 	die7: electro ##########
 		Length: *
-	die-crushed:
-		Filename: e1rot.shp
+	die-crushed: e1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-	garrison-muzzle:
-		Filename: minigun.shp
+	garrison-muzzle: minigun
 		Length: 3
 		Stride: 6
 		Facings: 8
-	icon:
-		Filename: wh40kberserkicon.shp
-
+	icon: wh40kberserkicon
 wh40kterminator1:
-	Defaults:
-		Filename: wh40kterminator1.shp
 	Inherits: ^InfantryOverlays
 	stand:
 		Facings: -8
@@ -3259,61 +2611,49 @@ wh40kterminator1:
 		Facings: 8
 		Tick: 100
 	# Shot
-	die1:
-		Filename: e1.shp
+	die1: e1
 		Start: 381
 		Length: 9
 		Tick: 80
 	# Explode
-	die2:
-		Filename: e1.shp
+	die2: e1
 		Start: 390
 		Length: 8
 		Tick: 80
 	# Fly and explode in air
-	die3:
-		Filename: e1.shp
+	die3: e1
 		Start: 398
 		Length: 8
 		Tick: 80
 	# Fly through air squish on ground
-	die4:
-		Filename: e1.shp
+	die4: e1
 		Start: 406
 		Length: 12
 		Tick: 80
 	# Burn
-	die5:
-		Filename: e1.shp
+	die5: e1
 		Start: 418
 		Length: 18
 		Tick: 80
 	# Tib
-	die6:
-		Filename: e1.shp
+	die6: e1
 		Start: 366
 		Length: 11
 		Tick: 80
 	# Electro
 	die7: electro ##########
 		Length: *
-	die-crushed:
-		Filename: e1rot.shp
+	die-crushed: e1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-	garrison-muzzle:
-		Filename: minigun.shp
+	garrison-muzzle: minigun
 		Length: 3
 		Stride: 6
 		Facings: 8
-	icon:
-		Filename: wh40kterminator1icon.shp
-
+	icon: wh40kterminator1icon
 wh40kterminator2:
-	Defaults:
-		Filename: wh40kterminator2.shp
 	Inherits: ^InfantryOverlays
 	stand:
 		Facings: -8
@@ -3367,187 +2707,140 @@ wh40kterminator2:
 		Facings: 8
 		Tick: 100
 	# Shot
-	die1:
-		Filename: e1.shp
+	die1: e1
 		Start: 381
 		Length: 9
 		Tick: 80
 	# Explode
-	die2:
-		Filename: e1.shp
+	die2: e1
 		Start: 390
 		Length: 8
 		Tick: 80
 	# Fly and explode in air
-	die3:
-		Filename: e1.shp
+	die3: e1
 		Start: 398
 		Length: 8
 		Tick: 80
 	# Fly through air squish on ground
-	die4:
-		Filename: e1.shp
+	die4: e1
 		Start: 406
 		Length: 12
 		Tick: 80
 	# Burn
-	die5:
-		Filename: e1.shp
+	die5: e1
 		Start: 418
 		Length: 18
 		Tick: 80
 	# Tib
-	die6:
-		Filename: e1.shp
+	die6: e1
 		Start: 366
 		Length: 11
 		Tick: 80
 	# Electro
 	die7: electro ##########
 		Length: *
-	die-crushed:
-		Filename: e1rot.shp
+	die-crushed: e1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-	garrison-muzzle:
-		Filename: minigun.shp
+	garrison-muzzle: minigun
 		Length: 3
 		Stride: 6
 		Facings: 8
-	icon:
-		Filename: wh40kterminator2icon.shp
-
+	icon: wh40kterminator2icon
 wh40kterminator3:
-	Defaults:
-		Filename: wh40kterminator3.shp
 	Inherits: wh40kterminator1
-	icon:
-		Filename: wh40kterminatorgattlingicon.shp
-
+	Defaults: wh40kterminator1
+	icon: wh40kterminatorgattlingicon
 wh40kterminator4:
-	Defaults:
-		Filename: wh40kterminator4.shp
 	Inherits: wh40kterminator1
-	icon:
-		Filename: wh40kterminatorflameicon.shp
+	Defaults: wh40kterminator1
+	icon: wh40kterminatorflameicon
 	muzzle:
 		Combine:
 			flame-n:
-				Filename: flame-n.shp
 				Length: *
 				Offset: 1,6
 			flame-nw:
-				Filename: flame-nw.shp
 				Length: *
 				Offset: 8,7
 			flame-w:
-				Filename: flame-w.shp
 				Length: *
 				Offset: 8,2
 			flame-sw:
-				Filename: flame-sw.shp
 				Length: *
 				Offset: 7,-2
 			flame-s:
-				Filename: flame-s.shp
 				Length: *
 				Offset: 1,-2
 			flame-se:
-				Filename: flame-se.shp
 				Length: *
 				Offset: -5,-2
 			flame-e:
-				Filename: flame-e.shp
 				Length: *
 				Offset: -7,2
 			flame-ne:
-				Filename: flame-ne.shp
 				Length: *
 				Offset: -7,8
 		Facings: 8
 		Length: 13
-
 wh40kkarsgrenade:
-	Defaults:
-		Filename: wh40kkarsgrenade.shp
 	Inherits: wh40kkars
-	icon:
-		Filename: wh40kgrenadeicon.shp
-
+	Defaults: wh40kkars
+	icon: wh40kgrenadeicon
 wh40kkarsplasma:
-	Defaults:
-		Filename: wh40kkarsplasma.shp
 	Inherits: wh40kkars
-	icon:
-		Filename: wh40kplasmaicon.shp
-
+	Defaults: wh40kkars
+	icon: wh40kplasmaicon
 wh40kbigguns:
-	Defaults:
-		Filename: wh40kbigguns.shp
 	Inherits: ^RA2ArmedInfantry
-	dot:
-		Filename: invisibleitem.shp
+	Defaults: wh40bigguns
+	dot: invisibleitem
 		ZOffset: -9999
 	run:
 		Tick: 120
 		Scale: 1.1
-	deployed:
-		Filename: wh40kbiggunstur.shp
+	deployed: wh40kbiggunstur
 		Facings: -16
 		Scale: 1.1
-	deploy:
-		Filename: wh40kbiggunstur.shp
+	deploy: wh40kbiggunstur
 		Facings: -16
 		Scale: 1.1
-	shoot-deployed:
-		Filename: wh40kbiggunstur.shp
+	shoot-deployed: wh40kbiggunstur
 		Facings: -16
 		Scale: 1.1
-	paradrop:
-		Filename: ra2gi.shp
+	paradrop: ra2gi
 		Start: 363
 		Scale: 1.1
-	cheer:
-		Filename: ra2gi.shp
+	cheer: ra2gi
 		Start: 364
 		Scale: 1.1
-	garrison-muzzle:
-		Filename: minigun.shp
+	garrison-muzzle: minigun
 		Length: 3
 		Stride: 6
 		Facings: 8
 		Tick: 30
 		Scale: 1.1
-	icon:
-		Filename: wh40kbiggunsicon.shp
+	icon: wh40kbiggunsicon
 
 wh40kbigguns2:
-	Defaults:
-		Filename: wh40kbigguns2.shp
 	Inherits: wh40kbigguns
+	Defaults: wh40bigguns
 		Scale: 1.2
-	icon:
-		Filename: wh40klascannon.shp
+	icon: wh40klascannon
 
 wh40kbigguns3:
-	Defaults:
-		Filename: wh40kbigguns3.shp
 	Inherits: wh40kbigguns
+	Defaults: wh40bigguns
 		Scale: 1.2
-	icon:
-		Filename: wh40kautocannon.shp
-
+	icon: wh40kautocannon
 wh40kcommisair:
-	Defaults:
-		Filename: wh40kcommisair.shp
 	Inherits: ra2e2
-	icon:
-		Filename: wh40kcommisairicon.shp
+	Defaults: wh40kcommisair
+	icon: wh40kcommisairicon.shp
 		AddExtension: False
-	garrison-muzzle:
-		Filename: minigun.shp
+	garrison-muzzle: minigun
 		Length: 3
 		Stride: 6
 		Facings: 8
@@ -3568,63 +2861,43 @@ wh40kcommisair:
 		Start: 0
 		Length: 1
 		Facings: 8
-
 wh40kguardsargent:
-	Defaults:
-		Filename: wh40kguardsargent.shp
 	Inherits: ra2seal
-	icon:
-		Filename: wh40ksargenticon.shp
+	Defaults: wh40kguard
+	icon: wh40ksargenticon.shp
 		AddExtension: False
-	garrison-muzzle:
-		Filename: minigun.shp
+	garrison-muzzle: minigun
 		Length: 3
 		Stride: 6
 		Facings: 8
-
 wh40kkarssargent:
-	Defaults:
-		Filename: wh40kkarssargent.shp
 	Inherits: wh40kkars
-	icon:
-		Filename: wh40kkarssargenticon.shp
-
+	Defaults: wh40kkars
+	icon: wh40kkarssargenticon
 wh40kogrynsargent:
-	Defaults:
-		Filename: wh40kogrynsargent.shp
 	Inherits: wh40kogryn
-	icon:
-		Filename: wh40kogrynsargenticon.shp
-
+	Defaults: wh40kogryn
+	icon: wh40kogrynsargenticon
 wh40kgrenade:
-	Defaults:
-		Filename: wh40kgrenade.shp
 	Inherits: ra2flakt
-	icon:
-		Filename: wh40kgrenadeicon.shp
+	Defaults: wh40kgrenade
+	icon: wh40kgrenadeicon.shp
 		AddExtension: False
-	garrison-muzzle:
-		Filename: minigun.shp
+	garrison-muzzle: minigun
 		Length: 3
 		Stride: 6
 		Facings: 8
 
 wh40kguardplasma:
-	Defaults:
-		Filename: wh40kguardplasma.shp
 	Inherits: ra2seal
-	icon:
-		Filename: wh40kplasmaicon.shp
+	Defaults: wh40kguard
+	icon: wh40kplasmaicon.shp
 		AddExtension: False
-	garrison-muzzle:
-		Filename: minigun.shp
+	garrison-muzzle: minigun
 		Length: 3
 		Stride: 6
 		Facings: 8
-
 wh40kogryn:
-	Defaults:
-		Filename: wh40kogryn.shp
 	Inherits: ^InfantryOverlays
 	stand:
 		Facings: 8
@@ -3674,61 +2947,50 @@ wh40kogryn:
 		Facings: 8
 		Tick: 100
 	# Shot
-	die1:
-		Filename: e1.shp
+	die1: e1
 		Start: 381
 		Length: 9
 		Tick: 80
 	# Explode
-	die2:
-		Filename: e1.shp
+	die2: e1
 		Start: 390
 		Length: 8
 		Tick: 80
 	# Fly and explode in air
-	die3:
-		Filename: e1.shp
+	die3: e1
 		Start: 398
 		Length: 8
 		Tick: 80
 	# Fly through air squish on ground
-	die4:
-		Filename: e1.shp
+	die4: e1
 		Start: 406
 		Length: 12
 		Tick: 80
 	# Burn
-	die5:
-		Filename: e1.shp
+	die5: e1
 		Start: 418
 		Length: 18
 		Tick: 80
 	# Tib
-	die6:
-		Filename: e1.shp
+	die6: e1
 		Start: 366
 		Length: 11
 		Tick: 80
 	# Electro
 	die7: electro ##########
 		Length: *
-	die-crushed:
-		Filename: e1rot.shp
+	die-crushed: e1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-	garrison-muzzle:
-		Filename: minigun.shp
+	garrison-muzzle: minigun
 		Length: 3
 		Stride: 6
 		Facings: 8
-	icon:
-		Filename: wh40kogrynicon.shp
+	icon: wh40kogrynicon
 
 wh40ktechpriest:
-	Defaults:
-		Filename: wh40ktechpriest.shp
 	Inherits: ^InfantryOverlays
 	stand:
 		Facings: 8
@@ -3780,367 +3042,242 @@ wh40ktechpriest:
 		Facings: 8
 		Tick: 100
 	# Shot
-	die1:
-		Filename: e1.shp
+	die1: e1
 		Start: 381
 		Length: 9
 		Tick: 80
 	# Explode
-	die2:
-		Filename: e1.shp
+	die2: e1
 		Start: 390
 		Length: 8
 		Tick: 80
 	# Fly and explode in air
-	die3:
-		Filename: e1.shp
+	die3: e1
 		Start: 398
 		Length: 8
 		Tick: 80
 	# Fly through air squish on ground
-	die4:
-		Filename: e1.shp
+	die4: e1
 		Start: 406
 		Length: 12
 		Tick: 80
 	# Burn
-	die5:
-		Filename: e1.shp
+	die5: e1
 		Start: 418
 		Length: 18
 		Tick: 80
 	# Tib
-	die6:
-		Filename: e1.shp
+	die6: e1
 		Start: 366
 		Length: 11
 		Tick: 80
 	# Electro
 	die7: electro ##########
 		Length: *
-	die-crushed:
-		Filename: e1rot.shp
+	die-crushed: e1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-	garrison-muzzle:
-		Filename: minigun.shp
+	garrison-muzzle: minigun
 		Length: 3
 		Stride: 6
 		Facings: 8
-	icon:
-		Filename: wh40ktechpriesticon.shp
-
+	icon: wh40ktechpriesticon
 wh40kfirewarrior:
-	Defaults:
-		Filename: wh40kfirewarrior.shp
 	Inherits: wh40kchaosmarine
-	icon:
-		Filename: wh40kcultisticon.shp
-
+	Defaults: wh40kfirewarrior
+	icon: wh40kcultisticon
 wh40kpathfinder:
-	Defaults:
-		Filename: wh40kpathfinder.shp
 	Inherits: wh40kchaosmarine
-	icon:
-		Filename: wh40kcultisticon.shp
-
+	Defaults: wh40kpathfinder
+	icon: wh40kcultisticon
 wh40kxv15:
-	Defaults:
-		Filename: wh40kxv15.shp
 	Inherits: wh40kchaosmarine
-	icon:
-		Filename: wh40kcultisticon.shp
-
+	Defaults: wh40kxv15
+	icon: wh40kcultisticon
 wh40kshavre:
-	Defaults:
-		Filename: wh40kshavre.shp
 	Inherits: wh40kchaosmarine
-	icon:
-		Filename: wh40kcultisticon.shp
-
+	Defaults: wh40kshavre
+	icon: wh40kcultisticon
 wh40kkroot:
-	Defaults:
-		Filename: wh40kkroot.shp
 	Inherits: wh40kchaosmarine
-	icon:
-		Filename: wh40kcultisticon.shp
-
+	Defaults: wh40kkroot
+	icon: wh40kcultisticon
 wh40kkrootshaper:
-	Defaults:
-		Filename: wh40kkrootshaper.shp
 	Inherits: wh40kchaosmarine
-	icon:
-		Filename: wh40kcultisticon.shp
-
+	Defaults: wh40kkrootshaper
+	icon: wh40kcultisticon
 wh40kdevilfish:
-	Defaults:
-		Filename: wh40kdevilfish.shp
 	idle:
 		Facings: -32
 		UseClassicFacings: True
 		Scale: 0.70
-	muzzle:
-		Filename: scphotonexplosion.shp
+	muzzle: scphotonexplosion
 		Length: 4
 		Scale: 0.70
-	icon:
-		Filename: wh40krhinoicon.shp
-
+	icon: wh40krhinoicon
 wh40kskyray:
-	Defaults:
-		Filename: wh40kskyray.shp
 	idle:
 		Facings: -32
 		UseClassicFacings: True
 		Scale: 0.70
-	muzzle:
-		Filename: scphotonexplosion.shp
+	muzzle: scphotonexplosion
 		Length: 4
 		Scale: 0.70
-	icon:
-		Filename: wh40krhinoicon.shp
-
+	icon: wh40krhinoicon
 wh40khammerhead:
-	Defaults:
-		Filename: wh40khammerhead.shp
 	idle:
 		Facings: -32
 		UseClassicFacings: True
 		Scale: 0.72
-	turret:
-		Filename: wh40khammerheadtur.shp
+	turret: wh40khammerheadtur
 		Facings: -32
 		UseClassicFacings: True
 		Scale: 0.72
-	muzzle:
-		Filename: scphotonexplosion.shp
+	muzzle: scphotonexplosion
 		Length: 4
 		Scale: 0.72
-	icon:
-		Filename: wh40klemanicon.shp
-
+	icon: wh40klemanicon
 wh40kdronesquad:
-	Defaults:
-		Filename: wh40kdronesquad.shp
 	idle:
 		Facings: -32
 		UseClassicFacings: True
 		Scale: 0.90
-	muzzle:
-		Filename: wh40ksmallphotom.shp
+	muzzle: wh40ksmallphotom
 		Length: 4
 		Scale: 0.90
-	dot:
-		Filename: invisibleitem.shp
-	icon:
-		Filename: wh40krhinoicon.shp
-
+	dot: invisibleitem
+	icon: wh40krhinoicon
 wh40kdronesquad2:
-	Defaults:
-		Filename: wh40kdronesquad2.shp
 	idle:
 		Facings: -32
 		UseClassicFacings: True
 		Scale: 0.90
-	muzzle:
-		Filename: wh40ksmallphotom.shp
+	muzzle: wh40ksmallphotom
 		Length: 4
 		Scale: 0.90
-	dot:
-		Filename: invisibleitem.shp
-	icon:
-		Filename: wh40krhinoicon.shp
-
+	dot: invisibleitem
+	icon: wh40krhinoicon
 wh40kdronehard:
-	Defaults:
-		Filename: wh40kdronehard.shp
 	idle:
 		Facings: -32
 		UseClassicFacings: True
 		Scale: 0.72
-	muzzle:
-		Filename: wh40ksmallphotom.shp
+	muzzle: wh40ksmallphotom
 		Length: 4
 		Scale: 0.72
-	dot:
-		Filename: invisibleitem.shp
-	icon:
-		Filename: wh40krhinoicon.shp
-
+	dot: invisibleitem
+	icon: wh40krhinoicon
 wh40kguardian:
-	Defaults:
-		Filename: wh40kguardian.shp
 	Inherits: wh40kchaosmarine
-	icon:
-		Filename: wh40kcultisticon.shp
-
+	Defaults: wh40kguardian
+	icon: wh40kcultisticon
 wh40kleman:
-	Defaults:
-		Filename: wh40kleman.shp
 	idle:
 		Facings: -32
 		UseClassicFacings: True
 		Scale: 0.60
-	turret:
-		Filename: wh40klemantur.shp
+	turret: wh40klemantur
 		Facings: -32
 		UseClassicFacings: True
 		Scale: 0.60
-	muzzle:
-		Filename: gunfire2.shp
+	muzzle: gunfire2
 		Length: 5
 		Scale: 0.60
-	icon:
-		Filename: wh40klemanicon.shp
-
+	icon: wh40klemanicon
 wh40korcleman:
-	Defaults:
-		Filename: wh40korcleman.shp
 	idle:
 		Facings: -32
 		UseClassicFacings: True
 		Scale: 0.60
-	turret:
-		Filename: wh40korclemantur.shp
+	turret: wh40korclemantur
 		Facings: -32
 		UseClassicFacings: True
 		Scale: 0.60
-	muzzle:
-		Filename: gunfire2.shp
+	muzzle: gunfire2
 		Length: 5
 		Scale: 0.60
-	icon:
-		Filename: wh40klootedicon.shp
-
+	icon: wh40klootedicon
 wh40kpredator:
-	Defaults:
-		Filename: wh40kpredator.shp
 	idle:
 		Facings: -32
 		UseClassicFacings: True
 		Scale: 0.60
-	turret:
-		Filename: wh40kpredatortur.shp
+	turret: wh40kpredatortur
 		Facings: -32
 		UseClassicFacings: True
 		Scale: 0.60
-	turret2:
-		Filename: wh40kpredatortur2.shp
+	turret2: wh40kpredatortur2
 		Facings: -32
 		UseClassicFacings: True
 		Scale: 0.60
-	muzzle:
-		Filename: gunfire2.shp
+	muzzle: gunfire2
 		Length: 5
 		Scale: 0.60
-	icon:
-		Filename: wh40kpredatoricon.shp
-
+	icon: wh40kpredatoricon
 wh40kchaospredator:
-	Defaults:
-		Filename: wh40kchaospredator.shp
 	idle:
 		Facings: -32
 		UseClassicFacings: True
 		Scale: 0.60
-	turret:
-		Filename: wh40kchaospredatortur.shp
+	turret: wh40kchaospredatortur
 		Facings: -32
 		UseClassicFacings: True
 		Scale: 0.60
-	turret2:
-		Filename: wh40kchaospredatortur2.shp
+	turret2: wh40kchaospredatortur2
 		Facings: -32
 		UseClassicFacings: True
 		Scale: 0.60
-	muzzle:
-		Filename: gunfire2.shp
+	muzzle: gunfire2
 		Length: 5
 		Scale: 0.60
-	icon:
-		Filename: wh40kpredatorchaosicon.shp
-
+	icon: wh40kpredatorchaosicon
 pscwh40kpredator1:
-	Defaults:
-		Filename: pscwh40kpredator1.shp
-	icon:
-		Filename: pscwh40kpredator1.shp
-
+	icon: pscwh40kpredator1
 pscwh40kpredator2:
-	Defaults:
-		Filename: pscwh40kpredator2.shp
-	icon:
-		Filename: pscwh40kpredator2.shp
-
+	icon: pscwh40kpredator2
 wh40kwhirl:
-	Defaults:
-		Filename: wh40kwhirl.shp
 	idle:
 		Facings: -32
 		UseClassicFacings: True
 		Scale: 0.60
-	turret:
-		Filename: wh40kwhirltur.shp
+	turret: wh40kwhirltur
 		Facings: -32
 		UseClassicFacings: True
 		Scale: 0.60
-	muzzle:
-		Filename: gunfire2.shp
+	muzzle: gunfire2
 		Length: 5
 		Scale: 0.60
-	icon:
-		Filename: wh40kwhirlicon.shp
-
+	icon: wh40kwhirlicon
 wh40krhino:
-	Defaults:
-		Filename: wh40krhino.shp
 	idle:
 		Facings: -32
 		UseClassicFacings: True
 		Scale: 0.60
-	icon:
-		Filename: wh40krhinoicon.shp
-
+	icon: wh40krhinoicon
 wh40kchaosrhino:
-	Defaults:
-		Filename: wh40kchaosrhino.shp
 	idle:
 		Facings: -32
 		UseClassicFacings: True
 		Scale: 0.60
-	icon:
-		Filename: wh40krhinochaosicon.shp
-
+	icon: wh40krhinochaosicon
 wh40kchaosrhinomcv:
-	Defaults:
-		Filename: wh40kchaosrhinomcv.shp
-	idle:
-		Filename: wh40kharvc.shp
+	idle: wh40kharvc
 		Facings: -32
 		UseClassicFacings: True
 		Scale: 1.09
-	icon:
-		Filename: wh40kstrongholdcicon.shp
-
+	icon: wh40kstrongholdcicon
 wh40klandspeed:
-	Defaults:
-		Filename: wh40klandspeed.shp
 	idle:
 		Facings: -32
 		UseClassicFacings: True
 		Scale: 0.60
-	muzzle:
-		Filename: gunfire2.shp
+	muzzle: gunfire2
 		Length: 5
 		Scale: 0.60
-	icon:
-		Filename: wh40klandspeedicon.shp
-
+	icon: wh40klandspeedicon
 wh40klandspeed2:
-	Defaults:
-		Filename: wh40klandspeed2.shp
 	idle:
 		Facings: -32
 		UseClassicFacings: True
@@ -4149,406 +3286,270 @@ wh40klandspeed2:
 		Facings: -32
 		UseClassicFacings: True
 		Scale: 0.62
-	muzzle:
-		Filename: gunfire2.shp
+	muzzle: gunfire2
 		Length: 5
 		Scale: 0.62
-	icon:
-		Filename: wh40klandspeed2icon.shp
-
+	icon: wh40klandspeed2icon
 wh40kdread:
-	Defaults:
-		Filename: wh40kdread.shp
-	idle:
-		Filename: wh40kdreadlegs.shp
+	idle: wh40kdreadlegs
 		Length: 4
 		Facings: 8
 		Tick: 9999
 		Scale: 0.52
-	stand:
-		Filename: wh40kdreadlegs.shp
+	stand: wh40kdreadlegs
 		Length: 4
 		Facings: 8
 		Tick: 9999
 		Scale: 0.52
-	turret:
-		Filename: wh40kdreadtur.shp
+	turret: wh40kdreadtur
 		Facings: -32
 		UseClassicFacings: True
 		Scale: 0.52
-	turret2:
-		Filename: wh40kdreadtur2.shp
+	turret2: wh40kdreadtur2
 		Facings: -32
 		UseClassicFacings: True
 		Scale: 0.52
-	turret3:
-		Filename: wh40kdreadtur3.shp
+	turret3: wh40kdreadtur3
 		Facings: -32
 		UseClassicFacings: True
 		Scale: 0.52
-	run:
-		Filename: wh40kdreadlegs.shp
+	run: wh40kdreadlegs
 		Length: 4
 		Facings: 8
 		Tick: 150
 		Scale: 0.52
-	muzzle:
-		Filename: minigun.shp
+	muzzle: minigun
 		Length: 6
 		Facings: 8
 		Scale: 0.52
-	icon:
-		Filename: wh40kdreadicon.shp
-
+	icon: wh40kdreadicon
 wh40kdefiler:
-	Defaults:
-		Filename: wh40kdefiler.shp
-	idle:
-		Filename: wh40kdefiler.shp
+	idle: wh40kdefiler
 		Facings: -8
 		Scale: 0.60
-	stand:
-		Filename: wh40kdefiler.shp
+	stand: wh40kdefiler
 		Facings: -8
 		Scale: 0.60
-	turret:
-		Filename: wh40kdefilertur.shp
+	turret: wh40kdefilertur
 		Facings: -32
 		UseClassicFacings: True
 		Scale: 0.60
-	run:
-		Filename: wh40kdefiler.shp
+	run: wh40kdefiler
 		Start: 8
 		Length: 2
 		Facings: 8
 		Tick: 150
 		Scale: 0.60
-	muzzle:
-		Filename: minigun.shp
+	muzzle: minigun
 		Length: 6
 		Facings: 8
 		Scale: 0.60
-	icon:
-		Filename: wh40kdefilericon.shp
-
+	icon: wh40kdefilericon
 wh40kdreadh:
-	Defaults:
-		Filename: wh40kdreadh.shp
-	idle:
-		Filename: wh40kdreadlegs.shp
+	idle: wh40kdreadlegs
 		Length: 4
 		Facings: 8
 		Tick: 9999
 		Scale: 0.52
-	stand:
-		Filename: wh40kdreadlegs.shp
+	stand: wh40kdreadlegs
 		Length: 4
 		Facings: 8
 		Tick: 9999
 		Scale: 0.52
-	turret:
-		Filename: wh40kdreadturh.shp
+	turret: wh40kdreadturh
 		Facings: -32
 		UseClassicFacings: True
 		Scale: 0.52
-	run:
-		Filename: wh40kdreadlegs.shp
+	run: wh40kdreadlegs
 		Length: 4
 		Facings: 8
 		Tick: 150
 		Scale: 0.52
-	muzzle:
-		Filename: minigun.shp
+	muzzle: minigun
 		Length: 6
 		Facings: 8
 		Scale: 0.52
-	icon:
-		Filename: wh40kdreadhicon.shp
+	icon: wh40kdreadhicon
 
 wh40klandraider:
-	Defaults:
-		Filename: wh40klandraider.shp
-	idle:
-		Filename: wh40klandraider.shp
+	idle: wh40klandraider
 		Facings: -32
 		UseClassicFacings: True
 		Scale: 0.50
-	turret:
-		Filename: wh40kbanebladetur.shp
+	turret: wh40kbanebladetur
 		Facings: -32
 		Scale: 0.50
-	turret2:
-		Filename: wh40kbanebladetur2.shp
+	turret2: wh40kbanebladetur2
 		Facings: -32
 		Scale: 0.50
-	muzzle:
-		Filename: gunfire2.shp
+	muzzle: gunfire2
 		Length: 5
 		Scale: 0.50
-	icon:
-		Filename: wh40klandraidericon.shp
-
+	icon: wh40klandraidericon
 wh40kthunderhawk:
-	Defaults:
-		Filename: wh40kthunderhawk.shp
-	idle:
-		Filename: wh40kthunderhawk.shp
+	idle: wh40kthunderhawk
 		Facings: -32
 		UseClassicFacings: True
 		Scale: 0.70
-	icon:
-		Filename: wh40kstrongholdicon.shp
-
+	icon: wh40kstrongholdicon
 wh40kcapsule:
-	Defaults:
-		Filename: wh40kcapsule.shp
 	idle:
 		Length: *
 		Tick: 200
-
 pscwh40kdread1:
-	Defaults:
-		Filename: pscwh40kdread1.shp
-	icon:
-		Filename: pscwh40kdread1.shp
-
+	icon: pscwh40kdread1
 pscwh40kdread2:
-	Defaults:
-		Filename: pscwh40kdread2.shp
-	icon:
-		Filename: pscwh40kdread2.shp
-
+	icon: pscwh40kdread2
 pscwh40klandspeed1:
-	Defaults:
-		Filename: pscwh40klandspeed1.shp
-	icon:
-		Filename: pscwh40klandspeed1.shp
-
+	icon: pscwh40klandspeed1
 pscwh40klandspeed2:
-	Defaults:
-		Filename: pscwh40klandspeed2.shp
-	icon:
-		Filename: pscwh40klandspeed2.shp
-
+	icon: pscwh40klandspeed2
 pscwh40kkillakan1:
-	Defaults:
-		Filename: pscwh40kkillakan1.shp
-	icon:
-		Filename: pscwh40kkillakan1.shp
-
+	icon: pscwh40kkillakan1
 wh40kbaneblade:
-	Defaults:
-		Filename: wh40kbaneblade.shp
-	idle:
-		Filename: wh40kbaneblade.shp
+	idle: wh40kbaneblade
 		Facings: -32
 		UseClassicFacings: True
 		Scale: 0.50
-	turret:
-		Filename: wh40kbanebladetur.shp
+	turret: wh40kbanebladetur
 		Facings: -32
 		Scale: 0.50
-	turret2:
-		Filename: wh40kbanebladetur2.shp
+	turret2: wh40kbanebladetur2
 		Facings: -32
 		Scale: 0.50
-	muzzle:
-		Filename: gunfire2.shp
+	muzzle: gunfire2
 		Length: 5
 		Scale: 0.50
-	icon:
-		Filename: wh40kbanebladeicon.shp
-
+	icon: wh40kbanebladeicon
 wh40khellhound:
-	Defaults:
-		Filename: wh40khellhound.shp
 	idle:
 		Facings: -32
 		UseClassicFacings: True
 		Scale: 0.60
-	turret:
-		Filename: wh40khellhoundtur.shp
+	turret: wh40khellhoundtur
 		Facings: -32
 		UseClassicFacings: True
 		Scale: 0.60
-	muzzle:
-		Filename: gunfire2.shp
+	muzzle: gunfire2
 		Length: 5
 		Scale: 0.60
-	icon:
-		Filename: wh40khellhoundicon.shp
-
+	icon: wh40khellhoundicon
 wh40kbanewolf:
-	Defaults:
-		Filename: wh40kbanewolf.shp
-	idle:
-		Filename: wh40kchime.shp
+	idle: wh40kchime
 		Facings: -32
 		UseClassicFacings: True
 		Scale: 0.60
-	turret:
-		Filename: wh40khellhoundtur.shp
+	turret: wh40khellhoundtur
 		Facings: -32
 		UseClassicFacings: True
 		Scale: 0.60
-	muzzle:
-		Filename: gunfire2.shp
+	muzzle: gunfire2
 		Length: 5
 		Scale: 0.60
-	icon:
-		Filename: wh40kbanewolficon.shp
+	icon: wh40kbanewolficon
 
 wh40kchime:
-	Defaults:
-		Filename: wh40kchime.shp
 	idle:
 		Facings: -32
 		UseClassicFacings: True
 		Scale: 0.60
-	turret:
-		Filename: wh40kchimetur.shp
+	turret: wh40kchimetur
 		Facings: -32
 		UseClassicFacings: True
 		Scale: 0.60
-	muzzle:
-		Filename: gunfire2.shp
+	muzzle: gunfire2
 		Length: 5
 		Scale: 0.60
-	icon:
-		Filename: wh40kchimeicon.shp
-
+	icon: wh40kchimeicon
 wh40kskullprobe:
-	Defaults:
-		Filename: wh40kskullprobe.shp
 	idle:
 		Facings: -16
-	muzzle:
-		Filename: gunfire2.shp
+	muzzle: gunfire2
 		Length: 5
-	icon:
-		Filename: wh40kskullprobeicon.shp
-
+	icon: wh40kskullprobeicon
 wh40kbasilisk:
-	Defaults:
-		Filename: wh40kbasilisk.shp
 	idle:
 		Facings: -32
 		UseClassicFacings: True
 		Scale: 0.60
-	muzzle:
-		Filename: gunfire2.shp
+	muzzle: gunfire2
 		Length: *
 		Scale: 0.60
-	icon:
-		Filename: wh40kbasiliskicon.shp
+	icon: wh40kbasiliskicon
 
 wh40kharv:
-	Defaults:
-		Filename: wh40kharv.shp
-	idle:
-		Filename: wh40kchime.shp
+	idle: wh40kchime
 		Facings: -32
 		UseClassicFacings: True
 		Scale: 0.50
-	harvest:
-		Filename: wh40kchime.shp
+	harvest: wh40kchime
 		Facings: -32
 		UseClassicFacings: True
 		Scale: 0.50
-	dock:
-		Filename: wh40kchime.shp
+	dock: wh40kchime
 		Facings: -32
 		UseClassicFacings: True
 		Scale: 0.50
-	dock-loop:
-		Filename: wh40kchime.shp
+	dock-loop: wh40kchime
 		Facings: -32
 		UseClassicFacings: True
 		Scale: 0.50
-	icon:
-		Filename: wh40kharvicon.shp
-
+	icon: wh40kharvicon
 wh40kharvm:
-	Defaults:
-		Filename: wh40kharvm.shp
-	idle:
-		Filename: wh40kharvm.shp
+	idle: wh40kharvm
 		Facings: -32
 		UseClassicFacings: True
 		Scale: 0.60
-	harvest:
-		Filename: wh40kharvm.shp
+	harvest: wh40kharvm
 		Facings: -32
 		UseClassicFacings: True
 		Scale: 0.60
-	dock:
-		Filename: wh40kharvm.shp
+	dock: wh40kharvm
 		Facings: -32
 		UseClassicFacings: True
 		Scale: 0.60
-	dock-loop:
-		Filename: wh40kharvm.shp
+	dock-loop: wh40kharvm
 		Facings: -32
 		UseClassicFacings: True
 		Scale: 0.60
-	icon:
-		Filename: wh40kharvmicon.shp
-
+	icon: wh40kharvmicon
 wh40kharvc:
-	Defaults:
-		Filename: wh40kharvc.shp
-	idle:
-		Filename: wh40kharvc.shp
+	idle: wh40kharvc
 		Facings: -32
 		UseClassicFacings: True
 		Scale: 0.60
-	harvest:
-		Filename: wh40kharvc.shp
+	harvest: wh40kharvc
 		Facings: -32
 		UseClassicFacings: True
 		Scale: 0.60
-	dock:
-		Filename: wh40kharvc.shp
+	dock: wh40kharvc
 		Facings: -32
 		UseClassicFacings: True
 		Scale: 0.60
-	dock-loop:
-		Filename: wh40kharvc.shp
+	dock-loop: wh40kharvc
 		Facings: -32
 		UseClassicFacings: True
 		Scale: 0.60
-	icon:
-		Filename: wh40kharvmicon.shp
-
+	icon: wh40kharvmicon
 wh40kharvt:
-	Defaults:
-		Filename: wh40kharvt.shp
-	idle:
-		Filename: wh40khammerhead.shp
+	idle: wh40khammerhead
 		Facings: -32
 		UseClassicFacings: True
 		Scale: 0.62
-	harvest:
-		Filename: wh40khammerhead.shp
+	harvest: wh40khammerhead
 		Facings: -32
 		UseClassicFacings: True
 		Scale: 0.62
-	dock:
-		Filename: wh40khammerhead.shp
+	dock: wh40khammerhead
 		Facings: -32
 		UseClassicFacings: True
 		Scale: 0.62
-	dock-loop:
-		Filename: wh40khammerhead.shp
+	dock-loop: wh40khammerhead
 		Facings: -32
 		UseClassicFacings: True
 		Scale: 0.62
-	icon:
-		Filename: wh40kharvmicon.shp
-
+	icon: wh40kharvmicon
 wh40kmaurader:
-	Defaults:
-		Filename: wh40kmaurader.shp
 	idle:
 		Facings: -32
 		UseClassicFacings: True
@@ -4557,12 +3558,8 @@ wh40kmaurader:
 		Facings: -32
 		UseClassicFacings: True
 		Scale: 0.80
-	icon:
-		Filename: wh40kmauradericon.shp
-
+	icon: wh40kmauradericon
 wh40kfightabomma:
-	Defaults:
-		Filename: wh40kfightabomma.shp
 	idle:
 		Facings: -32
 		UseClassicFacings: True
@@ -4571,12 +3568,9 @@ wh40kfightabomma:
 		Facings: -32
 		UseClassicFacings: True
 		Scale: 0.80
-	icon:
-		Filename: wh40kfightabommaicon.shp
+	icon: wh40kfightabommaicon
 
 wh40khelltalon:
-	Defaults:
-		Filename: wh40khelltalon.shp
 	idle:
 		Facings: -32
 		UseClassicFacings: True
@@ -4585,134 +3579,96 @@ wh40khelltalon:
 		Facings: -32
 		UseClassicFacings: True
 		Scale: 0.80
-	icon:
-		Filename: wh40khelltalonicon.shp
+	icon: wh40khelltalonicon
 
 wh40ksentinel:
-	Defaults:
-		Filename: wh40ksentinel.shp
-	idle:
-		Filename: wh40ksentinelwalk.shp
+	idle: wh40ksentinelwalk
 		Facings: 8
 		Scale: 0.70
-	stand:
-		Filename: wh40ksentinelwalk.shp
+	stand: wh40ksentinelwalk
 		Facings: 8
 		Scale: 0.70
-	turret:
-		Filename: wh40ksentineltur.shp
+	turret: wh40ksentineltur
 		Facings: -32
 		UseClassicFacings: True
 		Scale: 0.70
-	run:
-		Filename: wh40ksentinelwalk.shp
+	run: wh40ksentinelwalk
 		Start: 8
 		Length: 4
 		Facings: 8
 		Tick: 150
 		Scale: 0.70
-	muzzle:
-		Filename: gunfire2.shp
+	muzzle: gunfire2
 		Length: *
 		Scale: 0.70
-	icon:
-		Filename: wh40ksentinelicon.shp
-	muzzlemg:
-		Filename: minigun.shp
+	icon: wh40ksentinelicon
+	muzzlemg: minigun
 		Length: 6
 		Facings: 8
-	muzzlefl:
-		Filename: gunfire2.shp
+	muzzlefl: gunfire2
 		Length: 2
-	muzzlemm:
-		Filename: gunfire2.shp
+	muzzlemm: gunfire2
 		Length: *
 	muzzlefa:
 		Combine:
 			flame-n:
-				Filename: flame-n.shp
 				Length: *
-				Offset: 1,6
+				Offset: 3,6
 			flame-nw:
-				Filename: flame-nw.shp
 				Length: *
 				Offset: 8,7
 			flame-w:
-				Filename: flame-w.shp
 				Length: *
 				Offset: 8,2
 			flame-sw:
-				Filename: flame-sw.shp
 				Length: *
 				Offset: 7,-2
 			flame-s:
-				Filename: flame-s.shp
 				Length: *
-				Offset: 1,-2
+				Offset: 3,-2
 			flame-se:
-				Filename: flame-se.shp
 				Length: *
 				Offset: -5,-2
 			flame-e:
-				Filename: flame-e.shp
 				Length: *
 				Offset: -7,2
 			flame-ne:
-				Filename: flame-ne.shp
 				Length: *
 				Offset: -7,8
 		Facings: 8
 		Length: 13
 
 wh40kwartrukk:
-	Defaults:
-		Filename: wh40kwartrukk.shp
 	idle:
 		Facings: -32
 		UseClassicFacings: True
 		Scale: 0.70
-	muzzle:
-		Filename: gunfire2.shp
+	muzzle: gunfire2
 		Length: 5
 		Scale: 0.70
-	icon:
-		Filename: wh40kwartrukkicon.shp
-
+	icon: wh40kwartrukkicon
 wh40kwartrakk:
-	Defaults:
-		Filename: wh40kwartrakk.shp
 	idle:
 		Facings: -32
 		UseClassicFacings: True
 		Scale: 0.80
-	idle2:
-		Filename: wh40kwartrakk2.shp
+	idle2: wh40kwartrakk2
 		Facings: -32
 		UseClassicFacings: True
 		Scale: 0.80
-	muzzle:
-		Filename: gunfire2.shp
+	muzzle: gunfire2
 		Length: 5
 		Scale: 0.80
-	icon:
-		Filename: wh40kwartrakkicon.shp
-
+	icon: wh40kwartrakkicon
 lemanruss:
-	Defaults:
-		Filename: lemanruss.shp
-	idle:
-		Filename: invisibleitem.shp
-	icon:
-		Filename: ra2mtnkicon.shp
+	idle: invisibleitem
+	icon: ra2mtnkicon.shp
 		AddExtension: False
-	muzzle:
-		Filename: gunfire2.shp
+	muzzle: gunfire2
 		Length: 5
 
 wh40kstrategy:
 	Defaults:
-		Filename: wh40kstrategy.shp
-	Defaults:
 		Offset: 0,-6
 	idle:
 		Start: 1
@@ -4723,28 +3679,21 @@ wh40kstrategy:
 	damaged-idle2:
 		Start: 2
 	make:
-	turret1:
-		Filename: wh40kstrategytur.shp
+	turret1: wh40kstrategytur
 		Facings: -32
 		UseClassicFacings: True
-	turret2:
-		Filename: wh40kstrategytur.shp
+	turret2: wh40kstrategytur
 		Start: 32
 		Facings: -32
 		UseClassicFacings: True
-	bib:
-		Filename: bib3.tem
+	bib: bib3
 		Length: *
 		Offset: 0,0
 		UseTilesetExtension: true
-	icon:
-		Filename: wh40kstrategyicon.shp
+	icon: wh40kstrategyicon
 		Offset: 0,0
-
 wh40kstrategyo:
 	Defaults:
-		Filename: wh40kstrategyo.shp
-	Defaults:
 		Offset: 0,-6
 	idle:
 		Start: 1
@@ -4755,31 +3704,23 @@ wh40kstrategyo:
 	damaged-idle2:
 		Start: 2
 	make:
-	turret1:
-		Filename: wh40kgretchintur1.shp
+	turret1: wh40kgretchintur1
 		Facings: -32
 		UseClassicFacings: True
-	turret2:
-		Filename: wh40kgretchintur2.shp
+	turret2: wh40kgretchintur2
 		Facings: -32
 		UseClassicFacings: True
-	turret3:
-		Filename: wh40kgretchintur3.shp
+	turret3: wh40kgretchintur3
 		Facings: -32
 		UseClassicFacings: True
-	bib:
-		Filename: bib3.tem
+	bib: bib3
 		Length: *
 		Offset: 0,0
 		UseTilesetExtension: true
-	icon:
-		Filename: wh40kstrategyicon.shp
+	icon: wh40kstrategyicon
 		Offset: 0,0
-
 wh40kstrategym:
 	Defaults:
-		Filename: wh40kstrategym.shp
-	Defaults:
 		Offset: 0,-6
 	idle:
 		Start: 1
@@ -4794,23 +3735,17 @@ wh40kstrategym:
 	damaged-idle3:
 		Start: 3
 	make:
-	turret1:
-		Filename: wh40kstrategytur.shp
+	turret1: wh40kstrategytur
 		Facings: -32
 		UseClassicFacings: True
-	bib:
-		Filename: bib3.tem
+	bib: bib3
 		Length: *
 		Offset: 0,0
 		UseTilesetExtension: true
-	icon:
-		Filename: wh40kstrategyicon.shp
+	icon: wh40kstrategyicon
 		Offset: 0,0
-
 wh40kstrategyc:
 	Defaults:
-		Filename: wh40kstrategyc.shp
-	Defaults:
 		Offset: 0,-6
 	idle:
 		Start: 1
@@ -4825,23 +3760,18 @@ wh40kstrategyc:
 	damaged-idle3:
 		Start: 3
 	make:
-	turret1:
-		Filename: wh40kstrategytur.shp
+	turret1: wh40kstrategytur
 		Facings: -32
 		UseClassicFacings: True
-	bib:
-		Filename: bib3.tem
+	bib: bib3
 		Length: *
 		Offset: 0,0
 		UseTilesetExtension: true
-	icon:
-		Filename: wh40kstrategyicon.shp
+	icon: wh40kstrategyicon
 		Offset: 0,0
 
 wh40kstrategyt:
 	Defaults:
-		Filename: wh40kstrategyt.shp
-	Defaults:
 		Offset: 0,-6
 	idle:
 		Start: 1
@@ -4856,51 +3786,31 @@ wh40kstrategyt:
 	damaged-idle3:
 		Start: 3
 	make:
-	turret1:
-		Filename: wh40kstrategytur.shp
+	turret1: wh40kstrategytur
 		Facings: -32
 		UseClassicFacings: True
-	bib:
-		Filename: bib3.tem
+	bib: bib3
 		Length: *
 		Offset: 0,0
 		UseTilesetExtension: true
-	icon:
-		Filename: wh40kstrategyicon.shp
+	icon: wh40kstrategyicon
 		Offset: 0,0
-
 pscwh40kstrategy1:
-	Defaults:
-		Filename: pscwh40kstrategy1.shp
-	icon:
-		Filename: pscwh40kstrategy1.shp
-
+	icon: pscwh40kstrategy1
 pscwh40kstrategy2:
-	Defaults:
-		Filename: pscwh40kstrategy2.shp
-	icon:
-		Filename: pscwh40kstrategy2.shp
-
+	icon: pscwh40kstrategy2
 pscwh40kstrategy3:
-	Defaults:
-		Filename: pscwh40kstrategy3.shp
-	icon:
-		Filename: pscwh40kstrategy3.shp
-
+	icon: pscwh40kstrategy3
 wh40kstrategy.neutral:
-	Defaults:
-		Filename: wh40kstrategy.neutral.shp
 	Inherits: wh40kstrategy
+	Defaults: wh40kstrategy
 	idle:
 		Start: 0
 	damaged-idle:
 		Start: 0
-	icon:
-		Filename: 4tnkicon.shp
+	icon: 4tnkicon
 
 wh40kitems:
-	Defaults:
-		Filename: wh40kitems.shp
 	Defaults:
 		Offset: 0, 4
 	grenade:
@@ -4950,241 +3860,85 @@ wh40kitems:
 		Start: 22
 	sidelascannon:
 		Start: 23
-
 wh40kuphonor:
-	Defaults:
-		Filename: wh40kuphonor.shp
-	icon:
-		Filename: wh40kuphonor.shp
-
+	icon: wh40kuphonor
 wh40kupguardarmor:
-	Defaults:
-		Filename: wh40kupguardarmor.shp
-	icon:
-		Filename: wh40kupguardarmor.shp
-
+	icon: wh40kupguardarmor
 wh40kupguardemperor:
-	Defaults:
-		Filename: wh40kupguardemperor.shp
-	icon:
-		Filename: wh40kupguardemperor.shp
-
+	icon: wh40kupguardemperor
 wh40kupsateliterange:
-	Defaults:
-		Filename: wh40kupsateliterange.shp
-	icon:
-		Filename: wh40kupsateliterange.shp
-
+	icon: wh40kupsateliterange
 wh40kupweapspecialization:
-	Defaults:
-		Filename: wh40kupweapspecialization.shp
-	icon:
-		Filename: wh40kupweapspecialization.shp
-
+	icon: wh40kupweapspecialization
 wh40kupbattlecommand:
-	Defaults:
-		Filename: wh40kupbattlecommand.shp
-	icon:
-		Filename: wh40kupbattlecommand.shp
-
+	icon: wh40kupbattlecommand
 wh40kupregimentalcommand:
-	Defaults:
-		Filename: wh40kupregimentalcommand.shp
-	icon:
-		Filename: wh40kupregimentalcommand.shp
-
+	icon: wh40kupregimentalcommand
 wh40kupogrynquarters:
-	Defaults:
-		Filename: wh40kupogrynquarters.shp
-	icon:
-		Filename: wh40kupogrynquarters.shp
-
+	icon: wh40kupogrynquarters
 wh40kuppoweredbayonets:
-	Defaults:
-		Filename: wh40kuppoweredbayonets.shp
-	icon:
-		Filename: wh40kuppoweredbayonets.shp
-
+	icon: wh40kuppoweredbayonets
 wh40kupsentineldepot:
-	Defaults:
-		Filename: wh40kupsentineldepot.shp
-	icon:
-		Filename: wh40kupsentineldepot.shp
-
+	icon: wh40kupsentineldepot
 wh40kuphellhounddepot:
-	Defaults:
-		Filename: wh40kuphellhounddepot.shp
-	icon:
-		Filename: wh40kuphellhounddepot.shp
-
+	icon: wh40kuphellhounddepot
 wh40kupbasiliskdepot:
-	Defaults:
-		Filename: wh40kupbasiliskdepot.shp
-	icon:
-		Filename: wh40kupbasiliskdepot.shp
-
+	icon: wh40kupbasiliskdepot
 wh40kupmarauderdepot:
-	Defaults:
-		Filename: wh40kupmarauderdepot.shp
-	icon:
-		Filename: wh40kupmarauderdepot.shp
-
+	icon: wh40kupmarauderdepot
 wh40kuplemanrussdepot:
-	Defaults:
-		Filename: wh40kuplemanrussdepot.shp
-	icon:
-		Filename: wh40kuplemanrussdepot.shp
-
+	icon: wh40kuplemanrussdepot
 wh40kupgenenhancement:
-	Defaults:
-		Filename: wh40kupgenenhancement.shp
-	icon:
-		Filename: wh40kupgenenhancement.shp
-
+	icon: wh40kupgenenhancement
 wh40kupkasrkinquarters:
-	Defaults:
-		Filename: wh40kupkasrkinquarters.shp
-	icon:
-		Filename: wh40kupkasrkinquarters.shp
-
+	icon: wh40kupkasrkinquarters
 wh40kupkasrkinarmor:
-	Defaults:
-		Filename: wh40kupkasrkinarmor.shp
-	icon:
-		Filename: wh40kupkasrkinarmor.shp
-
+	icon: wh40kupkasrkinarmor
 wh40kupenergy1:
-	Defaults:
-		Filename: wh40kupenergy1.shp
-	icon:
-		Filename: wh40kupenergy1.shp
-
+	icon: wh40kupenergy1
 wh40kupenergy2:
-	Defaults:
-		Filename: wh40kupenergy2.shp
-	icon:
-		Filename: wh40kupenergy2.shp
-
+	icon: wh40kupenergy2
 wh40kupfullscalewar:
-	Defaults:
-		Filename: wh40kupfullscalewar.shp
-	icon:
-		Filename: wh40kupfullscalewar.shp
-
+	icon: wh40kupfullscalewar
 wh40kupmonastery:
-	Defaults:
-		Filename: wh40kupmonastery.shp
-	icon:
-		Filename: wh40kupmonastery.shp
-
+	icon: wh40kupmonastery
 wh40kupmonastery2:
-	Defaults:
-		Filename: wh40kupmonastery2.shp
-	icon:
-		Filename: wh40kupmonastery2.shp
-
+	icon: wh40kupmonastery2
 wh40kupcapincrease:
-	Defaults:
-		Filename: wh40kupcapincrease.shp
-	icon:
-		Filename: wh40kupcapincrease.shp
-
+	icon: wh40kupcapincrease
 wh40kupcapincrease2:
-	Defaults:
-		Filename: wh40kupcapincrease2.shp
-	icon:
-		Filename: wh40kupcapincrease2.shp
-
+	icon: wh40kupcapincrease2
 wh40kupbionics:
-	Defaults:
-		Filename: wh40kupbionics.shp
-	icon:
-		Filename: wh40kupbionics.shp
-
+	icon: wh40kupbionics
 wh40kupbionics2:
-	Defaults:
-		Filename: wh40kupbionics2.shp
-	icon:
-		Filename: wh40kupbionics2.shp
-
+	icon: wh40kupbionics2
 wh40kupfraggrenade:
-	Defaults:
-		Filename: wh40kupfraggrenade.shp
-	icon:
-		Filename: wh40kupfraggrenade.shp
-
+	icon: wh40kupfraggrenade
 wh40kscoutinfiltration:
-	Defaults:
-		Filename: wh40kscoutinfiltration.shp
-	icon:
-		Filename: wh40kscoutinfiltration.shp
-
+	icon: wh40kscoutinfiltration
 wh40kskullprobestealth:
-	Defaults:
-		Filename: wh40kskullprobestealth.shp
-	icon:
-		Filename: wh40kskullprobestealth.shp
-
+	icon: wh40kskullprobestealth
 wh40ktargetfinder1:
-	Defaults:
-		Filename: wh40ktargetfinder1.shp
-	icon:
-		Filename: wh40ktargetfinder1.shp
-
+	icon: wh40ktargetfinder1
 wh40ktargetfinder2:
-	Defaults:
-		Filename: wh40ktargetfinder2.shp
-	icon:
-		Filename: wh40ktargetfinder2.shp
-
+	icon: wh40ktargetfinder2
 wh40kfuriuscharge:
-	Defaults:
-		Filename: wh40kfuriuscharge.shp
-	icon:
-		Filename: wh40kfuriuscharge.shp
-
+	icon: wh40kfuriuscharge
 wh40kpsyinquisition:
-	Defaults:
-		Filename: wh40kpsyinquisition.shp
-	icon:
-		Filename: wh40kpsyinquisitionicon.shp
-
+	icon: wh40kpsyinquisitionicon
 wh40kpowerswords:
-	Defaults:
-		Filename: wh40kpowerswords.shp
-	icon:
-		Filename: wh40kpowerswords.shp
-
+	icon: wh40kpowerswords
 wh40kpowerfists:
-	Defaults:
-		Filename: wh40kpowerfists.shp
-	icon:
-		Filename: wh40kpowerfists.shp
-
+	icon: wh40kpowerfists
 wh40kveteranupgrade1:
-	Defaults:
-		Filename: wh40kveteranupgrade1.shp
-	icon:
-		Filename: wh40kveteranupgrade1.shp
-
+	icon: wh40kveteranupgrade1
 wh40kveteranupgrade2:
-	Defaults:
-		Filename: wh40kveteranupgrade2.shp
-	icon:
-		Filename: wh40kveteranupgrade2.shp
-
+	icon: wh40kveteranupgrade2
 wh40kupmachineculticon:
-	Defaults:
-		Filename: wh40kupmachineculticon.shp
-	icon:
-		Filename: wh40kupmachineculticon.shp
-
+	icon: wh40kupmachineculticon
 wh40kgretchin:
-	Defaults:
-		Filename: wh40kgretchin.shp
 	Inherits: ^InfantryOverlays
-	idle:
-		Filename: invisibleitem.shp
+	idle: invisibleitem
 	stand:
 		Facings: 8
 	stand2:
@@ -5235,57 +3989,48 @@ wh40kgretchin:
 		Facings: 8
 		Tick: 100
 	# Shot
-	die1:
-		Filename: e1.shp
+	die1: e1
 		Start: 381
 		Length: 9
 		Tick: 80
 	# Explode
-	die2:
-		Filename: e1.shp
+	die2: e1
 		Start: 390
 		Length: 8
 		Tick: 80
 	# Fly and explode in air
-	die3:
-		Filename: e1.shp
+	die3: e1
 		Start: 398
 		Length: 8
 		Tick: 80
 	# Fly through air squish on ground
-	die4:
-		Filename: e1.shp
+	die4: e1
 		Start: 406
 		Length: 12
 		Tick: 80
 	# Burn
-	die5:
-		Filename: e1.shp
+	die5: e1
 		Start: 418
 		Length: 18
 		Tick: 80
 	# Tib
-	die6:
-		Filename: e1.shp
+	die6: e1
 		Start: 366
 		Length: 11
 		Tick: 80
 	# Electro
 	die7: electro ##########
 		Length: *
-	die-crushed:
-		Filename: e1rot.shp
+	die-crushed: e1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-	garrison-muzzle:
-		Filename: minigun.shp
+	garrison-muzzle: minigun
 		Length: 3
 		Stride: 6
 		Facings: 8
-	icon:
-		Filename: wh40kgretchinicon.shp
+	icon: wh40kgretchinicon
 	harvest:
 		Start: 8
 		Length: 4
@@ -5301,10 +4046,7 @@ wh40kgretchin:
 		Length: 4
 		Facings: 8
 		Tick: 8
-
 wh40kslugga:
-	Defaults:
-		Filename: wh40kslugga.shp
 	Inherits: ^InfantryOverlays
 	stand:
 		Facings: 8
@@ -5356,80 +4098,61 @@ wh40kslugga:
 		Facings: 8
 		Tick: 100
 	# Shot
-	die1:
-		Filename: e1.shp
+	die1: e1
 		Start: 381
 		Length: 9
 		Tick: 80
 	# Explode
-	die2:
-		Filename: e1.shp
+	die2: e1
 		Start: 390
 		Length: 8
 		Tick: 80
 	# Fly and explode in air
-	die3:
-		Filename: e1.shp
+	die3: e1
 		Start: 398
 		Length: 8
 		Tick: 80
 	# Fly through air squish on ground
-	die4:
-		Filename: e1.shp
+	die4: e1
 		Start: 406
 		Length: 12
 		Tick: 80
 	# Burn
-	die5:
-		Filename: e1.shp
+	die5: e1
 		Start: 418
 		Length: 18
 		Tick: 80
 	# Tib
-	die6:
-		Filename: e1.shp
+	die6: e1
 		Start: 366
 		Length: 11
 		Tick: 80
 	# Electro
 	die7: electro ##########
 		Length: *
-	die-crushed:
-		Filename: e1rot.shp
+	die-crushed: e1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-	garrison-muzzle:
-		Filename: minigun.shp
+	garrison-muzzle: minigun
 		Length: 3
 		Stride: 6
 		Facings: 8
-	icon:
-		Filename: wh40ksluggaicon.shp
+	icon: wh40ksluggaicon
 
 wh40ksluggasquad:
-	Defaults:
-		Filename: wh40ksluggasquad.shp
 	Inherits: wh40kslugga
-	icon:
-		Filename: wh40ksluggasquad.shp
+	Defaults: wh40kslugga
+	icon: wh40ksluggasquad.shp
 		AddExtension: False
-	dot:
-		Filename: invisibleitem.shp
-	idle:
-		Filename: invisibleitem.shp
-
+	dot: invisibleitem
+	idle: invisibleitem
 wh40knob:
-	Defaults:
-		Filename: wh40knob.shp
 	Inherits: wh40kslugga
-	icon:
-		Filename: wh40knobicon.shp
-
+	Defaults: wh40knob
+	icon: wh40knobicon
 wh40knobleader:
-	Defaults:
-		Filename: wh40knobleader.shp
 	Inherits: ^InfantryOverlays
 	stand:
 		Facings: -8
@@ -5481,75 +4204,57 @@ wh40knobleader:
 		Facings: 8
 		Tick: 100
 	# Shot
-	die1:
-		Filename: e1.shp
+	die1: e1
 		Start: 381
 		Length: 9
 		Tick: 80
 	# Explode
-	die2:
-		Filename: e1.shp
+	die2: e1
 		Start: 390
 		Length: 8
 		Tick: 80
 	# Fly and explode in air
-	die3:
-		Filename: e1.shp
+	die3: e1
 		Start: 398
 		Length: 8
 		Tick: 80
 	# Fly through air squish on ground
-	die4:
-		Filename: e1.shp
+	die4: e1
 		Start: 406
 		Length: 12
 		Tick: 80
 	# Burn
-	die5:
-		Filename: e1.shp
+	die5: e1
 		Start: 418
 		Length: 18
 		Tick: 80
 	# Tib
-	die6:
-		Filename: e1.shp
+	die6: e1
 		Start: 366
 		Length: 11
 		Tick: 80
 	# Electro
 	die7: electro ##########
 		Length: *
-	die-crushed:
-		Filename: e1rot.shp
+	die-crushed: e1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-	garrison-muzzle:
-		Filename: minigun.shp
+	garrison-muzzle: minigun
 		Length: 3
 		Stride: 6
 		Facings: 8
-	icon:
-		Filename: wh40knobleadericon.shp
-
+	icon: wh40knobleadericon
 wh40kmeganobz:
-	Defaults:
-		Filename: wh40kmeganobz.shp
 	Inherits: wh40knobleader
-	icon:
-		Filename: wh40kmeganobzicon.shp
-
+	Defaults: wh40kmeganobz
+	icon: wh40kmeganobzicon
 wh40kwarboss:
-	Defaults:
-		Filename: wh40kwarboss.shp
 	Inherits: wh40knobleader
-	icon:
-		Filename: wh40kwarbossicon.shp
-
+	Defaults: wh40kwarboss
+	icon: wh40kwarbossicon
 wh40kmaddok:
-	Defaults:
-		Filename: wh40kmaddok.shp
 	Inherits: ^InfantryOverlays
 	stand:
 		Facings: -8
@@ -5601,61 +4306,50 @@ wh40kmaddok:
 		Facings: 8
 		Tick: 100
 	# Shot
-	die1:
-		Filename: e1.shp
+	die1: e1
 		Start: 381
 		Length: 9
 		Tick: 80
 	# Explode
-	die2:
-		Filename: e1.shp
+	die2: e1
 		Start: 390
 		Length: 8
 		Tick: 80
 	# Fly and explode in air
-	die3:
-		Filename: e1.shp
+	die3: e1
 		Start: 398
 		Length: 8
 		Tick: 80
 	# Fly through air squish on ground
-	die4:
-		Filename: e1.shp
+	die4: e1
 		Start: 406
 		Length: 12
 		Tick: 80
 	# Burn
-	die5:
-		Filename: e1.shp
+	die5: e1
 		Start: 418
 		Length: 18
 		Tick: 80
 	# Tib
-	die6:
-		Filename: e1.shp
+	die6: e1
 		Start: 366
 		Length: 11
 		Tick: 80
 	# Electro
 	die7: electro ##########
 		Length: *
-	die-crushed:
-		Filename: e1rot.shp
+	die-crushed: e1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-	garrison-muzzle:
-		Filename: minigun.shp
+	garrison-muzzle: minigun
 		Length: 3
 		Stride: 6
 		Facings: 8
-	icon:
-		Filename: wh40kmaddokicon.shp
+	icon: wh40kmaddokicon
 
 wh40kstormboyz:
-	Defaults:
-		Filename: wh40kstormboyz.shp
 	Inherits: ^InfantryOverlays
 	stand:
 		Facings: -32
@@ -5691,61 +4385,49 @@ wh40kstormboyz:
 	idle4:
 		Facings: -32
 	# Shot
-	die1:
-		Filename: e1.shp
+	die1: e1
 		Start: 381
 		Length: 9
 		Tick: 80
 	# Explode
-	die2:
-		Filename: e1.shp
+	die2: e1
 		Start: 390
 		Length: 8
 		Tick: 80
 	# Fly and explode in air
-	die3:
-		Filename: e1.shp
+	die3: e1
 		Start: 398
 		Length: 8
 		Tick: 80
 	# Fly through air squish on ground
-	die4:
-		Filename: e1.shp
+	die4: e1
 		Start: 406
 		Length: 12
 		Tick: 80
 	# Burn
-	die5:
-		Filename: e1.shp
+	die5: e1
 		Start: 418
 		Length: 18
 		Tick: 80
 	# Tib
-	die6:
-		Filename: e1.shp
+	die6: e1
 		Start: 366
 		Length: 11
 		Tick: 80
 	# Electro
 	die7: electro ##########
 		Length: *
-	die-crushed:
-		Filename: e1rot.shp
+	die-crushed: e1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-	garrison-muzzle:
-		Filename: minigun.shp
+	garrison-muzzle: minigun
 		Length: 3
 		Stride: 6
 		Facings: 8
-	icon:
-		Filename: wh40kstormboyzicon.shp
-
+	icon: wh40kstormboyzicon
 wh40kshoota:
-	Defaults:
-		Filename: wh40kshoota.shp
 	Inherits: ^InfantryOverlays
 	stand:
 		Facings: 8
@@ -5797,110 +4479,80 @@ wh40kshoota:
 		Facings: 8
 		Tick: 100
 	# Shot
-	die1:
-		Filename: e1.shp
+	die1: e1
 		Start: 381
 		Length: 9
 		Tick: 80
 	# Explode
-	die2:
-		Filename: e1.shp
+	die2: e1
 		Start: 390
 		Length: 8
 		Tick: 80
 	# Fly and explode in air
-	die3:
-		Filename: e1.shp
+	die3: e1
 		Start: 398
 		Length: 8
 		Tick: 80
 	# Fly through air squish on ground
-	die4:
-		Filename: e1.shp
+	die4: e1
 		Start: 406
 		Length: 12
 		Tick: 80
 	# Burn
-	die5:
-		Filename: e1.shp
+	die5: e1
 		Start: 418
 		Length: 18
 		Tick: 80
 	# Tib
-	die6:
-		Filename: e1.shp
+	die6: e1
 		Start: 366
 		Length: 11
 		Tick: 80
 	# Electro
 	die7: electro ##########
 		Length: *
-	die-crushed:
-		Filename: e1rot.shp
+	die-crushed: e1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-	garrison-muzzle:
-		Filename: minigun.shp
+	garrison-muzzle: minigun
 		Length: 3
 		Stride: 6
 		Facings: 8
-	icon:
-		Filename: wh40kshootaicon.shp
-
+	icon: wh40kshootaicon
 wh40kshoota2:
-	Defaults:
-		Filename: wh40kshoota2.shp
 	Inherits: wh40kshoota
-	icon:
-		Filename: wh40kbigshootaicon.shp
-
+	Defaults: wh40kshoota
+	icon: wh40kbigshootaicon
 wh40kwhaaag:
-	Defaults:
-		Filename: wh40kwhaaag.shp
-	idle:
-		Filename: wh40kwhaaag.shp
-	dead:
-		Filename: wh40kwhaaag.shp
-	make:
-		Filename: wh40kbommabuild.shp
+	idle: wh40kwhaaag
+	dead: wh40kwhaaag
+	make: wh40kbommabuild
 		Length: *
 		Tick: 80
-	turret:
-		Filename: wh40kgretchintur1.shp
+	turret: wh40kgretchintur1
 		Facings: -32
-	turret2:
-		Filename: wh40kgretchintur2.shp
+	turret2: wh40kgretchintur2
 		Facings: -32
-	turret3:
-		Filename: wh40kgretchintur3.shp
+	turret3: wh40kgretchintur3
 		Facings: -32
-	muzzle:
-		Filename: minigun.shp
+	muzzle: minigun
 		Length: 6
 		Facings: 8
-	icon:
-		Filename: wh40kwhaaagicon.shp
-	whaaag1:
-		Filename: wh40kwhaaagstatus.shp
+	icon: wh40kwhaaagicon
+	whaaag1: wh40kwhaaagstatus
 		Start: 0
-	whaaag2:
-		Filename: wh40kwhaaagstatus.shp
+	whaaag2: wh40kwhaaagstatus
 		Start: 1
-	whaaag3:
-		Filename: wh40kwhaaagstatus.shp
+	whaaag3: wh40kwhaaagstatus
 		Start: 2
-	whaaag4:
-		Filename: wh40kwhaaagstatus.shp
+	whaaag4: wh40kwhaaagstatus
 		Start: 3
-	whaaag5:
-		Filename: wh40kwhaaagstatus.shp
+	whaaag5: wh40kwhaaagstatus
 		Start: 4
 
 wh40ktankbusta:
-	Defaults:
-		Filename: wh40ktankbusta.shp
 	Inherits: ^InfantryOverlays
 	stand:
 		Facings: -8
@@ -5950,61 +4602,49 @@ wh40ktankbusta:
 		Facings: 8
 		Tick: 90
 	# Shot
-	die1:
-		Filename: e1.shp
+	die1: e1
 		Start: 381
 		Length: 9
 		Tick: 80
 	# Explode
-	die2:
-		Filename: e1.shp
+	die2: e1
 		Start: 390
 		Length: 8
 		Tick: 80
 	# Fly and explode in air
-	die3:
-		Filename: e1.shp
+	die3: e1
 		Start: 398
 		Length: 8
 		Tick: 80
 	# Fly through air squish on ground
-	die4:
-		Filename: e1.shp
+	die4: e1
 		Start: 406
 		Length: 12
 		Tick: 80
 	# Burn
-	die5:
-		Filename: e1.shp
+	die5: e1
 		Start: 418
 		Length: 18
 		Tick: 80
 	# Tib
-	die6:
-		Filename: e1.shp
+	die6: e1
 		Start: 366
 		Length: 11
 		Tick: 80
 	# Electro
 	die7: electro ##########
 		Length: *
-	die-crushed:
-		Filename: e1rot.shp
+	die-crushed: e1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-	garrison-muzzle:
-		Filename: minigun.shp
+	garrison-muzzle: minigun
 		Length: 3
 		Stride: 6
 		Facings: 8
-	icon:
-		Filename: wh40ktankbustaicon.shp
-
+	icon: wh40ktankbustaicon
 wh40kbigmek:
-	Defaults:
-		Filename: wh40kbigmek.shp
 	Inherits: ^InfantryOverlays
 	stand:
 		Facings: -8
@@ -6054,61 +4694,49 @@ wh40kbigmek:
 		Facings: 8
 		Tick: 90
 	# Shot
-	die1:
-		Filename: e1.shp
+	die1: e1
 		Start: 381
 		Length: 9
 		Tick: 80
 	# Explode
-	die2:
-		Filename: e1.shp
+	die2: e1
 		Start: 390
 		Length: 8
 		Tick: 80
 	# Fly and explode in air
-	die3:
-		Filename: e1.shp
+	die3: e1
 		Start: 398
 		Length: 8
 		Tick: 80
 	# Fly through air squish on ground
-	die4:
-		Filename: e1.shp
+	die4: e1
 		Start: 406
 		Length: 12
 		Tick: 80
 	# Burn
-	die5:
-		Filename: e1.shp
+	die5: e1
 		Start: 418
 		Length: 18
 		Tick: 80
 	# Tib
-	die6:
-		Filename: e1.shp
+	die6: e1
 		Start: 366
 		Length: 11
 		Tick: 80
 	# Electro
 	die7: electro ##########
 		Length: *
-	die-crushed:
-		Filename: e1rot.shp
+	die-crushed: e1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-	garrison-muzzle:
-		Filename: minigun.shp
+	garrison-muzzle: minigun
 		Length: 3
 		Stride: 6
 		Facings: 8
-	icon:
-		Filename: wh40kbigmekicon.shp
-
+	icon: wh40kbigmekicon
 wh40kburna:
-	Defaults:
-		Filename: wh40kburna.shp
 	Inherits: ^InfantryOverlays
 	stand:
 		Facings: -8
@@ -6158,97 +4786,77 @@ wh40kburna:
 		Facings: 8
 		Tick: 90
 	# Shot
-	die1:
-		Filename: e1.shp
+	die1: e1
 		Start: 381
 		Length: 9
 		Tick: 80
 	# Explode
-	die2:
-		Filename: e1.shp
+	die2: e1
 		Start: 390
 		Length: 8
 		Tick: 80
 	# Fly and explode in air
-	die3:
-		Filename: e1.shp
+	die3: e1
 		Start: 398
 		Length: 8
 		Tick: 80
 	# Fly through air squish on ground
-	die4:
-		Filename: e1.shp
+	die4: e1
 		Start: 406
 		Length: 12
 		Tick: 80
 	# Burn
-	die5:
-		Filename: e1.shp
+	die5: e1
 		Start: 418
 		Length: 18
 		Tick: 80
 	# Tib
-	die6:
-		Filename: e1.shp
+	die6: e1
 		Start: 366
 		Length: 11
 		Tick: 80
 	# Electro
 	die7: electro ##########
 		Length: *
-	die-crushed:
-		Filename: e1rot.shp
+	die-crushed: e1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-	garrison-muzzle:
-		Filename: minigun.shp
+	garrison-muzzle: minigun
 		Length: 3
 		Stride: 6
 		Facings: 8
 	muzzle:
 		Combine:
 			flame-n:
-				Filename: flame-n.shp
 				Length: *
 				Offset: 1,6
 			flame-nw:
-				Filename: flame-nw.shp
 				Length: *
 				Offset: 8,7
 			flame-w:
-				Filename: flame-w.shp
 				Length: *
 				Offset: 8,2
 			flame-sw:
-				Filename: flame-sw.shp
 				Length: *
 				Offset: 7,-2
 			flame-s:
-				Filename: flame-s.shp
 				Length: *
 				Offset: 1,-2
 			flame-se:
-				Filename: flame-se.shp
 				Length: *
 				Offset: -5,-2
 			flame-e:
-				Filename: flame-e.shp
 				Length: *
 				Offset: -7,2
 			flame-ne:
-				Filename: flame-ne.shp
 				Length: *
 				Offset: -7,8
 		Facings: 8
 		Length: 13
-	icon:
-		Filename: wh40kburnaicon.shp
-
+	icon: wh40kburnaicon
 wh40kflash:
-	Defaults:
-		Filename: wh40kflash.shp
 	Inherits: ^InfantryOverlays
 	stand:
 		Facings: -8
@@ -6300,395 +4908,194 @@ wh40kflash:
 		Facings: 8
 		Tick: 90
 	# Shot
-	die1:
-		Filename: e1.shp
+	die1: e1
 		Start: 381
 		Length: 9
 		Tick: 80
 	# Explode
-	die2:
-		Filename: e1.shp
+	die2: e1
 		Start: 390
 		Length: 8
 		Tick: 80
 	# Fly and explode in air
-	die3:
-		Filename: e1.shp
+	die3: e1
 		Start: 398
 		Length: 8
 		Tick: 80
 	# Fly through air squish on ground
-	die4:
-		Filename: e1.shp
+	die4: e1
 		Start: 406
 		Length: 12
 		Tick: 80
 	# Burn
-	die5:
-		Filename: e1.shp
+	die5: e1
 		Start: 418
 		Length: 18
 		Tick: 80
 	# Tib
-	die6:
-		Filename: e1.shp
+	die6: e1
 		Start: 366
 		Length: 11
 		Tick: 80
 	# Electro
 	die7: electro ##########
 		Length: *
-	die-crushed:
-		Filename: e1rot.shp
+	die-crushed: e1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-	garrison-muzzle:
-		Filename: minigun.shp
+	garrison-muzzle: minigun
 		Length: 3
 		Stride: 6
 		Facings: 8
-	icon:
-		Filename: wh40kflashicon.shp
-
+	icon: wh40kflashicon
 wh40kuptankbusta:
-	Defaults:
-		Filename: wh40kuptankbusta.shp
-	icon:
-		Filename: wh40kuptankbusta.shp
-
+	icon: wh40kuptankbusta
 wh40kupgretchin:
-	Defaults:
-		Filename: wh40kupgretchin.shp
-	icon:
-		Filename: wh40kupgretchin.shp
-
+	icon: wh40kupgretchin
 wh40kupblastier:
-	Defaults:
-		Filename: wh40kupblastier.shp
-	icon:
-		Filename: wh40kupblastier.shp
-
+	icon: wh40kupblastier
 wh40kupdakka1:
-	Defaults:
-		Filename: wh40kupdakka1.shp
-	icon:
-		Filename: wh40kupdakka1.shp
-
+	icon: wh40kupdakka1
 wh40kupdakka2:
-	Defaults:
-		Filename: wh40kupdakka2.shp
-	icon:
-		Filename: wh40kupdakka2.shp
-
+	icon: wh40kupdakka2
 wh40kupburny1:
-	Defaults:
-		Filename: wh40kupburny1.shp
-	icon:
-		Filename: wh40kupburny1.shp
-
+	icon: wh40kupburny1
 wh40kupburny2:
-	Defaults:
-		Filename: wh40kupburny2.shp
-	icon:
-		Filename: wh40kupburny2.shp
-
+	icon: wh40kupburny2
 wh40kuporkarmor1:
-	Defaults:
-		Filename: wh40kuporkarmor1.shp
-	icon:
-		Filename: wh40kuporkarmor1.shp
-
+	icon: wh40kuporkarmor1
 wh40kuporkarmor2:
-	Defaults:
-		Filename: wh40kuporkarmor2.shp
-	icon:
-		Filename: wh40kuporkarmor2.shp
-
+	icon: wh40kuporkarmor2
 wh40kupbigshooty1:
-	Defaults:
-		Filename: wh40kupbigshooty1.shp
-	icon:
-		Filename: wh40kupbigshooty1.shp
-
+	icon: wh40kupbigshooty1
 wh40kuporkboss1:
-	Defaults:
-		Filename: wh40kuporkboss1.shp
-	icon:
-		Filename: wh40kuporkboss1.shp
-
+	icon: wh40kuporkboss1
 wh40kuporkboss2:
-	Defaults:
-		Filename: wh40kuporkboss2.shp
-	icon:
-		Filename: wh40kuporkboss2.shp
-
+	icon: wh40kuporkboss2
 wh40kupchoppy1:
-	Defaults:
-		Filename: wh40kupchoppy1.shp
-	icon:
-		Filename: wh40kupchoppy1.shp
-
+	icon: wh40kupchoppy1
 wh40kupchoppy2:
-	Defaults:
-		Filename: wh40kupchoppy2.shp
-	icon:
-		Filename: wh40kupchoppy2.shp
-
+	icon: wh40kupchoppy2
 wh40kupvboost:
-	Defaults:
-		Filename: wh40kupvboost.shp
-	icon:
-		Filename: wh40kupvboost.shp
-
+	icon: wh40kupvboost
 wh40kupburnabomb:
-	Defaults:
-		Filename: wh40kupburnabomb.shp
-	icon:
-		Filename: wh40kupburnabomb.shp
-
+	icon: wh40kupburnabomb
 wh40kupcombatjuice:
-	Defaults:
-		Filename: wh40kupcombatjuice.shp
-	icon:
-		Filename: wh40kupcombatjuice.shp
-
+	icon: wh40kupcombatjuice
 wh40kupvextraarmor:
-	Defaults:
-		Filename: wh40kupvextraarmor.shp
-	icon:
-		Filename: wh40kupvextraarmor.shp
-
+	icon: wh40kupvextraarmor
 wh40kmoresluggas:
-	Defaults:
-		Filename: wh40kmoresluggas.shp
-	icon:
-		Filename: wh40kmoresluggas.shp
-
+	icon: wh40kmoresluggas
 wh40kuporkyfort:
-	Defaults:
-		Filename: wh40kuporkyfort.shp
-	icon:
-		Filename: wh40kuporkyfort.shp
-
+	icon: wh40kuporkyfort
 wh40kcultiststealth:
-	Defaults:
-		Filename: wh40kcultiststealth.shp
-	icon:
-		Filename: wh40kcultiststealth.shp
-
+	icon: wh40kcultiststealth
 wh40kchaosmarinestealth:
-	Defaults:
-		Filename: wh40kchaosmarinestealth.shp
-	icon:
-		Filename: wh40kchaosmarinestealth.shp
-
+	icon: wh40kchaosmarinestealth
 wh40kfuriuschargechaos:
-	Defaults:
-		Filename: wh40kfuriuschargechaos.shp
-	icon:
-		Filename: wh40kfuriuschargechaos.shp
-
+	icon: wh40kfuriuschargechaos
 wh40kunholysight:
-	Defaults:
-		Filename: wh40kunholysight.shp
-	icon:
-		Filename: wh40kunholysight.shp
-
+	icon: wh40kunholysight
 wh40kjetpackbooster:
-	Defaults:
-		Filename: wh40kjetpackbooster.shp
-	icon:
-		Filename: wh40kjetpackbooster.shp
-
+	icon: wh40kjetpackbooster
 wh40kdaemonfire:
-	Defaults:
-		Filename: wh40kdaemonfire.shp
-	icon:
-		Filename: wh40kdaemonfire.shp
-
+	icon: wh40kdaemonfire
 wh40kupmonasteryc:
-	Defaults:
-		Filename: wh40kupmonasteryc.shp
-	icon:
-		Filename: wh40kupmonasteryc.shp
-
+	icon: wh40kupmonasteryc
 wh40kupmonastery2c:
-	Defaults:
-		Filename: wh40kupmonastery2c.shp
-	icon:
-		Filename: wh40kupmonastery2c.shp
-
+	icon: wh40kupmonastery2c
 wh40kupcapincreasec:
-	Defaults:
-		Filename: wh40kupcapincreasec.shp
-	icon:
-		Filename: wh40kupcapincreasec.shp
-
+	icon: wh40kupcapincreasec
 wh40kupcapincrease2c:
-	Defaults:
-		Filename: wh40kupcapincrease2c.shp
-	icon:
-		Filename: wh40kupcapincrease2c.shp
-
+	icon: wh40kupcapincrease2c
 wh40kchaosenergies:
-	Defaults:
-		Filename: wh40kchaosenergies.shp
-	icon:
-		Filename: wh40kchaosenergies.shp
-
+	icon: wh40kchaosenergies
 wh40kfraggrenadesc:
-	Defaults:
-		Filename: wh40kfraggrenadesc.shp
-	icon:
-		Filename: wh40kfraggrenadesc.shp
-
+	icon: wh40kfraggrenadesc
 wh40kveteranupgrade1c:
-	Defaults:
-		Filename: wh40kveteranupgrade1c.shp
-	icon:
-		Filename: wh40kveteranupgrade1c.shp
-
+	icon: wh40kveteranupgrade1c
 wh40kveteranupgrade2c:
-	Defaults:
-		Filename: wh40kveteranupgrade2c.shp
-	icon:
-		Filename: wh40kveteranupgrade2c.shp
-
+	icon: wh40kveteranupgrade2c
 wh40kdemonstrength:
-	Defaults:
-		Filename: wh40kdemonstrength.shp
-	icon:
-		Filename: wh40kdemonstrength.shp
-
+	icon: wh40kdemonstrength
 pscwh40kwhaaag1:
-	Defaults:
-		Filename: pscwh40kwhaaag1.shp
-	icon:
-		Filename: pscwh40kwhaaag1.shp
-
+	icon: pscwh40kwhaaag1
 pscwh40kwhaaag2:
-	Defaults:
-		Filename: pscwh40kwhaaag2.shp
-	icon:
-		Filename: pscwh40kwhaaag2.shp
-
+	icon: pscwh40kwhaaag2
 pscwh40kwartrakk1:
-	Defaults:
-		Filename: pscwh40kwartrakk1.shp
-	icon:
-		Filename: pscwh40kwartrakk1.shp
-
+	icon: pscwh40kwartrakk1
 wh40kmcvo:
-	Defaults:
-		Filename: wh40kmcvo.shp
-	idle:
-		Filename: wh40kwartrukk.shp
+	idle: wh40kwartrukk
 		Facings: -32
 		UseClassicFacings: True
-	icon:
-		Filename: wh40kuporkyfort.shp
+	icon: wh40kuporkyfort
 
 wh40kkillakan:
-	Defaults:
-		Filename: wh40kkillakan.shp
-	idle:
-		Filename: wh40kkillakanlegs.shp
+	idle: wh40kkillakanlegs
 		Length: 4
 		Facings: 8
 		Tick: 9999
 		Scale: 0.60
-	stand:
-		Filename: wh40kkillakanlegs.shp
+	stand: wh40kkillakanlegs
 		Length: 4
 		Facings: 8
 		Tick: 9999
 		Scale: 0.60
-	turret:
-		Filename: wh40kkillakantur.shp
+	turret: wh40kkillakantur
 		Facings: -32
 		UseClassicFacings: True
 		Scale: 0.60
-	run:
-		Filename: wh40kkillakanlegs.shp
+	run: wh40kkillakanlegs
 		Length: 4
 		Facings: 8
 		Tick: 150
 		Scale: 0.60
-	muzzle:
-		Filename: minigun.shp
+	muzzle: minigun
 		Length: 6
 		Facings: 8
 		Scale: 0.60
-	icon:
-		Filename: wh40kkillakanicon.shp
-
+	icon: wh40kkillakanicon
 wh40ksquiggoth:
-	Defaults:
-		Filename: wh40ksquiggoth.shp
-	idle:
-		Filename: wh40ksquiggoth.shp
+	idle: wh40ksquiggoth
 		Facings: -32
 		Scale: 0.70
-	stand:
-		Filename: wh40ksquiggoth.shp
+	stand: wh40ksquiggoth
 		Facings: -32
 		Scale: 0.70
-	turret:
-		Filename: invisibleitem.shp
-	run:
-		Filename: wh40ksquiggoth.shp
+	turret: invisibleitem
+	run: wh40ksquiggoth
 		Length: 8
 		Facings: 8
 		Start: 32
 		Tick: 150
 		Scale: 0.70
-	muzzle:
-		Filename: minigun.shp
+	muzzle: minigun
 		Length: 6
 		Facings: 8
 		Scale: 0.70
-	icon:
-		Filename: wh40ksquiggothicon.shp
-
+	icon: wh40ksquiggothicon
 wh40kplasmaray:
-	Defaults:
-		Filename: wh40kplasmaray.shp
 	idle:
 		Facings: 8
 		ZOffset: 1023
-
 wh40kreaplasgun:
-	Defaults:
-		Filename: wh40kreaplasgun.shp
 	idle:
 		Facings: 8
 		ZOffset: 1023
-
 icon:
 	Defaults:
-		Filename: icon.shp
 		AddExtension: False
-	wh40ksluggaicon:
-		Filename: wh40ksluggaicon.shp
-	wh40kmarineicon:
-		Filename: wh40kmarineicon.shp
-	wh40kdreadicon:
-		Filename: wh40kdreadicon.shp
-	wh40kdreadhicon:
-		Filename: wh40kdreadhicon.shp
-	wh40kpsyinquisition:
-		Filename: wh40kpsyinquisitionicon.shp
-	wh40kdemonicon:
-		Filename: wh40kdemonicon.shp
-
+	wh40ksluggaicon: wh40ksluggaicon.shp
+	wh40kmarineicon: wh40kmarineicon.shp
+	wh40kdreadicon: wh40kdreadicon.shp
+	wh40kdreadhicon: wh40kdreadhicon.shp
+	wh40kpsyinquisition: wh40kpsyinquisitionicon.shp
+	wh40kdemonicon: wh40kdemonicon.shp
 explosion:
 	Defaults:
-		Filename: explosion.shp
 		Length: *
 		ZOffset: 2047
-	wh40kplasmaexp:
-		Filename: wh40kplasmaexp.shp
-	wh40ksmallphotom:
-		Filename: wh40ksmallphotom.shp
+	wh40kplasmaexp: wh40kplasmaexp
+	wh40ksmallphotom: wh40ksmallphotom

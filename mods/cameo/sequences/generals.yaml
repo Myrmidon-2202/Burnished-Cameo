@@ -773,6 +773,21 @@ sglaangrymob1:
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
+	die5:
+		Filename: gle3.shp
+		Start: 434
+		Length: 18
+		Tick: 80
+	# Tib
+	die6: 
+		Filename: gle3.shp
+		Start: 382
+		Length: 11
+		Tick: 80
+	# Electro
+	die7: 
+		Filename: electro.shp ##########
+		Length: *
 	muzzle: 
 		Filename: minigun.shp
 		Length: 3
@@ -811,6 +826,21 @@ sglaangrymob2:
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
+	die5:
+		Filename: gle3.shp
+		Start: 434
+		Length: 18
+		Tick: 80
+	# Tib
+	die6: 
+		Filename: gle3.shp
+		Start: 382
+		Length: 11
+		Tick: 80
+	# Electro
+	die7: 
+		Filename: electro.shp ##########
+		Length: *
 	idle:
 		Start: 208
 		Length: 20
@@ -2438,7 +2468,7 @@ schtankhunter:
 		Length: 12
 		Tick: 80
 	# Burn
-	die5: 
+	die5:
 		Filename: gle3.shp
 		Start: 434
 		Length: 18
