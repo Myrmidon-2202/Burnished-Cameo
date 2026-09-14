@@ -742,6 +742,11 @@ sglaangrymob1:
 		Length: 10
 		Facings: 8
 		Tick: 130
+	die1: 
+		Filename: sglmob03.shp
+		Start: 168
+		Length: 20
+		Tick: 130
 	die-ak: 
 		Filename: sglmob03.shp
 		Start: 168
@@ -3566,6 +3571,10 @@ usamissiledefender:
 	Defaults:
 		Scale: 2.0
 	stand: 
+		Filename: usamissiledefender.shp
+		Start: 0
+		Facings: 8
+	stand2: 
 		Filename: usamissiledefender.shp
 		Start: 0
 		Facings: 8

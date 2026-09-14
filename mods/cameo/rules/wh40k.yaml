@@ -58,18 +58,18 @@ World:
 		Class: none
 		ClassName: MCV Only
 		Factions: imperialguard
-		BaseActor: wh40kmcv
+		BaseActor: wh40kfieldcommand
 	StartingUnits@defaultimperialguard:
 		Class: light
 		ClassName: Light Support
 		Factions: imperialguard
-		BaseActor: wh40kmcv
+		BaseActor: wh40kfieldcommand
 		SupportActors: wh40kguard,wh40kguard,wh40kguard,wh40kguard,wh40kguard,wh40kguard,wh40kchime
 	StartingUnits@heavyimperialguard:
 		Class: heavy
 		ClassName: Heavy Support
 		Factions: imperialguard
-		BaseActor: wh40kmcv
+		BaseActor: wh40kfieldcommand
 		SupportActors: wh40kguard,wh40kguard,wh40kguard,wh40kguard,wh40kguard,wh40kguard,wh40kguard,wh40kchime,wh40kleman
 	####################################################################################################
 	#		Space Marines
@@ -1254,7 +1254,6 @@ wh40kmcv:
 	Inherits: ^Vehicle
 	Inherits@selection: ^SelectableSupportUnit
 	Inherits@mcv: ^MCV
-	Inherits@conyard: ^Conyard
 	Buildable:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 210
@@ -1294,6 +1293,7 @@ wh40kmcv:
 
 wh40kfieldcommand:
 	Inherits: ^BunkerBaseBuilding
+	Inherits@shape: ^3x3Shape
 	Inherits@CPQ: ^CPQCondition
 	Inherits@aicash: ^AIConyardCash
 	Inherits@conyard: ^Conyard
@@ -1746,7 +1746,7 @@ wh40kheavybolt:
 		BuildDurationModifier: 40
 		Description: All-purpose defensive structure.\n  Strong vs Aircraft, Infantry\n  Weak vs Vehicles
 	Selectable:
-		Bounds: 87381, 89173
+		Bounds: 1024, 1024
 	SelectionDecorations:
 	Health:
 		HP: 100000
@@ -1784,8 +1784,8 @@ wh40kheavybolt:
 	DetectCloaked:
 		Range: 5c0
 	# -RenderDetectionCircle:
-	Power:
-		Amount: -15
+	# Power:
+	# 	Amount: -15
 
 wh40kheavybolt2:
 	Inherits: ^Defense
@@ -1804,7 +1804,7 @@ wh40kheavybolt2:
 		BuildDurationModifier: 40
 		Description: All-purpose defensive structure.\n  Strong vs Aircraft, Infantry\n  Weak vs Vehicles
 	Selectable:
-		Bounds: 87381, 89173
+		Bounds: 1024, 1024
 	SelectionDecorations:
 	Health:
 		HP: 75000
@@ -1842,11 +1842,12 @@ wh40kheavybolt2:
 	DetectCloaked:
 		Range: 5c0
 	# -RenderDetectionCircle:
-	Power:
-		Amount: -15
+	# Power:
+	# 	Amount: -15
 
 wh40kproc:
 	Inherits: ^BunkerBaseBuilding
+	Inherits@shape: ^3x3Shape
 	Inherits@ref: ^Refinery
 	Buildable:
 		Queue: Building, RABuilding
@@ -1864,8 +1865,8 @@ wh40kproc:
 		BuildDuration: 500
 		BuildDurationModifier: 100
 	Selectable:
-		Bounds: 2048, 2048
-		DecorationBounds: 2048, 2048
+		# Bounds: 2048, 2048
+		# DecorationBounds: 2048, 2048
 	SelectionDecorations:
 	Power:
 		Amount: -30
@@ -1878,7 +1879,7 @@ wh40kproc:
 	Refinery:
 	DockHost:
 		DockAngle: 256
-		DockOffset: 1, 2, 0
+		DockOffset: 1c0, 2c0, 0
 	StoresResources:
 		Capacity: 5000 #2000
 	DrawLineToTarget:
@@ -1924,7 +1925,7 @@ wh40kmars:
 		BuildPaletteOrder: 50
 		Prerequisites: wh40kupfullscalewar, ~mmimperialguard
 		Queue: Building, RABuilding
-		Description: Produces vehicles
+		Description: Produces vehicles, 25% faster
 		BuildLimit: 1
 	Building:
 		Footprint: xxxx x++x ====
@@ -1960,6 +1961,7 @@ wh40kmars:
 		QueuedAudio: Training
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
+		BuildDurationModifier: 75
 	ProductionBar@VEHICLEGUARD:
 		ProductionType: Vehicle2.Guard
 		RequiresCondition: !classicproductionqueues
@@ -2169,7 +2171,7 @@ wh40kuphonor:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
 		Description: Increases Guardsmen health by 10%.
-		Prerequisites: ~!wh40kuphonor
+		Prerequisites: ~!wh40kuphonor, ~mmimperialguard
 	Valued:
 		Cost: 1000
 	RenderSprites:
@@ -2184,8 +2186,8 @@ wh40kupguardarmor:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Increases Guardsmens to 15% of health.
-		Prerequisites: ~!wh40kupguardarmor
+		Description: Increases Guardsmens health by 15%.
+		Prerequisites: ~!wh40kupguardarmor, ~mmimperialguard
 	Valued:
 		Cost: 1500
 	RenderSprites:
@@ -2200,8 +2202,8 @@ wh40kupguardemperor:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Increases Guardsmens to 15% of health.
-		Prerequisites: ~!wh40kupguardemperor, wh40kupbattlecommand
+		Description: Increases Guardsmens health by a further 15%.
+		Prerequisites: ~!wh40kupguardemperor, wh40kupbattlecommand, ~mmimperialguard
 	Valued:
 		Cost: 1000
 	RenderSprites:
@@ -2216,8 +2218,8 @@ wh40kupsateliterange:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Increases Guardsmens to 20% of shoot range.
-		Prerequisites: ~!wh40kupsateliterange, wh40kupbattlecommand
+		Description: Increases Guardsmen range by 20%.
+		Prerequisites: ~!wh40kupsateliterange, wh40kupbattlecommand, ~mmimperialguard
 	Valued:
 		Cost: 1250
 	RenderSprites:
@@ -2232,8 +2234,8 @@ wh40kupweapspecialization:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Increases Infantry firepower by 15%.
-		Prerequisites: ~!wh40kupweapspecialization, wh40kupsateliterange
+		Description: Increases Infantry firepower by a further 15%.
+		Prerequisites: ~!wh40kupweapspecialization, wh40kupsateliterange, ~mmimperialguard
 	Valued:
 		Cost: 2000
 	RenderSprites:
@@ -2249,7 +2251,7 @@ wh40kuppoweredbayonets:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
 		Description: Increases Ogryn firepower by 15%.
-		Prerequisites: ~!wh40kuppoweredbayonets, wh40kupogrynquarters
+		Prerequisites: ~!wh40kuppoweredbayonets, wh40kupogrynquarters, ~mmimperialguard
 	Valued:
 		Cost: 1750
 	RenderSprites:
@@ -2263,9 +2265,9 @@ wh40kupbattlecommand:
 		Name: Battle Command
 	Buildable:
 		BuildPaletteOrder: 200
-		Queue: Upgrades
+		Queue: Defence, RADefence
 		Description: Increases Field Command to 25% of health, Unlock new Tech
-		Prerequisites: ~!wh40kupbattlecommand, barracks
+		Prerequisites: ~!wh40kupbattlecommand, barracks, ~mmimperialguard
 	Valued:
 		Cost: 3000
 	RenderSprites:
@@ -2279,9 +2281,9 @@ wh40kupregimentalcommand:
 		Name: Regimental Command
 	Buildable:
 		BuildPaletteOrder: 200
-		Queue: Upgrades
+		Queue: Defence, RADefence
 		Description: Increases Field Command to 25% of health, Unlock new Tech
-		Prerequisites: ~!wh40kupregimentalcommand, wh40kupbattlecommand, vehicleproduction
+		Prerequisites: ~!wh40kupregimentalcommand, wh40kupbattlecommand, vehicleproduction, ~mmimperialguard
 	Valued:
 		Cost: 3000
 	RenderSprites:
@@ -2295,9 +2297,9 @@ wh40kupogrynquarters:
 		Name: Ogryn Quarters
 	Buildable:
 		BuildPaletteOrder: 200
-		Queue: Upgrades
+		Queue: Addons
 		Description: Unlock Ogryns.
-		Prerequisites: ~!wh40kupogrynquarters, wh40kupregimentalcommand
+		Prerequisites: ~!wh40kupogrynquarters, wh40kupregimentalcommand, ~mmimperialguard
 	Valued:
 		Cost: 500
 	RenderSprites:
@@ -2311,9 +2313,9 @@ wh40kupkasrkinquarters:
 		Name: Kasrkin Quarters
 	Buildable:
 		BuildPaletteOrder: 200
-		Queue: Upgrades
+		Queue: Addons
 		Description: Unlock Ogryns.
-		Prerequisites: ~!wh40kupkasrkinquarters, wh40kupregimentalcommand
+		Prerequisites: ~!wh40kupkasrkinquarters, wh40kupregimentalcommand, ~mmimperialguard
 	Valued:
 		Cost: 500
 	RenderSprites:
@@ -2327,9 +2329,9 @@ wh40kupsentineldepot:
 		Name: Sentinel Depot
 	Buildable:
 		BuildPaletteOrder: 200
-		Queue: Upgrades
+		Queue: Addons
 		Description: Unlock Sentinels.
-		Prerequisites: ~!wh40kupsentineldepot, wh40kupbattlecommand
+		Prerequisites: ~!wh40kupsentineldepot, wh40kupbattlecommand, ~mmimperialguard
 	Valued:
 		Cost: 750
 	RenderSprites:
@@ -2343,9 +2345,9 @@ wh40kuphellhounddepot:
 		Name: Hellhound Depot
 	Buildable:
 		BuildPaletteOrder: 200
-		Queue: Upgrades
+		Queue: Addons
 		Description: Unlock Hellhounds.
-		Prerequisites: ~!wh40kuphellhounddepot, wh40kupbattlecommand
+		Prerequisites: ~!wh40kuphellhounddepot, wh40kupbattlecommand, ~mmimperialguard
 	Valued:
 		Cost: 1500
 	RenderSprites:
@@ -2359,9 +2361,9 @@ wh40kupbasiliskdepot:
 		Name: Basilisk Depot
 	Buildable:
 		BuildPaletteOrder: 200
-		Queue: Upgrades
+		Queue: Addons
 		Description: Unlock Basilisks.
-		Prerequisites: ~!wh40kupbasiliskdepot, wh40kupbattlecommand
+		Prerequisites: ~!wh40kupbasiliskdepot, wh40kupbattlecommand, ~mmimperialguard
 	Valued:
 		Cost: 750
 	RenderSprites:
@@ -2375,9 +2377,9 @@ wh40kupmarauderdepot:
 		Name: Marauder Depot
 	Buildable:
 		BuildPaletteOrder: 200
-		Queue: Upgrades
+		Queue: Addons
 		Description: Unlock Marauder Bombers.
-		Prerequisites: ~!wh40kupmarauderdepot, wh40kupbattlecommand
+		Prerequisites: ~!wh40kupmarauderdepot, wh40kupbattlecommand, ~mmimperialguard
 	Valued:
 		Cost: 1500
 	RenderSprites:
@@ -2391,9 +2393,9 @@ wh40kuplemanrussdepot:
 		Name: Leman Russ Depot
 	Buildable:
 		BuildPaletteOrder: 200
-		Queue: Upgrades
+		Queue: Addons
 		Description: Unlock Leman Russ.
-		Prerequisites: ~!wh40kuplemanrussdepot, wh40kupregimentalcommand, wh40kupfullscalewar
+		Prerequisites: ~!wh40kuplemanrussdepot, wh40kupregimentalcommand, wh40kupfullscalewar, ~mmimperialguard
 	Valued:
 		Cost: 1500
 	RenderSprites:
@@ -2407,9 +2409,9 @@ wh40kupfullscalewar:
 		Name: Full Scale War
 	Buildable:
 		BuildPaletteOrder: 200
-		Queue: Upgrades
+		Queue: Addons
 		Description: Unlock Leman Russ and Baneblade Tanks
-		Prerequisites: ~!wh40kupfullscalewar, wh40kupregimentalcommand
+		Prerequisites: ~!wh40kupfullscalewar, wh40kupregimentalcommand, ~mmimperialguard
 	Valued:
 		Cost: 3000
 	RenderSprites:
@@ -2423,8 +2425,8 @@ wh40kupenergy1:
 		Name: Energy Upgrade 1
 	Buildable:
 		BuildPaletteOrder: 210
-		Queue: Upgrades
-		Description: Increases Energy of Generators.
+		Queue: Addons
+		Description: Increases Energy of Generators., ~mmimperialguard
 		Prerequisites: ~!wh40kupenergy1
 	Valued:
 		Cost: 1500
@@ -2439,9 +2441,9 @@ wh40kupenergy2:
 		Name: Energy Upgrade 2
 	Buildable:
 		BuildPaletteOrder: 210
-		Queue: Upgrades
+		Queue: Addons
 		Description: Increases Energy of Generators.
-		Prerequisites: ~!wh40kupenergy2, wh40kupenergy1
+		Prerequisites: ~!wh40kupenergy2, wh40kupenergy1, ~mmimperialguard
 	Valued:
 		Cost: 2500
 	RenderSprites:
@@ -2457,7 +2459,7 @@ wh40kupgenenhancement:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
 		Description: Increases Kasrkin to 33% of speed.
-		Prerequisites: ~!wh40kupgenenhancement, wh40kupkasrkinquarters
+		Prerequisites: ~!wh40kupgenenhancement, wh40kupkasrkinquarters, ~mmimperialguard
 	Valued:
 		Cost: 1500
 	RenderSprites:
@@ -2473,7 +2475,7 @@ wh40kupkasrkinarmor:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
 		Description: Increases Kasrkin to 25% of health.
-		Prerequisites: ~!wh40kupkasrkinarmor, wh40kupkasrkinquarters
+		Prerequisites: ~!wh40kupkasrkinarmor, wh40kupkasrkinquarters, ~mmimperialguard
 	Valued:
 		Cost: 1500
 	RenderSprites:
@@ -2494,7 +2496,7 @@ wh40kguard:
 	Valued:
 		Cost: 100
 	Health:
-		HP: 7000
+		HP: 16000
 	Power:
 		Amount: -7
 	Tooltip:
@@ -2535,6 +2537,8 @@ wh40kguard:
 		EnterBlockedCursor: move-blocked
 	SoundOnDamageTransition:
 		DamagedSounds: wh40kguardunder1.wav, wh40kguardunder2.wav, wh40kguardunder3.wav, wh40kguardunder4.wav, wh40kguardunder5.wav
+	RenderSprites:
+		Image: wh40kguard
 
 wh40kgrenade:
 	Inherits: ^Soldier
@@ -2563,7 +2567,7 @@ wh40kgrenade:
 	Mobile:
 		Speed: 48
 	Health:
-		HP: 8000
+		HP: 16000
 	AutoTarget:
 		ScanRadius: 4
 	Armament@PRIMARY:
@@ -2644,6 +2648,8 @@ wh40kguardplasma:
 		ConsumedByCapture: False
 		EnterCursor: ability
 		EnterBlockedCursor: move-blocked
+	RenderSprites:
+		Image: wh40kguardplasma
 
 wh40kcommisair:
 	Inherits: E1
@@ -2653,7 +2659,7 @@ wh40kcommisair:
 	Valued:
 		Cost: 400
 	Health:
-		HP: 16000
+		HP: 37500
 	Power:
 		Amount: -20
 	Tooltip:
@@ -2720,7 +2726,7 @@ wh40kogryn:
 	Crushable:
 		CrushClasses: vehicle
 	Health:
-		HP: 30000
+		HP: 69000
 	Armor:
 		Type: None
 	AutoTarget:
@@ -2798,7 +2804,7 @@ wh40kbigguns:
 	Buildable:
 		BuildPaletteOrder: 50
 		Prerequisites: barracks
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Guard
 		BuildDurationModifier: 300
 		BuildDuration: 70
 		Description: General-purpose Infantry \n  Strong vs Infantry, Light Vehicles\n  Weak vs Tanks, Aircraft\n  Can deploy for increased firepower
@@ -2808,7 +2814,7 @@ wh40kbigguns:
 	Passenger:
 		RequireForceMoveCondition: !undeployed
 	Health:
-		HP: 15000
+		HP: 65000
 	AutoTarget:
 		ScanRadius: 4
 	RevealOnFire:
@@ -2947,7 +2953,7 @@ wh40kkars:
 	Inherits@horde: ^WH40KHordeEffect
 	Inherits@priest: ^WH40KPriestBonuses
 	Valued:
-		Cost: 200
+		Cost: 300
 	Power:
 		Amount: -15
 	Tooltip:
@@ -2964,7 +2970,7 @@ wh40kkars:
 	Crushable:
 		CrushClasses: vehicle
 	Health:
-		HP: 12000
+		HP: 38500
 	AutoTarget:
 		ScanRadius: 4
 	Armament@PRIMARY: ##########
@@ -3101,7 +3107,7 @@ wh40ktechpriest:
 	Crushable:
 		CrushClasses: vehicle
 	Health:
-		HP: 15000
+		HP: 31000
 	AutoTarget:
 		ScanRadius: 4
 	Armament@PRIMARY: ##########
@@ -3151,7 +3157,7 @@ wh40kpsyker:
 	Mobile:
 		Speed: 50
 	Health:
-		HP: 15000
+		HP: 37500
 	AutoTarget:
 		ScanRadius: 6
 	Armament@PRIMARY:
@@ -3201,7 +3207,7 @@ wh40kpriest:
 	Crushable:
 		CrushClasses: vehicle
 	Health:
-		HP: 25000
+		HP: 50000
 	AutoTarget:
 		ScanRadius: 4
 	Armament@PRIMARY: ##########
@@ -3244,7 +3250,7 @@ wh40kcommandsquada:
 		DeathTypes: DefaultDeath
 	Buildable:
 		BuildPaletteOrder: 30
-		Queue: Infantry,, ~mmimperialguard
+		Queue: Infantry.Guard, ~mmimperialguard
 		Description: Elite Infantry Squad.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft \n  Contain a Commander, Commissar, Psyker and Priest
 		Prerequisites: wh40karmory
 		BuildLimit: 1
@@ -3255,7 +3261,7 @@ wh40kcommandsquada:
 	Valued:
 		Cost: 2500
 	Health:
-		HP: 100
+		HP: 43500
 	Mobile:
 		Speed: 48
 		Locomotor: foot
@@ -3565,6 +3571,10 @@ wh40kguardsargent:
 		BuildDurationModifier: 120
 		Description: Imperial Guard Main Sergeant
 		BuildLimit: 5
+		DamagedSounds: wh40kguardunder1.wav, wh40kguardunder2.wav, wh40kguardunder3.wav, wh40kguardunder4.wav, wh40kguardunder5.wav
+	RenderSprites:
+		Image: wh40kkarssargent
+
 
 wh40kkarssargent:
 	Inherits: wh40kkarsplasma
@@ -3582,6 +3592,8 @@ wh40kkarssargent:
 		BuildDurationModifier: 120
 		Description: Imperial Guard Main Sergeant
 		BuildLimit: 1
+	RenderSprites:
+		Image: wh40kkarssargent
 
 wh40kogrynsargent:
 	Inherits: wh40kogryn
@@ -3717,7 +3729,7 @@ wh40kchime:
 	WithMuzzleOverlay:
 	SelectionDecorations:
 	Selectable:
-		DecorationBounds: 61866, 61866, 0, -5461
+		DecorationBounds: 1280, 1024
 	Inherits@EXT: ^ExternalConditions ##########
 	AcceptsDeliveredExperience: ##########
 		ValidTypes: vehicle ##########
@@ -3895,7 +3907,7 @@ wh40kharv:
 	Inherits@selection: ^SelectableEconomicUnit
 	Inherits@harv: ^Harvester
 	Valued:
-		Cost: 1000
+		Cost: 800
 	Tooltip:
 		Name: Imperial Harvester
 		GenericName: Harvester
@@ -4142,7 +4154,7 @@ wh40ksentinel:
 		RecoilRecovery: 38
 		LocalOffset: 768,12,20, 768,-12,20
 		MuzzleSequence: muzzle
-		RequiresCondition: !ifv-mg && !ifv-repair && !ifv-sniper && !ifv-flak && !ifv-tesla && !ifv-hero && !ifv-chem && !ifv-fire && !ifv-cannon && !ifv-miss && !ifv-deso && !ifv-demo && !ifv-chrono
+		# RequiresCondition: !ifv-mg && !ifv-repair && !ifv-sniper && !ifv-flak && !ifv-tesla && !ifv-hero && !ifv-chem && !ifv-fire && !ifv-cannon && !ifv-miss && !ifv-deso && !ifv-demo && !ifv-chrono
 	# Armament@MG1:
 	# 	Weapon: WH40KHeavyBolterMG
 	# 	Recoil: 128
@@ -4236,9 +4248,9 @@ wh40ksentinel:
 	RenderSprites:
 	Voiced:
 		VoiceSet: WH40KImperialVehicleVoice
-	WithCargoPipsDecoration:
-		Position: BottomLeft
-		RequiresSelection: true
+	# WithCargoPipsDecoration:
+	# 	Position: BottomLeft
+	# 	RequiresSelection: true
 
 wh40kmaurader:
 	Inherits: ^Helicopter
@@ -4439,6 +4451,7 @@ wh40kmaurader.napalm:
 	Contrail@2:
 		Offset: -640,-171,0
 		TrailLength: 15
+	RejectsOrders:
 	-MapEditorData:
 	-SpawnActorOnDeath:
 	RenderSprites:
@@ -4679,6 +4692,7 @@ wh40kpsyker_rank:
 #######################################
 wh40kstronghold:
 	Inherits: ^BaseBuilding
+	Inherits@shape: ^3x3Shape
 	Inherits@CPQ: ^CPQCondition
 	Inherits@aicash: ^AIConyardCash
 	Inherits@conyard: ^Conyard
@@ -4933,7 +4947,7 @@ wh40ksacredart:
 		Names:
 			1: Psychic Inquisition
 		Descriptions:
-			1: Initiate an Inquisition Ray strike.\nApplies instant damage to a small area.\nOnly can Damage Units.
+			1: Initiate an Inquisition Orbital strike.\nApplies instant damage to a small area.\nOnly can Damage Units.
 		BeginChargeSpeechNotification: IonCannonCharging
 		EndChargeSpeechNotification: IonCannonReady
 		SelectTargetSpeechNotification: SelectTarget
@@ -5492,7 +5506,7 @@ wh40kprocm:
 	Refinery:
 	DockHost:
 		DockAngle: 256
-		DockOffset: 1, 2, 0
+		DockOffset: 1c0, 2c0, 0
 	StoresResources:
 		Capacity: 5000 #2000
 	DrawLineToTarget:
@@ -5580,8 +5594,8 @@ wh40kbolterturret:
 	DetectCloaked:
 		Range: 5c0
 	# -RenderDetectionCircle:
-	Power:
-		Amount: -15
+	# Power:
+	# 	Amount: -15
 	RenderSprites:
 
 wh40kbolterturret2:
@@ -5601,7 +5615,7 @@ wh40kbolterturret2:
 		BuildDurationModifier: 40
 		Description: All-purpose defensive structure.\n  Strong vs Aircraft, Infantry\n  Weak vs Vehicles
 	Selectable:
-		Bounds: 87381, 89173
+		Bounds: 1024, 1024
 	SelectionDecorations:
 	Health:
 		HP: 150000
@@ -5639,8 +5653,8 @@ wh40kbolterturret2:
 	DetectCloaked:
 		Range: 5c0
 	# -RenderDetectionCircle:
-	Power:
-		Amount: -15
+	# Power:
+	# 	Amount: -15
 	RenderSprites:
 #######################################
 # Marines, Infantry
@@ -5659,7 +5673,7 @@ wh40kmarine:
 	Power:
 		Amount: -7
 	Tooltip:
-		Name: Space Marine
+		Name: Tactical Marine
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
@@ -5672,7 +5686,7 @@ wh40kmarine:
 	Crushable:
 		CrushClasses: vehicle
 	Health:
-		HP: 10000
+		HP: 39000
 	Armor:
 		Type: Wood
 	AutoTarget:
@@ -5838,7 +5852,7 @@ wh40kscout:
 	Crushable:
 		CrushClasses: vehicle
 	Health:
-		HP: 8500
+		HP: 29500
 	AutoTarget:
 		ScanRadius: 4
 	Armament@PRIMARY: ##########
@@ -5986,7 +6000,7 @@ wh40kforcecmd:
 	Crushable:
 		CrushClasses: vehicle
 	Health:
-		HP: 142000
+		HP: 187500
 	AutoTarget:
 		ScanRadius: 4
 	Armament@PRIMARY: ##########
@@ -6035,7 +6049,7 @@ wh40kchaptain:
 	Crushable:
 		CrushClasses: vehicle
 	Health:
-		HP: 142000
+		HP: 130000
 	AutoTarget:
 		ScanRadius: 4
 	Armament@PRIMARY: ##########
@@ -6089,7 +6103,7 @@ wh40klibrarian:
 	Crushable:
 		CrushClasses: vehicle
 	Health:
-		HP: 142000
+		HP: 140000
 	AutoTarget:
 		ScanRadius: 4
 	Armament@PRIMARY: ##########
@@ -6138,7 +6152,7 @@ wh40kterminator1:
 	Crushable:
 		CrushClasses: vehicle
 	Health:
-		HP: 45000
+		HP: 65500
 	Armor:
 		Type: Heavy
 	AutoTarget:
@@ -6196,7 +6210,7 @@ wh40kterminator2:
 	Crushable:
 		CrushClasses: vehicle
 	Health:
-		HP: 55000
+		HP: 80000
 	Armor:
 		Type: Heavy
 	AutoTarget:
@@ -6356,7 +6370,7 @@ wh40kapotecary:
 	Crushable:
 		CrushClasses: vehicle
 	Health:
-		HP: 10000
+		HP: 50000
 	Armor:
 		Type: Wood
 	AutoTarget:
@@ -6412,7 +6426,7 @@ wh40kgrayknight:
 	Crushable:
 		CrushClasses: vehicle
 	Health:
-		HP: 120000
+		HP: 80000
 	AutoTarget:
 		ScanRadius: 4
 	Armament@PRIMARY: ##########
@@ -6473,7 +6487,6 @@ wh40kmcvm:
 	Inherits: ^Vehicle
 	Inherits@selection: ^SelectableSupportUnit
 	Inherits@mcv: ^MCV
-	Inherits@conyard: ^Conyard
 	Buildable:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 210
@@ -7200,6 +7213,7 @@ wh40kthunderhawk:
 		MaxWeight: 10
 	DamageMultiplier@INVULNERABLE:
 		Modifier: 0
+	RejectsOrders:
 	-MapEditorData:
 	-SpawnActorOnDeath:
 	RenderSprites:
@@ -7379,7 +7393,7 @@ wh40kskullprobe:
 		Locomotor: hover
 	Hovers:
 	Health:
-		HP: 11000
+		HP: 22500
 	Repairable:
 		HpPerStep: 1000
 	Armor:
@@ -7970,7 +7984,6 @@ wh40kmcvo:
 	Inherits: ^Vehicle
 	Inherits@selection: ^SelectableSupportUnit
 	Inherits@mcv: ^MCV
-	Inherits@conyard: ^Conyard
 	Buildable:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 210
@@ -8037,6 +8050,7 @@ wh40kmcvo:
 
 wh40ksettlement:
 	Inherits: ^ArmedBaseBuilding
+	Inherits@shape: ^3x3Shape
 	Inherits@CPQ: ^CPQCondition
 	Inherits@aicash: ^AIConyardCash
 	Inherits@conyard: ^Conyard
@@ -8054,7 +8068,7 @@ wh40ksettlement:
 		Footprint: xxx xxx xxx
 		Dimensions: 3,3
 	Health:
-		HP: 650000 #150000
+		HP: 300000 #150000
 	Armor:
 		Type: Wood
 	RevealsShroud:
@@ -8343,7 +8357,7 @@ wh40kwhaaag:
 		BuildDurationModifier: 40
 		Description: All-purpose defensive structure.\n  Strong vs Aircraft, Infantry\n  Weak vs Vehicles
 	Selectable:
-		Bounds: 87381, 89173
+		Bounds: 1024, 1024
 	SelectionDecorations:
 	Health:
 		HP: 50000
@@ -8518,6 +8532,7 @@ pscwh40kwhaaag2:
 
 wh40kproco:
 	Inherits: ^ArmedBaseBuilding
+	Inherits@shape: ^3x3Shape
 	Inherits@ref: ^Refinery
 	Inherits@dakka: ^WH40KDakkaUpgrade
 	Buildable:
@@ -8536,8 +8551,6 @@ wh40kproco:
 		BuildDuration: 500
 		BuildDurationModifier: 100
 	Selectable:
-		Bounds: 131072, 91008, 0, 21845
-		DecorationBounds: 131072, 127402, 0, -3626
 	SelectionDecorations:
 	Power:
 		Amount: -30
@@ -8550,7 +8563,7 @@ wh40kproco:
 	Refinery:
 	DockHost:
 		DockAngle: 256
-		DockOffset: 1, 2, 0
+		DockOffset: 1c0, 2c0, 0
 		MaxQueueLength: 10
 	StoresResources:
 		Capacity: 5000 #2000
@@ -8754,7 +8767,7 @@ wh40kgretchin:
 	Inherits@harv: ^Harvester
 	Inherits@horde: ^WH40KHordeEffect
 	Valued:
-		Cost: 80
+		Cost: 120
 	Tooltip:
 		Name: Gretchins
 	UpdatesPlayerStatistics:
@@ -8768,7 +8781,7 @@ wh40kgretchin:
 		Speed: 85
 	Crushable:
 	Health:
-		HP: 3000
+		HP: 9000
 	AutoTarget:
 		ScanRadius: 4
 	Armament@PRIMARY: ##########
@@ -8828,7 +8841,7 @@ wh40kgretchin:
 		EnterCursor: ability
 		EnterBlockedCursor: move-blocked
 	Power:
-		Amount: -1
+		Amount: -5
 	GrantConditionOnPrerequisite@wh40kupgretchin:
 		Condition: wh40kupgretchin
 		Prerequisites: wh40kupgretchin
@@ -8841,14 +8854,14 @@ wh40kgretchin:
 		IsPlayerPalette: true
 	Harvester:
 		PipCount: 2
-		Capacity: 2
+		Capacity: 1
 		BaleLoadDelay: 4
 		BaleUnloadDelay: 0
 		BaleUnloadAmount: 2
 		FullyLoadedSpeed: 100
 		MaxUnloadQueue: 9
 	StoresResources:
-		Capacity: 2
+		Capacity: 1
 	WithHarvestAnimation:
 	WithDockingAnimation:
 	WithSpriteBody:
@@ -8869,7 +8882,7 @@ wh40kslugga:
 	Inherits@armor: ^WH40KOrkInfantryArnorUpgrades
 	Inherits@stimpack: ^WH40KCombatJuice
 	Valued:
-		Cost: 125
+		Cost: 120
 	Tooltip:
 		Name: Slugga Boyz
 	UpdatesPlayerStatistics:
@@ -8883,7 +8896,7 @@ wh40kslugga:
 	Crushable:
 		CrushClasses: vehicle
 	Health:
-		HP: 12500
+		HP: 25000
 	AutoTarget:
 		ScanRadius: 4
 	Armament@PRIMARY: ##########
@@ -8993,7 +9006,7 @@ wh40kstormboyz:
 	Crushable:
 		CrushClasses: vehicle
 	Health:
-		HP: 12500
+		HP: 27500
 	AutoTarget:
 		ScanRadius: 4
 	Armament@PRIMARY: ##########
@@ -9142,7 +9155,7 @@ wh40kshoota:
 	Crushable:
 		CrushClasses: vehicle
 	Health:
-		HP: 12000
+		HP: 23500
 	AutoTarget:
 		ScanRadius: 4
 	Armament@PRIMARY: ##########
@@ -9223,7 +9236,7 @@ wh40knob:
 	Crushable:
 		CrushClasses: vehicle
 	Health:
-		HP: 30000
+		HP: 65000
 	Armor:
 		Type: None
 	AutoTarget:
@@ -9295,7 +9308,7 @@ wh40kbigmek:
 	Valued:
 		Cost: 800
 	Tooltip:
-		Name: Bigmek
+		Name: Big Mek
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
@@ -9309,7 +9322,7 @@ wh40kbigmek:
 	Crushable:
 		CrushClasses: vehicle
 	Health:
-		HP: 64000
+		HP: 131000
 	Armor:
 		Type: Wood
 	AutoTarget:
@@ -9392,7 +9405,7 @@ wh40ktankbusta:
 	Crushable:
 		CrushClasses: vehicle
 	Health:
-		HP: 12000
+		HP: 36000
 	AutoTarget:
 		ScanRadius: 4
 	Armament@PRIMARY: ##########
@@ -9461,7 +9474,7 @@ wh40kflash:
 	Crushable:
 		CrushClasses: vehicle
 	Health:
-		HP: 15000
+		HP: 45000
 	AutoTarget:
 		ScanRadius: 4
 	Armament@PRIMARY: ##########
@@ -9535,7 +9548,7 @@ wh40kmaddok:
 	Crushable:
 		CrushClasses: vehicle
 	Health:
-		HP: 12500
+		HP: 50000
 	AutoTarget:
 		ScanRadius: 4
 	Armament@PRIMARY: ##########
@@ -9615,7 +9628,7 @@ wh40kmeganobz:
 	Inherits@armor: ^WH40KOrkInfantryArnorUpgrades
 	Inherits@boss: ^WH40KOrkBossUpgrades
 	Valued:
-		Cost: 1200
+		Cost: 900
 	Tooltip:
 		Name: Mega Armored Nobz
 	UpdatesPlayerStatistics:
@@ -9630,7 +9643,7 @@ wh40kmeganobz:
 	Crushable:
 		CrushClasses: vehicle
 	Health:
-		HP: 120000
+		HP: 90000
 	Armor:
 		Type: Heavy
 	AutoTarget:
@@ -9751,7 +9764,7 @@ wh40kwarboss:
 	Crushable:
 		CrushClasses: vehicle
 	Health:
-		HP: 220000
+		HP: 224000
 	Armor:
 		Type: Heavy
 	AutoTarget:
@@ -10226,7 +10239,7 @@ wh40kuporkyfort:
 		Name: Orky Fort
 	Buildable:
 		BuildPaletteOrder: 200
-		Queue: Upgrades
+		Queue: Defence, RADefence
 		Description: Make Sluggas more cheaper
 		Prerequisites: ~!wh40kuporkyfort, wh40karmoryo, whaaag3, ~mmorkz
 	Valued:
@@ -10324,7 +10337,7 @@ wh40kupburnabomb:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
 		Description: Mad Doks adkire the Ability to Plaze Bom to Enemys
-		Prerequisites: ~!wh40kupburnabomb, wh40kupburny1, wh40kuporkyfort
+		Prerequisites: ~!wh40kupburnabomb, wh40kupburny1, wh40kuporkyfort, ~mmorkz
 	Valued:
 		Cost: 2000
 	RenderSprites:
@@ -10403,7 +10416,7 @@ wh40kwartrukk:
 	WithMuzzleOverlay:
 	SelectionDecorations:
 	Selectable:
-		DecorationBounds: 61866, 61866, 0, -5461
+		DecorationBounds: 1280, 1024
 	Inherits@EXT: ^ExternalConditions ##########
 	AcceptsDeliveredExperience: ##########
 		ValidTypes: vehicle ##########
@@ -10465,7 +10478,7 @@ wh40kwartrakk:
 	WithMuzzleOverlay:
 	SelectionDecorations:
 	Selectable:
-		DecorationBounds: 61866, 61866, 0, -5461
+		DecorationBounds: 1280, 1024
 	Inherits@EXT: ^ExternalConditions ##########
 	AcceptsDeliveredExperience: ##########
 		ValidTypes: vehicle ##########
@@ -10930,7 +10943,6 @@ wh40kmcvc:
 	Inherits: ^Vehicle
 	Inherits@selection: ^SelectableSupportUnit
 	Inherits@mcv: ^MCV
-	Inherits@conyard: ^Conyard
 	Buildable:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 210
@@ -10940,7 +10952,7 @@ wh40kmcvc:
 	Valued:
 		Cost: 2000
 	Tooltip:
-		Name: Stronghold Transporter (Space Marines)
+		Name: Stronghold Transporter (Chaos)
 	Selectable:
 		Priority: 4
 		DecorationBounds: 1536, 1536
@@ -11368,6 +11380,7 @@ wh40khelltalon.toxins:
 	Contrail@2:
 		Offset: -640,-171,0
 		TrailLength: 15
+	RejectsOrders:
 	-MapEditorData:
 	-SpawnActorOnDeath:
 	RenderSprites:
@@ -11449,7 +11462,7 @@ wh40kchaosmarine:
 	Crushable:
 		CrushClasses: vehicle
 	Health:
-		HP: 12000
+		HP: 37500
 	Armor:
 		Type: Wood
 	AutoTarget:
@@ -11576,7 +11589,7 @@ wh40kcultist:
 	Crushable:
 		CrushClasses: vehicle
 	Health:
-		HP: 10200
+		HP: 15500
 	AutoTarget:
 		ScanRadius: 4
 	Armament@PRIMARY: ##########
@@ -11719,7 +11732,7 @@ wh40kdemon:
 	Inherits@horde: ^WH40KHordeEffect
 	Inherits@upsquad: ^WH40KSquadcapChaos
 	Valued:
-		Cost: 700
+		Cost: 600
 	Power:
 		Amount: -20
 	Tooltip:
@@ -11736,7 +11749,7 @@ wh40kdemon:
 	Crushable:
 		CrushClasses: vehicle
 	Health:
-		HP: 35000
+		HP: 60000
 	Armor:
 		Type: Heavy
 	AutoTarget:
@@ -11794,7 +11807,7 @@ wh40kpossessed:
 	Crushable:
 		CrushClasses: vehicle
 	Health:
-		HP: 32000
+		HP: 80000
 	AutoTarget:
 		ScanRadius: 4
 	Armament@PRIMARY: ##########
@@ -11980,7 +11993,7 @@ wh40kraptor:
 	Crushable:
 		CrushClasses: vehicle
 	Health:
-		HP: 15500
+		HP: 40500
 	Armor:
 		Type: Wood
 	AutoTarget:
@@ -12085,7 +12098,7 @@ wh40koliberator:
 	Inherits@horde: ^WH40KHordeEffect
 	Inherits@upsquad: ^WH40KSquadcapChaos
 	Valued:
-		Cost: 2500
+		Cost: 1200
 	Tooltip:
 		Name: Obliterator
 	UpdatesPlayerStatistics:
@@ -12100,7 +12113,7 @@ wh40koliberator:
 		Locomotor: heavytracked
 	-Crushable:
 	Health:
-		HP: 300000
+		HP: 110000
 	Armor:
 		Type: Heavy
 	AutoTarget:
@@ -12233,7 +12246,7 @@ wh40kprincedemon:
 		Locomotor: heavytracked
 	-Crushable:
 	Health:
-		HP: 820000
+		HP: 600000
 	Armor:
 		Type: Heavy
 	AutoTarget:
@@ -12290,7 +12303,7 @@ wh40ksorcerer:
 	Crushable:
 		CrushClasses: vehicle
 	Health:
-		HP: 142000
+		HP: 100000
 	AutoTarget:
 		ScanRadius: 4
 	Armament@PRIMARY: ##########
@@ -12339,7 +12352,7 @@ wh40kchaoslord:
 	Crushable:
 		CrushClasses: vehicle
 	Health:
-		HP: 142000
+		HP: 163000
 	AutoTarget:
 		ScanRadius: 4
 	Armament@PRIMARY: ##########
@@ -12376,11 +12389,11 @@ wh40kberserk:
 	Inherits@vo: ^AttackFrontalVoice
 	Inherits@upsquad: ^WH40KSquadcapChaos
 	Valued:
-		Cost: 1000
+		Cost: 400
 	Power:
 		Amount: -20
 	Tooltip:
-		Name: Khorne Berzerk
+		Name: Khorne Berzerker
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
@@ -12394,7 +12407,7 @@ wh40kberserk:
 	Crushable:
 		CrushClasses: vehicle
 	Health:
-		HP: 120000
+		HP: 61000
 	AutoTarget:
 		ScanRadius: 4
 	Armament@PRIMARY: ##########
@@ -12667,7 +12680,7 @@ wh40kupmonasteryc:
 		Name: Decreased Monastery
 	Buildable:
 		BuildPaletteOrder: 200
-		Queue: Upgrades
+		Queue: Defence, RADefence
 		Description: Increases Monastery to 25% of health, Unlock new Tech
 		Prerequisites: ~!wh40kupmonastery, barracks, ~mmchaos
 	Valued:
@@ -12683,7 +12696,7 @@ wh40kupmonastery2c:
 		Name: Unholy Monastery
 	Buildable:
 		BuildPaletteOrder: 200
-		Queue: Upgrades
+		Queue: Defence, RADefence
 		Description: Increases Monastery to 25% of health, Unlock new Tech
 		Prerequisites: ~!wh40kupmonastery2, wh40kupmonastery, vehicleproduction, ~mmchaos
 	Valued:
@@ -12699,7 +12712,7 @@ wh40kupcapincreasec:
 		Name: Squad Cap Increase
 	Buildable:
 		BuildPaletteOrder: 200
-		Queue: Upgrades
+		Queue: Defence, RADefence
 		Description: Increase Marine Production
 		Prerequisites: ~!wh40kupcapincrease, barracks, ~mmchaos
 	Valued:
@@ -12715,7 +12728,7 @@ wh40kupcapincrease2c:
 		Name: Squad Cap Increase
 	Buildable:
 		BuildPaletteOrder: 200
-		Queue: Upgrades
+		Queue: Defence, RADefence
 		Description: Increase Vehicle Production
 		Prerequisites: ~!wh40kupcapincrease2, vehicleproduction, ~mmchaos
 	Valued:
@@ -12809,6 +12822,7 @@ wh40kdemonstrength:
 #######################################
 wh40kstrongholdc:
 	Inherits: ^BaseBuilding
+	Inherits@shape: ^3x3Shape
 	Inherits@CPQ: ^CPQCondition
 	Inherits@aicash: ^AIConyardCash
 	Inherits@conyard: ^Conyard
@@ -13263,6 +13277,7 @@ wh40kmachinepit:
 
 wh40kprocc:
 	Inherits: ^BaseBuilding
+	Inherits@shape: ^3x3Shape
 	Inherits@ref: ^Refinery
 	Buildable:
 		Queue: Building, RABuilding
@@ -13280,8 +13295,8 @@ wh40kprocc:
 		BuildDuration: 500
 		BuildDurationModifier: 100
 	Selectable:
-		Bounds: 3072, 3072
-		DecorationBounds: 3072, 3072
+		# Bounds: 3072, 3072
+		# DecorationBounds: 3072, 3072
 	SelectionDecorations:
 	Power:
 		Amount: -30
@@ -13294,7 +13309,7 @@ wh40kprocc:
 	Refinery:
 	DockHost:
 		DockAngle: 256
-		DockOffset: 1, 2, 0
+		DockOffset: 1c0, 2c0, 0
 	StoresResources:
 		Capacity: 5000 #2000
 	DrawLineToTarget:
@@ -13341,7 +13356,7 @@ wh40kbolterturretc:
 		BuildDurationModifier: 40
 		Description: All-purpose defensive structure.\n  Strong vs Aircraft, Infantry\n  Weak vs Vehicles
 	Selectable:
-		Bounds: 87381, 89173
+		Bounds: 1024, 1024
 	SelectionDecorations:
 	Health:
 		HP: 160000
@@ -13379,8 +13394,8 @@ wh40kbolterturretc:
 	DetectCloaked:
 		Range: 5c0
 	# -RenderDetectionCircle:
-	Power:
-		Amount: -15
+	# Power:
+	# 	Amount: -15
 	RenderSprites:
 
 wh40kbolterturret2c:
@@ -13400,7 +13415,7 @@ wh40kbolterturret2c:
 		BuildDurationModifier: 40
 		Description: All-purpose defensive structure.\n  Strong vs Aircraft, Infantry\n  Weak vs Vehicles
 	Selectable:
-		Bounds: 87381, 89173
+		Bounds: 1024, 1024
 	SelectionDecorations:
 	Health:
 		HP: 150000
@@ -13438,8 +13453,8 @@ wh40kbolterturret2c:
 	DetectCloaked:
 		Range: 5c0
 	# -RenderDetectionCircle:
-	Power:
-		Amount: -15
+	# Power:
+	# 	Amount: -15
 	RenderSprites:
 
 wh40kdaemonpit:

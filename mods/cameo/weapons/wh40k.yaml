@@ -112,6 +112,7 @@ WH40KKasrkinMGG:
 	Range: 8c0
 	Warhead@1Dam: SpreadDamage
 		Damage: 500
+
 WH40KTechpriestGun:
 	Inherits: WH40KImperialGuardMG
 
@@ -331,6 +332,7 @@ WH40KBasiliskGun:
 			Concrete: 44
 		Spread: 420
 		Damage: 18470
+
 WH40KSentinelCannon:
 	Inherits: ^TankDestroyerCannon
 	Range: 7c0
@@ -344,6 +346,10 @@ WH40KSentinelCannon:
 		SecondaryBeamWidth: 45
 		SecondaryBeamZOffset: 2047
 		SecondaryBeamColor: FFFFFF
+	Warhead@TankDestroyerCannon: SpreadDamage
+		Damage: 6000
+		DamageTypes: Prone75Percent, TriggerProne, FireDeath, Incendiary
+
 WH40KShootaBoyzGun:
 	Inherits: M16
 	ReloadDelay: 9
@@ -359,6 +365,7 @@ WH40KShootaBoyzGun:
 			Light: 24
 			Heavy: 12
 		ValidTargets: Ground, Air
+
 WH40KBigShoota:
 	Inherits: WH40KShootaBoyzGun
 	ReloadDelay: 3
@@ -640,6 +647,7 @@ WH40KPredatorLasgunSmallChaos:
 	Inherits: WH40KPredatorLasgunSmall
 	Projectile: LaserZap
 		Color: E1256780
+
 WH40KPredatorCannon:
 	Inherits: 70mm
 	ReloadDelay: 70
@@ -649,6 +657,7 @@ WH40KPredatorCannon:
 		Speed: 1c512
 	Warhead@1Dam: SpreadDamage
 		Damage: 5500
+
 WH40KTankbustaMissile:
 	Inherits: WH40KHeavyMissileLauncher
 	Range: 7c0
@@ -723,10 +732,12 @@ PriestChainsaw:
 	ReloadDelay: 15
 	Burst: 2
 	BurstDelays: 20
+	Report: DSSAWFUL.WAV, DSSAWUP.WAV
 	StartBurstReport: DSSAWFUL.WAV, DSSAWUP.WAV
 	Warhead@1Dam: SpreadDamage
 		Spread: 50
 		Damage: 8000
+
 WH40KBommaBomb:
 	Inherits: TankKiller
 	Burst: 1
