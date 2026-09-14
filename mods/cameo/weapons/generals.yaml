@@ -409,7 +409,6 @@ GLTractorContaminate:
 		Speed: 20, 40
 		TurnRate: 5
 
-
 GLTractorContaminateBeta:
 	Inherits: TractorGLAnthraxBlue
 	ReloadDelay: 40
@@ -428,10 +427,9 @@ GLTractorContaminateGamma:
 		Speed: 20, 40
 		TurnRate: 5
 
-
 GLTunnelToxinWeapon:
 	Inherits: GLRebelToxinGarrison
-	Range: 8c0
+	Range: 4c0
 
 #####################################################
 # Suicide Weapons

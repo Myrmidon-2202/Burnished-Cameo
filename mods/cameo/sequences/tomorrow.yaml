@@ -28,7 +28,7 @@ dthand:
 	muzzle: 
 		Filename: gunfire2.shp
 		Length: *
-	bib: bib3
+	bib:
 		UseTilesetExtension: true
 		Length: *
 		Offset: 0,0
@@ -132,7 +132,7 @@ dtstrike:
 		Filename: atwrmake.shp
 		Length: *
 		Tick: 80
-	bib: bib3
+	bib: bib3.tem
 		UseTilesetExtension: true
 		Length: *
 		Scale: 1.0
@@ -154,7 +154,7 @@ dtpower:
 	dead: 
 		Filename: powrdead.shp
 		Tick: 800
-	bib: bib3
+	bib: bib3.tem
 		Length: *
 		UseTilesetExtension: true
 		TilesetOverrides:
@@ -207,7 +207,7 @@ dtbpower:
 		Start: 2
 		Filename: dtpower.shp
 		Tick: 800
-	bib: bib3
+	bib: bib3.tem
 		Length: *
 		UseTilesetExtension: true
 		TilesetOverrides:
@@ -232,7 +232,7 @@ dtapower:
 		Start: 2
 		Filename: dtoutpost.shp
 		Tick: 800
-	# bib: bib3
+	# bib: bib3.tem
 	# 	Length: *
 	# 	UseTilesetExtension: true
 	# 	TilesetOverrides:
@@ -256,7 +256,7 @@ dtepower:
 		Start: 2
 		Filename: powershed.shp
 		Tick: 800
-	bib: bib3
+	bib: bib3.tem
 		Length: *
 		UseTilesetExtension: true
 		TilesetOverrides:
@@ -342,7 +342,7 @@ dtnuke:
 		Tick: 80
 		Scale: 1.0
 	bib: 
-		Filename: bib3
+		Filename: bib3.tem
 		UseTilesetExtension: true
 		Length: *
 		Scale: 1.0
@@ -369,7 +369,7 @@ dtbatek:
 		Length: *
 		Scale: 2.0
 	bib: 
-		Filename: bib3
+		Filename: bib3.tem
 		UseTilesetExtension: true
 		Length: *
 		Scale: 1.0
@@ -396,7 +396,7 @@ dtbmrkt:
 		Length: 16
 		Scale: 2.0
 	bib: 
-		Filename: bib3
+		Filename: bib3.tem
 		UseTilesetExtension: true
 		Length: *
 		Scale: 1.0
@@ -418,7 +418,7 @@ dtbio:
 		Tick: 80
 	dead: 
 		Filename: bio.shp
-	bib: bib3
+	bib: bib3.tem
 		Length: *
 		UseTilesetExtension: true
 		TilesetOverrides:
@@ -573,7 +573,7 @@ dtshop:
 		Filename: powrdead.shp
 		Tick: 800
 		Scale: 1.0
-	bib: bib3
+	bib: bib3.tem
 		Length: *
 		UseTilesetExtension: true
 		TilesetOverrides:
@@ -598,7 +598,7 @@ dtrpower:
 		Filename: dtrpowermake.shp
 		Length: *
 		Tick: 80
-	bib: bib3
+	bib: bib3.tem
 		UseTilesetExtension: true
 		Length: *
 		Scale: 1.0
@@ -626,7 +626,7 @@ dtjpower:
 		Length: *
 		Tick: 80
 	bib: 
-		Filename: bib3
+		Filename: bib3.tem
 		UseTilesetExtension: true
 		Length: *
 		Scale: 1.0
@@ -871,7 +871,7 @@ dtprison:
 		Filename: prisonmake.shp
 		Length: *
 		Tick: 80
-	bib: bib3
+	bib: bib3.tem
 		UseTilesetExtension: true
 		Length: *
 		Scale: 1.0
@@ -897,7 +897,7 @@ dthq:
 		Filename: dthqmake.shp
 		Length: *
 		Tick: 80
-	bib: bib3
+	bib: bib3.tem
 		UseTilesetExtension: true
 		Length: *
 		Scale: 1.0

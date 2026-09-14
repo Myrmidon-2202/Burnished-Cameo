@@ -742,6 +742,11 @@ sglaangrymob1:
 		Length: 10
 		Facings: 8
 		Tick: 130
+	die1: 
+		Filename: sglmob03.shp
+		Start: 168
+		Length: 20
+		Tick: 130
 	die-ak: 
 		Filename: sglmob03.shp
 		Start: 168
@@ -773,6 +778,21 @@ sglaangrymob1:
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
+	die5:
+		Filename: gle3.shp
+		Start: 434
+		Length: 18
+		Tick: 80
+	# Tib
+	die6: 
+		Filename: gle3.shp
+		Start: 382
+		Length: 11
+		Tick: 80
+	# Electro
+	die7: 
+		Filename: electro.shp ##########
+		Length: *
 	muzzle: 
 		Filename: minigun.shp
 		Length: 3
@@ -811,6 +831,21 @@ sglaangrymob2:
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
+	die5:
+		Filename: gle3.shp
+		Start: 434
+		Length: 18
+		Tick: 80
+	# Tib
+	die6: 
+		Filename: gle3.shp
+		Start: 382
+		Length: 11
+		Tick: 80
+	# Electro
+	die7: 
+		Filename: electro.shp ##########
+		Length: *
 	idle:
 		Start: 208
 		Length: 20
@@ -2438,7 +2473,7 @@ schtankhunter:
 		Length: 12
 		Tick: 80
 	# Burn
-	die5: 
+	die5:
 		Filename: gle3.shp
 		Start: 434
 		Length: 18
@@ -3536,6 +3571,10 @@ usamissiledefender:
 	Defaults:
 		Scale: 2.0
 	stand: 
+		Filename: usamissiledefender.shp
+		Start: 0
+		Facings: 8
+	stand2: 
 		Filename: usamissiledefender.shp
 		Start: 0
 		Facings: 8
