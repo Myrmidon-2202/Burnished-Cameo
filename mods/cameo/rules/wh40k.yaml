@@ -1063,6 +1063,156 @@ wh40kstrategyc:
 		Modifier: 110
 	ProvidesPrerequisite@buildingname:
 
+wh40kstrategye:
+	Inherits: ^ArmedBaseBuilding
+	Inherits@2: ^CashTricklerMultipliers
+	Inherits@shape: ^2x2Shape
+	Inherits@lowpower: ^DisabledOverlay
+	Buildable:
+		Queue: Building, RABuilding
+		BuildPaletteOrder: 120
+		Prerequisites: wh40kpowere, ~mmeldar
+		Description: Provides Passive income.\n Provides Base Area .\n Attacks when is Upgraded.\n  Upgradeable with Addons
+		BuildLimit: 5
+	Valued:
+		Cost: 1500
+	HitShape:
+		UseTargetableCellsOffsets: false
+		TargetableOffsets: 0,0,0, 630,-300,0, 420,512,0, -420,-512,0, -630,300,0
+	Selectable:
+		Priority: 0
+		Bounds: 2048, 2048
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Health:
+		HP: 70000
+	UpdatesDerrickCount:
+	RevealsShroud:
+		Range: 4c0
+	CaptureManager:
+	Capturable:
+		Types: building
+	# EngineerRepairable:	CashTrickler:
+		Interval: 50
+		Amount: 6
+		RequiresCondition: !addon1
+	CashTrickler@lvl1:
+		Interval: 50
+		Amount: 12
+		RequiresCondition: addon1 && !upgrade1 && !addon2
+	CashTrickler@lvl2:
+		Interval: 50
+		Amount: 18
+		RequiresCondition: addon2 && !upgrade1 && !addon3
+	CashTrickler@lvl3:
+		Interval: 50
+		Amount: 24
+		RequiresCondition: addon3 && !upgrade1
+	CashTrickler@lvl1up1:
+		Interval: 50
+		Amount: 42
+		RequiresCondition: addon1 && upgrade1  && !upgrade2 && !addon2
+	CashTrickler@lvl2up1:
+		Interval: 50
+		Amount: 48
+		RequiresCondition: addon2 && upgrade1  && !upgrade2 && !addon3
+	CashTrickler@lvl3up1:
+		Interval: 50
+		Amount: 54
+		RequiresCondition: addon3 && upgrade1  && !upgrade2
+	CashTrickler@lvl1up2:
+		Interval: 50
+		Amount: 62
+		RequiresCondition: addon1 && upgrade2 && !addon2
+	CashTrickler@lvl2up2:
+		Interval: 50
+		Amount: 68
+		RequiresCondition: addon2 && upgrade2 && !addon3
+	CashTrickler@lvl3up2:
+		Interval: 50
+		Amount: 74
+		RequiresCondition: addon3 && upgrade2
+	CashTricklerBar:
+	Tooltip:
+		Name: Strategic Point
+	RenderSprites:
+		Image: wh40kstrategy
+	-WithDeathAnimation:
+	Power:
+		Amount: -25
+	Production@1:
+		Produces: WH40KStrategy1
+		RequiresCondition: !addon1
+	ProductionQueue@1:
+		Type: WH40KStrategy1
+		Group: Addon
+		LowPowerModifier: 200
+		QueueLimit: 1
+		ItemLimit: 1
+		DisplayOrder: 0
+	GrantConditionOnProduction@addon1:
+		Condition: addon1
+		Actors: pscwh40kstrategy1
+	Production@2:
+		Produces: WH40KStrategy2
+		RequiresCondition: !addon2 && addon1
+	ProductionQueue@2:
+		Type: WH40KStrategy2
+		Group: Addon
+		LowPowerModifier: 200
+		QueueLimit: 1
+		ItemLimit: 1
+		DisplayOrder: 0
+	GrantConditionOnProduction@addon2:
+		Condition: addon2
+		Actors: pscwh40kstrategy2
+	Production@3:
+		Produces: WH40KStrategy3
+		RequiresCondition: !addon3 && addon2
+	ProductionQueue@3:
+		Type: WH40KStrategy3
+		Group: Addon
+		LowPowerModifier: 200
+		QueueLimit: 1
+		ItemLimit: 1
+		DisplayOrder: 0
+	GrantConditionOnProduction@addon3:
+		Condition: addon3
+		Actors: pscwh40kstrategy3
+	DamageMultiplier@addon1:
+		RequiresCondition: addon1
+		Modifier: 90
+	DamageMultiplier@addon2:
+		RequiresCondition: addon2
+		Modifier: 90
+	DamageMultiplier@addon3:
+		RequiresCondition: addon3
+		Modifier: 90
+	GivesBuildableArea:
+		AreaTypes: building
+	BaseProvider:
+		Range: 5c0
+	Armament:
+		Weapon: WH40KHeavyBolterMG
+		LocalOffset: 700,0,500
+		RequiresCondition: addon2
+	Armament@2:
+		Weapon: WH40KHeavyBolterMG
+		LocalOffset: 700,0,500
+		RequiresCondition: addon3
+	WithIdleOverlay@addon1:
+		RequiresCondition: addon1
+		Sequence: idle2
+	WithSpriteTurret@addon2:
+		RequiresCondition: addon2
+		Sequence: turret1
+	WithSpriteTurret@addon3:
+		RequiresCondition: addon3
+		Sequence: turret2
+	RangeMultiplier@Extrarange:
+		Modifier: 110
+
 wh40kstrategyt:
 	Inherits: ^ArmedBaseBuilding
 	Inherits@2: ^CashTricklerMultipliers
@@ -1643,7 +1793,7 @@ wh40karmory:
 	Valued:
 		Cost: 1500
 	Tooltip:
-		Name: Upgrades Control
+		Name: Tactica Control
 	ProvidesPrerequisite:
 		Prerequisite: usastrategy
 	Buildable:
@@ -1749,7 +1899,7 @@ wh40kheavybolt:
 		Bounds: 1024, 1024
 	SelectionDecorations:
 	Health:
-		HP: 100000
+		HP: 75000
 	Armor:
 		Type: Heavy
 	Building:
@@ -2426,8 +2576,8 @@ wh40kupenergy1:
 	Buildable:
 		BuildPaletteOrder: 210
 		Queue: Addons
-		Description: Increases Energy of Generators., ~mmimperialguard
-		Prerequisites: ~!wh40kupenergy1
+		Description: Increases Energy of Generators.
+		Prerequisites: ~!wh40kupenergy1, ~wh30kcommand
 	Valued:
 		Cost: 1500
 	RenderSprites:
@@ -2443,7 +2593,7 @@ wh40kupenergy2:
 		BuildPaletteOrder: 210
 		Queue: Addons
 		Description: Increases Energy of Generators.
-		Prerequisites: ~!wh40kupenergy2, wh40kupenergy1, ~mmimperialguard
+		Prerequisites: ~!wh40kupenergy2, wh40kupenergy1, ~wh30kcommand
 	Valued:
 		Cost: 2500
 	RenderSprites:
@@ -4467,7 +4617,7 @@ wh40krankguards:
 		BuildPaletteOrder: 200
 		Queue: Promotions
 		Description: A group of Regimental Guards spawn at your base.
-		Prerequisites: !wh40krankguards, rank1
+		Prerequisites: !wh40krankguards, rank1, ~mmimperialguard
 	RenderSprites:
 		Image: wh40kguard
 	ProvidesPrerequisite:
@@ -4481,7 +4631,7 @@ wh40krankcommisar:
 		BuildPaletteOrder: 200
 		Queue: Promotions
 		Description: A Regimental Commissar spawn at your base.
-		Prerequisites: !wh40krankcommisar, rank1
+		Prerequisites: !wh40krankcommisar, rank1, ~mmimperialguard
 	RenderSprites:
 		Image: wh40kcommisair
 	ProvidesPrerequisite:
@@ -4495,7 +4645,7 @@ wh40kranktechpriest:
 		BuildPaletteOrder: 200
 		Queue: Promotions
 		Description: A Expert Techpriest spawn at your base.
-		Prerequisites: !wh40kranktechpriest, rank1
+		Prerequisites: !wh40kranktechpriest, rank1, ~mmimperialguard
 	RenderSprites:
 		Image: wh40ktechpriest
 	ProvidesPrerequisite:
@@ -4509,7 +4659,7 @@ wh40krankpsyker:
 		BuildPaletteOrder: 200
 		Queue: Promotions
 		Description: A Sanctioned Psyker spawn at your base.
-		Prerequisites: !wh40krankpsyker, rank1
+		Prerequisites: !wh40krankpsyker, rank1, ~mmimperialguard
 	RenderSprites:
 		Image: wh40kpsyker
 	ProvidesPrerequisite:
@@ -4523,7 +4673,7 @@ wh40krankkars:
 		BuildPaletteOrder: 200
 		Queue: Promotions
 		Description: A group of Veteran Kasrkin spawn at your base.
-		Prerequisites: !wh40krankkars, rank3, rank1
+		Prerequisites: !wh40krankkars, rank3, rank1, ~mmimperialguard
 	RenderSprites:
 		Image: wh40kkars
 	ProvidesPrerequisite:
@@ -4537,7 +4687,7 @@ wh40krankogryn:
 		BuildPaletteOrder: 200
 		Queue: Promotions
 		Description: A group of Bone'ead Ogryn spawn at your base.
-		Prerequisites: !wh40krankogryn, rank3, rank1
+		Prerequisites: !wh40krankogryn, rank3, rank1, ~mmimperialguard
 	RenderSprites:
 		Image: wh40kogrynsargent
 	ProvidesPrerequisite:
@@ -4550,7 +4700,7 @@ wh40kranksentinel:
 		BuildPaletteOrder: 200
 		Queue: Promotions
 		Description: A Sentinel spawn at your base.
-		Prerequisites: !wh40kranksentinel, rank3, rank1
+		Prerequisites: !wh40kranksentinel, rank3, rank1, ~mmimperialguard
 	RenderSprites:
 		Image: wh40ksentinel
 	ProvidesPrerequisite:
@@ -5556,7 +5706,7 @@ wh40kbolterturret:
 		BuildDurationModifier: 40
 		Description: All-purpose defensive structure.\n  Strong vs Aircraft, Infantry\n  Weak vs Vehicles
 	Selectable:
-		Bounds: 87381, 89173
+		Bounds: 1024, 1024
 	SelectionDecorations:
 	Health:
 		HP: 160000
@@ -6740,7 +6890,7 @@ wh40krhino:
 	AttackTurreted:
 	SelectionDecorations:
 	Selectable:
-		DecorationBounds: 61866, 61866, 0, -5461
+		DecorationBounds: 1280, 1024
 	Inherits@EXT: ^ExternalConditions ##########
 	AcceptsDeliveredExperience: ##########
 		ValidTypes: vehicle ##########
@@ -7292,7 +7442,7 @@ wh40klandraider:
 		BuildPaletteOrder: 60
 		Prerequisites: wh40kupmachineculticon, !wh40klandraiderc
 		Queue: Vehicle.Marine
-		Description: Heavy Bolter Marine Tank.\nCan attack Aircraft\n  Strong vs All, Specially Infantry
+		Description: Superheavy Apc.\nCan attack Aircraft\n  Strong vs All, Specially Infantry
 	Mobile:
 		Locomotor: heavytracked
 		Speed: 77
@@ -13522,6 +13672,7 @@ wh40kdaemonpit:
 #######################################
 # wh40kwebway:
 # 	Inherits: ^BaseBuilding
+# 	Inherits@shape: ^3x3Shape
 # 	Inherits@CPQ: ^CPQCondition
 # 	Inherits@aicash: ^AIConyardCash
 # 	Inherits@conyard: ^Conyard
@@ -13533,7 +13684,7 @@ wh40kdaemonpit:
 # 	Valued:
 # 		Cost: 2000
 # 	Tooltip:
-# 		Name: Desecrated Stronghold
+# 		Name: Webway Assembly
 # 	Building:
 # 		Footprint: xxx xxx xxx
 # 		Dimensions: 3,3
@@ -13544,58 +13695,7 @@ wh40kdaemonpit:
 # 	RevealsShroud:
 # 		Range: 10c0
 # 	WithBuildingBib:
-# 	Production@NORMAL:
-# 		Produces: Defence
-# 		RequiresCondition: !classicproductionqueues
-# 	Production@CLASSICPRODUCTIONQUEUES:
-# 		Produces: RADefence
-# 		RequiresCondition: classicproductionqueues
-# 	GrantConditionOnPrerequisite@GLOBALFACTUNDEPLOY:
-# 		Condition: factundeploy
-# 		Prerequisites: global-factundeploy
-# 	ProductionQueue@AlliesBuilding:
-# 		Type: Building
-# 		DisplayOrder: 0
-# 		Group: Building
-# 		LowPowerModifier: 200
-# 		QueuedAudio: Building
-# 		ReadyAudio: ConstructionComplete
-# 	ProductionQueue@AlliesDefense:
-# 		Type: Defence
-# 		DisplayOrder: 1
-# 		Group: Defence
-# 		LowPowerModifier: 300
-# 		QueuedAudio: Building
-# 		ReadyAudio: ConstructionComplete
 # 	BaseBuilding:
-# 	ProductionBar@BuildingAllies:
-# 		ProductionType: Building
-# 		RequiresCondition: !classicproductionqueues
-# 	ProductionBar@DefenceAllies:
-# 		ProductionType: Defence
-# 		RequiresCondition: !classicproductionqueues
-# 	ProductionBar@RABuildingAllies:
-# 		ProductionType: RABuilding
-# 		RequiresCondition: classicproductionqueues
-# 	ProductionBar@RADefenceAllies:
-# 		ProductionType: RADefence
-# 		RequiresCondition: classicproductionqueues
-# 	ProductionAirdropCA@NORMAL:
-# 		Produces: Building
-# 		RequiresCondition: !classicproductionqueues
-# 		ActorType: wh40kthunderhawk
-# 		EntryType: DropSiteClosestEdge
-# 		ExitType: StraightAhead
-# 		LandingFacing: 64
-# 		ReadyAudio: ReinforcementsArrived
-# 	ProductionAirdropCA@CLASSIC:
-# 		Produces: RABuilding
-# 		RequiresCondition: classicproductionqueues
-# 		ActorType: wh40kthunderhawk
-# 		EntryType: DropSiteClosestEdge
-# 		ExitType: StraightAhead
-# 		LandingFacing: 64
-# 		ReadyAudio: ReinforcementsArrived
 # 	BaseProvider:
 # 		Range: 8c0
 # 	WithBuildingPlacedAnimation:
@@ -13604,9 +13704,9 @@ wh40kdaemonpit:
 # 	ProvidesPrerequisite@buildingname:
 # 		Prerequisite: wh30kcommand
 # 	Buildable:
-# 		Description: Builds structures
+# 		Description: Calls structures forth from the Webway.
 # 	ProvidesPrerequisite@factionallies:
-# 		Prerequisite: mmchaos
+# 		Prerequisite: mmeldar
 # 	RallyPoint: ##########
 # 		Path: 0,2
 # 	Exit@1:
@@ -13642,7 +13742,7 @@ wh40kdaemonpit:
 # 	Buildable:
 # 		Queue: Building, RABuilding
 # 		BuildPaletteOrder: 10
-# 		Prerequisites: wh30kcommand
+# 		Prerequisites: ~mmeldar
 # 		Description: Provides power for other structures.
 # 	Valued:
 # 		Cost: 330 #300
@@ -13678,6 +13778,8 @@ wh40kdaemonpit:
 # 	PowerMultiplier@wh40kupenergy2:
 # 		Modifier: 150
 # 		RequiresCondition: wh40kupenergy2
+# 	ProvidesPrerequisite@eldarpower:
+# 		Prerequisite: wh40kpowere
 
 # wh40kbarre:
 # 	Inherits: ^BaseBuilding
@@ -13693,8 +13795,8 @@ wh40kdaemonpit:
 # 	Buildable:
 # 		Queue: Building, RABuilding
 # 		BuildPaletteOrder: 20
-# 		Prerequisites: anypower
-# 		Description: Trains infantry
+# 		Prerequisites: wh40kpowere, ~mmeldar
+# 		Description: Trains Aspect Warriors
 # 	Power:
 # 		Amount: -25
 # 	Valued:
@@ -13722,9 +13824,6 @@ wh40kdaemonpit:
 # 	Production@NORMAL:
 # 		Produces: Infantry
 # 		RequiresCondition: !classicproductionqueues
-# 	Production@CLASSICPRODUCTIONQUEUES:
-# 		Produces: RAInfantry
-# 		RequiresCondition: classicproductionqueues
 # 	ProductionQueue:
 # 		Type: Infantry
 # 		DisplayOrder: 2
@@ -13735,12 +13834,9 @@ wh40kdaemonpit:
 # 		QueuedAudio: Training
 # 		OnHoldAudio: OnHold
 # 		CancelledAudio: Cancelled
-# 	ProductionBar@INFANTRYALLIES:
+# 	ProductionBar@INFANTRYELDAR:
 # 		ProductionType: Infantry
 # 		RequiresCondition: !classicproductionqueues
-# 	ProductionBar@RAINFANTRYALLIES:
-# 		ProductionType: RAInfantry
-# 		RequiresCondition: classicproductionqueues
 # 	ProvidesPrerequisite@barracks:
 # 		Prerequisite: barracks
 # 	ProvidesPrerequisite@buildingname:
@@ -13765,13 +13861,13 @@ wh40kdaemonpit:
 # 		Queue: Building, RABuilding
 # 		BuildPaletteOrder: 20
 # 		Prerequisites: anypower
-# 		Description: Trains infantry
+# 		Description: Trains support platforms, buffs surrounding actors, and acts as teleportation network.
 # 	Power:
 # 		Amount: -30
 # 	Valued:
 # 		Cost: 750
 # 	Tooltip:
-# 		Name: Aspect Portal
+# 		Name: Webway Gate
 # 	Building:
 # 		Footprint: xx xx ==
 # 		Dimensions: 2,3
@@ -13791,13 +13887,9 @@ wh40kdaemonpit:
 # 		SpawnOffset: -725,640,0
 # 		ExitCell: 0,2
 # 	Production@NORMAL:
-# 		Produces: Infantry
-# 		RequiresCondition: !classicproductionqueues
-# 	Production@CLASSICPRODUCTIONQUEUES:
-# 		Produces: RAInfantry
-# 		RequiresCondition: classicproductionqueues
+# 		Produces: Infantry2.Eldar
 # 	ProductionQueue:
-# 		Type: Infantry
+# 		Type: Infantry2.Edlar
 # 		DisplayOrder: 2
 # 		Group: Infantry
 # 		ReadyAudio: UnitReady
@@ -13807,12 +13899,8 @@ wh40kdaemonpit:
 # 		OnHoldAudio: OnHold
 # 		CancelledAudio: Cancelled
 # 		BuildDurationModifier: 200
-# 	ProductionBar@INFANTRYALLIES:
-# 		ProductionType: Infantry
-# 		RequiresCondition: !classicproductionqueues
-# 	ProductionBar@RAINFANTRYALLIES:
-# 		ProductionType: RAInfantry
-# 		RequiresCondition: classicproductionqueues
+# 	ProductionBar@INFANTRYELDAR:
+# 		ProductionType: Infantry2.Eldar
 # 	ProvidesPrerequisite@barracks:
 # 		Prerequisite: barracks
 # 	ProvidesPrerequisite@buildingname:
@@ -13820,6 +13908,205 @@ wh40kdaemonpit:
 # 		Image: wh40kgate
 # 	BaseProvider:
 # 		Range: 8c0
+
+# wh40kweape:
+# 	Inherits: ^BunkerBaseBuilding
+# 	Inherits@shape: ^4x3Shape
+# 	Inherits@CPQWP: ^CPQConditionWithPrimary
+# 	Inherits@prod: ^ProducesUnits
+# 	Inherits@gensound: ^GeneralsDamageBuilding
+# 	Valued:
+# 		Cost: 2000
+# 	Power:
+# 		Amount: -50
+# 	Tooltip:
+# 		Name: Support Portal
+# 	Buildable:
+# 		BuildPaletteOrder: 50
+# 		Prerequisites: wh40kwebway, ~mmeldar
+# 		Queue: Building
+# 		Description: Summons Eldar vehicles.
+# 	Building:
+# 		Footprint: xxxx x++x ====
+# 		Dimensions: 4,3
+# 	SelectionDecorations:
+# 	Health:
+# 		HP: 200000
+# 	RevealsShroud:
+# 		Range: 5c0
+# 	WithBuildingBib:
+# 	RallyPoint:
+# 		Path: 1,4
+# 	Exit@1:
+# 		SpawnOffset: 128,256,0
+# 		ExitCell: 1,1
+# 		ExitDelay: 3
+# 	Exit@2:
+# 		ExitCell: 2,1
+# 		ExitDelay: 3
+# 	#Production@Upgrades:
+# 	#	Produces: VehicleUpgrades
+# 	Production@NORMAL:
+# 		Produces: Vehicle.Eldar
+# 	ProductionQueue:
+# 		Type: Vehicle.Eldar
+# 		DisplayOrder: 3
+# 		Group: Vehicle
+# 		LowPowerModifier: 200
+# 		ReadyAudio: UnitReady
+# 		BlockedAudio: NoBuild
+# 		LimitedAudio: BuildingInProgress
+# 		QueuedAudio: Training
+# 		OnHoldAudio: OnHold
+# 		CancelledAudio: Cancelled
+# 	ProductionBar@VEHICLEGUARD:
+# 		ProductionType: Vehicle.Eldar
+# 	ProvidesPrerequisite@buildingname:
+# 	ProvidesPrerequisite@vehicleproduction:
+# 		Prerequisite: vehicleproduction
+# 	RenderSprites:
+# 		Image: wh40kweap
+
+# wh40karmorye:
+# 	Inherits: ^BaseBuilding
+# 	Inherits@shape: ^2x2Shape
+# 	Valued:
+# 		Cost: 1500
+# 	Tooltip:
+# 		Name: Spirit Shrine
+# 	ProvidesPrerequisite:
+# 		Prerequisite: usastrategy
+# 	Buildable:
+# 		BuildPaletteOrder: 60
+# 		Prerequisites: barracks, ~mmeldar
+# 		Queue: Building
+# 		Description: Provides access to advanced Eldar technologies.
+# 	Building:
+# 		Footprint: xx xx ==
+# 		Dimensions: 2,3
+# 		LocalCenterOffset: 0,-512,0
+# 	SelectionDecorations:
+# 	Health:
+# 		HP: 200000
+# 	RevealsShroud:
+# 		Range: 5c0
+# 	WithBuildingBib:
+# 	ProvidesPrerequisite@buildingname:
+# 	Production@Upgrades:
+# 		Produces: Upgrades
+# 	Power:
+# 		Amount: -25
+# 	RenderSprites:
+# 		Image: wh40karmorym
+
+# wh40ksupport:
+# 	Inherits: ^Defense
+# 	Inherits@shape: ^2x2Shape
+# 	Inherits@AUTOTARGET: ^AutoTargetAll
+# 	Inherits@EMP: ^TurretEMP
+# 	Valued:
+# 		Cost: 1000
+# 	Tooltip:
+# 		Name: Support Platform (Scatter Laser)
+# 	Buildable:
+# 		BuildPaletteOrder: 40
+# 		Prerequisites: barracks, ~mmeldar
+# 		Queue: Defence
+# 		BuildDurationModifier: 40
+# 		Description: All-purpose defensive structure.\n  Strong vs Aircraft, Infantry\n  Weak vs Vehicles
+# 	Selectable:
+# 		Bounds: 1024, 1024
+# 	SelectionDecorations:
+# 	Health:
+# 		HP: 75000
+# 	Armor:
+# 		Type: Heavy
+# 	Building:
+# 		Footprint: xx xx
+# 		Dimensions: 2,2
+# 		LocalCenterOffset: 0,-512,0
+# 	RevealsShroud:
+# 		Range: 7c0
+# 	Turreted:
+# 		TurnSpeed: 48
+# 		Offset: 0,0,120
+# 	WithSpriteBody:
+# 	WithSpriteTurret:
+# 		RequiresCondition: !build-incomplete
+# 	Armament@NORMAL:
+# 		Weapon: WH40KHeavyBolterMG
+# 		LocalOffset: -85,120,340, -85,-120,340
+# 		LocalYaw: -100, 100
+# 		Recoil: 10
+# 		MuzzleSequence: muzzle
+# 	Armament@AA:
+# 		Weapon: WH40KHeavyBolterMG2
+# 		LocalOffset: -85,120,340, -85,-120,340
+# 		LocalYaw: -100, 100
+# 		Recoil: 10
+# 		MuzzleSequence: muzzle
+# 	AttackTurreted:
+# 		PauseOnCondition: lowpower || disabled
+# 	WithMuzzleOverlay:
+# 	BodyOrientation:
+# 		QuantizedFacings: 8
+# 	DetectCloaked:
+# 		Range: 5c0
+
+# wh40ksupportd:
+# 	Inherits: ^Defense
+# 	Inherits@shape: ^2x2Shape
+# 	Inherits@AUTOTARGET: ^AutoTargetAll
+# 	Inherits@EMP: ^TurretEMP
+# 	Valued:
+# 		Cost: 1500
+# 	Tooltip:
+# 		Name: Support Platform (D-Cannon)
+# 	Buildable:
+# 		BuildPaletteOrder: 40
+# 		Prerequisites: wh40kwebway, ~mmeldar
+# 		Queue: Defence, RADefence
+# 		BuildDurationModifier: 40
+# 		Description: All-purpose defensive structure.\n  Strong vs Aircraft, Infantry\n  Weak vs Vehicles
+# 	Selectable:
+# 		Bounds: 1024, 1024
+# 	SelectionDecorations:
+# 	Health:
+# 		HP: 75000
+# 	Armor:
+# 		Type: Heavy
+# 	Building:
+# 		Footprint: xx xx
+# 		Dimensions: 2,2
+# 		LocalCenterOffset: 0,-512,0
+# 	RevealsShroud:
+# 		Range: 7c0
+# 	Turreted:
+# 		TurnSpeed: 48
+# 		Offset: 0,0,120
+# 	WithSpriteBody:
+# 	WithSpriteTurret:
+# 		RequiresCondition: !build-incomplete
+# 	Armament@NORMAL:
+# 		Weapon: WH40KHeavyMissileLauncher
+# 		LocalOffset: -85,120,340, -85,-120,340
+# 		LocalYaw: -100, 100
+# 		Recoil: 10
+# 		MuzzleSequence: muzzle
+# 	Armament@AA:
+# 		Weapon: WH40KHeavyMissileLauncher
+# 		LocalOffset: -85,-120,340, -85,120,340
+# 		LocalYaw: -100, 100
+# 		Recoil: 10
+# 		MuzzleSequence: muzzle
+# 	AttackTurreted:
+# 		PauseOnCondition: lowpower || disabled
+# 	WithMuzzleOverlay:
+# 	BodyOrientation:
+# 		QuantizedFacings: 8
+# 	DetectCloaked:
+# 		Range: 5c0
+
 #######################################
 # Eldar Infantry
 #######################################
@@ -13879,6 +14166,572 @@ wh40kdaemonpit:
 # 		ConsumedByCapture: False
 # 		EnterCursor: ability
 # 		EnterBlockedCursor: move-blocked
+
+# wh40kwarlock:
+# 	Inherits: ^Soldier
+# 	Inherits@EXPERIENCE: ^GainsExperience
+# 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+# 	Inherits@DECORATIONS: ^InfantryExperienceHospitalHazmatOverrides
+# 	Inherits@announce: ^AnnounceOnBuild
+# 	Inherits@vo: ^AttackFrontalVoice
+# 	Inherits@horde: ^WH40KHordeEffect
+# 	Valued:
+# 		Cost: 150
+# 	Power:
+# 		Amount: -5
+# 	Tooltip:
+# 		Name: Warlock
+# 	UpdatesPlayerStatistics:
+# 		AddToArmyValue: true
+# 	Buildable:
+# 		BuildPaletteOrder: 60
+# 		Prerequisites: barracks
+# 		Queue: Defence, RADefence
+# 		Description: General-purpose Infantry \n  Strong vs Infantry\n  Weak vs Vehicles
+# 	Mobile:
+# 		Speed: 110
+# 	Crushable:
+# 		CrushClasses: vehicle
+# 	Health:
+# 		HP: 6000
+# 	Armor:
+# 		Type: None
+# 	AutoTarget:
+# 		ScanRadius: 4
+# 	Armament@PRIMARY: ##########
+# 		Weapon: WH40KEldarGuardianRifle
+# 	Armament@GARRISONED: ##########
+# 		Name: garrisoned
+# 		Weapon: WH40KTauPlasmarifle
+# 		MuzzleSequence: garrison-muzzle
+# 	WithInfantryBody:
+# 		IdleSequences: idle1,idle2,idle3,idle4
+# 	Inherits@EXT: ^ExternalConditions ##########
+# 	AcceptsDeliveredExperience: ##########
+# 		ValidTypes: infantry ##########
+# 	Voiced:
+# 		VoiceSet: WH40KChaosMarineVoice
+# 	GainsExperience:
+# 		LevelUpNotification: LevelUpRA2
+# 	Passenger:
+# 		Weight: 1
+# 	-TakeCover:
+# 	Captures:
+# 		CaptureTypes: building, tech
+# 		PlayerExperience: 500
+# 		CaptureDelay: 750
+# 		ConsumedByCapture: False
+# 		EnterCursor: ability
+# 		EnterBlockedCursor: move-blocked
+
+# wh40kranger:
+# 	Inherits: ^Soldier
+# 	Inherits@EXPERIENCE: ^GainsExperience
+# 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+# 	Inherits@DECORATIONS: ^InfantryExperienceHospitalHazmatOverrides
+# 	Inherits@announce: ^AnnounceOnBuild
+# 	Inherits@vo: ^AttackFrontalVoice
+# 	Inherits@horde: ^WH40KHordeEffect
+# 	Valued:
+# 		Cost: 150
+# 	Power:
+# 		Amount: -5
+# 	Tooltip:
+# 		Name: Ranger
+# 	UpdatesPlayerStatistics:
+# 		AddToArmyValue: true
+# 	Buildable:
+# 		BuildPaletteOrder: 60
+# 		Prerequisites: barracks
+# 		Queue: Infantry.Eldar
+# 		Description: General-purpose Infantry \n  Strong vs Infantry\n  Weak vs Vehicles
+# 	Mobile:
+# 		Speed: 110
+# 	Crushable:
+# 		CrushClasses: vehicle
+# 	Health:
+# 		HP: 6000
+# 	Armor:
+# 		Type: None
+# 	AutoTarget:
+# 		ScanRadius: 4
+# 	Armament@PRIMARY: ##########
+# 		Weapon: WH40KEldarGuardianRifle
+# 	Armament@GARRISONED: ##########
+# 		Name: garrisoned
+# 		Weapon: WH40KTauPlasmarifle
+# 		MuzzleSequence: garrison-muzzle
+# 	WithInfantryBody:
+# 		IdleSequences: idle1,idle2,idle3,idle4
+# 	Inherits@EXT: ^ExternalConditions ##########
+# 	AcceptsDeliveredExperience: ##########
+# 		ValidTypes: infantry ##########
+# 	Voiced:
+# 		VoiceSet: WH40KChaosMarineVoice
+# 	GainsExperience:
+# 		LevelUpNotification: LevelUpRA2
+# 	Passenger:
+# 		Weight: 1
+# 	-TakeCover:
+# 	Captures:
+# 		CaptureTypes: building, tech
+# 		PlayerExperience: 500
+# 		CaptureDelay: 750
+# 		ConsumedByCapture: False
+# 		EnterCursor: ability
+# 		EnterBlockedCursor: move-blocked
+
+# wh40kbanshee:
+# 	Inherits: ^Soldier
+# 	Inherits@EXPERIENCE: ^GainsExperience
+# 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+# 	Inherits@DECORATIONS: ^InfantryExperienceHospitalHazmatOverrides
+# 	Inherits@announce: ^AnnounceOnBuild
+# 	Inherits@vo: ^AttackFrontalVoice
+# 	Inherits@horde: ^WH40KHordeEffect
+# 	Valued:
+# 		Cost: 150
+# 	Power:
+# 		Amount: -5
+# 	Tooltip:
+# 		Name: Howling Banshee
+# 	UpdatesPlayerStatistics:
+# 		AddToArmyValue: true
+# 	Buildable:
+# 		BuildPaletteOrder: 60
+# 		Prerequisites: barracks
+# 		Queue: Infantry.Eldar
+# 		Description: General-purpose Infantry \n  Strong vs Infantry\n  Weak vs Vehicles
+# 	Mobile:
+# 		Speed: 110
+# 	Crushable:
+# 		CrushClasses: vehicle
+# 	Health:
+# 		HP: 6000
+# 	Armor:
+# 		Type: None
+# 	AutoTarget:
+# 		ScanRadius: 4
+# 	Armament@PRIMARY: ##########
+# 		Weapon: WH40KEldarGuardianRifle
+# 	Armament@GARRISONED: ##########
+# 		Name: garrisoned
+# 		Weapon: WH40KTauPlasmarifle
+# 		MuzzleSequence: garrison-muzzle
+# 	WithInfantryBody:
+# 		IdleSequences: idle1,idle2,idle3,idle4
+# 	Inherits@EXT: ^ExternalConditions ##########
+# 	AcceptsDeliveredExperience: ##########
+# 		ValidTypes: infantry ##########
+# 	Voiced:
+# 		VoiceSet: WH40KChaosMarineVoice
+# 	GainsExperience:
+# 		LevelUpNotification: LevelUpRA2
+# 	Passenger:
+# 		Weight: 1
+# 	-TakeCover:
+# 	Captures:
+# 		CaptureTypes: building, tech
+# 		PlayerExperience: 500
+# 		CaptureDelay: 750
+# 		ConsumedByCapture: False
+# 		EnterCursor: ability
+# 		EnterBlockedCursor: move-blocked
+
+# wh40kreaper:
+# 	Inherits: ^Soldier
+# 	Inherits@EXPERIENCE: ^GainsExperience
+# 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+# 	Inherits@DECORATIONS: ^InfantryExperienceHospitalHazmatOverrides
+# 	Inherits@announce: ^AnnounceOnBuild
+# 	Inherits@vo: ^AttackFrontalVoice
+# 	Inherits@horde: ^WH40KHordeEffect
+# 	Valued:
+# 		Cost: 150
+# 	Power:
+# 		Amount: -5
+# 	Tooltip:
+# 		Name: Dark Reaper
+# 	UpdatesPlayerStatistics:
+# 		AddToArmyValue: true
+# 	Buildable:
+# 		BuildPaletteOrder: 60
+# 		Prerequisites: barracks
+# 		Queue: Infantry.Eldar
+# 		Description: General-purpose Infantry \n  Strong vs Infantry\n  Weak vs Vehicles
+# 	Mobile:
+# 		Speed: 110
+# 	Crushable:
+# 		CrushClasses: vehicle
+# 	Health:
+# 		HP: 6000
+# 	Armor:
+# 		Type: None
+# 	AutoTarget:
+# 		ScanRadius: 4
+# 	Armament@PRIMARY: ##########
+# 		Weapon: WH40KEldarGuardianRifle
+# 	Armament@GARRISONED: ##########
+# 		Name: garrisoned
+# 		Weapon: WH40KTauPlasmarifle
+# 		MuzzleSequence: garrison-muzzle
+# 	WithInfantryBody:
+# 		IdleSequences: idle1,idle2,idle3,idle4
+# 	Inherits@EXT: ^ExternalConditions ##########
+# 	AcceptsDeliveredExperience: ##########
+# 		ValidTypes: infantry ##########
+# 	Voiced:
+# 		VoiceSet: WH40KChaosMarineVoice
+# 	GainsExperience:
+# 		LevelUpNotification: LevelUpRA2
+# 	Passenger:
+# 		Weight: 1
+# 	-TakeCover:
+# 	Captures:
+# 		CaptureTypes: building, tech
+# 		PlayerExperience: 500
+# 		CaptureDelay: 750
+# 		ConsumedByCapture: False
+# 		EnterCursor: ability
+# 		EnterBlockedCursor: move-blocked
+
+# wh40dragon:
+# 	Inherits: ^Soldier
+# 	Inherits@EXPERIENCE: ^GainsExperience
+# 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+# 	Inherits@DECORATIONS: ^InfantryExperienceHospitalHazmatOverrides
+# 	Inherits@announce: ^AnnounceOnBuild
+# 	Inherits@vo: ^AttackFrontalVoice
+# 	Inherits@horde: ^WH40KHordeEffect
+# 	Valued:
+# 		Cost: 150
+# 	Power:
+# 		Amount: -5
+# 	Tooltip:
+# 		Name: Fire Dragon
+# 	UpdatesPlayerStatistics:
+# 		AddToArmyValue: true
+# 	Buildable:
+# 		BuildPaletteOrder: 60
+# 		Prerequisites: barracks
+# 		Queue: Infantry.Eldar
+# 		Description: General-purpose Infantry \n  Strong vs Infantry\n  Weak vs Vehicles
+# 	Mobile:
+# 		Speed: 110
+# 	Crushable:
+# 		CrushClasses: vehicle
+# 	Health:
+# 		HP: 6000
+# 	Armor:
+# 		Type: None
+# 	AutoTarget:
+# 		ScanRadius: 4
+# 	Armament@PRIMARY: ##########
+# 		Weapon: WH40KEldarGuardianRifle
+# 	Armament@GARRISONED: ##########
+# 		Name: garrisoned
+# 		Weapon: WH40KTauPlasmarifle
+# 		MuzzleSequence: garrison-muzzle
+# 	WithInfantryBody:
+# 		IdleSequences: idle1,idle2,idle3,idle4
+# 	Inherits@EXT: ^ExternalConditions ##########
+# 	AcceptsDeliveredExperience: ##########
+# 		ValidTypes: infantry ##########
+# 	Voiced:
+# 		VoiceSet: WH40KChaosMarineVoice
+# 	GainsExperience:
+# 		LevelUpNotification: LevelUpRA2
+# 	Passenger:
+# 		Weight: 1
+# 	-TakeCover:
+# 	Captures:
+# 		CaptureTypes: building, tech
+# 		PlayerExperience: 500
+# 		CaptureDelay: 750
+# 		ConsumedByCapture: False
+# 		EnterCursor: ability
+# 		EnterBlockedCursor: move-blocked
+
+# wh40spider:
+# 	Inherits: ^Soldier
+# 	Inherits@EXPERIENCE: ^GainsExperience
+# 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+# 	Inherits@DECORATIONS: ^InfantryExperienceHospitalHazmatOverrides
+# 	Inherits@announce: ^AnnounceOnBuild
+# 	Inherits@vo: ^AttackFrontalVoice
+# 	Inherits@horde: ^WH40KHordeEffect
+# 	Valued:
+# 		Cost: 150
+# 	Power:
+# 		Amount: -5
+# 	Tooltip:
+# 		Name: Warp Spider
+# 	UpdatesPlayerStatistics:
+# 		AddToArmyValue: true
+# 	Buildable:
+# 		BuildPaletteOrder: 60
+# 		Prerequisites: barracks
+# 		Queue: Infantry.Eldar
+# 		Description: General-purpose Infantry \n  Strong vs Infantry\n  Weak vs Vehicles
+# 	Mobile:
+# 		Speed: 110
+# 	Crushable:
+# 		CrushClasses: vehicle
+# 	Health:
+# 		HP: 6000
+# 	Armor:
+# 		Type: None
+# 	AutoTarget:
+# 		ScanRadius: 4
+# 	Armament@PRIMARY: ##########
+# 		Weapon: WH40KEldarGuardianRifle
+# 	Armament@GARRISONED: ##########
+# 		Name: garrisoned
+# 		Weapon: WH40KTauPlasmarifle
+# 		MuzzleSequence: garrison-muzzle
+# 	WithInfantryBody:
+# 		IdleSequences: idle1,idle2,idle3,idle4
+# 	Inherits@EXT: ^ExternalConditions ##########
+# 	AcceptsDeliveredExperience: ##########
+# 		ValidTypes: infantry ##########
+# 	Voiced:
+# 		VoiceSet: WH40KChaosMarineVoice
+# 	GainsExperience:
+# 		LevelUpNotification: LevelUpRA2
+# 	Passenger:
+# 		Weight: 1
+# 	-TakeCover:
+# 	Captures:
+# 		CaptureTypes: building, tech
+# 		PlayerExperience: 500
+# 		CaptureDelay: 750
+# 		ConsumedByCapture: False
+# 		EnterCursor: ability
+# 		EnterBlockedCursor: move-blocked
+
+# wh40seer:
+# 	Inherits: ^Soldier
+# 	Inherits@EXPERIENCE: ^GainsExperience
+# 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+# 	Inherits@DECORATIONS: ^InfantryExperienceHospitalHazmatOverrides
+# 	Inherits@announce: ^AnnounceOnBuild
+# 	Inherits@vo: ^AttackFrontalVoice
+# 	Inherits@horde: ^WH40KHordeEffect
+# 	Valued:
+# 		Cost: 150
+# 	Power:
+# 		Amount: -5
+# 	Tooltip:
+# 		Name: Seer Council
+# 	UpdatesPlayerStatistics:
+# 		AddToArmyValue: true
+# 	Buildable:
+# 		BuildPaletteOrder: 60
+# 		Prerequisites: barracks
+# 		Queue: Infantry.Eldar
+# 		Description: General-purpose Infantry \n  Strong vs Infantry\n  Weak vs Vehicles
+# 	Mobile:
+# 		Speed: 110
+# 	Crushable:
+# 		CrushClasses: vehicle
+# 	Health:
+# 		HP: 6000
+# 	Armor:
+# 		Type: None
+# 	AutoTarget:
+# 		ScanRadius: 4
+# 	Armament@PRIMARY: ##########
+# 		Weapon: WH40KEldarGuardianRifle
+# 	Armament@GARRISONED: ##########
+# 		Name: garrisoned
+# 		Weapon: WH40KTauPlasmarifle
+# 		MuzzleSequence: garrison-muzzle
+# 	WithInfantryBody:
+# 		IdleSequences: idle1,idle2,idle3,idle4
+# 	Inherits@EXT: ^ExternalConditions ##########
+# 	AcceptsDeliveredExperience: ##########
+# 		ValidTypes: infantry ##########
+# 	Voiced:
+# 		VoiceSet: WH40KChaosMarineVoice
+# 	GainsExperience:
+# 		LevelUpNotification: LevelUpRA2
+# 	Passenger:
+# 		Weight: 1
+# 	-TakeCover:
+# 	Captures:
+# 		CaptureTypes: building, tech
+# 		PlayerExperience: 500
+# 		CaptureDelay: 750
+# 		ConsumedByCapture: False
+# 		EnterCursor: ability
+# 		EnterBlockedCursor: move-blocked
+
+# wh40harlequin:
+# 	Inherits: ^Soldier
+# 	Inherits@EXPERIENCE: ^GainsExperience
+# 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+# 	Inherits@DECORATIONS: ^InfantryExperienceHospitalHazmatOverrides
+# 	Inherits@announce: ^AnnounceOnBuild
+# 	Inherits@vo: ^AttackFrontalVoice
+# 	Inherits@horde: ^WH40KHordeEffect
+# 	Valued:
+# 		Cost: 150
+# 	Power:
+# 		Amount: -5
+# 	Tooltip:
+# 		Name: Harlequin
+# 	UpdatesPlayerStatistics:
+# 		AddToArmyValue: true
+# 	Buildable:
+# 		BuildPaletteOrder: 60
+# 		Prerequisites: Defence
+# 		Queue: Infantry.Eldar
+# 		Description: General-purpose Infantry \n  Strong vs Infantry\n  Weak vs Vehicles
+# 	Mobile:
+# 		Speed: 110
+# 	Crushable:
+# 		CrushClasses: vehicle
+# 	Health:
+# 		HP: 6000
+# 	Armor:
+# 		Type: None
+# 	AutoTarget:
+# 		ScanRadius: 4
+# 	Armament@PRIMARY: ##########
+# 		Weapon: WH40KEldarGuardianRifle
+# 	Armament@GARRISONED: ##########
+# 		Name: garrisoned
+# 		Weapon: WH40KTauPlasmarifle
+# 		MuzzleSequence: garrison-muzzle
+# 	WithInfantryBody:
+# 		IdleSequences: idle1,idle2,idle3,idle4
+# 	Inherits@EXT: ^ExternalConditions ##########
+# 	AcceptsDeliveredExperience: ##########
+# 		ValidTypes: infantry ##########
+# 	Voiced:
+# 		VoiceSet: WH40KChaosMarineVoice
+# 	GainsExperience:
+# 		LevelUpNotification: LevelUpRA2
+# 	Passenger:
+# 		Weight: 1
+# 	-TakeCover:
+# 	Captures:
+# 		CaptureTypes: building, tech
+# 		PlayerExperience: 500
+# 		CaptureDelay: 750
+# 		ConsumedByCapture: False
+# 		EnterCursor: ability
+# 		EnterBlockedCursor: move-blocked
+
+# wh40farseer:
+# 	Inherits: ^Soldier
+# 	Inherits@EXPERIENCE: ^GainsExperience
+# 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+# 	Inherits@DECORATIONS: ^InfantryExperienceHospitalHazmatOverrides
+# 	Inherits@announce: ^AnnounceOnBuild
+# 	Inherits@vo: ^AttackFrontalVoice
+# 	Inherits@horde: ^WH40KHordeEffect
+# 	Valued:
+# 		Cost: 150
+# 	Power:
+# 		Amount: -5
+# 	Tooltip:
+# 		Name: Farseer
+# 	UpdatesPlayerStatistics:
+# 		AddToArmyValue: true
+# 	Buildable:
+# 		BuildPaletteOrder: 60
+# 		Prerequisites: barracks
+# 		Queue: Defence
+# 		Description: General-purpose Infantry \n  Strong vs Infantry\n  Weak vs Vehicles
+# 	Mobile:
+# 		Speed: 110
+# 	Crushable:
+# 		CrushClasses: vehicle
+# 	Health:
+# 		HP: 6000
+# 	Armor:
+# 		Type: None
+# 	AutoTarget:
+# 		ScanRadius: 4
+# 	Armament@PRIMARY: ##########
+# 		Weapon: WH40KEldarGuardianRifle
+# 	Armament@GARRISONED: ##########
+# 		Name: garrisoned
+# 		Weapon: WH40KTauPlasmarifle
+# 		MuzzleSequence: garrison-muzzle
+# 	WithInfantryBody:
+# 		IdleSequences: idle1,idle2,idle3,idle4
+# 	Inherits@EXT: ^ExternalConditions ##########
+# 	AcceptsDeliveredExperience: ##########
+# 		ValidTypes: infantry ##########
+# 	Voiced:
+# 		VoiceSet: WH40KChaosMarineVoice
+# 	GainsExperience:
+# 		LevelUpNotification: LevelUpRA2
+# 	Passenger:
+# 		Weight: 1
+# 	-TakeCover:
+# 	Captures:
+# 		CaptureTypes: building, tech
+# 		PlayerExperience: 500
+# 		CaptureDelay: 750
+# 		ConsumedByCapture: False
+# 		EnterCursor: ability
+# 		EnterBlockedCursor: move-blocked
+
+# wh40kkhaine:
+# 	Inherits: ^Soldier
+# 	Inherits@EXPERIENCE: ^GainsExperience
+# 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+# 	Inherits@DECORATIONS: ^InfantryExperienceHospitalHazmatOverrides
+# 	Inherits@announce: ^AnnounceOnBuild
+# 	Inherits@MC: ^MCImmune
+# 	Valued:
+# 		Cost: 4000
+# 	Tooltip:
+# 		Name: Avatar of Khaine
+# 	UpdatesPlayerStatistics:
+# 		AddToArmyValue: true
+# 	Buildable:
+# 		BuildPaletteOrder: 100
+# 		Queue: Vehicle2.Chaos
+# 		Description: Greater Demon of Khorne.\n  Ztrong vs Infantry\n  Week vs Mekz
+# 		Prerequisites: wh40ksacrifical
+# 		BuildLimit: 1
+# 	Mobile:
+# 		Speed: 55
+# 		Locomotor: heavytracked
+# 	-Crushable:
+# 	Health:
+# 		HP: 650000
+# 	Armor:
+# 		Type: Heavy
+# 	AutoTarget:
+# 		ScanRadius: 4
+# 	Armament@PRIMARY: ##########
+# 		Weapon: WH40KBloodthirsterAxe
+# 	Armament@GARRISONED: ##########
+# 		Name: garrisoned
+# 		Weapon: WH40KMarineMGG
+# 		MuzzleSequence: garrison-muzzle
+# 	WithInfantryBody:
+# 		IdleSequences: idle1,idle2
+# 		AttackSequences:
+# 			primary: shoot
+# 			secondary: shoot
+# 	Inherits@EXT: ^ExternalConditions ##########
+# 	AcceptsDeliveredExperience: ##########
+# 		ValidTypes: infantry ##########
+# 	Voiced:
+# 		VoiceSet: SCUltraliskVoice
+# 	GainsExperience:
+# 		LevelUpNotification: LevelUpRA2
+# 	Passenger:
+# 		Weight: 15
+# 	-TakeCover:
+# 	Power:
+# 		Amount: -100
 
 # #######################################
 # # Tau Buildings

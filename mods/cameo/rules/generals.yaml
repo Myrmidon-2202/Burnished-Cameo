@@ -11184,7 +11184,7 @@ usasentry:
 	RevealsShroud:
 		Range: 7c0
 	Turreted:
-		TurnSpeed: 5
+		TurnSpeed: 10
 		Offset: -50,0,150
 	Armament@Normal:
 		Weapon: USASentryDroneMG
@@ -11278,7 +11278,7 @@ usaavenger:
 	RevealsShroud:
 		Range: 6c0
 	Turreted:
-		TurnSpeed: 5
+		TurnSpeed: 10
 		Offset: -128,0,170
 	Armament@Normal:
 		Weapon: USAAvengerLaser
@@ -11426,7 +11426,7 @@ usamicro:
 	RevealsShroud:
 		Range: 6c0
 	Turreted:
-		TurnSpeed: 5
+		TurnSpeed: 10
 		Offset: -50,0,150
 	Armament@Normal:
 		Weapon: USAMicrowaveFlame
@@ -12396,7 +12396,7 @@ usastrategy:
 		RequiresCondition: usabombardmentc
 	Turreted:
 		RequiresCondition: usabombardmentc
-		TurnSpeed: 6
+		TurnSpeed: 8
 	WithSpriteTurret:
 		RequiresCondition: usabombardmentc
 	GrantConditionOnPrerequisite@usabombardmentc:
