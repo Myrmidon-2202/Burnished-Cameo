@@ -8,7 +8,7 @@ actor-e1 =
         Weak vs Vehicles, Aircraft
    .raname = Rifle Infantry
    .tdname = Minigunner
-   .jpname = Imperial Scoutsman
+   .jpname = Imperial Hohei
 
 actor-e2 =
    .description = Fast infantry armed with grenades.

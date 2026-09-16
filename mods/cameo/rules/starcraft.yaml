@@ -3292,7 +3292,7 @@ SCNYDUSCANAL:
 	ProvidesPrerequisite@buildingname:
 	Buildable:
 		BuildPaletteOrder: 8010
-		Prerequisites: ~wip-content
+		Prerequisites: ~schive
 		Queue: Building, RABuilding
 		Description: Instantaneously transports units to another exit.
 	Building:
@@ -3312,6 +3312,9 @@ SCNYDUSCANAL:
 		IsPlayerPalette: true
 	Exit:
 	-WithDeathAnimation:
+	TeleportNetworkPrimaryExit:
+	TeleportNetwork:
+		Type: nydus
 	SpawnActorOnDeath@death1:
 		Actor: SCBROODLING
 	SpawnActorOnDeath@death2:

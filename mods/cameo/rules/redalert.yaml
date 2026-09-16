@@ -2323,7 +2323,7 @@ TTNK:
 		Weapon: TTankZap
 		LocalOffset: 0,0,213
 	AttackFrontal:
-		FacingTolerance: 0
+		FacingTolerance: 360
 	Turreted:
 	WithIdleOverlay@SPINNER:
 		Sequence: spinner

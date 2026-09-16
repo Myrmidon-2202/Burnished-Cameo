@@ -50,9 +50,9 @@
 		ValidTargets: Air
 	Warhead@1Dam: SpreadDamage
 		DamageTypes: ExplosionDeath
-	Projectile: MissileCA
+	Projectile: Missile
 		TrailImage: black_smokey
-		
+
 ^sow_antiair_mk1:
 	Inherits: ^sow_antiair
 	InvalidTargets: Ground
@@ -60,7 +60,7 @@
 	Range: 7c512
 	MinRange: 0c256
 	Report: antiair_shoot.aud
-	Projectile: MissileCA
+	Projectile: Missile
 		Arm: 5
 		Speed: 333
 		Inaccuracy: 333
@@ -418,7 +418,7 @@ sow_mech_avenger:
 	ValidTargets: Air
 	Burst: 8
 	BurstDelays: 2
-	Projectile: MissileCA
+	Projectile: Missile
 		Speed: 400
 		Arm: 2
 		Blockable: false
@@ -456,7 +456,7 @@ sow_mech_avenger_mk2:
 	Range: 25c0
 	MinRange: 3c0
 	Report: tripler_payload.aud
-	Projectile: MissileCA
+	Projectile: Missile
 		Speed: 600
 		Blockable: false
 		Inaccuracy: 600
@@ -1229,7 +1229,7 @@ sow_antiair_tower:
 	ValidTargets: Air
 	Burst: 4
 	BurstDelays: 4
-	Projectile: MissileCA
+	Projectile: Missile
 		Speed: 300
 		Arm: 4
 		Blockable: false
@@ -1385,7 +1385,7 @@ sow_vulcano_tower:
 	Report: turret6_shoot.aud
 	InvalidTargets: Ground
 	ValidTargets: Air
-	Projectile: MissileCA
+	Projectile: Missile
 		Speed: 400
 		Arm: 4
 		Blockable: false

@@ -5,6 +5,7 @@
 ####################################################################################################
 
 2100hq:
+	Inherits: ^WithBuildingBib2
 	Defaults:
 		Scale: 2.0
 		Filename: 2100hq.shp
@@ -26,6 +27,7 @@
 		Offset: 0,0
 
 2100power:
+	Inherits: ^WithBuildingBib2
 	Defaults:
 		Scale: 2.0
 		Filename: 2100power.shp
@@ -70,6 +72,7 @@
 		Offset: 0,0
 
 2100rr:
+	Inherits: ^WithBuildingBib2
 	Defaults:
 		Scale: 2.0
 		Filename: 2100rr.shp
@@ -94,6 +97,7 @@
 		Offset: 0,0
 
 2100fy1:
+	Inherits: ^WithBuildingBib1
 	Defaults:
 		Scale: 2.0
 		Filename: 2100fy1.shp
@@ -128,6 +132,7 @@
 		Offset: 0,0
 
 2100fy2:
+	Inherits: ^WithBuildingBib1
 	Defaults:
 		Scale: 2.0
 		Filename: 2100fy2.shp
@@ -147,6 +152,7 @@
 		AddExtension: False
 
 2100rf:
+	Inherits: ^WithBuildingBib2
 	Defaults:
 		Scale: 2.0
 		Filename: 2100rf.shp
@@ -172,6 +178,7 @@
 		AddExtension: False
 
 2100crc:
+	Inherits: ^WithBuildingBib2
 	Defaults:
 		Scale: 2.0
 		Filename: 2100crc.shp
@@ -194,6 +201,7 @@
 		Offset: 0,0
 
 2100las:
+	Inherits: ^WithBuildingBib2
 	Defaults:
 		Scale: 2.0
 		Filename: 2100las.shp
@@ -570,6 +578,7 @@
 		AddExtension: False
 
 cto2100fy:
+	Inherits: ^WithBuildingBib1
 	Defaults:
 		Scale: 2.0
 		Filename: cto2100fy.shp
@@ -593,6 +602,7 @@ cto2100fy:
 		Offset: 0,0
 
 cto2100power:
+	Inherits: ^WithBuildingBib1
 	Defaults:
 		Scale: 2.0
 		Offset: 0,8
@@ -639,6 +649,7 @@ cto2100power:
 		Offset: 0,0
 
 2100cf:
+	Inherits: ^WithBuildingBib3
 	Defaults:
 		Scale: 2.0
 		Filename: 2100cf.shp
@@ -657,6 +668,7 @@ cto2100power:
 		Offset: 0,0
 
 2100vfy1:
+	Inherits: ^WithBuildingBib1
 	Defaults:
 		Scale: 2.0
 		Filename: cto2100fy.shp
@@ -717,6 +729,7 @@ cto2100power:
 ####################################################################################################
 
 2100chopshop:
+	Inherits: ^WithBuildingBib1
 	Defaults:
 		Scale: 2.0
 		Filename: 2100chopshop.shp
@@ -750,6 +763,7 @@ cto2100power:
 		Offset: 0,0
 
 2100chopshopadv:
+	Inherits: ^WithBuildingBib1
 	Defaults:
 		Scale: 2.0
 		Filename: 2100scavheavyfactory.shp
@@ -770,6 +784,7 @@ cto2100power:
 		Offset: 0,0
 
 2100scavpowr:
+	Inherits: ^WithBuildingBib2
 	Defaults:
 		Scale: 2.0
 		Filename: 2100scavpowr.shp
@@ -791,6 +806,7 @@ cto2100power:
 		Offset: 0,0
 
 2100scavware:
+	Inherits: ^WithBuildingBib2
 	Defaults:
 		Scale: 2.0
 		Filename: 2100scavware.shp
@@ -841,6 +857,7 @@ cto2100power:
 		Offset: 0,0
 
 2100scavhangar:
+	Inherits: ^WithBuildingBib2
 	Defaults:
 		Scale: 2.0
 		Filename: 2100scavhangar.shp
@@ -919,6 +936,7 @@ cto2100power:
 		Filename: 2100scavrticon.shp
 
 2100scavtech:
+	Inherits: ^WithBuildingBib2
 	Defaults:
 		Scale: 2.0
 		Offset: 0,-6
@@ -1020,12 +1038,10 @@ cto2100power:
 		Filename: 2100pythontracks.shp
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.75
 	turret:
 		Filename: 2100trucktur.shp
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.75
 	icon:
 		Filename: 2100mcvicon.shp
 
@@ -1802,17 +1818,14 @@ cto2100power:
 		Filename: 2100bugwheels.shp
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.60
 	turret:
 		Filename: 2100lmg1.shp
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.60
 	muzzle:
 		Filename: minigun.shp
 		Length: 6
 		Facings: 8
-		Scale: 0.60
 	icon:
 		Filename: 2100mbuwicon.shp
 
@@ -1824,17 +1837,14 @@ cto2100power:
 		Filename: 2100bugwheels.shp
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.60
 	turret:
 		Filename: 2100rkpod.shp
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.60
 	muzzle:
 		Filename: minigun.shp
 		Length: 6
 		Facings: 8
-		Scale: 0.60
 	icon:
 		Filename: 2100rbuwicon.shp
 
@@ -1846,17 +1856,17 @@ cto2100power:
 		Filename: 2100bugwheels.shp
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.60
+
 	turret:
 		Filename: 2100flamertur.shp
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.60
+
 	muzzle:
 		Filename: minigun.shp
 		Length: 6
 		Facings: 8
-		Scale: 0.60
+
 	icon:
 		Filename: 2100fbuwicon.shp
 
@@ -1868,16 +1878,16 @@ cto2100power:
 		Filename: 2100bugwheels.shp
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.60
+
 	turret:
 		Filename: 2100rocketarray.shp
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.60
+
 	muzzle:
 		Filename: gunfire2.shp
 		Length: *
-		Scale: 0.60
+
 	icon:
 		Filename: 2100rabuwicon.shp
 
@@ -2486,17 +2496,17 @@ cto2100power:
 		Filename: 2100leopardwheels.shp
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.60
+
 	turret:
 		Filename: 2100lmg1.shp
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.60
+
 	muzzle:
 		Filename: minigun.shp
 		Length: 6
 		Facings: 8
-		Scale: 0.60
+
 	icon:
 		Filename: 2100mlewicon.shp
 
@@ -2508,17 +2518,17 @@ cto2100power:
 		Filename: 2100leopardwheels.shp
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.60
+
 	turret:
 		Filename: 2100rkpod.shp
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.60
+
 	muzzle:
 		Filename: minigun.shp
 		Length: 6
 		Facings: 8
-		Scale: 0.60
+
 	icon:
 		Filename: 2100rlewicon.shp
 
@@ -2530,17 +2540,17 @@ cto2100power:
 		Filename: 2100leopardwheels.shp
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.60
+
 	turret:
 		Filename: 2100flamertur.shp
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.60
+
 	muzzle:
 		Filename: minigun.shp
 		Length: 6
 		Facings: 8
-		Scale: 0.60
+
 	icon:
 		Filename: 2100flewicon.shp
 
@@ -2552,16 +2562,16 @@ cto2100power:
 		Filename: 2100leopardwheels.shp
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.60
+
 	turret:
 		Filename: 2100rocketarray.shp
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.60
+
 	muzzle:
 		Filename: gunfire2.shp
 		Length: *
-		Scale: 0.60
+
 	icon:
 		Filename: 2100ralewicon.shp
 
@@ -3134,17 +3144,17 @@ cto2100power:
 		Filename: 2100retaliatonwheels.shp
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.60
+
 	turret:
 		Filename: 2100lmg1.shp
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.60
+
 	muzzle:
 		Filename: minigun.shp
 		Length: 6
 		Facings: 8
-		Scale: 0.60
+
 	icon:
 		Filename: 2100mrewicon.shp
 
@@ -3156,17 +3166,17 @@ cto2100power:
 		Filename: 2100retaliatonwheels.shp
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.60
+
 	turret:
 		Filename: 2100rkpod.shp
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.60
+
 	muzzle:
 		Filename: minigun.shp
 		Length: 6
 		Facings: 8
-		Scale: 0.60
+
 	icon:
 		Filename: 2100rrewicon.shp
 
@@ -3178,17 +3188,17 @@ cto2100power:
 		Filename: 2100retaliatonwheels.shp
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.60
+
 	turret:
 		Filename: 2100flamertur.shp
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.60
+
 	muzzle:
 		Filename: minigun.shp
 		Length: 6
 		Facings: 8
-		Scale: 0.60
+
 	icon:
 		Filename: 2100frewicon.shp
 
@@ -4291,9 +4301,7 @@ cto2100power:
 		Filename: 2100scavtruck.shp
 	idle:
 		Facings: 32
-		Scale: 0.62
 	muzzle:
-		Scale: 0.62
 		Combine:
 			flame-n:
 				Filename: flame-n.shp
@@ -4332,16 +4340,13 @@ cto2100power:
 	turret1:
 		Filename: 2100flamertur.shp
 		Facings: 32
-		Scale: 0.62
 	turret2:
 		Filename: 2100tankkiller.shp
 		Facings: 32
-		Scale: 0.62
 		UseClassicFacings: True
 	turret3:
 		Filename: 2100rocketarray.shp
 		Facings: 32
-		Scale: 0.62
 		UseClassicFacings: True
 	icon:
 		Filename: 2100scavtruckicon.shp
@@ -4352,9 +4357,7 @@ cto2100power:
 		Filename: 2100tanker.shp
 	idle:
 		Facings: 32
-		Scale: 0.62
 	muzzle:
-		Scale: 0.62
 		Combine:
 			flame-n:
 				Filename: flame-n.shp
@@ -4393,12 +4396,10 @@ cto2100power:
 	turret1:
 		Filename: 2100flamertur.shp
 		Facings: 32
-		Scale: 0.62
 	turret2:
 		Filename: 2100inferno.shp
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.62
 	icon:
 		Filename: 2100tankericon.shp
 
@@ -4408,21 +4409,17 @@ cto2100power:
 		Filename: 2100tanker.shp
 	idle:
 		Facings: 32
-		Scale: 0.62
 	muzzle:
 		Filename: minigun.shp
 		Length: 6
 		Facings: 8
-		Scale: 0.62
 	turret1:
 		Filename: 2100assaultmg.shp
 		Facings: 32
-		Scale: 0.62
 	turret2:
 		Filename: 2100assaultmg.shp
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.62
 	icon:
 		Filename: 2100scavtruckicon.shp
 
@@ -4513,11 +4510,11 @@ cto2100power:
 		Filename: 2100crane.shp
 	idle:
 		Facings: 32
-		Scale: 0.60
+
 	turret:
 		Filename: 2100cranetur.shp
 		Facings: 32
-		Scale: 0.60
+
 	icon:
 		Filename: 2100craneicon.shp
 
@@ -4527,11 +4524,11 @@ cto2100power:
 		Filename: 2100crane.shp
 	idle:
 		Facings: 32
-		Scale: 0.60
+
 	turret:
 		Filename: 2100cranetur.shp
 		Facings: 32
-		Scale: 0.60
+
 	icon:
 		Filename: 2100craneicon.shp
 
@@ -4541,15 +4538,15 @@ cto2100power:
 		Filename: 2100trailer.shp
 	idle:
 		Facings: 32
-		Scale: 0.60
+
 	turret:
 		Filename: 2100heavycannon.shp
 		Facings: 32
-		Scale: 0.60
+
 	muzzle:
 		Filename: gunfire2.shp
 		Length: *
-		Scale: 0.60
+
 	icon:
 		Filename: 2100trailericon.shp
 
@@ -4561,17 +4558,17 @@ cto2100power:
 		Filename: 2100scavtank.shp
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.60
+
 	turret:
 		Filename: 2100scavtanktur.shp
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.60
+
 	muzzle:
 		Filename: minigun.shp
 		Length: 6
 		Facings: 8
-		Scale: 0.60
+
 	icon:
 		Filename: 2100scavtankicon.shp
 

@@ -747,6 +747,11 @@ sglaangrymob1:
 		Start: 168
 		Length: 20
 		Tick: 130
+	die4: 
+		Filename: sglmob03.shp
+		Start: 168
+		Length: 20
+		Tick: 130
 	die-ak: 
 		Filename: sglmob03.shp
 		Start: 168
@@ -831,6 +836,11 @@ sglaangrymob2:
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
+	die4: 
+		Filename: sglmob03.shp
+		Start: 168
+		Length: 20
+		Tick: 130
 	die5:
 		Filename: gle3.shp
 		Start: 434
@@ -4398,10 +4408,12 @@ usacomanche:
 	rotor: 
 		Filename: yrotorlg.shp
 		Length: 4
+		Scale: 1.0
 	slow-rotor: 
 		Filename: yrotorlg.shp
 		Start: 4
 		Length: 8
+		Scale: 1.0
 	muzzle: 
 		Filename: minigun.shp
 		Length: 6

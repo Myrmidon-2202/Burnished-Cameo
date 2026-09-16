@@ -1033,7 +1033,7 @@ GENE6:
 		UseDirectionalTarget: True
 		DirectionArrowAnimation: airstrikedirection
 		StartFullyCharged: true
-	AirstrikePower@Spectre:
+	ClassicAirstrikePower@Spectre:
 		Squad:
 			usagunship:
 				SpawnOffset: -1536,1024,0
@@ -3005,24 +3005,33 @@ glsite:
 		Weapon: GLStingerTargeting
 	AttackTurreted:
 		RequiresCondition: !build-incomplete
-	MobSpawnerMaster@1:
-		Actors: glsite.soldier
-		Offset: 255,255,0
-		RespawnTicks: 500
-		ExitByBudding: false
-		AggregateHealth: false
-	MobSpawnerMaster@2:
-		Actors: glsite.soldier
-		Offset: 255,-255,0
-		RespawnTicks: 500
-		ExitByBudding: false
-		AggregateHealth: false
-	MobSpawnerMaster@3:
-		Actors: glsite.soldier
-		Offset: -255,255,0
-		RespawnTicks: 500
-		ExitByBudding: false
-		AggregateHealth: false
+	# MobSpawnerMaster@1:
+	# 	Actors: glsite.soldier
+	# 	Offset: 255,255,0
+	# 	RespawnTicks: 500
+	# 	ExitByBudding: false
+	# 	AggregateHealth: false
+	# MobSpawnerMaster@2:
+	# 	Actors: glsite.soldier
+	# 	Offset: 255,-255,0
+	# 	RespawnTicks: 500
+	# 	ExitByBudding: false
+	# 	AggregateHealth: false
+	# MobSpawnerMaster@3:
+	# 	Actors: glsite.soldier
+	# 	Offset: -255,255,0
+	# 	RespawnTicks: 500
+	# 	ExitByBudding: false
+	# 	AggregateHealth: false
+	Cargo:
+		Types: Infantry, Hacker, Fremen
+		MaxWeight: 3
+		InitialUnits: gle3, gle3, gle3
+		EjectOnDeath: true
+	AttackOpenTopped:
+		Armaments: garrisoned
+		PortOffsets: 384,0,128, 224,-341,128, 224,341,128, 0,-341,128, 0,341,128, -224,-341,128, -224,341,128, -384,0,128
+		PauseOnCondition: chronobeamed
 	BodyOrientation:
 		QuantizedFacings: 8
 	DetectCloaked:
@@ -3115,7 +3124,7 @@ gltunnel:
 		Name: Tunnel Network
 	Buildable:
 		BuildPaletteOrder: 60
-		Prerequisites: ~wip-content #glbarracks, ~techlevel.low, ~glaselected, ~!selectglatoxin
+		Prerequisites: glbarracks, ~techlevel.low, ~glaselected, ~!selectglatoxin
 		Queue: Defence, RADefence
 		Description: Anti-Infantry defensive structure.\nCan protect and transport units.\n  Strong vs Infantry\n  Weak vs Tanks
 	Selectable:
@@ -3142,6 +3151,7 @@ gltunnel:
 	DetectCloaked:
 		Range: 5c0
 		RequiresCondition: !lowpower
+	-WithBuildingBib:
 	Power:
 		Amount: 0
 	Building:
@@ -3177,7 +3187,7 @@ gltunneltoxin:
 		Name: Toxin Network
 	Buildable:
 		BuildPaletteOrder: 60
-		Prerequisites: ~wip-content #glbarracks, ~techlevel.low, ~glaselected, ~selectglatoxin
+		Prerequisites: glbarracks, ~techlevel.low, ~glaselected, ~selectglatoxin
 	Armament@PRIMARY:
 		Weapon: GLTunnelToxinWeapon
 	RenderSprites:

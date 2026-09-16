@@ -353,9 +353,9 @@ Player:
 	Power:
 		Amount: -25
 	CashTrickler:
-		Interval: 50
+		Interval: 40
 		# Amount: 100
-		Amount: 250
+		Amount: 500
 		ShowTicks: True
 		PauseOnCondition: disabled
 		UseResourceStorage: true
