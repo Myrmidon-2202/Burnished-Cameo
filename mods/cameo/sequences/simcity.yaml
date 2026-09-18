@@ -1,9 +1,13 @@
-
 ####################################################################################################
+
 #		BUILDINGS
+
 ####################################################################################################
 
 citymayor:
+	Defaults:
+		Scale: 2.0
+		Filename: citymayor.shp
 	idle:
 		ZOffset: -2048
 	rank-veteran-2:
@@ -16,11 +20,14 @@ citymayor:
 		Start: 3
 	dead:
 	make:
-	icon: citymayoricon.shp
+	icon:
+		Filename: citymayoricon.shp
 		AddExtension: False
 
 cityr:
 	Defaults:
+		Scale: 2.0
+		Filename: cityr.shp
 		Offset: 0,-8
 	idle:
 		ZOffset: -2048
@@ -36,12 +43,15 @@ cityr:
 	make:
 		Length: 1
 		Tick: 80
-	icon: cityricon.shp
+	icon:
+		Filename: cityricon.shp
 		Offset: 0,0
 		AddExtension: False
 
 cityc:
 	Defaults:
+		Scale: 2.0
+		Filename: cityc.shp
 		Offset: 0,-8
 	idle:
 		ZOffset: -2048
@@ -59,12 +69,15 @@ cityc:
 	make:
 		Length: 1
 		Tick: 80
-	icon: citycicon.shp
+	icon:
+		Filename: citycicon.shp
 		Offset: 0,0
 		AddExtension: False
 
 cityi:
 	Defaults:
+		Scale: 2.0
+		Filename: cityi.shp
 		Offset: -8,-8
 	idle:
 		ZOffset: -2048
@@ -90,12 +103,16 @@ cityi:
 	make:
 		Length: 1
 		Tick: 80
-	icon: cityiicon.shp
+	icon:
+		Filename: cityiicon.shp
 		Offset: 0,0
 		AddExtension: False
 
 cityfd:
+	Inherits: ^WithBuildingBib3
 	Defaults:
+		Scale: 2.0
+		Filename: cityfd.shp
 		Offset: 0,-8
 	idle:
 		Start: 0
@@ -106,15 +123,21 @@ cityfd:
 		Length: 2
 		Tick: 400
 	dead:
-	bib: bib3
+	bib:
+		Filename: bib3.tem
 		UseTilesetExtension: true
 		Length: *
 		Offset: 0,0
-	icon: cityfdicon.shp
+	icon:
+		Filename: cityfdicon.shp
 		Offset: 0,0
 		AddExtension: False
 
 citypd:
+	Inherits: ^WithBuildingBib3
+	Defaults:
+		Scale: 2.0
+		Filename: citypd.shp
 	idle:
 		Start: 0
 	make:
@@ -124,25 +147,33 @@ citypd:
 		Length: 2
 		Tick: 400
 	dead:
-	bib: bib3
+	bib:
+		Filename: bib3.shp
 		UseTilesetExtension: true
 		Length: *
 		Offset: 0,0
-	icon: citypdicon.shp
+	icon:
+		Filename: citypdicon.shp
 		AddExtension: False
 
 cityairport:
+	Defaults:
+		Scale: 2.0
+		Filename: cityairport.shp
 	idle:
 		Length: 6
 		Tick: 200
 		ZOffset: -4096
 	dead:
 	make:
-	icon: cityairporticon.shp
+	icon:
+		Filename: cityairporticon.shp
 		AddExtension: False
 
 citycoal:
 	Defaults:
+		Scale: 2.0
+		Filename: citycoal.shp
 		Offset: 0,-4
 	idle:
 		Length: 8
@@ -151,12 +182,15 @@ citycoal:
 	make:
 		Length: 1
 		Tick: 80
-	icon: citycoalicon.shp
+	icon:
+		Filename: citycoalicon.shp
 		Offset: 0,0
 		AddExtension: False
 
 citynuke:
 	Defaults:
+		Scale: 2.0
+		Filename: citynuke.shp
 		Offset: -2,-6
 	idle:
 		Length: 6
@@ -165,70 +199,98 @@ citynuke:
 	make:
 		Length: 1
 		Tick: 80
-	icon: citynukeicon.shp
+	icon:
+		Filename: citynukeicon.shp
 		Offset: 0,0
 		AddExtension: False
 
 cityharbor:
+	Inherits: ^WithBuildingBib2
+	Defaults:
+		Scale: 2.0
+		Filename: cityharbor.shp
 	idle:
 		Length: 4
 		Tick: 200
 		ZOffset: -2048
 	dead:
 	make:
-	bib: bib2
-		UseTilesetExtension: true
-		Length: *
-		ZOffset: -2048
-	icon: cityharboricon.shp
+	# bib:
+	# 	Filename: bib2.shp
+	# 	UseTilesetExtension: true
+	# 	Length: *
+	# 	ZOffset: -2048
+	icon:
+		Filename: cityharboricon.shp
 		AddExtension: False
 
 citylibrary:
+	Defaults:
+		Scale: 2.0
+		Filename: citylibrary.shp
 	idle:
 	dead:
 	make:
-	icon: citylibraryicon.shp
+	icon:
+		Filename: citylibraryicon.shp
 		AddExtension: False
 
 citybank:
+	Defaults:
+		Scale: 2.0
+		Filename: citybank.shp
 	idle:
 	dead:
 	make:
-	icon: citybankicon.shp
+	icon:
+		Filename: citybankicon.shp
 		AddExtension: False
 
 cityexpo:
 	Defaults:
+		Scale: 2.0
+		Filename: cityexpo.shp
 		Offset: 0,-8
 	idle:
 		Length: 4
 		Tick: 200
 	dead:
 	make:
-	icon: cityexpoicon.shp
+	icon:
+		Filename: cityexpoicon.shp
 		Offset: 0,0
 		AddExtension: False
 
 citypark:
+	Defaults:
+		Scale: 2.0
+		Filename: citypark.shp
 	idle:
 		ZOffset: -2048
 	dead:
 	make:
-	icon: cityparkicon.shp
+	icon:
+		Filename: cityparkicon.shp
 		AddExtension: False
 
 cityfountain:
+	Defaults:
+		Scale: 2.0
+		Filename: cityfountain.shp
 	idle:
 		Length: 4
 		Tick: 200
 		ZOffset: -2048
 	dead:
 	make:
-	icon: cityfountainicon.shp
+	icon:
+		Filename: cityfountainicon.shp
 		AddExtension: False
 
 citystadium:
-	Defaults: citystadium.png
+	Defaults:
+		Scale: 2.0
+		Filename: citystadium.png
 		Offset: 0,-2
 		AddExtension: false
 	idle:
@@ -236,33 +298,42 @@ citystadium:
 		Tick: 200
 	dead:
 	make:
-	icon: citystadiumicon.png
+	icon:
+		Filename: citystadiumicon.png
 		Offset: 0,0
 		AddExtension: false
 
 citystation:
-	Defaults: citystation.png
+	Defaults:
+		Scale: 2.0
+		Filename: citystation.png
 		AddExtension: false
 	idle:
 	dead:
 	make:
-	icon: citystationicon.png
+	icon:
+		Filename: citystationicon.png
 		Offset: 0,0
 		AddExtension: false
 
 citymario:
-	Defaults: citymario.png
+	Defaults:
+		Scale: 2.0
+		Filename: citymario.png
 		Offset: -8,-8
 		AddExtension: false
 	idle:
 	dead:
 	make:
-	icon: citymarioicon.png
+	icon:
+		Filename: citymarioicon.png
 		Offset: 0,0
 		AddExtension: false
 
 cityamuse:
-	Defaults: cityamusementpark.png
+	Defaults:
+		Scale: 2.0
+		Filename: cityamusementpark.png
 		Offset: 0,-2
 		AddExtension: false
 	idle:
@@ -270,12 +341,15 @@ cityamuse:
 		Tick: 400
 	dead:
 	make:
-	icon: cityamuseicon.png
+	icon:
+		Filename: cityamuseicon.png
 		Offset: 0,0
 		AddExtension: false
 
 citycasino:
-	Defaults: citycasino.png
+	Defaults:
+		Scale: 2.0
+		Filename: citycasino.png
 		Offset: 0,-2
 		AddExtension: false
 	idle:
@@ -283,137 +357,203 @@ citycasino:
 		Tick: 400
 	dead:
 	make:
-	icon: citycasinoicon.png
+	icon:
+		Filename: citycasinoicon.png
 		Offset: 0,0
 		AddExtension: false
 
 citywindmill:
-	Defaults: citywindmill.png
+	Defaults:
+		Scale: 2.0
+		Filename: citywindmill.png
 		AddExtension: false
 	idle:
 		Length: *
 		Tick: 400
 	dead:
 	make:
-	icon: citywindmillicon.png
+	icon:
+		Filename: citywindmillicon.png
 		Offset: 0,0
 		AddExtension: false
 
 cityzoo:
-	Defaults: cityzoo.png
+	Defaults:
+		Scale: 2.0
+		Filename: cityzoo.png
 		AddExtension: false
 	idle:
 		Length: *
 		Tick: 400
 	dead:
 	make:
-	icon: cityzooicon.png
+	icon:
+		Filename: cityzooicon.png
 		AddExtension: false
 
 ####################################################################################################
+
 #		INFANTRY
+
 ####################################################################################################
 
 cityfirefighter: #reskinned flamethrower
 	Inherits: e4
-	icon: cityfirefightericon.shp
+	icon:
+		Filename: cityfirefightericon.shp
 
 citypoliceofficer: #reskinned civilian
 	Inherits: c1
-	idle: invisibleitem
-	icon: citypoliceofficericon
-	
+	idle:
+	Filename:
+		Filename: invisibleitem.shp
+	icon:
+		Filename: citypoliceofficericon.shp
+
 cityarchitect: #reskinned engineer
 	Inherits: e6
-	icon: cityarchitecticon.shp
-	eliteicon: cityelitearchitecticon
+	icon:
+		Filename: cityarchitecticon.shp
+	eliteicon:
+		Filename: cityelitearchitecticon.shp
 
 cityinstructor: #reskinned mechanic
 	Inherits: mech
-	icon: cityinstructoricon
-	eliteicon: cityeliteinstructoricon
+	icon:
+		Filename: cityinstructoricon.shp
+	eliteicon:
+		Filename: cityeliteinstructoricon.shp
 
 cityexpert: #reskinned medic
 	Inherits: medi
-	icon: cityexperticon
-	eliteicon: cityeliteexperticon
+	icon:
+		Filename: cityexperticon.shp
+	eliteicon:
+		Filename: cityeliteexperticon.shp
 
 cityswat: #reskinned commando
 	Inherits: rmbo
-	icon: cityswaticon.shp
-	dot: invisibleitem
-		AddExtension: true
-	idle: invisibleitem
-	iconcomm: cityswaticon
+	icon:
+		Filename: cityswaticon.shp
+	dot:
+		Filename: invisibleitem.shp
+	idle:
+		Filename: invisibleitem.shp
+	iconcomm:
+		Filename: cityswaticon.shp
 		Start: 1
 
 ####################################################################################################
+
 #		VEHICLES
+
 ####################################################################################################
 
 cityambulance:
+	Defaults:
+		Scale: 2.0
+		Filename: cityambulance.shp
 	idle:
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.8
-	icon: cityambulanceicon
+	icon:
+		Filename: cityambulanceicon.shp
 
 cityfiretruck:
+	Defaults:
+		Scale: 2.0
+		Filename: cityfiretruck.shp
 	idle:
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.8
-	icon: cityfiretruckicon
+	icon:
+		Filename: cityfiretruckicon.shp
 
 citypolicecar:
+	Defaults:
+		Scale: 2.0
+		Filename: citypolicecar.shp
 	idle:
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.8
-	icon: citypolicecaricon
-	cityicon: citymayoricon
-		
+	icon:
+		Filename: citypolicecaricon.shp
+	cityicon:
+		Filename: citymayoricon.shp
+
 cityswatvan:
+	Defaults:
+		Scale: 2.0
+		Filename: cityswatvan.shp
 	idle:
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.8
-	icon: cityswatvanicon
-	
+	icon:
+		Filename: cityswatvanicon.shp
+
 citytruck:
+	Defaults:
+		Scale: 2.0
+		Filename: citytruck.shp
 	idle:
 		Facings: 32
 		UseClassicFacings: True
-	icon: citytruckicon
+	icon:
+		Filename: citytruckicon.shp
 
 citytruckxxl:
+	Defaults:
+		Scale: 2.0
+		Filename: citytruckxxl.shp
 	idle:
 		Facings: 32
 		UseClassicFacings: True
 		Scale: 1.1
-	icon: citytruckxxlicon
+	icon:
+		Filename: citytruckxxlicon.shp
 
 simcity_smg:
-	icon: citypoliceupgicon
+	Defaults:
+		Scale: 2.0
+		Filename: simcity_smg.shp
+	icon:
+		Filename: citypoliceupgicon.shp
 		Start: 0
-		
+
 simcity_bpv:
-	icon: citypoliceupgicon
+	Defaults:
+		Scale: 2.0
+		Filename: simcity_bpv.shp
+	icon:
+		Filename: citypoliceupgicon.shp
 		Start: 1
-		
+
 simcity_gl:
-	icon: citypoliceupgicon
+	Defaults:
+		Scale: 2.0
+		Filename: simcity_gl.shp
+	icon:
+		Filename: citypoliceupgicon.shp
 		Start: 2
 
 simcity_taser:
-	icon: citypoliceupgicon
+	Defaults:
+		Scale: 2.0
+		Filename: simcity_taser.shp
+	icon:
+		Filename: citypoliceupgicon.shp
 		Start: 3
-		
+
 ####################################################################################################
+
 #		MISC
+
 ####################################################################################################
 
 cityspeed:
+	Defaults:
+		Scale: 2.0
+		Filename: cityspeed.shp
 	speed0:
 	speed1:
 		Start: 1
@@ -425,22 +565,41 @@ cityspeed:
 		Start: 4
 
 citymayorcall:
+	Defaults:
+		Scale: 2.0
+		Filename: citymayorcall.shp
 	idle:
 
 cityfirecall:
+	Defaults:
+		Scale: 2.0
+		Filename: cityfirecall.shp
 	idle:
 
 citypolicecall:
+	Defaults:
+		Scale: 2.0
+		Filename: citypolicecall.shp
 	idle:
 
 icon:
 	Defaults:
+		Scale: 2.0
+		Filename: icon.shp
 		AddExtension: False
-	instructor1: cityinstructoricon.shp
-	instructor2: cityeliteinstructoricon.shp
-	architect1: cityarchitecticon.shp
-	architect2: cityelitearchitecticon.shp
-	citypark: citypark.shp ##########
-	cityfountain: cityfountain.shp ##########
-	citygreenbombsicon: citygreenbombsicon.shp ##########
-	citybluebombsicon: citybluebombsicon.shp ##########
+	instructor1:
+		Filename: cityinstructoricon.shp
+	instructor2:
+		Filename: cityeliteinstructoricon.shp
+	architect1:
+		Filename: cityarchitecticon.shp
+	architect2:
+		Filename: cityelitearchitecticon.shp
+	citypark:
+		Filename: citypark.shp
+	cityfountain:
+		Filename: cityfountain.shp
+	citygreenbombsicon:
+		Filename: citygreenbombsicon.shp
+	citybluebombsicon:
+		Filename: citybluebombsicon.shp

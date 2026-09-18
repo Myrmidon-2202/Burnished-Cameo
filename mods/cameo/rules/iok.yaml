@@ -296,12 +296,12 @@ FACTIOK:
 		Actor: glworker
 		SpawnOffset: 1,2
 		Facing: 256
-	Production@NORMAL:
-		Produces: Building, Defence
-		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RABuilding, RADefence
-		RequiresCondition: classicproductionqueues
+	# Production@NORMAL:
+	# 	Produces: Building, Defence
+	# 	RequiresCondition: !classicproductionqueues
+	# Production@CLASSICPRODUCTIONQUEUES:
+	# 	Produces: RABuilding, RADefence
+	# 	RequiresCondition: classicproductionqueues
 	Transforms:
 		RequiresCondition: factundeploy
 		PauseOnCondition: being-demolished || build-incomplete
@@ -321,41 +321,41 @@ FACTIOK:
 	GrantConditionOnPrerequisite@GLOBALFACTUNDEPLOY:
 		Condition: factundeploy
 		Prerequisites: global-factundeploy
-	ProductionQueue@IOKBuilding:
-		Type: Building
-		DisplayOrder: 0
-		Group: Building
-		LowPowerModifier: 200
-		ReadyAudio: ConstructionComplete
-		BlockedAudio: NoBuild
-		LimitedAudio: BuildingInProgress
-		QueuedAudio: Building
-		OnHoldAudio: OnHold
-		CancelledAudio: Cancelled
-	ProductionQueue@IOKDefense:
-		Type: Defence
-		DisplayOrder: 1
-		Group: Defence
-		LowPowerModifier: 300
-		ReadyAudio: ConstructionComplete
-		BlockedAudio: NoBuild
-		LimitedAudio: BuildingInProgress
-		QueuedAudio: Building
-		OnHoldAudio: OnHold
-		CancelledAudio: Cancelled
+	# ProductionQueue@IOKBuilding:
+	# 	Type: Building
+	# 	DisplayOrder: 0
+	# 	Group: Building
+	# 	LowPowerModifier: 200
+	# 	ReadyAudio: ConstructionComplete
+	# 	BlockedAudio: NoBuild
+	# 	LimitedAudio: BuildingInProgress
+	# 	QueuedAudio: Building
+	# 	OnHoldAudio: OnHold
+	# 	CancelledAudio: Cancelled
+	# ProductionQueue@IOKDefense:
+	# 	Type: Defence
+	# 	DisplayOrder: 1
+	# 	Group: Defence
+	# 	LowPowerModifier: 300
+	# 	ReadyAudio: ConstructionComplete
+	# 	BlockedAudio: NoBuild
+	# 	LimitedAudio: BuildingInProgress
+	# 	QueuedAudio: Building
+	# 	OnHoldAudio: OnHold
+	# 	CancelledAudio: Cancelled
 	BaseBuilding:
-	ProductionBar@BuildingNod:
-		ProductionType: Building
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@DefenceNod:
-		ProductionType: Defence
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@RABuildingNod:
-		ProductionType: RABuilding
-		RequiresCondition: classicproductionqueues
-	ProductionBar@RADefenceNod:
-		ProductionType: RADefence
-		RequiresCondition: classicproductionqueues
+	# ProductionBar@BuildingNod:
+	# 	ProductionType: Building
+	# 	RequiresCondition: !classicproductionqueues
+	# ProductionBar@DefenceNod:
+	# 	ProductionType: Defence
+	# 	RequiresCondition: !classicproductionqueues
+	# ProductionBar@RABuildingNod:
+	# 	ProductionType: RABuilding
+	# 	RequiresCondition: classicproductionqueues
+	# ProductionBar@RADefenceNod:
+	# 	ProductionType: RADefence
+	# 	RequiresCondition: classicproductionqueues
 	BaseProvider:
 		Range: 14c0
 	WithBuildingBib:
@@ -371,7 +371,7 @@ FACTIOK:
 		Prerequisites: ~disabled
 		Description: Builds structures
 	ProvidesPrerequisite@factionnod:
-		Prerequisite: mmnod
+		Prerequisite: mmiok
 	WithIdleOverlay@BOX:
 		Sequence: box-overlay
 	WithIdleOverlay@BOX2:

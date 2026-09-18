@@ -56,7 +56,7 @@ World:
 	Buildable:
 		BuildPaletteOrder: 10
 		Prerequisites: barracks
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Z
 		Description: General-purpose robot
 	Mobile:
 		Speed: 56
@@ -137,7 +137,7 @@ zgrunt:
 		BuildPaletteOrder: 20
 		Prerequisites: zfort
 		BuildDuration: 100
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Z
 	Mobile:
 		Speed: 70
 	Health:
@@ -274,7 +274,7 @@ ztough:
 		BuildPaletteOrder: 20
 		Prerequisites: barracks
 		BuildDuration: 400
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Z
 	Mobile:
 		Speed: 50
 	Health:
@@ -305,7 +305,7 @@ zjeep:
 	Inherits@cargo: ^CargoVehicle
 	Inherits@detect: ^GenericGroundDetector
 	Buildable:
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Z
 		BuildPaletteOrder: 30
 		BuildDurationModifier: 100
 		BuildDuration: 250
@@ -378,7 +378,7 @@ zltnk:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 40
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Z
 		BuildDurationModifier: 100
 		Description: Fast, light tank.\n  Strong vs Vehicles, Tanks\n  Weak vs Infantry
 		BuildDuration: 500
@@ -435,7 +435,7 @@ zmtnk:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 40
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Z
 		BuildDurationModifier: 100
 		Description: Fast, light tank.\n  Strong vs Vehicles, Tanks\n  Weak vs Infantry
 		BuildDuration: 750
@@ -492,7 +492,7 @@ zhtnk:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 40
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Z
 		BuildDurationModifier: 100
 		Description: Fast, light tank.\n  Strong vs Vehicles, Tanks\n  Weak vs Infantry
 		BuildDuration: 1000
@@ -553,7 +553,7 @@ zapc:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 40
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Z
 		BuildDurationModifier: 100
 		Description: Can Carry one Infantry, changes weapons depend on infantry
 		BuildDuration: 500
@@ -652,7 +652,7 @@ zmlrs:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 40
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Z
 		BuildDurationModifier: 100
 		Description: Fast, light tank.\n  Strong vs Vehicles, Tanks\n  Weak vs Infantry
 		BuildDuration: 1250
@@ -694,6 +694,7 @@ zmlrs:
 		Weapons: ZSPARK1, ZSPARK2, ZSPARK3
 		Pieces: 10, 15
 		Range: 2c0, 3c0, 4c0
+
 zgattlingcan:
 	Inherits: ^Defense
 	Inherits@AUTOTARGET: ^AutoTargetAll
@@ -707,7 +708,7 @@ zgattlingcan:
 		Name: Gattling Cannon
 	Buildable:
 		BuildPaletteOrder: 45
-		Prerequisites: barracks
+		Prerequisites: barracks, ~mmzrobots
 		Queue: Defence, RADefence
 		Description: Basic Defence.\n  Strong vs Infantry, Aircraft\n  Weak vs Vehicles
 		BuildDuration: 650
@@ -760,7 +761,7 @@ zguncan:
 		Name: Gun Cannon
 	Buildable:
 		BuildPaletteOrder: 45
-		Prerequisites: barracks
+		Prerequisites: barracks, ~mmzrobots
 		Queue: Defence, RADefence
 		Description: Basic Defence.\n  Strong vs Vehicles\n  Weak vs Infantry
 		BuildDuration: 650
@@ -796,6 +797,7 @@ zguncan:
 		Weapons: ZSPARK1, ZSPARK2, ZSPARK3
 		Pieces: 10, 15
 		Range: 2c0, 3c0, 4c0
+
 zhotwizer:
 	Inherits: ^Defense
 	Inherits@AUTOTARGET: ^AutoTargetAll
@@ -809,7 +811,7 @@ zhotwizer:
 		Name: Howitzer
 	Buildable:
 		BuildPaletteOrder: 45
-		Prerequisites: barracks, zhq
+		Prerequisites: barracks, zhq, ~mmzrobots
 		Queue: Defence, RADefence
 		Description: Long Range Defence.\n  Strong vs Ground\n  Weak vs Aircraft
 		BuildDuration: 900
@@ -845,6 +847,7 @@ zhotwizer:
 		Weapons: ZSPARK1, ZSPARK2, ZSPARK3
 		Pieces: 10, 15
 		Range: 2c0, 3c0, 4c0
+
 zmissilecan:
 	Inherits: ^Defense
 	Inherits@AUTOTARGET: ^AutoTargetAll
@@ -858,7 +861,7 @@ zmissilecan:
 		Name: Missile Gun
 	Buildable:
 		BuildPaletteOrder: 45
-		Prerequisites: barracks, zhq
+		Prerequisites: barracks, zhq, ~mmzrobots
 		Queue: Defence, RADefence
 		Description: Anti Tank Defence.\n  Strong vs Vehicles, Aircraft\n  Weak vs Aircraft
 		BuildDuration: 850
@@ -898,6 +901,7 @@ zmissilecan:
 		Weapons: ZSPARK1, ZSPARK2, ZSPARK3
 		Pieces: 10, 15
 		Range: 2c0, 3c0, 4c0
+
 zgrenadebox:
 	Inherits: ^BaseBuilding
 	Selectable:
@@ -905,7 +909,7 @@ zgrenadebox:
 	Buildable:
 		Queue: Defence, RADefence
 		BuildPaletteOrder: 175
-		Prerequisites: zbarracks
+		Prerequisites: zbarracks, ~mmzrobots
 		Description: Trains Attack Dogs.
 		BuildDuration: 400
 	Valued:
@@ -951,7 +955,7 @@ zmcv:
 		Name: Construction Crane (Z)
 	Buildable:
 		BuildPaletteOrder: 100
-		Prerequisites: zweap, zfix
+		Prerequisites: zweap, zfix, ~mmzrobots
 		Queue: Building, RABuilding
 		BuildDurationModifier: 100
 		Description: Deploys into another Construction Yard.\n  Unarmed
@@ -989,13 +993,13 @@ zmcv:
 	Voiced:
 		VoiceSet: ZRobotVoice
 
-zmcv_bot:
-	Inherits: zmcv
-	Buildable:
-		BuildLimit: 1
-		Prerequisites: zweap, zfix, ~botplayer, allowsMCV, allowsMCVZ1, allowsMCVZ2
-	RenderSprites:
-		Image: zmcv
+# zmcv_bot:
+# 	Inherits: zmcv
+# 	Buildable:
+# 		BuildLimit: 1
+# 		Prerequisites: zweap, zfix, ~botplayer, allowsMCV, allowsMCVZ1, allowsMCVZ2
+# 	RenderSprites:
+# 		Image: zmcv
 
 zfort:
 	GrantExternalConditionToOwner@BuildingsOwned:
@@ -1005,8 +1009,8 @@ zfort:
 	Inherits@CPQ: ^CPQCondition
 	Inherits@aicash: ^AIConyardCash
 	Inherits@conyard: ^Conyard
-	Selectable:
-		Bounds: 218453, 174762
+	# Selectable:
+	# 	Bounds: 218453, 174762
 	Valued:
 		Cost: 5000
 	Tooltip:
@@ -1025,14 +1029,10 @@ zfort:
 		Range: 10c0
 	Production@NORMAL:
 		Produces: Building, Defence
-		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RABuilding, RADefence
-		RequiresCondition: classicproductionqueues
 	GrantConditionOnPrerequisite@GLOBALFACTUNDEPLOY:
 		Condition: factundeploy
 		Prerequisites: global-factundeploy
-	ProductionQueue@GDIBuilding:
+	ProductionQueue@ZBuilding:
 		Type: Building
 		DisplayOrder: 0
 		Group: Building
@@ -1043,7 +1043,7 @@ zfort:
 		QueuedAudio: Building
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
-	ProductionQueue@GDIDefense:
+	ProductionQueue@ZDefense:
 		Type: Defence
 		DisplayOrder: 1
 		Group: Defence
@@ -1055,18 +1055,10 @@ zfort:
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
 	BaseBuilding:
-	ProductionBar@BuildingGDI:
+	ProductionBar@BuildingZ:
 		ProductionType: Building
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@DefenceGDI:
+	ProductionBar@DefenceZ:
 		ProductionType: Defence
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@RABuildingGDI:
-		ProductionType: RABuilding
-		RequiresCondition: classicproductionqueues
-	ProductionBar@RADefenceGDI:
-		ProductionType: RADefence
-		RequiresCondition: classicproductionqueues
 	BaseProvider:
 		Range: 20c0
 	Power:
@@ -1079,7 +1071,7 @@ zfort:
 		Prerequisites: ~wip-content
 		Description: Builds structures
 	ProvidesPrerequisite@buildingname:
-	ProvidesPrerequisite@factiongdi:
+	ProvidesPrerequisite@factionZ:
 		Prerequisite: mmzrobots
 	RenderSprites:
 		Image: zfort
@@ -1226,11 +1218,12 @@ zfort:
 		RequiresCondition: zhotwizer
 		Name: secondary
 		Turret: secondary
+
 zfort.zgattlingcan:
 	Tooltip:
 		Name: Gattling Cannon
 	Buildable:
-		Prerequisites: barracks
+		Prerequisites: barracks, ~mmzrobots
 		BuildPaletteOrder: 10
 		Queue: Addon.Zfort
 		Description: Adds Gattling Cannons to Fort
@@ -1244,11 +1237,12 @@ zfort.zgattlingcan:
 	AlwaysVisible:
 	KillsSelf:
 		RemoveInstead: true
+
 zfort.zguncan:
 	Tooltip:
 		Name: Gun Lascannon
 	Buildable:
-		Prerequisites: barracks
+		Prerequisites: barracks, ~mmzrobots
 		BuildPaletteOrder: 10
 		Queue: Addon.Zfort
 		Description: Adds Gattling Gun to Fort
@@ -1262,11 +1256,12 @@ zfort.zguncan:
 	AlwaysVisible:
 	KillsSelf:
 		RemoveInstead: true
+
 zfort.zhotwizer:
 	Tooltip:
 		Name: Howitzer
 	Buildable:
-		Prerequisites: barracks
+		Prerequisites: barracks, ~mmzrobots
 		BuildPaletteOrder: 10
 		Queue: Addon.Zfort
 		Description: Adds Hotwizers to Fort
@@ -1280,11 +1275,12 @@ zfort.zhotwizer:
 	AlwaysVisible:
 	KillsSelf:
 		RemoveInstead: true
+
 zfort.zmissilecan:
 	Tooltip:
 		Name: Missiles Gun
 	Buildable:
-		Prerequisites: barracks
+		Prerequisites: barracks, ~mmzrobots
 		BuildPaletteOrder: 10
 		Queue: Addon.Zfort
 		Description: Adds Missiles Guns to Fort
@@ -1298,6 +1294,7 @@ zfort.zmissilecan:
 	AlwaysVisible:
 	KillsSelf:
 		RemoveInstead: true
+
 zbarracks:
 	GrantExternalConditionToOwner@BarracksOwned:
 		Condition: BarracksOwned
@@ -1314,7 +1311,7 @@ zbarracks:
 		Prerequisite: barracks
 	Buildable:
 		BuildPaletteOrder: 30
-		Prerequisites: zfort
+		Prerequisites: zfort, ~mmzrobots
 		Queue: Building, RABuilding
 		Description: Trains infantry
 		BuildDurationModifier: 100
@@ -1338,13 +1335,9 @@ zbarracks:
 	#Production@Upgrades:
 	#	Produces: InfantryUpgrades.ZROBOTS
 	Production@NORMAL:
-		Produces: Infantry
-		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RAInfantry
-		RequiresCondition: classicproductionqueues
+		Produces: Infantry.Z
 	ProductionQueue:
-		Type: Infantry
+		Type: Infantry.Z
 		DisplayOrder: 2
 		Group: Infantry
 		LowPowerModifier: 300
@@ -1354,12 +1347,8 @@ zbarracks:
 		QueuedAudio: Training
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
-	ProductionBar@INFANTRYGDI:
-		ProductionType: Infantry
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@RAINFANTRYGDI:
-		ProductionType: RAInfantry
-		RequiresCondition: classicproductionqueues
+	ProductionBar@INFANTRYZ:
+		ProductionType: Infantry.Z
 	Power:
 		Amount: 0
 	ProvidesPrerequisite@buildingname:
@@ -1382,7 +1371,7 @@ zweap:
 		Prerequisite: barracks
 	Buildable:
 		BuildPaletteOrder: 30
-		Prerequisites: zbarracks
+		Prerequisites: zbarracks, ~mmzrobots
 		Queue: Building, RABuilding
 		Description: Trains infantry
 		BuildDurationModifier: 100
@@ -1406,13 +1395,9 @@ zweap:
 	#Production@Upgrades:
 	#	Produces: InfantryUpgrades.ZROBOTS
 	Production@NORMAL:
-		Produces: Vehicle
-		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RAVehicle
-		RequiresCondition: classicproductionqueues
+		Produces: Vehicle.Z
 	ProductionQueue:
-		Type: Vehicle
+		Type: Vehicle.Z
 		DisplayOrder: 2
 		Group: Vehicle
 		LowPowerModifier: 300
@@ -1422,17 +1407,14 @@ zweap:
 		QueuedAudio: Training
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
-	ProductionBar@INFANTRYGDI:
-		ProductionType: Vehicle
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@RAINFANTRYGDI:
-		ProductionType: RAVehicle
-		RequiresCondition: classicproductionqueues
+	ProductionBar@INFANTRYZ:
+		ProductionType: Vehicle.Z
 	Power:
 		Amount: 0
 	ProvidesPrerequisite@buildingname:
 	ProductionCostMultiplier@free:
 		Multiplier: 0
+
 zhq:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^3x2Shape
@@ -1446,7 +1428,7 @@ zhq:
 		Prerequisite: anyhq
 	Buildable:
 		BuildPaletteOrder: 70
-		Prerequisites: zweap
+		Prerequisites: zweap, ~mmzrobots
 		Queue: Building, RABuilding
 		Description: Provides radar and Air Strike support power.\nUnlocks higher-tech units and buildings.\nRequires power to operate.
 		BuildDuration: 1500
@@ -1488,7 +1470,7 @@ zfix:
 		Name: Repair Facility
 	Buildable:
 		BuildPaletteOrder: 60
-		Prerequisites: zweap
+		Prerequisites: zweap, ~mmzrobots
 		Queue: Building, RABuilding
 		Description: Repairs vehicles
 		BuildDurationModifier: 100

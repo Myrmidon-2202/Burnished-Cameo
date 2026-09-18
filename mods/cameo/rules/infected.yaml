@@ -24,8 +24,6 @@ World:
 		BaseActor: bio
 		SupportActors: civzombie.infect, civzombie.infect, civzombie.infect, civzombie.infect, civzombie.infect, zombie1.infect, zombie1.infect, zombie1.infect, zombie1.infect, civzombie.infect, civzombie.infect, zombie1.infect, zombie2.infect, zombie2.infect, zombie1.infect, zombie1.infect, zombie2.infect, zombie2.infect, zombie2.infect
 
-
-
 Player:
 	ExternalCondition@ZombieHordesOwned:
 		Condition: ZombieHordesOwned
@@ -251,6 +249,7 @@ civzombie.infect:
 		Image: civzombie
 	Valued:
 		Cost: 125
+
 zombie1.infect:
 	Inherits: ZOMBIE1
 	Inherits@Infect: ^InfectionGamemode
@@ -260,6 +259,7 @@ zombie1.infect:
 		Modifier: 75
 	Valued:
 		Cost: 250
+
 zombie2.infect:
 	Inherits: ZOMBIE2
 	Inherits@Infect: ^InfectionGamemode
@@ -275,6 +275,7 @@ zombie2.infect:
 		Modifier: 50
 	Valued:
 		Cost: 500
+
 zombie.squad:
 	GrantExternalConditionToOwner@ZombieHordesOwned:
 		Condition: ZombieHordesOwned
@@ -640,6 +641,7 @@ upzombiemutate1:
 		Image: upisotopestability
 	ProvidesPrerequisite:
 		Prerequisite: upzombiemutate1
+
 upzombiemutate2:
 	Inherits: ^upgrade.template
 	Tooltip:
@@ -657,6 +659,7 @@ upzombiemutate2:
 		Image: upisotopestability
 	ProvidesPrerequisite:
 		Prerequisite: upzombiemutate2
+
 upzombiemutate3:
 	Inherits: ^upgrade.template
 	Tooltip:
@@ -674,6 +677,7 @@ upzombiemutate3:
 		Image: upisotopestability
 	ProvidesPrerequisite:
 		Prerequisite: upzombiemutate3
+
 upzombiemutate4:
 	Inherits: ^upgrade.template
 	Tooltip:
@@ -691,6 +695,7 @@ upzombiemutate4:
 		Image: zmutate2
 	ProvidesPrerequisite:
 		Prerequisite: upzombiemutate4
+
 upzombiemutate5:
 	Inherits: ^upgrade.template
 	Tooltip:
@@ -708,6 +713,7 @@ upzombiemutate5:
 		Image: zmutate2
 	ProvidesPrerequisite:
 		Prerequisite: upzombiemutate5
+
 upzombiemutate6:
 	Inherits: ^upgrade.template
 	Tooltip:
@@ -725,6 +731,7 @@ upzombiemutate6:
 		Image: zmutate2
 	ProvidesPrerequisite:
 		Prerequisite: upzombiemutate6
+
 upzintelligence1:
 	Inherits: ^upgrade.template
 	Tooltip:
@@ -742,6 +749,7 @@ upzintelligence1:
 		Image: upisotopestability
 	ProvidesPrerequisite:
 		Prerequisite: upzintelligence1
+
 upzintelligence2:
 	Inherits: ^upgrade.template
 	Tooltip:
@@ -759,6 +767,7 @@ upzintelligence2:
 		Image: upisotopestability
 	ProvidesPrerequisite:
 		Prerequisite: upzintelligence2
+
 upzintelligence3:
 	Inherits: ^upgrade.template
 	Tooltip:
@@ -894,6 +903,7 @@ tnkzombie.infect:
 		RequiresCondition: rank-elite
 	RenderSprites:
 		Image: tnkzombie
+
 zombiechan.infect:
 	Inherits: civzombie
 	Inherits@Infect: ^InfectionGamemode
@@ -1009,7 +1019,7 @@ ZOMBIE1:
 		Image: zombie
 	Cloneable:
 		Types: zombie
-		
+
 ZOMBIE2:
 	Inherits: ^Soldier
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
@@ -1082,132 +1092,132 @@ spitter:
 		Bounds: 25472, 25472
 	RenderSprites:
 
-ANT2:
-	Inherits: ^Infantry
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
-	Inherits@Infect: ^InfectionGamemode
-	Valued:
-		Cost: 500
-	Tooltip:
-		Name: Giant Ant
-		GenericName: Ant
-	Buildable:
-		Queue: Vehicle, RAVehicle
-		BuildPaletteOrder: 10
-		BuildDurationModifier: 70
-		Prerequisites: zbio
-		Description: Irradiated insect that grew oversize.
-	AutoTarget:
-		ScanRadius: 25
-		InitialStance: AttackAnything
-	Selectable:
-		Bounds: 43690, 43690, 0, -9088
-		DecorationBounds: 54613, 54613, 0, -3626
-	SelectionDecorations:
-	Health:
-		HP: 50000 #75000
-	Mobile:
-		Speed: 100
-		TurnSpeed: 48
-		Locomotor: lighttracked
-	-Crushable:
-	AttackFrontal:
-		FacingTolerance: 0
-	WithInfantryBody:
-		DefaultAttackSequence: bite
-	Armament:
-		Weapon: mandible
-	WithDeathAnimation:
-		UseDeathTypeSuffix: false
-	Voiced:
-		VoiceSet: AntVoice
-	HitShape:
-		Type: Circle
-			Radius: 469
-	RenderSprites:
-		Image: Ant
+# ANT2:
+# 	Inherits: ^Infantry
+# 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+# 	Inherits@Infect: ^InfectionGamemode
+# 	Valued:
+# 		Cost: 500
+# 	Tooltip:
+# 		Name: Giant Ant
+# 		GenericName: Ant
+# 	Buildable:
+# 		Queue: Vehicle, RAVehicle
+# 		BuildPaletteOrder: 10
+# 		BuildDurationModifier: 70
+# 		Prerequisites: zbio
+# 		Description: Irradiated insect that grew oversize.
+# 	AutoTarget:
+# 		ScanRadius: 25
+# 		InitialStance: AttackAnything
+# 	Selectable:
+# 		Bounds: 43690, 43690, 0, -9088
+# 		DecorationBounds: 54613, 54613, 0, -3626
+# 	SelectionDecorations:
+# 	Health:
+# 		HP: 50000 #75000
+# 	Mobile:
+# 		Speed: 100
+# 		TurnSpeed: 48
+# 		Locomotor: lighttracked
+# 	-Crushable:
+# 	AttackFrontal:
+# 		FacingTolerance: 0
+# 	WithInfantryBody:
+# 		DefaultAttackSequence: bite
+# 	Armament:
+# 		Weapon: mandible
+# 	WithDeathAnimation:
+# 		UseDeathTypeSuffix: false
+# 	Voiced:
+# 		VoiceSet: AntVoice
+# 	HitShape:
+# 		Type: Circle
+# 			Radius: 469
+# 	RenderSprites:
+# 		Image: Ant
 
-STEG2:
-	Inherits: STEG
-	Inherits@bounty: ^GlobalBounty ##########
-	Health:
-		HP: 50000 #100000
-	Armor:
-		Type: Light #Wood
-	Valued:
-		Cost: 1000
-	Armament:
-		Weapon: Tail2
-	Buildable:
-		Queue: Vehicle, RAVehicle
-		BuildPaletteOrder: 20
-		BuildDurationModifier: 70
-		Prerequisites: xbio
-	Mobile:
-		Speed: 60 #113
-	RenderSprites:
-		Image: STEG
+# STEG2:
+# 	Inherits: STEG
+# 	Inherits@bounty: ^GlobalBounty ##########
+# 	Health:
+# 		HP: 50000 #100000
+# 	Armor:
+# 		Type: Light #Wood
+# 	Valued:
+# 		Cost: 1000
+# 	Armament:
+# 		Weapon: Tail2
+# 	Buildable:
+# 		Queue: Vehicle, RAVehicle
+# 		BuildPaletteOrder: 20
+# 		BuildDurationModifier: 70
+# 		Prerequisites: xbio
+# 	Mobile:
+# 		Speed: 60 #113
+# 	RenderSprites:
+# 		Image: STEG
 
-TREX2:
-	Inherits: trex
-	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
-	Inherits@bounty: ^GlobalBounty ##########
-	Health:
-		HP: 100000
-	Armor:
-		Type: Heavy #Wood
-	Valued:
-		Cost: 1500 #1000
-	Armament:
-		Weapon: Teeth2
-	Buildable:
-		Queue: Vehicle, RAVehicle
-		BuildPaletteOrder: 30
-		BuildDurationModifier: 70
-		Prerequisites: xbio
-	Mobile:
-		Speed: 60 #113
-	RenderSprites:
-		Image: TREX
+# TREX2:
+# 	Inherits: trex
+# 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+# 	Inherits@bounty: ^GlobalBounty ##########
+# 	Health:
+# 		HP: 100000
+# 	Armor:
+# 		Type: Heavy #Wood
+# 	Valued:
+# 		Cost: 1500 #1000
+# 	Armament:
+# 		Weapon: Teeth2
+# 	Buildable:
+# 		Queue: Vehicle, RAVehicle
+# 		BuildPaletteOrder: 30
+# 		BuildDurationModifier: 70
+# 		Prerequisites: xbio
+# 	Mobile:
+# 		Speed: 60 #113
+# 	RenderSprites:
+# 		Image: TREX
 
-TRIC2:
-	Inherits: TRIC
-	Inherits@bounty: ^GlobalBounty ##########
-	Health:
-		HP: 50000 #100000
-	Armor:
-		Type: Heavy #Wood
-	Valued:
-		Cost: 1000
-	Armament:
-		Weapon: Horn2
-	Buildable:
-		Queue: Vehicle, RAVehicle
-		BuildPaletteOrder: 40
-		BuildDurationModifier: 70
-		Prerequisites: xbio
-	Mobile:
-		Speed: 60 #113
-	RenderSprites:
-		Image: TRIC
+# TRIC2:
+# 	Inherits: TRIC
+# 	Inherits@bounty: ^GlobalBounty ##########
+# 	Health:
+# 		HP: 50000 #100000
+# 	Armor:
+# 		Type: Heavy #Wood
+# 	Valued:
+# 		Cost: 1000
+# 	Armament:
+# 		Weapon: Horn2
+# 	Buildable:
+# 		Queue: Vehicle, RAVehicle
+# 		BuildPaletteOrder: 40
+# 		BuildDurationModifier: 70
+# 		Prerequisites: xbio
+# 	Mobile:
+# 		Speed: 60 #113
+# 	RenderSprites:
+# 		Image: TRIC
 
-RAPT2:
-	Inherits: RAPT
-	Inherits@bounty: ^GlobalBounty ##########
-	Health:
-		HP: 40000 #100000
-	Armor:
-		Type: Light #Wood
-	Valued:
-		Cost: 800 #1000
-	Armament:
-		Weapon: Claw2
-	Buildable:
-		Queue: Vehicle, RAVehicle
-		BuildPaletteOrder: 50
-		BuildDurationModifier: 70
-		Prerequisites: xbio
-	Mobile:
-		Speed: 113
-	RenderSprites:
-		Image: RAPT
+# RAPT2:
+# 	Inherits: RAPT
+# 	Inherits@bounty: ^GlobalBounty ##########
+# 	Health:
+# 		HP: 40000 #100000
+# 	Armor:
+# 		Type: Light #Wood
+# 	Valued:
+# 		Cost: 800 #1000
+# 	Armament:
+# 		Weapon: Claw2
+# 	Buildable:
+# 		Queue: Vehicle, RAVehicle
+# 		BuildPaletteOrder: 50
+# 		BuildDurationModifier: 70
+# 		Prerequisites: xbio
+# 	Mobile:
+# 		Speed: 113
+# 	RenderSprites:
+# 		Image: RAPT

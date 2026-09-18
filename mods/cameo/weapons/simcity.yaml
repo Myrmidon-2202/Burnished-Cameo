@@ -70,11 +70,11 @@ PoliceSMG:
 		Damage: 450 #2000
 		DamageTypes: Prone50Percent, TriggerProne, BulletDeath
 		Versus:
-			None: 60 #25
+			None: 80 #25
 			Wood: 80
 			Light: 80
 			Medium: 75
-			Heavy: 50
+			Heavy: 60
 			Concrete: 35
 		
 ####################################################################################################
@@ -316,7 +316,96 @@ SwatGL:
 		Duration: 30
 		Condition: empdisable
 		ValidTargets: Vehicle
-		
+
+Tail2:
+	ReloadDelay: 30
+	Range: 1c0
+	Report: dinoatk1.aud
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead@1Dam: SpreadDamage
+		Spread: 64 #213
+		Damage: 12000 #18000
+		Versus:
+			None: 97
+			Wood: 30 #10
+			Light: 50 #30
+			Medium: 40
+			Heavy: 30 #10
+			Concrete: 20 #10
+		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath
+
+Horn2:
+	ReloadDelay: 20
+	Range: 1c0
+	Report: dinoatk1.aud
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead@1Dam: SpreadDamage
+		Spread: 64 #213
+		Damage: 8000 #12000
+		Versus:
+			None: 97
+			Wood: 30 #10
+			Light: 50 #30
+			Medium: 40
+			Heavy: 30 #10
+			Concrete: 20 #10
+		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath
+
+Teeth2:
+	ReloadDelay: 30
+	ValidTargets: Ground, Water, Trees, Air
+	Range: 2c0
+	Report: dinoatk1.aud
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead@1Dam: SpreadDamage
+		Spread: 64 #213
+		Damage: 12000 #18000
+		Versus:
+			None: 97
+			Wood: 30 #10
+			Light: 50 #30
+			Medium: 40
+			Heavy: 30 #10
+			Concrete: 20 #10
+		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath
+		ValidTargets: Ground, Water, Trees, Air
+
+Claw2:
+	ReloadDelay: 20
+	Range: 1c0
+	Report: dinoatk1.aud
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead@1Dam: SpreadDamage
+		Spread: 64 #213
+		Damage: 6000
+		Versus:
+			None: 97
+			Wood: 30 #10
+			Light: 50 #30
+			Medium: 40
+			Heavy: 30 #10
+			Concrete: 20 #10
+		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath
+
+Munch:
+	Report: Munchymunchy.aud
+	ReloadDelay: 20
+	Range: 1c512
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead@1Dam: SpreadDamage
+		Damage: 3000
+		Versus:
+			Wood: 10
+			Light: 30
+			Medium: 20
+			Heavy: 10
+			Concrete: 10
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
 ####################################################################################################
 #		SUPERWEAPONS
 ####################################################################################################

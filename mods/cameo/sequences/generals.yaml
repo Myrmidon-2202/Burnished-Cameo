@@ -500,6 +500,10 @@ sglrebel:
 		Facings: 8
 		Length: 20
 		Tick: 120
+	die7:
+		Filename: electro.shp
+		Scale: 1
+		Length: *
 	muzzle: minigun.shp
 		Length: 3
 		Stride: 6
@@ -591,6 +595,10 @@ sglrpgtrooper:
 		Start: 188
 		Length: 20
 		Tick: 135
+	die7:
+		Filename: electro.shp
+		Scale: 1
+		Length: *
 	die-crushed: 
 		Filename: e1rot.shp
 		Start: 16
@@ -619,6 +627,10 @@ sglhijack:
 		Start: 88
 		Length: 20
 		Tick: 125
+	die7:
+		Filename: electro.shp
+		Scale: 1
+		Length: *
 	die-crushed:
 		Filename: e1rot.shp
 		Start: 16
@@ -679,6 +691,10 @@ sgljarmen:
 		Facings: 8
 		Length: 20
 		Tick: 120
+	die7:
+		Filename: electro.shp
+		Scale: 1
+		Length: *
 	muzzle:
 		Filename: minigun.shp
 		Length: 3
@@ -905,6 +921,10 @@ sglterrorist:
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
+	die7:
+		Filename: electro.shp
+		Scale: 1
+		Length: *
 	idle1:
 		Start: 208
 		Length: 20
