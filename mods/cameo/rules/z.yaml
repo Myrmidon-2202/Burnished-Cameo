@@ -17,11 +17,11 @@ Player:
 
 World:
 	FactionCA@zrobots:
-		Name: Z Sector
+		Name: Z
 		InternalName: zrobots
-		Game: Special
-		Side: Factions
-		Description: Z Sector\nFeatures:\n- Mechanized infantry, not affects by tiberium\n- All Units, Structures are free\n- Buildings and defenses do not require power to operate\n- The units only has time production\n-Support powers: Nothing
+		Game: Z
+		Side: Z
+		Description: Z \nFeatures:\n- Mechanized infantry, not affects by tiberium\n- All Units, Structures are free\n- Buildings and defenses do not require power to operate\n- The units only has time production\n-Support powers: Nothing
 	####################################################################################################
 	#		RA
 	####################################################################################################
@@ -42,6 +42,7 @@ World:
 		Factions: zrobots
 		BaseActor: zmcv
 		SupportActors: zgrunt,zgrunt,zgrunt,ztough,ztough,zjeep,zpsyco,zlaser,zlaser,zlaser
+
 ^ZRobotU:
 	Inherits: ^Soldier
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -102,6 +103,7 @@ World:
 		Multiplier: 0
 	ExternalCondition@zgrenades:
 		Condition: zgrenades
+
 ^ZArmedBaseBuilding:
 	Inherits: ^Defense
 	Inherits@AUTOTARGET: ^AutoTargetAll
@@ -353,7 +355,7 @@ zjeep:
 		MoveSequence: top
 	-WithFacingSpriteBody:
 	WithSpriteTurret:
-	ThrowsShrapnel@2:
+	FireProjectilesOnDeath@2:
 		Weapons: ZSPARK1, ZSPARK2, ZSPARK3
 		Pieces: 5, 10
 		Range: 2c0, 3c0, 4c0
@@ -413,11 +415,11 @@ zltnk:
 		Multiplier: 0
 	Voiced:
 		VoiceSet: ZRobotVoice
-	ThrowsShrapnel:
+	FireProjectilesOnDeath:
 		Weapons: ZLTNK_DEBRIS
 		Pieces: 1, 1
 		Range: 2c0, 4c0
-	ThrowsShrapnel@2:
+	FireProjectilesOnDeath@2:
 		Weapons: ZSPARK1, ZSPARK2, ZSPARK3
 		Pieces: 10, 15
 		Range: 2c0, 3c0, 4c0
@@ -470,11 +472,11 @@ zmtnk:
 		Multiplier: 0
 	Voiced:
 		VoiceSet: ZRobotVoice
-	ThrowsShrapnel:
+	FireProjectilesOnDeath:
 		Weapons: ZMTNK_DEBRIS
 		Pieces: 1, 1
 		Range: 2c0, 4c0
-	ThrowsShrapnel@2:
+	FireProjectilesOnDeath@2:
 		Weapons: ZSPARK1, ZSPARK2, ZSPARK3
 		Pieces: 10, 15
 		Range: 2c0, 3c0, 4c0
@@ -532,11 +534,11 @@ zhtnk:
 		Multiplier: 0
 	Voiced:
 		VoiceSet: ZRobotVoice
-	ThrowsShrapnel:
+	FireProjectilesOnDeath:
 		Weapons: ZHTNK_DEBRIS
 		Pieces: 1, 1
 		Range: 2c0, 4c0
-	ThrowsShrapnel@2:
+	FireProjectilesOnDeath@2:
 		Weapons: ZSPARK1, ZSPARK2, ZSPARK3
 		Pieces: 10, 15
 		Range: 2c0, 3c0, 4c0
@@ -597,7 +599,7 @@ zapc:
 		PauseOnCondition: chronobeamed
 	RevealOnFire:
 		ArmamentNames: primary, garrisoned
-	ThrowsShrapnel@2:
+	FireProjectilesOnDeath@2:
 		Weapons: ZSPARK1, ZSPARK2, ZSPARK3
 		Pieces: 10, 15
 		Range: 2c0, 3c0, 4c0
@@ -690,7 +692,7 @@ zmlrs:
 		ValidTypes: vehicle ##########
 	ProductionCostMultiplier@free:
 		Multiplier: 0
-	ThrowsShrapnel@2:
+	FireProjectilesOnDeath@2:
 		Weapons: ZSPARK1, ZSPARK2, ZSPARK3
 		Pieces: 10, 15
 		Range: 2c0, 3c0, 4c0
@@ -744,7 +746,7 @@ zgattlingcan:
 		Amount: 0
 	ProductionCostMultiplier@free:
 		Multiplier: 0
-	ThrowsShrapnel@2:
+	FireProjectilesOnDeath@2:
 		Weapons: ZSPARK1, ZSPARK2, ZSPARK3
 		Pieces: 10, 15
 		Range: 2c0, 3c0, 4c0
@@ -793,7 +795,7 @@ zguncan:
 		Amount: 0
 	ProductionCostMultiplier@free:
 		Multiplier: 0
-	ThrowsShrapnel@2:
+	FireProjectilesOnDeath@2:
 		Weapons: ZSPARK1, ZSPARK2, ZSPARK3
 		Pieces: 10, 15
 		Range: 2c0, 3c0, 4c0
@@ -843,7 +845,7 @@ zhotwizer:
 		Amount: 0
 	ProductionCostMultiplier@free:
 		Multiplier: 0
-	ThrowsShrapnel@2:
+	FireProjectilesOnDeath@2:
 		Weapons: ZSPARK1, ZSPARK2, ZSPARK3
 		Pieces: 10, 15
 		Range: 2c0, 3c0, 4c0
@@ -897,7 +899,7 @@ zmissilecan:
 		Amount: 0
 	ProductionCostMultiplier@free:
 		Multiplier: 0
-	ThrowsShrapnel@2:
+	FireProjectilesOnDeath@2:
 		Weapons: ZSPARK1, ZSPARK2, ZSPARK3
 		Pieces: 10, 15
 		Range: 2c0, 3c0, 4c0
@@ -940,7 +942,7 @@ zgrenadebox:
 		HasMinibib: true
 	ProductionCostMultiplier@free:
 		Multiplier: 0
-	ThrowsShrapnel@2:
+	FireProjectilesOnDeath@2:
 		Weapons: ZSPARK1, ZSPARK2, ZSPARK3
 		Pieces: 10, 15
 		Range: 2c0, 3c0, 4c0
@@ -948,7 +950,6 @@ zmcv:
 	Inherits: ^Vehicle
 	Inherits@selection: ^SelectableSupportUnit
 	Inherits@mcv: ^MCV
-	Inherits@conyard: ^Conyard
 	Valued:
 		Cost: 3000
 	Tooltip:
@@ -1027,38 +1028,38 @@ zfort:
 		Modifier: 50
 	RevealsShroud:
 		Range: 10c0
-	Production@NORMAL:
-		Produces: Building, Defence
+	# Production@NORMAL:
+	# 	Produces: Building, Defence
 	GrantConditionOnPrerequisite@GLOBALFACTUNDEPLOY:
 		Condition: factundeploy
 		Prerequisites: global-factundeploy
-	ProductionQueue@ZBuilding:
-		Type: Building
-		DisplayOrder: 0
-		Group: Building
-		LowPowerModifier: 200
-		ReadyAudio: ConstructionComplete
-		BlockedAudio: NoBuild
-		LimitedAudio: BuildingInProgress
-		QueuedAudio: Building
-		OnHoldAudio: OnHold
-		CancelledAudio: Cancelled
-	ProductionQueue@ZDefense:
-		Type: Defence
-		DisplayOrder: 1
-		Group: Defence
-		LowPowerModifier: 300
-		ReadyAudio: ConstructionComplete
-		BlockedAudio: NoBuild
-		LimitedAudio: BuildingInProgress
-		QueuedAudio: Building
-		OnHoldAudio: OnHold
-		CancelledAudio: Cancelled
+	# ProductionQueue@ZBuilding:
+	# 	Type: Building
+	# 	DisplayOrder: 0
+	# 	Group: Building
+	# 	LowPowerModifier: 200
+	# 	ReadyAudio: ConstructionComplete
+	# 	BlockedAudio: NoBuild
+	# 	LimitedAudio: BuildingInProgress
+	# 	QueuedAudio: Building
+	# 	OnHoldAudio: OnHold
+	# 	CancelledAudio: Cancelled
+	# ProductionQueue@ZDefense:
+	# 	Type: Defence
+	# 	DisplayOrder: 1
+	# 	Group: Defence
+	# 	LowPowerModifier: 300
+	# 	ReadyAudio: ConstructionComplete
+	# 	BlockedAudio: NoBuild
+	# 	LimitedAudio: BuildingInProgress
+	# 	QueuedAudio: Building
+	# 	OnHoldAudio: OnHold
+	# 	CancelledAudio: Cancelled
 	BaseBuilding:
-	ProductionBar@BuildingZ:
-		ProductionType: Building
-	ProductionBar@DefenceZ:
-		ProductionType: Defence
+	# ProductionBar@BuildingZ:
+	# 	ProductionType: Building
+	# ProductionBar@DefenceZ:
+	# 	ProductionType: Defence
 	BaseProvider:
 		Range: 20c0
 	Power:
@@ -1218,6 +1219,11 @@ zfort:
 		RequiresCondition: zhotwizer
 		Name: secondary
 		Turret: secondary
+	-Transforms:
+	-TransformsIntoMobile:
+	-TransformsIntoPassenger:
+	-TransformsIntoRepairable:
+	-TransferTimedExternalConditionOnTransform:
 
 zfort.zgattlingcan:
 	Tooltip:
@@ -1478,9 +1484,9 @@ zfix:
 	Building:
 		Footprint: xxx x+x +++
 		Dimensions: 3,3
-	Selectable:
-		Bounds: 116480, 61866, 0, 5461
-		DecorationBounds: 131072, 87381
+	# Selectable:
+	# 	Bounds: 116480, 61866, 0, 5461
+	# 	DecorationBounds: 131072, 87381
 	SelectionDecorations:
 	Health:
 		HP: 150000

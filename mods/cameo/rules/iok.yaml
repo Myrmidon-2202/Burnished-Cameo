@@ -24,6 +24,55 @@ World:
 		BaseActor: mcv.iok
 		SupportActors: ioke1,ioke1,ioke1,ioke1,ioke1,iokscorpion,iokftnk,iokbggy
 
+	# FactionCA@udi:
+	# 	Name: United Defense Initiative
+	# 	InternalName: udi
+	# 	Game: Tiberian Dawn
+	# 	Side: Nod
+	# 	Description: United Defense Initiative\nThe IoK consists of USA sympathizers who believe the tiberium prophecy.\nSupport powers: Radar van, Nuclear missile, Scud Storm
+
+	# StartingUnits@mcvonlyiok:
+	# 	Class: none
+	# 	ClassName: MCV Only
+	# 	Factions: udi
+	# 	BaseActor: mcv.udi
+	# StartingUnits@defaultiok:
+	# 	Class: light
+	# 	ClassName: Light Support
+	# 	Factions: udi
+	# 	BaseActor: mcv.udi
+	# 	SupportActors: ioke1,ioke1,ioke1,ioke1,ioke1,ioke1,ioke1,iokbggy
+	# StartingUnits@heavyiok:
+	# 	Class: heavy
+	# 	ClassName: Heavy Support
+	# 	Factions: udi
+	# 	BaseActor: mcv.udi
+	# 	SupportActors: ioke1,ioke1,ioke1,ioke1,ioke1,iokscorpion,iokftnk,iokbggy
+
+	# FactionCA@eau:
+	# 	Name: Eurasian Union
+	# 	InternalName: eau
+	# 	Game: Tiberian Dawn
+	# 	Side: Nod
+	# 	Description: Eurasian Union of Soviet Socialist Republics\nThe IoK consists of Chinese sympathizers who believe the tiberium prophecy.\nSupport powers: Radar van, Nuclear missile, Scud Storm
+
+	# StartingUnits@mcvonlyiok:
+	# 	Class: none
+	# 	ClassName: MCV Only
+	# 	Factions: eau
+	# 	BaseActor: mcv.eau
+	# StartingUnits@defaultiok:
+	# 	Class: light
+	# 	ClassName: Light Support
+	# 	Factions: eau
+	# 	BaseActor: mcv.eau
+	# 	SupportActors: ioke1,ioke1,ioke1,ioke1,ioke1,ioke1,ioke1,iokbggy
+	# StartingUnits@heavyiok:
+	# 	Class: heavy
+	# 	ClassName: Heavy Support
+	# 	Factions: eau
+	# 	BaseActor: mcv.eau
+	# 	SupportActors: ioke1,ioke1,ioke1,ioke1,ioke1,iokscorpion,iokftnk,iokbggy
 ####################################################################################################
 #		IOK - HOLES
 ####################################################################################################

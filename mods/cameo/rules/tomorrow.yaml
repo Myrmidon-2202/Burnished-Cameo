@@ -4317,8 +4317,7 @@ hideout:
 	Tooltip:
 		Name: Hideout
 	Buildable:
-		Queue:
-		Prerequisites:
+		Prerequisites: ~fact.dtethiopia
 	RenderSprites:
 		Image: dthideout
 	Armament:

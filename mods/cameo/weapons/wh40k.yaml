@@ -176,6 +176,7 @@ WH40KHeavyBolterLandRaider:
 	Range: 7c0
 	Warhead@1Dam: SpreadDamage
 		Damage: 7600
+
 WH40KPlasmapistol:
 	Inherits: ^BallisticWeapon
 	ReloadDelay: 50
@@ -196,6 +197,7 @@ WH40KPlasmapistol:
 			Heavy: 34
 	Warhead@3Eff: CreateEffect
 		Explosions: wh40kplasmaexp
+
 WH40KPlasmapistolG:
 	Inherits: WH40KPlasmapistol
 	ReloadDelay: 20
@@ -262,6 +264,7 @@ WH40KGrenadeLauncherG:
 	Inherits: WH40KGrenadeLauncher
 	ReloadDelay: 70
 	Range: 7c0
+
 WH40KCommissarPistol:
 	Inherits: M16
 	ReloadDelay: 25
@@ -269,6 +272,7 @@ WH40KCommissarPistol:
 	Report: iredweaa.aud, iredweab.aud, iredweac.aud, iredwead.aud
 	Warhead@1Dam: SpreadDamage
 		Damage: 4000
+
 WH40KCowardKill:
 	Inherits: M16
 	ReloadDelay: 350

@@ -159,7 +159,7 @@ ZToughMissileAA:
 	Inherits: Rockets
 	ValidTargets: Air
 	Report: ZGRENLOBX.wav
-	Projectile: MissileCA
+	Projectile: Missile
 		HorizontalRateOfTurn: 16
 		Range: 7c512
 		Speed: 333
@@ -216,7 +216,7 @@ ZRLMissileAA:
 	BurstDelays: 3
 	Range: 12c512
 	Report: ZGRENLOBX.wav
-	Projectile: MissileCA
+	Projectile: Missile
 	HorizontalRateOfTurn: 16
 		Speed: 333
 		RangeLimit: 25c0

@@ -5726,7 +5726,6 @@ Fremen_L:
 	Warhead@2Eff: CreateEffect
 		Explosions: d2k_small_explosion
 
-
 TSSonicZap:
 	ReloadDelay: 60
 	Range: 6c0
@@ -5796,6 +5795,377 @@ SpiceExplosion:
 		Explosions: d2k_med_explosion
 		ImpactActors: false
 		ExplosionPalette: effect75alpha
+
+### Monster
+
+ZClaw1:
+	ReloadDelay: 30
+	Range: 1c512
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead@1Dam: SpreadDamage
+		Spread: 64 #213
+		Damage: 1000 #3000
+		Versus:
+			None: 97
+			Wood: 30 #10
+			Light: 50 #30
+			Medium: 40
+			Heavy: 30 #10
+			Concrete: 10
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+
+ZClaw2:
+	ReloadDelay: 30
+	Range: 1c512
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead@1Dam: SpreadDamage
+		Spread: 64 #213
+		Damage: 1500
+		Versus:
+			None: 97
+			Wood: 30 #10
+			Light: 50 #30
+			Medium: 40
+			Heavy: 30 #10
+			Concrete: 10
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+
+ZClaw3:
+	ReloadDelay: 30
+	Range: 1c512
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead@1Dam: SpreadDamage
+		Spread: 64 #213
+		Damage: 2000
+		Versus:
+			None: 97
+			Wood: 30 #10
+			Light: 50 #30
+			Medium: 40
+			Heavy: 30 #10
+			Concrete: 10
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+
+ZMutantPunch:
+	ReloadDelay: 30
+	ValidTargets: Ground, Water, Trees, Air
+	Range: 2c0
+	Report: dinoatk1.aud
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead@1Dam: SpreadDamage
+		Spread: 64            #213
+		Damage: 18000        #18000
+		Versus:
+			None: 97
+			Wood: 30        #10
+			Light: 50        #30
+			Medium: 40
+			Heavy: 30        #10
+			Concrete: 20    #10
+		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath
+		ValidTargets: Ground, Water, Trees, Air
+
+ZBruteRock:
+	Inherits: BikeRockets
+	Burst: 1
+	Report: galiatta.wav, galiattb.wav
+	ValidTargets: Air
+	Projectile: Missile
+		HorizontalRateOfTurn: 16
+		Range: 7c512
+		Speed: 268
+		RangeLimit: 10c512
+		Image: shrapnel
+		Palette: d2keffect
+		Shadow: true
+		LaunchAngle: 128, 192
+	Warhead@1Dam: SpreadDamage
+		ValidTargets: Air
+		Damage: 4000
+
+Mandible:
+	Inherits: InfectZClaw1
+	Report: antbite.aud
+	ReloadDelay: 20
+	Warhead@1Dam: SpreadDamage
+		Damage: 10000
+		DamageTypes: Prone50Percent, TriggerProne, BulletDeath
+
+MandibleMedium:
+	Inherits: InfectZClaw2
+	Report: antbite.aud
+	ReloadDelay: 15
+	Warhead@1Dam: SpreadDamage
+		Damage: 15000
+		DamageTypes: Prone50Percent, TriggerProne, BulletDeath
+
+MandibleHeavy:
+	Inherits: InfectZClaw3
+	Report: antbite.aud
+	ReloadDelay: 10
+	Warhead@1Dam: SpreadDamage
+		Damage: 20000
+		DamageTypes: Prone50Percent, TriggerProne, BulletDeath
+
+SuperMandible:
+	Inherits: MandibleHeavy
+	Warhead@1Dam: SpreadDamage
+		Damage: 20000
+MandibleAA:
+	Inherits: Mandible
+	ValidTargets: Air
+	ReloadDelay: 15
+	Burst: 2
+	BurstDelays: 20
+	StartBurstReport: antbite.aud
+	Warhead@1Dam: SpreadDamage
+		Damage: 10000
+		Versus:
+			None: 100
+			Light: 90
+			Medium: 60
+			Heavy: 35
+			Concrete: 20
+		ValidTargets: Air
+
+AntFireball:
+	Inherits: ^FireWeapon
+	Report: antbite.aud
+	ReloadDelay: 100
+	Range: 10c0
+	Projectile: Bullet
+		Speed: 250
+		LaunchAngle: 125
+		Image: FB1
+		TrailImage: fb2
+	Warhead@1Dam: SpreadDamage
+		Spread: 1000
+		Damage: 10000
+		Falloff: 100, 50, 25, 0
+		Versus:
+			None: 100
+			Wood: 60
+			Light: 90
+			Medium: 80
+			Heavy: 70
+			Concrete: 50
+	Warhead@2Dam: HealthPercentageDamage
+		Damage: 10
+		Spread: 1000
+		Falloff: 100, 50, 25, 0
+		Delay: 10
+		DamageTypes: Prone100Percent, TriggerProne, FireDeath, Incendiary
+		Versus:
+			None: 100
+			Wood: 60
+			Light: 90
+			Medium: 80
+			Heavy: 70
+			Concrete: 50
+		ValidTargets: Ground, Water, Trees
+	Warhead@4Eff: CreateEffect
+		Explosions: large_napalm
+		Delay: 5
+
+SuperAntTeslaZap:
+	Inherits: TeslaZap
+	Range: 5c0
+	Burst: 5
+	BurstDelays: 5
+	ReloadDelay: 50
+	Report: btesat1a.wav
+	ValidTargets: Ground, Water
+	Warhead@1Dam: SpreadDamage
+		ValidTargets: Ground, Water
+		Damage: 5000
+		Spread: 500
+		Falloff: 100, 50, 25, 0
+		Versus:
+			None: 500
+			Wood: 40
+			Light: 100
+			Medium: 80
+			Heavy: 60
+			Concrete: 20
+	Warhead@Percentage: HealthPercentageDamage
+		Damage: 5
+		Spread: 500
+		Falloff: 100, 50, 25, 0
+		Delay: 5
+		Versus:
+			None: 100
+			Wood: 10
+			Light: 30
+			Medium: 40
+			Heavy: 50
+			Concrete: 20
+		DamageTypes: Prone100Percent, TriggerProne, FireDeath, Incendiary
+		ValidTargets: Ground, Water
+
+AntNeedles:
+	Inherits: ^AntiGroundMissile
+	ReloadDelay: 32
+	Range: 6c6
+	MinRange: 1c256
+	Burst: 4
+	BurstDelays: 2
+	Report: vrocweaa.wav, vrocweab.wav, vrocweac.wav, vrocwead.wav, vrocweae.wav, vrocweaf.wav
+	ValidTargets: Ground, Air, Water
+	TargetActorCenter: true
+	Projectile: Missile
+		LockOnProbability: 50
+		LockOnInaccuracy: 2c256
+		MinimumLaunchAngle: 25
+		MaximumLaunchAngle: 100
+		MinimumLaunchSpeed: 200
+		MaximumLaunchSpeed: 250
+		RangeLimit: 12c512
+		#Speed: 250
+		ContrailColor: 33FF33
+		ContrailLength: 50
+		Width: 0c3
+		#Inaccuracy: 1c512
+		HorizontalRateOfTurn: 25
+		TrailImage: green_smokey
+	Warhead@Cloud: SpawnSmokeParticle
+		Count: 1
+		Duration: 50
+		Speed: 4, 16
+		TurnRate: 10
+		Image: ra2txgasg
+		Sequences: idle
+		Palette: ra2effect
+		Weapon: RA2Cloud
+		InvalidTargets: Water
+	Warhead@1Dam: SpreadDamage
+		Spread: 100
+		Damage: 1000
+		Falloff: 1000, 333, 123, 55, 22, 11, 0
+		Versus:
+			None: 99
+			Wood: 111
+			Light: 88
+			Medium: 77
+			Heavy: 66
+			Concrete: 55
+		ValidTargets: Ground, Air, Water
+		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: chemball
+	Warhead@3Smu: LeaveSmudge
+		SmudgeType: Scorch
+
+Tail2:
+	ReloadDelay: 30
+	Range: 1c0
+	Report: dinoatk1.aud
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead@1Dam: SpreadDamage
+		Spread: 64 #213
+		Damage: 12000 #18000
+		Versus:
+			None: 97
+			Wood: 30 #10
+			Light: 50 #30
+			Medium: 40
+			Heavy: 30 #10
+			Concrete: 20 #10
+		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath
+
+Horn2:
+	ReloadDelay: 20
+	Range: 1c0
+	Report: dinoatk1.aud
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead@1Dam: SpreadDamage
+		Spread: 64 #213
+		Damage: 8000 #12000
+		Versus:
+			None: 97
+			Wood: 30 #10
+			Light: 50 #30
+			Medium: 40
+			Heavy: 30 #10
+			Concrete: 20 #10
+		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath
+
+Teeth2:
+	ReloadDelay: 30
+	ValidTargets: Ground, Water, Trees, Air
+	Range: 2c0
+	Report: dinoatk1.aud
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead@1Dam: SpreadDamage
+		Spread: 64 #213
+		Damage: 12000 #18000
+		Versus:
+			None: 97
+			Wood: 30 #10
+			Light: 50 #30
+			Medium: 40
+			Heavy: 30 #10
+			Concrete: 20 #10
+		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath
+		ValidTargets: Ground, Water, Trees, Air
+
+Claw2:
+	ReloadDelay: 20
+	Range: 1c0
+	Report: dinoatk1.aud
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead@1Dam: SpreadDamage
+		Spread: 64 #213
+		Damage: 6000
+		Versus:
+			None: 97
+			Wood: 30 #10
+			Light: 50 #30
+			Medium: 40
+			Heavy: 30 #10
+			Concrete: 20 #10
+		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath
+
+Munch:
+	Report: Munchymunchy.aud
+	ReloadDelay: 20
+	Range: 1c512
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead@1Dam: SpreadDamage
+		Damage: 3000
+		Versus:
+			Wood: 10
+			Light: 30
+			Medium: 20
+			Heavy: 10
+			Concrete: 10
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+
+Punch:
+	Inherits: ^Cannon
+	Report: Munchymunchy.aud
+	ReloadDelay: 20
+	Range: 1c512
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead@1Dam: SpreadDamage
+		Damage: 3500
+		Versus:
+			None: 30
+			Wood: 75
+			Light: 75
+			Concrete: 50
+	Warhead@2Eff: CreateEffect
+		Explosions: piffs
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
 
 ### Utilities
 
