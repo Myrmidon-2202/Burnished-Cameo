@@ -1256,8 +1256,10 @@ halloween_cow:
 		BuildDurationModifier: 50
 		Prerequisites: ~halloween_crypto
 		Description: Slow powerful cow. Attacks in close combat.
+	Selectable:
+		Bounds: 3072, 5120
 	Armament:
-		Weapon: demonSlice
+		Weapon: demonslice_cow
 	Valued:
 		Cost: 1000
 	RenderSprites:
@@ -1265,7 +1267,6 @@ halloween_cow:
 	-ChangesHealth:
 	Mobile:
 		Speed: 30
-	RenderSprites:
 	Health:
 		HP: 95000
 	ProducibleWithLevel:

@@ -54,6 +54,35 @@ ZClaw1_FI:
 #		Halloween
 ####################################################################################################
 
+demonslice_cow:
+	Inherits: ^WC1Melee
+	ReloadDelay: 60
+	Range: 1c512
+	Projectile: InstantHit
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 10500
+		Versus:
+			None: 150
+			Wood: 50
+			Light: 125
+			Medium: 100
+			Heavy: 75
+			Concrete: 25
+		DamageTypes: DefaultDeath
+	Warhead@Percentage: HealthPercentageDamage
+		Damage: 11
+		Spread: 128
+		Delay: 5
+		DamageTypes: Prone100Percent, TriggerProne, FireDeath, Incendiary
+		Versus:
+			None: 150
+			Wood: 50
+			Light: 125
+			Medium: 100
+			Heavy: 75
+			Concrete: 25
+
 Halloween_ClownBalloon:
 	Inherits: ^MissileWeapon
 	ReloadDelay: 40
@@ -104,6 +133,7 @@ Halloween_BigRock:
 	Warhead@1Dam: SpreadDamage
 		Spread: 341
 		Damage: 10000
+
 halloween_ghost_spawner:
 	Projectile: InstantHit
 	Warhead@3Eff: CreateEffect

@@ -1130,33 +1130,28 @@ halloween_demon:
 
 halloween_cow:
 	Defaults:
-		Scale: 2.0
+		Scale: 4.0
 		Filename: halloween_cow.shp
 	stand:
 		Tick: 9999
 		Length: 8
 		Facings: -8
-		Scale: 0.8
 	run:
 		Length: 8
 		Facings: -8
-		Scale: 0.8
 	shoot:
 		Start: 64
 		Length: 19
 		Facings: -8
 		Tick: 100
-		Scale: 0.8
 	die:
 		Start: 216
 		Length: 14
 		Tick: 80
-		Scale: 0.8
 	die-crushed:
 		Start: 216
 		Length: 14
 		Tick: 80
-		Scale: 0.8
 	icon: 
 		Filename: halloween_cameos.shp
 		Start: 21
