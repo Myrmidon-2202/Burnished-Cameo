@@ -1,0 +1,524 @@
+Metadata:
+	Title: mod-title
+	Id: burncameo
+	Version: Burnished Cameo 0.1
+	Website: https://github.com/Myrmidon-2202/Burnished-Cameo
+	WebIcon32: https://github.com/Myrmidon-2202/Burnished-Cameo/blob/main/packaging/artwork/icon_32x32.png
+	WindowTitle: mod-windowtitle
+
+PackageFormats: Mix, AudioBag, D2kSoundResources
+
+FileSystem: DefaultFileSystem
+	Packages:
+		~^SupportDir|Content/burncameo/: game
+		^EngineDir
+		$burncameo: burncameo
+		burncameo|uibits
+		^EngineDir|mods/common: common
+		~^SupportDir|Content/burncameo/music
+		burncameo|bits: bits
+		~burncameo|bits/temp
+		~burncameo|bits/ratemperat
+		~burncameo|bits/rasnow
+		~burncameo|bits/snow
+		~burncameo|bits/winter
+		~burncameo|bits/jungle
+		~burncameo|bits/desert
+		~burncameo|bits/radesert
+		~burncameo|bits/barren
+		~burncameo|bits/int
+		~burncameo|bits/ss
+		~burncameo|bits/scripts
+		~burncameo|bits/effects
+		~burncameo|music
+		~burncameo|bits/2100
+		~burncameo|bits/ra
+		~burncameo|bits/sw
+		~burncameo|bits/sow
+		~burncameo|bits/worms
+		~burncameo|bits/win98
+		~burncameo|bits/warcraft1
+		~burncameo|bits/warcraft2
+		~burncameo|bits/shockwave
+		~burncameo|bits/sc2k
+		~burncameo|bits/shared
+		~burncameo|bits/civilization2
+		#~burncameo|bits/ee1
+		~burncameo|bits/ra/ra_audio.mix
+		~burncameo|bits/terran
+		~burncameo|bits/protoss
+		~burncameo|bits/protoss/protoss_audio.mix
+		~burncameo|bits/zerg
+		~burncameo|bits/zerg/zerg_audio.mix
+		~burncameo|bits/city
+		~burncameo|bits/lua
+		~burncameo|bits/heroes
+		~burncameo|bits/misc
+		~burncameo|bits/scavenger
+		~burncameo|bits/ants
+		~burncameo|bits/test
+		~burncameo|bits/tech
+		~burncameo|bits/cameo_tileset
+		~burncameo|bits/cameo_tileset/trees
+		~burncameo|bits/d2k
+		~burncameo|bits/gta
+		~burncameo|bits/iok
+		~burncameo|bits/aw
+		~burncameo|bits/tomorrow
+		~burncameo|bits/classicdoom
+		~burncameo|bits/dune2
+		~burncameo|bits/td
+		~burncameo|bits/ra2/audio.bag
+		~burncameo|bits/ra2
+		~burncameo|bits/ra2/shp2
+		~burncameo|bits/ra2/mod
+		~burncameo|bits/ra2/tileset
+		~burncameo|bits/darkreign
+		#########
+		~burncameo|bits/ts
+		##########
+		~burncameo|bits/generals
+		~burncameo|bits/gla
+		~burncameo|bits/caribic
+		~burncameo|bits/notifications
+		~burncameo|bits/wh40k
+		~burncameo|bits/memes
+		~burncameo|bits/pvz
+		~burncameo|bits/outpost2
+		~burncameo|bits/legobattles
+		~burncameo|bits/halloween
+		~burncameo|bits/z
+		# ~burncameo|bits/tkm
+		#~burncameo|bits/mindustry
+		~common|/mods/cnc/bits
+		~common|/mods/cnc/bits/jungle
+		~common|/mods/cnc/bits/desert
+		~SOUND.RS
+
+MapFolders:
+	burncameo|maps: System
+	burncameo|mappack: System
+	~^SupportDir|maps/burncameo/{DEV_VERSION}: User
+
+Rules:
+	burncameo|rules/misc.yaml
+	burncameo|rules/player.yaml
+	burncameo|rules/world.yaml
+	burncameo|rules/palettes.yaml
+	burncameo|rules/defaults.yaml
+	burncameo|rules/shared.yaml
+	burncameo|rules/trees.yaml
+	burncameo|rules/civilian.yaml
+	burncameo|rules/civilian-desert.yaml
+	burncameo|rules/tech.yaml
+	burncameo|rules/husks.yaml
+	burncameo|rules/promotions.yaml
+	burncameo|ai/ai.yaml
+	burncameo|rules/tiberiandawn.yaml
+	burncameo|rules/redalert.yaml
+	burncameo|rules/redalert2.yaml
+	# burncameo|rules/redalert2mod.yaml
+	burncameo|rules/d2k.yaml
+	burncameo|rules/starcraft.yaml
+	# burncameo|rules/camea.yaml
+	# burncameo|rules/casino.yaml
+	burncameo|rules/darkreign.yaml
+	# burncameo|rules/actiblizz.yaml
+	burncameo|rules/tomorrow.yaml
+	burncameo|rules/wh40k.yaml
+	# burncameo|rules/classicdoom.yaml
+	# burncameo|rules/dune2.yaml
+	burncameo|rules/generals.yaml
+	# burncameo|rules/shockwave.yaml
+	burncameo|rules/simcity.yaml
+	# burncameo|rules/sc2k.yaml
+	burncameo|rules/civilization2.yaml
+	burncameo|rules/ants.yaml
+	burncameo|rules/sow.yaml
+	burncameo|rules/starwars.yaml
+	burncameo|rules/iok.yaml
+	# burncameo|rules/n64.yaml
+	burncameo|rules/tiberiansun.yaml
+	burncameo|rules/warcraft1.yaml
+	burncameo|rules/warcraft2.yaml
+	burncameo|rules/wz2100.yaml
+	burncameo|rules/worms.yaml
+	burncameo|rules/win98.yaml
+	# burncameo|rules/ships.yaml
+	# burncameo|rules/custom.yaml
+	# burncameo|rules/test.yaml
+	# burncameo|rules/lostunits.yaml
+	# burncameo|rules/fakes.yaml
+	# burncameo|rules/elementals.yaml
+	# burncameo|rules/315custom.yaml
+	# burncameo|rules/infected.yaml
+	# burncameo|rules/monsters.yaml
+	# burncameo|rules/keeper.yaml
+	# burncameo|rules/xmas.yaml
+	# burncameo|rules/valentine.yaml
+	burncameo|rules/halloween.yaml
+	burncameo|rules/legobattles.yaml
+	burncameo|rules/outpost2.yaml
+	burncameo|rules/z.yaml
+	# burncameo|rules/tkm.yaml
+
+Sequences:
+	burncameo|sequences/misc.yaml
+	burncameo|sequences/decorations.yaml
+	burncameo|sequences/funpark.yaml
+	burncameo|sequences/civilian.yaml
+	burncameo|sequences/campaign.yaml
+	# burncameo|sequences/test.yaml
+	burncameo|sequences/tiberiandawn.yaml
+	burncameo|sequences/redalert.yaml
+	burncameo|sequences/redalert2.yaml
+	# burncameo|sequences/redalert2mod.yaml
+	burncameo|sequences/d2k.yaml
+	burncameo|sequences/starcraft.yaml
+	burncameo|sequences/warcraft2.yaml
+	# burncameo|sequences/dune2.yaml
+	burncameo|sequences/iok.yaml
+	# burncameo|sequences/n64.yaml
+	burncameo|sequences/sow.yaml
+	burncameo|sequences/worms.yaml
+	burncameo|sequences/win98.yaml
+	burncameo|sequences/warcraft1.yaml
+	burncameo|sequences/darkreign.yaml
+	burncameo|sequences/starwars.yaml
+	# burncameo|sequences/lostunits.yaml
+	burncameo|sequences/tiberiansun.yaml
+	burncameo|sequences/generals.yaml
+	burncameo|sequences/simcity.yaml
+	burncameo|sequences/wh40k.yaml
+	burncameo|sequences/wz2100.yaml
+	# burncameo|sequences/shockwave.yaml
+	# burncameo|sequences/315custom.yaml
+	# burncameo|sequences/valentine.yaml
+	# burncameo|sequences/infected.yaml
+	# burncameo|sequences/sc2k.yaml
+	burncameo|sequences/civilization2.yaml
+	# burncameo|sequences/xmas.yaml
+	burncameo|sequences/halloween.yaml
+	burncameo|sequences/tomorrow.yaml
+	# burncameo|sequences/keeper.yaml
+	burncameo|sequences/outpost2.yaml
+	burncameo|sequences/legobattles.yaml
+	burncameo|sequences/z.yaml
+	# burncameo|sequences/classicdoom.yaml
+	# burncameo|sequences/tkm.yaml
+
+ModelSequences:
+	burncameo|sequences/voxels.yaml
+
+TileSets:
+	burncameo|tilesets/cameo.yaml
+	burncameo|tilesets/desert.yaml
+	burncameo|tilesets/winter.yaml
+	burncameo|tilesets/snow.yaml
+	burncameo|tilesets/temperat.yaml
+	burncameo|tilesets/jungle.yaml
+	burncameo|tilesets/ra_snow.yaml
+	burncameo|tilesets/ra_interior.yaml
+	burncameo|tilesets/ra_temperat.yaml
+	burncameo|tilesets/ra2_temperat.yaml
+	burncameo|tilesets/ra_desert.yaml
+	burncameo|tilesets/arrakis.yaml
+	burncameo|tilesets/arrakis2.yaml
+	burncameo|tilesets/wc2_sunset.yaml
+	burncameo|tilesets/wc2_summer.yaml
+	burncameo|tilesets/caribic.yaml
+	burncameo|tilesets/barren.yaml
+	burncameo|tilesets/outpost2.yaml
+
+Weapons:
+	burncameo|weapons/weapons.yaml
+	# burncameo|weapons/monsters.yaml
+	burncameo|weapons/tiberiandawn.yaml
+	burncameo|weapons/redalert.yaml
+	burncameo|weapons/redalert2.yaml
+	# burncameo|weapons/redalert2mod.yaml
+	burncameo|weapons/d2k.yaml
+	burncameo|weapons/starcraft.yaml
+	burncameo|weapons/warcraft2.yaml
+	burncameo|weapons/iok.yaml
+	# burncameo|weapons/n64.yaml
+	# burncameo|weapons/dune2.yaml
+	# burncameo|weapons/lostunits.yaml
+	burncameo|weapons/darkreign.yaml
+	burncameo|weapons/tiberiansun.yaml
+	burncameo|weapons/sow.yaml
+	burncameo|weapons/warcraft1.yaml
+	burncameo|weapons/worms.yaml
+	burncameo|weapons/win98.yaml
+	burncameo|weapons/generals.yaml
+	burncameo|weapons/wh40k.yaml
+	burncameo|weapons/wz2100.yaml
+	burncameo|weapons/simcity.yaml
+	# burncameo|weapons/shockwave.yaml
+	# burncameo|weapons/elementals.yaml
+	# burncameo|weapons/315custom.yaml
+	# burncameo|weapons/infected.yaml
+	burncameo|weapons/starwars.yaml
+	# burncameo|weapons/sc2k.yaml
+	burncameo|weapons/civilization2.yaml
+	# burncameo|weapons/xmas.yaml
+	burncameo|weapons/tomorrow.yaml
+	# burncameo|weapons/valentine.yaml
+	burncameo|weapons/halloween.yaml
+	# burncameo|weapons/keeper.yaml
+	burncameo|weapons/outpost2.yaml
+	burncameo|weapons/legobattles.yaml
+	burncameo|weapons/z.yaml
+	# burncameo|weapons/classicdoom.yaml
+	# burncameo|weapons/tkm.yaml
+
+Cursors:
+	burncameo|cursors.yaml
+
+Chrome:
+	burncameo|chrome.yaml
+
+Assemblies: OpenRA.Mods.AS.dll, OpenRA.Mods.CA.dll, OpenRA.Mods.Cameo.dll, OpenRA.Mods.Cnc.dll, OpenRA.Mods.D2k.dll, OpenRA.Mods.Common.dll
+
+ChromeLayout:
+	common|chrome/assetbrowser.yaml
+	common|chrome/color-picker.yaml
+	common|chrome/confirmation-dialogs.yaml
+	common|chrome/connection.yaml
+	burncameo|chrome/credits.yaml
+	common|chrome/dropdowns.yaml
+	common|chrome/editor.yaml
+	common|chrome/gamesave-browser.yaml
+	common|chrome/gamesave-loading.yaml
+	common|chrome/ingame.yaml
+	burncameo|chrome/ingame-chat.yaml
+	common|chrome/ingame-debug.yaml
+	common|chrome/ingame-debug-hpf.yaml
+	common|chrome/ingame-debuginfo.yaml
+	common|chrome/ingame-fmvplayer.yaml
+	common|chrome/ingame-info.yaml
+	common|chrome/ingame-infobriefing.yaml
+	common|chrome/ingame-infochat.yaml
+	common|chrome/ingame-info-lobby-options.yaml
+	common|chrome/ingame-infoobjectives.yaml
+	common|chrome/ingame-infoscripterror.yaml
+	common|chrome/ingame-infostats.yaml
+	common|chrome/ingame-menu.yaml
+	burncameo|chrome/ingame-observer.yaml
+	burncameo|chrome/ingame-player.yaml
+	common|chrome/ingame-transients.yaml
+	burncameo|chrome/lobby.yaml
+	common|chrome/lobby-kickdialogs.yaml
+	common|chrome/lobby-mappreview.yaml
+	common|chrome/lobby-music.yaml
+	burncameo|chrome/lobby-options.yaml
+	burncameo|chrome/lobby-players.yaml
+	common|chrome/lobby-servers.yaml
+	burncameo|chrome/mainmenu.yaml
+	common|chrome/mainmenu-prompts.yaml
+	common|chrome/map-chooser.yaml
+	common|chrome/missionbrowser.yaml
+	common|chrome/multiplayer-browser.yaml
+	common|chrome/multiplayer-browserpanels.yaml
+	common|chrome/multiplayer-createserver.yaml
+	common|chrome/multiplayer-directconnect.yaml
+	common|chrome/musicplayer.yaml
+	common|chrome/playerprofile.yaml
+	common|chrome/replaybrowser.yaml
+	common|chrome/settings.yaml
+	common|chrome/settings-advanced.yaml
+	common|chrome/settings-audio.yaml
+	common|chrome/settings-display.yaml
+	common|chrome/settings-hotkeys.yaml
+	common|chrome/settings-input.yaml
+	common|chrome/text-notifications.yaml
+	burncameo|chrome/tooltips.yaml
+
+Voices:
+	burncameo|audio/315custom.yaml
+	burncameo|audio/classicdoom.yaml
+	burncameo|audio/voices.yaml
+	burncameo|audio/tomorrow.yaml
+	burncameo|audio/redalert2.yaml
+	# burncameo|audio/redalert2mod.yaml
+	burncameo|audio/darkreign.yaml
+	burncameo|audio/n64.yaml
+	burncameo|audio/tiberiansun.yaml
+	burncameo|audio/generals.yaml
+	burncameo|audio/shockwave.yaml
+	burncameo|audio/sow.yaml
+	burncameo|audio/worms.yaml
+	burncameo|audio/win98.yaml
+	burncameo|audio/wh40k.yaml
+	burncameo|audio/warcraft1.yaml
+	burncameo|audio/warcraft2.yaml
+	burncameo|audio/casino.yaml
+	#burncameo|audio/warcraft2.yaml
+	burncameo|audio/d2k.yaml
+	burncameo|audio/dune2.yaml
+	burncameo|audio/wz2100.yaml
+	burncameo|audio/sc2k.yaml
+	burncameo|audio/civilization2.yaml
+	burncameo|audio/xmas.yaml
+	burncameo|audio/heroes.yaml
+	burncameo|audio/outpost2.yaml
+	burncameo|audio/legobattles.yaml
+	burncameo|audio/z.yaml
+	burncameo|audio/halloween.yaml
+	burncameo|audio/valentines.yaml
+
+Notifications:
+	burncameo|audio/notifications.yaml
+
+Music:
+	burncameo|music.yaml
+
+FluentMessages:
+	common|fluent/common.ftl
+	common|fluent/chrome.ftl
+	common|fluent/hotkeys.ftl
+	common|fluent/rules.ftl
+	burncameo|fluent/en.ftl
+	burncameo|fluent/rules/en.ftl
+
+AllowUnusedFluentMessagesInExternalPackages: true
+
+Hotkeys:
+	common|hotkeys/game.yaml
+	common|hotkeys/observer.yaml
+	common|hotkeys/production-common.yaml
+	common|hotkeys/supportpowers.yaml
+	common|hotkeys/viewport.yaml
+	common|hotkeys/chat.yaml
+	common|hotkeys/editor.yaml
+	common|hotkeys/control-groups.yaml
+	burncameo|hotkeys.yaml
+
+LoadScreen: FitImageLoadScreen
+	Image: burncameo|uibits/loadscreen2.png,burncameo|uibits/loadscreen3.png,burncameo|uibits/loadscreen4.png,burncameo|uibits/loadscreen5.png,burncameo|uibits/loadscreen6.png,burncameo|uibits/loadscreen7.png,burncameo|uibits/loadscreen8.png,burncameo|uibits/loadscreen9.png,burncameo|uibits/loadscreen10.png,burncameo|uibits/loadscreen11.png,burncameo|uibits/loadscreen12.png,burncameo|uibits/loadscreen15.png,burncameo|uibits/loadscreen16.png,burncameo|uibits/loadscreen17.png,burncameo|uibits/loadscreen18.png,burncameo|uibits/loadscreen19.png,burncameo|uibits/loadscreen20.png,burncameo|uibits/loadscreen21.png
+
+ServerTraits:
+	LobbyCommands
+	SkirmishLogic
+	PlayerPinger:
+		ConnTimeout: 500000
+	MasterServerPinger
+	LobbySettingsNotification
+
+ChromeMetrics:
+	common|metrics.yaml
+	burncameo|metrics.yaml
+
+Fonts:
+	Tiny:
+		Font: common|FreeSans.ttf
+		Size: 10
+		Ascender: 8
+	TinyBold:
+		Font: common|FreeSansBold.ttf
+		Size: 10
+		Ascender: 8
+	Small:
+		Font: common|FreeSans.ttf
+		Size: 12
+		Ascender: 9
+	SmallBold:
+		Font: common|FreeSansBold.ttf
+		Size: 12
+		Ascender: 9
+	Regular:
+		Font: common|FreeSans.ttf
+		Size: 14
+		Ascender: 11
+	Symbols:
+		Font: common|FreeSans.ttf
+		Size: 14
+		Ascender: 11
+	Bold:
+		Font: common|FreeSansBold.ttf
+		Size: 14
+		Ascender: 11
+	MediumBold:
+		Font: common|FreeSansBold.ttf
+		Size: 18
+		Ascender: 14
+	BigBold:
+		Font: common|FreeSansBold.ttf
+		Size: 24
+		Ascender: 18
+	Title:
+		Font: common|FreeSansBold.ttf
+		Size: 32
+		Ascender: 24
+#TileSize was 48, 48
+Missions:
+	burncameo|missions.yaml
+MapGrid:
+	TileSize: 48, 48
+	Type: Rectangular
+
+WorldViewportSizes:
+	DefaultScale: 0.5
+	MaxZoomScale: 1000.0
+	MaxZoomWindowHeight: 120
+
+DefaultOrderGenerator: UnitOrderGenerator
+
+SupportsMapsFrom: cnc, ra, cameo
+
+SoundFormats: Aud, Wav, Mp3, Ogg
+
+SpriteFormats: ShpTD, TmpTD, ShpTS, TmpRA, PngSheet, R8
+
+TerrainFormat: DefaultTerrain
+
+SpriteSequenceFormat: CameoSpriteSequence
+	IndexedSheetSize: 2048
+
+AssetBrowser:
+	SpriteExtensions: .shp, .tem, .des, .sno, .jun, .png, .r8, .r16, .car, .bar
+	AudioExtensions: .aud, .wav, .mp3
+	VideoExtensions: .vqa, .wsa
+
+GameSpeeds:
+	DefaultSpeed: default
+	Speeds:
+		slowest:
+			Name: Slowest
+			Timestep: 75
+			OrderLatency: 1
+		slower:
+			Name: Slower
+			Timestep: 50
+			OrderLatency: 2
+		default:
+			Name: Normal
+			Timestep: 40
+			OrderLatency: 3
+		fast:
+			Name: Fast
+			Timestep: 30
+			OrderLatency: 4
+		faster:
+			Name: Faster
+			Timestep: 25
+			OrderLatency: 5
+		fastest:
+			Name: Fastest
+			Timestep: 20
+			OrderLatency: 6
+		insane:
+			Name: Insane
+			Timestep: 10
+			OrderLatency: 7
+		maximum:
+			Name: Maximum
+			Timestep: 1
+			OrderLatency: 10
+
+ModCredits:
+	ModCreditsFile: burncameo|credits.txt
+	ModTabTitle: mod-title
+
+# DiscordService:
+# 	ApplicationId: 1269927383994077296
