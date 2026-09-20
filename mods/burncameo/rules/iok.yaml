@@ -1,0 +1,2261 @@
+World:
+	FactionCA@iok:
+		Name: Infidels of Kane
+		InternalName: iok
+		Game: Tiberian Dawn
+		Side: Factions
+		Description: Infidels of Kane\nThe IoK consists of GLA sympathizers who believe the tiberium prophecy.\nSupport powers: Radar van, Nuclear missile, Scud Storm
+
+	StartingUnits@mcvonlyiok:
+		Class: none
+		ClassName: MCV Only
+		Factions: iok
+		BaseActor: mcv.iok
+	StartingUnits@defaultiok:
+		Class: light
+		ClassName: Light Support
+		Factions: iok
+		BaseActor: mcv.iok
+		SupportActors: ioke1,ioke1,ioke1,ioke1,ioke1,ioke1,ioke1,iokbggy
+	StartingUnits@heavyiok:
+		Class: heavy
+		ClassName: Heavy Support
+		Factions: iok
+		BaseActor: mcv.iok
+		SupportActors: ioke1,ioke1,ioke1,ioke1,ioke1,iokscorpion,iokftnk,iokbggy
+
+	# FactionCA@udi:
+	# 	Name: United Defense Initiative
+	# 	InternalName: udi
+	# 	Game: Factions
+	# 	Side: Factions
+	# 	Description: United Defense Initiative\nThe IoK consists of USA sympathizers who believe the tiberium prophecy.\nSupport powers: Radar van, Nuclear missile, Scud Storm
+
+	# StartingUnits@mcvonlyiok:
+	# 	Class: none
+	# 	ClassName: MCV Only
+	# 	Factions: udi
+	# 	BaseActor: mcv.udi
+	# StartingUnits@defaultiok:
+	# 	Class: light
+	# 	ClassName: Light Support
+	# 	Factions: udi
+	# 	BaseActor: mcv.udi
+	# 	SupportActors: ioke1,ioke1,ioke1,ioke1,ioke1,ioke1,ioke1,iokbggy
+	# StartingUnits@heavyiok:
+	# 	Class: heavy
+	# 	ClassName: Heavy Support
+	# 	Factions: udi
+	# 	BaseActor: mcv.udi
+	# 	SupportActors: ioke1,ioke1,ioke1,ioke1,ioke1,iokscorpion,iokftnk,iokbggy
+
+	# FactionCA@eau:
+	# 	Name: Eurasian Union
+	# 	InternalName: eau
+	# 	Game: Factions
+	# 	Side: Factionss
+	# 	Description: Eurasian Union of Soviet Socialist Republics\nThe IoK consists of Chinese sympathizers who believe the tiberium prophecy.\nSupport powers: Radar van, Nuclear missile, Scud Storm
+
+	# StartingUnits@mcvonlyiok:
+	# 	Class: none
+	# 	ClassName: MCV Only
+	# 	Factions: eau
+	# 	BaseActor: mcv.eau
+	# StartingUnits@defaultiok:
+	# 	Class: light
+	# 	ClassName: Light Support
+	# 	Factions: eau
+	# 	BaseActor: mcv.eau
+	# 	SupportActors: ioke1,ioke1,ioke1,ioke1,ioke1,ioke1,ioke1,iokbggy
+	# StartingUnits@heavyiok:
+	# 	Class: heavy
+	# 	ClassName: Heavy Support
+	# 	Factions: eau
+	# 	BaseActor: mcv.eau
+	# 	SupportActors: ioke1,ioke1,ioke1,ioke1,ioke1,iokscorpion,iokftnk,iokbggy
+####################################################################################################
+#		IOK - HOLES
+####################################################################################################
+
+^IOKHOLE:
+	Inherits: ^BaseBuilding
+	#Inherits@shape: ^4x3Shape
+	#Inherits@gensound: ^GeneralsDamageBuilding
+	Valued:
+		Cost: 200
+	Tooltip:
+		Name: IOK Hole
+	Building:
+		Footprint: xxxx xxxx xxxx
+		Dimensions: 4,3
+	SelectionDecorations:
+	Health:
+		HP: 10000
+	RevealsShroud:
+		Range: 5c0
+	ProvidesPrerequisite@buildingname:
+	Power:
+		Amount: 0
+	RenderSprites:
+		Image: glhole
+	GrantPeriodicCondition@rebuild:
+		Condition: buildingrebirth
+		CooldownDuration: 1000
+		PauseOnCondition: chronobeamed
+	TransformOnCondition@buildingrebirth:
+		RequiresCondition: buildingrebirth
+		IntoActor: iokbarracks
+		SkipMakeAnims: false
+	-GpsDot:
+	Capturable:
+		Types: xfact
+
+IOKHOLE.FACTIOK:
+	Inherits: ^IOKHOLE
+	RenderSprites:
+		Image: glhole2
+	Building:
+		Footprint: xxx xxx ===
+		Dimensions: 3,3
+	HitShape:
+		UseTargetableCellsOffsets: true
+		Type: Rectangle
+			TopLeft: -1786, -1536
+			BottomRight: 1786, 1536
+	TransformOnCondition@buildingrebirth:
+		RequiresCondition: buildingrebirth
+		IntoActor: factiok
+		SkipMakeAnims: false
+
+IOKHOLE.IokNUKE:
+	Inherits: ^IOKHOLE
+	RenderSprites:
+		Image: glhole
+	Building:
+		Footprint: xx xx ==
+		Dimensions: 2,3
+	HitShape:
+		UseTargetableCellsOffsets: true
+		Type: Rectangle
+			TopLeft: -1786, -1536
+			BottomRight: 1786, 1536
+	TransformOnCondition@buildingrebirth:
+		RequiresCondition: buildingrebirth
+		IntoActor: ioknuke
+		SkipMakeAnims: false
+
+IOKHOLE.IokBARRACKS:
+	Inherits: ^IOKHOLE
+	RenderSprites:
+		Image: glhole
+	Building:
+		Footprint: xxx xxx ===
+		Dimensions: 3,3
+	HitShape:
+		UseTargetableCellsOffsets: true
+		Type: Rectangle
+			TopLeft: -1786, -1536
+			BottomRight: 1786, 1536
+	TransformOnCondition@buildingrebirth:
+		RequiresCondition: buildingrebirth
+		IntoActor: iokbarracks
+		SkipMakeAnims: false
+
+IOKHOLE.IokPROC:
+	Inherits: ^IOKHOLE
+	RenderSprites:
+		Image: glhole
+	Building:
+		Footprint: xxx xxx ===
+		Dimensions: 3,3
+	HitShape:
+		UseTargetableCellsOffsets: true
+		Type: Rectangle
+			TopLeft: -1786, -1536
+			BottomRight: 1786, 1536
+	TransformOnCondition@buildingrebirth:
+		RequiresCondition: buildingrebirth
+		IntoActor: iokproc
+		SkipMakeAnims: false
+
+IOKHOLE.IokAFLD:
+	Inherits: ^IOKHOLE
+	RenderSprites:
+		Image: glhole
+	Building:
+		Footprint: _x_ xxx === ===
+		Dimensions: 3,4
+	HitShape:
+		UseTargetableCellsOffsets: true
+		Type: Rectangle
+			TopLeft: -1786, -1536
+			BottomRight: 1786, 1536
+	TransformOnCondition@buildingrebirth:
+		RequiresCondition: buildingrebirth
+		IntoActor: iokafld
+		SkipMakeAnims: false
+
+IOKHOLE.IokNUK2:
+	Inherits: ^IOKHOLE
+	RenderSprites:
+		Image: glhole
+	Building:
+		Footprint: xx xx ==
+		Dimensions: 2,3
+	HitShape:
+		UseTargetableCellsOffsets: true
+		Type: Rectangle
+			TopLeft: -1786, -1536
+			BottomRight: 1786, 1536
+	TransformOnCondition@buildingrebirth:
+		RequiresCondition: buildingrebirth
+		IntoActor: ioknuk2
+		SkipMakeAnims: false
+
+IOKHOLE.IokBLACKMARKET:
+	Inherits: ^IOKHOLE
+	RenderSprites:
+		Image: glhole
+	Building:
+		Footprint: xx xx ==
+		Dimensions: 2,3
+	HitShape:
+		UseTargetableCellsOffsets: true
+		Type: Rectangle
+			TopLeft: -1786, -1536
+			BottomRight: 1786, 1536
+	TransformOnCondition@buildingrebirth:
+		RequiresCondition: buildingrebirth
+		IntoActor: iokblackmarket
+		SkipMakeAnims: false
+
+IOKHOLE.IokSITE:
+	Inherits: ^IOKHOLE
+	RenderSprites:
+		Image: glhole
+	Building:
+		Footprint: xx xx ==
+		Dimensions: 2,3
+	HitShape:
+		UseTargetableCellsOffsets: true
+		Type: Rectangle
+			TopLeft: -1786, -1536
+			BottomRight: 1786, 1536
+	TransformOnCondition@buildingrebirth:
+		RequiresCondition: buildingrebirth
+		IntoActor: ioksite
+		SkipMakeAnims: false
+
+IOKHOLE.IokGUN:
+	Inherits: ^IOKHOLE
+	RenderSprites:
+		Image: glhole
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	HitShape:
+		UseTargetableCellsOffsets: true
+		Type: Rectangle
+			TopLeft: -1786, -1536
+			BottomRight: 1786, 1536
+	TransformOnCondition@buildingrebirth:
+		RequiresCondition: buildingrebirth
+		IntoActor: iokgun
+		SkipMakeAnims: false
+
+IOKHOLE.IokOBLI:
+	Inherits: ^IOKHOLE
+	RenderSprites:
+		Image: glhole
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	HitShape:
+		UseTargetableCellsOffsets: true
+		Type: Rectangle
+			TopLeft: -1786, -1536
+			BottomRight: 1786, 1536
+	TransformOnCondition@buildingrebirth:
+		RequiresCondition: buildingrebirth
+		IntoActor: iokobli
+		SkipMakeAnims: false
+
+IOKHOLE.IokPALACE:
+	Inherits: ^IOKHOLE
+	RenderSprites:
+		Image: glhole
+	Building:
+		Footprint: xxxx xxxx xxxx
+		Dimensions: 4,3
+	HitShape:
+		UseTargetableCellsOffsets: true
+		Type: Rectangle
+			TopLeft: -1786, -1536
+			BottomRight: 1786, 1536
+	TransformOnCondition@buildingrebirth:
+		RequiresCondition: buildingrebirth
+		IntoActor: iokpalace
+		SkipMakeAnims: false
+
+IOKHOLE.IokSCUDTEMPLE:
+	Inherits: ^IOKHOLE
+	RenderSprites:
+		Image: glhole
+	Building:
+		Footprint: xxxx xxxx xxxx
+		Dimensions: 4,3
+	HitShape:
+		UseTargetableCellsOffsets: true
+		Type: Rectangle
+			TopLeft: -1786, -1536
+			BottomRight: 1786, 1536
+	TransformOnCondition@buildingrebirth:
+		RequiresCondition: buildingrebirth
+		IntoActor: iokscudtemple
+		SkipMakeAnims: false
+
+####################################################################################################
+#		IOK - STRUCTURES
+####################################################################################################
+
+FACTIOK:
+	GrantExternalConditionToOwner@BuildingsOwned:
+		Condition: BuildingsOwned
+	Inherits: ^BaseBuilding
+	Inherits@shape: ^3x2Shape
+	Inherits@CPQ: ^CPQCondition
+	Inherits@aicash: ^AIConyardCash
+	Inherits@conyard: ^Conyard
+	Inherits@sell: ^TDSpawnActorsOnSell
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Construction Yard (IOK)
+	Building:
+		Footprint: xxx xxx ===
+		Dimensions: 3,3
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 210000
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 10c0
+	FreeActor:
+		Actor: glworker
+		SpawnOffset: 1,2
+		Facing: 256
+	# Production@NORMAL:
+	# 	Produces: Building, Defence
+	# 	RequiresCondition: !classicproductionqueues
+	# Production@CLASSICPRODUCTIONQUEUES:
+	# 	Produces: RABuilding, RADefence
+	# 	RequiresCondition: classicproductionqueues
+	Transforms:
+		RequiresCondition: factundeploy
+		PauseOnCondition: being-demolished || build-incomplete
+		IntoActor: mcv.iok
+		Offset: 1,1
+		Facing: 432
+	TransformsIntoMobile:
+		RequiresCondition: factundeploy
+		Locomotor: heavywheeled
+		RequiresForceMove: true
+	TransformsIntoPassenger:
+		RequiresCondition: factundeploy
+		CargoType: Vehicle
+		RequiresForceMove: true
+	TransferTimedExternalConditionOnTransform:
+		Condition: invulnerability
+	GrantConditionOnPrerequisite@GLOBALFACTUNDEPLOY:
+		Condition: factundeploy
+		Prerequisites: global-factundeploy
+	# ProductionQueue@IOKBuilding:
+	# 	Type: Building
+	# 	DisplayOrder: 0
+	# 	Group: Building
+	# 	LowPowerModifier: 200
+	# 	ReadyAudio: ConstructionComplete
+	# 	BlockedAudio: NoBuild
+	# 	LimitedAudio: BuildingInProgress
+	# 	QueuedAudio: Building
+	# 	OnHoldAudio: OnHold
+	# 	CancelledAudio: Cancelled
+	# ProductionQueue@IOKDefense:
+	# 	Type: Defence
+	# 	DisplayOrder: 1
+	# 	Group: Defence
+	# 	LowPowerModifier: 300
+	# 	ReadyAudio: ConstructionComplete
+	# 	BlockedAudio: NoBuild
+	# 	LimitedAudio: BuildingInProgress
+	# 	QueuedAudio: Building
+	# 	OnHoldAudio: OnHold
+	# 	CancelledAudio: Cancelled
+	BaseBuilding:
+	# ProductionBar@BuildingNod:
+	# 	ProductionType: Building
+	# 	RequiresCondition: !classicproductionqueues
+	# ProductionBar@DefenceNod:
+	# 	ProductionType: Defence
+	# 	RequiresCondition: !classicproductionqueues
+	# ProductionBar@RABuildingNod:
+	# 	ProductionType: RABuilding
+	# 	RequiresCondition: classicproductionqueues
+	# ProductionBar@RADefenceNod:
+	# 	ProductionType: RADefence
+	# 	RequiresCondition: classicproductionqueues
+	BaseProvider:
+		Range: 14c0
+	WithBuildingBib:
+	WithBuildingPlacedAnimation:
+		RequiresCondition: !build-incomplete
+	Power:
+		Amount: 0
+	ProvidesPrerequisite@buildingname:
+		Prerequisite: iokfact
+	Buildable:
+		Queue: Building, RABuilding
+		BuildPaletteOrder: 1000
+		Prerequisites: ~disabled
+		Description: Builds structures
+	ProvidesPrerequisite@factioniok:
+		Prerequisite: mmiok
+	WithIdleOverlay@BOX:
+		Sequence: box-overlay
+	WithIdleOverlay@BOX2:
+		Sequence: box-overlay2
+	SpawnActorOnDeath@hole:
+		Actor: iokhole.factiok
+	Voiced:
+		VoiceSet: USAWarFactoryVoice
+
+IOKNUKE:
+	Inherits: ^BaseBuilding
+	Inherits@shape: ^2x2Shape
+	Inherits@power: ^PowerPlant
+	Inherits@sell: ^TDSpawnActorsOnSell
+	HitShape:
+		TargetableOffsets: 630,299,0
+	Valued:
+		Cost: 400
+	Tooltip:
+		Name: Power Plant
+	Buildable:
+		BuildPaletteOrder: 10
+		Prerequisites: iokfact, ~mmiok
+		Queue: Building, RABuilding,
+		Description: Generates power
+	Building:
+		Footprint: xX xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 60000
+	RevealsShroud:
+		Range: 4c0
+	WithBuildingBib:
+	Power:
+		Amount: 100
+	ProvidesPrerequisite@buildingname:
+		Prerequisite: ioknuke
+	ScalePowerWithHealth:
+	AcceptsDeliveredExperience: ##########
+		ValidTypes: building ##########
+	WithIdleOverlay@BOX:
+		Sequence: box-overlay
+	WithIdleOverlay@BOX2:
+		Sequence: box-overlay2
+	SpawnActorOnDeath@hole:
+		Actor: iokhole.ioknuke
+	Voiced:
+		VoiceSet: USAColdFusionReactorVoice
+
+IOKBARRACKS:
+	Inherits: ^BaseBuilding
+	Inherits@shape: ^3x2Shape
+	Inherits@CPQWP: ^CPQConditionWithPrimary
+	Inherits@prod: ^ProducesUnits
+	Inherits@camo: ^BuildingCamoLevel2
+	Inherits@fort: ^GLAFortifiable
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: IOK Barracks
+	ProvidesPrerequisite:
+		Prerequisite: barracks
+	Buildable:
+		BuildPaletteOrder: 20
+		Prerequisites: ioknuke, ~mmiok
+		Queue: Building, RABuilding
+		Description: Trains IOKs infantry
+	Building:
+		Footprint: xxx xxx ===
+		Dimensions: 3,3
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 60000
+	RevealsShroud:
+		Range: 5c0
+	FreeActor:
+		Actor: glworker
+		SpawnOffset: 1,2
+		Facing: 256
+	WithBuildingBib:
+	RallyPoint:
+	Exit@1:
+		SpawnOffset: -426,85,0
+		ExitCell: 0,1
+	Exit@2:
+		SpawnOffset: 298,298,0
+		ExitCell: 1,1
+	Production@NORMAL:
+		Produces: Infantry.Iok
+	ProductionQueue:
+		Type: Infantry.Iok
+		DisplayOrder: 2
+		Group: Infantry
+		ReadyAudio: UnitReady
+		BlockedAudio: NoBuild
+		LimitedAudio: BuildingInProgress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar@INFANTRYIOK:
+		ProductionType: Infantry.Iok
+		RequiresCondition: !classicproductionqueues
+	Power:
+		Amount: 0
+	ProvidesPrerequisite@buildingname:
+	Voiced:
+		VoiceSet: GLABarracksVoice
+	SpawnActorOnDeath@hole:
+		Actor: iokhole.iokbarracks
+	WithIdleOverlay@SMOKE:
+		RequiresCondition: !build-incomplete
+		Sequence: idle-anim2
+		Palette: placelinesegment
+
+IOKPROC:
+	Inherits: ^BaseBuilding
+	Inherits@ref: ^Refinery
+	Inherits@sell: ^TDSpawnActorsOnSell
+	Inherits@shape: ^3x2Shape
+	HitShape:
+		Type: Rectangle
+			TopLeft: -1536, -512
+			BottomRight: 1536, 853
+	HitShape@TOP:
+		Type: Rectangle
+			TopLeft: -512, -1450
+			BottomRight: 896, -512
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: Tiberium Refinery
+	Buildable:
+		BuildPaletteOrder: 30
+		Prerequisites: ioknuke, ~mmiok
+		Queue: Building, RABuilding
+		Description: Processes raw Tiberium\ninto useable resources
+	Building:
+		Footprint: _x_ xxx === ===
+		Dimensions: 3,4
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 100000
+	RevealsShroud:
+		Range: 6c0
+	Refinery:
+	DockHost:
+		DockAngle: 448
+		DockOffset: 0c0,2c0, 0c0
+		IsDragRequired: True
+		DragOffset: -554,512,0
+		DragLength: 12
+		TickRate: 15
+		MaxQueueLength: 10
+	StoresResources:
+		Capacity: 1000
+	CustomSellValue:
+		Value: 500
+	FreeActor@1:
+		Actor: glworker
+		SpawnOffset: 1,2
+		Facing: 256
+	FreeActor@2:
+		Actor: glworker
+		SpawnOffset: 1,2
+		Facing: 256
+	FreeActor@3:
+		Actor: glworker
+		SpawnOffset: 1,2
+		Facing: 256
+	FreeActor@4:
+		Actor: glworker
+		SpawnOffset: 1,2
+		Facing: 256
+	FreeActor@5:
+		Actor: glworker
+		SpawnOffset: 1,2
+		Facing: 256
+	WithBuildingBib:
+	WithResourceLevelOverlay:
+		RequiresCondition: !build-incomplete
+	Power:
+		Amount: -40
+	ProvidesPrerequisite@buildingname:
+	SelectionDecorations:
+	GivesBuildableArea: ##########
+		AreaTypes: building, cityi
+	WithIdleOverlay@BOX:
+		Sequence: box-overlay
+	WithIdleOverlay@BOX2:
+		Sequence: box-overlay2
+	Voiced:
+		VoiceSet: USASupplyDropVoice
+	SpawnActorOnDeath@hole:
+		Actor: iokhole.iokproc
+	WithResourceStoragePipsDecoration:
+		Position: BottomLeft
+		RequiresSelection: true
+		PipCount: 10
+
+IOKAFLD:
+	Inherits: ^BaseBuilding
+	Inherits@CPQWP: ^CPQConditionWithPrimary
+	Inherits@prod: ^ProducesUnits
+	Inherits@sell: ^TDSpawnActorsOnSell
+	Inherits@shape: ^4x2Shape
+	HitShape:
+		TargetableOffsets: 0,0,0, 0,-512,256, 0,-1451,384, 0,512,128, 0,1536,85
+		Type: Rectangle
+			TopLeft: -2048, -1024
+			BottomRight: 2048, 1024
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Airstrip
+	ProvidesPrerequisite:
+		Prerequisite: vehicleproduction
+	Buildable:
+		BuildPaletteOrder: 40
+		Prerequisites: iokproc, ~mmiok
+		Queue: Building, RABuilding
+		Description: Provides a dropzone\nfor vehicle reinforcements
+	Building:
+		Footprint: XXX+ xxx+ ====
+		Dimensions: 4,3
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 110000
+	RevealsShroud:
+		Range: 7c0
+	FreeActor:
+		Actor: glworker
+		SpawnOffset: 1,2
+		Facing: 256
+	RallyPoint:
+	Exit@1:
+		SpawnOffset: -1024,0,0
+		ExitCell: 3,1
+	ProductionAirdropCA@NORMAL:
+		Produces: Vehicle.Iok
+		ActorType: c17
+		EntryType: DropSiteClosestEdge
+		ExitType: StraightAhead
+		LandingFacing: 64
+		ReadyAudio: ReinforcementsArrived
+	WithBuildingBib:
+	WithIdleOverlay@DISH:
+		RequiresCondition: !build-incomplete
+		Sequence: idle-dish
+	WithDeliveryAnimation:
+		RequiresCondition: !build-incomplete
+	ProductionQueue:
+		Type: Vehicle.Iok
+		DisplayOrder: 3
+		Group: Vehicle
+		LowPowerModifier: 300
+		BlockedAudio: NoBuild
+		LimitedAudio: BuildingInProgress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar@VEHICLEIOK:
+		ProductionType: Vehicle.Iok
+	Power:
+		Amount: -40
+	ProvidesPrerequisite@buildingname:
+	WithIdleOverlay@BOX:
+		Sequence: box-overlay
+	WithIdleOverlay@BOX2:
+		Sequence: box-overlay2
+	SpawnActorOnDeath@hole:
+		Actor: iokhole.iokafld
+	Voiced:
+		VoiceSet: USASupplyDropVoice
+
+IOKNUK2:
+	Inherits: ^BaseBuilding
+	Inherits@shape: ^2x2Shape
+	Inherits@power: ^PowerPlant
+	Inherits@sell: ^TDSpawnActorsOnSell
+	HitShape:
+		TargetableOffsets: 630,299,0
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Advanced Power Plant
+	Buildable:
+		BuildPaletteOrder: 80
+		Prerequisites: iokafld, ~mmiok
+		Queue: Building, RABuilding
+		Description: Provides more power, cheaper than the\nstandard Power Plant
+	Building:
+		Footprint: xX xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 120000
+	RevealsShroud:
+		Range: 4c0
+	WithBuildingBib:
+	Power:
+		Amount: 200
+	ScalePowerWithHealth:
+	AcceptsDeliveredExperience: ##########
+		ValidTypes: building ##########
+	WithIdleOverlay@BOX:
+		Sequence: box-overlay
+	WithIdleOverlay@BOX2:
+		Sequence: box-overlay2
+	SpawnActorOnDeath@hole:
+		Actor: iokhole.ioknuk2
+	Voiced:
+		VoiceSet: USAColdFusionReactorVoice
+
+iokblackmarket:
+	Inherits: OILB.Building
+	Inherits: ^BaseBuilding
+	Inherits@shape: ^2x2Shape
+	Inherits@camo: ^BuildingCamoLevel2
+	Inherits@fort: ^GLAFortifiable
+	Buildable:
+		Queue: Building, RABuilding
+		BuildPaletteOrder: 60
+		Prerequisites: iokafld, ~mmiok
+		Description: Unlock upgrades for GLA weaponry.\nProvides a cash supply.
+	Valued:
+		Cost: 2500 #300
+	Tooltip:
+		Name: Black Market
+	ProvidesPrerequisite:
+		Prerequisite: glblackmarket
+	Building:
+		Footprint: xx xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 75000
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 4c0
+	FreeActor:
+		Actor: glworker
+		SpawnOffset: 1,2
+		Facing: 256
+	WithBuildingBib:
+	Power:
+		Amount: 0
+	WithDeathAnimation:
+		DeathSequence: dead
+		UseDeathTypeSuffix: false
+	GrantConditionOnPrerequisite@upglabounty1:
+		Condition: upglabounty1
+		Prerequisites: upglabounty1
+	GrantConditionOnPrerequisite@upglabounty2:
+		Condition: upglabounty2
+		Prerequisites: upglabounty2
+	GrantConditionOnPrerequisite@upglabounty3:
+		Condition: upglabounty3
+		Prerequisites: upglabounty3
+	CashTrickler:
+		Interval: 25
+		Amount: 25
+	# Production@Upgrades:
+	# 	Produces: MarketUpgrades.GLA
+	Voiced:
+		VoiceSet: GLBlackMarketVoice
+	ProvidesPrerequisite@buildingname:
+	WithIdleOverlay@SMOKE:
+		RequiresCondition: !build-incomplete
+		Sequence: idle-anim2
+		Palette: placelinesegment
+	WithIdleOverlay@BOX:
+		Sequence: box-overlay
+	WithIdleOverlay@BOX2:
+		Sequence: box-overlay2
+	SpawnActorOnDeath@hole:
+		Actor: iokhole.iokblackmarket
+	RenderSprites:
+		Image: iokblackmarket
+
+iokpalace:
+	Inherits: ^Defense
+	Inherits@shape: ^4x3Shape
+	Inherits@AUTOTARGET: ^AutoTargetAll
+	Inherits@camo: ^BuildingCamoLevel2
+	Inherits@fort: ^GLAFortifiable
+	Inherits@gar: ^ClearableGarrisonNeutronOnly
+	Valued:
+		Cost: 2500
+	Tooltip:
+		Name: Palace
+	Buildable:
+		BuildPaletteOrder: 70
+		Prerequisites: iokblackmarket, ~mmiok
+		Queue: Building, RABuilding
+		Description: Provides access to advanced GLA technologies.\nCan be used as a defensive bunker
+	Building:
+		Footprint: xxxx xxxx xxxx
+		Dimensions: 4,3
+	GivesBuildableArea:
+		AreaTypes: building
+	SelectionDecorations:
+	Health:
+		HP: 130000
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 5c0
+	FreeActor:
+		Actor: glworker
+		SpawnOffset: 1,2
+		Facing: 256
+	WithBuildingBib:
+	Cargo:
+		Types: Infantry, Hacker
+		MaxWeight: 5
+		EjectOnDeath: false
+	AttackOpenTopped:
+		Armaments: garrisoned
+		PortOffsets: 768,0,1024, 448,-682,1024, -448,-682,1024, -768,0,1024, -448,682,1024, 448,682,1024
+		PauseOnCondition: chronobeamed
+	Turreted:
+		TurnSpeed: 1023
+	-QuantizeFacingsFromSequence:
+	BodyOrientation:
+		QuantizedFacings: 8
+	RangeMultiplier@Extrarange:
+		Modifier: 175
+	DetectCloaked:
+		Range: 2c0
+	# -RenderDetectionCircle:
+	Voiced:
+		VoiceSet: GLPalaceVoice
+	Power:
+		Amount: 0
+	SpawnActorOnDeath@hole:
+		Actor: iokhole.iokpalace
+	WithIdleOverlay@SMOKE:
+		RequiresCondition: !build-incomplete
+		Sequence: idle-anim2
+		Palette: placelinesegment
+	ProvidesPrerequisite@buildingname:
+	WithIdleOverlay@BOX:
+		Sequence: box-overlay
+	WithIdleOverlay@BOX2:
+		Sequence: box-overlay2
+	WithCargoPipsDecoration:
+		Position: BottomLeft
+		RequiresSelection: true
+	ProvidesPrerequisite:
+		Prerequisite: iokpalace
+
+iokscudtemple:
+	Inherits: ^BaseBuilding
+	# Inherits@IDISABLE: ^DisabledOverlay
+	Inherits@shape: ^4x3Shape
+	Inherits@sw: ^PrimarySuperweapon
+	Inherits@camo: ^BuildingCamoLevel2
+	Valued:
+		Cost: 10000
+	Tooltip:
+		Name: Scud Temple
+	ProvidesPrerequisite:
+		Prerequisite: anyhq
+	Buildable:
+		BuildPaletteOrder: 100
+		Prerequisites: iokpalace, ~mmiok
+		Queue: Building, RABuilding
+		Description: Provides Scud Storm and Nuclear Strike support power.\nRequires power to operate.
+	Building:
+		Footprint: xxxx xxxx xxxx
+		Dimensions: 4,3
+	SelectionDecorations:
+	Health:
+		HP: 210000
+	RevealsShroud:
+		Range: 6c0
+	FreeActor:
+		Actor: glworker
+		SpawnOffset: 1,2
+		Facing: 256
+	Power:
+		Amount: 100
+	ProvidesPrerequisite@buildingname:
+	Turreted:
+	AttackTurreted:
+		RequiresCondition: ammo
+		OpportunityFire: false
+		PersistentTargeting: false
+		ForceFireIgnoresActors: true
+	GrantConditionOnPrerequisite@upantraxbeta:
+		Condition: antraxbetaupgrade
+		Prerequisites: upantraxbeta
+	GrantConditionOnPrerequisite@upantraxgamma:
+		Condition: upantraxgamma
+		Prerequisites: upantraxgamma
+	Armament@Power:
+		Weapon: GLASCUDPOWER
+		LocalOffset: 900,900,340, 900,-900,340, -900,900,340, -900,-900,340
+		LocalYaw: 0,100
+		RequiresCondition: !antraxbetaupgrade && !upantraxgamma
+	Armament@Power2:
+		Weapon: GLASCUDPOWER2
+		LocalOffset: 900,900,340, 900,-900,340, -900,900,340, -900,-900,340
+		LocalYaw: 0,100
+		RequiresCondition: antraxbetaupgrade && !upantraxgamma
+	Armament@Power3:
+		Weapon: GLASCUDPOWER3
+		LocalOffset: 900,900,340, 900,-900,340, -900,900,340, -900,-900,340
+		LocalYaw: 0,100
+		RequiresCondition: upantraxgamma
+	NukePowerCA:
+		AllowMultiple: True
+		PauseOnCondition: lowpower
+		Prerequisites:
+			1: ~techlevel.superweapons
+		Icons:
+			1: abomb
+		Cursor: nuke
+		ChargeInterval: 9000
+		Names:
+			1: Nuclear Strike
+		Descriptions:
+			1: Launch a tactical nuclear warhead.\nApplies heavy damage over a large area.
+		EndChargeSpeechNotification: NuclearWeaponAvailable
+		SelectTargetSpeechNotification: SelectTarget
+		InsufficientPowerSpeechNotification: InsufficientPower
+		LaunchSpeechNotification: NuclearWeaponLaunched
+		IncomingSpeechNotification: NuclearWarheadApproaching
+		MissileWeapons:
+			1: atomic
+		MissileDelay: 11
+		SpawnOffset: 3c0,0,-1c512
+		DisplayBeacon: True
+		BeaconPosters:
+			1: atomic
+		BeaconPosterPalette: beaconposter
+		DisplayTimerRelationships: Ally, Neutral, Enemy
+		DisplayRadarPing: True
+		CameraRange: 10c0
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+		SupportPowerPaletteOrder: 30
+		MissileImage: atomic
+	WithSupportPowerActivationAnimation:
+		RequiresCondition: !build-incomplete
+	WithSupportPowerActivationOverlay:
+		RequiresCondition: !build-incomplete
+		Sequence: smoke
+	AmmoPool:
+		Ammo: 9
+		AmmoCondition: ammo
+	ReloadAmmoPool:
+		Count: 9
+		Delay: 100
+	AttackOrderPower@PowerMulti:
+		OrderName: GLAScudStorm
+		PauseOnCondition: disabled
+		AllowMultiple: True
+		Prerequisites:
+			1: ~techlevel.superweapons
+		Cursor: attackmove
+		Icons:
+			1: glscudstorm
+		ChargeInterval: 9000
+		Names:
+			1: Scud Storm
+		Descriptions:
+			1: Fires 9 Scud Missiles at the target.
+		EndChargeSpeechNotification:
+		SelectTargetSpeechNotification:
+		DisplayTimerStances: Ally, Neutral, Enemy
+	RejectsOrders:
+		Except: Sell
+	RenderRangeCircle:
+	SupportPowerChargeBar:
+	Voiced:
+		VoiceSet: GLSCUDStormVoice
+	SpawnActorOnDeath@hole:
+		Actor: iokhole.iokscudtemple
+	FireWarheadsOnDeath:
+		Weapon: GLBombTruckToxExplosive
+		EmptyWeapon: GLBombTruckToxExplosive
+		Type: CenterPosition
+	WithIdleOverlay@SMOKE:
+		RequiresCondition: !build-incomplete
+		Sequence: idle-anim2
+		Palette: placelinesegment
+	WithIdleOverlay@SMOKE2:
+		RequiresCondition: !build-incomplete
+		Sequence: idle-anim3
+		Palette: placelinesegment
+	ProvidesPrerequisite@swlimit:
+		Prerequisite: scudstorm
+	WithIdleOverlay@TEMPLE:
+		Sequence: temple-overlay
+
+
+####################################################################################################
+#		IOK - DEFENSES
+####################################################################################################
+
+IOKSITE:
+	Inherits: ^Defense
+	Inherits@AUTOTARGET: ^AutoTargetAll
+	Inherits@shape: ^2x2Shape
+	Inherits@camo: ^BuildingCamoLevel1
+	Inherits@fort: ^GLAFortifiable
+	Inherits@demo: ^DemolitionUpgrade
+	Inherits@AntiAir: ^PrioritizeAir
+	Valued:
+		Cost: 900
+	Tooltip:
+		Name: Stinger Site
+	Buildable:
+		BuildPaletteOrder: 60
+		Prerequisites: iokbarracks, ~mmiok
+		Queue: Defence, RADefence
+		Description: All-purpose defensive structure.\n  Strong vs Aircraft, Tanks\n  Weak vs Infantry
+	SelectionDecorations:
+	Health:
+		HP: 85000
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 8c0
+	Turreted:
+		TurnSpeed: 1023
+	Armament:
+		Weapon: GLStingerTargeting
+	AttackTurreted:
+		RequiresCondition: !build-incomplete
+	MobSpawnerMaster@1:
+		Actors: glsite.soldier
+		Offset: 255,255,0
+		RespawnTicks: 500
+		ExitByBudding: false
+		AggregateHealth: false
+	MobSpawnerMaster@2:
+		Actors: glsite.soldier
+		Offset: 255,-255,0
+		RespawnTicks: 500
+		ExitByBudding: false
+		AggregateHealth: false
+	MobSpawnerMaster@3:
+		Actors: glsite.soldier
+		Offset: -255,255,0
+		RespawnTicks: 500
+		ExitByBudding: false
+		AggregateHealth: false
+	BodyOrientation:
+		QuantizedFacings: 8
+	DetectCloaked:
+		Range: 5c0
+		RequiresCondition: !disabled
+		DetectionTypes: Cloak, Hijacker
+	Power:
+		Amount: 0
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	WithIdleOverlay@TOP:
+		RequiresCondition: !build-incomplete
+		Sequence: top
+	Voiced:
+		VoiceSet: GLStingerSiteVoice
+	RenderSprites:
+		Image: glsite
+	SpawnActorOnDeath@hole:
+		Actor: iokhole.ioksite
+
+IOKGUN:
+	Inherits: ^Defense
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@EMP: ^TurretEMP
+	Inherits@shape: ^1x1Shape
+	Valued:
+		Cost: 600
+	Tooltip:
+		Name: Turret
+	Buildable:
+		BuildPaletteOrder: 45
+		Prerequisites: iokbarracks, ~mmiok
+		Queue: Defence, RADefence
+		Description: Basic Anti-Tank base defense.\n  Strong vs Tanks, vehicles\n  Weak vs Infantry
+	Building:
+	Health:
+		HP: 41000
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 6c0
+	WithBuildingBib:
+		HasMinibib: true
+	Turreted:
+		TurnSpeed: 48
+		InitialFacing: 224
+	-WithSpriteBody:
+	WithEmbeddedTurretSpriteBody:
+	Armament:
+		Weapon: TurretGun
+		LocalOffset: 512,0,112
+		MuzzleSequence: muzzle
+	AttackTurreted:
+		RequiresCondition: !build-incomplete
+	WithMuzzleOverlay:
+	-WithDeathAnimation:
+	DetectCloaked:
+		Range: 3c0
+	Power:
+		Amount: -20
+	RenderSprites:
+		Image: gun
+	SpawnActorOnDeath@hole:
+		Actor: iokhole.iokgun
+
+IOKOBLI:
+	Inherits: OBLI
+	Buildable:
+		BuildPaletteOrder: 60
+		Prerequisites: iokblackmarket, ~mmiok
+		Queue: Defence, RADefence
+		Description: Advanced base defense.\nRequires power to operate.\n  Strong vs all Ground units\n  Cannot target Aircraft
+	Armament:
+		Weapon: IOKLaser
+		LocalOffset: 0,-85,1280
+	SpawnActorOnDeath@hole:
+		Actor: iokhole.iokobli
+	RenderSprites:
+		Image: obli
+
+####################################################################################################
+#		IOK - VEHICLES
+####################################################################################################
+
+IOKBGGY:
+	Inherits: ^Vehicle
+	Inherits@@EXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@EMP: ^TurretEMP
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: IOK Buggy
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Buildable:
+		BuildPaletteOrder: 20
+		Prerequisites:
+		Queue: Vehicle.Iok
+		Description: Fast scout and anti-infantry vehicle.\n  Strong vs Infantry\n  Weak vs Tanks
+	Mobile:
+		TurnSpeed: 16
+		Speed: 170
+	Health:
+		HP: 12000
+	Repairable:
+		HpPerStep: 1819
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 8c0
+	Turreted:
+		TurnSpeed: 10
+		Offset: -43,0,128
+	Armament:
+		Weapon: MachineGun
+		LocalOffset: 171,0,43
+		MuzzleSequence: muzzle
+	AttackTurreted:
+	WithMuzzleOverlay:
+	WithSpriteTurret:
+	#SpawnActorOnDeath:
+	#	Actor: BGGY.Husk
+	#	OwnerType: InternalName
+	#	EffectiveOwnerFromOwner: true
+	Inherits@EXT: ^ExternalConditions
+	AcceptsDeliveredExperience:
+		ValidTypes: vehicle
+	RenderSprites:
+		Image: bggy
+
+IOKROCKETBGGY:
+	Inherits: ^Vehicle
+	Inherits@EXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@GeneralsVehicle: ^GeneralsVehicle
+	Inherits@announce: ^AnnounceOnBuild
+	Inherits@vo: ^AttackTurretedVoice
+	Inherits@EMP: ^TurretEMP
+	Inherits@junk: ^JunkRepair
+	Inherits@AP: ^APRocketUpgrade
+	Inherits@demo: ^DemolitionUpgrade
+	Valued:
+		Cost: 900
+	Tooltip:
+		Name: Rocket Buggy
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Buildable:
+		BuildPaletteOrder: 30
+		Prerequisites:
+		Queue: Vehicle.Iok
+		Description: Fast, long-range artillery.\n  Strong vs Vehicles, Buildings\n  Weak vs Aircraft
+	Mobile:
+		Speed: 180
+	Health:
+		HP: 12000
+	Repairable:
+		HpPerStep: 569
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 5c0
+	Armament@Normal:
+		Weapon: GLRocketBuggyMissiles
+		LocalOffset: 624,-128,208, 624,128,208
+		MuzzleSequence: muzzle
+		RequiresCondition: !selectglatoxin
+	Armament@Extra:
+		Weapon: GLRocketBuggyMissiles
+		LocalOffset: 624,128,208, 624,-128,208
+		MuzzleSequence: muzzle
+		RequiresCondition: ammoupgrade
+	Armament@Toxin:
+		Weapon: GLRocketBuggyMissilesToxin
+		LocalOffset: 624,-128,208, 624,128,208
+		MuzzleSequence: muzzle
+		RequiresCondition: selectglatoxin
+	AttackTurreted:
+		TargetFrozenActors: True
+	Turreted:
+		Offset: -400,0,250
+	WithSpriteTurret@1:
+		Sequence: turret
+		RequiresCondition: !ammoupgrade
+	WithSpriteTurret@2:
+		Sequence: turret2
+		RequiresCondition: ammoupgrade
+	WithMuzzleOverlay:
+	AutoTarget:
+		InitialStanceAI: Defend
+	Inherits@EXT: ^ExternalConditions
+	AcceptsDeliveredExperience:
+		ValidTypes: vehicle
+	Voiced:
+		VoiceSet: RocketBuggyVoice
+	RenderSprites:
+		Scale: 0.85
+	GrantConditionOnPrerequisite@upbuggyammo:
+		Condition: ammoupgrade
+		Prerequisites: upbuggyammo
+	FireWarheadsOnDeath:
+		Weapon: GLBuggyHuskCluster
+		EmptyWeapon: GLBuggyHuskCluster
+	GrantConditionOnPrerequisite@selectglatoxin:
+		Condition: selectglatoxin
+		Prerequisites: selectglatoxin
+	GainsExperience:
+		LevelUpNotification: LevelUpRA2
+
+IOKSCORPION:
+	Inherits: ^Tank
+	Inherits@EXPERIENCE: ^GainsExperience
+	Inherits@CLOAK: ^AcceptsCloakCrate
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@GeneralsVehicle: ^GeneralsVehicle
+	Inherits@announce: ^AnnounceOnBuild
+	Inherits@EMP: ^TurretEMP
+	Inherits@vo: ^AttackTurretedVoice
+	Inherits@junk: ^JunkRepair
+	Inherits@AP: ^APRocketUpgrade
+	Inherits@demo: ^DemolitionUpgrade
+	Valued:
+		Cost: 600
+	Tooltip:
+		Name: Scorpion Tank
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Buildable:
+		BuildPaletteOrder: 40
+		Prerequisites:
+		Queue: Vehicle.Iok
+		Description: Fast, light tank.\nCan be upgraded with missiles.\n  Strong vs Vehicles\n  Weak vs Infantry
+	Mobile:
+		Speed: 110
+	Health:
+		HP: 37000
+	Repairable:
+		HpPerStep: 2273
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 6c0
+	Turreted:
+		TurnSpeed: 7
+		Offset: 150,0,200
+	Armament@Normal:
+		Weapon: GLScorpionShell
+		Recoil: 85
+		RecoilRecovery: 17
+		LocalOffset: 720,0,90
+		MuzzleSequence: muzzle
+		RequiresCondition: !shellsupgrade
+	Armament@Toxin:
+		Weapon: GLScorpionShellToxin
+		Recoil: 85
+		RecoilRecovery: 17
+		LocalOffset: 720,0,90
+		MuzzleSequence: muzzle
+		RequiresCondition: shellsupgrade && !antraxbetaupgrade
+	Armament@ToxinBeta:
+		Weapon: GLScorpionShellToxinBeta
+		Recoil: 85
+		RecoilRecovery: 17
+		LocalOffset: 720,0,90
+		MuzzleSequence: muzzle
+		RequiresCondition: shellsupgrade && antraxbetaupgrade
+	AttackTurreted:
+	WithMuzzleOverlay:
+	WithSpriteTurret:
+	WithSpriteTurret@Missile:
+		Sequence: turret2
+		RequiresCondition: rocketupgrade
+	Armament@Missile:
+		Weapon: GlScorpionMissile
+		LocalOffset: 720,0,90
+		RequiresCondition: rocketupgrade && !selectglatoxin && scrap_create_bonus <= 1
+	Armament@MissileThrax:
+		Weapon: GlScorpionMissileToxin
+		LocalOffset: 720,0,90
+		RequiresCondition: rocketupgrade && selectglatoxin && scrap_create_bonus <= 1
+	Armament@Missile2:
+		Weapon: GlScorpionMissileTwin
+		LocalOffset: 720,0,90
+		RequiresCondition: rocketupgrade && !selectglatoxin && scrap_create_bonus >= 2
+	Armament@MissileThrax2:
+		Weapon: GlScorpionMissileToxinTwin
+		LocalOffset: 720,0,90
+		RequiresCondition: rocketupgrade && selectglatoxin && scrap_create_bonus >= 2
+	Inherits@EXT: ^ExternalConditions
+	AcceptsDeliveredExperience:
+		ValidTypes: vehicle
+	RenderSprites:
+		Scale: 0.50
+	Voiced:
+		VoiceSet: ScorpionTankVoice
+	GrantConditionOnPrerequisite@upscorpionrocket:
+		Condition: rocketupgrade
+		Prerequisites: upscorpionrocket
+	GrantConditionOnPrerequisite@uptoxinshells:
+		Condition: shellsupgrade
+		Prerequisites: uptoxinshells
+	GrantConditionOnPrerequisite@upantraxbeta:
+		Condition: antraxbetaupgrade
+		Prerequisites: upantraxbeta
+	GrantConditionOnPrerequisite@uparmorpiercingrocket:
+		Condition: rocketupgrade2
+		Prerequisites: uparmorpiercingrocket, upscorpionrocket
+	FirepowerMultiplier@uparmorpiercingrocket:
+		RequiresCondition: rocketupgrade2
+		Modifier: 105
+	GrantConditionOnPrerequisite@selectglatoxin:
+		Condition: selectglatoxin
+		Prerequisites: selectglatoxin
+	ProductionCostMultiplier@selectglatoxin:
+		Multiplier: 110
+		Prerequisites: selectglatoxin
+		Queue: Vehicle.GLA, RAVehicle.GLA
+	ProductionCostMultiplier@selectglademo:
+		Multiplier: 110
+		Prerequisites: selectglademo
+		Queue: Vehicle.GLA, RAVehicle.GLA
+	ReloadDelayMultiplier@Salvaged1:
+		RequiresCondition: scrap_create_bonus >= 1
+		Modifier: 75
+	GainsExperience:
+		LevelUpNotification: LevelUpRA2
+
+IOKRADAR:
+	Inherits: ^Vehicle
+	Inherits@selection: ^SelectableSupportUnit
+	Inherits@GeneralsVehicle: ^GeneralsVehicle
+	Inherits@detect: ^GenericGroundDetector
+	Inherits@announce: ^AnnounceOnBuild
+	Inherits@junk: ^JunkRepair
+	Inherits@demo: ^DemolitionUpgrade
+	Buildable:
+		BuildLimit: 1
+		Queue: Vehicle.Iok
+		BuildPaletteOrder: 50
+		Prerequisites: 
+		Description: Detects cloaked units and provides radar.
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Radar Van
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 19000
+	Armor:
+		Type: Heavy
+	Mobile:
+		Speed: 140
+	RevealsShroud:
+		Range: 7c0
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 4c0
+	RenderSprites:
+		Scale: 0.92
+	Voiced:
+		VoiceSet: CHRadarVanVoice
+	Inherits@EXT: ^ExternalConditions
+	WithIdleOverlay@SPINNER:
+		Sequence: spinner
+		Offset: -256,0,256
+	ProximityExternalCondition@JAMMER:
+		Range: 5c0
+		ValidStances: Enemy, Neutral
+		Condition: jammed
+		RequiresCondition: !disabled
+	WithRangeCircle@JAMMER:
+		Type: jammer
+		Range: 5c0
+		Color: 0000FF80
+	DetectCloaked:
+		Range: 10c0
+		RequiresCondition: !disabled
+	RenderDetectionCircle:
+	ProvidesRadar:
+		RequiresCondition: !jammed && !disabled
+	ExternalCondition@JAMMED:
+		Condition: jammed
+	FireWarheadsOnDeath:
+		Weapon: GLRadarvanHuskCluster
+		EmptyWeapon: GLRadarvanHuskCluster
+	SpawnActorPower@scan:
+		PauseOnCondition: disabled
+		OrderName: SovietSpyPlane
+		Prerequisites:
+			1:
+		Icons:
+			1: radarvan
+		Names:
+			1: Radar Van Scan
+		ChargeInterval: 3000
+		Descriptions:
+			1: Radar Van Scan Reveals an area of the map\nand cloaked enemy units.
+		SelectTargetSpeechNotification: SelectTarget
+		InsufficientPowerSpeechNotification: InsufficientPower
+		EndChargeSpeechNotification: SpyPlaneReady
+		Actors:
+			1: camera.radarvan
+		LifeTime: 250
+		DeploySound: vradscan.wav
+		LaunchSound: vradscan.wav
+		IncomingSound: vradscan.wav
+		SupportPowerPaletteOrder: 10
+
+IOKFTNK:
+	Inherits: ^Tank
+	Inherits@EXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@EMP: ^FrontalEMP
+	Valued:
+		Cost: 600
+	Tooltip:
+		Name: Flame Tank
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Buildable:
+		BuildPaletteOrder: 55
+		Prerequisites: 
+		Queue: Vehicle.Iok
+		Description: Heavily armored flame-throwing vehicle.\n  Strong vs Infantry, Buildings and Vehicles\n  Weak vs Tanks
+	Mobile:
+		Speed: 99
+	Health:
+		HP: 27000
+	Repairable:
+		HpPerStep: 2046
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 5c0
+	Armament:
+		Weapon: BigFlamer
+		LocalOffset: 512,128,42, 512,-128,42
+		MuzzleSequence: muzzle
+	AttackFrontal:
+	WithMuzzleOverlay:
+	FireWarheadsOnDeath:
+		Weapon: FlametankExplode
+		EmptyWeapon: FlametankExplode
+	#SpawnActorOnDeath:
+	#	Actor: FTNK.Husk
+	#	OwnerType: InternalName
+	#	EffectiveOwnerFromOwner: true
+	Inherits@EXT: ^ExternalConditions
+	AcceptsDeliveredExperience:
+		ValidTypes: vehicle
+	RenderSprites:
+		Image: ftnk
+
+IOKQUAD:
+	Inherits: ^Vehicle
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	Inherits@GeneralsVehicle: ^GeneralsVehicle
+	Inherits@announce: ^AnnounceOnBuild
+	Inherits@EMP: ^TurretEMP
+	Inherits@vo: ^AttackTurretedVoice
+	Inherits@junk: ^JunkRepair
+	Inherits@AP: ^APBulletUpgrade
+	Inherits@demo: ^DemolitionUpgrade
+	Buildable:
+		Queue: Vehicle.Iok
+		BuildPaletteOrder: 60
+		Prerequisites: 
+		Description: Anti-air and anti-infantry vehicle.\n  Strong vs Aircraft, Infantry\n  Weak vs Vehicles
+	Valued:
+		Cost: 700
+	Tooltip:
+		Name: Quad Cannon
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 30000
+	Armor:
+		Type: Heavy
+	Mobile:
+		Speed: 110
+	RevealsShroud:
+		Range: 6c0
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 4c0
+	Turreted:
+		TurnSpeed: 9
+		Offset: -370,0,225
+	Armament@2:
+		Weapon: GLQuadCannonGround
+		MuzzleSequence: muzzle
+		LocalOffset: 128,128,200, 128,-128,200, 128,-128,43, 128,128,43
+	Armament@2AA:
+		Weapon: GLQuadCannonAir
+		MuzzleSequence: muzzle
+		LocalOffset: 128,128,200, 128,-128,200, 128,-128,43, 128,128,43
+	AttackTurreted:
+	WithMuzzleOverlay:
+	WithSpriteTurret:
+		Sequence: turret
+		RequiresCondition: scrap_create_bonus == 0
+	WithSpriteTurret@Scrap1:
+		Sequence: turret2
+		RequiresCondition: scrap_create_bonus == 1
+	WithSpriteTurret@Scrap2:
+		Sequence: turret3
+		RequiresCondition: scrap_create_bonus >= 2
+	RenderSprites:
+	Voiced:
+		VoiceSet: QuadCannonVoice
+	Inherits@EXT: ^ExternalConditions
+	AcceptsDeliveredExperience:
+		ValidTypes: vehicle
+	ReloadDelayMultiplier@Salvaged1:
+		RequiresCondition: scrap_create_bonus == 1
+		Modifier: 75
+	ReloadDelayMultiplier@Salvaged2:
+		RequiresCondition: scrap_create_bonus == 2
+		Modifier: 50
+	GrantConditionOnPrerequisite@selectglatoxin:
+		Condition: selectglatoxin
+		Prerequisites: selectglatoxin
+	ProductionCostMultiplier@selectglatoxin:
+		Multiplier: 110
+		Prerequisites: selectglatoxin
+		Queue: Vehicle.GLA, RAVehicle.GLA
+	ProductionCostMultiplier@selectglademo:
+		Multiplier: 110
+		Prerequisites: selectglademo
+		Queue: Vehicle.GLA, RAVehicle.GLA
+	ExternalCondition@SCRAP_CREATE_BONUS:
+		Condition: scrap_create_bonus
+		TotalCap: 2
+	GainsExperience:
+		LevelUpNotification: LevelUpRA2
+
+IOKSCUD:
+	Inherits: ^Vehicle
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@GeneralsVehicle: ^GeneralsVehicle
+	Inherits@EMP: ^FrontalEMP
+	Inherits@announce: ^AnnounceOnBuild
+	Inherits@vo: ^AttackFrontalVoice
+	Inherits@junk: ^JunkRepair
+	Inherits@demo: ^DemolitionUpgrade
+	Buildable:
+		Queue: Vehicle.Iok
+		BuildPaletteOrder: 70
+		Prerequisites: iokpalace
+		Description: Long-range ballistic missile launcher.\n  Strong vs ground targets\n  Weak vs Aircraft
+	Valued:
+		Cost: 1200
+	Tooltip:
+		Name: Scud Launcher
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 18000
+	Armor:
+		Type: Light
+	Mobile:
+		Speed: 50
+	RevealsShroud:
+		Range: 5c0
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 4c0
+	Armament:
+		Weapon: GLAScudLaunch
+	MissileSpawnerMaster@1:
+		Actors: glscud.missile
+		RespawnTicks: 250
+		LoadedCondition: expammo
+		RequiresCondition: undeployed
+	MissileSpawnerMaster@2:
+		Actors: glscud.missiletox
+		RespawnTicks: 250
+		LoadedCondition: toxammo
+		RequiresCondition: deployed
+	AutoTarget:
+		ScanRadius: 10
+	AttackFrontal:
+		TargetFrozenActors: True
+		ForceFireIgnoresActors: True
+	WithFacingSpriteBody:
+		RequiresCondition: (!deployed && expammo) || (deployed && toxammo)
+		Name: loaded
+	WithFacingSpriteBody@EMPTY:
+		RequiresCondition: (!deployed && !expammo) || (deployed && !toxammo)
+		Sequence: empty-idle
+		Name: reloading
+	FireWarheadsOnDeath:
+		Weapon: GLV2Explode
+	Selectable:
+		DecorationBounds: 28,28
+		Class: glscud
+	Inherits@EXT: ^ExternalConditions
+	AcceptsDeliveredExperience:
+		ValidTypes: vehicle
+	RenderSprites:
+		Scale: 0.92
+	Voiced:
+		VoiceSet: GLSCUDLauncherVoice
+	ProducibleWithLevel:
+		Prerequisites: selectglademo
+		InitialLevels: 2
+	WithTextDecoration@TOX:
+		Text: TOXIN
+		ReferencePoint: Bottom, Center
+		UsePlayerColor: True
+		RequiresCondition: deployed
+	WithTextDecoration@EX:
+		Text: EXPLOSIVE
+		ReferencePoint: Bottom, Center
+		UsePlayerColor: True
+		RequiresCondition: !deployed
+	GrantConditionOnDeploy:
+		DeployedCondition: deployed
+		UndeployedCondition: undeployed
+		UndeployOnMove: false
+		PauseOnCondition: disabled
+		Voice: Move
+	ExternalCondition@SCRAP_CREATE_BONUS:
+		Condition: scrap_create_bonus
+		TotalCap: 2
+	RangeMultiplier@Scrap1:
+		Modifier: 120
+		RequiresCondition: scrap_create_bonus == 1
+	RangeMultiplier@Scrap2:
+		Modifier: 140
+		RequiresCondition: scrap_create_bonus >= 2
+	GainsExperience:
+		LevelUpNotification: LevelUpRA2
+
+IOKSTNK:
+	Inherits: ^Vehicle
+	Inherits@EXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	Inherits@EMP: ^FrontalEMP
+	Valued:
+		Cost: 900
+	Tooltip:
+		Name: Stealth Tank
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Buildable:
+		BuildPaletteOrder: 90
+		Prerequisites: iokpalace
+		Queue: Vehicle.Iok
+		Description: Long-range missile tank that can cloak.\nCan attack Aircraft.\nHas weak armor. Can be spotted by infantry and defense structures.\n  Strong vs Vehicles, Tanks\n  Weak vs Infantry.
+	Mobile:
+		Locomotor: heavywheeled
+		Speed: 142
+	Health:
+		HP: 15000
+	Repairable:
+		HpPerStep: 758
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 7c0
+	Cloak:
+		InitialDelay: 90
+		CloakDelay: 90
+		CloakSound: trans1.aud
+		UncloakSound: trans1.aud
+		PauseOnCondition: cloak-force-disabled || disabled
+		IsPlayerPalette: true
+	GrantConditionOnDamageState@UNCLOAK:
+		Condition: cloak-force-disabled
+		ValidDamageStates: Critical
+	Armament:
+		Weapon: StealthTankMissiles
+		LocalOffset: 213,43,128, 213,-43,128
+	AttackFrontal:
+	AutoTarget:
+		InitialStance: HoldFire
+		InitialStanceAI: ReturnFire
+	#SpawnActorOnDeath:
+	#	Actor: STNK.Husk
+	#	OwnerType: InternalName
+	#	EffectiveOwnerFromOwner: true
+	-MustBeDestroyed:
+	Inherits@EXT: ^ExternalConditions
+	AcceptsDeliveredExperience:
+		ValidTypes: vehicle
+	RenderSprites:
+		Image: stnk
+
+MCV.Iok:
+	Inherits: ^Vehicle
+	Inherits@selection: ^SelectableSupportUnit
+	Inherits@mcv: ^MCV
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Mobile Construction Vehicle (IOK)
+	Buildable:
+		BuildPaletteOrder: 100
+		Prerequisites:
+		Queue: Vehicle.Iok
+		BuildDurationModifier: 40
+		Description: Deploys into another Construction Yard.\n  Unarmed
+	Selectable:
+		Priority: 4
+		DecorationBounds: 1536, 1536
+	Mobile:
+		Speed: 75
+		Locomotor: heavywheeled
+	Health:
+		HP: 150000
+	Repairable:
+		HpPerStep: 2182
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 8c0
+	Transforms:
+		IntoActor: factiok
+		Offset: -1,-1
+		Facing: 432
+		TransformSounds: constru2.aud, hvydoor1.aud
+		NoTransformNotification: BuildingCannotPlaceAudio
+	#SpawnActorOnDeath:
+	#	Actor: MCV.Husk
+	#	OwnerType: InternalName
+	#	EffectiveOwnerFromOwner: true
+	SelectionDecorations:
+	Inherits@EXT: ^ExternalConditions
+	RenderSprites:
+		Image: mcv
+
+# mcviok.bot:
+	# Inherits: MCV.Iok
+	# Buildable:
+	# 	BuildPaletteOrder: 100
+	# 	BuildLimit: 1
+	# 	Prerequisites: ~techlevel.medium, ~botplayer, allowsMCV
+
+####################################################################################################
+#		IOK - INFANTRY
+####################################################################################################
+iokworker:
+	Inherits: ^Soldier
+	Inherits@selection: ^SelectableEconomicUnit
+	Inherits@EXPERIENCE: ^GainsExperience
+	Inherits@DECORATIONS: ^InfantryExperienceHospitalHazmatOverrides
+	Inherits@announce: ^AnnounceOnBuild
+	Inherits@anim: ^RA2Infantry
+	Inherits@harv: ^Harvester
+	Inherits@demo: ^DemolitionUpgrade
+	Valued:
+		Cost: 200
+	Tooltip:
+		Name: Worker
+	Buildable:
+		BuildPaletteOrder: 5
+		Prerequisites: iokproc
+		Queue: Infantry.Iok
+		Description: Resource collector.\nCan repair buildings\nCan deploy to neutralize mines and traps
+	Mobile:
+		Speed: 95
+	Health:
+		HP: 10000
+	AutoTarget:
+		ScanRadius: 4
+	Inherits@EXT: ^ExternalConditions
+	AcceptsDeliveredExperience:
+		ValidTypes: infantry
+	Voiced:
+		VoiceSet: WorkerVoice
+	Harvester:
+		PipCount: 1
+		Capacity: 5
+		BaleLoadDelay: 4
+		BaleUnloadAmount: 5
+		BaleUnloadDelay: 0
+		MaxUnloadQueue: 9
+	StoresResources:
+		Capacity: 5
+	ChangesHealth:
+		Step: 500
+		Delay: 20
+		HealIfBelow: 50
+		DamageCooldown: 50
+	WithSpriteBody:
+	WithInfantryBody:
+		IdleSequences: idle
+		DefaultAttackSequence: shoot
+	WithDockingAnimation:
+	DeliversCash:
+		Payload: 60
+	Cloneable:
+		Types: NormalInfantry
+	-DamagedByTerrain:
+	-TakeCover:
+	Armament@PRIMARY:
+		Weapon: GLWorkerHealBuilding
+		TargetStances: Ally
+	AutoTarget:
+		ScanRadius: 7
+		InitialStance: AttackAnything
+	AutoTargetPriority@DEFAULT:
+		ValidTargets: Structure
+	AttackFrontal:
+		Voice: Repair
+	GrantConditionOnDeploy@clearmines:
+		DeployedCondition: clearmines
+		SkipMakeAnimation: true
+		Voice: Repair
+		PauseOnCondition: disabled
+	DetectCloaked:
+		Range: 4c0
+		CloakTypes: Mine
+		RequiresCondition: clearmines && !disabled
+	RenderDetectionCircle:
+	GrantConditionOnPrerequisite@upnewshoes:
+		Condition: newshoesupgrade
+		Prerequisites: upnewshoes
+	SpeedMultiplier@upnewshoes:
+		RequiresCondition: newshoesupgrade
+		Modifier: 115
+	ResourceValueMultiplier:
+		Modifier: 115
+		RequiresCondition: newshoesupgrade
+	ProducibleWithLevel:
+		Prerequisites: selectglacamo
+		InitialLevels: 1
+	ProximityExternalCondition@clearmines:
+		Condition: trap-neutralized
+		Range: 4c0
+		RequiresCondition: !disabled && clearmines
+		ValidStances: Neutral, Enemy
+	Cloak@stashcamo:
+		PauseOnCondition: disabled
+	RenderSprites:
+		Image: yrslav
+	GainsExperience:
+		LevelUpNotification: LevelUpRA2
+
+IOKE1:
+	Inherits: ^Soldier
+	Inherits@EXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@DECORATIONS: ^InfantryExperienceHospitalHazmatOverrides
+	Inherits@AntiInf: ^PrioritizeInfantry
+	Valued:
+		Cost: 100
+	Tooltip:
+		Name: Minigunner
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Buildable:
+		BuildPaletteOrder: 10
+		Prerequisites: iokbarracks
+		Queue: Infantry.Iok
+		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles
+	Mobile:
+		Speed: 56
+	Health:
+		HP: 5000
+	AutoTarget:
+		ScanRadius: 4
+	Armament@PRIMARY:
+		Weapon: M16
+	Armament@GARRISONED:
+		Name: garrisoned
+		Weapon: HighV
+		MuzzleSequence: garrison-muzzle
+	WithInfantryBody:
+		IdleSequences: idle1,idle2
+	Inherits@EXT: ^ExternalConditions
+	AcceptsDeliveredExperience:
+		ValidTypes: infantry
+	RenderSprites:
+		Image: e1
+		PlayerPalette: raplayer
+
+IOKTERROR:
+	Inherits: RA2TERROR
+	Inherits@announce: ^AnnounceOnBuild
+	Inherits@AntiInf: ^PrioritizeInfantry
+	Valued:
+		Cost: 200
+	Tooltip:
+		Name: Terrorist
+	Buildable:
+		BuildPaletteOrder: 20
+		Prerequisites: iokbarracks
+		Queue: Infantry.Iok
+		Description: Suicide bomber infantry.
+	Voiced:
+		VoiceSet: GLATerroristVoice
+	GrantConditionOnPrerequisite@selectglademo:
+		Condition: selectglademo
+		Prerequisites: selectglademo
+	SpeedMultiplier@selectglademo:
+		RequiresCondition: selectglademo
+		Modifier: 135
+	DamageMultiplier@selectglademo:
+		RequiresCondition: selectglademo
+		Modifier: 75
+	GrantConditionOnPrerequisite@selectglatoxin:
+		Condition: selectglatoxin
+		Prerequisites: selectglatoxin
+	FireWarheadsOnDeath@antraxbeta1:
+		Weapon: GLAnthraxBlue
+		EmptyWeapon: GLAnthraxBlue
+		DamageSource: Killer
+		RequiresCondition: selectglatoxin && !disabled
+	Armament@PRIMARY:
+	FireWarheadsOnDeath:
+		Weapon: GLTerroristExplosive
+		EmptyWeapon: GLTerroristExplosive
+		RequiresCondition: !selectglademo && !disabled
+	FireWarheadsOnDeath@2:
+		Weapon: GLTerroristExplosive2
+		EmptyWeapon: GLTerroristExplosive2
+		RequiresCondition: selectglademo && !disabled
+	RenderSprites:
+		Image: GLTERROR
+
+IOKE5:
+	Inherits: ^Soldier
+	Inherits@EXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@DECORATIONS: ^InfantryExperienceHospitalHazmatOverrides
+	Inherits@AntiInf: ^PrioritizeInfantry
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Chemical Warrior
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Buildable:
+		BuildPaletteOrder: 25
+		Prerequisites:
+		Queue: Infantry.Iok
+		Description: Advanced general-purpose infantry.\n  Strong vs all Ground units
+	Mobile:
+		Speed: 56
+		Locomotor: chem
+	Health:
+		HP: 9000
+	AutoTarget:
+		ScanRadius: 4
+	Armament:
+		Weapon: Chemspray
+		LocalOffset: 341,0,256
+		FireDelay: 3
+		MuzzleSequence: muzzle
+	Armament@GARRISONED:
+		Name: garrisoned
+		Weapon: Chemspray
+		MuzzleSequence: muzzle
+	TakeCover:
+		ProneOffset: 190,0,-190
+	WithMuzzleOverlay:
+	-DamagedByTerrain:
+	Targetable@Immune:
+		TargetTypes: ToxinImmune
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+	Inherits@EXT: ^ExternalConditions
+	AcceptsDeliveredExperience:
+		ValidTypes: infantry
+	RenderSprites:
+		Image: E5
+
+IOKE3:
+	Inherits: ^Soldier
+	Inherits@EXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	Inherits@DECORATIONS: ^InfantryExperienceHospitalHazmatOverrides
+	Inherits@AntiTank: ^PrioritizeTank
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Rocket Soldier
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Buildable:
+		BuildPaletteOrder: 30
+		Prerequisites: 
+		Queue: Infantry.Iok
+		Description: Anti-tank/Anti-aircraft infantry. \n  Strong vs Tanks, Aircraft\n  Weak vs Infantry
+	Mobile:
+		Speed: 42
+	Health:
+		HP: 4500
+	AutoTarget:
+		ScanRadius: 6
+	Armament@PRIMARY:
+		Weapon: Rockets
+		LocalOffset: 256,43,341
+		FireDelay: 5
+	Armament@GARRISONED:
+		Name: garrisoned
+		Weapon: RocketsG
+	TakeCover:
+		ProneOffset: 180,0,-200
+	Inherits@EXT: ^ExternalConditions
+	AcceptsDeliveredExperience:
+		ValidTypes: infantry
+	RenderSprites:
+		Image: e3
+		PlayerPalette: raplayer
+
+IOKMOB:
+	Inherits@1: ^ExistsInWorld
+	Inherits@3: ^SpriteActor
+	Inherits@selection: ^SelectableCombatUnit
+	Inherits@bot: ^BotProductionBehavior
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@vo: ^AttackTurretedVoice
+	Inherits@announce: ^AnnounceOnBuild
+	Inherits@AntiBuil: ^PrioritizeBuilding
+	-AppearsOnRadar:
+	OwnerLostAction:
+		Action: Kill
+		DeathTypes: DefaultDeath
+	Buildable:
+		BuildPaletteOrder: 40
+		Queue: Infantry.Iok
+		Description: Large armed crowd, armed with pistols and Molotovs.\n  Strong vs Buildings, Infantry\n  Weak vs Vehicles, Aircraft
+		Prerequisites:
+	Tooltip:
+		Name: Angry Mob
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Valued:
+		Cost: 1000
+	Health:
+		HP: 100
+	Mobile:
+		Speed: 50
+		Locomotor: foot
+	Guardable:
+	SelectionDecorations:
+	WithSpriteControlGroupDecoration:
+	Selectable:
+		Bounds: 48,48
+	AttackMove:
+	DrawLineToTarget:
+	MobSpawnerMaster:
+		Actors: angrymob1, angrymob1, angrymob1, angrymob1, angrymob2, angrymob2, angrymob2, angrymob2, angrymob2, angrymob3, angrymob3
+		RespawnTicks: 750
+		ExitByBudding: false
+	AttackTurreted:
+		PersistentTargeting: false
+	Turreted:
+		TurnSpeed: 255
+	Armament:
+		Weapon: AngryMobTargeting
+	AutoTarget:
+		ScanRadius: 6
+	WithSpriteBody:
+		Sequence: dot
+	HitShape:
+	HiddenUnderFog:
+		Type: CenterPosition
+	RevealsShroud:
+		Type: CenterPosition
+	SpeedMultiplier@Generic:
+		Modifier: 200
+	DamageMultiplier@INVINCIBLE:
+		Modifier: 0
+	RenderSprites:
+		Image: glamob
+
+IOKE6:
+	Inherits: ^Soldier
+	Inherits@selection: ^SelectableSupportUnit
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Engineer
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Buildable:
+		BuildPaletteOrder: 50
+		Prerequisites: barracks
+		Queue: Infantry.Iok
+		Description: Infiltrates and captures enemy structures.\nRemoves attached explosives from units.\n  Unarmed
+	Mobile:
+		Speed: 48
+	Health:
+		HP: 3000
+	Passenger:
+		PipType: Yellow
+	# EngineerRepair:
+	RepairsBridges:
+	CaptureManager:
+	GrantConditionOnPrerequisite@GLOBALREUSABLEENGINEER:
+		Condition: global-reusable-engineers
+		Prerequisites: global-reusable-engineers
+	Captures:
+		RequiresCondition: !global-reusable-engineers
+		CaptureTypes: building, defense, tech
+		PlayerExperience: 500
+		ConsumedByCapture: True
+	Captures@REUSABLE:
+		RequiresCondition: global-reusable-engineers
+		CaptureTypes: building, defense, tech
+		PlayerExperience: 500
+		CaptureDelay: 375
+		ConsumedByCapture: False
+		EnterCursor: ability
+		EnterBlockedCursor: move-blocked
+	Selectable:
+		Priority: 5
+		Class: e6
+	Voiced:
+		VoiceSet: EngineerVoice
+	AttackFrontal:
+	Armament@defuse:
+		Weapon: DefuseKit
+		TargetStances: Ally
+		ForceTargetStances: None
+	Inherits@EXT: ^ExternalConditions
+	RenderSprites:
+		Image: e6
+
+####################################################################################################
+#		IOK - AIRCRAFT
+####################################################################################################
+
+# IOKJETPLANE:
+# 	Inherits: ^RANeutralPlane
+# 	Inherits@GAINSEXPERIENCE: ^GainsExperience
+# 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+# 	Buildable:
+# 		Queue: Vehicle.Iok
+# 		BuildPaletteOrder: 100
+# 		Description: Crashes into ground targets.
+# 	Valued:
+# 		Cost: 500
+# 	Tooltip:
+# 		Name: Hijacked Jet
+# 	Health:
+# 		HP: 16000
+# 	Armor:
+# 		Type: Light
+# 	RevealsShroud:
+# 		Range: 7c0
+# 		Type: GroundPosition
+# 	AttackAircraft:
+# 		FacingTolerance: 512
+# 	Armament@PRIMARY:
+# 		Weapon: JetExplosion
+# 	GrantConditionOnAttack:
+# 		Condition: triggered
+# 	WithDeathAnimation:
+# 		UseDeathTypeSuffix: False
+# 	KillsSelf:
+# 		RequiresCondition: triggered
+# 	AttackAircraft:
+# 		FacingTolerance: 80
+# 	Aircraft:
+# 		CruiseAltitude: 2560
+# 		InitialFacing: 768
+# 		TurnSpeed: 40
+# 		Speed: 223
+# 		RepulsionSpeed: 40
+# 		MaximumPitch: 56
+# 	Contrail@1:
+# 		Offset: -598,-683,0
+# 	Contrail@2:
+# 		Offset: -598,683,0
+# 	Voiced:
+# 		VoiceSet: GLATerroristVoice
+# 	AcceptsDeliveredExperience: ##########
+# 		ValidTypes: vehicle ##########
+# 	WithRangeCircle:
+# 		Range: 7c0
+# 	#-ExternalCondition@FireCall:
+# 	#-ExternalCondition@PoliceCall:
+# 	SpawnActorOnDeath:
+# 		Actor: SC2KJetplane.Husk
+# 	RenderSprites:
+# 		Image: sc2kjetplane

@@ -1,0 +1,725 @@
+^ZRobot:
+	Defaults:
+		Scale: 1.5
+		Filename: zrobot.shp
+	Inherits: ^InfantryOverlays
+	stand:
+		Facings: 8
+	stand2:
+		Facings: 8
+	run:
+		Start: 8
+		Length: 4
+		Facings: 8
+		Tick: 120
+	grenade:
+		Start: 40
+		Length: 8
+		Facings: 8
+	idle1:
+		Facings: 8
+	idle2:
+		Facings: 8
+	idle3:
+		Facings: 8
+	cheer:
+		Facings: 8
+	# Dancing
+	idle4:
+		Facings: 8
+	# Shot
+	die1:
+		Start: 102
+		Length: 8
+		Tick: 80
+	# Explode
+	die2:
+		Start: 72
+		Length: 10
+		Tick: 80
+	# Fly and explode in air
+	die3:
+		Start: 82
+		Length: 10
+		Tick: 80
+	# Fly through air squish on ground
+	die4:
+		Start: 92
+		Length: 10
+		Tick: 80
+	# Burn
+	die5:
+		Start: 72
+		Length: 10
+		Tick: 80
+	# Tib
+	die6:
+		Start: 102
+		Length: 8
+		Tick: 80
+	# Electro
+	die7:
+		Filename: electro.shp
+		Length: *
+	die-crushed:
+		Filename: e1rot.shp
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	garrison-muzzle:
+		Filename: minigun.shp
+		Length: 3
+		Stride: 6
+		Facings: 8
+	icon:
+		Filename: zroboticon.shp
+
+zgrunt:
+	Defaults:
+		Scale: 1.5
+		Filename: zrobot.shp
+	Inherits: ^ZRobot
+	shoot:
+		Start: 110
+		Length: 2
+		Facings: 8
+	icon:
+		Filename: zgrunticon.shp
+
+zpsyco:
+	Defaults:
+		Scale: 1.5
+		Filename: zrobot.shp
+	Inherits: ^ZRobot
+	shoot:
+		Start: 150
+		Length: 2
+		Facings: 8
+	icon:
+		Filename: zpsycoicon.shp
+
+zpyro:
+	Defaults:
+		Scale: 1.5
+		Filename: zrobot.shp
+	Inherits: ^ZRobot
+	shoot:
+		Start: 166
+		Length: 3
+		Facings: 8
+	icon:
+		Filename: zpyroicon.shp
+
+zlaser:
+	Defaults:
+		Scale: 1.5
+		Filename: zrobot.shp
+	Inherits: ^ZRobot
+	shoot:
+		Start: 126
+		Length: 3
+		Facings: 8
+	icon:
+		Filename: zlasericon.shp
+
+zsniper:
+	Defaults:
+		Scale: 1.5
+		Filename: zrobot.shp
+	Inherits: ^ZRobot
+	shoot:
+		Start: 192
+		Length: 2
+		Facings: 8
+	icon:
+		Filename: zsnipericon.shp
+
+ztough:
+	Defaults:
+		Scale: 1.5
+		Filename: zrobot.shp
+	Inherits: ^ZRobot
+	shoot:
+		Start: 208
+		Length: 2
+		Facings: 8
+	icon:
+		Filename: ztoughicon.shp
+
+zlaserbeam:
+	Defaults:
+		Scale: 1.5
+		Filename: zlaserbeam.shp
+	idle:
+		Facings: -32
+		ZOffset: 1023
+
+zrockets:
+	Defaults:
+		Scale: 1.5
+		Filename: zrockets.shp
+	idle:
+		Facings: -32
+		ZOffset: 1023
+
+zltnk_debris:
+	Defaults:
+		Scale: 1.5
+		Filename: zltnk_debris.shp
+	idle:
+		ZOffset: 1023
+		Length: *
+
+zmtnk_debris:
+	Defaults:
+		Scale: 1.5
+		Filename: zmtnk_debris.shp
+	idle:
+		ZOffset: 1023
+		Length: *
+
+zhtnk_debris:
+	Defaults:
+		Scale: 1.5
+		Filename: zhtnk_debris.shp
+	idle:
+		ZOffset: 1023
+		Length: *
+
+zspark1:
+	Defaults:
+		Scale: 1.5
+		Filename: zspark1.shp
+	idle:
+		ZOffset: 1023
+		Length: *
+
+zspark2:
+	Defaults:
+		Scale: 1.5
+		Filename: zspark2.shp
+	idle:
+		ZOffset: 1023
+		Length: *
+
+zspark3:
+	Defaults:
+		Scale: 1.5
+		Filename: zspark3.shp
+	idle:
+		ZOffset: 1023
+		Length: *
+
+zjeep:
+	Defaults:
+		Scale: 1.5
+		Filename: zjeep.shp
+	idle:
+		Filename: zjeep_bottom.shp
+		Length: 4
+		Facings: 8
+		Tick: 9999
+	stand:
+		Filename: zjeep_bottom.shp
+		Length: 4
+		Facings: 8
+		Tick: 9999
+	top:
+		Filename: zjeep_top.shp
+		Length: 2
+		Facings: 8
+		Tick: 150
+	turret:
+		Filename: zjeep_tur.shp
+		Facings: 8
+	run:
+		Filename: zjeep_bottom.shp
+		Length: 4
+		Facings: 8
+	muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: zjeepicon.shp
+
+zltnk:
+	Defaults:
+		Scale: 1.5
+		Filename: zltnk.shp
+	idle:
+		Filename: zltnk.shp
+		Length: 3
+		Facings: 8
+		Tick: 9999
+	stand:
+		Filename: zltnk.shp
+		Length: 3
+		Facings: 8
+		Tick: 9999
+	turret:
+		Filename: zltnk.shp
+		Start: 24
+		Facings: 8
+		Tick: 150
+	run:
+		Filename: zltnk.shp
+		Length: 3
+		Facings: 8
+	muzzle:
+		Filename: gunfire2.shp
+		Length: *
+	icon:
+		Filename: zltnkicon.shp
+
+zmtnk:
+	Defaults:
+		Scale: 1.5
+		Filename: zmtnk.shp
+	idle:
+		Filename: zmtnk.shp
+		Length: 3
+		Facings: 8
+		Tick: 9999
+	stand:
+		Filename: zmtnk.shp
+		Length: 3
+		Facings: 8
+		Tick: 9999
+	turret:
+		Filename: zmtnk.shp
+		Start: 24
+		Facings: 8
+		Tick: 150
+	run:
+		Filename: zmtnk.shp
+		Length: 3
+		Facings: 8
+	muzzle:
+		Filename: gunfire2.shp
+		Length: *
+	icon:
+		Filename: zmtnkicon.shp
+
+zhtnk:
+	Defaults:
+		Scale: 1.5
+		Filename: zhtnk.shp
+	idle:
+		Filename: zhtnk.shp
+		Length: 3
+		Facings: 8
+		Tick: 9999
+	stand:
+		Filename: zhtnk.shp
+		Length: 3
+		Facings: 8
+		Tick: 9999
+	turret:
+		Filename: zhtnk.shp
+		Start: 24
+		Facings: 8
+		Tick: 150
+	run:
+		Filename: zhtnk.shp
+		Length: 3
+		Facings: 8
+	muzzle:
+		Filename: gunfire2.shp
+		Length: *
+	icon:
+		Filename: zhtnkicon.shp
+
+zmlrs:
+	Defaults:
+		Scale: 1.5
+		Filename: zmlrs.shp
+	idle:
+		Filename: zmlrs.shp
+		Length: 3
+		Facings: 8
+		Tick: 9999
+	stand:
+		Filename: zmlrs.shp
+		Length: 3
+		Facings: 8
+		Tick: 9999
+	turret:
+		Filename: zmlrs_tur.shp
+		Facings: 8
+	run:
+		Filename: zmlrs.shp
+		Length: 3
+		Facings: 8
+	muzzle:
+		Filename: gunfire2.shp
+		Length: *
+	icon:
+		Filename: zmlrsicon.shp
+
+zapc:
+	Defaults:
+		Scale: 1.5
+		Filename: zapc.shp
+	idle:
+		Filename: zapc.shp
+		Length: 3
+		Facings: 8
+		Tick: 9999
+	stand:
+		Filename: zapc.shp
+		Length: 3
+		Facings: 8
+		Tick: 9999
+	run:
+		Filename: zapc.shp
+		Length: 3
+		Facings: 8
+	turret:
+		Filename: zapc_tur.shp
+		Facings: 8
+	muzzle:
+		Filename: apcmuz.shp
+		Length: 3
+		Stride: 6
+		Facings: 8
+	close:
+		Filename: zapc.shp
+		Length: 3
+		Facings: 8
+		Tick: 9999
+	unload:
+		Filename: zapc.shp
+		Length: 3
+		Facings: 8
+		Tick: 9999
+	icon:
+		Filename: zapcicon.shp
+
+zmcv:
+	Defaults:
+		Scale: 1.5
+		Filename: zmcv.shp
+	idle:
+		Filename: zcrane.shp
+		Length: 3
+		Facings: 8
+		Tick: 9999
+	stand:
+		Filename: zcrane.shp
+		Length: 3
+		Facings: 8
+		Tick: 9999
+	turret:
+		Filename: zcrane.shp
+		Start: 4
+		Facings: 8
+	run:
+		Filename: zcrane.shp
+		Length: 3
+		Facings: 8
+	muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: zforticon.shp
+
+zcrane:
+	Defaults:
+		Scale: 1.5
+		Filename: zcrane.shp
+	idle:
+		Filename: zcrane.shp
+		Length: 3
+		Facings: 8
+		Tick: 9999
+	stand:
+		Filename: zcrane.shp
+		Length: 3
+		Facings: 8
+		Tick: 9999
+	turret:
+		Filename: zcrane.shp
+		Start: 4
+		Facings: 8
+	run:
+		Filename: zcrane.shp
+		Length: 3
+		Facings: 8
+	muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: zcraneicon.shp
+
+zfort:
+	Defaults:
+		Scale: 1.5
+		Filename: zfort.shp
+	build:
+	idle:
+	damaged-idle:
+		Start: 1
+	damaged-build:
+		Start: 1
+	dead:
+		Start: 1
+	make:
+	icon:
+		Filename: zforticon.shp
+	idle-overlay:
+		Filename: customoverlay.shp
+	turret:
+		Filename: zgattlingcan.shp
+		Facings: 8
+	zguncan:
+		Filename: zguncan.shp
+		Facings: 8
+	zhotwizer:
+		Filename: zhotwizer.shp
+		Facings: 8
+	zmissilecan:
+		Filename: zmissilecan.shp
+		Facings: 8
+	muzzle:
+		Filename: apcmuz.shp
+		Length: 3
+		Stride: 6
+		Facings: 8
+
+zbarracks:
+	Inherits: ^WithBuildingBib2
+	Defaults:
+		Scale: 1.5
+		Filename: zbarracks.shp
+	idle:
+	damaged-idle:
+		Start: 1
+	dead:
+	make:
+	# bib:
+	# 	Filename: bib2.tem
+	# 	UseTilesetExtension: true
+	# 	Length: *
+	icon:
+		Filename: zbarracksicon.shp
+
+zweap:
+	Inherits: ^WithBuildingBib2
+	Defaults:
+		Scale: 1.5
+		Filename: zweap.shp
+	idle:
+	damaged-idle:
+		Start: 1
+	dead:
+	make:
+	# bib:
+	# 	Filename: bib2.tem
+	# 	UseTilesetExtension: true
+	# 	Length: *
+	icon:
+		Filename: zweapicon.shp
+
+zhq:
+	Defaults:
+		Scale: 1.5
+		Filename: zhq.shp
+	idle:
+	damaged-idle:
+		Start: 1
+	idle-dish:
+		Filename: zhq_dish.shp
+		Length: *
+	damaged-idle-dish:
+		Filename: zhq_dish.shp
+		Length: *
+	dead:
+		Start: 1
+	make:
+	icon:
+		Filename: zhqicon.shp
+
+zfix:
+	Defaults:
+		Scale: 1.5
+		Filename: zfix.shp
+	idle:
+	damaged-idle:
+		Start: 1
+	active:
+	damaged-active:
+		Start: 1
+	dead:
+		Start: 1
+	make:
+	icon:
+		Filename: zfixicon.shp
+
+zgrenadebox:
+	Defaults:
+		Scale: 1.5
+		Filename: zgrenadebox.shp
+	idle:
+	damaged-idle:
+	make:
+	dead:
+	bib:
+		Filename: mbRASILO.tem
+		Length: *
+		UseTilesetExtension: false
+	icon:
+		Filename: zgrenadeboxicon.shp
+
+zgattlingcan:
+	Defaults:
+		Scale: 1.5
+		Filename: zgattlingcan.shp
+	idle:
+		Facings: 8
+	recoil:
+		Facings: 8
+	damaged-idle:
+		Facings: 8
+	damaged-recoil:
+		Facings: 8
+	make:
+		Filename: zgattlingcanmake.shp
+		Length: *
+		Tick: 80
+	muzzle:
+		Filename: minigun.shp
+		Length: 3
+		Stride: 6
+		Facings: 8
+	bib:
+		Filename: mbGUN.tem
+		TilesetFilenames:
+			DESERT: mbGUN.des
+			WINTER: mbGUN.win
+			SNOW: mbGUN.sno
+			BARREN: mbGUN.bar
+			JUNGLE: mbGUN.jun
+			RA_SNOW: mbGUN.sno
+			RA_DESERT: mbGUN.des
+			RA_INTERIOR: mbGUN.int
+			ARRAKIS: mbGUN.des
+			ARRAKIS2: mbGUN.des
+		Length: *
+		Offset: -1,-1
+	icon:
+		Filename: zgattlingcanicon.shp
+
+zguncan:
+	Defaults:
+		Scale: 1.5
+		Filename: zguncan.shp
+	idle:
+		Facings: 8
+	recoil:
+		Facings: 8
+	damaged-idle:
+		Facings: 8
+	damaged-recoil:
+		Facings: 8
+	make:
+		Filename: zguncanmake.shp
+		Length: *
+		Tick: 80
+	muzzle:
+		Filename: gunfire2.shp
+		Length: *
+	bib:
+		Filename: mbGUN.tem
+		TilesetFilenames:
+			DESERT: mbGUN.des
+			WINTER: mbGUN.win
+			SNOW: mbGUN.sno
+			BARREN: mbGUN.bar
+			JUNGLE: mbGUN.jun
+			RA_SNOW: mbGUN.sno
+			RA_DESERT: mbGUN.des
+			RA_INTERIOR: mbGUN.int
+			ARRAKIS: mbGUN.des
+			ARRAKIS2: mbGUN.des
+		Length: *
+		Offset: -1,-1
+	icon:
+		Filename: zguncanicon.shp
+
+zhotwizer:
+	Defaults:
+		Scale: 1.5
+		Filename: zhotwizer.shp
+	idle:
+		Facings: 8
+	recoil:
+		Facings: 8
+	damaged-idle:
+		Facings: 8
+	damaged-recoil:
+		Facings: 8
+	make:
+		Filename: zhotwizermake.shp
+		Length: *
+		Tick: 80
+	muzzle:
+		Filename: gunfire2.shp
+		Length: *
+	bib:
+		Filename: mbGUN.tem
+		TilesetFilenames:
+			DESERT: mbGUN.des
+			WINTER: mbGUN.win
+			SNOW: mbGUN.sno
+			BARREN: mbGUN.bar
+			JUNGLE: mbGUN.jun
+			RA_SNOW: mbGUN.sno
+			RA_DESERT: mbGUN.des
+			RA_INTERIOR: mbGUN.int
+			ARRAKIS: mbGUN.des
+			ARRAKIS2: mbGUN.des
+		Length: *
+		Offset: -1,-1
+	icon:
+		Filename: zhotwizericon.shp
+
+zmissilecan:
+	Defaults:
+		Scale: 1.5
+		Filename: zmissilecan.shp
+	idle:
+		Facings: 8
+	recoil:
+		Facings: 8
+	damaged-idle:
+		Facings: 8
+	damaged-recoil:
+		Facings: 8
+	make:
+		Filename: zmissilecanmake.shp
+		Length: *
+		Tick: 80
+	muzzle:
+		Filename: gunfire2.shp
+		Length: *
+	bib:
+		Filename: mbGUN.tem
+		TilesetFilenames:
+			DESERT: mbGUN.des
+			WINTER: mbGUN.win
+			SNOW: mbGUN.sno
+			BARREN: mbGUN.bar
+			JUNGLE: mbGUN.jun
+			RA_SNOW: mbGUN.sno
+			RA_DESERT: mbGUN.des
+			RA_INTERIOR: mbGUN.int
+			ARRAKIS: mbGUN.des
+			ARRAKIS2: mbGUN.des
+		Length: *
+		Offset: -1,-1
+	icon:
+		Filename: zmissilecanicon.shp

@@ -1,0 +1,1517 @@
+###############
+
+#  BUILDINGS  #
+
+###############
+
+sowheadquarters:
+	Defaults:
+		Filename: sowheadquarters.shp
+	idle:
+		Start: 0
+	damaged-idle:
+		Start: 1
+	dead:
+	make:
+		Filename: sowbuildinganim.shp
+		Length: *
+		Tick: 50
+	icon:
+		Filename: sowheadquarters_icon.shp
+		Start: 0
+
+sowlightfactory:
+	Defaults:
+		Filename: sowlightfactory.shp
+	idle:
+		Filename: sowlightfactory.shp
+		Start: 0
+	damaged-idle:
+		Filename: sowlightfactory.shp
+		Start: 1
+	make:
+		Filename: sowbuildinganim.shp
+		Length: *
+		Tick: 50
+	icon:
+		Filename: sowlightfactory_icon.shp
+		Start: 0
+	dead:
+		Filename: sowlightfactory.shp
+	idle-overlay:
+		Filename: sowlightfactory.shp
+		Start: 2
+		Length: 11
+		Tick: 75
+
+sowmediumfactory:
+	Defaults:
+		Filename: sowmediumfactory.shp
+	idle:
+		Filename: sowmediumfactory.shp
+		Start: 0
+	damaged-idle:
+		Filename: sowmediumfactory.shp
+		Start: 1
+	dead:
+		Filename: sowmediumfactory.shp
+	make:
+		Filename: sowbuildinganim.shp
+		Length: *
+		Tick: 50
+	icon:
+		Filename: sowmediumfactory_icon.shp
+		Start: 0
+	idle-overlay:
+		Filename: sowmediumfactory.shp
+		Start: 2
+		Length: 12
+		Tick: 75
+
+sowabcfactory:
+	Defaults:
+		Filename: sowabcfactory.shp
+	idle:
+		Filename: sowmediumfactory.shp
+		Start: 0
+	damaged-idle:
+		Filename: sowmediumfactory.shp
+		Start: 1
+	dead:
+	make:
+		Filename: sowbuildinganim.shp
+		Length: *
+		Tick: 50
+	icon:
+		Filename: sowabcfactory_icon.shp
+		Start: 0
+	idle-overlay-1:
+		Filename: sowmediumfactory.shp
+		Start: 2
+		Length: 12
+		Tick: 75
+	idle-overlay-2:
+		Filename: sowabcfactory.shp
+		Start: 0
+
+sowheavyfactory:
+	Defaults:
+		Filename: sowheavyfactory.shp
+	idle:
+		Filename: sowheavyfactory.shp
+		Start: 0
+	damaged-idle:
+		Filename: sowheavyfactory.shp
+		Start: 1
+	dead:
+		Filename: sowheavyfactory.shp
+	make:
+		Filename: sowbuildinganim.shp
+		Length: *
+		Tick: 50
+	icon:
+		Filename: sowheavyfactory_icon.shp
+		Start: 0
+	idle-overlay:
+		Filename: sowheavyfactory.shp
+		Start: 2
+		Length: 13
+		Tick: 60
+
+sowupgradeicon:
+	Defaults:
+		Filename: sowupgradeicon.shp
+	icon:
+		Start: 0
+
+sowheavyunits:
+	Defaults:
+		Filename: sowheavyunits.shp
+	icon:
+		Start: 0
+
+sowbombertripler:
+	Defaults:
+		Filename: sowbombertripler.shp
+	icon:
+		Start: 0
+
+sowstateofwar:
+	Defaults:
+		Filename: sowstateofwar.shp
+	icon:
+		Start: 0
+
+sowresearch_upg:
+	Defaults:
+		Filename: sowresearch_upg.shp
+	icon:
+		Start: 0
+
+sowresearch_upg2:
+	Defaults:
+		Filename: sowresearch_upg2.shp
+	icon:
+		Start: 0
+
+sowgoldprocessing:
+	Defaults:
+		Filename: sowgoldprocessing.shp
+	icon:
+		Start: 0
+
+sowgoldprocessing2:
+	Defaults:
+		Filename: sowgoldprocessing2.shp
+	icon:
+		Start: 0
+
+sowradar:
+	Defaults:
+		Filename: sowradar.shp
+	idle:
+		Start: 0
+	damaged-idle:
+		Start: 1
+	dead:
+	make:
+		Filename: sowbuildinganim.shp
+		Length: *
+		Tick: 50
+	icon:
+		Filename: sowradar_icon.shp
+		Start: 0
+	idle-overlay:
+		Start: 2
+		Length: 10
+		Tick: 200
+
+sowupgicon:
+	Defaults:
+		Filename: sowupgicon.shp
+	upg1:
+		Filename: sowupgicon.shp
+		Start: 0
+	upg2:
+		Filename: sowupgicon.shp
+		Start: 1
+	upg3:
+		Filename: sowupgicon.shp
+		Start: 2
+	upg4:
+		Filename: sowupgicon.shp
+		Start: 3
+	upg5:
+		Filename: sowupgicon.shp
+		Start: 4
+
+sowgoldmine:
+	Defaults:
+		Filename: sowgoldmine.shp
+	idle:
+		Filename: sowgoldmine.shp
+		Start: 0
+	damaged-idle:
+		Filename: sowgoldmine.shp
+		Start: 1
+	dead:
+		Filename: sowgoldmine.shp
+	make:
+		Filename: sowbuildinganim.shp
+		Length: *
+		Tick: 50
+	icon:
+		Filename: sowgoldmine_icon.shp
+		Start: 0
+	idle-overlay:
+		Filename: sowgoldmine.shp
+		Start: 2
+		Length: 12
+		Tick: 120
+	upg1:
+		Filename: sowgoldicon.shp
+		Start: 0
+	upg2:
+		Filename: sowgoldicon.shp
+		Start: 1
+	upg3:
+		Filename: sowgoldicon.shp
+		Start: 2
+	upg4:
+		Filename: sowgoldicon.shp
+		Start: 3
+	upg5:
+		Filename: sowgoldicon.shp
+		Start: 4
+
+sowpower:
+	Defaults:
+		Filename: sowpower.shp
+	idle:
+		Filename: sowpower.shp
+		Start: 0
+	damaged-idle:
+		Filename: sowpower.shp
+		Start: 1
+	dead:
+		Filename: sowpower.shp
+	make:
+		Filename: sowbuildinganim.shp
+		Length: *
+		Tick: 50
+	icon:
+		Filename: sowpower_icon.shp
+		Start: 0
+	idle-overlay:
+		Filename: sowpower.shp
+		Start: 2
+		Length: 11
+		Tick: 75
+	idle-electro:
+		Filename: sowpowerelectricity.shp
+		Start: 0
+		Length: 7
+		Tick: 5
+
+sowresearch:
+	Defaults:
+		Filename: sowresearch.shp
+	idle:
+		Start: 0
+	damaged-idle:
+		Start: 1
+	dead:
+	make:
+		Filename: sowbuildinganim.shp
+		Length: *
+		Tick: 50
+	icon:
+		Filename: sowresearch_icon.shp
+		Start: 0
+	idle-overlay:
+		Start: 2
+		Length: 10
+		Tick: 100
+	upg1:
+		Filename: sowresearch_icon_upg.shp
+		Start: 0
+	upg2:
+		Filename: sowresearch_icon_upg2.shp
+		Start: 0
+	upg3:
+		Filename: sowresearch_icon_upg3.shp
+		Start: 0
+	upg4:
+		Filename: sowresearch_icon_upg4.shp
+		Start: 0
+	upg5:
+		Filename: sowresearch_icon_upg5.shp
+		Start: 0
+
+sowmechfactory:
+	Defaults:
+		Filename: sowmechfactory.shp
+	idle:
+		Filename: sowmechfactory.shp
+		Start: 0
+	idle-overlay:
+		Filename: sowmechfactory.shp
+		Start: 1
+		Length: 4
+		Tick: 120
+	damaged-idle:
+		Filename: sowmechfactory.shp
+		Start: 5
+	dead:
+		Filename: sowmechfactory.shp
+	make:
+		Filename: sowbuildinganim.shp
+		Length: *
+		Tick: 50
+	icon:
+		Filename: sowmechfactory_icon.shp
+		Start: 0
+
+#################
+
+#    TURRETS    #
+
+#################
+
+sow_gun_tower:
+	Defaults:
+		Filename: sow_gun_tower.shp
+	idle:
+		Filename: sowlightturret.shp
+	dead:
+		Filename: sowlightturret.shp
+	make:
+		Filename: chbuildingmake1x1.shp
+		Length: *
+		Tick: 80
+	turret:
+		Filename: sowturretcannon.shp
+		Facings: 32
+	muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: sowturret1_icon.shp
+
+sow_antiair_tower:
+	Defaults:
+		Filename: sow_antiair_tower.shp
+	idle:
+		Filename: sowmedturret.shp
+	dead:
+		Filename: sowmedturret.shp
+	make:
+		Filename: chbuildingmake1x1.shp
+		Length: *
+		Tick: 80
+	turret:
+		Filename: sowmedantiair.shp
+		Facings: 32
+	muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: sowturret2_icon.shp
+
+sow_plasma_tower:
+	Defaults:
+		Filename: sow_plasma_tower.shp
+	idle:
+		Filename: sowmedturret.shp
+	dead:
+		Filename: sowmedturret.shp
+	make:
+		Filename: chbuildingmake1x1.shp
+		Length: *
+		Tick: 80
+	turret:
+		Filename: sowturretplasma.shp
+		Facings: 32
+	muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: sowturret3_icon.shp
+
+sow_minigun_tower:
+	Defaults:
+		Filename: sow_minigun_tower.shp
+	idle:
+		Filename: sowheavyturret.shp
+	dead:
+		Filename: sowheavyturret.shp
+	make:
+		Filename: chbuildingmake1x1.shp
+		Length: *
+		Tick: 80
+	turret:
+		Filename: sowturretminigun.shp
+		Offset: 0,-2
+		Facings: 32
+	muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: sowturret4_icon.shp
+
+sow_defragmenter_tower:
+	Defaults:
+		Filename: sow_defragmenter_tower.shp
+	idle:
+		Filename: sowheavyturret.shp
+	dead:
+		Filename: sowheavyturret.shp
+	make:
+		Filename: chbuildingmake1x1.shp
+		Length: *
+		Tick: 80
+	turret:
+		Filename: sowturretdefregmentator.shp
+		Facings: 32
+	muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: sowturret5_icon.shp
+
+sow_vulcano_tower:
+	Defaults:
+		Filename: sow_vulcano_tower.shp
+	idle:
+		Filename: sowheavyturret.shp
+	dead:
+		Filename: sowheavyturret.shp
+	make:
+		Filename: chbuildingmake1x1.shp
+		Length: *
+		Tick: 80
+	turret:
+		Filename: sowheavyantiair.shp
+		Offset: 0,-7
+		Facings: 32
+	muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: sowturret6_icon.shp
+
+sowasteroidstation:
+	Defaults:
+		Filename: sowasteroidstation.shp
+	idle:
+		Start: 0
+	damaged-idle:
+		Start: 0
+	dead:
+	make:
+		Filename: sowbuildinganim.shp
+		Length: *
+		Tick: 50
+	icon:
+		Filename: sowmystery_icon.shp
+		Start: 0
+
+###############
+
+#    UNITS    #
+
+###############
+
+sow_lt_cannon:
+	Defaults:
+		Filename: sow_lt_cannon.shp
+	idle:
+		Filename: sowlighttank.shp
+		Facings: 32
+		ZOffset: -512
+	turret:
+		Filename: sowlightcannon.shp
+		Start: 0
+		Facings: 32
+		ZOffset: -512
+	muzzle:
+		Filename: gunfire2.shp
+		Length: *
+	icon:
+		Filename: sow_lt_panzer_icon.shp
+		Offset: 0,0
+
+sow_lt_flame:
+	Defaults:
+		Filename: sow_lt_flame.shp
+	idle:
+		Filename: sowlighttank.shp
+		Facings: 32
+		ZOffset: 0
+	turret:
+		Filename: sowlightflame.shp
+		Start: 0
+		Facings: 32
+		ZOffset: 0
+	muzzle:
+		Combine:
+			flame-n:
+				Filename: flame-n.shp
+				Length: *
+				Offset: 3,6
+			flame-nw:
+				Filename: flame-nw.shp
+				Length: *
+				Offset: 8,7
+			flame-w:
+				Filename: flame-w.shp
+				Length: *
+				Offset: 8,2
+			flame-sw:
+				Filename: flame-sw.shp
+				Length: *
+				Offset: 7,-2
+			flame-s:
+				Filename: flame-s.shp
+				Length: *
+				Offset: 3,-2
+			flame-se:
+				Filename: flame-se.shp
+				Length: *
+				Offset: -5,-2
+			flame-e:
+				Filename: flame-e.shp
+				Length: *
+				Offset: -7,2
+			flame-ne:
+				Filename: flame-ne.shp
+				Length: *
+				Offset: -7,8
+		Facings: 8
+		Length: 13
+	icon:
+		Filename: sow_lt_flame_icon.shp
+		Offset: 0,0
+
+sow_lt_siege:
+	Defaults:
+		Filename: sow_lt_siege.shp
+	idle:
+		Filename: sowlighttank.shp
+		Facings: 32
+		ZOffset: -512
+	turret:
+		Filename: sowlightsiege.shp
+		Start: 0
+		Facings: 32
+		ZOffset: -512
+	muzzle:
+		Filename: gunfire2.shp
+		Length: *
+	icon:
+		Filename: sow_lt_siege_icon.shp
+		Offset: 0,0
+
+sow_lt_special:
+	Defaults:
+		Filename: sow_lt_special.shp
+	idle:
+		Filename: sowlighttank.shp
+		Facings: 32
+	turret:
+		Filename: sowlightspecial.shp
+		Start: 0
+		Facings: 32
+	muzzle:
+		Filename: gunfire2.shp
+		Length: *
+	icon:
+		Filename: sow_lt_special_icon.shp
+		Offset: 0,0
+
+sow_lt_antiair:
+	Defaults:
+		Filename: sow_lt_antiair.shp
+	idle:
+		Filename: sowlighttank.shp
+		Facings: 32
+		ZOffset: -512
+	turret:
+		Filename: sowlightantiair.shp
+		Start: 0
+		Facings: 32
+		ZOffset: 512
+	muzzle:
+		Filename: gunfire2.shp
+		Length: *
+	icon:
+		Filename: sow_lt_antiair_icon.shp
+		Offset: 0,0
+
+sow_mt_cannon:
+	Defaults:
+		Filename: sow_mt_cannon.shp
+	idle:
+		Filename: sowmedtank.shp
+		Facings: 32
+		ZOffset: -512
+	turret:
+		Filename: sowmedcannon.shp
+		Start: 0
+		Facings: 32
+		ZOffset: -512
+	muzzle:
+		Filename: gunfire2.shp
+		Length: *
+	icon:
+		Filename: sow_mt_panzer_icon.shp
+		Offset: 0,0
+
+sow_mt_flame:
+	Defaults:
+		Filename: sow_mt_flame.shp
+	idle:
+		Filename: sowmedtank.shp
+		Facings: 32
+		ZOffset: -512
+	turret:
+		Filename: sowmedflame.shp
+		Start: 0
+		Facings: 32
+		ZOffset: -512
+	muzzle:
+		Combine:
+			flame-n:
+				Filename: flame-n.shp
+				Length: *
+				Offset: 3,6
+			flame-nw:
+				Filename: flame-nw.shp
+				Length: *
+				Offset: 8,7
+			flame-w:
+				Filename: flame-w.shp
+				Length: *
+				Offset: 8,2
+			flame-sw:
+				Filename: flame-sw.shp
+				Length: *
+				Offset: 7,-2
+			flame-s:
+				Filename: flame-s.shp
+				Length: *
+				Offset: 3,-2
+			flame-se:
+				Filename: flame-se.shp
+				Length: *
+				Offset: -5,-2
+			flame-e:
+				Filename: flame-e.shp
+				Length: *
+				Offset: -7,2
+			flame-ne:
+				Filename: flame-ne.shp
+				Length: *
+				Offset: -7,8
+		Facings: 8
+		Length: 13
+	icon:
+		Filename: sow_mt_flame_icon.shp
+		Offset: 0,0
+
+sow_mt_siege:
+	Defaults:
+		Filename: sow_mt_siege.shp
+	idle:
+		Filename: sowmedtank.shp
+		Facings: 32
+		ZOffset: -512
+	turret:
+		Filename: sowmedsiege.shp
+		Start: 0
+		Facings: 32
+		ZOffset: 0
+	muzzle:
+		Filename: gunfire2.shp
+		Length: *
+	icon:
+		Filename: sow_mt_siege_icon.shp
+		Offset: 0,0
+
+sow_mt_special:
+	Defaults:
+		Filename: sow_mt_special.shp
+	idle:
+		Filename: sowmedtank.shp
+		Facings: 32
+		ZOffset: -512
+	turret:
+		Filename: sowmedspecial.shp
+		Start: 0
+		Facings: 32
+		ZOffset: -512
+	muzzle:
+		Filename: gunfire2.shp
+		Length: *
+	icon:
+		Filename: sow_mt_special_icon.shp
+		Offset: 0,0
+
+sow_mt_antiair:
+	Defaults:
+		Filename: sow_mt_antiair.shp
+	idle:
+		Filename: sowmedtank.shp
+		Facings: 32
+		ZOffset: -512
+	turret:
+		Filename: sowmedantiair.shp
+		Start: 0
+		Facings: 32
+		ZOffset: -512
+	muzzle:
+		Filename: gunfire2.shp
+		Length: *
+	icon:
+		Filename: sow_mt_antiair_icon.shp
+		Offset: 0,0
+
+sow_ht_cannon:
+	Defaults:
+		Filename: sow_ht_cannon.shp
+	idle:
+		Filename: sowheavytank.shp
+		Facings: 32
+		ZOffset: -512
+	turret:
+		Filename: sowheavycannon.shp
+		Start: 0
+		Facings: 32
+		ZOffset: -512
+	muzzle:
+		Filename: gunfire2.shp
+		Length: *
+	icon:
+		Filename: sow_ht_panzer_icon.shp
+		Offset: 0,0
+
+sow_ht_flame:
+	Defaults:
+		Filename: sow_ht_flame.shp
+	idle:
+		Filename: sowheavytank.shp
+		Facings: 32
+		ZOffset: -512
+	turret:
+		Filename: sowheavyflame.shp
+		Start: 0
+		Facings: 32
+		ZOffset: -512
+	muzzle:
+		Combine:
+			flame-n:
+				Filename: flame-n.shp
+				Length: *
+				Offset: 3,6
+			flame-nw:
+				Filename: flame-nw.shp
+				Length: *
+				Offset: 8,7
+			flame-w:
+				Filename: flame-w.shp
+				Length: *
+				Offset: 8,2
+			flame-sw:
+				Filename: flame-sw.shp
+				Length: *
+				Offset: 7,-2
+			flame-s:
+				Filename: flame-s.shp
+				Length: *
+				Offset: 3,-2
+			flame-se:
+				Filename: flame-se.shp
+				Length: *
+				Offset: -5,-2
+			flame-e:
+				Filename: flame-e.shp
+				Length: *
+				Offset: -7,2
+			flame-ne:
+				Filename: flame-ne.shp
+				Length: *
+				Offset: -7,8
+		Facings: 8
+		Length: 13
+	icon:
+		Filename: sow_ht_flame_icon.shp
+		Offset: 0,0
+
+sow_ht_siege:
+	Defaults:
+		Filename: sow_ht_siege.shp
+	idle:
+		Filename: sowheavytank.shp
+		Facings: 32
+		ZOffset: -512
+	turret:
+		Filename: sowheavysiege.shp
+		Start: 0
+		Facings: 32
+		ZOffset: 0
+	muzzle:
+		Filename: gunfire2.shp
+		Length: *
+	icon:
+		Filename: sow_ht_siege_icon.shp
+		Offset: 0,0
+
+sow_ht_special:
+	Defaults:
+		Filename: sow_ht_special.shp
+	idle:
+		Filename: sowheavytank.shp
+		Facings: 32
+		ZOffset: -512
+	turret:
+		Filename: sowheavyspecial.shp
+		Start: 0
+		Facings: 32
+		ZOffset: -512
+	muzzle:
+		Filename: gunfire2.shp
+		Length: *
+	icon:
+		Filename: sow_ht_special_icon.shp
+		Offset: 0,0
+
+sow_ht_antiair:
+	Defaults:
+		Filename: sow_ht_antiair.shp
+	idle:
+		Filename: sowheavytank.shp
+		Facings: 32
+		ZOffset: -512
+	turret:
+		Filename: sowheavyantiair.shp
+		Start: 0
+		Facings: 32
+		ZOffset: -512
+	muzzle:
+		Filename: gunfire2.shp
+		Length: *
+	icon:
+		Filename: sow_ht_antiair_icon.shp
+		Offset: 0,0
+
+sow_abc:
+	Defaults:
+		Filename: sow_abc.shp
+	idle:
+		Filename: sowabc.shp
+		Facings: 16
+		ZOffset: -512
+	icon:
+		Filename: sowabc_icon.shp
+		Offset: 0,0
+
+sow_advancer:
+	Defaults:
+		Filename: sow_advancer.shp
+	idle:
+		Filename: sowadvancer.shp
+		Start: 0
+		Length: 30
+		Tick: 70
+		ZOffset: 512
+	land:
+		Filename: sowadvancer.shp
+		Start: 0
+		ZOffset: 512
+	muzzle:
+		Filename: gunfire2.shp
+		Length: *
+	advancer-capture:
+		Filename: sowadvancercapture.shp
+		Start: 0
+		Length: 3
+	icon:
+		Filename: sowadvancer_icon.shp
+		Offset: 0,0
+
+sow_advancer_husk:
+	Defaults:
+		Filename: sow_advancer_husk.shp
+	idle:
+		Filename: sowadvancer.shp
+		Start: 0
+		Length: 30
+		Tick: 10
+		ZOffset: 512
+
+sow_invader:
+	Defaults:
+		Filename: sow_invader.shp
+	icon:
+		Filename: sowadvancer_icon.shp
+		Start: 1
+
+sow_invader_mk2:
+	Defaults:
+		Filename: sow_invader_mk2.shp
+	icon:
+		Filename: sowadvancer_icon.shp
+		Start: 2
+
+sow_mcv:
+	Defaults:
+		Filename: sow_mcv.shp
+	idle:
+		Filename: sowheavytank.shp
+		Facings: 32
+		ZOffset: -512
+	icon:
+		Filename: sowheadquarters_icon.shp
+		Start: 0
+
+sow_mcv.bot:
+	Defaults:
+		Filename: sow_mcv.bot.shp
+	Inherits: sow_mcv
+
+sow_mech_avenger:
+	Defaults:
+		Offset: 0,0,0
+		Scale: 1.5
+	idle:
+		Filename: invisibleitem.shp
+	stand:
+		Filename: sowmech.shp
+		Start: 0
+		Facings: 16
+	turret:
+		Filename: sowmechavenger.shp
+		Start: 0
+		Facings: 16
+	shoot:
+		Filename: sowmechkodiak.shp
+		Start: 0
+		Facings: 16
+	walk:
+		Filename: sowmech.shp
+		Start: 16
+		Facings: 8
+		Length: 8
+		Tick: 200
+	icon:
+		Filename: sow_avenger_icon.shp
+
+sow_mech_kodiak:
+	Defaults:
+		Offset: 0,0,0
+		Scale: 1.5
+	idle:
+		Filename: invisibleitem.shp
+	stand:
+		Filename: sowmech.shp
+		Start: 0
+		Facings: 16
+	turret:
+		Filename: sowmechkodiak.shp
+		Start: 0
+		Facings: 16
+	shoot:
+		Filename: sowmechkodiak.shp
+		Start: 0
+		Facings: 16
+	walk:
+		Filename: sowmech.shp
+		Start: 16
+		Facings: 8
+		Length: 8
+		Tick: 200
+	icon:
+		Filename: sow_kodiak_icon.shp
+
+sow_mech_gatling:
+	Defaults:
+		Offset: 0,0,0
+		Scale: 1.5
+	idle:
+		Filename: invisibleitem.shp
+	stand:
+		Filename: sowmech.shp
+		Start: 0
+		Facings: 16
+	turret:
+		Filename: sowmechgatling.shp
+		Start: 0
+		Facings: 16
+	shoot:
+		Filename: gunfire2.shp
+		Length: *
+	muzzle:
+		Filename: gunfire2.shp
+		Length: *
+	walk:
+		Filename: sowmech.shp
+		Start: 16
+		Facings: 8
+		Length: 8
+		Tick: 200
+	icon:
+		Filename: sow_gatling_icon.shp
+
+sow_mech_jaguar:
+	Defaults:
+		Offset: 0,0,0
+		Scale: 1.5
+	idle:
+		Filename: invisibleitem.shp
+	stand:
+		Filename: sowmech.shp
+		Start: 0
+		Facings: 16
+	turret:
+		Filename: sowmechjaguar.shp
+		Start: 0
+		Facings: 16
+	shoot:
+		Filename: sowmechjaguar.shp
+		Start: 0
+		Facings: 16
+	muzzle:
+		Filename: gunfire2.shp
+	walk:
+		Filename: sowmech.shp
+		Start: 16
+		Facings: 8
+		Length: 8
+		Tick: 200
+	icon:
+		Filename: sow_jaguar_icon.shp
+
+sow_mech_achilles:
+	Defaults:
+		Offset: 0,0,0
+		Scale: 1.5
+	idle:
+		Filename: invisibleitem.shp
+	stand:
+		Filename: sowmech.shp
+		Start: 0
+		Facings: 16
+	turret:
+		Filename: sowmechachilles.shp
+		Start: 0
+		Facings: 16
+	shoot:
+		Filename: sowmechachilles.shp
+		Start: 0
+		Facings: 16
+	walk:
+		Filename: sowmech.shp
+		Start: 16
+		Facings: 8
+		Length: 8
+		Tick: 200
+	icon:
+		Filename: sow_achilles_icon.shp
+
+sow_mech_avenger_mk2:
+	Defaults:
+	Inherits: sow_mech_avenger
+	icon:
+		Filename: sow_avenger_mk2_icon.shp
+
+sow_mech_kodiak_mk2:
+	Defaults:
+	Inherits: sow_mech_kodiak
+	icon:
+		Filename: sow_kodiak_mk2_icon.shp
+
+sow_mech_jaguar_mk2:
+	Defaults:
+	Inherits: sow_mech_jaguar
+	icon:
+		Filename: sow_jaguar_mk2_icon.shp
+
+sow_mech_gatling_mk2:
+	Defaults:
+	Inherits: sow_mech_gatling
+	icon:
+		Filename: sow_gatling_mk2_icon.shp
+
+sow_mech_achilles_mk2:
+	Defaults:
+	Inherits: sow_mech_achilles
+	icon:
+		Filename: sow_achilles_mk2_icon.shp
+
+sowfighter:
+	Defaults:
+		Filename: sowfighter.shp
+	idle:
+		Filename: sowfighter.shp
+		# Facings: 12
+		Facings: 8
+	icon:
+		Filename: sowfighter_icon.shp
+	dead:
+
+sowfighter_husk:
+	Defaults:
+		Filename: sowfighter_husk.shp
+	Inherits: sowfighter
+
+sowbomber:
+	Defaults:
+		Filename: sowbomber.shp
+	idle:
+		Filename: sowbomber.shp
+		Start: 0
+		Facings: 8
+	icon:
+		Filename: sowbomber_icon.shp
+	dead:
+
+sowbomber_husk:
+	Defaults:
+		Filename: sowbomber_husk.shp
+	Inherits: sowbomber
+
+sowbomber_bomb:
+	Defaults:
+		Filename: sowbomber_bomb.shp
+	idle:
+		Start: 0
+		Length: 8
+	open:
+		Start: 0
+		Length: 8
+
+sowbomber_icon:
+	Defaults:
+		Filename: sowbomber_icon.shp
+	icon:
+		Start: 0
+	idle:
+
+sowtripler:
+	Defaults:
+		Filename: sowtripler.shp
+	idle:
+		Start: 0
+		Length: 10
+		Tick: 65
+	icon:
+		Filename: sowtripler_icon.shp
+	dead:
+
+sowtripler_husk:
+	Defaults:
+		Filename: sowtripler_husk.shp
+	idle:
+		Filename: sowtripler.shp
+		Start: 0
+		Length: 10
+		Tick: 30
+
+sowtripler_icon:
+	Defaults:
+		Filename: sowtripler_icon.shp
+	icon:
+
+sowcarryall_icon:
+	Defaults:
+		Filename: sowcarryall_icon.shp
+	icon:
+		Start: 0
+	idle:
+
+sowasteroids_icon:
+	Defaults:
+		Filename: sowasteroids_icon.shp
+	icon:
+		Start: 0
+	idle:
+
+sowovercharge_icon:
+	Defaults:
+		Filename: sowovercharge_icon.shp
+	icon:
+		Start: 0
+
+sowovercharge1:
+	Defaults:
+		Filename: sowovercharge1.shp
+	icon:
+		Start: 0
+
+sowovercharge2:
+	Defaults:
+		Filename: sowovercharge2.shp
+	icon:
+		Start: 0
+
+sowovercharge3:
+	Defaults:
+		Filename: sowovercharge3.shp
+	icon:
+		Start: 0
+
+sowadvancercapture:
+	Defaults:
+		Filename: sowadvancercapture.shp
+	idle:
+		Filename: sowadvancercapture.shp
+		Start: 0
+		Length: 3
+
+sowasteroid:
+	Defaults:
+		Filename: sowasteroid.shp
+	idle:
+		Filename: sowasteroids.shp
+		Start: 0
+	open:
+		Filename: sowasteroids.shp
+		Start: 0
+
+sowasteroid_b:
+	Defaults:
+		Filename: sowasteroid_b.shp
+	idle:
+		Filename: sowasteroids.shp
+		Start: 1
+	open:
+		Filename: sowasteroids.shp
+		Start: 1
+
+sowasteroid_c:
+	Defaults:
+		Filename: sowasteroid_c.shp
+	idle:
+		Filename: sowasteroids.shp
+		Start: 2
+	open:
+		Filename: sowasteroids.shp
+		Start: 2
+
+sownothing:
+	Defaults:
+		Filename: sownothing.shp
+	idle:
+		Start: 0
+
+sow_lt_panzer_icon:
+	Defaults:
+		Filename: sow_lt_panzer_icon.shp
+	icon:
+		Start: 0
+	idle:
+
+sow_lt_flame_icon:
+	Defaults:
+		Filename: sow_lt_flame_icon.shp
+	icon:
+		Start: 0
+	idle:
+
+sow_lt_special_icon:
+	Defaults:
+		Filename: sow_lt_special_icon.shp
+	icon:
+		Start: 0
+	idle:
+
+sow_lt_siege_icon:
+	Defaults:
+		Filename: sow_lt_siege_icon.shp
+	icon:
+		Start: 0
+	idle:
+
+sow_lt_antiair_icon:
+	Defaults:
+		Filename: sow_lt_antiair_icon.shp
+	icon:
+		Start: 0
+	idle:
+
+sow_mt_panzer_icon:
+	Defaults:
+		Filename: sow_mt_panzer_icon.shp
+	icon:
+		Start: 0
+	idle:
+
+sow_mt_flame_icon:
+	Defaults:
+		Filename: sow_mt_flame_icon.shp
+	icon:
+		Start: 0
+	idle:
+
+sow_mt_special_icon:
+	Defaults:
+		Filename: sow_mt_special_icon.shp
+	icon:
+		Start: 0
+	idle:
+
+sow_mt_siege_icon:
+	Defaults:
+		Filename: sow_mt_siege_icon.shp
+	icon:
+		Start: 0
+	idle:
+
+sow_mt_antiair_icon:
+	Defaults:
+		Filename: sow_mt_antiair_icon.shp
+	icon:
+		Start: 0
+	idle:
+
+sow_ht_panzer_icon:
+	Defaults:
+		Filename: sow_ht_panzer_icon.shp
+	icon:
+		Start: 0
+	idle:
+
+sow_ht_flame_icon:
+	Defaults:
+		Filename: sow_ht_flame_icon.shp
+	icon:
+		Start: 0
+	idle:
+
+sow_ht_special_icon:
+	Defaults:
+		Filename: sow_ht_special_icon.shp
+	icon:
+		Start: 0
+	idle:
+
+sow_ht_siege_icon:
+	Defaults:
+		Filename: sow_ht_siege_icon.shp
+	icon:
+		Start: 0
+	idle:
+
+sow_ht_antiair_icon:
+	Defaults:
+		Filename: sow_ht_antiair_icon.shp
+	icon:
+		Start: 0
+	idle:
+
+sow_avenger_icon:
+	Defaults:
+		Filename: sow_avenger_icon.shp
+	icon:
+		Start: 0
+	idle:
+
+sow_kodiak_icon:
+	Defaults:
+		Filename: sow_kodiak_icon.shp
+	icon:
+		Start: 0
+	idle:
+
+sow_gatling_icon:
+	Defaults:
+		Filename: sow_gatling_icon.shp
+	icon:
+		Start: 0
+	idle:
+
+sow_jaguar_icon:
+	Defaults:
+		Filename: sow_jaguar_icon.shp
+	icon:
+		Start: 0
+	idle:
+
+sow_achilles_icon:
+	Defaults:
+		Filename: sow_achilles_icon.shp
+	icon:
+		Start: 0
+	idle:
+
+satelliteprotection_icon:
+	Defaults:
+		Filename: satelliteprotection_icon.shp
+	icon:
+		Start: 0
+	idle:
+
+satelliteprotection_mk2_icon:
+	Defaults:
+		Filename: satelliteprotection_mk2_icon.shp
+	icon:
+		Start: 0
+	idle:
+
+sowlightspecial_shot:
+	Defaults:
+		Filename: sowlightspecial_shot.shp
+	idle:
+		Facings: 32
+
+sowmedspecial_shot:
+	Defaults:
+		Filename: sowmedspecial_shot.shp
+	idle:
+		Start: 0
+		Facings: 8
+		Length: 3
+		Tick: 100
+
+sow_aa_shot:
+	Defaults:
+		Filename: sow_aa_shot.shp
+	idle:
+		Facings: 32
+
+sowheavyspecial_shot:
+	Defaults:
+		Filename: sowheavyspecial_shot.shp
+	idle:
+		Start: 0
+
+sowturretplasma_shot:
+	Defaults:
+		Filename: sowturretplasma_shot.shp
+	idle:
+		Start: 0
+
+lt_siege_shot:
+	Defaults:
+		Filename: lt_siege_shot.shp
+	idle:
+		Filename: sowsiege_shots.shp
+		Start: 0
+
+mt_siege_shot:
+	Defaults:
+		Filename: mt_siege_shot.shp
+	idle:
+		Filename: sowsiege_shots.shp
+		Start: 1
+
+ht_siege_shot:
+	Defaults:
+		Filename: ht_siege_shot.shp
+	idle:
+		Filename: sowsiege_shots.shp
+		Start: 2
+
+sowmechjaguar_shot:
+	Defaults:
+		Filename: sowmechjaguar_shot.shp
+	idle:
+		Start: 0
+
+tripler_payload:
+	Defaults:
+		Filename: tripler_payload.shp
+	open:
+		Start: 0
+		Length: 23
+		Tick: 55
+	idle:
+		Start: 0
+		Length: 23
+		Tick: 55
+
+mmsowmcv:
+	Defaults:
+		Filename: mmsowmcv.shp
+	Inherits: sow_mcv
+
+icon:
+	Defaults:
+		Filename: icon.shp
+		AddExtension: False
+	sowfighter_icon:
+		Filename: sowfighter_icon.shp
+	sowbomber_icon:
+		Filename: sowbomber_icon.shp
+	sowtripler_icon:
+		Filename: sowtripler_icon.shp
+	sowcarryall_icon:
+		Filename: sowcarryall_icon.shp
+	sowasteroids_icon:
+		Filename: sowasteroids_icon.shp
