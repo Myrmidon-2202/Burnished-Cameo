@@ -667,6 +667,9 @@ World:
 	Selectable:
 		Bounds: 840, 840, 0, 0
 		DecorationBounds: 840, 840, 0, 0
+	WithInfantryBody:
+		IdleSequences: idle
+		StandSequences: stand
 
 ^lego_mage:
 	Inherits@FOURSTATEDEPLOY: ^LEGOFourStateDeploy

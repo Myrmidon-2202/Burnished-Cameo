@@ -2,6 +2,7 @@
 #	SW Meet CNC Building
 ########################################################
 swfact:
+	Inherits: ^WithBuildingBib2
 	Defaults:
 		Scale: 2.0
 		Filename: swfact.shp
@@ -14,16 +15,18 @@ swfact:
 		Filename: swdfactmake.shp
 		Length: *
 		Tick: 80
-	bib: 
-		Filename: bib2.tem
-		UseTilesetExtension: true
-		Length: *
+	bib:
+		Scale: 1
+	# 	Filename: bib2.tem
+	# 	UseTilesetExtension: true
+	# 	Length: *
 	icon: 
 		Filename: facticnh.shp
 	idle-overlay: 
 		Filename: customoverlay.shp
 
 swifact:
+	Inherits: ^WithBuildingBib1
 	Defaults:
 		Scale: 2.0
 		Filename: swifact.shp
@@ -41,16 +44,18 @@ swifact:
 		Filename: swifactmake.shp
 		Length: *
 		Tick: 80
-	bib: 
-		Filename: bib1.tem
-		UseTilesetExtension: true
-		Length: *
+	bib:
+		Scale: 1
+	# 	Filename: bib1.tem
+	# 	UseTilesetExtension: true
+	# 	Length: *
 	icon: 
 		Filename: facticnh.shp
 	idle-overlay: 
 		Filename: customoverlay.shp
 
 swrfact:
+	Inherits: ^WithBuildingBib1
 	Defaults:
 		Scale: 2.0
 		Filename: swrfact.shp
@@ -68,16 +73,18 @@ swrfact:
 		Filename: swrfactmake.shp
 		Length: *
 		Tick: 80
-	bib: 
-		Filename: bib1.tem
-		UseTilesetExtension: true
-		Length: *
+	bib:
+		Scale: 1
+	# 	Filename: bib1.tem
+	# 	UseTilesetExtension: true
+	# 	Length: *
 	icon: 
 		Filename: facticnh.shp
 	idle-overlay: 
 		Filename: customoverlay.shp
 
 swrefact:
+	Inherits: ^WithBuildingBib1
 	Defaults:
 		Scale: 2.0
 		Filename: swrefact.shp
@@ -95,16 +102,18 @@ swrefact:
 		Filename: swrefactmake.shp
 		Length: *
 		Tick: 80
-	bib: 
-		Filename: bib1.tem
-		UseTilesetExtension: true
-		Length: *
+	bib:
+		Scale: 1 
+	# 	Filename: bib1.tem
+	# 	UseTilesetExtension: true
+	# 	Length: *
 	icon: 
 		Filename: facticnh.shp
 	idle-overlay: 
 		Filename: customoverlay.shp
 
 swibarr:
+	Inherits: ^WithBuildingBib2
 	Defaults:
 		Scale: 2.0
 		Filename: swibarr.shp
@@ -115,14 +124,16 @@ swibarr:
 		Filename: swibarrmake.shp
 		Length: *
 		Tick: 80
-	bib: 
-		Filename: bib2.tem
-		UseTilesetExtension: true
-		Length: *
+	bib:
+		Scale: 1 
+	# 	Filename: bib2.tem
+	# 	UseTilesetExtension: true
+	# 	Length: *
 	icon: 
 		Filename: swbarricon.shp
 
 swrbarr:
+	Inherits: ^WithBuildingBib2
 	Defaults:
 		Scale: 2.0
 		Filename: swrbarr.shp
@@ -133,14 +144,16 @@ swrbarr:
 		Filename: swrbarrmake.shp
 		Length: *
 		Tick: 80
-	bib: 
-		Filename: bib2.tem
-		UseTilesetExtension: true
-		Length: *
+	bib:
+		Scale: 1 
+	# 	Filename: bib2.tem
+	# 	UseTilesetExtension: true
+	# 	Length: *
 	icon: 
 		Filename: swbarricon.shp
 
 swrebarr:
+	Inherits: ^WithBuildingBib2
 	Defaults:
 		Scale: 2.0
 		Filename: swrebarr.shp
@@ -151,14 +164,16 @@ swrebarr:
 		Filename: swrebarrmake.shp
 		Length: *
 		Tick: 80
-	bib: 
-		Filename: bib2.tem
-		UseTilesetExtension: true
-		Length: *
+	bib:
+		Scale: 1 
+	# 	Filename: bib2.tem
+	# 	UseTilesetExtension: true
+	# 	Length: *
 	icon: 
 		Filename: swbarricon.shp
 
 swdbarr:
+	Inherits: ^WithBuildingBib2
 	Defaults:
 		Scale: 2.0
 		Filename: swdbarr.shp
@@ -169,14 +184,16 @@ swdbarr:
 		Filename: swdbarrmake.shp
 		Length: *
 		Tick: 80
-	bib: 
-		Filename: bib2.tem
-		UseTilesetExtension: true
-		Length: *
+	bib:
+		Scale: 1 
+	# 	Filename: bib2.tem
+	# 	UseTilesetExtension: true
+	# 	Length: *
 	icon: 
 		Filename: swbarricon.shp
 
 swdfact:
+	Inherits: ^WithBuildingBib1
 	Defaults:
 		Scale: 2.0
 		Filename: swdfact.shp
@@ -194,16 +211,18 @@ swdfact:
 		Filename: swdfactmake2.shp
 		Length: *
 		Tick: 80
-	bib: 
-		Filename: bib1.tem
-		UseTilesetExtension: true
-		Length: *
+	bib:
+		Scale: 1 
+	# 	Filename: bib1.tem
+	# 	UseTilesetExtension: true
+	# 	Length: *
 	icon: 
 		Filename: facticnh.shp
 	idle-overlay: 
 		Filename: customoverlay.shp
 
 swfort:
+	Inherits: ^WithBuildingBib1
 	Defaults:
 		Scale: 2.0
 		Filename: swfort.shp
@@ -217,15 +236,17 @@ swfort:
 		Filename: swfortmake.shp
 		Length: *
 		Tick: 80
-	bib: 
-		Filename: bib1.tem
-		UseTilesetExtension: true
-		Length: *
+	bib:
+		Scale: 1 
+	# 	Filename: bib1.tem
+	# 	UseTilesetExtension: true
+	# 	Length: *
 	icon: 
 		Filename: swforticon.shp
 		Offset: 0,0
 
 swfortre:
+	Inherits: ^WithBuildingBib1
 	Defaults:
 		Scale: 2.0
 		Filename: swfortre.shp
@@ -239,15 +260,17 @@ swfortre:
 		Filename: swfortremake.shp
 		Length: *
 		Tick: 80
-	bib: 
-		Filename: bib1.tem
-		UseTilesetExtension: true
-		Length: *
+	bib:
+		Scale: 1 
+	# 	Filename: bib1.tem
+	# 	UseTilesetExtension: true
+	# 	Length: *
 	icon: 
 		Filename: swforticon.shp
 		Offset: 0,0
 
 swfortd:
+	Inherits: ^WithBuildingBib1
 	Defaults:
 		Scale: 2.0
 		Filename: swfortd.shp
@@ -261,15 +284,17 @@ swfortd:
 		Filename: swfortdmake.shp
 		Length: *
 		Tick: 80
-	bib: 
-		Filename: bib1.tem
-		UseTilesetExtension: true
-		Length: *
+	bib:
+		Scale: 1 
+	# 	Filename: bib1.tem
+	# 	UseTilesetExtension: true
+	# 	Length: *
 	icon: 
 		Filename: swforticon.shp
 		Offset: 0,0
 
 swfortr:
+	Inherits: ^WithBuildingBib1
 	Defaults:
 		Scale: 2.0
 		Filename: swfortr.shp
@@ -283,15 +308,17 @@ swfortr:
 		Filename: swfortrmake.shp
 		Length: *
 		Tick: 80
-	bib: 
-		Filename: bib1.tem
-		UseTilesetExtension: true
-		Length: *
+	bib:
+		Scale: 1 
+	# 	Filename: bib1.tem
+	# 	UseTilesetExtension: true
+	# 	Length: *
 	icon: 
 		Filename: swforticon.shp
 		Offset: 0,0
 
 sweweap:
+	Inherits: ^WithBuildingBib1
 	Defaults:
 		Scale: 2.0
 		Filename: sweweap.shp
@@ -305,15 +332,17 @@ sweweap:
 		Filename: sweweapmake.shp
 		Length: *
 		Tick: 80
-	bib: 
-		Filename: bib1.tem
-		UseTilesetExtension: true
-		Length: *
+	bib:
+		Scale: 1 
+	# 	Filename: bib1.tem
+	# 	UseTilesetExtension: true
+	# 	Length: *
 	icon: 
 		Filename: swweapicon.shp
 		Offset: 0,0
 
 swrweap:
+	Inherits: ^WithBuildingBib1
 	Defaults:
 		Scale: 2.0
 		Filename: swrweap.shp
@@ -327,15 +356,17 @@ swrweap:
 		Filename: swrweapmake.shp
 		Length: *
 		Tick: 80
-	bib: 
-		Filename: bib1.tem
-		UseTilesetExtension: true
-		Length: *
+	bib:
+		Scale: 1 
+	# 	Filename: bib1.tem
+	# 	UseTilesetExtension: true
+	# 	Length: *
 	icon: 
 		Filename: swweapicon.shp
 		Offset: 0,0
 
 swreweap:
+	Inherits: ^WithBuildingBib1
 	Defaults:
 		Scale: 2.0
 		Filename: swreweap.shp
@@ -349,15 +380,17 @@ swreweap:
 		Filename: swrweapmake.shp
 		Length: *
 		Tick: 80
-	bib: 
-		Filename: bib1.tem
-		UseTilesetExtension: true
-		Length: *
+	bib:
+		Scale: 1 
+	# 	Filename: bib1.tem
+	# 	UseTilesetExtension: true
+	# 	Length: *
 	icon: 
 		Filename: swweapicon.shp
 		Offset: 0,0
 
 swdweap:
+	Inherits: ^WithBuildingBib1
 	Defaults:
 		Scale: 2.0
 		Filename: swdweap.shp
@@ -376,15 +409,17 @@ swdweap:
 		Filename: swdweapmake2.shp
 		Length: *
 		Tick: 80
-	bib: 
-		Filename: bib1.tem
-		UseTilesetExtension: true
-		Length: *
+	bib:
+		Scale: 1 
+	# 	Filename: bib1.tem
+	# 	UseTilesetExtension: true
+	# 	Length: *
 	icon: 
 		Filename: swweapicon.shp
 		Offset: 0,0
 
 swnuke:
+	Inherits: ^WithBuildingBib3
 	Defaults:
 		Scale: 2.0
 		Filename: swnuke.shp
@@ -402,10 +437,11 @@ swnuke:
 		Filename: swnukemake.shp
 		Length: *
 		Tick: 80
-	bib: 
-		Filename: bib3.tem
-		UseTilesetExtension: true
-		Length: *
+	bib:
+		Scale: 1 
+	# 	Filename: bib3.tem
+	# 	UseTilesetExtension: true
+	# 	Length: *
 	icon: 
 		Filename: swnukeicnh.tem
 		AddExtension: False
@@ -421,12 +457,14 @@ swpower:
 		Filename: swpowermake.shp
 		Length: *
 		Tick: 80
-	bib: 
+	bib:
+		Scale: 1 
 		Filename: invisibleitem.shp
 	icon: 
 		Filename: swpowericon.shp
 
 swshelt:
+	Inherits: ^WithBuildingBib3
 	Defaults:
 		Scale: 2.0
 		Filename: swshelt.shp
@@ -437,14 +475,16 @@ swshelt:
 		Filename: swsheltmake.shp
 		Length: *
 		Tick: 80
-	bib: 
-		Filename: bib3.tem
-		UseTilesetExtension: true
-		Length: *
+	bib:
+		Scale: 1 
+	# 	Filename: bib3.tem
+	# 	UseTilesetExtension: true
+	# 	Length: *
 	icon: 
 		Filename: swshelticon.shp
 
 swsheltr:
+	Inherits: ^WithBuildingBib3
 	Defaults:
 		Scale: 2.0
 		Filename: swsheltr.shp
@@ -455,14 +495,16 @@ swsheltr:
 		Filename: swsheltrmake.shp
 		Length: *
 		Tick: 80
-	bib: 
-		Filename: bib3.tem
-		UseTilesetExtension: true
-		Length: *
+	bib:
+		Scale: 1 
+	# 	Filename: bib3.tem
+	# 	UseTilesetExtension: true
+	# 	Length: *
 	icon: 
 		Filename: swshelticon.shp
 
 swsheltd:
+	Inherits: ^WithBuildingBib3
 	Defaults:
 		Scale: 2.0
 		Filename: swsheltd.shp
@@ -473,14 +515,16 @@ swsheltd:
 		Filename: swsheltdmake.shp
 		Length: *
 		Tick: 80
-	bib: 
-		Filename: bib3.tem
-		UseTilesetExtension: true
-		Length: *
+	bib:
+		Scale: 1 
+	# 	Filename: bib3.tem
+	# 	UseTilesetExtension: true
+	# 	Length: *
 	icon: 
 		Filename: swshelticon.shp
 
 swsheltre:
+	Inherits: ^WithBuildingBib3
 	Defaults:
 		Scale: 2.0
 		Filename: swsheltre.shp
@@ -491,14 +535,16 @@ swsheltre:
 		Filename: swsheltremake.shp
 		Length: *
 		Tick: 80
-	bib: 
-		Filename: bib3.tem
-		UseTilesetExtension: true
-		Length: *
+	bib:
+		Scale: 1 
+	# 	Filename: bib3.tem
+	# 	UseTilesetExtension: true
+	# 	Length: *
 	icon: 
 		Filename: swshelticon.shp
 
 sweproc:
+	Inherits: ^WithBuildingBib3
 	Defaults:
 		Scale: 2.0
 		Filename: sweproc.shp
@@ -509,10 +555,11 @@ sweproc:
 		Filename: sweprocmake.shp
 		Length: *
 		Tick: 80
-	bib: 
-		Filename: bib3.tem
-		UseTilesetExtension: true
-		Length: *
+	bib:
+		Scale: 1 
+	# 	Filename: bib3.tem
+	# 	UseTilesetExtension: true
+	# 	Length: *
 	icon: 
 		Filename: swproc2icon.shp
 	resources: 
@@ -525,6 +572,7 @@ sweproc:
 		Offset: -30,-17
 
 swreproc:
+	Inherits: ^WithBuildingBib3
 	Defaults:
 		Scale: 2.0
 		Filename: swreproc.shp
@@ -535,10 +583,11 @@ swreproc:
 		Filename: swreprocmake.shp
 		Length: *
 		Tick: 80
-	bib: 
-		Filename: bib3.tem
-		UseTilesetExtension: true
-		Length: *
+	bib:
+		Scale: 1 
+	# 	Filename: bib3.tem
+	# 	UseTilesetExtension: true
+	# 	Length: *
 	icon: 
 		Filename: swproc2icon.shp
 	resources: 
@@ -551,6 +600,7 @@ swreproc:
 		Offset: -30,-17
 
 swrproc:
+	Inherits: ^WithBuildingBib3
 	Defaults:
 		Scale: 2.0
 		Filename: swrproc.shp
@@ -561,10 +611,11 @@ swrproc:
 		Filename: swrprocmake.shp
 		Length: *
 		Tick: 80
-	bib: 
-		Filename: bib3.tem
-		UseTilesetExtension: true
-		Length: *
+	bib:
+		Scale: 1 
+	# 	Filename: bib3.tem
+	# 	UseTilesetExtension: true
+	# 	Length: *
 	icon: 
 		Filename: swproc2icon.shp
 	resources: 
@@ -577,6 +628,7 @@ swrproc:
 		Offset: -30,-17
 
 swdproc:
+	Inherits: ^WithBuildingBib3
 	Defaults:
 		Scale: 2.0
 		Filename: swdproc.shp
@@ -587,10 +639,11 @@ swdproc:
 		Filename: swdprocmake.shp
 		Length: *
 		Tick: 80
-	bib: 
-		Filename: bib3.tem
-		UseTilesetExtension: true
-		Length: *
+	bib:
+		Scale: 1 
+	# 	Filename: bib3.tem
+	# 	UseTilesetExtension: true
+	# 	Length: *
 	icon: 
 		Filename: swproc2icon.shp
 	resources: 
@@ -603,6 +656,7 @@ swdproc:
 		Offset: -30,-17
 
 swproc:
+	Inherits: ^WithBuildingBib2
 	Defaults:
 		Scale: 2.0
 		Filename: swproc.shp
@@ -633,10 +687,11 @@ swproc:
 		Start: 6
 		Length: 6
 		Offset: -30,-17
-	bib: 
-		Filename: bib2.tem
-		UseTilesetExtension: true
-		Length: *
+	bib:
+		Scale: 1 
+	# 	Filename: bib2.tem
+	# 	UseTilesetExtension: true
+	# 	Length: *
 	icon: 
 		Filename: swprocicnh.tem
 		AddExtension: False
@@ -666,7 +721,8 @@ swsilo:
 		Length: *
 		Tick: 80
 		Offset: 0,-1
-	bib: 
+	bib:
+		Scale: 1 
 		# Filename: mbSILO.tem
 		Filename: mbIRON.tem
 		UseTilesetExtension: true
@@ -707,7 +763,8 @@ swdsilo:
 		Length: *
 		Tick: 80
 		Offset: 0,-1
-	bib: 
+	bib:
+		Scale: 1 
 		Filename: mbIRON.tem
 		UseTilesetExtension: true
 		TilesetOverrides:
@@ -723,6 +780,7 @@ swdsilo:
 		AddExtension: False
 
 swhand:
+	Inherits: ^WithBuildingBib3
 	Defaults:
 		Scale: 2.0
 		Filename: swhand.shp
@@ -737,17 +795,19 @@ swhand:
 		Filename: swhandmake.shp
 		Length: *
 		Tick: 80
-	bib: 
-		Filename: bib3.tem
-		UseTilesetExtension: true
-		Length: *
-		Offset: 0,0
+	bib:
+		Scale: 1 
+	# 	Filename: bib3.tem
+	# 	UseTilesetExtension: true
+	# 	Length: *
+	# 	Offset: 0,0
 	icon: 
 		Filename: swhandicnh.tem
 		AddExtension: False
 		Offset: 0,0
 
 swtrade:
+	Inherits: ^WithBuildingBib3
 	Defaults:
 		Scale: 2.0
 		Filename: swtrade.shp
@@ -762,16 +822,18 @@ swtrade:
 		Filename: swtrade.shp
 		Start: 2
 		Tick: 80
-	bib: 
-		Filename: bib3.tem
-		UseTilesetExtension: true
-		Length: *
-		Offset: 0,0
+	bib:
+		Scale: 1 
+	# 	Filename: bib3.tem
+	# 	UseTilesetExtension: true
+	# 	Length: *
+	# 	Offset: 0,0
 	icon: 
 		Filename: swtradeicon.shp
 		Offset: 0,0
 
 swbarrdroid:
+	Inherits: ^WithBuildingBib3
 	Defaults:
 		Scale: 2.0
 		Filename: swbarrdroid.shp
@@ -786,16 +848,18 @@ swbarrdroid:
 		Filename: swbarrdroidmake.shp
 		Length: *
 		Tick: 80
-	bib: 
-		Filename: bib3.tem
-		UseTilesetExtension: true
-		Length: *
-		Offset: 0,0
+	bib:
+		Scale: 1 
+	# 	Filename: bib3.tem
+	# 	UseTilesetExtension: true
+	# 	Length: *
+	# 	Offset: 0,0
 	icon: 
 		Filename: swdroidfacticon.shp
 		Offset: 0,0
 
 swafld:
+	Inherits: ^WithBuildingBib1
 	Defaults:
 		Scale: 2.0
 		Filename: swafld.shp
@@ -832,15 +896,17 @@ swafld:
 		Filename: swafldmake.shp
 		Length: *
 		Tick: 80
-	bib: 
-		Filename: bib1.tem
-		UseTilesetExtension: true
-		Length: *
+	bib:
+		Scale: 1 
+	# 	Filename: bib1.tem
+	# 	UseTilesetExtension: true
+	# 	Length: *
 	icon: 
 		Filename: swafldicnh.tem
 		AddExtension: False
 
 swhq:
+	Inherits: ^WithBuildingBib3
 	Defaults:
 		Scale: 2.0
 		Filename: swhq.shp
@@ -858,15 +924,17 @@ swhq:
 		Filename: swhqmake.shp
 		Length: *
 		Tick: 80
-	bib: 
-		Filename: bib3.tem
-		UseTilesetExtension: true
-		Length: *
+	bib:
+		Scale: 1 
+	# 	Filename: bib3.tem
+	# 	UseTilesetExtension: true
+	# 	Length: *
 	icon: 
 		Filename: swhqicnh.tem
 		AddExtension: False
 
 swdhq:
+	Inherits: ^WithBuildingBib2
 	Defaults:
 		Scale: 2.0
 		Filename: swdhq.shp
@@ -877,14 +945,16 @@ swdhq:
 		Filename: swdhqmake.shp
 		Length: *
 		Tick: 80
-	bib: 
-		Filename: bib2.tem
-		UseTilesetExtension: true
-		Length: *
+	bib:
+		Scale: 1 
+	# 	Filename: bib2.tem
+	# 	UseTilesetExtension: true
+	# 	Length: *
 	icon: 
 		Filename: swwarcentericon.shp
 
 swihq:
+	Inherits: ^WithBuildingBib2
 	Defaults:
 		Scale: 2.0
 		Filename: swihq.shp
@@ -895,14 +965,16 @@ swihq:
 		Filename: swihqmake.shp
 		Length: *
 		Tick: 80
-	bib: 
-		Filename: bib2.tem
-		UseTilesetExtension: true
-		Length: *
+	bib:
+		Scale: 1 
+	# 	Filename: bib2.tem
+	# 	UseTilesetExtension: true
+	# 	Length: *
 	icon: 
 		Filename: swwarcentericon.shp
 
 swrehq:
+	Inherits: ^WithBuildingBib2
 	Defaults:
 		Scale: 2.0
 		Filename: swrehq.shp
@@ -913,14 +985,16 @@ swrehq:
 		Filename: swrehqmake.shp
 		Length: *
 		Tick: 80
-	bib: 
-		Filename: bib2.tem
-		UseTilesetExtension: true
-		Length: *
+	bib:
+		Scale: 1 
+	# 	Filename: bib2.tem
+	# 	UseTilesetExtension: true
+	# 	Length: *
 	icon: 
 		Filename: swwarcentericon.shp
 
 swrhq:
+	Inherits: ^WithBuildingBib2
 	Defaults:
 		Scale: 2.0
 		Filename: swrhq.shp
@@ -931,14 +1005,16 @@ swrhq:
 		Filename: swrhqmake.shp
 		Length: *
 		Tick: 80
-	bib: 
-		Filename: bib2.tem
-		UseTilesetExtension: true
-		Length: *
+	bib:
+		Scale: 1 
+	# 	Filename: bib2.tem
+	# 	UseTilesetExtension: true
+	# 	Length: *
 	icon: 
 		Filename: swwarcentericon.shp
 
 swnuk2:
+	Inherits: ^WithBuildingBib3
 	Defaults:
 		Scale: 2.0
 		Filename: swnuk2.shp
@@ -956,10 +1032,11 @@ swnuk2:
 		Filename: swnuk2make.shp
 		Length: *
 		Tick: 80
-	bib: 
-		Filename: bib3.tem
-		UseTilesetExtension: true
-		Length: *
+	bib:
+		Scale: 1
+	# 	Filename: bib3.tem
+	# 	UseTilesetExtension: true
+	# 	Length: *
 	icon: 
 		Filename: swnuk2icnh.tem
 		AddExtension: False
@@ -1021,7 +1098,8 @@ swgun:
 	muzzle: 
 		Filename: gunfire2.shp
 		Length: *
-	bib: 
+	bib:
+		Scale: 1 
 		Filename: mbGUN.tem
 		UseTilesetExtension: true
 		TilesetOverrides:
@@ -1061,7 +1139,8 @@ swdgun:
 	muzzle: 
 		Filename: gunfire2.shp
 		Length: *
-	bib: 
+	bib:
+		Scale: 1 
 		Filename: mbGUN.tem
 		UseTilesetExtension: true
 		TilesetOverrides:
@@ -1099,7 +1178,8 @@ swgtwr:
 		Filename: minigun.shp
 		Length: 6
 		Facings: 8
-	bib: 
+	bib:
+		Scale: 1 
 		Filename: mbGTWR.tem
 		UseTilesetExtension: true
 		TilesetOverrides:
@@ -1132,7 +1212,8 @@ swatwr:
 	muzzle: 
 		Filename: gunfire2.shp
 		Length: *
-	bib: 
+	bib:
+		Scale: 1 
 		Filename: mbGTWR.tem
 		UseTilesetExtension: true
 		TilesetOverrides:
@@ -1177,6 +1258,7 @@ swdhpad:
 		AddExtension: False
 
 sweye:
+	Inherits: ^WithBuildingBib3
 	Defaults:
 		Scale: 2.0
 		Filename: sweye.shp
@@ -1190,15 +1272,17 @@ sweye:
 		Filename: swresearchmake.shp
 		Length: *
 		Tick: 80
-	bib: 
-		Filename: bib3.tem
-		UseTilesetExtension: true
-		Length: *
+	bib:
+		Scale: 1 
+	# 	Filename: bib3.tem
+	# 	UseTilesetExtension: true
+	# 	Length: *
 	icon: 
 		Filename: sweyeicnh.tem
 		AddExtension: False
 
 sweyer:
+	Inherits: ^WithBuildingBib3
 	Defaults:
 		Scale: 2.0
 		# Filename: sweyer.shp
@@ -1213,15 +1297,17 @@ sweyer:
 		Filename: swresearchrmake.shp
 		Length: *
 		Tick: 80
-	bib: 
-		Filename: bib3.tem
-		UseTilesetExtension: true
-		Length: *
+	bib:
+		Scale: 1
+	# 	Filename: bib3.tem
+	# 	UseTilesetExtension: true
+	# 	Length: *
 	icon: 
 		Filename: sweyeicnh.tem
 		AddExtension: False
 
 swtmpl:
+	Inherits: ^WithBuildingBib2
 	Defaults:
 		Scale: 2.0
 		Filename: swtmpl.shp
@@ -1247,10 +1333,11 @@ swtmpl:
 		Filename: swresearchremake.shp
 		Length: *
 		Tick: 60
-	bib: 
-		Filename: bib2.tem
-		UseTilesetExtension: true
-		Length: *
+	bib:
+		Scale: 1 
+	# 	Filename: bib2.tem
+	# 	UseTilesetExtension: true
+	# 	Length: *
 		Offset: 0,0
 	icon: 
 		Filename: swtmplicnh.tem
@@ -1258,6 +1345,7 @@ swtmpl:
 		Offset: 0,0
 
 swdtmpl:
+	Inherits: ^WithBuildingBib2
 	Defaults:
 		Scale: 2.0
 		Filename: swdtmpl.shp
@@ -1280,16 +1368,18 @@ swdtmpl:
 		Filename: swresearchdmake.shp
 		Length: *
 		Tick: 60
-	bib: 
-		Filename: bib2.tem
-		UseTilesetExtension: true
-		Length: *
+	bib:
+		Scale: 1 
+	# 	Filename: bib2.tem
+	# 	UseTilesetExtension: true
+	# 	Length: *
 		Offset: 0,0
 	icon: 
 		Filename: swdtmplicon.shp
 		Offset: 0,0
 
 swpalace:
+	Inherits: ^WithBuildingBib2
 	Defaults:
 		Scale: 2.0
 		Filename:  swpalacemake.shp
@@ -1311,10 +1401,11 @@ swpalace:
 	make:
 		Length: *
 		Tick: 60
-	bib: 
-		Filename: bib2.tem
-		UseTilesetExtension: true
-		Length: *
+	bib:
+		Scale: 1 
+	# 	Filename: bib2.tem
+	# 	UseTilesetExtension: true
+	# 	Length: *
 		Offset: 0,0
 	icon: 
 		Filename: swjabbapalaceicon.shp
@@ -1345,7 +1436,8 @@ swsite:
 		Filename: e3.shp
 		Start: 8
 		Facings: 8
-	bib: 
+	bib:
+		Scale: 1 
 		Filename: mbGTWR.tem
 		UseTilesetExtension: true
 		TilesetOverrides:
@@ -1401,6 +1493,7 @@ swaatower:
 		Offset: 0,0
 
 swnurse:
+	Inherits: ^WithBuildingBib3
 	Defaults:
 		Scale: 2.0
 		Filename: swnurse.shp
@@ -1413,10 +1506,11 @@ swnurse:
 		Filename: swnursemake.shp
 		Length: *
 		Tick: 80
-	bib: 
-		Filename: bib3.tem
-		UseTilesetExtension: true
-		Length: *
+	bib:
+		Scale: 1 
+	# 	Filename: bib3.tem
+	# 	UseTilesetExtension: true
+	# 	Length: *
 	icon: 
 		Filename: swnurseicon.shp
 	
@@ -1427,6 +1521,7 @@ swnurse.bot:
 		Filename: swnurse.shp
 	
 swnursere:
+	Inherits: ^WithBuildingBib3
 	Defaults:
 		Scale: 2.0
 		Filename: swnursere.shp
@@ -1439,10 +1534,11 @@ swnursere:
 		Filename: swnurseremake.shp
 		Length: *
 		Tick: 80
-	bib: 
-		Filename: bib3.tem
-		UseTilesetExtension: true
-		Length: *
+	bib:
+		Scale: 1 
+	# 	Filename: bib3.tem
+	# 	UseTilesetExtension: true
+	# 	Length: *
 	icon: 
 		Filename: swnurseicon.shp
 	
@@ -1453,6 +1549,7 @@ swnursere.bot:
 		Filename: swnursere.shp
 
 swnursed:
+	Inherits: ^WithBuildingBib3
 	Defaults:
 		Scale: 2.0
 		Filename: swnursed.shp
@@ -1465,10 +1562,11 @@ swnursed:
 		Filename: swnursedmake.shp
 		Length: *
 		Tick: 80
-	bib: 
-		Filename: bib3.tem
-		UseTilesetExtension: true
-		Length: *
+	bib:
+		Scale: 1
+	# 	Filename: bib3.tem
+	# 	UseTilesetExtension: true
+	# 	Length: *
 	icon: 
 		Filename: swnurseicon.shp
 	
@@ -1479,6 +1577,7 @@ swnursed.bot:
 		Filename: swnursed.shp
 
 swnurser:
+	Inherits: ^WithBuildingBib3
 	Defaults:
 		Scale: 2.0
 		Filename: swnurser.shp
@@ -1491,7 +1590,8 @@ swnurser:
 		Filename: swnursermake.shp
 		Length: *
 		Tick: 80
-	bib: 
+	bib:
+		Scale: 1 
 		Filename: bib3.tem
 		UseTilesetExtension: true
 		Length: *
@@ -1517,6 +1617,7 @@ swnurseh.bot:
 		Filename: swnurser.shp
 	
 swfood:
+	Inherits: ^WithBuildingBib3
 	Defaults:
 		Scale: 2.0
 		Filename: swfood.shp
@@ -1529,14 +1630,16 @@ swfood:
 		Filename: swfoodmake.shp
 		Length: *
 		Tick: 80
-	bib: 
-		Filename: bib3.tem
-		UseTilesetExtension: true
-		Length: *
+	bib:
+		Scale: 1 
+	# 	Filename: bib3.tem
+	# 	UseTilesetExtension: true
+	# 	Length: *
 	icon: 
 		Filename: swfoodicon.shp
 
 swfoodre:
+	Inherits: ^WithBuildingBib3
 	Defaults:
 		Scale: 2.0
 		Filename: swfoodre.shp
@@ -1549,14 +1652,16 @@ swfoodre:
 		Filename: swfoodmake.shp
 		Length: *
 		Tick: 80
-	bib: 
-		Filename: bib3.tem
-		UseTilesetExtension: true
-		Length: *
+	bib:
+		Scale: 1 
+	# 	Filename: bib3.tem
+	# 	UseTilesetExtension: true
+	# 	Length: *
 	icon: 
 		Filename: swfoodicon.shp
 
 swfoodr:
+	Inherits: ^WithBuildingBib3
 	Defaults:
 		Scale: 2.0
 		Filename: swfoodr.shp
@@ -1569,14 +1674,16 @@ swfoodr:
 		Filename: swfoodrmake.shp
 		Length: *
 		Tick: 80
-	bib: 
-		Filename: bib3.tem
-		UseTilesetExtension: true
-		Length: *
+	bib:
+		Scale: 1 
+	# 	Filename: bib3.tem
+	# 	UseTilesetExtension: true
+	# 	Length: *
 	icon: 
 		Filename: swfoodicon.shp
 
 swfoodd:
+	Inherits: ^WithBuildingBib3
 	Defaults:
 		Scale: 2.0
 		Filename: swfoodd.shp
@@ -1589,10 +1696,11 @@ swfoodd:
 		Filename: swfooddmake.shp
 		Length: *
 		Tick: 80
-	bib: 
-		Filename: bib3.tem
-		UseTilesetExtension: true
-		Length: *
+	bib:
+		Scale: 1 
+	# 	Filename: bib3.tem
+	# 	UseTilesetExtension: true
+	# 	Length: *
 	icon: 
 		Filename: swfoodicon.shp
 	
@@ -1603,6 +1711,7 @@ swfoodh:
 		Filename: swfoodd.shp
 	
 swstarport:
+	Inherits: ^WithBuildingBib1
 	Defaults:
 		Scale: 2.0
 		Filename: swstarport.shp
@@ -1616,16 +1725,18 @@ swstarport:
 		Filename: swstarportmake.shp
 		Length: *
 		Tick: 80
-	bib: 
-		Filename: bib1.tem
-		UseTilesetExtension: true
-		Length: *
+	bib:
+		Scale: 1 
+	# 	Filename: bib1.tem
+	# 	UseTilesetExtension: true
+	# 	Length: *
 	icon: 
 		Filename: swafldicnh.tem
 		AddExtension: False
 		Offset: 0,0
 
 swstarportre:
+	Inherits: ^WithBuildingBib1
 	Defaults:
 		Scale: 2.0
 		Filename: swstarportre.shp
@@ -1639,16 +1750,18 @@ swstarportre:
 		Filename: swstarportremake.shp
 		Length: *
 		Tick: 80
-	bib: 
-		Filename: bib1.tem
-		UseTilesetExtension: true
-		Length: *
+	bib:
+		Scale: 1 
+	# 	Filename: bib1.tem
+	# 	UseTilesetExtension: true
+	# 	Length: *
 	icon: 
 		Filename: swafldicnh.tem
 		AddExtension: False
 		Offset: 0,0
 
 swstarportr:
+	Inherits: ^WithBuildingBib1
 	Defaults:
 		Scale: 2.0
 		Filename: swstarportr.shp
@@ -1662,16 +1775,18 @@ swstarportr:
 		Filename: swstarportrmake.shp
 		Length: *
 		Tick: 80
-	bib: 
-		Filename: bib1.tem
-		UseTilesetExtension: true
-		Length: *
+	bib:
+		Scale: 1 
+	# 	Filename: bib1.tem
+	# 	UseTilesetExtension: true
+	# 	Length: *
 	icon: 
 		Filename: swafldicnh.tem
 		AddExtension: False
 		Offset: 0,0
 
 swstarportd:
+	Inherits: ^WithBuildingBib1
 	Defaults:
 		Scale: 2.0
 		Filename: swstarportd.shp
@@ -1685,10 +1800,11 @@ swstarportd:
 		Filename: swstarportdmake.shp
 		Length: *
 		Tick: 80
-	bib: 
-		Filename: bib1.tem
-		UseTilesetExtension: true
-		Length: *
+	bib:
+		Scale: 1 
+	# 	Filename: bib1.tem
+	# 	UseTilesetExtension: true
+	# 	Length: *
 	icon: 
 		Filename: swafldicnh.tem
 		AddExtension: False

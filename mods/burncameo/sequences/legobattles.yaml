@@ -302,7 +302,8 @@ astro_builder:
 				Length: 3
 				Frames: 3,2,1
 				FlipX: true
-	idle: invisibleitem
+	idle:
+		Filename: invisibleitem.shp
 	run: 
 		Facings: -8
 		Length: 5
@@ -363,7 +364,7 @@ astro_builder:
 		Filename: lego_explosion.shp
 		Start: 0
 		Length: 1
-	icon: astro_cameos.png
+	icon:
 		Filename: astro_cameos.png
 		Start: 16
 		AddExtension: False

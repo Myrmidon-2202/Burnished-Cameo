@@ -578,15 +578,13 @@ swmcv.empire:
 	Inherits@EXT: ^ExternalConditions
 	RenderSprites:
 		Image: mcv
-	ProvidesPrerequisite@faction:
-		Prerequisite: mmswempire
 
-swmcv.empireBot:
-	Inherits: swmcv.empire
-	Buildable:
-		BuildPaletteOrder: 100
-		BuildLimit: 1
-		Prerequisites: swhqe, ~techlevel.medium, swfix, ~botplayer, allowsMCV
+# swmcv.empireBot:
+# 	Inherits: swmcv.empire
+# 	Buildable:
+# 		BuildPaletteOrder: 100
+# 		BuildLimit: 1
+# 		Prerequisites: swhqe, ~techlevel.medium, swfix, ~botplayer, allowsMCV
 
 swpower:
 	Inherits: ^BaseBuilding
@@ -1461,8 +1459,6 @@ swmcv.rebels:
 		Description: Deploys into another Construction Yard.\n  Unarmed
 	Transforms:
 		IntoActor: swfact.rebels
-	ProvidesPrerequisite@faction:
-		Prerequisite: mmswrebels
 
 # swmcv.rebelsBot:
 # 	Inherits: swmcv.rebels
@@ -2488,8 +2484,6 @@ swmcv.separatist:
 		Description: Deploys into another Construction Yard.\n  Unarmed
 	Transforms:
 		IntoActor: swfact.separatist
-	ProvidesPrerequisite@faction:
-		Prerequisite: mmswseparatist
 	RenderSprites:
 		Image: swdmcv
 
