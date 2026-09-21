@@ -801,6 +801,7 @@ iokblackmarket:
 		Actor: iokhole.iokblackmarket
 	RenderSprites:
 		Image: iokblackmarket
+		PlayerPalette: raplayer
 
 iokpalace:
 	Inherits: ^Defense
@@ -879,9 +880,9 @@ iokscudtemple:
 	# Inherits@IDISABLE: ^DisabledOverlay
 	Inherits@shape: ^4x3Shape
 	Inherits@sw: ^PrimarySuperweapon
-	Inherits@camo: ^BuildingCamoLevel2
+	# Inherits@camo: ^BuildingCamoLevel2
 	Valued:
-		Cost: 10000
+		Cost: 5000
 	Tooltip:
 		Name: Scud Temple
 	ProvidesPrerequisite:
@@ -912,61 +913,11 @@ iokscudtemple:
 		OpportunityFire: false
 		PersistentTargeting: false
 		ForceFireIgnoresActors: true
-	GrantConditionOnPrerequisite@upantraxbeta:
-		Condition: antraxbetaupgrade
-		Prerequisites: upantraxbeta
-	GrantConditionOnPrerequisite@upantraxgamma:
-		Condition: upantraxgamma
-		Prerequisites: upantraxgamma
-	Armament@Power:
+	Armament@PowerIok:
 		Weapon: GLASCUDPOWER
 		LocalOffset: 900,900,340, 900,-900,340, -900,900,340, -900,-900,340
 		LocalYaw: 0,100
 		RequiresCondition: !antraxbetaupgrade && !upantraxgamma
-	Armament@Power2:
-		Weapon: GLASCUDPOWER2
-		LocalOffset: 900,900,340, 900,-900,340, -900,900,340, -900,-900,340
-		LocalYaw: 0,100
-		RequiresCondition: antraxbetaupgrade && !upantraxgamma
-	Armament@Power3:
-		Weapon: GLASCUDPOWER3
-		LocalOffset: 900,900,340, 900,-900,340, -900,900,340, -900,-900,340
-		LocalYaw: 0,100
-		RequiresCondition: upantraxgamma
-	NukePowerCA:
-		AllowMultiple: True
-		PauseOnCondition: lowpower
-		Prerequisites:
-			1: ~techlevel.superweapons
-		Icons:
-			1: abomb
-		Cursor: nuke
-		ChargeInterval: 9000
-		Names:
-			1: Nuclear Strike
-		Descriptions:
-			1: Launch a tactical nuclear warhead.\nApplies heavy damage over a large area.
-		EndChargeSpeechNotification: NuclearWeaponAvailable
-		SelectTargetSpeechNotification: SelectTarget
-		InsufficientPowerSpeechNotification: InsufficientPower
-		LaunchSpeechNotification: NuclearWeaponLaunched
-		IncomingSpeechNotification: NuclearWarheadApproaching
-		MissileWeapons:
-			1: atomic
-		MissileDelay: 11
-		SpawnOffset: 3c0,0,-1c512
-		DisplayBeacon: True
-		BeaconPosters:
-			1: atomic
-		BeaconPosterPalette: beaconposter
-		DisplayTimerRelationships: Ally, Neutral, Enemy
-		DisplayRadarPing: True
-		CameraRange: 10c0
-		ArrowSequence: arrow
-		ClockSequence: clock
-		CircleSequence: circles
-		SupportPowerPaletteOrder: 30
-		MissileImage: atomic
 	WithSupportPowerActivationAnimation:
 		RequiresCondition: !build-incomplete
 	WithSupportPowerActivationOverlay:
@@ -978,7 +929,7 @@ iokscudtemple:
 	ReloadAmmoPool:
 		Count: 9
 		Delay: 100
-	AttackOrderPower@PowerMulti:
+	AttackOrderPower@PowerMultiIok:
 		OrderName: GLAScudStorm
 		PauseOnCondition: disabled
 		AllowMultiple: True
@@ -1019,7 +970,6 @@ iokscudtemple:
 		Prerequisite: scudstorm
 	WithIdleOverlay@TEMPLE:
 		Sequence: temple-overlay
-
 
 ####################################################################################################
 #		IOK - DEFENSES
@@ -2014,7 +1964,7 @@ IOKE5:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 25
-		Prerequisites:
+		Prerequisites: iokpalace
 		Queue: Infantry.Iok
 		Description: Advanced general-purpose infantry.\n  Strong vs all Ground units
 	Mobile:
@@ -2046,6 +1996,7 @@ IOKE5:
 		ValidTypes: infantry
 	RenderSprites:
 		Image: E5
+		PlayerPalette: raplayer
 
 IOKE3:
 	Inherits: ^Soldier
@@ -2103,7 +2054,7 @@ IOKMOB:
 		BuildPaletteOrder: 40
 		Queue: Infantry.Iok
 		Description: Large armed crowd, armed with pistols and Molotovs.\n  Strong vs Buildings, Infantry\n  Weak vs Vehicles, Aircraft
-		Prerequisites:
+		Prerequisites: iokpalace
 	Tooltip:
 		Name: Angry Mob
 	UpdatesPlayerStatistics:

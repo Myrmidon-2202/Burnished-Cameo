@@ -1915,11 +1915,11 @@ SCDevourerAA:
 		Weapon: SCDevourerCloud
 		Count: 5
 		ValidTargets: Air
-	Warhead@Effect2: CreateEffect
-		Explosions: nax_corr_ex
-		ExplosionPalette: ra2effect
-		ImpactSounds: gexp14a.wav
-		ValidTargets: Air
+	# Warhead@Effect2: CreateEffect
+	# 	Explosions: nax_corr_ex
+	# 	ExplosionPalette: ra2effect
+	# 	ImpactSounds: gexp14a.wav
+	# 	ValidTargets: Air
 	Warhead@Condition: GrantExternalCondition
 		Range: 2000
 		Condition: corroded

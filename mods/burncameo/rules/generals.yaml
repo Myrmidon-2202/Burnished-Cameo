@@ -833,13 +833,15 @@ GENE6:
 			1: Emergency Repair
 		Descriptions:
 			1: Provides repair for vehicles in the target area.
-		Durations: 100
+		Durations:
+			1: 100
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
 		#BeginChargeSpeechNotification: IronCurtainCharging
 		#EndChargeSpeechNotification: IronCurtainReady
 		DisplayRadarPing: True
-		Conditions: repairlvl3
+		Conditions:
+			1: repairlvl3
 		OnFireSound: srepaira.aud
 		Prerequisites:
 			1: upemergencyrepair1, !upemergencyrepair2
@@ -1386,19 +1388,21 @@ GENE6:
 			1: 6000
 	GrantExternalConditionPower@GPSScrambler:
 		OrderName: GPSScrambler
-		Icons: 
+		Icons:
 			1: glgpscram
 		ChargeInterval: 3000
-		Names: 
+		Names:
 			1: GPS Scrambler
-		Descriptions: 
+		Descriptions:
 			1: Cloaks a large group of units.
-		Durations: 2000
+		Durations:
+			1: 2000
 		SelectTargetSpeechNotification: SelectTarget
 		DisplayRadarPing: True
-		Conditions: tscloak
+		Conditions:
+			1: tscloak
 		OnFireSound: cloak5.aud
-		Prerequisites: 
+		Prerequisites:
 			1: upgpscram
 		StartFullyCharged: true
 		Dimensions: 7, 7
@@ -1433,19 +1437,21 @@ GENE6:
 	# 	StartFullyCharged: true
 	GrantExternalConditionPower@Bounty3:
 		OrderName: CashBounty3
-		Icons: 
+		Icons:
 			1: glabounty3
 		ChargeInterval: 3000
-		Names: 
+		Names:
 			1: Cash Bounty
 		Descriptions: 
 			1: Makes selected targets grant 40% of value\nupon being killed or destroyed.
-		Durations: 1000
+		Durations:
+			1: 1000
 		SelectTargetSpeechNotification: SelectTarget
 		DisplayRadarPing: True
-		Conditions: glabounty3
+		Conditions:
+			1: glabounty3
 		ValidStances: Enemy, Neutral
-		Prerequisites: 
+		Prerequisites:
 			1: upglabounty3
 		StartFullyCharged: true
 		Dimensions: 9, 9
@@ -1681,20 +1687,22 @@ GENE6:
 	GrantExternalConditionPower@Frenzy:
 		OrderName: FrenzyPower
 		PauseOnCondition: lowpower
-		Icons: 
+		Icons:
 			1: chfrenzy3
 		ChargeInterval: 3000
-		Names: 
+		Names:
 			1: Frenzy
 		Descriptions: 
 			1: Increases the firepower of selected vehicles.
-		Durations: 750
+		Durations:
+			1: 750
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
 		OnFireSound: sfrenzya.wav
 		DisplayRadarPing: True
-		Conditions: frenzypower1
-		Prerequisites: 
+		Conditions:
+			1: frenzypower1
+		Prerequisites:
 			1: upfrenzy1, !upfrenzy2
 		StartFullyCharged: true
 		Dimensions: 7, 7
@@ -14494,17 +14502,19 @@ leangcommand:
 			1: Cash Bounty
 		Descriptions:
 			1: Makes selected targets grant 40% of value\nupon being killed or destroyed.
-		Durations: 1000
+		Durations:
+			1: 1000
 		SelectTargetSpeechNotification: SelectTarget
 		DisplayRadarPing: True
-		Conditions: glabounty3
+		Conditions:
+			1: glabounty3
 		ValidStances: Enemy, Neutral
 		Prerequisites:
 			1: upglabounty3
 		StartFullyCharged: true
 		Dimensions: 9, 9
 		Footprints: ____x____ ___xxx___ __xxxxx__ _xxxxxxx_ xxxxxxxxx _xxxxxxx_ __xxxxx__ ___xxx___ ____x____
-	AirstrikePower@Spectre:
+	ClassicAirstrikePower@Spectre:
 		Squad:
 			usagunship:
 				SpawnOffset: -1536,1024,0

@@ -6842,6 +6842,7 @@ contaminator:
 	icon:
 		Filename: contaminatoricon.shp
 		AddExtension: False
+
 ordos_aatrooper:
 	Inherits: ^RA2ArmedInfantry
 	Inherits@2: ^RA2MachineGunMuzzle
@@ -6921,6 +6922,7 @@ ordos_mortar:
 	icon:
 		Filename: ordos_mortar_icon.png
 		AddExtension: False
+
 bene_gesserit:
 	Defaults:
 		Filename: bene_gesserit.shp
@@ -6961,6 +6963,12 @@ bene_gesserit:
 	die7:
 		Filename: electro.shp
 		Length: *
+	die-crushed:
+		Filename: e1rot.shp
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
 	icon:
 		Filename: bene_gesserit_icon.shp
 

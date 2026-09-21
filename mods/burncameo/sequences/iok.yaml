@@ -29,6 +29,7 @@ factiok:
 		Tick: 80
 		Filename: factmake.shp
 	bib:
+		Scale: 1
 		UseTilesetExtension: true
 		Length: *
 		Filename: bib2.tem
@@ -69,7 +70,8 @@ ioknuke:
 		Length: *
 		Tick: 80
 		Filename: nukemake.shp
-	bib: bib3
+	bib:
+		Scale: 1
 		UseTilesetExtension: true
 		Length: *
 		Filename: bib3.tem
@@ -104,6 +106,7 @@ iokbarracks:
 		Length: *
 		Filename: glbuildingmakebig.shp
 	bib:
+		Scale: 1
 		UseTilesetExtension: true
 		Length: *
 		Filename: bib2.tem
@@ -160,6 +163,7 @@ iokproc:
 		Offset: -30,-17
 		Filename: proctwr.shp
 	bib:
+		Scale: 1
 		UseTilesetExtension: true
 		Length: *
 		Filename: bib2.tem
@@ -219,6 +223,7 @@ iokafld:
 		Tick: 80
 		Filename: afldmake.shp
 	bib:
+		Scale: 1
 		UseTilesetExtension: true
 		Length: *
 		Filename: bib1.tem
@@ -259,6 +264,7 @@ ioknuk2:
 		Tick: 80
 		Filename: nuk2make.shp
 	bib:
+		Scale: 1
 		UseTilesetExtension: true
 		Length: *
 		Filename: bib3.tem
@@ -293,6 +299,7 @@ iokblackmarket:
 		Filename: glbuildingmake2x2.shp
 	dead:
 	bib:
+		Scale: 1
 		Length: *
 		UseTilesetExtension: true
 		TilesetOverrides:
@@ -331,6 +338,7 @@ iokblackmarket:
 iokpalace:
 	Defaults:
 		Filename: iokpalace.shp
+		Scale: 2.0
 	Defaults:
 		Offset: 0,-4
 	idle:
@@ -341,6 +349,7 @@ iokpalace:
 		Length: *
 		Filename: glbuildingmakebig.shp
 	bib:
+		Scale: 1
 		UseTilesetExtension: true
 		Length: *
 		Filename: bib1.tem
@@ -394,6 +403,7 @@ iokscudtemple:
 		Scale: 0.92
 		Filename: glbuildingmakebig.shp
 	bib:
+		Scale: 1
 		UseTilesetExtension: true
 		Length: *
 		Offset: 0,0
