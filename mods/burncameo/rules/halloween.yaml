@@ -595,7 +595,7 @@ halloween_tower:
 	Valued:
 		Cost: 800
 	Tooltip:
-		Name: Mediaval Tower
+		Name: Medieval Tower
 	Selectable:
 		Bounds: 1024, 1024
 		DecorationBounds: 43690, 72789, 0, -14549
@@ -877,7 +877,7 @@ halloween_cauldron:
 		Dimensions: 3,4
 		LocalCenterOffset: 0,-512,0
 	Selectable:
-		Bounds: 4096, 4096, 0, 4096
+		Bounds: 4096, 4096
 	SelectionDecorations:
 	Health:
 		HP: 90000
@@ -886,8 +886,12 @@ halloween_cauldron:
 	RevealsShroud:
 		Range: 5c0
 	Refinery:
-		DockAngle: 256
-		DockOffset: 1,2
+	DockHost:
+		DockAngle: 448
+		DockOffset: -1c0, 1c0, 0
+		IsDragRequired: True
+		DragOffset: -554,512,0
+		DragLength: 12
 	StoresResources:
 		Capacity: 1000 #2000
 	DrawLineToTarget:
@@ -1258,6 +1262,7 @@ halloween_cow:
 		Description: Slow powerful cow. Attacks in close combat.
 	Selectable:
 		Bounds: 3072, 5120
+		DecorationBounds: 3072, 5120
 	Armament:
 		Weapon: demonslice_cow
 	Valued:
@@ -1327,6 +1332,7 @@ halloween_rockgolem:
 	SpawnActorOnDeath@death2:
 		Actor: halloween_rockgolem_small
 	RenderSprites:
+		Palette: td_temperat
 	GrantConditionOnPrerequisite@ghost:
 		Prerequisites: halloween_upgrade.ghost
 		Condition: halloween_upgrade.ghost
@@ -1364,6 +1370,7 @@ halloween_rockgolem_small:
 		Weapon: Halloween_SmallRock
 	RenderSprites:
 		Image: halloween_rockgolem2
+		Palette: td_temperat
 	SpawnActorOnDeath@death1:
 		Actor: halloween_dkghost_small
 	GrantConditionOnPrerequisite@ghost:
@@ -1745,6 +1752,7 @@ halloween_clowncar:
 	GainsExperience:
 		LevelUpNotification: LevelUpRA2
 	RenderSprites:
+		Palette: td_temperat
 	FireWarheadsOnDeath:
 		Weapon: FakeHealtAPC
 	WithCargoPipsDecoration:
@@ -2191,7 +2199,7 @@ halloween_mcv:
 	Inherits: ^Vehicle
 	Inherits@selection: ^SelectableSupportUnit
 	Inherits@mcv: ^MCV
-	Inherits@conyard: ^Conyard
+	# Inherits@conyard: ^Conyard
 	Valued:
 		Cost: 2000
 	Tooltip:
