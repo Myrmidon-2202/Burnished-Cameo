@@ -1,37 +1,50 @@
 ####################################################################################################
+
 #		SC2K - ABANDONED
+
 ####################################################################################################
 
 sc2kabandonedsmall_1:
 	Defaults:
+		Scale: 1.5
+		Filename: sc2kabandonedsmall_1.shp
 		Offset: 0,8
 	idle:
 	dead:
-	make: sc2kconstructionsmall_1.shp
+	make:
+		Filename: sc2kconstructionsmall_1.shp
 		Frames: 0,0,0,0,0
 		Tick: 2000
 		Offset: 0,0
 		AddExtension: False
-		
+
 sc2kabandonedmedium_1:
 	Defaults:
+		Scale: 1.5
+		Filename: sc2kabandonedmedium_1.shp
 		Offset: 0,8
 	idle:
 	dead:
-	make: sc2kconstructionlarge_1.shp
+	make:
+		Filename: sc2kconstructionlarge_1.shp
 		Frames: 0,0,0,0,0
 		Tick: 2000
 		Offset: 0,0
 		AddExtension: False
-		
+
 sc2kabandonedsp:
 	Defaults:
+		Scale: 1.5
+		Filename: sc2kabandonedsp.shp
 		Offset: 0,8
-	idle: sc2kspconstruction.shp
+	idle:
+		Filename: sc2kspconstruction.shp
 		AddExtension: False
-	dead: sc2kspconstruction.shp
+	dead:
+		Filename: sc2kspconstruction.shp
 		AddExtension: False
-	make: sc2kspconstruction.shp
+	make:
+		Filename: sc2kspconstruction.shp
 		Frames: 0,0,0,0,0
 		Tick: 2000
 		Offset: 0,0
@@ -39,33 +52,42 @@ sc2kabandonedsp:
 
 sc2kabandonedlarge_1:
 	Defaults:
+		Scale: 1.5
+		Filename: sc2kabandonedlarge_1.shp
 		Offset: 0,-4
 	idle:
 	dead:
-	make: sc2kconstructionlarge_2.shp
+	make:
+		Filename: sc2kconstructionlarge_2.shp
 		Frames: 0,0,0,0,0
 		Tick: 2000
 		Offset: 0,12
 		AddExtension: False
-	
+
 sc2kabandonedlarge_2:
 	Defaults:
+		Scale: 1.5
+		Filename: sc2kabandonedlarge_2.shp
 		Offset: 0,-4
 	idle:
 	dead:
-	make: sc2kconstructionlarge_1.shp
+	make:
+		Filename: sc2kconstructionlarge_1.shp
 		Frames: 0,0,0,0,0
 		Tick: 2000
 		Offset: 0,12
 		AddExtension: False
 
-
-
 ####################################################################################################
+
 #		SC2K STRUCTURES
+
 ####################################################################################################
 
 sc2kfactorystructure:
+	Defaults:
+		Scale: 1.5
+		Filename: sc2kfactorystructure.shp
 	idle:
 		#Offset: 0,10
 		Length: 8
@@ -80,135 +102,176 @@ sc2kfactorystructure:
 	#rank-veteran-4: citymayor
 	#	Start: 3
 	dead:
-	make: sc2kconstructionlarge_2.shp
+	make:
+		Filename: sc2kconstructionlarge_2.shp
 		Frames: 0,0,0,0,0
 		Tick: 2000
 		Offset: 0,12
 		AddExtension: False
-	icon: chromesc2kfactorystructure.png
+	icon:
+		Filename: chromesc2kfactorystructure.png
 		AddExtension: False
-		
+
 sc2kpowercoal:
 	Defaults:
+		Scale: 1.5
+		Filename: sc2kpowercoal.shp
 		Offset: 0,-4
 	idle:
 		Length: 8
 		Tick: 200
 	dead:
-	make: sc2kconstructionlarge_2.shp
+	make:
+		Filename: sc2kconstructionlarge_2.shp
 		Frames: 0,0,0,0,0
 		Tick: 2000
 		Offset: 0,12
 		AddExtension: False
-	icon: chromesc2kpowercoal.png
+	icon:
+		Filename: chromesc2kpowercoal.png
 		Offset: 0,0
 		AddExtension: False
-		
+
 sc2kwindmill:
 	Defaults:
+		Scale: 1.5
+		Filename: sc2kwindmill.shp
 		Offset: 0,-10
 	idle:
 		Length: 8
 		Tick: 10
 	dead:
-	make: sc2kconstructionsmall_1.shp
+	make:
+		Filename: sc2kconstructionsmall_1.shp
 		Frames: 0,0,0,0,0
 		Tick: 2000
 		Offset: 0,0
 		AddExtension: False
-	icon: chromesc2kwindmill.png
+	icon:
+		Filename: chromesc2kwindmill.png
 		Offset: 0,0
 		AddExtension: False
 
 sc2kpoweroil:
 	Defaults:
+		Scale: 1.5
+		Filename: sc2kpoweroil.shp
 		Offset: 0,-10
 	idle:
 		Length: 8
 		Tick: 200
 	dead:
-	make: sc2kconstructionlarge_1.shp
+	make:
+		Filename: sc2kconstructionlarge_1.shp
 		Frames: 0,0,0,0,0
 		Tick: 2000
 		Offset: 0,12
 		AddExtension: False
-	icon: chromesc2kpoweroil.png
+	icon:
+		Filename: chromesc2kpoweroil.png
 		Offset: 0,0
 		AddExtension: False
-		
+
 sc2knaturalgas:
 	Defaults:
+		Scale: 1.5
+		Filename: sc2knaturalgas.shp
 		Offset: 0, 14
 	idle:
 		Length: 8
 		Tick: 200
 	dead:
-	make: sc2kconstructionlarge_2.shp
+	make:
+		Filename: sc2kconstructionlarge_2.shp
 		Frames: 0,0,0,0,0
 		Tick: 2000
 		Offset: 0,12
 		AddExtension: False
-	icon: chromesc2knaturalgas.png
+	icon:
+		Filename: chromesc2knaturalgas.png
 		Offset: 0,0
 		AddExtension: False
+
 sc2knuclear:
 	Defaults:
+		Scale: 1.5
+		Filename: sc2knuclear.shp
 		Offset: 0, 14
 	idle:
 		Length: 1
 	dead:
-	make: sc2kconstructionlarge_1.shp
+	make:
+		Filename: sc2kconstructionlarge_1.shp
 		Frames: 0,0,0,0,0
 		Tick: 2000
 		Offset: 0,12
 		AddExtension: False
-	icon: chromesc2knuclear.png
+	icon:
+		Filename: chromesc2knuclear.png
 		Offset: 0,0
 		AddExtension: False
+
 sc2kpowersolar:
 	Defaults:
+		Scale: 1.5
+		Filename: sc2kpowersolar.shp
 		Offset: 0, 14
 	idle:
 		Length: 1
 	dead:
-	make: sc2kconstructionlarge_2.shp
+	make:
+		Filename: sc2kconstructionlarge_2.shp
 		Frames: 0,0,0,0,0
 		Tick: 2000
 		Offset: 0,12
 		AddExtension: False
-	icon: chromesc2ksolarpower.png
+	icon:
+		Filename: chromesc2ksolarpower.png
 		Offset: 0,0
 		AddExtension: False
+
 sc2kpowermicrowave:
 	Defaults:
+		Scale: 1.5
+		Filename: sc2kpowermicrowave.shp
 		Offset: 0, 14
 	idle:
 		Length: 1
 	dead:
-	make: sc2kconstructionlarge_1.shp
+	make:
+		Filename: sc2kconstructionlarge_1.shp
 		Frames: 0,0,0,0,0
 		Tick: 2000
 		Offset: 0,12
 		AddExtension: False
-	icon: chromesc2kmicrowave.png
+	icon:
+		Filename: chromesc2kmicrowave.png
 		Offset: 0,0
 		AddExtension: False
+
 sc2kpowerfusion:
 	Defaults:
+		Scale: 1.5
+		Filename: sc2kpowerfusion.shp
 		Offset: 0, 14
 	idle:
 		Length: 1
 	dead:
-	make: sc2kconstructionlarge_1.shp
+	make:
+		Filename: sc2kconstructionlarge_1.shp
 		Frames: 0,0,0,0,0
 		Tick: 2000
 		Offset: 0,12
 		AddExtension: False
-	icon: chromesc2kfusionpower.png
+	icon:
+		Filename: chromesc2kfusionpower.png
 		Offset: 0,0
 		AddExtension: False
-		
+
 sc2kfactorydisaster:
+	Defaults:
+		Scale: 1.5
+		Filename: sc2kfactorydisaster.shp
 	idle:
 		Offset: 0,-50
 		Length: 8
@@ -217,15 +280,20 @@ sc2kfactorydisaster:
 	dead:
 		Length: 1
 		Offset: 0,-50
-	make: sc2kconstructionlarge_1.shp
+	make:
+		Filename: sc2kconstructionlarge_1.shp
 		Frames: 0,0,0,0,0
 		Tick: 2000
 		Offset: 0,12
 		AddExtension: False
-	icon: chromesc2kfactorydisaster.png
+	icon:
+		Filename: chromesc2kfactorydisaster.png
 		AddExtension: False
-		
+
 sc2krecyclingcenter:
+	Defaults:
+		Scale: 1.5
+		Filename: sc2krecyclingcenter.shp
 	idle:
 		Offset: 0,0
 		Length: 8
@@ -234,151 +302,198 @@ sc2krecyclingcenter:
 	dead:
 		Length: 1
 		Offset: 0,0
-	make: sc2kconstructionlarge_2.shp
+	make:
+		Filename: sc2kconstructionlarge_2.shp
 		Frames: 0,0,0,0,0
 		Tick: 2000
 		Offset: 0,12
 		AddExtension: False
-	resources: proctwr
+	resources:
+		Filename: proctwr.shp
 		Length: 6
 		Offset: -30,-17
-	icon: chromesc2krecyclingcenter.png
+	icon:
+		Filename: chromesc2krecyclingcenter.png
 		AddExtension: False
-		
+
 sc2kdomicile:
+	Defaults:
+		Scale: 1.5
+		Filename: sc2kdomicile.shp
 	idle:
 	dead:
-	make: sc2kconstructionlarge_2.shp
+	make:
+		Filename: sc2kconstructionlarge_2.shp
 		Frames: 0,0,0,0,0
 		Tick: 2000
 		Offset: 0,12
 		AddExtension: False
-	icon: chromesc2kdomicile.png
+	icon:
+		Filename: chromesc2kdomicile.png
 		AddExtension: False
-		
+
 sc2kcardealership:
+	Defaults:
+		Scale: 1.5
+		Filename: sc2kcardealership.shp
 	idle:
 	dead:
-	make: sc2kconstructionlarge_2.shp
+	make:
+		Filename: sc2kconstructionlarge_2.shp
 		Frames: 0,0,0,0,0
 		Tick: 2000
 		Offset: 0,12
 		AddExtension: False
-	icon: chromesc2kcardealership.png
+	icon:
+		Filename: chromesc2kcardealership.png
 		AddExtension: False
 
 sc2kmarina:
+	Defaults:
+		Scale: 1.5
+		Filename: sc2kmarina.shp
 	idle:
 	dead:
-	make: sc2kconstructionlarge_2.shp
+	make:
+		Filename: sc2kconstructionlarge_2.shp
 		Frames: 0,0,0,0,0
 		Tick: 2000
 		Offset: 0,12
 		AddExtension: False
-	icon: chromesc2kmarina.png
+	icon:
+		Filename: chromesc2kmarina.png
 		AddExtension: False
-		
+
 sc2kfactoryfarm:
+	Defaults:
+		Scale: 1.5
+		Filename: sc2kfactoryfarm.shp
 	idle:
 		Offset: 0,0
 		Length: 1
 		ZOffset: -2048
-		Scale: 0.7
+#		Scale: 0.7
 	dead:
 		Length: 1
 		Offset: 0,0
-		Scale: 0.7
-	make: sc2kconstructionlarge_2.shp
+#		Scale: 0.7
+	make:
+		Filename: sc2kconstructionlarge_2.shp
 		Frames: 0,0,0,0,0
 		Tick: 2000
 		Offset: 0,12
 		AddExtension: False
-		Scale: 0.7
-	icon: chromesc2kfactoryfarm.png
+#		Scale: 0.7
+	icon:
+		Filename: chromesc2kfactoryfarm.png
 		AddExtension: False
-		
+
 sc2kobservatory:
+	Defaults:
+		Scale: 1.5
+		Filename: sc2kobservatory.shp
 	idle:
 		Offset: 0,-84
 		Length: 1
 		ZOffset: -2048
-		Scale: 0.7
+#		Scale: 0.7
 	dead:
 		Length: 1
 		Offset: 0,-84
-		Scale: 0.7
-	make: sc2kconstructionlarge_2.shp
+#		Scale: 0.7
+	make:
+		Filename: sc2kconstructionlarge_2.shp
 		Frames: 0,0,0,0,0
 		Tick: 2000
 		Offset: 0,12
 		AddExtension: False
-		Scale: 0.7
-	icon: chromesc2kobservatory.png
+#		Scale: 0.7
+	icon:
+		Filename: chromesc2kobservatory.png
 		AddExtension: False
-		
+
 sc2ktradecenter:
+	Defaults:
+		Scale: 1.5
+		Filename: sc2ktradecenter.shp
 	idle:
 		Offset: 0,-12
 		Length: 1
 		ZOffset: -2048
-		Scale: 0.7
+#		Scale: 0.7
 	dead:
 		Length: 1
 		Offset: 0,0
-		Scale: 0.7
-	make: sc2kspconstruction.shp
+#		Scale: 0.7
+	make:
+		Filename: sc2kspconstruction.shp
 		Frames: 0,0,0,0,0
 		Tick: 2000
 		Offset: 0,12
 		AddExtension: False
-		Scale: 0.7
-	icon: chromesc2ktradecenter.png
+#		Scale: 0.7
+	icon:
+		Filename: chromesc2ktradecenter.png
 		AddExtension: False
-		
+
 sc2ksupermall:
+	Defaults:
+		Scale: 1.5
+		Filename: sc2ksupermall.shp
 	idle:
 		Offset: 0,-40
 		Length: 1
 		ZOffset: -2048
-		Scale: 0.7
+#		Scale: 0.7
 	dead:
 		Length: 1
 		Offset: 0,-40
-		Scale: 0.7
-	make: sc2kconstructionlarge_2.shp
+#		Scale: 0.7
+	make:
+		Filename: sc2kconstructionlarge_2.shp
 		Frames: 0,0,0,0,0
 		Tick: 2000
 		Offset: 0,12
 		AddExtension: False
-		Scale: 0.7
-	icon: chromesc2ksupermall.png
+#		Scale: 0.7
+	icon:
+		Filename: chromesc2ksupermall.png
 		AddExtension: False
-		
+
 sc2kubermall:
+	Defaults:
+		Scale: 1.5
+		Filename: sc2kubermall.shp
 	idle:
 		Offset: 0,-60
 		Length: 1
 		ZOffset: -2048
-		Scale: 0.7
+#		Scale: 0.7
 	dead:
 		Length: 1
 		Offset: 0,-60
-		Scale: 0.7
-	make: sc2kconstructionlarge_2.shp
+#		Scale: 0.7
+	make:
+		Filename: sc2kconstructionlarge_2.shp
 		Frames: 0,0,0,0,0
 		Tick: 2000
 		Offset: 0,12
 		AddExtension: False
-		Scale: 0.7
-	icon: chromesc2kubermall.png
+#		Scale: 0.7
+	icon:
+		Filename: chromesc2kubermall.png
 		AddExtension: False
 
 sc2kbeaconpolice:
+	Defaults:
+		Scale: 1.5
+		Filename: sc2kbeaconpolice.shp
 	idle:
 		Offset: 0,-13
 		Length: 2
 		Tick: 25
-	make: sc2kconstructionsmall_1.shp
+	make:
+		Filename: sc2kconstructionsmall_1.shp
 		Frames: 0,0,0,0,0
 		Tick: 2000
 		Offset: 0,12
@@ -390,13 +505,19 @@ sc2kbeaconpolice:
 		Offset: 0,-13
 	dead:
 		Offset: 0,-13
-	icon: chromesc2kbeaconpolice.png
+	icon:
+		Filename: chromesc2kbeaconpolice.png
 		AddExtension: False
+
 sc2kbeaconfire:
+	Defaults:
+		Scale: 1.5
+		Filename: sc2kbeaconfire.shp
 	idle:
 		Offset: 0,-13
 		Length: 2
-	make: sc2kconstructionsmall_2.shp
+	make:
+		Filename: sc2kconstructionsmall_2.shp
 		Frames: 0,0,0,0,0
 		Tick: 2000
 		Offset: 0,12
@@ -408,14 +529,20 @@ sc2kbeaconfire:
 		Offset: 0,-13
 	dead:
 		Offset: 0,-13
-	icon: chromesc2kbeaconfire.png
+	icon:
+		Filename: chromesc2kbeaconfire.png
 		AddExtension: False
+
 sc2kbeaconarmy:
+	Defaults:
+		Scale: 1.5
+		Filename: sc2kbeaconarmy.shp
 	idle:
 		Offset: 0,-13
 		Length: 2
 		Tick: 25
-	make: sc2kconstructionsmall_2.shp
+	make:
+		Filename: sc2kconstructionsmall_2.shp
 		Frames: 0,0,0,0,0
 		Tick: 2000
 		Offset: 0,12
@@ -430,10 +557,14 @@ sc2kbeaconarmy:
 	#bib: mbTSLA
 	#	Length: *
 	#	UseTilesetExtension: false
-	icon: chromesc2kbeaconarmy.png
+	icon:
+		Filename: chromesc2kbeaconarmy.png
 		AddExtension: False
-		
+
 sc2kmissilesilo:
+	Defaults:
+		Scale: 1.5
+		Filename: sc2kmissilesilo.shp
 	idle:
 		Offset: 0,4
 		Length: 2
@@ -442,365 +573,620 @@ sc2kmissilesilo:
 	dead:
 		Length: 1
 		Offset: 0,0
-	make: sc2kconstructionlarge_2.shp
+	make:
+		Filename: sc2kconstructionlarge_2.shp
 		Frames: 0,0,0,0,0
 		Tick: 2000
 		Offset: 0,12
 		AddExtension: False
-	icon: chromesc2kmissilesilo.png
+	icon:
+		Filename: chromesc2kmissilesilo.png
 		AddExtension: False
 
 sc2kpolicedept:
-	idle: sc2k_policestation
-	damaged-idle: sc2k_policestation
+	Defaults:
+		Scale: 1.5
+		Filename: sc2kpolicedept.shp
+	idle:
+		Filename: sc2k_policestation.shp
+	damaged-idle:
+		Filename: sc2k_policestation.shp
 		Start: 1
-	make: sc2kconstructionlarge_2
+	make:
+		Filename: sc2kconstructionlarge_2.shp
 		Frames: 0,0,0,0,0
 		Tick: 2000
 		Offset: 0,12
-	icon: sc2k_policestation_icon
-		
+	icon:
+		Filename: sc2k_policestation_icon.shp
+
 sc2khospital:
-	idle: sc2k_hospital
-	damaged-idle: sc2k_hospital
+	Defaults:
+		Scale: 1.5
+		Filename: sc2khospital.shp
+	idle:
+		Filename: sc2k_hospital.shp
+	damaged-idle:
+		Filename: sc2k_hospital.shp
 		Start: 1
-	make: sc2kconstructionlarge_2
+	make:
+		Filename: sc2kconstructionlarge_2.shp
 		Frames: 0,0,0,0,0
 		Tick: 2000
 		Offset: 0,12
-	icon: sc2k_hospital_icon
-		
+	icon:
+		Filename: sc2k_hospital_icon.shp
+
 sc2kfiredept:
-	idle: sc2k_firestation
-	damaged-idle: sc2k_firestation
+	Defaults:
+		Scale: 1.5
+		Filename: sc2kfiredept.shp
+	idle:
+		Filename: sc2k_firestation.shp
+	damaged-idle:
+		Filename: sc2k_firestation.shp
 		Start: 1
-	make: sc2kconstructionlarge_2
+	make:
+		Filename: sc2kconstructionlarge_2.shp
 		Frames: 0,0,0,0,0
 		Tick: 2000
 		Offset: 0,12
-	icon: sc2k_firestation_icon
+	icon:
+		Filename: sc2k_firestation_icon.shp
+
 ####################################################################################################
+
 #		SC2K UNITS
+
 ####################################################################################################
 
 sc2kfire:
+	Defaults:
+		Scale: 1.5
+		Filename: sc2kfire.shp
 	idle:
 		Length: 4
 		Tick: 100
-	icon: chromesc2kfire.png
+	icon:
+		Filename: chromesc2kfire.png
 		AddExtension: False
 
 sc2ktornado:
+	Defaults:
+		Scale: 1.5
+		Filename: sc2ktornado.shp
 	idle:
 		Length: 24
 		Tick: 100
-	icon: chromesc2ktornado.png
+	icon:
+		Filename: chromesc2ktornado.png
 		AddExtension: False
-		
+
 sc2k_thundercloud_main:
+	Defaults:
+		Scale: 1.5
+		Filename: sc2k_thundercloud_main.shp
 	idle:
 		Length: 12
 		Tick: 70
-	cloud_left: sc2k_thundercloud_left.shp
+	cloud_left:
+		Filename: sc2k_thundercloud_left.shp
 		Length: 13
 		Tick: 70
 		Offset: -40,0
 		AddExtension: False
-	cloud_right: sc2k_thundercloud_right.shp
+	cloud_right:
+		Filename: sc2k_thundercloud_right.shp
 		Length: 13
 		Tick: 70
 		Offset: 40,0
 		AddExtension: False
-	icon: chromesc2kthundercloud.png
+	icon:
+		Filename: chromesc2kthundercloud.png
 		AddExtension: False
 
 sc2kbulldozer:
-	idle: sc2k_bulldozer
+	Defaults:
+		Scale: 1.5
+		Filename: sc2kbulldozer.shp
+	idle:
+		Filename: sc2k_bulldozer.shp
 		Facings: 4
-	harvest: sc2k_bulldozer
+	harvest:
+		Filename: sc2k_bulldozer.shp
 		Facings: 4
-	dock: sc2k_bulldozer
-	dock-loop: sc2k_bulldozer
-	icon: chromesc2kbulldozer.png
+	dock:
+		Filename: sc2k_bulldozer.shp
+	dock-loop:
+		Filename: sc2k_bulldozer.shp
+	icon:
+		Filename: chromesc2kbulldozer.png
 		AddExtension: False
-	
+
 sc2kjetplane:
+	Defaults:
+		Scale: 1.5
+		Filename: sc2kjetplane.shp
 	idle:
 		Facings: -8
 	die:
 		Facings: -8
-	icon: chromesc2kaircrash.png
+	icon:
+		Filename: chromesc2kaircrash.png
 		AddExtension: False
-		
+
 sc2khelicopter:
+	Defaults:
+		Scale: 1.5
+		Filename: sc2khelicopter.shp
 	idle:
 		Length: 8
 		Facings: -8
 		Tick: 25
 		#Offset: 0,-64
-	icon: chromesc2ksimcopter.png
+	icon:
+		Filename: chromesc2ksimcopter.png
 		AddExtension: False
-		
+
 sc2kcargoship:
+	Defaults:
+		Scale: 1.5
+		Filename: sc2kcargoship.shp
 	idle:
 		Length: 1
 		Facings: 8
-	icon: chromesc2kcargoship.png
+	icon:
+		Filename: chromesc2kcargoship.png
 		AddExtension: False
 
 sc2kpolicecar:
-	idle: sc2k_policecar
+	Defaults:
+		Scale: 1.5
+		Filename: sc2kpolicecar.shp
+	idle:
+		Filename: sc2k_policecar.shp
 		Facings: -32
-    Scale: 0.8
-	lightbar-off: sc2k_lightbar
+#    Scale: 0.8
+	lightbar-off:
+		Filename: sc2k_lightbar.shp
 		Facings: -32
 		Offset: 0,-9
-    Scale: 0.8
-	lightbar-on: sc2k_lightbar
+#    Scale: 0.8
+	lightbar-on:
+		Filename: sc2k_lightbar.shp
 		Start: 32
 		Facings: -32
 		Length: 2
 		Tick: 60
 		Offset: 0,-9
-    Scale: 0.8
-	icon: chromesc2kpolicecar.png
+#    Scale: 0.8
+	icon:
+		Filename: chromesc2kpolicecar.png
 		AddExtension: false
 
 sc2kfiretruck:
-	idle: sc2k_firetruck
+	Defaults:
+		Scale: 1.5
+		Filename: sc2kfiretruck.shp
+	idle:
+		Filename: sc2k_firetruck.shp
 		Facings: -32
-		Scale: 0.8
-	turret: sc2k_firetruck
+##		Scale: 0.8
+	turret:
+		Filename: sc2k_firetruck.shp
 		Start: 32
 		Facings: -32
-		Scale: 0.8
-	icon: cityfiretruckicon
-		
+##		Scale: 0.8
+	icon:
+		Filename: cityfiretruckicon.shp
+
 sc2kmob:
+	Defaults:
+		Scale: 1.5
+		Filename: sc2kmob.shp
 	idle:
 		Length: 2
 		Tick: 100
-	icon: chromesc2kmob.png
+	icon:
+		Filename: chromesc2kmob.png
 		AddExtension: false
 
 ####################################################################################################
+
 #		SC2K ALTERNATIVE
+
 ####################################################################################################
+
 sc2kdomicilea1:
-	idle: sc2kdomicilea1null
-	skin1: sc2kdomicilea1
-	skin2: sc2kdomicilea1
+	Defaults:
+		Scale: 1.5
+		Filename: sc2kdomicilea1.shp
+	idle:
+		Filename: sc2kdomicilea1null.shp
+	skin1:
+		Filename: sc2kdomicilea1.shp
+	skin2:
+		Filename: sc2kdomicilea1.shp
 		Start: 1
-	skin3: sc2kdomicilea1
+	skin3:
+		Filename: sc2kdomicilea1.shp
 		Start: 2
-	skin1b: sc2kdomicilea2
-	skin2b: sc2kdomicilea2
+	skin1b:
+		Filename: sc2kdomicilea2.shp
+	skin2b:
+		Filename: sc2kdomicilea2.shp
 		Start: 1
-	skin3b: sc2kdomicilea2
+	skin3b:
+		Filename: sc2kdomicilea2.shp
 		Start: 2
-	skin1c: sc2kdomicilea3
-	skin2c: sc2kdomicilea3
+	skin1c:
+		Filename: sc2kdomicilea3.shp
+	skin2c:
+		Filename: sc2kdomicilea3.shp
 		Start: 1
-	skin3c: sc2kdomicilea3
+	skin3c:
+		Filename: sc2kdomicilea3.shp
 		Start: 2
 	dead:
-	make: sc2kconstructionsmall_1.shp
+	make:
+		Filename: sc2kconstructionsmall_1.shp
 		Frames: 0,0,0,0,0
 		Tick: 2000
 		AddExtension: False
-	icon: chromesc2kdomicilea1.png
+	icon:
+		Filename: chromesc2kdomicilea1.png
 		AddExtension: False
 
 sc2kdomicileb1:
-	idle: sc2kdomicileb1null
-	skin1: sc2kdomicileb1
-	skin2: sc2kdomicileb1
+	Defaults:
+		Scale: 1.5
+		Filename: sc2kdomicileb1.shp
+	idle:
+		Filename: sc2kdomicileb1null.shp
+	skin1:
+		Filename: sc2kdomicileb1.shp
+	skin2:
+		Filename: sc2kdomicileb1.shp
 		Start: 1
-	skin3: sc2kdomicileb1
+	skin3:
+		Filename: sc2kdomicileb1.shp
 		Start: 2
-	skin1b: sc2kdomicileb2
-	skin2b: sc2kdomicileb2
+	skin1b:
+		Filename: sc2kdomicileb2.shp
+	skin2b:
+		Filename: sc2kdomicileb2.shp
 		Start: 1
-	skin3b: sc2kdomicileb2
+	skin3b:
+		Filename: sc2kdomicileb2.shp
 		Start: 2
-	skin1c: sc2kdomicileb3
-	skin2c: sc2kdomicileb3
+	skin1c:
+		Filename: sc2kdomicileb3.shp
+	skin2c:
+		Filename: sc2kdomicileb3.shp
 		Start: 1
-	skin3c: sc2kdomicileb3
+	skin3c:
+		Filename: sc2kdomicileb3.shp
 		Start: 2
 	dead:
-	make: sc2kconstructionlarge_2.shp
+	make:
+		Filename: sc2kconstructionlarge_2.shp
 		Frames: 0,0,0,0,0
 		Tick: 2000
 		AddExtension: False
-	icon: chromesc2kdomicileb1.png
+	icon:
+		Filename: chromesc2kdomicileb1.png
 		AddExtension: False
+
 sc2kdomicilec1:
-	idle: sc2kdomicileb1null
-	skin1: sc2kdomicilec1
-	skin2: sc2kdomicilec1
+	Defaults:
+		Scale: 1.5
+		Filename: sc2kdomicilec1.shp
+	idle:
+		Filename: sc2kdomicileb1null.shp
+	skin1:
+		Filename: sc2kdomicilec1.shp
+	skin2:
+		Filename: sc2kdomicilec1.shp
 		Start: 1
-	skin3: sc2kdomicilec1
+	skin3:
+		Filename: sc2kdomicilec1.shp
 		Start: 2
-	skin4: sc2kdomicilec1
+	skin4:
+		Filename: sc2kdomicilec1.shp
 		Start: 3
 	dead:
-	make: sc2kconstructionlarge_2.shp
+	make:
+		Filename: sc2kconstructionlarge_2.shp
 		Frames: 0,0,0,0,0
 		Tick: 2000
 		AddExtension: False
-	icon: chromesc2kdomicilec1.png
+	icon:
+		Filename: chromesc2kdomicilec1.png
 		AddExtension: False
 
 sc2kcommerciala1:
-	idle: sc2kdomicilea1null
-	skin1: sc2k_commerciala1
-	skin2: sc2k_commerciala1
+	Defaults:
+		Scale: 1.5
+		Filename: sc2kcommerciala1.shp
+	idle:
+		Filename: sc2kdomicilea1null.shp
+	skin1:
+		Filename: sc2k_commerciala1.shp
+	skin2:
+		Filename: sc2k_commerciala1.shp
 		Start: 1
-	skin3: sc2k_commerciala1
+	skin3:
+		Filename: sc2k_commerciala1.shp
 		Start: 2
-	skin4: sc2k_commerciala1
+	skin4:
+		Filename: sc2k_commerciala1.shp
 		Start: 3
-	skin1b: sc2k_commerciala2
-	skin2b: sc2k_commerciala2
+	skin1b:
+		Filename: sc2k_commerciala2.shp
+	skin2b:
+		Filename: sc2k_commerciala2.shp
 		Start: 1
-	skin3b: sc2k_commerciala2
+	skin3b:
+		Filename: sc2k_commerciala2.shp
 		Start: 2
-	skin4b: sc2k_commerciala2
+	skin4b:
+		Filename: sc2k_commerciala2.shp
 		Start: 3
-	dead: sc2kdomicilea1null
-	make: sc2kconstructionsmall_1.shp
+	dead:
+		Filename: sc2kdomicilea1null.shp
+	make:
+		Filename: sc2kconstructionsmall_1.shp
 		Frames: 0,0,0,0,0
 		Tick: 2000
 		AddExtension: False
-	icon: chromesc2kcommerciala1.png
+	icon:
+		Filename: chromesc2kcommerciala1.png
 		AddExtension: False
 
 sc2kcommercialb1:
-	idle: sc2kdomicileb1null
-	skin1: sc2k_commercialb1
-	skin2: sc2k_commercialb1
+	Defaults:
+		Scale: 1.5
+		Filename: sc2kcommercialb1.shp
+	idle:
+		Filename: sc2kdomicileb1null.shp
+	skin1:
+		Filename: sc2k_commercialb1.shp
+	skin2:
+		Filename: sc2k_commercialb1.shp
 		Start: 1
-	skin3: sc2k_commercialb1
+	skin3:
+		Filename: sc2k_commercialb1.shp
 		Start: 2
-	skin4: sc2k_commercialb1
+	skin4:
+		Filename: sc2k_commercialb1.shp
 		Start: 3
-	skin1b: sc2k_commercialb2
-	skin2b: sc2k_commercialb2
+	skin1b:
+		Filename: sc2k_commercialb2.shp
+	skin2b:
+		Filename: sc2k_commercialb2.shp
 		Start: 1
-	skin3b: sc2k_commercialb2
+	skin3b:
+		Filename: sc2k_commercialb2.shp
 		Start: 2
-	skin4b: sc2k_commercialb2
+	skin4b:
+		Filename: sc2k_commercialb2.shp
 		Start: 3
-	skin1c: sc2k_commercialb3
-	skin2c: sc2k_commercialb3
+	skin1c:
+		Filename: sc2k_commercialb3.shp
+	skin2c:
+		Filename: sc2k_commercialb3.shp
 		Start: 1
-	skin3c: sc2k_commercialb3
+	skin3c:
+		Filename: sc2k_commercialb3.shp
 		Start: 2
-	skin4c: sc2k_commercialb3
+	skin4c:
+		Filename: sc2k_commercialb3.shp
 		Start: 3
-	dead: sc2kdomicileb1null
-	make: sc2kconstructionlarge_2.shp
+	dead:
+		Filename: sc2kdomicileb1null.shp
+	make:
+		Filename: sc2kconstructionlarge_2.shp
 		Frames: 0,0,0,0,0
 		Tick: 2000
 		AddExtension: False
-	icon: chromesc2kdomicileb1.png
+	icon:
+		Filename: chromesc2kdomicileb1.png
 		AddExtension: False
 
 sc2k_armyhq:
-	idle: sc2k_armyhq
-	damaged-idle: sc2k_armyhq
-	make: sc2kconstructionlarge_2
+	Defaults:
+		Scale: 1.5
+		Filename: sc2k_armyhq.shp
+	idle:
+		Filename: sc2k_armyhq.shp
+	damaged-idle:
+		Filename: sc2k_armyhq.shp
+	make:
+		Filename: sc2kconstructionlarge_2.shp
 		Frames: 0,0,0,0,0
 		Tick: 2000
 		Offset: 0,12
-	icon: chromesc2karmyhq.png
+	icon:
+		Filename: chromesc2karmyhq.png
 		AddExtension: False
 
 sc2k_armyvehicle:
-	idle: sc2k_armyvehicle
-	damaged-idle: sc2k_armyvehicle
-	make: sc2kconstructionlarge_2
+	Defaults:
+		Scale: 1.5
+		Filename: sc2k_armyvehicle.shp
+	idle:
+		Filename: sc2k_armyvehicle.shp
+	damaged-idle:
+		Filename: sc2k_armyvehicle.shp
+	make:
+		Filename: sc2kconstructionlarge_2.shp
 		Frames: 0,0,0,0,0
 		Tick: 2000
 		Offset: 0,12
-	icon: chromesc2karmyveh.png
+	icon:
+		Filename: chromesc2karmyveh.png
 		AddExtension: False
 
 sc2k_storage:
-	idle: sc2kdomicilea1null
-	damaged-idle: sc2kdomicilea1null
-	stages: sc2kdomicilea1null
-	damaged-stages: sc2kdomicilea1null
-	make: sc2kconstructionsmall_1.shp
+	Defaults:
+		Scale: 1.5
+		Filename: sc2k_storage.shp
+	idle:
+		Filename: sc2kdomicilea1null.shp
+	damaged-idle:
+		Filename: sc2kdomicilea1null.shp
+	stages:
+		Filename: sc2kdomicilea1null.shp
+	damaged-stages:
+		Filename: sc2kdomicilea1null.shp
+	make:
+		Filename: sc2kconstructionsmall_1.shp
 		Frames: 0,0,0,0,0
 		Tick: 2000
 		AddExtension: False
-	dead: sc2kdomicilea1null
-	skin1: sc2k_storage
-	skin2: sc2k_storage
+	dead:
+		Filename: sc2kdomicilea1null.shp
+	skin1:
+		Filename: sc2k_storage.shp
+	skin2:
+		Filename: sc2k_storage.shp
 		Start: 1
-	icon: chromesc2kstorage.png
+	icon:
+		Filename: chromesc2kstorage.png
 		AddExtension: False
 
 sc2k_streetrat:
-	idle: sc2k_streetrat
+	Defaults:
+		Scale: 1.5
+		Filename: sc2k_streetrat.shp
+	idle:
+		Filename: sc2k_streetrat.shp
 		Facings: -32
-	icon: chromesc2kstreetrat.png
+	icon:
+		Filename: chromesc2kstreetrat.png
 		AddExtension: false
+
 sc2k_utilityvan:
-	idle: sc2k_utilityvan
+	Defaults:
+		Scale: 1.5
+		Filename: sc2k_utilityvan.shp
+	idle:
+		Filename: sc2k_utilityvan.shp
 		Facings: -32
-	icon: chromesc2kutilityvan.png
+	icon:
+		Filename: chromesc2kutilityvan.png
 		AddExtension: false
+
 sc2k_j57:
-	idle: sc2k_j57
+	Defaults:
+		Scale: 1.5
+		Filename: sc2k_j57.shp
+	idle:
+		Filename: sc2k_j57.shp
 		Facings: -32
-	icon: chromesc2kJ57.png
+	icon:
+		Filename: chromesc2kJ57.png
 		AddExtension: false
+
 sc2k_airhawk:
-	idle: sc2k_airhawk
+	Defaults:
+		Scale: 1.5
+		Filename: sc2k_airhawk.shp
+	idle:
+		Filename: sc2k_airhawk.shp
 		Facings: -32
-	icon: chromesc2kairhawk.png
+	icon:
+		Filename: chromesc2kairhawk.png
 		AddExtension: false
+
 chromesc2kengine1:
-	icon: chromesc2kengine1.png
+	Defaults:
+		Scale: 1.5
+		Filename: chromesc2kengine1.shp
+	icon:
+		Filename: chromesc2kengine1.png
 		AddExtension: false
+
 chromesc2kengine2:
-	icon: chromesc2kengine2.png
+	Defaults:
+		Scale: 1.5
+		Filename: chromesc2kengine2.shp
+	icon:
+		Filename: chromesc2kengine2.png
 		AddExtension: false
+
 chromesc2kengine3:
-	icon: chromesc2kengine3.png
+	Defaults:
+		Scale: 1.5
+		Filename: chromesc2kengine3.shp
+	icon:
+		Filename: chromesc2kengine3.png
 		AddExtension: false
+
 chromesc2karmor:
-	icon: chromesc2karmor.png
+	Defaults:
+		Scale: 1.5
+		Filename: chromesc2karmor.shp
+	icon:
+		Filename: chromesc2karmor.png
 		AddExtension: false
+
 chromesc2kshield:
-	icon: chromesc2kshield.png
+	Defaults:
+		Scale: 1.5
+		Filename: chromesc2kshield.shp
+	icon:
+		Filename: chromesc2kshield.png
 		AddExtension: false
+
 chromesc2kmachinegun:
-	icon: chromesc2kmachinegun.png
+	Defaults:
+		Scale: 1.5
+		Filename: chromesc2kmachinegun.shp
+	icon:
+		Filename: chromesc2kmachinegun.png
 		AddExtension: false
+
 chromesc2kmissile:
-	icon: chromesc2kmissile.png
+	Defaults:
+		Scale: 1.5
+		Filename: chromesc2kmissile.shp
+	icon:
+		Filename: chromesc2kmissile.png
 		AddExtension: false
+
 sc2k_ufo:
-	idle: sc2k_ufo_eye
+	Defaults:
+		Scale: 1.5
+		Filename: sc2k_ufo.shp
+	idle:
+		Filename: sc2k_ufo_eye.shp
 		Length: 2
 		Tick: 2500
-	rotor: sc2k_ufo_legs_front
+	rotor:
+		Filename: sc2k_ufo_legs_front.shp
 		Length: 4
 		Tick: 1000
-	rotor2: sc2k_ufo_legs_back
+	rotor2:
+		Filename: sc2k_ufo_legs_back.shp
 		Length: 4
 		Tick: 1100
-	icon: chromesc2krobot.png
+	icon:
+		Filename: chromesc2krobot.png
 		AddExtension: false
+
 icon:
 	Defaults:
+		Scale: 1.5
+		Filename: icon.shp
 		AddExtension: False
-	chromesc2kmob: chromesc2kmob.png
-	chromesc2kfire: chromesc2kfire.png
-	chromesc2ktornado: chromesc2ktornado.png
-	chromesc2kthundercloud: chromesc2kthundercloud.png
-	chromesc2krobot: chromesc2krobot.png
+	chromesc2kmob:
+		Filename: chromesc2kmob.png
+	chromesc2kfire:
+		Filename: chromesc2kfire.png
+	chromesc2ktornado:
+		Filename: chromesc2ktornado.png
+	chromesc2kthundercloud:
+		Filename: chromesc2kthundercloud.png
+	chromesc2krobot:
+		Filename: chromesc2krobot.png

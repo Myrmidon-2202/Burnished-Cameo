@@ -846,8 +846,10 @@ GENE6:
 		Prerequisites:
 			1: upemergencyrepair1, !upemergencyrepair2
 		StartFullyCharged: true
-		Dimensions: 7, 7
-		Footprints: ___x___ __xxx__ _xxxxx_ xxxxxxx _xxxxx_ __xxx__ ___x___
+		Dimensions:
+			1: 7, 7
+		Footprints:
+			1: ___x___ __xxx__ _xxxxx_ xxxxxxx _xxxxx_ __xxx__ ___x___
 	# GrantExternalConditionPower@EmergencyRepair2:
 	# 	OrderName: EmergencyRepair2
 	# 	PauseOnCondition: lowpower
@@ -1405,8 +1407,10 @@ GENE6:
 		Prerequisites:
 			1: upgpscram
 		StartFullyCharged: true
-		Dimensions: 7, 7
-		Footprints: ___x___ __xxx__ _xxxxx_ xxxxxxx _xxxxx_ __xxx__ ___x___
+		Dimensions:
+			1: 7, 7
+		Footprints:
+			1: ___x___ __xxx__ _xxxxx_ xxxxxxx _xxxxx_ __xxx__ ___x___
 	# GrantExternalConditionPower@Bounty1:
 	# 	OrderName: CashBounty1
 	# 	Icon: glabounty1
@@ -1454,8 +1458,10 @@ GENE6:
 		Prerequisites:
 			1: upglabounty3
 		StartFullyCharged: true
-		Dimensions: 9, 9
-		Footprints: ____x____ ___xxx___ __xxxxx__ _xxxxxxx_ xxxxxxxxx _xxxxxxx_ __xxxxx__ ___xxx___ ____x____
+		Dimensions:
+			1: 9, 9
+		Footprints:
+			1: ____x____ ___xxx___ __xxxxx__ _xxxxxxx_ xxxxxxxxx _xxxxxxx_ __xxxxx__ ___xxx___ ____x____
 
 ^GeneralsChinaSupportPowers:
 	CashHackPower:
@@ -1705,8 +1711,10 @@ GENE6:
 		Prerequisites:
 			1: upfrenzy1, !upfrenzy2
 		StartFullyCharged: true
-		Dimensions: 7, 7
-		Footprints: ___x___ __xxx__ _xxxxx_ xxxxxxx _xxxxx_ __xxx__ ___x___
+		Dimensions:
+			1: 7, 7
+		Footprints:
+			1: ___x___ __xxx__ _xxxxx_ xxxxxxx _xxxxx_ __xxx__ ___x___
 	# GrantExternalConditionPower@Frenzy2:
 	# 	OrderName: FrenzyPower2
 	# 	PauseOnCondition: lowpower
@@ -14512,8 +14520,10 @@ leangcommand:
 		Prerequisites:
 			1: upglabounty3
 		StartFullyCharged: true
-		Dimensions: 9, 9
-		Footprints: ____x____ ___xxx___ __xxxxx__ _xxxxxxx_ xxxxxxxxx _xxxxxxx_ __xxxxx__ ___xxx___ ____x____
+		Dimensions:
+			1: 9, 9
+		Footprints:
+			1: ____x____ ___xxx___ __xxxxx__ _xxxxxxx_ xxxxxxxxx _xxxxxxx_ __xxxxx__ ___xxx___ ____x____
 	ClassicAirstrikePower@Spectre:
 		Squad:
 			usagunship:

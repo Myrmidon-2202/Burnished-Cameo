@@ -716,7 +716,7 @@ TSMCVGDI:
 		Prerequisites: ~tsgtweap, tsgtdeptgdi
 		Queue: Vehicle.Tsgdi
 		BuildDurationModifier: 40
-		Description: Deploys into another Construction Yard..  Unarmed
+		Description: Deploys into another Construction Yard.
 		IconPalette: tscameo
 		IconPaletteIsPlayerPalette: False
 	Transforms:
@@ -3570,7 +3570,7 @@ TSMEDIC:
 	Buildable:
 		Prerequisites: ~tsgtpile
 		Queue: Infantry.Tsgdi
-		Description: Heals nearby infantry..  Unarmed
+		Description: Heals nearby infantry.
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -5951,7 +5951,7 @@ TSSAPC:
 		BuildPaletteOrder: 60
 		Prerequisites: ~tsntweap, tsntradr
 		Queue: Vehicle.Tsnod
-		Description: Troop transport that can move.underground to avoid detection..  Unarmed
+		Description: Troop transport that can move.underground to avoid detection.
 	Mobile:
 		Locomotor: subterranean
 		PauseOnCondition: loading || being-captured || disabled
@@ -6182,7 +6182,7 @@ TSREPAIR:
 		BuildPaletteOrder: 70
 		Prerequisites: ~tsntweap
 		Queue: Vehicle.Tsnod
-		Description: Repairs nearby vehicles..  Unarmed
+		Description: Repairs nearby vehicles.
 	Mobile:
 		Locomotor: tracked
 		Speed: 85
@@ -7831,7 +7831,7 @@ TSTRNSPORT:
 		Queue: Aircraft.Tsgdi
 		BuildPaletteOrder: 60
 		Prerequisites: ~tsgthpad
-		Description: VTOL aircraft capable of lifting.and transporting vehicles..  Unarmed
+		Description: VTOL aircraft capable of lifting.and transporting vehicles.
 	Aircraft:
 		TurnSpeed: 80
 		Speed: 149
@@ -7896,7 +7896,7 @@ TSTRNSPORTMUTANT:
 		Queue: Aircraft.Tsmutant
 		BuildPaletteOrder: 60
 		Prerequisites: ~tsgthpadmutant, tsgtdeptmutant
-		Description: VTOL aircraft capable of lifting.and transporting vehicles..  Unarmed
+		Description: VTOL aircraft capable of lifting.and transporting vehicles.
 	Aircraft:
 		TurnSpeed: 80
 		Speed: 149

@@ -5,25 +5,6 @@ World:
 		Game: SimCity
 		Side: Simcity
 		Description: SimCity from SNES\nFeatures:\n- Generates revenue through taxation of Residential Zones\n- Units gain massive bonuses near Mayor's House\n- Variety of support powers to assist teammates\n- Great Stun Powers\nSupport powers: Mininuke Parabomb, various others
-	# FactionCA@sc2k:
-	# 	Name: SimCity 2000
-	# 	InternalName: sc2k
-	# 	Game: SimCity
-	# 	Side: Factions
-	# 	Description: SimCity from PC\nFeatures:\n- Generates revenue through taxation of Residential Zones\n- Use disasters as units.
-	#FactionCA@sc2ka:
-	# Name: SimCity 2000 (Alternative)
-	# InternalName: sc2ka
-	# Game: SimCity
-	# Side: Factions
-	# Description: Alternative Simcity 2000\nCustom Rules by Commando\nFeatures:\n- Disasters arent controlled\n- All units are based on law or military\n- Deleted some limits
-	# FactionCA@RandomCity:
-	# 	Name: Any
-	# 	InternalName: RandomCity
-	# 	RandomFactionMembers: city, sc2k
-	# 	Game: SimCity
-	# 	Side: Random
-	# 	Description: Random Faction\nA random faction from Simcity will be chosen when the game starts.
 	####################################################################################################
 	#		CITY
 	####################################################################################################
@@ -1851,7 +1832,8 @@ CITYARCHITECT:
 		Conditions:
 			1: city-veteran
 		SupportPowerPaletteOrder: 10
-		Dimensions: 1: 9, 9
+		Dimensions:
+			1: 9, 9
 		Footprints:
 			1: ____x____ ___xxx___ __xxxxx__ _xxxxxxx_ xxxxxxxxx _xxxxxxx_ __xxxxx__ ___xxx___ ____x____
 
@@ -1908,7 +1890,8 @@ CITYELITEARCHITECT:
 		Conditions:
 			1: city-veteran
 		SupportPowerPaletteOrder: 10
-		Dimensions: 11, 11
+		Dimensions:
+			1: 11, 11
 		Footprints:
 			1: _____x_____ ____xxx____ ___xxxxx___ __xxxxxxx__ _xxxxxxxxx_ xxxxxxxxxxx _xxxxxxxxx_ __xxxxxxx__ ___xxxxx___ ____xxx____ _____x_____
 
@@ -1965,7 +1948,8 @@ CITYINSTRUCTOR:
 		Conditions:
 			1: rank-veteran
 		SupportPowerPaletteOrder: 10
-		Dimensions: 5, 5
+		Dimensions:
+			1: 5, 5
 		Footprints:
 			1: __x__ _xxx_ xxxxx _xxx_ __x__
 	RenderSprites:
@@ -2008,7 +1992,8 @@ CITYELITEINSTRUCTOR:
 		Conditions:
 			1: rank-veteran
 		SupportPowerPaletteOrder: 10
-		Dimensions: 7, 7
+		Dimensions:
+			1: 7, 7
 		Footprints:
 			1: ___x___ __xxx__ _xxxxx_ xxxxxxx _xxxxx_ __xxx__ ___x___
 	RenderSprites:

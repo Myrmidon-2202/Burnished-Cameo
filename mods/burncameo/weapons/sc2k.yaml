@@ -141,12 +141,14 @@ SpawnActor_Thundercloud:
 	Warhead@2: SpawnActor
 		Actors: sc2k_thundercloud_maina,sc2k_thundercloud_maina
 		Delay: 5
+
 SpawnActor_SimcityUFO:
 	Range: 3c0
 	Projectile: InstantHit
 	Warhead@2: SpawnActor
 		Actors: sc2k_ufo
 		Delay: 5
+
 StreetSimcity_Missile:
 	Inherits: ^MissileWeapon
 	ReloadDelay: 45
@@ -154,7 +156,7 @@ StreetSimcity_Missile:
 	Report: streetsimcity_missile.WAV
 	Burst: 4
 	BurstDelays: 10
-	Projectile: MissileCA
+	Projectile: Missile
 		HorizontalRateOfTurn: 20
 		Speed: 341
 		RangeLimit: 6c0
@@ -190,3 +192,31 @@ StreetSimcity_Crash:
 			Medium: 60
 			Heavy: 50
 		DamageTypes: RippedApartDeath
+
+SimcityTerrorist:
+	Inherits: ^HeavyBomb
+	Inherits: ^ShrapnelWeapon
+	Inherits: ^RA2Grenade
+	-Report:
+	Warhead@HeavyBomb: SpreadDamage
+		Damage: 50000
+	Warhead@HeavyBombPercentage: HealthPercentageDamage
+		Damage: 25
+	Warhead@ShrapnelWeapon: SpreadDamage
+		Damage: 50000
+	Warhead@ShrapnelWeaponFriendlyFire: SpreadDamage
+		Damage: 25000
+	Warhead@ShrapnelWeaponPercentage: HealthPercentageDamage
+		Damage: 25
+	Warhead@Grenade: SpreadDamage
+		Damage: 50000
+	Warhead@GrenadeFriendlyFire: SpreadDamage
+		Damage: 25000
+	Warhead@GrenadePercentage: HealthPercentageDamage
+		Damage: 25
+	-Warhead@Effect1:
+	-Warhead@Effect2:
+	Warhead@Effect: CreateEffect
+		Explosions: ra2_terrorist_explosion
+		ExplosionPalette: ra2effect
+		ImpactSounds: gexpapoa.wav

@@ -1,3 +1,46 @@
+World:
+	FactionCA@sc2k:
+		Name: SimCity 2000
+		InternalName: sc2k
+		Game: SimCity
+		Side: Simcity
+		Description: SimCity from PC\nFeatures:\n- Generates revenue through taxation of Residential Zones\n- Use disasters as units.
+	FactionCA@sc2ka:
+		Name: SimCity 2000 (Alt)
+		InternalName: sc2ka
+		Game: SimCity
+		Side: SimCity
+		Description: Alternative Simcity 2000\nCustom Rules by Commando\nFeatures:\n- Disasters arent controlled\n- All units are based on law or military\n- Deleted some limits
+	FactionCA@RandomCity:
+		Name: Any
+		InternalName: RandomCity
+		RandomFactionMembers: city, sc2k
+		Game: SimCity
+		Side: SimCity
+		Description: Random Faction\nA random faction from Simcity will be chosen when the game starts.
+
+	####################################################################################################
+	#		SC2K Starting Units
+	####################################################################################################
+
+	StartingUnits@mcvonlycity2k:
+		Class: none
+		ClassName: MCV Only
+		Factions: sc2k, sc2ka
+		BaseActor: sc2kmcv
+	StartingUnits@defaultcity2k:
+		Class: light
+		ClassName: Light Support
+		Factions: sc2k, sc2ka
+		BaseActor: sc2kmcv
+		#SupportActors: cityambulance,cityfiretruck,citypolicecar
+	StartingUnits@heavycity2k:
+		Class: heavy
+		ClassName: Heavy Support
+		Factions: sc2k, sc2ka
+		BaseActor: sc2kmcv
+		#SupportActors: cityambulance,cityambulance,cityfiretruck,cityfiretruck,citypolicecar,citypolicecar
+
 Player:
 	ProvidesPrerequisite@regular-simcity2000:
 		Prerequisite: selectsimcity2000
@@ -5,9 +48,9 @@ Player:
 	ProvidesPrerequisite@regular-usimcity2000-a:
 		Prerequisite: selectsimcity2000a
 		Factions: sc2ka
-
-
-
+	ProvidesPrerequisite@bothsimcity200:
+		Prerequisite: mmsimcity2k
+		Factions: sc2k, sc2ka
 
 ####################################################################################################
 #		SC2K - ABANDONED
@@ -423,7 +466,7 @@ SC2KFACTORYSTRUCTURE:
 		Name: Structure Factory
 	Buildable:
 		BuildPaletteOrder: 30
-		Prerequisites: #
+		Prerequisites: ~mmsimcity2k
 		Queue: Defence, RADefence
 		Description: Builds structures.
 	Building:
@@ -436,41 +479,41 @@ SC2KFACTORYSTRUCTURE:
 		Type: Wood
 	RevealsShroud:
 		Range: 10c0
-	Production@NORMAL:
-		Produces: Building, Defence
-		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RABuilding, RADefence
-		RequiresCondition: classicproductionqueues
-	ProductionQueue@SimCityBuilding:
-		Type: Building
-		DisplayOrder: 0
-		Group: Building
-		LowPowerModifier: 200
-		QueuedAudio: Building
-		ReadyAudio: ConstructionComplete
-		LimitedAudio: BuildingInProgress
-	ProductionQueue@SimCityDefense:
-		Type: Defence
-		DisplayOrder: 1
-		Group: Defence
-		LowPowerModifier: 300
-		QueuedAudio: Building
-		ReadyAudio: ConstructionComplete
-		LimitedAudio: BuildingInProgress
+	# Production@NORMAL:
+	# 	Produces: Building, Defence
+	# 	RequiresCondition: !classicproductionqueues
+	# Production@CLASSICPRODUCTIONQUEUES:
+	# 	Produces: RABuilding, RADefence
+	# 	RequiresCondition: classicproductionqueues
+	# ProductionQueue@SimCityBuilding:
+	# 	Type: Building
+	# 	DisplayOrder: 0
+	# 	Group: Building
+	# 	LowPowerModifier: 200
+	# 	QueuedAudio: Building
+	# 	ReadyAudio: ConstructionComplete
+	# 	LimitedAudio: BuildingInProgress
+	# ProductionQueue@SimCityDefense:
+	# 	Type: Defence
+	# 	DisplayOrder: 1
+	# 	Group: Defence
+	# 	LowPowerModifier: 300
+	# 	QueuedAudio: Building
+	# 	ReadyAudio: ConstructionComplete
+	# 	LimitedAudio: BuildingInProgress
 	BaseBuilding:
-	ProductionBar@BuildingSimCity:
-		ProductionType: Building
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@DefenceSimCity:
-		ProductionType: Defence
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@RABuildingSimCity:
-		ProductionType: RABuilding
-		RequiresCondition: classicproductionqueues
-	ProductionBar@RADefenceSimCity:
-		ProductionType: RADefence
-		RequiresCondition: classicproductionqueues
+	# ProductionBar@BuildingSimCity:
+	# 	ProductionType: Building
+	# 	RequiresCondition: !classicproductionqueues
+	# ProductionBar@DefenceSimCity:
+	# 	ProductionType: Defence
+	# 	RequiresCondition: !classicproductionqueues
+	# ProductionBar@RABuildingSimCity:
+	# 	ProductionType: RABuilding
+	# 	RequiresCondition: classicproductionqueues
+	# ProductionBar@RADefenceSimCity:
+	# 	ProductionType: RADefence
+	# 	RequiresCondition: classicproductionqueues
 	BaseProvider:
 		Range: 14c0
 	WithRangeCircle:
@@ -500,6 +543,12 @@ SC2KFACTORYSTRUCTURE:
 		Position: BottomLeft
 		RequiresSelection: true
 		PipCount: 6
+	-Transforms:
+	-TransformsIntoMobile:
+	-TransformsIntoPassenger:
+	-TransformsIntoRepairable:
+	-TransferTimedExternalConditionOnTransform:
+
 SC2KPOWERCOAL:
 	Inherits: ^BaseBuilding
 	Inherits@power: ^PowerPlant
@@ -515,6 +564,7 @@ SC2KPOWERCOAL:
 	Tooltip:
 		Name: Coal Fired Power Plant
 	Buildable:
+		Prerequisites: ~mmsimcity2k
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 10
 		Description: Generates power.
@@ -550,7 +600,7 @@ SC2KWINDMILL:
 	Buildable:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 15
-		Prerequisites: Coal Power Plant
+		Prerequisites: Coal Power Plant, ~mmsimcity2k
 		Description: Generates cheap power.\nLimit 10.
 		BuildLimit: 10
 	Building:
@@ -583,7 +633,7 @@ SC2KPOWEROIL:
 	Buildable:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 55
-		Prerequisites: Coal Power Plant
+		Prerequisites: Coal Power Plant, ~mmsimcity2k
 		Description: Generates power cheaper than coal. \nLimit 5.
 		BuildLimit: 5
 	Building:
@@ -598,6 +648,7 @@ SC2KPOWEROIL:
 		Amount: 200
 	SpawnActorOnDeath@hole:
 		Actor: sc2kabandoned.poweroil
+
 SC2KNATURALGAS:
 	Inherits: ^BaseBuilding
 	Inherits@power: ^PowerPlant
@@ -615,7 +666,7 @@ SC2KNATURALGAS:
 	Buildable:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 57
-		Prerequisites: Coal Power Plant
+		Prerequisites: Coal Power Plant, ~mmsimcity2k
 		Description: Generates a lot of power. \nLimit 5.
 		BuildLimit: 5
 	Building:
@@ -632,6 +683,7 @@ SC2KNATURALGAS:
 		Prerequisite: Natural Gas Power Plant
 	SpawnActorOnDeath@hole:
 		Actor: sc2kabandoned.naturalgas
+
 SC2KNUCLEAR:
 	Inherits: ^BaseBuilding
 	Inherits@power: ^PowerPlant
@@ -649,7 +701,7 @@ SC2KNUCLEAR:
 	Buildable:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 57
-		Prerequisites: Natural Gas Power Plant
+		Prerequisites: Natural Gas Power Plant, ~mmsimcity2k
 		Description: Generates a ton of power.\nExplodes when razed.\nLimit 5.
 		BuildLimit: 5
 	Building:
@@ -662,10 +714,11 @@ SC2KNUCLEAR:
 		Range: 4c0
 	Power:
 		Amount: 800
-	Explodes@1:
+	FireWarheadsOnDeath@1:
 		Weapon: ReactorNuke
 	SpawnActorOnDeath@hole:
 		Actor: sc2kabandoned.nuclear
+
 SC2KPOWERSOLAR:
 	Inherits: ^BaseBuilding
 	Inherits@power: ^PowerPlant
@@ -683,7 +736,7 @@ SC2KPOWERSOLAR:
 	Buildable:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 58
-		Prerequisites: Natural Gas Power Plant
+		Prerequisites: Natural Gas Power Plant, ~mmsimcity2k
 		Description: Generates some power.\nLimit 5.
 		BuildLimit: 5
 	Building:
@@ -698,6 +751,7 @@ SC2KPOWERSOLAR:
 		Amount: 300
 	SpawnActorOnDeath@hole:
 		Actor: sc2kabandoned.powersolar
+
 SC2KPOWERMICROWAVE:
 	Inherits: ^BaseBuilding
 	Inherits@power: ^PowerPlant
@@ -715,7 +769,7 @@ SC2KPOWERMICROWAVE:
 	Buildable:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 150
-		Prerequisites: Natural Gas Power Plant
+		Prerequisites: Natural Gas Power Plant, ~mmsimcity2k
 		Description: Generates clean power.\nLimit 2.
 		BuildLimit: 2
 	Building:
@@ -732,6 +786,7 @@ SC2KPOWERMICROWAVE:
 		Prerequisite: Microwave Power Plant
 	SpawnActorOnDeath@hole:
 		Actor: sc2kabandoned.powermicrowave
+
 SC2KPOWERFUSION:
 	Inherits: ^BaseBuilding
 	Inherits@power: ^PowerPlant
@@ -749,7 +804,7 @@ SC2KPOWERFUSION:
 	Buildable:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 160
-		Prerequisites: Microwave Power Plant
+		Prerequisites: Microwave Power Plant, ~mmsimcity2k
 		Description: Generates extreme power.\nLimit 2.
 		BuildLimit: 2
 	Building:
@@ -812,13 +867,13 @@ SC2KFACTORYDISASTER:
 		ExitCell: 1,2
 		Facing: 520
 	Production@NORMAL:
-		Produces: Infantry
-		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RAInfantry
-		RequiresCondition: classicproductionqueues
+		Produces: Infantry.Sc2k
+	# 	RequiresCondition: !classicproductionqueues
+	# Production@CLASSICPRODUCTIONQUEUES:
+	# 	Produces: RAInfantry
+	# 	RequiresCondition: classicproductionqueues
 	ProductionQueue:
-		Type: Infantry
+		Type: Infantry.Sc2k
 		DisplayOrder: 2
 		Group: Infantry
 		LowPowerModifier: 300
@@ -829,11 +884,11 @@ SC2KFACTORYDISASTER:
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
 	ProductionBar@INFANTRYSIMCITY:
-		ProductionType: Infantry
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@RAINFANTRYSIMCITY:
-		ProductionType: RAInfantry
-		RequiresCondition: classicproductionqueues
+		ProductionType: Infantry.Sc2k
+	# 	RequiresCondition: !classicproductionqueues
+	# ProductionBar@RAINFANTRYSIMCITY:
+	# 	ProductionType: RAInfantry
+	# 	RequiresCondition: classicproductionqueues
 	ProvidesPrerequisite@1:
 		Prerequisite: Disaster Factory
 	ProvidesPrerequisite@2:
@@ -868,7 +923,7 @@ SC2KRECYCLINGCENTER:
 		Name: Recycling Center
 	Buildable:
 		Queue: Building, RABuilding
-		Prerequisites: Coal Power Plant
+		Prerequisites: Coal Power Plant, ~mmsimcity2k
 		BuildPaletteOrder: 50
 		Description: Refinery.
 	Building:
@@ -880,8 +935,15 @@ SC2KRECYCLINGCENTER:
 	RevealsShroud:
 		Range: 4c0
 	Refinery:
+		# DockAngle: 448
+		# DockOffset: 0,2
+		# IsDragRequired: True
+		# DragOffset: -554,512,0
+		# DragLength: 12
+		# TickRate: 15
+	DockHost:
 		DockAngle: 448
-		DockOffset: 0,2
+		DockOffset: 0c0, 2c0, 0
 		IsDragRequired: True
 		DragOffset: -554,512,0
 		DragLength: 12
@@ -889,8 +951,8 @@ SC2KRECYCLINGCENTER:
 	StoresResources:
 		Capacity: 1000
 	Selectable:
-		Bounds: 131072, 101930
-		DecorationBounds: 132864, 131072
+		# Bounds: 131072, 101930
+		# DecorationBounds: 132864, 131072
 	CustomSellValue:
 		Value: 500
 	FreeActor:
@@ -899,15 +961,15 @@ SC2KRECYCLINGCENTER:
 		Facing: 256
 	Power:
 		Amount: -40
-	ProvidesPrerequisite@1:
-		Prerequisite: Recycling Center
+	ProvidesPrerequisite@RecycleCenter:
+		Prerequisite: sc2krecyclingcenter
 	SpawnActorOnDeath@hole:
 		Actor: sc2kabandoned.recyclingcenter
-
 	WithResourceStoragePipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: true
 		PipCount: 10
+
 SC2KDOMICILE:
 	Inherits: ^BaseBuilding
 	HitShape:
@@ -922,7 +984,7 @@ SC2KDOMICILE:
 	Buildable:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 55
-		Prerequisites: Coal Power Plant
+		Prerequisites: Coal Power Plant, ~mmsimcity2k
 		Description: Living quarters.\n Provides income.
 	Building:
 		Footprint: xx ==
@@ -958,7 +1020,7 @@ SC2KCARDEALERSHIP:
 	Buildable:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 55
-		Prerequisites: Coal Power Plant
+		Prerequisites: Coal Power Plant, ~mmsimcity2k
 		Description: Sells vehicles
 	Building:
 		Footprint: xxx xxx ===
@@ -969,13 +1031,13 @@ SC2KCARDEALERSHIP:
 		SpawnOffset: 0,0,0
 		ExitCell: 2,3
 	Production@NORMAL:
-		Produces: Vehicle
-		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RAVehicle
-		RequiresCondition: classicproductionqueues
+		Produces: Vehicle.Sc2k
+	# 	RequiresCondition: !classicproductionqueues
+	# Production@CLASSICPRODUCTIONQUEUES:
+	# 	Produces: RAVehicle
+	# 	RequiresCondition: classicproductionqueues
 	ProductionQueue:
-		Type: Vehicle
+		Type: Vehicle.Sc2k
 		DisplayOrder: 2
 		Group: Vehicle
 		LowPowerModifier: 300
@@ -986,11 +1048,11 @@ SC2KCARDEALERSHIP:
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
 	ProductionBar@VEHICLESIMCITY:
-		ProductionType: Vehicle
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@RAVEHICLESIMCITY:
-		ProductionType: RAVehicle
-		RequiresCondition: classicproductionqueues
+		ProductionType: Vehicle.Sc2k
+	# 	RequiresCondition: !classicproductionqueues
+	# ProductionBar@RAVEHICLESIMCITY:
+	# 	ProductionType: RAVehicle
+	# 	RequiresCondition: classicproductionqueues
 	Health:
 		HP: 20000
 	RevealsShroud:
@@ -1020,7 +1082,7 @@ SC2KMARINA:
 		Name: Marina
 	Buildable:
 		BuildPaletteOrder: 57
-		Prerequisites: Recycling Center
+		Prerequisites: sc2krecyclingcenter, ~mmsimcity2k
 		Queue: Building, RABuilding
 		Description: Produces, and\nrepairs boats
 	Building:
@@ -1051,11 +1113,11 @@ SC2KMARINA:
 		Facing: 128
 		ExitCell: 2,0
 	Production@NORMAL:
-		Produces: Naval
+		Produces: Naval.Sc2k
 		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RANaval
-		RequiresCondition: classicproductionqueues
+	# Production@CLASSICPRODUCTIONQUEUES:
+	# 	Produces: RANaval
+	# 	RequiresCondition: classicproductionqueues
 	Reservable:
 	RepairsUnits:
 		HpPerStep: 1000
@@ -1063,7 +1125,7 @@ SC2KMARINA:
 		StartRepairingNotification: Repairing
 	RallyPoint:
 	ProductionQueue:
-		Type: Naval
+		Type: Naval.Sc2k
 		DisplayOrder: 5
 		Group: Naval
 		LowPowerModifier: 300
@@ -1074,11 +1136,11 @@ SC2KMARINA:
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
 	ProductionBar@NAVALSC2K:
-		ProductionType: Naval
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@RANAVALSC2K:
-		ProductionType: RANaval
-		RequiresCondition: classicproductionqueues
+		ProductionType: Naval.Sc2k
+	# 	RequiresCondition: !classicproductionqueues
+	# ProductionBar@RANAVALSC2K:
+	# 	ProductionType: RANaval
+	# 	RequiresCondition: classicproductionqueues
 	Power:
 		Amount: -30
 	ProvidesPrerequisite@buildingname:
@@ -1104,7 +1166,7 @@ SC2KFACTORYFARM:
 		Name: Factory Farm
 	Buildable:
 		Queue: Building, RABuilding
-		Prerequisites: Recycling Center
+		Prerequisites: sc2krecyclingcenter, ~mmsimcity2k
 		BuildPaletteOrder: 60
 		Description: Increases Refinery income by 25%. \nLimit 1.
 		BuildLimit: 1
@@ -1141,7 +1203,7 @@ SC2KOBSERVATORY:
 	Buildable:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 70
-		Prerequisites: Recycling Center
+		Prerequisites: sc2krecyclingcenter, ~mmsimcity2k
 		Description: Reveals the entire map and provides radar.\nLimit 1.
 		BuildLimit: 1
 	Building:
@@ -1158,11 +1220,14 @@ SC2KOBSERVATORY:
 	RenderSprites:
 		Image: sc2kobservatory
 	GpsPower:
-		Icon: gps
+		Icons:
+			1: gps
 		OneShot: true
 		ChargeInterval: 250
-		Name: GPS Satellite
-		Description: Reveals map terrain and provides tactical\ninformation. Requires power and active radar.
+		Names:
+			1: GPS Satellite
+		Descriptions:
+			1: Reveals map terrain and provides tactical\ninformation. Requires power and active radar.
 		RevealDelay: 375
 		#LaunchSpeechNotification: SatelliteLaunched
 		DisplayTimerRelationships: Ally, Neutral, Enemy
@@ -1175,6 +1240,7 @@ SC2KOBSERVATORY:
 		Actor: sc2kabandoned.observatory
 	ProvidesPrerequisite@2:
 		Prerequisite: citylibrary
+
 SC2KTRADECENTER:
 	Inherits: ^BaseBuilding
 	#AcceptsDeliveredExperience:
@@ -1191,7 +1257,7 @@ SC2KTRADECENTER:
 	Buildable:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 80
-		Prerequisites: Recycling Center
+		Prerequisites: sc2krecyclingcenter, ~mmsimcity2k
 		Description: Unlocks the Super mall.\nLimit 1.
 		BuildLimit: 1
 	Building:
@@ -1212,6 +1278,7 @@ SC2KTRADECENTER:
 		Actor: sc2kabandoned.tradecenter
 	ProvidesPrerequisite@2:
 		Prerequisite: citybank
+
 SC2KSUPERMALL:
 	Inherits: ^BaseBuilding
 	#AcceptsDeliveredExperience:
@@ -1228,7 +1295,7 @@ SC2KSUPERMALL:
 	Buildable:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 90
-		Prerequisites: Trade Center
+		Prerequisites: Trade Center, ~mmsimcity2k
 		Description: Shrine of commercialism.\n Provides income.\nLimit 1.\nFragile, explodes when razed.
 		BuildLimit: 1
 	Building:
@@ -1248,7 +1315,7 @@ SC2KSUPERMALL:
 		Image: sc2ksupermall
 	ProvidesPrerequisite@1:
 		Prerequisite: Super Mall
-	Explodes@1:
+	FireWarheadsOnDeath@1:
 		Weapon: ReactorNuke
 	SpawnActorOnDeath@hole:
 		Actor: sc2kabandoned.supermall
@@ -1269,7 +1336,7 @@ SC2KUBERMALL:
 	Buildable:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 100
-		Prerequisites: Super Mall
+		Prerequisites: Super Mall, ~mmsimcity2k
 		Description: Ultimate commercial firm.\nProvides major income.\nLimit 1.\nFragile, explodes when razed.
 		BuildLimit: 1
 	Building:
@@ -1287,10 +1354,11 @@ SC2KUBERMALL:
 	CashTrickler:
 		Amount: 700
 		Interval: 200
-	Explodes@1:
+	FireWarheadsOnDeath@1:
 		Weapon: ReactorNuke
 	SpawnActorOnDeath@hole:
 		Actor: sc2kabandoned.ubermall
+
 SC2KMISSILESILO:
 	Inherits: ^BaseBuilding
 	Inherits@IDISABLE: ^DisabledOverlay
@@ -1328,27 +1396,35 @@ SC2KMISSILESILO:
 	#	HasMinibib: true
 	Power:
 		Amount: -200
-	NukePower:
+	NukePowerCA:
 		AllowMultiple: True
 		PauseOnCondition: lowpower
-		Prerequisites: ~techlevel.superweapons
+		Prerequisites:
+			1: ~techlevel.superweapons
 		Cursor: nuke
-		Icon: abomb
+		Icons:
+			1: abomb
 		ChargeInterval: 9000
-		Name: Atom Bomb
-		Description: Launches a devastating atomic bomb\nat a target location.
+		Names:
+			1: Atom Bomb
+		Descriptions:
+			1: Launches a devastating atomic bomb at a target location.
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
 		EndChargeSpeechNotification: NuclearWeaponAvailable
 		LaunchSpeechNotification: NuclearWeaponLaunched
 		IncomingSpeechNotification: NuclearWarheadApproaching
-		MissileWeapon: raatomic
+		MissileWeapons:
+			1: raatomic
 		MissileDelay: 5
 		SpawnOffset: 1c0,427,0
 		DisplayTimerRelationships: Ally, Neutral, Enemy
 		DisplayBeacon: True
 		DisplayRadarPing: True
-		BeaconPoster: raatomicon
+		BeaconPosters:
+			1: raatomicon
+		CircleRanges:
+			1: 10000
 		CameraRange: 10c0
 		ArrowSequence: arrow
 		ClockSequence: clock
@@ -1395,13 +1471,13 @@ SC2KPOLICEDEPT:
 		ExitCell: 1,2
 	ProvidesPrerequisite@buildingname:
 	Production@NORMAL:
-		Produces: Infantry
-		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RAInfantry
-		RequiresCondition: classicproductionqueues
+		Produces: Infantry.Sc2k
+	# 	RequiresCondition: !classicproductionqueues
+	# Production@CLASSICPRODUCTIONQUEUES:
+	# 	Produces: RAInfantry
+	# 	RequiresCondition: classicproductionqueues
 	ProductionQueue:
-		Type: Infantry
+		Type: Infantry.Sc2k
 		DisplayOrder: 2
 		Group: Infantry
 		LowPowerModifier: 300
@@ -1412,11 +1488,11 @@ SC2KPOLICEDEPT:
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
 	ProductionBar@INFANTRYPOLICE:
-		ProductionType: Infantry
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@RAINFANTRYPOLICE:
-		ProductionType: Infantry
-		RequiresCondition: classicproductionqueues
+		ProductionType: Infantry.Sc2k
+	# 	RequiresCondition: !classicproductionqueues
+	# ProductionBar@RAINFANTRYPOLICE:
+	# 	ProductionType: Infantry
+	# 	RequiresCondition: classicproductionqueues
 	-WithDeathAnimation:
 
 SC2KFIREDEPT:
@@ -1454,13 +1530,13 @@ SC2KFIREDEPT:
 	ProvidesPrerequisite@2:
 		Prerequisite: barracks
 	Production@NORMAL:
-		Produces: Vehicle
-		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RAVehicle
-		RequiresCondition: classicproductionqueues
+		Produces: Vehicle.Sc2k
+	# 	RequiresCondition: !classicproductionqueues
+	# Production@CLASSICPRODUCTIONQUEUES:
+	# 	Produces: RAVehicle
+	# 	RequiresCondition: classicproductionqueues
 	ProductionQueue:
-		Type: Vehicle
+		Type: Vehicle.Sc2k
 		DisplayOrder: 3
 		Group: Vehicle
 		LowPowerModifier: 300
@@ -1471,11 +1547,11 @@ SC2KFIREDEPT:
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
 	ProductionBar@INFANTRYFIREDEPT:
-		ProductionType: Vehicle
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@RAINFANTRYFIREDEPT:
-		ProductionType: RAVehicle
-		RequiresCondition: classicproductionqueues
+		ProductionType: Vehicle.Sc2k
+	# 	RequiresCondition: !classicproductionqueues
+	# ProductionBar@RAINFANTRYFIREDEPT:
+	# 	ProductionType: RAVehicle
+	# 	RequiresCondition: classicproductionqueues
 	-WithDeathAnimation:
 
 SC2KHOSPITAL:
@@ -1515,7 +1591,6 @@ SC2KMCV:
 	Inherits@EXT: ^ExternalConditions
 	Inherits@mcv: ^MCV
 	Inherits@shadow: ^ScavShadow
-	Inherits@conyard: ^Conyard
 	Valued:
 		Cost: 3500
 	Tooltip:
@@ -1547,8 +1622,8 @@ SC2KMCV:
 	SelectionDecorations:
 	RenderSprites:
 		Image: citypolicecar
-	ProvidesPrerequisite@faction:
-		Prerequisite: mmsimcity
+	# ProvidesPrerequisite@faction:
+	# 	Prerequisite: mmsimcity2k
 	#icon: citymayoricon.shp
 	#	AddExtension: False
 
@@ -1563,9 +1638,9 @@ SC2KFIRE:
 	Inherits@shadow: ^ScavShadow
 	Inherits@elemental: ^FireActor
 	Buildable:
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Sc2k
 		BuildPaletteOrder: 20
-		Description: Burning.
+		Description: Burning fire.
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -1611,7 +1686,7 @@ SC2KTORNADO:
 	Selectable:
 		Bounds: 131072, 262144
 	Buildable:
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Sc2k
 		BuildPaletteOrder: 20
 		Description: Sucks and eats everything in its way.
 	Valued:
@@ -1650,9 +1725,9 @@ SC2KMOB:
 	Inherits@EXT: ^ExternalConditions
 	Inherits@shadow: ^ScavShadow
 	Buildable:
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Sc2k
 		BuildPaletteOrder: 20
-		Description: Rioting.\nArmed with molotovs
+		Description: Rioting Citizen. Armed with molotovs.
 	ChangesHealth:
 		PercentageStep: 5
 		Delay: 75
@@ -1702,7 +1777,7 @@ SC2K_THUNDERCLOUD_MAIN:
 	Selectable:
 		Bounds: 131072, 87381
 	Buildable:
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Sc2k
 		BuildPaletteOrder: 20
 		Description: Mobile tesla coil
 	Valued:
@@ -1718,8 +1793,8 @@ SC2K_THUNDERCLOUD_MAIN:
 		Speed: 150
 		CruiseAltitude: 4c0
 		AltitudeVelocity: 0c100
-	SpawnActorOnDeath:
-		Actor: TRAN.Husk
+	-SpawnActorOnDeath:
+		# Actor: TRAN.Husk
 	RevealsShroud:
 		Range: 7c0
 		Type: GroundPosition
@@ -1759,7 +1834,7 @@ SC2KBULLDOZER:
 	Inherits@EMP: ^FrontalEMP
 	Inherits@shadow: ^ScavShadow
 	Buildable:
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Sc2k
 		BuildPaletteOrder: 20
 		Description: Harvests Tiberium.
 	Harvester:
@@ -1770,6 +1845,8 @@ SC2KBULLDOZER:
 		SearchFromProcRadius: 15
 		SearchFromHarvesterRadius: 8
 		EmptyCondition: no-tiberium
+	StoresResources:
+		Capacity: 20
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -1798,7 +1875,8 @@ SC2KBULLDOZER:
 	RenderSprites:
 
 SC2KJETPLANE:
-	Inherits: ^RAPlane
+	# Inherits: ^RAPlane
+	Inherits: ^RANeutralPlane
 	Inherits@GAINSEXPERIENCE: ^GainsExperience
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	#Inherits@MAYORCALL: ^ExternalConditionsMayorCall
@@ -1807,7 +1885,7 @@ SC2KJETPLANE:
 	#Inherits@EMP: ^FrontalEMP
 	#Inherits@shadow: ^ScavShadow
 	Buildable:
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Sc2k
 		BuildPaletteOrder: 20
 		Description: Crashes into ground targets.
 		BuildDurationModifier: 100
@@ -1859,9 +1937,9 @@ SC2KJETPLANE:
 		Actor: SC2KJetplane.Husk
 	EjectOnDeath:
 		PilotActor: glterror
-	Explodes:
-		Weapon: RA2Terrorist3
-		EmptyWeapon: RA2Terrorist3
+	FireWarheadsOnDeath:
+		Weapon: SimcityTerrorist
+		EmptyWeapon: SimcityTerrorist
 
 SC2KJETPLANE.HUSK:
 	Inherits: ^PlaneHusk
@@ -1885,7 +1963,7 @@ SC2KJETPLANE.HUSK:
 		Type: CenterPosition
 	RenderSprites:
 		Image: sc2kjetplane
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: RA2Terrorist
 		EmptyWeapon: RA2Terrorist
 
@@ -1897,6 +1975,7 @@ SC2KHELICOPTER:
 	Inherits@EMP: ^FrontalEMP
 	Buildable:
 		Queue: Defence, RADefence
+		Prerequisites: ~mmsimcity2k
 		BuildPaletteOrder: 20
 		Description: Good for scouting.
 	Valued:
@@ -1954,8 +2033,7 @@ SC2KCARGOSHIP:
 	Inherits@EXT: ^ExternalConditions
 	Buildable:
 		BuildPaletteOrder: 20
-		Prerequisites:
-		Queue: Naval, RANaval
+		Queue: Naval.Sc2k
 		Description: Cargo ship filled with explosives.
 	Valued:
 		Cost: 500
@@ -1969,7 +2047,7 @@ SC2KCARGOSHIP:
 		Type: Heavy
 	Mobile:
 		Speed: 128
-	Explodes@bomb:
+	FireWarheadsOnDeath@bomb:
 		Weapon: MiniNuke
 		EmptyWeapon: MiniNuke
 		DamageSource: Killer
@@ -2007,7 +2085,7 @@ SC2KPOLICECAR:
 	Inherits@EXT: ^ExternalConditions
 	Inherits@announce: ^AnnounceOnBuild
 	Buildable:
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Sc2k
 		BuildPaletteOrder: 20
 		BuildDuration: 300
 		BuildDurationModifier: 100
@@ -2066,6 +2144,7 @@ SC2KPOLICECAR:
 	WithCargoPipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: true
+
 SC2KFIRETRUCK:
 	Inherits: ^Tank
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -2082,7 +2161,7 @@ SC2KFIRETRUCK:
 		Name: Fire Truck
 	Buildable:
 		BuildPaletteOrder: 20
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Sc2k
 		Description: Truck armed with a water cannon.\n Strong vs Infantry, Buildings\n Increases damage resistance of nearby allied units
 		BuildDuration: 425
 		BuildDurationModifier: 100
@@ -2216,6 +2295,7 @@ SC2KBEACONPOLICE:
 		RespawnTicks: 500
 		ExitByBudding: false
 		AggregateHealth: false
+
 SC2KBEACONFIRE:
 	Inherits: ^Defense
 	Inherits@IDISABLE: ^DisabledOverlay
@@ -2284,6 +2364,7 @@ SC2KBEACONFIRE:
 		RespawnTicks: 400
 		ExitByBudding: false
 		AggregateHealth: false
+
 SC2KBEACONARMY:
 	Inherits: ^Defense
 	Inherits@IDISABLE: ^DisabledOverlay
@@ -2293,7 +2374,7 @@ SC2KBEACONARMY:
 	Buildable:
 		Queue: Defence, RADefence
 		BuildPaletteOrder: 80
-		Prerequisites: Recycling Center, ~selectsimcity2000
+		Prerequisites: sc2krecyclingcenter, ~selectsimcity2000
 		Description: AA defense.\nCan detect cloaked units.\n  Strong vs Aircraft
 	HitShape:
 		UseTargetableCellsOffsets: true
@@ -2377,6 +2458,7 @@ SC2KBEACONARMY:
 		RespawnTicks: 500
 		ExitByBudding: false
 		AggregateHealth: false
+
 sc2kcityfirefighter.defense:
 	Inherits: CITYFIREFIGHTER
 	Inherits@MC: ^MCImmune
@@ -2401,6 +2483,7 @@ sc2kcityfirefighter.defense:
 		Class: sc2kbeaconfire
 	RenderSprites:
 		Image: cityfirefighter
+
 sc2kcitypoliceofficer.defense:
 	Inherits: CITYPOLICEOFFICER
 	Inherits@MC: ^MCImmune
@@ -2445,6 +2528,7 @@ sc2kpolicecar.defense:
 		Class: sc2kbeaconpolice
 	RenderSprites:
 		Image: sc2kpolicecar
+
 sc2kglsite.defense:
 	Inherits: ^Soldier
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
@@ -2547,6 +2631,7 @@ sc2ktank.defense:
 	CashTricklerMultiplier@COMMERCIAL4C:
 		Modifier: 400
 		RequiresCondition: CommercialCash4C
+
 SC2KDOMICILEA1:
 	Inherits: ^BaseBuilding
 	Inherits@IDISABLE: ^DisabledOverlay
@@ -2616,6 +2701,7 @@ SC2KDOMICILEA1:
 		PauseOnCondition: disabled
 		RequiresCondition: city-elite
 	ProvidesPrerequisite@buildingname:
+		Prerequisite: SC2KDOMICILEA1
 	SpawnActorOnDeath@hole:
 		Actor: sc2kabandoned.sc2kdomicilea1
 	GrantRandomCondition@:
@@ -2648,6 +2734,7 @@ SC2KDOMICILEA1:
 		RequiresCondition: !build-incomplete && city-veteran >= 2 && skin3
 		Sequence: skin3c
 	SelectionDecorations:
+
 SC2KDOMICILEB1:
 	Inherits: ^BaseBuilding
 	Inherits@IDISABLE: ^DisabledOverlay
@@ -3171,12 +3258,13 @@ SC2KPOLICEDEPTA:
 		Description: Calls in Police Forces
 	RenderSprites:
 		Image: sc2kpolicedept
+
 SC2KFIREDEPTA:
 	Inherits: SC2KFIREDEPT
 	Buildable:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 50
-		Prerequisites: Recycling Center, ~selectsimcity2000a
+		Prerequisites: sc2krecyclingcenter, ~selectsimcity2000a
 		Description: Calls in Firefighters
 	RenderSprites:
 		Image: sc2kfiredept
@@ -3190,6 +3278,7 @@ SC2KHOSPITALA:
 		Description: Heals nearby units
 	RenderSprites:
 		Image: sc2khospital
+
 sc2k_armyhq:
 	Inherits: ^BaseBuilding
 	Inherits@CPQWP: ^CPQConditionWithPrimary
@@ -3223,13 +3312,13 @@ sc2k_armyhq:
 		ExitCell: 1,2
 	ProvidesPrerequisite@buildingname:
 	Production@NORMAL:
-		Produces: Aircraft
-		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RAAircraft
-		RequiresCondition: classicproductionqueues
+		Produces: Aircraft.Sc2k
+	# 	RequiresCondition: !classicproductionqueues
+	# Production@CLASSICPRODUCTIONQUEUES:
+	# 	Produces: RAAircraft
+	# 	RequiresCondition: classicproductionqueues
 	ProductionQueue:
-		Type: Aircraft
+		Type: Aircraft.Sc2k
 		DisplayOrder: 4
 		Group: Aircraft
 		LowPowerModifier: 300
@@ -3240,11 +3329,11 @@ sc2k_armyhq:
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
 	ProductionBar@INFANTRYPOLICE:
-		ProductionType: Aircraft
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@RAINFANTRYPOLICE:
-		ProductionType: RAAircraft
-		RequiresCondition: classicproductionqueues
+		ProductionType: Aircraft.Sc2k
+	# 	RequiresCondition: !classicproductionqueues
+	# ProductionBar@RAINFANTRYPOLICE:
+	# 	ProductionType: RAAircraft
+	# 	RequiresCondition: classicproductionqueues
 	-WithDeathAnimation:
 
 sc2k_armyvehicle:
@@ -3277,6 +3366,7 @@ sc2k_armyvehicle:
 		SpawnOffset: 512,1024,0
 		ExitCell: 1,2
 	ProvidesPrerequisite@buildingname:
+
 SC2KBEACONPOLICEA:
 	Inherits: SC2KBEACONPOLICE
 	Buildable:
@@ -3303,12 +3393,13 @@ SC2KBEACONARMYA:
 		Prerequisites: sc2k_armyhq, ~selectsimcity2000a
 	RenderSprites:
 		Image: sc2kbeaconarmy
+
 SC2KMISSILESILOA:
 	Inherits: SC2KMISSILESILO
 	Buildable:
 		Queue: Defence, RADefence
 		BuildPaletteOrder: 90
-		Prerequisites: sc2k_armyhq, ~selectsimcity2000
+		Prerequisites: sc2k_armyhq, ~selectsimcity2000a
 		Description: Nuke silo.
 	RenderSprites:
 		Image: sc2kmissilesilo
@@ -3330,7 +3421,7 @@ sc2k_storage:
 	Buildable:
 		Queue: Defence, RADefence
 		BuildPaletteOrder: 10
-		Prerequisites: Recycling Center
+		Prerequisites: sc2krecyclingcenter, ~mmsimcity2k
 		Description: Stores excess refined\nOre and Gems.
 	Building:
 		Footprint: x
@@ -3360,6 +3451,7 @@ sc2k_storage:
 		RequiresSelection: true
 		PipCount: 5
 		FullSequence: pip-yellow
+
 sc2kabandoned.sc2k_storage:
 	Inherits: ^SC2KABANDONED
 	RenderSprites:
@@ -3432,64 +3524,95 @@ SC2KFACTORYDISASTERA:
 		OrderName: SC2KSpawnActor_SimcityMob
 		Cursor: ability
 		PauseOnCondition: lowpower
-		Icon: chromesc2kmob
-		Name: Mob Disaster
-		Description: Deploys the fire disaster in enemies base
+		Icons:
+			1: chromesc2kmob
+		Names:
+			1: Mob Disaster
+		Descriptions:
+			1: Deploys the fire disaster in enemies base
+		TargetCircleRange:
+			1: 3000
 		DisplayRadarPing: True
 		ChargeInterval: 4000
-		Weapon: SpawnActor_SimcityMob
+		Weapons:
+			1: SpawnActor_SimcityMob
 		CameraActor: camera.small
 		CameraRemoveDelay: 60
 	DetonateWeaponPower@fire:
 		OrderName: SC2KSpawnActor_Fire
 		Cursor: ability
 		PauseOnCondition: lowpower
-		Icon: chromesc2kfire
-		Name: Fire Disaster
-		Description: Deploys the fire disaster in enemies base
+		Icons:
+			1: chromesc2kfire
+		Names:
+			1: Fire Disaster
+		Descriptions:
+			1: Deploys the fire disaster in enemies base
+		TargetCircleRange:
+			1: 3000
 		DisplayRadarPing: True
 		ChargeInterval: 4000
-		Weapon: SpawnActor_Fire
+		Weapons:
+			1: SpawnActor_Fire
 		CameraActor: camera.small
 		CameraRemoveDelay: 60
 	DetonateWeaponPower@tornado:
 		OrderName: SC2KSpawnActor_Tornado
 		Cursor: ability
 		PauseOnCondition: lowpower
-		Icon: chromesc2ktornado
-		Name: Tornado Disaster
-		Description: Deploys the tornado disaster with enemies aircraft
+		Icons:
+			1: chromesc2ktornado
+		Names:
+			1: Tornado Disaster
+		Descriptions:
+			1: Deploys the tornado disaster with enemies aircraft
 		DisplayRadarPing: True
 		ChargeInterval: 4500
-		Weapon: SpawnActor_Tornado
+		Weapons:
+			1: SpawnActor_Tornado
+		TargetCircleRange:
+			1: 3000
 		CameraActor: camera.small
 		CameraRemoveDelay: 60
 	DetonateWeaponPower@thunder:
 		OrderName: SC2KSpawnActor_Thundercloud
 		Cursor: ability
 		PauseOnCondition: lowpower
-		Icon: chromesc2kthundercloud
-		Name: Thundercloud Disaster
-		Description: Deploys the Thundercloud disaster in enemies base
+		Icons:
+			1: chromesc2kthundercloud
+		Names:
+			1: Thundercloud Disaster
+		Descriptions:
+			1: Deploys the Thundercloud disaster in enemies base
+		TargetCircleRange:
+			1: 3000
 		DisplayRadarPing: True
 		ChargeInterval: 5000
-		Weapon: SpawnActor_Thundercloud
+		Weapons:
+			1: SpawnActor_Thundercloud
 		CameraActor: camera.small
 		CameraRemoveDelay: 60
 	DetonateWeaponPower@ufo:
 		OrderName: SC2KSpawnActor_SimcityUFO
 		Cursor: ability
 		PauseOnCondition: lowpower
-		Icon: chromesc2krobot
-		Name: UFO Disaster
-		Description: Deploys the Thundercloud disaster in enemies base
+		Icons:
+			1: chromesc2krobot
+		Names:
+			1: UFO Disaster
+		Descriptions:
+			1: Deploys the Thundercloud disaster in enemies base
+		TargetCircleRange:
+			1: 3000
 		DisplayRadarPing: True
 		ChargeInterval: 8500
-		Weapon: SpawnActor_SimcityUFO
+		Weapons:
+			1: SpawnActor_SimcityUFO
 		CameraActor: camera.small
 		CameraRemoveDelay: 60
 	RenderSprites:
 		Image: sc2kfactorydisaster
+
 SC2KABANDONED.FACTORYDISASTERA:
 	Inherits: ^SC2KABANDONED
 	RenderSprites:
@@ -3519,7 +3642,7 @@ sc2kae1:
 	Buildable:
 		BuildPaletteOrder: 10
 		Prerequisites: sc2k_armyhq
-		Queue: Aircraft, RAAircraft
+		Queue: Aircraft.Sc2k
 	RenderSprites:
 		Image: e1
 
@@ -3530,7 +3653,7 @@ sc2kae3:
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: sc2k_armyhq
-		Queue: Aircraft, RAAircraft
+		Queue: Aircraft.Sc2k
 	RenderSprites:
 		Image: e3
 
@@ -3543,7 +3666,7 @@ sc2kajeep:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
-		Queue: Aircraft, RAAircraft
+		Queue: Aircraft.Sc2k
 		Prerequisites: sc2k_armyvehicle, ~selectsimcity2000a
 	RenderSprites:
 		Image: jeep
@@ -3557,7 +3680,7 @@ sc2kamtnk:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
-		Queue: Aircraft, RAAircraft
+		Queue: Aircraft.Sc2k
 		Description: General-Purpose Tank.\n  Strong vs Tanks, Vehicles\n  Weak vs Infantry
 		Prerequisites: sc2k_armyvehicle, ~selectsimcity2000a
 	RenderSprites:
@@ -3612,7 +3735,7 @@ sc2k_ufo:
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: ~disabled, ~techlevel.medium
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Sc2k
 		Description: Helicopter Gunship with AG Missiles.\n  Strong vs Buildings, Tanks\n  Weak vs Infantry
 	Aircraft:
 		TurnSpeed: 28
@@ -3704,6 +3827,7 @@ sc2k_ufo:
 	Armament@crash:
 		Weapon: StreetSimcity_Crash
 		RequiresCondition: !chromesc2kmachinegun && !chromesc2kmissile
+
 sc2k_streetrat:
 	Inherits: ^Vehicle
 	Inherits@EXPERIENCE: ^GainsExperienceVehicle
@@ -3721,7 +3845,7 @@ sc2k_streetrat:
 		BuildPaletteOrder: 30
 		BuildLimit: 1
 		Prerequisites: Trade Center
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Sc2k
 		Description: Fast car, armed and upgradable\nupgradable with rockets.\nupgradable with machineguns
 	Mobile:
 		TurnSpeed: 64
@@ -3757,7 +3881,7 @@ sc2k_utilityvan:
 		BuildPaletteOrder: 30
 		BuildLimit: 1
 		Prerequisites: Trade Center
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Sc2k
 		Description: Tanky Truck, armed and upgradable\nupgradable with rockets.\nupgradable with machineguns
 	Mobile:
 		TurnSpeed: 32
@@ -3793,7 +3917,7 @@ sc2k_j57:
 		BuildPaletteOrder: 30
 		BuildLimit: 1
 		Prerequisites: Trade Center
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Sc2k
 		Description: Faster Classic car, armed and upgradable\nupgradable with rockets.\nupgradable with machineguns
 	Mobile:
 		TurnSpeed: 64
@@ -3811,6 +3935,7 @@ sc2k_j57:
 	Inherits@EXT: ^ExternalConditions ##########
 	AcceptsDeliveredExperience: ##########
 		ValidTypes: vehicle ##########
+
 sc2k_airhawk:
 	Inherits: ^Vehicle
 	Inherits@EXPERIENCE: ^GainsExperienceVehicle
@@ -3828,7 +3953,7 @@ sc2k_airhawk:
 		BuildPaletteOrder: 30
 		BuildLimit: 1
 		Prerequisites: Trade Center
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Sc2k
 		Description: Faster Muscle car, armed and upgradable\nupgradable with rockets.\nupgradable with machineguns
 	Mobile:
 		TurnSpeed: 60
@@ -3853,7 +3978,7 @@ chromesc2kengine1:
 		Name: Small Engine
 	Buildable:
 		BuildPaletteOrder: 200
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Sc2k
 		Description: Increases speed of simcity cars.
 		Prerequisites: Trade Center
 	Valued:
@@ -3869,7 +3994,7 @@ chromesc2kengine2:
 		Name: Medium Engine
 	Buildable:
 		BuildPaletteOrder: 200
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Sc2k
 		Description: Increases speed of simcity cars.
 		Prerequisites: chromesc2kengine1
 	Valued:
@@ -3885,7 +4010,7 @@ chromesc2kengine3:
 		Name: Big Engine
 	Buildable:
 		BuildPaletteOrder: 200
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Sc2k
 		Description: Increases speed of simcity cars.
 		Prerequisites: chromesc2kengine2
 	Valued:
@@ -3901,7 +4026,7 @@ chromesc2karmor:
 		Name: Armor
 	Buildable:
 		BuildPaletteOrder: 200
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Sc2k
 		Description: Increases health of simcity cars.
 		Prerequisites: Trade Center
 	Valued:
@@ -3917,7 +4042,7 @@ chromesc2kshield:
 		Name: Shield
 	Buildable:
 		BuildPaletteOrder: 200
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Sc2k
 		Description: Increases health of simcity cars.
 		Prerequisites: Trade Center
 	Valued:
@@ -3933,7 +4058,7 @@ chromesc2kmachinegun:
 		Name: Machinegun
 	Buildable:
 		BuildPaletteOrder: 200
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Sc2k
 		Description: Adds a Machinegun to simcity cars.
 		Prerequisites: Trade Center
 	Valued:
@@ -3949,7 +4074,7 @@ chromesc2kmissile:
 		Name: Missile
 	Buildable:
 		BuildPaletteOrder: 200
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Sc2k
 		Description: Adds a Missile Launcher to simcity cars.
 		Prerequisites: Trade Center
 	Valued:
