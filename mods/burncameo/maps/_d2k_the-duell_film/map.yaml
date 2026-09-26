@@ -1,0 +1,131 @@
+MapFormat: 12
+
+RequiresMod: burncameo
+
+Title: The Duell Filming
+
+Author: CombineCnR
+
+Tileset: ARRAKIS
+
+MapSize: 136,136
+
+Bounds: 16,16,104,104
+
+Visibility: Lobby
+
+Categories: Conquest_D2K
+
+Players:
+	PlayerReference@Neutral:
+		Name: Neutral
+		OwnsWorld: True
+		NonCombatant: True
+		Faction: atreides
+	PlayerReference@Multi0:
+		Name: Multi0
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+	PlayerReference@Multi1:
+		Name: Multi1
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+	PlayerReference@Creeps:
+		Name: Creeps
+		NonCombatant: True
+		Faction: atreides
+		Enemies: Multi0, Multi1
+
+Actors:
+	Actor0: spicebloom.spawnpoint
+		Location: 106,116
+		Owner: Neutral
+	Actor1: spicebloom.spawnpoint
+		Location: 115,109
+		Owner: Neutral
+	Actor2: spicebloom.spawnpoint
+		Location: 20,29
+		Owner: Neutral
+	Actor3: spicebloom.spawnpoint
+		Location: 26,20
+		Owner: Neutral
+	Actor4: mpspawn
+		Location: 37,38
+		Owner: Neutral
+	Actor10: spicebloom.spawnpoint
+		Location: 23,107
+		Owner: Neutral
+	Actor11: spicebloom.spawnpoint
+		Location: 111,29
+		Owner: Neutral
+	Actor12: mpspawn
+		Location: 101,101
+		Owner: Neutral
+	Actor5: wormspawner
+		Location: 16,119
+		Owner: Creeps
+	Actor13: wormspawner
+		Location: 16,59
+		Owner: Creeps
+	Actor15: wormspawner
+		Location: 66,16
+		Owner: Creeps
+	Actor16: wormspawner
+		Location: 119,63
+		Owner: Creeps
+	Actor17: wormspawner
+		Location: 64,119
+		Owner: Creeps
+	Actor18: wormspawner
+		Location: 119,16
+		Owner: Creeps
+	Actor14: spicebloom.spawnpoint
+		Owner: Neutral
+		Location: 66,69
+	Actor32: spicebloom.spawnpoint
+		Owner: Neutral
+		Location: 74,71
+	Actor33: spicebloom.spawnpoint
+		Owner: Neutral
+		Location: 72,67
+	Actor40: spicebloom.spawnpoint
+		Owner: Neutral
+		Location: 69,72
+	Actor19: glbombtruck
+		Owner: Multi0
+		Facing: 384
+		Location: 69,68
+	Actor20: glbombtruck
+		Owner: Multi0
+		Facing: 384
+		Location: 70,68
+	Actor21: glbombtruck
+		Owner: Multi0
+		Facing: 384
+		Location: 71,68
+	Actor22: glbombtruck
+		Owner: Multi0
+		Facing: 384
+		Location: 72,68
+	Actor23: dtrk
+		Owner: Multi1
+		Facing: 384
+		Location: 69,71
+	Actor24: dtrk
+		Owner: Multi1
+		Facing: 384
+		Location: 70,71
+	Actor25: dtrk
+		Owner: Multi1
+		Facing: 384
+		Location: 71,71
+	Actor26: dtrk
+		Owner: Multi1
+		Facing: 384
+		Location: 72,71
+	Actor27: glbombtruck
+		Owner: Multi0
+		Facing: 384
+		Location: 68,68

@@ -1005,10 +1005,10 @@ halloween_skeleton_archer:
 		Filename: halloween_skeleton_archer.shp
 	Inherits: ^InfantryOverlays
 	stand:
-		Facings: 8
+		Facings: -8
 		Length: 15
 	stand2:
-		Facings: 8
+		Facings: -8
 		Length: 15
 	run:
 		Start: 120
@@ -1016,9 +1016,9 @@ halloween_skeleton_archer:
 		Facings: -8
 		Tick: 100
 	shoot:
-		Start: 200
+		Start: 199
 		Length: 11
-		Facings: 8
+		Facings: -8
 		Tick: 100
 	prone-stand:
 		Facings: 8
