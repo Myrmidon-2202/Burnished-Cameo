@@ -49,6 +49,7 @@ WH40KLemanMG:
 			Light: 24
 			Heavy: 12
 		ValidTargets: Ground, Air
+
 WH40KOgrynPunch:
 	ReloadDelay: 60
 	Report: galiatta.aud, galiattb.aud
@@ -64,6 +65,7 @@ WH40KOgrynPunch:
 			Wood: 15
 			Concrete: 20
 		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath
+
 WH40KOgrynGun:
 	Inherits: WH40KPlasmapistol
 	Report: wh40kbiggun.aud
@@ -78,6 +80,7 @@ WH40KOgrynGun:
 	Projectile: Bullet
 		Speed: 800
 		Image: wh40kreaplasgun
+
 WH40KImperialGuardMG:
 	Inherits: M16
 	Inherits@Laserzap: ^WH40KMGs
@@ -99,6 +102,7 @@ WH40KImperialGuardMGG:
 	Range: 7c0
 	Warhead@1Dam: SpreadDamage
 		Damage: 150
+
 WH40KKasrkinMG:
 	Inherits: WH40KImperialGuardMG
 	Range: 6c0
@@ -106,6 +110,7 @@ WH40KKasrkinMG:
 		Damage: 300
 	Projectile: LaserZap
 		Width: 30
+
 WH40KKasrkinMGG:
 	Inherits: WH40KKasrkinMG
 	ReloadDelay: 15
@@ -124,6 +129,7 @@ WH40KChimeraMGG:
 		Damage: 1500
 	Projectile: LaserZap
 		Width: 44
+
 WH40KBaneBeamWeapon:
 	Range: 7c0
 	ReloadDelay: 15
@@ -149,11 +155,13 @@ WH40KHeavyBolterMG:
 	Range: 7c0
 	Warhead@1Dam: SpreadDamage
 		Damage: 1000
+
 WH40KHeavyBolterMG2:
 	Inherits: MachineGun
 	Report: wh40kturretmg.aud
 	ReloadDelay: 6
 	Range: 7c0
+
 WH40KHeavyBolterMG3:
 	Inherits: WH40KImperialGuardMG
 	Report: wh40kturretmg.aud
@@ -161,6 +169,7 @@ WH40KHeavyBolterMG3:
 	Range: 7c0
 	Warhead@1Dam: SpreadDamage
 		Damage: 1100
+
 WH40KHeavyBolterMG4:
 	Inherits: WH40KImperialGuardMG
 	Report: wh40kturretmg.aud

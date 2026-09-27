@@ -9,19 +9,19 @@ World:
 		Class: none
 		ClassName: MCV Only
 		Factions: infection
-		BaseActor: bio
+		BaseActor: zbio
 		SupportActors: civzombie.infect, civzombie.infect, civzombie.infect, civzombie.infect, civzombie.infect, zombie1.infect, zombie1.infect, zombie2.infect
 	StartingUnits@defaultinfection:
 		Class: light
 		ClassName: Light Support
 		Factions: infection
-		BaseActor: bio
+		BaseActor: zbio
 		SupportActors: civzombie.infect, civzombie.infect, civzombie.infect, civzombie.infect, civzombie.infect, zombie1.infect, zombie1.infect, zombie1.infect, zombie1.infect, zombie2.infect, zombie1.infect, zombie1.infect, zombie2.infect, zombie2.infect
 	StartingUnits@heavyinfection:
 		Class: heavy
 		ClassName: Heavy Support
 		Factions: infection
-		BaseActor: bio
+		BaseActor: zbio
 		SupportActors: civzombie.infect, civzombie.infect, civzombie.infect, civzombie.infect, civzombie.infect, zombie1.infect, zombie1.infect, zombie1.infect, zombie1.infect, civzombie.infect, civzombie.infect, zombie1.infect, zombie2.infect, zombie2.infect, zombie1.infect, zombie1.infect, zombie2.infect, zombie2.infect, zombie2.infect
 
 Player:
@@ -60,74 +60,103 @@ zbio:
 	Inherits@AUTOTARGET: ^AutoTargetAir
 	Inherits@CPQ: ^CPQConditionWithPrimary
 	Inherits@aicash: ^AIConyardCash
-	Inherits@conyard: ^Conyard
+	Inherits@barrack: ^IsBarrackOld
 	Inherits@shape: ^2x2Shape
+	Buildable:
+		Queue:
 	DetonateWeaponPower@ZombieInfect:
 		OrderName: ZombieToxins
 		Cursor: ability
-		Icon: glanthraxbomb
-		Name: Corona Virus
-		Description: Spreads Covid-19 to turn humans into Zombies.
+		Prerequisites:
+			1: upzmsquad1
+		Icons:
+			1: glanthraxbomb
+		Names:
+			1: Corona Virus
+		Descriptions:
+			1: Spreads Covid-19 to turn humans into Zombies.
 		IncomingSpeechNotification: EnemyUnitsApproaching
 		SelectTargetSpeechNotification: SelectTarget
 		DisplayRadarPing: True
 		ChargeInterval: 3000
 		ActivationDelay: 50
-		Weapon: InfectToxicSpawner
-		CameraActor: camera
+		Weapons:
+			1: InfectToxicSpawner
+		CameraActors: camera
 		CameraRemoveDelay: 250
 		DisplayBeacon: True
 		ArrowSequence: arrow
 		ClockSequence: clock
 		CircleSequence: circles
-		BeaconPoster: rapinficon
+		BeaconPosters:
+			1: rapinficon
 		StartFullyCharged: true
-		RequiresCondition: upzmsquad1
+		# RequiresCondition: upzmsquad1
 		DisplayTimerStances: Ally, Neutral, Enemy
+		TargetCircleRange:
+			1: 6000
 	DetonateWeaponPower@ZombieAmbush:
 		OrderName: ZombieAmbush
 		Cursor: ability
-		Icon: glambush3
-		Name: Aircraft Crash
-		Description: Spawns a large Zombie squad.
+		Prerequisites:
+			1: upzmsquad2
+		Icons:
+			1: glambush3
+		Names:
+			1: Aircraft Crash
+		Descriptions:
+			1: Spawns a large Zombie squad.
 		IncomingSpeechNotification: EnemyUnitsApproaching
 		SelectTargetSpeechNotification: SelectTarget
 		DisplayRadarPing: True
 		ChargeInterval: 4500
 		ActivationDelay: 50
-		Weapon: InfectAmbushSpawner
+		Weapons:
+			1: InfectAmbushSpawner
 		CameraActor: camera
 		CameraRemoveDelay: 250
 		DisplayBeacon: True
 		ArrowSequence: arrow
 		ClockSequence: clock
 		CircleSequence: circles
-		BeaconPoster: rapinficon
+		BeaconPosters:
+			1: rapinficon
 		StartFullyCharged: false
-		RequiresCondition: upzmsquad2
+		# RequiresCondition: upzmsquad2
 		DisplayTimerStances: Ally, Neutral, Enemy
+		TargetCircleRange:
+			1: 6000
 	DetonateWeaponPower@ZombieAmbush2:
 		OrderName: ZombieAmbush2
 		Cursor: ability
-		Icon: glambush3
-		Name: SpaceShip Crash
-		Description: Spawns a large Zombie and Monster squad.
+		Prerequisites:
+			1: upzmsquad3
+		Icons:
+			1: glambush3
+		Names:
+			1: Zepplin Crash
+		Descriptions:
+			1: Spawns a large Zombie and Monster squad.
 		IncomingSpeechNotification: EnemyUnitsApproaching
 		SelectTargetSpeechNotification: SelectTarget
 		DisplayRadarPing: True
 		ChargeInterval: 7500
 		ActivationDelay: 75
-		Weapon: InfectAmbushSpawner2
+		Weapons:
+			1: InfectAmbushSpawner2
 		CameraActor: camera
 		CameraRemoveDelay: 250
 		DisplayBeacon: True
 		ArrowSequence: arrow
 		ClockSequence: clock
 		CircleSequence: circles
-		BeaconPoster: rapinficon
+		BeaconPosters:
+			1: rapinficon
 		StartFullyCharged: false
-		RequiresCondition: upzmsquad3
+		# RequiresCondition: upzmsquad3
 		DisplayTimerStances: Ally, Neutral, Enemy
+		TargetCircleRange:
+			1: 6000
 	BaseBuilding:
 	MustBeDestroyed:
 		RequiredForShortGame: true
@@ -137,7 +166,7 @@ zbio:
 	Valued:
 		Cost: 5000
 	Health:
-		HP: 500000
+		HP: 800000
 	DamageMultiplier@Armor:
 		Modifier: 50
 	Power:
@@ -148,8 +177,8 @@ zbio:
 		StartIfBelow: 100
 		DamageCooldown: 1
 	CashTrickler:
-		Interval: 250
-		Amount: 1000
+		Interval: 150
+		Amount: 3000
 	Armor:
 		Type: Concrete
 	BaseProvider:
@@ -180,9 +209,9 @@ zbio:
 		SpawnOffset: 0,-426,0
 		ExitCell: 1,0
 	Production:
-		Produces: Infantry
+		Produces: Infantry.Infected
 	ProductionQueue:
-		Type: Infantry
+		Type: Infantry.Infected
 		Group: Infantry
 		LowPowerModifier: 200
 		ReadyAudio: UnitReady
@@ -192,35 +221,37 @@ zbio:
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
 	ProductionBar:
-		ProductionType: Infantry
+		ProductionType: Infantry.Infected
 	RallyPoint:
 	ProvidesPrerequisite@buildingname:
+		Prerequisite: zbio
 	RenderSprites:
-		Image: bio
+		Image: zbio
+		PlayerPalette: raplayer
 	GpsDot:
 		String: Biohazard
-	Explodes@1:
+	FireWarheadsOnDeath@1:
 		Weapon: RA2Atomic
 		EmptyWeapon: RA2Atomic
-	Explodes@bomb:
+	FireWarheadsOnDeath@bomb:
 		Weapon: RA2DemoBomb
 		EmptyWeapon: RA2DemoBomb
-	Explodes@2:
+	FireWarheadsOnDeath@2:
 		Weapon: GLAnthraxGreen
 		EmptyWeapon: GLAnthraxGreen
-	Explodes@3:
+	FireWarheadsOnDeath@3:
 		Weapon: GLAnthraxBlue
 		EmptyWeapon: GLAnthraxBlue
-	Explodes@4:
+	FireWarheadsOnDeath@4:
 		Weapon: GLAnthraxPurple
 		EmptyWeapon: GLAnthraxPurple
-	Explodes@5:
+	FireWarheadsOnDeath@5:
 		Weapon: GLAnthraxLarge
 		EmptyWeapon: GLAnthraxLarge
-	Explodes@6:
+	FireWarheadsOnDeath@6:
 		Weapon: GLAnthraxBlueLarge
 		EmptyWeapon: GLAnthraxBlueLarge
-	Explodes@6:
+	FireWarheadsOnDeath@6:
 		Weapon: GLAnthraxPurpleLarge
 		EmptyWeapon: GLAnthraxPurpleLarge
 	AttackTurreted:
@@ -234,11 +265,53 @@ zbio:
 	DetectCloaked:
 		Range: 10c0
 	RangeMultiplier:
-		Modifier: 333
+		Modifier: 600
 	FirepowerMultiplier:
-		Modifier: 333
-	ReloadDelayMultiplier@WC2HASTE:
+		Modifier: 200
+	ReloadDelayMultiplier:
 		Modifier: 33
+	ProductionCostMultiplier:
+		Multiplier: 120
+	# -Transforms:
+	# -TransformsIntoMobile:
+	# -TransformsIntoPassenger:
+	# -TransformsIntoRepairable:
+	# -TransferTimedExternalConditionOnTransform:
+
+Zombie:
+	Inherits: ^Soldier
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Valued:
+		Cost: 100
+	Tooltip:
+		Name: Zombie
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Buildable:
+		Queue: Infantry
+		BuildAtProductionType: Soldier
+		BuildPaletteOrder: 200
+		Prerequisites: ~barracks, ~bio
+		Description: Basic Zombie
+	Health:
+		HP: 25000
+	Mobile:
+		Speed: 39
+	AutoTarget:
+		ScanRadius: 5
+	WithInfantryBody:
+		DefaultAttackSequence: bite
+		IdleSequences: idle1
+		RequiresCondition: !parachute
+	WithInfantryBody@PARACHUTE:
+		RequiresCondition: parachute
+		Palette: player-noshadow
+		IsPlayerPalette: true
+	Armament:
+		Weapon: claw
+	Voiced:
+		VoiceSet: AntVoice
+	-TakeCover:
 
 civzombie.infect:
 	Inherits: civzombie
@@ -264,7 +337,7 @@ zombie2.infect:
 	Inherits: ZOMBIE2
 	Inherits@Infect: ^InfectionGamemode
 	Buildable:
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Infected
 		BuildPaletteOrder: 10
 		BuildDuration: 125
 		BuildDurationModifier: 100
@@ -287,7 +360,7 @@ zombie.squad:
 	Inherits@bot: ^BotMicromanageable
 	Inherits@2: ^CashTricklerMultipliers
 	Inherits@XP: ^GainsExperienceCity
-	Inherits: ^Conyard
+	# Inherits: ^Conyard
 	-AppearsOnRadar:
 	OwnerLostAction:
 		Action: Kill
@@ -297,16 +370,16 @@ zombie.squad:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Valued:
-		Cost: 10000
+		Cost: 4000
 	Buildable:
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Infected
 		BuildPaletteOrder: 1
-		BuildDuration: 1500
+		BuildDuration: 750
 		BuildDurationModifier: 100
 		Prerequisites:
 		BuildLimit: 8
 	Health:
-		HP: 100
+		HP: 200
 	ChangesHealth:
 		Step: -100
 		Delay: 1
@@ -632,7 +705,7 @@ upzombiemutate1:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
 		Description: zombies have +20% more hp.
-		Prerequisites: ~!upzombiemutate1
+		Prerequisites: ~!upzombiemutate1, ~zbio
 		BuildDuration: 500
 		BuildDurationModifier: 100
 	Valued:
@@ -650,7 +723,7 @@ upzombiemutate2:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
 		Description: zombies have +20% more hp.
-		Prerequisites: ~!upzombiemutate2, upzombiemutate1
+		Prerequisites: ~!upzombiemutate2, upzombiemutate1, ~zbio
 		BuildDuration: 1000
 		BuildDurationModifier: 100
 	Valued:
@@ -668,7 +741,7 @@ upzombiemutate3:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
 		Description: zombies have +20% more hp.
-		Prerequisites: ~!upzombiemutate3, upzombiemutate2
+		Prerequisites: ~!upzombiemutate3, upzombiemutate2, ~zbio
 		BuildDuration: 1500
 		BuildDurationModifier: 100
 	Valued:
@@ -686,7 +759,7 @@ upzombiemutate4:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
 		Description: zombies have +10% more hp.
-		Prerequisites: ~!upzombiemutate4, upzintelligence3, upzombiemutate3
+		Prerequisites: ~!upzombiemutate4, upzintelligence3, upzombiemutate3, ~zbio
 		BuildDuration: 2000
 		BuildDurationModifier: 100
 	Valued:
@@ -704,7 +777,7 @@ upzombiemutate5:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
 		Description: zombies have +10% more hp.
-		Prerequisites: ~!upzombiemutate5, upzombiemutate4
+		Prerequisites: ~!upzombiemutate5, upzombiemutate4, ~zbio
 		BuildDuration: 2500
 		BuildDurationModifier: 100
 	Valued:
@@ -722,7 +795,7 @@ upzombiemutate6:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
 		Description: zombies have +10% more hp.
-		Prerequisites: ~!upzombiemutate6, upzombiemutate5
+		Prerequisites: ~!upzombiemutate6, upzombiemutate5, ~zbio
 		BuildDuration: 3000
 		BuildDurationModifier: 100
 	Valued:
@@ -740,7 +813,7 @@ upzintelligence1:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
 		Description: zombies have +10% more speed.
-		Prerequisites: ~!upzintelligence1, upzombiemutate1
+		Prerequisites: ~!upzintelligence1, upzombiemutate1, ~zbio
 		BuildDuration: 1500
 		BuildDurationModifier: 100
 	Valued:
@@ -758,7 +831,7 @@ upzintelligence2:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
 		Description: zombies have +10% more speed.
-		Prerequisites: ~!upzintelligence2, upzintelligence1
+		Prerequisites: ~!upzintelligence2, upzintelligence1, ~zbio
 		BuildDuration: 1500
 		BuildDurationModifier: 100
 	Valued:
@@ -776,7 +849,7 @@ upzintelligence3:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
 		Description: zombies have +10% more speed.
-		Prerequisites: ~!upzintelligence3, upzintelligence2
+		Prerequisites: ~!upzintelligence3, upzintelligence2, ~zbio
 		BuildDuration: 1500
 		BuildDurationModifier: 100
 	Valued:
@@ -794,7 +867,7 @@ upzmsquad1:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
 		Description: Gain Squad Nembers.
-		Prerequisites: ~!upzmsquad1, upzintelligence1, upzombiemutate2
+		Prerequisites: ~!upzmsquad1, upzintelligence1, upzombiemutate2, ~zbio
 		BuildDuration: 1500
 		BuildDurationModifier: 100
 	Valued:
@@ -814,7 +887,7 @@ upzmsquad2:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
 		Description: Gain Squad Nembers.
-		Prerequisites: ~!upzmsquad2, upzmsquad1, upzintelligence2, upzombiemutate4
+		Prerequisites: ~!upzmsquad2, upzmsquad1, upzintelligence2, upzombiemutate4, ~zbio
 		BuildDuration: 3000
 		BuildDurationModifier: 100
 	Valued:
@@ -832,7 +905,7 @@ upzmsquad3:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
 		Description: Gain Squad Nembers.
-		Prerequisites: ~!upzmsquad3, upzmsquad2, upzintelligence3, upzombiemutate6
+		Prerequisites: ~!upzmsquad3, upzmsquad2, upzintelligence3, upzombiemutate6, ~zbio
 		BuildDuration: 4500
 		BuildDurationModifier: 100
 	Valued:
@@ -859,7 +932,7 @@ tnkzombie.infect:
 		BuildDuration: 250
 		BuildDurationModifier: 100
 		Prerequisites: upzombiemutate2
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Infected
 		Description: Melee infantry.\n  Strong vs Infantry, Vehicles\n  Weak vs Aircraft
 	Mobile:
 		Speed: 100
@@ -908,7 +981,7 @@ zombiechan.infect:
 	Inherits: civzombie
 	Inherits@Infect: ^InfectionGamemode
 	Buildable:
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Infected
 		BuildPaletteOrder: 10
 		BuildDuration: 250
 		BuildDurationModifier: 100
@@ -919,17 +992,18 @@ zombiechan.infect:
 		Image: zombiechan
 	Valued:
 		Cost: 1000
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: GLASCUDTOXIN
 		EmptyWeapon: GLASCUDTOXIN
 	Tooltip:
 		Name: Chemical Zombie
+
 jumpzombie.infect:
 	Inherits: civzombie
 	Inherits@Infect: ^InfectionGamemode
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
 	Buildable:
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Infected
 		BuildPaletteOrder: 10
 		BuildDuration: 125
 		BuildDurationModifier: 100
@@ -1029,7 +1103,7 @@ ZOMBIE2:
 		Name: Big Zombie
 		GenericName: Zombie
 	Buildable:
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Infected
 		BuildPaletteOrder: 20
 		BuildDuration: 250
 		BuildDurationModifier: 100
@@ -1071,7 +1145,7 @@ spitter:
 		ScanRadius: 25
 		InitialStance: AttackAnything
 	Buildable:
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Infected
 		BuildPaletteOrder: 30
 		Prerequisites: zbio
 		BuildDuration: 250
@@ -1102,7 +1176,7 @@ spitter:
 # 		Name: Giant Ant
 # 		GenericName: Ant
 # 	Buildable:
-# 		Queue: Vehicle, RAVehicle
+# 		Queue: Vehicle.Infected
 # 		BuildPaletteOrder: 10
 # 		BuildDurationModifier: 70
 # 		Prerequisites: zbio
@@ -1149,7 +1223,7 @@ spitter:
 # 	Armament:
 # 		Weapon: Tail2
 # 	Buildable:
-# 		Queue: Vehicle, RAVehicle
+# 		Queue: Vehicle.Infected
 # 		BuildPaletteOrder: 20
 # 		BuildDurationModifier: 70
 # 		Prerequisites: xbio
@@ -1171,7 +1245,7 @@ spitter:
 # 	Armament:
 # 		Weapon: Teeth2
 # 	Buildable:
-# 		Queue: Vehicle, RAVehicle
+# 		Queue: Vehicle.Infected
 # 		BuildPaletteOrder: 30
 # 		BuildDurationModifier: 70
 # 		Prerequisites: xbio
@@ -1192,7 +1266,7 @@ spitter:
 # 	Armament:
 # 		Weapon: Horn2
 # 	Buildable:
-# 		Queue: Vehicle, RAVehicle
+# 		Queue: Vehicle.Infected
 # 		BuildPaletteOrder: 40
 # 		BuildDurationModifier: 70
 # 		Prerequisites: xbio
@@ -1213,7 +1287,7 @@ spitter:
 # 	Armament:
 # 		Weapon: Claw2
 # 	Buildable:
-# 		Queue: Vehicle, RAVehicle
+# 		Queue: Vehicle.Infected
 # 		BuildPaletteOrder: 50
 # 		BuildDurationModifier: 70
 # 		Prerequisites: xbio

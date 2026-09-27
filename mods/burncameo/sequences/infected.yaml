@@ -1,7 +1,12 @@
 civzombie:
 	Inherits: c1
-	icon: civzombieicon
-	dot: invisibleitem
+	Defaults:
+		Filename: civzombie.shp
+		Scale: 2.0
+	icon:
+		Filename: civzombieicon.shp
+	dot:
+		Filename: invisibleitem.shp
 	idle:
 		Facings: 8
 	stand2:
@@ -45,90 +50,135 @@ civzombie:
 		Length: 3
 		Facings: 8
 		Tick: 120
-	die1: civzombie
+	die1:
+		Filename: civzombie.shp
 		Start: 329
 		Length: 8
 		Tick: 80
 	# Explode
-	die2: civzombie
+	die2:
+		Filename: civzombie.shp
 		Start: 337
 		Length: 8
 		Tick: 80
 	# Fly and explode in air
-	die3: civzombie
+	die3:
+		Filename: civzombie.shp
 		Start: 337
 		Length: 8
 		Tick: 80
 	# Fly through air squish on ground
-	die4: civzombie
+	die4:
+		Filename: civzombie.shp
 		Start: 345
 		Length: 12
 		Tick: 80
 	# Burn
-	die5: civzombie
+	die5:
+		Filename: civzombie.shp
 		Start: 357
 		Length: 18
 		Tick: 80
 	# Tib
-	die6: civzombie
+	die6:
+		Filename: civzombie.shp
 		Start: 182
 		Length: 4
 		Tick: 80
 	# Electro
-	die7: electro ##########
+	die7:
+		Filename: electro.shp
 		Length: *
-	die-crushed: e1rot
+	die-crushed:
+		Filename: e1rot.shp
 		Start: 16
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-	muzzle: minigun
+	muzzle:
+		Filename: minigun.shp
 		Length: 6
 		Facings: 8
+
 zombiee6:
 	Inherits: e6
-	icon: e6icnh.tem
+	Defaults:
+		Filename: zombiee6.shp
+	icon:
+		Filename: e6icnh.tem
 		AddExtension: False
-	dot: invisibleitem
-	idle:
-		Facings: 8
-	stand2:
-		Facings: 8
-	idle:
-		Facings: 8
-	# stand -> prone transition
-	stand:
-		Facings: 8
-	# prone -> stand transition
-	stand:
-		Facings: 8
+	dot:
+		Filename: invisibleitem.shp
+	# idle1:
+	# 	Start: 130
+	# 	Length: 16
+	# 	Tick: 120
+	# idle2:
+	# 	Start: 200
+	# 	Length: 6
+	# 	Tick: 120
+	# idle1:
+	# 	Start: 130
+	# 	Length: 16
+	# 	Tick: 120
+	# idle2:
+	# 	Start: 200
+	# 	Length: 6
+	# 	Tick: 120
+	# # stand -> prone transition
+	# liedown:
+	# 	Start: 66
+	# 	Length: 2
+	# 	Facings: 8
+	# # prone -> stand transition
+	# standup:
+	# 	Start: 114
+	# 	Length: 2
+	# 	Facings: 8
 	shoot:
-		Facings: 8
+		Start: 130
+		Length: 16
+		Tick: 120
 	bite:
-		Facings: 8
+		Start: 130
+		Length: 16
+		Tick: 120
 	prone-shoot:
+		Start: 82
+		Length: 4
 		Facings: 8
-	idle1:
-		Facings: 8
-	idle2:
-		Facings: 8
-	idle3:
-		Facings: 8
-	idle4:
-		Facings: 8
-	muzzle: minigun
+		Tick: 100
+	# idle1:
+	# 	Facings: 8
+	# idle2:
+	# 	Facings: 8
+	# idle3:
+	# 	Facings: 8
+	# idle4:
+	# 	Facings: 8
+	muzzle:
+		Filename: minigun.shp
 		Length: 6
 		Facings: 8
+
 zombiechan:
 	Inherits: civzombie
-	icon: civzombieicon
-	dot: invisibleitem
+	Defaults:
+		Filename: zombiechan.shp
+	icon:
+		Filename: civzombieicon.shp
+	dot:
+		Filename: invisibleitem.shp
 	shoot:
 		Facings: 8
 	prone-shoot:
 		Facings: 8
+
 tnkzombie:
 	Inherits: ^RA2BasicInfantry
+	Defaults:
+		Filename: tnkzombie.shp
+		Scale: 2
 	run:
 		Tick: 120
 	shoot:
@@ -143,31 +193,58 @@ tnkzombie:
 		Start: 86
 	die2:
 		Start: 101
-	icon: ra2bruteicon.shp
+	icon:
+		Filename: ra2bruteicon.shp
 		AddExtension: False
+
 zintelligence:
-	icon: zintelligenceicon
+	icon:
+		Filename: zintelligenceicon.shp
+
 zmutate2:
-	icon: zmutate2icon
+	icon:
+		Filename: zmutate2icon.shp
+
 zmsquad:
-	icon: zmsquadicon
+	icon:
+		Filename: zmsquadicon.shp
+
 zmutant:
-    stand:
-        Length: 11
-        Facings: 8
-        Tick: 9999
-    stand2:
-        Length: 11
-        Facings: 8
-        Tick: 9999
-    run:
-        Length: 11
-        Facings: 8
-    attack:
-        Start: 88
-        Length: 14
-        Facings: 8
-    die:
-        Start: 200
-        Length: 15
-    icon: zmutanticon
+	Defaults:
+		Filename: zmutant.shp
+	stand:
+		Length: 11
+		Facings: 8
+		Tick: 9999
+	stand2:
+		Length: 11
+		Facings: 8
+		Tick: 9999
+	run:
+		Length: 11
+		Facings: 8
+	attack:
+		Start: 88
+		Length: 14
+		Facings: 8
+	die:
+		Start: 200
+		Length: 15
+	icon:
+		Filename: zmutanticon.shp
+
+zbio:
+	Defaults:
+		Filename: bio.shp
+	idle:
+	active:
+	damaged-idle:
+		Start: 1
+	dead:
+		Start: 2
+		Tick: 800
+	make:
+		Filename: biomake.shp
+		Length: *
+	icon:
+		Filename: biolabicon.shp

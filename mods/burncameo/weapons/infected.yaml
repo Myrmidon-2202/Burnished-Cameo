@@ -76,8 +76,7 @@ InfectAmbushCloud:
 		Delay: 20
 
 InfectAmbush:
-	Inherits: ArtilleryShell
-	-MinRange:
+	Inherits: ^Artillery
 	-Report:
 	Projectile: Bullet
 		Image: c17
@@ -95,7 +94,7 @@ InfectAmbush:
 		Delay: 5
 
 InfectToxicSpawner:
-	Inherits: ArtilleryShell
+	Inherits: ^Artillery
 	ReloadDelay: 250
 	MinRange: 2c512
 	Range: 12c512
@@ -196,8 +195,7 @@ InfectAmbushCloud2:
 		Delay: 25
 
 InfectAmbush2:
-	Inherits: ArtilleryShell
-	-MinRange:
+	Inherits: ^Artillery
 	-Report:
 	Projectile: Bullet
 		Image: scbattlecruiser
@@ -211,8 +209,9 @@ InfectAmbush2:
 		Explosions: big_frag
 		ImpactSounds: xplobig6.aud
 	Warhead@2: SpawnActor
-		Actors: tnkzombie.infect, jumpzombie.infect, spitter, Zombie, ANT2, PVICE, civzombie.infect, zombie1.infect, zombie2.infect, trex, Ant
+		Actors: tnkzombie.infect, jumpzombie.infect, spitter, civzombie.infect, zombie1.infect, zombie2.infect
 		Delay: 5
+
 ZBrutePunch:
 	ReloadDelay: 60
 	Report: galiatta.wav, galiattb.wav
@@ -259,12 +258,11 @@ ZJumperZombie:
 		Delay: 5
 		
 ZJumperZombieAA:
-	Inherits: OrcaAGMissiles
+	Inherits: ^LightMissile
 	ValidTargets: Air
-	Projectile: MissileCA
+	Projectile: Missile
 		Arm: 0
 		Speed: 333
 		Image: civzombie
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Air
-	-Warhead@2Smu:

@@ -2373,34 +2373,34 @@ ra2tesla:
 	FirepowerMultiplier@Charge3:
 		Modifier: 150
 		RequiresCondition: (TeslaCoilCharge == 3 && !unpowered) || TeslaCoilCharge > 3
-	DroneSpawnerMasterCA:
-		Actors: ra2shk.bot, ra2shk.bot, ra2shk.bot
-		SpawnOffset: 511,1c0,0, -511,-1c0,0, -1c0,1c0,0
-		RespawnTicks: 250
-		InitialActorCount: 0
-		SlavesTargetSelf: true
-		SlaveDisposalOnKill: DoNothing
-		SlaveDisposalOnOwnerChange: DoNothing
-		LoadedCondition: TeslaCoilCharge
-		PauseOnCondition: !teslaChargeUpgrade
-	Production:
-		Produces: ra2tesla.upgrade
-		RequiresCondition: !teslaChargeUpgrade
-	ProductionBar:
-		ProductionType: ra2tesla.upgrade
-	ProductionQueue:
-		Type: ra2tesla.upgrade
-		DisplayOrder: 0
-		Group: Addon
-		LowPowerModifier: 200
-		QueueLimit: 1
-		ItemLimit: 1
-	GrantConditionOnProduction@teslaChargeUpgrade:
-		Condition: teslaChargeUpgrade
-		Actors: ra2teslaUpgrade
-	GrantConditionOnPrerequisite@teslaChargeUpgrade:
-		Condition: teslaChargeUpgrade
-		Prerequisites: upcoilchargers
+	# DroneSpawnerMasterCA:
+	# 	Actors: ra2shk.bot, ra2shk.bot, ra2shk.bot
+	# 	SpawnOffset: 511,1c0,0, -511,-1c0,0, -1c0,1c0,0
+	# 	RespawnTicks: 250
+	# 	InitialActorCount: 0
+	# 	SlavesTargetSelf: true
+	# 	SlaveDisposalOnKill: DoNothing
+	# 	SlaveDisposalOnOwnerChange: DoNothing
+	# 	LoadedCondition: TeslaCoilCharge
+	# 	PauseOnCondition: !teslaChargeUpgrade
+	# Production:
+	# 	Produces: ra2tesla.upgrade
+	# 	RequiresCondition: !teslaChargeUpgrade
+	# ProductionBar:
+	# 	ProductionType: ra2tesla.upgrade
+	# ProductionQueue:
+	# 	Type: ra2tesla.upgrade
+	# 	DisplayOrder: 0
+	# 	Group: Addon
+	# 	LowPowerModifier: 200
+	# 	QueueLimit: 1
+	# 	ItemLimit: 1
+	# GrantConditionOnProduction@teslaChargeUpgrade:
+	# 	Condition: teslaChargeUpgrade
+	# 	Actors: ra2teslaUpgrade
+	# GrantConditionOnPrerequisite@teslaChargeUpgrade:
+	# 	Condition: teslaChargeUpgrade
+	# 	Prerequisites: upcoilchargers
 	Power:
 		Amount: -100
 	RevealsShroud:
