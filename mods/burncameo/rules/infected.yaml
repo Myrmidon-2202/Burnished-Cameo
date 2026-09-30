@@ -63,7 +63,7 @@ zbio:
 	Inherits@barrack: ^IsBarrackOld
 	Inherits@shape: ^2x2Shape
 	Buildable:
-		Queue:
+		Prerequisites: ~Unbuildable
 	DetonateWeaponPower@ZombieInfect:
 		OrderName: ZombieToxins
 		Cursor: ability
