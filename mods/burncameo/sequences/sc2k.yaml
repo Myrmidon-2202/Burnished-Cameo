@@ -290,6 +290,71 @@ sc2kfactorydisaster:
 		Filename: chromesc2kfactorydisaster.png
 		AddExtension: False
 
+sc2k_cyclone_center:
+	Defaults:
+		Filename: sc2k_cyclone_center.shp
+		Scale: 1.5
+	idle: 
+		Offset: 0,-50
+		Length: 4
+		Tick: 200
+		ZOffset: -2048
+	dead: 
+		Length: 1
+		Offset: 0,-50
+	make: 
+		Filename: sc2kconstructionlarge_1.shp
+		Frames: 0,0,0,0,0
+		Tick: 2000
+		Offset: 0,12
+		AddExtension: False
+	icon: 
+		Filename: chromesc2kcyclonecenter.shp
+		AddExtension: False
+
+sc2k_airport:
+	Defaults:
+		Filename: sc2k_airport.shp
+		Scale: 1.5
+	idle: 
+		Length: 2
+		Tick: 200
+		ZOffset: -2048
+	dead: 
+		Length: 1
+	make: 
+		Filename: sc2kconstructionlarge_1.shp
+		Frames: 0,0,0,0,0
+		Tick: 2000
+		Offset: 0,12
+		AddExtension: False
+	icon: 
+		Filename: chromesc2kairport.shp
+		AddExtension: False
+
+sc2k_toy_factory:
+	Defaults:
+		Filename: sc2k_toy_factory.shp
+	idle: 
+		ZOffset: -2048
+	anim-overlay: 
+		Filename: sc2k_toy_factory_anim.shp
+		Length: 16
+		Tick: 100
+		Offset: -56,6
+		AddExtension: False
+	dead: 
+		Length: 1
+	make: 
+		Filename: sc2kconstructionlarge_1.shp
+		Frames: 0,0,0,0,0
+		Tick: 2000
+		Offset: 0,12
+		AddExtension: False
+	icon: 
+		Filename: chromesc2ktoyfactory.shp
+		AddExtension: False
+
 sc2krecyclingcenter:
 	Defaults:
 		Scale: 1.5
@@ -662,6 +727,18 @@ sc2ktornado:
 		Filename: chromesc2ktornado.png
 		AddExtension: False
 
+ice_cyclone:
+	Defaults:
+		Filename: ice_cyclone.shp
+	idle:
+		Length: 4
+		Tick: 50
+	icon: 
+		Filename: chromesc2kicecyclone.shp
+	icon:
+		Filename: chromesc2ktornado.png
+		AddExtension: False
+
 sc2k_thundercloud_main:
 	Defaults:
 		Scale: 1.5
@@ -713,6 +790,23 @@ sc2kjetplane:
 		Facings: -8
 	icon:
 		Filename: chromesc2kaircrash.png
+		AddExtension: False
+
+sc2k_big_bulldozer: 
+	Defaults:
+		Filename: sc2k_big_bulldozer.shp
+	idle: 
+		Frames: 0,3,6,9
+		Facings: 4
+		Length: 1
+	run:
+		Start: 0
+		Facings: 4
+		Length: 3
+	die: 
+		Start: 0
+	icon:
+		Filename: chromesc2kbigbulldozer.shp
 		AddExtension: False
 
 sc2khelicopter:
@@ -790,6 +884,16 @@ sc2kmob:
 	icon:
 		Filename: chromesc2kmob.png
 		AddExtension: false
+
+sc2katomic:
+	up: 
+		Filename: atomicup.shp
+		Length: *
+		ZOffset: 1023
+	down: 
+		Filename: atomicdn.shp
+		Length: *
+		ZOffset: 1023
 
 ####################################################################################################
 

@@ -350,6 +350,57 @@ SC2KABANDONED.TRADECENTER:
 		IntoActor: sc2ktradecenter
 		SkipMakeAnims: false
 
+SC2KABANDONED.CYLONECENTER:
+	Inherits: ^SC2KABANDONED
+	RenderSprites:
+		Image: sc2kabandonedsp
+	HitShape:
+		UseTargetableCellsOffsets: true
+		Type: Rectangle
+			TopLeft: -1786, -1536
+			BottomRight: 1786, 1536
+	Building:
+		Footprint: xxxxxx xxxxxx ======
+		Dimensions: 6,3
+	TransformOnCondition@buildingrebirth:
+		RequiresCondition: buildingrebirth
+		IntoActor: sc2k_cyclone_center
+		SkipMakeAnims: false
+
+SC2KABANDONED.AIRPORT:
+	Inherits: ^SC2KABANDONED
+	RenderSprites:
+		Image: sc2kabandonedsp
+	HitShape:
+		UseTargetableCellsOffsets: true
+		Type: Rectangle
+			TopLeft: -1786, -1536
+			BottomRight: 1786, 1536
+	Building:
+		Footprint: xxxxxx xxxxxx ======
+		Dimensions: 6,3
+	TransformOnCondition@buildingrebirth:
+		RequiresCondition: buildingrebirth
+		IntoActor: sc2k_airport
+		SkipMakeAnims: false
+
+SC2KABANDONED.TOYFACTORY:
+	Inherits: ^SC2KABANDONED
+	RenderSprites:
+		Image: sc2kabandonedsp
+	HitShape:
+		UseTargetableCellsOffsets: true
+		Type: Rectangle
+			TopLeft: -1786, -1536
+			BottomRight: 1786, 1536
+	Building:
+		Footprint: xxxxxxxxxx xxxxxxxxxx xxxxxxxxxx xxxxxxxxxx xxxxxxxxxx xxxxxxxxxx
+		Dimensions: 10,6
+	TransformOnCondition@buildingrebirth:
+		RequiresCondition: buildingrebirth
+		IntoActor: sc2k_toy_factory
+		SkipMakeAnims: false
+
 SC2KABANDONED.UBERMALL:
 	Inherits: ^SC2KABANDONED
 	RenderSprites:
@@ -459,7 +510,7 @@ SC2KFACTORYSTRUCTURE:
 			TopLeft: -1792, -1536
 			BottomRight: 1792, 1536
 	Selectable:
-		Bounds: 174762, 174762
+		Bounds: 2048, 2048
 	Valued:
 		Cost: 3500
 	Tooltip:
@@ -548,6 +599,8 @@ SC2KFACTORYSTRUCTURE:
 	-TransformsIntoPassenger:
 	-TransformsIntoRepairable:
 	-TransferTimedExternalConditionOnTransform:
+	Voiced:
+		VoiceSet: sc2kfactorystructurevoice
 
 SC2KPOWERCOAL:
 	Inherits: ^BaseBuilding
@@ -559,6 +612,8 @@ SC2KPOWERCOAL:
 		Type: Rectangle
 			TopLeft: -2536, -1536
 			BottomRight: 2536, 1536
+	Selectable:
+		Bounds: 3072, 3072
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -582,6 +637,8 @@ SC2KPOWERCOAL:
 		Actor: sc2kabandoned.powercoal
 	ProvidesPrerequisite@1:
 		Prerequisite: Coal Power Plant
+	Voiced:
+		VoiceSet: sc2kpowerplantcoalvoice
 
 SC2KWINDMILL:
 	Inherits: ^BaseBuilding
@@ -593,6 +650,8 @@ SC2KWINDMILL:
 		Type: Rectangle
 			TopLeft: -512, -1512
 			BottomRight: 512, 512
+	Selectable:
+		Bounds: 1024, 1024
 	Valued:
 		Cost: 50
 	Tooltip:
@@ -615,6 +674,8 @@ SC2KWINDMILL:
 		Amount: 20
 	SpawnActorOnDeath@hole:
 		Actor: sc2kabandoned.windmill
+	Voiced:
+		VoiceSet: sc2kpowerplantwindvoice
 
 SC2KPOWEROIL:
 	Inherits: ^BaseBuilding
@@ -626,6 +687,8 @@ SC2KPOWEROIL:
 		Type: Rectangle
 			TopLeft: -2536, -1536
 			BottomRight: 2536, 1536
+	Selectable:
+		Bounds: 3072, 3072
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -648,6 +711,8 @@ SC2KPOWEROIL:
 		Amount: 200
 	SpawnActorOnDeath@hole:
 		Actor: sc2kabandoned.poweroil
+	Voiced:
+		VoiceSet: sc2kpowerplantoilvoice
 
 SC2KNATURALGAS:
 	Inherits: ^BaseBuilding
@@ -659,6 +724,8 @@ SC2KNATURALGAS:
 		Type: Rectangle
 			TopLeft: -2536, -1536
 			BottomRight: 2536, 1536
+	Selectable:
+		Bounds: 3072, 3072
 	Valued:
 		Cost: 1400
 	Tooltip:
@@ -683,6 +750,8 @@ SC2KNATURALGAS:
 		Prerequisite: Natural Gas Power Plant
 	SpawnActorOnDeath@hole:
 		Actor: sc2kabandoned.naturalgas
+	Voiced:
+		VoiceSet: sc2kpowerplantgasvoice
 
 SC2KNUCLEAR:
 	Inherits: ^BaseBuilding
@@ -694,6 +763,8 @@ SC2KNUCLEAR:
 		Type: Rectangle
 			TopLeft: -2536, -1536
 			BottomRight: 2536, 1536
+	Selectable:
+		Bounds: 3072, 3072
 	Valued:
 		Cost: 2500
 	Tooltip:
@@ -718,6 +789,8 @@ SC2KNUCLEAR:
 		Weapon: ReactorNuke
 	SpawnActorOnDeath@hole:
 		Actor: sc2kabandoned.nuclear
+	Voiced:
+		VoiceSet: sc2kpowerplantnuclearvoice
 
 SC2KPOWERSOLAR:
 	Inherits: ^BaseBuilding
@@ -729,6 +802,8 @@ SC2KPOWERSOLAR:
 		Type: Rectangle
 			TopLeft: -2536, -1536
 			BottomRight: 2536, 1536
+	Selectable:
+		Bounds: 3072, 3072
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -751,6 +826,8 @@ SC2KPOWERSOLAR:
 		Amount: 300
 	SpawnActorOnDeath@hole:
 		Actor: sc2kabandoned.powersolar
+	Voiced:
+		VoiceSet: sc2kpowerplantsolarvoice
 
 SC2KPOWERMICROWAVE:
 	Inherits: ^BaseBuilding
@@ -762,6 +839,8 @@ SC2KPOWERMICROWAVE:
 		Type: Rectangle
 			TopLeft: -2536, -1536
 			BottomRight: 2536, 1536
+	Selectable:
+		Bounds: 3072, 3072
 	Valued:
 		Cost: 2500
 	Tooltip:
@@ -786,6 +865,8 @@ SC2KPOWERMICROWAVE:
 		Prerequisite: Microwave Power Plant
 	SpawnActorOnDeath@hole:
 		Actor: sc2kabandoned.powermicrowave
+	Voiced:
+		VoiceSet: sc2kpowerplantmicrowavevoice
 
 SC2KPOWERFUSION:
 	Inherits: ^BaseBuilding
@@ -797,6 +878,8 @@ SC2KPOWERFUSION:
 		Type: Rectangle
 			TopLeft: -2536, -1536
 			BottomRight: 2536, 1536
+	Selectable:
+		Bounds: 3072, 3072
 	Valued:
 		Cost: 3500
 	Tooltip:
@@ -819,6 +902,8 @@ SC2KPOWERFUSION:
 		Amount: 5000
 	SpawnActorOnDeath@hole:
 		Actor: sc2kabandoned.powerfusion
+	Voiced:
+		VoiceSet: sc2kpowerplantfusionvoice
 
 SC2KFACTORYDISASTER:
 	Inherits: ^BaseBuilding
@@ -834,7 +919,7 @@ SC2KFACTORYDISASTER:
 			TopLeft: -2730, -6181
 			BottomRight: 2730, 2181
 	Selectable:
-		Bounds: 233002, 349525
+		Bounds: 4096, 6144, 0, -2048
 	Valued:
 		Cost: 2000
 	Tooltip:
@@ -890,7 +975,7 @@ SC2KFACTORYDISASTER:
 	# 	ProductionType: RAInfantry
 	# 	RequiresCondition: classicproductionqueues
 	ProvidesPrerequisite@1:
-		Prerequisite: Disaster Factory
+		Prerequisite: Disaster_Factory
 	ProvidesPrerequisite@2:
 		Prerequisite: barracks
 	ProvidesPrerequisite@3:
@@ -908,6 +993,130 @@ SC2KFACTORYDISASTER:
 		Range: 7c0
 	SpawnActorOnDeath@hole:
 		Actor: sc2kabandoned.factorydisaster
+	Voiced:
+		VoiceSet: sc2karcovoice
+
+SC2K_CYCLONE_CENTER:
+	Inherits: ^BaseBuilding
+	#AcceptsDeliveredExperience:
+	#	ValidTypes: building
+	HitShape:
+		UseTargetableCellsOffsets: true
+		Type: Rectangle
+			TopLeft: -1536, -1536
+			BottomRight: 1536, 1536
+	Selectable:
+		Bounds: 4096, 7168, 0, -2048
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Cyclone Center
+	Buildable:
+		Queue: Building, RABuilding
+		BuildPaletteOrder: 45
+		Prerequisites: Disaster_Factory, ~mmsimcity2k
+		Description: Unlocks Ice Cyclones.\nLimit 1.
+		BuildLimit: 1
+	Building:
+		Footprint: xxxxxx xxxxxx ======
+		Dimensions: 6,3
+		BuildSounds: sc2k_build.wav
+	Health:
+		HP: 55000
+	RevealsShroud:
+		Range: 4c0
+	Power:
+		Amount: -40
+	Voiced:
+		VoiceSet: sc2karcovoice
+	ProvidesPrerequisite@1:
+		Prerequisite: Cyclone_Center
+	SpawnActorOnDeath@hole:
+		Actor: sc2kabandoned.cylonecenter
+	Voiced:
+		VoiceSet: sc2karcovoice
+
+SC2K_AIRPORT:
+	Inherits: ^BaseBuilding
+	#AcceptsDeliveredExperience:
+	#	ValidTypes: building
+	HitShape:
+		UseTargetableCellsOffsets: true
+		Type: Rectangle
+			TopLeft: -1536, -1536
+			BottomRight: 1536, 1536
+	Selectable:
+		Bounds: 4096, 4096
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Airport
+	Buildable:
+		Queue: Building, RABuilding
+		BuildPaletteOrder: 65
+		Prerequisites: Observatory, ~mmsimcity2k
+		Description: Unlocks Air Crash.\nLimit 1.
+		BuildLimit: 1
+	Building:
+		Footprint: xxxxxx xxxxxx ======
+		Dimensions: 6,3
+		BuildSounds: sc2k_build.wav
+	Health:
+		HP: 55000
+	RevealsShroud:
+		Range: 4c0
+	Power:
+		Amount: -40
+	Voiced:
+		VoiceSet: sc2kairportvoice
+	ProvidesPrerequisite@1:
+		Prerequisite: Airport
+	SpawnActorOnDeath@hole:
+		Actor: sc2kabandoned.airport
+
+SC2K_TOY_FACTORY:
+	Inherits: ^BaseBuilding
+	#AcceptsDeliveredExperience:
+	#	ValidTypes: building
+	HitShape:
+		UseTargetableCellsOffsets: true
+		Type: Rectangle
+			TopLeft: -3730, -4181
+			BottomRight: 3730, 2181
+	Selectable:
+		Bounds: 4096, 4096
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Toy Factory
+	Buildable:
+		Queue: Building, RABuilding
+		BuildPaletteOrder: 67
+		Prerequisites: sc2krecyclingcenter, ~mmsimcity2k
+		Description: Gadget factory.\n Provides income.\nLimit 1.
+		BuildLimit: 1
+	Building:
+		Footprint: xxxxxx xxxxxx xxxxxx xxxxxx
+		Dimensions: 6,4
+		BuildSounds: sc2k_build.wav
+	Health:
+		HP: 100000
+	RevealsShroud:
+		Range: 4c0
+	Power:
+		Amount: -50
+	Voiced:
+		VoiceSet: sc2kfactorystructurevoice
+	CashTrickler:
+		Amount: 100
+		Interval: 200
+	ProvidesPrerequisite@1:
+		Prerequisite: Toy Factory
+	SpawnActorOnDeath@hole:
+		Actor: sc2kabandoned.toyfactory
+	WithIdleOverlay@ANIM:
+		Sequence: anim-overlay
+		RequiresCondition: !build-incomplete
 
 SC2KRECYCLINGCENTER:
 	Inherits: ^BaseBuilding
@@ -917,6 +1126,8 @@ SC2KRECYCLINGCENTER:
 		Type: Rectangle
 			TopLeft: -2024, -1024
 			BottomRight: 2024, 1024
+	Selectable:
+		Bounds: 2048, 2048
 	Valued:
 		Cost: 2000
 	Tooltip:
@@ -969,6 +1180,8 @@ SC2KRECYCLINGCENTER:
 		Position: BottomLeft
 		RequiresSelection: true
 		PipCount: 10
+	Voiced:
+		VoiceSet: sc2krecyclevoice
 
 SC2KDOMICILE:
 	Inherits: ^BaseBuilding
@@ -977,6 +1190,8 @@ SC2KDOMICILE:
 		Type: Rectangle
 			TopLeft: -1536, -1536
 			BottomRight: 1536, 1536
+	Selectable:
+		Bounds: 2048, 2048
 	Valued:
 		Cost: 400
 	Tooltip:
@@ -1004,6 +1219,8 @@ SC2KDOMICILE:
 	#	Scale: 0.7
 	SpawnActorOnDeath@hole:
 		Actor: sc2kabandoned.domicile
+	Voiced:
+		VoiceSet: sc2kdomicilevoice
 
 SC2KCARDEALERSHIP:
 	Inherits: ^BaseBuilding
@@ -1013,6 +1230,8 @@ SC2KCARDEALERSHIP:
 		Type: Rectangle
 			TopLeft: -1792, -1536
 			BottomRight: 1792, 1536
+	Selectable:
+		Bounds: 3072, 3072
 	Valued:
 		Cost: 1300
 	Tooltip:
@@ -1061,6 +1280,8 @@ SC2KCARDEALERSHIP:
 		Amount: -40
 	SpawnActorOnDeath@hole:
 		Actor: sc2kabandoned.cardealership
+	Voiced:
+		VoiceSet: sc2kcardealershipvoice
 
 SC2KMARINA:
 	Inherits: ^BaseBuilding
@@ -1072,7 +1293,7 @@ SC2KMARINA:
 			TopLeft: -1536, -1536
 			BottomRight: 1536, 1536
 	Selectable:
-		Bounds: 131072, 131072
+		Bounds: 4096, 4096
 	HitShape:
 		UseTargetableCellsOffsets: false
 		TargetableOffsets: 0,0,0, 768,-512,0, 768,512,0, -281,-512,0, -630,512,0
@@ -1150,6 +1371,8 @@ SC2KMARINA:
 		TargetTypes: Ground, Water, C4, Structure
 	SpawnActorOnDeath@hole:
 		Actor: sc2kabandoned.marina
+	Voiced:
+		VoiceSet: sc2kmarinavoice
 
 SC2KFACTORYFARM:
 	Inherits: ^BaseBuilding
@@ -1160,6 +1383,8 @@ SC2KFACTORYFARM:
 		Type: Rectangle
 			TopLeft: -3536, -1536
 			BottomRight: 3536, 1536
+	Selectable:
+		Bounds: 6144, 6144
 	Valued:
 		Cost: 2000
 	Tooltip:
@@ -1186,6 +1411,8 @@ SC2KFACTORYFARM:
 		Modifier: 25
 	SpawnActorOnDeath@hole:
 		Actor: sc2kabandoned.factoryfarm
+	Voiced:
+		VoiceSet: sc2kfactoryfarmvoice
 
 SC2KOBSERVATORY:
 	Inherits: ^BaseBuilding
@@ -1196,6 +1423,8 @@ SC2KOBSERVATORY:
 		Type: Rectangle
 			TopLeft: -2548, -6536
 			BottomRight: 2548, 1536
+	Selectable:
+		Bounds: 4096, 8192, 0, -3072
 	Valued:
 		Cost: 2000
 	Tooltip:
@@ -1250,6 +1479,8 @@ SC2KTRADECENTER:
 		Type: Rectangle
 			TopLeft: -1536, -1536
 			BottomRight: 1536, 1536
+	Selectable:
+		Bounds: 4096, 4096
 	Valued:
 		Cost: 2000
 	Tooltip:
@@ -1288,6 +1519,8 @@ SC2KSUPERMALL:
 		Type: Rectangle
 			TopLeft: -3730, -4181
 			BottomRight: 3730, 2181
+	Selectable:
+		Bounds: 8192, 8192
 	Valued:
 		Cost: 2000
 	Tooltip:
@@ -1329,6 +1562,8 @@ SC2KUBERMALL:
 		Type: Rectangle
 			TopLeft: -3730, -5181
 			BottomRight: 3730, 2181
+	Selectable:
+		Bounds: 8192, 8192
 	Valued:
 		Cost: 3000
 	Tooltip:
@@ -1378,6 +1613,8 @@ SC2KMISSILESILO:
 		Type: Rectangle
 			TopLeft: -2536, -1536
 			BottomRight: 2536, 1536
+	Selectable:
+		Bounds: 2048, 2048
 	Valued:
 		Cost: 3000
 	Tooltip:
@@ -1437,6 +1674,8 @@ SC2KMISSILESILO:
 	ProvidesPrerequisite@buildingname:
 	SpawnActorOnDeath@hole:
 		Actor: sc2kabandoned.missilesilo
+	Voiced:
+		VoiceSet: sc2kmissilesilovoice
 
 SC2KPOLICEDEPT:
 	Inherits: ^BaseBuilding
@@ -1448,6 +1687,8 @@ SC2KPOLICEDEPT:
 		Cost: 1000
 	Tooltip:
 		Name: Police Department
+	Selectable:
+		Bounds: 2048, 2048
 	Buildable:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 50
@@ -1494,6 +1735,8 @@ SC2KPOLICEDEPT:
 	# 	ProductionType: Infantry
 	# 	RequiresCondition: classicproductionqueues
 	-WithDeathAnimation:
+	Voiced:
+		VoiceSet: sc2kpolicedeptvoice
 
 SC2KFIREDEPT:
 	Inherits: ^BaseBuilding
@@ -1505,6 +1748,8 @@ SC2KFIREDEPT:
 		Cost: 1000
 	Tooltip:
 		Name: Fire Department
+	Selectable:
+		Bounds: 2048, 2048
 	Buildable:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 50
@@ -1553,6 +1798,8 @@ SC2KFIREDEPT:
 	# 	ProductionType: RAVehicle
 	# 	RequiresCondition: classicproductionqueues
 	-WithDeathAnimation:
+	Voiced:
+		VoiceSet: sc2kfiredeptvoice
 
 SC2KHOSPITAL:
 	Inherits: ^BaseBuilding
@@ -1561,6 +1808,8 @@ SC2KHOSPITAL:
 		Cost: 1000
 	Tooltip:
 		Name: Hospital
+	Selectable:
+		Bounds: 2048, 2048
 	Buildable:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 50
@@ -1583,6 +1832,7 @@ SC2KHOSPITAL:
 		ValidRelationships: Ally
 		Range: 6c0
 	-WithDeathAnimation:
+
 ####################################################################################################
 #		SC2K - UNITS
 ####################################################################################################
@@ -1715,6 +1965,57 @@ SC2KTORNADO:
 	-ExternalCondition@FireCall:
 	-ExternalCondition@PoliceCall:
 	RenderSprites:
+
+ICE_CYCLONE:
+	Inherits: ^Tank
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	Inherits@MAYORCALL: ^ExternalConditionsMayorCall
+	Inherits@POLICECALL: ^PoliceCall
+	Inherits@EXT: ^ExternalConditions
+	Inherits@EMP: ^FrontalEMP
+	Inherits@shadow: ^ScavShadow
+	HitShape:
+		UseTargetableCellsOffsets: true
+		Type: Circle
+			Radius: 3c0
+	Selectable:
+		Bounds: 72, 144
+	Buildable:
+		Queue: Infantry.Sc2k
+		BuildPaletteOrder: 25
+		Prerequisites: Cyclone_Center
+		Description: Freezes everything in its way.
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Ice Cylone
+	Health:
+		HP: 50000
+	Armor:
+		Type: Light
+	Mobile:
+		Locomotor: wheeled
+		Speed: 110
+	RevealsShroud:
+		Range: 7c0
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 6c0
+    Armament@PRIMARY:
+		Weapon: SuicideBomberTargeting
+	PeriodicExplosion:
+		Weapon: sc2ktornado
+	Voiced:
+		VoiceSet: sc2ktornado
+	AcceptsDeliveredExperience:							##########
+		ValidTypes: vehicle								##########
+	WithRangeCircle:
+		Range: 7c0
+	-ExternalCondition@FireCall:
+	-ExternalCondition@PoliceCall:
+	RenderSprites:
+		Scale: 1.7
 
 SC2KMOB:
 	Inherits: ^Tank
@@ -1873,6 +2174,54 @@ SC2KBULLDOZER:
 	-ExternalCondition@FireCall:
 	-ExternalCondition@PoliceCall:
 	RenderSprites:
+
+SC2K_BIG_BULLDOZER:
+	Inherits: ^Tank
+	Inherits@selection: ^SelectableEconomicUnit
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@MAYORCALL: ^ExternalConditionsMayorCall
+	Inherits@announce: ^AnnounceGlobal
+	Inherits@POLICECALL: ^PoliceCall
+	Inherits@EXT: ^ExternalConditions
+	Inherits@EMP: ^FrontalEMP
+	Inherits@shadow: ^ScavShadow
+	Buildable:
+		Queue: Vehicle.Sc2k
+		BuildPaletteOrder: 20
+		BuildLimit: 1
+		Description: Knocks down buildings.
+	Valued:
+		Cost: 3000
+	Tooltip:
+		Name: Big Bulldozer
+	Health:
+		HP: 60000
+	Armor:
+		Type: Heavy
+	Mobile:
+		Locomotor: wheeled
+		Speed: 110
+	WithMoveAnimation:
+		MoveSequence: run
+	RevealsShroud:
+		Range: 7c0
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 6c0
+	Armament:
+		Weapon: bigbulldoze
+	AttackFrontal:
+	Voiced:
+		VoiceSet: sc2kbigbulldozer
+	Selectable:
+		DecorationBounds: 168,96
+	AcceptsDeliveredExperience:							##########
+		ValidTypes: vehicle								##########
+	WithRangeCircle:
+		Range: 7c0
+	-ExternalCondition@FireCall:
+	-ExternalCondition@PoliceCall:
 
 SC2KJETPLANE:
 	# Inherits: ^RAPlane
@@ -2295,6 +2644,8 @@ SC2KBEACONPOLICE:
 		RespawnTicks: 500
 		ExitByBudding: false
 		AggregateHealth: false
+	Voiced:
+		VoiceSet: sc2kbeaconvoice
 
 SC2KBEACONFIRE:
 	Inherits: ^Defense
@@ -2364,6 +2715,8 @@ SC2KBEACONFIRE:
 		RespawnTicks: 400
 		ExitByBudding: false
 		AggregateHealth: false
+	Voiced:
+		VoiceSet: sc2kbeaconvoice
 
 SC2KBEACONARMY:
 	Inherits: ^Defense
@@ -2458,6 +2811,8 @@ SC2KBEACONARMY:
 		RespawnTicks: 500
 		ExitByBudding: false
 		AggregateHealth: false
+	Voiced:
+		VoiceSet: sc2kbeaconvoice
 
 sc2kcityfirefighter.defense:
 	Inherits: CITYFIREFIGHTER
@@ -3451,6 +3806,8 @@ sc2k_storage:
 		RequiresSelection: true
 		PipCount: 5
 		FullSequence: pip-yellow
+	Voiced:
+		VoiceSet: sc2kwarehousevoice
 
 sc2kabandoned.sc2k_storage:
 	Inherits: ^SC2KABANDONED

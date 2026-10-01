@@ -60,6 +60,15 @@ sc2kbulldozer:
 		Move: sc2k_bulldozer
 		Action: sc2k_bulldozer
 
+sc2kbigbulldozer:
+    DefaultVariant: .wav
+    Voices:
+		Build: sc2k_bulldozer_brr
+		Attack: sc2k_bulldozer_brr
+		Select: sc2k_bulldozer_brr
+		Move: sc2k_bulldozer_brr
+		Action: sc2k_bulldozer_brr
+
 CopVehicleVoice:
 	VolumeModifier: 1.75
 	Voices:
@@ -94,3 +103,112 @@ FireFighterVoice:
 		Burned: yell1
 		Zapped: nuyell3
 		Poisoned: nuyell12
+
+####################################################################################################
+#		SC2K STRUCTURES
+####################################################################################################
+sc2kfactorystructurevoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: fac_sel
+
+sc2kdomicilevoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: res1_sel
+
+sc2kairportvoice:
+    DefaultVariant: .wav
+	Voices:
+		Select: sc2k_jet_takeoff, sc2k_jet_land
+		
+sc2krecyclevoice:
+    DefaultVariant: .wav
+	Voices:
+		Select: sc2k_recycle
+
+sc2kbeaconvoice:
+    DefaultVariant: .wav
+	Voices:
+		Select: sc2k_click
+		Action: 
+
+sc2kwarehousevoice:
+    DefaultVariant: .wav
+	Voices:
+		Select: sc2k_rail
+
+sc2karcovoice:
+    DefaultVariant: .wav
+	Voices:
+		Select: sc2k_arco
+
+sc2kcardealershipvoice:
+    DefaultVariant: .wav
+	Voices:
+		Select: repvhc
+
+sc2kfiredeptvoice:
+    DefaultVariant: .wav
+	Voices:
+		Select: sc2k_firedept
+
+sc2kpolicedeptvoice:
+    DefaultVariant: .wav
+	Voices:
+		Select: sc2k_police
+
+sc2kmarinavoice:
+    DefaultVariant: .wav
+	Voices:
+		Select: sc2k_water
+
+sc2kfactoryfarmvoice:
+    DefaultVariant: .wav
+	Voices:
+		Select: ag_sel
+
+sc2kmissilesilovoice:
+    DefaultVariant: .wav
+	Voices:
+		Select: bstrsela
+
+sc2kpowerplantcoalvoice:
+    DefaultVariant: .wav
+	Voices:
+		Select: sc2k_power_coal
+
+sc2kpowerplantwindvoice:
+    DefaultVariant: .wav
+	Voices:
+		Select: sc2k_power_wind
+
+sc2kpowerplantoilvoice:
+    DefaultVariant: .wav
+	Voices:
+		Select: sc2k_power_oil
+
+sc2kpowerplantgasvoice:
+    DefaultVariant: .wav
+	Voices:
+		Select: sc2k_power_gas
+
+sc2kpowerplantsolarvoice:
+    DefaultVariant: .wav
+	Voices:
+		Select: sc2k_power_solar
+
+sc2kpowerplantnuclearvoice:
+    DefaultVariant: .wav
+	Voices:
+		Select: sc2k_power_nuclear
+
+sc2kpowerplantmicrowavevoice:
+    DefaultVariant: .wav
+	Voices:
+		Select: sc2k_power_microwave
+
+sc2kpowerplantfusionvoice:
+    DefaultVariant: .wav
+	Voices:
+		Select: sc2k_power_fusion
