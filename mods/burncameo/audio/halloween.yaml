@@ -41,7 +41,7 @@ Halloween_Crypt_Voice:
 Halloween_Necropolis_Voice:
 	DefaultVariant: .wav
 	Voices:
-		Select: halloween_necropolis
+		Select: halloween_necropolis, Gazorpazorpfield_what_1, Gazorpazorpfield_what_2
 		Action: halloween_necropolis
 
 Halloween_SpiritTower_Voice:
@@ -54,3 +54,20 @@ Halloween_Tomb_Voice:
 	DefaultVariant: .wav
 	Voices:
 		Select: halloween_tomb
+
+####################################################################################################
+#		2026 Halloween Additions
+####################################################################################################
+
+Halloween_Garfield:
+    DefaultVariant: .wav
+	Voices:
+		Select: Gazorpazorpfield_what_1, Gazorpazorpfield_what_2, Gazorpazorpfield_what_3, Gazorpazorpfield_what_4
+		Attack: Gazorpazorpfield_yes_1, Gazorpazorpfield_yes_2, Gazorpazorpfield_yes_3
+		Action: Gazorpazorpfield_yes_1, Gazorpazorpfield_yes_2, Gazorpazorpfield_yes_3
+		Move: Gazorpazorpfield_yes_1, Gazorpazorpfield_yes_2, Gazorpazorpfield_yes_3
+		Die: Gazorpazorpfield_yes_3
+		Build: Gazorpazorpfield_what_2
+		Burned: Gazorpazorpfield_yes_3
+		Zapped: Gazorpazorpfield_yes_3
+		Poisoned: Gazorpazorpfield_yes_3

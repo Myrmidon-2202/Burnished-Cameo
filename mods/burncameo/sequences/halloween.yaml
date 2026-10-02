@@ -1287,3 +1287,72 @@ halloween_spider:
 		Filename: wc_chrome.shp
 		Start: 39
 		AddExtension: true
+
+####################################################################################################
+#		2026 Halloween Additions
+####################################################################################################
+
+garfield_infantry:
+	Inherits: ^WCInfantry
+	smallflag:
+		Offset: -10, -10
+	Defaults: 
+		Filename: garfield_infantry.shp
+		Scale: 1.0
+	idle:
+		Facings: 2
+		Combine:
+			garfield1: 
+				Filename: garfield_infantry.shp
+				Start: 0
+				Length: 1
+			garfield2: 
+				Filename: garfield_infantry.shp
+				Start: 0
+				Length: 1
+				FlipX: true
+	stand:
+		Facings: 2
+		Combine:
+			garfield3: 
+				Filename: garfield_infantry.shp
+				Start: 0
+				Length: 1
+			garfield4: 
+				Filename: garfield_infantry.shp
+				Start: 0
+				Length: 1
+				FlipX: true
+	run:
+		Facings: 2
+		Combine:
+			garfield5: 
+				Filename: garfield_infantry.shp
+				Start: 1
+				Length: 3
+				Frames: 1,2,3
+			garfield6: 
+				Filename: garfield_infantry.shp
+				Length: 3
+				Frames: 3,2,1
+				FlipX: true
+	shoot:
+		Facings: 2
+		Combine:
+			garfield7: 
+				Filename: garfield_infantry.shp
+				Start: 5
+				Length: 4
+				Frames: 5,6,7,8
+			garfield8: 
+				Filename: garfield_infantry.shp
+				Length: 4
+				Frames: 8,7,6,5
+				FlipX: true
+	die:
+		Facings: 1
+		Length: 1
+		Start: 15
+	icon: 
+		Filename: civilization_2_icons.png
+		Start: 34

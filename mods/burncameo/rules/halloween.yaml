@@ -2249,3 +2249,55 @@ halloween_mcv_bot:
 		BuildPaletteOrder: 100
 		BuildLimit: 1
 		Prerequisites: halloween_daemonpit, ~techlevel.medium, ~botplayer, allowsMCV
+
+####################################################################################################
+#		2026 Halloween Additions
+####################################################################################################
+
+GARFIELD_INFANTRY:
+	Inherits: ^Soldier
+	Inherits@EXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMoveMelee
+	Inherits@DECORATIONS: ^InfantryExperienceHospitalHazmatOverrides
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Gazorpazorpfield
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Buildable:
+		BuildPaletteOrder: 10
+		Prerequisites:
+		Queue: Infantry, RAInfantry
+		Description: Basic Melee Infantry. Slow but can take some damage.
+		BuildDuration: 150
+		# BuildDurationModifier: 100
+	Mobile:
+		Speed: 56
+	DamageMultiplier@DamageReduction:
+		Modifier: 85
+	FirepowerMultiplier@FirepowerIncrease:
+		Modifier: 115
+	Health:
+		HP: 14400
+	DamageMultiplier@armor:
+		Modifier: 60
+	Armor:
+		Type: None
+	#Food
+	Power:
+		Amount: -20
+	AutoTarget:
+		ScanRadius: 6
+		InitialStance: AttackAnything
+	Armament:
+		Weapon: footmanSlice
+	WithDeathAnimation:
+		UseDeathTypeSuffix: false
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+		-IdleSequences: idle1,idle2,idle3,idle4
+	Voiced:
+		VoiceSet: Halloween_Garfield
+	Crushable:
+		CrushClasses: vehicle
