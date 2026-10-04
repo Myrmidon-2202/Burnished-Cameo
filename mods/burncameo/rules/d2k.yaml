@@ -35,7 +35,7 @@ World:
 		RandomFactionMembers: ordos, atreides, harkonnen, corrino
 		Game: Dune Universe
 		Side: Random
-		Description: faction-dune-Random.description
+		Description: faction-dune-random.description
 
 	#########################################
 	#  DUNE UNIVERSE
@@ -240,8 +240,6 @@ Player:
 	GrantConditionOnPrerequisite@d2k_personal_shield:
 		Condition: d2k_personal_shield
 		Prerequisites: d2k_personal_shield
-	ActorStatValues:
-		Upgrades: d2k_personal_shield
 
 # ^D2K_HeavyMissilesUpgrade:
 # 	RangeMultiplier@d2k_heavy_missile_upgrade:
@@ -695,6 +693,7 @@ Player:
 		PlayerPalette: raplayer
 
 ^D2K_Ix_technology:
+
 ^D2K_BiologicalWarfare:
 	FirepowerMultiplier@ordos_upgrade_toxin:
 		RequiresCondition: ordos_upgrade_toxin
@@ -710,6 +709,7 @@ Player:
 		Prerequisites: ordos_upgrade_toxin
 	ActorStatValues:
 		Upgrades: ordos_upgrade_toxin
+
 ^D2K_Ordos_Shields:
 	Inherits: ^D2KPersonalShield
 	Shielded:
@@ -719,6 +719,7 @@ Player:
 		ShieldsUpCondition: d2k_shielded
 		SelectionBarColor: 8888FFFF
 		RequiresCondition: !disabled
+
 ^D2K_Ix_Turret_EMP:
 	Inherits: ^D2K_Ix_technology
 	AttackTurreted:
@@ -1199,7 +1200,7 @@ wind_trap.corrino:
 # 		BuildPaletteOrder: 110
 # 		BuildDuration: 50
 # 		BuildDurationModifier: 100
-# 		Description: Provides power for other structures.. Takes a lot less space than regular Wind Trap
+# 		Description: Provides power for other structures. Takes a lot less space than regular Wind Trap
 # 		IconPalette: player
 # 		Prerequisites: ~construction_yard.ixian
 # 	Valued:
@@ -1698,7 +1699,7 @@ d2k_barracks:
 # 		Name: Wormsign
 # 		IncomingSpeechNotification: EnemyUnitsApproaching
 # 		DisplayTimerRelationships: Ally, Neutral, Enemy
-# 		Description: Summons Tamed Sandworm anywhere on the map.. Sandworm can roam around the map and swallow enemy units. Cannot swallow big targets
+# 		Description: Summons Tamed Sandworm anywhere on the map. Sandworm can roam around the map and swallow enemy units. Cannot swallow big targets
 # 		SelectTargetSpeechNotification: SelectTarget
 # 		InsufficientPowerSpeechNotification: InsufficientPower
 # 		Prerequisites: ~faction.tleilaxu
@@ -3674,7 +3675,7 @@ storm_lasher_big:
 # 		HP: 121000
 # 	Buildable:
 # 		Prerequisites: heavy_factory, outpost, research_centre, ~techlevel.high, ~faction.smugglers
-# 		Description: Dropzone for quick reinforcements.. Enables drop-off of supervehicles
+# 		Description: Dropzone for quick reinforcements. Enables drop-off of supervehicles
 # 		BuildDuration: 1500
 # 		BuildDurationModifier: 100
 # 		IconPalette: player
@@ -3695,7 +3696,7 @@ storm_lasher_big:
 # 		HP: 145000
 # 	Buildable:
 # 		Prerequisites: heavy_factory, outpost, research_centre, ~techlevel.high, ~faction.corrino
-# 		Description: Dropzone for quick reinforcements.. Enables drop-off of Corrino's Special Vehicles
+# 		Description: Dropzone for quick reinforcements. Enables drop-off of Corrino's Special Vehicles
 # 		BuildDuration: 1500
 # 		IconPalette: d2kunit
 # 	Valued:
@@ -3841,8 +3842,6 @@ machine_gun_turret:
 		Amount: -30
 	RevealsShroud:
 		Range: 7394
-	ActorStatValues:
-		Upgrades: d2k_needle_guns, d2k_general_purpose_armor
 
 medium_gun_turret:
 	Inherits: ^D2KDefense
@@ -3905,8 +3904,6 @@ medium_gun_turret:
 		Amount: -50
 	RevealsShroud:
 		Range: 7979
-	ActorStatValues:
-		Upgrades: d2k_siege_range_upgrade, d2k_general_purpose_armor
 
 artillery_platform:
 	Inherits: medium_gun_turret
@@ -3917,7 +3914,7 @@ artillery_platform:
 		Queue: Defence, RADefence
 		Prerequisites: ~d2k_barracks.ordos
 		BuildPaletteOrder: 510
-		Description: Defensive structure..  Strong vs Infantry, Vehicles, Buildings.  Weak vs Tanks
+		Description: Defensive structure.  Strong vs Infantry, Vehicles, Buildings.  Weak vs Tanks
 	Health:
 		HP: 125000
 	Valued:
@@ -3942,7 +3939,7 @@ autogun_turret:
 		Queue: Defence, RADefence
 		Prerequisites: ~d2k_barracks.ordos
 		BuildPaletteOrder: 510
-		Description: Defensive structure..  Strong vs Infantry, Vehicles, Buildings.  Weak vs Tanks
+		Description: Defensive structure.  Strong vs Infantry, Vehicles, Buildings.  Weak vs Tanks
 		IconPalette: chrome
 	Health:
 		HP: 75000
@@ -3997,7 +3994,7 @@ flame_turret:
 		Queue: Defence, RADefence
 		Prerequisites: ~construction_yard.harkonnen, d2k_barracks.harkonnen
 		BuildPaletteOrder: 510
-		Description: Defensive structure.. Detector..  Strong vs Infantry, Vehicles, Tanks.  Weak vs Siege
+		Description: Defensive structure. Detector.  Strong vs Infantry, Vehicles, Tanks.  Weak vs Siege
 	Health:
 		HP: 40000
 	-WithSpriteTurret:
@@ -4071,8 +4068,6 @@ large_gun_turret:
 		Range: 10684
 	DetectCloaked:
 		Range: 5342
-	ActorStatValues:
-		Upgrades: d2k_heavy_missile_upgrade, d2k_general_purpose_armor
 
 # d2k_mine_ap:
 # 	Inherits: ^D2KMine
@@ -4081,7 +4076,7 @@ large_gun_turret:
 # 		BuildPaletteOrder: 60
 # 		BuildDuration: 150
 # 		Prerequisites: d2k_barracks, ~faction.smugglers, ~techlevel.low
-# 		Description: Defensive structure. Explodes when an enemy unit moves over it..  Strong vs Infantry.  Weak vs Tanks. .  Invisible to enemy.
+# 		Description: Defensive structure. Explodes when an enemy unit moves over it.  Strong vs Infantry.  Weak vs Tanks. .  Invisible to enemy.
 # 		IconPalette: d2kunit
 # 	Valued:
 # 		Cost: 125
@@ -4157,7 +4152,7 @@ large_gun_turret:
 # 		BuildPaletteOrder: 70
 # 		BuildDuration: 200
 # 		Prerequisites: d2k_barracks, ~faction.smugglers, ~techlevel.medium
-# 		Description: Defensive structure. Explodes when an enemy unit moves over it..  Strong vs Tanks.  Weak vs Infantry. .  Invisible to enemy.
+# 		Description: Defensive structure. Explodes when an enemy unit moves over it.  Strong vs Tanks.  Weak vs Infantry. .  Invisible to enemy.
 # 		IconPalette: d2kunit
 # 	Valued:
 # 		Cost: 200
@@ -4195,7 +4190,7 @@ large_gun_turret:
 # 		BuildPaletteOrder: 620
 # 		BuildDuration: 937
 # 		BuildDurationModifier: 100
-# 		Description: Unlocks elite infantry and weapons.. Provides Passive Income. Can be only built once.
+# 		Description: Unlocks elite infantry and weapons. Provides Passive Income. Can be only built once.
 # 		IconPalette: d2kunit
 # 	Valued:
 # 		Cost: 1600
@@ -4701,7 +4696,7 @@ palace.harkonnen:
 		Names:
 			1: Death Hand
 		Descriptions:
-			1: Launches a death hand missile at a target location
+			1: Launches a Death Hand missile at a target location
 		MissileWeapons:
 			1: deathhand
 		BeaconPosters:
@@ -4748,7 +4743,7 @@ palace.corrino:
 	Inherits@SW: ^PrimarySuperweapon
 	Buildable:
 		Prerequisites: ~construction_yard.corrino, research_centre.corrino
-		Description: This structure unlocks the death hand.
+		Description: This structure unlocks the Death Hand.
 		IconPalette: d2kunit
 	Tooltip:
 		Name: Palace
@@ -4793,7 +4788,7 @@ palace.corrino:
 		Names:
 			1: Release the Sardaukar!
 		Descriptions:
-			1: Deploys Corrino's Sardaukars from orbit to decimate your enemies.. Drop Pods damages area around. Provides passive income
+			1: Deploys Corrino's Sardaukars from orbit to decimate your enemies. Drop Pods damages area around. Provides passive income
 		Weapons:
 			1: SardaukarDroppodSpawner
 		OrderName: GDI Drop
@@ -4827,7 +4822,7 @@ palace.corrino:
 # 		BuildPaletteOrder: 620
 # 		BuildDuration: 937
 # 		BuildDurationModifier: 100
-# 		Description: Trains Emperor's Elite Sardaukars.. Provides Passive Income. Makes all infantry trained elite. Provides discount for Sardaukars. Can be only built once.
+# 		Description: Trains Emperor's Elite Sardaukars. Provides Passive Income. Makes all infantry trained elite. Provides discount for Sardaukars. Can be only built once.
 # 		IconPalette: d2kunit
 # 	Power:
 # 		Amount: -250
@@ -4871,7 +4866,7 @@ palace.corrino:
 # 		Names:
 # 			1: Release the Sardaukars
 # 		Descriptions:
-# 			1: Deploys Corrino's Sardaukars from orbit to decimate your enemies.. Drop Pods damages area around. Provides passive income
+# 			1: Deploys Corrino's Sardaukars from orbit to decimate your enemies. Drop Pods damages area around. Provides passive income
 # 		Weapons:
 # 			1: SardaukarDroppodSpawner
 # 		BeaconPosters:
@@ -4945,7 +4940,7 @@ palace.corrino:
 # 		Names:
 # 			1: Death before Dishonor
 # 		Descriptions:
-# 			1: Deploys Corrino's Sardaukar Juggernauts and Chief from orbit to devastate your enemies.. Drop Pods damages area around heavily and stuns everything around. Sardaukar Chief can plant C4 and jams enemy radar
+# 			1: Deploys Corrino's Sardaukar Juggernauts and Chief from orbit to devastate your enemies. Drop Pods damages area around heavily and stuns everything around. Sardaukar Chief can plant C4 and jams enemy radar
 # 		Weapons:
 # 			1: SardaukarEliteDroppodSpawner
 # 		BeaconPosters:
@@ -5247,8 +5242,8 @@ light_inf:
 		Speed: 52
 	Health:
 		HP: 19000
-	ChangesHealth@SelfHealing:
-		Step: 18
+#	ChangesHealth@SelfHealing:
+#		Step: 18
 	Armament@PRIMARY: ##########
 		Weapon: LMG
 		LocalOffset: 128,0,256
@@ -5298,8 +5293,8 @@ light_inf.harkonnen:
 		Speed: 52
 	Health:
 		HP: 18000
-	ChangesHealth@SelfHealing:
-		Step: 18
+#	ChangesHealth@SelfHealing:
+#		Step: 18
 	Armament@PRIMARY: ##########
 		Weapon: LMG
 		LocalOffset: 128,0,256
@@ -5353,7 +5348,7 @@ engineer:
 # 	Buildable:
 # 		BuildPaletteOrder: 10
 # 		Queue: Infantry, RAInfantry
-# 		Description: General-purpose infantry equipped with SMG. Deals burst damage.. Short Range.  Strong vs Infantry, Vehicles.  Weak vs Siege
+# 		Description: General-purpose infantry equipped with SMG. Deals burst damage. Short Range.  Strong vs Infantry, Vehicles.  Weak vs Siege
 # 		Prerequisites: ~faction.mercenary
 # 		BuildDuration: 80
 # 		BuildDurationModifier: 100
@@ -5378,7 +5373,7 @@ engineer:
 # 	Buildable:
 # 		BuildPaletteOrder: 10
 # 		Queue: Infantry, RAInfantry
-# 		Description: General-purpose infantry equipped with shotgun. Deals massive damage up front.. Very Short Range.  Strong vs Infantry, Vehicles.  Weak vs Siege
+# 		Description: General-purpose infantry equipped with shotgun. Deals massive damage up front. Very Short Range.  Strong vs Infantry, Vehicles.  Weak vs Siege
 # 		Prerequisites: ~faction.smugglers
 # 		BuildDuration: 90
 # 		BuildDurationModifier: 100
@@ -5422,8 +5417,8 @@ trooper:
 		AddToArmyValue: true
 	Health:
 		HP: 24000
-	ChangesHealth@SelfHealing:
-		Step: 24
+#	ChangesHealth@SelfHealing:
+#		Step: 24
 	Mobile:
 		Speed: 48
 	Armament:
@@ -5442,8 +5437,6 @@ trooper:
 		ProneOffset: 324,0,-204
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
-	ActorStatValues:
-		Upgrades: d2k_personal_shield, d2k_general_purpose_armor, d2k_heavy_missile_upgrade, d2k_advanced_ixian_technology
 
 shock_infantry:
 	Inherits: ^D2KInfantry
@@ -5469,8 +5462,8 @@ shock_infantry:
 		Speed: 45
 	Health:
 		HP: 36000
-	ChangesHealth@SelfHealing:
-		Step: 36
+#	ChangesHealth@SelfHealing:
+#		Step: 36
 	Armament@PRIMARY: ##########
 		Weapon: D2K_ShockGunInf
 		LocalOffset: 135,0,200
@@ -5491,8 +5484,6 @@ shock_infantry:
 	RenderSprites:
 		Image: shockgunner
 		PlayerPalette: player
-	ActorStatValues:
-		Upgrades: d2k_personal_shield, d2k_general_purpose_armor, d2k_advanced_ixian_technology
 
 heavy_trooper:
 	Inherits: ^D2KInfantry
@@ -5518,8 +5509,8 @@ heavy_trooper:
 		Speed: 45
 	Health:
 		HP: 21000
-	ChangesHealth@SelfHealing:
-		Step: 36
+#	ChangesHealth@SelfHealing:
+#		Step: 36
 	Armament@PRIMARY: ##########
 		Weapon: trooper_autogun
 		LocalOffset: 135,0,200
@@ -5548,13 +5539,13 @@ chem_troop:
 	AutoTargetPriority@INFANTRY:
 		InvalidTargets: Vehicle
 	Valued:
-		Cost: 75
+		Cost: 200
 	Tooltip:
 		Name: Chemical Trooper
 	Buildable:
 		BuildPaletteOrder: 10
 		Queue: Infantry.Ordos
-		Description: General-purpose infantry equipped with chemical weapon.. Cannot attack buildings.  Strong vs Infantry.  Weak vs Vehicles
+		Description: chem_troop.description
 		Prerequisites: barracks
 		IconPalette: player
 		BuildDuration: 80
@@ -5633,7 +5624,7 @@ ordos_mortar:
 	Inherits@anim: ^RA2Infantry
 	Inherits@vo: ^AttackFrontalVoice
 	Valued:
-		Cost: 400
+		Cost: 500
 	Tooltip:
 		Name: Mortar trooper
 	Buildable:
@@ -5644,7 +5635,7 @@ ordos_mortar:
 	Mobile:
 		Speed: 48
 	Health:
-		HP: 24000
+		HP: 22000
 	Armament:
 		Weapon: Dune_SiegeMortar
 		LocalOffset: 128,0,256
@@ -5733,7 +5724,7 @@ fremen:
 		Prerequisites: ~barracks.atreides, upgrade_barracks, high_tech_factory, ~techlevel.medium
 		Icon: phantomicon
 		IconPalette: windows256
-		Description: Fast Elite infantry units armed with assault rifles and machine guns. When grouped, they can take down buildings extremely quickly. Detector.  Strong vs Buildings.  Weak vs Infantry, Vehicles.  Special Ability: Invisibility
+		Description: actor-shahid.description
 		BuildDuration: 300
 		BuildDurationModifier: 100
 	Mobile:
@@ -5741,7 +5732,7 @@ fremen:
 	Valued:
 		Cost: 400
 	Health:
-		HP: 23000
+		HP: 24000
 	RevealsShroud:
 		Range: 5c256
 	Armament@PRIMARY:
@@ -5801,7 +5792,7 @@ facedancer:
 		BuildDuration: 175
 		BuildDurationModifier: 100
 		Prerequisites: ~d2k_barracks.ordos, outpost.ordos, ~upordos_facedancer
-		Description: Genetically modified humanoid. Can shapeshift into various forms.. Does not lie down when attacked. Cannot be damaged by Tiberium. Throws grenades. Must resupply at Resource Center.  Strong vs Buildings, Infantry, Air, Vehicles.  Weak vs Siege
+		Description: Genetically modified humanoid. Can shapeshift into various forms. Does not lie down when attacked. Cannot be damaged by Tiberium. Throws grenades. Must resupply at Resource Center.  Strong vs Buildings, Infantry, Air, Vehicles.  Weak vs Siege
 	Health:
 		HP: 5000
 	Power:
@@ -5886,7 +5877,7 @@ contaminator:
 		BuildDuration: 375
 		BuildDurationModifier: 100
 		Prerequisites: ~d2k_barracks.ordos
-		Description: The Contaminator is a genetically engineered organism. that infects a target organic unit to create another Contaminator. when the target dies. They are quite. resilient to gunfire..  Strong vs Buildings, Infantry, Air, Vehicles.  Weak vs Siege
+		Description: The Contaminator is a genetically engineered organism. that infects a target organic unit to create another Contaminator. when the target dies. They are quite. resilient to gunfire.  Strong vs Buildings, Infantry, Air, Vehicles.  Weak vs Siege
 	Health:
 		HP: 37500
 	Mobile:
@@ -5944,18 +5935,18 @@ grenadier:
 		Prerequisites: upgrade_barracks, high_tech_factory.atreides
 		BuildDuration: 100
 		BuildDurationModifier: 100
-		Description: Infantry armed with grenades. . Very prone to friendly fire.  Strong vs Buildings, Infantry.  Weak vs Vehicles
+		description: actor-d2k_atrgrenadier.description
 		IconPalette: d2kunit
 	Valued:
-		Cost: 100
+		Cost: 400
 	Tooltip:
 		Name: Grenadier
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 8000
+		HP: 17000
 	Mobile:
-		Speed: 52
+		Speed: 58
 	Armament:
 		Weapon: d2k_grenade
 		LocalOffset: 192,0,224
@@ -5984,7 +5975,7 @@ sardaukar:
 		Prerequisites: d2k_barracks.corrino
 		BuildDuration: 280
 		BuildDurationModifier: 100
-		Description: Assault infantry of Emperor's Army. Strong vs Infantry, Vehicles. Weak vs Artillery
+		description: actor-d2k_sardaukar.description
 		IconPalette: d2kunit
 	Valued:
 		Cost: 150
@@ -6052,7 +6043,7 @@ d2k_sardaukar_elite:
 		Prerequisites: ~barracks.corrino, upgrade_barracks, high_tech_factory.corrino, research_centre.corrino
 		BuildDuration: 500
 		BuildDurationModifier: 100
-		Description: Heavily Armored Elite assault infantry of Emperor's Army. Cannot lay down or be crushed. Strong vs Everything
+		description: actor-d2k_sardaukar_elite.description
 		IconPalette: player
 	Valued:
 		Cost: 1100
@@ -6110,7 +6101,7 @@ d2k_sardaukar_assassin:
 		Queue: Infantry.Corrino
 		BuildPaletteOrder: 70
 		Prerequisites: ~barracks.corrino, upgrade_barracks, high_tech_factory.corrino
-		Description: Assassin equipped with Heat Blade and Crossbow.  Strong vs Infantry
+		Description: actor-d2k_sardaukar_assassin.description
 		BuildDuration: 300
 		BuildDurationModifier: 100
 		IconPalette: windows256
@@ -6218,7 +6209,7 @@ saboteur:
 		Queue: Infantry, RAInfantry
 		BuildPaletteOrder: 100
 		Prerequisites: ~wip-content
-		Description: Sneaky stealth infantry that can infiltrate safely, armed with explosives that can be attached to buildings. Explodes upon death. Detector.  Strong vs Buildings.  Weak vs Everything.  Special Abilities: Destroy Buildings, Invisibility
+		Description: actor-saboteur.description
 		IconPalette: d2kunit
 	Valued:
 		Cost: 300 ## actually 0, but spawns from support power at Palace
@@ -6281,7 +6272,7 @@ saboteur:
 # 		Queue: Infantry, RAInfantry
 # 		BuildPaletteOrder: 10
 # 		Prerequisites: ~barracks.atreides, ~faction.fremen
-# 		Description: Universal Fremen infantry unit armed with assault rifle and rockets.. Can attack air..  Strong vs Infantry, Vehicles.  Weak vs Artillery
+# 		Description: Universal Fremen infantry unit armed with assault rifle and rockets. Can attack air.  Strong vs Infantry, Vehicles.  Weak vs Artillery
 # 		BuildDuration: 120
 # 		BuildDurationModifier: 100
 # 		Icon: icon
@@ -6312,7 +6303,7 @@ saboteur:
 # 	Buildable:
 # 		Prerequisites: ~faction.emperor, upgrade_barracks
 # 		BuildDuration: 150
-# 		Description: Fremen infantry unit armed with Rocket Launcher.. Can attack air..  Strong vs Tanks, Air.  Weak vs Infantry, Artillery
+# 		Description: Fremen infantry unit armed with Rocket Launcher. Can attack air.  Strong vs Tanks, Air.  Weak vs Infantry, Artillery
 
 # plasma_infantry:
 # 	Inherits: ^D2KInfantry
@@ -6378,7 +6369,7 @@ fedaykin:
 		Queue: Infantry.Atreides
 		BuildPaletteOrder: 120
 		Prerequisites: ~barracks.atreides, upgrade_barracks, high_tech_factory
-		Description: Elite Fremen infantry armed with a Weirding Module.  Strong vs Infantry, Vehicles, Buildings.  Weak vs Artillery, Tanks
+		Description: actor-fedaykin.description
 		IconPalette: d2kunit
 		BuildDuration: 280
 		BuildDurationModifier: 100
@@ -6429,7 +6420,7 @@ d2k_leech:
 		Queue: Vehicle, RAVehicle
 		BuildPaletteOrder: 130
 		Prerequisites: ~d2k_barracks.ordos
-		Description: Stealth creature that can attack infantry and vehicles.. Can detect cloaked units.. Regenerates health extremely quickly. Upon attack lays eggs which, upon death of vehicls, creates another Leech.  Strong vs Infantry, Vehicles.  Weak vs Aircraft.  Special Abilities: Invisibility, Jump, Lay Eggs
+		Description: Stealth creature that can attack infantry and vehicles. Can detect cloaked units. Regenerates health extremely quickly. Upon attack lays eggs which, upon death of vehicls, creates another Leech.  Strong vs Infantry, Vehicles.  Weak vs Aircraft.  Special Abilities: Invisibility, Jump, Lay Eggs
 		IconPalette: player
 		BuildDuration: 500
 		BuildDurationModifier: 100
@@ -6443,8 +6434,8 @@ d2k_leech:
 		Speed: 150
 	Health:
 		HP: 80000
-	ChangesHealth@SelfHealing:
-		Step: 80
+#	ChangesHealth@SelfHealing:
+#		Step: 80
 	Armament@PRIMARY:
 		Weapon: LeechSpit
 		LocalOffset: 0,0,200
@@ -6481,7 +6472,7 @@ d2k_leech:
 # 		Queue: Infantry, RAInfantry
 # 		BuildPaletteOrder: 140
 # 		Prerequisites: ~barracks.harkonnen, upgrade_barracks, high_tech_factory, ~techlevel.medium
-# 		Description: Flying infantry unit armed with dual assault rifle.. Can Attack air units..  Strong vs Infantry.  Weak vs Vehicles
+# 		Description: Flying infantry unit armed with dual assault rifle. Can Attack air units.  Strong vs Infantry.  Weak vs Vehicles
 # 		IconPalette: d2kunit
 # 		BuildDuration: 250
 # 		BuildDurationModifier: 100
@@ -6653,7 +6644,7 @@ d2k_sniper:
 		Queue: Infantry.Atreides, RAInfantry
 		BuildPaletteOrder: 60
 		Prerequisites: ~barracks.atreides, upgrade_barracks, outpost.atreides
-		Description: Infantry armed with a long range rifle. Can detect cloaked units at great distances.. Can Deplay to grant stealth and accuracy but loses movement.  Strong vs Infantry, Air, Vehicles.  Weak vs Tanks.  Special Ability: Invisibility while static
+		Description: actor-d2k_sniper.description
 		IconPalette: d2kunit
 		BuildDuration: 600
 		BuildDurationModifier: 100
@@ -6664,7 +6655,7 @@ d2k_sniper:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 5000
+		HP: 20000
 	Mobile:
 		Speed: 25
 	Armament:
@@ -6727,7 +6718,7 @@ d2k_sniper:
 # 		Queue: Infantry, RAInfantry
 # 		BuildPaletteOrder: 160
 # 		Prerequisites: ~barracks.atreides, upgrade_barracks, ~!faction.ixian, ~techlevel.low
-# 		Description: Spotter Infantry armed with a long range rifle. Can detect cloaked units.. Can Deplay to grant more view distance and accuracy, but loses movement.  Strong vs Infantry, Air, Vehicles.  Weak vs Tanks.  Special Ability: Binoculars
+# 		Description: Spotter Infantry armed with a long range rifle. Can detect cloaked units. Can Deplay to grant more view distance and accuracy, but loses movement.  Strong vs Infantry, Air, Vehicles.  Weak vs Tanks.  Special Ability: Binoculars
 # 		IconPalette: d2kunit
 # 		BuildDuration: 400
 # 		BuildDurationModifier: 100
@@ -6764,10 +6755,10 @@ flamethrower:
 		BuildDuration: 220
 		BuildDurationModifier: 100
 		Prerequisites: ~barracks.harkonnen, upgrade_barracks, high_tech_factory.harkonnen
-		Description: Close range assault unit..  Strong vs Infantry, Vehicles, Tanks, Buildings.  Weak vs Siege.  Special Ability: Invisibility
+		Description: actor-harkflame_infantry.description
 		IconPalette: d2kunit
 	Valued:
-		Cost: 300
+		Cost: 500
 	Tooltip:
 		Name: Flamethrower
 	Selectable:
@@ -6775,7 +6766,7 @@ flamethrower:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 9000
+		HP: 18000
 	Mobile:
 		Speed: 32
 	RevealsShroud:
@@ -6872,7 +6863,7 @@ flamethrower:
 # 		BuildDuration: 375
 # 		BuildDurationModifier: 100
 # 		Prerequisites: upgrade_barracks, high_tech_factory, ~techlevel.medium, ~mechanic_prereq
-# 		Description: Repairs nearby vehicles and buildings.. Can enter vehicle husks to repair them.. Removes attached explosives from units and buildings.  Unarmed
+# 		Description: Repairs nearby vehicles and buildings. Can enter vehicle husks to repair them. Removes attached explosives from units and buildings.  Unarmed
 # 		IconPalette: d2kunit
 # 	Valued:
 # 		Cost: 400
@@ -6941,7 +6932,7 @@ bene_gesserit:
 		BuildDuration: 500
 		BuildDurationModifier: 100
 		BuildLimit: 6
-		Description: Witch of the Imperium. Can control enemy units using The Voice and. instantly kill infantry with the Gom Jabbar. Cannot be poisoned nor mind controlled.
+		Description: actor-bene_gesserit.description
 		IconPalette: player
 	-ExternalCondition@Poisoned:
 	-Targetable@poisoned:
@@ -7008,7 +6999,7 @@ d2k_light_tank:
 		BuildPaletteOrder: 80
 		BuildDuration: 325
 		BuildDurationModifier: 100
-		Prerequisites:
+		Prerequisites: actor-d2k_apc.description
 		Description: Light Carrier vehicle with light cannon and missile launcher. Can carry 3 passengers. Strong vs Vehicles, Tanks. Weak vs Infantry
 		IconPalette: d2kunit
 	Valued:
@@ -7157,7 +7148,7 @@ d2k_atreides_apc:
 		BuildDuration: 375
 		BuildDurationModifier: 100
 		Prerequisites: heavy_factory.atreides
-		Description: Stealth Heavy Carrier vehicle with machine gun. Can carry 12 passengers. Due to its giant size its very attractive to worms
+		Description: actor-d2k_atreides_apc.description
 		IconPalette: windows256
 	Valued:
 		Cost: 1000
@@ -7508,7 +7499,7 @@ d2k_apc:
 		BuildDuration: 325
 		BuildDurationModifier: 100
 		Prerequisites:
-		Description: Hit and Run Vehicle with small cannon and missile launcher. Can carry 3 passengers
+		Description: actor-d2k_apc.description
 		IconPalette: d2kunit
 	AutoDeployer:
 		DeployChance: 100
@@ -7537,7 +7528,7 @@ d2k_apc:
 	AutoTarget:
 	Cargo:
 		Types: Infantry
-		MaxWeight: 3
+		MaxWeight: 5
 		LoadingCondition: notmobile
 	WithSpriteTurret@default:
 		Sequence: turret-tank
@@ -7623,7 +7614,7 @@ ordos_apc:
 		Prerequisites: ~light_factory.ordos, outpost.ordos
 		BuildDuration: 400
 		BuildDurationModifier: 100
-		Description: Ordos Hover Apc. Highly Mobile Hover unit. Fires laser beams. Weak durability.  Strong vs Everything
+		Description: actor-ordos_apc.description
 		IconPalette: windows256
 	Valued:
 		Cost: 1000
@@ -7892,7 +7883,7 @@ swarmer:
 		Prerequisites: ~high_tech_factory.ordos
 		BuildDuration: 250
 		BuildDurationModifier: 100
-		Description: Light craft armed with dual machine guns. Can attack air. Strong vs Infantry and Air
+		Description: actor-swarmer.description
 	Tooltip:
 		Name: Swarmer Drone
 	UpdatesPlayerStatistics:
@@ -7958,7 +7949,7 @@ d2k_aa_mine:
 		Prerequisites: ~high_tech_factory.ordos
 		BuildDuration: 500
 		BuildDurationModifier: 100
-		Description: Slowly Flying Mine that hurls missiles upon contact with enemy aircraft.
+		Description: actor-aa_mine.description
 	Tooltip:
 		Name: Air Mine
 	UpdatesPlayerStatistics:
@@ -8033,13 +8024,13 @@ ordos_eye:
 		Prerequisites: ~high_tech_factory.ordos
 		BuildDuration: 250
 		BuildDurationModifier: 100
-		Description: Light scout aircraft with a suicidal passenger . Can attack air.. Strong vs Infantry and Air
+		Description: actor-ordos_eye.description
 	Tooltip:
 		Name: Eye in the Sky
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 150000
+		HP: 30000
 	RevealsShroud:
 		Range: 10c0
 		Type: GroundPosition
@@ -8086,7 +8077,7 @@ ordos_banshee:
 		Prerequisites: ~high_tech_factory.ordos, ~upordos_banshee
 		BuildDuration: 250
 		BuildDurationModifier: 100
-		Description: Light plane armed with dual machine guns. . Can attack air.. Strong vs Infantry and Air
+		Description: Light plane armed with dual machine guns. . Can attack air. Strong vs Infantry and Air
 	Tooltip:
 		Name: Banshee
 	UpdatesPlayerStatistics:
@@ -8146,6 +8137,7 @@ ordos_banshee:
 		PauseOnCondition: cloak-force-disabled || base-reveal
 	WithMoveAnimation:
 		MoveSequence: move
+
 ordos_wraith:
 	Inherits: ^Helicopter
 	Inherits@Template: ^SpaceshipTemplate
@@ -8173,8 +8165,8 @@ ordos_wraith:
 		RepulsionSpeed: 40
 	Health:
 		HP: 3750000
-	ChangesHealth@SelfHealing:
-		Step: 50
+#	ChangesHealth@SelfHealing:
+#		Step: 50
 	GrantConditionOnPrerequisite@Upgrade:
 		Condition: upyrdisk
 		Prerequisites: upyrdisk
@@ -8249,7 +8241,7 @@ d2katreidesmongoose:
 		Queue: VehicleHeavy.Atreides, VehicleStarport.Atreides
 		Prerequisites: heavy_factory.atreides
 		BuildPaletteOrder: 30
-		Description: Generalist Combat Walker
+		Description: actor-mongoose.description
 		BuildDuration: 250
 		BuildDurationModifier: 100
 	UpdatesPlayerStatistics:
@@ -8373,7 +8365,7 @@ ornithopter.controllable:
 		Prerequisites: high_tech_factory.atreides
 		BuildDuration: 600
 		BuildDurationModifier: 100
-		Description: Powerful Aircraft armed with dual Heavy Machine Guns and Bombs.. Strong vs Everything
+		Description: actor-ornithopter.description
 		IconPalette: d2kunit
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
@@ -8474,8 +8466,8 @@ d2k_air_drone:
 		HP: 62500
 	Repairable:
 		HpPerStep: 3125
-	ChangesHealth@SelfHealing:
-		Step: 25
+#	ChangesHealth@SelfHealing:
+#		Step: 25
 	Shielded:
 		DamageRegenDelay: 125
 		RegenAmount: 50
@@ -8506,13 +8498,6 @@ d2k_air_drone:
 		MuzzleSequence: muzzle
 		MuzzlePalette: d2keffect
 		RequiresCondition: !d2k_needle_guns
-		PauseOnCondition: !ammo
-	Armament@Upgrade: ##########
-		Weapon: d2k_air_drone_guns_upgrade
-		LocalOffset: 0,-256,0, 0,256,0
-		MuzzleSequence: muzzle
-		MuzzlePalette: d2keffect
-		RequiresCondition: d2k_needle_guns
 		PauseOnCondition: !ammo
 	FirepowerMultiplier@DualWeapon:
 		Modifier: 50
@@ -8546,8 +8531,6 @@ d2k_air_drone:
 		CloakSound: appear1.aud
 		UncloakSound: trans1.aud
 		UncloakOn: Unload, Infiltrate, Demolish, Dock, Damage, Heal, Attack
-	ActorStatValues:
-		Upgrades: d2k_heavy_missile_upgrade, d2k_general_purpose_armor, d2k_needle_guns, d2k_advanced_ixian_technology
 
 d2k_air_drone.husk:
 	Inherits: ^PlaneHusk
@@ -8577,7 +8560,7 @@ phoenix:
 		Prerequisites: outpost.harkonnen
 		BuildDuration: 512
 		BuildDurationModifier: 100
-		Description: Medium Plane armed with dual Air-To-Ground flame rockets.. Strong vs Buildings, Vehicles, Infantry
+		Description: actor-harkgunship.description
 	Tooltip:
 		Name: Gunship
 	UpdatesPlayerStatistics:
@@ -8703,7 +8686,7 @@ d2k_combat_fleet:
 		BuildPaletteOrder: 40
 		Prerequisites: high_tech_factory.corrino, research_centre.corrino
 		Queue: Aircraft.Corrino
-		Description: Heavy siege vessel which fires multiple unguided rockets at its targets.
+		Description: actor-combat_fleet.description
 		IconPalette: ra2
 	Aircraft:
 		InitialFacing: 896
@@ -8768,7 +8751,7 @@ d2k_kwny_fighter:
 		BuildPaletteOrder: 10
 		Prerequisites: high_tech_factory.corrino
 		Queue: Aircraft.Corrino
-		Description: Fast Spaceship fighter used for aerial combat. Equipped with guided missiles. Strong vs Everything
+		Description: actor-kwny_fighter.description
 		IconPalette: ra2
 	Aircraft:
 		InitialFacing: 896
@@ -8830,7 +8813,7 @@ d2k_airdefenseplatform:
 		BuildPaletteOrder: 180
 		Prerequisites: high_tech_factory.harkonnen, research_centre.harkonnen
 		Queue: Aircraft.Harkonnen
-		Description: Mobile Base Air Defense equipped with Dual High Calibre Machinegun
+		Description: actor-adp.description
 		IconPalette: ra2
 		BuildDuration: 625
 		BuildDurationModifier: 100
@@ -8914,8 +8897,8 @@ harvester:
 		HP: 200000
 	Repairable:
 		HpPerStep: 10000
-	ChangesHealth@SelfHealing:
-		Step: 80
+#	ChangesHealth@SelfHealing:
+#		Step: 80
 	Armor:
 		Type: Heavy
 	Shielded:
@@ -8963,7 +8946,6 @@ harvester:
 	Voiced:
 		VoiceSet: D2KHarvester
 	ActorStatValues:
-		Upgrades: d2k_general_purpose_armor, d2k_advanced_ixian_technology
 
 # ordos_harv:
 # 	Inherits@D2KT: ^D2KTank
@@ -9063,7 +9045,7 @@ trike:
 		Prerequisites:
 		BuildDuration: 175
 		BuildDurationModifier: 100
-		Description: Fast scout.  Strong vs Infantry.  Weak vs Tanks
+		Description: actor-trike.description
 		IconPalette: d2kunit
 	Valued:
 		Cost: 250
@@ -9120,7 +9102,7 @@ d2k_buzzsaw:
 		Queue: VehicleLight.Harkonnen, VehicleStarport.Harkonnen
 		BuildDuration: 200
 		BuildDurationModifier: 100
-		Description: Fast and moderately armoured, this unit is ideal for scouting. an area quickly and taking out infantry either with its dual cannons. or with the massive central blade.  Strong vs Infantry.  Weak vs Vehicles, Aircraft
+		Description: actor-buzzsaw.description
 	Mobile:
 		TurnSpeed: 48
 		Speed: 102
@@ -9173,7 +9155,7 @@ quad:
 		BuildPaletteOrder: 20
 		BuildDuration: 210
 		BuildDurationModifier: 100
-		Description: Missile Scout. Can attack air.  Strong vs Vehicles.  Weak vs Infantry
+		Description: actor-rocket_raider.description
 		IconPalette: d2kunit
 	Valued:
 		Cost: 400
@@ -9226,7 +9208,7 @@ d2k_rocket_buggy:
 		BuildPaletteOrder: 20
 		BuildDuration: 175
 		BuildDurationModifier: 100
-		Description: Missile Scout. Strong vs Vehicles. Weak vs Infantry
+		Description: actor-rocket_raider.description
 		IconPalette: ra2
 	Valued:
 		Cost: 350
@@ -9609,7 +9591,7 @@ siege_tank:
 		Queue: VehicleHeavy.Atreides, VehicleHeavy.Ordos, VehicleStarport.Atreides, VehicleStarport.Harkonnen, VehicleStarport.Ordos
 		Prerequisites: upgrade_heavy
 		BuildPaletteOrder: 50
-		Description: Siege Artillery. Strong vs Infantry, Buildings. Weak vs Tanks
+		Description: actor-assault_gun.description
 		IconPalette: d2kunit
 	Valued:
 		Cost: 800
@@ -9729,7 +9711,7 @@ ordos_cobra:
 	Inherits@AntiBuil: ^PrioritizeBuilding
 	Buildable:
 		Queue: VehicleHeavy.Ordos, VehicleStarport.Ordos
-		Prerequisites: ~heavy_factory.ordos, outpost.ordos, ~!upordos_python
+		Prerequisites: ~heavy_factory.ordos, outpost.ordos
 		BuildPaletteOrder: 50
 		Description: Siege Artillery.  Strong vs Infantry, Buildings.  Weak vs Tanks
 		IconPalette: d2kunit
@@ -9939,8 +9921,8 @@ siege_tank_ixian:
 		HP: 60000
 	Repairable:
 		HpPerStep: 3000
-	ChangesHealth@SelfHealing:
-		Step: 24
+#	ChangesHealth@SelfHealing:
+#		Step: 24
 	Valued:
 		Cost: 2050
 	Mobile:
@@ -10007,8 +9989,6 @@ siege_tank_ixian:
 	WithShadow:
 		Offset: 128, 128, 0
 		ZOffset: -512
-	ActorStatValues:
-		Upgrades: d2k_siege_range_upgrade, d2k_general_purpose_armor, d2k_advanced_ixian_technology
 
 duelist_tank:
 	Inherits@D2KT: ^D2KTank
@@ -10034,8 +10014,8 @@ duelist_tank:
 		HP: 197500
 	Repairable:
 		HpPerStep: 9875
-	ChangesHealth@SelfHealing:
-		Step: 79
+#	ChangesHealth@SelfHealing:
+#		Step: 79
 	Armor:
 		Type: Heavy
 	Shielded:
@@ -10072,8 +10052,6 @@ duelist_tank:
 		RequiresCondition: d2k_needle_guns
 	FirepowerMultiplier@DualWeapon:
 		Modifier: 50
-	ActorStatValues:
-		Upgrades: d2k_siege_range_upgrade
 	AttackTurreted:
 	WithMuzzleOverlay:
 	WithSpriteTurret:
@@ -10091,8 +10069,6 @@ duelist_tank:
 		Modifier: 105
 	FirepowerMultiplier@d2k_needle_guns:
 		Modifier: 110
-	ActorStatValues:
-		Upgrades: d2k_siege_range_upgrade, d2k_needle_guns, d2k_general_purpose_armor, d2k_advanced_ixian_technology
 
 missile_tank_ixian:
 	Inherits@D2KT: ^D2KTank
@@ -10121,8 +10097,8 @@ missile_tank_ixian:
 		HP: 50000
 	Repairable:
 		HpPerStep: 2500
-	ChangesHealth@SelfHealing:
-		Step: 20
+#	ChangesHealth@SelfHealing:
+#		Step: 20
 	Armor:
 		Type: Light
 	Shielded:
@@ -10186,8 +10162,6 @@ missile_tank_ixian:
 	RenderSprites:
 		Image: ix_missile_tank
 		PlayerPalette: player
-	ActorStatValues:
-		Upgrades: d2k_heavy_missile_upgrade, d2k_advanced_ixian_technology
 
 # d2k_autogun_tank:
 # 	Inherits@D2KT: ^D2KTank
@@ -10277,7 +10251,7 @@ d2k_autogun_tank_small:
 	Buildable:
 		Queues: VehicleHeavy,Ordos, VehicleStarport.Ordos
 		Prerequisites: ~heavy_factory.ordos
-		Description: Combat Anti-Infantry Vehicle
+		Description: actor-autogun_tank.description
 		IconPalette: ra2
 	Armament:
 		Weapon: autogun_tank_small
@@ -10335,7 +10309,7 @@ missile_tank:
 		Queue: VehicleHeavy.Atreides, VehicleHeavy.Harkonnen, VehicleStarport.Atreides, VehicleStarport.Harkonnen, VehicleStarport.Ordos, VehicleStarport.Corrino
 		Prerequisites: upgrade_heavy, research_centre
 		BuildPaletteOrder: 60
-		Description: Rocket Artillery. Strong vs Vehicles, Buildings, Aircraft. Weak vs Infantry. Detector
+		Description: actor-missile_tank.description
 		IconPalette: d2kunit
 	Valued:
 		Cost: 750
@@ -10382,7 +10356,7 @@ d2k_flame_tank:
 		BuildPaletteOrder: 50
 		BuildDuration: 200
 		BuildDurationModifier: 100
-		Description: Flame Tank.  Strong vs Infantry, Buildings.  Weak vs Tanks
+		Description: actor-flame_tank.description
 		IconPalette: player
 	Valued:
 		Cost: 550
@@ -10432,7 +10406,7 @@ sonic_tank:
 		Prerequisites: ~heavy.atreides, research_centre.atreides
 		BuildDuration: 500
 		BuildDurationModifier: 100
-		Description: Fires sonic shocks.  Strong vs Infantry, Vehicles.  Weak vs Tanks, Artillery
+		Description: actor-sonic_tank.description
 		IconPalette: d2kunit
 	Valued:
 		Cost: 1000
@@ -10504,7 +10478,7 @@ d2k_laser_tank:
 		Prerequisites: ~heavy_factory.ordos, outpost.ordos
 		BuildDuration: 400
 		BuildDurationModifier: 100
-		Description: Ordos Universal Battle Tank. Highly Mobile Hover unit. Fires laser beams. Weak durability.  Strong vs Everything
+		Description: actor-ordos_laser_tank.description
 		IconPalette: windows256
 	Valued:
 		Cost: 1000
@@ -10513,7 +10487,7 @@ d2k_laser_tank:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 60000
+		HP: 50000
 	Armor:
 		Type: Medium
 	Mobile:
@@ -10548,62 +10522,63 @@ d2k_laser_tank:
 	RenderSprites:
 		PlayerPalette: player_rgba
 
-ordos_deviatormk2:
-	Inherits: ^D2KTank
-	Inherits@Template: ^HighTechTankTemplate
-	Inherits@GAINSEXPERIENCE: ^GainsExperience
-	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
-	Inherits@EXT: ^ExternalConditions
-	Inherits@IXEMP: ^D2K_Ix_Turret_EMP
-	Inherits@SHADOWS: ^Shadows
-	Inherits@Chemical: ^D2K_BiologicalWarfare
-	Inherits@Shield: ^D2K_Ordos_Shields
-	Buildable:
-		Queue: Vehicle, RAVehicle
-		BuildPaletteOrder: 100
-		Prerequisites: ~heavy_factory.ordos, research_centre.ordos, ~upordos_deviatormk2
-		BuildDuration: 400
-		BuildDurationModifier: 100
-		Description: Ordos Universal Battle Tank. Highly Mobile Hover unit. Fires laser beams. Weak durability.  Strong vs Everything
-		IconPalette: windows256
-	Valued:
-		Cost: 1400
-	Tooltip:
-		Name: Deviator Tank
-	UpdatesPlayerStatistics:
-		AddToArmyValue: true
-	Health:
-		HP: 85000
-	Armor:
-		Type: Medium
-	Mobile:
-		TurnSpeed: 48
-		Speed: 105
-		Locomotor: hover
-		Voice: Move
-	RevealsShroud:
-		Range: 5c0
-	Turreted:
-		TurnSpeed: 40
-		Offset: -100,20,1
-	Armament:
-		Weapon: DeviatorMissile
-		LocalOffset: 275,-125,0
-	AttackTurreted:
-	Hovers:
-	WithSpriteTurret:
-	FireWarheadsOnDeath:
-		Weapon: D2KUnitExplodeMed
-		EmptyWeapon: D2KUnitExplodeMed
-	AttractsWorms:
-		Intensity: 350
-	Voiced:
-		VoiceSet: EBFDDeviator
-	WithShadow:
-		Offset: 128, 128, 0
-		ZOffset: -512
-	RenderSprites:
-		PlayerPalette: player_rgba
+# ordos_deviatormk2:
+# 	Inherits: ^D2KTank
+# 	Inherits@Template: ^HighTechTankTemplate
+# 	Inherits@GAINSEXPERIENCE: ^GainsExperience
+# 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+# 	Inherits@EXT: ^ExternalConditions
+# 	Inherits@IXEMP: ^D2K_Ix_Turret_EMP
+# 	Inherits@SHADOWS: ^Shadows
+# 	Inherits@Chemical: ^D2K_BiologicalWarfare
+# 	Inherits@Shield: ^D2K_Ordos_Shields
+# 	Buildable:
+# 		Queue: Vehicle, RAVehicle
+# 		BuildPaletteOrder: 100
+# 		Prerequisites: ~heavy_factory.ordos, research_centre.ordos, ~upordos_deviatormk2
+# 		BuildDuration: 400
+# 		BuildDurationModifier: 100
+# 		Description: Ordos Universal Battle Tank. Highly Mobile Hover unit. Fires laser beams. Weak durability.  Strong vs Everything
+# 		IconPalette: windows256
+# 	Valued:
+# 		Cost: 1400
+# 	Tooltip:
+# 		Name: Deviator Tank
+# 	UpdatesPlayerStatistics:
+# 		AddToArmyValue: true
+# 	Health:
+# 		HP: 85000
+# 	Armor:
+# 		Type: Medium
+# 	Mobile:
+# 		TurnSpeed: 48
+# 		Speed: 105
+# 		Locomotor: hover
+# 		Voice: Move
+# 	RevealsShroud:
+# 		Range: 5c0
+# 	Turreted:
+# 		TurnSpeed: 40
+# 		Offset: -100,20,1
+# 	Armament:
+# 		Weapon: DeviatorMissile
+# 		LocalOffset: 275,-125,0
+# 	AttackTurreted:
+# 	Hovers:
+# 	WithSpriteTurret:
+# 	FireWarheadsOnDeath:
+# 		Weapon: D2KUnitExplodeMed
+# 		EmptyWeapon: D2KUnitExplodeMed
+# 	AttractsWorms:
+# 		Intensity: 350
+# 	Voiced:
+# 		VoiceSet: EBFDDeviator
+# 	WithShadow:
+# 		Offset: 128, 128, 0
+# 		ZOffset: -512
+# 	RenderSprites:
+# 		PlayerPalette: player_rgba
+
 # d2k_qafza:
 # 	Inherits: ^D2KTank
 # 	Inherits@GAINSEXPERIENCE: ^GainsExperience
@@ -10738,16 +10713,16 @@ devastator:
 		Prerequisites: heavy_factory.harkonnen, research_centre.harkonnen
 		BuildDuration: 1000
 		BuildDurationModifier: 100
-		Description: Super Heavy Tank.  Strong vs Tanks.  Weak vs Artillery
+		Description: actor-devastator.description
 		IconPalette: d2kunit
 	Valued:
-		Cost: 1500
+		Cost: 1700
 	Tooltip:
 		Name: Devastator
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 170000
+		HP: 110000
 	ChangesHealth:
 		Step: 60
 		Delay: 1
@@ -10827,15 +10802,15 @@ d2k_tyrant:
 		Prerequisites: research_centre.corrino
 		BuildDuration: 750
 		BuildDurationModifier: 100
-		Description: Super Heavy Tank. Strong vs Tanks. Weak vs Artillery
+		Description: actor-tyrant.description
 	Valued:
-		Cost: 1300
+		Cost: 1500
 	Tooltip:
 		Name: Tyrant
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 170000
+		HP: 100000
 	Armor:
 		Type: Heavy
 	Voiced:
@@ -10888,7 +10863,7 @@ raider:
 		Queue: VehicleLight.Ordos, VehicleStarport.Ordos
 		BuildPaletteOrder: 10
 		Prerequisites: ~light_factory.ordos
-		Description: Improved Scout. Can carry a passenger. Strong vs Infantry, Light Vehicles. Weak vs Tanks
+		Description: actor-raider.description
 		IconPalette: d2kunit
 	Cargo:
 		Types: Infantry
@@ -10947,7 +10922,7 @@ ordos_scoutdrone:
 		Queue: VehicleLight.Ordos, VehicleStarport.Ordos
 		BuildPaletteOrder: 10
 		Prerequisites: ~light_factory.ordos
-		Description: Improved Scout.  Strong vs Vehicles.  Weak vs Infantry
+		Description: actor-ordos_scoutdrone.description
 		IconPalette: d2kunit
 	Valued:
 		Cost: 500
@@ -11005,7 +10980,7 @@ stealth_raider:
 		BuildPaletteOrder: 30
 		BuildDuration: 175
 		BuildDurationModifier: 100
-		Description: Invisible Raider Trike.  Strong vs Infantry, Light Vehicles.  Weak vs Tanks
+		Description: actor-stealth_raider.description
 		IconPalette: d2kunit
 	Valued:
 		Cost: 375
@@ -11064,8 +11039,8 @@ rocket_raider_ixian:
 		HP: 25000
 	Repairable:
 		HpPerStep: 1250
-	ChangesHealth@SelfHealing:
-		Step: 10
+#	ChangesHealth@SelfHealing:
+#		Step: 10
 	Armor:
 		Type: Medium
 	Shielded:
@@ -11131,8 +11106,6 @@ rocket_raider_ixian:
 	WithCargoPipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: true
-	ActorStatValues:
-		Upgrades: d2k_heavy_missile_upgrade, d2k_general_purpose_armor, d2k_advanced_ixian_technology
 	RenderSprites:
 		PlayerPalette: player_rgba
 	Turreted:
@@ -11166,8 +11139,8 @@ shock_raider:
 		HP: 40000
 	Repairable:
 		HpPerStep: 2000
-	ChangesHealth@SelfHealing:
-		Step: 16
+#	ChangesHealth@SelfHealing:
+#		Step: 16
 	Shielded:
 		DamageRegenDelay: 125
 		RegenAmount: 32
@@ -11207,8 +11180,6 @@ shock_raider:
 		VoiceSet: D2KShockRaider
 	RenderSprites:
 		Image: stealth_raider
-	ActorStatValues:
-		Upgrades: d2k_general_purpose_armor, d2k_advanced_ixian_technology
 
 
 deviator:
@@ -11233,7 +11204,7 @@ deviator:
 		Prerequisites: ~heavy_factory.ordos, research_centre.ordos
 		BuildDuration: 400
 		BuildDurationModifier: 100
-		Description: Fires a warhead which changes. the allegiance of enemy vehicles
+		Description: actor-deviator.description
 		IconPalette: d2kunit
 	Mobile:
 		TurnSpeed: 48
@@ -11273,7 +11244,7 @@ deviator:
 	Buildable:
 		Queue: Vehicle, RAVehicle
 		BuildPaletteOrder: 40
-		Description: Main Battle Tank.  Strong vs Tanks.  Weak vs Infantry
+		Description: actor-combat_tank.description
 		IconPalette: d2kunit
 	Valued:
 		Cost: 600
@@ -11332,7 +11303,7 @@ combat_tank_h:
 	Buildable:
 		Queue: VehicleHeavy.Harkonnen, VehicleStarport.Harkonnen
 		BuildPaletteOrder: 40
-		Description: Main Battle Tank.  Strong vs Tanks.  Weak vs Infantry
+		Description: actor-combat_tank.description
 		IconPalette: d2kunit
 		Prerequisites: heavy_factory.harkonnen
 	Valued:
@@ -11402,7 +11373,7 @@ combat_tank_o_stealth:
 	Buildable:
 		Queue: VehicleHeavy.Ordos, VehicleStarport.Ordos
 		Prerequisites: ~heavy_factory.ordos, outpost.ordos
-		Description: Fast stealth tank with powerful long range cannon.  Strong vs Tanks.  Weak vs Infantry
+		Description: actor-combat_tank_o_stealth.description
 		IconPalette: windows256
 	Valued:
 		Cost: 1000
@@ -11464,8 +11435,8 @@ combat_tank_ixian:
 		HP: 65000
 	Repairable:
 		HpPerStep: 3250
-	ChangesHealth@SelfHealing:
-		Step: 26
+#	ChangesHealth@SelfHealing:
+#		Step: 26
 	Armor:
 		Type: Medium
 	Shielded:
@@ -11499,8 +11470,6 @@ combat_tank_ixian:
 		Intensity: 520
 	Voiced:
 		VoiceSet: D2KCombatTank
-	ActorStatValues:
-		Upgrades: d2k_siege_range_upgrade, d2k_general_purpose_armor, d2k_advanced_ixian_technology
 
 combat_tank_corrino:
 	Inherits: combat_tank_h
@@ -11515,7 +11484,7 @@ combat_tank_corrino:
 		Queue: VehicleStarport.Corrino
 		BuildPaletteOrder: 10
 		Prerequisites: starport.corrino
-		Description: Corrino Multi-Purpose Main Battle Tank. Equipped with Lower Calibre Cannon and AA/AT Missile System. All-Rounder
+		Description: actor-combat_tank_corrino.description
 	Armament:
 		Weapon: D2K76mm
 		Recoil: 65
@@ -11787,6 +11756,52 @@ carryall:
 		BuildPaletteOrder: 120
 		Prerequisites: ~high_tech_factory.ixian
 
+carryall.transport:
+	Inherits: ^Helicopter
+	Inherits@Template: ^UnarmedTransportHelicopterTemplate
+	Inherits@cargo: ^CargoAircraft
+	Inherits@bot: ^BotAutoDeployUnarmedAirTransport
+	Inherits@eject: ^AircraftEjectOnDeath
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Carryall Transport
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+		OverrideActor: carryall
+	Buildable:
+		Queue: Aircraft.Atreides, Aircraft.Harkonnen, Aircraft.Ordos, Aircraft.Corrino
+		BuildPaletteOrder: 120
+	Aircraft:
+		TurnSpeed: 20
+		Speed: 170
+	Health:
+		HP: 60000
+	Repairable:
+		HpPerStep: 5000
+	Cargo:
+		Types: Infantry, Hacker, Fremen
+		MaxWeight: 30
+		AfterLoadDelay: 0
+		BeforeUnloadDelay: 0
+		AfterUnloadDelay: 5
+	SpawnActorOnDeath:
+		Actor: carryall.husk
+		RequiresCondition: cruising
+	SpawnActorOnDeath@LANDING:
+		Actor: carryall.huskVTOL
+		RequiresCondition: !cruising
+	SelectionDecorations:
+	Selectable:
+		Bounds: 1440, 1440
+		DecorationBounds: 1440, 1440
+	RenderSprites:
+		Image: carryall
+	FireProjectilesOnDeath:
+		Weapons: Debris, Debris2, Debris3, Debris4
+		Pieces: 3, 6
+		Range: 1c512, 2c512
+
 carryall.atreides:
 	Inherits: carryall.reinforce
 	Health:
@@ -11922,7 +11937,6 @@ frigate:
 		RequiresSelection: true
 		PipCount: 10
 
-
 frigate.paradrop:
 	Inherits: frigate
 	Cargo:
@@ -11946,6 +11960,7 @@ ornithopter.husk:
 		PlayerPalette: playerd2k
 	FallsToEarth:
 		Explosion: D2KUnitExplodeMed
+
 carryall.husk:
 	Inherits: ^PlaneHusk
 	Tooltip:
@@ -11960,6 +11975,7 @@ carryall.husk:
 		PlayerPalette: playerd2k
 	FallsToEarth:
 		Explosion: D2KUnitExplodeLarge
+
 carryall.huskVTOL:
 	Inherits: ^PlaneHusk
 	Tooltip:
@@ -11976,6 +11992,7 @@ carryall.huskVTOL:
 		PlayerPalette: playerd2k
 	FallsToEarth:
 		Explosion: D2KUnitExplodeLarge
+
 ordos_carryall.husk:
 	Inherits: ^PlaneHusk
 	Tooltip:
@@ -11990,6 +12007,7 @@ ordos_carryall.husk:
 		PlayerPalette: player_rgba
 	FallsToEarth:
 		Explosion: D2KUnitExplodeLarge
+
 ordos_carryall.huskVTOL:
 	Inherits: ^PlaneHusk
 	Tooltip:
@@ -12340,151 +12358,154 @@ d2k_spice_sifter_upgrade:
 		Image: d2k_spice_sifter
 
 #  Ixian Upgrades
-d2k_needle_guns:
-	Inherits: ^researched_upgrade.template
-	Tooltip:
-		Name: Tungsten Needle Guns
-	Valued:
-		Cost: 5000
-	Buildable:
-		BuildPaletteOrder: 200
-		Prerequisites: ~outpost, ~!d2k_needle_guns
-		Queue: Addons
-		Description: upgrade-d2k_needle_guns.description
-		IconPalette: d2kunit
-	RenderSprites:
-		Image: light_inf
+# d2k_needle_guns:
+# 	Inherits: ^researched_upgrade.template
+# 	Tooltip:
+# 		Name: Tungsten Needle Guns
+# 	Valued:
+# 		Cost: 5000
+# 	Buildable:
+# 		BuildPaletteOrder: 200
+# 		Prerequisites: ~outpost, ~!d2k_needle_guns
+# 		Queue: Addons
+# 		Description: upgrade-d2k_needle_guns.description
+# 		IconPalette: d2kunit
+# 	RenderSprites:
+# 		Image: light_inf
 
-d2k_personal_shield:
-	Inherits: ^researched_upgrade.template
-	Tooltip:
-		Name: Personal Shield
-	Valued:
-		Cost: 5000
-	Buildable:
-		BuildPaletteOrder: 200
-		Queue: Addons
-		Description: upgrade-personal_shield.description
-		Prerequisites: ~outpost, ~!d2k_personal_shield
-		IconPalette: ra2
-	RenderSprites:
-		Image: d2k_personal_shield_icon
+# d2k_personal_shield:
+# 	Inherits: ^researched_upgrade.template
+# 	Tooltip:
+# 		Name: Personal Shield
+# 	Valued:
+# 		Cost: 5000
+# 	Buildable:
+# 		BuildPaletteOrder: 200
+# 		Queue: Addons
+# 		Description: upgrade-personal_shield.description
+# 		Prerequisites: ~outpost, ~!d2k_personal_shield
+# 		IconPalette: ra2
+# 	RenderSprites:
+# 		Image: d2k_personal_shield_icon
 
-d2k_general_purpose_armor:
-	Inherits: ^researched_upgrade.template
-	Tooltip:
-		Name: General Purpose Armor
-	Valued:
-		Cost: 7500
-	Buildable:
-		BuildPaletteOrder: 200
-		Prerequisites: ~research_centre, ~!d2k_general_purpose_armor
-		Queue: Upgrades
-		Description: upgrade-d2k_general_purpose_armor.description
-		IconPalette: d2kunit
-	RenderSprites:
-		Image: combat_tank_ixian
+# d2k_general_purpose_armor:
+# 	Inherits: ^researched_upgrade.template
+# 	Tooltip:
+# 		Name: General Purpose Armor
+# 	Valued:
+# 		Cost: 7500
+# 	Buildable:
+# 		BuildPaletteOrder: 200
+# 		Prerequisites: ~research_centre, ~!d2k_general_purpose_armor
+# 		Queue: Upgrades
+# 		Description: upgrade-d2k_general_purpose_armor.description
+# 		IconPalette: d2kunit
+# 	RenderSprites:
+# 		Image: combat_tank_ixian
 
-d2k_siege_range_upgrade:
-	Inherits: ^researched_upgrade.template
-	Tooltip:
-		Name: Reinforced Barrel
-	Valued:
-		Cost: 7500
-	Buildable:
-		BuildPaletteOrder: 200
-		Prerequisites: ~research_centre, ~!d2k_siege_range_upgrade
-		Queue: Upgrades
-		Description: upgrade-d2k_siege_range_upgrade.description
-	RenderSprites:
-		Image: d2k_siege_tank_higher_range
+# d2k_siege_range_upgrade:
+# 	Inherits: ^researched_upgrade.template
+# 	Tooltip:
+# 		Name: Reinforced Barrel
+# 	Valued:
+# 		Cost: 7500
+# 	Buildable:
+# 		BuildPaletteOrder: 200
+# 		Prerequisites: ~research_centre, ~!d2k_siege_range_upgrade
+# 		Queue: Upgrades
+# 		Description: upgrade-d2k_siege_range_upgrade.description
+# 	RenderSprites:
+# 		Image: d2k_siege_tank_higher_range
 
-d2k_heavy_missile_upgrade:
-	Inherits: ^researched_upgrade.template
-	Tooltip:
-		Name: Heavy Missiles
-	Valued:
-		Cost: 7500
-	Buildable:
-		BuildPaletteOrder: 200
-		Prerequisites: ~research_centre, ~!d2k_heavy_missile_upgrade
-		Queue: Upgrades
-		Description: upgrade-d2k_heavy_missile_upgrade.description
-	RenderSprites:
-		Image: ix_missile_tank
-d2k_advanced_ixian_technology:
-	Inherits: ^upgrade.template
-	Tooltip:
-		Name: Advanced Ixian Technology
-	Valued:
-		Cost: 12500
-	Buildable:
-		BuildPaletteOrder: 200
-		Queue: Upgrades
-		Description: upgrade-d2k_advanced_ixian_technology.description
-		Prerequisites: ~research_centre, d2k_personal_shield, ~!d2k_advanced_ixian_technology
-	RenderSprites:
-		Image: storm_raider
-	#ProvidesPrerequisite:
-	ProvidesTeamProxyActor:
-		Actor: team_upgrade.d2k_advanced_ixian_technology
+# d2k_heavy_missile_upgrade:
+# 	Inherits: ^researched_upgrade.template
+# 	Tooltip:
+# 		Name: Heavy Missiles
+# 	Valued:
+# 		Cost: 7500
+# 	Buildable:
+# 		BuildPaletteOrder: 200
+# 		Prerequisites: ~research_centre, ~!d2k_heavy_missile_upgrade
+# 		Queue: Upgrades
+# 		Description: upgrade-d2k_heavy_missile_upgrade.description
+# 	RenderSprites:
+# 		Image: ix_missile_tank
 
-team_upgrade.d2k_advanced_ixian_technology:
-	Inherits: ^researched_upgrade.template
-	ProvidesPrerequisite:
-		Prerequisite: d2k_advanced_ixian_technology
-	RenderSprites:
-		Image: storm_raider
-	Tooltip:
-		Name: Advanced Ixian Technology
-	Buildable:
-		Description: upgrade-d2k_advanced_ixian_technology.description, ~research_centre
-	PlayerDisplayUpgrade:
+# d2k_advanced_ixian_technology:
+# 	Inherits: ^upgrade.template
+# 	Tooltip:
+# 		Name: Advanced Ixian Technology
+# 	Valued:
+# 		Cost: 12500
+# 	Buildable:
+# 		BuildPaletteOrder: 200
+# 		Queue: Upgrades
+# 		Description: upgrade-d2k_advanced_ixian_technology.description
+# 		Prerequisites: ~research_centre, d2k_personal_shield, ~!d2k_advanced_ixian_technology
+# 	RenderSprites:
+# 		Image: storm_raider
+# 	#ProvidesPrerequisite:
+# 	ProvidesTeamProxyActor:
+# 		Actor: team_upgrade.d2k_advanced_ixian_technology
+
+# team_upgrade.d2k_advanced_ixian_technology:
+# 	Inherits: ^researched_upgrade.template
+# 	ProvidesPrerequisite:
+# 		Prerequisite: d2k_advanced_ixian_technology
+# 	RenderSprites:
+# 		Image: storm_raider
+# 	Tooltip:
+# 		Name: Advanced Ixian Technology
+# 	Buildable:
+# 		Description: upgrade-d2k_advanced_ixian_technology.description, ~research_centre
+# 	PlayerDisplayUpgrade:
 
 #  Ordos Upgrades
-ordos_upgrade_shield:
-	Inherits: ^researched_upgrade.template
-	Tooltip:
-		Name: Hovercraft Shields
-	Valued:
-		Cost: 5000
-	Buildable:
-		BuildPaletteOrder: 200
-		Prerequisites: ~research_centre.ordos, ~!d2k_needle_guns
-		Queue: Upgrades
-		Description: All hovertanks starts to use Shields
-		IconPalette: d2kunit
-	RenderSprites:
-		Image: ordos_upgrade_shield
+# ordos_upgrade_shield:
+# 	Inherits: ^researched_upgrade.template
+# 	Tooltip:
+# 		Name: Hovercraft Shields
+# 	Valued:
+# 		Cost: 5000
+# 	Buildable:
+# 		BuildPaletteOrder: 200
+# 		Prerequisites: ~research_centre.ordos, ~!d2k_needle_guns
+# 		Queue: Upgrades
+# 		Description: All hovertanks starts to use Shields
+# 		IconPalette: d2kunit
+# 	RenderSprites:
+# 		Image: ordos_upgrade_shield
 
-ordos_upgrade_toxin:
-	Inherits: ^researched_upgrade.template
-	Tooltip:
-		Name: Biological Warfare
-	Valued:
-		Cost: 12500
-	Buildable:
-		BuildPaletteOrder: 200
-		Prerequisites: ~research_centre.ordos, ~!ordos_upgrade_toxin
-		Queue: Upgrades
-		Description: upgrades the firepowerr and reload of current chemical and biological units.
-		IconPalette: d2kunit
-	RenderSprites:
-		Image: ordos_upgrade_toxin
-upordos_outpost.ordos:
-	Inherits: ^researched_upgrade.template
-	Tooltip:
-		Name: Contraband
-	Valued:
-		Cost: 12500
-	Buildable:
-		BuildPaletteOrder: 200
-		Prerequisites: ~research_centre.ordos, ~!upordos_outpost.ordos
-		Queue: Upgrades
-		Description: upgrades the firepowerr and reload of current chemical and biological units.
-		IconPalette: d2kunit
-	RenderSprites:
-		Image: ordos_upgrade_para
+# ordos_upgrade_toxin:
+# 	Inherits: ^researched_upgrade.template
+# 	Tooltip:
+# 		Name: Biological Warfare
+# 	Valued:
+# 		Cost: 12500
+# 	Buildable:
+# 		BuildPaletteOrder: 200
+# 		Prerequisites: ~research_centre.ordos, ~!ordos_upgrade_toxin
+# 		Queue: Upgrades
+# 		Description: upgrades the firepowerr and reload of current chemical and biological units.
+# 		IconPalette: d2kunit
+# 	RenderSprites:
+# 		Image: ordos_upgrade_toxin
+
+# upordos_outpost.ordos:
+# 	Inherits: ^researched_upgrade.template
+# 	Tooltip:
+# 		Name: Contraband
+# 	Valued:
+# 		Cost: 12500
+# 	Buildable:
+# 		BuildPaletteOrder: 200
+# 		Prerequisites: ~research_centre.ordos, ~!upordos_outpost.ordos
+# 		Queue: Upgrades
+# 		Description: upgrades the firepowerr and reload of current chemical and biological units.
+# 		IconPalette: d2kunit
+# 	RenderSprites:
+# 		Image: ordos_upgrade_para
+
 # d2k_ornithopter_upgrade:
 # 	Inherits: ^researched_upgrade.template
 # 	Tooltip:
@@ -13342,13 +13363,6 @@ upixians_farasha:
 		Image: d2k_farasha
 	ProvidesPrerequisite:
 
-	####################################################################################################
-	#		Promotion Units Ixians
-	####################################################################################################
-
-	### Storm Tree
-
-
 ##############################################
 #        Upgrade Ordos
 ##############################################
@@ -13407,7 +13421,7 @@ upixians_farasha:
 # 	RenderSprites:
 # 		Image: tleilax_labcrawl
 # 	ProvidesPrerequisite:
-# #
+
 # upordos_ordos_aatrooper:
 # 	Inherits: ^promotion_upgrade.template
 # 	Tooltip:
@@ -13520,7 +13534,6 @@ upixians_farasha:
 # 		Image: ordos_python
 # 	ProvidesPrerequisite:
 
-#
 heavy_inf:
 	Inherits: ^D2KInfantry
 	Inherits@Template: ^MeleeInfantryTemplate
@@ -13546,8 +13559,8 @@ heavy_inf:
 		Speed: 50
 	Health:
 		HP: 32000
-	ChangesHealth@SelfHealing:
-		Step: 32
+#	ChangesHealth@SelfHealing:
+#		Step: 32
 	Armament@PRIMARY: ##########
 		Weapon: RashinanGun
 		LocalOffset: 128,0,256
@@ -13580,8 +13593,6 @@ heavy_inf:
 		PlayerPalette: player_rgba
 	WithDeathAnimation:
 		DeathSequencePalette: player_rgba
-	ActorStatValues:
-		Upgrades: d2k_personal_shield, d2k_needle_guns, d2k_general_purpose_armor, d2k_advanced_ixian_technology
 
 storm_infantry:
 	Inherits: ^D2KInfantry
@@ -13608,8 +13619,8 @@ storm_infantry:
 		Speed: 44
 	Health:
 		HP: 44000
-	ChangesHealth@SelfHealing:
-		Step: 44
+#	ChangesHealth@SelfHealing:
+#		Step: 44
 	Armament@PRIMARY: ##########
 		Weapon: D2K_StormGunInf
 		LocalOffset: 135,0,200
@@ -13629,8 +13640,6 @@ storm_infantry:
 		VoiceSet: D2KGenericVoice
 	RenderSprites:
 		PlayerPalette: player
-	ActorStatValues:
-		Upgrades: d2k_personal_shield, d2k_general_purpose_armor, d2k_advanced_ixian_technology
 
 storm_raider:
 	Inherits@D2KV: ^D2KVehicle
@@ -13644,7 +13653,6 @@ storm_raider:
 	Inherits@EMP: ^TurretEMP
 	Inherits@AntiVeh: ^PrioritizeVehicle
 	Inherits@AntiInf: ^PrioritizeInfantry
-
 	Buildable:
 		Queue: Vehicle, RAVehicle
 		BuildPaletteOrder: 10
@@ -13661,8 +13669,8 @@ storm_raider:
 		HP: 60000
 	Repairable:
 		HpPerStep: 3000
-	ChangesHealth@SelfHealing:
-		Step: 24
+#	ChangesHealth@SelfHealing:
+#		Step: 24
 	Armor:
 		Type: Medium
 	Shielded:
@@ -13707,8 +13715,6 @@ storm_raider:
 	RenderSprites:
 		Image: storm_raider
 		PlayerPalette: player_rgba
-	ActorStatValues:
-		Upgrades: d2k_general_purpose_armor, d2k_advanced_ixian_technology
 
 storm_lasher:
 	Inherits: ^D2KDefense
@@ -13720,7 +13726,6 @@ storm_lasher:
 	Inherits@AntiTank: ^PrioritizeTank
 	Inherits@shape: ^2x2Shape
 	Inherits@detect: ^GenericGroundDetector
-
 	Buildable:
 		Queue: Defence, RADefence
 		Prerequisites: ~upixians_stormlasher, research_centre
@@ -13795,8 +13800,6 @@ storm_lasher:
 		Range: 11384
 	DetectCloaked:
 		Range: 5692
-	ActorStatValues:
-		Upgrades: d2k_general_purpose_armor, d2k_advanced_ixian_technology
 
 	### Armor Tree
 
@@ -13830,8 +13833,8 @@ heavy_rocket_raider_ixian:
 		HP: 85000
 	Repairable:
 		HpPerStep: 4250
-	ChangesHealth@SelfHealing:
-		Step: 34
+#	ChangesHealth@SelfHealing:
+#		Step: 34
 	Armor:
 		Type: Heavy
 	Shielded:
@@ -13910,8 +13913,6 @@ heavy_rocket_raider_ixian:
 	WithCargoPipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: true
-	ActorStatValues:
-		Upgrades: d2k_heavy_missile_upgrade, d2k_needle_guns, d2k_general_purpose_armor, d2k_advanced_ixian_technology
 
 combat_siege_tank:
 	Inherits@D2KT: ^D2KTank
@@ -13938,8 +13939,8 @@ combat_siege_tank:
 		HP: 80000
 	Repairable:
 		HpPerStep: 4000
-	ChangesHealth@SelfHealing:
-		Step: 32
+#	ChangesHealth@SelfHealing:
+#		Step: 32
 	Armor:
 		Type: Medium
 	Shielded:
@@ -13968,8 +13969,6 @@ combat_siege_tank:
 	RangeMultiplier@d2k_siege_range_upgrade:
 		Modifier: 125
 		RequiresCondition: d2k_siege_range_upgrade
-	ActorStatValues:
-		Upgrades: d2k_siege_range_upgrade
 	AttackTurreted:
 	WithMuzzleOverlay:
 	WithSpriteTurret:
@@ -13983,8 +13982,6 @@ combat_siege_tank:
 		Intensity: 520
 	Voiced:
 		VoiceSet: D2KCombatTank
-	ActorStatValues:
-		Upgrades: d2k_siege_range_upgrade, d2k_general_purpose_armor, d2k_advanced_ixian_technology
 
 d2k_neocymek:
 	Inherits: ^Vehicle
@@ -14011,8 +14008,8 @@ d2k_neocymek:
 		HP: 300000
 	Repairable:
 		HpPerStep: 15000
-	ChangesHealth@SelfHealing:
-		Step: 120
+#	ChangesHealth@SelfHealing:
+#		Step: 120
 	Armor:
 		Type: Heavy
 	Shielded:
@@ -14079,8 +14076,6 @@ d2k_neocymek:
 		DecorationBounds: 1600, 1600
 	RenderSprites:
 		PlayerPalette: player_rgba
-	ActorStatValues:
-		Upgrades: d2k_siege_range_upgrade, d2k_needle_guns, d2k_general_purpose_armor, d2k_advanced_ixian_technology
 
 d2k_jammer:
 	Inherits@D2KT: ^D2KTank
@@ -14091,7 +14086,6 @@ d2k_jammer:
 	Inherits@AntiEpic: ^PrioritizeEpic
 	Inherits@COMMANDOSKULL: ^CommandoSkull
 	Inherits@bot: ^BotMicromanageable
-
 	Valued:
 		Cost: 5000
 	Tooltip:
@@ -14107,8 +14101,8 @@ d2k_jammer:
 		HP: 100000
 	Repairable:
 		HpPerStep: 5000
-	ChangesHealth@SelfHealing:
-		Step: 40
+#	ChangesHealth@SelfHealing:
+#		Step: 40
 	Armor:
 		Type: Medium
 	Shielded:
@@ -14210,8 +14204,6 @@ d2k_jammer:
 		RequiresCondition: projection
 		FollowAfterAttackDelay: 25
 		ShouldSpawnInitialLoad: false
-	ActorStatValues:
-		Upgrades: d2k_general_purpose_armor, d2k_advanced_ixian_technology
 
 ^D2KVordelProxyUnit:
 	GrantConditionOnPowerState@LOWPOWER:
@@ -14287,8 +14279,8 @@ d2k_apparition:
 		AddToArmyValue: true
 	Health:
 		HP: 37500
-	ChangesHealth@SelfHealing:
-		Step: 30
+#	ChangesHealth@SelfHealing:
+#		Step: 30
 	Armor:
 		Type: Plate
 	Mobile:
@@ -14439,8 +14431,8 @@ d2k_ixdrone:
 		HP: 30000
 	Repairable:
 		HpPerStep: 1500
-	ChangesHealth@SelfHealing:
-		Step: 12
+#	ChangesHealth@SelfHealing:
+#		Step: 12
 	Shielded:
 		DamageRegenDelay: 125
 		RegenAmount: 24
@@ -14479,8 +14471,6 @@ d2k_ixdrone:
 		PipCount: 1
 	Cloak:
 		UncloakOn: Attack, Damage
-	ActorStatValues:
-		Upgrades: d2k_siege_range_upgrade, d2k_needle_guns, d2k_general_purpose_armor, d2k_advanced_ixian_technology
 	WithAttackAnimation:
 		Sequence: shoot
 	RenderSprites:
@@ -14658,8 +14648,8 @@ d2k_ixbomber:
 		HP: 95000
 	Repairable:
 		HpPerStep: 4750
-	ChangesHealth@SelfHealing:
-		Step: 38
+#	ChangesHealth@SelfHealing:
+#		Step: 38
 	Shielded:
 		DamageRegenDelay: 125
 		RegenAmount: 76
@@ -14691,8 +14681,6 @@ d2k_ixbomber:
 		DecorationBounds: 1280, 1024
 	Cloak:
 		UncloakOn: Attack, Damage
-	ActorStatValues:
-		Upgrades: d2k_general_purpose_armor, d2k_advanced_ixian_technology
 	RenderSprites:
 		PlayerPalette: player_rgba
 
@@ -14734,8 +14722,8 @@ d2k_resonancedrone:
 		HP: 25000
 	Repairable:
 		HpPerStep: 1250
-	ChangesHealth@SelfHealing:
-		Step: 10
+#	ChangesHealth@SelfHealing:
+#		Step: 10
 	ProximityExternalCondition@shieldgen:
 		Range: 6000
 		ValidRelationships: Ally
@@ -14787,8 +14775,6 @@ d2k_resonancedrone:
 		PipCount: 10
 	Cloak:
 		UncloakOn: Attack, Damage
-	ActorStatValues:
-		Upgrades: d2k_siege_range_upgrade, d2k_needle_guns, d2k_general_purpose_armor, d2k_advanced_ixian_technology
 	WithAttackAnimation:
 		Sequence: shoot
 	RenderSprites:
@@ -14848,8 +14834,8 @@ d2k_farasha:
 		HP: 250000
 	Repairable:
 		HpPerStep: 12500
-	ChangesHealth@SelfHealing:
-		Step: 100
+#	ChangesHealth@SelfHealing:
+#		Step: 100
 	Shielded:
 		MaxPercentageStrength: 100
 		DamageRegenDelay: 125
@@ -14926,8 +14912,6 @@ d2k_farasha:
 		Range: 3c0, 6c0
 	RenderSprites:
 		PlayerPalette: player_rgba
-	ActorStatValues:
-		Upgrades: d2k_general_purpose_armor, d2k_advanced_ixian_technology
 
 d2k_farasha.husk:
 	Inherits: ^PlaneHusk
@@ -14947,7 +14931,6 @@ d2k_farasha_drone:
 	Inherits@Template: ^BomberTemplate
 	Inherits@exp: ^GainsExperienceRA
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
-
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -14968,8 +14951,8 @@ d2k_farasha_drone:
 	HasParent:
 	Health:
 		HP: 25000
-	ChangesHealth@SelfHealing:
-		Step: 10
+#	ChangesHealth@SelfHealing:
+#		Step: 10
 	Shielded:
 		InitialPercentageStrength: 100
 		MaxPercentageStrength: 100
@@ -14999,8 +14982,6 @@ d2k_farasha_drone:
 		Weapons: Debris, Debris2
 		Pieces: 1, 2
 		Range: 1c0, 3c0
-	ActorStatValues:
-		Upgrades: d2k_general_purpose_armor, d2k_advanced_ixian_technology
 
 d2k_farasha_drone.husk:
 	Inherits: ^PlaneHusk

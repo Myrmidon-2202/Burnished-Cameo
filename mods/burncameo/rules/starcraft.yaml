@@ -4,26 +4,26 @@ World:
 		InternalName: terran
 		Game: StarCraft
 		Side: StarCraft
-		Description: Terran wield powerful units that consume power for production, can lift buildings, and deploy Nuclear Strikes, while defenses remain operational.
+		Description: faction-starcraft-terran.description
 	FactionCA@protoss:
 		Name: Protoss
 		InternalName: protoss
 		Game: StarCraft
 		Side: StarCraft
-		Description: Protoss\nFeatures:\n- Units consume power (supply)\n- Unit production pauses on low power\n- Buildings and defenses do not require power to operate\n- Relatively resilient and powerful units\nSupport powers: Purifier Beam
+		Description: faction-starcraft-protoss.description
 	FactionCA@zerg:
 		Name: Zerg
 		InternalName: zerg
 		Game: StarCraft
 		Side: StarCraft
-		Description: Zerg\nFeatures:\n- Units consume power (supply)\n- Unit production pauses on low power\n- Buildings and defenses do not require power to operate\n- Relatively powerful units\nSupport powers: Nuclear Strike
+		Description: faction-starcraft-zerg.description
 	FactionCA@RandomSC:
 		Name: Any StarCraft
 		InternalName: RandomSC
 		RandomFactionMembers: terran, protoss, zerg
 		Game: StarCraft
 		Side: Random
-		Description: Random Faction\nA random faction from StarCraft will be chosen when the game starts.
+		Description: faction-starcraft-random.description
 	####################################################################################################
 	#		SC TERRAN
 	####################################################################################################

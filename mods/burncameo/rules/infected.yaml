@@ -57,6 +57,7 @@ Player:
 
 zbio:
 	Inherits: ^Defense
+	Inherits@Building: ^BaseBuilding
 	Inherits@AUTOTARGET: ^AutoTargetAir
 	Inherits@CPQ: ^CPQConditionWithPrimary
 	Inherits@aicash: ^AIConyardCash
@@ -272,6 +273,7 @@ zbio:
 		Modifier: 33
 	ProductionCostMultiplier:
 		Multiplier: 120
+	-GrantConditionOnPrerequisite@base-reveal:
 	# -Transforms:
 	# -TransformsIntoMobile:
 	# -TransformsIntoPassenger:
@@ -579,6 +581,7 @@ zombie1.horde:
 	RenderSprites:
 		Image: civzombie
 	MobSpawnerSlave:
+	-GrantConditionOnPrerequisite@base-reveal:
 	-MapEditorData:
 	-Passenger:
 
@@ -617,6 +620,7 @@ zombie2.horde:
 	RenderSprites:
 		Image: civzombie
 	MobSpawnerSlave:
+	-GrantConditionOnPrerequisite@base-reveal:
 	-MapEditorData:
 	-Passenger:
 
@@ -931,8 +935,8 @@ tnkzombie.infect:
 		BuildPaletteOrder: 20
 		BuildDuration: 250
 		BuildDurationModifier: 100
-		Prerequisites: upzombiemutate2
-		Queue: Infantry.Infected
+		Prerequisites: ~upzombiemutate2, ~wipcontent
+		Queue: Infantry
 		Description: Melee infantry.\n  Strong vs Infantry, Vehicles\n  Weak vs Aircraft
 	Mobile:
 		Speed: 100
@@ -974,6 +978,7 @@ tnkzombie.infect:
 		Delay: 25
 		StartIfBelow: 100
 		RequiresCondition: rank-elite
+	-GrantConditionOnPrerequisite@base-reveal:
 	RenderSprites:
 		Image: tnkzombie
 
@@ -1028,6 +1033,7 @@ jumpzombie.infect:
 		RequiresCondition: !disabled
 	KillsSelf:
 		RequiresCondition: triggered && !disabled
+
 zmutant.infect:
 	Inherits: tnkzombie.infect
 	Armament:
@@ -1036,7 +1042,7 @@ zmutant.infect:
 		Weapon: ZBruteRock
 	RenderSprites:
 		Image: tnkzombie
-		
+
 ####################################################################################################
 #		ZOMBIES & MONSTERS
 ####################################################################################################
@@ -1093,6 +1099,7 @@ ZOMBIE1:
 		Image: zombie
 	Cloneable:
 		Types: zombie
+	-GrantConditionOnPrerequisite@base-reveal:
 
 ZOMBIE2:
 	Inherits: ^Soldier
@@ -1107,7 +1114,7 @@ ZOMBIE2:
 		BuildPaletteOrder: 20
 		BuildDuration: 250
 		BuildDurationModifier: 100
-		Prerequisites: xhosp
+		Prerequisites: zbio
 		Description: Slow undead. Attacks in close combat.
 	Health:
 		HP: 25000 #25000
@@ -1127,8 +1134,10 @@ ZOMBIE2:
 		VoiceSet: AntVoice
 	-TakeCover:
 	-DamagedByTerrain:
+	-GrantConditionOnPrerequisite@base-reveal:
 	RenderSprites:
 		Image: zombie
+
 
 spitter:
 	Inherits: ^Viceroid
@@ -1162,6 +1171,7 @@ spitter:
 		LocalOffset: 384,0,0
 	-WithMuzzleOverlay:
 	-DamagedByTerrain:
+	-GrantConditionOnPrerequisite@base-reveal:
 	Selectable:
 		Bounds: 25472, 25472
 	RenderSprites:

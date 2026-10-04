@@ -94,6 +94,10 @@ namespace OpenRA.Mods.AS.Traits
 
 		void INotifySelected.Selected(Actor self)
 		{
+			// Edit Made to fix a null crash.
+			if (spawnerMaster == null)
+				return;
+
 			if (spawnerMaster.Info.SlavesHaveFreeWill)
 				return;
 
