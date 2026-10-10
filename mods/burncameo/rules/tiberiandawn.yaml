@@ -149,9 +149,9 @@ World:
 	Mobile:
 		Speed: 60
 	Health:
-		HP: 16000
-	ChangesHealth@SelfHealing:
-		Step: 16
+		HP: 12000
+#	ChangesHealth@SelfHealing:
+#		Step: 16
 	Armament@PRIMARY: ##########
 		Weapon: M16
 		LocalOffset: 128,0,256
@@ -260,9 +260,9 @@ E2:
 	Mobile:
 		Speed: 75
 	Health:
-		HP: 8000
-	ChangesHealth@SelfHealing:
-		Step: 8
+		HP: 14000
+#	ChangesHealth@SelfHealing:
+#		Step: 8
 	Armament:
 		Weapon: Grenade
 		LocalOffset: 0,0,427
@@ -310,9 +310,9 @@ E2:
 	Mobile:
 		Speed: 50
 	Health:
-		HP: 9000
-	ChangesHealth@SelfHealing:
-		Step: 9
+		HP: 10000
+#	ChangesHealth@SelfHealing:
+#		Step: 9
 	Armament@PRIMARY: ##########
 		Weapon: Rockets
 		LocalOffset: 256,43,341
@@ -344,20 +344,9 @@ E3.GDI:
 		Weapon: Rockets
 		LocalOffset: 256,43,341
 		FireDelay: 5
-		RequiresCondition: !up_advancedmissiletargeting
 	Armament@GARRISONED: ##########
 		Name: garrisoned
 		Weapon: Rockets
-		RequiresCondition: !up_advancedmissiletargeting
-	Armament@AdvancedMissileTargeting: ##########
-		Weapon: RocketsAMT
-		LocalOffset: 256,43,341
-		FireDelay: 5
-		RequiresCondition: up_advancedmissiletargeting
-	Armament@AdvancedMissileTargetingGARRISONED: ##########
-		Name: garrisoned
-		Weapon: RocketsAMT
-		RequiresCondition: up_advancedmissiletargeting
 
 E3: #map import compatibility
 	Inherits: E3.GDI
@@ -365,6 +354,7 @@ E3: #map import compatibility
 		-Queue:
 	Selectable:
 		Class: e1.gdi
+
 E3.Nod:
 	Inherits: ^E3
 	Tooltip:
@@ -397,9 +387,9 @@ E4:
 	Mobile:
 		Speed: 60
 	Health:
-		HP: 20000
-	ChangesHealth@SelfHealing:
-		Step: 20
+		HP: 17000
+#	ChangesHealth@SelfHealing:
+#		Step: 20
 	Armament:
 		Weapon: Flamethrower
 		LocalOffset: 341,0,256
@@ -437,7 +427,7 @@ E5:
 	Inherits@DECORATIONS: ^InfantryExperienceHospitalHazmatOverrides
 	# Inherits@decoration: ^NodRankDecoration
 	Valued:
-		Cost: 500
+		Cost: 300
 	Tooltip:
 		Name: Chemical Warrior
 	UpdatesPlayerStatistics:
@@ -448,12 +438,12 @@ E5:
 		Queue: Infantry.Nod, RAInfantry.Nod
 		Description: actor-e5.description
 	Mobile:
-		Speed: 48
+		Speed: 62
 		Locomotor: chem
 	Health:
-		HP: 48000
-	ChangesHealth@SelfHealing:
-		Step: 48
+		HP: 21000
+#	ChangesHealth@SelfHealing:
+#		Step: 48
 	Armament:
 		Weapon: Chemspray
 		LocalOffset: 341,0,256
@@ -571,7 +561,7 @@ RMBO:
 	Inherits@COMMANDOSKULL: ^CommandoSkull
 	Inherits@AntiInf: ^PrioritizeInfantry
 	Valued:
-		Cost: 3000
+		Cost: 900
 	Tooltip:
 		Name: Commando
 	UpdatesPlayerStatistics:
@@ -588,9 +578,9 @@ RMBO:
 	Guard:
 		Voice: Move
 	Health:
-		HP: 80000
-	ChangesHealth@SelfHealing:
-		Step: 80
+		HP: 20000
+#	ChangesHealth@SelfHealing:
+#		Step: 80
 	Passenger:
 		Voice: Move
 	Armament:
@@ -718,8 +708,8 @@ MCV.NOD:
 		HP: 150000
 	Repairable:
 		HpPerStep: 7500
-	ChangesHealth@SelfHealing:
-		Step: 60
+#	ChangesHealth@SelfHealing:
+#		Step: 60
 	Armor:
 		Type: Heavy
 	WithHarvestAnimation:
@@ -763,7 +753,7 @@ APC:
 	Inherits@botmicro: ^BotAutoDeployTransport
 	# Inherits@decoration: ^GDIRankDecoration
 	Valued:
-		Cost: 1200
+		Cost: 850
 	Tooltip:
 		Name: GDI APC
 	UpdatesPlayerStatistics:
@@ -778,11 +768,11 @@ APC:
 		Speed: 100
 		TurnSpeed: 20
 	Health:
-		HP: 47500
+		HP: 36000
 	Repairable:
 		HpPerStep: 2375
-	ChangesHealth@SelfHealing:
-		Step: 19
+#	ChangesHealth@SelfHealing:
+#		Step: 19
 	Armor:
 		Type: Medium
 	Turreted:
@@ -844,8 +834,8 @@ ARTY:
 		HP: 17500
 	Repairable:
 		HpPerStep: 875
-	ChangesHealth@SelfHealing:
-		Step: 7
+#	ChangesHealth@SelfHealing:
+#		Step: 7
 	Armor:
 		Type: Light
 	Armament:
@@ -886,11 +876,11 @@ FTNK:
 		TurnSpeed: 16
 		Locomotor: tracked
 	Health:
-		HP: 100000
+		HP: 35000
 	Repairable:
 		HpPerStep: 5000
-	ChangesHealth@SelfHealing:
-		Step: 40
+#	ChangesHealth@SelfHealing:
+#		Step: 40
 	Armor:
 		Type: Heavy
 	Armament:
@@ -928,8 +918,8 @@ BGGY:
 		HP: 20000
 	Repairable:
 		HpPerStep: 1000
-	ChangesHealth@SelfHealing:
-		Step: 8
+#	ChangesHealth@SelfHealing:
+#		Step: 8
 	Turreted:
 		TurnSpeed: 40
 		Offset: -43,0,128
@@ -973,8 +963,8 @@ JEEP:
 		HP: 27500
 	Repairable:
 		HpPerStep: 1375
-	ChangesHealth@SelfHealing:
-		Step: 11
+#	ChangesHealth@SelfHealing:
+#		Step: 11
 	Turreted:
 		TurnSpeed: 30
 		Offset: -85,0,192
@@ -1023,8 +1013,8 @@ BIKE:
 		HP: 7500
 	Repairable:
 		HpPerStep: 375
-	ChangesHealth@SelfHealing:
-		Step: 3
+#	ChangesHealth@SelfHealing:
+#		Step: 3
 	Armor:
 		Type: Light
 	Armament:
@@ -1061,11 +1051,11 @@ LTNK:
 		Speed: 110
 		TurnSpeed: 22
 	Health:
-		HP: 80000
+		HP: 35000
 	Repairable:
 		HpPerStep: 4000
-	ChangesHealth@SelfHealing:
-		Step: 32
+#	ChangesHealth@SelfHealing:
+#		Step: 32
 	Armor:
 		Type: Medium
 	Turreted:
@@ -1104,7 +1094,7 @@ MTNK:
 	Inherits@AntiTank: ^PrioritizeTank
 	# Inherits@decoration: ^GDIRankDecoration
 	Valued:
-		Cost: 900
+		Cost: 800
 	Tooltip:
 		Name: GDI Battle Tank
 	UpdatesPlayerStatistics:
@@ -1118,11 +1108,11 @@ MTNK:
 		Speed: 80
 		TurnSpeed: 16
 	Health:
-		HP: 125000
+		HP: 46000
 	Repairable:
 		HpPerStep: 6250
-	ChangesHealth@SelfHealing:
-		Step: 50
+#	ChangesHealth@SelfHealing:
+#		Step: 50
 	Armor:
 		Type: Medium
 	Turreted:
@@ -1189,7 +1179,7 @@ HTNK:
 	Inherits@AntiTank: ^PrioritizeTank
 	# Inherits@decoration: ^GDIRankDecoration
 	Valued:
-		Cost: 1600
+		Cost: 1100
 	Tooltip:
 		Name: GDI Mammoth Tank
 	UpdatesPlayerStatistics:
@@ -1206,7 +1196,7 @@ HTNK:
 	Passenger:
 		Weight: 4
 	Health:
-		HP: 225000
+		HP: 91000
 	Repairable:
 		HpPerStep: 11250
 	ChangesHealth@SelfHealing:
@@ -1275,7 +1265,7 @@ MLRS:
 	Inherits@AntiDef: ^PrioritizeDefence
 	# Inherits@decoration: ^GDIRankDecoration
 	Valued:
-		Cost: 1000
+		Cost: 800
 	Tooltip:
 		Name: GDI MLRS
 	UpdatesPlayerStatistics:
@@ -1289,11 +1279,11 @@ MLRS:
 		Speed: 80
 		TurnSpeed: 16
 	Health:
-		HP: 25000
+		HP: 12000
 	Repairable:
 		HpPerStep: 1250
-	ChangesHealth@SelfHealing:
-		Step: 10
+#	ChangesHealth@SelfHealing:
+#		Step: 10
 	Armor:
 		Type: Light
 	Turreted:
@@ -1390,7 +1380,7 @@ MSSM:
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	# Inherits@decoration: ^NodRankDecoration
 	Valued:
-		Cost: 800
+		Cost: 1200
 	Tooltip:
 		Name: SSM Launcher
 	UpdatesPlayerStatistics:
@@ -1408,8 +1398,8 @@ MSSM:
 		HP: 20000
 	Repairable:
 		HpPerStep: 1000
-	ChangesHealth@SelfHealing:
-		Step: 8
+#	ChangesHealth@SelfHealing:
+#		Step: 8
 	Armor:
 		Type: Light
 	Turreted:
@@ -1476,8 +1466,8 @@ STNK:
 		HP: 25000
 	Repairable:
 		HpPerStep: 1250
-	ChangesHealth@SelfHealing:
-		Step: 10
+#	ChangesHealth@SelfHealing:
+#		Step: 10
 	Armor:
 		Type: Light
 	Cloak:
@@ -1541,11 +1531,11 @@ TRAN:
 		TurnSpeed: 20
 		Speed: 150
 	Health:
-		HP: 100000
+		HP: 18000
 	Repairable:
 		HpPerStep: 5000
-	ChangesHealth@SelfHealing:
-		Step: 40
+#	ChangesHealth@SelfHealing:
+#		Step: 40
 	WithIdleOverlay@ROTOR1AIR:
 		Offset: 597,0,85
 		Sequence: rotor
@@ -1587,7 +1577,7 @@ TRAN:
 tran.gdi:
 	Inherits: TRAN
 	Valued:
-		Cost: 3000
+		Cost: 1500
 	Tooltip:
 		Name: GDI Chinook Transport
 	Buildable:
@@ -1609,7 +1599,7 @@ tran.gdi:
 tran.nod:
 	Inherits: TRAN
 		Valued:
-		Cost: 3200
+		Cost: 1500
 	Tooltip:
 		Name: Nod Chinook Transport
 	Buildable:
@@ -1636,7 +1626,7 @@ HELI:
 	# Inherits@decoration: ^NodRankDecoration
 	Inherits@eject: ^AircraftEjectOnDeath
 	Valued:
-		Cost: 1600
+		Cost: 1500
 	Tooltip:
 		Name: Apache Attack Helicopter
 	UpdatesPlayerStatistics:
@@ -1651,11 +1641,11 @@ HELI:
 		TurnSpeed: 32
 		RepulsionSpeed: 32
 	Health:
-		HP: 45000
+		HP: 35000
 	Repairable:
 		HpPerStep: 2250
-	ChangesHealth@SelfHealing:
-		Step: 18
+#	ChangesHealth@SelfHealing:
+#		Step: 18
 	Armament@PRIMARY:
 		Weapon: HeliGun
 		LocalOffset: 128,-213,-85, 128,213,-85
@@ -1715,7 +1705,7 @@ ORCA:
 	# Inherits@decoration: ^GDIRankDecoration
 	Inherits@eject: ^AircraftEjectOnDeath
 	Valued:
-		Cost: 1700
+		Cost: 1200
 	Tooltip:
 		Name: Orca
 	UpdatesPlayerStatistics:
@@ -1730,11 +1720,11 @@ ORCA:
 		TurnSpeed: 35
 		RepulsionSpeed: 35
 	Health:
-		HP: 32500
+		HP: 22000
 	Repairable:
 		HpPerStep: 1625
-	ChangesHealth@SelfHealing:
-		Step: 13
+#	ChangesHealth@SelfHealing:
+#		Step: 13
 	Armament@PRIMARY:
 		Weapon: OrcaMissiles
 		LocalOffset: 427,-171,-213, 427,171,-213
@@ -3012,7 +3002,7 @@ ATWR:
 		Bounds: 1024, 2048, 0, -512
 	SelectionDecorations:
 	Health:
-		HP: 132500
+		HP: 55000
 	WithBuildingBib:
 		HasMinibib: true
 	Turreted:
@@ -3198,8 +3188,8 @@ CNCPT:
 		TurnSpeed: 20
 	Health:
 		HP: 75000
-	ChangesHealth@SelfHealing:
-		Step: 30
+#	ChangesHealth@SelfHealing:
+#		Step: 30
 	Armor:
 		Type: Heavy
 	Turreted:
@@ -3473,8 +3463,8 @@ CNCSS:
 		TurnSpeed: 16
 	Health:
 		HP: 160000
-	ChangesHealth@SelfHealing:
-		Step: 64
+#	ChangesHealth@SelfHealing:
+#		Step: 64
 	Armor:
 		Type: Heavy
 	Turreted:
@@ -3528,8 +3518,8 @@ ssmsub:
 		TurnSpeed: 12
 	Health:
 		HP: 200000
-	ChangesHealth@SelfHealing:
-		Step: 80
+#	ChangesHealth@SelfHealing:
+#		Step: 80
 	Armor:
 		Type: Medium
 	Armament:
@@ -3592,8 +3582,8 @@ nodlasercorvette:
 		TurnSpeed: 12
 	Health:
 		HP: 150000
-	ChangesHealth@SelfHealing:
-		Step: 60
+#	ChangesHealth@SelfHealing:
+#		Step: 60
 	Armor:
 		Type: Medium
 	Turreted@PRIMARY:

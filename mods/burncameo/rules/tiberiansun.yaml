@@ -4,25 +4,25 @@ World:
 		InternalName: tsgdi
 		Game: Tiberian Sun
 		Side: Tiberian Sun
-		Description: GDI from Tiberian Sun.Features:.- Hero unit: Mammoth Mk. II.Support powers: Drop Pods, Ion Cannon
+		Description: faction-tibsun-gdi.description
 	FactionCA@tsnod:
 		Name: Nod TS
 		InternalName: tsnod
 		Game: Tiberian Sun
 		Side: Tiberian Sun
-		Description: Nod from Tiberian Sun.Features:.- Subterranean vehicles.- Stealth generators.- Tactical missiles with fast charge and flight time.Support powers: Cluster & Chemical Missiles
+		Description: faction-tibsun-nod.description
 	FactionCA@forgotten:
 		Name: Forgotten TS
 		InternalName: forgotten
 		Game: Tiberian Sun
 		Side: Tiberian Sun
-		Description: Forgotten mutants from Tiberian Sun.Support powers: Mutant Commando, Wildlife Rampage
+		Description: faction-tibsun-forgotten.description
 	FactionCA@cabal:
 		Name: CABAL TS
 		InternalName: cabal
 		Game: Tiberian Sun
 		Side: Tiberian Sun
-		Description: CABAL from Tiberian Sun Firestorm.Features:.- Subterranean vehicles.- Stealth generators.- Cluster & Chemical Missiles with fast charge and flight time.- Most units immune to mind control.- Epic unit: Core Defender.Support powers: Cluster & Chemical Missiles
+		Description: faction-tibsun-cabal.description
 	FactionCA@RandomTS:
 		Name: Any TS
 		InternalName: RandomTS
@@ -2171,7 +2171,7 @@ tsgtradrmutant:
 		Names: 
 			1: Mutant Commando
 		Descriptions: 
-			1: Deploys elite Ghost Stalkers and Snipers.via Subterranean APC.
+			1: Deploys elite Ghost Stalkers and Snipers via a captured Subterranean APC.
 		InsufficientPowerSpeechNotification: InsufficientPower
 		IncomingSpeechNotification: EnemyUnitsApproaching
 		SelectTargetSpeechNotification: SelectTarget
@@ -2197,7 +2197,7 @@ tsgtradrmutant:
 		Names: 
 			1: Wildlife Rampage
 		Descriptions: 
-			1: Spawns numerous Tiberium creatures.causing massive havoc.
+			1: Spawns numerous Tiberium creatures to cause a massive havoc.
 		InsufficientPowerSpeechNotification: InsufficientPower
 		IncomingSpeechNotification: EnemyUnitsApproaching
 		SelectTargetSpeechNotification: SelectTarget

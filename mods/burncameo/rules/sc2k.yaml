@@ -3,7 +3,7 @@ World:
 		Name: SimCity 2000
 		InternalName: sc2k
 		Game: SimCity
-		Side: Simcity
+		Side: SimCity
 		Description: SimCity from PC\nFeatures:\n- Generates revenue through taxation of Residential Zones\n- Use disasters as units.
 	FactionCA@sc2ka:
 		Name: SimCity 2000 (Alt)
@@ -1015,9 +1015,6 @@ SC2K_CYCLONE_CENTER:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 45
 		Prerequisites: Disaster_Factory, ~mmsimcity2k
-=======
-		Prerequisites: Disaster_Factory
->>>>>>> Stashed changes
 		Description: Unlocks Ice Cyclones.\nLimit 1.
 		BuildLimit: 1
 	Building:
@@ -1058,9 +1055,6 @@ SC2K_AIRPORT:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 65
 		Prerequisites: Observatory, ~mmsimcity2k
-=======
-		Prerequisites: Observatory
->>>>>>> Stashed changes
 		Description: Unlocks Air Crash.\nLimit 1.
 		BuildLimit: 1
 	Building:
@@ -1099,9 +1093,6 @@ SC2K_TOY_FACTORY:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 67
 		Prerequisites: sc2krecyclingcenter, ~mmsimcity2k
-=======
-		Prerequisites: sc2krecyclingcenter
->>>>>>> Stashed changes
 		Description: Gadget factory.\n Provides income.\nLimit 1.
 		BuildLimit: 1
 	Building:
@@ -1992,9 +1983,6 @@ ICE_CYCLONE:
 		Bounds: 72, 144
 	Buildable:
 		Queue: Infantry.Sc2k
-=======
-		Queue: Infantry.sc2k, RAInfantry.sc2k
->>>>>>> Stashed changes
 		BuildPaletteOrder: 25
 		Prerequisites: Cyclone_Center
 		Description: Freezes everything in its way.
@@ -2014,7 +2002,7 @@ ICE_CYCLONE:
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
 		Range: 6c0
-    Armament@PRIMARY:
+	Armament@PRIMARY:
 		Weapon: SuicideBomberTargeting
 	PeriodicExplosion:
 		Weapon: sc2ktornado
@@ -2200,9 +2188,6 @@ SC2K_BIG_BULLDOZER:
 	Inherits@shadow: ^ScavShadow
 	Buildable:
 		Queue: Vehicle.Sc2k
-=======
-		Queue: Vehicle.sc2k
->>>>>>> Stashed changes
 		BuildPaletteOrder: 20
 		BuildLimit: 1
 		Description: Knocks down buildings.

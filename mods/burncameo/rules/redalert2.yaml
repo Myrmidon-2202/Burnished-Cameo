@@ -5371,7 +5371,7 @@ YRROBO:
 	Inherits@EMP: ^TurretEMP
 	Inherits@MC: ^MCImmune
 	Valued:
-		Cost: 1100
+		Cost: 600
 	Tooltip:
 		Name: Robot Tank
 	Buildable:
@@ -5385,7 +5385,7 @@ YRROBO:
 		TurnSpeed: 26
 		PauseOnCondition: !robotcontrol || disabled
 	Health:
-		HP: 50000
+		HP: 18000
 	Repairable:
 		HpPerStep: 2500
 	ChangesHealth@SelfHealing:

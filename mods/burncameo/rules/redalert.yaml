@@ -469,8 +469,8 @@ DOG:
 	SelectionDecorations:
 	Health:
 		HP: 5000
-	ChangesHealth@SelfHealing:
-		Step: 5
+#	ChangesHealth@SelfHealing:
+#		Step: 5
 	Armor:
 		Type: None
 	Mobile:
@@ -562,8 +562,8 @@ DOG:
 		Speed: 58
 	Health:
 		HP: 14000
-	ChangesHealth@SelfHealing:
-		Step: 14
+#	ChangesHealth@SelfHealing:
+#		Step: 14
 	Armament@PRIMARY: ##########
 		Weapon: M1Carbine
 		LocalOffset: 128,0,256
@@ -597,47 +597,27 @@ RAE1:
 	Armament@PRIMARY: ##########
 		Weapon: M1Carbine
 		LocalOffset: 128,0,256
-		RequiresCondition: !up_cryomissiles
 	Armament@GARRISONED: ##########
 		Name: garrisoned
 		Weapon: M1Carbine
 		MuzzleSequence: garrison-muzzle
-		RequiresCondition: !up_cryomissiles
-	Armament@Upgrade: ##########
-		Weapon: CryoM1Carbine
-		LocalOffset: 128,0,256
-		RequiresCondition: up_cryomissiles
-	Armament@UpgradeGARRISONED: ##########
-		Name: garrisoned
-		Weapon: CryoM1Carbine
-		MuzzleSequence: garrison-muzzle
-		RequiresCondition: up_cryomissiles
 
 RARE1:
 	Inherits: ^RAE1
 	Tooltip:
 		Name: Soviet Rifle Infantry
+	Valued:
+		Cost: 90
 	Buildable:
 		Prerequisites: barr
 		Queue: Infantry.Soviet
 	Armament@PRIMARY: ##########
 		Weapon: M1Carbine
 		LocalOffset: 128,0,256
-		RequiresCondition: !up_advancedthermobarics
 	Armament@GARRISONED: ##########
 		Name: garrisoned
 		Weapon: M1Carbine
 		MuzzleSequence: garrison-muzzle
-		RequiresCondition: !up_advancedthermobarics
-	Armament@Upgrade: ##########
-		Weapon: IncendiaryM1Carbine
-		LocalOffset: 128,0,256
-		RequiresCondition: up_advancedthermobarics
-	Armament@UpgradeGARRISONED: ##########
-		Name: garrisoned
-		Weapon: IncendiaryM1Carbine
-		MuzzleSequence: garrison-muzzle
-		RequiresCondition: up_advancedthermobarics
 	Voiced:
 		VoiceSet: RussianVoice
 
@@ -653,11 +633,11 @@ RAJE1:
 	Valued:
 		Cost: 100
 	Mobile:
-		Speed: 55
+		Speed: 64
 	Health:
 		HP: 11000
-	ChangesHealth@SelfHealing:
-		Step: 11
+#	ChangesHealth@SelfHealing:
+#		Step: 11
 	RenderSprites:
 		Image: japanesesoldier
 		PlayerPalette: player
@@ -667,19 +647,8 @@ RAJE1:
 		VoiceSet: JapaneseVoice
 	Armament@PRIMARY: ##########
 		Weapon: CHGuardRifle
-		RequiresCondition: !up_waveforcebullets
 	Armament@GARRISONED: ##########
 		Weapon: CHGuardRifle
-		RequiresCondition: !up_waveforcebullets
-	Armament@Upgrade: ##########
-		Weapon: CHGuardRifleWaveforce
-		LocalOffset: 128,0,256
-		RequiresCondition: up_waveforcebullets
-	Armament@UpgradeGARRISONED: ##########
-		Name: garrisoned
-		Weapon: CHGuardRifleWaveforce
-		MuzzleSequence: garrison-muzzle
-		RequiresCondition: up_waveforcebullets
 
 RAE2:
 	Inherits: ^Soldier
@@ -692,7 +661,7 @@ RAE2:
 	Inherits@AntiInf: ^PrioritizeInfantry
 	Inherits@AntiBuil: ^PrioritizeBuilding
 	Valued:
-		Cost: 200
+		Cost: 180
 	Tooltip:
 		Name: Soviet Grenadier
 	UpdatesPlayerStatistics:
@@ -705,30 +674,16 @@ RAE2:
 	Mobile:
 		Speed: 75
 	Health:
-		HP: 8000
-	ChangesHealth@SelfHealing:
-		Step: 8
+		HP: 12000
+#	ChangesHealth@SelfHealing:
+#		Step: 8
 	Armament:
 		Weapon: GrenadeRA
 		LocalOffset: 0,0,427
 		FireDelay: 15
-		RequiresCondition: !up_advancedthermobarics
 	Armament@GARRISONED:
 		Name: garrisoned
 		Weapon: GrenadeRA
-		RequiresCondition: !up_advancedthermobarics
-	Armament@Upgrade:
-		Weapon: GrenadeThermobaric
-		LocalOffset: 0,0,427
-		FireDelay: 15
-		RequiresCondition: up_advancedthermobarics
-	Armament@UpgradeGARRISONED:
-		Name: garrisoned
-		Weapon: GrenadeThermobaric
-		RequiresCondition: up_advancedthermobarics
-	DamageMultiplier@up_advancedthermobarics:
-		RequiresCondition: up_advancedthermobarics
-		Modifier: 50
 	TakeCover:
 		ProneOffset: 180,0,-200
 	WithInfantryBody:
@@ -739,10 +694,6 @@ RAE2:
 		RequiresCondition: parachute
 	FireWarheadsOnDeath:
 		Weapon: GrenadeRA
-		RequiresCondition: !up_advancedthermobarics
-	FireWarheadsOnDeath@Upgrade:
-		Weapon: GrenadeThermobaric
-		RequiresCondition: up_advancedthermobarics
 	WithDeathAnimation:
 		DeathSequencePalette: raplayer
 	Voiced:
@@ -772,8 +723,8 @@ RAE2:
 		Speed: 55
 	Health:
 		HP: 10000
-	ChangesHealth@SelfHealing:
-		Step: 10
+#	ChangesHealth@SelfHealing:
+#		Step: 10
 	Armament@PRIMARY: ##########
 		Weapon: RocketsRA
 		LocalOffset: 256,43,341
@@ -844,7 +795,7 @@ RAJE3:
 	Inherits@AntiInf: ^PrioritizeInfantry
 	Inherits@cloak: ^CloakedVehicle
 	Valued:
-		Cost: 400
+		Cost: 250
 	Tooltip:
 		Name: Japanese Sniper
 	UpdatesPlayerStatistics:
@@ -856,11 +807,11 @@ RAJE3:
 		Prerequisites: modtentj
 		Description: actor-rasniper.description
 	Health:
-		HP: 10000
-	ChangesHealth@SelfHealing:
-		Step: 10
+		HP: 12000
+#	ChangesHealth@SelfHealing:
+#		Step: 10
 	Mobile:
-		Speed: 60
+		Speed: 62
 	Passenger:
 	AutoTargetPriority@DEFAULT:
 		ValidTargets: Infantry
@@ -905,8 +856,8 @@ RAE4:
 		Description: actor-e4.description
 	Health:
 		HP: 16000
-	ChangesHealth@SelfHealing:
-		Step: 16
+#	ChangesHealth@SelfHealing:
+#		Step: 16
 	Mobile:
 		Speed: 56
 	Armament:
@@ -975,8 +926,8 @@ RAJE4:
 		Cost: 200
 	Health:
 		HP: 15000
-	ChangesHealth@SelfHealing:
-		Step: 15
+#	ChangesHealth@SelfHealing:
+#		Step: 15
 	Mobile:
 		Speed: 50
 	Armament:
@@ -1040,9 +991,9 @@ SHOK:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 80000
-	ChangesHealth@SelfHealing:
-		Step: 80
+		HP: 25000
+#	ChangesHealth@SelfHealing:
+#		Step: 80
 	Mobile:
 		Speed: 40
 	Armament@PRIMARY:
@@ -1097,8 +1048,8 @@ SNIPER:
 		Description: actor-rasniper.description
 	Health:
 		HP: 10000
-	ChangesHealth@SelfHealing:
-		Step: 10
+#	ChangesHealth@SelfHealing:
+#		Step: 10
 	Mobile:
 		Speed: 60
 	Passenger:
@@ -1169,8 +1120,8 @@ E7:
 		AddToArmyValue: true
 	Health:
 		HP: 44000
-	ChangesHealth@SelfHealing:
-		Step: 44
+#	ChangesHealth@SelfHealing:
+#		Step: 44
 	Mobile:
 		Speed: 77
 		Voice: Move
@@ -1509,7 +1460,7 @@ TECH1:
 # 		Count: 1
 # 	Selectable:
 # 		DecorationBounds: 1280, 1280
-	
+
 V2RL:
 	Inherits: ^Vehicle
 	Inherits@Template: ^ArtilleryTemplate
@@ -1522,17 +1473,17 @@ V2RL:
 		Prerequisites: dome.soviet
 		Description: actor-v2rl.description
 	Valued:
-		Cost: 1500
+		Cost: 900
 	Tooltip:
 		Name: V2 Rocket Launcher
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 30000
+		HP: 20000
 	Repairable:
 		HpPerStep: 1500
-	ChangesHealth@SelfHealing:
-		Step: 12
+#	ChangesHealth@SelfHealing:
+#		Step: 12
 	Armor:
 		Type: Medium
 	Mobile:
@@ -1544,12 +1495,6 @@ V2RL:
 		LocalOffset: -256,0,128
 		MuzzleSequence: muzzle
 		RequiresCondition: !up_advancedthermobarics
-	Armament@Upgrade:
-		Weapon: SCUDThermobaric
-		ReloadingCondition: reloading
-		LocalOffset: -256,0,128
-		MuzzleSequence: muzzle
-		RequiresCondition: up_advancedthermobarics
 	WithFacingSpriteBody:
 		RequiresCondition: !reloading
 		Name: loaded
@@ -1599,11 +1544,11 @@ V2RL:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 50000
+		HP: 24000
 	Repairable:
 		HpPerStep: 2500
-	ChangesHealth@SelfHealing:
-		Step: 20
+#	ChangesHealth@SelfHealing:
+#		Step: 20
 	Armor:
 		Type: Medium
 	Mobile:
@@ -1656,11 +1601,11 @@ V2RL:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 90000
+		HP: 42000
 	Repairable:
 		HpPerStep: 4500
-	ChangesHealth@SelfHealing:
-		Step: 36
+#	ChangesHealth@SelfHealing:
+#		Step: 36
 	Armor:
 		Type: Medium
 	Mobile:
@@ -1706,17 +1651,17 @@ V2RL:
 		BuildPaletteOrder: 120
 		Description: actor-3tnk.description
 	Valued:
-		Cost: 1000
+		Cost: 900
 	Tooltip:
 		Name: Soviet Heavy Tank
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 150000
+		HP: 65000
 	Repairable:
 		HpPerStep: 7500
-	ChangesHealth@SelfHealing:
-		Step: 60
+#	ChangesHealth@SelfHealing:
+#		Step: 60
 	Armor:
 		Type: Heavy
 	Mobile:
@@ -1771,17 +1716,20 @@ V2RL:
 		Prerequisites: stek
 		Description: actor-htnk.description
 	Valued:
-		Cost: 2000
+		Cost: 1000
 	Tooltip:
 		Name: Soviet Mammoth Tank
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 375000
+		HP: 90000
 	Repairable:
 		HpPerStep: 18750
 	ChangesHealth@SelfHealing:
-		Step: 150
+		Step: 50
+		Delay: 1
+		HealIfBelow: 100
+		DamageCooldown: 1
 	Armor:
 		Type: Superheavy
 	Mobile:
@@ -1798,14 +1746,6 @@ V2RL:
 		Recoil: 175
 		RecoilRecovery: 30
 		MuzzleSequence: muzzle
-		RequiresCondition: !up_advancedthermobarics
-	Armament@Upgrade:
-		Weapon: ra120mmThermobaric
-		LocalOffset: 900,180,340, 900,-180,340
-		Recoil: 175
-		RecoilRecovery: 30
-		MuzzleSequence: muzzle
-		RequiresCondition: up_advancedthermobarics
 	Armament@SECONDARY:
 		Name: secondary
 		Weapon: MammothTusk
@@ -1814,16 +1754,6 @@ V2RL:
 		Recoil: 50
 		RecoilRecovery: 25
 		MuzzleSequence: muzzle
-		RequiresCondition: !up_advancedthermobarics
-	Armament@UpgradeSECONDARY:
-		Name: secondary
-		Weapon: MammothTuskThermobaric
-		LocalOffset: -85,384,340, -85,-384,340
-		LocalYaw: -50,50
-		Recoil: 50
-		RecoilRecovery: 25
-		MuzzleSequence: muzzle
-		RequiresCondition: up_advancedthermobarics
 	AttackTurreted:
 	WithMuzzleOverlay:
 	WithSpriteTurret:
@@ -1940,7 +1870,7 @@ V2RL:
 # 		Modifier: 115
 # 	KeepsDistance:
 # 	RenderRangeCircle:
-# 	
+
 RAARTY:
 	Inherits: ^Tank
 	Inherits@Template: ^ArtilleryTemplate
@@ -1953,17 +1883,17 @@ RAARTY:
 		BuildPaletteOrder: 70
 		Description: actor-arty.description
 	Valued:
-		Cost: 600
+		Cost: 700
 	Tooltip:
 		Name: Allied Artillery
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 20000
+		HP: 15000
 	Repairable:
 		HpPerStep: 1000
-	ChangesHealth@SelfHealing:
-		Step: 8
+#	ChangesHealth@SelfHealing:
+#		Step: 8
 	Armor:
 		Type: Light
 	Mobile:
@@ -1974,12 +1904,6 @@ RAARTY:
 		Weapon: 155mm
 		LocalOffset: 624,0,208
 		MuzzleSequence: muzzle
-		RequiresCondition: !up_cryomissiles
-	Armament@Upgrade: ##########
-		Weapon: 155mmCryo
-		LocalOffset: 624,0,208
-		MuzzleSequence: muzzle
-		RequiresCondition: up_cryomissiles
 	WithMuzzleOverlay:
 	FireWarheadsOnDeath:
 		Weapon: ArtilleryExplode
@@ -2011,8 +1935,8 @@ RAARTY:
 		HP: 100000
 	Repairable:
 		HpPerStep: 5000
-	ChangesHealth@SelfHealing:
-		Step: 40
+#	ChangesHealth@SelfHealing:
+#		Step: 40
 	Armor:
 		Type: Medium
 	Mobile:
@@ -2076,8 +2000,8 @@ RAHARV.JAPAN:
 		HP: 75000
 	Repairable:
 		HpPerStep: 3750
-	ChangesHealth@SelfHealing:
-		Step: 30
+#	ChangesHealth@SelfHealing:
+#		Step: 30
 	Armor:
 		Type: Light
 	Mobile:
@@ -2152,17 +2076,17 @@ RAJEEP:
 		Prerequisites: raweapa
 		Description: actor-jeep.description
 	Valued:
-		Cost: 300
+		Cost: 400
 	Tooltip:
 		Name: Ranger
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 22500
+		HP: 15000
 	Repairable:
 		HpPerStep: 1125
-	ChangesHealth@SelfHealing:
-		Step: 9
+#	ChangesHealth@SelfHealing:
+#		Step: 9
 	Mobile:
 		Speed: 175
 		TurnSpeed: 35
@@ -2194,7 +2118,7 @@ RAAPC:
 	Inherits@AntiAir: ^PrioritizeAir
 	Inherits@botmicro: ^BotAutoDeployTransport
 	Valued:
-		Cost: 1300
+		Cost: 700
 	Tooltip:
 		Name: Allied APC
 	Buildable:
@@ -2206,11 +2130,11 @@ RAAPC:
 		Speed: 105
 		TurnSpeed: 21
 	Health:
-		HP: 50000
+		HP: 35000
 	Repairable:
 		HpPerStep: 2500
-	ChangesHealth@SelfHealing:
-		Step: 20
+#	ChangesHealth@SelfHealing:
+#		Step: 20
 	Armor:
 		Type: Medium
 	Turreted:
@@ -2305,7 +2229,7 @@ TTNK:
 		Prerequisites: dome.soviet
 		Description: actor-ttnk.description
 	Valued:
-		Cost: 1000
+		Cost: 1100
 	Tooltip:
 		Name: Tesla Tank
 	UpdatesPlayerStatistics:
@@ -2314,8 +2238,8 @@ TTNK:
 		HP: 40000
 	Repairable:
 		HpPerStep: 2000
-	ChangesHealth@SelfHealing:
-		Step: 16
+#	ChangesHealth@SelfHealing:
+#		Step: 16
 	Armor:
 		Type: Light
 	Mobile:
@@ -2365,13 +2289,13 @@ FTRK:
 		AddToArmyValue: true
 		OverrideActor: ftrk
 	Health:
-		HP: 30000
+		HP: 16000
 	Repairable:
 		HpPerStep: 1500
-	ChangesHealth@SelfHealing:
-		Step: 12
+#	ChangesHealth@SelfHealing:
+#		Step: 12
 	Mobile:
-		Speed: 120
+		Speed: 118
 		TurnSpeed: 24
 	Turreted:
 		TurnSpeed: 48
@@ -2477,11 +2401,11 @@ QTNK:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 300000
+		HP: 90000
 	Repairable:
 		HpPerStep: 15000
-	ChangesHealth@SelfHealing:
-		Step: 120
+#	ChangesHealth@SelfHealing:
+#		Step: 120
 	Armor:
 		Type: Heavy
 	Mobile:
@@ -2705,8 +2629,8 @@ YAK:
 		HP: 15000
 	Repairable:
 		HpPerStep: 750
-	ChangesHealth@SelfHealing:
-		Step: 6
+#	ChangesHealth@SelfHealing:
+#		Step: 6
 	Armament@BOMBS:
 		Weapon: YakNapalm
 		LocalOffset: 0,-256,-32, 0,256,-32
@@ -2715,27 +2639,12 @@ YAK:
 		LocalOffset: 256,-213,0
 		MuzzleSequence: muzzle
 		PauseOnCondition: !ammo
-		RequiresCondition: !up_advancedthermobarics
 	Armament@SECONDARY:
 		Name: secondary
 		Weapon: YakChainGun
 		LocalOffset: 256,213,0
 		MuzzleSequence: muzzle
 		PauseOnCondition: !ammo
-		RequiresCondition: !up_advancedthermobarics
-	Armament@Upgrade1:
-		Weapon: IncendiaryYakChainGun
-		LocalOffset: 256,-213,0
-		MuzzleSequence: muzzle
-		PauseOnCondition: !ammo
-		RequiresCondition: up_advancedthermobarics
-	Armament@Upgrade2:
-		Name: secondary
-		Weapon: IncendiaryYakChainGun
-		LocalOffset: 256,213,0
-		MuzzleSequence: muzzle
-		PauseOnCondition: !ammo
-		RequiresCondition: up_advancedthermobarics
 	FirepowerMultiplier@doublecannonsandbombs:
 		Modifier: 25
 	AttackAircraft:
@@ -2802,44 +2711,23 @@ MODKAMI:
 		HP: 30000
 	Repairable:
 		HpPerStep: 1500
-	ChangesHealth@SelfHealing:
-		Step: 12
+#	ChangesHealth@SelfHealing:
+#		Step: 12
 	Armament@Bomb:
 		Weapon: RapierBombs
 		LocalOffset: 85,-300,-85, 85,300,-85
 		MuzzleSequence: muzzle
 		PauseOnCondition: !ammo
-		RequiresCondition: !up_energizedarrows
-	Armament@MissilesUpgrade:
-		Weapon: ZeroFighterArrowsEnergized
-		LocalOffset: 85,-300,-85, 85,300,-85
-		MuzzleSequence: muzzle
-		PauseOnCondition: !ammo
-		RequiresCondition: up_energizedarrows
 	Armament@PRIMARY:
 		Weapon: ZeroFighterChainGun
 		LocalOffset: 256,213,0, 256,-213,0
 		MuzzleSequence: muzzle
 		PauseOnCondition: !ammo
-		RequiresCondition: !up_waveforcebullets
 	Armament@SECONDARY:
 		Weapon: ZeroFighterChainGun
 		LocalOffset: 256,213,0, 256,-213,0
 		MuzzleSequence: muzzle
 		PauseOnCondition: !ammo
-		RequiresCondition: !up_waveforcebullets
-	Armament@Upgrade: ##########
-		Weapon: ZeroFighterChainGunWaveforce
-		LocalOffset: 256,213,0, 256,-213,0
-		MuzzleSequence: muzzle
-		PauseOnCondition: !ammo
-		RequiresCondition: up_waveforcebullets
-	Armament@UpgradeSECONDARY:
-		Weapon: ZeroFighterChainGunWaveforce
-		LocalOffset: 256,213,0, 256,-213,0
-		MuzzleSequence: muzzle
-		PauseOnCondition: !ammo
-		RequiresCondition: up_waveforcebullets
 	FirepowerMultiplier@doublecannonsandarrows:
 		Modifier: 25
 	FirepowerMultiplier@up_waveforcebullets:
@@ -2902,45 +2790,23 @@ MIG:
 		Prerequisites: stek
 		Description: actor-mig.description
 	Valued:
-		Cost: 1400
+		Cost: 1300
 	Tooltip:
-		Name: Mig Attack Bomber
+		Name: Mig Attack Aircraft
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 40000
+		HP: 30000
 	Repairable:
 		HpPerStep: 2000
-	ChangesHealth@SelfHealing:
-		Step: 16
+#	ChangesHealth@SelfHealing:
+#		Step: 16
 	Armament@Rockets1:
 		Weapon: Maverick
 		LocalOffset: 0,-480,0, 0,640,0
 		LocalYaw: 48, -64
 		MuzzleSequence: muzzle
 		PauseOnCondition: !ammo
-		RequiresCondition: !up_advancedthermobarics
-	Armament@Rockets2:
-		Weapon: Maverick
-		LocalOffset: 0,480,0, 0,-640,0
-		LocalYaw: -48, 64
-		MuzzleSequence: muzzle
-		PauseOnCondition: !ammo
-		RequiresCondition: !up_advancedthermobarics
-	Armament@Upgrade1:
-		Weapon: ThermobaricMaverick
-		LocalOffset: 0,-480,0, 0,640,0
-		LocalYaw: 48, -64
-		MuzzleSequence: muzzle
-		PauseOnCondition: !ammo
-		RequiresCondition: up_advancedthermobarics
-	Armament@Upgrade2:
-		Weapon: ThermobaricMaverick
-		LocalOffset: 0,480,0, 0,-640,0
-		LocalYaw: -48, 64
-		MuzzleSequence: muzzle
-		PauseOnCondition: !ammo
-		RequiresCondition: up_advancedthermobarics
 	AttackAircraft:
 		FacingTolerance: 40
 		StrafeRunLength: 2500
@@ -2999,29 +2865,23 @@ HIND:
 		Prerequisites: raafld
 		Description: actor-hind.description
 	Valued:
-		Cost: 1800
+		Cost: 1000
 	Tooltip:
 		Name: Hind Attack Helicopter
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 80000
+		HP: 22000
 	Repairable:
 		HpPerStep: 5000
-	ChangesHealth@SelfHealing:
-		Step: 40
+#	ChangesHealth@SelfHealing:
+#		Step: 40
 	Armament@Missiles:
 		Weapon: HindMissiles
 		LocalOffset: 85,250,-85, 85,-250,-85
 		MuzzleSequence: muzzle
 		PauseOnCondition: !ammo
 		RequiresCondition: !up_advancedthermobarics
-	Armament@MissilesUpgrade:
-		Weapon: HindMissilesThermobaric
-		LocalOffset: 85,250,-85, 85,-250,-85
-		MuzzleSequence: muzzle
-		PauseOnCondition: !ammo
-		RequiresCondition: up_advancedthermobarics
 	Armament@PRIMARY:
 		Weapon: ChainGun
 		LocalOffset: 85,-200,-85, 85,200,-85
@@ -3035,19 +2895,6 @@ HIND:
 		MuzzleSequence: muzzle
 		PauseOnCondition: !ammo
 		RequiresCondition: !up_advancedthermobarics
-	Armament@Upgrade1:
-		Weapon: IncendiaryChainGun
-		LocalOffset: 85,-200,-85, 85,200,-85
-		MuzzleSequence: muzzle
-		PauseOnCondition: !ammo
-		RequiresCondition: up_advancedthermobarics
-	Armament@Upgrade2:
-		Name: secondary
-		Weapon: IncendiaryChainGun
-		LocalOffset: 85,200,-85, 85,-200,-85
-		MuzzleSequence: muzzle
-		PauseOnCondition: !ammo
-		RequiresCondition: up_advancedthermobarics
 	FirepowerMultiplier@DualWeapon:
 		Modifier: 50
 	AttackAircraft:
@@ -3120,17 +2967,17 @@ MH60:
 		Queue: Aircraft.Allies
 		Description: actor-mh60.description
 	Valued:
-		Cost: 1000
+		Cost: 900
 	Tooltip:
 		Name: Black Hawk
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 50000
+		HP: 12000
 	Repairable:
 		HpPerStep: 2500
-	ChangesHealth@SelfHealing:
-		Step: 20
+#	ChangesHealth@SelfHealing:
+#		Step: 20
 	Armament@PRIMARY:
 		Weapon: ChainGunMH60
 		LocalOffset: 85,-213,-85, 85,213,-85
@@ -3228,11 +3075,11 @@ RAHELI:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 35000
+		HP: 36000
 	Repairable:
 		HpPerStep: 1750
-	ChangesHealth@SelfHealing:
-		Step: 14
+#	ChangesHealth@SelfHealing:
+#		Step: 14
 	Armament:
 		Weapon: Hellfire
 		LocalOffset: 50,250,-100, 50,-250,-100
@@ -3240,13 +3087,6 @@ RAHELI:
 		MuzzleSequence: muzzle
 		PauseOnCondition: !ammo
 		RequiresCondition: !up_cryomissiles
-	Armament@Upgrade: ##########
-		Weapon: HellfireCryo
-		LocalOffset: 50,250,-100, 50,-250,-100
-		LocalYaw: -75, 75
-		MuzzleSequence: muzzle
-		PauseOnCondition: !ammo
-		RequiresCondition: up_cryomissiles
 	AttackAircraft:
 		FacingTolerance: 20
 		AttackType: Hover
@@ -3339,8 +3179,8 @@ JHIND:
 		HP: 75000
 	Repairable:
 		HpPerStep: 3750
-	ChangesHealth@SelfHealing:
-		Step: 30
+#	ChangesHealth@SelfHealing:
+#		Step: 30
 	Armament@Missiles:
 		Weapon: JHindArrows
 		LocalOffset: 85,-300,-85, 85,300,-85
@@ -3443,7 +3283,7 @@ RATRAN:
 		BuildPaletteOrder: 10
 		Description: actor-tran.description
 	Valued:
-		Cost: 3600
+		Cost: 3400
 	Tooltip:
 		Name: Allied Chinook Transport
 	UpdatesPlayerStatistics:
@@ -3453,11 +3293,11 @@ RATRAN:
 		TurnSpeed: 25
 		Speed: 125
 	Health:
-		HP: 125000
+		HP: 17000
 	Repairable:
 		HpPerStep: 6250
-	ChangesHealth@SelfHealing:
-		Step: 50
+#	ChangesHealth@SelfHealing:
+#		Step: 50
 	WithIdleOverlay@ROTOR1AIR:
 		Offset: 597,0,213
 		Sequence: rotor
@@ -3527,11 +3367,11 @@ modhip:
 		AddToArmyValue: true
 		-OverrideActor:
 	Health:
-		HP: 150000
+		HP: 30000
 	Repairable:
 		HpPerStep: 7500
-	ChangesHealth@SelfHealing:
-		Step: 60
+#	ChangesHealth@SelfHealing:
+#		Step: 60
 	Aircraft:
 		TurnSpeed: 10
 		Speed: 100
@@ -3652,8 +3492,8 @@ MODKUBEL:
 		HP: 25000
 	Repairable:
 		HpPerStep: 1250
-	ChangesHealth@SelfHealing:
-		Step: 10
+#	ChangesHealth@SelfHealing:
+#		Step: 10
 	Mobile:
 		Speed: 160
 		TurnSpeed: 32
@@ -3700,8 +3540,8 @@ MODTYPEJ:
 		HP: 40000
 	Repairable:
 		HpPerStep: 5500
-	ChangesHealth@SelfHealing:
-		Step: 44
+#	ChangesHealth@SelfHealing:
+#		Step: 44
 	Armor:
 		Type: Light
 	Mobile:
@@ -4212,8 +4052,8 @@ PT:
 		AddToArmyValue: true
 	Health:
 		HP: 60000
-	ChangesHealth@SelfHealing:
-		Step: 24
+#	ChangesHealth@SelfHealing:
+#		Step: 24
 	Armor:
 		Type: Medium
 	Mobile:
@@ -4267,8 +4107,8 @@ DD:
 		TurnSpeed: 17
 	Health:
 		HP: 125000
-	ChangesHealth@SelfHealing:
-		Step: 50
+#	ChangesHealth@SelfHealing:
+#		Step: 50
 	Armor:
 		Type: Heavy
 	Turreted:
@@ -4336,8 +4176,8 @@ CA:
 		TurnSpeed: 8
 	Health:
 		HP: 225000
-	ChangesHealth@SelfHealing:
-		Step: 90
+#	ChangesHealth@SelfHealing:
+#		Step: 90
 	Armor:
 		Type: Superheavy
 	Turreted@PRIMARY:
@@ -4401,8 +4241,8 @@ japanspeedboat:
 		AddToArmyValue: true
 	Health:
 		HP: 40000
-	ChangesHealth@SelfHealing:
-		Step: 16
+#	ChangesHealth@SelfHealing:
+#		Step: 16
 	Armor:
 		Type: Light
 	Mobile:
@@ -4486,8 +4326,8 @@ yamatobattleship:
 		TurnSpeed: 7
 	Health:
 		HP: 250000
-	ChangesHealth@SelfHealing:
-		Step: 100
+#	ChangesHealth@SelfHealing:
+#		Step: 100
 	Armor:
 		Type: Superheavy
 	Turreted@PRIMARY:
@@ -4570,8 +4410,8 @@ japancarrier:
 		TurnSpeed: 9
 	Health:
 		HP: 225000
-	ChangesHealth@SelfHealing:
-		Step: 90
+#	ChangesHealth@SelfHealing:
+#		Step: 90
 	Armor:
 		Type: Superheavy
 	AttackFollowFrontal:
@@ -4708,8 +4548,8 @@ SS:
 		TurnSpeed: 15
 	Health:
 		HP: 100000
-	ChangesHealth@SelfHealing:
-		Step: 40
+#	ChangesHealth@SelfHealing:
+#		Step: 40
 	Armor:
 		Type: Heavy
 	Turreted:
@@ -4764,8 +4604,8 @@ MSUB:
 		TurnSpeed: 12
 	Health:
 		HP: 70000
-	ChangesHealth@SelfHealing:
-		Step: 28
+#	ChangesHealth@SelfHealing:
+#		Step: 28
 	Armor:
 		Type: Medium
 	Armament@PRIMARY:
@@ -7056,8 +6896,8 @@ alliedmachinegunner:
 		Speed: 50
 	Health:
 		HP: 20000
-	ChangesHealth@SelfHealing:
-		Step: 20
+#	ChangesHealth@SelfHealing:
+#		Step: 20
 	Armament@PRIMARY:
 		Weapon: RAVulcan
 		LocalOffset: 128,0,256
@@ -7112,8 +6952,8 @@ sheridan:
 		HP: 85000
 	Repairable:
 		HpPerStep: 4250
-	ChangesHealth@SelfHealing:
-		Step: 34
+#	ChangesHealth@SelfHealing:
+#		Step: 34
 	Armor:
 		Type: Medium
 	Turreted:
@@ -7202,8 +7042,8 @@ rapierjumpjet:
 		HP: 77500
 	Repairable:
 		HpPerStep: 3875
-	ChangesHealth@SelfHealing:
-		Step: 31
+#	ChangesHealth@SelfHealing:
+#		Step: 31
 	Armament@PRIMARY:
 		Weapon: RapierBombs
 		LocalOffset: 256,213,0, 256,-213,0
@@ -7447,8 +7287,8 @@ reconranger:
 		HP: 25000
 	Repairable:
 		HpPerStep: 1250
-	ChangesHealth@SelfHealing:
-		Step: 10
+#	ChangesHealth@SelfHealing:
+#		Step: 10
 	Mobile:
 		Speed: 160
 		TurnSpeed: 32
@@ -7524,8 +7364,8 @@ MODTIGER:
 		HP: 160000
 	Repairable:
 		HpPerStep: 8000
-	ChangesHealth@SelfHealing:
-		Step: 64
+#	ChangesHealth@SelfHealing:
+#		Step: 64
 	Armor:
 		Type: Heavy
 	Turreted:
@@ -7556,18 +7396,18 @@ CTNK:
 		Prerequisites: atek
 		Description: actor-ctnk.description
 	Valued:
-		Cost: 2000
+		Cost: 1250
 	Tooltip:
 		Name: Chrono Tank
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	SelectionDecorations:
 	Health:
-		HP: 75000
+		HP: 45000
 	Repairable:
 		HpPerStep: 3750
-	ChangesHealth@SelfHealing:
-		Step: 60
+#	ChangesHealth@SelfHealing:
+#		Step: 60
 	Armor:
 		Type: Medium
 	Mobile:
@@ -7579,25 +7419,11 @@ CTNK:
 		LocalOffset: -160,-276,232
 		LocalYaw: 100
 		MuzzleSequence: muzzle
-		RequiresCondition: !up_cryomissiles
 	Armament@SECONDARY:
 		Weapon: ChronoTusk
 		LocalOffset: -160,276,232
 		LocalYaw: -100
 		MuzzleSequence: muzzle
-		RequiresCondition: !up_cryomissiles
-	Armament@Upgrade:
-		Weapon: ChronoTuskCryo
-		LocalOffset: -160,-276,232
-		LocalYaw: 100
-		MuzzleSequence: muzzle
-		RequiresCondition: up_cryomissiles
-	Armament@UpgradeSECONDARY:
-		Weapon: ChronoTuskCryo
-		LocalOffset: -160,276,232
-		LocalYaw: -100
-		MuzzleSequence: muzzle
-		RequiresCondition: up_cryomissiles
 	AttackFrontal:
 		FacingTolerance: 10
 	WithMuzzleOverlay:
@@ -7673,7 +7499,6 @@ SAPC:
 	Inherits: ^Vehicle
 	Inherits@Template: ^SupportVehicleTemplate
 	Inherits@exp: ^GainsExperienceRA
-	Inherits@PromotionUnitBuff: ^PromotionUnitBuff
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
 	Inherits@EMP: ^TurretEMP
 	Inherits@AntiVeh: ^PrioritizeVehicle
@@ -7687,7 +7512,7 @@ SAPC:
 		Prerequisites: atek
 		Description: actor-sapc.description
 	Valued:
-		Cost: 1800
+		Cost: 1200
 	Tooltip:
 		Name: Phase Transport
 	UpdatesPlayerStatistics:
@@ -7696,8 +7521,8 @@ SAPC:
 		HP: 30000
 	Repairable:
 		HpPerStep: 1500
-	ChangesHealth@SelfHealing:
-		Step: 12
+#	ChangesHealth@SelfHealing:
+#		Step: 12
 	Armor:
 		Type: Light
 	Mobile:
@@ -7916,8 +7741,8 @@ RAMGG:
 		HP: 25000
 	Repairable:
 		HpPerStep: 1250
-	ChangesHealth@SelfHealing:
-		Step: 10
+#	ChangesHealth@SelfHealing:
+#		Step: 10
 		Delay: 1
 		StartIfBelow: 100
 		DamageCooldown: 1
@@ -7933,10 +7758,10 @@ RAMGG:
 	WithIdleOverlay@SPINNER:
 		Offset: -299,0,171
 		Sequence: spinner
-	WithIdleOverlay@gapfield:
-		Sequence: gapfield
-		RequiresCondition: !disabled
-		IsDecoration: True
+	# WithIdleOverlay@gapfield:
+	# 	Sequence: gapfield
+	# 	RequiresCondition: !disabled
+	# 	IsDecoration: True
 	Armament:
 		Weapon: dummytargeting
 	RevealsShroud:
@@ -8026,12 +7851,12 @@ MRJ:
 		RequiresCondition: charging
 		SoundFiles: jammer.aud
 		VolumeMultiplier: 10
-	WithIdleOverlay@JAMSIGNAL:
-		Sequence: jamsignal
-		Palette: ra_temperat
-		RequiresCondition: charging
-		Offset: -256,0,256
-		IsDecoration: True
+	# WithIdleOverlay@JAMSIGNAL:
+	# 	Sequence: jamsignal
+	# 	Palette: ra_temperat
+	# 	RequiresCondition: charging
+	# 	Offset: -256,0,256
+	# 	IsDecoration: True
 	JamsMissiles:
 		Range: 5000
 		DeflectionRelationships: Neutral, Enemy
@@ -8149,8 +7974,8 @@ mortarsoldier:
 		AddToArmyValue: true
 	Health:
 		HP: 16000
-	ChangesHealth@SelfHealing:
-		Step: 16
+#	ChangesHealth@SelfHealing:
+#		Step: 16
 	Mobile:
 		Speed: 48
 	Armament@PRIMARY:
@@ -8205,8 +8030,8 @@ cyberdog:
 	SelectionDecorations:
 	Health:
 		HP: 50000
-	ChangesHealth@SelfHealing:
-		Step: 50
+#	ChangesHealth@SelfHealing:
+#		Step: 50
 	Mobile:
 		Speed: 100
 		Voice: Move
@@ -8310,8 +8135,8 @@ VOLKOV:
 		Weapon: VolkovMagneticWeapon
 	Health:
 		HP: 400000
-	ChangesHealth@SelfHealing:
-		Step: 400
+#	ChangesHealth@SelfHealing:
+#		Step: 400
 	Mobile:
 		Speed: 55
 		PauseOnCondition: disabled
@@ -9212,9 +9037,9 @@ RASAMURAI:
 	Mobile:
 		Speed: 65
 	Health:
-		HP: 35000
-	ChangesHealth@SelfHealing:
-		Step: 35
+		HP: 21000
+#	ChangesHealth@SelfHealing:
+#		Step: 35
 	Armament@PRIMARY: ##########
 		Weapon: SamuraiBlade
 		RequiresCondition: !up_advancedplasmaweapons
@@ -9304,15 +9129,15 @@ MODTNKD:
 	Valued:
 		Cost: 1200
 	Tooltip:
-		Name: Japanese Tank Destroyer
+		Name: Japanese Tank Destroyer (Ho-Ni)
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
 		HP: 67500
 	Repairable:
 		HpPerStep: 3375
-	ChangesHealth@SelfHealing:
-		Step: 27
+#	ChangesHealth@SelfHealing:
+#		Step: 27
 	Armor:
 		Type: Medium
 	Mobile:
@@ -9357,7 +9182,7 @@ MODHOVER:
 		Prerequisites: dome.japan
 		Description: actor-jphover.description
 	Valued:
-		Cost: 1500
+		Cost: 1200
 	Tooltip:
 		Name: Hovercraft Transport
 	UpdatesPlayerStatistics:
@@ -9366,11 +9191,11 @@ MODHOVER:
 		DeployChance: 100
 		DeployTicks: 0
 	Health:
-		HP: 65000
+		HP: 35000
 	Repairable:
 		HpPerStep: 3250
-	ChangesHealth@SelfHealing:
-		Step: 26
+#	ChangesHealth@SelfHealing:
+#		Step: 26
 	Armor:
 		Type: Medium
 	Mobile:
@@ -9766,8 +9591,8 @@ typechiha:
 		HP: 80000
 	Repairable:
 		HpPerStep: 6500
-	ChangesHealth@SelfHealing:
-		Step: 104
+#	ChangesHealth@SelfHealing:
+#		Step: 104
 	Armor:
 		Type: Medium
 	Mobile:
@@ -9967,8 +9792,8 @@ MODBGGY:
 		HP: 60000
 	Repairable:
 		HpPerStep: 3000
-	ChangesHealth@SelfHealing:
-		Step: 24
+#	ChangesHealth@SelfHealing:
+#		Step: 24
 	Turreted:
 		TurnSpeed: 24
 		Offset: -40,0,0
@@ -10022,8 +9847,8 @@ MODBOMBER:
 		HP: 122500
 	Repairable:
 		HpPerStep: 6125
-	ChangesHealth@SelfHealing:
-		Step: 49
+#	ChangesHealth@SelfHealing:
+#		Step: 49
 	AttackAircraft:
 		AttackType: Strafe
 		Armaments: primary, secondary

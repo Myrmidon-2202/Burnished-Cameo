@@ -1577,31 +1577,178 @@ actor-nax_rocket =
    .description = Provides a V1 missile.
       Requires power to operate
 
+actor-chem_troop =
+   .description = General-purpose infantry equipped with chemical weapon.
+       Cannot attack buildings.
+       Strong vs Infantry
+
+actor-shahid =
+   .description = Fast Elite infantry units armed with Rockets and machine guns.
+       When grouped, they can take down buildings extremely quickly.
+       Cloaking, Detector.
+       Strong vs Infantry, Buildings
+
+actor-d2k_atrgrenadier =
+   .description = Assault Infantry armed with grenades.
+       Very prone to friendly fire.
+       Strong vs Infantry, Structures
+
+actor-d2k_sardaukar =
+   .description = Generalist infantry of Emperor's Army.
+       Strong vs Infantry, Vehicles, Aircraft
+
+actor-d2k_sardaukar_elite =
+   .description = Heavily Armored assault infantry of the Sarkdaukar.
+       Cannot lay down or be crushed.
+       Strong vs Everything
+
+actor-d2k_sardaukar_assassin =
+   .description = Assassin equipped with Heat Blade and Crossbow. 
+       Strong vs Infantry
+
+actor-saboteur =
+   .description = Stealth infantry that can infiltrate regardless of terrain
+       Armed with explosives that can be attached to buildings.
+       Explodes upon death.
+       Detector.
+       Strong vs Buildings
+
+actor-fedaykin =
+   .description = Elite Fremen infantry armed with a Weirding Module.
+       Strong vs Infantry, Vehicles, Buildings
+
+actor-d2k_sniper =
+   .description =  Infantry armed with a long range rifle.
+       Can detect cloaked units at great distances.
+       Can Deploy to grant stealth and accuracy, at the cost of mobility.
+       Strong vs Infantry, Vehicles, Buildings
+
+actor-harkflame_infantry =
+   .description = Close range assault unit. 
+       Capable of cloaking.
+       Strong vs Infantry, Vehicles, Buildings
+
 actor-shock_infantry =
    .description = Armed with a autogun, firing high calibre ammo and rockets.
        Damages enemies in a line.
        Strong vs Infantry, Vehicles
 
+actor-bene_gesserit =
+   .description = Secretive Witch of the Imperium.
+       Can control enemy units using The Voice.
+       Instantly kills infantry with the Gom Jabbar.
+       Cannot be poisoned nor mind controlled.
+       Strong vs Infantry, Vehicles
+
+actor-trike =
+   .description = Fast scout vehicle armed with a Machine Gun.
+      Strong vs Infantry, Light Vehicles
+
+actor-raider =
+   .description = Improved fast scout vehicle armed with a Machine Gun.
+      Strong vs Infantry, Light Vehicles
+
+actor-stealth_raider =
+   .description = Improved fast scout vehicle armed with a Machine Gun.
+      Cloaked.
+      Strong vs Infantry, Light Vehicles
+
+actor-ordos_scoutdrone =
+   .description = Fast scouting vehicle. Armed with Missiles.
+      Unimplemented - Can deploy to turn into a sensor mode, increasing vision range.
+      Strong vs Light Vehicles, Aircraft
+
 actor-rocket_raider =
    .description = Fast raider armed with rockets.
-      Can carry 4 passengers.
        Strong vs Infantry, Light Vehicles, Air
 
 actor-shock_raider =
    .description = Fast raider armed with a shock gun.
       Strong vs Tanks
 
+actor-buzzsaw:
+   .description = Durable Scout.
+       Strong vs Infantry, Light Vehicles
+
 actor-missile_tank =
    .description = Long-range rocket artillery.
+       Detector
        Strong vs Vehicles, Buildings
 
 actor-siege_tank =
    .description = Long-range artillery gun.
        Strong vs Infantry, Buildings
 
+actor-autogun_tank =
+   .description = Medium tank. Armed with an Autogun.
+      Strong vs Infantry, Vehicles
+
+actor-combat_tank =
+   .description = Medium tank.
+      Strong vs Vehicles
+
+actor-combat_tank_o_stealth =
+   .description = Cloaked tank destroyer. Armed with a long range Cannon.
+      Strong vs Vehicles
+
+actor-combat_tank_corrino =
+   .description = Multi-Purpose Medium tank. Armed with a Cannon and a Missile Launcher.
+      Strong vs Infantry, Vehicles
+
+actor-tyrant =
+   .description = Superheavy support tank.
+      Capable of firing a burst of missiles.
+      Can deploy to meltdown, producing an explosion lethal to anything nearby.
+      Strong vs Infantry, Vehicles, Buildings
+
 actor-duelist_tank =
    .description = Heavy tank.
       Strong vs Vehicles
+
+actor-d2k_apc:
+   .description = Infantry support APC. Armed with a small cannon and a missile launcher. Carries 5 units.
+      Strong vs Vehicles, Buildings
+
+actor-d2k_atreides_apc =
+   .description =  Stealthed Heavy Apc. Armed with a with machine gun. Can carry 12 passengers.
+      Strong vs Infantry
+
+actor-mongoose =
+   .description =  Generalist Fire Support Walker.
+      Strong vs Vehicles, Buildings
+
+actor-sonic_tank =
+   .description = Fire support vehicle capable of firing sonic blasts.
+      Damages enemies in a line.
+      Strong vs Infantry, Vehicles, Buildings
+
+actor-ordos_apc =
+   .description = Ordos Hover Apc armed with  a missile launcher. Shielded.
+      Strong vs Vehicles, Buildings
+
+actor-ordos_laser_tank =
+   .description = Mobile hover tank, armed with an anti tank laser.
+      Shielded
+      Strong vs Vehicles, Buildings
+
+actor-deviator=
+   .description = Mobile Artillery unit.
+      Capable of converting enemy units to your side for a limited time.
+      Strong vs Ground Units
+
+actor-assault_gun =
+   .description = Heavy Siege Artillery.
+      Strong vs Vehicles, Buildings
+
+actor-devastator =
+   .description = Superheavy assault tank.
+      Can deploy to meltdown, producing an explosion lethal to anything nearby.
+      Strong vs Infantry, Vehicles, Buildings
+
+actor-flame_tank =
+   .description = Medium flamethrower support tank.
+      Explodes on death.
+      Strong vs Infantry, Buildings
 
 actor-quake_tank =
    .description = Deals seismic damage to vehicles and structures.
@@ -1612,6 +1759,38 @@ actor-carryall =
 actor-air_drone =
    .description = Multirole light fighter armed with napalm rockets.
        Strong vs Infantry, Aircraft
+
+actor-harkgunship =
+   .description = Multirole medium fighter armed with napalm rockets.
+       Strong vs Infantry, Aircraft, Buildings
+
+actor-ornithopter =
+   .description = Powerful Aircraft armed with dual Heavy Machine Guns and Bombs.
+       Strong vs Infantry, Aircraft, Buildings
+
+actor-adp =
+   .description = Air Mobile Base Defense equipped with dual autocannons.
+       Strong vs Infantry, Aircraft
+
+actor-kwny_fighter =
+   .description = Support fighter used for air and ground support. Equipped with guided missiles.
+       Strong vs Aircraft, Buildings
+
+actor-combat_fleet =
+   .description = Heavy siege vessel, capable of releasing a hailstorm of rockets at long range.
+       Strong vs Vehicles, Buildings
+
+actor-swarmer:
+   .description = Fast flying support craft armed with machineguns.
+       Strong vs Infantry, Aircraft
+
+actor-aa_mine:
+   .description = Flying Mine that hurls missiles upon contact with enemy aircraft.
+       Strong vs Aircraft
+
+actor-ordos_eye:
+   .description = Light scout aircraft with a suicidal passenger.
+       Strong vs Nothing
 
 actor-farasha =
    .description = Carrier spaceship.
@@ -2088,8 +2267,8 @@ promotions =
    .rank8 = Level 8
 
 promotions-flavor =
-   .prefix = Promotion Faction Tip
-   .notification-01 = You have been promoted. Review the Promotions tab for access to new technologies.
+   .prefix = Notice for a Promotion Faction
+   .notification-01 = You have been promoted. Review the Promotions tab for access to new technologies or units.
    .notification-02 = Congratulations on your field promotion! Purchase a Promotional upgrade to bolster your forces.
    .notification-03 = Your successes have granted you access to an exclusive field technology or ability of your choice.
    .notification-04 = You've been authorized to purchase a Promotional upgrade. Fight on to earn more points and expand your arsenal.
@@ -2186,7 +2365,7 @@ faction-ra2-modded-random =
    .name = Any
    .description = Random faction
       A random faction from Red Alert 2 Mods will be chosen when the game starts.
-	  
+
 faction-dune-atreides =
     .name = Westwood's Atreides
     .description = The Atreides from Westwood's Dune games.
@@ -2200,14 +2379,14 @@ faction-dune-harkonnen =
        The evil House Harkonnen, driven by a hunger for power at all costs.
        Heavy Forces, with a focus on medium ranged vehicular warfare.
        Support powers: Death Hand Missile
-	  
+
 faction-dune-ordos =
    .name = Westwood's Ordos
    .description = The Ordos from Westwood's Dune games.
        The insidious House Ordos, seeking profit above all else. 
        Lighter specialist Forces, with a focus on rapid hit and run assaults with ambushes.
        Support powers: Chaos Lightning, Sabotuers
-	  
+
 faction-dune-corrino =
    .name = Westwood's Corrino
    .description = The Corrino from Westwood's Dune games.
@@ -2215,10 +2394,41 @@ faction-dune-corrino =
        Balanced Forces, with a focus on enduring heavy infantry backed by multipurpose vehicular support.
        Support powers: Release the Sardaukar
 
+faction-tibsun-gdi =
+   .name = Tiberian Sun GDI
+   .description = GDI from Tiberian Sun
+       The second chapter of GDI, keeping their resolve regardless of conditions.
+       Balanced Forces, with a focus on reliable infantry and hardy mechanized support.
+       Support powers: Drop Pods, EMP cannon, Ion Cannon
+
+faction-tibsun-nod =
+   .name = Tiberian Sun Nod
+   .description = The Brotherhood of Nod from Tiberian Sun.
+       The second chapter of NOD, even more driven and fanatical than their predecessors.
+       Guerilla Forces, with a focus on light infantry backed by unconventional vehicular support.
+       Possess subterranean vehicles and stealth generators.
+       Support powers: Chemical Missile, Multi-Missile
+
+faction-tibsun-forgotten =
+   .name = Tiberian Sun Forgotten
+   .description = The Forgotten from Tiberian Sun.
+       The Lingering Forgotten, persisting in spite of their afflictions.
+       Numerous Forces, with a focus on hardy infantry backed by ramshackle vehicular support.
+       Infantry heals in tiberium.
+       Support powers: Wildlife Rampage, Mutant Commando
+
+faction-tibsun-cabal =
+   .name = Tiberian Sun CABAL
+   .description = CABAL from from Tiberian Sun.
+       The cybernetic slaves of CABAL, pushing forward their power mad master's ends.
+       Heavy Forces, with a focus on cybernetic infantry backed by unconventional vehicular support.
+       Possesses modified nod units and structures, all infantry can be repaired and EMPed.
+       Support powers: Chemical Missile, Multi-Missile
+
 faction-dune-random =
    .name = Any
    .description = Random faction
-	  A random faction from Westwood's Dune games will be chosen when the game starts.
+       A random faction from Westwood's Dune games will be chosen when the game starts.
 
 faction-warcraft-human =
    .name = Warcraft 1 Human
@@ -2237,4 +2447,32 @@ faction-warcraft-orc =
 faction-warcraft-random =
    .name = Any
    .description = Random faction
-	  A random faction from Warcraft 1 will be chosen when the game starts.
+       A random faction from Warcraft 1 will be chosen when the game starts.
+
+faction-starcraft-terran =
+   .name = Starcraft Terrans
+   .description = Terrans from from Starcraft.
+       The ambitious castaway humans of the Koprulu sector, eager to throw down with all comers.
+       Heavy Forces, with a focus on maneuver and siege warfare.
+       Units cost power to be built. Structures can be lifted off to move elsewhere.
+       Support powers: Nuclear Strike
+
+faction-starcraft-zerg =
+   .name = Starcraft Zerg
+   .description = Zerg from from Starcraft.
+       The ever devouring zerg swarm, assimilating and consuming all in their path.
+       Swarming forces, with a focus on ambush and attrition warfare.
+       Units cost power to be built. All units boast health regeneration.
+       Support powers: Cerebrate Neural Boost.
+
+faction-starcraft-protoss =
+   .name = Starcraft Protoss
+   .description = Terrans from from Starcraft.
+       The prideful protoss of the Koprulu sector, eager to assert their wills on all who oppose them.
+       Superheavy Forces, with a focus on frontal assaults aided by copious psi-power.
+       Units cost power to be built. All units are shielded
+
+faction-starcraft-random =
+   .name = Any
+   .description = Random faction
+       A random faction from the Starcraft factions will be chosen when the game starts.

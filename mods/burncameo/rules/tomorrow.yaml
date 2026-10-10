@@ -1,12 +1,12 @@
 World:
 	FactionCA@dtomorrow:
-		Name: F.O.T
+		Name: Forces of Tomorrow
 		InternalName: dtomorrow
 		Game: Dawn of Tomorrow
 		Side: Dawn of Tomorrow
 		Description: Forces of Tomorrow Support powers: Bacterial Missile Strike Special Unit: Classified
 	FactionCA@dtanswer:
-		Name: C.O.A
+		Name: Company of Answers
 		InternalName: dtanswer
 		Game: Dawn of Tomorrow
 		Side: Dawn of Tomorrow
@@ -440,7 +440,7 @@ MCV.TOMORROW:
 		Prerequisites: ~anyhq, fix
 		Queue: Vehicle.Tomorrow
 		BuildDurationModifier: 40
-		Description: Deploys into another Construction Yard.   Unarmed
+		Description: Deploys into another Construction Yard.
 	Selectable:
 		Priority: 4
 		DecorationBounds: 1536, 1536
@@ -493,7 +493,7 @@ MCV.ANSWER:
 		Prerequisites: ~anyhq, fix
 		Queue: Vehicle.Anwer
 		BuildDurationModifier: 40
-		Description: Deploys into another Construction Yard.   Unarmed
+		Description: Deploys into another Construction Yard.
 	Selectable:
 		Priority: 4
 		DecorationBounds: 1536, 1536
@@ -544,7 +544,7 @@ MCV.DTUSA:
 		Prerequisites: ~anyhq, fix
 		Queue: Vehicle.Dtusa
 		BuildDurationModifier: 40
-		Description: Deploys into another Construction Yard.   Unarmed
+		Description: Deploys into another Construction Yard.
 	Selectable:
 		Priority: 4
 		DecorationBounds: 1536, 1536
@@ -594,7 +594,7 @@ MCV.DTRUSSIA:
 		BuildPaletteOrder: 210
 		Prerequisites: fix
 		BuildDurationModifier: 40
-		Description: Deploys into another Construction Yard.   Unarmed
+		Description: Deploys into another Construction Yard.
 	Valued:
 		Cost: 2000
 	Tooltip:
@@ -650,7 +650,7 @@ MCV.DTJAPAN:
 		Prerequisites: ~anyhq, fix
 		Queue: Vehicle.Dtjapan
 		BuildDurationModifier: 40
-		Description: Deploys into another Construction Yard.   Unarmed
+		Description: Deploys into another Construction Yard.
 	Selectable:
 		Priority: 4
 		DecorationBounds: 1536, 1536
@@ -698,7 +698,7 @@ MCV.DTARGENTINA:
 		Prerequisites: atek.argentina, fix
 		Queue: Vehicle.Dtargentina
 		BuildDurationModifier: 40
-		Description: Deploys into another Construction Yard.   Unarmed
+		Description: Deploys into another Construction Yard.
 	Selectable:
 		Priority: 4
 		DecorationBounds: 1536, 1536
@@ -747,7 +747,7 @@ MCV.DTBRAZIL:
 		Prerequisites: ~fact.dtbrazil, fix
 		Queue: Vehicle.Dtbrazil
 		BuildDurationModifier: 40
-		Description: Deploys into another Construction Yard.   Unarmed
+		Description: Deploys into another Construction Yard.
 	Selectable:
 		Priority: 4
 		DecorationBounds: 1536, 1536
@@ -798,7 +798,7 @@ MCV.DTCUBA:
 		BuildPaletteOrder: 210
 		Prerequisites: fix
 		BuildDurationModifier: 40
-		Description: Deploys into another Construction Yard.   Unarmed
+		Description: Deploys into another Construction Yard.
 	Valued:
 		Cost: 2000
 	Tooltip:
@@ -847,7 +847,7 @@ MCV.DTAUSTRALIA:
 		Prerequisites: ~anyhq, fix
 		Queue: Vehicle.Dtaustralia
 		BuildDurationModifier: 40
-		Description: Deploys into another Construction Yard.   Unarmed
+		Description: Deploys into another Construction Yard.
 	Selectable:
 		Priority: 4
 		DecorationBounds: 1536, 1536
@@ -893,7 +893,7 @@ MCV.DTETHIOPIA:
 		Prerequisites: atek.ethiopia, fix
 		Queue: Vehicle.Dtethiopia
 		BuildDurationModifier: 40
-		Description: Deploys into another Construction Yard.   Unarmed
+		Description: Deploys into another Construction Yard.
 	Selectable:
 		Priority: 4
 		DecorationBounds: 1536, 1536
