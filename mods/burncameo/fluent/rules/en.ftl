@@ -1290,6 +1290,403 @@ power-forceshield =
    .name = Force Shield
    .description = Makes selected buildings temporarily invulnerable.
 
+actor-tsjumpjet =
+   .description = Advanced Infantry. Capable of taking flight.
+      Effective against Infantry, Aircraft.
+
+actor-elitcadre =
+   .description = Advanced Black Hand Infantry. Effective Generalist.
+      Regenerates HP.
+      Effective against Infantry, Vehicles, Aircraft.
+
+actor-tschamspy =
+   .description = Nod spy that can infiltrate structures.
+      Cloaks when standing still.
+      Unarmed
+
+actor-tscyborg =
+   .description = Durable Cyborg Infantry.
+      Regenerates HP in Tiberium.
+      Effective against Infantry.
+
+actor-tsdissolver =
+   .description = Anti-Tank Walker.
+      Dissolves mechanical parts to regenerate itself.
+      Effective against Vehicles.
+
+actor-tscyc2 =
+   .description = Elite cybernetic infantry unit.
+      Effective against Infantry, Vehicles, Buildings.
+
+actor-tsreaper =
+   .description = Cyborg walker armed with missiles and nets.
+      Strong vs vehicles.
+      Can immobilize infantry.
+
+actor-tsumagon =
+   .description = Advanced anti-infantry unit.
+      Maximum of 10 can be trained.
+      Strong vs Infantry.
+      Weak vs Vehicles.
+
+actor-tsghost =
+   .description = Elite commando infantry, armed with a railgun and C4.
+      Strong vs Infantry, Buildings.
+      Weak vs Vehicles, Aircraft.
+      Special Ability: Destroys Buildings with C4 
+      Maximum of 5 can be trained.
+
+actor-tsmutant =
+   .description = Mutant armed with dual pistols.
+      Weapon has high spread.
+      Strong vs Infantry.
+      Weak vs Vehicles.
+
+actor-tsmwmn =
+   .description = Mutant armed with a carbine.
+      Weapon does high, precise damage.
+      Strong vs infantry, light vehicles.
+      Weak vs tanks, aircraft.
+
+actor-tsmutant3 =
+   .description = Elite mutant infantry, can use grenades.
+      Strong vs Infantry.
+      Weak vs Vehicles.
+
+actor-tsweedguy =
+   .description = Mutant soldier with a Tiberium weapon.
+      Can attack air.
+      Strong vs Infantry.
+      Weak vs Vehicles.
+
+actor-rapt =
+   .description = Bipedal dinosaur.
+
+actor-tsdoggie =
+   .description = Canine mutant that hurls Tiberium shards.
+      Can attack aircraft.
+      Strong vs Vehicles.
+      Weak vs Infantry.
+
+actor-tsnapost =
+   .description = Stops infantry and blocks enemy fire.
+      Can NOT be crushed by tanks.
+
+actor-tsharv =
+   .description = Harvests Tiberium for processing.
+
+actor-tsharvnod =
+   .description = Harvests Tiberium for processing.
+
+actor-tsharvmutant =
+   .description = Harvests Tiberium for processing.
+
+actor-tsharvcabal =
+   .description = Harvests Tiberium for processing.
+
+actor-tsldrone =
+   .description = Hovering drone that can deploy.into a mine.
+
+actor-tsprobe =
+   .description = Fire-and-forget munition.
+      Instantly kills mobile targets.
+
+actor-tsmmch =
+   .description = General purpose mechanized walker.
+      Strong vs Vehicles.
+      Weak vs Infantry, Aircraft.
+
+actor-tsjugg =
+   .description = Mobile artillery mech.
+      Immobile when firing.
+      Strong vs Ground units.
+      Weak vs Aircraft.
+
+actor-tshvr =
+   .description = Hovering vehicle armed with long range missiles.
+      Strong vs Vehicles, Aircraft.
+      Weak vs Infantry.
+
+actor-tssmech =
+   .description = Anti-personnel walker.
+      Strong vs Infantry, Light armor.
+      Weak vs Vehicles, Aircraft.
+
+actor-tshmec =
+   .description = Slow superheavy walker.
+      Armed with dual railguns and rocket launchers.
+      Strong vs Everything.
+      Maximum 1 can be built.
+
+actor-tssonic =
+   .description = Armored high-tech vehicle with a long range sonic armament.
+      Strong vs Infantry, Vehicles, Buildings.
+      Weak vs Aircraft.
+
+actor-tsaegis =
+   .description = Heavy GDI anti-aircraft warship.
+      Strong vs.
+      Aircraft.
+
+actor-tssapc =
+   .description = Troop transport that can move underground to avoid detection.
+
+actor-tsbggy =
+   .description = Fast scout and anti-infantry vehicle.
+      Strong vs Infantry, Light armor.
+      Weak vs Vehicles, Aircraft.
+
+actor-tsbike =
+   .description = Fast scout vehicle, armed with.rockets.
+      Strong vs Vehicles.
+      Weak vs Infantry, Aircraft.
+
+actor-tsstnk =
+   .description = Lightly armoured tank equipped with a stealth generator.
+      Armed with missiles.
+      Can be spotted by infantry at close range.
+      Strong vs Vehicles, Aircraft.
+      Weak vs Infantry.
+
+actor-tsrepair =
+   .description = Repairs nearby vehicles.
+
+actor-tsttnk =
+   .description = Nod's main battle tank.
+      Can deploy to gain extra protection.
+      Strong vs Vehicles.
+      Weak vs Infantry, Aircraft.
+
+actor-tsart2 =
+   .description = Mobile artillery.
+      Immobile when firing.
+      Strong vs Ground units.
+      Weak vs Aircraft.
+
+actor-tssubtank =
+   .description = Subterranean flame tank.
+      Is able to move underground.
+      Strong vs Infantry, Buildings.
+      Weak vs Tanks, Aircraft.
+
+actor-tsapc =
+   .description = Armored infantry transport.
+      Can move on water.
+
+actor-tssgen =
+   .description = Cloaks nearby buildings and units.
+      Can not be cloaked.
+      Unarmed.
+
+actor-tslpst =
+   .description = Detects cloaked units and buildings.
+      Unarmed.
+
+actor-tslpstnod =
+   .description = Shuts down vehicles with an EMP blast.
+      Strong vs Vehicles, Cyborgs.
+
+actor-tsmobilefact =
+   .description = Deploys into a frontline war factory.
+
+actor-tsmemp =
+   .description = Shuts down vehicles with an EMP blast.
+      Strong vs Vehicles, Cyborgs.
+
+actor-tswini2 =
+   .description = Light motor vehicle armed with long range missiles.
+      Strong vs Vehicles, Aircraft.
+      Weak vs Infantry.
+
+actor-ts1tnk =
+   .description = Fast, lightly armored tank.
+      Strong vs Light Vehicles.
+
+actor-ts2tnk =
+   .description = General-purpose Mutant tank.
+      Strong vs Vehicles.
+      Weak vs Aircraft, Infantry.
+
+actor-ts3tnk =
+   .description = Mutant heavy armor.
+      Strong vs Vehicles.
+      Weak vs Aircraft, Infantry.
+
+actor-tsftnk =
+   .description = Mutant incendiary tank.
+      Strong vs Infantry, Buildings.
+      Weak vs Vehicles, Aircraft.
+
+actor-ts4tnk =
+   .description = Mutant superheavy tank.
+      Can attack Aircraft.
+      Strong vs Everything.
+
+actor-tsmlrs =
+   .description = Mutant rocket artillery.
+      Strong vs Infantry, Buildings.
+      Weak vs Vehicles.
+
+actor-tsm113 =
+   .description = Armored troop transport.
+      Strong vs Infantry.
+      Weak vs Vehicles, Aircraft.
+
+actor-tst1000 =
+   .description = Cybernetic infantry unit.
+      Strong vs Infantry, Light armor.
+      Weak vs Vehicles, Aircraft.
+
+actor-tsdefender =
+   .description = Superheavy CABAL epic unit.
+      Strong vs ground targets.
+
+actor-tsorca =
+   .description = Fast assault gunship with dual missile launchers.
+      Strong vs Aircraft, Vehicles.
+
+actor-tsorcab =
+   .description = Heavy bomber.
+      Strong vs Buildings, Vehicles.
+      Weak vs Infantry, Aircraft.
+
+actor-tstrnsport =
+   .description = VTOL aircraft capable of lifting and transporting vehicles.
+
+actor-tstrnsportmutant =
+   .description = VTOL aircraft capable of lifting and transporting vehicles.
+
+actor-tsscrin =
+   .description = Advanced fighter-bomber craft.with twin plasma cannons.
+      Strong vs Buildings, Vehicles.
+      Weak vs Infantry, Aircraft.
+
+actor-tsapachenod =
+   .description = Anti-personnel support gunship armed with dual chain guns.
+      Strong vs Infantry, Light armor, Aircraft.
+      Weak vs Vehicles.
+
+actor-tsapachecabal =
+   .description = Anti-personnel support gunship armed with dual chain guns.
+      Strong vs Infantry, Light armor, Aircraft.
+      Weak vs Vehicles.
+
+actor-tsheli =
+   .description = Anti-personnel support gunship armed with guns and missiles.
+      Strong vs Infantry, Vehicles, Aircraft.
+
+actor-tshind =
+   .description = Anti-personnel support gunship armed with dual chain guns.
+      Strong vs Infantry, Light armor, Aircraft.
+      Weak vs Vehicles.
+
+actor-tstran =
+   .description = Fast infantry transport helicopter.
+      Unarmed.
+
+actor-tsarnd =
+   .description = Cybernetic-Biologic infantry unit.
+      Strong vs Infantry, Light armor, Aircraft.
+      Weak vs Vehicles.
+
+actor-tsntpowrmutant =
+   .description = Generates power.
+
+actor-powerupgrade =
+   .description = Additional Turbines boost the plant's power output.
+
+actor-radar_mutant =
+   .description = Provides radar and advanced technologies.
+      Requires power to operate.
+      Provides the Wildlife Rampage support power.
+
+actor-tsnttmpl =
+   .description = Nod Temple
+      Provides the final tier of Nod's technologies.
+      Provides the Hunter-Seeker support power.
+
+actor-tscore =
+   .description = CABAL Core
+      Provides the final tier of CABAL's technologies.
+      Provides the Hunter-Seeker support power.
+
+actor-tscore =
+   .description = CABAL Core
+      Provides the final tier of CABAL's technologies.
+      Provides the Hunter-Seeker support power.
+
+actor-tsntmisl =
+   .description = Upgrade Center
+      Provides the Ion Cannon support power with the respective plug.
+      Provides the Hunter-Seeker support power with the respective plug.
+      Provides the Drop Pods support power with the respective plug.
+
+actor-tsgtplug =
+   .description = Waste Facility
+      Provides the Chemical Missile support power.
+      Provides the Multi-Missile support power.
+
+actor-tsntstlh =
+   .description = Stealth Generator
+      Generates a cloaking field for surrounding units.
+
+actor-tsntpulsgdi =
+   .description = E.M. Pulse Cannon
+      Provides access to the E.M. Pulse support power.
+      Requires power to operate.
+
+actor-tib_derrick =
+   .description = Tiberium Extractor
+      Generates Cash at set intervals.
+
+actor-tsobl2 =
+   .description = Advanced Anti-air base defense.
+      Requires power to operate.
+      Strong vs Aircraft
+
+actor-tsgtplug2 =
+   .description = Upgrade Center
+      Enables Ion Cannon strikes.
+
+actor-tsgtplug3 =
+   .description = Upgrade Center
+      Enables deployment of Hunter-Seekers.
+
+power-ts-hunterseeker =
+   .description = Deploys a Hunter-Seeker.
+      An explosive suicide drone.
+      Deals immense splash damage.
+      Strong vs Vehicles, Buildings.
+      Requires line of sight to target.
+   .name = Hunter Seeker
+
+power-ts-emp =
+   .description = E.M. Pulse
+      Fires a pulse blast which disables all mechanical units in an area.
+
+power-ts-multimissile =
+   .description = Multi Missile
+      Launches a tactical cluster missile.
+      Applies heavy damage over a large area.
+
+power-ts-chemicalmissile =
+   .description = Chemical Missile
+      Launches a tactical missile with a Tiberium warhead.
+      Applies heavy damage over a small area.
+      Releases toxic gas clouds.
+
+power-ts-dropods =
+   .description = Drop Pods
+      Deploys elite infantry from orbit.
+
+power-ts-mutantcommandos =
+   .description = Deploy Mutant Commandos.
+      Deploys elite Ghost Stalkers and Snipers via a captured Subterranean APC.
+
+power-ts-wildlife =
+   .description = Wildlife Rampage.
+      Spawns numerous Tiberium creatures to cause great havoc.
+
 actor-aashinobi =
    .description = Stealth soldier.
       Can infiltrate buildings.
@@ -2094,6 +2491,629 @@ upgrade-latin_up_hotfire =
 upgrade-uplatin_cashrecover =
    .description = Recycles lost vehicles for a cashback of 10%.
 
+actor-scsupplydepot =
+   .description = Provides supply and stores resources.
+
+actor-supplydepotexpand =
+   .description = Increase the size of the supply depot by 100%.
+
+actor-screfinery =
+   .description = Processes raw Tiberium.
+      into useable resources.
+
+actor-sctvespenegascollector =
+   .description = The Refinery generates Vespene gas Capsules and passive income.
+
+actor-scbarracks =
+   .description = Produces infantry.
+
+actor-scacademy =
+   .description = Unlocks Firebat and Medic.
+      Researches infantry upgrades.
+
+actor-scengineeringbay =
+   .description = Unlocks Siege Tanks, Missile Turret and Infantry Upgrades.
+
+actor-scbunker =
+   .description = Static defense with fireports for up to 4 garrisoned soldiers.
+
+actor-scmissileturret =
+   .description = Anti-aircraft base defense.
+      Can detect cloaked units.
+
+actor-scfactory =
+   .description = Produces vehicles.
+
+actor-scarmory =
+   .description = Unlocks Goliath and Vehicle and Ship Upgrades.
+
+actor-scstarport =
+   .description = Produces aircraft.
+
+actor-scsciencefacility =
+   .description = Unlocks Battlecruiser, Ghost and Jim Raynor.
+
+actor-scpylon =
+   .description = Provides supply and stores resources.
+
+actor-scassimilator =
+   .description = Processes raw Tiberium.
+      into useable resources.
+
+actor-scpvespenegascollector =
+   .description = The Assimilator generates Vespene gas Capsules and passive income.
+
+actor-scgateway =
+   .description = Produces infantry.
+
+actor-scforge =
+   .description = Unlocks Photon Cannon.
+      Researches infantry upgrades.
+
+actor-scphotoncannon =
+   .description = Basic Base defense.
+      Can detect cloaked units.
+
+actor-sccyberneticscore =
+   .description = Unlocks Dragoon.
+
+actor-scshieldbattery =
+   .description = Automatically heals nearby units.
+
+actor-scroboticsfacility =
+   .description = Produces vehicles.
+
+actor-scstargate =
+   .description = Produces aircraft.
+
+actor-sccitadelofadun =
+   .description = Unlocks Zeratul and Dark Templar.
+
+actor-scroboticssupportbay =
+   .description = Unlocks Reaver.
+
+actor-scfleetbeacon =
+   .description = Unlocks Carrier and Purifier Beam support power.
+
+actor-sctemplararchives =
+   .description = Unlocks High Templar & Archon.
+
+actor-scobservatory =
+   .description = Unlocks Observer.
+
+actor-scarbitertribunal =
+   .description = Unlocks Arbiter.
+
+actor-sclair =
+   .description = Unlocks Spire and Queen's Nest.
+
+actor-schive =
+   .description = Unlocks Ultralisk Cavern and Defiler Mound.
+
+actor-sccreepcolony =
+   .description = Can be upgraded to Sunken or Spore Colonies.
+
+actor-scsporecolonyupgrade =
+   .description = Ground base defense.
+
+actor-scsunkencolonyupgrade =
+   .description = Anti-aircraft base defense.
+
+actor-scextractor =
+   .description = Processes raw Tiberium.
+      into useable resources.
+
+actor-sczvespenegascollector =
+   .description = The Extractor generates Vespene gas Capsules and passive income.
+
+actor-scspawningpool =
+   .description = Unlocks Zergling.
+
+actor-scevolutionchamber =
+   .description = Unlocks Spore Colony and Lurker.
+
+actor-schydraliskden =
+   .description = Unlocks Hydralisk.
+
+actor-scqueensnest =
+   .description = Unlocks Queen and Kerrigan.
+
+actor-scspire =
+   .description = Unlocks Mutalisk.
+
+actor-scgreaterspire =
+   .description = Unlocks multiple zerg air units.
+
+actor-scultraliskcavern =
+   .description = Unlocks Ultralisk.
+
+actor-scdefilermound =
+   .description = Unlocks Defiler.
+
+actor-scnyduscanal =
+   .description = Instantaneously transports units to another exit.
+
+actor-scovermind =
+   .description = Unlocks Siege Tanks.
+
+actor-scinfestedcommandcenter =
+   .description = Unlocks Infested Terrans.
+
+actor-scscv =
+   .description = Collects resources.
+      Can repair mechanical units and buildings.
+
+actor-scmarine =
+   .description = Basic Terran infantry.
+      Strong vs Infantry.
+      Weak vs Vehicles.
+      Can attack aircraft.
+      Uncrushable.
+
+actor-screaper =
+   .description = Basic Terran infantry.
+      Strong vs Infantry.
+      Weak vs Vehicles.
+      Can attack aircraft.
+      Uncrushable.
+
+actor-scmadcap =
+   .description = Basic Terran infantry.
+      Strong vs Infantry.
+      Weak vs Vehicles.
+      Can attack aircraft.
+      Uncrushable.
+
+actor-scfirebat =
+   .description = Terran flamethrower infantry.
+      Strong vs Infantry, Buildings.
+      Weak vs Vehicles.
+      Uncrushable.
+
+actor-scharakan =
+   .description = Terran flamethrower infantry.
+      Strong vs Infantry, Buildings.
+      Weak vs Vehicles.
+      Uncrushable.
+
+actor-scghost =
+   .description = Terran stealth assassin.
+      Strong vs Infantry, Vehicles.
+      Can attack aircraft.
+      Can temporarily disable vehicles.
+      Uncrushable.
+
+actor-scsilvertongue =
+   .description = Terran stealth assassin.
+      Strong vs Infantry, Vehicles.
+      Can attack aircraft.
+      Can temporarily disable vehicles.
+      Uncrushable.
+
+actor-scmedic =
+   .description = Heals nearby infantry.
+      Unarmed.
+      Uncrushable.
+
+actor-scjimraynor =
+   .description = Heroic Terran Unit.
+      Can Stimpack.
+      Extremely Durable.
+      Strong vs Everything.
+
+actor-scspidermine =
+   .description = An unwelcome, seeking, stealthed suprise.
+
+actor-scvulture =
+   .description = Fast scout vehicle, armed with.
+      grenades.
+      Strong vs Infantry.
+      Weak vs Vehicles, Aircraft.
+      Can cross water.
+
+actor-scsiegetank =
+   .description = Terran mobile artillery.
+      Strong vs Infantry, Buildings.
+      Weak vs Vehicles, Aircraft.
+      Can deploy for increased range and splash damage.
+
+actor-scmatador =
+   .description = Terran mobile artillery.
+      Strong vs Infantry, Buildings.
+      Weak vs Vehicles, Aircraft.
+      Can deploy for increased range and splash damage.
+
+actor-sccyclone =
+   .description = Terran mobile artillery.
+      Strong vs Infantry, Buildings.
+      Weak vs Vehicles, Aircraft.
+      Can deploy for increased range and splash damage.
+
+actor-scgoliath =
+   .description = Versatile Terran combat walker, armed with.
+      autocannons and AA missiles.
+      Strong vs Infantry, Aircraft.
+      Weak vs Vehicles.
+
+actor-scgoliath2 =
+   .description = Versatile Terran combat walker, armed with.
+      autocannons and AA missiles.
+      Strong vs Infantry, Aircraft.
+      Weak vs Vehicles.
+
+actor-scwarhound =
+   .description = Colossal Terran Mech.
+      Strong vs Everything, Buildings.
+      Weak vs Air.
+      Uncrushable.
+
+actor-scwraith =
+   .description = Light Terran attack aircraft, armed.
+      with lasers and AA missiles.
+      Strong vs Infantry, Aircraft.
+      Weak vs Buildings, Vehicles.
+
+actor-scraven =
+   .description = Light Terran attack aircraft, armed.
+      with lasers and AA missiles.
+      Strong vs Infantry, Aircraft.
+      Weak vs Buildings, Vehicles.
+
+actor-scsundog =
+   .description = Light Terran attack aircraft, armed.
+      with lasers and AA missiles.
+      Strong vs Infantry, Aircraft.
+      Weak vs Buildings, Vehicles.
+
+actor-scvalkyrie =
+   .description = Air Superiority Fighter that fires a burst of 8 missiles.
+      Can only attack air.
+
+actor-scwyvern =
+   .description = Air Superiority Fighter that fires a burst of 8 missiles.
+      Can only attack air.
+
+actor-scdropship =
+   .description = Fast transport for all ground units.
+      Unarmed.
+
+actor-scpythean =
+   .description = A slow moving garrison transport for all ground units.
+      Extremely Durable.
+      Strong vs Everything.
+
+actor-scmedivac =
+   .description = Fast transport for all ground units.
+      Unarmed.
+
+actor-scbattlecruiser =
+   .description = Terran capital ship.
+      Strong vs Everything.
+
+actor-scphobos =
+   .description = Terran capital ship.
+      Strong vs Everything.
+
+actor-scsciencevessel =
+   .description = Terran capital ship.
+      Strong vs Everything.
+
+actor-sctmcv =
+   .description = Builds structures and provides radar.
+
+actor-scprobe =
+   .description = Collects resources.
+      Can repair mechanical units and buildings.
+
+actor-sczealot =
+   .description = Protoss infantry, attacks in close combat.
+      Strong vs Infantry.
+      Weak vs Vehicles, Aircraft.
+      Uncrushable.
+
+actor-scdragoon =
+   .description = Protoss assault walker.
+      Can attack air.
+
+actor-scmanifold =
+   .description = Protoss anti air support vehicle.
+      Can lockon enemy units.
+
+actor-scanalogue =
+   .description = Protoss mobile shield generator.
+      Can repair vehicles and buildings.
+
+actor-scidol =
+   .description = Protoss support vehicle.
+
+actor-schightemplar =
+   .description = Protoss psionic warrior.
+      Casts psionic storm for massive splash damage.
+      Strong vs clustered units.
+      Uncrushable.
+
+actor-scdarktemplar =
+   .description = Protoss stealth warrior, attacks in close combat.
+      Strong vs ground targets.
+      Uncrushable.
+
+actor-scshuttle =
+   .description = Fast transport for all ground units.
+      Unarmed.
+
+actor-screaver =
+   .description = Long-range rocket artillery.
+      Strong vs Vehicles, Buildings.
+      Weak vs Aircraft.
+
+actor-scobserver =
+   .description = Stealth scout.
+      Unarmed.
+
+actor-scarchon =
+   .description = Powerful heavy protoss warrior.
+      Strong vs Everything.
+
+actor-scscout =
+   .description = Protoss fighter aircraft.
+      Strong vs Aircraft.
+
+actor-scepigraph =
+   .description = Protoss fighter aircraft.
+      Strong vs Aircraft.
+
+actor-sclanifect =
+   .description = Protoss fighter aircraft that can blind enemies.
+
+actor-scgladius =
+   .description = Protoss artillery aircraft.
+      Strong vs everything.
+
+actor-sccorsair =
+   .description = Protoss fighter aircraft.
+      Strong vs Aircraft.
+
+actor-sccarrier =
+   .description = Heavy protoss warship, deploys.
+      5 interceptor craft.
+      Strong vs Vehicles, Aircraft.
+
+actor-scstarshipsovereign =
+   .description = Heavy protoss warship, deploys.
+      5 interceptor craft.
+      Strong vs Vehicles, Aircraft.
+
+actor-scarbiter =
+   .description = Protoss support vessel.
+      Cloaks nearby friendly units.
+      Can cast a stasis field to freeze units.
+
+actor-scpmcv =
+   .description = Builds structures and provides radar.
+
+actor-sczeratul =
+   .description = Protoss Hero.
+      Is pretty mobile, durable and has powerful splash melee attack.
+      Strong vs Ground.
+      Weak vs Air.
+
+actor-scamaranth =
+   .description = Protoss stealth warrior, attacks in close combat.
+      Strong vs ground targets.
+      Uncrushable.
+
+actor-scatreus =
+   .description = Protoss assault walker.
+      Strong vs Vehicles.
+      Weak vs Infantry.
+
+actor-scpositron =
+   .description = Fast scout vehicle, armed with.
+      grenades.
+      Strong vs Infantry.
+      Weak vs Vehicles, Aircraft.
+      Can cross water.
+
+actor-sclegionnaire =
+   .description = Protoss infantry, attacks in close combat.
+      Strong vs Infantry.
+      Weak vs Vehicles, Aircraft.
+      Uncrushable.
+
+actor-scpatriarch =
+   .description = Protoss psionic warrior.
+      Shoots psionic storm for massive splash damage.
+      Strong vs clustered units.
+      Uncrushable.
+
+actor-scdrone =
+   .description = Collects resources.
+
+actor-scoverlord =
+   .description = Provides supply and stores resources.
+      Can transport 8 units.
+
+actor-scbroodweaver =
+   .description = Heals nearby units.
+
+actor-sczergling =
+   .description = Fast Zerg basic assault strain.
+      Strong vs Infantry.
+      Weak vs Vehicles, Aircraft.
+
+actor-sctalon =
+   .description = Fast Zerg basic assault strain.
+      Strong vs Infantry.
+      Weak vs Vehicles, Aircraft.
+
+actor-scsporemaw =
+   .description = Zerg artillery strain.
+      Strong vs Infantry, Vehicles.
+      Weak vs Aircraft.
+
+actor-schydralisk =
+   .description = Zerg armored assault strain.
+      Strong vs Infantry, Vehicles, Aircraft.
+      Weak vs Siege.
+
+actor-scspithid =
+   .description = Zerg armored assault strain.
+      Strong vs Infantry, Vehicles, Aircraft.
+      Weak vs Siege.
+
+actor-scdreadshroud =
+   .description = Airborne Zerg creature.
+      Strong vs Infantry, Aircraft.
+
+actor-sccorruptor =
+   .description = Airborne Zerg creature can snare enemy units.
+
+actor-scswarmling =
+   .description = Airborne Zerg creature.
+      Strong vs Everything in group.
+
+actor-scshriek =
+   .description = Airborne Melee Zerg creature.
+      Strong vs Infantry, Aircraft.
+
+actor-scmutalisk =
+   .description = Airborne Zerg creature.
+      Strong vs Infantry, Aircraft.
+
+actor-scdevourer =
+   .description = Airborne Zerg creature.
+      Strong vs Aircraft.
+
+actor-scscourge =
+   .description = Aerial suicide bomber.
+      Strong vs Aircraft.
+
+actor-scqueen =
+   .description = Defensive Air Unit.
+      Can breed Broodlings.
+      Can attack air and ground.
+      Detector.
+
+actor-scguardian =
+   .description = Heavy Zerg siege creature.
+      Strong vs Vehicles, Buildings.
+      Weak vs Aircraft.
+
+actor-scultralisk =
+   .description = Heavy Zerg assault strain.
+      Strong vs Vehicles.
+      Weak vs Aircraft.
+
+actor-scgorekraken =
+   .description = Heavy Zerg bomber.
+      Strong vs Vehicles, Buildings.
+      Weak vs Aircraft.
+
+actor-schermit =
+   .description = Heavy Zerg assault strain.
+      Strong vs Vehicles.
+      Weak vs Aircraft.
+
+actor-scgoremaw =
+   .description = Heavy Zerg assault strain.
+      Strong vs Vehicles.
+      Weak vs Aircraft.
+
+actor-sclurker =
+   .description = Zerg ambush strain.
+      Needs to deploy to attack.
+      Strong vs Infantry.
+
+actor-scinfestedterran =
+   .description = Suicide bomber infantry.
+      Strong vs clustered units.
+      Does no damage if killed.
+
+actor-scdefiler =
+   .description = Zerg support strain.
+      Attack reduces targets' health over time.
+      Strong vs clustered units.
+      Special Ability: Dark Swarm.
+
+actor-sckerriganzerg =
+   .description = Queen Of Blades.
+      Powerful melee attack.
+      Can Breed Zergs.
+
+actor-sczmcv =
+   .description = Builds structures and provides radar.
+
+actor-scbehemoth =
+   .description = A slow moving garrison transport for all ground units.
+      Extremely Durable.
+      Strong vs Everything.
+
+actor-psclair =
+   .description = Upgrade to Lair.
+
+actor-pschive =
+   .description = Upgrade to Hive.
+
+actor-pscgreaterspire =
+   .description = Unlocks Guardian.
+
+actor-pscsporecolony =
+   .description = Anti-air base defense.
+
+actor-updragoonrange =
+   .description = Increases range of Dragoons, Atreuses, and Positrons.
+
+actor-uppylon1 =
+   .description = Increases energy of supply depots by 100%.
+
+actor-uppylon2 =
+   .description = Increases energy of supply depots by 100%.
+
+actor-upplasmashield =
+   .description = Increases durability of all Protoss units and structures.
+
+actor-upreavercapacity =
+   .description = Doubles Reaver capacity.
+
+actor-upairspeed =
+   .description = Increases speed of flying Protoss Units.
+
+actor-upgroundweapons =
+   .description = Increases firepower of all Protoss ground units.
+
+actor-upgroundweapons2 =
+   .description = Increases firepower of all Protoss ground units.
+
+actor-upgroundweapons3 =
+   .description = Increases firepower of all Protoss ground units.
+
+actor-upgroundarmor =
+   .description = Increases armor of all Protoss ground units.
+
+actor-upgroundarmor2 =
+   .description = Increases armor of all Protoss ground units.
+
+actor-upgroundarmor3 =
+   .description = Increases armor of all Protoss ground units.
+
+actor-upairweapons =
+   .description = Increases firepower of all Protoss aur units.
+
+actor-upairweapons2 =
+   .description = Increases firepower of all Protoss air units.
+
+actor-upairweapons3 =
+   .description = Increases firepower of all Protoss air units.
+
+actor-upairarmor =
+   .description = Increases armor of all Protoss air units.
+
+actor-upairarmor2 =
+   .description = Increases armor of all Protoss air units.
+
+actor-upairarmor3 =
+   .description = Increases armor of all Protoss air units.
+
 upgrade-infweapon =
    .description = Increases firepower of all Terran infantry by 25%
 
@@ -2112,8 +3132,86 @@ upgrade-shipweapon =
 upgrade-shiparmor =
    .description = Increases armor of all Terran aircraft by 20%
 
+actor-upstimpack =
+   .description = Marines and Firebats can use the Stim Pack ability.
+
+actor-upmarinerange =
+   .description = Increases range of Marines by 25%.
+
+actor-upsupplydepot1 =
+   .description = Increases energy of supply depots by 100%.
+
+actor-upsupplydepot2 =
+   .description = Increases energy of supply depots by 100%.
+
+actor-upghostcloak =
+   .description = Enables cloak for Ghosts, Spectres, Wraiths, Sundogs.
+
+actor-upsiegemode =
+   .description = Increases Siege Mode Range by 20%.
+
+actor-upyamatocannon =
+   .description = Allows the use of the Yamato Cannon and Tactical Jump for the Battle Cruiser.
+
+actor-upoverlordspeed =
+   .description = Increases Overlord speed.
+
+actor-uplingspeed =
+   .description = Increases Zergling, Talon, and Shriek speed.
+
+actor-uplingattack =
+   .description = Increases Zergling, Talon, and Shriek attack speed.
+
+actor-upzergmelee =
+   .description = Increases damage dealt by Melee Zerg units.
+
+actor-upzergmelee2 =
+   .description = Increases damage dealt by Melee Zerg units.
+
+actor-upzergmelee3 =
+   .description = Increases damage dealt by Melee Zerg units.
+
+actor-upzergmissile =
+   .description = Increases damage dealt by Range Ground Zerg Units.
+
+actor-upzergmissile2 =
+   .description = Increases damage dealt by Range Ground Zerg Units.
+
+actor-upzergmissile3 =
+   .description = Increases damage dealt by Range Ground Zerg Units.
+
+actor-upcarapace =
+   .description = Increases durability of Zerg ground units.
+
+actor-upcarapace2 =
+   .description = Increases durability of Zerg ground units.
+
+actor-upcarapace3 =
+   .description = Increases durability of Zerg ground units.
+
+actor-upflyerattack =
+   .description = Increases damage dealt by Air Zerg Units.
+
+actor-upflyerattack2 =
+   .description = Increases damage dealt by Air Zerg Units.
+
+actor-upflyerattack3 =
+   .description = Increases damage dealt by Air Zerg Units.
+
+actor-upflyerarmor =
+   .description = Increases durability of Zerg aircrafts.
+
+actor-upflyerarmor2 =
+   .description = Increases durability of Zerg aircrafts.
+
+actor-upflyerarmor3 =
+   .description = Increases durability of Zerg aircrafts.
+
+actor-upzergrange =
+   .description = Increases range of Hydralisks, Lurkers, and Spithids by 25%.
+
 template-mcv =
-   .description = Deploys into another Construction Yard.
+   .description = Deploys into a Construction Yard.
       Unarmed
    .name = Mobile Construction Vehicle
 
@@ -2122,6 +3220,10 @@ template-harvester =
       Unarmed
    .tdname = Harvester
    .raname = Ore Truck
+
+template-conyard:
+   .description = Constructs structures.
+      Unarmed
 
 template-refinery =
    .description = Processes resources into cash.
@@ -2168,6 +3270,7 @@ template-radar =
    .ra-soviet = Soviet Radar Dome
    .ra-japan = Japanese Radar Array
    .ra2-soviet = Soviet Radar
+   .tsmutant = Provides Wildlife Rampage support power.
 
 template-service-depot =
    .description = Repairs vehicles.
@@ -2180,7 +3283,7 @@ template-service-depot =
    .ra2-soviet = Soviet Service Depot
 
 template-airfield =
-   .description = Produces aircraft.
+   .description = Produces & rearms aircraft.
    .td-gdi = GDI Helipad
    .td-nod = Nod Helipad
    .ra-allies = Allied Helipad
@@ -2233,6 +3336,11 @@ template-antitank-antiair-infantry =
 template-antitank-infantry =
    .description = Anti-vehicle infantry.
       Strong vs Vehicles
+      Weak vs Infantry, Aircraft
+
+template-hijacker-infantry =
+   .description = Hijacking infantry.
+      Hijacks vehicles.
       Weak vs Infantry, Aircraft
 
 template-mbt =
@@ -2301,6 +3409,497 @@ warcraft-poisoncloud-orc =
       This foul stench eats through anything that stands in its way, and chokes the very life out of anyone unlucky enough to be in its path.
       It is a mix of the sickly stench of rotting corpses and the essence of evil, designed to decay and corrode all that it comes in contact with.
 
+actor-critter =
+   .description = Critter.
+
+actor-wc2_human_keep =
+   .description = Unlocks more advanced buildings.
+
+actor-wc2_human_castle =
+   .description = Unlocks more advanced buildings.
+
+actor-wc2_human_betterfarm =
+   .description = Farm Upgrade.
+      Gives +60 food (120 total).
+      Gives +50% hp (150% total).
+
+actor-wc2_human_bestfarm =
+   .description = Farm Upgrade.
+      Gives +120 food (240 total).
+      Gives +50% hp (200% total).
+
+actor-wc2_human_barracks =
+   .description = Warriors of the Alliance live and train here.
+      Produces many Human units.
+
+actor-wc2_human_elven_lumber_mill =
+   .description = Dropoff point for gold.
+      (Tiberium).
+      Can store up to 1000 resources.
+      Produces bows enabling Archers.
+      Provides arrow upgrades for archers and guard towers.
+
+actor-wc2_human_blacksmith =
+   .description = Enables Ballista and upgrading Scout Towers to Cannon Towers.
+      Enables upgrades to units.
+
+actor-wc2_human_gnomish_inventor =
+   .description = Here Dwarves and Gnomes invent marvels.
+      Provides Radar.
+      Trains Demo Squads and Gnomish Flying Machines.
+
+actor-wc2_human_stables =
+   .description = Stables the horses for Knights, allowing their production in the Barracks.
+
+actor-wc2_human_church =
+   .description = Allows Knights to upgrade to Paladins and trains them in holy magicks.
+
+actor-wc2_human_mage_tower =
+   .description = Teaches men in arcane magicks.
+      Trains Mages.
+      Unlocks Blizzard superweapon.
+
+actor-wc2_human_gryphon_aviary =
+   .description = A great Gryphon Matriarch lives here.
+      Trains formidable Gryphon Riders.
+
+actor-wc2_human_shipyard =
+   .description = Produces and repairs ships.
+
+actor-wc2_human_foundry =
+   .description = Unlocks production of the Transport and the Battleship.
+      Provides upgrades for naval units.
+
+actor-wc2_human_oil_refinery =
+   .description = Unlocks the construction of Oil Platforms for passive income.
+
+actor-wc2_human_oil_platform =
+   .description = Provides passive income.
+      Oil tankers can drill here for further income boost.
+
+actor-wc2_human_scout_tower =
+   .description = Can be upgraded to Guard or Cannon Tower.
+
+actor-wchumancannontowerupgrade =
+   .description = Ground base defense.
+
+actor-wchumanguardtowerupgrade =
+   .description = Anti-aircraft base defense.
+
+actor-wc2_human_wall =
+   .description = Stops infantry and most tanks.
+      Blocks some projectiles.
+
+actor-wc2_human_goldmine =
+   .description = Send workers inside to provide passive income.
+      Miners progressively get experience and work more efficiently.
+
+actor-wc2_human_mcv =
+   .description = Transforms into a Town Hall.
+
+actor-wc2_human_peasant =
+   .description = Harvester.
+
+actor-wc2_human_footman =
+   .description = Basic melee infantry.
+      Slow but can take some damage.
+
+actor-wc2_human_elven_archer =
+   .description = Basic ranged infantry.
+      Not as durable as Footman.
+      Can attack air.
+
+actor-wc2_human_elven_ranger =
+   .description = Elite ranged infantry.
+      Not as durable as Footman.
+      Can attack air.
+
+actor-wc2_human_knight =
+   .description = Mounted infantry.
+      Fast and durable.
+
+actor-wc2_human_paladin =
+   .description = Mounted holy infantry.
+      Very fast and quite durable.
+      Can cast healing magicks.
+
+actor-wc2_human_ballista =
+   .description = Powerful long range siege unit.
+
+actor-wc2_human_demolitionsquad =
+   .description = Explosive suicide infantry.
+      Can attack normally.
+
+actor-wc2_human_mage =
+   .description = Wise, old, grumpy spell caster.
+      Can attack air.
+      Detector.
+
+actor-wc2_human_oil_tanker =
+   .description = Drills inside Oil Platforms for income.
+
+actor-wc2_human_elven_destroyer =
+   .description = Light scout & support ship.
+      Can attack air units.
+
+actor-wc2_human_transport =
+   .description = Transport ship.
+
+actor-wc2_human_battleship =
+   .description = Heavy artillery ship.
+
+actor-wc2_human_gnomish_submarine =
+   .description = Stealthed attack vessel.
+
+actor-wc2_human_gnomish_flying_machine =
+   .description = Flying scout unit.
+      He's got a flying machine!
+      Detector.
+
+actor-wc2_human_gryphon_rider =
+   .description = Flying attacker unit.
+      Magical hammer can hit multiple targets in a line.
+      Strong vs air units.
+
+actor-wc2_orc_stronghold =
+   .description = Unlocks more advanced buildings.
+
+actor-wc2_orc_fortress =
+   .description = Unlocks more advanced buildings.
+
+actor-wc2_orc_betterfarm =
+   .description = Farm Upgrade.
+      Gives +60 food (120 total).
+      Gives +50% hp (150% total).
+
+actor-wc2_orc_bestfarm =
+   .description = Farm Upgrade.
+      Gives +120 food (240 total).
+      Gives +50% hp (200% total).
+
+actor-wc2_orc_barracks =
+   .description = Warriors of the Horde live and train here.
+      Produces many Orcish units.
+
+actor-wc2_orc_troll_lumber_mill =
+   .description = Dropoff point for gold.
+      (Tiberium).
+      Can store up to 1000 resource.
+      Produces axes enabling Axethrowers.
+      Provides upgrades for Axethrowers.
+      Unlocks Guard Tower upgrade.
+
+actor-wc2_orc_blacksmith =
+   .description = Enables Catapults and upgrading Scout Towers to Cannon Towers.
+      Enables upgrades to units.
+
+actor-wc2_orc_goblin_alchemist =
+   .description = Ingenious goblins dabble in alchemy and invention.
+      Provides Radar.
+      Trains Sappers & Zeppelins.
+
+actor-wc2_orc_ogre_mound =
+   .description = Unlocks production of Ogres.
+      This place smells bad!
+
+actor-wc2_orc_altar_of_storms =
+   .description = Teaches Ogres how to read and cast dark magicks.
+      Unlocks Ogre Mage upgrade for Ogres.
+
+actor-wc2_orc_temple_of_the_damned =
+   .description = Terrible rituals are performed here.
+      Trains Death Knights and raise Skeletons.
+      Unlocks Death & Decay superweapon.
+
+actor-wc2_orc_dragon_roost =
+   .description = A captured dragon is forced to lay eggs for the Horde.
+      Trains mighty Dragons.
+
+actor-wc2_orc_shipyard =
+   .description = Produces and repairs ships.
+
+actor-wc2_orc_foundry =
+   .description = Unlocks production of the Transport and the Juggernaught.
+      Provides upgrades for naval units.
+
+actor-wc2_orc_oil_refinery =
+   .description = Unlocks the construction of Oil Platforms for passive income.
+
+actor-wc2_orc_oil_platform =
+   .description = Provides passive income.
+      Oil tankers can drill here for further income boost.
+
+actor-wc2_orc_watch_tower =
+   .description = Can be upgraded to Guard or Cannon Tower.
+
+actor-wcorcguardtowerupgrade =
+   .description = Ground base defense.
+
+actor-wcorccannontowerupgrade =
+   .description = Anti-aircraft base defense.
+
+actor-wc2_orc_goldmine =
+   .description = Send workers inside to provide passive income.
+      Miners progressively get experience and work more efficiently.
+
+actor-wc2_orc_mcv =
+   .description = Transforms into a Great Hall.
+
+actor-wc2_orc_peon =
+   .description = Harvester.
+      Zug zug!
+
+actor-wc2_orc_grunt =
+   .description = Basic melee infantry.
+      Slow but can take some damage.
+      Lok'tar!
+
+actor-wc2_orc_troll_axethrower =
+   .description = Basic ranged infantry.
+      Not as durable as Grunt.
+      Can attack air.
+
+actor-wc2_orc_troll_berserker =
+   .description = Elite ranged infantry.
+      Not as durable as Grunt.
+      Can attack air.
+
+actor-wc2_orc_ogre =
+   .description = Improved melee infantry.
+      Stinky, fast, dumb and dangerous!
+
+actor-wc2_orc_ogremage =
+   .description = Improved magickal melee infantry.
+      Stinky, very fast, smart, and dangerous!
+
+actor-wc2_orc_catapult =
+   .description = Powerful long range siege unit.
+
+actor-wc2_orc_goblin_sappers =
+   .description = Explosive suicide infantry.
+      Can attack normally.
+
+actor-wc2_orc_deathknight =
+   .description = Powerful undead spell caster.
+      Can attack Air.
+      Detector.
+
+actor-wc2_orc_skeleton =
+   .description = Undead melee infantry.
+      Spooky!
+
+actor-wc2_orc_oil_tanker =
+   .description = Drills oil inside Oil Platforms for income.
+
+actor-wc2_orc_trolldestroyer =
+   .description = Light scout & support ship.
+
+actor-wc2_orc_transport =
+   .description = Transport ship.
+
+actor-wc2_orc_ogre_juggernaught =
+   .description = Heavy artillery ship.
+
+actor-wc2_orc_giant_turtle =
+   .description = Turtle go grrr.
+      Stealthed attack submarine.
+
+actor-wc2_orc_goblin_zeppelin =
+   .description = Flying scout unit.
+      He can see your house!
+      Detector.
+
+actor-wc2_orc_dragon =
+   .description = Flying ranged attacker.
+      Fire breath can hit multiple targets in a line.
+      Strong vs Aircraft.
+
+actor-wc2_orc_eye_of_kilrogg =
+   .description = Fast, weak scouting unit.
+
+actor-wc2_neutral_daemon =
+   .description = Daemonic flying attacker.
+
+actor-wc2_h_str_sword =
+   .description = Increases melee damage by 20%.
+
+actor-wc2_h_str_sword2 =
+   .description = Increases melee damage by further 20%.
+
+actor-wc2_h_str_shield =
+   .description = Increases damage resistance of all land units by 10%.
+
+actor-wc2_h_str_shield2 =
+   .description = Increases damage resistance of all land units by further 10%.
+
+actor-wc2_h_str_arrow =
+   .description = Increases arrow damage dealt by Archers and Guard Towers by 20%.
+
+actor-wc2_h_str_arrow2 =
+   .description = Increases arrow damage by Archers and Guard Towers by further 20%.
+
+actor-wc2_h_rangerupg =
+   .description = Intense training is given to Elven Archers.
+      Increases damage resistance by 10% and unlocks upgrades for the Ranger.
+
+actor-wc2_h_ranger_longbow =
+   .description = Increases range of Rangers by 20%.
+
+actor-wc2_h_ranger_scouting =
+   .description = Increases vision range of Rangers by 25%.
+
+actor-wc2_h_ranger_marksman =
+   .description = Increases arrow damage of Rangers by 20%.
+
+actor-wc2_h_str_ballista =
+   .description = Increases ballista damage dealt by Ballista by 20%.
+
+actor-wc2_h_str_ballista2 =
+   .description = Increases ballista damage dealt by Ballista by further 20%.
+
+actor-wc2_h_str_cannon =
+   .description = Increases Cannon Damage dealt by Naval Vessels and Cannon Towers by 20%.
+
+actor-wc2_h_str_cannon2 =
+   .description = Increases Cannon Damage dealt by Naval Vessels and Cannon Towers by further 10%.
+
+actor-wc2_h_str_navyshield =
+   .description = Increases damage resistance of all Naval Vessels by 10%.
+
+actor-wc2_h_str_navyshield2 =
+   .description = Increases damage resistance of all Naval Vessels by further 20%.
+
+actor-wc2_h_paladinupg =
+   .description = Perform holy rituals to turn your noble Knights into righteous Paladins!
+      Paladins are more powerful and can cast Heal.
+      Increases damage resistance, melee damage and speed by 20%.
+
+actor-wc2_h_healingupg =
+   .description = Paladins can now heal.
+      Toggle Paladin's modes by deploying them.
+      Healing uses mana.
+
+actor-wc2_h_exorcismupg =
+   .description = Paladins can now exorcise.
+      Toggle Paladin's modes by deploying them.
+      Exorcism only affects undead units.
+      Good vs Orc Death Knight and Skeleton.
+
+actor-wc2_h_slowupg =
+   .description = Allows Mages to cast Slow.
+      Toggle Mage's modes by deploying them.
+      Slows down affected target.
+      Affects movement and attack speed.
+      Uses 50 mana.
+
+actor-wc2_h_polymorphupg =
+   .description = Allows Mages to cast Polymorph.
+      Toggle Mage's modes by deploying them.
+      Turns target into a.
+      harmless critter.
+      Uses 200 mana.
+
+actor-wc2_h_blizzardupg =
+   .description = Allows Mages to cast Blizzard.
+      Toggle Mage's modes by deploying them.
+      AOE damage spell.
+      Uses 25 mana.
+
+actor-wc2_o_str_axe =
+   .description = Increases melee damage by 20%.
+
+actor-wc2_o_str_axe2 =
+   .description = Increases melee damage by further 20%.
+
+actor-wc2_o_str_shield =
+   .description = Increases damage resistance of all land units by 10%.
+
+actor-wc2_o_str_shield2 =
+   .description = Increases damage resistance of all land units by further 10%.
+
+actor-wc2_o_str_throwaxe =
+   .description = Increases ranged damage dealt by Axethrowers and Guard Towers by 20%.
+
+actor-wc2_o_str_throwaxe2 =
+   .description = Increases ranged damage by Axethrowers and Guard Towers by further 20%.
+
+actor-wc2_o_berserkerupg =
+   .description = Troll Axethrowers are driven into a mad frenzy.
+      Increases damage resistance by 10% and unlocks upgrades for the Berserker.
+
+actor-wc2_o_berserker_lighteraxes =
+   .description = Increases throwing range of Berserker axes by 20%.
+
+actor-wc2_o_berserker_scouting =
+   .description = Increases vision range of Berserkers by 25%.
+
+actor-wc2_o_berserker_regen =
+   .description = Berserkers heal over time.
+
+actor-wc2_o_str_catapult =
+   .description = Increases Catapult damage by 25%.
+
+actor-wc2_o_str_catapult2 =
+   .description = Increases Catapult damage by 20%.
+
+actor-wc2_o_str_cannon =
+   .description = Increases cannon damage dealt by Naval Vessels and Cannon Towers by 20%.
+
+actor-wc2_o_str_cannon2 =
+   .description = Increases cannon damage dealt by Naval Vessels and Cannon Towers by further 20%.
+
+actor-wc2_o_str_navyshield =
+   .description = Increases damage resistance of all Naval Vessels by 10%.
+
+actor-wc2_o_str_navyshield2 =
+   .description = Increases damage resistance of all Naval Vessels by further 10%.
+
+actor-wc2_o_ogremageupg =
+   .description = Perform mysterious rituals to transform your Ogres into Ogre-Magi!
+      Ogre-Magi are more powerful and can cast Bloodlust.
+      Bloodlust makes your units hit harder for a short time.
+      Increases damage resistance by 10%.
+      Increases melee damage by 20%.
+
+actor-wc2_o_bloodlustupg =
+   .description = Allows Ogre-Magi to cast bloodlust.
+      Toggle Oger-Mage's modes by deploying them.
+      Triples damage output of affected unit.
+      Uses 50 mana.
+
+actor-wc2_o_runesupg =
+   .description = Allows Ogre-Magi to cast runes.
+      Toggle Oger-Mage's modes by deploying them.
+      Deploys five land mines in a + shape.
+      Uses 200 mana.
+
+actor-wc2_o_hasteupg =
+   .description = Allows Death Knights to cast haste.
+      Toggle Death Knight's modes by deploying them.
+      Speeds up affected target.
+      Affects movement and attack speed.
+      Uses 50 mana.
+
+actor-wc2_o_deathanddecayupg =
+   .description = Allows Death Knights to cast death and decay.
+      Toggle Death Knight's modes by deploying them.
+      AOE damage spell.
+      Uses 25 mana.
+
+actor-wc2_o_raisedeadupg =
+   .description = Allows Death Knights to cast raise dead.
+      Toggle Death Knight's modes by deploying them.
+      Summons a skeleton.
+      Uses 50 mana.
+
+power-wc2-blizzard =
+   .description = Blizzard
+      Rain down icy death in a large area.
+
+power-wc2-deathanddecay =
+   .description = Death and Decay
+      Rots and kills in a large area.
+
 faction-random =
    .name = Any
    .description = Random faction
@@ -2364,13 +3963,13 @@ faction-ra2-yuri =
 faction-ra2-modded-random =
    .name = Any
    .description = Random faction
-      A random faction from Red Alert 2 Mods will be chosen when the game starts.
+      A random faction from Red Alert 2 will be chosen when the game starts.
 
 faction-dune-atreides =
     .name = Westwood's Atreides
     .description = The Atreides from Westwood's Dune games.
         The noble House Atreides, seeking to obtain rulership for the good of all.
-        Balanced Forces, with a focus on fire support.
+        Balanced Forces, with a focus on combined arms and fire support.
         Support powers: Ornithopter Bombing Runs, Fremen Support
 
 faction-dune-harkonnen =
@@ -2419,16 +4018,16 @@ faction-tibsun-forgotten =
 
 faction-tibsun-cabal =
    .name = Tiberian Sun CABAL
-   .description = CABAL from from Tiberian Sun.
+   .description = CABAL from Tiberian Sun.
        The cybernetic slaves of CABAL, pushing forward their power mad master's ends.
        Heavy Forces, with a focus on cybernetic infantry backed by unconventional vehicular support.
        Possesses modified nod units and structures, all infantry can be repaired and EMPed.
        Support powers: Chemical Missile, Multi-Missile
 
-faction-dune-random =
+faction-tibsun-random =
    .name = Any
    .description = Random faction
-       A random faction from Westwood's Dune games will be chosen when the game starts.
+       A random faction from Tiberian Sun will be chosen when the game starts.
 
 faction-warcraft-human =
    .name = Warcraft 1 Human
@@ -2451,7 +4050,7 @@ faction-warcraft-random =
 
 faction-starcraft-terran =
    .name = Starcraft Terrans
-   .description = Terrans from from Starcraft.
+   .description = Terrans from Starcraft.
        The ambitious castaway humans of the Koprulu sector, eager to throw down with all comers.
        Heavy Forces, with a focus on maneuver and siege warfare.
        Units cost power to be built. Structures can be lifted off to move elsewhere.
@@ -2459,7 +4058,7 @@ faction-starcraft-terran =
 
 faction-starcraft-zerg =
    .name = Starcraft Zerg
-   .description = Zerg from from Starcraft.
+   .description = Zerg from Starcraft.
        The ever devouring zerg swarm, assimilating and consuming all in their path.
        Swarming forces, with a focus on ambush and attrition warfare.
        Units cost power to be built. All units boast health regeneration.
@@ -2467,12 +4066,33 @@ faction-starcraft-zerg =
 
 faction-starcraft-protoss =
    .name = Starcraft Protoss
-   .description = Terrans from from Starcraft.
+   .description = Terrans from Starcraft.
        The prideful protoss of the Koprulu sector, eager to assert their wills on all who oppose them.
        Superheavy Forces, with a focus on frontal assaults aided by copious psi-power.
-       Units cost power to be built. All units are shielded
+       Units cost power to be built. All units are shielded.
 
 faction-starcraft-random =
-   .name = Any
+   .name = Any Starcraft
    .description = Random faction
        A random faction from the Starcraft factions will be chosen when the game starts.
+
+faction-warcraft2-human =
+   .name = Warcraft 2 Humans
+   .description = Alliance from Warcraft 2.
+       The young Alliance of Lordaeron, standing firm against all who would destroy them.
+       Heavy forces, with a focus on frontal assaults aided by powerful spellcasters.
+       Tends towards quantity over quality.
+       Support Powers: Holy Vision, Blizzard
+
+faction-warcraft2-orc =
+   .name = Warcraft 2 Orc
+   .description = Horde from Warcraft 2.
+       The overwelming Horde, slaying and claiming all before them.
+       Heavy forces, with a focus on frontal assaults aided by powerful spellcasters.
+       Tends towards quality over quantity.
+       Support Powers: Eye of Kilrogg, Death and Decay
+
+faction-warcraft2-random =
+   .name = Any WC2
+   .description = Random faction
+       A random faction from the Warcraft 2 factions will be chosen when the game starts.

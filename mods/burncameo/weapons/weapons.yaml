@@ -2918,9 +2918,9 @@
 		Range: 2000
 		Types: ivanbomb
 		ValidRelationships: Ally
-	Warhead@Effect: CreateEffect
-		Explosions: green_small_fire
-		ImpactActors: true
+	# Warhead@Effect: CreateEffect
+	# 	Explosions: green_small_fire
+	# 	ImpactActors: true
 
 ^RepairWeapon:
 	ReloadDelay: 25
