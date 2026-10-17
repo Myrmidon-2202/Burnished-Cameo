@@ -1286,7 +1286,7 @@ halloween_cow:
 	ReloadDelayMultiplier@cow:
 		Modifier: 60
 	Voiced:
-		VoiceSet: DRZombieVoice
+		VoiceSet: Halloween_Cow
 	GrantConditionOnPrerequisite@axe:
 		Prerequisites: halloween_upgrade.axe
 		Condition: halloween_upgrade.axe
@@ -2266,12 +2266,15 @@ GARFIELD_INFANTRY:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
+		BuildLimit: 1
 		BuildPaletteOrder: 10
 		Prerequisites:
 		Queue: Infantry, RAInfantry
 		Description: Basic Melee Infantry. Slow but can take some damage.
 		BuildDuration: 150
 		# BuildDurationModifier: 100
+	Selectable:
+		Bounds: 1536, 1536, 0, -512
 	Mobile:
 		Speed: 56
 	DamageMultiplier@DamageReduction:
@@ -2301,3 +2304,162 @@ GARFIELD_INFANTRY:
 		VoiceSet: Halloween_Garfield
 	Crushable:
 		CrushClasses: vehicle
+
+SPOOKY_EYE:
+	Inherits: ^RANeutralPlane
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 20
+		Prerequisites: ~halloween_crypto
+		Description: Crashes into ground targets.
+		BuildDurationModifier: 100
+		BuildDuration: 750
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Spooky Eye
+	Health:
+		HP: 10000
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 7c0
+		Type: GroundPosition
+	AttackAircraft:
+		FacingTolerance: 512
+	Armament@PRIMARY:
+		Weapon: JetExplosion
+	GrantConditionOnAttack:
+		Condition: triggered
+	WithDeathAnimation:
+		UseDeathTypeSuffix: False
+	KillsSelf:
+		RequiresCondition: triggered
+	AttackAircraft:
+		FacingTolerance: 80
+	Aircraft:
+		CruiseAltitude: 2560
+		InitialFacing: 768
+		TurnSpeed: 20
+		Speed: 200
+		RepulsionSpeed: 25
+		MaximumPitch: 50
+	Contrail@1:
+		Offset: -598,-683,0
+	Contrail@2:
+		Offset: -598,683,0
+	Voiced:
+		VoiceSet: sc2kjet
+	AcceptsDeliveredExperience: ##########
+		ValidTypes: vehicle ##########
+	WithRangeCircle:
+		Range: 7c0
+	#-ExternalCondition@FireCall:
+	#-ExternalCondition@PoliceCall:
+	RenderSprites:
+	SpawnActorOnDeath:
+		Actor: SPOOKY_EYE.Husk
+	EjectOnDeath:
+		PilotActor: glterror
+	FireWarheadsOnDeath:
+		Weapon: SimcityTerrorist
+		EmptyWeapon: SimcityTerrorist
+
+SPOOKY_EYE.HUSK:
+	Inherits: ^PlaneHusk
+	Tooltip:
+		Name: Spooky Eye
+	Contrail@1:
+		Offset: -598,-683,0
+	Contrail@2:
+		Offset: -598,683,0
+	Aircraft:
+		TurnSpeed: 20
+		Speed: 93
+		#186
+	LeavesTrails:
+		Offsets: -853,0,171
+		MovingInterval: 2
+		Image: smokey
+		StationaryInterval: 2
+		SpawnAtLastPosition: False
+		TrailWhileStationary: True
+		Type: CenterPosition
+	RenderSprites:
+		Image: spooky_eye
+	FireWarheadsOnDeath:
+		Weapon: RA2Terrorist
+		EmptyWeapon: RA2Terrorist
+
+INFLATABLE_SPIDER:
+	Inherits: ^BaseBuilding
+	Inherits@shape: ^3x2Shape
+	Inherits@CPQWP: ^CPQConditionWithPrimary
+	Inherits@prod: ^ProducesUnits
+	Valued:
+		Cost: 750
+	Tooltip:
+		Name: Inflatable Spider
+	ProvidesPrerequisite:
+		Prerequisite: barracks
+	Buildable:
+		BuildPaletteOrder: 30
+		Queue: Building, RABuilding
+		Description: Trains Heroes
+		Prerequisites: ~halloween_blackcitadel, halloween_crypto 
+	Building:
+		Footprint: xxx xxx ===
+		Dimensions: 3,3
+		LocalCenterOffset: 0,-512,0
+	Armor:
+		Type: Wood
+	Health:
+		HP: 100000
+	RevealsShroud:
+		Range: 5c0
+	RallyPoint:
+	Exit@1:
+		SpawnOffset: -426,85,0
+		ExitCell: 0,1
+	Exit@2:
+		SpawnOffset: 298,298,0
+		ExitCell: 1,1
+	GrantConditionOnPowerState@supply:
+		Condition: lowpower
+		ValidPowerStates: Low, Critical
+	Production@NORMAL:
+		Produces: Infantry
+		RequiresCondition: !classicproductionqueues
+		PauseOnCondition: lowpower
+	Production@CLASSICPRODUCTIONQUEUES:
+		Produces: RAInfantry
+		RequiresCondition: classicproductionqueues
+		PauseOnCondition: lowpower
+	ProductionQueue:
+		Type: Infantry
+		DisplayOrder: 2
+		Group: Infantry
+		LowPowerModifier: 300
+		ReadyAudio: UnitReady
+		BlockedAudio: NoBuild
+		LimitedAudio: BuildingInProgress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar@INFANTRYGDI:
+		ProductionType: Infantry
+		RequiresCondition: !classicproductionqueues
+	ProductionBar@RAINFANTRYGDI:
+		ProductionType: RAInfantry
+		RequiresCondition: classicproductionqueues
+	Power:
+		Amount: -15
+	ProvidesPrerequisite@buildingname:
+	Voiced:
+		VoiceSet: wc2orctempleofthedamnedvoice
+	-WithMakeAnimation:
+	-WithDeathAnimation:
+	RenderSprites:
+		Image: inflatable_spider

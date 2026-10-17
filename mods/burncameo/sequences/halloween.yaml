@@ -39,6 +39,7 @@ pinky_fi:
 		Length: 1
 
 wh40kdaemonpit_fi:
+	Inherits: ^WithBuildingBib3
 	Defaults:
 		Scale: 2.0
 		Filename: wh40kdaemonpit.shp
@@ -83,6 +84,7 @@ halloween_blackcitadel:
 # 	icon: xmas_elves_refinery_icon
 
 halloween_graveyard:
+	Inherits: ^WithBuildingBib3
 	Defaults:
 		Scale: 2.0
 		Filename: halloween_graveyard.shp
@@ -152,6 +154,7 @@ halloween_carousel:
 		AddExtension: False
 
 halloween_cauldron:
+	Inherits: ^WithBuildingBib3
 	Defaults:
 		Scale: 2.0
 		Filename: halloween_cauldron.shp
@@ -1294,59 +1297,47 @@ halloween_spider:
 
 garfield_infantry:
 	Inherits: ^WCInfantry
-	smallflag:
-		Offset: -10, -10
 	Defaults: 
 		Filename: garfield_infantry.shp
-		Scale: 1.0
+		Scale: 1.5
+		Tick: 100
+		Offset: 0, -8
 	idle:
-		Facings: 2
-		Combine:
-			garfield1: 
-				Filename: garfield_infantry.shp
-				Start: 0
-				Length: 1
-			garfield2: 
-				Filename: garfield_infantry.shp
-				Start: 0
-				Length: 1
-				FlipX: true
+		Filename: invisibleitem.shp
 	stand:
 		Facings: 2
+		Length: 2
+		Tick: 1500
 		Combine:
 			garfield3: 
 				Filename: garfield_infantry.shp
-				Start: 0
-				Length: 1
+				Frames: 0,15
 			garfield4: 
 				Filename: garfield_infantry.shp
-				Start: 0
-				Length: 1
+				Frames: 0,15
 				FlipX: true
 	run:
 		Facings: 2
+		Length: 3
 		Combine:
 			garfield5: 
 				Filename: garfield_infantry.shp
 				Start: 1
-				Length: 3
 				Frames: 1,2,3
 			garfield6: 
 				Filename: garfield_infantry.shp
-				Length: 3
 				Frames: 3,2,1
 				FlipX: true
 	shoot:
 		Facings: 2
+		Length: 4
 		Combine:
 			garfield7: 
 				Filename: garfield_infantry.shp
 				Start: 5
-				Length: 4
 				Frames: 5,6,7,8
 			garfield8: 
 				Filename: garfield_infantry.shp
-				Length: 4
 				Frames: 8,7,6,5
 				FlipX: true
 	die:
@@ -1356,3 +1347,51 @@ garfield_infantry:
 	icon: 
 		Filename: civilization_2_icons.png
 		Start: 34
+
+spooky_eye:
+	Defaults:
+		Scale: 1.5
+		Filename: spooky_eye.png
+	idle:
+		Facings: 2
+		Length: 2
+		Tick: 200
+		Combine:
+			spookyeye1: 
+				Filename: spooky_eye.png
+				Frames: 0,1
+			spookyeye2: 
+				Filename: spooky_eye.png
+				Frames: 1,0
+				FlipX: true
+	die:
+		Facings: 2
+		Combine:
+			spookyeye3: 
+				Filename: spooky_eye.png
+				Frames: 0,1
+				Length: 2
+			spookyeye4: 
+				Filename: spooky_eye.png
+				Frames: 1,0
+				Length: 2
+				FlipX: true
+	icon:
+		Filename: chromesc2kaircrash.png
+		AddExtension: False
+
+inflatable_spider:
+	Defaults:
+		Scale: 2.5
+		Tick: 400
+		Filename: inflatable_spider.png
+	idle:
+		Start: 0
+		Length: 4
+	damaged-idle:
+		Start: 0
+		Length: 4
+	icon: 
+		Filename: halloween_cameos.shp
+		Start: 3
+		AddExtension: False

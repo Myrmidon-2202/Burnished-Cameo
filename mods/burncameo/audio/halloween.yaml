@@ -41,7 +41,7 @@ Halloween_Crypt_Voice:
 Halloween_Necropolis_Voice:
 	DefaultVariant: .wav
 	Voices:
-		Select: halloween_necropolis, Gazorpazorpfield_what_1, Gazorpazorpfield_what_2
+		Select: halloween_necropolis
 		Action: halloween_necropolis
 
 Halloween_SpiritTower_Voice:
@@ -58,6 +58,19 @@ Halloween_Tomb_Voice:
 ####################################################################################################
 #		2026 Halloween Additions
 ####################################################################################################
+
+Halloween_Cow:
+    DefaultVariant: .wav
+	Voices:
+		Select: d2_cow_what_1, d2_cow_what_2, d2_cow_what_3
+		Attack: d2_cow_yes_1, d2_cow_yes_2, d2_cow_yes_3, d2_cow_yes_4, d2_cow_yes_5
+		Action: d2_cow_yes_1, d2_cow_yes_2, d2_cow_yes_3, d2_cow_yes_4, d2_cow_yes_5
+		Move: d2_cow_yes_1, d2_cow_yes_2, d2_cow_yes_3, d2_cow_yes_4, d2_cow_yes_5
+		Die: d2_cow_yes_1
+		Build: d2_cow_what_2
+		Burned: d2_cow_yes_1
+		Zapped: d2_cow_yes_1
+		Poisoned: d2_cow_yes_1
 
 Halloween_Garfield:
     DefaultVariant: .wav
