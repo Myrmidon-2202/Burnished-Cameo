@@ -211,6 +211,8 @@ actor-obli =
 
 actor-gtwr =
    .name = Guard Tower
+        Strong vs Infantry
+        Weak vs Tanks, Aircraft
 
 actor-atwr =
    .name = Advanced Guard Tower
@@ -334,6 +336,199 @@ actor-nodlasercorvette =
       Can attack air.
         Strong vs Everything
    .name = Nod Laser Corvette
+
+actor-truck =
+   .description = Generic Truck.
+
+actor-lcv =
+   .description = Deploys into a Flame Tower.
+
+actor-vehicleproduction =
+   .description = Produces vehicles.
+
+actor-dthand =
+   .description = Produces Infantry Basic Anti-Tank base defense.
+      Strong vs Tanks, vehicles Weak vs Infantry.
+
+actor-hq =
+   .description = Provides radar and Air Strike support power.
+      Unlocks higher-tech units and buildings.
+      Requires power to operate.
+
+actor-dtstrike =
+   .description = Provides radar and Air Strike support power.
+      Unlocks higher-tech units and buildings.
+      Requires power to operate.
+
+actor-dtproc =
+   .description = Processes raw Tiberium into useable resources.
+
+actor-dtpropaganda =
+   .description = Provides some Technologies.
+
+actor-dtpower2 =
+   .description = Provides double the power of a standard Power Plant.
+
+actor-dtbpower =
+   .description = Barracks and Power Plant.
+      Trains infantry and provides power to operate buildings.
+
+actor-dtpyle =
+   .description = Trains infantry.
+
+actor-dtbio =
+   .description = Provides Tomorrow advanced technologies.
+
+actor-dtwood =
+   .description = Stops infantry and light vehicles.
+      Can be crushed by tanks.
+
+actor-dtbarb =
+   .description = Stops infantry and light vehicles.
+      Can be crushed by tanks.
+
+actor-dtbarbe =
+   .description = Stops infantry and light vehicles.
+      Can be crushed by tanks.
+
+actor-dtobli =
+   .description = Advanced base defense.
+      Requires power to operate.
+      Strong vs all Ground units   Cannot target Aircraft.
+
+actor-dteye =
+   .description = Provides radar and the Cruise Missile support power.
+      Requires power to operate.
+
+actor-dthq =
+   .description = Provides radar and the Cruise Missile support power.
+      Requires power to operate.
+
+actor-dtshop =
+   .description = Provides new Vehicles.
+
+actor-dtrkpod =
+   .description = Basic Anti-Tank base defense.
+      Strong vs Tanks, vehicles   Weak vs Infantry.
+
+actor-dtlwall =
+   .description = Stops infantry and most tanks.
+      Blocks some projectiles.
+
+actor-dtharv =
+   .description = Collects Resources for processing.
+
+actor-dtover =
+   .description = Fast scout and anti-infantry vehicle.
+      Strong vs Infantry   Weak vs Tanks.
+
+actor-dtmedi =
+   .description = Anti-tank/Anti-aircraft infantry.
+      Strong vs Tanks, Aircraft   Weak vs Infantry.
+
+actor-dte3 =
+   .description = Anti-tank/Anti-aircraft infantry.
+      Strong vs Tanks, Aircraft   Weak vs Infantry.
+
+actor-dtmutant =
+   .description = Short ranged laser mutant.
+      Strong vs Everything   Weak vs long range artillery.
+
+actor-dtrmbo =
+   .description = Elite sniper infantry unit.
+      Strong vs Infantry, Buildings   Weak vs Vehicles.
+
+actor-dtapc =
+   .description = Armed infantry transport.
+      Can attack Aircraft.
+      Strong vs Vehicles   Weak vs Infantry.
+
+actor-dte2 =
+   .description = General-purpose infantry.
+      Strong vs Infantry   Weak vs Vehicles.
+
+actor-dtorca =
+   .description = VTol Gunship with AG Missiles.
+      Strong vs Buildings, Infantry.
+
+actor-dtltnk2 =
+   .description = Fast, light tank.
+      Strong vs Vehicles, Tanks Weak vs Infantry.
+
+actor-dtstnk =
+   .description = Armed infantry transport.
+      Can attack Aircraft.
+      Strong vs Vehicles   Weak vs Infantry.
+
+actor-dthtnk =
+   .description = Heavily armored Russian Tank.
+      Can attack Aircraft.
+      Strong vs Everything.
+
+actor-dte5 =
+   .description = Advanced general-purpose infantry.
+      Strong vs Infantry Units.
+
+actor-dtapc2 =
+   .description = Armed infantry transport.
+      Can attack Aircraft.
+      Strong vs Vehicles   Weak vs Infantry.
+
+actor-dtltnk =
+   .description = Fast, light tank.
+      Strong vs Vehicles, Tanks   Weak vs Infantry.
+
+actor-snpr =
+   .description = Long range rocket artillery.
+      Strong vs all Ground units.
+
+actor-dttecn =
+   .description = Weak Scout Infantry.
+      Effective in swarms.
+
+actor-dtfbik =
+   .description = Rapid flame-throwing scout vehicle.
+      Strong vs Infantry, Buildings and Vehicles   Weak vs Tanks.
+
+actor-empdisruptor =
+   .description = Long range pulse weapon.
+      Strong vs vehicles and structures.
+
+actor-dtbtr =
+   .description = Armed infantry transport.
+      Strong vs Vehicles   Weak vs Infantry.
+
+actor-dtatv =
+   .description = Armed infantry transport.
+      Can attack Aircraft.
+      Strong vs Vehicles   Weak vs Infantry.
+
+actor-dtstnke =
+   .description = Armed infantry transport.
+      Can attack Aircraft.
+      Strong vs Vehicles   Weak vs Infantry.
+
+actor-dtdtrk =
+   .description = Truck with actively armed explosives.
+      Has very weak armor.
+
+actorgunlcv =
+   .description = Deploys into a Gun Turret.
+
+actorhidelcv =
+   .description = Deploys into a Hideout.
+
+
+power-tomorrow-tankdrop =
+   .description = Airdrops Medium Tanks for the Cuban war effort.
+
+power-tomorrow-bacterialstrike =
+   .description = Launch a tactical bacterial warhead at the target location.
+      Applies heavy damage over a large area.
+
+power-tomorrow-cruisemissile =
+   .description = Initiate an Cruise Missile strike at the target location.
+      Applies instant damage to a small area.
 
 actor-dog =
    .name = Attack Dog
@@ -579,6 +774,9 @@ actor-raafld =
 actor-atek =
    .description = Provides advanced technologies
       and a GPS satellite.
+
+actor-gentek =
+   .description = Provides advanced technologies.
 
 power-gps =
    .name = GPS Satellite
@@ -855,6 +1053,195 @@ actor-yamatobattleship =
         Strong vs Buildings, Ground units
         Weak vs Naval units, Aircraft
    .name = Yamato Battleship
+
+actor-qant =
+   .description = Deploys into another Construction Yard.
+      Unarmed.
+
+actor-tinyant =
+   .description = Collects resources.
+
+actor-modant =
+   .description = Irradiated insect that grew oversize.
+
+actor-modant2 =
+   .description = Irradiated insect that grew oversize.
+
+actor-modant3 =
+   .description = Irradiated insect that grew oversize.
+
+actor-fant =
+   .description = Irradiated insect that grew oversize.
+
+actor-chant =
+   .description = Irradiated insect that grew oversize.
+
+actor-sant =
+   .description = Irradiated insect that grew oversize.
+
+actor-crab =
+   .description = Parasitic insect, capable of capturing buildings and vehicles.
+
+actor-breednest =
+   .description = Provides double the power of.
+      a standard Power Plant.
+
+actor-tinynest =
+   .description = Refines Ore and Gems.
+      into credits.
+
+actor-tinynest2 =
+   .description = All-purpose defensive structure.
+      Strong vs Aircraft, Tanks.
+      Weak vs Infantry.
+
+actor-flyant =
+   .description = Flying Ant.
+      Strong vs Buildings, Tanks.
+      Weak vs Infantry.
+
+actor-evo =
+   .description = Provides advanced mutations for ants.
+      Can combine units.
+      Drone + Drone = Scout.
+      Scout + Scout = Giant.
+      Giant + Giant = Fire.
+      Fire + Fire = Warrior.
+      Warrior + Warrior = Super.
+      Super + Super = HyperInfester + Infester = Queen.
+
+actor-tevo =
+   .description = Provides advanced weapons for ants.
+      Can combine units.
+      Fire + Fire = Chemical.
+      Warrior + Warrior = Missile.
+      Giant + Giant = Tant.
+      Super + Super = Mammoth Tant.
+      Tant + Tant = Heavy Tant.
+      Hyper + Hyper = Tesla Tant.
+
+actor-factiok =
+   .description = Builds structures.
+
+actor-ioknuke =
+   .description = Generates power.
+
+actor-iokbarracks =
+   .description = Trains IOKs infantry.
+
+actor-iokproc =
+   .description = Processes raw Tiberium.
+      into useable resources.
+
+actor-iokafld =
+   .description = Provides a dropzone.
+      for vehicle reinforcements.
+
+actor-ioknuk2 =
+   .description = Provides more power, cheaper than the.
+      standard Power Plant.
+
+actor-iokblackmarket =
+   .description = Unlock upgrades for GLA weaponry.
+      Provides a cash supply.
+
+actor-iokpalace =
+   .description = Provides access to advanced GLA technologies.
+      Can be used as a defensive bunker.
+
+actor-iokscudtemple =
+   .description = Provides Scud Storm and Nuclear Strike support power.
+      Requires power to operate.
+
+actor-ioksite =
+   .description = All-purpose defensive structure.
+      Strong vs Aircraft, Tanks.
+      Weak vs Infantry.
+
+actor-iokgun =
+   .description = Basic Anti-Tank base defense.
+      Strong vs Tanks, vehicles.
+      Weak vs Infantry.
+
+actor-iokobli =
+   .description = Advanced base defense.
+      Requires power to operate.
+      Strong vs all Ground units.
+      Cannot target Aircraft.
+
+actor-iokbggy =
+   .description = Fast scout and anti-infantry vehicle.
+      Strong vs Infantry.
+      Weak vs Tanks.
+
+actor-iokrocketbggy =
+   .description = Fast, long-range artillery.
+      Strong vs Vehicles, Buildings.
+      Weak vs Aircraft.
+
+actor-iokscorpion =
+   .description = Fast, light tank.
+      Can be upgraded with missiles.
+      Strong vs Vehicles.
+      Weak vs Infantry.
+
+actor-iokradar =
+   .description = Detects cloaked units and provides radar.
+
+actor-iokftnk =
+   .description = Heavily armored flame-throwing vehicle.
+      Strong vs Infantry, Buildings and Vehicles.
+      Weak vs Tanks.
+
+actor-iokquad =
+   .description = Anti-air and anti-infantry vehicle.
+      Strong vs Aircraft, Infantry.
+      Weak vs Vehicles.
+
+actor-iokscud =
+   .description = Long-range ballistic missile launcher.
+      Strong vs ground targets.
+      Weak vs Aircraft.
+
+actor-iokstnk =
+   .description = Long-range missile tank that can cloak.
+      Can attack Aircraft.
+      Has weak armor.
+      Can be spotted by infantry and defense structures.
+      Strong vs Vehicles, Tanks.
+      Weak vs Infantry.
+
+actor-iokworker =
+   .description = Resource collector.
+      Can repair buildings.
+      Can deploy to neutralize mines and traps.
+
+actor-ioke1 =
+   .description = General-purpose infantry.
+      Strong vs Infantry.
+      Weak vs Vehicles.
+
+actor-iokterror =
+   .description = Suicide bomber infantry.
+
+actor-ioke5 =
+   .description = Advanced general-purpose infantry.
+      Strong vs all Ground units.
+
+actor-ioke3 =
+   .description = Anti-tank/Anti-aircraft infantry.
+      Strong vs Tanks, Aircraft.
+      Weak vs Infantry.
+
+actor-iokmob =
+   .description = Large armed crowd, armed with pistols and Molotovs.
+      Strong vs Buildings, Infantry.
+      Weak vs Vehicles, Aircraft.
+
+actor-ioke6 =
+   .description = Infiltrates and captures enemy structures.
+      Removes attached explosives from units.
+      Unarmed.
 
 actor-ra2e1 =
    .name = G. I.
@@ -1686,6 +2073,1548 @@ power-ts-mutantcommandos =
 power-ts-wildlife =
    .description = Wildlife Rampage.
       Spawns numerous Tiberium creatures to cause great havoc.
+
+power-general-repair =
+   .description = Emergency Repair
+      Provides repairs for vehicles in the target area.
+
+actor-upgecapture =
+   .description = Allow anti-personnel infantry to capture base buildings.
+      Alt-click to capture enemy base buildings.
+
+actor-upemergencyrepair1 =
+   .description = Unlocks Emergency Repair.
+
+actor-upemergencyrepair2 =
+   .description = Unlocks Emergency Repair Level 2.
+
+actor-upemergencyrepair3 =
+   .description = Unlocks Emergency Repair Level 3.
+
+actor-glamcv =
+   .description = Builds structures and provides radar.
+
+actor-glbarracks =
+   .description = Trains GLAs infantry.
+
+actor-glsupply =
+   .description = Manage collectible resources.
+      into useable money.
+
+actor-glweap =
+   .description = Produces GLA vehicles.
+
+actor-glpalace =
+   .description = Provides access to advanced GLA technologies.
+      Can be used as a defensive bunker.
+
+actor-glstorm =
+   .description = Provides Scud Storm support power.
+      Requires power to operate.
+
+actor-glblackmarket =
+   .description = Unlock upgrades for GLA weaponry.
+      Provides a cash supply.
+
+actor-glsite =
+   .description = All-purpose defensive structure.
+      Strong vs Aircraft, Tanks.
+      Weak vs Infantry.
+
+actor-gltunnel =
+   .description = Anti-Infantry defensive structure.
+      Can protect and transport units.
+      Strong vs Infantry.
+      Weak vs Tanks.
+
+actor-gltrap =
+   .description = Explosive defensive structure.
+
+actor-glamob =
+   .description = Large armed crowd, armed with pistols and Molotovs.
+      Strong vs Buildings, Infantry.
+      Weak vs Vehicles, Aircraft.
+
+actor-gle1 =
+   .description = General-purpose infantry.
+      Strong vs Infantry.
+      Weak vs Vehicles.
+
+actor-gle1toxin =
+   .description = Soldier armed with a toxin weapon.
+      Strong vs Infantry.
+      Weak vs Vehicles.
+
+actor-upglatrap =
+   .description = Allows Rebels to plant explosives.
+      Friendly and neutral buildings can.
+      be trapped to prevent capture.
+
+actor-glkell =
+   .description = Elite sniper.
+      Can snipe enemy vehicles, allowing them to be captured.
+      Strong vs Infantry.
+      Weak vs Vehicles.
+
+actor-gle3 =
+   .description = Anti-tank/anti-aircraft infantry.
+      Strong vs Tanks, Aircraft.
+      Weak vs Infantry.
+
+actor-glterror =
+   .description = Suicide bomber infantry.
+
+actor-glsabo =
+   .description = Cloaked spy that can infiltrate structures.
+
+actor-glhijack =
+   .description = Hijacks vehicles.
+
+actor-glbiker =
+   .description = Fast scout and multi-purpose vehicle.
+      Weak vs Tanks.
+
+actor-glbggy =
+   .description = Fast, long-range artillery.
+      Strong vs Vehicles, Buildings.
+      Weak vs Aircraft.
+
+actor-glbbus =
+   .description = Mobile bunker vehicle.
+      Passengers can fire from within.
+      Immobilized on heavy damage.
+
+actor-glscorpion =
+   .description = Fast, light tank.
+      Can be upgraded with missiles.
+      Strong vs Vehicles.
+      Weak vs Infantry.
+
+actor-glmaura =
+   .description = Medium tank.
+      Strong vs Vehicles.
+      Weak vs Infantry.
+
+actor-gltractor =
+   .description = Vehicle armed with toxins.
+      Can deploy to contaminate an area.
+      Strong vs Infantry.
+      Weak vs Vehicles.
+
+actor-glpickup =
+   .description = Fast scout & anti-infantry vehicle.
+      Can carry infantry.
+      Strong vs Infantry.
+      Weak vs Vehicles, Aircraft.
+
+actor-glscrapcar =
+   .description = Suicide bomber vehicle.
+      Cloaked when stationary.
+
+actor-glvan =
+   .description = Fast scout & anti-infantry vehicle.
+      Can carry infantry.
+      Strong vs Infantry.
+      Weak vs Vehicles, Aircraft.
+
+actor-glradar =
+   .description = Detects cloaked units and provides radar.
+      Jams enemy radars when close.
+
+actor-glquad =
+   .description = Anti-air and anti-infantry vehicle.
+      Strong vs Aircraft, Infantry.
+      Weak vs Vehicles.
+
+actor-glscud =
+   .description = Long-range ballistic missile launcher.
+      Strong vs ground targets.
+      Weak vs Aircraft.
+
+actor-glbombtruck =
+   .description = Suicide vehicle.
+      Can be upgraded with different explosives.
+      Strong vs Infantry, Vehicles.
+      Weak vs Aircraft.
+
+actor-pscglbtruck2 =
+   .description = Toxin Explosive upgrade.
+      Strong vs Infantry.
+
+actor-pscglbtruck3 =
+   .description = High Damage Explosive.
+      Strong vs Vehicles, Buildings.
+
+actor-glworker =
+   .description = Resource collector.
+      Can repair buildings.
+      Can deploy to neutralize mines and traps.
+
+actor-upscorpionrocket =
+   .description = Allows Scorpion Tanks to launch rockets.
+
+actor-uparmthemob =
+   .description = Arm Angry Mob members with assault rifles and molotovs.
+
+actor-uprebelcamo =
+   .description = Allow Rebels to cloak when stationary.
+
+actor-upcamonetting =
+   .description = Cloaks defensive structures.
+
+actor-upcamonetting2 =
+   .description = Cloaks all structures.
+
+actor-upglfort =
+   .description = Increases durability of all buildings.
+
+actor-uparmorpiercingrocket =
+   .description = All GLA rocket units attack with 25% more damage.
+
+actor-uparmorpiercingbullet =
+   .description = All GLA MG units attack with 25% more damage.
+
+actor-upjunkrepair =
+   .description = Allow all GLA vehicles to self-repair.
+
+actor-uptoxinshells =
+   .description = Allow tanks to fire toxin shells.
+
+actor-upantraxbeta =
+   .description = Increases effectiveness of toxin weapons.
+
+actor-updemolition =
+   .description = All GLA units and defenses explode on death.
+
+actor-upnewshoes =
+   .description = Increases speed of Workers.
+
+actor-upbuggyammo =
+   .description = Doubles rockets fired by Rocket Buggies.
+
+actor-upantraxgamma =
+   .description = Increases effectiveness of toxin weapons.
+
+actor-upradarvanscan =
+   .description = Allow Radar Vans to reveal areas of the map.
+
+actor-upmarauder =
+   .description = Allows production of the Marauder Tank.
+
+actor-uptechnical =
+   .description = Trains technicals as Rank 1.
+
+actor-upscudlauncher =
+   .description = Allows production of the Scud Launcher.
+
+actor-uphijack =
+   .description = Allows deployment of Hijackers.
+
+actor-uprebelambush1 =
+   .description = Enables Rebel Ambush Level 1.
+
+actor-uprebelambush2 =
+   .description = Enables Rebel Ambush Level 2.
+
+actor-uprebelambush3 =
+   .description = Enables Rebel Ambush.
+
+actor-upglabounty1 =
+   .description = Increases Black Market income.
+
+actor-upglabounty2 =
+   .description = Increases Black Market income.
+
+actor-upglabounty3 =
+   .description = Enables Cash Bounty power.
+
+actor-upanthraxbomb =
+   .description = Enables Anthrax Bomb strikes.
+
+actor-upsneakattack =
+   .description = Enables Sneak Attacks.
+
+actor-upgpscram =
+   .description = Enables use of GPS Scrambling.
+
+actor-glgunboat =
+   .description = Light scout & support ship.
+      Can detect submarines.
+
+actor-pscglgunboat1 =
+   .description = Replaces MG gun.
+      Strong vs Infantry.
+
+actor-pscglgunboat2 =
+   .description = High Damage Explosive.
+      Strong vs Vehicles, Buildings.
+
+actor-chnmcv =
+   .description = Builds structures and provides radar.
+
+actor-chpower =
+   .description = Provides power.
+      Can be deployed to overcharge at expense of damage to self.
+      FireWarheadsOnDeath violently when destroyed.
+
+actor-chbarracks =
+   .description = Trains infantry.
+
+actor-chgattling =
+   .description = All-purpose defensive structure.
+      Strong vs Aircraft, Infantry.
+      Weak vs Vehicles.
+
+actor-chbunker =
+   .description = Garrisonable defensive structure.
+      Strong vs ground targets.
+      Weak vs Aircraft.
+
+actor-chbunker2 =
+   .description = All-purpose defensive structure.
+      Strong vs Aircraft, Tanks.
+      Weak vs Infantry.
+
+actor-chsupply =
+   .description = Processes raw Tiberium.
+      into useable resources.
+
+actor-chweap =
+   .description = Produces vehicles.
+
+actor-chpropaganda =
+   .description = Provides access to advanced Chinese technologies.
+
+actor-chpropagandatower =
+   .description = Allows nearby units to self-heal.
+
+actor-chinternetcenter =
+   .description = Can shelter Hackers.
+      Can be upgraded with surveillance powers.
+
+actor-chsilo =
+   .description = Provides Nuclear Strike support power.
+      Requires power to operate.
+
+actor-chairport =
+   .description = Produces and reloads aircraft.
+
+actor-che1 =
+   .description = General-purpose infantry armed with a rifle.
+      Strong vs Infantry.
+      Weak vs Vehicles.
+
+actor-che2 =
+   .description = General-purpose infantry armed with a minigun.
+      Can attack aircraft.
+      Strong vs Infantry, Light Vehicles.
+      Weak vs Tanks.
+
+actor-che3 =
+   .description = Anti-tank/Anti-aircraft infantry.
+      Can Plant explosives on vehicles and buildings.
+      Strong vs Tanks, Aircraft.
+      Weak vs Infantry.
+
+actor-chhacker =
+   .description = Computer specialist.
+      Can deploy to provide money.
+      Can disable buildings.
+
+actor-chhacker2 =
+   .description = Computer specialist.
+      Can deploy to provide money.
+      Can disable buildings and vehicles.
+
+actor-chlotus =
+   .description = Elite hacker.
+      Can take control of buildings.
+      Can disable vehicles.
+
+actor-chbattle =
+   .description = Chinese main battle tank.
+      Strong vs Vehicles.
+      Weak vs Infantry.
+
+actor-charty =
+   .description = Long-range artillery.
+      Strong vs Infantry, Buildings.
+      Weak vs Vehicles, Aircraft.
+
+actor-choverlord =
+   .description = Heavy Chinese tank.
+      Can be upgraded with addon towers.
+      Strong vs Vehicles.
+
+actor-pscchoverlord1 =
+   .description = Installs an anti-aircraft Gattling gun.
+
+actor-pscchoverlord2 =
+   .description = Installs a bunker for infantry.
+      Firepower increases with loaded passengers.
+
+actor-pscchoverlord3 =
+   .description = Installs a morale-improving propaganda speaker.
+
+actor-chdragon =
+   .description = Flame tank.
+      Can deploy to create a fire wall.
+      Strong vs Infantry.
+      Weak vs Tanks.
+
+actor-chgtnk =
+   .description = Tank armed with Gattling guns.
+      Strong vs Infantry, Aircraft.
+      Weak vs Tanks.
+
+actor-chharv =
+   .description = Collects Ore and Gems for processing.
+      Unarmed.
+
+actor-choutpost =
+   .description = Detects cloaked units and buildings.
+      Garrisoned by 2 Tank Hunters.
+
+actor-choutpost2 =
+   .description = Detects cloaked units and buildings.
+      Mounted with a propaganda speaker.
+      Has space for up to 8 garrisoned infantry.
+      Garrisoned by 3 Tank Hunters.
+
+actor-checm =
+   .description = Disables vehicles and jams incoming missiles.
+
+actor-chcrawl =
+   .description = Heavy infantry transport.
+      Unarmed.
+
+actor-chcrawl2 =
+   .description = Heavy infantry transport.
+      Passengers can fire from within.
+
+actor-chnukecann =
+   .description = Slow heavy artillery.
+      Strong vs ground targets.
+      Weak vs Aircraft.
+
+actor-upredguard =
+   .description = Trains Red Guard as Rank 1.
+
+actor-upcharty =
+   .description = Trains artillery as Rank 1.
+
+actor-upbattlemaster =
+   .description = Trains Battlemasters as Rank 4.
+
+actor-upnukecann =
+   .description = Allows production of the Nuke Cannon.
+
+actor-upcashhack =
+   .description = Enables Cash Hacks.
+
+actor-uptankdrop =
+   .description = Enables Tank Drops.
+
+actor-upminigunnerdrop =
+   .description = Enables Minigunner Drops.
+
+actor-upartybarrage1 =
+   .description = Unlocks Artillery Barrage.
+
+actor-upartybarrage2 =
+   .description = Unlocks Artillery Barrage.
+
+actor-upartybarrage3 =
+   .description = Unlocks Artillery Barrage.
+
+actor-upfrenzy1 =
+   .description = Enables Frenzy.
+
+actor-upfrenzy2 =
+   .description = Unlocks Frenzy Level 2.
+
+actor-upfrenzy3 =
+   .description = Unlocks Frenzy Level 3.
+
+actor-upchaingun =
+   .description = Increases firing rate of units using Gattling weapons.
+
+actor-upnationalism =
+   .description = Increases effect of the Horde Bonus.
+
+actor-upuraniumshell =
+   .description = Increases Battlemaster and Overlord damage.
+
+actor-upatomictank =
+   .description = Increases Battlemaster and Overlord speed.
+
+actor-upisotopestability =
+   .description = Nuclear tank explosions do not damage friendly units.
+      or leave radiation.
+
+actor-upbluefire =
+   .description = Increases effectiveness of incendiary weapons.
+
+actor-upneutronshell =
+   .description = Gives Nuke Cannons neutron munitions.
+      Can kill vehicle passengers and drivers, allowing them.
+      to be captured.
+
+actor-upmigarmor =
+   .description = Increases durability of MiGs.
+
+actor-upautoload =
+   .description = Increases firing rate of Battlemasters.
+
+actor-upsubliminal =
+   .description = Increases effectiveness of propaganda.
+
+actor-upmignuke =
+   .description = Allows MiGs to use nuclear missiles.
+
+actor-upsathack =
+   .description = Reveals all command centers.
+
+actor-upsathack2 =
+   .description = Reveals all buildings and troop movements.
+
+actor-chmig =
+   .description = Fighter armed with napalm missiles.
+      Strong vs Buildings, Vehicles.
+      Weak vs Infantry, Aircraft.
+
+actor-chmig2 =
+   .description = Fighter jet, can be upgraded with nuclear missiles.
+      Strong vs ground targets.
+      Weak vs Aircraft.
+
+actor-chhelix =
+   .description = Helicopter gunship upgradeable with addons.
+      Strong vs Infantry.
+      Weak vs Aircraft.
+
+actor-pscchhelix1 =
+   .description = Installs an anti-aircraft Gatling gun.
+
+actor-pscchhelix2 =
+   .description = Installs a bunker for infantry.
+      Firepower increases with loaded passengers.
+
+actor-pscchhelix3 =
+   .description = Allows dropping napalm bombs.
+
+actor-pscchhelix4 =
+   .description = Allows nearby friendly units to self-heal.
+
+actor-chflameboat =
+   .description = Light scout & support ship.
+      Can detect submarines.
+
+actor-chasub =
+   .description = Submerged anti-ship unit.
+      armed with torpedoes.
+      Can detect other submarines.
+      Strong vs Naval units.
+      Weak vs Ground units, Aircraft.
+
+actor-uplandmines =
+   .description = Protects buildings with landmines.
+
+actor-upneutronmines =
+   .description = Upgrades landmines to Neutron Mines.
+      Kills infantry and vehicle passengers.
+
+actor-upcarpetbomb =
+   .description = Enables carpet bombing runs.
+
+actor-upchemp =
+   .description = Enables EMP Bomb strikes.
+
+actor-upchminebomb =
+   .description = Enables deployment of Cluster Mines.
+
+actor-usae1 =
+   .description = Basic USA infantry.
+      Strong vs Infantry.
+      Weak vs Vehicles.
+
+actor-usae3 =
+   .description = Anti-tank/anti-aircraft infantry.
+      Has to lock on to mobile targets before attacking.
+      Strong vs Tanks, Aircraft.
+      Weak vs Infantry.
+
+actor-usapath =
+   .description = Stealthed sniper infantry.
+      Strong vs Infantry.
+      Weak vs Vehicles.
+
+actor-usaburton =
+   .description = Elite commando.
+      Can switch between close and long range modes.
+      Strong vs Infantry, Buildings, Vehicles.
+      Weak vs Air.
+
+actor-usapilot =
+   .description = Can deliver experience to US vehicles and aircraft.
+
+actor-usajeep =
+   .description = Fast scout and transport vehicle.
+      Strong vs Infantry.
+      Weak vs Tanks.
+
+actor-pscdrones1 =
+   .description = Deploys a drone armed with a machine-gun.
+
+actor-pscdrones2 =
+   .description = Deploys a drone that fires anti-tank missiles.
+
+actor-pscdrones3 =
+   .description = Deploys a drone that provides vision.
+      and detects cloaked units.
+
+actor-usattnk =
+   .description = USA siege weapon.
+      Strong vs Vehicles, Buildings.
+      Weak vs Aircraft.
+
+actor-usacrusader =
+   .description = General-purpose USA tank.
+      Strong vs Vehicles.
+      Weak vs Infantry.
+
+actor-usacrusader2 =
+   .description = General-purpose USA tank.
+      Requires power to operate.
+      Strong vs Vehicles and Infantry.
+
+actor-usapala =
+   .description = Heavy USA tank.
+      Strong vs Vehicles.
+      Weak vs Infantry.
+
+actor-usasentry =
+   .description = Cloaked scout and detector robot.
+      Can be upgraded with a machinegun.
+      Strong vs Infantry when upgraded.
+
+actor-usaavenger =
+   .description = Laser-based air defense system.
+      Increases accuracy and firepower of nearby units.
+      Dazzles ground targets.
+      Strong vs Aircraft.
+
+actor-usaambulan =
+   .description = Heals friendly units.
+      Can carry 4 passengers.
+
+actor-usamicro =
+   .description = Support vehicle able to disable buildings and fry infantry.
+      Strong vs Infantry, Buildings.
+      Weak vs Vehicles.
+
+actor-usamcv =
+   .description = Builds structures and provides radar.
+
+actor-usapower =
+   .description = Provides power.
+      Can be upgraded to increase output.
+
+actor-pscusapower =
+   .description = Increases power output.
+
+actor-pscusapower2 =
+   .description = Increases power output.
+
+actor-usabarracks =
+   .description = Trains infantry.
+
+actor-usapatriot =
+   .description = All-purpose defensive structure.
+      Requires power to operate.
+      Passes one target to another with other nearby Patriot Defense Systems.
+      Strong vs Aircraft, Tanks.
+      Weak vs Infantry.
+
+actor-usalasertur =
+   .description = All-purpose defensive structure.
+      Requires power to operate.
+      Strong vs Aircraft, Tanks.
+      Weak vs Infantry.
+
+actor-usasupply =
+   .description = Processes raw Tiberium.
+      into useable resources.
+
+actor-usahook =
+   .description = Resource collector and troop transport.
+      Unarmed.
+
+actor-usacombathook =
+   .description = Combat helicopter that allows garrisoned soldiers to shoot out of it.
+      Can load up to 8 soldiers.
+      Unarmed.
+
+actor-usaweap =
+   .description = Produces vehicles.
+
+actor-usastrategy =
+   .description = Provides access to advanced American technologies.
+      Build Limit: 1.
+
+actor-usaairport =
+   .description = Produces and reloads aircraft.
+
+actor-usadropzone =
+   .description = Provides a cash supply.
+
+actor-usacannon =
+   .description = Provides Particle Cannon support power.
+      Requires power to operate.
+
+actor-usaraptor =
+   .description = Multirole fighter.
+      Strong vs Aircraft, Vehicles.
+
+actor-usastealth =
+   .description = Cloaked bomber.
+      Strong vs Buildings, Vehicles.
+      Weak vs Aircraft.
+
+actor-usaaurora =
+   .description = Heavy bomber.
+      Strong vs ground targets.
+      Weak vs Aircraft.
+
+actor-usacomanche =
+   .description = Helicopter gunship.
+      Strong vs Infantry, Light vehicles.
+      Weak vs Aircraft.
+
+actor-usafirebase =
+   .description = Garrisonable defensive structure.
+      Strong vs ground targets.
+      Weak vs Aircraft.
+
+actor-usaupgrenade =
+   .description = Allow Rangers to use flashbangs.
+      Flashbangs stuns infantry and damages garrisoned soldiers.
+
+actor-usauptowmiss =
+   .description = Equips Humvees with TOW missiles.
+
+actor-usaupdronegun =
+   .description = Arms the Sentry Drone with a machine gun.
+
+actor-usaupchemsuit =
+   .description = Makes infantry immune to lingering toxin weapons.
+
+actor-usauparmor =
+   .description = Increases durability of all ground vehicles.
+
+actor-usauplasmiss =
+   .description = Increases damage done by aircraft by 25%.
+
+actor-usaupsupplylines =
+   .description = Increases income from Supply Drops and Chinooks.
+
+actor-usabombardament =
+   .description = All units deal 25% more damage.
+      Allows Strategy Centers to use bombardment.
+      Upgrading this will disable other Battle Plans.
+
+actor-usasearchndestroy =
+   .description = All units have 25% more range.
+      Upgrading this will disable other Battle Plans.
+
+actor-usaholdtheline =
+   .description = All units take 20% less damage.
+      Upgrading this will disable other Battle Plans.
+
+actor-usaupbunkerbuster =
+   .description = Allow Stealth Fighters to clear out garrisons.
+
+actor-usaupcounter =
+   .description = Increases durability of aircraft.
+
+actor-usauptraining =
+   .description = All ground units gain experience faster.
+
+actor-usaupdronearmor =
+   .description = Increases durability of drones.
+
+actor-upstealthcomanche =
+   .description = Cloaks Comanches.
+
+actor-usagunboat =
+   .description = Light scout & support ship.
+      Can detect submarines.
+
+actor-usabattleship =
+   .description = Very slow long-range ship.
+      Strong vs Buildings, Ground units.
+      Weak vs Naval units, Aircraft.
+
+actor-usacarrier =
+   .description = Very slow long-range ship.
+      Strong vs Buildings, Ground units.
+      Weak vs Naval units, Aircraft.
+
+actor-usauwusupply =
+   .description = Transports cash other players.
+      Armed with self-defense machine gun.
+
+actor-upusapath =
+   .description = Allows training of Pathfinders.
+
+actor-upusapala =
+   .description = Allows production of the Paladin Tank.
+
+actor-upusastealth =
+   .description = Allows production of the Stealth Fighter.
+
+actor-upusaspydrone =
+   .description = Enables the deployment of Spy Drones.
+
+actor-upusaparadrop1 =
+   .description = Unlocks Paradrop.
+
+actor-upusaparadrop2 =
+   .description = Unlocks Paradrop.
+
+actor-upusaparadrop3 =
+   .description = Unlocks Paradrop.
+
+actor-upusaa101 =
+   .description = Unlocks A10 Strike.
+
+actor-upusaa102 =
+   .description = Unlocks A10 Strike.
+
+actor-upusaa103 =
+   .description = Unlocks A10 Strike.
+
+actor-upusagunship =
+   .description = Allows use of Spectre Gunship airstrikes.
+
+actor-upusaleaflet =
+   .description = Allows use of the Leaflet Drop.
+
+actor-upusafuelbomb =
+   .description = Allows use of Fuel Air Bomb strikes.
+
+actor-upusamotherbomb =
+   .description = Allows use of MOAB strikes.
+
+actor-usaupmisspod =
+   .description = Upgrades the Comanche with rocket pods strong against clustered targets.
+
+actor-leangmcv =
+   .description = Builds structures and provides radar.
+
+power-general-spydrone =
+   .description = Spy Drone
+      Spawns a spy drone.
+      Detects cloaked units.
+
+power-general-paratroopers =
+   .description = USA Paratroopers
+      Call cargo planes to drop a squad of rangers on the map.
+
+power-general-spectre =
+   .description = Spectre Gunship
+      Deploys a Spectre Gunship to fire on the target.
+
+power-general-fuelairbomb =
+   .description = Fuel Air Bomb
+      Drops a thermobaric weapon on the target.
+
+power-general-usacarpetbomb =
+   .description = Carpet Bombing
+      A stealth bomber strikes targets along a line.
+
+power-general-moab =
+   .description = MOAB
+      Drops heavy explosive ordinance on the target.
+
+power-general-leaflet =
+   .description = Leaflet Drop
+      Drops leaflets onto enemy units, briefly preventing them from fighting.
+
+power-general-a101 =
+   .description = A10 Strike 1
+      A single A-10 attacks the target.
+
+power-general-a102 =
+   .description = A10 Strike 2
+      2 A-10 aircraft attack the target.
+
+power-general-a103:
+   .description = A10 Strike 3
+      3 A-10 aircraft attack the target.
+
+power-general-particle:
+   .description = Particle Cannon
+      Fires a controllable particle beam.
+      Select the beam to manuever
+
+power-general-anthrax =
+   .description = Anthrax Bomb
+      Drops a biochemical weapon on the target.
+
+power-general-ambush =
+   .description = Ambush
+      Spawns a large Rebel squad.
+
+power-general-toxinambush =
+   .description = Toxin Ambush
+      Spawns a large Toxin Rebel squad.
+
+power-general-scrambler =
+   .description = GPS Scrambler
+      Cloaks a large group of units.
+
+power-general-bounty =
+   .description = Cash Bounty
+      Makes selected targets grant 40% of value upon being killed or destroyed.
+
+power-general-cashhack =
+   .description = Cash Hack
+      Steal up to $2000 credits from a selected enemy refinery.
+
+power-general-tankdrop =
+   .description = Tank Drop
+      Cargo planes drop Battlemaster tanks anywhere on the map.
+
+power-general-infdrop =
+   .description = Minigunner Paradrop
+      Cargo planes drop 15 minigunners anywhere on the map.
+
+power-general-artillery =
+   .description = Artillery Barrage
+      Off-map guns fire at the target.\nApplies heavy damage over a large area.
+
+power-general-carpetbomb =
+   .description = Carpet Bombing
+      A bomber strikes targets along a line.
+
+power-general-empulse =
+   .description = EM Pulse
+      A bomber drops a EMP bomb on the target. Disables vehicles and defenses.
+      Instant-kills most aircraft.
+
+power-general-clustermines =
+   .description = Cluster Mines
+      A bomber deploys cluster mines at the target.
+
+power-general-frenzy =
+   .description = Frenzy
+      Increases the firepower of selected vehicles.
+
+power-general-sathack =
+   .description = Satellite Hack 1
+      Reveals command centers.
+
+power-general-sathack2 =
+   .description = Satellite Hack 2
+      Reveals map terrain and provides tactical information. Requires power.
+
+power-general-chinanuke =
+   .description = Nuclear Strike
+      Launch a tactical nuclear warhead.\nApplies heavy damage over a large area.
+
+power-general-scud =
+   .description = Scud Storm
+      Fires 9 Scud Missiles at the target.
+
+actor-player =
+   .description = Produces vehicles.
+
+actor-swsilo =
+   .description = Stores processed Resources.
+
+actor-swnuke =
+   .description = Generates power.
+
+actor-swnuk2 =
+   .description = Provides more power, cheaper than the.
+      standard Power Plant.
+
+actor-swhq =
+   .description = Provides radar and Air Strike support power.
+      Unlocks higher-tech units and buildings.
+      Requires power to operate.
+
+actor-swpower =
+   .description = Generates power.
+
+actor-swshelt =
+   .description = Generates power.
+
+actor-swpyle =
+   .description = Trains infantry.
+
+actor-swweap =
+   .description = Produces vehicles.
+
+actor-sweproc =
+   .description = Processes raw Minerals.
+      into useable resources.
+
+actor-swnurse =
+   .description = Generates passive income, requires animals to work.
+
+actor-swfood =
+   .description = Generates farm tiles, requires Harversters to work.
+
+actor-swstarport =
+   .description = Provides a dropzone.
+      for vehicle reinforcements.
+
+actor-swhand =
+   .description = Trains infantry.
+
+actor-swweapre =
+   .description = Produces vehicles.
+
+actor-swreproc =
+   .description = Processes raw Minerals.
+      into useable resources.
+
+actor-swnursere =
+   .description = Generates passive income, requires animals to work.
+
+actor-swafld =
+   .description = Provides a dropzone.
+      for vehicle reinforcements.
+
+actor-swpyler =
+   .description = Trains infantry.
+
+actor-swweapr =
+   .description = Produces vehicles.
+
+actor-swrproc =
+   .description = Processes raw Minerals.
+      into useable resources.
+
+actor-swnurser =
+   .description = Generates passive income, requires animals to work.
+
+actor-swstarportr =
+   .description = Provides a dropzone.
+      for vehicle reinforcements.
+
+actor-swweapd =
+   .description = Produces vehicles.
+
+actor-swdproc =
+   .description = Processes raw Minerals.
+      into useable resources.
+
+actor-swbarrdroid =
+   .description = Trains infantry.
+      Produces droids.
+
+actor-swnursed =
+   .description = Generates passive income, requires animals to work.
+
+actor-swfoodd =
+   .description = Generates passive income, requires animals to work.
+
+actor-swtrade =
+   .description = Provides a dropzone.
+      for vehicle reinforcements.
+
+actor-swproc =
+   .description = Processes raw Resources.
+      into useable resources.
+
+actor-swpyleh =
+   .description = Trains infantry.
+
+actor-swnurseh =
+   .description = Generates passive income, requires animals to work.
+
+actor-swfoodh =
+   .description = Generates passive income, requires animals to work.
+
+actor-swafldh =
+   .description = Provides a dropzone.
+      for vehicle reinforcements.
+
+actor-swfix =
+   .description = Repairs vehicles.
+
+actor-sweye =
+   .description = Provides radar and Orbital Ion Cannon support power.
+      Requires power to operate.
+
+actor-sweyee =
+   .description = Provides radar and Death Star support power.
+      Requires power to operate.
+
+actor-swtmpl =
+   .description = Provides Nuclear Strike support power.
+      Unlocks Hi-Tech.
+      Requires power to operate.
+
+actor-swdtmpl =
+   .description = Provides Nuclear Strike support power.
+      Unlocks Hi-Tech.
+      Requires power to operate.
+
+actor-swpalace =
+   .description = Provides Nuclear Strike support power.
+      Unlocks Hi-Tech.
+      Requires power to operate.
+
+actor-swsam =
+   .description = Anti-Aircraft base defense.
+      Strong vs Aircraft.
+      Cannot target Ground units.
+
+actor-swobli =
+   .description = Advanced base defense.
+      Requires power to operate.
+      Strong vs all Ground units.
+      Cannot target Aircraft.
+
+actor-swsite =
+   .description = All-purpose defensive structure.
+      Strong vs Infantry, Tanks.
+      Weak vs Aircraft.
+      Spawn Tusken Raiders.
+
+actor-swcloneplant =
+   .description = Clones produced infantry.
+
+actor-swindustrialplant =
+   .description = Reduces cost of vehicles by 25%.
+
+actor-swaddonupgrade1 =
+   .description = add 50% of armor.
+
+actor-swaddonupgrade2 =
+   .description = add Camo to Unit.
+
+actor-swaddonupgrade3 =
+   .description = Add 30% of Speed.
+
+actor-swe1 =
+   .description = General-purpose infantry.
+      Strong vs Infantry.
+      Weak vs Vehicles.
+
+actor-swe1inf =
+   .description = General-purpose infantry.
+      Strong vs Infantry.
+      Weak vs Vehicles.
+
+actor-swe1troop =
+   .description = General-purpose infantry.
+      Strong vs Infantry.
+      Weak vs Vehicles.
+
+actor-swe1dark =
+   .description = Heavy infantry.
+      Strong vs Infantry.
+      Weak vs Vehicles.
+
+actor-swe1clone =
+   .description = General-purpose infantry.
+      Strong vs Infantry.
+      Weak vs Vehicles.
+
+actor-swjumpjet =
+   .description = Airborne soldier.
+      Can attack aircraft.
+      Strong vs Infantry, Light armor.
+      Weak vs AA.
+
+actor-swe1droid =
+   .description = General-purpose infantry.
+      Strong vs Infantry.
+      Weak vs Vehicles.
+
+actor-swddroid =
+   .description = Heavy infantry.
+      Strong vs Ground.
+      Weak vs Aircraft, EMP weapons.
+
+actor-swdroidb2 =
+   .description = Cybernetic infantry unit.
+      Strong vs Infantry, Light armor.
+      Weak vs Vehicles, Aircraft.
+
+actor-swe1droidmob =
+   .description = A big horde of Droids.
+      Strong vs Infantry.
+      Weak vs Vehicles.
+
+actor-swjedi =
+   .description = Melee combat infantry.
+      Strong vs Ground Targets.
+      Weak vs Aircraft.
+
+actor-swsith =
+   .description = Melee combat infantry.
+      Strong vs Ground Targets.
+      Weak vs Aircraft.
+
+actor-swvice =
+   .description = Small recon droid.
+      Strong vs Infantry.
+      Weak vs Aircraft.
+
+actor-swe2 =
+   .description = Fast infantry armed with grenades.
+      Disables Vehicles.
+      Strong vs Buildings, Vehicle.
+
+actor-swe3 =
+   .description = Anti-tank/Anti-aircraft infantry.
+      Strong vs Tanks, Aircraft.
+      Weak vs Infantry.
+
+actor-swe3troop =
+   .description = Anti-tank/Anti-aircraft infantry.
+      Strong vs Tanks, Aircraft.
+      Weak vs Infantry.
+
+actor-swe3clone =
+   .description = Anti-tank/Anti-aircraft infantry.
+      Strong vs Tanks, Aircraft.
+      Weak vs Infantry.
+
+actor-swe3droid =
+   .description = Anti-tank/Anti-aircraft infantry.
+      Strong vs Tanks, Aircraft.
+      Weak vs Infantry.
+
+actor-swe4 =
+   .description = Advanced Anti-infantry unit.
+      Strong vs Infantry, Buildings.
+      Weak vs Tanks.
+
+actor-swrmbo =
+   .description = Elite sniper infantry unit.
+      Strong vs Infantry, Buildings.
+      Weak vs Vehicles.
+
+actor-swgreedo =
+   .description = Elite sniper infantry unit.
+      Strong vs Infantry, Buildings.
+      Weak vs Vehicles.
+
+actor-swbike =
+   .description = Fast scout and anti-infantry vehicle.
+      Strong vs Infantry.
+      Weak vs Tanks.
+
+actor-swbggy =
+   .description = Fast scout and anti-infantry vehicle.
+      Strong vs Infantry.
+      Weak vs Tanks.
+      Upgradable with Salvage Parts.
+
+actor-swjeep =
+   .description = Fast scout and anti-infantry vehicle.
+      Strong vs Infantry.
+      Weak vs Tanks.
+
+actor-swspider =
+   .description = Fast scout and anti-infantry vehicle.
+      Strong vs Infantry.
+      Weak vs Tanks.
+
+actor-swmtnk =
+   .description = Empire Main Battle Walker, with dual cannons.
+      Strong vs Vehicles.
+      Weak vs Infantry, Aircraft.
+
+actor-swhtnk =
+   .description = Heavily armored Empire Walker.
+      Can attack Aircraft.
+      Strong vs Everything.
+
+actor-swarty =
+   .description = Long-range artillery.
+      Strong vs Infantry, Vehicles and Buildings.
+
+actor-swarty2 =
+   .description = Upgraded Artillery, Twin Cannons and more Armored.
+      Strong vs Infantry, Vehicles and Buildings.
+
+actor-swarty3 =
+   .description = Long-range artillery.
+      Strong vs Infantry, Vehicles and Buildings.
+
+actor-swarty4 =
+   .description = Upgraded Artillery, Twin Cannons and more Armored.
+      Strong vs Infantry, Vehicles and Buildings.
+
+actor-swarty5 =
+   .description = Long-range artillery.
+      Strong vs Infantry, Vehicles and Buildings.
+
+actor-swarty6 =
+   .description = Upgraded Artillery, Twin Cannons and more Armored.
+      Strong vs Infantry, Vehicles and Buildings.
+
+actor-swltnk =
+   .description = Aircraft Gunship with AG Laser.
+      Strong vs Tanks, Walker Mech.
+      Weak vs Infantry.
+
+actor-swheli =
+   .description = Fast Aircraft with Light Lasers.
+      Strong vs Infantry, Light Vehicles and.
+      Aircraft.
+      Weak vs Tanks.
+
+actor-swdroidheli =
+   .description = Light Aircraft with Lasers.
+      Strong vs Infantry, Light Vehicles and.
+      Aircraft.
+      Weak vs Tanks.
+
+actor-swxwing =
+   .description = Fighter Aircraft with Medium Lasers and Missiles.
+      Strong vs Infantry, Light Vehicles and.
+      Aircraft.
+      Weak vs Tanks.
+
+actor-swstarfighter =
+   .description = Fighter Aircraft with Lasers.
+      Strong vs Infantry, Light Vehicles and.
+      Aircraft.
+      Weak vs Tanks.
+
+actor-swstarfighterj =
+   .description = Fighter Aircraft with Lasers.
+      Strong vs Infantry, Light Vehicles and.
+      Aircraft.
+      Weak vs Tanks.
+
+actor-swfalc =
+   .description = Hero Aircraft.
+      with Lasers, Heavy Lasers, etc.
+      Strong vs Infantry, Light Vehicles and.
+      Aircraft.
+      Weak vs Tanks.
+
+actor-sworca =
+   .description = Aircraft with Heavy Lasers.
+      Strong vs Buildings, Tanks.
+      Weak vs Infantry.
+
+actor-swtrifighter =
+   .description = Aircraft with Heavy Lasers.
+      Strong vs Buildings, Tanks.
+      Weak vs Infantry.
+
+actor-swywing =
+   .description = Bomber Aircraft.
+      Strong vs Buildings, Tanks, Infantry.
+      Weak vs AA Armament.
+
+actor-swharv =
+   .description = Collects Resources for processing.
+      Unarmed.
+
+actor-swiharv =
+   .description = Collects Ore and Gems for processing.
+      Unarmed.
+
+actor-swreharv =
+   .description = Collects Ore and Gems for processing.
+      Unarmed.
+
+actor-swrharv =
+   .description = Collects Ore and Gems for processing.
+      Unarmed.
+
+actor-swdharv =
+   .description = Collects Ore and Gems for processing.
+      Unarmed.
+
+actor-swcrawl =
+   .description = Tough infantry transport.
+      Strong vs Infantry, Light armor.
+      Weak vs Tanks, Aircraft.
+      Transport 30 droids.
+
+actor-sw2tnk =
+   .description = Droid Army Main Battle Tank.
+      Strong vs Vehicles, Infantry, Buildings.
+      Weak vs Aircraft.
+
+actor-swlaat =
+   .description = Fast Infantry Transport Aircraft.
+      Armed with AG Missiles.
+
+actor-swc17player =
+   .description = Heavy Transport Cruiser.
+      Comes loaded with a small army.
+      Armed with Interceptor X-Wings.
+
+actor-swstard =
+   .description = Heavy Cruiser.
+      Armed with Interceptor TIE Fighters.
+      and Heavy Lasers.
+
+actor-swexecutor =
+   .description = Heavy Cruiser.
+      Armed with Interceptor TIE Fighters.
+      and Heavy Lasers.
+
+actor-swaclamator =
+   .description = Heavy Cruiser.
+      Armed with Interceptor Starfighters.
+      and Heavy Lasers.
+
+actor-swdarty =
+   .description = Long-range missile artillery.
+      Strong vs Infantry, Vehicles and Aircraft.
+
+actor-swquad =
+   .description = Mobile unit with mounted quad Lasers.
+      Strong vs Infantry, Light armor, Aircraft.
+      Weak vs Tanks.
+
+actor-sw4tnk =
+   .description = Heavily armored Republic Tank.
+      Can attack Aircraft.
+      Strong vs Everything.
+
+actor-swaa =
+   .description = Heavily armored AA Tank.
+      Can attack Aircraft.
+      Strong vs Everything.
+
+actor-swjugger =
+   .description = Heavily armored Republic Assault Platform.
+      Can attack Aircraft.
+      Strong vs Everything.
+
+actor-sw3tnk =
+   .description = Rebels Main Battle Tank, with dual cannons.
+      Strong vs Vehicles.
+      Weak vs Infantry, Aircraft.
+
+actor-sw1tnkre =
+   .description = Rebels Main Battle Tank, with dual cannons.
+      Strong vs Vehicles.
+      Weak vs Infantry, Aircraft.
+
+actor-swftnk =
+   .description = Heavily armored flame-throwing vehicle.
+      Strong vs Infantry, Buildings and Vehicles.
+      Weak vs Tanks.
+
+actor-swpummel =
+   .description = Heavily armored anti Structure.
+      Strong vs Infantry, Buildings and Vehicles.
+      Weak vs Tanks.
+
+actor-swpummeld =
+   .description = Heavily armored anti Structure.
+      Strong vs Infantry, Buildings and Vehicles.
+      Weak vs Tanks.
+
+actor-swftnk2 =
+   .description = Heavily armored flame-throwing vehicle.
+      Strong vs Infantry, Buildings and Vehicles.
+      Weak vs Tanks.
+
+actor-swmsam =
+   .description = Light Hovertank, armed with Missiles.
+      Strong vs Vehicles.
+      Weak vs Heavy Tanks.
+
+actor-sw1tnk =
+   .description = Light Republic Walker.
+      Strong vs Infantry.
+      Weak vs Vehicles, Aircraft.
+
+actor-swtran =
+   .description = Fast Infantry Transport Helicopter.
+      Unarmed.
+
+actor-swbantha2 =
+   .description = Livestock animal.
+      Used to obtain money.
+      must be kept in a nursery.
+
+actor-swnerf =
+   .description = Livestock animal.
+      Used to obtain money.
+      must be kept in a nursery.
+
+actor-swexecc17 =
+   .description = Elite sniper infantry unit.
+      Strong vs Infantry, Buildings.
+      Weak vs Vehicles.
+
+actor-swptnk =
+   .description = Hutt Clan Main Battle Walker, with dual Laser cannons.
+      Strong vs Vehicles, Aircraft.
+      Weak vs Infantry.
+
+actor-swjabbaparty =
+   .description = Mobile bunker vehicle.
+      Passengers can fire from within.
+      Immobilized on heavy damage.
+
+actor-swupinfarmor1 =
+   .description = Increases durability of all troopers.
+
+actor-swupveharmor1 =
+   .description = Increases durability of all vehicles.
+
+actor-swupvehspeed1 =
+   .description = Increases speed of all vehicles.
+
+actor-swuplaser1 =
+   .description = Increases damage of all laser weapons.
+
+actor-swupphase2clone =
+   .description = Increases veterancy of all Clones, upgrades clones arsenal.
+
+actor-swupdroidarmor1 =
+   .description = Increases durability of all droids infantry, include R2 units.
+
+actor-swupstimulant =
+   .description = Increases passive income from Banthas, and Nerfs by 10% in the Nursery.
+
+actor-swupgenetics =
+   .description = Increases passive income from Banthas, and Nerfs by 25% in the Nursery.
+
+actor-swupcloning =
+   .description = Increases passive income from Banthas, and Nerfs by 50%  in the Nursery.
+
+actor-swupirrigation =
+   .description = Food Proc Center can make more farms.
+
+power-starwars-protonbomb =
+   .description = Proton Strike
+      Deploy an aerial proton bomb strike.
+      Burns buildings and infantry along a line.
+
+power-starwars-orbitalstrike =
+   .description = Proton Strike
+      Initiates an orbital strike from craft above.
+      Applies instant damage to a small area.
+
+power-starwars-deathstar =
+   .description = Proton Strike
+      Initiates a power power Death Star strike.
+      Applies instant damage to a small area.
+
+power-starwars-clonedrop =
+   .description = Clone Drop
+      Cargo planes drop a squad of infantry at the designated target.
 
 actor-aashinobi =
    .description = Stealth soldier.
@@ -3289,7 +5218,7 @@ template-airfield =
    .ra-allies = Allied Helipad
 
 template-shipyard =
-   .description = Produces and repairs ships.
+   .description = Produces and repairs naval vessels.
    .td-gdi = GDI Naval Yard
    .td-nod = Nod Sub Pen
    .ra-soviet = Soviet Sub Pen
@@ -3381,6 +5310,212 @@ promotions-flavor =
    .notification-03 = Your successes have granted you access to an exclusive field technology or ability of your choice.
    .notification-04 = You've been authorized to purchase a Promotional upgrade. Fight on to earn more points and expand your arsenal.
    .notification-05 = A Promotional upgrade is now available to you. Unlock new units and powers or augment your existing ones.
+
+actor-wc_h_farm =
+   .description = Provides 100 Food (Power).
+      Can be expanded to store twice as much Food.
+      Can store up to 500 resources.
+
+actor-wc_h_guard_tower =
+   .description = Basic Anti-Ground and Anti-Air Defense building.
+      Detector.
+
+actor-wc_h_barracks =
+   .description = Trains most human units.
+
+actor-wc_h_blacksmith =
+   .description = Upgrades Units.
+
+actor-wc_h_church =
+   .description = Trains Clerics.
+
+actor-wc_h_stable =
+   .description = Allows production of Knights.
+      Provides upgrades for Knights.
+
+actor-wc_h_tower =
+   .description = Trains Conjurers.
+      Provides Radar.
+
+actor-wc_h_stormwind =
+   .description = Provides Superweapon.
+
+actor-wc_o_barracks =
+   .description = Trains most orc units.
+
+actor-wc_o_damnedtemple =
+   .description = Trains Necrolytes.
+
+actor-wc_o_kennel =
+   .description = Allows production of Raiders.
+
+actor-wc_o_tower =
+   .description = Trains Warlocks.
+      Provides Radar.
+
+actor-wc_h_peasant =
+   .description = Harvester.
+
+actor-wc_h_mcv =
+   .description = Transforms into another Town Hall.
+
+actor-wc_h_footman =
+   .description = Basic Melee Infantry.
+      Slow but can take some damage.
+
+actor-wc_h_archer =
+   .description = Basic Ranged Infantry.
+      Not as durable as Footman.
+      Can attack air.
+
+actor-wc_h_knight =
+   .description = Mounted Infantry.
+      Fast and durable.
+
+actor-wc_h_catapult =
+   .description = Siege weapon.
+      Powerful against static targets.
+
+actor-wc_h_conjurer =
+   .description = Spell Caster.
+      Far seer.
+      Can summon Scorpions and Water Elementals.
+      Can attack Air.
+      Detector.
+
+actor-wc_h_cleric =
+   .description = Support Caster.
+      Heals nearby units.
+
+actor-wc_h_scorpion =
+   .description = Lesser Spawn.
+
+actor-wc_n_scorpion =
+   .description = Mighty Scorpion.
+
+actor-wc_h_waterelemental =
+   .description = Will make you wet your pants.
+      Literally cannot be hurt by fire.
+
+actor-wc_n_waterelemental =
+   .description = Will make you wet your pants.
+      Literally cannot be hurt by fire.
+
+actor-wc_n_fireelemental =
+   .description = Don't play with fire.
+      Extremely vulnerable against Water.
+      Cannot be hurt by fire.
+
+actor-wc_n_portal =
+   .description = Warps powerful units from elsewhere in Azeroth, or beyond.
+      Ported Units does not require food.
+      Can be only built once.
+
+actor-wc_goldmine =
+   .description = Send workers inside to provide passive income.
+      Miners progressively get experience and work more efficiently.
+
+actor-wc_o_peon =
+   .description = Harvester.
+
+actor-wc_o_grunt =
+   .description = Basic Melee Infantry.
+      Slow but can take some damage.
+
+actor-wc_o_spearman =
+   .description = Basic Ranged Infantry.
+      Not as durable as Grunt.
+      Can attack air.
+
+actor-wc_o_raider =
+   .description = Mounted Infantry.
+      Fast and durable.
+
+actor-wc_o_warlock =
+   .description = Spell Caster.
+      Farseer.
+      Can summon Spiders and Demons.
+      Can attack Air.
+      Detector.
+
+actor-wc_o_necrolyte =
+   .description = Support Caster.
+      Summons the Dead.
+      Casts Unholy Armor.
+
+actor-wc_n_spider =
+   .description = May cause heart attack to Arachnophobes.
+      Faster but more vulnerable than the Scorpion.
+
+actor-wc_o_skeleton_single =
+   .description = Restless Dead.
+
+actor-wc_o_demon =
+   .description = This beast comes from hell itself and therefore cannot be hurt by fire.
+
+actor-wc_n_demon =
+   .description = This beast comes from hell itself and therefore cannot be hurt by fire.
+
+actor-wc_o_skeleton_army =
+   .description = Big group of skeletons.
+      Regenerates fast.
+      Weak against Siege and Toxins.
+
+actor-wc_n_brigand =
+   .description = Deceitful bandit.
+      Faster than Footman.
+
+actor-wc_n_ogre =
+   .description = Large, tanky and stupid.
+      Powerful melee attack.
+
+actor-wc_n_slime =
+   .description = Slow Booger-like creature with jump attack that splits into more upon death.
+
+actor-wc_h_str_arrow =
+   .description = Increases Arrow Damage dealt by Archers and Guard Towers by 40%.
+
+actor-wc_h_str_arrow2 =
+   .description = Increases Arrow Damage by Archers and Guard Towers by further 40%.
+
+actor-wc_h_str_sword =
+   .description = Increases Sword Damage by 30%.
+
+actor-wc_h_str_sword2 =
+   .description = Increases Sword Damage by further 30%.
+
+actor-wc_h_str_shield =
+   .description = Increases Shield Resistance of all units by 25%.
+
+actor-wc_h_str_shield2 =
+   .description = Increases Shield Resistance of all units by further 25%.
+
+actor-wc_h_horses =
+   .description = Increases Horses speed by 20%.
+
+actor-wc_h_horses2 =
+   .description = Increases Horses speed by further 20%.
+
+actor-wc_o_str_spear =
+   .description = Increases Spear Damage dealt by Spearmen and Guard Towers by 35%.
+
+actor-wc_o_str_spear2 =
+   .description = Increases Spear Damage dealt by Spearmen and Guard Towers by further 35%.
+
+actor-wc_o_str_axe =
+   .description = Increases Axe Damage by 30%.
+
+actor-wc_o_str_axe2 =
+   .description = Increases Axe Damage by further 30%.
+
+actor-wc_o_wolves =
+   .description = Increases Wolves speed by 20%.
+
+actor-wc_o_wolves2 =
+   .description = Increases Wolves speed by further 20%.
+
+actor-wc_h_upgradefarm =
+   .description = Expands farm gaining 100 more food out of this farm.
 
 warcraft-lumbermill-human =
    .description = Human Lumbermill
@@ -3900,6 +6035,5299 @@ power-wc2-deathanddecay =
    .description = Death and Decay
       Rots and kills in a large area.
 
+actor-drpowr =
+   .description = Provides power for other structures.
+      Refines Ores and gems into credits.
+
+actor-drwater =
+   .description =
+      Refines Ores and gems into credits.
+
+actor-drwaterextract =
+   .description =
+      Provides Passive income.
+
+actor-drbarracks =
+   .description = Produces infantry.
+      Upgradeable.
+
+actor-driweap =
+   .description = Produces vehicles.
+      Upgradeable.
+
+actor-drmatrix =
+   .description = Activates a local ai, emulating Osiris.
+      Enables Shadowhand Robotic Units.
+
+actor-drcamera =
+   .description = Detection purpose Turret.
+
+actor-drwall1 =
+   .description = Blocks Units.
+
+actor-drwall2 =
+   .description = Blocks Units.
+
+actor-dre6 =
+   .description = Deploys into another Construction Yard.
+      Unarmed.
+
+actor-drhq =
+   .description = Builds structures and provides radar.
+      Upgradeable.
+
+actor-drhqt =
+   .description = Builds structures and provides radar.
+      Can deploy to unpack and fly.
+
+actor-pscdrihq2 =
+   .description = Upgrades the HQ for New Technology.
+
+actor-pscdrihq3 =
+   .description = Upgrades the HQ for New Technology.
+
+actor-pscdribarr =
+   .description = Upgrades the Barracks for New Infantry.
+
+actor-pscdriweap =
+   .description = Upgrades the Factory for New Vehicles.
+
+actor-drplastur1 =
+   .description = All-purpose defensive structure.
+      Strong vs Aircraft, Infantry.
+      Weak vs Tanks.
+
+actor-drneutronturret =
+   .description = Antiground defensive structure.
+      Strong vs Infantry, Tanks.
+      Weak vs Aircraft.
+
+actor-driaaturret =
+   .description = Antiground defensive structure.
+      Strong vs Infantry, Tanks.
+      Weak vs Aircraft.
+
+actor-drirep =
+   .description = Repairs vehicles.
+
+actor-drihosp =
+   .description = Repairs vehicles.
+
+actor-drguardian =
+   .description = Known as the Guardians of Order in the peaceful era.
+      before the Freedom Guard uprising, the basic.
+      Imperium infantry unit is armed with a laser rifle.
+      and wears a powered armour suit.
+      Type: Walker.
+      Speed: Slow.
+      Weapon: Laser Rifle.
+      Range: Short.
+      Armor: Light.
+
+actor-drbion =
+   .description = A fearless mechanical killer, the Bion is armoured like a walking tank.
+      This one-man cyborg death squad carries a massive plasma rifle,
+      and can fire at both ground and air units.
+      Type: Walker.
+      Speed: Slow.
+      Weapon: Plasma Rifle.
+      Range: Short.
+      Armor: Medium.
+
+actor-drext =
+   .description = These infantry units are equipped with antigravity generators.
+      which allow them to hover over water.
+      As infantry, they can also move over steep gradients that are generally inaccessible to hover vehicles.
+      Exterminators are armed with chemical grenades that dissolve metal.
+      They are very effective at attacking armour.
+      Type: Hover/Walker.
+      Speed: Medium.
+      Weapon: Chemical Grenade.
+      Range: Short.
+      Armor: Light.
+
+actor-drptnk =
+   .description = Backbone of the Imperium war effort, the Plasma Tank.
+      is tough and packs a formidable plasma cannon.
+      The Imperium overruns.
+      the enemy with endless waves of these ruinous machines.
+      Type: Hover.
+      Speed: Medium.
+      Weapon: Plasma Canon.
+      Range: Medium.
+      Armor: Heavy.
+
+actor-drsctnk =
+   .description = This fast moving hover vehicle is armed with a laser and.
+      is fairly effective against both infantry and armour.
+      However, it is not very sturdy,
+      and is used primarily for front line reconnaissance.
+      Type: Hover.
+      Speed: Medium.
+      Weapon: Laser Canon.
+      Range: Medium.
+      Armor: Medium.
+
+actor-drimpapc =
+   .description = Armed with a laser rifle, the Troop Transport can.
+      carry up to five infantry units at a time.
+      Type: Hover.
+      Speed: Medium.
+      Weapon: Laser Rifle.
+      Range: Short.
+      Armor: Medium.
+
+actor-dramp =
+   .description = The Imperium’s version of first aid, this lunatic.
+      cyborg fires darts into dying infantry units that boost the target’s.
+      health to full, but leave the unit poisoned so that its health will steadily decrease.
+      until the unit dies.
+      The Amper can also be used as an offensive weapon,
+      bringing slow death to enemy infantry.
+      Type: Walker.
+      Speed: Slow.
+      Weapon: Serum.
+      Range: Short.
+      Armor: Light.
+
+actor-drshreder =
+   .description = A huge, hovering nightmare, the Shredder tears through infantry like a runaway saw.
+      Although it has no ranged attack, it is fast, heavily armoured, and inflicts severe damage on any.
+      infantry units foolish enough to get near it.
+      Type: Hover.
+      Speed: Medium.
+      Weapon: Blades.
+      Range: Contact.
+      Armor: Medium.
+
+actor-drttnk =
+   .description = The Tachion Tank is the largest, most heavily armed beast on the battlefield.
+      It’s a ponderous mountain of havoc that has the last word in any argument.
+      When the enemy does manage to overpower one of these juggernaughts,
+      it has the ability to selfdestruct and take any nearby units down with it.
+      Type: Hover.
+      Speed: Medium.
+      Weapon: Tachion Cannon.
+      Range: Long.
+      Armor: Very Heavy.
+
+actor-drmad =
+   .description = The M.A.D.
+      fires bladed orbs at enemy air units.
+      Like the Freedom Guard Flak Jack, it cannot fire at ground units and.
+      should be defended against land attack.
+      Type: Hover.
+      Speed: Medium.
+      Weapon: Bladed Orbs.
+      Range: Long.
+      Armor: Light.
+
+actor-drscarab =
+   .description = This long range weapon fires a fragmenting projectile that breaks.
+      into numerous burning particles over its target.
+      This vehicle is slow and lightly.
+      armoured, but it can enclose itself in a retractable armoured exoskeleton when it gets in trouble.
+      The unit cannot fire while this armour is engaged, but can weather a considerable beating while waiting for reinforcements.
+      Type: Hover.
+      Speed: Slow.
+      Weapon: Artillery.
+      Range: Extrme.
+      Armor: Medium.
+
+actor-drhostage =
+   .description = This diabolical Imperium vehicle snatches infantry units, lobotomises.
+      them and converts them into Suicide Zombies.
+      Shortly after the infantry unit is run over and captured,
+      it is released, now under the player’s control and with a high-powered explosive strapped.
+      to its back.
+      Enjoy.
+      Type: Wheeled.
+      Speed: Medium.
+      Weapon: Vivisector.
+      Range: Contact.
+      Armor: Heavy.
+
+actor-drptnkfake =
+   .description = Dummy unit that is used to immitate real one.
+
+actor-drimpapcfake =
+   .description = Dummy unit that is used to immitate real one.
+
+actor-drshrederfake =
+   .description = Dummy unit that is used to immitate real one.
+
+actor-drttnkfake =
+   .description = Dummy unit that is used to immitate real one.
+
+actor-drmadfake =
+   .description = Dummy unit that is used to immitate real one.
+
+actor-drscarabfake =
+   .description = Dummy unit that is used to immitate real one.
+
+actor-drcyclone =
+   .description = The Cyclone embodies the core of the Imperium aerial force.
+      The unit is fairly rugged and can engage both air and ground units.
+      However, the Cyclone’s neutron cannon has a limited energy source and must.
+      recharge at the Re-Arming Deck.
+      Type: Flyer.
+      Speed: Fast.
+      Weapon: Neutron Cannon.
+      Range: Medium.
+      Armor: Medium.
+
+actor-drskyfort =
+   .description = Death from above.
+      This floating platform of wreckage houses the largest.
+      plasma cannon known to humanity.
+      It’s slow to recharge but makes a lasting impact.
+      Type: Flyer.
+      Speed: Slow.
+      Weapon: Pulse Plasma Cannon.
+      Range: Contact.
+      Armor: Heavy.
+
+actor-drdrone =
+   .description = This small unmanned drone is lightly armoured and has.
+      no offensive capability.
+      It is used solely to scout enemy targets.
+      Type: Flyer.
+      Speed: Medium.
+      Weapon: None.
+      Range: N/A.
+      Armor: Light.
+
+actor-pscdrfghq2 =
+   .description = Upgrades the HQ for New Technology.
+
+actor-pscdrfghq3 =
+   .description = Upgrades the HQ for New Technology.
+
+actor-pscdrfgbarr =
+   .description = Upgrades the Barracks for New Infantry.
+
+actor-pscdrfgweap =
+   .description = Upgrades the Factory for New Vehicles.
+
+actor-drlastur1 =
+   .description = All-purpose defensive structure.
+      Strong vs Aircraft, Tanks.
+      Weak vs Infantry.
+
+actor-drrailtur1 =
+   .description = All-purpose defensive structure.
+      Strong vs Aircraft, Tanks.
+      Weak vs Infantry.
+
+actor-draacannon1 =
+   .description = All-purpose defensive structure.
+      Strong vs Aircraft, Tanks.
+      Weak vs Infantry.
+
+actor-pscdrpplant2 =
+   .description = Upgrades the Barracks for New Infantry.
+
+actor-drfgrep =
+   .description = Repairs vehicles.
+
+actor-drfghosp =
+   .description = Repairs vehicles.
+
+actor-drraid =
+   .description = Stalwart of the Freedom Guard cause, the Raider is armed with a laser rifle.
+      Once the Phasing Facility is constructed, the Raider gains the ability to phase underground.
+      Type: Walker.
+      Speed: SLow.
+      Weapon: Laser Rifle.
+      Range: Short.
+      Armor: Light.
+
+actor-drscout =
+   .description = Used mainly for front line surveillance, the Scout is able to morph into.
+      inanimate objects such as trees and rocks to conceal her position.
+      The Scout is relatively fast but wears.
+      no body armour, so combat is not her specialty.
+      Type: Walker.
+      Speed: Medium.
+      Weapon: None.
+      Range: N/A.
+      Armor: Light.
+
+actor-drmercenary =
+   .description = Recruited from outside the Freedom Guard ranks, these hired guns carry a massive shoulder mounted rail gun.
+      Highly trained and ruthless, the Mercenary is tougher and deadlier than the Raider.
+      The Mercenary can phase.
+      once the Phasing Facility has been built.
+      Type: Walker.
+      Speed: SLow.
+      Weapon: Rail Gun.
+      Range: Short.
+      Armor: Medium.
+
+actor-drsnipe =
+   .description = With a long range electro-magnetic needle gun, the Sniper is lethal against infantry targets.
+      Like the Scout, the Sniper can morph into objects for camouflage.
+      Type: Walker.
+      Speed: Medium.
+      Weapon: Sniper Rail.
+      Range: Long.
+      Armor: Light.
+
+actor-drmartyr =
+   .description = Freedom Guard soldiers who are approaching their 25th birthday, and therefore certain death.
+      death, are outfitted with a high-powered explosive device and then sent screaming into the enemy to die for the cause.
+      Type: Walker.
+      Speed: Medium.
+      Weapon: Plasma Bomb.
+      Range: None.
+      Armor: Light.
+
+actor-drsabot =
+   .description = The Saboteur can damage any building to half its maximum health.
+      Type: Walker.
+      Speed: Slow.
+      Weapon: None.
+      Range: N/A.
+      Armor: Light.
+
+actor-drmech =
+   .description = The Mechanic functions similarly to the Field Medic.
+      repairing damaged vehicles in the field.
+      The Mechanic has no attack capability.
+      Type: Walker.
+      Speed: Slow.
+      Weapon: None.
+      Range: N/A.
+      Armor: Light.
+
+actor-drmedi =
+   .description = The Field Medic can restore the health of.
+      wounded infantry units and administer an antitoxin to.
+      counteract the effects of the Amper.
+      The Field Medic will.
+      automatically heal damaged units that are nearby or can.
+      be directed to heal a specific unit.
+      The Field Medic has no.
+      attack capability and does not wear body armour.
+      Type: Walker.
+      Speed: Slow.
+      Weapon: None.
+      Range: N/A.
+      Armor: Light.
+
+actor-drjebradec =
+   .description = Hero Infantry.
+      Strong vs Infantry, Vehicles.
+      Weak vs Aircraft.
+
+actor-drspid =
+   .description = This all terrain vehicle is the cornerstone of.
+      the Freedom Guard ground force.
+      Fast and inexpensive, it.
+      is able to tackle all types of terrain.
+      Armed with a double.
+      rail gun, it is fairly effective against armour but somewhat.
+      vulnerable to infantry.
+      Type: Special Wheeled.
+      Speed: Fast.
+      Weapon: Rail Gun.
+      Range: Medium.
+      Armor: Medium.
+
+actor-drstnk =
+   .description = The Skirmish Tank is the foundation upon.
+      which any successful military outfit is built.
+      Properly.
+      accessorised, the Skirmish Tank can make a splash at an.
+      intimate midnight raid, a small summer skirmish, or even.
+      a full-scale gala massacre.
+      Type: Tracked.
+      Speed: Medium.
+      Weapon: Missile Launcher.
+      Range: Medium.
+      Armor: Medium.
+
+actor-drrat =
+   .description = The Freedom Guard.
+      troop transport has the ability to camouflage itself to.
+      match the surrounding terrain.
+      The R.A.T.
+      is unarmed, but.
+      move over water, although at a considerably reduced speed.
+      Type: Wheeled.
+      Speed: Medium.
+      Weapon: None.
+      Range: N/A.
+      Armor: Medium.
+
+actor-drrtnk =
+   .description = The pinnacle of Freedom Guard.
+      armour, the Triple Rail uses hover technology stolen from.
+      the Imperium to allow movement over a broader range.
+      of terrain types.
+      Hauling three electro-magnetic projectile.
+      accelerator cannons, or rail guns, this tank is a savage.
+      consumer of Imperium armour.
+      Type: Hover.
+      Speed: Medium.
+      Weapon: Triple Rail Gun.
+      Range: Long.
+      Armor: Heavy.
+
+actor-drarty =
+   .description = The Hellstorm Artillery fires a longrange, area-effect explosive.
+      Its range is more than four.
+      times longer than any other unit.
+      A battery of Artillery is.
+      capable of single-handedly destroying an enemy base, but,
+      the vehicle is slow and lightly armoured, so undefended.
+      Artillery is fodder in close combat.
+      Type: Tracked.
+      Speed: Slow.
+      Weapon: Artillery.
+      Range: Extreme.
+      Armor: Medium.
+
+actor-drtnkh =
+   .description = This quick, deadly vehicle emits a massive.
+      short range electric discharge.
+      The Tank Hunter is.
+      devastating in close combat but has no ranged weapon.
+      and is vulnerable in situations where it cannot close on its prey.
+      Type: Tracked.
+      Speed: Medium.
+      Weapon: Electrical Discharge.
+      Range: Short.
+      Armor: Light.
+
+actor-drphasetnk =
+   .description = Laser Twin Cannon Tank.
+      Powerful Firepower.
+      Strong vs Ground Units.
+      Weak vs Aircraft.
+      Can Phase.
+
+actor-drjack =
+   .description = A revamped Construction Rig outfitted with two.
+      shoulder mounted particle launchers.
+      The Flak Jack.
+      salvages metal from the battlefield and converts it into.
+      microscopic metallic particles that it fires in clouds which.
+      cause sustained damage to air units.
+      The unit has no.
+      defensive capability against ground attack, and should be.
+      protected at all times.
+      Type: Walker.
+      Speed: Slow.
+      Weapon: Chaff.
+      Range: Long.
+      Armor: Light.
+
+actor-drquake =
+   .description = A single-use unit that creates an immense.
+      earth wave that travels across the map, causing severe.
+      damage to everything in its wake.
+      The Shock Wave unit.
+      embeds in the ground and detonates, self-destructing.
+      in the discharge.
+      The Shock Wave is expensive and slow to.
+      build but well worth the wait.
+      Build Limit: 1.
+      Type: Tracked.
+      Speed: Slow.
+      Weapon: Seismic Wave.
+      Range: Special.
+      Armor: Medium.
+
+actor-drskybike =
+   .description = Using a modified Spider Bike chassis, the.
+      Freedom Guard were able to produce cheap, fast aerial.
+      units which could attack enemy ground troops and other.
+      flyers.
+      Although quicker than the Imperium Cyclone, the.
+      Sky Bike is not as heavily armoured and is outgunned in.
+      even combat.
+      The speed of the Sky Bike, however, allows.
+      it to dictate the circumstance of conflict.
+      This unit fires.
+      high-velocity mini-missiles and, like the Outrider, must rearm at the Re-Arming Deck.
+      Type: Flyer.
+      Speed: Fast.
+      Weapon: Mini Missiles.
+      Range: Short.
+      Armor: Light.
+
+actor-droutrider =
+   .description =
+      This ground attack aerial unit is slower and less manueverable than the Sky Bike, but considerably tougher and fires air to ground missiles.
+      Deadly effective against Imperium armour, it cannot engage other air units and should be escorted by air defence units.
+      The Outrider has limited ammunition and must re-arm at the Re-Arming Deck.
+      Type: Flyer.
+      Speed: Fast.
+      Weapon: Guided Missile.
+      Range: Long.
+      Armor: Heavy.
+
+actor-drfgmcv =
+   .description = Deploys into another Construction Yard.
+      Unarmed.
+
+actor-drfanboat =
+   .description = Light scout & support ship.
+      Can detect submarines.
+
+actor-drreaper =
+   .description = Shock Sniper Infantry.
+      Strong vs Light Vehicles and Creatures.
+      Weak vs Infantry.
+
+actor-drgemenis1 =
+   .description = Fast, light tank.
+      Strong vs Vehicles, Tanks.
+      Weak vs Infantry, Aircraft.
+
+actor-drfury =
+   .description = Speedy, heavy mech.
+      Powerful Firepower.
+      Strong vs Ground Units.
+      Weak vs Aircraft.
+
+actor-drshadowblade =
+   .description = Sadistic Anti Infantry drones, armed with Blades.
+      Strong vs Infantry.
+      Weak vs Vehicles, Aircraft.
+
+actor-drhades =
+   .description = Helicopter Gunship with Chainguns.
+      Strong vs Infantry, Light Vehicles and Aircraft.
+      Weak vs Tanks.
+
+actor-drempdisable =
+   .description = Base Disable Unit.
+      Place it in the enemy's central building.
+      Weak vs AA.
+
+actor-pscbiocom2 =
+   .description = Upgrades the Barracks for New Infantry.
+
+actor-drtrainer =
+   .description = Animal Control Infantry.
+      Strong vs Creatures.
+      Weak vs Vehicles, Infantry.
+      Can Control Dinosaurs, Grendels, Gants and Other Creatures.
+
+actor-drgant =
+   .description = Melee Attack Unit.
+      Strong vs Infantry.
+      Weak vs Aircraft, Heavy Vehicles.
+      Requires Control.
+
+actor-drgrendel =
+   .description = Electric Attack Unit.
+      Strong vs Infantry.
+      Weak vs Aircraft, Heavy Vehicles.
+      Requires Control.
+
+actor-drgrider =
+   .description = Animal Control Unit.
+      Electric Attack Unit.
+      Strong vs Infantry.
+      Weak vs Aircraft, Heavy Vehicles.
+
+actor-drrat2 =
+   .description = Fast scout vehicle, armed with.
+      Light Laser.
+      Strong vs Infantry.
+      Weak vs Vehicles, Aircraft.
+
+actor-dravenger =
+   .description = Helicopter Gunship with Chainguns.
+      Strong vs Infantry, Light Vehicles and Aircraft.
+      Weak vs Tanks.
+
+actor-drtpower =
+   .description = Provides power for other structures.
+
+actor-drtflamer =
+   .description = All-purpose defensive structure.
+      Strong vs Aircraft, Tanks.
+      Weak vs Infantry.
+
+actor-drtsentry =
+   .description = All-purpose defensive structure.
+      Strong vs Aircraft, Tanks.
+      Weak vs Infantry.
+
+actor-drtmissile =
+   .description = Antiground defensive structure.
+      Strong vs Infantry, Tanks.
+      Weak vs Aircraft.
+
+actor-drshok =
+   .description = General-purpose infantry.
+      Strong vs Infantry.
+      Weak vs Vehicles.
+
+actor-drbiocontrol =
+   .description = Anti-Ground infantry.
+      Strong vs Infantry, Light Vehicles.
+      Weak vs Fast Units.
+      Can Attack Aircraft.
+
+actor-drreaper2 =
+   .description = Anti-Ground infantry.
+      Strong vs Infantry, Light Vehicles.
+      Weak vs Fast Units.
+      Can Attack Aircraft.
+
+actor-drphasemine =
+   .description = Speedy, heavy mech.
+      Powerful Firepower.
+      Strong vs Ground Units.
+      Weak vs Aircraft.
+
+actor-drntnk =
+   .description = Fast, light tank.
+      Strong vs Vehicles, Tanks.
+      Weak vs Infantry, Aircraft.
+
+actor-drtscout =
+   .description = Speedy, heavy mech.
+      Powerful Firepower.
+      Strong vs Ground Units.
+      Weak vs Aircraft.
+
+actor-drticktank =
+   .description = Speedy, heavy mech.
+      Powerful Firepower.
+      Strong vs Ground Units.
+      Weak vs Aircraft.
+
+actor-drvortextank =
+   .description = Speedy, heavy tank.
+      Powerful Firepower.
+      Strong vs Ground Units.
+      Weak vs Aircraft.
+      When deploy can attack with a Black Hole.
+
+actor-drflamedeath =
+   .description = Speedy, heavy mech.
+      Powerful Firepower.
+      Strong vs Ground Units.
+      Weak vs Aircraft.
+
+actor-drsonic =
+   .description = Speedy, heavy mech.
+      Powerful Firepower.
+      Strong vs Ground Units.
+      Weak vs Aircraft.
+
+actor-drterrep2 =
+   .description = Deploys into another Construction Yard.
+      Armed With Lasers.
+      Better than an Construction Biot.
+      Special for Large Travels.
+
+actor-drterpower =
+   .description = Provides power for other structures.
+
+actor-pscdrterhq2 =
+   .description = Upgrades the HQ for New Technology.
+
+actor-pscdrterhq3 =
+   .description = Upgrades the HQ for New Technology.
+
+actor-drterrep =
+   .description = Repairs vehicles.
+
+actor-pscdrterrep =
+   .description = Upgrades the Repair Station for Support New Vehicles.
+
+actor-drterhosp =
+   .description = Heals infantry.
+
+actor-drterrturret =
+   .description = All-purpose defensive structure.
+      Strong vs Aircraft, Infantry.
+      Weak vs Tanks.
+
+actor-dririft =
+   .description = Provides the Black Hole support power.
+      Requires power to operate.
+      Only 1 can be built.
+
+actor-driportal =
+   .description = Allows for units to be teleported across the map.
+      Requires power to operate.
+      Only 1 can be built.
+
+actor-drpplant =
+   .description = Enables Freedom Guard Phase Technology.
+      Allows Infantry to phase into the ground for ambushes.
+      Allows the phase transport to be produced.
+
+actor-drrasta =
+   .description = The Low Rank Infantry.
+      The Second Veterancy adquire Grenade Launcher.
+      The Next Veterancy adquire Better Laser Gun.
+      The Ultimate Veterancy transform into Jail Breaker.
+      The Jail Breaker with veterancy can sabotage and attach C4 in vehicles.
+      Type: Infantry.
+      Speed: Slow.
+      Weapon: Small Laser, Gremades, C4s.
+      Range: Medium.
+      Armor: None.
+
+actor-drjailbrk =
+   .description = General-purpose infantry.
+      Strong vs Infantry.
+      Weak vs Vehicles.
+
+actor-drfatso =
+   .description = A heavy guy, armed with rockets and machinegun.
+      You can deploy it and convert it in a Artillery.
+      Type: Infantry.
+      Speed: Slow.
+      Weapon: Machinegun Laser, Rocket Artillery.
+      Range: Long (deployed) Short (undeployed).
+      Armor: Heavy (deployed) None (undeployed).
+
+actor-drskater =
+   .description = The Skater is a Scout Infantry.
+      The Fist Veterancy adquires Camouflage.
+      The Second Veterancy adquire Spy Habilities.
+      Type: Hover.
+      Speed: Medium.
+      Weapon: Small Laser.
+      Range: Medium.
+      Armor: Light.
+
+actor-drttransport =
+   .description = Fast scout vehicle, armed with.
+      Light Laser.
+      Strong vs Infantry.
+      Weak vs Vehicles, Aircraft.
+
+actor-drtanker =
+   .description = Collects Tiberium for processing.
+      Unarmed.
+
+actor-drtarty =
+   .description = Long-range artillery.
+      Strong vs Infantry, Vehicles and Buildings.
+
+actor-drmtnk =
+   .description = Speedy, heavy mech.
+      Powerful Firepower.
+      Strong vs Ground Units.
+      Weak vs Aircraft.
+
+actor-drspiner =
+   .description = Helicopter.
+      Type: Flyer.
+      Speed: Fast.
+      Weapon: Guided Missile.
+      Range: Long.
+      Armor: Heavy.
+
+actor-drtertran =
+   .description = Fast Infantry Transport Helicopter.
+      Unarmed.
+
+actor-drghazi =
+   .description = Light scout & support ship.
+      Can detect submarines.
+
+actor-drphunisher =
+   .description = Light scout & support ship.
+      Can detect submarines.
+
+actor-drapower =
+   .description = Provides power for other structures.
+      Refines Ores and gems into credits.
+
+actor-draplastur =
+   .description = All-purpose defensive structure.
+      Strong vs Aircraft, Infantry.
+      Weak vs Tanks.
+
+actor-drbattery =
+   .description = Antiground defensive structure.
+      Strong vs Infantry, Tanks.
+      Weak vs Aircraft.
+
+actor-drramnoth =
+   .description = General-purpose infantry.
+      Strong vs Infantry.
+      Weak vs Vehicles.
+
+actor-drmamnoth =
+   .description = General-purpose infantry.
+      Strong vs Infantry.
+      Weak vs Vehicles.
+
+actor-drrelmnoth =
+   .description = General-purpose infantry.
+      Strong vs Infantry.
+      Weak vs Vehicles.
+
+actor-drsalamander =
+   .description = Melee Attack Unit.
+      Strong vs Infantry.
+      Weak vs Aircraft, Heavy Vehicles.
+
+actor-drassimilator =
+   .description = Melee Attack Unit.
+      Strong vs Infantry.
+      Weak vs Aircraft, Heavy Vehicles.
+
+actor-drgather =
+   .description = Collects Tiberium for processing.
+      Unarmed.
+
+actor-drdrednaut =
+   .description = Fast, light tank.
+      Strong vs Vehicles, Tanks.
+      Weak vs Infantry, Aircraft.
+
+actor-drmole =
+   .description = Speedy, heavy mech.
+      Powerful Firepower.
+      Strong vs Ground Units.
+      Weak vs Aircraft.
+
+actor-drarunner =
+   .description = Speedy, heavy mech.
+      Powerful Firepower.
+      Strong vs Ground Units.
+      Weak vs Aircraft.
+
+actor-drhealer =
+   .description = Fast, light tank.
+      Strong vs Vehicles, Tanks.
+      Weak vs Infantry, Aircraft.
+
+actor-drrouter =
+   .description = Speedy, medium mech.
+      Powerful Firepower.
+      Strong vs Ground Units.
+      Weak vs Aircraft.
+
+actor-drmecha =
+   .description = Speedy, medium mech.
+      Powerful Firepower.
+      Strong vs Ground Units.
+      Weak vs Aircraft.
+
+actor-drlynoth =
+   .description = Helicopter Gunship with Chainguns.
+      Strong vs Infantry, Light Vehicles and.
+      Aircraft.
+      Weak vs Tanks.
+
+actor-drcarrier =
+   .description = Heavy Bomber Aircraft.
+      Strong vs Ground Units and Buildings.
+      Weak vs AA Aircraft.
+
+actor-drblazer =
+   .description = Helicopter Gunship with Chainguns.
+      Strong vs Infantry, Light Vehicles and.
+      Aircraft.
+      Weak vs Tanks.
+
+actor-drbomber =
+   .description = Helicopter Gunship with Missiles.
+      Strong vs Infantry, Light Vehicles and.
+      Aircraft.
+      Weak vs Tanks.
+
+actor-drthunder =
+   .description = Helicopter Gunship with Quake Weapons.
+      Strong vs Infantry, Light Vehicles and.
+      Aircraft.
+      Weak vs Tanks.
+
+actor-drmissboat =
+   .description = Fast, light tank.
+      Strong vs Vehicles, Tanks.
+      Weak vs Infantry, Aircraft.
+
+actor-drpboat =
+   .description = Fast, light tank.
+      Strong vs Vehicles, Tanks.
+      Weak vs Infantry, Aircraft.
+
+actor-drwaterextract =
+   .description = Provides additional funds.
+
+actor-drcivplant =
+   .description = Provides additional funds.
+
+actor-drarmciv =
+   .description = General-purpose infantry.
+      Strong vs Infantry.
+      Weak vs Vehicles.
+
+actor-drzombie =
+   .description = General-purpose infantry.
+      Strong vs Infantry.
+      Weak vs Vehicles.
+
+actor-drsatanclawz =
+   .description = General-purpose infantry.
+      Strong vs Infantry.
+      Weak vs Vehicles.
+
+power-blackhole =
+   .description = Black Hole
+      Opens a a rift in space that destroys all nearby units.
+
+actor-stategicpoint =
+   .description = Provides additional funds.
+
+actor-pscwh40kstrategy1 =
+   .description = Increases Health and Increases Cash.
+
+actor-pscwh40kstrategy2 =
+   .description = Increases Health and Increases Cash.
+      Adds a defensive Weapon.
+
+actor-pscwh40kstrategy3 =
+   .description = Increases Health and Increases Cash.
+      Upgrades the Previous Weapon.
+
+actor-wh40kstrategy =
+   .description = Provides Passive income.
+      Provides Base Area .
+      Attacks when is Upgraded.
+      Upgradeable with Addons.
+
+actor-wh40kstrategyo =
+   .description = Provides Passive income.
+      Provides Base Area .
+      Attacks when is Upgraded.
+      Upgradeable with Addons.
+
+actor-wh40kstrategym =
+   .description = Provides Passive income.
+      Provides Base Area .
+      Attacks when is Upgraded.
+      Upgradeable with Addons.
+
+actor-wh40kstrategyc =
+   .description = Provides Passive income.
+      Provides Base Area .
+      Attacks when is Upgraded.
+      Upgradeable with Addons.
+
+actor-wh40kstrategye =
+   .description = Provides Passive income.
+      Provides Base Area .
+      Attacks when is Upgraded.
+      Upgradeable with Addons.
+
+actor-wh40kstrategyt =
+   .description = Provides Passive income.
+      Provides Base Area .
+      Attacks when is Upgraded.
+      Upgradeable with Addons.
+
+actor-wh40kmcv =
+   .description = Deploys into another Field Command.
+      Unarmed.
+
+actor-wh40kfieldcommand =
+   .description = Builds structures.
+
+actor-wh40kpower =
+   .description = Provides power for other structures.
+
+actor-wh40kbarr =
+   .description = Trains infantry.
+
+actor-wh40karmory =
+   .description = Provides access to advanced Guard technologies.
+
+actor-wh40kweap =
+   .description = Produces vehicles.
+
+actor-wh40kheavybolt =
+   .description = All-purpose defensive structure.
+      Strong vs Aircraft, Infantry.
+      Weak vs Vehicles.
+
+actor-wh40kheavybolt2 =
+   .description = All-purpose defensive structure.
+      Strong vs Aircraft, Infantry.
+      Weak vs Vehicles.
+
+actor-wh40kproc =
+   .description = Refines Ore and Gems.
+      into credits.
+
+actor-wh40kmars =
+   .description = Produces vehicles, 25% faster.
+
+actor-wh40kuphonor =
+   .description = Increases Guardsmen health by 10%.
+
+actor-wh40kupguardarmor =
+   .description = Increases Guardsmens health by 15%.
+
+actor-wh40kupguardemperor =
+   .description = Increases Guardsmens health by a further 15%.
+
+actor-wh40kupsateliterange =
+   .description = Increases Guardsmen range by 20%.
+
+actor-wh40kupweapspecialization =
+   .description = Increases Infantry firepower by a further 15%.
+
+actor-wh40kuppoweredbayonets =
+   .description = Increases Ogryn firepower by 15%.
+
+actor-wh40kupbattlecommand =
+   .description = Increases Field Command to 25% of health, Unlock new Tech.
+
+actor-wh40kupregimentalcommand =
+   .description = Increases Field Command to 25% of health, Unlock new Tech.
+
+actor-wh40kupogrynquarters =
+   .description = Unlock Ogryns.
+
+actor-wh40kupkasrkinquarters =
+   .description = Unlock Ogryns.
+
+actor-wh40kupsentineldepot =
+   .description = Unlock Sentinels.
+
+actor-wh40kuphellhounddepot =
+   .description = Unlock Hellhounds.
+
+actor-wh40kupbasiliskdepot =
+   .description = Unlock Basilisks.
+
+actor-wh40kupmarauderdepot =
+   .description = Unlock Marauder Bombers.
+
+actor-wh40kuplemanrussdepot =
+   .description = Unlock Leman Russ.
+
+actor-wh40kupfullscalewar =
+   .description = Unlock Leman Russ and Baneblade Tanks.
+
+actor-wh40kupenergy1 =
+   .description = Increases Energy of Generators.
+
+actor-wh40kupenergy2 =
+   .description = Increases Energy of Generators.
+
+actor-wh40kupgenenhancement =
+   .description = Increases Kasrkin to 33% of speed.
+
+actor-wh40kupkasrkinarmor =
+   .description = Increases Kasrkin to 25% of health.
+
+actor-wh40kguard =
+   .description = Imperial Guard Main Infantry.
+
+actor-wh40kgrenade =
+   .description = Imperial Guard Main Infantry.
+
+actor-wh40kguardplasma =
+   .description = Imperial Guard Main Infantry.
+
+actor-wh40kcommisair =
+   .description = Imperial Guard Main Infantry.
+
+actor-wh40kogryn =
+   .description = General-purpose Infantry.
+      Strong vs Infantry.
+      Weak vs Vehicles.
+
+actor-wh40kbigguns =
+   .description = General-purpose Infantry.
+      Strong vs Infantry, Light Vehicles.
+      Weak vs Tanks, Aircraft.
+      Can deploy for increased firepower.
+
+actor-wh40kbigguns2 =
+   .description = General-purpose Infantry.
+      Strong vs Infantry, Light Vehicles.
+      Weak vs Tanks, Aircraft.
+      Can deploy for increased firepower.
+
+actor-wh40kbigguns3 =
+   .description = General-purpose Infantry.
+      Strong vs Infantry, Light Vehicles.
+      Weak vs Tanks, Aircraft.
+      Can deploy for increased firepower.
+
+actor-wh40kkars =
+   .description = General-purpose Infantry.
+      Strong vs Infantry.
+      Weak vs Vehicles.
+
+actor-wh40kkarsgrenade =
+   .description = General-purpose Infantry.
+      Strong vs Infantry.
+      Weak vs Vehicles.
+
+actor-wh40kkarsplasma =
+   .description = General-purpose Infantry.
+      Strong vs Infantry.
+      Weak vs Vehicles.
+
+actor-wh40ktechpriest =
+   .description = General-purpose Infantry.
+      Strong vs Infantry.
+      Weak vs Vehicles.
+
+actor-wh40kpsyker =
+   .description = Psychic Infantry.
+      Can control enemy units.
+      Can deploy to unleash a psychic blast.
+      Weak vs Aircraft, Robots.
+
+actor-wh40kpriest =
+   .description = Support Infantry.
+      Strong vs Infantry.
+      Weak vs Vehicles.
+      Can Upgrade Firepower of Nearby Infantry.
+
+actor-wh40kcommandsquada =
+   .description = Elite Infantry Squad.
+      Strong vs Infantry.
+      Weak vs Vehicles, Aircraft.
+      Contain a Commander, Commissar, Psyker and Priest.
+
+actor-wh40kcommandsquad =
+   .description = Support Infantry.
+      Strong vs Infantry.
+      Weak vs Vehicles.
+      Can Upgrade Firepower of Nearby Infantry.
+
+actor-wh40kguardsquad =
+   .description = Basic Infantry Squad.
+      Equivalent to 8 guardsmens.
+      Squad Nembers respawn after dead.
+
+actor-wh40kguardsargent =
+   .description = Imperial Guard Main Sergeant.
+
+actor-wh40kkarssargent =
+   .description = Imperial Guard Main Sergeant.
+
+actor-wh40kogrynsargent =
+   .description = Imperial Guard Main Sergeant.
+
+actor-wh40kleman =
+   .description = Heavily armored Imperial Guard Tank.
+      Can attack Aircraft.
+      Strong vs Everything.
+
+actor-wh40kchime =
+   .description = Heavily armored Imperial Guard Transport.
+      Can attack Aircraft.
+      Strong vs Infantry.
+
+actor-wh40khellhound =
+   .description = Heavily armored Imperial Guard Flame Tank.
+      Strong vs Infantry.
+
+actor-wh40kbanewolf =
+   .description = Radiation Tank.
+      Strong vs Infantry.
+
+actor-wh40kharv =
+   .description = Collects Tiberium for processing.
+      Unarmed.
+
+actor-wh40kbasilisk =
+   .description = Long-range artillery.
+      Strong vs Infantry, Vehicles and Buildings.
+
+actor-wh40ksentinel =
+   .description = Imperial Guard Main Battle Walker, with las cannons.
+      Strong vs Vehicles.
+      Weak vs Infantry, Aircraft.
+
+actor-wh40kmaurader =
+   .description = Aircraft Gunship with las Guns and MGs.
+      Strong vs All.
+
+actor-wh40kbaneblade =
+   .description = The Ultimate Imperial Guard Tank.
+      Can attack Aircraft.
+      Strong vs Everything.
+
+actor-wh40krankguards =
+   .description = A group of Regimental Guards spawn at your base.
+
+actor-wh40krankcommisar =
+   .description = A Regimental Commissar spawn at your base.
+
+actor-wh40kranktechpriest =
+   .description = A Expert Techpriest spawn at your base.
+
+actor-wh40krankpsyker =
+   .description = A Sanctioned Psyker spawn at your base.
+
+actor-wh40krankkars =
+   .description = A group of Veteran Kasrkin spawn at your base.
+
+actor-wh40krankogryn =
+   .description = A group of Bone'ead Ogryn spawn at your base.
+
+actor-wh40kranksentinel =
+   .description = A Sentinel spawn at your base.
+
+actor-wh40kstronghold =
+   .description = Builds structures.
+
+actor-wh40kbarrm =
+   .description = Trains infantry.
+
+actor-wh40ksacredart =
+   .description = Trains infantry.
+
+actor-wh40karmorym =
+   .description = Provides access to advanced USA technologies.
+
+actor-wh40korbitalrelay =
+   .description = Provides Deep Strike Support Powers.
+      Unlock Variants introduce the next units.
+      Rocket Marines = Adds Rocket Marines in the Strike.
+      Flamer Marines = Adds Flamer Marines in the Strike.
+      Bolter Marines = Adds Bolter Marines in the Strike.
+      Plasma Marines = Adds Plasma Marines in the Strike.
+      Dreadnought = Replace Marines with a single Dreadnought in the Strike.
+      Hellfire Dreadnought = Replace Marines with a Hellfire Dreadnought in the Strike.
+
+actor-wh40kpowerm =
+   .description = Provides power for other structures.
+
+actor-wh40kmachinecult =
+   .description = Produces vehicles.
+
+actor-wh40kprocm =
+   .description = Refines Ore and Gems.
+      into credits.
+
+actor-wh40kbolterturret =
+   .description = All-purpose defensive structure.
+      Strong vs Aircraft, Infantry.
+      Weak vs Vehicles.
+
+actor-wh40kbolterturret2 =
+   .description = All-purpose defensive structure.
+      Strong vs Aircraft, Infantry.
+      Weak vs Vehicles.
+
+actor-wh40kmarine =
+   .description = General-purpose Infantry.
+      Strong vs Infantry.
+      Weak vs Vehicles.
+
+actor-wh40kmarineflamer =
+   .description = Short Range Infantry.
+      Strong vs Infantry.
+      Weak vs Vehicles.
+
+actor-wh40kmarineplasma =
+   .description = Armed with Anti Personel Pistol.
+      Strong vs Heavy Infantry.
+      Weak vs Vehicles.
+
+actor-wh40kmarinerocket =
+   .description = AntiTank-purpose Infantry.
+      Strong vs Vehicles.
+      Weak vs Infantry.
+
+actor-wh40kmarinebolter =
+   .description = Armed with Anti Infantry Heavy gun.
+      Strong vs Infantry.
+      Weak vs Vehicles.
+
+actor-wh40kscout =
+   .description = Scout-purpose Infantry.
+      Strong vs Infantry.
+      Weak vs Vehicles.
+
+actor-wh40kscoutflamer =
+   .description = Short Range Infantry.
+      Strong vs Infantry.
+      Weak vs Vehicles.
+
+actor-wh40kscoutplasma =
+   .description = Armed with Anti Personel Pistol.
+      Strong vs Heavy Infantry.
+      Weak vs Vehicles.
+
+actor-wh40kscoutsniper =
+   .description = Armed Long Ranged Weapon.
+      Strong vs Infantry.
+      Weak vs Vehicles.
+
+actor-wh40kforcecmd =
+   .description = Combat Commander.
+      Melee Infantry.
+      Strong vs Infantry.
+      Weak vs Vehicles.
+
+actor-wh40kchaptain =
+   .description = Combat Commander.
+      Melee Infantry.
+      Strong vs Infantry.
+      Weak vs Vehicle.
+
+actor-wh40klibrarian =
+   .description = Combat Commander.
+      Melee Infantry.
+      Strong vs Infantry.
+      Weak vs Vehicle.
+
+actor-wh40kterminator1 =
+   .description = Heavy Ranged Marine.
+      Can Use Teleporter.
+      Strong vs Infantry.
+      Weak vs Vehicles.
+
+actor-wh40kterminator2 =
+   .description = Heavy Melee Marine.
+      Can Use Teleporter.
+      Strong vs Infantry.
+      Weak vs Vehicles.
+
+actor-wh40kterminator3 =
+   .description = Armed with a Better Gun.
+      Can Use Teleporter.
+      Strong vs Infantry.
+      Weak vs Vehicles.
+
+actor-wh40kterminator4 =
+   .description = Armed with Heavy Flamer.
+      Can Use Teleporter.
+      Strong vs Infantry.
+      Weak vs Vehicles.
+
+actor-wh40kservitor =
+   .description = Support-purpose Infantry.
+      Can Repair Buildings, Vehicles.
+
+actor-wh40kapotecary =
+   .description = Support Medic Unit.
+      Can Attack.
+      Strong vs Infantry.
+      Weak vs Vehicles.
+
+actor-wh40kgrayknight =
+   .description = Elite Inquisition Infantry.
+      Fast Melee Infantry.
+      Strong vs Infantry.
+      Weak vs Vehicles.
+
+actor-wh40kmarinesargent =
+   .description = Imperial Guard Main Sergeant.
+
+actor-wh40kmcvm =
+   .description = Deploys into another Field Command.
+      Unarmed.
+
+actor-wh40kpredator =
+   .description = Heavily armored Marines Tank.
+      Can attack Aircraft.
+      Strong vs Everything.
+      Upgradeable with Lascannon Addons.
+
+actor-pscwh40kpredator1 =
+   .description = Replaces the Cannon with a Twin Lascannon.
+      Strong vs Vehicles.
+      Weak vs Infantry.
+
+actor-pscwh40kpredator2 =
+   .description = Replaces side Bolters with Lascannons.
+      Strong vs Vehicles.
+      Weak vs Infantry.
+
+actor-wh40krhino =
+   .description = Heavy Transport.
+      Can attack Infantry with Smoke Launcher.
+
+actor-wh40kwhirl =
+   .description = Heavy Artillery Missile Tank.
+      Can attack Aircraft.
+      Strong vs Everything.
+
+actor-wh40klandspeed =
+   .description = Light Scout Marine Vehicle.
+      Can attack Aircraft.
+      Strong vs Infantry.
+
+actor-wh40klandspeed2 =
+   .description = Aircraft Gunship with Machineguns.
+      Strong vs All.
+      Can be upgraded with Addons.
+
+actor-pscwh40klandspeed1 =
+   .description = Adds a Anti Infantry Missile Pods.
+      Strong vs Infantry.
+      Weak vs Vehicles.
+
+actor-pscwh40klandspeed2 =
+   .description = Adds a Anti Tank Missile Pods.
+      Strong vs Vehicles.
+      Weak vs Infantry.
+
+actor-wh40kdread =
+   .description = Heavy Marine Mech.
+      Melee and Ground Targets.
+      Strong vs All.
+      Upgradeable with Addons.
+
+actor-pscwh40kdread1 =
+   .description = Replaces the Flamer with a Assault Bolter.
+      Strong vs Infantry.
+      Weak vs Vehicles.
+
+actor-pscwh40kdread2 =
+   .description = Replaces the Flamer with a Lascannon.
+      Strong vs Vehicles.
+      Weak vs Infantry.
+
+actor-wh40kdreadh =
+   .description = Heavy Marine Mech.
+      Long Range Weapons.
+      Strong vs All.
+
+actor-wh40kharvm =
+   .description = Collects Resources for processing.
+      Unarmed.
+
+actor-wh40klandraider =
+   .description = Superheavy Apc.
+      Can attack Aircraft.
+      Strong vs All, Specially Infantry.
+
+actor-wh40kskullprobe =
+   .description = Small Scout Probe.
+      Can Disable Vehicles.
+      Strong vs Vehicles, Tanks.
+      Weak vs Infantry.
+
+actor-wh40kupmonastery =
+   .description = Increases Field Command to 25% of health, Unlock new Tech.
+
+actor-wh40kupmonastery2 =
+   .description = Increases Field Command to 25% of health, Unlock new Tech.
+
+actor-wh40kupcapincrease =
+   .description = Increase Marine Production.
+
+actor-wh40kupcapincrease2 =
+   .description = Increase Vehicle Production.
+
+actor-wh40kupbionics =
+   .description = Increase Marine Health.
+
+actor-wh40kupbionics2 =
+   .description = Increase Marine Health.
+
+actor-wh40ktargetfinder1 =
+   .description = Increase Marine Firepower and Range.
+
+actor-wh40ktargetfinder2 =
+   .description = Increase Marine Firepower and Range.
+
+actor-wh40kpowerswords =
+   .description = Upgrades Sargent, Force Commander, Chaptain and Librarian Damage.
+
+actor-wh40kpowerfists =
+   .description = Upgrades Sargent, Force Commander, Chaptain and Librarian Damage.
+
+actor-wh40kscoutinfiltration =
+   .description = Now Scouts are Stealth.
+
+actor-wh40kskullprobestealth =
+   .description = Now Skull Probes are Stealth.
+
+actor-wh40kveteranupgrade1 =
+   .description = Add +1 veteran rank to Leaders, and add more Health.
+
+actor-wh40kveteranupgrade2 =
+   .description = Add +1 veteran rank to Leaders, and add more Health.
+
+actor-wh40kupmachineculticon =
+   .description = Increases Field Command to 25% of health, Unlock new Tech.
+
+actor-wh40kupfraggrenade =
+   .description = Enable the use of Grenades to Sargents.
+
+actor-wh40kfuriuscharge =
+   .description = Increase Speed of Gray Knights.
+
+actor-wh40kpsyinquisition =
+   .description = Enable a Superweapon.
+
+actor-wh40krankmarine =
+   .description = A First Company Veteran spawn at your base.
+
+actor-wh40krankscout =
+   .description = A Scout Marine Squad spawn at your base.
+
+actor-wh40kranklandspeeder =
+   .description = A Senior Librarian Saribander spawn at your base.
+
+actor-wh40kranklibrarian =
+   .description = A Senior Librarian Saribander spawn at your base.
+
+actor-wh40krankassault =
+   .description = A Senior Librarian Saribander spawn at your base.
+
+actor-wh40krankdread =
+   .description = A Dreadnought spawn at your base.
+
+actor-wh40kmcvo =
+   .description = Deploys into another Field Command.
+      Unarmed.
+
+actor-wh40ksettlement =
+   .description = Builds structures.
+
+actor-wh40kpowero =
+   .description = Provides power for other structures.
+
+actor-wh40kbarro =
+   .description = Trains infantry.
+
+actor-wh40kwhaaag =
+   .description = All-purpose defensive structure.
+      Strong vs Aircraft, Infantry.
+      Weak vs Vehicles.
+
+actor-pscwh40kwhaaag1 =
+   .description = Replaces the normal Guns with a Twin Guns.
+
+actor-pscwh40kwhaaag2 =
+   .description = Replaces Twin Guns with a Rokkit Launcha.
+
+actor-wh40kproco =
+   .description = Fixa Map Rezouse for da Whaaahg.
+      inta Moar Zkrap.
+
+actor-wh40karmoryo =
+   .description = Provides access to advanced technologies.
+
+actor-wh40kweapo =
+   .description = Produces vehicles.
+
+actor-wh40kgretchin =
+   .description = Zlavery-purpose Infantry.
+      Ztrong vs Infantry.
+      Week vs Mekz.
+      Kan Fixa Mekz.
+
+actor-wh40kslugga =
+   .description = General-purpose Boyz.
+      Ztrong vs Infantry.
+      Week vs Mekz.
+
+actor-wh40kstormboyz =
+   .description = General-purpose Boyz.
+      Ztrong vs Infantry.
+      Week vs Mekz.
+
+actor-wh40kburna =
+   .description = Anti Infantry Burna Troopa.
+      Ztrong vs Infantry.
+      Week vs Mekz.
+
+actor-wh40kshoota =
+   .description = General-purpose Dakka.
+      Ztrong vs Infantry.
+      Week vs Mekz.
+
+actor-wh40kshoota2 =
+   .description = General-purpose Dakka.
+      Ztrong vs Infantry.
+      Week vs Mekz.
+
+actor-wh40knob =
+   .description = Thicc Boyz.
+      Ztrong vs All.
+      Week vs Airkraft.
+
+actor-wh40kbigmek =
+   .description = Heavy Boy, Can Repair Vehicles.
+      Ztrong vs All.
+      Week vs Airkraft.
+
+actor-wh40ktankbusta =
+   .description = Busta-purpose Boyz.
+      Strong vs Infantry.
+      Weak vs Thicc Mekz.
+
+actor-wh40kflash =
+   .description = Dakka Thicc Boyz.
+      Ztrong vs Infantry.
+
+actor-wh40knobleader =
+   .description = Zergeant Big Boss, limit 10.
+
+actor-wh40kmaddok =
+   .description = Healer Boy.
+      Can Hel Boyz.
+      Can be Upgrade wit Burna Boms.
+
+actor-wh40kmeganobz =
+   .description = Thicc Boyz.
+      Ztrong vs All.
+      Week vs Airkraft.
+
+actor-wh40kwarboss =
+   .description = Da Biggest Boss.
+      Ztrong vs All Thingz.
+
+actor-wh40ksluggasquad =
+   .description = Basic Infantry Squad.
+      Equivalent to 8 guardsmens.
+      Squad Nembers respawn after dead.
+
+actor-wh40kuptankbusta =
+   .description = Now Tankbusta kan Ztealth.
+
+actor-wh40kupgretchin =
+   .description = Now Gretchin kan Ztealth.
+
+actor-wh40kupblastier =
+   .description = Upgrades Dakka Boyz in 15%.
+
+actor-wh40kupdakka1 =
+   .description = Upgrades Dakka Gunz in 15%.
+
+actor-wh40kupdakka2 =
+   .description = Upgrades Dakka Gunz in 15%.
+
+actor-wh40kupchoppy1 =
+   .description = Upgrades Melee Damage in 15%.
+
+actor-wh40kupchoppy2 =
+   .description = Upgrades Melee Damage in 15%.
+
+actor-wh40kupburny1 =
+   .description = Upgrades Burna Damage in 15%.
+
+actor-wh40kupburny2 =
+   .description = Upgrades Burna Damage in 15%.
+
+actor-wh40kupvboost =
+   .description = Upgrades Vehicle Speed Boost in 30%.
+
+actor-wh40kupvextraarmor =
+   .description = Upgrades Vehicle Armor in 15%.
+
+actor-wh40kmoresluggas =
+   .description = Make Sluggas more cheaper.
+
+actor-wh40kuporkyfort =
+   .description = Make Sluggas more cheaper.
+
+actor-wh40kuporkarmor1 =
+   .description = Upgrades Boyz Armor in 15%.
+
+actor-wh40kuporkarmor2 =
+   .description = Upgrades Boyz Armor in 15%.
+
+actor-wh40kupbigshooty1 =
+   .description = Upgrades Bosses Damage in 15%.
+
+actor-wh40kuporkboss1 =
+   .description = Upgrades Bosses Armor in 15%.
+
+actor-wh40kuporkboss2 =
+   .description = Upgrades Bosses Armor in 15%.
+
+actor-wh40kupburnabomb =
+   .description = Mad Doks adkire the Ability to Plaze Bom to Enemys.
+
+actor-wh40kupcombatjuice =
+   .description = Da boyz can attack fasta with this.
+
+actor-wh40kwartrukk =
+   .description = Da Orkz Transport, Prety Nize.
+      Can attack Aircraft.
+      Strong vs Infantry.
+
+actor-wh40kwartrakk =
+   .description = Kustom Wartillery.
+      Can atak Arkraft.
+      Strong vs Mekz.
+      Can be Upgrade with Chukka Boms.
+
+actor-pscwh40kwartrakk1 =
+   .description = Replaces the Flamer with a Assault Bolter.
+      Strong vs Infantry.
+      Weak vs Vehicles.
+
+actor-wh40korcleman =
+   .description = Looted Hevy tank from Oomans.
+      Can atak Arkraft.
+      Strong vs Everything.
+
+actor-wh40kkillakan =
+   .description = Da Ork Walkin Unit.
+      Can atak Arkraft.
+      Strong vs Infantry.
+      Upgradeable wit Rockit Launcha.
+
+actor-pscwh40kkillakan1 =
+   .description = Replaces the Flamer with a Assault Bolter.
+      Strong vs Infantry.
+      Weak vs Vehicles.
+
+actor-wh40ksquiggoth =
+   .description = This is da Squiggoth.
+      Can Karry da Boyz.
+      Strong vs All.
+      Superweapon Unit.
+
+actor-wh40kfightabomma =
+   .description = Aircraft Gunship with las Guns and MGs.
+      Strong vs All.
+
+actor-wh40kmcvc =
+   .description = Deploys into another Field Command.
+      Unarmed.
+
+actor-wh40kharvc =
+   .description = Collects Resources for processing.
+      Unarmed.
+
+actor-wh40kchaospredator =
+   .description = Heavily armored Marines Tank.
+      Can attack Aircraft.
+      Strong vs Everything.
+      Upgradeable with Lascannon Addons.
+
+actor-wh40kchaosrhino =
+   .description = Heavy Transport.
+      Can attack Infantry with Smoke Launcher.
+
+actor-wh40kdefiler =
+   .description = Heavy Marine Mech.
+      Melee and Ground Targets.
+      Strong vs All.
+      Upgradeable with Addons.
+
+actor-wh40khelltalon =
+   .description = Aircraft Gunship with las Guns and MGs.
+      Strong vs All.
+
+actor-wh40kchaosmarine =
+   .description = General-purpose Infantry.
+      Strong vs Infantry.
+      Weak vs Vehicles.
+
+actor-wh40kchaosmarineplasma =
+   .description = Armed with Anti Personel Pistol.
+      Strong vs Heavy Infantry.
+      Weak vs Vehicles.
+
+actor-wh40kboltchaosmarine =
+   .description = Armed with Anti Infantry Heavy gun.
+      Strong vs Infantry.
+      Weak vs Vehicles.
+
+actor-wh40kcultist =
+   .description = General-purpose cannon fodder.
+      Ztrong vs Infantry.
+      Week vs Mekz.
+
+actor-wh40kcultistgrenadier =
+   .description = Armed with Anti Tank Heavy gun.
+      Strong vs Vehicles.
+      Weak vs Infantry.
+
+actor-wh40kcultistplasma =
+   .description = Armed with Anti Tank Heavy gun.
+      Strong vs Vehicles.
+      Weak vs Infantry.
+
+actor-wh40kdemon =
+   .description = Heavy Ranged Marine.
+      Can Use Teleporter.
+      Strong vs Infantry.
+      Weak vs Vehicles.
+
+actor-wh40kpossessed =
+   .description = General-purpose Boyz.
+      Ztrong vs Infantry.
+      Week vs Mekz.
+
+actor-wh40kheretic =
+   .description = Support-purpose Infantry.
+      Can Repair Buildings, Vehicles.
+
+actor-wh40kraptor =
+   .description = General-purpose Boyz.
+      Ztrong vs Infantry.
+      Week vs Mekz.
+
+actor-wh40kraptor2 =
+   .description = Armed with Anti Personel Pistol.
+      Strong vs Heavy Infantry.
+      Weak vs Vehicles.
+
+actor-wh40koliberator =
+   .description = Warped cybernetic walking arsenals.
+      Ztrong vs Infantry.
+      Week vs Mekz.
+
+actor-wh40kbloodthirster =
+   .description = Greater Demon of Khorne.
+      Ztrong vs Infantry.
+      Week vs Mekz.
+
+actor-wh40kprincedemon =
+   .description = Ascended Chaos Lord.
+      Ztrong vs Infantry.
+      Week vs Mekz.
+
+actor-wh40ksorcerer =
+   .description = Combat Commander.
+      Melee Infantry.
+      Strong vs Infantry.
+      Weak vs Vehicle.
+
+actor-wh40kchaoslord =
+   .description = Combat Commander.
+      Melee Infantry.
+      Strong vs Infantry.
+      Weak vs Vehicles.
+
+actor-wh40kberserk =
+   .description = Elite Shock Infantry.
+      Fast Melee Infantry.
+      Strong vs Infantry.
+      Weak vs Vehicles.
+
+actor-wh40kcultistsquad =
+   .description = Basic Infantry Squad.
+      Equivalent to 8 guardsmens.
+      Squad Nembers respawn after dead.
+
+actor-wh40kchaosmarinechamp =
+   .description = Sargent unit for Marines.
+
+actor-wh40kcultiststealth =
+   .description = Enable the stealth to Cultists.
+
+actor-wh40kunholysight =
+   .description = Cultist has more view range.
+
+actor-wh40kchaosmarinestealth =
+   .description = Enable the stealth to Cultists.
+
+actor-wh40kfuriuschargechaos =
+   .description = Upgrades Speed and Attack of Cultists and Marines.
+
+actor-wh40kjetpackbooster =
+   .description = Upgrades Speed of Raptors.
+
+actor-wh40kdaemonfire =
+   .description = Upgrades Demons firepower /n Replaces Possessed Claws with Demon Fire.
+
+actor-wh40kupmonasteryc =
+   .description = Increases Monastery to 25% of health, Unlock new Tech.
+
+actor-wh40kupmonastery2c =
+   .description = Increases Monastery to 25% of health, Unlock new Tech.
+
+actor-wh40kupcapincreasec =
+   .description = Increase Marine Production.
+
+actor-wh40kupcapincrease2c =
+   .description = Increase Vehicle Production.
+
+actor-wh40kchaosenergies =
+   .description = Upgrades Vehicle Armor in 15%.
+
+actor-wh40kfraggrenadesc =
+   .description = Enable the use of Grenades to Sargents.
+
+actor-wh40kveteranupgrade1c =
+   .description = Add +1 veteran rank to Leaders, and add more Health.
+
+actor-wh40kveteranupgrade2c =
+   .description = Add +1 veteran rank to Leaders, and add more Health.
+
+actor-wh40kdemonstrength =
+   .description = Upgrades Chaos Lord Damage.
+
+actor-wh40kstrongholdc =
+   .description = Builds structures.
+
+actor-wh40kbarrc =
+   .description = Trains infantry.
+
+actor-wh40ksacrifical =
+   .description = Trains infantry.
+
+actor-wh40karmoryc =
+   .description = Provides access to advanced American technologies.
+
+actor-wh40kpowerc =
+   .description = Provides power for other structures.
+
+actor-wh40kmachinepit =
+   .description = Produces vehicles.
+
+actor-wh40kprocc =
+   .description = Refines Ore and Gems.
+      into credits.
+
+actor-wh40kbolterturretc =
+   .description = All-purpose defensive structure.
+      Strong vs Aircraft, Infantry.
+      Weak vs Vehicles.
+
+actor-wh40kbolterturret2c =
+   .description = All-purpose defensive structure.
+      Strong vs Aircraft, Infantry.
+      Weak vs Vehicles.
+
+actor-wh40kdaemonpit =
+   .description = Produces vehicles.
+
+power-napalmstrike =
+   .description = Napalm Strike
+      Deploy an aerial napalm strike.
+      Burns buildings and infantry along a line.
+
+power-psykinq =
+   .description = Psychic Inquisition
+      Initiate an Inquisition Orbital strike.
+      Applies instant damage to a small area.
+      Only can Damage Units.
+
+power-deepstrike =
+   .description = Deep Strike
+      Deploys squad of tactical marines from orbit.
+
+power-deepstrikeflamer =
+   .description = Flamer Deep Strike
+      Deploys squad of flamer equipped tactical marines from orbit.
+
+power-deepstrikeplasma =
+   .description = Plasma Deep Strike
+      Deploys squad of plasma equipped tactical marines from orbit.
+
+power-deepstrikemissile =
+   .description = Missile Deep Strike
+      Deploys squad of missile launcher equipped tactical marines from orbit.
+
+power-deepstrikeheavybolter =
+   .description = Heavy Bolter Deep Strike
+      Deploys squad of heavy bolter launcher equipped tactical marines from orbit.
+
+power-deepstrikedread =
+   .description = Deep Strike
+      Deploys a dreadnaught from orbit.
+
+power-deepstrikehelldread =
+   .description = Deep Strike
+      Deploys a hellfire dreadnaught from orbit.
+
+power-helltalonplague =
+   .description = Plague Strike
+      Deploy an aerial plague strike.
+      Exterminates infantry along a line.
+
+power-deepstrikehorror =
+   .description = Horror Deep Strike
+      Teleport five Horror Demons anywhere on the map.
+
+actor-2100hq = 
+   .description = Builds structures and provides radar.
+
+actor-2100power =
+   .description = Generates power.
+      Stores Resources.
+
+actor-2100oil =
+   .description = Provides resources.
+
+actor-2100rr =
+   .description = Heals nearby units.
+
+actor-2100fy1 =
+   .description = Produces vehicles - Tier 1.
+
+actor-2100fy2 =
+   .description = Produces vehicles - Tier 1, 2 & 3.
+
+actor-2100rf =
+   .description = Unlocks higher-tech units and buildings.
+
+actor-2100crc =
+   .description = Unlocks commander units.
+
+actor-2100las =
+   .description = Provides Laser Satellite support power.
+
+actor-2100cf =
+   .description = Trains infantry.
+
+actor-2100vfy1 =
+   .description = Produces vehicles - Tier 1.
+
+actor-2100vtolpad =
+   .description = Produces, rearms and.
+      repairs helicopters.
+
+actor-2100wall =
+   .description = Basic defensive structure.
+
+actor-2100wcmg =
+   .description = Anti-infantry base defense.
+      Strong vs Infantry.
+      Weak vs Vehicles.
+
+actor-2100wcl =
+   .description = Anti-Tank base defense.
+      Strong vs Vehicles.
+      Weak vs Infantry.
+
+actor-2100wcm =
+   .description = Anti-Tank base defense.
+      Strong vs Vehicles.
+      Weak vs Infantry.
+
+actor-2100wch =
+   .description = Anti-Tank base defense.
+      Strong vs Vehicles.
+      Weak vs Infantry.
+
+actor-2100mb =
+   .description = Basic defensive structure.
+      Strong vs Infantry.
+      Weak vs Tanks.
+
+actor-2100fb =
+   .description = Basic defensive structure.
+      Strong vs Infantry.
+      Weak vs Tanks.
+
+actor-2100mt =
+   .description = All-purpose defensive structure.
+      Strong vs Aircraft, Infantry.
+      Weak vs Tanks.
+
+actor-2100radt =
+   .description = Reveals shroud.
+      Unarmed.
+
+actor-2100rt =
+   .description = All-purpose defensive structure.
+      Strong vs Aircraft, Tanks.
+      Weak vs Infantry.
+
+actor-2100tt =
+   .description = Anti-Tank base defense.
+      Strong vs Vehicles.
+      Weak vs Infantry.
+
+actor-2100mp =
+   .description = Long range defensive structure.
+
+actor-2100pp =
+   .description = Long range defensive structure.
+      Fast-firing variant of the Mortar Pit.
+
+actor-2100aa =
+   .description = Anti-Air base defense.
+      Strong vs Aircraft.
+      Unable to attack ground units.
+
+actor-psc2100power =
+   .description = Increases power output.
+
+actor-psc2100factory1 =
+   .description = Allows building of medium class chassis.
+
+actor-psc2100factory2 =
+   .description = allows building of heavy class chassis.
+
+actor-2100scavpowr =
+   .description = Generates power.
+
+actor-2100chopshop =
+   .description = Produces vehicles.
+
+actor-2100chopshopadv =
+   .description = Produces more vehicles very Fast.
+
+actor-2100scavhangar =
+   .description = Produces aircraft and unlocks higher-tech.
+      units and buildings.
+
+actor-2100scavtech =
+   .description = Provides support powers.
+      Unlocks higher-tech units and buildings.
+
+actor-2100scavwall =
+   .description = Basic defensive structure.
+
+actor-2100scavturret =
+   .description = Basic defensive structure.
+      Strong vs Infantry.
+      Weak vs Tanks.
+
+actor-2100scavpill =
+   .description = Static defense with a fireport for.
+      a garrisoned soldier.
+      Can detect cloaked units.
+      Strong vs Infantry, Light armor.
+      Weak vs Tanks, Aircraft.
+
+actor-2100scavrt =
+   .description = All-purpose defensive structure.
+      Strong vs Aircraft, Tanks.
+      Weak vs Infantry.
+
+actor-2100scavmort =
+   .description = Long range defensive structure.
+
+actor-2100scavware =
+   .description = Research New Tecnology.
+
+actor-2100scavmt =
+   .description = All-purpose defensive structure.
+      Strong vs Aircraft, Tanks.
+      Weak vs Infantry.
+
+actor-2100scavft =
+   .description = All-purpose defensive structure.
+      Strong vs Aircraft, Tanks.
+      Weak vs Infantry.
+
+actor-2100scavradt =
+   .description = All-purpose defensive structure.
+      Strong vs Aircraft, Tanks.
+      Weak vs Infantry.
+
+actor-psc2100chopshop1 =
+   .description = Increases power output.
+
+actor-psc2100chopshop2 =
+   .description = Increases power output.
+
+actor-2100scav =
+   .description = General-purpose infantry.
+      Strong vs Infantry.
+      Weak vs Vehicles.
+
+actor-2100e6 =
+   .description = Deploys into another Construction Yard.
+      Automatically Repairs Structures in a 3 Tile Radius.
+
+actor-2100repairtruck =
+   .description = Repairs structures and provides building area radius.
+      Can remove resources to make building space.
+
+actor-2100healtruck =
+   .description = Heals nearby units.
+      Unarmed.
+
+actor-2100radartruck =
+   .description = Strong vs Infantry.
+
+actor-2100mvw =
+   .description = Strong vs Infantry.
+
+actor-2100rvw =
+   .description = Strong vs Vehicles, Aircraft.
+
+actor-2100fvw =
+   .description = Strong vs Infantry.
+
+actor-2100lcvw =
+   .description = Strong vs Vehicles.
+
+actor-2100tch =
+   .description = Strong vs Vehicles, Buildings.
+
+actor-2100t2ch =
+   .description = Strong vs Vehicles, Buildings.
+
+actor-2100mch =
+   .description = Strong vs ground targets.
+
+actor-2100mgch =
+   .description = Strong vs ground targets.
+
+actor-2100moch =
+   .description = Strong vs ground targets.
+
+actor-2100rach =
+   .description = Strong vs ground targets.
+
+actor-2100ifch =
+   .description = Strong vs ground targets.
+
+actor-2100aach =
+   .description = Strong vs ground targets.
+
+actor-2100hvch =
+   .description = Strong vs ground targets.
+
+actor-2100flach =
+   .description = Strong vs ground targets.
+
+actor-2100nedch =
+   .description = Strong vs ground targets.
+
+actor-2100bnkch =
+   .description = Strong vs ground targets.
+
+actor-2100bomch =
+   .description = Strong vs ground targets.
+
+actor-2100aartch =
+   .description = Strong vs ground targets.
+
+actor-2100imoch =
+   .description = Strong vs ground targets.
+
+actor-2100pepperch =
+   .description = Strong vs ground targets.
+
+actor-2100apt =
+   .description = Strong vs Infantry.
+
+actor-2100a2pt =
+   .description = Strong vs Infantry.
+
+actor-2100hpt =
+   .description = Strong vs ground targets.
+
+actor-2100acpt =
+   .description = Strong vs ground targets.
+
+actor-2100ac2pt =
+   .description = Strong vs ground targets.
+
+actor-2100cpt =
+   .description = Buffs nearby allies and debuffs targeted enemies.
+      Unarmed.
+
+actor-2100supplytruck =
+   .description = Transports supplies to other players.
+      Armed with self-defense HMG.
+
+actor-2100rippt =
+   .description = Strong vs ground targets.
+
+actor-2100hotpt =
+   .description = Strong vs ground targets.
+
+actor-2100mchov =
+   .description = Strong vs ground targets.
+
+actor-2100aphov =
+   .description = Strong vs Infantry.
+
+actor-2100hphov =
+   .description = Strong vs ground targets.
+
+actor-2100mvvtol =
+   .description = Helicopter gunship armed.
+      with MH.
+      Strong vs Infantry, Light armor.
+      Weak vs Tanks, Aircraft.
+
+actor-2100rvvtol =
+   .description = Helicopter gunship armed.
+      with rocket pod.
+      Strong vs Infantry, Light armor.
+      Weak vs Tanks, Aircraft.
+
+actor-2100lcvtol =
+   .description = Helicopter gunship armed.
+      with light cannon.
+      Strong vs Infantry, Light armor.
+      Weak vs Tanks, Aircraft.
+
+actor-2100tcvtol =
+   .description = Helicopter gunship armed.
+      with lancer.
+      Strong vs Infantry, Light armor.
+      Weak vs Tanks, Aircraft.
+
+actor-2100cymg =
+   .description = Strong vs Infantry.
+
+actor-2100cycan =
+   .description = Strong vs Vehicles.
+
+actor-2100cylan =
+   .description = Strong vs Vehicles.
+
+actor-2100cymor =
+   .description = Strong vs Ground targets.
+
+actor-2100cyfla =
+   .description = Strong vs Infantry.
+
+actor-2100cybui =
+   .description = Repairs structures and provides building area radius.
+
+actor-2100repairtruckc =
+   .description = Repairs structures and provides building area radius.
+      Can remove resources to make building space.
+
+actor-2100healtruckc =
+   .description = Heals nearby units.
+      Unarmed.
+
+actor-2100radartruckc =
+   .description = Strong vs Infantry.
+
+actor-2100mbuw =
+   .description = Strong vs Infantry.
+
+actor-2100rbuw =
+   .description = Strong vs Vehicles, Aircraft.
+
+actor-2100fbuw =
+   .description = Strong vs Infantry.
+
+actor-2100rabuw =
+   .description = Strong vs Vehicles, Aircraft.
+
+actor-2100tsch =
+   .description = Strong vs Vehicles, Buildings.
+
+actor-2100t2sch =
+   .description = Strong vs Vehicles, Buildings.
+
+actor-2100msch =
+   .description = Strong vs ground targets.
+
+actor-2100mgsch =
+   .description = Strong vs ground targets.
+
+actor-2100rsch =
+   .description = Strong vs Vehicles, Buildings.
+
+actor-2100lcsch =
+   .description = Strong vs Vehicles, Buildings.
+
+actor-2100mosch =
+   .description = Strong vs Vehicles, Buildings.
+
+actor-2100ifsch =
+   .description = Strong vs ground targets.
+
+actor-2100hvsch =
+   .description = Strong vs ground targets.
+
+actor-2100flasch =
+   .description = Strong vs ground targets.
+
+actor-2100nedsch =
+   .description = Strong vs ground targets.
+
+actor-2100bnksch =
+   .description = Strong vs ground targets.
+
+actor-2100amat =
+   .description = Strong vs Infantry.
+
+actor-2100a2mat =
+   .description = Strong vs Infantry.
+
+actor-2100hmat =
+   .description = Strong vs ground targets.
+
+actor-2100acmat =
+   .description = Strong vs ground targets.
+
+actor-2100ac2mat =
+   .description = Strong vs ground targets.
+
+actor-2100cmat =
+   .description = Buffs nearby allies and debuffs targeted enemies.
+      Unarmed.
+
+actor-2100aamat =
+   .description = Strong vs Aircraft.
+
+actor-2100ripmat =
+   .description = Strong vs ground targets.
+
+actor-2100hotmat =
+   .description = Strong vs ground targets.
+
+actor-2100mschov =
+   .description = Strong vs ground targets.
+
+actor-2100amahov =
+   .description = Strong vs Infantry.
+
+actor-2100hmahov =
+   .description = Strong vs ground targets.
+
+actor-2100cchopshop =
+   .description = Produces vehicles.
+
+actor-2100mbuvtol =
+   .description = Helicopter gunship armed.
+      with MG.
+      Strong vs Infantry, Light armor.
+      Weak vs Tanks, Aircraft.
+
+actor-2100rbuvtol =
+   .description = Helicopter gunship armed.
+      with rocket pod.
+      Strong vs Infantry, Light armor.
+      Weak vs Tanks, Aircraft.
+
+actor-2100lscvtol =
+   .description = Helicopter gunship armed.
+      with light cannon.
+      Strong vs Infantry, Light armor.
+      Weak vs Tanks, Aircraft.
+
+actor-2100tscvtol =
+   .description = Helicopter gunship armed.
+      with Lancer.
+      Strong vs Infantry, Light armor.
+      Weak vs Tanks, Aircraft.
+
+actor-2100repairtruckp =
+   .description = Repairs structures and provides building area radius.
+      Can remove resources to make building space.
+
+actor-2100healtruckp =
+   .description = Heals nearby units.
+      Unarmed.
+
+actor-2100radartruckp =
+   .description = Strong vs Infantry.
+
+actor-2100mlew =
+   .description = Strong vs Infantry.
+
+actor-2100rlew =
+   .description = Strong vs Vehicles, Aircraft.
+
+actor-2100flew =
+   .description = Strong vs Vehicles, Aircraft.
+
+actor-2100ralew =
+   .description = Strong vs Vehicles, Aircraft.
+
+actor-2100tphh =
+   .description = Strong vs Vehicles, Buildings.
+
+actor-2100t2phh =
+   .description = Strong vs Vehicles, Buildings.
+
+actor-2100mphh =
+   .description = Strong vs ground targets.
+
+actor-2100mgphh =
+   .description = Strong vs ground targets.
+
+actor-2100mophh =
+   .description = Strong vs ground targets.
+
+actor-2100ifphh =
+   .description = Strong vs ground targets.
+
+actor-2100aaphh =
+   .description = Strong vs ground targets.
+
+actor-2100hvphh =
+   .description = Strong vs ground targets.
+
+actor-2100flaphh =
+   .description = Strong vs ground targets.
+
+actor-2100nedphh =
+   .description = Strong vs ground targets.
+
+actor-2100bnkphh =
+   .description = Strong vs ground targets.
+
+actor-2100pepperphh =
+   .description = Strong vs ground targets.
+
+actor-2100atit =
+   .description = Strong vs Infantry.
+
+actor-2100a2tit =
+   .description = Strong vs Infantry.
+
+actor-2100htit =
+   .description = Strong vs ground targets.
+
+actor-2100actit =
+   .description = Strong vs ground targets.
+
+actor-2100ac2tit =
+   .description = Strong vs ground targets.
+
+actor-2100ctit =
+   .description = Buffs nearby allies and debuffs targeted enemies.
+      Unarmed.
+
+actor-2100riptit =
+   .description = Strong vs ground targets.
+
+actor-2100hottit =
+   .description = Strong vs ground targets.
+
+actor-2100mphhov =
+   .description = Strong vs ground targets.
+
+actor-2100atihov =
+   .description = Strong vs Infantry.
+
+actor-2100htihov =
+   .description = Strong vs ground targets.
+
+actor-2100mlevtol =
+   .description = Helicopter gunship armed.
+      with dual chainguns.
+      Strong vs Infantry, Light armor.
+      Weak vs Tanks, Aircraft.
+
+actor-2100rlevtol =
+   .description = Helicopter gunship armed.
+      with dual chainguns.
+      Strong vs Infantry, Light armor.
+      Weak vs Tanks, Aircraft.
+
+actor-2100lphvtol =
+   .description = Helicopter gunship armed.
+      with dual chainguns.
+      Strong vs Infantry, Light armor.
+      Weak vs Tanks, Aircraft.
+
+actor-2100tphvtol =
+   .description = Helicopter gunship armed.
+      with dual chainguns.
+      Strong vs Infantry, Light armor.
+      Weak vs Tanks, Aircraft.
+
+actor-2100repairtruckn =
+   .description = Repairs structures.
+      Can remove resources to make building space.
+
+actor-2100healtruckn =
+   .description = Heals nearby units.
+      Unarmed.
+
+actor-2100radartruckn =
+   .description = Strong vs Infantry.
+
+actor-2100mrew =
+   .description = Strong vs Infantry.
+
+actor-2100rrew =
+   .description = Strong vs Vehicles, Aircraft.
+
+actor-2100frew =
+   .description = Strong vs Vehicles, Aircraft.
+
+actor-2100trth =
+   .description = Strong vs Vehicles, Buildings.
+
+actor-2100t2rth =
+   .description = Strong vs Vehicles, Buildings.
+
+actor-2100mrth =
+   .description = Strong vs ground targets.
+
+actor-2100mgrth =
+   .description = Strong vs ground targets.
+
+actor-2100morth =
+   .description = Strong vs ground targets.
+
+actor-2100rarth =
+   .description = Strong vs ground targets.
+
+actor-2100ifrth =
+   .description = Strong vs ground targets.
+
+actor-2100hvrth =
+   .description = Strong vs ground targets.
+
+actor-2100flarth =
+   .description = Strong vs ground targets.
+
+actor-2100nedrth =
+   .description = Strong vs ground targets.
+
+actor-2100pepperrth =
+   .description = Strong vs ground targets.
+
+actor-2100avet =
+   .description = Strong vs Infantry.
+
+actor-2100a2vet =
+   .description = Strong vs Infantry.
+
+actor-2100hvet =
+   .description = Strong vs ground targets.
+
+actor-2100cvet =
+   .description = Buffs nearby allies and debuffs targeted enemies.
+      Unarmed.
+
+actor-2100acvet =
+   .description = Strong vs ground targets.
+
+actor-2100ac2vet =
+   .description = Strong vs ground targets.
+
+actor-2100aavet =
+   .description = Strong vs Infantry.
+
+actor-2100nexvet =
+   .description = Strong vs Infantry.
+
+actor-2100ripvet =
+   .description = Strong vs ground targets.
+
+actor-2100mrthov =
+   .description = Strong vs ground targets.
+
+actor-2100avehov =
+   .description = Strong vs Infantry.
+
+actor-2100hvehov =
+   .description = Strong vs ground targets.
+
+actor-2100mrevtol =
+   .description = Helicopter gunship armed.
+      with dual chainguns.
+      Strong vs Infantry, Light armor.
+      Weak vs Tanks, Aircraft.
+
+actor-2100rrevtol =
+   .description = Helicopter gunship armed.
+      with dual chainguns.
+      Strong vs Infantry, Light armor.
+      Weak vs Tanks, Aircraft.
+
+actor-2100lrtvtol =
+   .description = Helicopter gunship armed.
+      with dual chainguns.
+      Strong vs Infantry, Light armor.
+      Weak vs Tanks, Aircraft.
+
+actor-2100trtvtol =
+   .description = Helicopter gunship armed.
+      with dual chainguns.
+      Strong vs Infantry, Light armor.
+      Weak vs Tanks, Aircraft.
+
+actor-2100crane =
+   .description = Repairs structures.
+      Can remove resources to make building space.
+
+actor-2100crane2 =
+   .description = Repairs structures.
+      Can remove resources to make building space.
+
+actor-2100scavcar =
+   .description = Fast scout and anti-infantry vehicle.
+      Can detect cloaked units.
+      Strong vs Infantry.
+      Weak vs Tanks.
+
+actor-2100trike =
+   .description = Fast scout and anti-infantry vehicle.
+      Can detect cloaked units.
+      Strong vs Infantry.
+      Weak vs Tanks.
+
+actor-2100trike2 =
+   .description = Fast scout and anti-infantry vehicle.
+      Can detect cloaked units.
+      Strong vs Infantry.
+      Weak vs Tanks.
+
+actor-2100jeep =
+   .description = Fast scout and anti-infantry vehicle.
+      Strong vs Infantry.
+      Weak vs Tanks.
+
+actor-2100jeepmsl =
+   .description = Fast scout vehicle, armed with.
+      rockets.
+      Can attack Aircraft.
+      Strong vs Vehicles, Tanks.
+      Weak vs Infantry.
+
+actor-2100buggy =
+   .description = Fast scout and anti-infantry vehicle.
+      Strong vs Infantry.
+      Weak vs Tanks.
+
+actor-2100buggyrk =
+   .description = Fast scout vehicle, armed with.
+      rockets.
+      Can attack Aircraft.
+      Strong vs Vehicles, Tanks.
+      Weak vs Infantry.
+
+actor-2100camper =
+   .description = Fast armed transport.
+      Strong vs light vehicles.
+      Weak vs Infantry, Tanks.
+      Can transport 3 infantry.
+
+actor-2100camper2 =
+   .description = Fast armed transport.
+      Strong vs light vehicles.
+      Weak vs Infantry, Tanks.
+      Can transport 3 infantry.
+
+actor-2100camper3 =
+   .description = Fast armed transport.
+      Strong vs light vehicles.
+      Weak vs Infantry, Tanks.
+      Can transport 3 infantry.
+
+actor-2100hcamper =
+   .description = Fast armed transport.
+      Strong vs light vehicles.
+      Weak vs Infantry, Tanks.
+      Can transport 3 infantry.
+
+actor-2100hcamper2 =
+   .description = Fast armed transport.
+      Strong vs light vehicles.
+      Weak vs Infantry, Tanks.
+      Can transport 3 infantry.
+
+actor-2100tractor =
+   .description = Flamethrower vehicle.
+      Strong vs Infantry, Buildings.
+      Weak vs Tanks.
+
+actor-2100tractor2 =
+   .description = Flamethrower vehicle.
+      Strong vs Infantry, Buildings.
+      Weak vs Tanks.
+
+actor-2100bus =
+   .description = Large armored transport.
+      Strong vs light vehicles.
+      Weak vs infantry, tanks.
+      Can transport 6 infantry.
+
+actor-2100bus2 =
+   .description = Large armored transport.
+      Strong vs light vehicles.
+      Weak vs infantry, tanks.
+      Can transport 6 infantry.
+
+actor-2100bus3 =
+   .description = Large armored transport.
+      Strong vs light vehicles.
+      Weak vs infantry, tanks.
+      Can transport 6 infantry.
+
+actor-2100bus4 =
+   .description = Large armored transport.
+      Strong vs light vehicles.
+      Weak vs infantry, tanks.
+      Can transport 6 infantry.
+
+actor-2100bus5 =
+   .description = Large armored transport.
+      Strong vs light vehicles.
+      Weak vs infantry, tanks.
+      Can transport 6 infantry.
+
+actor-2100ftruk =
+   .description = Anti-tank missile vehicle.
+      Strong vs ground targets.
+
+actor-2100ftruk2 =
+   .description = Anti-tank missile vehicle.
+      Strong vs ground targets.
+
+actor-2100ftruk3 =
+   .description = Anti-tank missile vehicle.
+      Strong vs ground targets.
+
+actor-2100hftruk =
+   .description = Anti-tank missile vehicle.
+      Strong vs ground targets.
+
+actor-2100scavtruck =
+   .description = Converted heavy truck with numerous weapons.
+      Strong vs Everything.
+
+actor-2100tanker =
+   .description = Converted heavy truck with numerous weapons.
+      Strong vs Everything.
+
+actor-2100tanker2 =
+   .description = Converted heavy truck with numerous weapons.
+      Strong vs Everything.
+
+actor-2100icecream =
+   .description = Long-range self-propelled mortar.
+      Strong vs Infantry, Buildings.
+
+actor-2100supplytruckarmed =
+   .description = Transports tins of dog food to other players.
+      Armed with self-defense cannon.
+
+actor-2100trailer =
+   .description = Large armored transport.
+      Strong vs light vehicles.
+      Weak vs infantry, tanks.
+      Can transport 6 infantry.
+
+actor-2100scavtank =
+   .description = Control Unit.
+
+actor-2100chopper =
+   .description = Helicopter Gunship with Chainguns.
+      Strong vs Infantry, Light Vehicles and.
+      Aircraft.
+      Weak vs Tanks.
+
+actor-2100polmav =
+   .description = Helicopter Gunship with Rockets.
+      Strong vs Infantry, Light Vehicles and.
+      Aircraft.
+      Weak vs Tanks.
+
+actor-up2100uplmg1 =
+   .description = Unlock Machinegun Weapon.
+
+actor-up2100uptwinmg1 =
+   .description = Unlock Machinegun Weapon.
+
+actor-up2100uphurricane1 =
+   .description = Unlock Hurricane AA Weapon.
+
+actor-up2100upheavymg1 =
+   .description = Unlock Machinegun Weapon.
+
+actor-up2100upassaultmg1 =
+   .description = Unlock Machinegun Weapon.
+
+actor-up2100uptwinassaultmg1 =
+   .description = Unlock Machinegun Weapon.
+
+actor-up2100upflamer1 =
+   .description = Unlock Machinegun Weapon.
+
+actor-up2100upflamer2 =
+   .description = Unlock Machinegun Weapon.
+
+actor-up2100upflamer3 =
+   .description = Unlock Machinegun Weapon.
+
+actor-up2100upflamer4 =
+   .description = Unlock Machinegun Weapon.
+
+actor-up2100upflamer5 =
+   .description = Unlock Machinegun Weapon.
+
+actor-up2100upflamer6 =
+   .description = Unlock Machinegun Weapon.
+
+actor-up2100upinferno1 =
+   .description = Unlock Inferno Flamer Weapon.
+
+actor-up2100upinferno2 =
+   .description = Unlock Machinegun Weapon.
+
+actor-up2100upinferno3 =
+   .description = Unlock Machinegun Weapon.
+
+actor-up2100uplmg2 =
+   .description = MG Weapons make 20% more damage.
+
+actor-up2100uplmg3 =
+   .description = MG Weapons make 20% more damage.
+
+actor-up2100uplmg4 =
+   .description = MG Weapons make 20% more damage.
+
+actor-up2100uplmg5 =
+   .description = MG Weapons make 20% more reload.
+
+actor-up2100uplmg6 =
+   .description = MG Weapons make 20% more reload.
+
+actor-up2100uplmg7 =
+   .description = MG Weapons make 20% more reload.
+
+actor-up2100upengine1 =
+   .description = Vehicles gains %5 more speed.
+
+actor-up2100upengine2 =
+   .description = Vehicles gains %5 more speed.
+
+actor-up2100upengine3 =
+   .description = Vehicles gains %5 more speed.
+
+actor-up2100upengine4 =
+   .description = Vehicles gains %5 more speed.
+
+actor-up2100uplrk1 =
+   .description = Vehicles gains %5 more speed.
+
+actor-up2100uplrk2 =
+   .description = Vehicles gains %5 more speed.
+
+actor-up2100uplrk3 =
+   .description = Vehicles gains %5 more speed.
+
+actor-up2100uplrk4 =
+   .description = Vehicles gains %5 more speed.
+
+actor-up2100uplrk5 =
+   .description = Upgrades the Target of Rockets.
+
+actor-up2100uplancer1 =
+   .description = Unlock Lancer Weapons.
+
+actor-up2100uplancer2 =
+   .description = Vehicles gains %5 more speed.
+
+actor-up2100uplancer3 =
+   .description = Vehicles gains %5 more speed.
+
+actor-up2100uplancer4 =
+   .description = Vehicles gains %5 more speed.
+
+actor-up2100uplancer5 =
+   .description = Vehicles gains %5 more speed.
+
+actor-up2100upbunkerbuster1 =
+   .description = Unlock Lancer Weapons.
+
+actor-up2100uptankkiller1 =
+   .description = Tank Killer Unlock.
+
+actor-up2100rkarray1 =
+   .description = Unlock Rockets Mini-Rockets Array.
+
+actor-up2100uparmor1 =
+   .description = Vehicles gains %10 more HP.
+
+actor-up2100uparmor2 =
+   .description = Vehicles gains %10 more HP.
+
+actor-up2100uparmor3 =
+   .description = Vehicles gains %10 more HP.
+
+actor-up2100uparmor4 =
+   .description = Vehicles gains %10 more HP.
+
+actor-up2100uparmor5 =
+   .description = Vehicles gains %10 more HP.
+
+actor-up2100uparmor6 =
+   .description = Vehicles gains %10 more HP.
+
+actor-up2100uparmor7 =
+   .description = Vehicles gains %10 more HP.
+
+actor-up2100upengineer1 =
+   .description = Upgrades Repairs Vehicles.
+
+actor-up2100upengineer2 =
+   .description = Upgrades Repairs Vehicles.
+
+actor-up2100upwall1 =
+   .description = Unlock Walls.
+
+actor-up2100upwall2 =
+   .description = Defences gains %10 more HP.
+
+actor-up2100upwall3 =
+   .description = Defences gains %10 more HP.
+
+actor-up2100upwall4 =
+   .description = Defences gains %10 more HP.
+
+actor-up2100upwall5 =
+   .description = Defences gains %10 more HP.
+
+actor-up2100upwall6 =
+   .description = Defences gains %10 more HP.
+
+actor-up2100upwall7 =
+   .description = Defences gains %10 more HP.
+
+actor-up2100upstructure1 =
+   .description = Structures gains %10 more HP.
+
+actor-up2100upstructure2 =
+   .description = Structures gains %10 more HP.
+
+actor-up2100upstructure3 =
+   .description = Structures gains %10 more HP.
+
+actor-up2100uplcannon1 =
+   .description = Unlock Light Cannon Weapon.
+
+actor-up2100uplcannon2 =
+   .description = UUpgrade Cannons Weapons Firepower.
+
+actor-up2100uplcannon3 =
+   .description = Upgrade Cannons Weapons Firepower.
+
+actor-up2100uplcannon4 =
+   .description = Upgrade Cannons Weapons Firepower.
+
+actor-up2100uplcannon5 =
+   .description = Upgrade Cannons Weapons Firepower.
+
+actor-up2100uplcannon6 =
+   .description = Upgrade Cannons Weapons Firepower.
+
+actor-up2100uplcannon7 =
+   .description = Upgrade Cannons Weapons Firepower.
+
+actor-up2100upmcannon1 =
+   .description = Unlock Medium Cannon Weapon.
+
+actor-up2100uphcannon1 =
+   .description = Unlock Heavy Cannon Weapon.
+
+actor-up2100upacannon1 =
+   .description = Unlock Assault Cannon Weapon.
+
+actor-up2100uphycannon =
+   .description = Unlock Hyper Velocity Cannon Weapon.
+
+actor-up2100upneedle =
+   .description = Unlock Needle Gun Weapon.
+
+actor-up2100upflak1 =
+   .description = Unlock AA Flak Weapon.
+
+actor-up2100upa2cannon1 =
+   .description = Unlock Twin Assault Cannon Weapon.
+
+actor-up2100upmortar1 =
+   .description = Unlock Mortar Weapon.
+
+actor-up2100upmortar2 =
+   .description = Upgrades Mortar Firepower.
+
+actor-up2100upmortar3 =
+   .description = Upgrades Mortar Firepower.
+
+actor-up2100upmortar4 =
+   .description = Upgrades Mortar Target.
+
+actor-up2100upmortar5 =
+   .description = Upgrades Mortar Firepower.
+
+actor-up2100upmortar6 =
+   .description = Upgrades Mortar Firepower.
+
+actor-up2100upmortar7 =
+   .description = Upgrades Mortar Firepower.
+
+actor-up2100upbombard1 =
+   .description = Unlock Bombard Weapon.
+
+actor-up2100uppepper1 =
+   .description = Unlock Bombard Weapon.
+
+actor-2100uphotwizer1 =
+   .description = Unlock Bombard Weapon.
+
+actor-up2100uptracks1 =
+   .description = Unlock Heavy Tracked Vehicles.
+
+actor-up2100uphover1 =
+   .description = Unlock Hovercraft Vehicles.
+
+actor-up2100upvtols1 =
+   .description = Unlock Vtols Vehicles.
+
+actor-up2100upviper1 =
+   .description = Unlock Viper Vehicles.
+
+actor-up2100upbug1 =
+   .description = Unlock Bug Vehicles.
+
+actor-up2100upcobra1 =
+   .description = Unlock Cobra Vehicles.
+
+actor-up2100uppython1 =
+   .description = Unlock Python Vehicles.
+
+actor-up2100upscorpion1 =
+   .description = Unlock Scorpion Vehicles.
+
+actor-up2100upmantis1 =
+   .description = Unlock Mantis Vehicles.
+
+actor-up2100upleopard1 =
+   .description = Unlock Leopard Vehicles.
+
+actor-up2100uppanther1 =
+   .description = Unlock Panther Vehicles.
+
+actor-up2100uptiger1 =
+   .description = Unlock Tiger Vehicles.
+
+actor-up2100upretaliaton1 =
+   .description = Unlock Retaliation Vehicles.
+
+actor-up2100upretribution1 =
+   .description = Unlock Panther Vehicles.
+
+actor-up2100upvengeance1 =
+   .description = Unlock Tiger Vehicles.
+
+actor-up2100uppowermodule1 =
+   .description = Unlock Power Modules.
+
+actor-up2100upfactorymodule1 =
+   .description = Unlock Factory Modules.
+
+actor-up2100upresearchmodule1 =
+   .description = Unlock Research Center Modules.
+
+actor-up2100upsypnaticdata1 =
+   .description = Upgrade Research Speed.
+
+actor-up2100upsypnaticdata2 =
+   .description = Upgrade Research Speed.
+
+actor-up2100upsypnaticdata3 =
+   .description = Upgrade Research Speed.
+
+actor-up2100upsypnaticdata4 =
+   .description = Upgrade Research Speed.
+
+power-lasersat =
+   .description = Laser Satellite
+      Initiate a Laser Satellite strike.
+      Applies instant damage to a small area.
+
+power-chopperstrike =
+   .description = Chopper Strike
+       Gun Choppers attack enemies along a line with chainguns.
+
+power-pchopperstrike =
+   .description = Chopper Strike
+       Police Choppers attack enemies along a line with missiles.
+
+actor-sowlightfactory =
+   .description = Produces Light Tanks.
+
+actor-sowmediumfactory =
+   .description = Produces Light Tanks.
+      Can produce Medium Tanks after research.
+
+actor-sowheavyfactory =
+   .description = Produces Light Tanks.
+      Can produce Medium and Heavy Tanks after research.
+
+actor-sowabcfactory =
+   .description = Produces Atomic Bomb Carriers.
+
+actor-sowradar =
+   .description = Provides radar and air supports.
+      Provides air support only once.
+
+actor-sowgoldmine =
+   .description = Provides Passive Income.
+      Stores 1000 resources.
+
+actor-sowpower =
+   .description = Accelerates build times\Doubles all Research Points for each Research Center.
+      Can be only built once.
+
+actor-sowresearch =
+   .description = Provides Research Points (Power) that is used for Advanced Buildings and Upgrades.
+      Unlocks upgrades.
+
+actor-sowmechfactory =
+   .description = Produces Powerful Walkers.
+
+actor-sowasteroidstation =
+   .description = Provides superweapon.
+      Produces Walkers Mk.2.
+      Unlocks all vehicles.
+      Stores 2000 resources.
+      Increases all income by 25%.
+
+actor-sow_gun_tower =
+   .description = Basic defence against Light vehicles and infantry.
+
+actor-sow_antiair_tower =
+   .description = Basic Air defence.
+      Detector.
+
+actor-sow_plasma_tower =
+   .description = Advanced ground defence.
+
+actor-sow_minigun_tower =
+   .description = Advanced Long Range Ground defence.
+
+actor-sow_defragmenter_tower =
+   .description = Advanced Long Range Ground defence.
+
+actor-sow_vulcano_tower =
+   .description = Advanced Air Defence.
+      Detector.
+
+actor-sow_lt_cannon =
+   .description = Light Main battle tank.
+
+actor-sow_lt_flame =
+   .description = Light Anti-Infantry Vehicle.
+
+actor-sow_lt_siege =
+   .description = Light Long Range Vehicle.
+
+actor-sow_lt_special =
+   .description = Light Anti-Tank vehicle.
+
+actor-sow_lt_antiair =
+   .description = Light Anti-Air vehicle.
+      Detector.
+
+actor-sow_mt_cannon =
+   .description = Main Battle tank.
+
+actor-sow_mt_flame =
+   .description = Medium Anti-Infantry vehicle.
+
+actor-sow_mt_siege =
+   .description = Medium Long Range vehicle.
+
+actor-sow_mt_special =
+   .description = Medium Anti-Tank vehicle.
+
+actor-sow_mt_antiair =
+   .description = Medium Anti-Air vehicle.
+      Detector.
+
+actor-sow_ht_cannon =
+   .description = Heavy Main Battle Tank.
+
+actor-sow_ht_flame =
+   .description = Heavy Anti-Infantry vehicle.
+
+actor-sow_ht_siege =
+   .description = Heavy Long Range vehicle.
+
+actor-sow_ht_special =
+   .description = Heavy Anti-Tank vehicle.
+
+actor-sow_ht_antiair =
+   .description = Heavy Anti-Air vehicle.
+      Detector.
+
+actor-sow_abc =
+   .description = Suicidal Unit.
+      Won't explode if disabled.
+
+actor-sow_mech_avenger =
+   .description = Walker equipped with next generation of 8-Missile Ground-To-Air Missiles.
+      Missiles offering instant fire and reliable lock-on with decent accuracy.
+      Strong vs Air.
+      Weak vs Ground.
+      Detector.
+
+actor-sow_mech_avenger_mk2 =
+   .description = Upgraded Avenger Walker equipped with third generation of Anti-Air offering constant firing.
+      mechanisms shooting up to 16 missiles before having to go through reload.
+      - Slightly Increased Speed.
+      - Increased Range.
+      - Can fire constantly without reload.
+      - Missiles Tracking is enormous.
+      - More vulnerable than regular Avenger.
+      - Repairs itself over time.
+      - Immune to Mind Control.
+      Detector.
+
+actor-sow_mech_kodiak =
+   .description = Durable Multipurpose Walker with dual Heating Laser weapons.
+      Offers decent range and damage.
+
+actor-sow_mech_kodiak_mk2 =
+   .description = Upgraded Kodiak Walker offers massive armor plating making this Walker Ultimate Combat Unit with Overclocked Heating Lasers.
+      - Decreased Speed.
+      - Increased Range.
+      - Slower Rate of Fire.
+      - Overclocked Lasers causes Area Damage.
+      - Most Durable Unit of Overmind.
+      - Can be Repaired by Advancer.
+
+actor-sow_mech_gatling =
+   .description = Low-Mobility Walker with extreme long range outranging most units and turrets.
+      Dual Minigun is used to damage turrets and buildings from long range.
+      Won't do much against heavily armored targets.
+      Group of these can take down entire bases in a moment.
+      Strong vs Buildings.
+      Weak va Fast Units.
+
+actor-sow_mech_gatling_mk2 =
+   .description = Upgraded Gatling Walker capable of running at incredible speeds.
+      - Massively Increased Speed.
+      - Increased Fire Rate.
+      - Increased Range.
+      - Can shoot down Air units effectively.
+      - Much more vulnerable than regular Gatling.
+      - Can be Repaired by Advancer.
+      - Immune to Mind Control.
+      Detector.
+
+actor-sow_mech_jaguar =
+   .description = Short Ranged Walker with 4 Deadly Blasters deals massive damage up close.
+      Strong vs Infantry, Light armor.
+      Weak vs Long Range, Air.
+
+actor-sow_mech_jaguar_mk2 =
+   .description = Upgraded Jaguar Walker utilizing Stealth Technology and massive damage against Structures.
+      - Increased Speed and manuevarability.
+      - Increased Damage against Structures.
+      - Cloaked.
+      - More vulnerable than regular Jaguar.
+      - Repairs itself over time.
+      - Immune to Mind Control.
+
+actor-sow_mech_achilles =
+   .description = Exceptionally Mobile Walker using Claws to deal massive damage on melee range.
+      Decimates almost any turret or ground unit on single touch.
+      Shreds buildings on few hits too.
+      Autoproduction is very fast on this Walker.
+      Strong vs Ground.
+      Weak vs Air and Kiting.
+
+actor-sow_mech_achilles_mk2 =
+   .description = Upgraded Achilles Walker is equipped with Atomic Bomb that will detonate upon its death.
+      Note: Detonation will happen even if unit is disabled.
+      - Massively Increased Speed and manuevarability.
+      - Can be Repaired by Advancer.
+      - Repairs itself over time.
+      - Immune to Mind Control.
+      Detector.
+
+actor-sow_mcv =
+   .description = Mobile unit that deploys into Headquarters.
+      Grants 75 Research Points.
+      Each Headquarters provides One Advancer.
+      Provides some passive income.
+      Advancer:
+      Flying unit that can upgrade, repair and destroy buildings and units.
+      Detector.
+
+actor-satelliteprotection_mk1 =
+   .description = Protects non-defensive buildings from aerial attacks.
+      High damage output, long cooldown.
+
+actor-satelliteprotection_mk2 =
+   .description = Protects non-defensive buildings from aerial attacks.
+      Moderate damage output, short cooldown.
+
+actor-heavyunits =
+   .description = Unlocks Heavy Units to be researched inside Heavy Factories.
+
+actor-sow_invader =
+   .description = Upgrades Advancers into Invaders.
+      Gives ability to attack buildings and units.
+      Enhances Durability and Speed.
+
+actor-sow_invader_mk2 =
+   .description = Upgrades Invaders into Mk.2 Invaders.
+      Makes these units an effective predators.
+      Greatly Enhances Durability and Speed.
+
+actor-sowovercharge =
+   .description = Overcharges Power Plant doubling its effectivity.
+      Reveals its location to all players.
+      Nukes after death.
+
+actor-advancedairstrikes =
+   .description = Unlocks Bomber and Tripler support powers for Radar.
+
+actor-goldmineupgrade =
+   .description = Increases the generated Income from all Gold Mines by 30%.
+
+actor-goldmineupgrade2 =
+   .description = Increases the generated Income from Maxed Gold Mines by 60%.
+
+actor-researchupgrade =
+   .description = Increases the Research points provided by all Research Centers by 20%.
+
+actor-researchupgrade2 =
+   .description = Increases the Research points provided by Maxed Research Centers by 35%.
+
+actor-stateofwar =
+   .description = Removes Build Time From Turrets but increases their cost by 50%.
+      Unlocks late game technologies.
+
+actor-mta_unlock =
+   .description = Research vehicle to be ready for production.
+
+power-fighterbomber =
+   .description = Fighter Bomber
+       Call a quick jet to drop a bomb on the target.
+
+power-hercules =
+   .description = Hercules
+       Call upon a slow carpet bomber to strike the target.
+
+power-tripler =
+   .description = Tripler
+       Call upon a giant siege vessel. Drops 9 massive fire circles on its target.
+       Slow and extremely vulnerable.
+
+power-asteroids =
+   .description = Asteroids
+       Call upon a a storm of ateroids to strike your target.
+       Inaccurate, but deadly.
+
+actor-citymcv =
+   .description = Deploys into Mayor's house.
+      Mayor's house.
+      Buffs units and buildings.
+      Can be upgraded with Architects.
+
+actor-cityharvester =
+   .description = Collects resources for processing.
+      Unarmed.
+
+actor-cityambulance =
+   .description = Heals units.
+      Can transport 4 infantry.
+
+actor-cityfiretruck =
+   .description = Truck armed with a water cannon.
+      Strong vs Infantry, Buildings.
+      Increases damage resistance of nearby allied units.
+      Resistant against fire.
+
+actor-citypolicecar =
+   .description = Light vehicle that drives police officers to their destination.
+      Equipped with Taser.
+      Can carry up to 2 units.
+      Increases damage output of nearby allied units.
+
+actor-cityswatvan =
+   .description = Heavy police vehicle driving S.W.A.T.
+      to their destination.
+      Equipped with Taser.
+      Can carry up to 4 units.
+      SWAT Units inside are equipped with tasers.
+
+actor-cityr =
+   .description = Generates tax revenue.
+      Can be upgraded with Architects.
+      Automatically self-upgrades.
+      #Limit: 20.
+
+actor-cityc =
+   .description = Increases tax revenue from nearby Residentials.
+      Can be upgraded with Architects.
+      Automatically self-upgrades.
+      #Limit: 5.
+
+actor-cityi =
+   .description = Increases speed of nearby units.
+      Can be upgraded with Architects.
+      Automatically self-upgrades.
+      #Limit: 10.
+
+actor-cityfd =
+   .description = Produces fire department units, Architects, and Instructors.
+      Defense structure, can attack aircraft.
+      Requires power to operate.
+
+actor-citypd =
+   .description = Produces police units and dozers.
+      Defense structure.
+      Requires power to operate.
+
+actor-cityharbor =
+   .description = Refines resources.
+      into credits.
+
+actor-citycoal =
+   .description = Generates power.
+      Upgradeable:
+      each upgrade increases power output by 25% up to 100%.
+
+actor-citynuke =
+   .description = Provides triple the power of.
+      a standard Power Plant.
+      Upgradeable:
+      each upgrade increases power output by 25% up to 100%.
+
+actor-cityairport =
+   .description = Provides airborne support powers.
+
+actor-citylibrary =
+   .description = Unlocks Elite Architect & Elite Instructor.
+      Limit: 1.
+
+actor-citybank =
+   .description = Unlocks Money Truck XXL and Casino.
+      Limit: 1.
+
+actor-citypark =
+   .description = Seeds Tiberium.
+      Limit: 3.
+
+actor-cityfountain =
+   .description = Seeds Blue Tiberium.
+      Limit: 1.
+
+actor-citystadium =
+   .description = TBA.
+
+actor-cityexpo =
+   .description = TBA.
+
+actor-citystation =
+   .description = Provides Railway Gun support power.
+
+actor-citycasino =
+   .description = Generates revenue.
+      Provides Casino Crate support power.
+
+actor-citywindmill =
+   .description = TBA.
+
+actor-cityamuse =
+   .description = TBA.
+
+actor-cityzoo =
+   .description = Provides Dinosaur Drop support power.
+
+actor-cityfirefighter =
+   .description = Emergency worker armed with a high pressure fire hose.
+      Stuns Vehicles and Cyborgs.
+      Deals bonus damage to cyborgs.
+      Resistant against fire.
+      Strong vs Infantry, Buildings.
+      Weak vs Vehicles, Aircraft.
+
+actor-citypoliceofficer =
+   .description = Law enforcement armed with a pistol.
+      Can be upgraded to have pistol replaced with Submachine gun.
+      Strong vs Infantry.
+      Weak vs Vehicles, Aircraft.
+
+actor-cityarchitect =
+   .description = Upgrades a small area of buildings by 1 rank.
+      Limit: 1.
+
+actor-cityelitearchitect =
+   .description = Upgrades a large area of buildings by 1 rank.
+      Limit: 1.
+
+actor-cityinstructor =
+   .description = Upgrades a small group of units by 1 rank.
+      Limit: 1.
+
+actor-cityeliteinstructor =
+   .description = Upgrades a large group of units by 1 rank.
+      Limit: 1.
+
+actor-cityexpert =
+   .description = Upgrades a Vehicle by 1 Rank.
+
+actor-cityeliteexpert =
+   .description = Upgrades a Vehicle to Rank 4 (Elite).
+
+actor-cityswat =
+   .description = Elite law enforcement Team armed with silenced.
+      submachine guns and EMP grenades.
+      Strong vs ground targets.
+      Weak vs Aircraft.
+
+actor-cityswatgl =
+   .description = Stealth Elite law enforcement equipped with silenced Sniper Rifle.
+      Can he upgraded to get Grenade Launcher.
+      Strong vs Infantry, Air.
+
+actor-simcity_smg =
+   .description = Law Enforcement gets Submachine Guns instead of Handguns.
+      Increases damage against all targets.
+
+actor-simcity_bpv =
+   .description = All units produced at Police Departments gets Bulletproof vests reducing damage taken.
+
+actor-simcity_gl =
+   .description = S.W.A.T Specialists will get Grenade Launcher that can Siege Buildings and other static targets.
+
+actor-simcity_taser =
+   .description = Police Cars and SWAT Vans will shoot their tasers 50% faster.
+
+actor-steg =
+   .description = A large, heavily built, herbivorous quadruped.
+
+actor-tric =
+   .description = Quadruped with large bony frill and three horns.
+
+actor-trex =
+   .description = Giant dinosaur with powerful melee attack.
+      Strong vs Infantry, Buildings.
+      Weak vs Aircraft.
+
+power-tibseed =
+   .description = Tiberium Seeds
+       A cargo plane seeds Tiberium on your target.
+       It may give you and your world cancer, but its good for the economy.
+
+power-bluetibseed =
+   .description = Blue Tiberium Seeds
+       A cargo plane seeds blue Tiberium on your target.
+       Like the regular tib, but blueberry flavored. And thus, more valuable.
+
+power-mininukeparabomb =
+   .description = Mininuke Parabomb
+       A cargo plane drops a parachuted mininuke on your target.
+       The aircraft Can be intercepted en route.
+       NAGASAKI NUMBER 2!
+
+power-searchwarrant =
+   .description = Search Warrant
+       A squad of cargo planes drops 5 Police Cars on your target.
+       Demolition man style.
+
+power-railwaygun =
+   .description = Railway Gun
+       An unseen underground bullet train fires heavy artillery at the target.
+       Everyone loves a good set of guns.
+
+power-casinocrates =
+   .description = Casino Crates
+    Drop 3 Casino Crates at target.
+    Can provide massive benefits or penalties.
+    Do you feel lucky, punk?
+
+power-dinodrop =
+   .description = Dinosaur Drop
+    Drops a healthy mix of dinosaurs at the target.
+    Good for assaults, and enhances the mood.
+
+power-architect =
+   .description = Architect
+    Upgrades a small area of buildings by 1 rank.
+    If only rennovations were so easy in reality eh?
+
+power-elitearchitect =
+   .description = Elite Architect
+    Upgrades a large area of buildings by 1 rank.
+    THE POWER OF PRIVATE CONTRACTORS COMPELLS YOU!
+
+power-instructor =
+   .description = Instructor
+    Upgrades a small group of units by 1 rank.
+    Sometimes, a good pep talk is all that's needed.
+
+power-eliteinstructor =
+   .description = Elite Instructor
+    Upgrades a large group of units by 1 rank.
+    "WHAT IS STEP 1!"
+
+actor-sc2kfactorystructure =
+   .description = Builds structures.
+
+actor-sc2kpowercoal =
+   .description = Generates power.
+
+actor-sc2kwindmill =
+   .description = Generates cheap power.
+      Limit 10.
+
+actor-sc2kpoweroil =
+   .description = Generates power cheaper than coal.
+      Limit 5.
+
+actor-sc2knaturalgas =
+   .description = Generates a lot of power.
+      Limit 5.
+
+actor-sc2knuclear =
+   .description = Generates a ton of power.
+      Explodes when razed.
+      Limit 5.
+
+actor-sc2kpowersolar =
+   .description = Generates some power.
+      Limit 5.
+
+actor-sc2kpowermicrowave =
+   .description = Generates clean power.
+      Limit 2.
+
+actor-sc2kpowerfusion =
+   .description = Generates extreme power.
+      Limit 2.
+
+actor-sc2kfactorydisaster =
+   .description = Produces disasters to use on enemy players.
+
+actor-sc2k_cyclone_center =
+   .description = Unlocks Ice Cyclones.
+      Limit 1.
+
+actor-sc2k_airport =
+   .description = Unlocks Air Crash.
+      Limit 1.
+
+actor-sc2k_toy_factory =
+   .description = Gadget factory.
+      Provides income.
+      Limit 1.
+
+actor-sc2krecyclingcenter =
+   .description = Refinery.
+
+actor-sc2kdomicile =
+   .description = Living quarters.
+      Provides income.
+
+actor-sc2kcardealership =
+   .description = Sells vehicles.
+
+actor-sc2kmarina =
+   .description = Produces, and.
+      repairs boats.
+
+actor-sc2kfactoryfarm =
+   .description = Increases Refinery income by 25%.
+      Limit 1.
+
+actor-sc2kobservatory =
+   .description = Reveals the entire map and provides radar.
+      Limit 1.
+
+actor-sc2ktradecenter =
+   .description = Unlocks the Super mall.
+      Limit 1.
+
+actor-sc2ksupermall =
+   .description = Shrine of commercialism.
+      Provides income.
+      Limit 1.
+      Fragile, explodes when razed.
+
+actor-sc2kubermall =
+   .description = Ultimate commercial firm.
+      Provides major income.
+      Limit 1.
+      Fragile, explodes when razed.
+
+actor-sc2kmissilesilo =
+   .description = Nuke silo.
+
+actor-sc2kpolicedept =
+   .description = Calls in Police Forces.
+
+actor-sc2kfiredept =
+   .description = Calls in Firefighters.
+
+actor-sc2khospital =
+   .description = Heals nearby units.
+
+actor-sc2kfire =
+   .description = Burning fire.
+
+actor-sc2ktornado =
+   .description = Sucks and eats everything in its way.
+
+actor-ice_cyclone =
+   .description = Freezes everything in its way.
+
+actor-sc2kmob =
+   .description = Rioting Citizen.
+      Armed with molotovs.
+
+actor-sc2k_thundercloud_main =
+   .description = Mobile tesla coil.
+
+actor-sc2kbulldozer =
+   .description = Harvests Tiberium.
+
+actor-sc2k_big_bulldozer =
+   .description = Knocks down buildings.
+
+actor-sc2kjetplane =
+   .description = Crashes into ground targets.
+
+actor-sc2khelicopter =
+   .description = Good for scouting.
+
+actor-sc2kcargoship =
+   .description = Cargo ship filled with explosives.
+
+actor-sc2kpolicecar =
+   .description = Light vehicle that drives police officers to their destination.
+      Can carry up to 4 officers who can shoot from inside.
+      Increases damage output of nearby allied units.
+
+actor-sc2kfiretruck =
+   .description = Truck armed with a water cannon.
+      Strong vs Infantry, Buildings.
+      Increases damage resistance of nearby allied units.
+
+actor-sc2kbeaconpolice =
+   .description = Advanced base defense.
+      Requires power to operate.
+      Can detect cloaked units.
+      Strong vs Vehicles, Infantry.
+      Weak vs Aircraft.
+
+actor-sc2kbeaconfire =
+   .description = Advanced base defense.
+      Requires power to operate.
+      Can detect cloaked units.
+      Strong vs Vehicles, Infantry.
+      Weak vs Aircraft.
+
+actor-sc2kbeaconarmy =
+   .description = AA defense.
+      Can detect cloaked units.
+      Strong vs Aircraft.
+
+actor-sc2kdomicilea1 =
+   .description = Living quarters.
+      Provides income.
+
+actor-sc2kdomicileb1 =
+   .description = Living quarters.
+      Provides income.
+
+actor-sc2kdomicilec1 =
+   .description = Living quarters.
+      Provides income.
+
+actor-sc2kcommerciala1 =
+   .description = Living quarters.
+      Provides income.
+
+actor-sc2kcommercialb1 =
+   .description = Living quarters.
+      Provides income.
+
+actor-sc2kpolicedepta =
+   .description = Calls in Police Forces.
+
+actor-sc2kfiredepta =
+   .description = Calls in Firefighters.
+
+actor-sc2khospitala =
+   .description = Heals nearby units.
+
+actor-sc2k_armyhq =
+   .description = Calls Military.
+
+actor-sc2k_armyvehicle =
+   .description = Calls Military.
+
+actor-sc2kmissilesiloa =
+   .description = Nuke silo.
+
+actor-sc2k_storage =
+   .description = Stores excess refined.
+      Ore and Gems.
+
+actor-sc2kfactorydisastera =
+   .description = Produces disasters to use on enemy players.
+
+actor-sc2kamtnk =
+   .description = General-Purpose Tank.
+      Strong vs Tanks, Vehicles.
+      Weak vs Infantry.
+
+actor-sc2k_ufo =
+   .description = Helicopter Gunship with AG Missiles.
+      Strong vs Buildings, Tanks.
+      Weak vs Infantry.
+
+actor-sc2k_streetrat =
+   .description = Fast car, armed and upgradable.
+      upgradable with rockets.
+      upgradable with machineguns.
+
+actor-sc2k_utilityvan =
+   .description = Tanky Truck, armed and upgradable.
+      upgradable with rockets.
+      upgradable with machineguns.
+
+actor-sc2k_j57 =
+   .description = Faster Classic car, armed and upgradable.
+      upgradable with rockets.
+      upgradable with machineguns.
+
+actor-sc2k_airhawk =
+   .description = Faster Muscle car, armed and upgradable.
+      upgradable with rockets.
+      upgradable with machineguns.
+
+actor-chromesc2kengine1 =
+   .description = Increases speed of simcity cars.
+
+actor-chromesc2kengine2 =
+   .description = Increases speed of simcity cars.
+
+actor-chromesc2kengine3 =
+   .description = Increases speed of simcity cars.
+
+actor-chromesc2karmor =
+   .description = Increases health of simcity cars.
+
+actor-chromesc2kshield =
+   .description = Increases health of simcity cars.
+
+actor-chromesc2kmachinegun =
+   .description = Adds a Machinegun to simcity cars.
+
+actor-chromesc2kmissile =
+   .description = Adds a Missile Launcher to simcity cars.
+
+power-sc2000atom = 
+   .description = Launches a devastating atomic bomb at a target location.
+
+power-mobdisaster = 
+   .description = Deploys the mob disaster in enemies base.
+
+power-firedisaster = 
+   .description = Deploys the fire disaster in enemies base.
+
+power-tornadodisaster = 
+   .description = Deploys the tornado disaster in enemies base.
+
+power-thunderdisaster = 
+   .description = Deploys the thunder disaster in enemies base.
+
+power-ufodisaster = 
+   .description = Deploys the ufo disaster in enemies base.
+
+actor-zbio =
+   .description = Produces Bio-Lab units.
+
+actor-zombie =
+   .description = Basic Zombie.
+
+actor-upzombiemutate1 =
+   .description = zombies have +20% more hp.
+
+actor-upzombiemutate2 =
+   .description = zombies have +20% more hp.
+
+actor-upzombiemutate3 =
+   .description = zombies have +20% more hp.
+
+actor-upzombiemutate4 =
+   .description = zombies have +10% more hp.
+
+actor-upzombiemutate5 =
+   .description = zombies have +10% more hp.
+
+actor-upzombiemutate6 =
+   .description = zombies have +10% more hp.
+
+actor-upzintelligence1 =
+   .description = zombies have +10% more speed.
+
+actor-upzintelligence2 =
+   .description = zombies have +10% more speed.
+
+actor-upzintelligence3 =
+   .description = zombies have +10% more speed.
+
+actor-upzmsquad1 =
+   .description = Gain Squad Nembers.
+
+actor-upzmsquad2 =
+   .description = Gain Squad Nembers.
+
+actor-upzmsquad3 =
+   .description = Gain Squad Nembers.
+
+actor-zombie2 =
+   .description = Slow undead.
+      Attacks in close combat.
+
+actor-spitter =
+   .description = Mutated abomination that spits liquid Tiberium.
+      Strong vs Infantry, Buildings.
+      Weak vs Aircraft.
+
+power-corona =
+   .description = Corona Virus Mk2
+    Spreads Covid-19 to turn humans into Zombies.
+
+power-aircrash =
+   .description = Aircraft Crash
+    Spawns a large Zombie squad.
+
+power-zepcrash =
+   .description = Zeppelin Crash
+    Spawns a large Zombie and Monster squad.
+
+actor-wnuke =
+   .description = Provides Power.
+
+actor-wnuk2 =
+   .description = Provides more power, cheaper than the.
+      standard Power Plant.
+
+actor-wref =
+   .description = Processes raw Tiberium.
+      into useable resources.
+
+actor-whand =
+   .description = Trains infantry.
+
+actor-wweap =
+   .description = Produces vehicles.
+
+actor-wsheepstatue =
+   .description = Unlocks Sheeps, Skunks, and Moles.
+
+actor-whq =
+   .description = Provides radar.
+      Unlocks higher-tech units and buildings.
+      Requires power to operate.
+
+actor-wsheepstrikecommand =
+   .description = Provides Sheep Strike power.
+      Requires power to operate.
+
+actor-wtimemachine =
+   .description = Provides Chronosphere.
+      Requires power to operate.
+
+actor-wconcretedonkey =
+   .description = Provides Concrete Donkey support power.
+      Requires power to operate.
+
+actor-wsilo =
+   .description = Stores processed Tiberium.
+
+actor-wsantassleigh =
+   .description = Generates Cash.
+
+actor-wgtwr =
+   .description = Basic defensive structure.
+      Strong vs Infantry.
+      Weak vs Tanks.
+
+actor-worms_aasite =
+   .description = Anti-Aircraft base defense.
+      Strong vs Aircraft.
+      Cannot target Ground units.
+
+actor-worms_candle =
+   .description = Basic defensive structure.
+      Strong vs Infantry.
+      Weak vs Tanks.
+
+actor-laspy =
+   .description = Advanced base defense.
+      Requires power to operate.
+      Strong vs all Ground units.
+      Cannot target Aircraft.
+
+actor-worms_wormpad =
+   .description = Produces, rearms and.
+      repairs helicopters.
+
+actor-wormuzi =
+   .description = Uzi Infantry.
+
+actor-wormgrenade =
+   .description = Fast infantry armed with grenades.
+      Strong vs Buildings, slow-moving targets.
+
+actor-wormbazooka =
+   .description = Anti-tank/Anti-aircraft infantry.
+      Strong vs Tanks, Aircraft.
+      Weak vs Infantry.
+
+actor-wormflamer =
+   .description = Advanced Anti-infantry unit.
+      Strong vs Infantry, Buildings.
+      Weak vs Tanks.
+
+actor-wormengineer =
+   .description = Captures structures.
+
+actor-wormdynamite =
+   .description = Elite sniper infantry unit.
+      Strong vs Infantry, Buildings.
+      Weak vs Vehicles.
+
+actor-wharv =
+   .description = Collects Tiberium for processing.
+      Unarmed.
+
+actor-skunk =
+   .description = Toxic skunk!
+
+actor-wtruck =
+   .description = Bahhh.
+
+actor-worms_mole =
+   .description = Jumps onto targets.
+
+actor-wormbuggy =
+   .description = Fast scout and anti-infantry vehicle.
+      Strong vs Infantry.
+      Weak vs Tanks.
+
+actor-worms_moai =
+   .description = Fast scout and anti-infantry vehicle.
+      Strong vs Infantry.
+      Weak vs Tanks.
+
+actor-wmtnk =
+   .description = General-Purpose Worms Tank.
+      Strong vs Tanks, Vehicles.
+      Weak vs Infantry.
+
+actor-wtank =
+   .description = General-Purpose Worms Tank.
+      Strong vs Tanks, Vehicles.
+      Weak vs Infantry.
+
+actor-wmissilelauncher =
+   .description = Long range rocket artillery.
+      Strong vs all Ground units.
+
+actor-wcannon =
+   .description = Slow and Weak tank.
+      Strong vs all Ground units.
+
+actor-worms_mcv =
+   .description = Deploys into another Construction Yard.
+      Unarmed.
+
+actor-worms_ufo =
+   .description = Helicopter Gunship with AG Missiles.
+      Strong vs Buildings, Tanks.
+      Weak vs Infantry.
+
+actor-worms_apache =
+   .description = Helicopter Gunship with Missiles.
+      Strong vs Infantry, Light Vehicles and.
+      Aircraft.
+      Weak vs Tanks.
+
+power-sheepstrike =
+   .description = Sheep Strike
+    Strike an area with flaming sheep.
+
+power-concretedonkey =
+   .description = Concrete Donkey
+    Launch a tactical concrete donkey. Applies heavy damage over a large area.
+
+power-chronovortex =
+   .description = Chrono Vortex
+    Initiate a Chrono Vortex which deals heavy damage over time to a large area.
+
+actor-zbot =
+   .description = General-purpose robot.
+
+actor-zjeep =
+   .description = Fast scout & anti-infantry vehicle.
+      Can carry one infantry.
+      Strong vs Infantry.
+      Weak vs Vehicles, Aircraft.
+
+actor-zltnk =
+   .description = Fast, light tank.
+      Strong vs Vehicles, Tanks.
+      Weak vs Infantry.
+
+actor-zmtnk =
+   .description = Fast, light tank.
+      Strong vs Vehicles, Tanks.
+      Weak vs Infantry.
+
+actor-zhtnk =
+   .description = Fast, light tank.
+      Strong vs Vehicles, Tanks.
+      Weak vs Infantry.
+
+actor-zapc =
+   .description = Can Carry one Infantry, changes weapons depend on infantry.
+
+actor-zmlrs =
+   .description = Fast, light tank.
+      Strong vs Vehicles, Tanks.
+      Weak vs Infantry.
+
+actor-zgattlingcan =
+   .description = Basic Defence.
+      Strong vs Infantry, Aircraft.
+      Weak vs Vehicles.
+
+actor-zguncan =
+   .description = Basic Defence.
+      Strong vs Vehicles.
+      Weak vs Infantry.
+
+actor-zhotwizer =
+   .description = Long Range Defence.
+      Strong vs Ground.
+      Weak vs Aircraft.
+
+actor-zmissilecan =
+   .description = Anti Tank Defence.
+      Strong vs Vehicles, Aircraft.
+      Weak vs Aircraft.
+
+actor-zgrenadebox =
+   .description = Trains Attack Dogs.
+
+actor-zmcv =
+   .description = Deploys into another Construction Yard.
+      Unarmed.
+
+actor-zfort =
+   .description = Builds structures.
+
+actor-zbarracks =
+   .description = Trains infantry.
+
+actor-zweap =
+   .description = Trains vehicles.
+
+actor-zhq =
+   .description = Provides radar and Air Strike support power.
+      Unlocks higher-tech units and buildings.
+      Requires power to operate.
+
+actor-zgattlingcan =
+   .description = Adds Gattling Cannons to the Fort.
+
+actor-zguncan =
+   .description = Adds Cannons to the Fort.
+
+actor-zguncan =
+   .description = Adds Cannons to the Fort.
+
+actor-zhowitizer =
+   .description = Adds Howitzers to the Fort.
+
+actor-zmissilecan =
+   .description =  Adds Missiles launchers to the Fort.
+
+actor-win98_powerplant =
+   .description = Provides 100 Power.
+
+actor-win98_barracks =
+   .description = Trains infantry Windows 98 units.
+
+actor-win98_recyclebin =
+   .description = Refinery.
+
+actor-win98_input_devices =
+   .description = Trains vehicle Windows 98 units.
+
+actor-win98_powerplantadvanced =
+   .description = Provides 200 Power.
+
+actor-win98_aquanet =
+   .description = Produces, and.
+      repairs boats.
+
+actor-win98_radar =
+   .description = Provides an overview.
+      of the battlefield.
+      Can detect cloaked units.
+      Requires power to operate.
+      Provides Sector Scan and Turbo Button support powers.
+
+actor-win98_aerial_uplink =
+   .description = Trains air Windows 98 units.
+
+actor-win98_crt_wall =
+   .description = Stops infantry and light vehicles.
+      Can be crushed by tanks.
+
+actor-win98_settings_gear =
+   .description = Stores excess refined.
+      Ore and Gems.
+
+actor-win98_processor =
+   .description = Static defense with a fireport for.
+      a garrisoned soldier.
+      Can detect cloaked units.
+      Strong vs Infantry, Light armor.
+      Weak vs Tanks, Aircraft.
+
+actor-win98_joystick =
+   .description = Telsa defense tower.
+
+actor-win98_paint =
+   .description = Anti Air defense, shoots paintbrushes.
+
+actor-win98_defrag =
+   .description = Produces Bits that can be harvested (wip).
+      Provides income.
+
+actor-win98_hardware =
+   .description = Provides Demo Disk Strike support power.
+
+actor-win98_xbox =
+   .description = Provides Red Ring of Death Superweapon.
+
+actor-win98_user =
+   .description = Basic Melee Infantry.
+      Slow but can take some damage.
+
+actor-win98_erase =
+   .description = Rocket soldier.
+
+actor-win98_harvester =
+   .description = Harvester.
+
+actor-win98_freecell =
+   .description = Captures structures.
+
+actor-win98_agent =
+   .description = Hijacks vehicles.
+
+actor-win98_spider =
+   .description = Repairs nearby vehicles.
+      Unarmed.
+
+actor-win98_clippy =
+   .description = Elite commando infantry.
+      Armed with.
+      dual pistols and C4.
+      Can detect cloaked units.
+      Maximum 1 can be trained.
+      Strong vs Infantry, Buildings.
+      Weak vs Vehicles, Aircraft.
+      Special Ability: Destroy Building with C4.
+
+actor-win98_mcv =
+   .description = Tramsforms into another My Computer.
+
+actor-win98_mouse =
+   .description = Fast tank, good for scouting.
+      Strong vs Light armor.
+      Weak vs Infantry, Tanks, Aircraft.
+
+actor-win98_mine =
+   .description = Hovering mine that can deploy.
+      into the ground.
+
+actor-win98_keyboard =
+   .description = Artillery unit.
+
+actor-win98_bitcoin =
+   .description = Delivers 500 credits.
+
+actor-win98_msn_butterfly =
+   .description = Crashes into ground targets.
+
+actor-win98_explorer =
+   .description = Fast Infantry Transport Helicopter.
+      Unarmed.
+
+actor-win98_regedit =
+   .description = Heavy win98 warship, deploys.
+      5 interceptor craft.
+      Strong vs Vehicles, Aircraft.
+
+actor-win98_email_raft =
+   .description = Light scout & support ship.
+      Hardly floats.
+      Can detect submarines.
+
+actor-win98_benchy =
+   .description = Fast multi-role ship.
+      Can detect submarines.
+      Strong vs Naval units, Vehicles, Aircraft.
+
+actor-op2_commonore_beacon_3bar =
+   .description = Supernova Missile.
+
+actor-eden_tokamak =
+   .description = Generates power.
+      Releases Emp Shockwave on.
+      Death.
+
+actor-eden_smelter_common =
+   .description = Processes resources.
+
+actor-eden_agridome =
+   .description = [Colony Building : Limit 1] Needed with Residence for Vehicle Factory.
+
+actor-eden_residence =
+   .description = [Colony Building : Limit 1] Needed with Agridome for Vehicle Factory.
+      Provides Radar.
+
+actor-eden_lab_basic =
+   .description = [Colony Building : Limit 1] Needed with Nursery and University for Standard Lab.
+
+actor-eden_factory_vehicle =
+   .description = Constructs Vehicles.
+
+actor-eden_garage =
+   .description = Repairs vehicles.
+      Allows construction of MCVs.
+
+actor-eden_nursery =
+   .description = [Colony Building : Limit 1] Needed with University and Basic Lab for Standard Lab.
+
+actor-eden_university =
+   .description = [Colony Building : Limit 1] Needed with Nursery and Basic Lab for Standard Lab.
+
+actor-eden_lab_standard =
+   .description = [Colony Building : Limit 1] Needed for DIRT, Consumer Factory, GORF, and Advanced Lab.
+
+actor-eden_dirt =
+   .description = Provides Force Shield.
+
+actor-eden_rcc =
+   .description = [Colony Building : Limit 1] Needed for Consumer Factory.
+
+actor-eden_factory_consumer =
+   .description = Manufactures Consumer Goods.
+
+actor-eden_gorf =
+   .description = Increases income from Common Ore Smelter.
+
+actor-eden_lab_advanced =
+   .description = [Colony Building : Limit 1] Needed for Space Port, Rare Ore Smelter.
+
+actor-eden_spaceport =
+   .description = Needed for Solar Power Array.
+      Launches Supernova Missiles.
+
+actor-eden_solar_array =
+   .description = Generates power.
+      Releases Emp Shockwave on.
+      Death.
+
+actor-eden_smelter_rare =
+   .description = Needed for Tigers.
+
+actor-eden_light_tower =
+   .description = Provides sight and detection.
+
+actor-eden_mine_common =
+   .description = Provides passive income.
+      spawns common ore.
+
+actor-eden_storage_common =
+   .description = Stores processed Tiberium.
+
+actor-eden_gp_laser =
+   .description = Laser defense.
+      Strong vs Tanks, vehicles.
+      Weak vs Infantry.
+
+actor-eden_gp_emp =
+   .description = EMP defense.
+      Strong vs Tanks, vehicles.
+      Weak vs Infantry.
+
+actor-eden_gp_railgun =
+   .description = Railgun defense.
+      Strong vs Tanks, vehicles.
+      Weak vs Infantry.
+
+actor-consumer_items_impulse =
+   .description = Cheap Items - Returns $600.
+
+actor-consumer_items_wares =
+   .description = Basic Items - Returns $1100.
+
+actor-consumer_items_luxury_wares =
+   .description = Luxury Items - Returns $2300.
+
+actor-eden_convec_structure_factory =
+   .description = Deploys into another Command Center.
+      Unarmed.
+
+actor-eden_scout =
+   .description = Unarmed scout.
+
+actor-eden_lynx_laser =
+   .description = Fast laser vehicle.
+
+actor-eden_tiger_microwave =
+   .description = Slow and strong laser vehicle.
+
+actor-eden_lynx_railgun =
+   .description = Fast railgun vehcile.
+
+actor-eden_tiger_railgun =
+   .description = Slow and strong railgun vehicle.
+
+actor-eden_lynx_emp =
+   .description = Fast EMP vehicle.
+
+actor-eden_tiger_emp =
+   .description = Slow and strong EMP vehicle.
+
+actor-eden_lynx_acidcloud =
+   .description = Fast AcidCloud vehicle.
+
+actor-eden_tiger_acidcloud =
+   .description = Slow and strong AcidCloud vehicle.
+
+actor-eden_lynx_starflare =
+   .description = Fast starflare vehicle.
+
+actor-eden_tiger_starflare =
+   .description = Slow and strong Starflare vehicle.
+
+actor-eden_lynx_thorshammer =
+   .description = Fast ThorsHammer vehicle.
+
+actor-eden_tiger_thorshammer =
+   .description = Slow and strong ThorsHammer vehicle.
+
+actor-plymouth_tokamak =
+   .description = Generates power.
+      Releases Emp Shockwave on.
+      Death.
+
+actor-plymouth_smelter_common =
+   .description = Processes resources.
+
+actor-plymouth_agridome =
+   .description = [Colony Building : Limit 1] Needed with Residence for Vehicle Factory.
+
+actor-plymouth_residence =
+   .description = [Colony Building : Limit 1] Needed with Agridome for Vehicle Factory.
+      Provides Radar.
+
+actor-plymouth_basic_lab =
+   .description = [Colony Building : Limit 1] Needed with Nursery and University for Standard Lab.
+
+actor-plymouth_factory_vehicle =
+   .description = Constructs Vehicles.
+
+actor-plymouth_garage =
+   .description = Repairs vehicles.
+      Allows construction of MCVs.
+
+actor-plymouth_nursery =
+   .description = [Colony Building : Limit 1] Needed with University and Basic Lab for Standard Lab.
+
+actor-plymouth_university =
+   .description = [Colony Building : Limit 1] Needed with Nursery and Basic Lab for Standard Lab.
+
+actor-plymouth_lab_standard =
+   .description = [Colony Building : Limit 1] Needed for DIRT, Arachnid Factory, GORF, and Advanced Lab.
+
+actor-plymouth_dirt =
+   .description = Provides Force Shield.
+
+actor-plymouth_rcc =
+   .description = [Colony Building : Limit 1] Needed for Arachnid Factory.
+
+actor-plymouth_factory_arachnid =
+   .description = Constructs Arachnids.
+
+actor-plymouth_gorf =
+   .description = Increases income from Common Ore Smelter.
+
+actor-plymouth_lab_advanced =
+   .description = [Colony Building : Limit 1] Needed for Space Port, Rare Ore Smelter.
+
+actor-plymouth_spaceport =
+   .description = Needed for Solar Power Array.
+      Launches Supernova Missiles.
+
+actor-plymouth_solararray =
+   .description = Generates power.
+      Releases Emp Shockwave on.
+      Death.
+
+actor-plymouth_smelter_rare =
+   .description = Needed for Tigers.
+
+actor-plymouth_light_tower =
+   .description = Provides sight and detection.
+
+actor-plymouth_mine_common =
+   .description = Provides passive income.
+      spawns common ore.
+
+actor-plymouth_storage_common =
+   .description = Stores processed Tiberium.
+
+actor-plymouth_gp_microwave =
+   .description = Microwave defense.
+      Strong vs Tanks, vehicles.
+      Weak vs Infantry.
+
+actor-plymouth_gp_stickyfoam =
+   .description = Stickyfoam defense.
+      Strong vs Tanks, vehicles.
+      Weak vs Infantry.
+
+actor-plymouth_gp_rpg =
+   .description = RPG defense.
+      Strong vs Tanks, vehicles.
+      Doubles as Anti-air.
+
+actor-plymouth_convec_structure_factory =
+   .description = Deploys into a Structure Factory.
+      Unarmed.
+
+actor-plymouth_scout =
+   .description = Unarmed scout.
+
+actor-plymouth_spider =
+   .description = Arachnid capable of repair and capturing vehicles.
+
+actor-plymouth_scorpion =
+   .description = Arachnid armed with laser.
+
+actor-plymouth_lynx_microwave =
+   .description = Fast microwave vehicle.
+
+actor-plymouth_tiger_microwave =
+   .description = Slow and strong microwave vehicle.
+
+actor-plymouth_lynx_rpg =
+   .description = Fast rpg vehcile.
+
+actor-plymouth_tiger_rpg =
+   .description = Slow and strong RPG vehicle.
+
+actor-plymouth_lynx_emp =
+   .description = Fast EMP vehcile.
+
+actor-plymouth_tiger_emp =
+   .description = Slow and strong EMP vehicle.
+
+actor-plymouth_lynx_stickyfoam =
+   .description = Fast EMP vehcile.
+
+actor-plymouth_tiger_stickyfoam =
+   .description = Slow and strong Stickyfoam vehicle.
+
+actor-plymouth_lynx_esg =
+   .description = Fast EMP vehcile.
+
+actor-plymouth_tiger_esg =
+   .description = Slow and strong ESG vehicle.
+
+actor-plymouth_lynx_starflare =
+   .description = Fast starflare vehicle.
+
+actor-plymouth_tiger_starflare =
+   .description = Slow and strong Starflare vehicle.
+
+actor-plymouth_lynx_supernova =
+   .description = Fast supernova vehicle.
+
+actor-plymouth_tiger_supernova =
+   .description = Slow and strong Supernova vehicle.
+
+actor-pinky_fi =
+   .description = A Demon that shoots devastation fireballs.
+      clearing waves of infantry and buildings in its path.
+      Strong vs Everything.
+
+actor-halloween_blackcitadel =
+   .description = Enables buildings construction.
+
+actor-halloween_crypto =
+   .description = Trains Undeads.
+      Provides energy to build more units.
+
+actor-halloween_clowntent =
+   .description = Trains Clowns.
+
+actor-halloween_graveyard =
+   .description = Generates soul power.
+
+actor-halloween_daemonpit =
+   .description = Produces powerful demons, and monsters.
+
+actor-halloween_tower =
+   .description = Advanced base defense.
+      Requires power to operate.
+      Can detect cloaked units.
+      Strong vs Vehicles, Infantry.
+      Weak vs Aircraft.
+
+actor-halloween_spirittower =
+   .description = Advanced base defense.
+      Requires power to operate.
+      Can detect cloaked units.
+      Strong vs Vehicles, Infantry.
+      Weak vs Aircraft.
+
+actor-halloween_carousel =
+   .description = Provides Passive income.
+
+actor-halloween_cauldron =
+   .description = Refines Ore and Gems.
+      into credits.
+
+actor-halloween_dkghost_small =
+   .description = A Ghost, with melee attack, can fly.
+
+actor-halloween_bat =
+   .description = Can fly, spits blood.
+
+actor-halloween_skeleton =
+   .description = Powewrful skeleton.
+      Attacks in close combat.
+      Regenerates health.
+
+actor-halloween_demon =
+   .description = Slow powerful demon.
+      Attacks in close combat.
+
+actor-halloween_pinky =
+   .description = This is a PINKY.
+
+actor-halloween_cow =
+   .description = Slow powerful cow.
+      Attacks in close combat.
+
+actor-halloween_rockgolem =
+   .description = A large Rock Golem, throws rocks.
+
+actor-halloween_spider =
+   .description = A evil Spider.
+
+actor-halloween_clown =
+   .description = General-purpose infantry.
+      Strong vs Infantry.
+      Weak vs Vehicles.
+
+actor-halloween_clown2 =
+   .description = General-purpose infantry.
+      Strong vs Infantry.
+      Weak vs Vehicles.
+
+actor-halloween_clown3 =
+   .description = General-purpose infantry.
+      Strong vs Infantry.
+      Weak vs Vehicles.
+
+actor-halloween_sweettooth =
+   .description = Fast scout vehicle, armed with.
+      rockets.
+      Can attack Aircraft.
+      Strong vs Vehicles, Tanks.
+      Weak vs Infantry.
+
+actor-halloween_clowncar =
+   .description = Heavy infantry transport.
+      Unarmed.
+
+actor-halloween_pirateship =
+   .description = Heavy bomber airship.
+      Strong vs Buildings, Infantry.
+      Weak vs Aircraft.
+
+actor-halloween_skeleton_archer =
+   .description = Anti-tank/Anti-aircraft infantry.
+      Strong vs Tanks, Aircraft.
+      Weak vs Infantry.
+
+actor-halloween_worm =
+   .description = Collects Tiberium for processing.
+      Unarmed.
+
+actor-halloween_mcv =
+   .description = Deploys into another Construction Yard.
+      Unarmed.
+
+actor-garfield_infantry =
+   .description = Basic Melee Infantry.
+      Slow but can take some damage.
+
+actor-spooky_eye =
+   .description = Crashes into ground targets.
+
+actor-inflatable_spider =
+   .description = Trains Heroes.
+
+actor-halloween_upgradeghost =
+   .description = When a unit dies, it respawns like a ghost.
+
+actor-halloween_upgradeboiling =
+   .description = Provides hot oil to towers, aiding in killing melee infantry.
+
+actor-halloween_upgradeaxe =
+   .description = Now cows carry more powerful axes, increasing their damage.
+
+actor-halloween_upgradesword =
+   .description = Skeletons and Demons uses more powerful swords, increasing damage.
+
+actor-halloween_upgradebows =
+   .description = Archer Skeletons and Towers are more powerful, increasing damage.
+
+actor-halloween_upgrademana =
+   .description = Adds more hp and attack to magic creatures. Affects to Golems, Ghosts, Demons and Spirit Tower.
+
+actor-powergraveyard =
+   .description = Additional graves boost the unit cap (Power).
+
+actor-astro_conyard =
+   .description = Earth HQ unit.
+    Constructs buildings.
+    Hero units are healed by it.
+
+actor-astro_biodome =
+   .description = Generator, build to keep producing units.
+
+actor-astro_harvester =
+   .description = Resource dropoff structure.
+
+actor-astro_wellcap =
+   .description = Generates income.
+
+actor-astro_barracks =
+   .description = Trains Astro infantry.
+
+actor-astro_vehiclefactory =
+   .description = Trains Astro special units.
+
+actor-astro_tower =
+   .description = Upgradable defense building.
+      Detector.
+
+actor-astro_tower2 =
+   .description = Upgraded guard tower, attacks land, sea, and air.
+
+actor-astro_tower3 =
+   .description = Further upgraded Guard tower, attacks land, sea, and air.
+
+actor-lego_astro_mcv =
+   .description = Transforms into an Eagle Command.
+
+actor-astro_builder =
+   .description = Basic Harvester.
+      Can repair.
+
+actor-astro_trooper =
+   .description = Basic Melee Infantry.
+
+actor-astro_gripley =
+   .description = Heavy Melee Infantry.
+
+actor-astro_commando =
+   .description = Basic Ranged Infantry.
+
+actor-astro_space_police =
+   .description = Harrying Ranged Infantry.
+
+actor-astro_gemma =
+   .description = Astro Girlboss Hero.
+
+actor-astro_space_police_captain =
+   .description = Harrying Ranged Hero.
+
+actor-astro_biff =
+   .description = Stalwart Melee Hero.
+
+actor-legobattles_ghost =
+   .description = Spooky.
+
+actor-astro_claw_tank =
+   .description = Assault vehicle.
+
+actor-astro_transport =
+   .description = Flying transport unit.
+      Detector.
+
+actor-astro_special_starfighter =
+   .description = Medium Flying unit.
+      Detector.
+
+actor-astro_space_police_cruiser =
+   .description = Flying Patrol unit.
+      Detector.
+
+actor-astro_starship2 =
+   .description = Heavy Flying unit.
+
+actor-lego_alien_conyard =
+   .description = Alien HQ unit.
+    Constructs buildings.
+    Hero units are healed by it.
+
+actor-lego_alien_mcv =
+   .description = Transforms into an Crater Base.
+
+actor-alien_barracks =
+   .description = Trains Alien infantry.
+
+actor-alien_hatchery =
+   .description = Generator, build to keep producing units.
+
+actor-alien_harvester =
+   .description = Resource dropoff structure.
+
+actor-alien_wellcap =
+   .description = Generates income.
+
+actor-alien_vehiclefactory =
+   .description = Trains Alien special units.
+
+actor-alien_tower =
+   .description = Upgradable defense building.
+      Detector.
+
+actor-alien_tower2 =
+   .description = Upgraded guard tower, attacks land, sea, and air.
+
+actor-alien_tower3 =
+   .description = Further upgraded Guard tower, attacks land, sea, and air.
+
+actor-alien_builder =
+   .description = Basic Harvester.
+      Can repair.
+
+actor-alien_drone =
+   .description = Basic Melee Infantry.
+
+actor-alien_laser_trooper =
+   .description = Basic Ranged Infantry.
+
+actor-alien_grav_runner =
+   .description = Heavy Melee Infantry.
+
+actor-alien_space_criminal =
+   .description = Harrying Ranged Infantry.
+
+actor-alien_commander =
+   .description = Stalwart Melee Hero.
+
+actor-alien_queen =
+   .description = Supportive Melee Hero.
+
+actor-space_criminal_leader =
+   .description = Chaotic Ranged Hero.
+
+actor-alien_attack_ship =
+   .description = Assault vehicle.
+
+actor-alien_transport_ship =
+   .description = Flying transport unit.
+      Detector.
+
+actor-alien_strike_ship =
+   .description = Medium Flying unit.
+      Detector.
+
+actor-alien_space_criminal_hotrod =
+   .description = Flying Patrol unit.
+      Detector.
+
+actor-alien_assault_ship =
+   .description = Heavy Flying unit.
+
+actor-lego_imperial_conyard =
+   .description = Imperial HQ unit.
+    Constructs buildings.
+    Hero units are healed by it.
+
+actor-imperial_barracks =
+   .description = Trains Imperial infantry.
+
+actor-imperial_quarters =
+   .description = Generator, build to keep producing units.
+
+actor-imperial_lumber_mill =
+   .description = Resource dropoff structure.
+
+actor-imperial_quarry =
+   .description = Generates income.
+
+actor-imperial_vehiclefactory =
+   .description = Trains Imperial special units.
+
+actor-imperial_tower =
+   .description = Upgradable defense building.
+      Detector.
+
+actor-imperial_tower2 =
+   .description = Upgraded guard tower, attacks land, sea, and air.
+
+actor-imperial_tower3 =
+   .description = Further upgraded Guard tower, attacks land, sea, and air.
+
+actor-lego_imperial_mcv =
+   .description = Transforms into an Fortress.
+
+actor-imperial_builder =
+   .description = Basic Harvester.
+      Can repair.
+
+actor-imperial_swordsman =
+   .description = Basic Melee Infantry.
+
+actor-imperial_rifleman =
+   .description = Basic Ranged Infantry.
+
+actor-imperial_cavalry =
+   .description = Heavy Melee Infantry.
+
+actor-imperial_ninja =
+   .description = Harrying Ranged Infantry.
+
+actor-imperial_culverin =
+   .description = Assault vehicle.
+
+actor-imperial_flying_ship =
+   .description = Flying Patrol unit.
+      Detector.
+
+actor-imperial_governor_broadside =
+   .description = Stalwart Melee Hero.
+
+actor-imperial_camilla =
+   .description = Stalwart Melee Hero.
+
+actor-imperial_ninja_master =
+   .description = Stalwart Melee Hero.
+
+actor-lego_pirate_conyard =
+   .description = pirate HQ unit.
+    Constructs buildings.
+    Hero units are healed by it.
+
+actor-pirate_barracks =
+   .description = Trains pirate infantry.
+
+actor-pirate_plantation =
+   .description = Generator, build to keep producing units.
+
+actor-pirate_lumber_mill =
+   .description = Resource dropoff structure.
+
+actor-pirate_quarry =
+   .description = Generates income.
+
+actor-pirate_vehiclefactory =
+   .description = Trains pirate special units.
+
+actor-pirate_tower =
+   .description = Upgradable defense building.
+      Detector.
+
+actor-pirate_tower2 =
+   .description = Upgraded guard tower, attacks land, sea, and air.
+
+actor-pirate_tower3 =
+   .description = Further upgraded Guard tower, attacks land, sea, and air.
+
+actor-lego_pirate_mcv =
+   .description = Transforms into an Fortress.
+
+actor-pirate_builder =
+   .description = Basic Harvester.
+      Can repair.
+
+actor-pirate_oarsman =
+   .description = Basic Melee Infantry.
+
+actor-pirate_gunman =
+   .description = Basic Ranged Infantry.
+
+actor-pirate_horseman =
+   .description = Heavy Melee Infantry.
+
+actor-pirate_islander =
+   .description = Harrying Ranged Infantry.
+
+actor-pirate_cannon =
+   .description = Assault vehicle.
+
+actor-pirate_tiki_golem =
+   .description = Assault vehicle.
+
+actor-pirate_captain_brickbeard =
+   .description = Stalwart Melee Hero.
+
+actor-pirate_lady_pirate =
+   .description = Stalwart Melee Hero.
+
+actor-pirate_king_kahuka =
+   .description = Stalwart Melee Hero.
+
+actor-pirate_monkey =
+   .description = A monkey, for scouting or sabotage.
+
+actor-pirate_crab =
+   .description = Crabs mateys!
+
+actor-lego_king_conyard =
+   .description = King HQ unit.
+    Constructs buildings.
+    Hero units are healed by it.
+
+actor-king_barracks =
+   .description = Trains king infantry.
+
+actor-king_farm =
+   .description = Generator, build to keep producing units.
+
+actor-king_lumber_mill =
+   .description = Resource dropoff structure.
+
+actor-king_mine =
+   .description = Generates income.
+
+actor-king_vehiclefactory =
+   .description = Trains king special units.
+
+actor-king_tower =
+   .description = Upgradable defense building.
+      Detector.
+
+actor-king_tower2 =
+   .description = Upgraded guard tower, attacks land, sea, and air.
+
+actor-king_tower3 =
+   .description = Further upgraded Guard tower, attacks land, sea, and air.
+
+actor-lego_king_mcv =
+   .description = Transforms into an Fortress.
+
+actor-king_builder =
+   .description = Basic Harvester.
+      Can repair.
+
+actor-king_guardsman =
+   .description = Basic Melee Infantry.
+
+actor-king_archer =
+   .description = Basic Ranged Infantry.
+
+actor-king_knight =
+   .description = Heavy Melee Infantry.
+
+actor-king_dwarf =
+   .description = Harrying Ranged Infantry.
+
+actor-king_ballista =
+   .description = Assault vehicle.
+
+actor-king_catapult =
+   .description = Assault vehicle.
+
+actor-king_dwarf_glider =
+   .description = Flying Patrol unit.
+      Detector.
+
+actor-king_dragon =
+   .description = Flying Assault unit.
+      Detector.
+
+actor-king_king =
+   .description = Stalwart Melee Hero.
+
+actor-king_queen =
+   .description = Stalwart Melee Hero.
+
+actor-king_dwarf_king =
+   .description = Stalwart Melee Hero.
+
+actor-lego_wizard_conyard =
+   .description = Wizard HQ unit.
+    Constructs buildings.
+    Hero units are healed by it.
+
+actor-wizard_barracks =
+   .description = Trains wizard infantry.
+
+actor-wizard_graveyard =
+   .description = Generator, build to keep producing units.
+
+actor-wizard_lumber_mill =
+   .description = Resource dropoff structure.
+
+actor-wizard_mine =
+   .description = Generates income.
+
+actor-wizard_vehiclefactory =
+   .description = Trains wizard special units.
+
+actor-wizard_tower =
+   .description = Upgradable defense building.
+      Detector.
+
+actor-wizard_tower2 =
+   .description = Upgraded guard tower, attacks land, sea, and air.
+
+actor-wizard_tower3 =
+   .description = Further upgraded Guard tower, attacks land, sea, and air.
+
+actor-lego_wizard_mcv =
+   .description = Transforms into an Fortress.
+
+actor-wizard_builder =
+   .description = Basic Harvester.
+      Can repair.
+
+actor-wizard_skeleton =
+   .description = Basic Melee Infantry.
+
+actor-wizard_crossbowman =
+   .description = Basic Ranged Infantry.
+
+actor-wizard_knight =
+   .description = Heavy Melee Infantry.
+
+actor-wizard_troll =
+   .description = Harrying Ranged Infantry.
+
+actor-wizard_siege_tower =
+   .description = Assault vehicle.
+
+actor-wizard_troll_giant =
+   .description = Assault vehicle.
+
+actor-wizard_troll_blimp =
+   .description = Flying Patrol unit.
+      Detector.
+
+actor-wizard_dragon =
+   .description = Flying Assault unit.
+      Detector.
+
+actor-wizard_wizard =
+   .description = Stalwart Melee Hero.
+
+actor-wizard_sorceress =
+   .description = Stalwart Melee Hero.
+
+actor-wizard_troll_king =
+   .description = Stalwart Melee Hero.
+
 faction-random =
    .name = Any
    .description = Random faction
@@ -3939,6 +11367,96 @@ faction-ra-japan =
    .name = Japan RA
    .description = Japan
       Support powers: Super Bomber Airstrike
+
+faction-ra-ants =
+   .name = Ants RA
+   .description = Ants
+      The endless swarm of ants, coming in many shapes and sizes.
+      Enjoys munching on infantry and civilian centers.
+
+faction-cameo-iok =
+   .name = Infidels of Kane
+   .description = Infidels of Kane from Cameo
+      The IoK consists of GLA sympathizers who believe the tiberium prophecy.
+      Use a mix of TD Nod and the GLA to serve the Messiah!
+      Support powers: Radar van, Nuclear missile, Scud Storm
+
+faction-cameo-camea =
+   .name = Camea
+   .description = Camea from Cameo
+      An unaligned commander, possessing the older forces of GDI, NOD, Allies and Soviets at her disposal
+      Support powers: Spy Plane, Airstrike, Chronosphere, Paratroopers, Nuclear Strike
+
+faction-fot-tomorrow =
+   .name = Forces of Tomorrow
+   .description = Forces of Tomorrow from C&C Dawn of Tomorrow
+      A secretive yet well equipped terrorist organization with mysterious leadership.
+      Possesses a well rounded force, backed by terror weapons.
+      Support powers: Bacterial Missile Strike
+
+faction-coa-tomorrow =
+   .name = Company of Answers
+   .description = Company of Answers from C&C Dawn of Tomorrow
+      The security arm of the Company of Answers, a multinational megacorperation.
+      Possesses a lighter arsenal, backed by effective infantry and aircraft.
+      Support powers: A10 Strike, Special Bonus: Refineries process resources more efficiently.
+
+faction-russia-tomorrow =
+   .name = Russia
+   .description = Russia from C&C Dawn of Tomorrow
+      The armed forces of the Russian Federation, inheriting a sizable soviet arsenal.
+      Possesses a vehicle heavy force, with infatry and aircraft serving as support.
+      Special Bonus: Produces vehicles at a discount upon constructing their Tech Center.
+
+faction-japan-tomorrow =
+   .name = Japan
+   .description = Japan from C&C Dawn of Tomorrow
+      The armed forces of the JSDF, possessing unorthodox yet effective weaponry.
+      Possesses a well rounded force backed by specialist units, able to counter infantry and vehicles efficiently.
+      Support powers: Cruise Missile Strike
+
+faction-usa-tomorrow =
+   .name = USA
+   .description = USA from C&C Dawn of Tomorrow
+      The armed forces of the USA, utilizing an upgraded allied arsenal.
+      Possesses a light yet balanced adaptable force with a focus on combined arms.
+      Support powers: Cruise Missile Strike, Special Bonus: Rank unlocking machine Shop
+
+faction-argentina-tomorrow =
+   .name = Argentina
+   .description = Argentina from C&C Dawn of Tomorrow
+      The armed forces of the Argentinan Resistance, using proven gear alongside makeshift options.
+      Possesses a balanced adaptable force with a focus on speed and harrassment.
+
+faction-brazil-tomorrow =
+   .name = Brazil
+   .description = Brazil from C&C Dawn of Tomorrow
+      The armed forces of Brazil, with an almost entirely mechanized arsenal.
+      Possesses a force of generalized and specialized vehicles, backed by the efforts of endless technicians and mechanics.
+
+faction-cuba-tomorrow =
+   .name = Cuba
+   .description = Cuba from C&C Dawn of Tomorrow
+      The armed forces of Cuba, wielding homegrown variants of soviet equipment.
+      Possesses a balanced if inflexible force equipped for frontal assaults, with subterfuge options available.
+
+faction-australia-tomorrow =
+   .name = Australia
+   .description = Australia from C&C Dawn of Tomorrow
+      The Australian resistance, relying on durable infantry to carry the day.
+      Possesses a lighter force, with a focus on supporting their effective infantry squads.
+
+faction-ethiopia-tomorrow =
+   .name = Ethiopian
+   .description = Ethiopia from C&C Dawn of Tomorrow
+      The Ethiopian resistance, wielding black market weapons and numerous fighters.
+      Possesses a light force, overwelming positons with long range weapons and multi pronged assaults.
+      Can create hideouts, deployable guard towers doubling as barracks structures.
+
+faction-random-tomorrow =
+   .name = Any Dawn of Tomorrow
+   .description = Random faction from C&C Dawn of Tomorrow
+      A random faction from the Dawn of Tomorrow factions will be chosen when the game starts.
 
 faction-ra2-random =
    .name = Any
@@ -4029,6 +11547,170 @@ faction-tibsun-random =
    .description = Random faction
        A random faction from Tiberian Sun will be chosen when the game starts.
 
+faction-usa-generals =
+   .name = Generals USA
+   .description = USA from C&C Generals
+       The standard forces of the USA, utilizing High Tech Weaponry and skill to defeat its enemies.
+       Heavier Forces, with a focus on combined arms, drone support and effective aircraft.
+       Support powers: Particle Cannon, General's Powers
+
+faction-superweapon-generals =
+   .name = Alexander
+   .description = USA Superweapons General
+       The forces of General Alexis Alexander, she prefers to build heavy base Defenses and superweapons to defeat her enemies.
+       Heavier Forces, with a focus on combined arms, drone support and effective aircraft.
+       Possesses superior lategame options.
+       Support powers: Particle Cannon, General's Powers
+
+faction-laser-generals =
+   .name = Townes
+   .description = USA Superweapons General
+       The forces of General "Pinpoint" Townes, he prefers to utilize cutting edge laser technology to defeat his enemies.
+       Heavier Forces, with a focus on combined arms, drone support and effective aircraft.
+       Posesses effective yet power hungry laser equipped vehicles.
+       Support powers: Particle Cannon, General's Powers
+
+faction-air-generals =
+   .name = Granger
+   .description = USA Superweapons General
+       The forces of General Malcolm Ace Granger, he prefers to utilize the maximum airpower available to defeat his enemies.
+       Lighter Forces, with a focus on combined arms, drone support and highly effective aircraft.
+       Posesses highly capable variants of the USA's aircraft.
+       Support powers: Particle Cannon, General's Powers
+
+faction-china-generals =
+   .name = Generals China
+   .description = China from C&C Generals
+       The standard forces of the PLA, utilizing fire and overwhelming force to defeat its enemies.
+       Medium Forces, with a focus on numbers, flame weaponry, and durable lategame vehicles.
+       Support powers: Nuclear Missile, General's Powers
+
+faction-infantry-generals =
+   .name = Fai
+   .description = China Infantry General
+       The forces of General "Anvil" Shin Fai, he prefers to enlist highly trained soldiers to defeat his enemies.
+       Medium Forces, with a focus on numbers, flame weaponry, and durable lategame vehicles.
+       Possesses effective generalist infantry options, alongside custom infantry support vehicles.
+       Support powers: Nuclear Missile, General's Powers
+
+faction-tank-generals =
+   .name = Kwai
+   .description = China Tank General
+       The forces of General Ta Hun Kwai, he prefers to construct well built Tanks to defeat his enemies.
+       Medium Forces, with a focus on numbers, flame weaponry, and durable lategame vehicles.
+       Possesses cheaper tanks, and effective custom tank options.
+       Support powers: Nuclear Missile, General's Powers
+
+faction-nuke-generals =
+   .name = Tao
+   .description = China Nuke General
+       The forces of General Tsing Shi Tao, he prefers to utilize nuclear radiation to defeat his enemies.
+       Medium Forces, with a focus on numbers, flame weaponry, and durable lategame vehicles.
+       Possesses lethal yet effective nuclear modifications to his vehicles.
+       Support powers: Nuclear Missile, General's Powers
+
+faction-gla-generals =
+   .name = Generals GLA
+   .description = GLA from C&C Generals
+       The standard forces of the GLA, utilizing subterfuge and fanatacism to defeat its enemies.
+       Light Forces, with a focus on stealth, and speed and suicide attacks to devestate their foes.
+       Structures do not require power.
+       Support powers: Scud Storm, General's Powers
+
+faction-toxin-generals =
+   .name = Dr Thrax
+   .description = GLA Toxin General
+       The forces of Dr. Thrax, he prefers to mix deadly toxins to defeat his enemies.
+       Light Forces, with a focus on stealth, and speed and suicide attacks to devestate their foes.
+       Structures do not require power.
+       Possesses lethal anti infantry options, and well as access to more effective grades of anthrax.
+       Support powers: Scud Storm, General's Powers
+
+faction-demo-generals =
+   .name = Juhziz
+   .description = GLA Demo General
+       The forces of Rodall "Demo" Juhziz, he prefers to wire up powerful explosives to defeat his enemies.
+       Light Forces, with a focus on stealth, and speed and suicide attacks to devestate their foes.
+       Structures do not require power.
+       Possesses enhanced explosive capabilties, in addition to some units exploding on death.
+       Support powers: Scud Storm, General's Powers
+
+faction-stealth-generals =
+   .name = Kassad
+   .description = GLA Stealth General
+       The forces of Prince Kassad, he prefers to use camouflage and covert ops to defeat his enemies.
+       Light Forces, with a focus on stealth, and speed and suicide attacks to devestate their foes.
+       Structures do not require power.
+       Possesses greater means of stealth than the average GLA force.
+       Support powers: Scud Storm, General's Powers
+
+faction-boss-generals =
+   .name = Leang
+   .description = Boss General
+       General "Tigress" Leiong Leang, she demands to use of advaned technology and heavy support weapons to defeat her enemies.
+       Utilizes a combined arsenal of the best the Generals factions have to offer.
+       Support powers:  Scud Storm, Nuclear Missile, Particle Cannon, General's Powers
+
+faction-generals-usarandom =
+   .name = Any
+   .description = Random USA faction
+       A random faction from the Generals USA factions will be chosen when the game starts.
+
+faction-generals-chinarandom =
+   .name = Any
+   .description = Random China faction
+       A random faction from the Generals China factions will be chosen when the game starts.
+
+faction-generals-glarandom =
+   .name = Any
+   .description = Random GLA faction
+       A random faction from the Generals GLA factions will be chosen when the game starts.
+
+faction-generals-random =
+   .name = Any
+   .description = Random Generals faction
+       A random faction from the Generals factions will be chosen when the game starts.
+
+faction-starwars-empire =
+   .name = Galactic Empire
+   .description = Galactic Empire from Star Wars
+       The imperious Galactic Empire from Star Wars, based on CnC Meets Star Wars.
+       Possess a force consisting of light infantry and heavy vehicle units.
+       Support powers: Tie Bomber Run, Death Star Strike, Force Shield
+
+faction-starwars-rebel =
+   .name = rebel Alliance
+   .description = Rebel Alliance from Star Wars
+       The tenacious Rebel Alliance from Star Wars, based on CnC Meets Star Wars.
+       Possess a force consisting of light infantry and heavy vehicle units.
+       upport powers: Mercenary Airstrike, Atomic Bomb, Force Shield
+
+faction-starwars-republic =
+   .name = Republic
+   .description = Republic from Star Wars
+       The unswerving Grand Army of the republic from Star Wars, based on CnC Meets Star Wars.
+       Possess a force consisting of light infantry and heavy vehicle units.
+       Support powers: Mercenary Airstrike, Fleet Strike, Force Shield
+
+faction-starwars-separatist =
+   .name = C.I.S
+   .description = Seperatists from Star Wars
+       The rote Seperatists from Star Wars, based on CnC Meets Star Wars.
+       Possess a force consisting of cheap light infantry and heavy vehicle units.
+       upport powers: Mercenary Airstrike, Atomic Bomb, Force Shield
+
+faction-starwars-hutt =
+   .name = Hutt Clans
+   .description = Hutt Clan from Star Wars
+       The scheming Hutt clans from Star Wars, based on CnC Meets Star Wars.
+       Possess a force consisting of cheap Mercenary infantry and heavy vehicle units.
+       upport powers: Mercenary Airstrike, Atomic Bomb, Force Shield
+
+faction-starwars-random =
+   .name = Any
+   .description = Random Star Wars faction
+       A random faction from the Star Wars factions will be chosen when the game starts.
+
 faction-warcraft-human =
    .name = Warcraft 1 Human
    .description = The Humans from Warcraft 1.
@@ -4096,3 +11778,296 @@ faction-warcraft2-random =
    .name = Any WC2
    .description = Random faction
        A random faction from the Warcraft 2 factions will be chosen when the game starts.
+
+faction-darkreign-imperium =
+   .name = Dark Reign Imperium
+   .description = Imperium from Dark Reign.
+       The rigid Imperium, an expansive empire devoted to order at all costs.
+       Heavy forces, with a focus on frontal armored assaults.
+       Most vehicles can hover, ignoring water and difficult terrain.
+       Can create decoy units.
+       Support Powers: Rift Generator, Teleportation
+
+faction-darkreign-freedomguard =
+   .name = Dark Reign Freedom Guard
+   .description = Freedom Guard from Dark Reign.
+       The resilient Freedom Guard, an alliance of former gene-slaves and sympathetic citizens.
+       Balanced flexible forces, with a focus on combined arms and ambushes.
+       Possesses both camouflage and phase technology, allowing for easy ambushes.
+       Superweapon unit: Shock Wave
+
+faction-darkreign-shadowhand =
+   .name = Dark Reign Shadowhand
+   .description = Shadowhand from Dark Reign.
+       The deceptive Shadowhand, agents of the imperium wielding experimental weapons.
+       Enhanced Heavy forces, with a focus on frontal armored assaults, backed by heavy infantry.
+       Most vehicles can hover, ignoring water and difficult terrain.
+       Can create decoy units.
+       Support powers: Rift Generator, Superweapon unit: EMP Device
+
+faction-darkreign-xenite =
+   .name = Dark Reign Xenites
+   .description = Xenites from Dark Reign.
+       The adaptable Xenites, an alliance of stranded Freedom Guard and the local population of Minevah.
+       Supplemented flexible forces, with a focus on combined arms.
+       Possess beast units, which require a nearby tamer unit to fully control.
+       Superweapon unit: Shock Wave
+
+faction-darkreign-togran =
+   .name = Dark Reign Tograns
+   .description = Tograns from Dark Reign.
+       The inventive Tograns, a science cult devoted to their visionary founder. Only recently militarized.
+       Unconventional flexible forces, composed of light yet mobile of experimental craft.
+       Possess beast units, which require a nearby tamer unit to fully control.
+
+faction-darkreign-terrorist =
+   .name = Dark Reign Terrorist
+   .description = Terrorists from Dark Reign.
+       The unhinged Terrorists, an ecclectic mix of rouges seeking to take advantage of war's chaos.
+       Light flexible forces, with a focus on Guerrilla Tactics.
+       Certain units evolve when veterancy is achieved.
+
+faction-darkreign-terrorist =
+   .name = Dark Reign Terrorist
+   .description = Terrorists from Dark Reign.
+       The unhinged Terrorists, an ecclectic mix of rouges seeking to take advantage of war's chaos.
+       Light flexible forces, with a focus on Guerrilla Tactics.
+       Certain units evolve when veterancy is achieved.
+
+faction-darkreign-aliens =
+   .name = Dark Reign Aliens
+   .description = Aliens from Dark Reign.
+       The bizzare aliens. A strange mixture of lifeforms with no known goals.
+       A force of varied creatures, with few weaknesses.
+
+faction-random-darkreign =
+   .name = Any
+   .description = Random
+       A random faction from the Dark Reign factions will be chosen when the game starts.
+
+faction-wh40k-imperialguard =
+   .name = Dawn of War Imperial Guard
+   .description = Imperial Guard from Dawn of War
+       The loyal Imperial Guard, the blunt hammer of the Imperium of Man.
+       Heavy vehicle based forces, backed by a numerous variety of infantry.
+       Require power to produce units.
+       Support powers: Maraunder Bombing, Super Weapon unit: Baneblade
+
+faction-wh40k-spacemarine =
+   .name = Dawn of War Space Marines
+   .description = Space Marines from Dawn of War
+       The resolute Space Marines, the scalpel of the Imperium of Man.
+       Heavy vehicle based forces, backed by a variety of heavy infantry.
+       Require power to produce units.
+       Support powers: Orbital Relay, Super Weapon unit: Land Raider
+
+faction-wh40k-orkz =
+   .name = Dawn of War Orkz
+   .description = Orkz from Dawn of War
+       The bloodthirsty Orkz, a numerous horde ever seeking battle.
+       Medium vehicle based forces, backed by a numerous variety of heavy infantry.
+       Gain strength with numbers.
+       Require power to produce units.
+       Zupport Powah: Whaaghhh, Supa Biggah unit: Squiggoth
+
+faction-wh40k-chaos =
+   .name = Dawn of War Chaos
+   .description = Chaos from Dawn of War
+       The fallen forces of Chaos, seeking to claim all for their hungering gods.
+       Heavy vehicle based forces, backed by a variety of light infantry, heavy infantry, demonic forces.
+       Require power to produce units.
+       Support powers: Horror Teleport, Super Weapon unit: Prince Demon
+
+faction-random-wh40k =
+   .name = Any
+   .description = Random
+       A random faction from the Dawn of War factions will be chosen when the game starts.
+
+faction-warzone-project =
+   .name = Warzone Project
+   .description = The Project from Warzone 2100
+       Adaptable survivors seeking to rebuild civilization.
+       Generates revenue through building oil derricks.
+       Balanced vehicle based forces, coming in many varieties.
+       Heavily reliant on research to advance their tech.
+       Early Body Unlocks: Viper, Cobra, Python.
+       Support powers: Laser Satellite
+
+faction-warzone-paradigm =
+   .name = Warzone New Paradigm
+   .description = New Paradigm from Warzone 2100
+       Militant survivalists, well armed and with scavenger support.
+       Generates revenue through building oil derricks.
+       Balanced vehicle based forces, coming in many varieties.
+       Heavily reliant on research to advance their tech.
+       Early Body Unlocks: Bug, Mantis, Scorpion.
+       Support powers: Laser Satellite
+
+faction-warzone-collective =
+   .name = Warzone The Collective
+   .description = The Collective from Warzone 2100
+       Machine cultists, with an arsenal matching their faith.
+       Generates revenue through building oil derricks.
+       Balanced vehicle based forces, coming in many varieties.
+       Heavily reliant on research to advance their tech.
+       Early Body Unlocks: Leopard, Panther, Tiger.
+       Support powers: Laser Satellite
+
+faction-warzone-nexus =
+   .name = Warzone Nexus
+   .description = Nexus from Warzone 2100
+       A rogue Intelligence, seeking domininion over all.
+       Generates revenue through building oil derricks.
+       Balanced vehicle based forces, coming in many varieties.
+       Heavily reliant on research to advance their tech.
+       Early Body Unlocks: Retaliation, Retribution, Vengeance.
+       Support powers: Laser Satellite
+
+faction-warzone-scavenger =
+   .name = Warzone Scavengers
+   .description = Scavengers from Warzone 2100
+       Scrappy low tech raiders, reliant on swarming.
+       Generates revenue through building oil derricks.
+       Light vehicle based forces, coming in many varieties.
+       Heavily reliant on research to advance their tech.
+       Early Body Unlocks: Retaliation, Retribution, Vengeance.
+       Support powers: Airstrikes, Nuclear Strike
+
+faction-random-warzone =
+   .name = Any
+   .description = Random
+       A random faction from the Warzone 2100 factions will be chosen when the game starts.
+
+faction-ufsc-sow =
+   .name = State of War UFSC
+   .description = UFSC from State of War
+       United Federation of Seven Continents. The ultimate steamroller.
+       Generates income via mines.
+       Uses an Advancer unit to Upgrade and Repair Buildings.
+       Support Powers: Asteroids, Fighter, Bomber, Tripler.
+
+faction-snes-simcity =
+   .name = SNES SimCity
+   .description = Simcity from SNES
+       Generates revenue through taxation of Residential Zones.
+       Units gain massive bonuses near the Mayor's House.
+       Variety of support powers to assist teammates.
+       Support powers: Mininuke Parabomb, various others
+
+faction-sc2000-sc2000 =
+   .description = Simcity 2000
+      Simcity 2000, new and improved.
+      - Generates revenue through taxation of Residential Zones.
+      - Use disasters as units.
+
+faction-random-simcity =
+   .name = Any
+   .description = Random
+       A random faction from the simcity factions will be chosen when the game starts.
+
+faction-z-z =
+   .name = Z
+   .description = Z from Z
+       A collection of militarized hot headed robots. Eager to fight anytime, anyplace and anywhere.
+       Robotic infantry, not affected by tiberium.
+       All Units, Structures are free. Attrition favors you.
+       Buildings and defenses do not require power to operate.
+
+faction-worms-worms =
+   .name = Worms
+   .description = Worms from Worms
+       Worms with assorted instruments of destruction.
+       Balanced arsenal, with a few strange units.
+       Support powers: Sheep Strike, Time Machine, Concrete Donkey
+
+faction-outpost2-eden =
+   .name = Eden
+   .description = Eden from Outpost 2
+       Eden - Primary Colony. Wish to conform things to their comfort.
+       High tech faction from NewTerra, must build a colony in order to operate.
+       Has fast Lynx vehicles and strong Tiger vehicles.
+       Support powers: Supernova Missile
+
+faction-outpost2-plymouth =
+   .name = Plymouth
+   .description = Plymouth from Outpost 2
+       Plymouth - Splinter Colony. Wish to survive and thrive in alien conditions.
+       High tech faction from NewTerra, must build a colony in order to operate.
+       Has fast Lynx vehicles and strong Tiger vehicles.
+       Support powers: Supernova Missile
+
+faction-cameo-win98 =
+   .name = Windows 98
+   .description = Windows 98 from Cameo
+       Windows 98, deadly nostalgia. The OG.
+       Uses a mix of Warcraft and Starcraft unit archetypes.
+       Support powers: Sheep Strike, Time Machine, Concrete Donkey
+
+faction-cameo-infected =
+   .name = Infected
+   .description = Infected from Cameo
+       NOTE: Best played by the AI.
+       Your average zombie horde that escaped from a biolab.
+       The player starts with a group of zombies, and a protective biolab.
+       All the zombies my be destroyed defeat the zombie player.
+       This faction has no economy, no buildings.
+
+faction-cameo-halloween =
+   .name = Halloween
+   .description = Halloween from Cameo
+       NOTE: Best played by the AI.
+       Skeletons, Monsters and other spooky critters are at your command.
+       Possess a series of unconventional and varied units.
+
+faction-legobattles-king =
+   .name = King
+   .description = King from Lego Battles
+       The peaceful kingdom, allied with the dwarves for security.
+       Flat tech tree, with powerful hero units.
+       Units cost power.
+       Support powers: Hero Spells
+
+faction-legobattles-wizard =
+   .name = Wizard
+   .description = King from Lego Battles
+       The risen skeleton army, allied with the trolls in their ambitions.
+       Flat tech tree, with powerful hero units.
+       Units cost power.
+       Support powers: Hero Spells
+
+faction-legobattles-imperial =
+   .name = Imperial
+   .description = Imperial from Lego Battles
+       The empire's finest, ever set to quell brigands and piracy. Allied with the Ninja clans with this goal in mind.
+       Flat tech tree, with powerful hero units.
+       Units cost power.
+       Support powers: Hero Spells
+
+faction-legobattles-pirate =
+   .name = Pirate
+   .description = Pirate from Lego Battles
+       The eager and greedy pirates, allied with islanders in their quest for riches.
+       Flat tech tree, with powerful hero units.
+       Units cost power.
+       Support powers: Hero Spells
+
+faction-legobattles-earth =
+   .name = Earth
+   .description = Earth from Lego Battles
+       The inquisitive forces of Earth, staking their claim amonst the stars. "Allies" of the space police.
+       Flat tech tree, with powerful hero units.
+       Units cost power.
+       Support powers: Hero Spells
+
+faction-legobattles-Alien =
+   .name = Alien
+   .description = Alien from Lego Battles
+       The desperate aliens, seeking to escape their interstellar stranding. Allied with the space criminals out of mutual interest.
+       Flat tech tree, with powerful hero units.
+       Units cost power.
+       Support powers: Hero Spells
+
+faction-random-legobattles =
+   .name = Any
+   .description = Random
+       A random faction from the Lego Battles factions will be chosen when the game starts.

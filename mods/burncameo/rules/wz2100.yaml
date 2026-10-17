@@ -4,38 +4,38 @@ World:
 		InternalName: alpha
 		Game: Warzone 2100
 		Side: Warzone 2100
-		Description: Adaptable survivors seeking to rebuild civilization.\nFeatures:\n- Generates revenue through building oil derricks\n- Most units are vehicular\n- Buildings and defenses do not require power to operate\nSupport powers: Laser Satellite\nEarly Body Unlocks: Viper, Cobra, Python\nPrice of project vehicles are balanced same with vehicle toughness
+		Description: faction-warzone-project.description
 	FactionCA@paradigm:
 		Name: New Paradigm
 		InternalName: paradigm
 		Side: Warzone 2100
 		Game: Warzone 2100
-		Description: Militant survivalists, well armed and with scavenger support\nFeatures:\n- It has all the elements of Project outside of other chassis\n- Most units are vehicular\n- Buildings and defenses do not require power to operate\nSupport powers: Laser Satellite\nEarly Body Unlocks: Bug, Mantis, Scorpion\nPrice of NP vehicles will be cheaper but are more fragile to damage\n Access to mercenary chop shop
+		Description: faction-warzone-paradigm.description
 	FactionCA@collective:
 		Name: The Collective
 		InternalName: collective
 		Side: Warzone 2100
 		Game: Warzone 2100
-		Description: Machine cultists, with an arsenal matching their faith.\nFeatures:\n- It has all the elements of Project outside of other chassis\n- Most units are vehicular\n- Buildings and defenses do not require power to operate\nSupport powers: Laser Satellite\nEarly Body Unlocks: Leopard, Panther, Tiger\nPrice of collective vehicles are more expensive but withstand damage better
+		Description: faction-warzone-collective.description
 	FactionCA@nexus:
 		Name: Nexus
 		InternalName: nexus
 		Side: Warzone 2100
 		Game: Warzone 2100
-		Description: Rogue A.I, seeking domininion over all.\nFeatures:\n- It has all the elements of Project outside of other chassis\n- Most units are vehicular\n- Buildings and defenses do not require power to operate\nSupport powers: Laser Satellite\nEarly Body Unlocks: Retaliation, Retribution, Vengeance\nPrice of NEXUS vehicles are the most expensive but units take longer to kill compared to Collective variants
+		Description: faction-warzone-nexus.description
 	FactionCA@scav:
 		Name: Scavengers
 		InternalName: scavenger
 		Game: Warzone 2100
 		Side: Warzone 2100
-		Description: Scrappy low tech raiders, reliant on swarming.\nFeatures:\n- Generates revenue through building oil derricks\n- Most units are vehicular\n- Buildings and defenses do not require power to operate\nSupport powers: Airstrikes, Dogfood Convoy, Nuclear Strike
+		Description: faction-warzone-scavenger.description
 	FactionCA@RandomWZ:
 		Name: Any
 		InternalName: RandomWZ
 		RandomFactionMembers: alpha, collective, paradigm, nexus, scavenger
 		Game: Warzone 2100
 		Side: Random
-		Description: Random Faction\nA random faction from Warzone 2100 will be chosen when the game starts.
+		Description: faction-random-warzone.description
 		
 	####################################################################################################
 	#		2100
@@ -173,7 +173,7 @@ Player:
 		BuildPaletteOrder: 200
 		Prerequisites: 2100RF, ~techlevel.high, ~littlebuilderenable
 		Queue: Building, RABuilding
-		Description: Builds structures and provides radar.
+		Description: actor-player.description
 	Building:
 		Footprint: xxx xxx xxx
 		Dimensions: 3,3
@@ -274,7 +274,7 @@ Player:
 		BuildDuration: 750
 		Prerequisites: ~mmalpha
 		Queue: Building, RABuilding
-		Description: Generates power\nStores Resources
+		Description: actor-2100power.description
 	Building:
 		Footprint: xxx ===
 		Dimensions: 3,2
@@ -342,7 +342,7 @@ Player:
 		Queue: Building, RABuilding
 		BuildDurationModifier: 100
 		BuildDuration: 250
-		Description: Provides resources
+		Description: actor-2100oil.description
 	Selectable:
 		Priority: 0
 		Bounds: 1024, 1024
@@ -448,7 +448,7 @@ Player:
 		BuildPaletteOrder: 30
 		Prerequisites: ~2100FY1
 		Queue: Building, RABuilding
-		Description: Heals nearby units.
+		Description: actor-2100rr.description
 	Selectable:
 		Bounds: 2048, 2048
 		DecorationBounds: 2048, 2048
@@ -510,7 +510,7 @@ Player:
 		BuildPaletteOrder: 40
 		Prerequisites: 2100OIL, ~mmalpha
 		Queue: Building, RABuilding
-		Description: Produces vehicles - Tier 1
+		Description: actor-2100fy1.description
 	Building:
 		Footprint: xxxx xxxx xxxx ====
 		Dimensions: 4,4
@@ -663,7 +663,7 @@ Player:
 		BuildPaletteOrder: 50
 		Prerequisites: 2100FY1, 2100OIL, ~disabled
 		Queue: Building, RABuilding
-		Description: Produces vehicles - Tier 1, 2 & 3
+		Description: actor-2100fy2.description
 	Building:
 		Footprint: xxxx xxxx xxxx ====
 		Dimensions: 4,4
@@ -742,7 +742,7 @@ Player:
 		BuildPaletteOrder: 60
 		Prerequisites: 2100OIL, ~techlevel.medium, ~mmalpha
 		Queue: Building, RABuilding
-		Description: Unlocks higher-tech units and buildings.
+		Description: actor-2100rf.description
 	Building:
 		Footprint: xxx xxx ===
 		Dimensions: 3,3
@@ -792,7 +792,7 @@ Player:
 		BuildPaletteOrder: 100
 		Prerequisites: 2100RF, ~techlevel.high, ~mmalpha
 		Queue: Building, RABuilding
-		Description: \nUnlocks commander units
+		Description: actor-2100crc.description
 	Building:
 		Footprint: xxx xxx ===
 		Dimensions: 3,3
@@ -823,7 +823,7 @@ Player:
 		BuildPaletteOrder: 100
 		Prerequisites: 2100RF, ~techlevel.high, !nasda, up2100upsypnaticdata4, ~mmalpha
 		Queue: Building, RABuilding
-		Description: Provides Laser Satellite support power.\n
+		Description: actor-2100las.description
 	Building:
 		Footprint: xxx xxx ===
 		Dimensions: 3,3
@@ -847,7 +847,7 @@ Player:
 		Names: 
 			1: Laser Satellite
 		Descriptions:
-			1: Initiate a Laser Satellite strike.\nApplies instant damage to a small area.
+			1: power-lasersat.description
 		BeginChargeSpeechNotification: IonCannonCharging
 		EndChargeSpeechNotification: IonCannonReady
 		SelectTargetSpeechNotification: SelectTarget
@@ -881,7 +881,7 @@ Player:
 		BuildPaletteOrder: 30
 		Prerequisites: 2100fy1, ~mmalpha
 		Queue: Building, RABuilding
-		Description: Trains infantry
+		Description: actor-2100cf.description
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -954,7 +954,7 @@ Player:
 		BuildPaletteOrder: 40
 		Prerequisites: 2100FY1, ~up2100upvtols1, ~mmalpha
 		Queue: Building, RABuilding
-		Description: Produces vehicles - Tier 1
+		Description: actor-2100vfy1.description
 	Building:
 		Footprint: xxxx xxxx xxxx ====
 		Dimensions: 4,4
@@ -1106,7 +1106,7 @@ Player:
 		BuildPaletteOrder: 50
 		Prerequisites: 2100vfy1, ~up2100upvtols1, ~mmalpha
 		Queue: Building, RABuilding
-		Description: Produces, rearms and\nrepairs helicopters
+		Description: actor-2100vtolpad.description
 	Building:
 		Footprint: x
 		Dimensions: 1,1
@@ -1140,7 +1140,7 @@ Player:
 	Buildable:
 		BuildPaletteOrder: 10
 		Queue: Defence, RADefence
-		Description: Basic defensive structure.
+		Description: actor-2100wall.description
 		Prerequisites: ~up2100upwall1, ~mmalpha
 	Health:
 		HP: 30000
@@ -1232,7 +1232,7 @@ Player:
 		BuildPaletteOrder: 40
 		Prerequisites: 2100FY1, ~up2100upwall1, ~mmalpha
 		Queue: Defence, RADefence
-		Description: Anti-infantry base defense.\n  Strong vs Infantry\n  Weak vs Vehicles
+		Description: actor-2100wcmg.description
 	Armament:
 		Weapon: 2100MachinegunTower
 		LocalOffset: 128,0,2
@@ -1254,7 +1254,7 @@ Player:
 		BuildPaletteOrder: 40
 		Prerequisites: 2100FY1, ~up2100upwall1, ~up2100uplcannon1, ~mmalpha
 		Queue: Defence, RADefence
-		Description: Anti-Tank base defense.\n  Strong vs Vehicles\n  Weak vs Infantry
+		Description: actor-2100wcl.description
 	Armament:
 		Weapon: wallcanonlight
 		LocalOffset: 512,-20,2
@@ -1272,7 +1272,7 @@ Player:
 		BuildPaletteOrder: 40
 		Prerequisites: 2100FY1, ~up2100upwall1, up2100upmcannon1, ~mmalpha
 		Queue: Defence, RADefence
-		Description: Anti-Tank base defense.\n  Strong vs Vehicles\n  Weak vs Infantry
+		Description: actor-2100wcm.description
 	Armament:
 		Weapon: wallcanonmedium
 		LocalOffset: 600,-20,2
@@ -1292,7 +1292,7 @@ Player:
 		BuildPaletteOrder: 40
 		Prerequisites: 2100FY1, ~up2100upwall1, ~up2100uphcannon1, ~mmalpha
 		Queue: Defence, RADefence
-		Description: Anti-Tank base defense.\n  Strong vs Vehicles\n  Weak vs Infantry
+		Description: actor-2100wch.description
 	Armament:
 		Weapon: wallcanonheavy
 		LocalOffset: 700,-20,2
@@ -1313,7 +1313,7 @@ Player:
 		BuildPaletteOrder: 20
 		Prerequisites: 2100OIL, ~mmalpha
 		Queue: Defence, RADefence
-		Description: Basic defensive structure.\n  Strong vs Infantry\n  Weak vs Tanks
+		Description: actor-2100mb.description
 	RequiresBuildableArea:
 		AreaTypes: building
 	Health:
@@ -1354,7 +1354,7 @@ Player:
 		BuildPaletteOrder: 30
 		Prerequisites: 2100OIL, ~up2100upflamer1, ~mmalpha
 		Queue: Defence, RADefence
-		Description: Basic defensive structure.\n  Strong vs Infantry\n  Weak vs Tanks
+		Description: actor-2100fb.description
 	RequiresBuildableArea:
 		AreaTypes: building
 	Health:
@@ -1397,7 +1397,7 @@ Player:
 		BuildPaletteOrder: 50
 		Prerequisites: 2100fy1, ~techlevel.medium, ~mmalpha
 		Queue: Defence, RADefence
-		Description: All-purpose defensive structure.\n  Strong vs Aircraft, Infantry\n  Weak vs Tanks
+		Description: actor-2100mt.description
 	RequiresBuildableArea:
 		AreaTypes: building
 	Selectable:
@@ -1443,7 +1443,7 @@ Player:
 		BuildPaletteOrder: 50
 		Prerequisites: 2100fy1, ~techlevel.medium, ~mmalpha
 		Queue: Defence, RADefence
-		Description: Reveals shroud.\n  Unarmed
+		Description: actor-2100radt.description
 	RequiresBuildableArea:
 		AreaTypes: building
 	Selectable:
@@ -1488,7 +1488,7 @@ Player:
 		BuildPaletteOrder: 50
 		Prerequisites: 2100fy1, ~techlevel.medium, ~up2100uplrk1, ~mmalpha
 		Queue: Defence, RADefence
-		Description: All-purpose defensive structure.\n  Strong vs Aircraft, Tanks\n  Weak vs Infantry
+		Description: actor-2100rt.description
 	RequiresBuildableArea:
 		AreaTypes: building
 	Selectable:
@@ -1527,7 +1527,7 @@ Player:
 		BuildPaletteOrder: 60
 		Prerequisites: 2100RF, ~techlevel.high, ~up2100uplancer1, ~mmalpha
 		Queue: Defence, RADefence
-		Description: Anti-Tank base defense.\n  Strong vs Vehicles\n  Weak vs Infantry
+		Description: actor-2100tt.description
 	RequiresBuildableArea:
 		AreaTypes: building
 	Selectable:
@@ -1567,7 +1567,7 @@ Player:
 		BuildPaletteOrder: 80
 		Prerequisites: 2100FY1, ~up2100upmortar1, ~mmalpha
 		Queue: Defence, RADefence
-		Description: Long range defensive structure.
+		Description: actor-2100mp.description
 	RequiresBuildableArea:
 		AreaTypes: building
 	Health:
@@ -1601,7 +1601,7 @@ Player:
 		Prerequisites: up2100uppepper1, ~techlevel.high, ~mmalpha
 		Queue: Defence, RADefence
 		BuildDurationModifier: 20
-		Description: Long range defensive structure.\nFast-firing variant of the Mortar Pit.
+		Description: actor-2100pp.description
 	RequiresBuildableArea:
 		AreaTypes: building
 	Health:
@@ -1630,7 +1630,7 @@ Player:
 		Queue: Defence, RADefence
 		BuildPaletteOrder: 110
 		Prerequisites: 2100FY1, ~techlevel.medium, ~up2100uphurricane1, ~mmalpha
-		Description: Anti-Air base defense.\n  Strong vs Aircraft\n  Unable to attack ground units
+		Description: actor-2100aa.description
 	Valued:
 		Cost: 600
 	Tooltip:
@@ -1676,7 +1676,7 @@ psc2100power:
 	Buildable:
 		BuildPaletteOrder: 10
 		Queue: PowerPlant.Alpha
-		Description: Increases power output.
+		Description: actor-psc2100power.description
 		Prerequisites: ~wzpower, ~up2100uppowermodule1, ~mmalpha
 	Valued:
 		Cost: 2000
@@ -1693,7 +1693,7 @@ psc2100factory1:
 	Buildable:
 		BuildPaletteOrder: 10
 		Queue: FactoryUpgrade1.Alpha
-		Description: Allows building of medium class chassis.
+		Description: actor-psc2100factory1.description
 		Prerequisites: ~wzpower, ~up2100upfactorymodule1, ~mmalpha
 	Valued:
 		Cost: 750
@@ -1710,7 +1710,7 @@ psc2100factory2:
 	Buildable:
 		BuildPaletteOrder: 10
 		Queue: FactoryUpgrade2.Alpha
-		Description: allows building of heavy class chassis.
+		Description: actor-psc2100factory2.description
 		Prerequisites: ~2100fy2, ~up2100upfactorymodule1
 	Valued:
 		Cost: 1000
@@ -1745,7 +1745,7 @@ psc2100factory2:
 		BuildPaletteOrder: 200
 		Prerequisites: 2100RF, ~techlevel.high, ~littlebuilderenable
 		Queue: Building, RABuilding
-		Description: Builds structures and provides radar.
+		Description: actor-2100hq.description
 	Building:
 		Footprint: xxx xxx xxx
 		Dimensions: 3,3
@@ -1834,7 +1834,7 @@ psc2100factory2:
 		BuildDuration: 480
 		Prerequisites: ~mmscavenger
 		Queue: Building, RABuilding
-		Description: Generates power
+		Description: actor-2100scavpowr.description
 	Building:
 		Footprint: xxx ===
 		Dimensions: 3,2
@@ -1902,7 +1902,7 @@ psc2100factory2:
 		BuildPaletteOrder: 40
 		Prerequisites: 2100OIL, ~mmscavenger
 		Queue: Building, RABuilding
-		Description: Produces vehicles
+		Description: actor-2100chopshop.description
 	Building:
 		Footprint: ____ =xx= ==== ====
 		Dimensions: 4,4
@@ -2027,7 +2027,7 @@ psc2100factory2:
 		BuildPaletteOrder: 50
 		Prerequisites: up2100upstructure2, 2100chopshop3, up2100upsypnaticdata2, ~mmscavenger
 		Queue: Building, RABuilding
-		Description: Produces more vehicles very Fast
+		Description: actor-2100chopshopadv.description
 	Building:
 		Footprint: ____ =xxx ==== ====
 		Dimensions: 4,4
@@ -2099,7 +2099,7 @@ psc2100factory2:
 		BuildPaletteOrder: 60
 		Prerequisites: up2100upvtols1, ~techlevel.medium, ~mmscavenger
 		Queue: Building, RABuilding
-		Description: Produces aircraft and unlocks higher-tech\nunits and buildings.
+		Description: actor-2100scavhangar.description
 	Building:
 		Footprint: xxx ===
 		Dimensions: 3,2
@@ -2153,10 +2153,10 @@ psc2100factory2:
 		SquadSizes:
 			1: 3
 		QuantizedFacings: 8
-		Names: 
-			1: Air Strike
+		Names:
+			1: Chopper Strike
 		Descriptions:
-			1:  Gun Choppers attack enemies along a line\nwith chainguns.
+			1: power-chopperstrike.description
 		EndChargeSpeechNotification: AirstrikeReady
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
@@ -2175,35 +2175,35 @@ psc2100factory2:
 		UseDirectionalTarget: True
 		DirectionArrowAnimation: airstrikedirection
 		SupportPowerPaletteOrder: 10
-	ParatroopersPower@paratroopers:
-		UnitTypes: 
-			1: 2100chopper.para
-		OrderName: Scavenger Supply
-		Icons: 
-			1: paratroopers
-		ChargeInterval: 3000
-		Names: 
-			1: Dogfood Truck
-		Descriptions: 
-			1: A Chopper drops a Supply Truck\nanywhere on the map.
-		DropItems: 
-			1: 2100supplytruckarmed, 2100scav
-		ReinforcementsArrivedSpeechNotification: ReinforcementsArrived
-		SelectTargetSpeechNotification: SelectTarget
-		AllowImpassableCells: false
-		QuantizedFacings: 8
-		CameraActor: camera.paradrop
-		DisplayBeacon: true
-		BeaconPosters:
-			1: rapinficon
-		SquadSizes:
-			1: 3
-		ArrowSequence: arrow
-		ClockSequence: clock
-		CircleSequence: circles
-		UseDirectionalTarget: True
-		DirectionArrowAnimation: airstrikedirection
-		SupportPowerPaletteOrder: 30
+	# ParatroopersPower@paratroopers:
+	# 	UnitTypes: 
+	# 		1: 2100chopper.para
+	# 	OrderName: Scavenger Supply
+	# 	Icons: 
+	# 		1: paratroopers
+	# 	ChargeInterval: 3000
+	# 	Names: 
+	# 		1: Dogfood Truck
+	# 	Descriptions: 
+	# 		1: A Chopper drops a Supply Truck\nanywhere on the map.
+	# 	DropItems: 
+	# 		1: 2100supplytruckarmed, 2100scav
+	# 	ReinforcementsArrivedSpeechNotification: ReinforcementsArrived
+	# 	SelectTargetSpeechNotification: SelectTarget
+	# 	AllowImpassableCells: false
+	# 	QuantizedFacings: 8
+	# 	CameraActor: camera.paradrop
+	# 	DisplayBeacon: true
+	# 	BeaconPosters:
+	# 		1: rapinficon
+	# 	SquadSizes:
+	# 		1: 3
+	# 	ArrowSequence: arrow
+	# 	ClockSequence: clock
+	# 	CircleSequence: circles
+	# 	UseDirectionalTarget: True
+	# 	DirectionArrowAnimation: airstrikedirection
+	# 	SupportPowerPaletteOrder: 30
 	SupportPowerChargeBar:
 	
 2100SCAVTECH:
@@ -2219,7 +2219,7 @@ psc2100factory2:
 		BuildPaletteOrder: 70
 		Prerequisites: up2100upsypnaticdata4, up2100uppowermodule1, ~techlevel.high, !scavnuke, ~mmscavenger
 		Queue: Building, RABuilding
-		Description: Provides support powers.\nUnlocks higher-tech units and buildings.
+		Description: actor-2100scavtech.description
 	Building:
 		Footprint: xxx xxx ===
 		Dimensions: 3,3
@@ -2248,7 +2248,7 @@ psc2100factory2:
 		Names:
 			1: Missile Air Strike
 		Descriptions:
-			1: Police Choppers attack enemies along a line\nwith missiles.
+			1: power-pchopperstrike.description
 		EndChargeSpeechNotification: AirstrikeReady
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
@@ -2267,35 +2267,35 @@ psc2100factory2:
 		UseDirectionalTarget: True
 		DirectionArrowAnimation: airstrikedirection
 		SupportPowerPaletteOrder: 20
-	ParatroopersPower@paratroopers2:
-		UnitTypes:
-			1: 2100chopper.para
-		SquadSizes:
-			1: 3
-		OrderName: Scavenger Supply x3
-		Icons:
-			1: paratroopers
-		ChargeInterval: 3000
-		Names:
-			1: Dogfood Convoy
-		Descriptions:
-			1: Deploy 3 Supply Trucks via Choppers\nanywhere on the map.
-		DropItems:
-			1: 2100supplytruckarmed,2100scav,2100scav,2100supplytruckarmed, 2100scav,2100scav,2100supplytruckarmed,2100scav,2100scav
-		ReinforcementsArrivedSpeechNotification: ReinforcementsArrived
-		SelectTargetSpeechNotification: SelectTarget
-		AllowImpassableCells: false
-		QuantizedFacings: 8
-		CameraActor: camera.paradrop
-		DisplayBeacon: true
-		BeaconPosters:
-			1: rapinficon
-		ArrowSequence: arrow
-		ClockSequence: clock
-		CircleSequence: circles
-		UseDirectionalTarget: True
-		DirectionArrowAnimation: airstrikedirection
-		SupportPowerPaletteOrder: 40
+	# ParatroopersPower@paratroopers2:
+	# 	UnitTypes:
+	# 		1: 2100chopper.para
+	# 	SquadSizes:
+	# 		1: 3
+	# 	OrderName: Scavenger Supply x3
+	# 	Icons:
+	# 		1: paratroopers
+	# 	ChargeInterval: 3000
+	# 	Names:
+	# 		1: Dogfood Convoy
+	# 	Descriptions:
+	# 		1: Deploy 3 Supply Trucks via Choppers\nanywhere on the map.
+	# 	DropItems:
+	# 		1: 2100supplytruckarmed,2100scav,2100scav,2100supplytruckarmed, 2100scav,2100scav,2100supplytruckarmed,2100scav,2100scav
+	# 	ReinforcementsArrivedSpeechNotification: ReinforcementsArrived
+	# 	SelectTargetSpeechNotification: SelectTarget
+	# 	AllowImpassableCells: false
+	# 	QuantizedFacings: 8
+	# 	CameraActor: camera.paradrop
+	# 	DisplayBeacon: true
+	# 	BeaconPosters:
+	# 		1: rapinficon
+	# 	ArrowSequence: arrow
+	# 	ClockSequence: clock
+	# 	CircleSequence: circles
+	# 	UseDirectionalTarget: True
+	# 	DirectionArrowAnimation: airstrikedirection
+	# 	SupportPowerPaletteOrder: 40
 	NukePower:
 		AllowMultiple: true
 		PauseOnCondition: lowpower
@@ -2308,7 +2308,7 @@ psc2100factory2:
 		Names:
 			1: Nuclear Strike
 		Descriptions:
-			1: Launch a tactical nuclear warhead.\nApplies heavy damage over a large area.
+			1: power-nuke.description
 		EndChargeSpeechNotification: NuclearWeaponAvailable
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
@@ -2350,7 +2350,7 @@ psc2100factory2:
 		BuildPaletteOrder: 10
 		Prerequisites: ~mmscavenger
 		Queue: Defence, RADefence
-		Description: Basic defensive structure.
+		Description: actor-2100scavwall.description
 	Health:
 		HP: 25000
 	Armor:
@@ -2413,7 +2413,7 @@ psc2100factory2:
 		BuildPaletteOrder: 20
 		Prerequisites: 2100ChopShop, ~mmscavenger
 		Queue: Defence, RADefence
-		Description: Basic defensive structure.\n  Strong vs Infantry\n  Weak vs Tanks
+		Description: actor-2100scavturret.description
 	Building:
 		RequiresBaseProvider: true
 	Health:
@@ -2454,7 +2454,7 @@ psc2100factory2:
 		Queue: Defence, RADefence
 		BuildPaletteOrder: 30
 		Prerequisites: 2100ChopShop, ~mmscavenger
-		Description: Static defense with a fireport for\na garrisoned soldier.\nCan detect cloaked units.\n  Strong vs Infantry, Light armor\n  Weak vs Tanks, Aircraft
+		Description: actor-2100scavpill.description
 	Valued:
 		Cost: 250
 	CustomSellValue:
@@ -2504,7 +2504,7 @@ psc2100factory2:
 		BuildPaletteOrder: 40
 		Prerequisites: 2100ChopShop, ~techlevel.medium, ~mmscavenger
 		Queue: Defence, RADefence
-		Description: All-purpose defensive structure.\n  Strong vs Aircraft, Tanks\n  Weak vs Infantry
+		Description: actor-2100scavrt.description
 	RequiresBuildableArea:
 		AreaTypes: building
 	Selectable:
@@ -2542,7 +2542,7 @@ psc2100factory2:
 		BuildPaletteOrder: 50
 		Prerequisites: 2100ChopShop, ~mmscavenger
 		Queue: Defence, RADefence
-		Description: Long range defensive structure.
+		Description: actor-2100scavmort.description
 	RequiresBuildableArea:
 		AreaTypes: building
 	Health:
@@ -2576,7 +2576,7 @@ psc2100factory2:
 		BuildPaletteOrder: 10
 		BuildDuration: 480
 		Queue: Building, RABuilding
-		Description: Research New Tecnology
+		Description: actor-2100scavware.description
 		Prerequisites: 2100chopshop, ~mmscavenger
 	Building:
 		Footprint: xxx ===
@@ -2611,7 +2611,7 @@ psc2100factory2:
 		BuildPaletteOrder: 50
 		Prerequisites: 2100chopshop, ~mmscavenger
 		Queue: Defence, RADefence
-		Description: All-purpose defensive structure.\n  Strong vs Aircraft, Tanks\n  Weak vs Infantry
+		Description: actor-2100scavmt.description
 	RenderSprites:
 		Image: 2100mt
 
@@ -2628,7 +2628,7 @@ psc2100factory2:
 		BuildPaletteOrder: 50
 		Prerequisites: 2100chopshop, up2100upflamer1, ~techlevel.medium, ~mmscavenger
 		Queue: Defence, RADefence
-		Description: All-purpose defensive structure.\n  Strong vs Aircraft, Tanks\n  Weak vs Infantry
+		Description: actor-2100scavft.description
 	RequiresBuildableArea:
 		AreaTypes: building
 	Selectable:
@@ -2667,7 +2667,7 @@ psc2100factory2:
 		BuildPaletteOrder: 50
 		Prerequisites: 2100chopshop, ~techlevel.medium, ~mmscavenger
 		Queue: Defence, RADefence
-		Description: All-purpose defensive structure.\n  Strong vs Aircraft, Tanks\n  Weak vs Infantry
+		Description: actor-2100scavradt.description
 	RenderSprites:
 		Image: 2100radt
 
@@ -2681,7 +2681,7 @@ psc2100chopshop1:
 	Buildable:
 		BuildPaletteOrder: 10
 		Queue: FactoryUpgrade1.Scavenger
-		Description: Increases power output.
+		Description: actor-psc2100chopshop1.description
 		Prerequisites: ~wzpower, ~up2100upfactorymodule1, ~mmscavenger
 	Valued:
 		Cost: 750
@@ -2698,7 +2698,7 @@ psc2100chopshop2:
 	Buildable:
 		BuildPaletteOrder: 10
 		Queue: FactoryUpgrade2.Scavenger
-		Description: Increases power output.
+		Description: actor-psc2100chopshop2.description
 		Prerequisites: ~2100chopshop2, ~up2100upfactorymodule1
 	Valued:
 		Cost: 1000
@@ -4084,7 +4084,7 @@ psc2100chopshop2:
 	Buildable:
 		BuildPaletteOrder: 10
 		Queue: Vehicle.Wzscavenger
-		Description: General-purpose infantry\n  Strong vs Infantry\n  Weak vs Vehicles
+		Description: actor-2100scav.description
 	Mobile:
 		Speed: 56
 	Health:
@@ -4281,7 +4281,7 @@ psc2100chopshop2:
 		Prerequisites: 2100RF, ~techlevel.medium, 2100RR
 		Queue: Vehicle.Warzone
 		BuildDurationModifier: 35
-		Description: Deploys into another Construction Yard.\n  Automaticaly Repairs Structures in a 3 Tile Radius
+		Description: actor-2100e6.description
 	Mobile:
 		Speed: 100
 		Locomotor: tracked
@@ -4330,7 +4330,7 @@ psc2100chopshop2:
 	Buildable:
 		Queue: Vehicle.Warzone
 		BuildPaletteOrder: 10
-		Description: Repairs structures and provides building area radius.\nCan remove resources to make building space.
+		Description: actor-2100repairtruck.description
 		Prerequisites: ~up2100upviper1
 	Valued:
 		Cost: 600
@@ -4361,7 +4361,7 @@ psc2100chopshop2:
 	Buildable:
 		Queue: Vehicle.Warzone
 		BuildPaletteOrder: 40
-		Description: Heals nearby units.\n  Unarmed
+		Description: actor-2100healtruck.description
 		Prerequisites: ~up2100upviper1
 	Valued:
 		Cost: 500
@@ -4380,7 +4380,7 @@ psc2100chopshop2:
 	Buildable:
 		BuildPaletteOrder: 20
 		Queue: Vehicle.Warzone
-		Description: Strong vs Infantry
+		Description: actor-2100radartruck.description
 		Prerequisites: ~up2100upviper1
 	Selectable:
 		Class: 2100radartruck
@@ -4396,7 +4396,7 @@ psc2100chopshop2:
 	Buildable:
 		BuildPaletteOrder: 20
 		Queue: Vehicle.Warzone
-		Description: Strong vs Infantry
+		Description: actor-2100mvw.description
 		Prerequisites: ~up2100uplmg1, ~up2100upviper1, ~!2100oldtechdisabled
 	Selectable:
 		Class: 2100mvw
@@ -4411,7 +4411,7 @@ psc2100chopshop2:
 	Buildable:
 		BuildPaletteOrder: 30
 		Queue: Vehicle.Warzone
-		Description: Strong vs Vehicles, Aircraft
+		Description: actor-2100rvw.description
 		Prerequisites: ~up2100uplrk1, ~up2100upviper1, ~!2100oldtechdisabled
 	Selectable:
 		Class: 2100rvw
@@ -4426,7 +4426,7 @@ psc2100chopshop2:
 	Buildable:
 		BuildPaletteOrder: 30
 		Queue: Vehicle.Warzone
-		Description: Strong vs Infantry
+		Description: actor-2100fvw.description
 		Prerequisites: ~up2100upflamer1, ~up2100upviper1, ~!2100oldtechdisabled
 	Selectable:
 		Class: 2100fvw
@@ -4441,7 +4441,7 @@ psc2100chopshop2:
 	Buildable:
 		BuildPaletteOrder: 30
 		Queue: Vehicle.Warzone
-		Description: Strong vs Vehicles
+		Description: actor-2100lcvw.description
 		Prerequisites: ~up2100uplcannon1, ~up2100upviper1, ~!2100oldtechdisabled
 	Selectable:
 		Class: 2100lcvw
@@ -4457,7 +4457,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 50
 		Prerequisites: 2100fy2, ~techlevel.medium, ~up2100upcobra1, up2100uplancer1
 		Queue: Vehicle.Warzone
-		Description: Strong vs Vehicles, Buildings
+		Description: actor-2100tch.description
 
 2100T2CH:
 	Inherits@Body: ^2100CobraHTracks
@@ -4470,7 +4470,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 50
 		Prerequisites: 2100fy2, ~techlevel.medium, ~up2100upcobra1, up2100uptankkiller1
 		Queue: Vehicle.Warzone
-		Description: Strong vs Vehicles, Buildings
+		Description: actor-2100t2ch.description
 
 2100MCH:
 	Inherits: ^2100CobraHTracks
@@ -4483,7 +4483,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 60
 		Prerequisites: 2100fy2, ~up2100upmcannon1, ~up2100upcobra1, ~techlevel.medium, ~!2100oldtechdisabled2
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100mch.description
 
 2100MGCH:
 	Inherits: ^2100CobraHTracks
@@ -4496,7 +4496,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 60
 		Prerequisites: 2100fy2, ~up2100upheavymg1, ~up2100upcobra1, ~techlevel.medium, ~!2100oldtechdisabled2
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100mgch.description
 
 2100MOCH:
 	Inherits: ^2100CobraHTracks
@@ -4509,7 +4509,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 60
 		Prerequisites: 2100fy2, ~up2100upmortar1, ~up2100upcobra1, ~techlevel.medium
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100moch.description
 
 2100RACH:
 	Inherits: ^2100CobraHTracks
@@ -4522,7 +4522,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 60
 		Prerequisites: 2100fy2, ~up2100rkarray1, ~up2100upcobra1, ~techlevel.medium
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100rach.description
 
 2100IFCH:
 	Inherits: ^2100CobraHTracks
@@ -4535,7 +4535,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 60
 		Prerequisites: 2100fy2, ~up2100upinferno1, ~up2100upcobra1, ~techlevel.medium
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100ifch.description
 
 2100AACH:
 	Inherits: ^2100CobraHTracks
@@ -4548,7 +4548,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 60
 		Prerequisites: 2100fy2, ~up2100uphurricane1, ~up2100upcobra1, ~techlevel.medium
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100aach.description
 
 2100HVCH:
 	Inherits: ^2100CobraHTracks
@@ -4561,7 +4561,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 60
 		Prerequisites: 2100fy2, ~up2100uphycannon, ~up2100upcobra1, ~techlevel.medium
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100hvch.description
 
 2100FLACH:
 	Inherits: ^2100CobraHTracks
@@ -4574,7 +4574,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 60
 		Prerequisites: 2100fy2, ~up2100upflak1, ~up2100upcobra1, ~techlevel.medium
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100flach.description
 
 2100NEDCH:
 	Inherits: ^2100CobraHTracks
@@ -4587,7 +4587,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 60
 		Prerequisites: 2100fy2, ~up2100upneedle, ~up2100upcobra1, ~techlevel.medium
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100nedch.description
 
 2100BNKCH:
 	Inherits: ^2100CobraHTracks
@@ -4600,7 +4600,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 60
 		Prerequisites: 2100fy2, ~up2100upbunkerbuster1, ~up2100upcobra1, ~techlevel.medium
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100bnkch.description
 
 2100BOMCH:
 	Inherits: ^2100CobraHTracks
@@ -4613,7 +4613,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 60
 		Prerequisites: 2100fy2, ~up2100upbombard1, ~up2100upcobra1, ~techlevel.medium
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100bomch.description
 
 2100AARTCH:
 	Inherits: ^2100CobraHTracks
@@ -4626,7 +4626,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 60
 		Prerequisites: 2100fy2, ~up2100upbombard1, ~up2100upcobra1, ~techlevel.medium
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100aartch.description
 
 2100IMOCH:
 	Inherits: ^2100CobraHTracks
@@ -4639,7 +4639,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 60
 		Prerequisites: 2100fy2, ~up2100upmortar1, ~up2100upcobra1, ~techlevel.medium
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100imoch.description
 
 2100PEPPERCH:
 	Inherits: ^2100CobraHTracks
@@ -4652,7 +4652,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 60
 		Prerequisites: 2100fy2, ~up2100uppepper1, ~up2100upcobra1, ~techlevel.medium
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100pepperch.description
 #		Python
 2100APT:
 	Inherits: ^2100PythonTracks
@@ -4665,7 +4665,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 80
 		Prerequisites: ~2100fy3, ~techlevel.high, ~up2100uppython1, ~up2100uptracks1, ~up2100uptwinassaultmg1
 		Queue: Vehicle.Warzone
-		Description: Strong vs Infantry
+		Description: actor-2100apt.description
 
 2100A2PT:
 	Inherits: ^2100PythonTracks
@@ -4678,7 +4678,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 80
 		Prerequisites: ~2100fy3, ~techlevel.high, ~up2100uppython1, ~up2100uptracks1, ~up2100upassaultmg1
 		Queue: Vehicle.Warzone
-		Description: Strong vs Infantry
+		Description: actor-2100a2pt.description
 
 2100HPT:
 	Inherits: ^2100PythonTracks
@@ -4691,7 +4691,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 90
 		Prerequisites: ~2100fy3, ~techlevel.high, ~up2100uppython1, ~up2100uptracks1, ~up2100uphcannon1
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100hpt.description
 
 2100ACPT:
 	Inherits: ^2100PythonTracks
@@ -4704,7 +4704,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 90
 		Prerequisites: ~2100fy3, ~techlevel.high, ~up2100uppython1, ~up2100uptracks1, ~up2100upacannon1
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100acpt.description
 
 2100AC2PT:
 	Inherits: ^2100PythonTracks
@@ -4717,7 +4717,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 90
 		Prerequisites: ~2100fy3, ~techlevel.high, ~up2100uppython1, ~up2100uptracks1, ~up2100upa2cannon1
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100ac2pt.description
 
 2100CPT:
 	Inherits: ^2100PythonTracks
@@ -4730,7 +4730,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 100
 		Prerequisites: 2100CRC, ~techlevel.high, ~up2100uppython1, ~up2100uptracks1
 		Queue: Vehicle.Warzone
-		Description: Buffs nearby allies and debuffs targeted enemies.\n Unarmed
+		Description: actor-2100cpt.description
 
 2100SUPPLYTRUCK:
 	Inherits: TRUCK
@@ -4744,7 +4744,7 @@ psc2100chopshop2:
 		Queue: Vehicle.Warzone
 		Prerequisites: 2100FY1
 		BuildPaletteOrder: 120
-		Description: Transports supplies to other players.\n Armed with self-defense HMG
+		Description: actor-2100supplytruck.description
 	Turreted:
 		TurnSpeed: 32
 		Offset: -10,0,150
@@ -4767,7 +4767,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 100
 		Prerequisites: ~2100fy3, ~techlevel.high, ~up2100uppython1, ~up2100uptracks1, ~up2100upa2cannon1
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100rippt.description
 
 2100HOTPT:
 	Inherits: ^2100PythonTracks
@@ -4780,7 +4780,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 100
 		Prerequisites: ~2100fy3, ~techlevel.high, ~up2100uppython1, ~up2100uptracks1, ~2100uphotwizer1
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100hotpt.description
 #		Cobra Hovercraft
 2100MCHOV:
 	Inherits: ^2100CobraHovercraft
@@ -4793,7 +4793,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 60
 		Prerequisites: 2100fy2, ~up2100upmcannon1, ~up2100upcobra1, ~techlevel.medium, ~up2100uphover1
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100mchov.description
 
 #		Python Hovercraft
 2100APHOV:
@@ -4807,7 +4807,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 80
 		Prerequisites: ~2100fy3, ~techlevel.high, ~up2100uppython1, ~up2100uphover1, ~up2100uptwinassaultmg1
 		Queue: Vehicle.Warzone
-		Description: Strong vs Infantry
+		Description: actor-2100aphov.description
 
 2100HPHOV:
 	Inherits: ^2100PythonHovercraft
@@ -4820,7 +4820,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 90
 		Prerequisites: ~2100fy3, ~techlevel.high, ~up2100uppython1, ~up2100uphover1, ~up2100uphcannon1
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100hphov.description
 
 ####################################################################################################
 #		2100 Aircraft TheProject
@@ -4832,7 +4832,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 20
 		Prerequisites: 2100vfy1, ~techlevel.medium, ~up2100uplrk1, ~up2100upviper1, ~up2100upvtols1
 		Queue: Aircraft.Warzone
-		Description: Helicopter gunship armed\nwith MH.\n  Strong vs Infantry, Light armor\n  Weak vs Tanks, Aircraft
+		Description: actor-2100mvvtol.description
 	Valued:
 		Cost: 600
 	Tooltip:
@@ -4845,7 +4845,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 20
 		Prerequisites: 2100vfy1, ~techlevel.medium, ~up2100uplmg1, ~up2100upviper1, ~up2100upvtols1
 		Queue: Aircraft.Warzone
-		Description: Helicopter gunship armed\nwith rocket pod.\n  Strong vs Infantry, Light armor\n  Weak vs Tanks, Aircraft
+		Description: actor-2100rvvtol.description
 	Valued:
 		Cost: 900
 	Tooltip:
@@ -4858,7 +4858,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 20
 		Prerequisites: 2100vfy2, ~techlevel.medium, ~up2100uplcannon1, ~up2100upcobra1, ~up2100upvtols1
 		Queue: Aircraft.Warzone
-		Description: Helicopter gunship armed\nwith light cannon.\n  Strong vs Infantry, Light armor\n  Weak vs Tanks, Aircraft
+		Description: actor-2100lcvtol.description
 	Valued:
 		Cost: 1400
 	Tooltip:
@@ -4871,7 +4871,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 20
 		Prerequisites: 2100vfy2, ~techlevel.medium, ~up2100uplancer1, ~up2100upcobra1, ~up2100upvtols1
 		Queue: Aircraft.Warzone
-		Description: Helicopter gunship armed\nwith lancer.\n  Strong vs Infantry, Light armor\n  Weak vs Tanks, Aircraft
+		Description: actor-2100tcvtol.description
 	Valued:
 		Cost: 1400
 	Tooltip:
@@ -4889,7 +4889,7 @@ psc2100chopshop2:
 	Buildable:
 		BuildPaletteOrder: 20
 		Queue: Infantry.Warzone
-		Description: Strong vs Infantry
+		Description: actor-2100cymg.description
 		Prerequisites: ~up2100uplmg1, ~barracks
 	Selectable:
 		Class: 2100cymg
@@ -4904,7 +4904,7 @@ psc2100chopshop2:
 	Buildable:
 		BuildPaletteOrder: 30
 		Queue: Infantry.Warzone
-		Description: Strong vs Vehicles
+		Description: actor-2100cycan.description
 		Prerequisites: ~up2100uplcannon1, ~barracks
 	Selectable:
 		Class: 2100cycan
@@ -4919,7 +4919,7 @@ psc2100chopshop2:
 	Buildable:
 		BuildPaletteOrder: 40
 		Queue: Infantry.Warzone
-		Description: Strong vs Vehicles
+		Description: actor-2100cylan.description
 		Prerequisites: ~up2100uplancer1, ~barracks
 	Selectable:
 		Class: 2100cylan
@@ -4936,7 +4936,7 @@ psc2100chopshop2:
 	Buildable:
 		BuildPaletteOrder: 30
 		Queue: Infantry.Warzone
-		Description: Strong vs Ground targets
+		Description: actor-2100cymor.description
 		Prerequisites: ~up2100upmortar1, ~barracks
 	Selectable:
 		Class: 2100cylan
@@ -4951,7 +4951,7 @@ psc2100chopshop2:
 	Buildable:
 		BuildPaletteOrder: 30
 		Queue: Infantry.Warzone
-		Description: Strong vs Infantry
+		Description: actor-2100cyfla.description
 		Prerequisites: ~up2100upflamer1, ~barracks
 	Selectable:
 		Class: 2100cylan
@@ -4966,7 +4966,7 @@ psc2100chopshop2:
 	Buildable:
 		BuildPaletteOrder: 20
 		Queue: Infantry.Warzone
-		Description: Repairs structures and provides building area radius
+		Description: actor-2100cybui.description
 		Prerequisites: ~barracks
 	Selectable:
 		Class: 2100cymg
@@ -5079,7 +5079,7 @@ psc2100chopshop2:
 	Buildable:
 		Queue: Vehicle.Warzone
 		BuildPaletteOrder: 10
-		Description: Repairs structures and provides building area radius.\nCan remove resources to make building space.
+		Description: actor-2100repairtruckc.description
 		Prerequisites: ~up2100upbug1
 	Valued:
 		Cost: 550
@@ -5106,7 +5106,7 @@ psc2100chopshop2:
 	Buildable:
 		Queue: Vehicle.Warzone
 		BuildPaletteOrder: 40
-		Description: Heals nearby units.\n  Unarmed
+		Description: actor-2100healtruckc.description
 		Prerequisites: ~up2100upbug1
 	Valued:
 		Cost: 450
@@ -5125,7 +5125,7 @@ psc2100chopshop2:
 	Buildable:
 		BuildPaletteOrder: 20
 		Queue: Vehicle.Warzone
-		Description: Strong vs Infantry
+		Description: actor-2100radartruckc.description
 		Prerequisites: ~up2100upbug1
 	Selectable:
 		Class: 2100radartruck
@@ -5141,7 +5141,7 @@ psc2100chopshop2:
 	Buildable:
 		BuildPaletteOrder: 20
 		Queue: Vehicle.Warzone
-		Description: Strong vs Infantry
+		Description: actor-2100mbuw.description
 		Prerequisites: ~up2100uplmg1, ~up2100upbug1, ~!2100oldtechdisabled
 	Selectable:
 		Class: 2100mvw
@@ -5157,7 +5157,7 @@ psc2100chopshop2:
 	Buildable:
 		BuildPaletteOrder: 30
 		Queue: Vehicle.Warzone
-		Description: Strong vs Vehicles, Aircraft
+		Description: actor-2100rbuw.description
 		Prerequisites: ~up2100uplrk1, ~up2100upbug1, ~!2100oldtechdisabled
 	Selectable:
 		Class: 2100rvw
@@ -5173,7 +5173,7 @@ psc2100chopshop2:
 	Buildable:
 		BuildPaletteOrder: 30
 		Queue: Vehicle.Warzone
-		Description: Strong vs Infantry
+		Description: actor-2100fbuw.description
 		Prerequisites: ~up2100upflamer1, ~up2100upbug1, ~!2100oldtechdisabled
 	Selectable:
 		Class: 2100fvw
@@ -5189,7 +5189,7 @@ psc2100chopshop2:
 	Buildable:
 		BuildPaletteOrder: 30
 		Queue: Vehicle.Warzone
-		Description: Strong vs Vehicles, Aircraft
+		Description: actor-2100rabuw.description
 		Prerequisites: ~up2100rkarray1, ~up2100upbug1, ~!2100oldtechdisabled
 	RenderSprites:
 #		Scorpion
@@ -5204,7 +5204,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 50
 		Prerequisites: 2100fy2, ~techlevel.medium, ~up2100upscorpion1, up2100uplancer1
 		Queue: Vehicle.Warzone
-		Description: Strong vs Vehicles, Buildings
+		Description: actor-2100tsch.description
 
 2100T2SCH:
 	Inherits@Body: ^2100ScorpionHTracks
@@ -5217,7 +5217,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 50
 		Prerequisites: 2100fy2, ~techlevel.medium, ~up2100upscorpion1, up2100uptankkiller1
 		Queue: Vehicle.Warzone
-		Description: Strong vs Vehicles, Buildings
+		Description: actor-2100t2sch.description
 
 2100MSCH:
 	Inherits: ^2100ScorpionHTracks
@@ -5230,7 +5230,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 60
 		Prerequisites: 2100fy2, ~up2100upmcannon1, ~up2100upscorpion1, ~techlevel.medium, ~!2100oldtechdisabled2
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100msch.description
 
 2100MGSCH:
 	Inherits: ^2100ScorpionHTracks
@@ -5243,7 +5243,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 60
 		Prerequisites: 2100fy2, ~up2100upheavymg1, ~up2100upscorpion1, ~techlevel.medium
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100mgsch.description
 
 2100RSCH:
 	Inherits@Body: ^2100ScorpionHTracks
@@ -5256,7 +5256,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 50
 		Prerequisites: 2100fy2, ~techlevel.medium, ~up2100upscorpion1, ~up2100uplrk1
 		Queue: Vehicle.Warzone
-		Description: Strong vs Vehicles, Buildings
+		Description: actor-2100rsch.description
 
 2100LCSCH:
 	Inherits@Body: ^2100ScorpionHTracks
@@ -5269,7 +5269,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 50
 		Prerequisites: 2100fy2, ~techlevel.medium, ~up2100upscorpion1, ~up2100uplcannon1, ~!2100oldtechdisabled2
 		Queue: Vehicle.Warzone
-		Description: Strong vs Vehicles, Buildings
+		Description: actor-2100lcsch.description
 
 2100MOSCH:
 	Inherits@Body: ^2100ScorpionHTracks
@@ -5282,7 +5282,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 50
 		Prerequisites: 2100fy2, ~techlevel.medium, ~up2100upscorpion1, ~up2100upmortar1
 		Queue: Vehicle.Warzone
-		Description: Strong vs Vehicles, Buildings
+		Description: actor-2100mosch.description
 
 2100IFSCH:
 	Inherits: ^2100ScorpionHTracks
@@ -5295,7 +5295,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 60
 		Prerequisites: 2100fy2, ~up2100upinferno1, ~up2100upscorpion1, ~techlevel.medium
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100ifsch.description
 
 2100HVSCH:
 	Inherits: ^2100ScorpionHTracks
@@ -5308,7 +5308,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 60
 		Prerequisites: 2100fy2, ~up2100uphycannon, ~up2100upscorpion1, ~techlevel.medium
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100hvsch.description
 
 2100FLASCH:
 	Inherits: ^2100ScorpionHTracks
@@ -5321,7 +5321,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 60
 		Prerequisites: 2100fy2, ~up2100upflak1, ~up2100upscorpion1, ~techlevel.medium
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100flasch.description
 
 2100NEDSCH:
 	Inherits: ^2100ScorpionHTracks
@@ -5334,7 +5334,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 60
 		Prerequisites: 2100fy2, ~up2100upneedle, ~up2100upscorpion1, ~techlevel.medium
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100nedsch.description
 
 2100BNKSCH:
 	Inherits: ^2100ScorpionHTracks
@@ -5347,7 +5347,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 60
 		Prerequisites: 2100fy2, ~up2100upbunkerbuster1, ~up2100upscorpion1, ~techlevel.medium
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100bnksch.description
 
 2100PEPPERCH:
 	Inherits: ^2100ScorpionHTracks
@@ -5360,7 +5360,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 60
 		Prerequisites: 2100fy2, ~up2100uppepper1, ~up2100upscorpion1, ~techlevel.medium
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100hvsch.description
 #		Mantis
 2100AMAT:
 	Inherits: ^2100MantisTracks
@@ -5373,7 +5373,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 80
 		Prerequisites: ~2100fy3, ~techlevel.high, ~up2100upmantis1, ~up2100uptracks1, ~up2100uptwinassaultmg1
 		Queue: Vehicle.Warzone
-		Description: Strong vs Infantry
+		Description: actor-2100amat.description
 
 2100A2MAT:
 	Inherits: ^2100MantisTracks
@@ -5386,7 +5386,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 80
 		Prerequisites: ~2100fy3, ~techlevel.high, ~up2100upmantis1, ~up2100uptracks1, ~up2100upassaultmg1
 		Queue: Vehicle.Warzone
-		Description: Strong vs Infantry
+		Description: actor-2100a2mat.description
 
 2100HMAT:
 	Inherits: ^2100MantisTracks
@@ -5399,7 +5399,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 90
 		Prerequisites: ~2100fy3, ~techlevel.high, ~up2100upmantis1, ~up2100uptracks1, ~up2100uphcannon1
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100hmat.description
 
 2100ACMAT:
 	Inherits: ^2100MantisTracks
@@ -5412,7 +5412,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 90
 		Prerequisites: ~2100fy3, ~techlevel.high, ~up2100upmantis1, ~up2100uptracks1, ~up2100upacannon1
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100acmat.description
 
 2100AC2MAT:
 	Inherits: ^2100MantisTracks
@@ -5425,7 +5425,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 90
 		Prerequisites: ~2100fy3, ~techlevel.high, ~up2100upmantis1, ~up2100uptracks1, ~up2100upa2cannon1
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100ac2mat.description
 
 2100CMAT:
 	Inherits: ^2100MantisTracks
@@ -5438,7 +5438,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 100
 		Prerequisites: 2100CRC, ~techlevel.high, ~up2100upmantis1, ~up2100uptracks1
 		Queue: Vehicle.Warzone
-		Description: Buffs nearby allies and debuffs targeted enemies.\n Unarmed
+		Description: actor-2100cmat.description
 
 2100AAMAT:
 	Inherits: ^2100MantisTracks
@@ -5451,7 +5451,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 80
 		Prerequisites: ~2100fy3, ~techlevel.high, ~up2100upmantis1, ~up2100uptracks1, ~up2100uphurricane1
 		Queue: Vehicle.Warzone
-		Description: Strong vs Aircraft
+		Description: actor-2100aamat.description
 
 2100RIPMAT:
 	Inherits: ^2100MantisTracks
@@ -5464,7 +5464,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 100
 		Prerequisites: ~2100fy3, ~techlevel.high, ~up2100upmantis1, ~up2100uptracks1, ~up2100upa2cannon1
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100ripmat.description
 
 2100HOTMAT:
 	Inherits: ^2100MantisTracks
@@ -5477,7 +5477,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 100
 		Prerequisites: ~2100fy3, ~techlevel.high, ~up2100upmantis1, ~up2100uptracks1, ~2100uphotwizer1
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100hotmat.description
 #		Scorpion Hovercraft
 2100MSCHOV:
 	Inherits: ^2100ScorpionHovercraft
@@ -5490,7 +5490,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 60
 		Prerequisites: 2100fy2, ~up2100upmcannon1, ~up2100upcobra1, ~techlevel.medium, ~up2100uphover1
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100mschov.description
 #		Mantis Hovercraft
 2100AMAHOV:
 	Inherits: ^2100MantisHovercraft
@@ -5503,7 +5503,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 80
 		Prerequisites: ~2100fy3, ~techlevel.high, ~up2100upmantis1, ~up2100uphover1, ~up2100uptwinassaultmg1
 		Queue: Vehicle.Warzone
-		Description: Strong vs Infantry
+		Description: actor-2100amahov.description
 
 2100HMAHOV:
 	Inherits: ^2100MantisHovercraft
@@ -5516,7 +5516,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 90
 		Prerequisites: ~2100fy3, ~techlevel.high, ~up2100upmantis1, ~up2100uphover1, ~up2100uphcannon1
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100hmahov.description
 ####################################################################################################
 #		2100 Scavengers Paradigm
 ####################################################################################################
@@ -5530,7 +5530,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 100
 		Prerequisites: 2100OIL, ~conyard.paradigm
 		Queue: Building, RABuilding
-		Description: Produces vehicles
+		Description: actor-2100cchopshop.description
 		BuildLimit: 1
 	Production@NORMAL:
 		Produces: Scavs.Paradigm
@@ -5618,7 +5618,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 20
 		Prerequisites: 2100vfy1, ~techlevel.medium, ~up2100uplrk1, ~up2100upbug1, ~up2100upvtols1
 		Queue: Aircraft.Warzone
-		Description: Helicopter gunship armed\nwith MG.\n  Strong vs Infantry, Light armor\n  Weak vs Tanks, Aircraft
+		Description: actor-2100mbuvtol.description
 	Valued:
 		Cost: 550
 	Tooltip:
@@ -5631,7 +5631,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 20
 		Prerequisites: 2100vfy1, ~techlevel.medium, ~up2100uplmg1, ~up2100upbug1, ~up2100upvtols1
 		Queue: Aircraft.Warzone
-		Description: Helicopter gunship armed\nwith rocket pod.\n  Strong vs Infantry, Light armor\n  Weak vs Tanks, Aircraft
+		Description: actor-2100rbuvtol.description
 	Valued:
 		Cost: 850
 	Tooltip:
@@ -5644,7 +5644,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 20
 		Prerequisites: 2100vfy2, ~techlevel.medium, ~up2100uplcannon1, ~up2100upscorpion1, ~up2100upvtols1
 		Queue: Aircraft.Warzone
-		Description: Helicopter gunship armed\nwith light cannon.\n  Strong vs Infantry, Light armor\n  Weak vs Tanks, Aircraft
+		Description: actor-2100lscvtol.description
 	Valued:
 		Cost: 1300
 	Tooltip:
@@ -5657,7 +5657,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 20
 		Prerequisites: 2100vfy2, ~techlevel.medium, ~up2100uplancer1, ~up2100upscorpion1, ~up2100upvtols1
 		Queue: Aircraft.Warzone
-		Description: Helicopter gunship armed\nwith Lancer.\n  Strong vs Infantry, Light armor\n  Weak vs Tanks, Aircraft
+		Description: actor-2100tscvtol.description
 	Valued:
 		Cost: 1300
 	Tooltip:
@@ -5672,7 +5672,7 @@ psc2100chopshop2:
 	Buildable:
 		Queue: Vehicle.Warzone
 		BuildPaletteOrder: 10
-		Description: Repairs structures and provides building area radius.\nCan remove resources to make building space.
+		Description: actor-2100repairtruckp.description
 		Prerequisites: ~up2100upleopard1
 	Valued:
 		Cost: 650
@@ -5699,7 +5699,7 @@ psc2100chopshop2:
 	Buildable:
 		Queue: Vehicle.Warzone
 		BuildPaletteOrder: 40
-		Description: Heals nearby units.\n  Unarmed
+		Description: actor-2100healtruckp.description
 		Prerequisites: ~up2100upleopard1
 	Valued:
 		Cost: 550
@@ -5718,7 +5718,7 @@ psc2100chopshop2:
 	Buildable:
 		BuildPaletteOrder: 20
 		Queue: Vehicle.Warzone
-		Description: Strong vs Infantry
+		Description: actor-2100radartruckp.description
 		Prerequisites: ~up2100upleopard1
 	Selectable:
 		Class: 2100radartruck
@@ -5733,7 +5733,7 @@ psc2100chopshop2:
 	Buildable:
 		BuildPaletteOrder: 20
 		Queue: Vehicle.Warzone
-		Description: Strong vs Infantry
+		Description: actor-2100mlew.description
 		Prerequisites: ~up2100uplmg1, ~!2100oldtechdisabled
 	Selectable:
 		Class: 2100mvw
@@ -5749,7 +5749,7 @@ psc2100chopshop2:
 	Buildable:
 		BuildPaletteOrder: 30
 		Queue: Vehicle.Warzone
-		Description: Strong vs Vehicles, Aircraft
+		Description: actor-2100rlew.description
 		Prerequisites: ~up2100uplrk1, ~!2100oldtechdisabled
 	Selectable:
 		Class: 2100rvw
@@ -5765,7 +5765,7 @@ psc2100chopshop2:
 	Buildable:
 		BuildPaletteOrder: 30
 		Queue: Vehicle.Warzone
-		Description: Strong vs Vehicles, Aircraft
+		Description: actor-2100flew.description
 		Prerequisites: ~up2100upflamer1, ~!2100oldtechdisabled
 	Selectable:
 		Class: 2100fvw
@@ -5781,7 +5781,7 @@ psc2100chopshop2:
 	Buildable:
 		BuildPaletteOrder: 30
 		Queue: Vehicle.Warzone
-		Description: Strong vs Vehicles, Aircraft
+		Description: actor-2100ralew.description
 		Prerequisites: ~up2100rkarray1, ~!2100oldtechdisabled
 	RenderSprites:
 #		Panther
@@ -5796,7 +5796,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 50
 		Prerequisites: 2100fy2, ~techlevel.medium, ~up2100uppanther1, up2100uplancer1
 		Queue: Vehicle.Warzone
-		Description: Strong vs Vehicles, Buildings
+		Description: actor-2100tphh.description
 
 2100T2PHH:
 	Inherits@Body: ^2100PantherHTracks
@@ -5809,7 +5809,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 50
 		Prerequisites: 2100fy2, ~techlevel.medium, ~up2100uppanther1, up2100uptankkiller1
 		Queue: Vehicle.Warzone
-		Description: Strong vs Vehicles, Buildings
+		Description: actor-2100t2phh.description
 
 2100MPHH:
 	Inherits: ^2100PantherHTracks
@@ -5822,7 +5822,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 60
 		Prerequisites: 2100fy2, ~up2100upmcannon1, ~up2100uppanther1, ~techlevel.medium, ~!2100oldtechdisabled2
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100mphh.description
 
 2100MGPHH:
 	Inherits: ^2100PantherHTracks
@@ -5835,7 +5835,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 60
 		Prerequisites: 2100fy2, ~up2100upheavymg1, ~up2100uppanther1, ~techlevel.medium
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100mgphh.description
 
 2100MOPHH:
 	Inherits: ^2100PantherHTracks
@@ -5848,7 +5848,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 60
 		Prerequisites: 2100fy2, ~up2100upmortar1, ~up2100uppanther1, ~techlevel.medium
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100mophh.description
 
 2100IFPHH:
 	Inherits: ^2100PantherHTracks
@@ -5861,7 +5861,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 60
 		Prerequisites: 2100fy2, ~up2100upinferno1, ~up2100uppanther1, ~techlevel.medium
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100ifphh.description
 
 2100AAPHH:
 	Inherits: ^2100PantherHTracks
@@ -5874,7 +5874,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 60
 		Prerequisites: 2100fy2, ~up2100uphurricane1, ~up2100uppanther1, ~techlevel.medium
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100aaphh.description
 
 2100HVPHH:
 	Inherits: ^2100PantherHTracks
@@ -5887,7 +5887,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 60
 		Prerequisites: 2100fy2, ~up2100uphycannon, ~up2100uppanther1, ~techlevel.medium
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100hvphh.description
 
 2100FLAPHH:
 	Inherits: ^2100PantherHTracks
@@ -5900,7 +5900,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 60
 		Prerequisites: 2100fy2, ~up2100upflak1, ~up2100uppanther1, ~techlevel.medium
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100flaphh.description
 
 2100NEDPHH:
 	Inherits: ^2100PantherHTracks
@@ -5913,7 +5913,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 60
 		Prerequisites: 2100fy2, ~up2100upneedle, ~up2100uppanther1, ~techlevel.medium
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100nedphh.description
 
 2100BNKPHH:
 	Inherits: ^2100PantherHTracks
@@ -5926,7 +5926,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 60
 		Prerequisites: 2100fy2, ~up2100upbunkerbuster1, ~up2100uppanther1, ~techlevel.medium
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100bnkphh.description
 
 2100PEPPERPHH:
 	Inherits: ^2100PantherHTracks
@@ -5939,7 +5939,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 60
 		Prerequisites: 2100fy2, ~up2100uppepper1, ~up2100uppanther1, ~techlevel.medium
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100pepperphh.description
 #		Tiger
 2100ATIT:
 	Inherits: ^2100TigerTracks
@@ -5952,7 +5952,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 80
 		Prerequisites: 2100CRC, ~techlevel.high, ~up2100uptiger1, ~up2100uptracks1, ~up2100uptwinassaultmg1
 		Queue: Vehicle.Warzone
-		Description: Strong vs Infantry
+		Description: actor-2100atit.description
 
 2100A2TIT:
 	Inherits: ^2100TigerTracks
@@ -5965,7 +5965,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 80
 		Prerequisites: 2100CRC, ~techlevel.high, ~up2100uptiger1, ~up2100uptracks1, ~up2100upassaultmg1
 		Queue: Vehicle.Warzone
-		Description: Strong vs Infantry
+		Description: actor-2100a2tit.description
 
 2100HTIT:
 	Inherits: ^2100TigerTracks
@@ -5978,7 +5978,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 90
 		Prerequisites: 2100CRC, ~techlevel.high, ~up2100uptiger1, ~up2100uptracks1, ~up2100uphcannon1
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100htit.description
 
 2100ACTIT:
 	Inherits: ^2100TigerTracks
@@ -5991,7 +5991,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 90
 		Prerequisites: ~2100fy3, ~techlevel.high, ~up2100uptiger1, ~up2100uptracks1, ~up2100upacannon1
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100actit.description
 
 2100AC2TIT:
 	Inherits: ^2100TigerTracks
@@ -6004,7 +6004,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 90
 		Prerequisites: ~2100fy3, ~techlevel.high, ~up2100uptiger1, ~up2100uptracks1, ~up2100upa2cannon1
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100ac2tit.description
 
 2100CTIT:
 	Inherits: ^2100TigerTracks
@@ -6017,7 +6017,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 100
 		Prerequisites: 2100CRC, ~techlevel.high, ~up2100uptiger1, ~up2100uptracks1
 		Queue: Vehicle.Warzone
-		Description: Buffs nearby allies and debuffs targeted enemies.\n Unarmed
+		Description: actor-2100ctit.description
 
 2100RIPTIT:
 	Inherits: ^2100TigerTracks
@@ -6030,7 +6030,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 100
 		Prerequisites: ~2100fy3, ~techlevel.high, ~up2100uptiger1, ~up2100uptracks1, ~up2100upa2cannon1
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100riptit.description
 
 2100HOTTIT:
 	Inherits: ^2100TigerTracks
@@ -6043,7 +6043,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 100
 		Prerequisites: ~2100fy3, ~techlevel.high, ~up2100uptiger1, ~up2100uptracks1, ~2100uphotwizer1
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100hottit.description
 #		Panther Hovercraft
 2100MPHHOV:
 	Inherits: ^2100PantherHovercraft
@@ -6056,7 +6056,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 60
 		Prerequisites: 2100fy2, ~up2100upmcannon1, ~up2100uppanther1, ~techlevel.medium, ~up2100uphover1
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100mphhov.description
 #		Tiger Hovercraft
 2100ATIHOV:
 	Inherits: ^2100TigerHovercraft
@@ -6069,7 +6069,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 80
 		Prerequisites: ~2100fy3, ~techlevel.high, ~up2100uptiger1, ~up2100uphover1, ~up2100uptwinassaultmg1
 		Queue: Vehicle.Warzone
-		Description: Strong vs Infantry
+		Description: actor-2100atihov.description
 
 2100HTIHOV:
 	Inherits: ^2100TigerHovercraft
@@ -6082,7 +6082,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 90
 		Prerequisites: ~2100fy3, ~techlevel.high, ~up2100uptiger1, ~up2100uphover1, ~up2100uphcannon1
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100htihov.description
 ####################################################################################################
 #		2100 Aircraft Collective
 ####################################################################################################
@@ -6093,7 +6093,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 20
 		Prerequisites: 2100vfy1, ~techlevel.medium, ~up2100uplrk1, ~up2100upleopard1, ~up2100upvtols1
 		Queue: Aircraft.Warzone
-		Description: Helicopter gunship armed\nwith dual chainguns.\n  Strong vs Infantry, Light armor\n  Weak vs Tanks, Aircraft
+		Description: actor-2100mlevtol.description
 	Valued:
 		Cost: 700
 	Tooltip:
@@ -6106,7 +6106,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 20
 		Prerequisites: 2100vfy1, ~techlevel.medium, ~up2100uplmg1, ~up2100upleopard1, ~up2100upvtols1
 		Queue: Aircraft.Warzone
-		Description: Helicopter gunship armed\nwith dual chainguns.\n  Strong vs Infantry, Light armor\n  Weak vs Tanks, Aircraft
+		Description: actor-2100rlevtol.description
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -6119,7 +6119,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 20
 		Prerequisites: 2100vfy2, ~techlevel.medium, ~up2100uplcannon1, ~up2100uppanther1, ~up2100upvtols1
 		Queue: Aircraft.Warzone
-		Description: Helicopter gunship armed\nwith dual chainguns.\n  Strong vs Infantry, Light armor\n  Weak vs Tanks, Aircraft
+		Description: actor-2100lphvtol.description
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -6132,7 +6132,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 20
 		Prerequisites: 2100vfy2, ~techlevel.medium, ~up2100uplancer1, ~up2100uppanther1, ~up2100upvtols1
 		Queue: Aircraft.Warzone
-		Description: Helicopter gunship armed\nwith dual chainguns.\n  Strong vs Infantry, Light armor\n  Weak vs Tanks, Aircraft
+		Description: actor-2100tphvtol.description
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -6147,7 +6147,7 @@ psc2100chopshop2:
 	Buildable:
 		Queue: Vehicle.Warzone
 		BuildPaletteOrder: 10
-		Description: Repairs structures.\nCan remove resources to make building space.
+		Description: actor-2100repairtruckn.description
 		Prerequisites: ~up2100upretaliaton1
 	Valued:
 		Cost: 700
@@ -6174,7 +6174,7 @@ psc2100chopshop2:
 	Buildable:
 		Queue: Vehicle.Warzone
 		BuildPaletteOrder: 40
-		Description: Heals nearby units.\n  Unarmed
+		Description: actor-2100healtruckn.description
 		Prerequisites: ~up2100upretaliaton1
 	Valued:
 		Cost: 600
@@ -6193,7 +6193,7 @@ psc2100chopshop2:
 	Buildable:
 		BuildPaletteOrder: 20
 		Queue: Vehicle.Warzone
-		Description: Strong vs Infantry
+		Description: actor-2100radartruckn.description
 		Prerequisites: ~up2100upretaliaton1
 	Selectable:
 		Class: 2100radartruck
@@ -6208,7 +6208,7 @@ psc2100chopshop2:
 	Buildable:
 		BuildPaletteOrder: 20
 		Queue: Vehicle.Warzone
-		Description: Strong vs Infantry
+		Description: actor-2100mrew.description
 		Prerequisites: ~up2100uplmg1, ~up2100upretaliaton1, ~!2100oldtechdisabled
 	Selectable:
 		Class: 2100mvw
@@ -6224,7 +6224,7 @@ psc2100chopshop2:
 	Buildable:
 		BuildPaletteOrder: 30
 		Queue: Vehicle.Warzone
-		Description: Strong vs Vehicles, Aircraft
+		Description: actor-2100rrew.description
 		Prerequisites: ~up2100uplrk1, ~up2100upretaliaton1, ~!2100oldtechdisabled
 	Selectable:
 		Class: 2100rvw
@@ -6240,7 +6240,7 @@ psc2100chopshop2:
 	Buildable:
 		BuildPaletteOrder: 30
 		Queue: Vehicle.Warzone
-		Description: Strong vs Vehicles, Aircraft
+		Description: actor-2100frew.description
 		Prerequisites: ~up2100upflamer1, ~up2100upretaliaton1, ~!2100oldtechdisabled
 	Selectable:
 		Class: 2100fvw
@@ -6257,7 +6257,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 50
 		Prerequisites: ~2100fy2, ~techlevel.medium, ~up2100upretribution1, up2100uplancer1
 		Queue: Vehicle.Warzone
-		Description: Strong vs Vehicles, Buildings
+		Description: actor-2100trth.description
 
 2100T2RTH:
 	Inherits@Body: ^2100RetributionHTracks
@@ -6270,7 +6270,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 50
 		Prerequisites: ~2100fy2, ~techlevel.medium, ~up2100upretribution1, up2100uptankkiller1
 		Queue: Vehicle.Warzone
-		Description: Strong vs Vehicles, Buildings
+		Description: actor-2100t2rth.description
 
 2100MRTH:
 	Inherits: ^2100RetributionHTracks
@@ -6283,7 +6283,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 60
 		Prerequisites: ~2100fy2, ~up2100upmcannon1, ~up2100upretribution1, ~techlevel.medium, ~!2100oldtechdisabled2
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100mrth.description
 
 2100MGRTH:
 	Inherits: ^2100RetributionHTracks
@@ -6296,7 +6296,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 60
 		Prerequisites: ~2100fy2, ~up2100upheavymg1, ~up2100upretribution1, ~techlevel.medium
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100mgrth.description
 
 2100MORTH:
 	Inherits: ^2100RetributionHTracks
@@ -6309,7 +6309,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 60
 		Prerequisites: ~2100fy2, ~up2100upmortar1, ~up2100upretribution1, ~techlevel.medium
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100morth.description
 
 2100RARTH:
 	Inherits: ^2100RetributionHTracks
@@ -6322,7 +6322,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 60
 		Prerequisites: ~2100fy2, ~up2100rkarray1, ~up2100upretribution1, ~techlevel.medium
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100rarth.description
 
 2100IFRTH:
 	Inherits: ^2100RetributionHTracks
@@ -6335,7 +6335,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 60
 		Prerequisites: 2100fy2, ~up2100upinferno1, ~up2100upretribution1, ~techlevel.medium
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100ifrth.description
 
 2100HVRTH:
 	Inherits: ^2100RetributionHTracks
@@ -6348,7 +6348,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 60
 		Prerequisites: 2100fy2, ~up2100uphycannon, ~up2100upretribution1, ~techlevel.medium
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100hvrth.description
 
 2100FLARTH:
 	Inherits: ^2100RetributionHTracks
@@ -6361,7 +6361,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 60
 		Prerequisites: 2100fy2, ~up2100upflak1, ~up2100upretribution1, ~techlevel.medium
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100flarth.description
 
 2100NEDRTH:
 	Inherits: ^2100RetributionHTracks
@@ -6374,7 +6374,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 60
 		Prerequisites: 2100fy2, ~up2100upneedle, ~up2100upretribution1, ~techlevel.medium
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100nedrth.description
 
 2100PEPPERRTH:
 	Inherits: ^2100RetributionHTracks
@@ -6387,7 +6387,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 60
 		Prerequisites: 2100fy2, ~up2100uppepper1, ~up2100upretribution1, ~techlevel.medium
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100pepperrth.description
 #		Vengeance
 2100AVET:
 	Inherits: ^2100VengeanceTracks
@@ -6400,7 +6400,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 80
 		Prerequisites: ~2100fy3, ~techlevel.high, ~up2100upvengeance1, ~up2100uptracks1, ~up2100uptwinassaultmg1
 		Queue: Vehicle.Warzone
-		Description: Strong vs Infantry
+		Description: actor-2100avet.description
 
 2100A2VET:
 	Inherits: ^2100VengeanceTracks
@@ -6413,7 +6413,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 80
 		Prerequisites: ~2100fy3, ~techlevel.high, ~up2100upvengeance1, ~up2100uptracks1, ~up2100upassaultmg1
 		Queue: Vehicle.Warzone
-		Description: Strong vs Infantry
+		Description: actor-2100a2vet.description
 
 2100HVET:
 	Inherits: ^2100VengeanceTracks
@@ -6426,7 +6426,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 90
 		Prerequisites: ~2100fy3, ~techlevel.high, ~up2100upvengeance1, ~up2100uptracks1, ~up2100uphcannon1
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100hvet.description
 
 2100CVET:
 	Inherits: ^2100VengeanceTracks
@@ -6439,7 +6439,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 100
 		Prerequisites: 2100CRC, ~techlevel.high, ~up2100upvengeance1, ~up2100uptracks1
 		Queue: Vehicle.Warzone
-		Description: Buffs nearby allies and debuffs targeted enemies.\n Unarmed
+		Description: actor-2100cvet.description
 
 2100ACVET:
 	Inherits: ^2100VengeanceTracks
@@ -6452,7 +6452,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 90
 		Prerequisites: ~2100fy3, ~techlevel.high, ~up2100upvengeance1, ~up2100uptracks1, ~up2100upacannon1
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100acvet.description
 
 2100AC2VET:
 	Inherits: ^2100VengeanceTracks
@@ -6465,7 +6465,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 90
 		Prerequisites: ~2100fy3, ~techlevel.high, ~up2100upvengeance1, ~up2100uptracks1, ~up2100upa2cannon1
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100ac2vet.description
 
 2100AAVET:
 	Inherits: ^2100VengeanceTracks
@@ -6478,7 +6478,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 80
 		Prerequisites: ~2100fy3, ~techlevel.high, ~up2100upvengeance1, ~up2100uptracks1, ~up2100uphurricane1
 		Queue: Vehicle.Warzone
-		Description: Strong vs Infantry
+		Description: actor-2100aavet.description
 
 2100NEXVET:
 	Inherits: ^2100VengeanceTracks
@@ -6491,7 +6491,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 80
 		Prerequisites: ~2100fy3, ~techlevel.high, ~up2100upvengeance1, ~up2100uptracks1, ~up2100uptwinassaultmg1
 		Queue: Vehicle.Warzone
-		Description: Strong vs Infantry
+		Description: actor-2100nexvet.description
 
 2100RIPVET:
 	Inherits: ^2100VengeanceTracks
@@ -6504,7 +6504,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 100
 		Prerequisites: ~2100fy3, ~techlevel.high, ~up2100upvengeance1, ~up2100uptracks1, ~up2100upa2cannon1
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100ripvet.description
 
 2100HOTTIT:
 	Inherits: ^2100VengeanceTracks
@@ -6517,7 +6517,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 100
 		Prerequisites: ~2100fy3, ~techlevel.high, ~up2100upvengeance1, ~up2100uptracks1, ~2100uphotwizer1
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100hottit.description
 #		Retribution Hovercraft
 2100MRTHOV:
 	Inherits: ^2100RetributionHovercraft
@@ -6530,7 +6530,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 60
 		Prerequisites: 2100fy2, ~up2100upmcannon1, ~up2100upretribution1, ~techlevel.medium, ~up2100uphover1
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100mrthov.description
 #		Vengeance Hovercraft
 2100AVEHOV:
 	Inherits: ^2100VengeanceHovercraft
@@ -6543,7 +6543,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 80
 		Prerequisites: ~2100fy3, ~techlevel.high, ~up2100upvengeance1, ~up2100uphover1, ~up2100uptwinassaultmg1
 		Queue: Vehicle.Warzone
-		Description: Strong vs Infantry
+		Description: actor-2100avehov.description
 
 2100HVEHOV:
 	Inherits: ^2100VengeanceHovercraft
@@ -6556,7 +6556,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 90
 		Prerequisites: ~2100fy3, ~techlevel.high, ~up2100upvengeance1, ~up2100uphover1, ~up2100uphcannon1
 		Queue: Vehicle.Warzone
-		Description: Strong vs ground targets
+		Description: actor-2100hvehov.description
 ####################################################################################################
 #		2100 Aircraft Nexus
 ####################################################################################################
@@ -6567,7 +6567,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 20
 		Prerequisites: 2100vfy1, ~techlevel.medium, ~up2100uplrk1, ~up2100upretaliaton1, ~up2100upvtols1
 		Queue: Aircraft.Warzone
-		Description: Helicopter gunship armed\nwith dual chainguns.\n  Strong vs Infantry, Light armor\n  Weak vs Tanks, Aircraft
+		Description: actor-2100mrevtol.description
 	Valued:
 		Cost: 800
 	Tooltip:
@@ -6580,7 +6580,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 20
 		Prerequisites: 2100vfy1, ~techlevel.medium, ~up2100uplmg1, ~up2100upretaliaton1, ~up2100upvtols1
 		Queue: Aircraft.Warzone
-		Description: Helicopter gunship armed\nwith dual chainguns.\n  Strong vs Infantry, Light armor\n  Weak vs Tanks, Aircraft
+		Description: actor-2100rrevtol.description
 	Valued:
 		Cost: 1100
 	Tooltip:
@@ -6593,7 +6593,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 20
 		Prerequisites: 2100vfy2, ~techlevel.medium, ~up2100uplcannon1, ~up2100upretribution1, ~up2100upvtols1
 		Queue: Aircraft.Warzone
-		Description: Helicopter gunship armed\nwith dual chainguns.\n  Strong vs Infantry, Light armor\n  Weak vs Tanks, Aircraft
+		Description: actor-2100lrtvtol.description
 	Valued:
 		Cost: 1600
 	Tooltip:
@@ -6606,7 +6606,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 20
 		Prerequisites: 2100vfy2, ~techlevel.medium, ~up2100uplancer1, ~up2100upretribution1, ~up2100upvtols1
 		Queue: Aircraft.Warzone
-		Description: Helicopter gunship armed\nwith dual chainguns.\n  Strong vs Infantry, Light armor\n  Weak vs Tanks, Aircraft
+		Description: actor-2100trtvtol.description
 	Valued:
 		Cost: 1600
 	Tooltip:
@@ -6986,7 +6986,7 @@ psc2100chopshop2:
 		Prerequisites: 2100RF, ~techlevel.medium, 2100RR
 		Queue: Vehicle.Wzscavenger
 		BuildDurationModifier: 35
-		Description: Deploys into another Construction Yard.\n  Automaticaly Repairs Structures in a 3 Tile Radius
+		Description: actor-2100e6.description
 	Selectable:
 		Priority: 4
 		DecorationBounds: 1536, 1536
@@ -7041,7 +7041,7 @@ psc2100chopshop2:
 	Buildable:
 		Queue: Vehicle.Wzscavenger
 		BuildPaletteOrder: 20
-		Description: Repairs structures.\nCan remove resources to make building space.
+		Description: actor-2100crane.description
 	Valued:
 		Cost: 480
 	Tooltip:
@@ -7135,7 +7135,7 @@ psc2100chopshop2:
 	Buildable:
 		Queue: Vehicle.Wzscavenger
 		BuildPaletteOrder: 20
-		Description: Repairs structures.\nCan remove resources to make building space.
+		Description: actor-2100crane2.description
 		Prerequisites: up2100upengineer1
 	Valued:
 		Cost: 1000
@@ -7235,7 +7235,7 @@ psc2100chopshop2:
 	Buildable:
 		BuildPaletteOrder: 30
 		Queue: Vehicle.Wzscavenger
-		Description: Fast scout and anti-infantry vehicle\nCan detect cloaked units.\n  Strong vs Infantry\n  Weak vs Tanks
+		Description: actor-2100scavcar.description
 		Prerequisites: up2100uplmg1, ~2100oldtechenable
 	AttackTurreted:
 	WithMuzzleOverlay:
@@ -7252,7 +7252,7 @@ psc2100chopshop2:
 	Buildable:
 		BuildPaletteOrder: 30
 		Queue: Vehicle.Wzscavenger
-		Description: Fast scout and anti-infantry vehicle\nCan detect cloaked units.\n  Strong vs Infantry\n  Weak vs Tanks
+		Description: actor-2100trike.description
 		Prerequisites: up2100uplmg1, ~!2100oldtechdisabled
 	AttackTurreted:
 	WithMuzzleOverlay:
@@ -7269,7 +7269,7 @@ psc2100chopshop2:
 	Buildable:
 		BuildPaletteOrder: 30
 		Queue: Vehicle.Wzscavenger
-		Description: Fast scout and anti-infantry vehicle\nCan detect cloaked units.\n  Strong vs Infantry\n  Weak vs Tanks
+		Description: actor-2100trike2.description
 		Prerequisites: up2100uplrk1, ~!2100oldtechdisabled
 	AttackTurreted:
 	WithSpriteTurret:
@@ -7287,7 +7287,7 @@ psc2100chopshop2:
 	Buildable:
 		BuildPaletteOrder: 40
 		Queue: Vehicle.Wzscavenger
-		Description: Fast scout and anti-infantry vehicle\n  Strong vs Infantry\n  Weak vs Tanks
+		Description: actor-2100jeep.description
 		Prerequisites: up2100upengine1, up2100uparmor1, ~!2100oldtechdisabled
 	AttackTurreted:
 	WithMuzzleOverlay:
@@ -7312,7 +7312,7 @@ psc2100chopshop2:
 	Buildable:
 		BuildPaletteOrder: 50
 		Queue: Vehicle.Wzscavenger
-		Description: Fast scout vehicle, armed with\nrockets.\nCan attack Aircraft\n  Strong vs Vehicles, Tanks\n  Weak vs Infantry
+		Description: actor-2100jeepmsl.description
 		Prerequisites: up2100upengine1, up2100rkarray1, up2100uparmor1, ~!2100oldtechdisabled
 	Armament:
 		Weapon: ScavJeepRK
@@ -7338,7 +7338,7 @@ psc2100chopshop2:
 	Buildable:
 		BuildPaletteOrder: 40
 		Queue: Vehicle.Wzscavenger
-		Description: Fast scout and anti-infantry vehicle\n  Strong vs Infantry\n  Weak vs Tanks
+		Description: actor-2100buggy.description
 		Prerequisites: up2100upengine1, up2100uplmg1, ~!2100oldtechdisabled
 	AttackTurreted:
 	WithMuzzleOverlay:
@@ -7363,7 +7363,7 @@ psc2100chopshop2:
 	Buildable:
 		BuildPaletteOrder: 50
 		Queue: Vehicle.Wzscavenger
-		Description: Fast scout vehicle, armed with\nrockets.\nCan attack Aircraft\n  Strong vs Vehicles, Tanks\n  Weak vs Infantry
+		Description: actor-2100buggyrk.description
 		Prerequisites: up2100upengine1, up2100rkarray1, ~!2100oldtechdisabled
 	Armament:
 		Weapon: ScavBuggyRK
@@ -7390,7 +7390,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 60
 		Queue: Vehicle.Wzscavenger
 		BuildDurationModifier: 40
-		Description: Fast armed transport.\n  Strong vs light vehicles\n  Weak vs Infantry, Tanks\n Can transport 3 infantry
+		Description: actor-2100camper.description
 		Prerequisites: up2100uparmor2, up2100uplcannon1, ~techlevel.medium, 2100chopshop2, ~!2100oldtechdisabled2
 	AttackTurreted:
 	WithMuzzleOverlay:
@@ -7408,7 +7408,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 60
 		Queue: Vehicle.Wzscavenger
 		BuildDurationModifier: 40
-		Description: Fast armed transport.\n  Strong vs light vehicles\n  Weak vs Infantry, Tanks\n Can transport 3 infantry
+		Description: actor-2100camper2.description
 		Prerequisites: up2100uparmor2, up2100uplrk1, ~techlevel.medium, 2100chopshop2, ~!2100oldtechdisabled2
 	AttackTurreted:
 	WithMuzzleOverlay:
@@ -7426,7 +7426,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 60
 		Queue: Vehicle.Wzscavenger
 		BuildDurationModifier: 40
-		Description: Fast armed transport.\n  Strong vs light vehicles\n  Weak vs Infantry, Tanks\n Can transport 3 infantry
+		Description: actor-2100camper3.description
 		Prerequisites: up2100uparmor2, up2100upneedle, ~techlevel.medium, 2100chopshop2
 	AttackTurreted:
 	WithMuzzleOverlay:
@@ -7444,7 +7444,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 60
 		Queue: Vehicle.Wzscavenger
 		BuildDurationModifier: 40
-		Description: Fast armed transport.\n  Strong vs light vehicles\n  Weak vs Infantry, Tanks\n Can transport 3 infantry
+		Description: actor-2100hcamper.description
 		Prerequisites: up2100uparmor2, up2100uplcannon1, up2100uphover1, ~techlevel.medium, 2100chopshop2
 	AttackTurreted:
 	WithMuzzleOverlay:
@@ -7462,7 +7462,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 60
 		Queue: Vehicle.Wzscavenger
 		BuildDurationModifier: 40
-		Description: Fast armed transport.\n  Strong vs light vehicles\n  Weak vs Infantry, Tanks\n Can transport 3 infantry
+		Description: actor-2100hcamper2.description
 		Prerequisites: up2100uparmor2, up2100uplrk1, up2100uphover1, ~techlevel.medium, 2100chopshop2
 	AttackTurreted:
 	WithMuzzleOverlay:
@@ -7479,7 +7479,7 @@ psc2100chopshop2:
 	Buildable:
 		BuildPaletteOrder: 70
 		Queue: Vehicle.Wzscavenger
-		Description: Flamethrower vehicle\n  Strong vs Infantry, Buildings\n  Weak vs Tanks
+		Description: actor-2100tractor.description
 		Prerequisites: up2100upengine1, up2100upflamer1, ~!2100oldtechdisabled2
 	AttackTurreted:
 	WithMuzzleOverlay:
@@ -7496,7 +7496,7 @@ psc2100chopshop2:
 	Buildable:
 		BuildPaletteOrder: 70
 		Queue: Vehicle.Wzscavenger
-		Description: Flamethrower vehicle\n  Strong vs Infantry, Buildings\n  Weak vs Tanks
+		Description: actor-2100tractor2.description
 		Prerequisites: up2100upengine1, up2100upheavymg1, ~!2100oldtechdisabled2
 	AttackTurreted:
 	WithMuzzleOverlay:
@@ -7517,7 +7517,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 80
 		Queue: Vehicle.Wzscavenger
 		Prerequisites: up2100uparmor3, up2100uplcannon1, ~techlevel.medium, 2100chopshop2, ~!2100oldtechdisabled2
-		Description: Large armored transport.\n  Strong vs light vehicles\n  Weak vs infantry, tanks\n Can transport 6 infantry
+		Description: actor-2100bus.description
 	AttackTurreted:
 	WithMuzzleOverlay:
 	WithSpriteTurret:
@@ -7534,7 +7534,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 80
 		Queue: Vehicle.Wzscavenger
 		Prerequisites: up2100uparmor3, up2100upmcannon1, ~techlevel.medium, 2100chopshop2
-		Description: Large armored transport.\n  Strong vs light vehicles\n  Weak vs infantry, tanks\n Can transport 6 infantry
+		Description: actor-2100bus2.description
 	AttackTurreted:
 	WithMuzzleOverlay:
 	WithSpriteTurret:
@@ -7551,7 +7551,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 80
 		Queue: Vehicle.Wzscavenger
 		Prerequisites: up2100uparmor3, up2100uphycannon, ~techlevel.medium, 2100chopshop2
-		Description: Large armored transport.\n  Strong vs light vehicles\n  Weak vs infantry, tanks\n Can transport 6 infantry
+		Description: actor-2100bus3.description
 	AttackTurreted:
 	WithMuzzleOverlay:
 	WithSpriteTurret:
@@ -7568,7 +7568,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 80
 		Queue: Vehicle.Wzscavenger
 		Prerequisites: up2100uparmor3, up2100uphycannon, ~techlevel.medium, 2100chopshop2, up2100upassaultmg1, ~!2100oldtechdisabled2
-		Description: Large armored transport.\n  Strong vs light vehicles\n  Weak vs infantry, tanks\n Can transport 6 infantry
+		Description: actor-2100bus4.description
 	AttackTurreted:
 	WithMuzzleOverlay:
 	WithSpriteTurret:
@@ -7585,7 +7585,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 80
 		Queue: Vehicle.Wzscavenger
 		Prerequisites: up2100uparmor3, up2100uphycannon, ~techlevel.medium, 2100chopshop2, up2100uptwinassaultmg1
-		Description: Large armored transport.\n  Strong vs light vehicles\n  Weak vs infantry, tanks\n Can transport 6 infantry
+		Description: actor-2100bus5.description
 	AttackTurreted:
 	WithMuzzleOverlay:
 	WithSpriteTurret:
@@ -7602,7 +7602,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 90
 		Queue: Vehicle.Wzscavenger
 		Prerequisites: up2100uparmor4, up2100uplancer1, ~techlevel.medium, 2100chopshop3
-		Description: Anti-tank missile vehicle\n  Strong vs ground targets
+		Description: actor-2100ftruk.description
 	AttackTurreted:
 	WithMuzzleOverlay:
 	WithSpriteTurret:
@@ -7619,7 +7619,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 90
 		Queue: Vehicle.Wzscavenger
 		Prerequisites: up2100uparmor4, up2100upinferno1, ~techlevel.medium, 2100chopshop3
-		Description: Anti-tank missile vehicle\n  Strong vs ground targets
+		Description: actor-2100ftruk2.description
 	AttackTurreted:
 	WithMuzzleOverlay:
 	WithSpriteTurret:
@@ -7636,7 +7636,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 90
 		Queue: Vehicle.Wzscavenger
 		Prerequisites: up2100uparmor4, up2100upbunkerbuster1, ~techlevel.medium, 2100chopshop3
-		Description: Anti-tank missile vehicle\n  Strong vs ground targets
+		Description: actor-2100ftruk3.description
 	AttackTurreted:
 	WithMuzzleOverlay:
 	WithSpriteTurret:
@@ -7653,7 +7653,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 90
 		Queue: Vehicle.Wzscavenger
 		Prerequisites: up2100uparmor4, up2100uplancer1, ~techlevel.medium, 2100chopshop3, up2100uphover1
-		Description: Anti-tank missile vehicle\n  Strong vs ground targets
+		Description: actor-2100hftruk.description
 	AttackTurreted:
 	WithMuzzleOverlay:
 	WithSpriteTurret:
@@ -7672,7 +7672,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 100
 		Queue: Vehicle.Wzscavenger
 		Prerequisites: up2100uparmor4, up2100upflamer1, up2100rkarray1, up2100uptankkiller1, ~techlevel.high, 2100chopshop3
-		Description: Converted heavy truck with numerous weapons.\n  Strong vs Everything
+		Description: actor-2100scavtruck.description
 	Mobile:
 		Speed: 97
 	Health:
@@ -7751,7 +7751,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 100
 		Queue: Vehicle.Wzscavenger
 		Prerequisites: up2100uparmor4, up2100upinferno1, ~techlevel.high, 2100chopshop3
-		Description: Converted heavy truck with numerous weapons.\n  Strong vs Everything
+		Description: actor-2100tanker.description
 	Mobile:
 		Speed: 97
 	Health:
@@ -7823,7 +7823,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 100
 		Queue: Vehicle.Wzscavenger
 		Prerequisites: up2100uparmor4, up2100uptwinassaultmg1, ~techlevel.high, 2100chopshop3
-		Description: Converted heavy truck with numerous weapons.\n  Strong vs Everything
+		Description: actor-2100tanker2.description
 	Mobile:
 		Speed: 97
 	Health:
@@ -7896,7 +7896,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 110
 		Queue: Vehicle.Wzscavenger
 		Prerequisites: up2100uparmor2, up2100upmortar1, ~techlevel.medium, 2100chopshop2
-		Description: Long-range self-propelled mortar.\n  Strong vs Infantry, Buildings
+		Description: actor-2100icecream.description
 	Mobile:
 		Speed: 85
 	Health:
@@ -7949,7 +7949,7 @@ psc2100chopshop2:
 		Queue: Vehicle.Wzscavenger
 		Prerequisites: 2100ChopShopAdv
 		BuildPaletteOrder: 120
-		Description: Transports tins of dog food to other players.\n Armed with self-defense cannon
+		Description: actor-2100supplytruckarmed.description
 	Turreted:
 		TurnSpeed: 32
 		Offset: -10,0,150
@@ -7980,7 +7980,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 80
 		Queue: Vehicle.Wzscavenger
 		Prerequisites: up2100uparmor5, up2100uphcannon1, ~techlevel.medium, 2100chopshop3
-		Description: Large armored transport.\n  Strong vs light vehicles\n  Weak vs infantry, tanks\n Can transport 6 infantry
+		Description: actor-2100trailer.description
 	Mobile:
 		Speed: 85
 		RequiresCondition: !notmobile
@@ -8029,7 +8029,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 80
 		Queue: Vehicle.Wzscavenger
 		Prerequisites: up2100uptracks1, ~techlevel.medium, 2100CRC, 2100chopshop3
-		Description: Control Unit
+		Description: actor-2100scavtank.description
 	AutoTarget:
 		ScanRadius: 25
 		InitialStance: AttackAnything
@@ -8186,7 +8186,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 10
 		Prerequisites: 2100ChopShop, 2100RF, ~techlevel.medium
 		Queue: Aircraft.Wzscavenger
-		Description: Helicopter Gunship with Chainguns.\n  Strong vs Infantry, Light Vehicles and\n  Aircraft\n  Weak vs Tanks
+		Description: actor-2100chopper.description
 	Aircraft:
 		InitialFacing: 896
 		TurnSpeed: 28
@@ -8354,7 +8354,7 @@ psc2100chopshop2:
 		BuildPaletteOrder: 20
 		Prerequisites: 2100ChopShop, 2100RF, ~techlevel.high
 		Queue: Aircraft.Wzscavenger
-		Description: Helicopter Gunship with Rockets.\n  Strong vs Infantry, Light Vehicles and\n  Aircraft\n  Weak vs Tanks
+		Description: actor-2100polmav.description
 	Aircraft:
 		InitialFacing: 896
 		TurnSpeed: 28
@@ -8735,7 +8735,7 @@ up2100uplmg1:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Unlock Machinegun Weapon
+		Description: actor-up2100uplmg1.description
 		Prerequisites: ~!up2100uplmg1, ~wzresearch
 	Valued:
 		Cost: 50
@@ -8751,7 +8751,7 @@ up2100uptwinmg1:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Unlock Machinegun Weapon
+		Description: actor-up2100uptwinmg1.description
 		Prerequisites: ~!up2100uptwinmg1, ~up2100uplmg3
 	Valued:
 		Cost: 500
@@ -8767,7 +8767,7 @@ up2100uphurricane1:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Unlock Hurricane AA Weapon
+		Description: actor-up2100uphurricane1.description
 		Prerequisites: ~!2100uphurricane, ~up2100uptwinmg1
 	Valued:
 		Cost: 1500
@@ -8783,7 +8783,7 @@ up2100upheavymg1:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Unlock Machinegun Weapon
+		Description: actor-up2100upheavymg1.description
 		Prerequisites: ~!up2100upheavymg1, ~up2100uplmg4, ~up2100uptwinmg1
 	Valued:
 		Cost: 800
@@ -8799,7 +8799,7 @@ up2100upassaultmg1:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Unlock Machinegun Weapon
+		Description: actor-up2100upassaultmg1.description
 		Prerequisites: ~!up2100upassaultmg1, ~up2100uplmg7, ~up2100upheavymg1
 	Valued:
 		Cost: 1500
@@ -8815,7 +8815,7 @@ up2100uptwinassaultmg1:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Unlock Machinegun Weapon
+		Description: actor-up2100uptwinassaultmg1.description
 		Prerequisites: ~!up2100uptwinassaultmg1, ~up2100upsypnaticdata4, ~up2100upassaultmg1
 	Valued:
 		Cost: 2000
@@ -8831,7 +8831,7 @@ up2100upflamer1:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Unlock Machinegun Weapon
+		Description: actor-up2100upflamer1.description
 		Prerequisites: ~!up2100upflamer1, ~wzresearch
 	Valued:
 		Cost: 150
@@ -8847,7 +8847,7 @@ up2100upflamer2:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Unlock Machinegun Weapon
+		Description: actor-up2100upflamer2.description
 		Prerequisites: ~!up2100upflamer2, ~up2100upflamer1
 	Valued:
 		Cost: 500
@@ -8862,7 +8862,7 @@ up2100upflamer3:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Unlock Machinegun Weapon
+		Description: actor-up2100upflamer3.description
 		Prerequisites: ~!up2100upflamer3, ~up2100upflamer2
 	Valued:
 		Cost: 750
@@ -8877,7 +8877,7 @@ up2100upflamer4:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Unlock Machinegun Weapon
+		Description: actor-up2100upflamer4.description
 		Prerequisites: ~!up2100upflamer4, ~up2100upflamer3
 	Valued:
 		Cost: 1000
@@ -8893,7 +8893,7 @@ up2100upflamer5:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Unlock Machinegun Weapon
+		Description: actor-up2100upflamer5.description
 		Prerequisites: ~!up2100upflamer5, ~up2100upflamer3
 	Valued:
 		Cost: 1500
@@ -8909,7 +8909,7 @@ up2100upflamer6:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Unlock Machinegun Weapon
+		Description: actor-up2100upflamer6.description
 		Prerequisites: ~!up2100upflamer6, ~up2100upflamer5
 	Valued:
 		Cost: 2000
@@ -8925,7 +8925,7 @@ up2100upinferno1:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Unlock Inferno Flamer Weapon
+		Description: actor-up2100upinferno1.description
 		Prerequisites: ~!up2100upinferno1, ~up2100upflamer6
 	Valued:
 		Cost: 1500
@@ -8941,7 +8941,7 @@ up2100upinferno2:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Unlock Machinegun Weapon
+		Description: actor-up2100upinferno2.description
 		Prerequisites: ~!up2100upinferno2, ~up2100upinferno1
 	Valued:
 		Cost: 2000
@@ -8957,7 +8957,7 @@ up2100upinferno3:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Unlock Machinegun Weapon
+		Description: actor-up2100upinferno3.description
 		Prerequisites: ~!up2100upinferno3, ~up2100upinferno2
 	Valued:
 		Cost: 2500
@@ -8972,7 +8972,7 @@ up2100uplmg2:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: MG Weapons make 20% more damage
+		Description: actor-up2100uplmg2.description
 		Prerequisites: ~!up2100uplmg2, ~up2100uplmg1
 	Valued:
 		Cost: 750
@@ -8987,7 +8987,7 @@ up2100uplmg3:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: MG Weapons make 20% more damage
+		Description: actor-up2100uplmg3.description
 		Prerequisites: ~!up2100uplmg3, ~up2100uplmg2
 	Valued:
 		Cost: 1500
@@ -9002,7 +9002,7 @@ up2100uplmg4:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: MG Weapons make 20% more damage
+		Description: actor-up2100uplmg4.description
 		Prerequisites: ~!up2100uplmg4, ~up2100uplmg3, ~up2100uptwinmg1
 	Valued:
 		Cost: 2000
@@ -9017,7 +9017,7 @@ up2100uplmg5:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: MG Weapons make 20% more reload
+		Description: actor-up2100uplmg5.description
 		Prerequisites: ~!up2100uplmg5, ~up2100uplmg4, ~up2100upengine1
 	Valued:
 		Cost: 2250
@@ -9032,7 +9032,7 @@ up2100uplmg6:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: MG Weapons make 20% more reload
+		Description: actor-up2100uplmg6.description
 		Prerequisites: ~!up2100uplmg6, ~up2100uplmg5
 	Valued:
 		Cost: 2500
@@ -9047,7 +9047,7 @@ up2100uplmg7:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: MG Weapons make 20% more reload
+		Description: actor-up2100uplmg7.description
 		Prerequisites: ~!up2100uplmg7, ~up2100uplmg6
 	Valued:
 		Cost: 2750
@@ -9062,7 +9062,7 @@ up2100upengine1:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Vehicles gains %5 more speed
+		Description: actor-up2100upengine1.description
 		Prerequisites: ~!up2100upengine1, ~wzresearch
 	Valued:
 		Cost: 250
@@ -9077,7 +9077,7 @@ up2100upengine2:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Vehicles gains %5 more speed
+		Description: actor-up2100upengine2.description
 		Prerequisites: ~!up2100upengine2, ~up2100upengine1
 	Valued:
 		Cost: 500
@@ -9092,7 +9092,7 @@ up2100upengine3:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Vehicles gains %5 more speed
+		Description: actor-up2100upengine3.description
 		Prerequisites: ~!up2100upengine3, ~up2100upengine2
 	Valued:
 		Cost: 1000
@@ -9107,7 +9107,7 @@ up2100upengine4:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Vehicles gains %5 more speed
+		Description: actor-up2100upengine4.description
 		Prerequisites: ~!up2100upengine4, ~up2100upengine3
 	Valued:
 		Cost: 1500
@@ -9123,7 +9123,7 @@ up2100uplrk1:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Vehicles gains %5 more speed
+		Description: actor-up2100uplrk1.description
 		Prerequisites: ~!up2100uplrk1, ~up2100upengine1
 	Valued:
 		Cost: 250
@@ -9139,7 +9139,7 @@ up2100uplrk2:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Vehicles gains %5 more speed
+		Description: actor-up2100uplrk2.description
 		Prerequisites: ~!up2100uplrk2, ~up2100uplrk1
 	Valued:
 		Cost: 1000
@@ -9155,7 +9155,7 @@ up2100uplrk3:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Vehicles gains %5 more speed
+		Description: actor-up2100uplrk3.description
 		Prerequisites: ~!up2100uplrk3, ~up2100uplrk2
 	Valued:
 		Cost: 1500
@@ -9171,7 +9171,7 @@ up2100uplrk4:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Vehicles gains %5 more speed
+		Description: actor-up2100uplrk4.description
 		Prerequisites: ~!up2100uplrk4, ~up2100uplrk3
 	Valued:
 		Cost: 1750
@@ -9186,7 +9186,7 @@ up2100uplrk5:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Upgrades the Target of Rockets
+		Description: actor-up2100uplrk5.description
 		Prerequisites: ~!up2100uplrk5, ~up2100uplrk3
 	Valued:
 		Cost: 2000
@@ -9201,7 +9201,7 @@ up2100uplancer1:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Unlock Lancer Weapons
+		Description: actor-up2100uplancer1.description
 		Prerequisites: ~!up2100uplancer1, ~up2100uplrk4, ~up2100uplrk5
 	Valued:
 		Cost: 500
@@ -9216,7 +9216,7 @@ up2100uplancer2:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Vehicles gains %5 more speed
+		Description: actor-up2100uplancer2.description
 		Prerequisites: ~!up2100uplancer2, ~up2100uplancer1
 	Valued:
 		Cost: 1000
@@ -9231,7 +9231,7 @@ up2100uplancer3:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Vehicles gains %5 more speed
+		Description: actor-up2100uplancer3.description
 		Prerequisites: ~!up2100uplancer3, ~up2100uplancer2
 	Valued:
 		Cost: 1500
@@ -9246,7 +9246,7 @@ up2100uplancer4:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Vehicles gains %5 more speed
+		Description: actor-up2100uplancer4.description
 		Prerequisites: ~!up2100uplancer4, ~up2100uplancer2
 	Valued:
 		Cost: 2000
@@ -9261,7 +9261,7 @@ up2100uplancer5:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Vehicles gains %5 more speed
+		Description: actor-up2100uplancer5.description
 		Prerequisites: ~!up2100uplancer5, ~up2100uplancer4
 	Valued:
 		Cost: 2500
@@ -9276,7 +9276,7 @@ up2100upbunkerbuster1:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Unlock Lancer Weapons
+		Description: actor-up2100upbunkerbuster1.description
 		Prerequisites: ~!up2100upbunkerbuster1, ~up2100uplancer1
 	Valued:
 		Cost: 750
@@ -9291,7 +9291,7 @@ up2100uptankkiller1:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Tank Killer Unlock
+		Description: actor-up2100uptankkiller1.description
 		Prerequisites: ~!up2100uptankkiller1, ~up2100uplancer5
 	Valued:
 		Cost: 1500
@@ -9306,7 +9306,7 @@ up2100rkarray1:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Unlock Rockets Mini-Rockets Array
+		Description: actor-up2100rkarray1.description
 		Prerequisites: ~!up2100rkarray1, ~up2100uplrk3
 	Valued:
 		Cost: 500
@@ -9322,7 +9322,7 @@ up2100uparmor1:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Vehicles gains %10 more HP
+		Description: actor-up2100uparmor1.description
 		Prerequisites: ~!up2100uparmor1, ~wzresearch
 	Valued:
 		Cost: 500
@@ -9338,7 +9338,7 @@ up2100uparmor2:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Vehicles gains %10 more HP
+		Description: actor-up2100uparmor2.description
 		Prerequisites: ~!up2100uparmor2, ~up2100uparmor1, ~up2100upfactorymodule1
 	Valued:
 		Cost: 1000
@@ -9354,7 +9354,7 @@ up2100uparmor3:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Vehicles gains %10 more HP
+		Description: actor-up2100uparmor3.description
 		Prerequisites: ~!up2100uparmor3, ~up2100uparmor2
 	Valued:
 		Cost: 1500
@@ -9370,7 +9370,7 @@ up2100uparmor4:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Vehicles gains %10 more HP
+		Description: actor-up2100uparmor4.description
 		Prerequisites: ~!up2100uparmor4, ~up2100uparmor3, ~up2100upsypnaticdata1
 	Valued:
 		Cost: 2000
@@ -9386,7 +9386,7 @@ up2100uparmor5:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Vehicles gains %10 more HP
+		Description: actor-up2100uparmor5.description
 		Prerequisites: ~!up2100uparmor5, ~up2100uparmor4, ~up2100upsypnaticdata4
 	Valued:
 		Cost: 2500
@@ -9402,7 +9402,7 @@ up2100uparmor6:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Vehicles gains %10 more HP
+		Description: actor-up2100uparmor6.description
 		Prerequisites: ~!up2100uparmor6, ~up2100uparmor5
 	Valued:
 		Cost: 3000
@@ -9418,7 +9418,7 @@ up2100uparmor7:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Vehicles gains %10 more HP
+		Description: actor-up2100uparmor7.description
 		Prerequisites: ~!up2100uparmor7, ~up2100uparmor6
 	Valued:
 		Cost: 3500
@@ -9434,7 +9434,7 @@ up2100upengineer1:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Upgrades Repairs Vehicles
+		Description: actor-up2100upengineer1.description
 		Prerequisites: ~!up2100upengineer1, ~up2100upmortar4
 	Valued:
 		Cost: 500
@@ -9450,7 +9450,7 @@ up2100upengineer2:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Upgrades Repairs Vehicles
+		Description: actor-up2100upengineer2.description
 		Prerequisites: ~!up2100upengineer2, ~up2100upengineer1
 	Valued:
 		Cost: 1000
@@ -9466,7 +9466,7 @@ up2100upwall1:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Unlock Walls
+		Description: actor-up2100upwall1.description
 		Prerequisites: ~!up2100upwall1, ~wzresearch
 	Valued:
 		Cost: 250
@@ -9482,7 +9482,7 @@ up2100upwall2:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Defences gains %10 more HP
+		Description: actor-up2100upwall2.description
 		Prerequisites: ~!up2100upwall2, ~up2100upwall1
 	Valued:
 		Cost: 500
@@ -9498,7 +9498,7 @@ up2100upwall3:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Defences gains %10 more HP
+		Description: actor-up2100upwall3.description
 		Prerequisites: ~!up2100upwall3, ~up2100upwall2
 	Valued:
 		Cost: 750
@@ -9514,7 +9514,7 @@ up2100upwall4:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Defences gains %10 more HP
+		Description: actor-up2100upwall4.description
 		Prerequisites: ~!up2100upwall4, ~up2100upwall3
 	Valued:
 		Cost: 1000
@@ -9530,7 +9530,7 @@ up2100upwall5:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Defences gains %10 more HP
+		Description: actor-up2100upwall5.description
 		Prerequisites: ~!up2100upwall5, ~up2100upwall4, ~up2100upengineer1
 	Valued:
 		Cost: 1250
@@ -9546,7 +9546,7 @@ up2100upwall6:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Defences gains %10 more HP
+		Description: actor-up2100upwall6.description
 		Prerequisites: ~!up2100upwall6, ~up2100upwall5
 	Valued:
 		Cost: 1500
@@ -9562,7 +9562,7 @@ up2100upwall7:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Defences gains %10 more HP
+		Description: actor-up2100upwall7.description
 		Prerequisites: ~!up2100upwall6, ~up2100upwall7
 	Valued:
 		Cost: 2000
@@ -9578,7 +9578,7 @@ up2100upstructure1:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Structures gains %10 more HP
+		Description: actor-up2100upstructure1.description
 		Prerequisites: ~!up2100upstructure1, ~up2100upwall2
 	Valued:
 		Cost: 500
@@ -9594,7 +9594,7 @@ up2100upstructure2:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Structures gains %10 more HP
+		Description: actor-up2100upstructure2.description
 		Prerequisites: ~!up2100upstructure2, ~up2100upstructure1
 	Valued:
 		Cost: 1000
@@ -9610,7 +9610,7 @@ up2100upstructure3:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Structures gains %10 more HP
+		Description: actor-up2100upstructure3.description
 		Prerequisites: ~!up2100upstructure3, ~up2100upstructure2
 	Valued:
 		Cost: 1500
@@ -9626,7 +9626,7 @@ up2100uplcannon1:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Unlock Light Cannon Weapon
+		Description: actor-up2100uplcannon1.description
 		Prerequisites: ~!2100uplcannon1, ~up2100uplmg2
 	Valued:
 		Cost: 500
@@ -9642,7 +9642,7 @@ up2100uplcannon2:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: UUpgrade Cannons Weapons Firepower
+		Description: actor-up2100uplcannon2.description
 		Prerequisites: ~!up2100uplcannon2, ~up2100uplcannon1
 	Valued:
 		Cost: 1500
@@ -9658,7 +9658,7 @@ up2100uplcannon3:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Upgrade Cannons Weapons Firepower
+		Description: actor-up2100uplcannon3.description
 		Prerequisites: ~!up2100uplcannon3, ~up2100uplcannon2
 	Valued:
 		Cost: 2000
@@ -9674,7 +9674,7 @@ up2100uplcannon4:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Upgrade Cannons Weapons Firepower
+		Description: actor-up2100uplcannon4.description
 		Prerequisites: ~!up2100uplcannon4, ~up2100uplcannon3
 	Valued:
 		Cost: 2500
@@ -9690,7 +9690,7 @@ up2100uplcannon5:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Upgrade Cannons Weapons Firepower
+		Description: actor-up2100uplcannon5.description
 		Prerequisites: ~!up2100uplcannon5, ~up2100uplcannon4
 	Valued:
 		Cost: 2500
@@ -9706,7 +9706,7 @@ up2100uplcannon6:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Upgrade Cannons Weapons Firepower
+		Description: actor-up2100uplcannon6.description
 		Prerequisites: ~!up2100uplcannon6, ~up2100uplcannon5
 	Valued:
 		Cost: 2500
@@ -9722,7 +9722,7 @@ up2100uplcannon7:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Upgrade Cannons Weapons Firepower
+		Description: actor-up2100uplcannon7.description
 		Prerequisites: ~!up2100uplcannon7, ~up2100uplcannon5
 	Valued:
 		Cost: 2500
@@ -9738,7 +9738,7 @@ up2100upmcannon1:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Unlock Medium Cannon Weapon
+		Description: actor-up2100upmcannon1.description
 		Prerequisites: ~!up2100upmcannon1, ~up2100uplcannon2, ~up2100upfactorymodule1
 	Valued:
 		Cost: 750
@@ -9754,7 +9754,7 @@ up2100uphcannon1:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Unlock Heavy Cannon Weapon
+		Description: actor-up2100uphcannon1.description
 		Prerequisites: ~!up2100uphcannon1, ~up2100upmcannon1, ~up2100uparmor3
 	Valued:
 		Cost: 1000
@@ -9770,7 +9770,7 @@ up2100upacannon1:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Unlock Assault Cannon Weapon
+		Description: actor-up2100upacannon1.description
 		Prerequisites: ~!up2100upacannon1, ~up2100uplcannon7, ~up2100upsypnaticdata3
 	Valued:
 		Cost: 1000
@@ -9786,7 +9786,7 @@ up2100uphycannon:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Unlock Hyper Velocity Cannon Weapon
+		Description: actor-up2100uphycannon.description
 		Prerequisites: ~!up2100uphycannon, ~up2100uplcannon3, ~up2100upsypnaticdata1
 	Valued:
 		Cost: 1000
@@ -9802,7 +9802,7 @@ up2100upneedle:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Unlock Needle Gun Weapon
+		Description: actor-up2100upneedle.description
 		Prerequisites: ~!up2100upneedle, ~up2100uplcannon6, ~up2100upsypnaticdata4
 	Valued:
 		Cost: 1000
@@ -9818,7 +9818,7 @@ up2100upflak1:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Unlock AA Flak Weapon
+		Description: actor-up2100upflak1.description
 		Prerequisites: ~!up2100upflak, ~up2100uphycannon
 	Valued:
 		Cost: 750
@@ -9834,7 +9834,7 @@ up2100upa2cannon1:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Unlock Twin Assault Cannon Weapon
+		Description: actor-up2100upa2cannon1.description
 		Prerequisites: ~!up2100upa2cannon1, ~up2100upacannon1
 	Valued:
 		Cost: 1000
@@ -9850,7 +9850,7 @@ up2100upmortar1:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Unlock Mortar Weapon
+		Description: actor-up2100upmortar1.description
 		Prerequisites: ~!up2100upmortar1, ~up2100uplcannon2, ~up2100upfactorymodule1
 	Valued:
 		Cost: 500
@@ -9866,7 +9866,7 @@ up2100upmortar2:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Upgrades Mortar Firepower
+		Description: actor-up2100upmortar2.description
 		Prerequisites: ~!up2100upmortar2, ~up2100upmortar1
 	Valued:
 		Cost: 750
@@ -9882,7 +9882,7 @@ up2100upmortar3:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Upgrades Mortar Firepower
+		Description: actor-up2100upmortar3.description
 		Prerequisites: ~!up2100upmortar3, ~up2100upmortar2
 	Valued:
 		Cost: 1000
@@ -9898,7 +9898,7 @@ up2100upmortar4:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Upgrades Mortar Target
+		Description: actor-up2100upmortar4.description
 		Prerequisites: ~!up2100upmortar4, ~up2100upmortar2
 	Valued:
 		Cost: 1000
@@ -9914,7 +9914,7 @@ up2100upmortar5:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Upgrades Mortar Firepower
+		Description: actor-up2100upmortar5.description
 		Prerequisites: ~!up2100upmortar5, ~up2100upmortar3
 	Valued:
 		Cost: 1500
@@ -9930,7 +9930,7 @@ up2100upmortar6:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Upgrades Mortar Firepower
+		Description: actor-up2100upmortar6.description
 		Prerequisites: ~!up2100upmortar6, ~up2100upmortar5
 	Valued:
 		Cost: 2000
@@ -9946,7 +9946,7 @@ up2100upmortar7:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Upgrades Mortar Firepower
+		Description: actor-up2100upmortar7.description
 		Prerequisites: ~!up2100upmortar7, ~up2100upmortar5
 	Valued:
 		Cost: 2500
@@ -9962,7 +9962,7 @@ up2100upbombard1:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Unlock Bombard Weapon
+		Description: actor-up2100upbombard1.description
 		Prerequisites: ~!up2100upbombard1, ~up2100upmortar3, ~up2100uparmor1
 	Valued:
 		Cost: 750
@@ -9978,7 +9978,7 @@ up2100uppepper1:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Unlock Bombard Weapon
+		Description: actor-up2100uppepper1.description
 		Prerequisites: ~!up2100uppepper1, ~up2100upmortar2, ~up2100uparmor1
 	Valued:
 		Cost: 750
@@ -9994,7 +9994,7 @@ up2100uppepper1:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Unlock Bombard Weapon
+		Description: actor-2100uphotwizer1.description
 		Prerequisites: ~!2100uphotwizer1, ~up2100upmortar3, ~up2100uparmor1
 	Valued:
 		Cost: 750
@@ -10010,7 +10010,7 @@ up2100uptracks1:
 	Buildable:
 		BuildPaletteOrder: 100
 		Queue: Upgrades
-		Description: Unlock Heavy Tracked Vehicles
+		Description: actor-up2100uptracks1.description
 		Prerequisites: ~!up2100uptracks1, ~up2100upfactorymodule1, ~up2100uparmor2
 	Valued:
 		Cost: 250
@@ -10026,7 +10026,7 @@ up2100uphover1:
 	Buildable:
 		BuildPaletteOrder: 100
 		Queue: Upgrades
-		Description: Unlock Hovercraft Vehicles
+		Description: actor-up2100uphover1.description
 		Prerequisites: ~!up2100uphover1, ~up2100upfactorymodule1, ~up2100upengine2
 	Valued:
 		Cost: 750
@@ -10042,7 +10042,7 @@ up2100upvtols1:
 	Buildable:
 		BuildPaletteOrder: 100
 		Queue: Upgrades
-		Description: Unlock Vtols Vehicles
+		Description: actor-up2100upvtols1.description
 		Prerequisites: ~!up2100upvtols1, ~up2100upfactorymodule1, ~up2100upengine3
 	Valued:
 		Cost: 1000
@@ -10058,7 +10058,7 @@ up2100upviper1:
 	Buildable:
 		BuildPaletteOrder: 100
 		Queue: Upgrades
-		Description: Unlock Viper Vehicles
+		Description: actor-up2100upviper1.description
 		Prerequisites: ~!up2100upviper1, ~bodies.alpha
 	Valued:
 		Cost: 50
@@ -10074,7 +10074,7 @@ up2100upbug1:
 	Buildable:
 		BuildPaletteOrder: 100
 		Queue: Upgrades
-		Description: Unlock Bug Vehicles
+		Description: actor-up2100upbug1.description
 		Prerequisites: ~!up2100upbug1, ~bodies.paradigm, ~up2100uparmor1
 	Valued:
 		Cost: 75
@@ -10090,7 +10090,7 @@ up2100upcobra1:
 	Buildable:
 		BuildPaletteOrder: 100
 		Queue: Upgrades
-		Description: Unlock Cobra Vehicles
+		Description: actor-up2100upcobra1.description
 		Prerequisites: ~!up2100upcobra1, ~up2100upviper1, ~bodies.alpha, ~up2100upfactorymodule1
 	Valued:
 		Cost: 250
@@ -10106,7 +10106,7 @@ up2100uppython1:
 	Buildable:
 		BuildPaletteOrder: 100
 		Queue: Upgrades
-		Description: Unlock Python Vehicles
+		Description: actor-up2100uppython1.description
 		Prerequisites: ~!up2100uppython1, ~up2100upcobra1, ~bodies.alpha
 	Valued:
 		Cost: 500
@@ -10122,7 +10122,7 @@ up2100upscorpion1:
 	Buildable:
 		BuildPaletteOrder: 100
 		Queue: Upgrades
-		Description: Unlock Scorpion Vehicles
+		Description: actor-up2100upscorpion1.description
 		Prerequisites: ~!up2100upscorpion1, ~up2100upbug1, ~bodies.paradigm, ~up2100uparmor2
 	Valued:
 		Cost: 750
@@ -10138,7 +10138,7 @@ up2100upmantis1:
 	Buildable:
 		BuildPaletteOrder: 100
 		Queue: Upgrades
-		Description: Unlock Mantis Vehicles
+		Description: actor-up2100upmantis1.description
 		Prerequisites: ~!up2100upmantis1, ~up2100upscorpion1, ~bodies.paradigm, ~up2100upengine4, ~up2100upresearchmodule1
 	Valued:
 		Cost: 1000
@@ -10154,7 +10154,7 @@ up2100upleopard1:
 	Buildable:
 		BuildPaletteOrder: 100
 		Queue: Upgrades
-		Description: Unlock Leopard Vehicles
+		Description: actor-up2100upleopard1.description
 		Prerequisites: ~!up2100upleopard1, ~bodies.collective, ~up2100uparmor4
 	Valued:
 		Cost: 750
@@ -10170,7 +10170,7 @@ up2100uppanther1:
 	Buildable:
 		BuildPaletteOrder: 100
 		Queue: Upgrades
-		Description: Unlock Panther Vehicles
+		Description: actor-up2100uppanther1.description
 		Prerequisites: ~!up2100uppanther1, ~up2100upleopard1, ~bodies.collective
 	Valued:
 		Cost: 1000
@@ -10186,7 +10186,7 @@ up2100uptiger1:
 	Buildable:
 		BuildPaletteOrder: 100
 		Queue: Upgrades
-		Description: Unlock Tiger Vehicles
+		Description: actor-up2100uptiger1.description
 		Prerequisites: ~!up2100uptiger1, ~up2100uppanther1, ~bodies.collective
 	Valued:
 		Cost: 1500
@@ -10202,7 +10202,7 @@ up2100upretaliaton1:
 	Buildable:
 		BuildPaletteOrder: 100
 		Queue: Upgrades
-		Description: Unlock Retaliation Vehicles
+		Description: actor-up2100upretaliaton1.description
 		Prerequisites: ~!up2100upretaliaton1, ~bodies.nexus, ~up2100uparmor5
 	Valued:
 		Cost: 1500
@@ -10218,7 +10218,7 @@ up2100upretribution1:
 	Buildable:
 		BuildPaletteOrder: 100
 		Queue: Upgrades
-		Description: Unlock Panther Vehicles
+		Description: actor-up2100upretribution1.description
 		Prerequisites: ~!up2100upretribution1, ~up2100upretaliaton1, ~bodies.nexus, ~up2100uparmor6
 	Valued:
 		Cost: 2000
@@ -10234,7 +10234,7 @@ up2100upvengeance1:
 	Buildable:
 		BuildPaletteOrder: 100
 		Queue: Upgrades
-		Description: Unlock Tiger Vehicles
+		Description: actor-up2100upvengeance1.description
 		Prerequisites: ~!up2100upvengeance1, ~up2100upretribution1, ~bodies.nexus, ~up2100uparmor7
 	Valued:
 		Cost: 3000
@@ -10250,7 +10250,7 @@ up2100uppowermodule1:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Unlock Power Modules
+		Description: actor-up2100uppowermodule1.description
 		Prerequisites: ~!up2100uppowermodule1, ~up2100upengine1
 	Valued:
 		Cost: 750
@@ -10266,7 +10266,7 @@ up2100upfactorymodule1:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Unlock Factory Modules
+		Description: actor-up2100upfactorymodule1.description
 		Prerequisites: ~!up2100upfactorymodule1, ~up2100uppowermodule1
 	Valued:
 		Cost: 1000
@@ -10282,7 +10282,7 @@ up2100upresearchmodule1:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Unlock Research Center Modules
+		Description: actor-up2100upresearchmodule1.description
 		Prerequisites: ~!up2100upresearchmodule1, ~up2100uppowermodule1
 	Valued:
 		Cost: 1000
@@ -10298,7 +10298,7 @@ up2100upsypnaticdata1:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Upgrade Research Speed
+		Description: actor-up2100upsypnaticdata1.description
 		Prerequisites: ~!up2100upsypnaticdata1, ~up2100upresearchmodule1
 	Valued:
 		Cost: 750
@@ -10314,7 +10314,7 @@ up2100upsypnaticdata2:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Upgrade Research Speed
+		Description: actor-up2100upsypnaticdata2.description
 		Prerequisites: ~!up2100upsypnaticdata2, ~up2100upsypnaticdata1
 	Valued:
 		Cost: 1000
@@ -10330,7 +10330,7 @@ up2100upsypnaticdata3:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Upgrade Research Speed
+		Description: actor-up2100upsypnaticdata3.description
 		Prerequisites: ~!up2100upsypnaticdata3, ~up2100upsypnaticdata2
 	Valued:
 		Cost: 1500
@@ -10346,7 +10346,7 @@ up2100upsypnaticdata4:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Upgrade Research Speed
+		Description: actor-up2100upsypnaticdata4.description
 		Prerequisites: ~!up2100upsypnaticdata4, ~up2100upsypnaticdata3
 	Valued:
 		Cost: 2000

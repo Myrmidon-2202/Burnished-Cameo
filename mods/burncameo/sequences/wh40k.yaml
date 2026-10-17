@@ -1,13 +1,13 @@
 wh40ksargentbonus:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40ksargentbonus.shp
 	idle:
 		Length: *
 
 wh40kmcv:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kmcv.shp
 	idle:
 		Filename: ramcv.shp
@@ -19,7 +19,7 @@ wh40kmcv:
 wh40kfieldcommand:
 	Inherits: ^WithBuildingBib2
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kfieldcommand.shp
 	build:
 	idle:
@@ -40,7 +40,7 @@ wh40kfieldcommand:
 wh40kstronghold:
 	Inherits: ^WithBuildingBib2
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kstronghold.shp
 	build:
 	idle:
@@ -61,7 +61,7 @@ wh40kstronghold:
 wh40kstrongholdc:
 	Inherits: ^WithBuildingBib2
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kstrongholdc.shp
 	build:
 	idle:
@@ -84,7 +84,7 @@ wh40kstrongholdc:
 wh40ksettlement:
 	Inherits: ^WithBuildingBib2
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40ksettlement.shp
 	build:
 	idle:
@@ -106,7 +106,7 @@ wh40ksettlement:
 wh40kwebway:
 	Inherits: ^WithBuildingBib2
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kwebway.shp
 	build:
 	idle:
@@ -129,7 +129,7 @@ wh40kwebway:
 wh40ktauhq:
 	Inherits: ^WithBuildingBib2
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40ktauhq.shp
 	build:
 	idle:
@@ -152,7 +152,7 @@ wh40ktauhq:
 wh40kproc:
 	Inherits: ^WithBuildingBib2
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kproc.shp
 	idle:
 		ZOffset: -1c511
@@ -175,7 +175,7 @@ wh40kproc:
 wh40kproco:
 	Inherits: ^WithBuildingBib2
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kproco.shp
 	idle:
 		ZOffset: -1c511
@@ -205,7 +205,7 @@ wh40kproco:
 wh40kprocm:
 	Inherits: ^WithBuildingBib2
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kprocm.shp
 	idle:
 		ZOffset: -1c511
@@ -235,7 +235,7 @@ wh40kprocm:
 wh40kprocc:
 	Inherits: ^WithBuildingBib2
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kprocc.shp
 	idle:
 		ZOffset: -1c511
@@ -265,7 +265,7 @@ wh40kprocc:
 wh40kproct:
 	Inherits: ^WithBuildingBib2
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kproct.shp
 	idle:
 		ZOffset: -1c511
@@ -295,7 +295,7 @@ wh40kproct:
 wh40kbarr:
 	Inherits: ^WithBuildingBib3
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kbarr.shp
 	idle:
 	damaged-idle:
@@ -316,7 +316,7 @@ wh40kbarr:
 wh40kbarrm:
 	Inherits: ^WithBuildingBib3
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kbarrm.shp
 	idle:
 	damaged-idle:
@@ -337,7 +337,7 @@ wh40kbarrm:
 wh40kbarrc:
 	Inherits: ^WithBuildingBib3
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kbarrc.shp
 	idle:
 	damaged-idle:
@@ -358,7 +358,7 @@ wh40kbarrc:
 wh40kbarro:
 	Inherits: ^WithBuildingBib3
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kbarro.shp
 	idle:
 	damaged-idle:
@@ -386,7 +386,7 @@ wh40kbarro:
 wh40kbarrt:
 	Inherits: ^WithBuildingBib3
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kbarrt.shp
 	idle:
 	damaged-idle:
@@ -407,7 +407,7 @@ wh40kbarrt:
 wh40kbarre:
 	Inherits: ^WithBuildingBib3
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kbarre.shp
 	idle:
 	damaged-idle:
@@ -428,7 +428,7 @@ wh40kbarre:
 wh40kkrootshapcenter:
 	Inherits: ^WithBuildingBib3
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kkrootshapcenter.shp
 	idle:
 	damaged-idle:
@@ -449,7 +449,7 @@ wh40kkrootshapcenter:
 wh40kgate:
 	Inherits: ^WithBuildingBib3
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kgate.shp
 	idle:
 	damaged-idle:
@@ -470,7 +470,7 @@ wh40kgate:
 wh40ksacredart:
 	Inherits: ^WithBuildingBib3
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40ksacredart.shp
 	idle:
 	damaged-idle:
@@ -491,7 +491,7 @@ wh40ksacredart:
 wh40ksacrifical:
 	Inherits: ^WithBuildingBib3
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40ksacrifical.shp
 	idle:
 	damaged-idle:
@@ -512,7 +512,7 @@ wh40ksacrifical:
 wh40korbitalrelay:
 	Inherits: ^WithBuildingBib3
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40korbitalrelay.shp
 	idle:
 	damaged-idle:
@@ -533,7 +533,7 @@ wh40korbitalrelay:
 wh40kpower:
 	Inherits: ^WithBuildingBib3
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kpower.shp
 	idle:
 	damaged-idle:
@@ -554,7 +554,7 @@ wh40kpower:
 wh40kpowerm:
 	Inherits: ^WithBuildingBib3
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kpowerm.shp
 	idle:
 	damaged-idle:
@@ -575,7 +575,7 @@ wh40kpowerm:
 wh40kpowero:
 	Inherits: ^WithBuildingBib3
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kpowero.shp
 	idle:
 	damaged-idle:
@@ -596,7 +596,7 @@ wh40kpowero:
 wh40kpowerc:
 	Inherits: ^WithBuildingBib3
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kpowerc.shp
 	idle:
 	damaged-idle:
@@ -617,7 +617,7 @@ wh40kpowerc:
 wh40kpowere:
 	Inherits: ^WithBuildingBib3
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kpowere.shp
 	idle:
 	damaged-idle:
@@ -638,7 +638,7 @@ wh40kpowere:
 wh40kpowert:
 	Inherits: ^WithBuildingBib3
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kpowert.shp
 	idle:
 	damaged-idle:
@@ -659,7 +659,7 @@ wh40kpowert:
 wh40kpowern:
 	Inherits: ^WithBuildingBib3
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kpowern.shp
 	idle:
 	damaged-idle:
@@ -680,7 +680,7 @@ wh40kpowern:
 wh40karmory:
 	Inherits: ^WithBuildingBib3
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40karmory.shp
 	idle:
 	damaged-idle:
@@ -701,7 +701,7 @@ wh40karmory:
 wh40karmorym:
 	Inherits: ^WithBuildingBib3
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40karmorym.shp
 	idle:
 	damaged-idle:
@@ -719,7 +719,7 @@ wh40karmorym:
 wh40karmoryo:
 	Inherits: ^WithBuildingBib3
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40karmoryo.shp
 	idle:
 	damaged-idle:
@@ -747,7 +747,7 @@ wh40karmoryo:
 wh40karmoryc:
 	Inherits: ^WithBuildingBib3
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40karmoryc.shp
 	idle:
 	damaged-idle:
@@ -768,7 +768,7 @@ wh40karmoryc:
 wh40karmoryt:
 	Inherits: ^WithBuildingBib3
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40karmoryt.shp
 	idle:
 	damaged-idle:
@@ -789,7 +789,7 @@ wh40karmoryt:
 wh40kweap:
 	Inherits: ^WithBuildingBib1
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kweap.shp
 		Offset: 0,-8
 	idle:
@@ -811,7 +811,7 @@ wh40kweap:
 wh40kweapo:
 	Inherits: ^WithBuildingBib1
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kweapo.shp
 		Offset: 0,-8
 	idle:
@@ -840,7 +840,7 @@ wh40kweapo:
 wh40kmachinecult:
 	Inherits: ^WithBuildingBib1
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kmachinecult.shp
 		Offset: 0,-8
 	idle:
@@ -861,7 +861,7 @@ wh40kmachinecult:
 wh40kmachinepit:
 	Inherits: ^WithBuildingBib1
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kmachinepit.shp
 		Offset: 0,-8
 	idle:
@@ -882,7 +882,7 @@ wh40kmachinepit:
 wh40kvehiclebeacon:
 	Inherits: ^WithBuildingBib1
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kvehiclebeacon.shp
 		Offset: 0,-8
 	idle:
@@ -903,7 +903,7 @@ wh40kvehiclebeacon:
 wh40kkauyon:
 	Inherits: ^WithBuildingBib1
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kkauyon.shp
 		Offset: 0,-8
 	idle:
@@ -924,7 +924,7 @@ wh40kkauyon:
 wh40kmontka:
 	Inherits: ^WithBuildingBib1
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kmontka.shp
 		Offset: 0,-8
 	idle:
@@ -945,7 +945,7 @@ wh40kmontka:
 wh40kcoalition:
 	Inherits: ^WithBuildingBib1
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kcoalition.shp
 		Offset: 0,-8
 	idle:
@@ -966,7 +966,7 @@ wh40kcoalition:
 wh40kmars:
 	Inherits: ^WithBuildingBib1
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kmars.shp
 		Offset: 0,-8
 	idle:
@@ -988,7 +988,7 @@ wh40kmars:
 wh40kdaemonpit:
 	Inherits: ^WithBuildingBib1
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kdaemonpit.shp
 		Offset: 0,-8
 	idle:
@@ -1009,7 +1009,7 @@ wh40kdaemonpit:
 
 wh40kheavybolt:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kheavybolt.shp
 	idle:
 		Filename: wh40kheavybolt.shp
@@ -1031,7 +1031,7 @@ wh40kheavybolt:
 
 wh40kheavybolt2:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kheavybolt2.shp
 	idle:
 		Filename: wh40kheavybolt.shp
@@ -1053,7 +1053,7 @@ wh40kheavybolt2:
 
 wh40kbolterturret:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kbolterturret.shp
 	idle:
 		Filename: wh40kbolterturret.shp
@@ -1075,7 +1075,7 @@ wh40kbolterturret:
 
 wh40kbolterturret2:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kbolterturret2.shp
 	idle:
 		Filename: wh40kbolterturret.shp
@@ -1097,7 +1097,7 @@ wh40kbolterturret2:
 
 wh40kbolterturretc:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kbolterturretc.shp
 	idle:
 		Filename: wh40kbolterturretc.shp
@@ -1119,7 +1119,7 @@ wh40kbolterturretc:
 
 wh40kbolterturret2c:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kbolterturret2c.shp
 	idle:
 		Filename: wh40kbolterturretc.shp
@@ -1142,7 +1142,7 @@ wh40kbolterturret2c:
 wh40kguard:
 	Inherits: ra2seal
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kguard.shp
 	icon:
 		Filename: wh40kguardicon.shp
@@ -1156,7 +1156,7 @@ wh40kguard:
 wh40kguardsquad:
 	Inherits: wh40kguard
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 	icon:
 		Filename: wh40kguardsquad.shp
 		AddExtension: False
@@ -1168,7 +1168,7 @@ wh40kguardsquad:
 wh40kpsyker:
 	Inherits: ra2yuri
 	Defaults:
-		# Scale: 2.0
+		# Scale: 1.5
 	icon:
 		Filename: wh40kpsykericon.shp
 		AddExtension: False
@@ -1180,7 +1180,7 @@ wh40kpsyker:
 
 wh40kkars:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kkars.shp
 	Inherits: ^InfantryOverlays
 	stand:
@@ -1288,7 +1288,7 @@ wh40kkars:
 
 wh40kpriest:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kpriest.shp
 	Inherits: ^InfantryOverlays
 	stand:
@@ -1398,7 +1398,7 @@ wh40kpriest:
 
 wh40kcommandsquad:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kcommandsquad.shp
 	Inherits: ^InfantryOverlays
 	stand:
@@ -1523,7 +1523,7 @@ wh40kcommandsquad:
 
 wh40kmarine:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kmarine.shp
 	Inherits: ^InfantryOverlays
 	stand:
@@ -1640,21 +1640,21 @@ wh40kmarine:
 wh40kmarineplasma:
 	Inherits: wh40kmarine
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 	icon:
 		Filename: wh40kmarineplasmaicon.shp
 
 wh40kmarinesargent:
 	Inherits: wh40kmarine
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 	icon:
 		Filename: wh40kmarinesargenticon.shp
 
 wh40kmarineflamer:
 	Inherits: wh40kmarinebolter
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kmarineflamer.shp
 	icon:
 		Filename: wh40kmarineflamericon.shp
@@ -1698,13 +1698,13 @@ wh40kmarineflamer:
 wh40kmarinerocket:
 	Inherits: wh40kmarine
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 	icon:
 		Filename: wh40kmarinerocketicon.shp
 
 wh40kmarinebolter:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kmarinebolter.shp
 	Inherits: ^InfantryOverlays
 	stand:
@@ -1812,7 +1812,7 @@ wh40kmarinebolter:
 
 wh40kchaosmarine:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kchaosmarine.shp
 	Inherits: ^InfantryOverlays
 	stand:
@@ -1923,21 +1923,21 @@ wh40kchaosmarine:
 wh40kchaosmarineplasma:
 	Inherits: wh40kchaosmarine
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 	icon:
 		Filename: wh40kplasmachaosicon.shp
 
 wh40kchaosmarinechamp:
 	Inherits: wh40kchaosmarine
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 	icon:
 		Filename: wh40kplasmachaosicon.shp
 
 wh40kboltchaosmarine:
 	Inherits: wh40kchaosmarine
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kboltchaosmarine.shp
 	icon:
 		Filename: wh40kmarineboltericon.shp
@@ -1945,7 +1945,7 @@ wh40kboltchaosmarine:
 wh40kcultist:
 	Inherits: wh40kchaosmarine
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kcultist.shp
 	icon:
 		Filename: wh40kcultisticon.shp
@@ -1953,7 +1953,7 @@ wh40kcultist:
 wh40kcultistsquad:
 	Inherits: wh40kcultist
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 	icon:
 		Filename: wh40kcultistsquad.shp
 		AddExtension: False
@@ -1965,21 +1965,21 @@ wh40kcultistsquad:
 wh40kcultistgrenadier:
 	Inherits: wh40kchaosmarine
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 	icon:
 		Filename: wh40kgrenadechaosicon.shp
 
 wh40kcultistplasma:
 	Inherits: wh40kchaosmarine
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 	icon:
 		Filename: wh40kplasmachaosicon.shp
 
 wh40kdemon:
 	Inherits: wh40kchaosmarine
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kdemon.shp
 	icon:
 		Filename: wh40kdemonicon.shp
@@ -1987,14 +1987,14 @@ wh40kdemon:
 wh40kheretic:
 	Inherits: wh40kchaosmarine
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kheretic.shp
 	icon:
 		Filename: wh40khereticicon.shp
 
 wh40kraptor:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kraptor.shp
 	Inherits: ^InfantryOverlays
 	stand:
@@ -2087,7 +2087,7 @@ wh40kraptor:
 wh40kraptor2:
 	Inherits: wh40kraptor
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kraptor2.shp
 	icon:
 		Filename: wh40kflamerchaosicon.shp
@@ -2131,7 +2131,7 @@ wh40kraptor2:
 wh40kpossessed:
 	Inherits: wh40kchaosmarine
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kpossessed.shp
 	icon:
 		Filename: wh40kpossessedicon.shp
@@ -2139,14 +2139,14 @@ wh40kpossessed:
 wh40koliberator:
 	Inherits: wh40kchaosmarine
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40koliberator.shp
 	icon:
 		Filename: wh40koliberatoricon.shp
 
 wh40kbloodthirster:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kbloodthirster.shp
 	Inherits: ^InfantryOverlays
 	stand:
@@ -2252,14 +2252,14 @@ wh40kbloodthirster:
 wh40kprincedemon:
 	Inherits: wh40kbloodthirster
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kprincedemon.shp
 	icon:
 		Filename: wh40kbloodthirstericon.shp
 
 wh40kservitor:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kservitor.shp
 	Inherits: ^InfantryOverlays
 	stand:
@@ -2363,7 +2363,7 @@ wh40kservitor:
 
 wh40kscout:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kscout.shp
 	Inherits: ^InfantryOverlays
 	stand:
@@ -2472,14 +2472,14 @@ wh40kscout:
 wh40kscoutplasma:
 	Inherits: wh40kscout
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 	icon:
 		Filename: wh40kmarineplasmaicon.shp
 
 wh40kscoutflamer:
 	Inherits: wh40kscout
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kscoutflamer.shp
 	icon:
 		Filename: wh40kmarineflamericon.shp
@@ -2523,14 +2523,14 @@ wh40kscoutflamer:
 wh40kscoutsniper:
 	Inherits: wh40kscout
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kscoutsniper.shp
 	icon:
 		Filename: wh40kscoutsnipericon.shp
 
 wh40kforcecmd:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kforcecmd.shp
 	Inherits: ^InfantryOverlays
 	stand:
@@ -2640,7 +2640,7 @@ wh40kforcecmd:
 
 wh40kchaptain:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kchaptain.shp
 	Inherits: ^InfantryOverlays
 	stand:
@@ -2750,7 +2750,7 @@ wh40kchaptain:
 
 wh40klibrarian:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40klibrarian.shp
 	Inherits: ^InfantryOverlays
 	stand:
@@ -2860,7 +2860,7 @@ wh40klibrarian:
 
 wh40kapotecary:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kapotecary.shp
 	Inherits: ^InfantryOverlays
 	stand:
@@ -2976,7 +2976,7 @@ wh40kapotecary:
 
 wh40kgrayknight:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kgrayknight.shp
 	Inherits: ^InfantryOverlays
 	stand:
@@ -3089,7 +3089,7 @@ wh40kgrayknight:
 
 wh40ksorcerer:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40ksorcerer.shp
 	Inherits: ^InfantryOverlays
 	stand:
@@ -3200,14 +3200,14 @@ wh40ksorcerer:
 wh40kchaoslord:
 	Inherits: wh40ksorcerer
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kchaoslord.shp
 	icon:
 		Filename: wh40kchaoslordicon.shp
 
 wh40kberserk:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kberserk.shp
 	Inherits: ^InfantryOverlays
 	stand:
@@ -3320,7 +3320,7 @@ wh40kberserk:
 
 wh40kterminator1:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kterminator1.shp
 	Inherits: ^InfantryOverlays
 	stand:
@@ -3428,7 +3428,7 @@ wh40kterminator1:
 
 wh40kterminator2:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kterminator2.shp
 	Inherits: ^InfantryOverlays
 	stand:
@@ -3539,14 +3539,14 @@ wh40kterminator2:
 wh40kterminator3:
 	Inherits: wh40kterminator1
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 	icon:
 		Filename: wh40kterminatorgattlingicon.shp
 
 wh40kterminator4:
 	Inherits: wh40kterminator1
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 	icon:
 		Filename: wh40kterminatorflameicon.shp
 	muzzle:
@@ -3589,21 +3589,21 @@ wh40kterminator4:
 wh40kkarsgrenade:
 	Inherits: wh40kkars
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 	icon:
 		Filename: wh40kgrenadeicon.shp
 
 wh40kkarsplasma:
 	Inherits: wh40kkars
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 	icon:
 		Filename: wh40kplasmaicon.shp
 
 wh40kbigguns:
 	Inherits: ^RA2ArmedInfantry
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 	dot:
 		Filename: invisibleitem.shp
 		ZOffset: -9999
@@ -3636,21 +3636,21 @@ wh40kbigguns:
 wh40kbigguns2:
 	Inherits: wh40kbigguns
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 	icon:
 		Filename: wh40klascannon.shp
 
 wh40kbigguns3:
 	Inherits: wh40kbigguns
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 	icon:
 		Filename: wh40kautocannon.shp
 
 wh40kcommisair:
 	Inherits: ra2e2
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kcommisair.shp
 	icon:
 		Filename: wh40kcommisairicon.shp
@@ -3681,7 +3681,7 @@ wh40kcommisair:
 wh40kguardsargent:
 	Inherits: ra2seal
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 	icon:
 		Filename: wh40ksargenticon.shp
 		AddExtension: False
@@ -3694,21 +3694,21 @@ wh40kguardsargent:
 wh40kkarssargent:
 	Inherits: wh40kkars
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 	icon:
 		Filename: wh40kkarssargenticon.shp
 
 wh40kogrynsargent:
 	Inherits: wh40kogryn
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 	icon:
 		Filename: wh40kogrynsargenticon.shp
 
 wh40kgrenade:
 	Inherits: ra2flakt
 	Defaults:
-		# Scale: 2.0
+		# Scale: 1.5
 	icon:
 		Filename: wh40kgrenadeicon.shp
 		AddExtension: False
@@ -3721,7 +3721,7 @@ wh40kgrenade:
 wh40kguardplasma:
 	Inherits: ra2seal
 	Defaults:
-		# Scale: 2.0
+		# Scale: 1.5
 	icon:
 		Filename: wh40kplasmaicon.shp
 		AddExtension: False
@@ -3733,7 +3733,7 @@ wh40kguardplasma:
 
 wh40kogryn:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kogryn.shp
 	Inherits: ^InfantryOverlays
 	stand:
@@ -3847,7 +3847,7 @@ wh40kogryn:
 
 wh40ktechpriest:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40ktechpriest.shp
 	Inherits: ^InfantryOverlays
 	stand:
@@ -3956,7 +3956,7 @@ wh40ktechpriest:
 wh40kfirewarrior:
 	Inherits: wh40kchaosmarine
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kfirewarrior.shp
 	icon:
 		Filename: wh40kcultisticon.shp
@@ -3964,7 +3964,7 @@ wh40kfirewarrior:
 wh40kpathfinder:
 	Inherits: wh40kchaosmarine
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kpathfinder.shp
 	icon:
 		Filename: wh40kcultisticon.shp
@@ -3972,7 +3972,7 @@ wh40kpathfinder:
 wh40kxv15:
 	Inherits: wh40kchaosmarine
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kxv15.shp
 	icon:
 		Filename: wh40kcultisticon.shp
@@ -3980,7 +3980,7 @@ wh40kxv15:
 wh40kshavre:
 	Inherits: wh40kchaosmarine
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kshavre.shp
 	icon:
 		Filename: wh40kcultisticon.shp
@@ -3988,7 +3988,7 @@ wh40kshavre:
 wh40kkroot:
 	Inherits: wh40kchaosmarine
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kkroot.shp
 	icon:
 		Filename: wh40kcultisticon.shp
@@ -3996,14 +3996,14 @@ wh40kkroot:
 wh40kkrootshaper:
 	Inherits: wh40kchaosmarine
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kkrootshaper.shp
 	icon:
 		Filename: wh40kcultisticon.shp
 
 wh40kdevilfish:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kdevilfish.shp
 	idle:
 		Facings: -32
@@ -4016,7 +4016,7 @@ wh40kdevilfish:
 
 wh40kskyray:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kskyray.shp
 	idle:
 		Facings: -32
@@ -4029,7 +4029,7 @@ wh40kskyray:
 
 wh40khammerhead:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40khammerhead.shp
 	idle:
 		Facings: -32
@@ -4046,7 +4046,7 @@ wh40khammerhead:
 
 wh40kdronesquad:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kdronesquad.shp
 	idle:
 		Facings: -32
@@ -4061,7 +4061,7 @@ wh40kdronesquad:
 
 wh40kdronesquad2:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kdronesquad2.shp
 	idle:
 		Facings: -32
@@ -4076,7 +4076,7 @@ wh40kdronesquad2:
 
 wh40kdronehard:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kdronehard.shp
 	idle:
 		Facings: -32
@@ -4092,14 +4092,14 @@ wh40kdronehard:
 wh40kguardian:
 	Inherits: wh40kchaosmarine
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kguardian.shp
 	icon:
 		Filename: wh40kcultisticon.shp
 
 wh40kleman:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kleman.shp
 	idle:
 		Facings: -32
@@ -4116,7 +4116,7 @@ wh40kleman:
 
 wh40korcleman:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40korcleman.shp
 	idle:
 		Facings: -32
@@ -4133,7 +4133,7 @@ wh40korcleman:
 
 wh40kpredator:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kpredator.shp
 	idle:
 		Facings: -32
@@ -4154,7 +4154,7 @@ wh40kpredator:
 
 wh40kchaospredator:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kchaospredator.shp
 	idle:
 		Facings: -32
@@ -4175,21 +4175,21 @@ wh40kchaospredator:
 
 pscwh40kpredator1:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: pscwh40kpredator1.shp
 	icon:
 		Filename: pscwh40kpredator1.shp
 
 pscwh40kpredator2:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: pscwh40kpredator2.shp
 	icon:
 		Filename: pscwh40kpredator2.shp
 
 wh40kwhirl:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kwhirl.shp
 	idle:
 		Facings: -32
@@ -4206,7 +4206,7 @@ wh40kwhirl:
 
 wh40krhino:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40krhino.shp
 	idle:
 		Facings: -32
@@ -4216,7 +4216,7 @@ wh40krhino:
 
 wh40kchaosrhino:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kchaosrhino.shp
 	idle:
 		Facings: -32
@@ -4226,7 +4226,7 @@ wh40kchaosrhino:
 
 wh40kchaosrhinomcv:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kchaosrhinomcv.shp
 	idle:
 		Filename: wh40kharvc.shp
@@ -4237,7 +4237,7 @@ wh40kchaosrhinomcv:
 
 wh40klandspeed:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40klandspeed.shp
 	idle:
 		Facings: -32
@@ -4250,7 +4250,7 @@ wh40klandspeed:
 
 wh40klandspeed2:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40klandspeed2.shp
 	idle:
 		Facings: -32
@@ -4266,7 +4266,7 @@ wh40klandspeed2:
 
 wh40kdread:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kdread.shp
 	idle:
 		Filename: wh40kdreadlegs.shp
@@ -4304,7 +4304,7 @@ wh40kdread:
 
 wh40kdefiler:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kdefiler.shp
 	idle:
 		Filename: wh40kdefiler.shp
@@ -4331,7 +4331,7 @@ wh40kdefiler:
 
 wh40kdreadh:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kdreadh.shp
 	idle:
 		Filename: wh40kdreadlegs.shp
@@ -4361,7 +4361,7 @@ wh40kdreadh:
 
 wh40klandraider:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40klandraider.shp
 	idle:
 		Filename: wh40klandraider.shp
@@ -4381,7 +4381,7 @@ wh40klandraider:
 
 wh40kthunderhawk:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kthunderhawk.shp
 	idle:
 		Filename: wh40kthunderhawk.shp
@@ -4392,7 +4392,7 @@ wh40kthunderhawk:
 
 wh40kcapsule:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kcapsule.shp
 	idle:
 		Length: *
@@ -4400,42 +4400,42 @@ wh40kcapsule:
 
 pscwh40kdread1:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: pscwh40kdread1.shp
 	icon:
 		Filename: pscwh40kdread1.shp
 
 pscwh40kdread2:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: pscwh40kdread2.shp
 	icon:
 		Filename: pscwh40kdread2.shp
 
 pscwh40klandspeed1:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: pscwh40klandspeed1.shp
 	icon:
 		Filename: pscwh40klandspeed1.shp
 
 pscwh40klandspeed2:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: pscwh40klandspeed2.shp
 	icon:
 		Filename: pscwh40klandspeed2.shp
 
 pscwh40kkillakan1:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: pscwh40kkillakan1.shp
 	icon:
 		Filename: pscwh40kkillakan1.shp
 
 wh40kbaneblade:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kbaneblade.shp
 	idle:
 		Filename: wh40kbaneblade.shp
@@ -4455,7 +4455,7 @@ wh40kbaneblade:
 
 wh40khellhound:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40khellhound.shp
 	idle:
 		Facings: -32
@@ -4472,7 +4472,7 @@ wh40khellhound:
 
 wh40kbanewolf:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kbanewolf.shp
 	idle:
 		Filename: wh40kchime.shp
@@ -4490,7 +4490,7 @@ wh40kbanewolf:
 
 wh40kchime:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kchime.shp
 	idle:
 		Facings: -32
@@ -4507,7 +4507,7 @@ wh40kchime:
 
 wh40kskullprobe:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kskullprobe.shp
 	idle:
 		Facings: -16
@@ -4519,7 +4519,7 @@ wh40kskullprobe:
 
 wh40kbasilisk:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kbasilisk.shp
 	idle:
 		Facings: -32
@@ -4532,7 +4532,7 @@ wh40kbasilisk:
 
 wh40kharv:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kharv.shp
 	idle:
 		Filename: wh40kchime.shp
@@ -4555,7 +4555,7 @@ wh40kharv:
 
 wh40kharvm:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kharvm.shp
 	idle:
 		Filename: wh40kharvm.shp
@@ -4578,7 +4578,7 @@ wh40kharvm:
 
 wh40kharvc:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kharvc.shp
 	idle:
 		Filename: wh40kharvc.shp
@@ -4601,7 +4601,7 @@ wh40kharvc:
 
 wh40kharvt:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kharvt.shp
 	idle:
 		Filename: wh40khammerhead.shp
@@ -4624,7 +4624,7 @@ wh40kharvt:
 
 wh40kmaurader:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kmaurader.shp
 	idle:
 		Facings: -32
@@ -4637,7 +4637,7 @@ wh40kmaurader:
 
 wh40kfightabomma:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kfightabomma.shp
 	idle:
 		Facings: -32
@@ -4650,7 +4650,7 @@ wh40kfightabomma:
 
 wh40khelltalon:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40khelltalon.shp
 	idle:
 		Facings: -32
@@ -4663,7 +4663,7 @@ wh40khelltalon:
 
 wh40ksentinel:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40ksentinel.shp
 	idle:
 		Filename: wh40ksentinelwalk.shp
@@ -4735,7 +4735,7 @@ wh40ksentinel:
 
 wh40kwartrukk:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kwartrukk.shp
 	idle:
 		Facings: -32
@@ -4748,7 +4748,7 @@ wh40kwartrukk:
 
 wh40kwartrakk:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kwartrakk.shp
 	idle:
 		Facings: -32
@@ -4765,7 +4765,7 @@ wh40kwartrakk:
 
 lemanruss:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: lemanruss.shp
 	idle:
 		Filename: invisibleitem.shp
@@ -4779,7 +4779,7 @@ lemanruss:
 wh40kstrategy:
 	Inherits: ^WithBuildingBib3
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kstrategy.shp
 		Offset: 0,-6
 	idle:
@@ -4812,7 +4812,7 @@ wh40kstrategy:
 wh40kstrategyo:
 	Inherits: ^WithBuildingBib3
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kstrategyo.shp
 		Offset: 0,-6
 	idle:
@@ -4848,7 +4848,7 @@ wh40kstrategyo:
 wh40kstrategym:
 	Inherits: ^WithBuildingBib3
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kstrategym.shp
 		Offset: 0,-6
 	idle:
@@ -4880,7 +4880,7 @@ wh40kstrategym:
 wh40kstrategyc:
 	Inherits: ^WithBuildingBib3
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kstrategyc.shp
 		Offset: 0,-6
 	idle:
@@ -4912,7 +4912,7 @@ wh40kstrategyc:
 wh40kstrategyt:
 	Inherits: ^WithBuildingBib3
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kstrategyt.shp
 		Offset: 0,-6
 	idle:
@@ -4943,28 +4943,28 @@ wh40kstrategyt:
 
 pscwh40kstrategy1:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: pscwh40kstrategy1.shp
 	icon:
 		Filename: pscwh40kstrategy1.shp
 
 pscwh40kstrategy2:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: pscwh40kstrategy2.shp
 	icon:
 		Filename: pscwh40kstrategy2.shp
 
 pscwh40kstrategy3:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: pscwh40kstrategy3.shp
 	icon:
 		Filename: pscwh40kstrategy3.shp
 
 wh40kstrategy.neutral:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kstrategy.neutral.shp
 	Inherits: wh40kstrategy
 	idle:
@@ -4976,7 +4976,7 @@ wh40kstrategy.neutral:
 
 wh40kitems:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kitems.shp
 		Offset: 0, 4
 	grenade:
@@ -5029,273 +5029,273 @@ wh40kitems:
 
 wh40kuphonor:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kuphonor.shp
 	icon:
 		Filename: wh40kuphonor.shp
 
 wh40kupguardarmor:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kupguardarmor.shp
 	icon:
 		Filename: wh40kupguardarmor.shp
 
 wh40kupguardemperor:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kupguardemperor.shp
 	icon:
 		Filename: wh40kupguardemperor.shp
 
 wh40kupsateliterange:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kupsateliterange.shp
 	icon:
 		Filename: wh40kupsateliterange.shp
 
 wh40kupweapspecialization:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kupweapspecialization.shp
 	icon:
 		Filename: wh40kupweapspecialization.shp
 
 wh40kupbattlecommand:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kupbattlecommand.shp
 	icon:
 		Filename: wh40kupbattlecommand.shp
 
 wh40kupregimentalcommand:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kupregimentalcommand.shp
 	icon:
 		Filename: wh40kupregimentalcommand.shp
 
 wh40kupogrynquarters:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kupogrynquarters.shp
 	icon:
 		Filename: wh40kupogrynquarters.shp
 
 wh40kuppoweredbayonets:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kuppoweredbayonets.shp
 	icon:
 		Filename: wh40kuppoweredbayonets.shp
 
 wh40kupsentineldepot:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kupsentineldepot.shp
 	icon:
 		Filename: wh40kupsentineldepot.shp
 
 wh40kuphellhounddepot:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kuphellhounddepot.shp
 	icon:
 		Filename: wh40kuphellhounddepot.shp
 
 wh40kupbasiliskdepot:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kupbasiliskdepot.shp
 	icon:
 		Filename: wh40kupbasiliskdepot.shp
 
 wh40kupmarauderdepot:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kupmarauderdepot.shp
 	icon:
 		Filename: wh40kupmarauderdepot.shp
 
 wh40kuplemanrussdepot:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kuplemanrussdepot.shp
 	icon:
 		Filename: wh40kuplemanrussdepot.shp
 
 wh40kupgenenhancement:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kupgenenhancement.shp
 	icon:
 		Filename: wh40kupgenenhancement.shp
 
 wh40kupkasrkinquarters:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kupkasrkinquarters.shp
 	icon:
 		Filename: wh40kupkasrkinquarters.shp
 
 wh40kupkasrkinarmor:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kupkasrkinarmor.shp
 	icon:
 		Filename: wh40kupkasrkinarmor.shp
 
 wh40kupenergy1:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kupenergy1.shp
 	icon:
 		Filename: wh40kupenergy1.shp
 
 wh40kupenergy2:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kupenergy2.shp
 	icon:
 		Filename: wh40kupenergy2.shp
 
 wh40kupfullscalewar:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kupfullscalewar.shp
 	icon:
 		Filename: wh40kupfullscalewar.shp
 
 wh40kupmonastery:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kupmonastery.shp
 	icon:
 		Filename: wh40kupmonastery.shp
 
 wh40kupmonastery2:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kupmonastery2.shp
 	icon:
 		Filename: wh40kupmonastery2.shp
 
 wh40kupcapincrease:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kupcapincrease.shp
 	icon:
 		Filename: wh40kupcapincrease.shp
 
 wh40kupcapincrease2:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kupcapincrease2.shp
 	icon:
 		Filename: wh40kupcapincrease2.shp
 
 wh40kupbionics:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kupbionics.shp
 	icon:
 		Filename: wh40kupbionics.shp
 
 wh40kupbionics2:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kupbionics2.shp
 	icon:
 		Filename: wh40kupbionics2.shp
 
 wh40kupfraggrenade:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kupfraggrenade.shp
 	icon:
 		Filename: wh40kupfraggrenade.shp
 
 wh40kscoutinfiltration:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kscoutinfiltration.shp
 	icon:
 		Filename: wh40kscoutinfiltration.shp
 
 wh40kskullprobestealth:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kskullprobestealth.shp
 	icon:
 		Filename: wh40kskullprobestealth.shp
 
 wh40ktargetfinder1:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40ktargetfinder1.shp
 	icon:
 		Filename: wh40ktargetfinder1.shp
 
 wh40ktargetfinder2:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40ktargetfinder2.shp
 	icon:
 		Filename: wh40ktargetfinder2.shp
 
 wh40kfuriuscharge:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kfuriuscharge.shp
 	icon:
 		Filename: wh40kfuriuscharge.shp
 
 wh40kpsyinquisition:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kpsyinquisition.shp
 	icon:
 		Filename: wh40kpsyinquisitionicon.shp
 
 wh40kpowerswords:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kpowerswords.shp
 	icon:
 		Filename: wh40kpowerswords.shp
 
 wh40kpowerfists:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kpowerfists.shp
 	icon:
 		Filename: wh40kpowerfists.shp
 
 wh40kveteranupgrade1:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kveteranupgrade1.shp
 	icon:
 		Filename: wh40kveteranupgrade1.shp
 
 wh40kveteranupgrade2:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kveteranupgrade2.shp
 	icon:
 		Filename: wh40kveteranupgrade2.shp
 
 wh40kupmachineculticon:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kupmachineculticon.shp
 	icon:
 		Filename: wh40kupmachineculticon.shp
 
 wh40kgretchin:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kgretchin.shp
 	Inherits: ^InfantryOverlays
 	idle:
@@ -5420,7 +5420,7 @@ wh40kgretchin:
 
 wh40kslugga:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kslugga.shp
 	Inherits: ^InfantryOverlays
 	stand:
@@ -5529,7 +5529,7 @@ wh40kslugga:
 wh40ksluggasquad:
 	Inherits: wh40kslugga
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 	icon:
 		Filename: wh40ksluggasquad.shp
 		AddExtension: False
@@ -5541,14 +5541,14 @@ wh40ksluggasquad:
 wh40knob:
 	Inherits: wh40kslugga
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40knob.shp
 	icon:
 		Filename: wh40knobicon.shp
 
 wh40knobleader:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40knobleader.shp
 	Inherits: ^InfantryOverlays
 	stand:
@@ -5657,7 +5657,7 @@ wh40knobleader:
 wh40kmeganobz:
 	Inherits: wh40knobleader
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kmeganobz.shp
 	icon:
 		Filename: wh40kmeganobzicon.shp
@@ -5665,14 +5665,14 @@ wh40kmeganobz:
 wh40kwarboss:
 	Inherits: wh40knobleader
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kwarboss.shp
 	icon:
 		Filename: wh40kwarbossicon.shp
 
 wh40kmaddok:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kmaddok.shp
 	Inherits: ^InfantryOverlays
 	stand:
@@ -5780,7 +5780,7 @@ wh40kmaddok:
 
 wh40kstormboyz:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kstormboyz.shp
 	Inherits: ^InfantryOverlays
 	stand:
@@ -5872,7 +5872,7 @@ wh40kstormboyz:
 
 wh40kshoota:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kshoota.shp
 	Inherits: ^InfantryOverlays
 	stand:
@@ -5981,13 +5981,13 @@ wh40kshoota:
 wh40kshoota2:
 	Inherits: wh40kshoota
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 	icon:
 		Filename: wh40kbigshootaicon.shp
 
 wh40kwhaaag:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kwhaaag.shp
 	idle:
 		Filename: wh40kwhaaag.shp
@@ -6030,7 +6030,7 @@ wh40kwhaaag:
 
 wh40ktankbusta:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40ktankbusta.shp
 	Inherits: ^InfantryOverlays
 	stand:
@@ -6136,7 +6136,7 @@ wh40ktankbusta:
 
 wh40kbigmek:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kbigmek.shp
 	Inherits: ^InfantryOverlays
 	stand:
@@ -6242,7 +6242,7 @@ wh40kbigmek:
 
 wh40kburna:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kburna.shp
 	Inherits: ^InfantryOverlays
 	stand:
@@ -6384,7 +6384,7 @@ wh40kburna:
 
 wh40kflash:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kflash.shp
 	Inherits: ^InfantryOverlays
 	stand:
@@ -6492,273 +6492,273 @@ wh40kflash:
 
 wh40kuptankbusta:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kuptankbusta.shp
 	icon:
 		Filename: wh40kuptankbusta.shp
 
 wh40kupgretchin:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kupgretchin.shp
 	icon:
 		Filename: wh40kupgretchin.shp
 
 wh40kupblastier:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kupblastier.shp
 	icon:
 		Filename: wh40kupblastier.shp
 
 wh40kupdakka1:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kupdakka1.shp
 	icon:
 		Filename: wh40kupdakka1.shp
 
 wh40kupdakka2:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kupdakka2.shp
 	icon:
 		Filename: wh40kupdakka2.shp
 
 wh40kupburny1:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kupburny1.shp
 	icon:
 		Filename: wh40kupburny1.shp
 
 wh40kupburny2:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kupburny2.shp
 	icon:
 		Filename: wh40kupburny2.shp
 
 wh40kuporkarmor1:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kuporkarmor1.shp
 	icon:
 		Filename: wh40kuporkarmor1.shp
 
 wh40kuporkarmor2:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kuporkarmor2.shp
 	icon:
 		Filename: wh40kuporkarmor2.shp
 
 wh40kupbigshooty1:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kupbigshooty1.shp
 	icon:
 		Filename: wh40kupbigshooty1.shp
 
 wh40kuporkboss1:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kuporkboss1.shp
 	icon:
 		Filename: wh40kuporkboss1.shp
 
 wh40kuporkboss2:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kuporkboss2.shp
 	icon:
 		Filename: wh40kuporkboss2.shp
 
 wh40kupchoppy1:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kupchoppy1.shp
 	icon:
 		Filename: wh40kupchoppy1.shp
 
 wh40kupchoppy2:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kupchoppy2.shp
 	icon:
 		Filename: wh40kupchoppy2.shp
 
 wh40kupvboost:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kupvboost.shp
 	icon:
 		Filename: wh40kupvboost.shp
 
 wh40kupburnabomb:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kupburnabomb.shp
 	icon:
 		Filename: wh40kupburnabomb.shp
 
 wh40kupcombatjuice:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kupcombatjuice.shp
 	icon:
 		Filename: wh40kupcombatjuice.shp
 
 wh40kupvextraarmor:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kupvextraarmor.shp
 	icon:
 		Filename: wh40kupvextraarmor.shp
 
 wh40kmoresluggas:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kmoresluggas.shp
 	icon:
 		Filename: wh40kmoresluggas.shp
 
 wh40kuporkyfort:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kuporkyfort.shp
 	icon:
 		Filename: wh40kuporkyfort.shp
 
 wh40kcultiststealth:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kcultiststealth.shp
 	icon:
 		Filename: wh40kcultiststealth.shp
 
 wh40kchaosmarinestealth:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kchaosmarinestealth.shp
 	icon:
 		Filename: wh40kchaosmarinestealth.shp
 
 wh40kfuriuschargechaos:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kfuriuschargechaos.shp
 	icon:
 		Filename: wh40kfuriuschargechaos.shp
 
 wh40kunholysight:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kunholysight.shp
 	icon:
 		Filename: wh40kunholysight.shp
 
 wh40kjetpackbooster:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kjetpackbooster.shp
 	icon:
 		Filename: wh40kjetpackbooster.shp
 
 wh40kdaemonfire:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kdaemonfire.shp
 	icon:
 		Filename: wh40kdaemonfire.shp
 
 wh40kupmonasteryc:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kupmonasteryc.shp
 	icon:
 		Filename: wh40kupmonasteryc.shp
 
 wh40kupmonastery2c:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kupmonastery2c.shp
 	icon:
 		Filename: wh40kupmonastery2c.shp
 
 wh40kupcapincreasec:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kupcapincreasec.shp
 	icon:
 		Filename: wh40kupcapincreasec.shp
 
 wh40kupcapincrease2c:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kupcapincrease2c.shp
 	icon:
 		Filename: wh40kupcapincrease2c.shp
 
 wh40kchaosenergies:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kchaosenergies.shp
 	icon:
 		Filename: wh40kchaosenergies.shp
 
 wh40kfraggrenadesc:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kfraggrenadesc.shp
 	icon:
 		Filename: wh40kfraggrenadesc.shp
 
 wh40kveteranupgrade1c:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kveteranupgrade1c.shp
 	icon:
 		Filename: wh40kveteranupgrade1c.shp
 
 wh40kveteranupgrade2c:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kveteranupgrade2c.shp
 	icon:
 		Filename: wh40kveteranupgrade2c.shp
 
 wh40kdemonstrength:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kdemonstrength.shp
 	icon:
 		Filename: wh40kdemonstrength.shp
 
 pscwh40kwhaaag1:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: pscwh40kwhaaag1.shp
 	icon:
 		Filename: pscwh40kwhaaag1.shp
 
 pscwh40kwhaaag2:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: pscwh40kwhaaag2.shp
 	icon:
 		Filename: pscwh40kwhaaag2.shp
 
 pscwh40kwartrakk1:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: pscwh40kwartrakk1.shp
 	icon:
 		Filename: pscwh40kwartrakk1.shp
 
 wh40kmcvo:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kmcvo.shp
 	idle:
 		Filename: wh40kwartrukk.shp
@@ -6769,7 +6769,7 @@ wh40kmcvo:
 
 wh40kkillakan:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kkillakan.shp
 	idle:
 		Filename: wh40kkillakanlegs.shp
@@ -6799,7 +6799,7 @@ wh40kkillakan:
 
 wh40ksquiggoth:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40ksquiggoth.shp
 	idle:
 		Filename: wh40ksquiggoth.shp
@@ -6824,7 +6824,7 @@ wh40ksquiggoth:
 
 wh40kplasmaray:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kplasmaray.shp
 	idle:
 		Facings: 8
@@ -6832,7 +6832,7 @@ wh40kplasmaray:
 
 wh40kreaplasgun:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: wh40kreaplasgun.shp
 	idle:
 		Facings: 8
@@ -6840,7 +6840,7 @@ wh40kreaplasgun:
 
 icon:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: icon.shp
 		AddExtension: False
 	wh40ksluggaicon:
@@ -6858,7 +6858,7 @@ icon:
 
 explosion:
 	Defaults:
-		Scale: 2.0
+		Scale: 1.5
 		Filename: explosion.shp
 		Length: *
 		ZOffset: 2047

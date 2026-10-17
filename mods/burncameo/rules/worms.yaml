@@ -4,7 +4,7 @@ World:
 		InternalName: worms
 		Game: Special
 		Side: Factions
-		Description: Worms from Worms
+		Description: faction-worms-worms.description
 		Selectable: True
 	####################################################################################################
 	#		MPSTARTUNITS
@@ -151,7 +151,7 @@ WNUKE:
 		Prerequisites: ~wcon
 		Queue: Building, RABuilding
 		BuildDuration: 330
-		Description: Provides Power
+		Description: actor-wnuke.description
 	Building:
 		Footprint: xX xx ==
 		Dimensions: 2,3
@@ -188,7 +188,7 @@ WNUK2:
 		BuildPaletteOrder: 80
 		Prerequisites: ~wcon, wnuke
 		Queue: Building, RABuilding
-		Description: Provides more power, cheaper than the\nstandard Power Plant
+		Description: actor-wnuk2.description
 	Building:
 		Footprint: xX xx ==
 		Dimensions: 2,3
@@ -228,7 +228,7 @@ WREF:
 		BuildPaletteOrder: 10
 		Prerequisites: ~wcon, wnuke
 		Queue: Building, RABuilding
-		Description: Processes raw Tiberium\ninto useable resources
+		Description: actor-wref.description
 	Building:
 		Footprint: _x_ xxx === ===
 		Dimensions: 3,4
@@ -292,7 +292,7 @@ WHAND:
 		BuildPaletteOrder: 30
 		Prerequisites: ~wcon, wnuke
 		Queue: Building, RABuilding
-		Description: Trains infantry
+		Description: actor-whand.description
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -340,7 +340,7 @@ WWEAP:
 		BuildPaletteOrder: 40
 		Prerequisites: ~wcon, wref
 		Queue: Building, RABuilding
-		Description: Produces vehicles
+		Description: actor-wweap.description
 	Building:
 		Footprint: xxx ===
 		Dimensions: 3,2
@@ -387,7 +387,7 @@ WSHEEPSTATUE:
 		Prerequisites: ~wcon, wweap
 		Queue: Building, RABuilding
 		BuildDuration: 330
-		Description: Unlocks Sheeps, Skunks, and Moles.
+		Description: actor-wsheepstatue.description
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -419,7 +419,7 @@ WHQ:
 		BuildPaletteOrder: 70
 		Prerequisites: ~wcon, wref
 		Queue: Building, RABuilding
-		Description: Provides radar.\nUnlocks higher-tech units and buildings.\nRequires power to operate.
+		Description: actor-whq.description
 	Building:
 		Footprint: X_ xx ==
 		Dimensions: 2,3
@@ -467,7 +467,7 @@ WSHEEPSTRIKECOMMAND:
 		BuildPaletteOrder: 70
 		Prerequisites: ~wcon, wref
 		Queue: Defence, RADefence
-		Description: Provides Sheep Strike power.\nRequires power to operate.
+		Description: actor-wsheepstrikecommand.description
 	Building:
 		Footprint: xxx xxx xxx ===
 		Dimensions: 3,4
@@ -495,24 +495,24 @@ WSHEEPSTRIKECOMMAND:
 		PauseOnCondition: lowpower
 		Prerequisites: 
 			1: ~techlevel.superweapons
-		Icons: 
+		Icons:
 			1: sheepstrike
 		ChargeInterval: 6000
-		SquadSizes: 
+		SquadSizes:
 			1: 3
 		QuantizedFacings: 8
-		Names: 
+		Names:
 			1: Sheep Strike
-		Descriptions: 
-			1: Stike an area with flaming sheep.
+		Descriptions:
+			1: power-sheepstrike.description
 		EndChargeSpeechNotification: AirstrikeReady
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
 		IncomingSpeechNotification: EnemyPlanesApproaching
-		UnitTypes: 
+		UnitTypes:
 			1: worms_jetenginebomber
 		DisplayBeacon: True
-		BeaconPosters: 
+		BeaconPosters:
 			1: airstrike
 		BeaconPosterPalette: beaconposter
 		DisplayRadarPing: True
@@ -543,7 +543,7 @@ WTIMEMACHINE:
 		BuildPaletteOrder: 70
 		Prerequisites: ~wcon, anyhq
 		Queue: Defence, RADefence
-		Description: Provides Chronosphere.\nRequires power to operate.
+		Description: actor-wtimemachine.description
 	Building:
 		Footprint: x x
 		Dimensions: 1,2
@@ -604,32 +604,6 @@ WTIMEMACHINE:
 		ImpactWeapon: ChronoshiftImpact
 		TeleportWeapon: ChronoshiftImpact
 		DisplayTimerRelationships: Ally, Neutral, Enemy
-	DetonateWeaponPower@ChronoReinforcements:
-		OrderName: ChronoReinforcements
-		Cost: 2000
-		Prerequisites:
-			1: up_chronoarmor
-		PauseOnCondition: disabled
-		Icons:
-			1: chronoreinforcements
-		Cursor: ability
-		ChargeInterval: 6000
-		Names:
-			1: Chrono Reinforcements
-		ActivationDelay: 25
-		ActivationSequence:
-		Descriptions:
-			1: Teleports a small taskforce to a specified location.
-		Weapons:
-			1: ChronoAI
-		CameraActor: camera.placeholderhack
-		CameraRemoveDelay: 0
-		SelectTargetSpeechNotification: SelectTarget
-		InsufficientPowerSpeechNotification: InsufficientPower
-		DisplayRadarPing: True
-		LaunchSound: chrono2.aud
-		IncomingSound: chrono2.aud
-		DisplayTimerRelationships: Ally, Neutral, Enemy
 	DetonateWeaponPowerCA@ChronoVortex:
 		AllowMultiple: true
 		OrderName: ChronoVortex
@@ -644,7 +618,7 @@ WTIMEMACHINE:
 			1: Chrono Vortex
 		ActivationDelay: 100
 		Descriptions:
-			1: Initiate a Chrono Vortex which deals heavy damage over time to a large area.
+			1: power-chronovortex.description
 		Weapons:
 			1: ChronoVortexInit
 		SelectTargetSpeechNotification: SelectTarget
@@ -730,7 +704,7 @@ WCONCRETEDONKEY:
 		BuildPaletteOrder: 100
 		Prerequisites: ~wcon, anyhq, ~techlevel.high
 		Queue: Defence, RADefence
-		Description: Provides Concrete Donkey support power.\nRequires power to operate.
+		Description: actor-wconcretedonkey.description
 	Building:
 		Footprint: xxx xxx ===
 		Dimensions: 3,3
@@ -759,7 +733,7 @@ WCONCRETEDONKEY:
 		Names:
 			1: Concrete Donkey
 		Descriptions:
-			1: Launch a tactical concrete donkey.\nApplies heavy damage over a large area.
+			1: power-concretedonkey.description
 		SelectTargetSpeechNotification: SelectTarget
 		SelectTargetTextNotification: Select target.
 		InsufficientPowerSpeechNotification: InsufficientPower
@@ -811,7 +785,7 @@ WSILO:
 		BuildPaletteOrder: 35
 		Prerequisites: ~wcon, wref
 		Queue: Defence, RADefence
-		Description: Stores processed Tiberium
+		Description: actor-wsilo.description
 	Building:
 		Footprint: xx
 		Dimensions: 2,1
@@ -856,7 +830,7 @@ WSANTASSLEIGH:
 		BuildPaletteOrder: 35
 		Prerequisites: ~wcon, wref
 		Queue: Defence, RADefence
-		Description: Generates Cash
+		Description: actor-wsantassleigh.description
 	Building:
 		Footprint: xxx xxx
 		Dimensions: 3,2
@@ -903,7 +877,7 @@ WGTWR:
 		Queue: Defence, RADefence
 		BuildDuration: 1440
 		BuildDurationModifier: 40
-		Description: Basic defensive structure.\n  Strong vs Infantry\n  Weak vs Tanks
+		Description: actor-wgtwr.description
 	Building:
 		BuildSounds: wormdrill.wav
 	Health:
@@ -949,7 +923,7 @@ WORMS_AASITE:
 		Queue: Defence, RADefence
 		BuildDuration: 1440
 		BuildDurationModifier: 40
-		Description: Anti-Aircraft base defense.\n  Strong vs Aircraft\n  Cannot target Ground units.
+		Description: actor-worms_aasite.description
 	Building:
 		Footprint: xx
 		Dimensions: 2,1
@@ -992,7 +966,7 @@ WORMS_CANDLE:
 		Queue: Defence, RADefence
 		BuildDuration: 1440
 		BuildDurationModifier: 40
-		Description: Basic defensive structure.\n  Strong vs Infantry\n  Weak vs Tanks
+		Description: actor-worms_candle.description
 	Building:
 		BuildSounds: wormdrill.wav
 	Health:
@@ -1029,7 +1003,7 @@ LASPY:
 		Queue: Defence, RADefence
 		BuildDuration: 3120
 		BuildDurationModifier: 40
-		Description: Advanced base defense.\nRequires power to operate.\n  Strong vs all Ground units\n  Cannot target Aircraft
+		Description: actor-laspy.description
 	Selectable:
 		Bounds: 1024, 1024
 	SelectionDecorations:
@@ -1080,7 +1054,7 @@ WORMS_WORMPAD:
 		BuildPaletteOrder: 50
 		Prerequisites: ~wcon, wref
 		Queue: Building, RABuilding
-		Description: Produces, rearms and\nrepairs helicopters
+		Description: actor-worms_wormpad.description
 	Building:
 		Footprint: xx xx xx
 		Dimensions: 2,3
@@ -1129,7 +1103,7 @@ WORMUZI:
 		BuildPaletteOrder: 10
 		Prerequisites: ~whand
 		Queue: Infantry, RAInfantry
-		Description: Uzi Infantry.
+		Description: actor-wormuzi.description
 	Mobile:
 		Speed: 56
 	Health:
@@ -1167,7 +1141,7 @@ WORMGRENADE:
 		BuildPaletteOrder: 40
 		Prerequisites: ~whand
 		Queue: Infantry, RAInfantry
-		Description: Fast infantry armed with grenades. \n  Strong vs Buildings, slow-moving targets
+		Description: actor-wormgrenade.description
 	Mobile:
 		Speed: 71
 	Health:
@@ -1209,7 +1183,7 @@ WORMBAZOOKA:
 		BuildPaletteOrder: 20
 		Prerequisites: ~whand
 		Queue: Infantry, RAInfantry
-		Description: Anti-tank/Anti-aircraft infantry. \n  Strong vs Tanks, Aircraft\n  Weak vs Infantry
+		Description: actor-wormbazooka.description
 	Mobile:
 		Speed: 42
 	Health:
@@ -1255,7 +1229,7 @@ WORMFLAMER:
 		BuildPaletteOrder: 40
 		Prerequisites: ~whand
 		Queue: Infantry, RAInfantry
-		Description: Advanced Anti-infantry unit.\n  Strong vs Infantry, Buildings\n  Weak vs Tanks
+		Description: actor-wormflamer.description
 	Mobile:
 		Speed: 56
 	Health:
@@ -1292,7 +1266,7 @@ WORMENGINEER:
 		BuildPaletteOrder: 30
 		Prerequisites: ~whand
 		Queue: Infantry, RAInfantry
-		Description: Captures structures.
+		Description: actor-wormengineer.description
 	WithDeathAnimation:
 		UseDeathTypeSuffix: false
 	WithInfantryBody:
@@ -1320,7 +1294,7 @@ WORMDYNAMITE:
 		Queue: Infantry, RAInfantry
 		BuildDuration: 1000
 		BuildDurationModifier: 40
-		Description: Elite sniper infantry unit.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles
+		Description: actor-wormdynamite.description
 	Mobile:
 		Speed: 71
 	Guard:
@@ -1364,7 +1338,7 @@ WHARV:
 		Queue: Vehicle, RAVehicle
 		BuildDuration: 1680
 		BuildDurationModifier: 40
-		Description: Collects Tiberium for processing.\n  Unarmed
+		Description: actor-wharv.description
 	Selectable:
 		DecorationBounds: 1536, 1536
 	Harvester:
@@ -1408,7 +1382,7 @@ SKUNK:
 		BuildPaletteOrder: 50
 		Prerequisites: ~wweap, wsheepstatue
 		Queue: Vehicle, RAVehicle
-		Description: Toxic skunk!
+		Description: actor-skunk.description
 	Mobile:
 		Speed: 130
 		TurnSpeed: 40
@@ -1438,7 +1412,7 @@ WTRUCK:
 		Queue: Vehicle, RAVehicle
 		BuildPaletteOrder: 35
 		Prerequisites: ~wweap, wsheepstatue
-		Description: Bahhh.
+		Description: actor-wtruck.description
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -1480,7 +1454,7 @@ WORMS_MOLE:
 		Queue: Vehicle, RAVehicle
 		BuildPaletteOrder: 35
 		Prerequisites: ~wweap, wsheepstatue
-		Description: Jumps onto targets.
+		Description: actor-worms_mole.description
 	Valued:
 		Cost: 2500
 	Tooltip:
@@ -1535,7 +1509,7 @@ WORMBUGGY:
 		BuildPaletteOrder: 20
 		Prerequisites: ~wweap
 		Queue: Vehicle, RAVehicle
-		Description: Fast scout and anti-infantry vehicle.\n  Strong vs Infantry\n  Weak vs Tanks
+		Description: actor-wormbuggy.description
 	Mobile:
 		TurnSpeed: 40
 		Speed: 170
@@ -1596,7 +1570,7 @@ WORMS_MOAI:
 		BuildPaletteOrder: 20
 		Prerequisites: ~wweap, wsheepstatue
 		Queue: Vehicle, RAVehicle
-		Description: Fast scout and anti-infantry vehicle.\n  Strong vs Infantry\n  Weak vs Tanks
+		Description: actor-worms_moai.description
 	Mobile:
 		TurnSpeed: 20
 		Speed: 22
@@ -1653,7 +1627,7 @@ WMTNK:
 		BuildPaletteOrder: 40
 		Prerequisites: ~disabled
 		Queue: Vehicle, RAVehicle
-		Description: General-Purpose Worms Tank.\n  Strong vs Tanks, Vehicles\n  Weak vs Infantry
+		Description: actor-wmtnk.description
 	Mobile:
 		Speed: 85
 	Health:
@@ -1697,7 +1671,7 @@ WTANK:
 		BuildPaletteOrder: 40
 		Prerequisites: ~wweap
 		Queue: Vehicle, RAVehicle
-		Description: General-Purpose Worms Tank.\n  Strong vs Tanks, Vehicles\n  Weak vs Infantry
+		Description: actor-wtank.description
 	Mobile:
 		Speed: 85
 	Health:
@@ -1739,7 +1713,7 @@ WMISSILELAUNCHER:
 		BuildPaletteOrder: 50
 		Prerequisites: ~wweap, anyhq, ~techlevel.medium
 		Queue: Vehicle, RAVehicle
-		Description: Long range rocket artillery.\n  Strong vs all Ground units.
+		Description: actor-wmissilelauncher.description
 	Mobile:
 		Speed: 85
 		TurnSpeed: 16
@@ -1779,7 +1753,7 @@ WCANNON:
 		BuildPaletteOrder: 20
 		Prerequisites: ~wweap, ~techlevel.medium
 		Queue: Vehicle, RAVehicle
-		Description: Slow and Weak tank.\n  Strong vs all Ground units.
+		Description: actor-wcannon.description
 	Mobile:
 		Speed: 30
 		TurnSpeed: 16
@@ -1815,7 +1789,7 @@ WORMS_MCV:
 		Queue: Vehicle, RAVehicle
 		BuildDuration: 3750
 		BuildDurationModifier: 40
-		Description: Deploys into another Construction Yard.\n  Unarmed
+		Description: actor-worms_mcv.description
 	Selectable:
 		DecorationBounds: 1536, 1536
 	Mobile:
@@ -1939,7 +1913,7 @@ WORMS_UFO:
 		BuildPaletteOrder: 20
 		Prerequisites: ~hpad, anyhq, ~techlevel.medium
 		Queue: Aircraft, RAAircraft
-		Description: Helicopter Gunship with AG Missiles.\n  Strong vs Buildings, Tanks\n  Weak vs Infantry
+		Description: actor-worms_ufo.description
 	Aircraft:
 		TurnSpeed: 28
 		Speed: 100
@@ -2002,7 +1976,7 @@ WORMS_APACHE:
 		BuildPaletteOrder: 20
 		Prerequisites: ~hpad, ~techlevel.medium
 		Queue: Aircraft, RAAircraft
-		Description: Helicopter Gunship with Missiles.\n  Strong vs Infantry, Light Vehicles and\n  Aircraft\n  Weak vs Tanks
+		Description: actor-worms_apache.description
 	Aircraft:
 		TurnSpeed: 28
 		Speed: 180

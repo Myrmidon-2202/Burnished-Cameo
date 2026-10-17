@@ -4,7 +4,7 @@ World:
 		InternalName: iok
 		Game: Tiberian Dawn
 		Side: Factions
-		Description: Infidels of Kane\nThe IoK consists of GLA sympathizers who believe the tiberium prophecy.\nSupport powers: Radar van, Nuclear missile, Scud Storm
+		Description: faction-cameo-iok.description
 
 	StartingUnits@mcvonlyiok:
 		Class: none
@@ -418,7 +418,7 @@ FACTIOK:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 1000
 		Prerequisites: ~disabled
-		Description: Builds structures
+		Description: actor-factiok.description
 	ProvidesPrerequisite@factioniok:
 		Prerequisite: mmiok
 	WithIdleOverlay@BOX:
@@ -445,7 +445,7 @@ IOKNUKE:
 		BuildPaletteOrder: 10
 		Prerequisites: iokfact, ~mmiok
 		Queue: Building, RABuilding,
-		Description: Generates power
+		Description: actor-ioknuke.description
 	Building:
 		Footprint: xX xx ==
 		Dimensions: 2,3
@@ -488,7 +488,7 @@ IOKBARRACKS:
 		BuildPaletteOrder: 20
 		Prerequisites: ioknuke, ~mmiok
 		Queue: Building, RABuilding
-		Description: Trains IOKs infantry
+		Description: actor-iokbarracks.description
 	Building:
 		Footprint: xxx xxx ===
 		Dimensions: 3,3
@@ -557,7 +557,7 @@ IOKPROC:
 		BuildPaletteOrder: 30
 		Prerequisites: ioknuke, ~mmiok
 		Queue: Building, RABuilding
-		Description: Processes raw Tiberium\ninto useable resources
+		Description: actor-iokproc.description
 	Building:
 		Footprint: _x_ xxx === ===
 		Dimensions: 3,4
@@ -642,7 +642,7 @@ IOKAFLD:
 		BuildPaletteOrder: 40
 		Prerequisites: iokproc, ~mmiok
 		Queue: Building, RABuilding
-		Description: Provides a dropzone\nfor vehicle reinforcements
+		Description: actor-iokafld.description
 	Building:
 		Footprint: XXX+ xxx+ ====
 		Dimensions: 4,3
@@ -711,7 +711,7 @@ IOKNUK2:
 		BuildPaletteOrder: 80
 		Prerequisites: iokafld, ~mmiok
 		Queue: Building, RABuilding
-		Description: Provides more power, cheaper than the\nstandard Power Plant
+		Description: actor-ioknuk2.description
 	Building:
 		Footprint: xX xx ==
 		Dimensions: 2,3
@@ -745,7 +745,7 @@ iokblackmarket:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 60
 		Prerequisites: iokafld, ~mmiok
-		Description: Unlock upgrades for GLA weaponry.\nProvides a cash supply.
+		Description: actor-iokblackmarket.description
 	Valued:
 		Cost: 2500 #300
 	Tooltip:
@@ -818,7 +818,7 @@ iokpalace:
 		BuildPaletteOrder: 70
 		Prerequisites: iokblackmarket, ~mmiok
 		Queue: Building, RABuilding
-		Description: Provides access to advanced GLA technologies.\nCan be used as a defensive bunker
+		Description: actor-iokpalace.description
 	Building:
 		Footprint: xxxx xxxx xxxx
 		Dimensions: 4,3
@@ -891,7 +891,7 @@ iokscudtemple:
 		BuildPaletteOrder: 100
 		Prerequisites: iokpalace, ~mmiok
 		Queue: Building, RABuilding
-		Description: Provides Scud Storm and Nuclear Strike support power.\nRequires power to operate.
+		Description: actor-iokscudtemple.description
 	Building:
 		Footprint: xxxx xxxx xxxx
 		Dimensions: 4,3
@@ -938,11 +938,11 @@ iokscudtemple:
 		Cursor: attackmove
 		Icons:
 			1: glscudstorm
-		ChargeInterval: 9000
+		ChargeInterval: 8500
 		Names:
 			1: Scud Storm
 		Descriptions:
-			1: Fires 9 Scud Missiles at the target.
+			1: power-general-scud.description
 		EndChargeSpeechNotification:
 		SelectTargetSpeechNotification:
 		DisplayTimerStances: Ally, Neutral, Enemy
@@ -991,7 +991,7 @@ IOKSITE:
 		BuildPaletteOrder: 60
 		Prerequisites: iokbarracks, ~mmiok
 		Queue: Defence, RADefence
-		Description: All-purpose defensive structure.\n  Strong vs Aircraft, Tanks\n  Weak vs Infantry
+		Description: actor-ioksite.description
 	SelectionDecorations:
 	Health:
 		HP: 85000
@@ -1057,7 +1057,7 @@ IOKGUN:
 		BuildPaletteOrder: 45
 		Prerequisites: iokbarracks, ~mmiok
 		Queue: Defence, RADefence
-		Description: Basic Anti-Tank base defense.\n  Strong vs Tanks, vehicles\n  Weak vs Infantry
+		Description: actor-iokgun.description
 	Building:
 	Health:
 		HP: 41000
@@ -1095,7 +1095,7 @@ IOKOBLI:
 		BuildPaletteOrder: 60
 		Prerequisites: iokblackmarket, ~mmiok
 		Queue: Defence, RADefence
-		Description: Advanced base defense.\nRequires power to operate.\n  Strong vs all Ground units\n  Cannot target Aircraft
+		Description: actor-iokobli.description
 	Armament:
 		Weapon: IOKLaser
 		LocalOffset: 0,-85,1280
@@ -1123,7 +1123,7 @@ IOKBGGY:
 		BuildPaletteOrder: 20
 		Prerequisites:
 		Queue: Vehicle.Iok
-		Description: Fast scout and anti-infantry vehicle.\n  Strong vs Infantry\n  Weak vs Tanks
+		Description: actor-iokbggy.description
 	Mobile:
 		TurnSpeed: 16
 		Speed: 170
@@ -1176,7 +1176,7 @@ IOKROCKETBGGY:
 		BuildPaletteOrder: 30
 		Prerequisites:
 		Queue: Vehicle.Iok
-		Description: Fast, long-range artillery.\n  Strong vs Vehicles, Buildings\n  Weak vs Aircraft
+		Description: actor-iokrocketbggy.description
 	Mobile:
 		Speed: 180
 	Health:
@@ -1256,7 +1256,7 @@ IOKSCORPION:
 		BuildPaletteOrder: 40
 		Prerequisites:
 		Queue: Vehicle.Iok
-		Description: Fast, light tank.\nCan be upgraded with missiles.\n  Strong vs Vehicles\n  Weak vs Infantry
+		Description: actor-iokscorpion.description
 	Mobile:
 		Speed: 110
 	Health:
@@ -1365,7 +1365,7 @@ IOKRADAR:
 		Queue: Vehicle.Iok
 		BuildPaletteOrder: 50
 		Prerequisites: 
-		Description: Detects cloaked units and provides radar.
+		Description: actor-iokradar.description
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -1422,7 +1422,7 @@ IOKRADAR:
 			1: Radar Van Scan
 		ChargeInterval: 3000
 		Descriptions:
-			1: Radar Van Scan Reveals an area of the map\nand cloaked enemy units.
+			1: power-ra2psireveal.description
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
 		EndChargeSpeechNotification: SpyPlaneReady
@@ -1449,7 +1449,7 @@ IOKFTNK:
 		BuildPaletteOrder: 55
 		Prerequisites: 
 		Queue: Vehicle.Iok
-		Description: Heavily armored flame-throwing vehicle.\n  Strong vs Infantry, Buildings and Vehicles\n  Weak vs Tanks
+		Description: actor-iokftnk.description
 	Mobile:
 		Speed: 99
 	Health:
@@ -1494,7 +1494,7 @@ IOKQUAD:
 		Queue: Vehicle.Iok
 		BuildPaletteOrder: 60
 		Prerequisites: 
-		Description: Anti-air and anti-infantry vehicle.\n  Strong vs Aircraft, Infantry\n  Weak vs Vehicles
+		Description: actor-iokquad.description
 	Valued:
 		Cost: 700
 	Tooltip:
@@ -1577,7 +1577,7 @@ IOKSCUD:
 		Queue: Vehicle.Iok
 		BuildPaletteOrder: 70
 		Prerequisites: iokpalace
-		Description: Long-range ballistic missile launcher.\n  Strong vs ground targets\n  Weak vs Aircraft
+		Description: actor-iokscud.description
 	Valued:
 		Cost: 1200
 	Tooltip:
@@ -1677,7 +1677,7 @@ IOKSTNK:
 		BuildPaletteOrder: 90
 		Prerequisites: iokpalace
 		Queue: Vehicle.Iok
-		Description: Long-range missile tank that can cloak.\nCan attack Aircraft.\nHas weak armor. Can be spotted by infantry and defense structures.\n  Strong vs Vehicles, Tanks\n  Weak vs Infantry.
+		Description: actor-iokstnk.description
 	Mobile:
 		Locomotor: heavywheeled
 		Speed: 142
@@ -1730,7 +1730,7 @@ MCV.Iok:
 		Prerequisites:
 		Queue: Vehicle.Iok
 		BuildDurationModifier: 40
-		Description: Deploys into another Construction Yard.\n  Unarmed
+		Description: template-mcv.description
 	Selectable:
 		Priority: 4
 		DecorationBounds: 1536, 1536
@@ -1787,7 +1787,7 @@ iokworker:
 		BuildPaletteOrder: 5
 		Prerequisites: iokproc
 		Queue: Infantry.Iok
-		Description: Resource collector.\nCan repair buildings\nCan deploy to neutralize mines and traps
+		Description: actor-iokworker.description
 	Mobile:
 		Speed: 95
 	Health:
@@ -1884,7 +1884,7 @@ IOKE1:
 		BuildPaletteOrder: 10
 		Prerequisites: iokbarracks
 		Queue: Infantry.Iok
-		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles
+		Description: actor-ioke1.description
 	Mobile:
 		Speed: 56
 	Health:
@@ -1918,7 +1918,7 @@ IOKTERROR:
 		BuildPaletteOrder: 20
 		Prerequisites: iokbarracks
 		Queue: Infantry.Iok
-		Description: Suicide bomber infantry.
+		Description: actor-iokterror.description
 	Voiced:
 		VoiceSet: GLATerroristVoice
 	GrantConditionOnPrerequisite@selectglademo:
@@ -1966,7 +1966,7 @@ IOKE5:
 		BuildPaletteOrder: 25
 		Prerequisites: iokpalace
 		Queue: Infantry.Iok
-		Description: Advanced general-purpose infantry.\n  Strong vs all Ground units
+		Description: actor-ioke5.description
 	Mobile:
 		Speed: 56
 		Locomotor: chem
@@ -2014,7 +2014,7 @@ IOKE3:
 		BuildPaletteOrder: 30
 		Prerequisites: 
 		Queue: Infantry.Iok
-		Description: Anti-tank/Anti-aircraft infantry. \n  Strong vs Tanks, Aircraft\n  Weak vs Infantry
+		Description: actor-ioke3.description
 	Mobile:
 		Speed: 42
 	Health:
@@ -2053,7 +2053,7 @@ IOKMOB:
 	Buildable:
 		BuildPaletteOrder: 40
 		Queue: Infantry.Iok
-		Description: Large armed crowd, armed with pistols and Molotovs.\n  Strong vs Buildings, Infantry\n  Weak vs Vehicles, Aircraft
+		Description: actor-iokmob.description
 		Prerequisites: iokpalace
 	Tooltip:
 		Name: Angry Mob
@@ -2112,7 +2112,7 @@ IOKE6:
 		BuildPaletteOrder: 50
 		Prerequisites: barracks
 		Queue: Infantry.Iok
-		Description: Infiltrates and captures enemy structures.\nRemoves attached explosives from units.\n  Unarmed
+		Description: actor-ioke6.description
 	Mobile:
 		Speed: 48
 	Health:

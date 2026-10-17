@@ -4,7 +4,7 @@ World:
 		InternalName: camea
 		Game: Boss
 		Side: Boss Factions
-		Description: Camea\nGeneral having forces of GDI, NOD, Allies and Soviets at her disposal\nSupport powers: Spy Plane, Airstrike, Chronosphere, Paratroopers, Nuclear Strike
+		Description: faction-cameo-camea.description
 
 	StartingUnits@mcvonlycamea:
 		Class: none
@@ -46,11 +46,9 @@ mcv.camea:
 		Name: Mobile Construction Vehicle
 	Buildable:
 		BuildPaletteOrder: 10
-		Description: Transforms into Construction Yard
-		Queue: Vehicle, RAVehicle
+		Description: Transforms into a Construction Yard
+		Queue: Vehicle.Camea
 		Prerequisites: RAFIX.camea
-	ProvidesPrerequisite@faction:
-		Prerequisite: mmgdi
 	RenderSprites:
 		Image: MCV
 
@@ -93,42 +91,12 @@ camea_conyard:
 	#Exit@2:
 	#	SpawnOffset: 298,298,0
 	#	ExitCell: 200,200
+	ProvidesPrerequisite@faction:
+		Prerequisite: mmcamea
 	ProvidesPrerequisite@buildingname:
 	ProvidesPrerequisite:
 		Prerequisite: conyard
-	Production@NORMAL:
-		Produces: Building, Defence
-		RequiresCondition: !classicproductionqueues
-	Production@classicproductionqueues:
-		Produces: RABuilding, RADefence
-		RequiresCondition: classicproductionqueues
-	ProductionQueue@Building:
-		Type: Building
-		Group: Building
-		DisplayOrder: 0
-		QueuedAudio: Building
-		ReadyAudio: ConstructionComplete
-		LowPowerModifier: 200
-	ProductionQueue@Defence:
-		Type: Defence
-		DisplayOrder: 1
-		Group: Defence
-		QueuedAudio: Building
-		ReadyAudio: ConstructionComplete
-		LowPowerModifier: 200
 	BaseBuilding:
-	ProductionBar@Building:
-		ProductionType: Building
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@Defence:
-		ProductionType: Defence
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@RABuilding:
-		ProductionType: RABuilding
-		RequiresCondition: classicproductionqueues
-	ProductionBar@RADefence:
-		ProductionType: RADefence
-		RequiresCondition: classicproductionqueues
 	Power:
 		Amount: 75
 	WithBuildingBib:
@@ -141,18 +109,25 @@ camea_conyard:
 		Prerequisite: faction.camea
 	AirstrikePower@spyplane:
 		OrderName: SovietSpyPlane
-		Icon: spyplane
+		Icons:
+			1: spyplane
 		ChargeInterval: 3750
-		Name: Spy Plane
-		Description: Reveals an area of the map\nand cloaked enemy units.
+		Names:
+			1: Spy Plane
+		Descriptions:
+			1: Reveals an area of the map\nand cloaked enemy units.
 		SelectTargetSpeechNotification: SelectTarget
 		EndChargeSpeechNotification: SpyPlaneReady
 		CameraActor: camera.spyplane
 		CameraRemoveDelay: 150
-		UnitType: u2
+		UnitTypes:
+			1: u2
+		SquadSizes:
+			1: 1
 		QuantizedFacings: 8
 		DisplayBeacon: true
-		BeaconPoster: racamicon
+		BeaconPosters:
+			1: racamicon
 		ArrowSequence: arrow
 		ClockSequence: clock
 		CircleSequence: circles
@@ -167,10 +142,12 @@ POWR.camea:
 	Buildable:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 10
-		Prerequisites: camea_conyard
+		Prerequisites: ~mmcamea
 		Description: Provides power for other structures.
 	RenderSprites:
 		Image: POWR
+	ProvidesPrerequisite:
+		Prerequisite: powr.camea
 
 HAND.camea:
 	Inherits: ^BaseBuilding
@@ -184,11 +161,9 @@ HAND.camea:
 		Cost: 500
 	Tooltip:
 		Name: Barracks
-	ProvidesPrerequisite:
-		Prerequisite: barracks
 	Buildable:
 		BuildPaletteOrder: 30
-		Prerequisites: anypower
+		Prerequisites: powr.camea, ~mmcamea
 		Queue: Building, RABuilding
 		Description: Trains infantry
 	Building:
@@ -205,13 +180,9 @@ HAND.camea:
 		SpawnOffset: 512,1024,0
 		ExitCell: 1,2
 	Production@NORMAL:
-		Produces: Infantry
-		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RAInfantry
-		RequiresCondition: classicproductionqueues
+		Produces: Infantry.Camea
 	ProductionQueue:
-		Type: Infantry
+		Type: Infantry.Camea
 		DisplayOrder: 2
 		Group: Infantry
 		LowPowerModifier: 300
@@ -222,14 +193,11 @@ HAND.camea:
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
 	ProductionBar@INFANTRY:
-		ProductionType: Infantry
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@RAINFANTRY:
-		ProductionType: RAInfantry
-		RequiresCondition: classicproductionqueues
+		ProductionType: Infantry.Camea
 	Power:
 		Amount: -20
 	ProvidesPrerequisite@buildingname:
+		Prerequisite: hand.camea
 	SelectionDecorations:
 	RenderSprites:
 		Image: HAND
@@ -239,7 +207,7 @@ RAPROC.camea:
 	Buildable:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 60
-		Prerequisites: anypower
+		Prerequisites: powr.camea, ~mmcamea
 		Description: Refines Ore and Gems\ninto credits.
 	Valued:
 		Cost: 1500 #1400
@@ -265,12 +233,12 @@ RAPROC.camea:
 	RenderSprites:
 		Image: RAPROC
 	ProvidesPrerequisite@buildingname:
-
 	WithResourceStoragePipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: true
 		PipCount: 17
 		FullSequence: pip-yellow
+
 RAWEAPA.camea:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^3x2Shape
@@ -280,7 +248,7 @@ RAWEAPA.camea:
 	Buildable:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 80
-		Prerequisites: raproc.camea, ~techlevel.low
+		Prerequisites: raproc.camea, ~techlevel.low, ~mmcamea
 		Description: Produces vehicles.
 	Valued:
 		Cost: 2000
@@ -306,13 +274,9 @@ RAWEAPA.camea:
 		SpawnOffset: 213,-128,0
 		ExitCell: 1,2
 	Production@NORMAL:
-		Produces: Vehicle
-		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RAVehicle
-		RequiresCondition: classicproductionqueues
+		Produces: Vehicle.Camea
 	ProductionQueue:
-		Type: Vehicle
+		Type: Vehicle.Camea
 		DisplayOrder: 3
 		Group: Vehicle
 		ReadyAudio: UnitReady
@@ -322,16 +286,12 @@ RAWEAPA.camea:
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
 	ProductionBar@VEHICLE:
-		ProductionType: Vehicle
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@RAVEHICLE:
-		ProductionType: RAVehicle
-		RequiresCondition: classicproductionqueues
+		ProductionType: Vehicle.Camea
 	Power:
 		Amount: -30
 	ProvidesPrerequisite@buildingname:
 	ProvidesPrerequisite:
-		Prerequisite: vehicleproduction
+		Prerequisite: vehicleproductioncamea
 	RenderSprites:
 		Image: raweap
 
@@ -343,7 +303,7 @@ HQ.camea:
 		Name: Communications Center
 	Buildable:
 		BuildPaletteOrder: 70
-		Prerequisites: raproc.camea, ~techlevel.medium
+		Prerequisites: raproc.camea, ~techlevel.medium, ~mmcamea
 		Queue: Building, RABuilding
 		Description: Provides radar and Air Strike support power.\nUnlocks higher-tech units and buildings.\nRequires power to operate.
 	Health:
@@ -356,22 +316,29 @@ HQ.camea:
 	ParatroopersPower@army:
 		PauseOnCondition: lowpower
 		OrderName: DinoDrop
-		Icon: paratroopers
+		Icons:
+			1: paratroopers
 		ChargeInterval: 2250
-		Name: Paratroopers
-		Description: A squad of cargo planes drops soldiers\nanywhere on the map.
-		DropItems: e1.para, e1.para, e1.para, e1.para, e1.para, e1.para, e1.para, e1.para, e1.para, e1.para
+		Names:
+			1: Paratroopers
+		Descriptions:
+			1: A squad of cargo planes drops soldiers\nanywhere on the map.
+		DropItems:
+			1: e1.para, e1.para, e1.para, e1.para, e1.para, e1.para, e1.para, e1.para, e1.para, e1.para
 		ReinforcementsArrivedSpeechNotification: ReinforcementsArrived
 		SelectTargetSpeechNotification: SelectTarget
 		AllowImpassableCells: false
 		QuantizedFacings: 8
 		CameraActor: camera.paradrop
 		DisplayBeacon: true
-		BeaconPoster: pinficon
+		BeaconPosters:
+			1: pinficon
 		ArrowSequence: arrow
 		ClockSequence: clock
-		UnitType: C17.Paradrop
-		SquadSize: 3
+		UnitTypes:
+			1: C17.Paradrop
+		SquadSizes:
+			1: 3
 		CircleSequence: circles
 		UseDirectionalTarget: True
 		DirectionArrowAnimation: airstrikedirection
@@ -380,17 +347,22 @@ HQ.camea:
 		Prerequisites: stek.camea, ~techlevel.superweapons
 		Icon: airstrike
 		ChargeInterval: 6000
-		SquadSize: 3
+		SquadSizes:
+			1: 3
 		QuantizedFacings: 8
-		Name: Air Strike
-		Description: Deploy an aerial napalm strike.\nBurns buildings and infantry along a line.
+		Names:
+			1: Air Strike
+		Descriptions:
+			1: Deploy an aerial napalm strike.\nBurns buildings and infantry along a line.
 		EndChargeSpeechNotification: AirstrikeReady
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
 		IncomingSpeechNotification: EnemyPlanesApproaching
-		UnitType: a10
+		UnitTypes:
+			1: a10
 		DisplayBeacon: True
-		BeaconPoster: airstrike
+		BeaconPosters:
+			1: airstrike
 		BeaconPosterPalette: beaconposter
 		DisplayRadarPing: True
 		CameraActor: camera
@@ -413,7 +385,7 @@ RAFIX.camea:
 	Buildable:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 100
-		Prerequisites: vehicleproduction, ~techlevel.medium
+		Prerequisites: vehicleproductioncamea, ~techlevel.medium, ~mmcamea
 		Description: Repairs vehicles for credits.
 	Valued:
 		Cost: 1200
@@ -438,6 +410,7 @@ RAFIX.camea:
 	ProvidesPrerequisite@buildingname:
 	ProvidesPrerequisite@rafix:
 		Prerequisite: RAFIX.camea
+
 NUK2.camea:
 	Inherits: NUK2
 	HitShape:
@@ -446,7 +419,7 @@ NUK2.camea:
 		Name: Advanced Power Plant
 	Buildable:
 		BuildPaletteOrder: 80
-		Prerequisites: anyhq, ~techlevel.medium
+		Prerequisites: anyhq, ~techlevel.medium, ~mmcamea
 		Queue: Building, RABuilding
 		Description: Provides more power, cheaper than the\nstandard Power Plant
 	RenderSprites:
@@ -457,7 +430,7 @@ stek.camea:
 	Buildable:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 150
-		Prerequisites: vehicleproduction, anyhq, ~techlevel.high
+		Prerequisites: vehicleproductioncamea, anyhq, ~techlevel.high, ~mmcamea
 		Description: Provides Soviet advanced technologies.
 	Valued:
 		Cost: 1500
@@ -495,7 +468,7 @@ HPAD.camea:
 		Name: Helipad
 	Buildable:
 		BuildPaletteOrder: 50
-		Prerequisites: raproc.camea
+		Prerequisites: raproc.camea, ~mmcamea
 		Queue: Building, RABuilding
 		Description: Produces, rearms and\nrepairs helicopters
 	Building:
@@ -508,11 +481,7 @@ HPAD.camea:
 	Exit@1:
 		SpawnOffset: 0,-256,0
 	ProductionFromMapEdge@NORMAL:
-		Produces: Aircraft
-		RequiresCondition: !classicproductionqueues
-	ProductionFromMapEdge@CLASSICPRODUCTIONQUEUES:
-		Produces: RAAircraft
-		RequiresCondition: classicproductionqueues
+		Produces: Aircraft.Camea
 	Reservable:
 	RepairsUnits:
 		HpPerStep: 1000
@@ -522,7 +491,7 @@ HPAD.camea:
 		RequiresCondition: !build-incomplete
 	RallyPoint:
 	ProductionQueue:
-		Type: Aircraft
+		Type: Aircraft.Camea
 		DisplayOrder: 4
 		Group: Aircraft
 		LowPowerModifier: 300
@@ -533,11 +502,7 @@ HPAD.camea:
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
 	ProductionBar@AIRCRAFT:
-		ProductionType: Aircraft
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@RAAIRCRAFT:
-		ProductionType: RAAircraft
-		RequiresCondition: classicproductionqueues
+		ProductionType: Aircraft.Camea
 	Power:
 		Amount: -10
 	ProvidesPrerequisite@buildingname:
@@ -553,7 +518,7 @@ SILO.camea:
 		Name: Tiberium Silo
 	Buildable:
 		BuildPaletteOrder: 35
-		Prerequisites: raproc.camea
+		Prerequisites: raproc.camea, ~mmcamea
 		Queue: Defence, RADefence
 		Description: Stores processed Tiberium
 	Health:
@@ -574,8 +539,7 @@ mslo.camea:
 	Buildable:
 		Queue: Defence, RADefence
 		BuildPaletteOrder: 140
-		Prerequisites: stek.camea, ~techlevel.superweapons, !abomb
-		Description: Provides an atomic bomb.\nRequires power to operate.\n  Special Ability: Atom Bomb
+		Prerequisites: stek.camea, ~techlevel.superweapons, !abomb, ~mmcamea
 	Health:
 		HP: 100000
 	Armor:
@@ -584,33 +548,41 @@ mslo.camea:
 		Range: 6c0
 		RequiresCondition: !lowpower
 		RequiresCondition: !lowpower
-	NukePower:
-		AllowMultiple: True
-		PauseOnCondition: lowpower
-		Prerequisites: ~techlevel.superweapons
-		Cursor: nuke
-		Icon: abomb
-		ChargeInterval: 9000
-		Name: Atom Bomb
-		Description: Launches a devastating atomic bomb\nat a target location.
-		SelectTargetSpeechNotification: SelectTarget
-		InsufficientPowerSpeechNotification: InsufficientPower
-		EndChargeSpeechNotification: NuclearWeaponAvailable
-		LaunchSpeechNotification: NuclearWeaponLaunched
-		IncomingSpeechNotification: NuclearWarheadApproaching
-		MissileWeapon: raatomic
-		MissileDelay: 5
-		SpawnOffset: 1c0,427,0
-		DisplayTimerRelationships: Ally, Neutral, Enemy
-		DisplayBeacon: True
-		DisplayRadarPing: True
-		BeaconPoster: raatomicon
-		CameraRange: 10c0
-		ArrowSequence: arrow
-		ClockSequence: clock
-		CircleSequence: circles
-		SupportPowerPaletteOrder: 70
-		MissileImage: raatomic
+	# NukePowerCA:
+	# 	AllowMultiple: True
+	# 	PauseOnCondition: lowpower
+	# 	Prerequisites:
+	# 		1: ~techlevel.superweapons
+	# 	Cursor: nuke
+	# 	Icons:
+	# 		1: abomb
+	# 	ChargeInterval: 9000
+	# 	Names:
+	# 		1: Atom Bomb
+	# 	Descriptions:
+	# 		1: Launches a devastating atomic bomb\nat a target location.
+	# 	SelectTargetSpeechNotification: SelectTarget
+	# 	InsufficientPowerSpeechNotification: InsufficientPower
+	# 	EndChargeSpeechNotification: NuclearWeaponAvailable
+	# 	LaunchSpeechNotification: NuclearWeaponLaunched
+	# 	IncomingSpeechNotification: NuclearWarheadApproaching
+	# 	MissileWeapons:
+	# 		1: raatomic
+	# 	MissileDelay: 5
+	# 	SpawnOffset: 1c0,427,0
+	# 	DisplayTimerRelationships: Ally, Neutral, Enemy
+	# 	DisplayBeacon: True
+	# 	DisplayRadarPing: True
+	# 	BeaconPosters:
+	# 		1: raatomicon
+	# 	CameraRange: 10c0
+	# 	ArrowSequence: arrow
+	# 	ClockSequence: clock
+	# 	CircleSequence: circles
+	# 	SupportPowerPaletteOrder: 70
+	# 	MissileImage: raatomic
+	# 	CircleRanges:
+	# 		1: 10000
 	Power:
 		Amount: -150
 	RenderSprites:
@@ -622,9 +594,8 @@ PDOX.camea:
 	Buildable:
 		Queue: Defence, RADefence
 		BuildPaletteOrder: 120
-		Prerequisites: stek.camea, ~techlevel.superweapons
+		Prerequisites: stek.camea, ~techlevel.superweapons, ~mmcamea
 		BuildLimit: 1
-		Description: Teleports a group of units across the map.\nRequires power to operate.\nMaximum 1 can be built.\n  Special Ability: Chronoshift
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -636,46 +607,60 @@ PDOX.camea:
 	RevealsShroud:
 		Range: 6c0
 		RequiresCondition: !lowpower
-	ChronoshiftPower@chronoshift:
-		OrderName: Chronoshift
-		Prerequisites: !botplayer
-		PauseOnCondition: lowpower
-		Icon: chrono
-		ChargeInterval: 3000
-		Name: Chronoshift
-		Description: Teleports a large group of units\nacross the map.
-		SelectTargetSpeechNotification: SelectTarget
-		InsufficientPowerSpeechNotification: InsufficientPower
-		#BeginChargeSpeechNotification: ChronosphereCharging
-		#EndChargeSpeechNotification: ChronosphereReady
-		Duration: 0
-		KillCargo: False
-		DisplayRadarPing: True
-		SelectionCursor: ability
-		TargetCursor: ability
-		SupportPowerPaletteOrder: 20
-		LaunchSound: chrono2.aud
-		IncomingSound: chrono2.aud
-		Dimensions: 5, 5
-		Footprint: __x__ _xxx_ xxxxx _xxx_ __x__
-	DetonateWeaponPower@aichrono:
-		OrderName: ChronoshiftAI
-		Prerequisites: botplayer
-		PauseOnCondition: lowpower
-		Icon: chrono
-		Cursor: ability
-		ChargeInterval: 3000
-		Name: Chronoshift
-		ActivationDelay: 25
-		Description: Teleports a large group of units\nacross the map.
-		Weapon: ChronoAI
-		CameraActor: camera.placeholderhack
-		CameraRemoveDelay: 0
-		SelectTargetSpeechNotification: SelectTarget
-		InsufficientPowerSpeechNotification: InsufficientPower
-		DisplayRadarPing: True
-		LaunchSound: chrono2.aud
-		IncomingSound: chrono2.aud
+	# ChronoshiftPower@chronoshift:
+	# 	OrderName: Chronoshift
+	# 	Prerequisites:
+	# 		1: !botplayer
+	# 	PauseOnCondition: lowpower
+	# 	Icons:
+	# 		1: chrono
+	# 	ChargeInterval: 3000
+	# 	Names:
+	# 		1: Chronoshift
+	# 	Descriptions:
+	# 		1: Teleports a large group of units\nacross the map.
+	# 	SelectTargetSpeechNotification: SelectTarget
+	# 	InsufficientPowerSpeechNotification: InsufficientPower
+	# 	#BeginChargeSpeechNotification: ChronosphereCharging
+	# 	#EndChargeSpeechNotification: ChronosphereReady
+	# 	Durations:
+	# 		1: 0
+	# 	KillCargo: False
+	# 	DisplayRadarPing: True
+	# 	SelectionCursor: ability
+	# 	TargetCursor: ability
+	# 	SupportPowerPaletteOrder: 20
+	# 	LaunchSound: chrono2.aud
+	# 	IncomingSound: chrono2.aud
+	# 	Dimensions:
+	# 		1: 5, 5
+	# 	Footprints:
+	# 		1:  __x__ _xxx_ xxxxx _xxx_ __x__
+	# DetonateWeaponPower@aichrono:
+	# 	OrderName: ChronoshiftAI
+	# 	Prerequisites:
+	# 		1: botplayer
+	# 	PauseOnCondition: lowpower
+	# 	Icons:
+	# 		1: chrono
+	# 	Cursor: ability
+	# 	ChargeInterval: 3000
+	# 	Names:
+	# 		1: Chronoshift
+	# 	Descriptions:
+	# 		1: Teleports a large group of units\nacross the map.
+	# 	ActivationDelay: 25
+	# 	Descriptions:
+	# 		1: Teleports a large group of units\nacross the map.
+	# 	Weapons:
+	# 		1: ChronoAI
+	# 	CameraActor: camera.placeholderhack
+	# 	CameraRemoveDelay: 0
+	# 	SelectTargetSpeechNotification: SelectTarget
+	# 	InsufficientPowerSpeechNotification: InsufficientPower
+	# 	DisplayRadarPing: True
+	# 	LaunchSound: chrono2.aud
+	# 	IncomingSound: chrono2.aud
 	Power:
 		Amount: -200
 	RenderSprites:
@@ -689,7 +674,7 @@ HOSP.camea:
 	Buildable:
 		Queue: Defence, RADefence
 		BuildPaletteOrder: 120
-		Prerequisites: stek.camea, ~techlevel.medium
+		Prerequisites: stek.camea, ~techlevel.medium, ~mmcamea
 		BuildLimit: 1
 		Description: Heals nearby infantry\nLimit: 1
 	Building:
@@ -711,7 +696,7 @@ ATWR.camea:
 	Inherits: ATWR
 	Buildable:
 		BuildPaletteOrder: 60
-		Prerequisites: vehicleproduction, ~techlevel.high
+		Prerequisites: vehicleproductioncamea, ~techlevel.high, ~mmcamea
 		Queue: Defence, RADefence
 	RenderSprites:
 		Image: ATWR
@@ -720,7 +705,7 @@ OBLI.camea:
 	Inherits: OBLI
 	Buildable:
 		BuildPaletteOrder: 60
-		Prerequisites: vehicleproduction, ~techlevel.high
+		Prerequisites: vehicleproductioncamea, ~techlevel.high, ~mmcamea
 		Queue: Defence, RADefence
 	RenderSprites:
 		Image: OBLI
@@ -729,7 +714,7 @@ TSLA.camea:
 	Inherits: TSLA
 	Buildable:
 		BuildPaletteOrder: 60
-		Prerequisites: vehicleproduction, ~techlevel.high
+		Prerequisites: vehicleproductioncamea, ~techlevel.high, ~mmcamea
 		Queue: Defence, RADefence
 	RenderSprites:
 		Image: TSLA
@@ -739,7 +724,7 @@ RAGUN.camea:
 	Buildable:
 		Queue: Defence, RADefence
 		BuildPaletteOrder: 50
-		Prerequisites: barracks, ~techlevel.medium
+		Prerequisites: hand.camea, ~techlevel.medium, ~mmcamea
 	RenderSprites:
 		Image: RAGUN
 
@@ -748,7 +733,7 @@ HBOX.camea:
 	Buildable:
 		Queue: Defence, RADefence
 		BuildPaletteOrder: 50
-		Prerequisites: barracks, ~techlevel.medium
+		Prerequisites: hand.camea, ~techlevel.medium, ~mmcamea
 	RenderSprites:
 		Image: HBOX
 
@@ -757,7 +742,7 @@ RASAM.camea:
 	Buildable:
 		Queue: Defence, RADefence
 		BuildPaletteOrder: 100
-		Prerequisites: hq.camea, ~techlevel.medium
+		Prerequisites: hq.camea, ~techlevel.medium, ~mmcamea
 		Description: Anti-Air base defense.\nRequires power to operate.\n  Strong vs Aircraft\n  Weak vs Ground units
 	RenderSprites:
 		Image: RASAM
@@ -767,7 +752,7 @@ GAP.camea:
 	Buildable:
 		Queue: Defence, RADefence
 		BuildPaletteOrder: 110
-		Prerequisites: stek.camea, ~techlevel.medium
+		Prerequisites: stek.camea, ~techlevel.medium, ~mmcamea
 		Description: Obscures the enemy's view with shroud.\nRequires power to operate.
 	RenderSprites:
 		Image: GAP
@@ -778,7 +763,7 @@ MAMMOTHBUNKER.camea:
 	Inherits@shape: ^2x2Shape
 	Buildable:
 		BuildPaletteOrder: 70
-		Prerequisites: stek.camea, ~techlevel.high
+		Prerequisites: stek.camea, ~techlevel.high, ~mmcamea
 		Queue: Defence, RADefence
 		Description: All-purpose defensive structure.\n  Strong vs Aircraft, Tanks\n  Weak vs Infantry
 	Valued:
@@ -826,7 +811,7 @@ MAMMOTHBUNKER.camea:
 E7.camea:
 	Inherits: E7
 	Buildable:
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Camea
 		Prerequisites: stek.camea, ~techlevel.high
 	RenderSprites:
 		Image: E7
@@ -834,7 +819,7 @@ E7.camea:
 SHOK.camea:
 	Inherits: SHOK
 	Buildable:
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Camea
 		Prerequisites: stek.camea, ~techlevel.high
 	RenderSprites:
 		Image: SHOK
@@ -852,14 +837,14 @@ RMBO.camea:
 	Inherits: RMBO
 	Buildable:
 		Prerequisites: stek.camea, ~techlevel.high
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Camea
 	RenderSprites:
 		Image: RMBO
 
 MECH.camea:
 	Inherits: MECH
 	Buildable:
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Camea
 		Prerequisites: hq.camea, ~techlevel.medium
 	RenderSprites:
 		Image: MECH
@@ -867,7 +852,7 @@ MECH.camea:
 JEEP.camea:
 	Inherits: JEEP
 	Buildable:
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Camea
 		Prerequisites: ~techlevel.medium
 	RenderSprites:
 		Image: JEEP
@@ -875,7 +860,7 @@ JEEP.camea:
 BIKE.camea:
 	Inherits: BIKE
 	Buildable:
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Camea
 		Prerequisites: ~techlevel.medium
 	RenderSprites:
 		Image: BIKE
@@ -883,7 +868,7 @@ BIKE.camea:
 1TNK.camea:
 	Inherits: 1TNK
 	Buildable:
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Camea
 		Prerequisites: ~techlevel.medium
 	RenderSprites:
 		Image: 1TNK
@@ -891,7 +876,7 @@ BIKE.camea:
 MTNK.camea:
 	Inherits: MTNK
 	Buildable:
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Camea
 		Prerequisites: ~techlevel.medium
 	RenderSprites:
 		Image: MTNK
@@ -899,7 +884,7 @@ MTNK.camea:
 3TNK.camea:
 	Inherits: 3TNK
 	Buildable:
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Camea
 		Prerequisites: ~techlevel.medium
 	RenderSprites:
 		Image: 3TNK
@@ -907,7 +892,7 @@ MTNK.camea:
 V2RL.camea:
 	Inherits: V2RL
 	Buildable:
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Camea
 		Prerequisites: hq.camea, ~techlevel.medium
 	RenderSprites:
 		Image: V2RL
@@ -916,7 +901,7 @@ FTNK.camea:
 	Inherits: FTNK
 	Buildable:
 		Prerequisites: ~techlevel.medium
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Camea
 	RenderSprites:
 		Image: FTNK
 
@@ -924,7 +909,7 @@ HTNK.camea:
 	Inherits: HTNK
 	Buildable:
 		Prerequisites: stek.camea
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Camea
 	RenderSprites:
 		Image: HTNK
 
@@ -932,14 +917,14 @@ STNK.camea:
 	Inherits: STNK
 	Buildable:
 		Prerequisites: stek.camea
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Camea
 	RenderSprites:
 		Image: STNK
 
 TTNK.camea:
 	Inherits: TTNK
 	Buildable:
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Camea
 		Prerequisites: hq.camea, ~techlevel.high
 	RenderSprites:
 		Image: TTNK
@@ -947,7 +932,7 @@ TTNK.camea:
 CTNK.camea:
 	Inherits: CTNK
 	Buildable:
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Camea
 		Prerequisites: stek.camea, ~techlevel.high
 	RenderSprites:
 		Image: CTNK
@@ -957,8 +942,8 @@ raapc.camea:
 	Valued:
 		Cost: 2000
 	Buildable:
-		Queue: Vehicle, RAVehicle
-		Prerequisites: barracks
+		Queue: Vehicle.Camea
+		Prerequisites: hand.camea
 	Cargo:
 		InitialUnits: SHOK.camea, SHOK.camea, SHOK.camea, SHOK.camea, medi
 	AutoDeployer:
@@ -968,7 +953,7 @@ raapc.camea:
 DTRK.camea:
 	Inherits: DTRK
 	Buildable:
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Camea
 		Prerequisites: mslo.camea, ~techlevel.high
 	RenderSprites:
 		Image: DTRK
@@ -977,14 +962,14 @@ MSAM.camea:
 	Inherits: MSAM
 	Buildable:
 		Prerequisites: stek.camea
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Camea
 	RenderSprites:
 		Image: MSAM
 
 RAARTY.camea:
 	Inherits: RAARTY
 	Buildable:
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Camea
 	RenderSprites:
 		Image: RAARTY
 
@@ -992,7 +977,7 @@ MSSM.camea:
 	Inherits: MSSM
 	Buildable:
 		Prerequisites: stek.camea
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Camea
 		Icon: icon
 	RenderSprites:
 		Image: mlrs
@@ -1000,7 +985,7 @@ MSSM.camea:
 RAHELI.camea:
 	Inherits: RAHELI
 	Buildable:
-		Queue: Aircraft, RAAircraft
+		Queue: Aircraft.Camea
 		Prerequisites: ~techlevel.medium
 	RenderSprites:
 		Image: RAHELI
@@ -1008,7 +993,7 @@ RAHELI.camea:
 HIND.camea:
 	Inherits: HIND
 	Buildable:
-		Queue: Aircraft, RAAircraft
+		Queue: Aircraft.Camea
 		Prerequisites: ~techlevel.medium
 	RenderSprites:
 		Image: HIND
@@ -1017,14 +1002,14 @@ ORCA.camea:
 	Inherits: ORCA
 	Buildable:
 		Prerequisites: ~techlevel.medium
-		Queue: Aircraft, RAAircraft
+		Queue: Aircraft.Camea
 	RenderSprites:
 		Image: ORCA
 
 YAK.camea:
 	Inherits: YAK
 	Buildable:
-		Queue: Aircraft, RAAircraft
+		Queue: Aircraft.Camea
 		Prerequisites: ~techlevel.medium
 	RenderSprites:
 		Image: YAK
@@ -1032,7 +1017,7 @@ YAK.camea:
 MIG.camea:
 	Inherits: MIG
 	Buildable:
-		Queue: Aircraft, RAAircraft
+		Queue: Aircraft.Camea
 		Prerequisites: stek.camea, ~techlevel.high
 	RenderSprites:
 		Image: MIG
@@ -1042,7 +1027,7 @@ TRAN.camea:
 	Inherits@bot: ^BotMicromanageable
 	Buildable:
 		Prerequisites: ~techlevel.medium
-		Queue: Aircraft, RAAircraft
+		Queue: Aircraft.Camea
 		Description: Fast Infantry Transport Helicopter.\nAlready with 12 crewmen on board\n  Unarmed
 	Cargo:
 		InitialUnits: e1, e1, e2, e2, e4, e4, e5, e5, rae4, rae4, shok, shok
@@ -1066,6 +1051,6 @@ HARV.camea:
 	Inherits: HARV
 	Buildable:
 		Prerequisites: raproc.camea
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Camea
 	RenderSprites:
 		Image: HARV

@@ -4,38 +4,38 @@ World:
 		InternalName: swempire
 		Game: Star Wars
 		Side: Star Wars
-		Description: Galactic Empire from Star Wars\nBased on CnC Meets Star Wars\nSupport powers: Mercenary Airstrike, Ion Cannon, Force Shield\n- Super unit: Star Destroyer
+		Description: faction-starwars-empire.description
 	FactionCA@swrebels:
 		Name: Rebel Alliance
 		InternalName: swrebels
 		Game: Star Wars
 		Side: Star Wars
-		Description: Rebel Alliance from Star Wars\nBased on CnC Meets Star Wars\nSupport powers: Mercenary Airstrike, Atomic Bomb, Force Shield\n- Hero unit: Millenary Falcon
+		Description: faction-starwars-rebel.description
 	FactionCA@swrepublic:
 		Name: Galactic Republic
 		InternalName: swrepublic
 		Game: Star Wars
 		Side: Star Wars
-		Description: Republic from Clone Wars\nBased on CnC Meets Star Wars\nSupport powers: Mercenary Airstrike, Ion Cannon, Force Shield
+		Description: faction-starwars-republic.description
 	FactionCA@swseparatist:
 		Name: Separatists
 		InternalName: swseparatist
 		Game: Star Wars
 		Side: Star Wars
-		Description: Separatists from Clone Wars\nBased on CnC Meets Star Wars\nSupport powers: Mercenary Airstrike, Atomic Bomb, Force Shield\nFeatures:\n- Most units immune to mind control\n- Cheap Infantry Droids\n- Shield Droideka\n- *Weak to EMP weapons
+		Description: faction-starwars-separatist.description
 	FactionCA@swhutt:
 		Name: Hutt Clans
 		InternalName: swhutt
 		Game: Star Wars
 		Side: Star Wars
-		Description: Hutt Clan from Star Wars\nBased on CnC Meets Star Wars\nSupport powers: Mercenary Airstrike, Atomic Bomb, Force Shield\nFeatures:\n- You can buy all kinds of units derived from other SW factions\n- *Mechanical Units are somewhat limited\n- Has multiple sabotage units\n- Broad Economic Power
+		Description: faction-starwars-hutt.description
 	FactionCA@RandomSW:
 		Name: Any
 		InternalName: RandomSW
 		RandomFactionMembers: swempire, swrebels, swrepublic, swseparatist, swhutt
 		Game: Star Wars
 		Side: Random
-		Description: Random Faction\nA random faction from Star Wars will be chosen when the game starts.
+		Description: faction-starwars-random.description
 	####################################################################################################
 	#		MPSTARTUNITS
 	####################################################################################################
@@ -220,7 +220,7 @@ Player:
 		BuildPaletteOrder: 100
 		Prerequisites: anyhq
 		# Queue: Building, RABuilding
-		Description: Produces vehicles
+		Description: actor-player.description
 	Building:
 		Footprint: xxxx xxxx xxxx ====
 		Dimensions: 4,4
@@ -279,7 +279,7 @@ swsilo:
 		BuildPaletteOrder: 35
 		Prerequisites: ~swproc
 		Queue: Defence, RADefence
-		Description: Stores processed Resources
+		Description: actor-swsilo.description
 	Building:
 		Footprint: xx
 		Dimensions: 2,1
@@ -328,7 +328,7 @@ swnuke:
 		BuildPaletteOrder: 10
 		Prerequisites: ~disabled
 		Queue: Building, RABuilding
-		Description: Generates power
+		Description: actor-swnuke.description
 	Building:
 		Footprint: xX xx ==
 		Dimensions: 2,3
@@ -362,7 +362,7 @@ swnuk2:
 		BuildPaletteOrder: 80
 		Prerequisites: anyhq, ~techlevel.medium. ~disabled
 		Queue: Building, RABuilding
-		Description: Provides more power, cheaper than the\nstandard Power Plant
+		Description: actor-swnuk2.description
 	Building:
 		Footprint: xX xx ==
 		Dimensions: 2,3
@@ -398,7 +398,7 @@ swhq:
 		BuildPaletteOrder: 70
 		Prerequisites: swproc, ~techlevel.medium
 		Queue: None
-		Description: Provides radar and Air Strike support power.\nUnlocks higher-tech units and buildings.\nRequires power to operate.
+		Description: actor-swhq.description
 	Building:
 		Footprint: X_ xx ==
 		Dimensions: 2,3
@@ -529,7 +529,7 @@ swfact.empire:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 1000
 		Prerequisites: ~wip-content
-		Description: Builds structures
+		Description: template-conyard.description
 	ProvidesPrerequisite@factiongdi:
 		Prerequisite: mmswempire
 	RenderSprites:
@@ -549,7 +549,7 @@ swmcv.empire:
 		Prerequisites: swhqe, ~techlevel.medium, swfix
 		Queue: Vehicle, RAVehicle
 		BuildDurationModifier: 40
-		Description: Deploys into another Construction Yard.\n  Unarmed
+		Description: template-mcv.description
 	Selectable:
 		Priority: 4
 		DecorationBounds: 1536, 1536
@@ -601,7 +601,7 @@ swpower:
 		BuildPaletteOrder: 10
 		Prerequisites: ~swfact
 		Queue: Building, RABuilding
-		Description: Generates power
+		Description: actor-swpower.description
 	Building:
 		Footprint: = x
 		Dimensions: 1,2
@@ -636,7 +636,7 @@ swshelt:
 		BuildPaletteOrder: 10
 		Prerequisites: swhqe, ~mmswempire
 		Queue: Building, RABuilding
-		Description: Generates power
+		Description: actor-swshelt.description
 	Building:
 		Footprint: xX xx ==
 		Dimensions: 2,3
@@ -668,7 +668,7 @@ swpyle:
 		BuildPaletteOrder: 30
 		Prerequisites: swpower, ~mmswempire
 		Queue: Building, RABuilding
-		Description: Trains infantry
+		Description: actor-swpyle.description
 	Building:
 		Footprint: =x= xxx ===
 		Dimensions: 3,3
@@ -752,7 +752,7 @@ swhqe:
 		Names:
 			1: Air Strike
 		Descriptions:
-			1: Deploy an aerial napalm strike.\nBurns buildings and infantry along a line.
+			1: power-starwars-protonbomb.description
 		EndChargeSpeechNotification: AirstrikeReady
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
@@ -800,7 +800,7 @@ swweap:
 		BuildPaletteOrder: 40
 		Prerequisites: swproc, swpyle, ~mmswempire
 		Queue: Building, RABuilding
-		Description: Produces vehicles
+		Description: actor-swweap.description
 	Building:
 		Footprint: xxxx xxxx ====
 		Dimensions: 4,3
@@ -859,7 +859,7 @@ sweproc:
 		BuildPaletteOrder: 20
 		Prerequisites: swpower, ~mmswempire
 		Queue: Building, RABuilding
-		Description: Processes raw Minerals\ninto useable resources
+		Description: actor-sweproc.description
 	Building:
 		Footprint: xX xx ==
 		Dimensions: 2,3
@@ -926,7 +926,7 @@ swnurse:
 		BuildDuration: 1500
 		Prerequisites: swproc, swpyle, ~mmswempire
 		Queue: Building, RABuilding
-		Description: Generates passive income, requires animals to work
+		Description: actor-swnurse.description
 	Building:
 		Footprint: xX xx ==
 		Dimensions: 2,3
@@ -1166,7 +1166,7 @@ swfood:
 		BuildPaletteOrder: 80
 		Prerequisites: swproc, swpyle, swhqe, ~mmswempire
 		Queue: Building, RABuilding
-		Description: Generates farm tiles, requires Harversters to work
+		Description: actor-swfood.description
 	Building:
 		Footprint: xX xx
 		Dimensions: 2,2
@@ -1217,7 +1217,7 @@ swstarport:
 		BuildPaletteOrder: 40
 		Prerequisites: swhqe, ~mmswempire
 		Queue: Building, RABuilding
-		Description: Provides a dropzone\nfor vehicle reinforcements
+		Description: actor-swstarport.description
 	Building:
 		Footprint: XXX+ xxx+ ====
 		Dimensions: 4,3
@@ -1297,7 +1297,7 @@ swhpad.empire:
 		BuildPaletteOrder: 50
 		Prerequisites: swproc, swpyle, ~mmswempire
 		Queue: Building, RABuilding
-		Description: Produces, rearms and\nrepairs aircraft
+		Description: template-airfield.description
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -1441,7 +1441,7 @@ swfact.rebels:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 1000
 		Prerequisites: ~wip-content
-		Description: Builds structures
+		Description: template-conyard.description
 	ProvidesPrerequisite@factionnod:
 		Prerequisite: mmswrebels
 	RenderSprites:
@@ -1456,7 +1456,7 @@ swmcv.rebels:
 		Prerequisites: swhqre, ~techlevel.medium, swfix
 		Queue: Vehicle, RAVehicle
 		BuildDurationModifier: 40
-		Description: Deploys into another Construction Yard.\n  Unarmed
+		Description: template-mcv.description
 	Transforms:
 		IntoActor: swfact.rebels
 
@@ -1492,7 +1492,7 @@ swhand:
 		BuildPaletteOrder: 30
 		Prerequisites: swpower, ~mmswrebels
 		Queue: Building, RABuilding
-		Description: Trains infantry
+		Description: actor-swhand.description
 	Building:
 		Footprint: =x= xxx ===
 		Dimensions: 3,3
@@ -1573,7 +1573,7 @@ swweapre:
 		BuildPaletteOrder: 40
 		Prerequisites: swproc, swhand, ~mmswrebels
 		Queue: Building, RABuilding
-		Description: Produces vehicles
+		Description: actor-swweapre.description
 	Building:
 		Footprint: xxxx xxxx ====
 		Dimensions: 4,3
@@ -1647,7 +1647,7 @@ swhqre:
 		Names:
 			1: Air Strike
 		Descriptions:
-			1: Deploy an aerial napalm strike.\nBurns buildings and infantry along a line.
+			1: power-starwars-protonbomb.description
 		EndChargeSpeechNotification: AirstrikeReady
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
@@ -1682,7 +1682,7 @@ swreproc:
 		BuildPaletteOrder: 20
 		Prerequisites: swpower, ~mmswrebels
 		Queue: Building, RABuilding
-		Description: Processes raw Minerals\ninto useable resources
+		Description: actor-swreproc.description
 	FreeActor:
 		Actor: swreharv
 
@@ -1692,14 +1692,14 @@ swnursere:
 	Buildable:
 		Prerequisites: swproc, swhand, ~mmswrebels
 		Queue: Building, RABuilding
-		Description: Generates passive income, requires animals to work
+		Description: actor-swnursere.description
 
 swnursere.bot:
 	Inherits: swnurse.bot
 	Buildable:
 		Prerequisites: swproc, swhand, ~botplayer
 		Queue: Building, RABuilding
-		Description: Generates passive income, requires animals to work
+		Description: actor-swnursere.description
 	RenderSprites:
 		Image: swnursere
 
@@ -1732,7 +1732,7 @@ swafld:
 		BuildPaletteOrder: 40
 		Prerequisites: swhqre, ~mmswrebels
 		Queue: Building, RABuilding
-		Description: Provides a dropzone\nfor vehicle reinforcements
+		Description: actor-swafld.description
 	Building:
 		Footprint: XXX+ xxx+ ====
 		Dimensions: 4,3
@@ -1809,7 +1809,7 @@ swhpad.rebels:
 		BuildPaletteOrder: 50
 		Prerequisites: swproc, swhand, ~mmswrebels
 		Queue: Building, RABuilding
-		Description: Produces, rearms and\nrepairs aircraft
+		Description: template-airfield.description
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -1953,7 +1953,7 @@ swfact.republic:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 1000
 		Prerequisites: ~wip-content
-		Description: Builds structures
+		Description: template-conyard.description
 	ProvidesPrerequisite@factionrepublic:
 		Prerequisite: mmswrepublic
 	RenderSprites:
@@ -1968,7 +1968,7 @@ swmcv.republic:
 		Prerequisites: swhqr, ~techlevel.medium, swfix, ~mmswrepublic
 		Queue: Vehicle, RAVehicle
 		BuildDurationModifier: 40
-		Description: Deploys into another Construction Yard.\n  Unarmed
+		Description: template-mcv.description
 	Transforms:
 		IntoActor: swfact.republic
 	# ProvidesPrerequisite@faction:
@@ -2004,7 +2004,7 @@ swpyler:
 		BuildPaletteOrder: 30
 		Prerequisites: swpower, ~mmswrepublic
 		Queue: Building, RABuilding
-		Description: Trains infantry
+		Description: actor-swpyler.description
 	Building:
 		Footprint: =x= xxx ===
 		Dimensions: 3,3
@@ -2089,7 +2089,7 @@ swweapr:
 		BuildPaletteOrder: 40
 		Prerequisites: swproc, swpyler, ~mmswrepublic
 		Queue: Building, RABuilding
-		Description: Produces vehicles
+		Description: actor-swweapr.description
 	Building:
 		Footprint: xxxx xxxx ====
 		Dimensions: 4,3
@@ -2142,7 +2142,7 @@ swrproc:
 		BuildPaletteOrder: 20
 		Prerequisites: swpower, ~mmswrepublic
 		Queue: Building, RABuilding
-		Description: Processes raw Minerals\ninto useable resources
+		Description: actor-swrproc.description
 	FreeActor:
 		Actor: swrharv
 
@@ -2170,7 +2170,7 @@ swhqr:
 		Names:
 			1: Airborne
 		Descriptions:
-			1: Cargo planes drop a squad of infantry\nanywhere on the map.
+			1: power-starwars-clonedrop.description
 		DropItems:
 			1: swe1clone,swe1clone,swe1clone,swe3clone,swe3clone,swe1clone,swe1clone,swe1clone,swe3clone,swe3clone,swe1clone,swe1clone,swe1clone,swe3clone,swe3clone,swe1clone,swe1clone,swe1clone,swe3clone,swe3clone,swe1clone,swe1clone,swe1clone,swe3clone,swe3clone,swe1clone,swe1clone,swe1clone,swe3clone,swe3clone,swe1clone,swe1clone,swe1clone,swe3clone,swe3clone,swe1clone,swe1clone,swe1clone,swe3clone,swe3clone,swe1clone,swe1clone,swe1clone,swe3clone,swe3clone
 		ReinforcementsArrivedSpeechNotification: ReinforcementsArrived
@@ -2205,14 +2205,14 @@ swnurser:
 	Buildable:
 		Prerequisites: swproc, swpyler, ~mmswrepublic
 		Queue: Building, RABuilding
-		Description: Generates passive income, requires animals to work
+		Description: actor-swnurser.description
 
 swnurser.bot:
 	Inherits: swnurse.bot
 	Buildable:
 		Prerequisites: swproc, swpyler, ~botplayer
 		Queue: Building, RABuilding
-		Description: Generates passive income, requires animals to work
+		Description: actor-swnursere.description
 	RenderSprites:
 		Image: swnurser
 
@@ -2245,7 +2245,7 @@ swstarportr:
 		BuildPaletteOrder: 40
 		Prerequisites: swhqr, ~mmswrepublic
 		Queue: Building, RABuilding
-		Description: Provides a dropzone\nfor vehicle reinforcements
+		Description: actor-swstarportr.description
 	Building:
 		Footprint: XXX+ xxx+ ====
 		Dimensions: 4,3
@@ -2322,7 +2322,7 @@ swhpad.republic:
 		BuildPaletteOrder: 50
 		Prerequisites: swproc, swpyler, ~mmswrepublic
 		Queue: Building, RABuilding
-		Description: Produces, rearms and\nrepairs aircraft
+		Description: template-airfield.description
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -2466,7 +2466,7 @@ swfact.separatist:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 1000
 		Prerequisites: ~wip-content
-		Description: Builds structures
+		Description: template-conyard.description
 	ProvidesPrerequisite@factionnod:
 		Prerequisite: mmswseparatist
 	RenderSprites:
@@ -2481,7 +2481,7 @@ swmcv.separatist:
 		Prerequisites: swhqs, ~techlevel.medium, swfix, ~mmswseparatist
 		Queue: Vehicle, RAVehicle
 		BuildDurationModifier: 40
-		Description: Deploys into another Construction Yard.\n  Unarmed
+		Description: template-mcv.description
 	Transforms:
 		IntoActor: swfact.separatist
 	RenderSprites:
@@ -2548,7 +2548,7 @@ swweapd:
 		BuildPaletteOrder: 40
 		Prerequisites: swproc, swbarrdroid, ~mmswseparatist
 		Queue: Building, RABuilding
-		Description: Produces vehicles
+		Description: actor-swweapd.description
 	Building:
 		Footprint: xxxx xxxx ====
 		Dimensions: 4,3
@@ -2620,7 +2620,7 @@ swhqs:
 		Names:
 			1: Air Strike
 		Descriptions:
-			1: Deploy an aerial napalm strike.\nBurns buildings and infantry along a line.
+			1: power-starwars-protonbomb.description
 		EndChargeSpeechNotification: AirstrikeReady
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
@@ -2653,7 +2653,7 @@ swdproc:
 		BuildPaletteOrder: 20
 		Prerequisites: swpower, ~mmswseparatist
 		Queue: Building, RABuilding
-		Description: Processes raw Minerals\ninto useable resources
+		Description: actor-swdproc.description
 	FreeActor:
 		Actor: swdharv
 
@@ -2673,7 +2673,7 @@ swbarrdroid:
 		BuildPaletteOrder: 30
 		Prerequisites: swpower, ~mmswseparatist
 		Queue: Building, RABuilding
-		Description: Trains infantry.\nProduces droids
+		Description: actor-swbarrdroid.description
 	Building:
 		Footprint: =x= xxx ===
 		Dimensions: 3,3
@@ -2722,7 +2722,7 @@ swnursed:
 	Buildable:
 		Prerequisites: swproc, swbarrdroid, ~mmswseparatist
 		Queue: Building, RABuilding
-		Description: Generates passive income, requires animals to work
+		Description: actor-swnursed.description
 
 swnursed.bot:
 	Inherits: swnurse.bot
@@ -2730,7 +2730,7 @@ swnursed.bot:
 	Buildable:
 		Prerequisites: swproc, swbarrdroid, ~botplayer
 		Queue: Building, RABuilding
-		Description: Generates passive income, requires animals to work
+		Description: actor-swnursere.description
 	RenderSprites:
 		Image: swnursed
 
@@ -2740,7 +2740,7 @@ swfoodd:
 	Buildable:
 		Prerequisites: swproc, swbarrdroid, swhqs, ~mmswseparatist
 		Queue: Building, RABuilding
-		Description: Generates passive income, requires animals to work
+		Description: actor-swfoodd.description
 
 swforth:
 	Inherits: ^SWFortressBuilding
@@ -2782,7 +2782,7 @@ swtrade:
 		BuildPaletteOrder: 40
 		Prerequisites: swhqs, ~mmswseparatist
 		Queue: Building, RABuilding
-		Description: Provides a dropzone\nfor vehicle reinforcements
+		Description: actor-swtrade.description
 	Building:
 		Footprint: XXX+ xxx+ ====
 		Dimensions: 4,3
@@ -2862,7 +2862,7 @@ swhpad.swseparatist:
 		BuildPaletteOrder: 50
 		Prerequisites: swproc, swbarrdroid, ~mmswseparatist
 		Queue: Building, RABuilding
-		Description: Produces, rearms and\nrepairs aircraft
+		Description: template-airfield.description
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -2915,7 +2915,7 @@ swmcv.hutt:
 		Prerequisites: anyhq, ~techlevel.medium, swfix
 		Queue: Vehicle, RAVehicle
 		BuildDurationModifier: 40
-		Description: Deploys into another Construction Yard.\n  Unarmed
+		Description: template-mcv.description
 	Transforms:
 		IntoActor: swfact.hutt
 	RenderSprites:
@@ -3044,7 +3044,7 @@ swfact.hutt:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 1000
 		Prerequisites: ~wip-content
-		Description: Builds structures
+		Description: template-conyard.description
 	ProvidesPrerequisite@factionnod:
 		Prerequisite: mmswhutt
 	RenderSprites:
@@ -3063,7 +3063,7 @@ swproc:
 		BuildPaletteOrder: 20
 		Prerequisites: swpower, ~mmswhutt
 		Queue: Building, RABuilding
-		Description: Processes raw Resources\ninto useable resources
+		Description: actor-swproc.description
 	Refinery:
 		DockAngle: 448
 		DockOffset: 0, 2c0, 0
@@ -3102,7 +3102,7 @@ swpyleh:
 		BuildPaletteOrder: 30
 		Prerequisites: swpower, ~mmswhutt
 		Queue: Building, RABuilding
-		Description: Trains infantry
+		Description: actor-swpyleh.description
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -3154,7 +3154,7 @@ swnurseh:
 	Buildable:
 		Prerequisites: swproc, swpyleh, ~mmswhutt
 		Queue: Building, RABuilding
-		Description: Generates passive income, requires animals to work
+		Description: actor-swnurseh.description
 
 swnurseh.bot:
 	Inherits: swnurse.bot
@@ -3162,7 +3162,7 @@ swnurseh.bot:
 	Buildable:
 		Prerequisites: swproc, swpyleh, ~botplayer
 		Queue: Building, RABuilding
-		Description: Generates passive income, requires animals to work
+		Description: actor-swnursere.description
 	RenderSprites:
 		Image: swnurser
 
@@ -3172,7 +3172,7 @@ swfoodh:
 	Buildable:
 		Prerequisites: swproc, swpyleh, anyhq, ~mmswhutt
 		Queue: Building, RABuilding
-		Description: Generates passive income, requires animals to work
+		Description: actor-swfoodh.description
 	RenderSprites:
 		Image: swfoodd
 
@@ -3198,7 +3198,7 @@ swafldh:
 		BuildPaletteOrder: 40
 		Prerequisites: swproc, ~mmswhutt
 		Queue: Building, RABuilding
-		Description: Provides a dropzone\nfor vehicle reinforcements
+		Description: actor-swafldh.description
 	Building:
 		Footprint: XXX+ xxx+ ====
 		Dimensions: 4,3
@@ -3272,7 +3272,7 @@ swhpad.hutt:
 		BuildPaletteOrder: 50
 		Prerequisites: swproc, swpyleh, ~mmswhutt
 		Queue: Building, RABuilding
-		Description: Produces, rearms and\nrepairs aircraft
+		Description: template-airfield.description
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -3335,7 +3335,7 @@ swhqh:
 		Names:
 			1: Air Strike
 		Descriptions:
-			1: Deploy an aerial napalm strike.\nBurns buildings and infantry along a line.
+			1: power-starwars-protonbomb.description
 		EndChargeSpeechNotification: AirstrikeReady
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
@@ -3378,7 +3378,7 @@ SWFIX:
 		BuildPaletteOrder: 60
 		Prerequisites: vehicleproduction, ~swfact
 		Queue: Building, RABuilding
-		Description: Repairs vehicles
+		Description: actor-swfix.description
 	Building:
 		Footprint: _+_ +++ _+_
 		Dimensions: 3,3
@@ -3429,7 +3429,7 @@ sweye:
 		BuildPaletteOrder: 100
 		Prerequisites: swhqr, ~techlevel.high, !ionc, ~mmswrepublic
 		Queue: Building, RABuilding
-		Description: Provides radar and Orbital Ion Cannon support power.\nRequires power to operate.
+		Description: actor-sweye.description
 	Building:
 		Footprint: xxx xxx ===
 		Dimensions: 3,3
@@ -3462,8 +3462,8 @@ sweye:
 		ChargeInterval: 6000
 		Names: 
 			1: Orbital Strike
-		Descriptions: 
-			1: Initiate an orbital strike from the fleet above.\nApplies instant damage to a small area.
+		Descriptions:
+			1: power-starwars-orbitalstrike.description
 		BeginChargeSpeechNotification: IonCannonCharging
 		EndChargeSpeechNotification: IonCannonReady
 		SelectTargetSpeechNotification: SelectTarget
@@ -3494,7 +3494,7 @@ sweyee:
 		BuildPaletteOrder: 100
 		Prerequisites: swhqe, ~techlevel.high, !ionc, ~mmswempire
 		Queue: Building, RABuilding
-		Description: Provides radar and Death Star support power.\nRequires power to operate.
+		Description: actor-sweyee.description
 	IonCannonPower:
 		AllowMultiple: True
 		PauseOnCondition: lowpower
@@ -3507,7 +3507,7 @@ sweyee:
 		Names: 
 			1: Death Star
 		Descriptions:
-			1: Initiate an Death Star strike.\nApplies instant damage to a small area.
+			1: power-starwars-deathstar.description
 		BeginChargeSpeechNotification: SWIonCannonCharging
 		EndChargeSpeechNotification: SWIonCannonReady
 		SelectTargetSpeechNotification: SelectTarget
@@ -3541,7 +3541,7 @@ swtmpl:
 		BuildPaletteOrder: 100
 		Prerequisites: swhqr, ~techlevel.high, !nodnuke, ~mmswrebels
 		Queue: Building, RABuilding
-		Description: Provides Nuclear Strike support power.\nUnlocks Hi-Tech.\nRequires power to operate.
+		Description: actor-swtmpl.description
 	Building:
 		Footprint: xxx xxx ===
 		Dimensions: 3,3
@@ -3570,7 +3570,7 @@ swtmpl:
 		Names:
 			1: Nuclear Strike
 		Descriptions:
-			1: Launch a tactical nuclear warhead.\nApplies heavy damage over a large area.
+			1: power-nuke.description
 		EndChargeSpeechNotification: NuclearWeaponAvailable
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
@@ -3626,7 +3626,7 @@ swdtmpl:
 		BuildPaletteOrder: 100
 		Prerequisites: swhqs, ~techlevel.high, !nodnuke, ~mmswseparatist
 		Queue: Building, RABuilding
-		Description: Provides Nuclear Strike support power.\nUnlocks Hi-Tech.\nRequires power to operate.
+		Description: actor-swdtmpl.description
 	Building:
 		Footprint: xxx xxx ===
 		Dimensions: 3,3
@@ -3655,7 +3655,7 @@ swdtmpl:
 		Names:
 			1: Nuclear Strike
 		Descriptions:
-			1: Launch a tactical nuclear warhead.\nApplies heavy damage over a large area.
+			1: power-nuke.description
 		EndChargeSpeechNotification: NuclearWeaponAvailable
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
@@ -3712,7 +3712,7 @@ swpalace:
 		BuildPaletteOrder: 100
 		Prerequisites: swhqh, ~techlevel.high, !nodnuke, ~mmswhutt
 		Queue: Building, RABuilding
-		Description: Provides Nuclear Strike support power.\nUnlocks Hi-Tech.\nRequires power to operate.
+		Description: actor-swpalace.description
 	Building:
 		Footprint: xxx xxx ===
 		Dimensions: 3,3
@@ -3740,7 +3740,7 @@ swpalace:
 		Names:
 			1: Nuclear Strike
 		Descriptions:
-			1: Launch a tactical nuclear warhead.\nApplies heavy damage over a large area.
+			1: power-nuke.description
 		EndChargeSpeechNotification: NuclearWeaponAvailable
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
@@ -3812,7 +3812,7 @@ swgun.empire:
 		BuildPaletteOrder: 45
 		Prerequisites: barracks, anyhq, ~swfact, ~!mmswhutt
 		Queue: Defence, RADefence
-		Description: Basic Anti-Tank base defense.\n  Strong vs Tanks, vehicles\n  Weak vs Infantry\n  Can attack Aircraft
+		Description: actor-gun.description
 	Building:
 	Health:
 		HP: 100000
@@ -3856,7 +3856,7 @@ swgun.rebels:
 		BuildPaletteOrder: 45
 		Prerequisites: barracks, anyhq, ~swfact, ~!mmswrebels
 		Queue: Defence, RADefence
-		Description: Basic Anti-Tank base defense.\n  Strong vs Tanks, vehicles\n  Weak vs Infantry\n  Can attack Aircraft
+		Description: actor-gun.description
 	Building:
 	Health:
 		HP: 100000
@@ -3900,7 +3900,7 @@ swgun.republic:
 		BuildPaletteOrder: 45
 		Prerequisites: barracks, anyhq, ~swfact, ~mmswrepublic
 		Queue: Defence, RADefence
-		Description: Basic Anti-Tank base defense.\n  Strong vs Tanks, vehicles\n  Weak vs Infantry\n  Can attack Aircraft
+		Description: actor-gun.description
 	Building:
 	Health:
 		HP: 100000
@@ -3944,7 +3944,7 @@ swgun.separatist:
 		BuildPaletteOrder: 45
 		Prerequisites: barracks, anyhq, ~swfact, ~mmswseparatist
 		Queue: Defence, RADefence
-		Description: Basic Anti-Tank base defense.\n  Strong vs Tanks, vehicles\n  Weak vs Infantry\n  Can attack Aircraft
+		Description: actor-gun.description
 	Building:
 	Health:
 		HP: 100000
@@ -3988,7 +3988,7 @@ swdgun.hutt:
 		BuildPaletteOrder: 45
 		Prerequisites: barracks, ~swfact, ~mmswhutt
 		Queue: Defence, RADefence
-		Description: Basic Anti-Infantry base defense.\n  Strong vs Infantry\n  Weak vs Tanks
+		Description: actor-nalasr.description
 	Building:
 	Health:
 		HP: 50000
@@ -4032,7 +4032,7 @@ swdgun.separatist:
 		BuildPaletteOrder: 45
 		Prerequisites: barracks, ~swfact, ~mmswseparatist
 		Queue: Defence, RADefence
-		Description: Basic Anti-Infantry base defense.\n  Strong vs Infantry\n  Weak vs Tanks
+		Description: actor-nalasr.description
 	Building:
 	Health:
 		HP: 50000
@@ -4081,7 +4081,7 @@ SWSAM:
 		BuildPaletteOrder: 50
 		Prerequisites: barracks, ~mmswhutt
 		Queue: Defence, RADefence
-		Description: Anti-Aircraft base defense.\n  Strong vs Aircraft\n  Cannot target Ground units.
+		Description: actor-swsam.description
 	Building:
 		Footprint: xx
 		Dimensions: 2,1
@@ -4125,7 +4125,7 @@ SWOBLI:
 		BuildPaletteOrder: 60
 		Prerequisites: tek, ~techlevel.high, ~mmswhutt
 		Queue: Defence, RADefence
-		Description: Advanced base defense.\nRequires power to operate.\n  Strong vs all Ground units\n  Cannot target Aircraft
+		Description: actor-swobli.description
 	Selectable:
 		Bounds: 1024, 1024
 		DecorationBounds: 1024, 1024
@@ -4175,7 +4175,7 @@ SWGTWR.EMPIRE:
 		BuildPaletteOrder: 40
 		Prerequisites: barracks, ~swfact, ~mmswempire
 		Queue: Defence, RADefence
-		Description: Basic defensive structure.\n  Strong vs Infantry\n  Weak vs Tanks
+		Description: actor-gtwr.description
 	Building:
 	Health:
 		HP: 75000
@@ -4215,7 +4215,7 @@ SWGTWR.REBELS:
 		BuildPaletteOrder: 40
 		Prerequisites: barracks, ~swfact, ~mmswrebels
 		Queue: Defence, RADefence
-		Description: Basic defensive structure.\n  Strong vs Infantry\n  Weak vs Tanks
+		Description: actor-gtwr.description
 	Building:
 	Health:
 		HP: 75000
@@ -4255,7 +4255,7 @@ SWGTWR.REPUBLIC:
 		BuildPaletteOrder: 40
 		Prerequisites: barracks, ~swfact, ~mmswrepublic
 		Queue: Defence, RADefence
-		Description: Basic defensive structure.\n  Strong vs Infantry\n  Weak vs Tanks
+		Description: actor-gtwr.description
 	Building:
 	Health:
 		HP: 75000
@@ -4293,7 +4293,7 @@ SWATWR.REPUBLIC:
 		BuildPaletteOrder: 60
 		Prerequisites: anyhq, ~techlevel.medium, tek, ~swfact, ~mmswrepublic
 		Queue: Defence, RADefence
-		Description: All-purpose defensive structure.\n  Strong vs Aircraft, Tanks, Infantry
+		Description: actor-atwr.description
 	Selectable:
 		Bounds: 1024, 1024
 		DecorationBounds: 1024, 1024
@@ -4346,7 +4346,7 @@ SWATWR.EMPIRE:
 		BuildPaletteOrder: 60
 		Prerequisites: anyhq, ~techlevel.medium, tek, ~swfact, ~mmswempire
 		Queue: Defence, RADefence
-		Description: All-purpose defensive structure.\n  Strong vs Aircraft, Tanks, Infantry
+		Description: actor-atwr.description
 	Selectable:
 		Bounds: 1024, 1024
 		DecorationBounds: 1024, 1024
@@ -4399,7 +4399,7 @@ SWSBAG.REBELS:
 		BuildPaletteOrder: 20
 		Prerequisites: fact, ~swfact, ~mmswrebels
 		Queue: Defence, RADefence
-		Description: Stops infantry and light vehicles.\nCan be crushed by tanks.
+		Description: actor-sbag.description
 	Armor:
 		Type: Light
 	LineBuild:
@@ -4423,7 +4423,7 @@ SWSBAG.SEPARATIST:
 		BuildPaletteOrder: 20
 		Prerequisites: fact, ~swfact, ~!mmswempire, ~!mmswseparatist
 		Queue: Defence, RADefence
-		Description: Stops infantry and light vehicles.\nCan be crushed by tanks.
+		Description: actor-sbag.description
 	Armor:
 		Type: Light
 	LineBuild:
@@ -4447,7 +4447,7 @@ SWSBAG.Hutt:
 		BuildPaletteOrder: 20
 		Prerequisites: fact, ~swfact, ~!mmswempire, ~!mmswhutt
 		Queue: Defence, RADefence
-		Description: Stops infantry and light vehicles.\nCan be crushed by tanks.
+		Description: actor-sbag.description
 	Armor:
 		Type: Light
 	LineBuild:
@@ -4471,7 +4471,7 @@ SWCYCL.EMPIRE:
 		BuildPaletteOrder: 20
 		Prerequisites: fact, ~swfact, ~mmswempire
 		Queue: Defence, RADefence
-		Description: Stops infantry and light vehicles.\nCan be crushed by tanks.
+		Description: actor-sbag.description
 	Armor:
 		Type: Light
 	LineBuild:
@@ -4495,7 +4495,7 @@ SWCYCL.REPUBLIC:
 		BuildPaletteOrder: 20
 		Prerequisites: fact, ~swfact, ~mmswrepublic
 		Queue: Defence, RADefence
-		Description: Stops infantry and light vehicles.\nCan be crushed by tanks.
+		Description: actor-sbag.description
 	Armor:
 		Type: Light
 	LineBuild:
@@ -4519,7 +4519,7 @@ SWBRIK.EMPIRE:
 		BuildPaletteOrder: 30
 		Prerequisites: vehicleproduction, ~swfact, ~mmswempire
 		Queue: Defence, RADefence
-		Description: Stops infantry and most tanks.\nBlocks some projectiles.
+		Description: actor-brik.description
 	Health:
 		HP: 25000
 	Armor:
@@ -4551,7 +4551,7 @@ SWBRIK.REBELS:
 		BuildPaletteOrder: 30
 		Prerequisites: vehicleproduction, ~swfact, ~mmswrebels
 		Queue: Defence, RADefence
-		Description: Stops infantry and most tanks.\nBlocks some projectiles.
+		Description: actor-brik.description
 	Health:
 		HP: 25000
 	Armor:
@@ -4583,7 +4583,7 @@ SWBRIK.REPUBLIC:
 		BuildPaletteOrder: 30
 		Prerequisites: vehicleproduction, ~swfact, ~mmswrepublic
 		Queue: Defence, RADefence
-		Description: Stops infantry and most tanks.\nBlocks some projectiles.
+		Description: actor-brik.description
 	Health:
 		HP: 25000
 	Armor:
@@ -4615,7 +4615,7 @@ SWBRIK.SEPRARTIST:
 		BuildPaletteOrder: 30
 		Prerequisites: vehicleproduction, ~swfact, ~mmswseparatist
 		Queue: Defence, RADefence
-		Description: Stops infantry and most tanks.\nBlocks some projectiles.
+		Description: actor-brik.description
 	Health:
 		HP: 25000
 	Armor:
@@ -4647,7 +4647,7 @@ swsite:
 		BuildPaletteOrder: 60
 		Prerequisites: barracks, ~techlevel.medium, ~mmswhutt
 		Queue: Defence, RADefence
-		Description: All-purpose defensive structure.\n  Strong vs Infantry, Tanks\n  Weak vs Aircraft\n Spawn Tusken Raiders
+		Description: actor-swsite.description
 	Selectable:
 		Bounds: 2048, 2048
 		DecorationBounds: 2048, 2048
@@ -4785,7 +4785,7 @@ swntpuls.empire:
 		BuildPaletteOrder: 140
 		Prerequisites: anyhq, ~techlevel.medium, ~swfact, ~mmswempire
 		Queue: Defence, RADefence
-		Description: Disables mechanical units in an area.\nRequires power to operate.
+		Description: actor-tsntpulsgdi.description
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -4825,7 +4825,7 @@ swntpuls.empire:
 		Names:
 			1: E.M. Pulse
 		Descriptions:
-			1: Fires a pulse blast which disables\nall mechanical units in the area.
+			1: power-ts-emp.description
 		EndChargeSpeechNotification: EmPulseCannonReady
 		SelectTargetSpeechNotification: SelectTarget
 	RenderRangeCircle:
@@ -4845,7 +4845,7 @@ swntpuls.republic:
 		BuildPaletteOrder: 140
 		Prerequisites: anyhq, ~techlevel.medium, ~swfact, ~mmswrepublic
 		Queue: Defence, RADefence
-		Description: Disables mechanical units in an area.\nRequires power to operate.
+		Description: actor-tsntpulsgdi.description
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -4885,7 +4885,7 @@ swntpuls.republic:
 		Names:
 			1: E.M. Pulse
 		Descriptions:
-			1: Fires a pulse blast which disables\nall mechanical units in the area.
+			1: power-ts-emp.description
 		EndChargeSpeechNotification: EmPulseCannonReady
 		SelectTargetSpeechNotification: SelectTarget
 	RenderRangeCircle:
@@ -4913,7 +4913,7 @@ swcloneplant:
 		BuildPaletteOrder: 90
 		Prerequisites: barracks, sweye, ~mmswrepublic
 		Queue: Building, RABuilding
-		Description: Clones produced infantry.
+		Description: actor-swcloneplant.description
 		BuildLimit: 1
 	Building:
 		Footprint: xxx xxx xxx
@@ -4959,7 +4959,7 @@ swindustrialplant:
 		Queue: Building, RABuilding
 		BuildDuration: 330
 		BuildLimit: 1
-		Description: Reduces cost of vehicles by 25%.
+		Description: actor-swindustrialplant.description
 	Building:
 		Footprint: xxxx xxxx xxxx
 		Dimensions: 4,3
@@ -4991,7 +4991,7 @@ swaatower.empire:
 		BuildPaletteOrder: 50
 		Prerequisites: barracks, ~techlevel.medium, ~swfact, ~mmswempire
 		Queue: Defence, RADefence
-		Description: All-purpose defensive structure.\n  Strong vs Aircraft, Tanks\n  Weak vs Infantry
+		Description: actor-swsam.description
 	RequiresBuildableArea:
 		AreaTypes: building
 	Selectable:
@@ -5033,7 +5033,7 @@ swaatower.rebels:
 		BuildPaletteOrder: 50
 		Prerequisites: barracks, ~techlevel.medium, ~swfact, ~mmswrebels
 		Queue: Defence, RADefence
-		Description: All-purpose defensive structure.\n  Strong vs Aircraft, Tanks\n  Weak vs Infantry
+		Description: actor-swsam.description
 	RequiresBuildableArea:
 		AreaTypes: building
 	Selectable:
@@ -5075,7 +5075,7 @@ swaatower.republic:
 		BuildPaletteOrder: 50
 		Prerequisites: barracks, ~techlevel.medium, ~swfact, ~mmswrepublic
 		Queue: Defence, RADefence
-		Description: All-purpose defensive structure.\n  Strong vs Aircraft, Tanks\n  Weak vs Infantry
+		Description: actor-swsam.description
 	RequiresBuildableArea:
 		AreaTypes: building
 	Selectable:
@@ -5117,7 +5117,7 @@ swaatower.separatist:
 		BuildPaletteOrder: 50
 		Prerequisites: barracks, ~techlevel.medium, ~swfact, ~mmswseparatist
 		Queue: Defence, RADefence
-		Description: All-purpose defensive structure.\n  Strong vs Aircraft, Tanks\n  Weak vs Infantry
+		Description: actor-swsam.description
 	RequiresBuildableArea:
 		AreaTypes: building
 	Selectable:
@@ -5174,7 +5174,7 @@ swaddonupgrade1:
 	Buildable:
 		BuildPaletteOrder: 10
 		Queue: Addons
-		Description: add 50% of armor.
+		Description: actor-swaddonupgrade1.description
 		Prerequisites: ~scrapvehicles, ~mmswhutt
 	Valued:
 		Cost: 150
@@ -5191,7 +5191,7 @@ swaddonupgrade2:
 	Buildable:
 		BuildPaletteOrder: 10
 		Queue: Addons
-		Description: add Camo to Unit.
+		Description: actor-swaddonupgrade2.description
 		Prerequisites: ~scrapvehicles, ~mmswhutt
 	Valued:
 		Cost: 600
@@ -5208,7 +5208,7 @@ swaddonupgrade3:
 	Buildable:
 		BuildPaletteOrder: 10
 		Queue: Addons
-		Description: Add 30% of Speed.
+		Description: actor-swaddonupgrade3.description
 		Prerequisites: scrapvehicles, ~mmswhutt
 	Valued:
 		Cost: 150
@@ -5240,7 +5240,7 @@ swe1:
 		BuildPaletteOrder: 10
 		Prerequisites: barracks
 		Queue: Infantry.Rebel
-		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles
+		Description: actor-swe1.description
 	Armament@PRIMARY: ##########
 		Weapon: SWLaser
 	Armament@GARRISONED: ##########
@@ -5276,7 +5276,7 @@ swe1inf:
 		BuildPaletteOrder: 10
 		Prerequisites: barracks
 		Queue: Infantry.Empire
-		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles
+		Description: actor-swe1inf.description
 	Armament@PRIMARY: ##########
 		Weapon: SWLaser
 	Armament@GARRISONED: ##########
@@ -5309,7 +5309,7 @@ swe1troop:
 		BuildPaletteOrder: 10
 		Prerequisites: barracks
 		Queue: Infantry.Empire
-		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles
+		Description: actor-swe1troop.description
 	Armament@PRIMARY: ##########
 		Weapon: SWLaser
 	Armament@GARRISONED: ##########
@@ -5342,7 +5342,7 @@ swe1dark:
 		BuildPaletteOrder: 60
 		Prerequisites: barracks, swfort
 		Queue: Infantry.Empire
-		Description: Heavy infantry.\n  Strong vs Infantry\n  Weak vs Vehicles
+		Description: actor-swe1dark.description
 	Armament@PRIMARY: ##########
 		Weapon: SWLaserG
 	Armament@GARRISONED: ##########
@@ -5425,7 +5425,7 @@ swe1clone:
 		BuildPaletteOrder: 10
 		Prerequisites: barracks
 		Queue: Infantry.Republic
-		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles
+		Description: actor-swe1clone.description
 	Armament@PRIMARY: ##########
 		Weapon: SWLaserClone
 		RequiresCondition: !swupphase2clone
@@ -5463,7 +5463,7 @@ swjumpjet:
 		BuildPaletteOrder: 40
 		Prerequisites: anyhq
 		Queue: Infantry.Republic
-		Description: Airborne soldier.\nCan attack aircraft.\n  Strong vs Infantry, Light armor\n  Weak vs AA
+		Description: actor-swjumpjet.description
 	Armament:
 		Weapon: SWLaserJetpack
 	Armament@2:
@@ -5483,7 +5483,7 @@ swe1droid:
 		BuildPaletteOrder: 10
 		Prerequisites: barracks
 		Queue: Infantry.Separatist
-		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles
+		Description: actor-swe1droid.description
 	Health:
 		HP: 2500
 	Armor:
@@ -5542,7 +5542,7 @@ swddroid:
 		BuildPaletteOrder: 30
 		Prerequisites: barracks, swfort
 		Queue: Infantry.Separatist
-		Description: Heavy infantry.\n  Strong vs Ground\n  Weak vs Aircraft, EMP weapons
+		Description: actor-swddroid.description
 	Health:
 		HP: 50000
 	ChangesHealth:
@@ -5605,7 +5605,7 @@ swdroidb2:
 		BuildPaletteOrder: 20
 		Prerequisites: barracks, anyhq
 		Queue: Infantry.Separatist
-		Description: Cybernetic infantry unit.\n  Strong vs Infantry, Light armor\n  Weak vs Vehicles, Aircraft
+		Description: actor-swdroidb2.description
 	Armament@PRIMARY:
 		Weapon: SWLaserG
 	Selectable:
@@ -5630,7 +5630,7 @@ swe1droidmob:
 		BuildPaletteOrder: 40
 		Prerequisites: barracks, swfort
 		Queue: Infantry.Separatist
-		Description: A big horde of Droids.\n  Strong vs Infantry\n  Weak vs Vehicles
+		Description: actor-swe1droidmob.description
 		Icon: iconhorde
 	Tooltip:
 		Name: B1 Droid Horde
@@ -5715,7 +5715,7 @@ swjedi:
 		BuildPaletteOrder: 100
 		Prerequisites: tek
 		Queue: Infantry.Rebel, Infantry.Republic
-		Description: Melee combat infantry.\n  Strong vs Ground Targets\n  Weak vs Aircraft
+		Description: actor-swjedi.description
 	Armament@PRIMARY: ##########
 		Weapon: SWJediSword
 	Armament@GARRISONED: ##########
@@ -5757,7 +5757,7 @@ swsith:
 		BuildPaletteOrder: 100
 		Prerequisites: tek
 		Queue: Infantry.Empire, Infantry.Separatists
-		Description: Melee combat infantry.\n  Strong vs Ground Targets\n  Weak vs Aircraft
+		Description: actor-swsith.description
 	Armament@PRIMARY: ##########
 		Weapon: SWSithSword
 	Armament@GARRISONED: ##########
@@ -5804,7 +5804,7 @@ swvice:
 		Queue: Infantry.Empire
 		BuildPaletteOrder: 30
 		Prerequisites: vehicleproduction
-		Description: Small recon droid.\n  Strong vs Infantry\n  Weak vs Aircraft
+		Description: actor-swvice.description
 	Tooltip:
 		Name: Probot
 	ActorLostNotification:
@@ -5830,7 +5830,7 @@ swe2:
 	Buildable:
 		BuildPaletteOrder: 40
 		Queue: Infantry.Empire, Infantry.Rebel, Infantry.Hutt
-		Description: Fast infantry armed with grenades. \nDisables Vehicles. \n  Strong vs Buildings, Vehicle
+		Description: actor-swe2.description
 	Armament:
 		Weapon: SWGrenade
 		LocalOffset: 0,0,427
@@ -5854,7 +5854,7 @@ swe3:
 		BuildPaletteOrder: 20
 		Prerequisites: barracks
 		Queue: Infantry.Rebel, Infantry.Hutt
-		Description: Anti-tank/Anti-aircraft infantry. \n  Strong vs Tanks, Aircraft\n  Weak vs Infantry
+		Description: actor-swe3.description
 	Mobile:
 		Speed: 42
 	Health:
@@ -5897,7 +5897,7 @@ swe3troop:
 		BuildPaletteOrder: 20
 		Prerequisites: barracks
 		Queue: Infantry.Empire.
-		Description: Anti-tank/Anti-aircraft infantry. \n  Strong vs Tanks, Aircraft\n  Weak vs Infantry
+		Description: actor-swe3troop.description
 	Mobile:
 		Speed: 42
 	Health:
@@ -5931,7 +5931,7 @@ swe3clone:
 		BuildPaletteOrder: 20
 		Prerequisites: barracks
 		Queue: Infantry.Republic
-		Description: Anti-tank/Anti-aircraft infantry. \n  Strong vs Tanks, Aircraft\n  Weak vs Infantry
+		Description: actor-swe3clone.description
 	Mobile:
 		Speed: 42
 	Health:
@@ -5960,7 +5960,7 @@ swe3droid:
 		BuildPaletteOrder: 20
 		Prerequisites: barracks
 		Queue: Infantry.Separatist
-		Description: Anti-tank/Anti-aircraft infantry. \n  Strong vs Tanks, Aircraft\n  Weak vs Infantry
+		Description: actor-swe3droid.description
 	Mobile:
 		Speed: 42
 	Health:
@@ -6016,7 +6016,7 @@ swe4:
 	Buildable:
 		BuildPaletteOrder: 40
 		Queue: Infantry.Hutt
-		Description: Advanced Anti-infantry unit.\n  Strong vs Infantry, Buildings\n  Weak vs Tanks
+		Description: actor-swe4.description
 	RenderSprites:
 		Image: e4
 
@@ -6077,7 +6077,7 @@ swrmbo:
 		BuildPaletteOrder: 50
 		Prerequisites: swfort, ~techlevel.high
 		Queue: Infantry.Rebel, Infantry.Empire
-		Description: Elite sniper infantry unit.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles
+		Description: actor-swrmbo.description
 	Armament:
 		Weapon: Sniper
 	Armament@GARRISONED:
@@ -6103,7 +6103,7 @@ swgreedo:
 		BuildPaletteOrder: 50
 		Prerequisites: swfort, ~techlevel.high
 		Queue: Infantry.Empire, Infantry.Hutt
-		Description: Elite sniper infantry unit.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles
+		Description: actor-swgreedo.description
 	Armament@PRIMARY:
 		Weapon: Sniper
 	Armament@GARRISONED:
@@ -6145,7 +6145,7 @@ swbike:
 		BuildPaletteOrder: 20
 		Prerequisites: vehicleproduction
 		Queue: Vehicle.Empire, Vehicle.Hutt
-		Description: Fast scout and anti-infantry vehicle.\n  Strong vs Infantry\n  Weak vs Tanks
+		Description: actor-swbike.description
 	Mobile:
 		TurnSpeed: 40
 		Speed: 170
@@ -6205,7 +6205,7 @@ swbggy:
 		BuildPaletteOrder: 20
 		Prerequisites: vehicleproduction
 		Queue: Vehicle.Rebel, Vehicle.Hutt
-		Description: Fast scout and anti-infantry vehicle.\n  Strong vs Infantry\n  Weak vs Tanks. \n Upgradable with Salvage Parts
+		Description: actor-swbggy.description
 	Mobile:
 		TurnSpeed: 40
 		Speed: 156
@@ -6268,7 +6268,7 @@ swjeep:
 		BuildPaletteOrder: 20
 		Prerequisites: vehicleproduction
 		Queue: Vehicle.Empire
-		Description: Fast scout and anti-infantry vehicle.\n  Strong vs Infantry\n  Weak vs Tanks
+		Description: actor-swjeep.description
 	Mobile:
 		TurnSpeed: 40
 		Speed: 156
@@ -6316,7 +6316,7 @@ swspider:
 		BuildPaletteOrder: 20
 		Prerequisites: vehicleproduction
 		Queue: Vehicle.Separatist
-		Description: Fast scout and anti-infantry vehicle.\n  Strong vs Infantry\n  Weak vs Tanks
+		Description: actor-swspider.description
 	Mobile:
 		TurnSpeed: 32
 		Speed: 120
@@ -6354,7 +6354,7 @@ swmtnk:
 	Buildable:
 		Queue: Vehicle.Empire
 		BuildPaletteOrder: 120
-		Description: Empire Main Battle Walker, with dual cannons\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft
+		Description: actor-swmtnk.description
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -6418,7 +6418,7 @@ swhtnk:
 		BuildPaletteOrder: 60
 		Prerequisites: tek
 		Queue: Vehicle.Empire
-		Description: Heavily armored Empire Walker.\nCan attack Aircraft.\n  Strong vs Everything
+		Description: actor-swhtnk.description
 	Mobile:
 		Locomotor: heavytracked
 		Speed: 35
@@ -6485,7 +6485,7 @@ swarty:
 	Buildable:
 		BuildPaletteOrder: 60
 		Queue: Vehicle.Empire
-		Description: Long-range artillery.\n  Strong vs Infantry, Vehicles and Buildings
+		Description: actor-swarty.description
 	Armament:
 		Weapon: SWArtilleryShell
 		RequiresCondition: scrap_create_bonus == 0
@@ -6514,7 +6514,7 @@ swarty2:
 	Buildable:
 		BuildPaletteOrder: 60
 		Queue: Vehicle.Empire
-		Description: Upgraded Artillery, Twin Cannons and more Armored.\n  Strong vs Infantry, Vehicles and Buildings
+		Description: actor-swarty2.description
 		Prerequisites: swfort
 	Armament@2-2:
 		Weapon: SWArtilleryShell
@@ -6540,7 +6540,7 @@ swarty3:
 	Buildable:
 		BuildPaletteOrder: 60
 		Queue: Vehicle.Rebel
-		Description: Long-range artillery.\n  Strong vs Infantry, Vehicles and Buildings
+		Description: actor-swarty3.description
 	Armament:
 		Weapon: SWArtilleryShell
 		RequiresCondition: scrap_create_bonus == 0
@@ -6568,7 +6568,7 @@ swarty4:
 	Buildable:
 		BuildPaletteOrder: 60
 		Queue: Vehicle.Rebel
-		Description: Upgraded Artillery, Twin Cannons and more Armored.\n  Strong vs Infantry, Vehicles and Buildings
+		Description: actor-swarty4.description
 		Prerequisites: swfort
 	Armament@2-2:
 		Weapon: SWArtilleryShell
@@ -6594,7 +6594,7 @@ swarty5:
 	Buildable:
 		BuildPaletteOrder: 60
 		Queue: Vehicle.Republic
-		Description: Long-range artillery.\n  Strong vs Infantry, Vehicles and Buildings
+		Description: actor-swarty5.description
 	RenderSprites:
 		Image: swarty5
 
@@ -6605,7 +6605,7 @@ swarty6:
 	Buildable:
 		BuildPaletteOrder: 60
 		Queue: Vehicle.Republic
-		Description: Upgraded Artillery, Twin Cannons and more Armored.\n  Strong vs Infantry, Vehicles and Buildings
+		Description: actor-swarty6.description
 		Prerequisites: swfort
 	RenderSprites:
 		Image: swarty6
@@ -6625,7 +6625,7 @@ swltnk:
 		BuildPaletteOrder: 20
 		Prerequisites: hpad, anyhq, ~techlevel.medium
 		Queue: Aircraft.Rebel
-		Description: Aircraft Gunship with AG Laser.\n  Strong vs Tanks, Walker Mech\n  Weak vs Infantry
+		Description: actor-swltnk.description
 		BuildDurationModifier: 50
 	Aircraft:
 		CruiseAltitude: 900
@@ -6699,7 +6699,7 @@ swheli:
 		BuildPaletteOrder: 20
 		Prerequisites: hpad, anyhq, ~techlevel.medium
 		Queue: Aircraft.Rebel, Aircraft.Hutt
-		Description: Fast Aircraft with Light Lasers.\n  Strong vs Infantry, Light Vehicles and\n  Aircraft\n  Weak vs Tanks
+		Description: actor-swheli.description
 		BuildDurationModifier: 50
 	Aircraft:
 		CruiseAltitude: 2560
@@ -6765,7 +6765,7 @@ swdroidheli:
 		BuildPaletteOrder: 20
 		Prerequisites: hpad, anyhq, ~techlevel.medium
 		Queue: Aircraft.Separatist
-		Description: Light Aircraft with Lasers.\n  Strong vs Infantry, Light Vehicles and\n  Aircraft\n  Weak vs Tanks
+		Description: actor-swdroidheli.description
 		BuildDurationModifier: 50
 	Aircraft:
 		CruiseAltitude: 2567
@@ -6843,7 +6843,7 @@ swxwing:
 		BuildPaletteOrder: 20
 		Prerequisites: hpad, anyhq, swfort, ~techlevel.medium
 		Queue: Aircraft.Rebel
-		Description: Fighter Aircraft with Medium Lasers and Missiles.\n  Strong vs Infantry, Light Vehicles and\n  Aircraft\n  Weak vs Tanks
+		Description: actor-swxwing.description
 		BuildDurationModifier: 50
 	Aircraft:
 		CruiseAltitude: 2560
@@ -6916,7 +6916,7 @@ swstarfighter:
 		BuildPaletteOrder: 20
 		Prerequisites: hpad, anyhq, ~techlevel.medium
 		Queue: Aircraft.Republic
-		Description: Fighter Aircraft with Lasers.\n  Strong vs Infantry, Light Vehicles and\n  Aircraft\n  Weak vs Tanks
+		Description: actor-swstarfighter.description
 		BuildDurationModifier: 50
 	Aircraft:
 		CruiseAltitude: 2560
@@ -6990,7 +6990,7 @@ swstarfighterj:
 		BuildPaletteOrder: 20
 		Prerequisites: hpad, swfort, ~techlevel.medium
 		Queue: Aircraft.Republic
-		Description: Fighter Aircraft with Lasers.\n  Strong vs Infantry, Light Vehicles and\n  Aircraft\n  Weak vs Tanks
+		Description: actor-swstarfighterj.description
 		BuildDurationModifier: 50
 	Aircraft:
 		CruiseAltitude: 2560
@@ -7067,7 +7067,7 @@ swfalc:
 		BuildPaletteOrder: 20
 		Prerequisites: hpad, anyhq, swfort, tek, ~techlevel.medium
 		Queue: Aircraft.Rebel
-		Description: Hero Aircraft.\nwith Lasers, Heavy Lasers, etc.\n  Strong vs Infantry, Light Vehicles and\n  Aircraft\n  Weak vs Tanks
+		Description: actor-swfalc.description
 		BuildDuration: 4500
 		BuildDurationModifier: 100
 	Aircraft:
@@ -7162,7 +7162,7 @@ sworca:
 		BuildPaletteOrder: 20
 		Prerequisites: hpad, anyhq, ~techlevel.medium
 		Queue: Aircraft.Empire
-		Description: Aircraft with Heavy Lasers.\n  Strong vs Buildings, Tanks\n  Weak vs Infantry
+		Description: actor-sworca.description
 		BuildDurationModifier: 50
 	Aircraft:
 		CruiseAltitude: 2560
@@ -7234,7 +7234,7 @@ swtrifighter:
 		BuildPaletteOrder: 20
 		Prerequisites: hpad, anyhq, ~techlevel.medium
 		Queue: Aircraft.Empire
-		Description: Aircraft with Heavy Lasers.\n  Strong vs Buildings, Tanks\n  Weak vs Infantry
+		Description: actor-swtrifighter.description
 		BuildDurationModifier: 50
 	Aircraft:
 		CruiseAltitude: 2560
@@ -7308,7 +7308,7 @@ swywing:
 		BuildPaletteOrder: 20
 		Prerequisites: hpad, anyhq, tek, ~techlevel.medium
 		Queue: Aircraft.Rebel, Aircraft.Republic
-		Description: Bomber Aircraft.\n  Strong vs Buildings, Tanks, Infantry\n  Weak vs AA Armament
+		Description: actor-swywing.description
 		BuildDurationModifier: 50
 	Aircraft:
 		CruiseAltitude: 2560
@@ -7369,7 +7369,7 @@ swharv:
 		Prerequisites: swproc
 		Queue: Vehicle.Hutt
 		BuildDurationModifier: 40
-		Description: Collects Resources for processing.\n  Unarmed
+		Description: actor-swharv.description
 	Selectable:
 		DecorationBounds: 1536, 1536
 	Harvester:
@@ -7412,7 +7412,7 @@ swiharv:
 		Queue: Vehicle.Empire
 		BuildPaletteOrder: 10
 		Prerequisites: swproc
-		Description: Collects Ore and Gems for processing.\n  Unarmed
+		Description: actor-swiharv.description
 	Valued:
 		Cost: 1000 #1100
 	Tooltip:
@@ -7469,7 +7469,7 @@ swreharv:
 		Queue: Vehicle.Rebel
 		BuildPaletteOrder: 10
 		Prerequisites: swproc
-		Description: Collects Ore and Gems for processing.\n  Unarmed
+		Description: actor-swreharv.description
 	WithHarvesterSpriteBody:
 		ImageByFullness: swreharv, swreharvfull, swreharvfull
 
@@ -7479,7 +7479,7 @@ swrharv:
 		Queue: Vehicle.Republic
 		BuildPaletteOrder: 10
 		Prerequisites: swproc
-		Description: Collects Ore and Gems for processing.\n  Unarmed
+		Description: actor-swrharv.description
 	WithHarvesterSpriteBody:
 		ImageByFullness: swrharv, swrharvfull, swrharvfull
 
@@ -7489,7 +7489,7 @@ swdharv:
 		Queue: Vehicle.Separatist
 		BuildPaletteOrder: 10
 		Prerequisites: swproc
-		Description: Collects Ore and Gems for processing.\n  Unarmed
+		Description: actor-swdharv.description
 	WithHarvesterSpriteBody:
 		ImageByFullness: swdharv, swdharvfull, swdharvfull
 
@@ -7503,7 +7503,7 @@ swcrawl:
 	Buildable:
 		Queue: Vehicle.Separatist
 		BuildPaletteOrder: 120
-		Description: Tough infantry transport.\n  Strong vs Infantry, Light armor\n  Weak vs Tanks, Aircraft.\n Transport 30 droids
+		Description: actor-swcrawl.description
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -7556,7 +7556,7 @@ sw2tnk:
 	Buildable:
 		Queue: Vehicle.Separatist
 		BuildPaletteOrder: 110
-		Description: Droid Army Main Battle Tank.\n  Strong vs Vehicles, Infantry, Buildings\n  Weak vs Aircraft
+		Description: actor-sw2tnk.description
 	Valued:
 		Cost: 1250
 	Tooltip:
@@ -7617,7 +7617,7 @@ swlaat:
 		BuildPaletteOrder: 10
 		Prerequisites: hpad
 		Queue: Aircraft.Republic
-		Description: Fast Infantry Transport Aircraft.\n  Armed with AG Missiles
+		Description: actor-swlaat.description
 	Aircraft:
 		TurnSpeed: 20
 		Speed: 150
@@ -7747,7 +7747,7 @@ swc17player:
 		BuildPaletteOrder: 10
 		Prerequisites: tek
 		Queue: Aircraft.Rebel
-		Description: Heavy Transport Cruiser.\nComes loaded with a small army.\nArmed with Interceptor X-Wings
+		Description: actor-swc17player.description
 	Aircraft:
 		InitialFacing: 896
 		TurnSpeed: 28
@@ -7866,7 +7866,7 @@ swstard:
 		BuildPaletteOrder: 10
 		Prerequisites: tek
 		Queue: Aircraft.Empire
-		Description: Heavy Cruiser.\n  Armed with Interceptor TIE Fighters\n and Heavy Lasers
+		Description: actor-swstard.description
 	Aircraft:
 		InitialFacing: 896
 		TurnSpeed: 28
@@ -7950,7 +7950,7 @@ swexecutor:
 		BuildPaletteOrder: 10
 		Prerequisites: anyhq
 		Queue: Vehicle.Empire
-		Description: Heavy Cruiser.\n  Armed with Interceptor TIE Fighters\n and Heavy Lasers
+		Description: actor-swexecutor.description
 	Aircraft:
 		InitialFacing: 896
 		TurnSpeed: 24
@@ -8038,7 +8038,7 @@ swaclamator:
 		BuildPaletteOrder: 10
 		Prerequisites: tek
 		Queue: Aircraft.Republic
-		Description: Heavy Cruiser.\n  Armed with Interceptor Starfighters\n and Heavy Lasers
+		Description: actor-swaclamator.description
 	Aircraft:
 		InitialFacing: 896
 		TurnSpeed: 40
@@ -8272,7 +8272,7 @@ swdarty:
 		BuildPaletteOrder: 60
 		Prerequisites: swfort, tek
 		Queue: Vehicle.Separatist
-		Description: Long-range missile artillery.\n  Strong vs Infantry, Vehicles and Aircraft
+		Description: actor-swdarty.description
 	Mobile:
 		TurnSpeed: 40
 		Speed: 150
@@ -8320,7 +8320,7 @@ swquad:
 		Queue: Vehicle.Rebel
 		BuildPaletteOrder: 60
 		Prerequisites: ~techlevel.low
-		Description: Mobile unit with mounted quad Lasers.\n  Strong vs Infantry, Light armor, Aircraft\n  Weak vs Tanks
+		Description: actor-swquad.description
 	Valued:
 		Cost: 750
 	Tooltip:
@@ -8390,7 +8390,7 @@ sw4tnk:
 		BuildPaletteOrder: 60
 		Prerequisites: anyhq
 		Queue: Vehicle.Republic
-		Description: Heavily armored Republic Tank.\nCan attack Aircraft.\n  Strong vs Everything
+		Description: actor-sw4tnk.description
 	Mobile:
 		Locomotor: heavytracked
 		Speed: 45
@@ -8469,7 +8469,7 @@ swaa:
 		BuildPaletteOrder: 60
 		Prerequisites: anyhq
 		Queue: Vehicle.Empire, Vehicle.Republic
-		Description: Heavily armored AA Tank.\nCan attack Aircraft.\n  Strong vs Everything
+		Description: actor-swaa.description
 	Mobile:
 		Locomotor: tracked
 		Speed: 80
@@ -8523,7 +8523,7 @@ swjugger:
 		BuildPaletteOrder: 60
 		Prerequisites: tek
 		Queue: Vehicle.Republic
-		Description: Heavily armored Republic Assault Platform.\nCan attack Aircraft.\n  Strong vs Everything
+		Description: actor-swjugger.description
 	Mobile:
 		Locomotor: heavytracked
 		Speed: 40
@@ -8590,7 +8590,7 @@ sw3tnk:
 	Buildable:
 		Queue: Vehicle.Rebel
 		BuildPaletteOrder: 120
-		Description: Rebels Main Battle Tank, with dual cannons\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft
+		Description: actor-sw3tnk.description
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -8656,7 +8656,7 @@ sw1tnkre:
 	Buildable:
 		Queue: Vehicle.Rebel
 		BuildPaletteOrder: 110
-		Description: Rebels Main Battle Tank, with dual cannons\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft
+		Description: actor-sw1tnkre.description
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -8717,7 +8717,7 @@ swftnk:
 		Cost: 600
 	Buildable:
 		Queue: Vehicle.Rebel, Vehicle.Hutt
-		Description: Heavily armored flame-throwing vehicle.\n  Strong vs Infantry, Buildings and Vehicles\n  Weak vs Tanks
+		Description: actor-swftnk.description
 	RenderSprites:
 		Image: swftnk
 	Armament:
@@ -8739,7 +8739,7 @@ swpummel:
 		BuildPaletteOrder: 50
 		Prerequisites: anyhq, ~techlevel.medium
 		Queue: Vehicle.Empire
-		Description: Heavily armored anti Structure.\n  Strong vs Infantry, Buildings and Vehicles\n  Weak vs Tanks
+		Description: actor-swpummel.description
 	Mobile:
 		Speed: 36
 	Health:
@@ -8768,7 +8768,7 @@ swpummeld:
 		BuildPaletteOrder: 50
 		Prerequisites: anyhq, ~techlevel.medium
 		Queue: Vehicle.Separatist
-		Description: Heavily armored anti Structure.\n  Strong vs Infantry, Buildings and Vehicles\n  Weak vs Tanks
+		Description: actor-swpummeld.description
 	Voiced:
 		VoiceSet: SWDroidVoice
 
@@ -8783,7 +8783,7 @@ swftnk2:
 		Cost: 300
 	Buildable:
 		Queue: Vehicle.Separatist
-		Description: Heavily armored flame-throwing vehicle.\n  Strong vs Infantry, Buildings and Vehicles\n  Weak vs Tanks
+		Description: actor-swftnk2.description
 	RenderSprites:
 		Image: swftnk2
 	Voiced:
@@ -8811,7 +8811,7 @@ swmsam:
 	Buildable:
 		Queue: Vehicle.Empire, Vehicle.Republic
 		BuildPaletteOrder: 110
-		Description: Light Hovertank, armed with Missiles.\n  Strong vs Vehicles\n  Weak vs Heavy Tanks
+		Description: actor-swmsam.description
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -8861,7 +8861,7 @@ sw1tnk:
 	Buildable:
 		Queue: Vehicle.Republic
 		BuildPaletteOrder: 120
-		Description: Light Republic Walker\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+		Description: actor-sw1tnk.description
 	Valued:
 		Cost: 650
 	Tooltip:
@@ -8924,7 +8924,7 @@ swtran:
 		BuildPaletteOrder: 10
 		Prerequisites: hpad
 		Queue: Aircraft.Empire
-		Description: Fast Infantry Transport Helicopter.\n  Unarmed
+		Description: actor-swtran.description
 	Aircraft:
 		TurnSpeed: 20
 		Speed: 150
@@ -9013,7 +9013,7 @@ swbantha2:
 		BuildPaletteOrder: 50
 		Prerequisites: swnurse, ~techlevel.medium
 		Queue: Infantry.Separatist, Infantry.Hutt
-		Description: Livestock animal\n Used to obtain money.\n must be kept in a nursery
+		Description: actor-swbantha2.description
 	Mobile:
 		Speed: 50
 	Health:
@@ -9055,7 +9055,7 @@ swnerf:
 		BuildPaletteOrder: 50
 		Prerequisites: swnurse, ~techlevel.medium
 		Queue: Infantry.Rebel, Infantry.Empire, Infantry.Republic
-		Description: Livestock animal\n Used to obtain money.\n must be kept in a nursery
+		Description: actor-swnerf.description
 	Voiced:
 		VoiceSet: SWBanthaVoice
 	Passenger:
@@ -9365,7 +9365,7 @@ swrmbo.hutt:
 		BuildPaletteOrder: 10
 		Prerequisites: ~techlevel.low
 		Queue: Infantry.Hutt
-		Description: Elite sniper infantry unit.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles
+		Description: actor-swexecc17.description
 	Armament:
 		Weapon: SWBikeLaserSalvage
 	Armament@GARRISONED:
@@ -9384,7 +9384,6 @@ sw2tnk.hutt:
 	Buildable:
 		Queue: Vehicle.Hutt
 		BuildPaletteOrder: 110
-		Description: Former Droid Army Main Battle Tank.\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft
 	Tooltip:
 		Name: Salvaged AAT
 		GenericName: Tank
@@ -9443,7 +9442,7 @@ swptnk:
 	Buildable:
 		Queue: Vehicle.Hutt
 		BuildPaletteOrder: 120
-		Description: Hutt Clan Main Battle Walker, with dual Laser cannons\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry
+		Description: actor-swptnk.description
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -9516,7 +9515,7 @@ swjabbaparty:
 		BuildPaletteOrder: 60
 		Prerequisites: tek
 		Queue: Vehicle.Hutt
-		Description: Mobile bunker vehicle.\n  Passengers can fire from within\n  Immobilized on heavy damage
+		Description: actor-swjabbaparty.description
 	Cargo:
 		InitialUnits:
 	Mobile:
@@ -9656,7 +9655,7 @@ swupinfarmor1:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Increases durability of all troopers.
+		Description: actor-swupinfarmor1.description
 		Prerequisites: ~!swupinfarmor1, ~swfact
 	Valued:
 		Cost: 2500
@@ -9672,7 +9671,7 @@ swupveharmor1:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Increases durability of all vehicles.
+		Description: actor-swupveharmor1.description
 		Prerequisites: ~!swupveharmor1, ~swfact
 	Valued:
 		Cost: 2500
@@ -9688,7 +9687,7 @@ swupvehspeed1:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Increases speed of all vehicles.
+		Description: actor-swupvehspeed1.description
 		Prerequisites: ~!swupvehspeed1, ~swfact
 	Valued:
 		Cost: 2500
@@ -9704,7 +9703,7 @@ swuplaser1:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Increases damage of all laser weapons.
+		Description: actor-swuplaser1.description
 		Prerequisites: ~!swuplaser1, ~swfact
 	Valued:
 		Cost: 2500
@@ -9720,7 +9719,7 @@ swupphase2clone:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Increases veterancy of all Clones, upgrades clones arsenal.
+		Description: actor-swupphase2clone.description
 		Prerequisites: ~!swupphase2clone, sweye, ~swfact, ~mmswrepublic
 	Valued:
 		Cost: 2500
@@ -9736,7 +9735,7 @@ swupdroidarmor1:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Increases durability of all droids infantry, include R2 units.
+		Description: actor-swupdroidarmor1.description
 		Prerequisites: ~!swupdroidarmor1, ~swfact, ~mmswseparatist
 	Valued:
 		Cost: 2500
@@ -9752,7 +9751,7 @@ swupstimulant:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Increases passive income from Banthas, and Nerfs by 10% in the Nursery.
+		Description: actor-swupstimulant.description
 		Prerequisites: ~!swupstimulant, swnurse, ~swfact
 	Valued:
 		Cost: 2500
@@ -9768,7 +9767,7 @@ swupgenetics:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Increases passive income from Banthas, and Nerfs by 25% in the Nursery.
+		Description: actor-swupgenetics.description
 		Prerequisites: ~!swupgenetics, swupstimulant, swnurse, ~swfact
 	Valued:
 		Cost: 5000
@@ -9784,7 +9783,7 @@ swupcloning:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Increases passive income from Banthas, and Nerfs by 50%  in the Nursery.
+		Description: actor-swupcloning.description
 		Prerequisites: ~!swupcloning, swupgenetics, swnurse, ~swfact
 	Valued:
 		Cost: 7500
@@ -9800,7 +9799,7 @@ swupirrigation:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Food Proc Center can make more farms.
+		Description: actor-swupirrigation.description
 		Prerequisites: ~!swupirrigation, swfood, ~swfact
 	Valued:
 		Cost: 2500

@@ -11,7 +11,7 @@ World:
 		InternalName: modants
 		Game: Red Alert
 		Side: Red Alert
-		Description: Ants: Ants. Special Ability: Ants. Special Unit: Ants
+		Description: faction-ra-ants.description
 	StartingUnits@mcvonlyramodant:
 		Class: none
 		ClassName: MCV Only
@@ -44,7 +44,7 @@ QANT:
 		Prerequisites: breednest, tinynest, evo, ~mmmodant
 		BuildDuration: 1500
 		BuildDurationModifier: 100
-		Description: Deploys into another Construction Yard.  Unarmed
+		Description: actor-qant.description
 	Valued:
 		Cost: 4000
 	Tooltip:
@@ -103,7 +103,7 @@ tinyant:
 		Prerequisites: ~mmmodant
 		BuildDuration: 250
 		Queue: Defence, RADefence
-		Description: Collects resources.
+		Description: actor-tinyant.description
 	Mobile:
 		Locomotor: foot
 		TurnSpeed: 1000
@@ -164,7 +164,7 @@ modant:
 		BuildPaletteOrder: 1954
 		BuildDuration: 700
 		BuildDurationModifier: 100
-		Description: Irradiated insect that grew oversize.
+		Description: actor-modant.description
 		Prerequisites: breednest, tinynest
 	Selectable:
 		Bounds: 1280, 1280, 0, -64
@@ -215,7 +215,7 @@ modant2:
 		BuildPaletteOrder: 1954
 		BuildDuration: 500
 		BuildDurationModifier: 100
-		Description: Irradiated insect that grew oversize.
+		Description: actor-modant2.description
 		Prerequisites: breednest
 	Health:
 		HP: 60000
@@ -245,7 +245,7 @@ modant3:
 		BuildPaletteOrder: 1954
 		BuildDuration: 900
 		BuildDurationModifier: 100
-		Description: Irradiated insect that grew oversize.
+		Description: actor-modant3.description
 		Prerequisites: breednest, tinynest, evo
 	Health:
 		HP: 100000
@@ -314,7 +314,7 @@ fant:
 		BuildPaletteOrder: 1954
 		BuildDuration: 600
 		BuildDurationModifier: 100
-		Description: Irradiated insect that grew oversize.
+		Description: actor-fant.description
 		Prerequisites: breednest, tinynest, evo
 	RenderSprites:
 		Image: fant
@@ -334,7 +334,7 @@ chant:
 		BuildPaletteOrder: 1954
 		BuildDuration: 800
 		BuildDurationModifier: 100
-		Description: Irradiated insect that grew oversize.
+		Description: actor-chant.description
 		Prerequisites: breednest, tinynest, evo
 	Health:
 		HP: 70000
@@ -380,7 +380,7 @@ sant:
 		BuildPaletteOrder: 1954
 		BuildDuration: 1000
 		BuildDurationModifier: 100
-		Description: Irradiated insect that grew oversize.
+		Description: actor-sant.description
 		Prerequisites: breednest, tinynest, evo
 	RenderSprites:
 		Image: hant
@@ -402,7 +402,7 @@ crab:
 		BuildPaletteOrder: 1954
 		BuildDuration: 250
 		BuildDurationModifier: 100
-		Description: Parasitic insect, capable of capturing buildings and vehicles
+		Description: actor-crab.description
 		Prerequisites: breednest, tinynest
 	Selectable:
 		Bounds: 512, 512, 0, -32
@@ -550,7 +550,7 @@ breednest:
 		Prerequisites: ~mmmodant
 		BuildDurationModifier: 500
 		BuildDuration: 100
-		Description: Provides double the power of. a standard Power Plant.
+		Description: actor-breednest.description
 	Valued:
 		Cost: 1000 #500
 	Tooltip:
@@ -588,7 +588,7 @@ tinynest:
 		Prerequisites: breednest, ~mmmodant
 		BuildDurationModifier: 500
 		BuildDuration: 100
-		Description: Refines Ore and Gems. into credits.
+		Description: actor-tinynest.description
 	Valued:
 		Cost: 1000 #1400
 	Tooltip:
@@ -656,7 +656,7 @@ tinynest2:
 		Queue: Building
 		BuildDurationModifier: 750
 		BuildDuration: 100
-		Description: All-purpose defensive structure.  Strong vs Aircraft, Tanks.  Weak vs Infantry
+		Description: actor-tinynest2.description
 	Selectable:
 		Bounds: 3072, 3072, 0, -512
 	SelectionDecorations:
@@ -793,7 +793,7 @@ flyant:
 		BuildDuration: 1500
 		BuildDurationModifier: 100
 		Queue: Infantry.Ant
-		Description: Flying Ant.  Strong vs Buildings, Tanks.  Weak vs Infantry
+		Description: actor-flyant.description
 	Aircraft:
 		TurnSpeed: 28
 		Speed: 100
@@ -852,7 +852,7 @@ EVO:
 		Queue: Building
 		BuildDurationModifier: 1000
 		BuildDuration: 100
-		Description: Provides advanced mutations for ants. Can combine units. Drone + Drone = Scout. Scout + Scout = Giant. Giant + Giant = Fire. Fire + Fire = Warrior. Warrior + Warrior = Super. Super + Super = HyperInfester + Infester = Queen
+		Description: actor-evo.description
 	Valued:
 		Cost: 2000
 	Tooltip:
@@ -903,7 +903,7 @@ TEVO:
 		Prerequisites: breednest, evo, ~mmmodant
 		Queue: Building
 		BuildDuration: 330
-		Description: Provides advanced weapons for ants. Can combine units. Fire + Fire = Chemical. Warrior + Warrior = Missile. Giant + Giant = Tant. Super + Super = Mammoth Tant. Tant + Tant = Heavy Tant. Hyper + Hyper = Tesla Tant
+		Description: actor-tevo.description
 	Valued:
 		Cost: 1500
 	Tooltip:

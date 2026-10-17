@@ -4,25 +4,25 @@ World:
 		InternalName: imperialguard
 		Game: Dawn of War
 		Side: Dawn of War
-		Description: Imperial Guard from WH40K\nBased on Dawn of War\nThis faction uses a big hordes of soldiers and Siege vehicles\nSupport powers: Maraunder Bombing\n- Super Weapon unit: Baneblade
+		Description: faction-wh40k-imperialguard.description
 	FactionCA@wh40kmarines:
 		Name: Space Marines
 		InternalName: spacemarines
 		Game: Dawn of War
 		Side: Dawn of War
-		Description: Space Marines from WH40K\nBased on Dawn of War\nThis faction uses powerful Elite Infantry\nSupport powers: Orbital Relay\n- Super Weapon unit: Land Raider
+		Description: faction-wh40k-spacemarine.description
 	FactionCA@wh40korkz:
 		Name: Orkz
 		InternalName: orkz
 		Game: Dawn of War
 		Side: Dawn of War
-		Description: Orkz fom WH40K\nBazed on Dawn of Whaaag\nDa Okrz use a lot of Boyz to attack, a biggah orde\nZuppor Powah: Whaaag\n- Supa Biggah unit: Squiggoth
+		Description: faction-wh40k-orkz.description
 	FactionCA@wh40kchaos:
 		Name: Chaos
 		InternalName: chaos
 		Game: Dawn of War
 		Side: Dawn of War
-		Description: Chaos from WH40K\nBased on Dawn of War\nSupport powers: Horror Teleport\n- Super Weapon unit: Prince Demon
+		Description: faction-wh40k-chaos.description
 	# FactionCA@wh40ktau:
 	# 	Name: Tau WH40K
 	# 	InternalName: tau
@@ -50,7 +50,7 @@ World:
 		RandomFactionMembers: imperialguard, spacemarines, orkz, chaos #, tau, eldar, necron
 		Game: Dawn of War
 		Side: Random
-		Description: Random Faction\nA random faction from DOW will be chosen when the game starts.
+		Description: faction-random-wh40k.description
 	####################################################################################################
 	#		Imperial Guard
 	####################################################################################################
@@ -193,7 +193,6 @@ World:
 		SupportActors: wh40kslugga,wh40kslugga,wh40kslugga,wh40kshoota,wh40kshoota,wh40kshoota,wh40kshoota,wh40kwartrukk,wh40kwartrukk
 
 Player:
-
 	ProvidesPrerequisite@wh40kspacemarine:
 		Prerequisite: mmspacemarine
 		Factions: spacemarines
@@ -273,7 +272,7 @@ wh40kstrategy.oldwip:
 	Tooltip:
 		Name: Captured Strategy Point
 	TooltipDescription@ally:
-		Description: Provides additional funds.
+		Description: actor-stategicpoint.description
 		ValidRelationships: Ally
 	TooltipDescription@other:
 		Description: Capture to receive additional funds.
@@ -349,7 +348,7 @@ pscwh40kstrategy1:
 	Buildable:
 		BuildPaletteOrder: 10
 		Queue: WH40KStrategy1
-		Description: Increases Health and Increases Cash.
+		Description: actor-pscwh40kstrategy1.description
 		Prerequisites:
 	Valued:
 		Cost: 500
@@ -366,7 +365,7 @@ pscwh40kstrategy2:
 	Buildable:
 		BuildPaletteOrder: 10
 		Queue: WH40KStrategy2
-		Description: Increases Health and Increases Cash.\n Adds a defensive Weapon
+		Description: actor-pscwh40kstrategy2.description
 		Prerequisites:
 	Valued:
 		Cost: 1000
@@ -383,7 +382,7 @@ pscwh40kstrategy3:
 	Buildable:
 		BuildPaletteOrder: 10
 		Queue: WH40KStrategy3
-		Description: Increases Health and Increases Cash.\n Upgrades the Previous Weapon
+		Description: actor-pscwh40kstrategy3.description
 		Prerequisites: vehicleproduction
 	Valued:
 		Cost: 1500
@@ -462,7 +461,7 @@ wh40kstrategy:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 120
 		Prerequisites: wh40kpower, ~mmimperialguard
-		Description: Provides Passive income.\n Provides Base Area .\n Attacks when is Upgraded.\n  Upgradeable with Addons
+		Description: actor-wh40kstrategy.description
 		BuildLimit: 5
 	Valued:
 		Cost: 1500
@@ -612,7 +611,7 @@ wh40kstrategyo:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 120
 		Prerequisites: wh40kpowero, ~techlevel.medium, ~mmorkz
-		Description: Provides Passive income.\n Provides Base Area .\n Attacks when is Upgraded.\n  Upgradeable with Addons
+		Description: actor-wh40kstrategyo.description
 		BuildLimit: 5
 	Valued:
 		Cost: 1500
@@ -770,7 +769,7 @@ wh40kstrategym:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 120
 		Prerequisites: wh40kpower, ~techlevel.medium, ~mmspacemarines
-		Description: Provides Passive income.\n Provides Base Area .\n Attacks when is Upgraded.\n  Upgradeable with Addons
+		Description: actor-wh40kstrategym.description
 		BuildLimit: 5
 	Valued:
 		Cost: 1500
@@ -921,7 +920,7 @@ wh40kstrategyc:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 120
 		Prerequisites: wh40kpowerc, ~techlevel.medium, ~mmchaos
-		Description: Provides Passive income.\n Provides Base Area .\n Attacks when is Upgraded.\n  Upgradeable with Addons
+		Description: actor-wh40kstrategyc.description
 		BuildLimit: 5
 	Valued:
 		Cost: 1500
@@ -1072,7 +1071,7 @@ wh40kstrategye:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 120
 		Prerequisites: wh40kpowere, ~mmeldar
-		Description: Provides Passive income.\n Provides Base Area .\n Attacks when is Upgraded.\n  Upgradeable with Addons
+		Description: actor-wh40kstrategye.description
 		BuildLimit: 5
 	Valued:
 		Cost: 1500
@@ -1222,7 +1221,7 @@ wh40kstrategyt:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 120
 		Prerequisites: anypower, ~techlevel.medium, ~mmtau
-		Description: Provides Passive income.\n Provides Base Area .\n Attacks when is Upgraded.\n  Upgradeable with Addons
+		Description: actor-wh40kstrategyt.description
 		BuildLimit: 5
 	Valued:
 		Cost: 1500
@@ -1409,7 +1408,7 @@ wh40kmcv:
 		BuildPaletteOrder: 210
 		Prerequisites: wh40karmory, ~techlevel.medium, ~mmimperialguard
 		BuildDurationModifier: 40
-		Description: Deploys into another Field Command.\n  Unarmed
+		Description: actor-wh40kmcv.description
 	Valued:
 		Cost: 2000
 	Tooltip:
@@ -1531,7 +1530,7 @@ wh40kfieldcommand:
 	ProvidesPrerequisite@buildingname:
 		Prerequisite: wh30kcommand
 	Buildable:
-		Description: Builds structures
+		Description: actor-wh40kfieldcommand.description
 	ProvidesPrerequisite@factionallies:
 		Prerequisite: mmimperialguard
 	RallyPoint: ##########
@@ -1561,7 +1560,7 @@ wh40kfieldcommand:
 		Names: 
 			1: Spy Satellite Scan
 		Descriptions:
-			1: Reveals an area of the map\nand cloaked enemy units.
+			1: power-ra2psireveal.description
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
 		EndChargeSpeechNotification: SpyPlaneReady
@@ -1590,7 +1589,7 @@ wh40kfieldcommand:
 		Names:
 			1: Incendiary Bombs
 		Descriptions:
-			1: Deploy an aerial napalm strike.\nBurns buildings and infantry along a line.
+			1: power-napalmstrike.description
 		EndChargeSpeechNotification: AirstrikeReady
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
@@ -1686,7 +1685,7 @@ wh40kpower:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 10
 		Prerequisites: wh30kcommand, ~mmimperialguard
-		Description: Provides power for other structures.
+		Description: actor-wh40kpower.description
 	Valued:
 		Cost: 330 #300
 	Tooltip:
@@ -1739,7 +1738,7 @@ wh40kbarr:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 20
 		Prerequisites: wh40kpower, ~mmimperialguard
-		Description: Trains infantry
+		Description: actor-wh40kbarr.description
 	Power:
 		Amount: -25
 	Valued:
@@ -1800,7 +1799,7 @@ wh40karmory:
 		BuildPaletteOrder: 60
 		Prerequisites: barracks, ~mmimperialguard
 		Queue: Building, RABuilding
-		Description: Provides access to advanced American technologies.
+		Description: actor-wh40karmory.description
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -1835,7 +1834,7 @@ wh40kweap:
 		BuildPaletteOrder: 50
 		Prerequisites: wh40kupbattlecommand, ~mmimperialguard
 		Queue: Building, RABuilding
-		Description: Produces vehicles
+		Description: actor-wh40kweap.description
 	Building:
 		Footprint: xxxx x++x ====
 		Dimensions: 4,3
@@ -1873,6 +1872,20 @@ wh40kweap:
 	ProductionBar@VEHICLEGUARD:
 		ProductionType: Vehicle.Guard
 		RequiresCondition: !classicproductionqueues
+	Production@Addons:
+		Produces: Addons
+		RequiresCondition: !classicproductionqueues
+	ProductionQueue@Addons:
+		Type: Addons
+		DisplayOrder: 0
+		Group: Building
+		LowPowerModifier: 200
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+	ProductionBar@Addons:
+		ProductionType: Addons
+		RequiresCondition: !classicproductionqueues
+	BaseBuilding:
 	ProvidesPrerequisite@buildingname:
 	ProvidesPrerequisite@vehicleproduction:
 		Prerequisite: vehicleproduction
@@ -1894,7 +1907,7 @@ wh40kheavybolt:
 		Prerequisites: barracks, ~mmimperialguard
 		Queue: Defence, RADefence
 		BuildDurationModifier: 40
-		Description: All-purpose defensive structure.\n  Strong vs Aircraft, Infantry\n  Weak vs Vehicles
+		Description: actor-wh40kheavybolt.description
 	Selectable:
 		Bounds: 1024, 1024
 	SelectionDecorations:
@@ -1952,7 +1965,7 @@ wh40kheavybolt2:
 		Prerequisites: wh40kupbattlecommand, ~mmimperialguard
 		Queue: Defence, RADefence
 		BuildDurationModifier: 40
-		Description: All-purpose defensive structure.\n  Strong vs Aircraft, Infantry\n  Weak vs Vehicles
+		Description: actor-wh40kheavybolt2.description
 	Selectable:
 		Bounds: 1024, 1024
 	SelectionDecorations:
@@ -2003,7 +2016,7 @@ wh40kproc:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 60
 		Prerequisites: wh40kpower, ~mmimperialguard
-		Description: Refines Ore and Gems\ninto credits.
+		Description: actor-wh40kproc.description
 	Valued:
 		Cost: 1500 #1400
 	Tooltip:
@@ -2075,7 +2088,7 @@ wh40kmars:
 		BuildPaletteOrder: 50
 		Prerequisites: wh40kupfullscalewar, ~mmimperialguard
 		Queue: Building, RABuilding
-		Description: Produces vehicles, 25% faster
+		Description: actor-wh40kmars.description
 		BuildLimit: 1
 	Building:
 		Footprint: xxxx x++x ====
@@ -2320,7 +2333,7 @@ wh40kuphonor:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Increases Guardsmen health by 10%.
+		Description: actor-wh40kuphonor.description
 		Prerequisites: ~!wh40kuphonor, ~mmimperialguard
 	Valued:
 		Cost: 1000
@@ -2336,7 +2349,7 @@ wh40kupguardarmor:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Increases Guardsmens health by 15%.
+		Description: actor-wh40kupguardarmor.description
 		Prerequisites: ~!wh40kupguardarmor, ~mmimperialguard
 	Valued:
 		Cost: 1500
@@ -2352,7 +2365,7 @@ wh40kupguardemperor:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Increases Guardsmens health by a further 15%.
+		Description: actor-wh40kupguardemperor.description
 		Prerequisites: ~!wh40kupguardemperor, wh40kupbattlecommand, ~mmimperialguard
 	Valued:
 		Cost: 1000
@@ -2368,7 +2381,7 @@ wh40kupsateliterange:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Increases Guardsmen range by 20%.
+		Description: actor-wh40kupsateliterange.description
 		Prerequisites: ~!wh40kupsateliterange, wh40kupbattlecommand, ~mmimperialguard
 	Valued:
 		Cost: 1250
@@ -2384,7 +2397,7 @@ wh40kupweapspecialization:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Increases Infantry firepower by a further 15%.
+		Description: actor-wh40kupweapspecialization.description
 		Prerequisites: ~!wh40kupweapspecialization, wh40kupsateliterange, ~mmimperialguard
 	Valued:
 		Cost: 2000
@@ -2400,7 +2413,7 @@ wh40kuppoweredbayonets:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Increases Ogryn firepower by 15%.
+		Description: actor-wh40kuppoweredbayonets.description
 		Prerequisites: ~!wh40kuppoweredbayonets, wh40kupogrynquarters, ~mmimperialguard
 	Valued:
 		Cost: 1750
@@ -2416,7 +2429,7 @@ wh40kupbattlecommand:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Defence, RADefence
-		Description: Increases Field Command to 25% of health, Unlock new Tech
+		Description: actor-wh40kupbattlecommand.description
 		Prerequisites: ~!wh40kupbattlecommand, barracks, ~mmimperialguard
 	Valued:
 		Cost: 3000
@@ -2432,7 +2445,7 @@ wh40kupregimentalcommand:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Defence, RADefence
-		Description: Increases Field Command to 25% of health, Unlock new Tech
+		Description: actor-wh40kupregimentalcommand.description
 		Prerequisites: ~!wh40kupregimentalcommand, wh40kupbattlecommand, vehicleproduction, ~mmimperialguard
 	Valued:
 		Cost: 3000
@@ -2448,7 +2461,7 @@ wh40kupogrynquarters:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Addons
-		Description: Unlock Ogryns.
+		Description: actor-wh40kupogrynquarters.description
 		Prerequisites: ~!wh40kupogrynquarters, wh40kupregimentalcommand, ~mmimperialguard
 	Valued:
 		Cost: 500
@@ -2464,7 +2477,7 @@ wh40kupkasrkinquarters:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Addons
-		Description: Unlock Ogryns.
+		Description: actor-wh40kupkasrkinquarters.description
 		Prerequisites: ~!wh40kupkasrkinquarters, wh40kupregimentalcommand, ~mmimperialguard
 	Valued:
 		Cost: 500
@@ -2480,7 +2493,7 @@ wh40kupsentineldepot:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Addons
-		Description: Unlock Sentinels.
+		Description: actor-wh40kupsentineldepot.description
 		Prerequisites: ~!wh40kupsentineldepot, wh40kupbattlecommand, ~mmimperialguard
 	Valued:
 		Cost: 750
@@ -2496,7 +2509,7 @@ wh40kuphellhounddepot:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Addons
-		Description: Unlock Hellhounds.
+		Description: actor-wh40kuphellhounddepot.description
 		Prerequisites: ~!wh40kuphellhounddepot, wh40kupbattlecommand, ~mmimperialguard
 	Valued:
 		Cost: 1500
@@ -2512,7 +2525,7 @@ wh40kupbasiliskdepot:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Addons
-		Description: Unlock Basilisks.
+		Description: actor-wh40kupbasiliskdepot.description
 		Prerequisites: ~!wh40kupbasiliskdepot, wh40kupbattlecommand, ~mmimperialguard
 	Valued:
 		Cost: 750
@@ -2528,7 +2541,7 @@ wh40kupmarauderdepot:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Addons
-		Description: Unlock Marauder Bombers.
+		Description: actor-wh40kupmarauderdepot.description
 		Prerequisites: ~!wh40kupmarauderdepot, wh40kupbattlecommand, ~mmimperialguard
 	Valued:
 		Cost: 1500
@@ -2544,7 +2557,7 @@ wh40kuplemanrussdepot:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Addons
-		Description: Unlock Leman Russ.
+		Description: actor-wh40kuplemanrussdepot.description
 		Prerequisites: ~!wh40kuplemanrussdepot, wh40kupregimentalcommand, wh40kupfullscalewar, ~mmimperialguard
 	Valued:
 		Cost: 1500
@@ -2560,7 +2573,7 @@ wh40kupfullscalewar:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Addons
-		Description: Unlock Leman Russ and Baneblade Tanks
+		Description: actor-wh40kupfullscalewar.description
 		Prerequisites: ~!wh40kupfullscalewar, wh40kupregimentalcommand, ~mmimperialguard
 	Valued:
 		Cost: 3000
@@ -2576,7 +2589,7 @@ wh40kupenergy1:
 	Buildable:
 		BuildPaletteOrder: 210
 		Queue: Addons
-		Description: Increases Energy of Generators.
+		Description: actor-wh40kupenergy1.description
 		Prerequisites: ~!wh40kupenergy1, ~wh30kcommand
 	Valued:
 		Cost: 1500
@@ -2592,7 +2605,7 @@ wh40kupenergy2:
 	Buildable:
 		BuildPaletteOrder: 210
 		Queue: Addons
-		Description: Increases Energy of Generators.
+		Description: actor-wh40kupenergy2.description
 		Prerequisites: ~!wh40kupenergy2, wh40kupenergy1, ~wh30kcommand
 	Valued:
 		Cost: 2500
@@ -2608,7 +2621,7 @@ wh40kupgenenhancement:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Increases Kasrkin to 33% of speed.
+		Description: actor-wh40kupgenenhancement.description
 		Prerequisites: ~!wh40kupgenenhancement, wh40kupkasrkinquarters, ~mmimperialguard
 	Valued:
 		Cost: 1500
@@ -2624,7 +2637,7 @@ wh40kupkasrkinarmor:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Increases Kasrkin to 25% of health.
+		Description: actor-wh40kupkasrkinarmor.description
 		Prerequisites: ~!wh40kupkasrkinarmor, wh40kupkasrkinquarters, ~mmimperialguard
 	Valued:
 		Cost: 1500
@@ -2659,7 +2672,7 @@ wh40kguard:
 		Prerequisites: wh30kcommand
 		BuildDurationModifier: 100
 		BuildDuration: 70
-		Description: Imperial Guard Main Infantry
+		Description: actor-wh40kguard.description
 	Armament@PRIMARY:
 		Weapon: WH40KImperialGuardMG
 		ReloadingCondition: reloading
@@ -2713,7 +2726,7 @@ wh40kgrenade:
 		Prerequisites: wh30kcommand, wh40karmory
 		BuildDurationModifier: 100
 		BuildDuration: 100
-		Description: Imperial Guard Main Infantry
+		Description: actor-wh40kgrenade.description
 	Mobile:
 		Speed: 48
 	Health:
@@ -2776,7 +2789,7 @@ wh40kguardplasma:
 		Prerequisites: wh30kcommand, wh40kupbattlecommand
 		BuildDurationModifier: 100
 		BuildDuration: 100
-		Description: Imperial Guard Main Infantry
+		Description: actor-wh40kguardplasma.description
 	Armament@PRIMARY:
 		Weapon: WH40KPlasmapistol
 	Armament@GARRISONED:
@@ -2822,7 +2835,7 @@ wh40kcommisair:
 		Prerequisites: wh30kcommand, ~mmimperialguard
 		BuildDurationModifier: 100
 		BuildDuration: 150
-		Description: Imperial Guard Main Infantry
+		Description: actor-wh40kcommisair.description
 	AutoTarget:
 		ScanRadius: 6
 		InitialStance: AttackAnything
@@ -2870,7 +2883,7 @@ wh40kogryn:
 		Queue: Infantry.Guard
 		BuildDurationModifier: 100
 		BuildDuration: 300
-		Description: General-purpose Infantry \n  Strong vs Infantry\n  Weak vs Vehicles
+		Description: actor-wh40kogryn.description
 	Mobile:
 		Speed: 80
 	Crushable:
@@ -2957,7 +2970,7 @@ wh40kbigguns:
 		Queue: Infantry.Guard
 		BuildDurationModifier: 300
 		BuildDuration: 70
-		Description: General-purpose Infantry \n  Strong vs Infantry, Light Vehicles\n  Weak vs Tanks, Aircraft\n  Can deploy for increased firepower
+		Description: actor-wh40kbigguns.description
 	Mobile:
 		Speed: 50
 		RequireForceMoveCondition: !undeployed
@@ -3053,7 +3066,7 @@ wh40kbigguns2:
 		BuildPaletteOrder: 51
 		Prerequisites: wh40kupbattlecommand
 		Queue: Infantry.Guard
-		Description: General-purpose Infantry \n  Strong vs Infantry, Light Vehicles\n  Weak vs Tanks, Aircraft\n  Can deploy for increased firepower
+		Description: actor-wh40kbigguns2.description
 	Armament@PRIMARY: ##########
 		Weapon: WH40KImperialGuardMG
 		RequiresCondition: !deployed
@@ -3076,7 +3089,7 @@ wh40kbigguns3:
 		BuildPaletteOrder: 52
 		Prerequisites: wh40kupregimentalcommand
 		Queue: Infantry.Guard
-		Description: General-purpose Infantry \n  Strong vs Infantry, Light Vehicles\n  Weak vs Tanks, Aircraft\n  Can deploy for increased firepower
+		Description: actor-wh40kbigguns3.description
 	Armament@PRIMARY: ##########
 		Weapon: WH40KImperialGuardMG
 		RequiresCondition: !deployed
@@ -3114,7 +3127,7 @@ wh40kkars:
 		BuildPaletteOrder: 60
 		Prerequisites: barracks, wh40kupkasrkinquarters
 		Queue: Infantry.Guard
-		Description: General-purpose Infantry \n  Strong vs Infantry\n  Weak vs Vehicles
+		Description: actor-wh40kkars.description
 	Mobile:
 		Speed: 70
 	Crushable:
@@ -3181,7 +3194,7 @@ wh40kkarsgrenade:
 		BuildPaletteOrder: 62
 		Prerequisites: barracks, wh40kupkasrkinquarters
 		Queue: Infantry.Guard
-		Description: General-purpose Infantry \n  Strong vs Infantry\n  Weak vs Vehicles
+		Description: actor-wh40kkarsgrenade.description
 	Armament@PRIMARY: ##########
 		Weapon: WH40KGrenadeLauncher
 	Armament@GARRISONED: ##########
@@ -3213,7 +3226,7 @@ wh40kkarsplasma:
 		BuildPaletteOrder: 62
 		Prerequisites: barracks, wh40kupkasrkinquarters
 		Queue: Infantry.Guard
-		Description: General-purpose Infantry \n  Strong vs Infantry\n  Weak vs Vehicles
+		Description: actor-wh40kkarsplasma.description
 	Armament@PRIMARY: ##########
 		Weapon: WH40KPlasmapistol
 	Armament@GARRISONED: ##########
@@ -3251,7 +3264,7 @@ wh40ktechpriest:
 		BuildPaletteOrder: 10
 		Prerequisites: ~mmimperialguard
 		Queue: Defence, RADefence
-		Description: General-purpose Infantry \n  Strong vs Infantry\n  Weak vs Vehicles
+		Description: actor-wh40ktechpriest.description
 	Mobile:
 		Speed: 70
 	Crushable:
@@ -3303,7 +3316,7 @@ wh40kpsyker:
 		BuildPaletteOrder: 99
 		Prerequisites: wh40kupbattlecommand, ~mmimperialguard
 		Queue: Defence, RADefence
-		Description: Psychic Infantry \nCan control enemy units.\nCan deploy to unleash a psychic blast.\n Weak vs Aircraft, Robots
+		Description: actor-wh40kpsyker.description
 	Mobile:
 		Speed: 50
 	Health:
@@ -3351,7 +3364,7 @@ wh40kpriest:
 		BuildPaletteOrder: 60
 		Prerequisites: barracks, wh40kupbattlecommand, ~mmimperialguard
 		Queue: Defence, RADefence
-		Description: Support Infantry \n  Strong vs Infantry\n  Weak vs Vehicles\n  Can Upgrade Firepower of Nearby Infantry
+		Description: actor-wh40kpriest.description
 	Mobile:
 		Speed: 70
 	Crushable:
@@ -3400,8 +3413,8 @@ wh40kcommandsquada:
 		DeathTypes: DefaultDeath
 	Buildable:
 		BuildPaletteOrder: 30
-		Queue: Infantry.Guard, ~mmimperialguard
-		Description: Elite Infantry Squad.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft \n  Contain a Commander, Commissar, Psyker and Priest
+		Queue: Infantry.Guard
+		Description: actor-wh40kcommandsquada.description
 		Prerequisites: wh40karmory
 		BuildLimit: 1
 	Tooltip:
@@ -3557,7 +3570,7 @@ wh40kcommandsquad:
 		BuildPaletteOrder: 60
 		Prerequisites: barracks, wh40kupbattlecommand, ~disabled
 		Queue: Defence, RADefence
-		Description: Support Infantry \n  Strong vs Infantry\n  Weak vs Vehicles\n  Can Upgrade Firepower of Nearby Infantry
+		Description: actor-wh40kcommandsquad.description
 	Mobile:
 		Speed: 70
 	Crushable:
@@ -3627,7 +3640,7 @@ wh40kguardsquad:
 	Buildable:
 		BuildPaletteOrder: 30
 		Queue: Infantry.Guard
-		Description: Basic Infantry Squad.\n  Equivalent to 8 guardsmens.\n Squad Nembers respawn after dead
+		Description: actor-wh40kguardsquad.description
 		Prerequisites: wh40karmory
 	Tooltip:
 		Name: Guardsmen Squad
@@ -3719,7 +3732,7 @@ wh40kguardsargent:
 		BuildPaletteOrder: 100
 		Prerequisites: wh40karmory
 		BuildDurationModifier: 120
-		Description: Imperial Guard Main Sergeant
+		Description: actor-wh40kguardsargent.description
 		BuildLimit: 5
 		DamagedSounds: wh40kguardunder1.wav, wh40kguardunder2.wav, wh40kguardunder3.wav, wh40kguardunder4.wav, wh40kguardunder5.wav
 	RenderSprites:
@@ -3740,7 +3753,7 @@ wh40kkarssargent:
 		BuildPaletteOrder: 101
 		Prerequisites: wh40karmory, wh40kupkasrkinquarters
 		BuildDurationModifier: 120
-		Description: Imperial Guard Main Sergeant
+		Description: actor-wh40kkarssargent.description
 		BuildLimit: 1
 	RenderSprites:
 		Image: wh40kkarssargent
@@ -3759,7 +3772,7 @@ wh40kogrynsargent:
 		BuildPaletteOrder: 102
 		Prerequisites: wh40karmory, wh40kupogrynquarters
 		BuildDurationModifier: 120
-		Description: Imperial Guard Main Sergeant
+		Description: actor-wh40kogrynsargent.description
 		BuildLimit: 1
 #######################################
 # Imperial Guard, Vehicles
@@ -3781,7 +3794,7 @@ wh40kleman:
 		BuildPaletteOrder: 60
 		Prerequisites: wh40kuplemanrussdepot
 		Queue: Vehicle.Guard, Vehicle2.Guard
-		Description: Heavily armored Imperial Guard Tank.\nCan attack Aircraft\n  Strong vs Everything
+		Description: actor-wh40kleman.description
 		BuildDuration: 2500
 		BuildDurationModifier: 100
 	Mobile:
@@ -3845,7 +3858,7 @@ wh40kchime:
 		BuildPaletteOrder: 60
 		Prerequisites: wh40kupbattlecommand
 		Queue: Vehicle.Guard, Vehicle2.Guard
-		Description: Heavily armored Imperial Guard Transport.\nCan attack Aircraft\n  Strong vs Infantry
+		Description: actor-wh40kchime.description
 	Mobile:
 		Locomotor: heavytracked
 		Speed: 90
@@ -3908,7 +3921,7 @@ wh40khellhound:
 		BuildPaletteOrder: 60
 		Prerequisites: wh40kuphellhounddepot
 		Queue: Vehicle.Guard, Vehicle2.Guard
-		Description: Heavily armored Imperial Guard Flame Tank.\n\n  Strong vs Infantry
+		Description: actor-wh40khellhound.description
 	Mobile:
 		Locomotor: heavytracked
 		Speed: 85
@@ -4012,7 +4025,7 @@ wh40kbanewolf:
 		BuildPaletteOrder: 60
 		Prerequisites: wh40kuphellhounddepot
 		Queue: Vehicle.Guard, Vehicle2.Guard
-		Description: Radiation Tank.\n  Strong vs Infantry
+		Description: actor-wh40kbanewolf.description
 	Mobile:
 		Locomotor: heavytracked
 		Speed: 85
@@ -4066,7 +4079,7 @@ wh40kharv:
 		Prerequisites: wh40kproc
 		Queue: Vehicle.Guard, Vehicle2.Guard
 		BuildDurationModifier: 40
-		Description: Collects Tiberium for processing.\n  Unarmed
+		Description: actor-wh40kharv.description
 	Selectable:
 		DecorationBounds: 1536, 1536
 	Harvester:
@@ -4119,7 +4132,7 @@ wh40kbasilisk:
 	Buildable:
 		BuildPaletteOrder: 60
 		Queue: Vehicle.Guard, Vehicle2.Guard
-		Description: Long-range artillery.\n  Strong vs Infantry, Vehicles and Buildings
+		Description: actor-wh40kbasilisk.description
 		Prerequisites: wh40kupbasiliskdepot
 	Mobile:
 		Locomotor: heavytracked
@@ -4164,7 +4177,7 @@ wh40ksentinel:
 	Buildable:
 		Queue: Vehicle.Guard, Vehicle2.Guard
 		BuildPaletteOrder: 120
-		Description: Imperial Guard Main Battle Walker, with las cannons\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft
+		Description: actor-wh40ksentinel.description
 		Prerequisites: wh40kupsentineldepot
 	Valued:
 		Cost: 1500
@@ -4419,7 +4432,7 @@ wh40kmaurader:
 		BuildPaletteOrder: 90
 		Prerequisites: wh40kupmarauderdepot
 		Queue: Vehicle.Guard, Vehicle2.Guard
-		Description: Aircraft Gunship with las Guns and MGs.\n  Strong vs All
+		Description: actor-wh40kmaurader.description
 	Aircraft:
 		Speed: 160
 		TurnSpeed: 80
@@ -4477,7 +4490,7 @@ wh40kbaneblade:
 		BuildPaletteOrder: 60
 		Prerequisites: wh40kupfullscalewar, !wh40kbanebladec
 		Queue: Vehicle2.Guard
-		Description: The Ultimate Imperial Guard Tank.\nCan attack Aircraft\n  Strong vs Everything
+		Description: actor-wh40kbaneblade.description
 	Mobile:
 		Locomotor: heavytracked
 		Speed: 68
@@ -4616,7 +4629,7 @@ wh40krankguards:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Promotions
-		Description: A group of Regimental Guards spawn at your base.
+		Description: actor-wh40krankguards.description
 		Prerequisites: !wh40krankguards, rank1, ~mmimperialguard
 	RenderSprites:
 		Image: wh40kguard
@@ -4630,7 +4643,7 @@ wh40krankcommisar:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Promotions
-		Description: A Regimental Commissar spawn at your base.
+		Description: actor-wh40krankcommisar.description
 		Prerequisites: !wh40krankcommisar, rank1, ~mmimperialguard
 	RenderSprites:
 		Image: wh40kcommisair
@@ -4644,7 +4657,7 @@ wh40kranktechpriest:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Promotions
-		Description: A Expert Techpriest spawn at your base.
+		Description: actor-wh40kranktechpriest.description
 		Prerequisites: !wh40kranktechpriest, rank1, ~mmimperialguard
 	RenderSprites:
 		Image: wh40ktechpriest
@@ -4658,7 +4671,7 @@ wh40krankpsyker:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Promotions
-		Description: A Sanctioned Psyker spawn at your base.
+		Description: actor-wh40krankpsyker.description
 		Prerequisites: !wh40krankpsyker, rank1, ~mmimperialguard
 	RenderSprites:
 		Image: wh40kpsyker
@@ -4672,7 +4685,7 @@ wh40krankkars:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Promotions
-		Description: A group of Veteran Kasrkin spawn at your base.
+		Description: actor-wh40krankkars.description
 		Prerequisites: !wh40krankkars, rank3, rank1, ~mmimperialguard
 	RenderSprites:
 		Image: wh40kkars
@@ -4686,7 +4699,7 @@ wh40krankogryn:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Promotions
-		Description: A group of Bone'ead Ogryn spawn at your base.
+		Description: actor-wh40krankogryn.description
 		Prerequisites: !wh40krankogryn, rank3, rank1, ~mmimperialguard
 	RenderSprites:
 		Image: wh40kogrynsargent
@@ -4699,7 +4712,7 @@ wh40kranksentinel:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Promotions
-		Description: A Sentinel spawn at your base.
+		Description: actor-wh40kranksentinel.description
 		Prerequisites: !wh40kranksentinel, rank3, rank1, ~mmimperialguard
 	RenderSprites:
 		Image: wh40ksentinel
@@ -4930,7 +4943,7 @@ wh40kstronghold:
 	ProvidesPrerequisite@buildingname:
 		Prerequisite: wh30kcommand
 	Buildable:
-		Description: Builds structures
+		Description: actor-wh40kstronghold.description
 	ProvidesPrerequisite@factionspacemarine:
 		Prerequisite: mmspacemarines
 	RallyPoint: ##########
@@ -4971,7 +4984,7 @@ wh40kbarrm:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 20
 		Prerequisites: wh40kpowerm, ~mmspacemarines
-		Description: Trains infantry
+		Description: actor-wh40kbarrm.description
 	Power:
 		Amount: -25
 	Valued:
@@ -5036,7 +5049,7 @@ wh40ksacredart:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 20
 		Prerequisites: barracks, ~mmspacemarines
-		Description: Trains infantry
+		Description: actor-wh40ksacredart.description
 	Power:
 		Amount: -25
 	Valued:
@@ -5097,7 +5110,7 @@ wh40ksacredart:
 		Names:
 			1: Psychic Inquisition
 		Descriptions:
-			1: Initiate an Inquisition Orbital strike.\nApplies instant damage to a small area.\nOnly can Damage Units.
+			1: power-psykinq.description
 		BeginChargeSpeechNotification: IonCannonCharging
 		EndChargeSpeechNotification: IonCannonReady
 		SelectTargetSpeechNotification: SelectTarget
@@ -5124,7 +5137,7 @@ wh40karmorym:
 		BuildPaletteOrder: 60
 		Prerequisites: barracks, ~mmspacemarines
 		Queue: Building, RABuilding
-		Description: Provides access to advanced USA technologies.
+		Description: actor-wh40karmorym.description
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -5157,7 +5170,7 @@ wh40korbitalrelay:
 		BuildPaletteOrder: 60
 		Prerequisites: wh40kupmonastery2, !marineorbital, ~mmspacemarines
 		Queue: Building, RABuilding
-		Description: Provides Deep Strike Support Powers.\n Unlock Variants introduce the next units.\n Rocket Marines = Adds Rocket Marines in the Strike.\n Flamer Marines = Adds Flamer Marines in the Strike.\n Bolter Marines = Adds Bolter Marines in the Strike.\n Plasma Marines = Adds Plasma Marines in the Strike.\n Dreadnought = Replace Marines with a single Dreadnought in the Strike.\n Hellfire Dreadnought = Replace Marines with a Hellfire Dreadnought in the Strike
+		Description: actor-wh40korbitalrelay.description
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -5183,7 +5196,7 @@ wh40korbitalrelay:
 		Names:
 			1: Deep Strike
 		Descriptions:
-			1: Deploys squad marines from orbit.
+			1: power-deepstrike.description
 		InsufficientPowerSpeechNotification: InsufficientPower
 		LaunchSpeechNotification: ReinforcementsArrived
 		SelectTargetSpeechNotification: SelectTarget
@@ -5203,7 +5216,7 @@ wh40korbitalrelay:
 		Names:
 			1: Deep Strike
 		Descriptions:
-			1: Deploys squad marines from orbit.
+			1: power-deepstrike.description
 		InsufficientPowerSpeechNotification: InsufficientPower
 		LaunchSpeechNotification: ReinforcementsArrived
 		SelectTargetSpeechNotification: SelectTarget
@@ -5223,9 +5236,9 @@ wh40korbitalrelay:
 		Icons:
 			1: wh40kmarineicon
 		Names:
-			1: Deep Strike
+			1: Flamer Deep Strike
 		Descriptions:
-			1: Deploys squad flamer marines from orbit.
+			1: power-deepstrikeflamer.description
 		InsufficientPowerSpeechNotification: InsufficientPower
 		LaunchSpeechNotification: ReinforcementsArrived
 		SelectTargetSpeechNotification: SelectTarget
@@ -5245,9 +5258,9 @@ wh40korbitalrelay:
 		Icons:
 			1: wh40kmarineicon
 		Names:
-			1: Deep Strike
+			1: Plasma Deep Strike
 		Descriptions:
-			1: Deploys squad plasma marines from orbit.
+			1: power-deepstrikeplasma.description
 		InsufficientPowerSpeechNotification: InsufficientPower
 		LaunchSpeechNotification: ReinforcementsArrived
 		SelectTargetSpeechNotification: SelectTarget
@@ -5267,9 +5280,9 @@ wh40korbitalrelay:
 		Icons:
 			1: wh40kmarineicon
 		Names:
-			1: Deep Strike
+			1: Missile Deep Strike
 		Descriptions:
-			1: Deploys squad rocket marines from orbit.
+			1: power-deepstrikemissile.description
 		InsufficientPowerSpeechNotification: InsufficientPower
 		LaunchSpeechNotification: ReinforcementsArrived
 		SelectTargetSpeechNotification: SelectTarget
@@ -5289,8 +5302,9 @@ wh40korbitalrelay:
 		Icons:
 			1: wh40kmarineicon
 		Names:
-			1:  Deep Strike
-		Descriptions: Deploys squad bolter marines from orbit.
+			1: Heavy Bolter Deep Strike
+		Descriptions:
+			1: power-deepstrikeheavybolter.description
 		InsufficientPowerSpeechNotification: InsufficientPower
 		LaunchSpeechNotification: ReinforcementsArrived
 		SelectTargetSpeechNotification: SelectTarget
@@ -5310,9 +5324,9 @@ wh40korbitalrelay:
 		Icons:
 			1: wh40kdreadicon
 		Names:
-			1: Deep Strike
+			1: Dreadnought Deep Strike
 		Descriptions:
-			1: Deploys Dreadnought from orbit.
+			1: power-deepstrikedread.description
 		InsufficientPowerSpeechNotification: InsufficientPower
 		LaunchSpeechNotification: ReinforcementsArrived
 		SelectTargetSpeechNotification: SelectTarget
@@ -5329,9 +5343,12 @@ wh40korbitalrelay:
 		Cursor: ability
 		PauseOnCondition: lowpower
 		RequiresCondition: hellfire >= 1
-		Icons: wh40kdreadhicon
-		Names: Deep Strike
-		Descriptions: Deploys Hellfire Dreadnought from orbit.
+		Icons:
+			1: wh40kdreadhicon
+		Names:
+			1: Deep Strike
+		Descriptions:
+			1: power-deepstrikehelldread.description
 		InsufficientPowerSpeechNotification: InsufficientPower
 		LaunchSpeechNotification: ReinforcementsArrived
 		SelectTargetSpeechNotification: SelectTarget
@@ -5354,7 +5371,7 @@ wh40korbitalrelay:
 		Names:
 			1: Deep Strike
 		Descriptions:
-			1: Deploys squad marines from orbit.
+			1: power-deepstrike.description
 		InsufficientPowerSpeechNotification: InsufficientPower
 		LaunchSpeechNotification: ReinforcementsArrived
 		SelectTargetSpeechNotification: SelectTarget
@@ -5375,7 +5392,7 @@ wh40korbitalrelay:
 		Names:
 			1: Deep Strike
 		Descriptions:
-			1: Deploys squad flamer marines from orbit.
+			1: power-deepstrikeflamer.description
 		InsufficientPowerSpeechNotification: InsufficientPower
 		LaunchSpeechNotification: ReinforcementsArrived
 		SelectTargetSpeechNotification: SelectTarget
@@ -5396,7 +5413,7 @@ wh40korbitalrelay:
 		Names:
 			1: Deep Strike
 		Descriptions:
-			1: Deploys squad plasma marines from orbit.
+			1: power-deepstrikeplasma.description
 		InsufficientPowerSpeechNotification: InsufficientPower
 		LaunchSpeechNotification: ReinforcementsArrived
 		SelectTargetSpeechNotification: SelectTarget
@@ -5416,7 +5433,8 @@ wh40korbitalrelay:
 			1: wh40kmarineicon
 		Names:
 			1: Deep Strike
-		Descriptions: Deploys squad rocket marines from orbit.
+		Descriptions:
+			1: power-deepstrikemissile.description
 		InsufficientPowerSpeechNotification: InsufficientPower
 		LaunchSpeechNotification: ReinforcementsArrived
 		SelectTargetSpeechNotification: SelectTarget
@@ -5437,7 +5455,7 @@ wh40korbitalrelay:
 		Names:
 			1: Deep Strike
 		Descriptions:
-			1: Deploys squad bolter marines from orbit.
+			1: power-deepstrikeheavybolter.description
 		InsufficientPowerSpeechNotification: InsufficientPower
 		LaunchSpeechNotification: ReinforcementsArrived
 		SelectTargetSpeechNotification: SelectTarget
@@ -5458,7 +5476,7 @@ wh40korbitalrelay:
 		Names:
 			1: Deep Strike
 		Descriptions:
-			1: Deploys Dreadnought from orbit.
+			1: power-deepstrikedread.description
 		InsufficientPowerSpeechNotification: InsufficientPower
 		LaunchSpeechNotification: ReinforcementsArrived
 		SelectTargetSpeechNotification: SelectTarget
@@ -5478,7 +5496,8 @@ wh40korbitalrelay:
 			1: wh40kdreadhicon
 		Names:
 			1: Deep Strike
-		Descriptions: Deploys Hellfire Dreadnought from orbit.
+		Descriptions:
+			1: power-deepstrikehelldread.description
 		InsufficientPowerSpeechNotification: InsufficientPower
 		LaunchSpeechNotification: ReinforcementsArrived
 		SelectTargetSpeechNotification: SelectTarget
@@ -5520,7 +5539,7 @@ wh40kpowerm:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 10
 		Prerequisites: wh30kcommand, ~mmspacemarines
-		Description: Provides power for other structures.
+		Description: actor-wh40kpowerm.description
 	Valued:
 		Cost: 330 #300
 	Tooltip:
@@ -5574,7 +5593,7 @@ wh40kmachinecult:
 		BuildPaletteOrder: 50
 		Prerequisites: wh40kupmonastery, ~mmspacemarines
 		Queue: Building, RABuilding
-		Description: Produces vehicles
+		Description: actor-wh40kmachinecult.description
 	Building:
 		Footprint: xxxx x++x ====
 		Dimensions: 4,3
@@ -5630,7 +5649,7 @@ wh40kprocm:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 60
 		Prerequisites: wh40kpowerm, ~mmspacemarines
-		Description: Refines Ore and Gems\ninto credits.
+		Description: actor-wh40kprocm.description
 	Valued:
 		Cost: 1500 #1400
 	Tooltip:
@@ -5704,7 +5723,7 @@ wh40kbolterturret:
 		Prerequisites: barracks, ~mmspacemarines
 		Queue: Defence, RADefence
 		BuildDurationModifier: 40
-		Description: All-purpose defensive structure.\n  Strong vs Aircraft, Infantry\n  Weak vs Vehicles
+		Description: actor-wh40kbolterturret.description
 	Selectable:
 		Bounds: 1024, 1024
 	SelectionDecorations:
@@ -5763,7 +5782,7 @@ wh40kbolterturret2:
 		Prerequisites: wh40kupmonastery, ~mmspacemarines
 		Queue: Defence, RADefence
 		BuildDurationModifier: 40
-		Description: All-purpose defensive structure.\n  Strong vs Aircraft, Infantry\n  Weak vs Vehicles
+		Description: actor-wh40kbolterturret2.description
 	Selectable:
 		Bounds: 1024, 1024
 	SelectionDecorations:
@@ -5830,7 +5849,7 @@ wh40kmarine:
 		BuildPaletteOrder: 60
 		Prerequisites: barracks
 		Queue: Infantry.Marine
-		Description: General-purpose Infantry \n  Strong vs Infantry\n  Weak vs Vehicles
+		Description: actor-wh40kmarine.description
 	Mobile:
 		Speed: 70
 	Crushable:
@@ -5879,7 +5898,7 @@ wh40kmarineflamer:
 		BuildPaletteOrder: 63
 		Prerequisites: barracks, wh40karmorym
 		Queue: Infantry.Marine
-		Description: Short Range Infantry \n  Strong vs Infantry\n  Weak vs Vehicles
+		Description: actor-wh40kmarineflamer.description
 	Armament@PRIMARY: ##########
 		Weapon: Flamethrower
 		MuzzleSequence: muzzle
@@ -5909,7 +5928,7 @@ wh40kmarineplasma:
 		BuildPaletteOrder: 63
 		Prerequisites: barracks, wh40karmorym
 		Queue: Infantry.Marine
-		Description: Armed with Anti Personel Pistol.\n  Strong vs Heavy Infantry\n  Weak vs Vehicles
+		Description: actor-wh40kmarineplasma.description
 	Armament@PRIMARY: ##########
 		Weapon: WH40KPlasmapistol
 	Armament@GARRISONED: ##########
@@ -5935,7 +5954,7 @@ wh40kmarinerocket:
 		BuildPaletteOrder: 63
 		Prerequisites: barracks, wh40karmorym
 		Queue: Infantry.Marine
-		Description: AntiTank-purpose Infantry \n  Strong vs Vehicles\n  Weak vs Infantry
+		Description: actor-wh40kmarinerocket.description
 	Armament@PRIMARY: ##########
 		Weapon: WH40KHeavyMissileLauncher
 	Armament@GARRISONED: ##########
@@ -5961,7 +5980,7 @@ wh40kmarinebolter:
 		BuildPaletteOrder: 64
 		Prerequisites: barracks, wh40karmorym, ~mmspacemarines
 		Queue: Infantry.Marine
-		Description: Armed with Anti Infantry Heavy gun.\n  Strong vs Infantry\n  Weak vs Vehicles
+		Description: actor-wh40kmarinebolter.description
 	Armament@PRIMARY: ##########
 		Weapon: WH40KHeavyBolterPortable
 	Armament@GARRISONED: ##########
@@ -5996,7 +6015,7 @@ wh40kscout:
 		BuildPaletteOrder: 60
 		Prerequisites: barracks, ~mmspacemarines
 		Queue: Defence, RADefence
-		Description: Scout-purpose Infantry \n  Strong vs Infantry\n  Weak vs Vehicles
+		Description: actor-wh40kscout.description
 	Mobile:
 		Speed: 80
 	Crushable:
@@ -6053,7 +6072,7 @@ wh40kscoutflamer:
 		BuildPaletteOrder: 63
 		Prerequisites: barracks, wh40karmorym, ~mmspacemarines
 		Queue: Defence, RADefence
-		Description: Short Range Infantry \n  Strong vs Infantry\n  Weak vs Vehicles
+		Description: actor-wh40kscoutflamer.description
 	Armament@PRIMARY: ##########
 		Weapon: Flamethrower
 		MuzzleSequence: muzzle
@@ -6083,7 +6102,7 @@ wh40kscoutplasma:
 		BuildPaletteOrder: 63
 		Prerequisites: barracks, wh40karmorym, ~mmspacemarines
 		Queue: Defence, RADefence
-		Description: Armed with Anti Personel Pistol.\n  Strong vs Heavy Infantry\n  Weak vs Vehicles
+		Description: actor-wh40kscoutplasma.description
 	Armament@PRIMARY: ##########
 		Weapon: WH40KPlasmapistol
 	Armament@GARRISONED: ##########
@@ -6109,7 +6128,7 @@ wh40kscoutsniper:
 		BuildPaletteOrder: 63
 		Prerequisites: barracks, wh40karmorym, ~mmspacemarines
 		Queue: Defence, RADefence
-		Description: Armed Long Ranged Weapon.\n  Strong vs Infantry\n  Weak vs Vehicles
+		Description: actor-wh40kscoutsniper.description
 	Armament@PRIMARY: ##########
 		Weapon: Sniper
 	Armament@GARRISONED: ##########
@@ -6143,7 +6162,7 @@ wh40kforcecmd:
 		BuildPaletteOrder: 60
 		Prerequisites: barracks, wh40karmorym
 		Queue: Infantry.Marine
-		Description: Combat Commander.\n Melee Infantry \n  Strong vs Infantry\n  Weak vs Vehicles
+		Description: actor-wh40kforcecmd.description
 		BuildLimit: 1
 	Mobile:
 		Speed: 75
@@ -6192,7 +6211,7 @@ wh40kchaptain:
 		BuildPaletteOrder: 60
 		Prerequisites: barracks, wh40kupmonastery, ~mmspacemarines
 		Queue: Defence, RADefence
-		Description: Combat Commander.\n Melee Infantry \n  Strong vs Infantry\n  Weak vs Vehicle
+		Description: actor-wh40kchaptain.description
 		BuildLimit: 1
 	Mobile:
 		Speed: 75
@@ -6246,7 +6265,7 @@ wh40klibrarian:
 		BuildPaletteOrder: 60
 		Prerequisites: barracks, wh40ksacredart
 		Queue: Infantry2.Marine
-		Description: Combat Commander.\n Melee Infantry \n  Strong vs Infantry\n  Weak vs Vehicle
+		Description: actor-wh40klibrarian.description
 		BuildLimit: 1
 	Mobile:
 		Speed: 75
@@ -6296,7 +6315,7 @@ wh40kterminator1:
 		BuildPaletteOrder: 110
 		Prerequisites: wh40kupmonastery2
 		Queue: Infantry.Marine
-		Description: Heavy Ranged Marine.\nCan Use Teleporter.\n  Strong vs Infantry\n  Weak vs Vehicles
+		Description: actor-wh40kterminator1.description
 	Mobile:
 		Speed: 57
 	Crushable:
@@ -6354,7 +6373,7 @@ wh40kterminator2:
 		BuildPaletteOrder: 120
 		Prerequisites: wh40kupmonastery2
 		Queue: Infantry.Marine
-		Description: Heavy Melee Marine.\nCan Use Teleporter.\n  Strong vs Infantry\n  Weak vs Vehicles
+		Description: actor-wh40kterminator2.description
 	Mobile:
 		Speed: 60
 	Crushable:
@@ -6401,7 +6420,7 @@ wh40kterminator3:
 		BuildPaletteOrder: 120
 		Prerequisites: wh40kupmonastery2, wh40karmorym
 		Queue: Infantry.Marine
-		Description: Armed with a Better Gun.\nCan Use Teleporter.\n  Strong vs Infantry\n  Weak vs Vehicles
+		Description: actor-wh40kterminator3.description
 	ReloadDelayMultiplier@buff:
 		Modifier: 25
 	WithDecoration@addon:
@@ -6425,7 +6444,7 @@ wh40kterminator4:
 		BuildPaletteOrder: 120
 		Prerequisites: wh40kupmonastery2, wh40karmorym
 		Queue: Infantry.Marine
-		Description: Armed with Heavy Flamer.\nCan Use Teleporter.\n  Strong vs Infantry\n  Weak vs Vehicles
+		Description: actor-wh40kterminator4.description
 	ReloadDelayMultiplier@buff:
 		Modifier: 33
 	WithDecoration@addon:
@@ -6465,7 +6484,7 @@ wh40kservitor:
 		BuildPaletteOrder: 10
 		Queue: Defence, RADefence
 		Prerequisites: ~mmspacemarines
-		Description: Support-purpose Infantry \n  Can Repair Buildings, Vehicles
+		Description: actor-wh40kservitor.description
 	Mobile:
 		Speed: 60
 	Crushable:
@@ -6514,7 +6533,7 @@ wh40kapotecary:
 		BuildPaletteOrder: 60
 		Prerequisites: barracks
 		Queue: Infantry2.Marine
-		Description: Support Medic Unit.\n  Can Attack.\n  Strong vs Infantry\n  Weak vs Vehicles
+		Description: actor-wh40kapotecary.description
 	Mobile:
 		Speed: 70
 	Crushable:
@@ -6569,7 +6588,7 @@ wh40kgrayknight:
 		BuildPaletteOrder: 60
 		Prerequisites: barracks, wh40ksacredart
 		Queue: Infantry.Marine
-		Description: Elite Inquisition Infantry \n  Fast Melee Infantry \n  Strong vs Infantry\n  Weak vs Vehicles\n
+		Description: actor-wh40kgrayknight.description
 		BuildLimit: 10
 	Mobile:
 		Speed: 100
@@ -6622,7 +6641,7 @@ wh40kmarinesargent:
 		BuildPaletteOrder: 100
 		Prerequisites: wh40karmorym
 		BuildDurationModifier: 120
-		Description: Imperial Guard Main Sergeant
+		Description: actor-wh40kmarinesargent.description
 		BuildLimit: 5
 	Armament@GRENADE: ##########
 		Weapon: Wh40kMarineGrenade
@@ -6642,7 +6661,7 @@ wh40kmcvm:
 		BuildPaletteOrder: 210
 		Prerequisites: wh40kupmonastery, ~techlevel.medium, ~mmspacemarines
 		BuildDurationModifier: 40
-		Description: Deploys into another Field Command.\n  Unarmed
+		Description: actor-wh40kmcvm.description
 	Valued:
 		Cost: 2000
 	Tooltip:
@@ -6695,7 +6714,7 @@ wh40kpredator:
 		BuildPaletteOrder: 60
 		Prerequisites: wh40kmachinecult
 		Queue: Vehicle.Marine
-		Description: Heavily armored Marines Tank.\nCan attack Aircraft\n  Strong vs Everything.\n  Upgradeable with Lascannon Addons
+		Description: actor-wh40kpredator.description
 		BuildDuration: 2500
 		BuildDurationModifier: 100
 	Mobile:
@@ -6806,7 +6825,7 @@ pscwh40kpredator1:
 		Prerequisites: wh40kpowerm
 		BuildPaletteOrder: 10
 		Queue: Addon.wh40kpredator
-		Description: Replaces the Cannon with a Twin Lascannon.\n Strong vs Vehicles.\n Weak vs Infantry
+		Description: actor-pscwh40kpredator1.description
 	Valued:
 		Cost: 800
 	RenderSprites:
@@ -6823,7 +6842,7 @@ pscwh40kpredator2:
 		Prerequisites: wh40kpowerm
 		BuildPaletteOrder: 10
 		Queue: Addon.wh40kpredator2
-		Description: Replaces side Bolters with Lascannons.\n Strong vs Vehicles.\n Weak vs Infantry
+		Description: actor-pscwh40kpredator2.description
 	Valued:
 		Cost: 600
 	RenderSprites:
@@ -6854,7 +6873,7 @@ wh40krhino:
 		BuildPaletteOrder: 60
 		Prerequisites: wh40kmachinecult
 		Queue: Vehicle.Marine
-		Description: Heavy Transport.\nCan attack Infantry with Smoke Launcher
+		Description: actor-wh40krhino.description
 	Mobile:
 		Locomotor: heavytracked
 		Speed: 100
@@ -6919,7 +6938,7 @@ wh40kwhirl:
 		BuildPaletteOrder: 60
 		Prerequisites: wh40kmachinecult
 		Queue: Vehicle.Marine
-		Description: Heavy Artillery Missile Tank.\nCan attack Aircraft\n  Strong vs Everything
+		Description: actor-wh40kwhirl.description
 		BuildDuration: 2500
 		BuildDurationModifier: 100
 	Mobile:
@@ -6983,7 +7002,7 @@ wh40klandspeed:
 		BuildPaletteOrder: 60
 		Prerequisites: wh40kmachinecult
 		Queue: Vehicle.Marine
-		Description: Light Scout Marine Vehicle\nCan attack Aircraft\n  Strong vs Infantry
+		Description: actor-wh40klandspeed.description
 	Mobile:
 		Locomotor: jumpjet
 		Speed: 100
@@ -7053,7 +7072,7 @@ wh40klandspeed2:
 		BuildPaletteOrder: 90
 		Prerequisites: wh40kupmonastery2
 		Queue: Vehicle.Marine
-		Description: Aircraft Gunship with Machineguns.\n  Strong vs All.\n Can be upgraded with Addons
+		Description: actor-wh40klandspeed2.description
 	Aircraft:
 		TurnSpeed: 28
 		Speed: 186
@@ -7129,7 +7148,7 @@ pscwh40klandspeed1:
 		Prerequisites: wh40kpowerm
 		BuildPaletteOrder: 10
 		Queue: Addon.wh40klandspeed2
-		Description: Adds a Anti Infantry Missile Pods.\n Strong vs Infantry \n Weak vs Vehicles
+		Description: actor-pscwh40klandspeed1.description
 	Valued:
 		Cost: 800
 	RenderSprites:
@@ -7146,7 +7165,7 @@ pscwh40klandspeed2:
 		Prerequisites: wh40kpowerm
 		BuildPaletteOrder: 10
 		Queue: Addon.wh40klandspeed2
-		Description: Adds a Anti Tank Missile Pods.\n Strong vs Vehicles.\n Weak vs Infantry
+		Description: actor-pscwh40klandspeed2.description
 	Valued:
 		Cost: 900
 	RenderSprites:
@@ -7170,7 +7189,7 @@ wh40kdread:
 		BuildPaletteOrder: 65
 		Prerequisites: wh40kmachinecult
 		Queue: Vehicle.Marine
-		Description: Heavy Marine Mech.\n Melee and Ground Targets.\n  Strong vs All.\n  Upgradeable with Addons
+		Description: actor-wh40kdread.description
 	Mobile:
 		Speed: 85
 	Health:
@@ -7273,7 +7292,7 @@ pscwh40kdread1:
 		Prerequisites: wh40kpowerm
 		BuildPaletteOrder: 10
 		Queue: Addon.wh40kdread
-		Description: Replaces the Flamer with a Assault Bolter.\n Strong vs Infantry \n Weak vs Vehicles
+		Description: actor-pscwh40kdread1.description
 	Valued:
 		Cost: 800
 	RenderSprites:
@@ -7290,7 +7309,7 @@ pscwh40kdread2:
 		Prerequisites: wh40kpowerm
 		BuildPaletteOrder: 10
 		Queue: Addon.wh40kdread
-		Description: Replaces the Flamer with a Lascannon.\n Strong vs Vehicles.\n Weak vs Infantry
+		Description: actor-pscwh40kdread2.description
 	Valued:
 		Cost: 900
 	RenderSprites:
@@ -7314,7 +7333,7 @@ wh40kdreadh:
 		BuildPaletteOrder: 65
 		Prerequisites: wh40kmachinecult
 		Queue: Vehicle.Marine
-		Description: Heavy Marine Mech.\n Long Range Weapons.\n  Strong vs All
+		Description: actor-wh40kdreadh.description
 	Mobile:
 		Speed: 82
 	Health:
@@ -7385,7 +7404,7 @@ wh40kharvm:
 		Prerequisites: wh40kprocm
 		Queue: Vehicle.Marine
 		BuildDurationModifier: 40
-		Description: Collects Resources for processing.\n  Unarmed
+		Description: actor-wh40kharvm.description
 	Selectable:
 		DecorationBounds: 1536, 1536
 	Harvester:
@@ -7442,7 +7461,7 @@ wh40klandraider:
 		BuildPaletteOrder: 60
 		Prerequisites: wh40kupmachineculticon, !wh40klandraiderc
 		Queue: Vehicle.Marine
-		Description: Superheavy Apc.\nCan attack Aircraft\n  Strong vs All, Specially Infantry
+		Description: actor-wh40klandraider.description
 	Mobile:
 		Locomotor: heavytracked
 		Speed: 77
@@ -7536,7 +7555,7 @@ wh40kskullprobe:
 		BuildPaletteOrder: 50
 		Prerequisites: wh40kstrategym
 		Queue: Infantry.Marine
-		Description: Small Scout Probe.\n Can Disable Vehicles.\n  Strong vs Vehicles, Tanks\n  Weak vs Infantry
+		Description: actor-wh40kskullprobe.description
 	Mobile:
 		TurnSpeed: 64
 		Speed: 213
@@ -7701,7 +7720,7 @@ wh40kupmonastery:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Defence, RADefence
-		Description: Increases Field Command to 25% of health, Unlock new Tech
+		Description: actor-wh40kupmonastery.description
 		Prerequisites: ~!wh40kupmonastery, barracks, ~mmspacemarines
 	Valued:
 		Cost: 3000
@@ -7717,7 +7736,7 @@ wh40kupmonastery2:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Defence, RADefence
-		Description: Increases Field Command to 25% of health, Unlock new Tech
+		Description: actor-wh40kupmonastery2.description
 		Prerequisites: ~!wh40kupmonastery2, wh40kupmonastery, vehicleproduction, ~mmspacemarines
 	Valued:
 		Cost: 3000
@@ -7733,7 +7752,7 @@ wh40kupcapincrease:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Defence, RADefence
-		Description: Increase Marine Production
+		Description: actor-wh40kupcapincrease.description
 		Prerequisites: ~!wh40kupcapincrease, barracks, ~mmspacemarines
 	Valued:
 		Cost: 1000
@@ -7749,7 +7768,7 @@ wh40kupcapincrease2:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Defence, RADefence
-		Description: Increase Vehicle Production
+		Description: actor-wh40kupcapincrease2.description
 		Prerequisites: ~!wh40kupcapincrease2, vehicleproduction, ~mmspacemarines
 	Valued:
 		Cost: 1500
@@ -7765,7 +7784,7 @@ wh40kupbionics:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Increase Marine Health
+		Description: actor-wh40kupbionics.description
 		Prerequisites: ~!wh40kupbionics, barracks, ~mmspacemarines
 	Valued:
 		Cost: 1000
@@ -7781,7 +7800,7 @@ wh40kupbionics2:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Increase Marine Health
+		Description: actor-wh40kupbionics2.description
 		Prerequisites: ~!wh40kupbionics2, wh40kupbionics, ~mmspacemarines
 	Valued:
 		Cost: 1500
@@ -7797,7 +7816,7 @@ wh40ktargetfinder1:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Increase Marine Firepower and Range
+		Description: actor-wh40ktargetfinder1.description
 		Prerequisites: ~!wh40ktargetfinder1, barracks, ~mmspacemarines
 	Valued:
 		Cost: 1000
@@ -7813,7 +7832,7 @@ wh40ktargetfinder2:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Increase Marine Firepower and Range
+		Description: actor-wh40ktargetfinder2.description
 		Prerequisites: ~!wh40ktargetfinder2, wh40ktargetfinder1, ~mmspacemarines
 	Valued:
 		Cost: 1500
@@ -7829,7 +7848,7 @@ wh40kpowerswords:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Upgrades Sargent, Force Commander, Chaptain and Librarian Damage
+		Description: actor-wh40kpowerswords.description
 		Prerequisites: ~!wh40kpowerswords, barracks, ~mmspacemarines
 	Valued:
 		Cost: 1500
@@ -7845,7 +7864,7 @@ wh40kpowerfists:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Upgrades Sargent, Force Commander, Chaptain and Librarian Damage
+		Description: actor-wh40kpowerfists.description
 		Prerequisites: ~!wh40kpowerfists, wh40kpowerswords, ~mmspacemarines
 	Valued:
 		Cost: 1500
@@ -7861,7 +7880,7 @@ wh40kscoutinfiltration:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Now Scouts are Stealth
+		Description: actor-wh40kscoutinfiltration.description
 		Prerequisites: ~!wh40kscoutinfiltration, wh40karmorym, ~mmspacemarines
 	Valued:
 		Cost: 1500
@@ -7877,7 +7896,7 @@ wh40kskullprobestealth:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Now Skull Probes are Stealth
+		Description: actor-wh40kskullprobestealth.description
 		Prerequisites: ~!wh40kskullprobestealth, wh40karmorym, ~mmspacemarines
 	Valued:
 		Cost: 500
@@ -7893,7 +7912,7 @@ wh40kveteranupgrade1:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Add +1 veteran rank to Leaders, and add more Health
+		Description: actor-wh40kveteranupgrade1.description
 		Prerequisites: ~!wh40kveteranupgrade1, barracks, ~mmspacemarines
 	Valued:
 		Cost: 1500
@@ -7909,7 +7928,7 @@ wh40kveteranupgrade2:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Add +1 veteran rank to Leaders, and add more Health
+		Description: actor-wh40kveteranupgrade2.description
 		Prerequisites: ~!wh40kveteranupgrade2, wh40kveteranupgrade1, ~mmspacemarines
 	Valued:
 		Cost: 2000
@@ -7925,7 +7944,7 @@ wh40kupmachineculticon:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Increases Field Command to 25% of health, Unlock new Tech
+		Description: actor-wh40kupmachineculticon.description
 		Prerequisites: ~!wh40kupmachineculticon, wh40kupmonastery2, ~mmspacemarines
 	Valued:
 		Cost: 2000
@@ -7941,7 +7960,7 @@ wh40kupfraggrenade:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Enable the use of Grenades to Sargents
+		Description: actor-wh40kupfraggrenade.description
 		Prerequisites: ~!wh40kupfraggrenade, barracks, ~mmspacemarines
 	Valued:
 		Cost: 800
@@ -7957,7 +7976,7 @@ wh40kfuriuscharge:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Increase Speed of Gray Knights
+		Description: actor-wh40kfuriuscharge.description
 		Prerequisites: ~!wh40kfuriuscharge, barracks, ~mmspacemarines
 	Valued:
 		Cost: 1500
@@ -7973,7 +7992,7 @@ wh40kpsyinquisition:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Enable a Superweapon
+		Description: actor-wh40kpsyinquisition.description
 		Prerequisites: ~!wh40kpsyinquisition, wh40kfuriuscharge, wh40kupmonastery, ~techlevel.superweapons, ~mmspacemarines
 	Valued:
 		Cost: 4000
@@ -7991,7 +8010,7 @@ wh40krankmarine:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Promotions
-		Description: A First Company Veteran spawn at your base.
+		Description: actor-wh40krankmarine.description
 		Prerequisites: !wh40krankmarine, rank1, ~mmspacemarines
 	RenderSprites:
 		Image: wh40kmarine
@@ -8005,7 +8024,7 @@ wh40krankscout:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Promotions
-		Description: A Scout Marine Squad spawn at your base.
+		Description: actor-wh40krankscout.description
 		Prerequisites: !wh40krankscout, rank1, ~mmspacemarines
 	RenderSprites:
 		Image: wh40kmarine
@@ -8019,7 +8038,7 @@ wh40kranklandspeeder:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Promotions
-		Description: A Senior Librarian Saribander spawn at your base.
+		Description: actor-wh40kranklandspeeder.description
 		Prerequisites: !wh40kranklandspeeder, rank3, rank1, ~mmspacemarines
 	RenderSprites:
 		Image: wh40klandspeed
@@ -8033,7 +8052,7 @@ wh40kranklibrarian:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Promotions
-		Description: A Senior Librarian Saribander spawn at your base.
+		Description: actor-wh40kranklibrarian.description
 		Prerequisites: !wh40kranklibrarian, rank3, rank1, ~mmspacemarines
 	RenderSprites:
 		Image: wh40klibrarian
@@ -8047,7 +8066,7 @@ wh40krankassault:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Promotions
-		Description: A Senior Librarian Saribander spawn at your base.
+		Description: actor-wh40krankassault.description
 		Prerequisites: !wh40krankassault, rank3, rank1, ~mmspacemarines
 	RenderSprites:
 		Image: wh40kterminator2
@@ -8061,7 +8080,7 @@ wh40krankdread:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Promotions
-		Description: A Dreadnought spawn at your base.
+		Description: actor-wh40krankdread.description
 		Prerequisites: !wh40krankdread, rank3, rank1, ~mmspacemarines
 	RenderSprites:
 		Image: wh40kdread
@@ -8139,7 +8158,7 @@ wh40kmcvo:
 		BuildPaletteOrder: 210
 		Prerequisites: wh40kweapo, ~techlevel.medium, ~mmorkz
 		BuildDurationModifier: 40
-		Description: Deploys into another Field Command.\n  Unarmed
+		Description: actor-wh40kmcvo.description
 	Valued:
 		Cost: 2000
 	Tooltip:
@@ -8289,7 +8308,7 @@ wh40ksettlement:
 	ProvidesPrerequisite@buildingname:
 		Prerequisite: wh30kcommand
 	Buildable:
-		Description: Builds structures
+		Description: actor-wh40ksettlement.description
 	ProvidesPrerequisite@factionorks:
 		Prerequisite: mmorkz
 	RallyPoint: ##########
@@ -8325,7 +8344,7 @@ wh40ksettlement:
 			1: Ork Sneak Attack
 		ActivationDelay: 25
 		Descriptions:
-			1: Teleports a large group of units\nacross the map.
+			1: power-chronoshift.description
 		Weapons:
 			1: WH40KSneakAttack
 		CameraActor: camera.placeholderhack
@@ -8353,7 +8372,7 @@ wh40kpowero:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 10
 		Prerequisites: wh30kcommand, ~mmorkz
-		Description: Provides power for other structures.
+		Description: actor-wh40kpowero.description
 	Valued:
 		Cost: 330 #300
 	Tooltip:
@@ -8409,7 +8428,7 @@ wh40kbarro:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 20
 		Prerequisites: wh40kpowero, ~mmorkz
-		Description: Trains infantry
+		Description: actor-wh40kbarro.description
 	Power:
 		Amount: -25
 	Valued:
@@ -8505,7 +8524,7 @@ wh40kwhaaag:
 		Prerequisites: barracks, ~mmorkz
 		Queue: Defence, RADefence
 		BuildDurationModifier: 40
-		Description: All-purpose defensive structure.\n  Strong vs Aircraft, Infantry\n  Weak vs Vehicles
+		Description: actor-wh40kwhaaag.description
 	Selectable:
 		Bounds: 1024, 1024
 	SelectionDecorations:
@@ -8653,7 +8672,7 @@ pscwh40kwhaaag1:
 		Prerequisites: wh40kpowero
 		BuildPaletteOrder: 10
 		Queue: Addon.wh40kwhaaag
-		Description: Replaces the normal Guns with a Twin Guns
+		Description: actor-pscwh40kwhaaag1.description
 	Valued:
 		Cost: 400
 	RenderSprites:
@@ -8670,7 +8689,7 @@ pscwh40kwhaaag2:
 		Prerequisites: wh40kpowero
 		BuildPaletteOrder: 10
 		Queue: Addon.wh40kwhaaag2
-		Description: Replaces Twin Guns with a Rokkit Launcha
+		Description: actor-pscwh40kwhaaag2.description
 	Valued:
 		Cost: 600
 	RenderSprites:
@@ -8689,7 +8708,7 @@ wh40kproco:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 60
 		Prerequisites: wh40kpowero, ~mmorkz
-		Description: Fixa Map Rezouse for da Whaaahg\ninta Moar Zkrap.
+		Description: actor-wh40kproco.description
 	Valued:
 		Cost: 1500 #1400
 	Tooltip:
@@ -8791,7 +8810,7 @@ wh40karmoryo:
 		BuildPaletteOrder: 60
 		Prerequisites: barracks, whaaag1, ~mmorkz
 		Queue: Building, RABuilding
-		Description: Provides access to advanced technologies.
+		Description: actor-wh40karmoryo.description
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -8841,7 +8860,7 @@ wh40kweapo:
 		BuildPaletteOrder: 50
 		Prerequisites: wh40karmoryo, wh40kproco, whaaag2, ~mmorkz
 		Queue: Building, RABuilding
-		Description: Produces vehicles
+		Description: actor-wh40kweapo.description
 	Building:
 		Footprint: xxxx x++x ====
 		Dimensions: 4,3
@@ -8926,7 +8945,7 @@ wh40kgretchin:
 		BuildPaletteOrder: 100
 		Prerequisites: ~mmorkz
 		Queue: Defence, RADefence
-		Description: Zlavery-purpose Infantry \n  Ztrong vs Infantry\n  Week vs Mekz\n  Kan Fixa Mekz
+		Description: actor-wh40kgretchin.description
 	Mobile:
 		Speed: 85
 	Crushable:
@@ -9040,7 +9059,7 @@ wh40kslugga:
 	Buildable:
 		BuildPaletteOrder: 100
 		Queue: Infantry.Orkz
-		Description: General-purpose Boyz.\n  Ztrong vs Infantry\n  Week vs Mekz
+		Description: actor-wh40kslugga.description
 	Mobile:
 		Speed: 80
 	Crushable:
@@ -9129,7 +9148,7 @@ wh40kstormboyz:
 	Buildable:
 		BuildPaletteOrder: 100
 		Queue: Infantry.Orkz
-		Description: General-purpose Boyz.\n  Ztrong vs Infantry\n  Week vs Mekz
+		Description: actor-wh40kstormboyz.description
 	Mobile:
 		Locomotor: jumpjet
 		Speed: 126
@@ -9211,7 +9230,7 @@ wh40kburna:
 		BuildPaletteOrder: 100
 		Prerequisites: barracks, wh40karmoryo
 		Queue: Infantry.Orkz
-		Description: Anti Infantry Burna Troopa.\n  Ztrong vs Infantry\n  Week vs Mekz
+		Description: actor-wh40kburna.description
 	Mobile:
 		Speed: 72
 	Crushable:
@@ -9299,7 +9318,7 @@ wh40kshoota:
 		BuildPaletteOrder: 100
 		Prerequisites: barracks
 		Queue: Infantry.Orkz
-		Description: General-purpose Dakka.\n  Ztrong vs Infantry\n  Week vs Mekz
+		Description: actor-wh40kshoota.description
 	Mobile:
 		Speed: 70
 	Crushable:
@@ -9346,7 +9365,7 @@ wh40kshoota2:
 		BuildPaletteOrder: 100
 		Prerequisites: wh40karmoryo
 		Queue: Infantry.Orkz
-		Description: General-purpose Dakka.\n  Ztrong vs Infantry\n  Week vs Mekz
+		Description: actor-wh40kshoota2.description
 	Power:
 		Amount: -10
 	ReloadDelayMultiplier@buff:
@@ -9380,7 +9399,7 @@ wh40knob:
 		BuildPaletteOrder: 100
 		Prerequisites: barracks, whaaag2
 		Queue: Infantry.Orkz
-		Description: Thicc Boyz.\n  Ztrong vs All\n  Week vs Airkraft
+		Description: actor-wh40knob.description
 	Mobile:
 		Speed: 80
 	Crushable:
@@ -9465,7 +9484,7 @@ wh40kbigmek:
 		BuildPaletteOrder: 100
 		Prerequisites: barracks, whaaag1
 		Queue: Infantry.Orkz
-		Description: Heavy Boy, Can Repair Vehicles.\n  Ztrong vs All\n  Week vs Airkraft
+		Description: actor-wh40kbigmek.description
 		BuildLimit: 1
 	Mobile:
 		Speed: 80
@@ -9549,7 +9568,7 @@ wh40ktankbusta:
 		BuildPaletteOrder: 100
 		Prerequisites: wh40karmoryo
 		Queue: Infantry.Orkz
-		Description: Busta-purpose Boyz.\n  Strong vs Infantry\n  Weak vs Thicc Mekz
+		Description: actor-wh40ktankbusta.description
 	Mobile:
 		Speed: 60
 	Crushable:
@@ -9618,7 +9637,7 @@ wh40kflash:
 		BuildPaletteOrder: 100
 		Prerequisites: wh40karmoryo, wh40kuporkyfort
 		Queue: Infantry.Orkz
-		Description: Dakka Thicc Boyz.\n  Ztrong vs Infantry
+		Description: actor-wh40kflash.description
 	Mobile:
 		Speed: 60
 	Crushable:
@@ -9669,7 +9688,7 @@ wh40knobleader:
 		BuildPaletteOrder: 100
 		Prerequisites: wh40karmoryo, whaaag2
 		BuildDurationModifier: 120
-		Description: Zergeant Big Boss, limit 10
+		Description: actor-wh40knobleader.description
 		BuildLimit: 10
 
 wh40kmaddok:
@@ -9691,7 +9710,7 @@ wh40kmaddok:
 	Buildable:
 		BuildPaletteOrder: 100
 		Queue: Defence, RADefence
-		Description: Healer Boy.\n  Can Hel Boyz.\n  Can be Upgrade wit Burna Boms
+		Description: actor-wh40kmaddok.description
 		Prerequisites: wh40kuporkyfort, ~mmorkz
 	Mobile:
 		Speed: 80
@@ -9787,7 +9806,7 @@ wh40kmeganobz:
 		BuildPaletteOrder: 100
 		Prerequisites: wh40karmoryo, whaaag3, wh40kuporkyfort, ~mmorkz
 		Queue: Defence, RADefence
-		Description: Thicc Boyz.\n  Ztrong vs All\n  Week vs Airkraft
+		Description: actor-wh40kmeganobz.description
 	Mobile:
 		Speed: 45
 	Crushable:
@@ -9907,7 +9926,7 @@ wh40kwarboss:
 		BuildPaletteOrder: 100
 		Prerequisites: wh40karmoryo, whaaag4, wh40kuporkyfort, ~mmorkz
 		Queue: Defence, RADefence
-		Description: Da Biggest Boss.\n  Ztrong vs All Thingz
+		Description: actor-wh40kwarboss.description
 		BuildLimit: 1
 	Mobile:
 		Speed: 45
@@ -9990,7 +10009,7 @@ wh40ksluggasquad:
 	Buildable:
 		BuildPaletteOrder: 30
 		Queue: Infantry.Orkz
-		Description: Basic Infantry Squad.\n  Equivalent to 8 guardsmens.\n Squad Nembers respawn after dead
+		Description: actor-wh40ksluggasquad.description
 		Prerequisites: whaaag2
 	Tooltip:
 		Name: Slugga Boyz Squad
@@ -10198,7 +10217,7 @@ wh40kuptankbusta:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Now Tankbusta kan Ztealth
+		Description: actor-wh40kuptankbusta.description
 		Prerequisites: ~!wh40kuptankbusta, wh40karmoryo, ~mmorkz
 	Valued:
 		Cost: 1000
@@ -10214,7 +10233,7 @@ wh40kupgretchin:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Now Gretchin kan Ztealth
+		Description: actor-wh40kupgretchin.description
 		Prerequisites: ~!wh40kupgretchin, ~mmorkz
 	Valued:
 		Cost: 1000
@@ -10230,7 +10249,7 @@ wh40kupblastier:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Upgrades Dakka Boyz in 15%
+		Description: actor-wh40kupblastier.description
 		Prerequisites: ~!wh40kupblastier, ~mmorkz
 	Valued:
 		Cost: 1000
@@ -10246,7 +10265,7 @@ wh40kupdakka1:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Upgrades Dakka Gunz in 15%
+		Description: actor-wh40kupdakka1.description
 		Prerequisites: ~!wh40kupdakka1, wh40kupblastier, ~mmorkz
 	Valued:
 		Cost: 1000
@@ -10262,7 +10281,7 @@ wh40kupdakka2:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Upgrades Dakka Gunz in 15%
+		Description: actor-wh40kupdakka2.description
 		Prerequisites: ~!wh40kupdakka2, wh40kupdakka1, wh40kuporkyfort, ~mmorkz
 	Valued:
 		Cost: 1500
@@ -10278,7 +10297,7 @@ wh40kupchoppy1:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Upgrades Melee Damage in 15%
+		Description: actor-wh40kupchoppy1.description
 		Prerequisites: ~!wh40kupchoppy1, ~mmorkz
 	Valued:
 		Cost: 1000
@@ -10294,7 +10313,7 @@ wh40kupchoppy2:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Upgrades Melee Damage in 15%
+		Description: actor-wh40kupchoppy2.description
 		Prerequisites: ~!wh40kupchoppy2, wh40kupchoppy1, wh40kuporkyfort, ~mmorkz
 	Valued:
 		Cost: 1500
@@ -10310,7 +10329,7 @@ wh40kupburny1:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Upgrades Burna Damage in 15%
+		Description: actor-wh40kupburny1.description
 		Prerequisites: ~!wh40kupburny1, ~mmorkz
 	Valued:
 		Cost: 500
@@ -10326,7 +10345,7 @@ wh40kupburny2:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Upgrades Burna Damage in 15%
+		Description: actor-wh40kupburny2.description
 		Prerequisites: ~!wh40kupburny2, wh40kupburny1, wh40kuporkyfort, ~mmorkz
 	Valued:
 		Cost: 1000
@@ -10342,7 +10361,7 @@ wh40kupvboost:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Upgrades Vehicle Speed Boost in 30%
+		Description: actor-wh40kupvboost.description
 		Prerequisites: ~!wh40kupvboost, ~mmorkz
 	Valued:
 		Cost: 800
@@ -10358,7 +10377,7 @@ wh40kupvextraarmor:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Upgrades Vehicle Armor in 15%
+		Description: actor-wh40kupvextraarmor.description
 		Prerequisites: ~!wh40kupvextraarmor, wh40kuporkyfort, ~mmorkz
 	Valued:
 		Cost: 2500
@@ -10374,7 +10393,7 @@ wh40kmoresluggas:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Make Sluggas more cheaper
+		Description: actor-wh40kmoresluggas.description
 		Prerequisites: ~!wh40kmoresluggas, wh40kupvextraarmor, ~mmorkz
 	Valued:
 		Cost: 2500
@@ -10390,7 +10409,7 @@ wh40kuporkyfort:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Defence, RADefence
-		Description: Make Sluggas more cheaper
+		Description: actor-wh40kuporkyfort.description
 		Prerequisites: ~!wh40kuporkyfort, wh40karmoryo, whaaag3, ~mmorkz
 	Valued:
 		Cost: 2500
@@ -10406,7 +10425,7 @@ wh40kuporkarmor1:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Upgrades Boyz Armor in 15%
+		Description: actor-wh40kuporkarmor1.description
 		Prerequisites: ~!wh40kuporkarmor1, ~mmorkz
 	Valued:
 		Cost: 1000
@@ -10422,7 +10441,7 @@ wh40kuporkarmor2:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Upgrades Boyz Armor in 15%
+		Description: actor-wh40kuporkarmor2.description
 		Prerequisites: ~!wh40kuporkarmor2, wh40kuporkarmor1, wh40kuporkyfort, ~mmorkz
 	Valued:
 		Cost: 1500
@@ -10438,7 +10457,7 @@ wh40kupbigshooty1:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Upgrades Bosses Damage in 15%
+		Description: actor-wh40kupbigshooty1.description
 		Prerequisites: ~!wh40kupbigshooty1, wh40kupblastier, ~mmorkz
 	Valued:
 		Cost: 1000
@@ -10454,7 +10473,7 @@ wh40kuporkboss1:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Upgrades Bosses Armor in 15%
+		Description: actor-wh40kuporkboss1.description
 		Prerequisites: ~!wh40kuporkboss1, wh40kuporkarmor1, ~mmorkz
 	Valued:
 		Cost: 1000
@@ -10470,7 +10489,7 @@ wh40kuporkboss2:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Upgrades Bosses Armor in 15%
+		Description: actor-wh40kuporkboss2.description
 		Prerequisites: ~!wh40kuporkboss2, wh40kuporkarmor1, wh40kuporkyfort, ~mmorkz
 	Valued:
 		Cost: 1500
@@ -10486,7 +10505,7 @@ wh40kupburnabomb:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Mad Doks adkire the Ability to Plaze Bom to Enemys
+		Description: actor-wh40kupburnabomb.description
 		Prerequisites: ~!wh40kupburnabomb, wh40kupburny1, wh40kuporkyfort, ~mmorkz
 	Valued:
 		Cost: 2000
@@ -10502,7 +10521,7 @@ wh40kupcombatjuice:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Da boyz can attack fasta with this
+		Description: actor-wh40kupcombatjuice.description
 		Prerequisites: ~!wh40kupcombatjuice, wh40kuporkyfort, ~mmorkz
 	Valued:
 		Cost: 2000
@@ -10535,7 +10554,7 @@ wh40kwartrukk:
 		BuildPaletteOrder: 60
 		Prerequisites: vehicleproduction
 		Queue: Vehicle.Orkz
-		Description: Da Orkz Transport, Prety Nize.\nCan attack Aircraft\n  Strong vs Infantry
+		Description: actor-wh40kwartrukk.description
 	Mobile:
 		Locomotor: tracked
 		Speed: 120
@@ -10597,7 +10616,7 @@ wh40kwartrakk:
 		BuildPaletteOrder: 60
 		Prerequisites: vehicleproduction
 		Queue: Vehicle.Orkz
-		Description: Kustom Wartillery.\nCan atak Arkraft.\n  Strong vs Mekz.\n  Can be Upgrade with Chukka Boms
+		Description: actor-wh40kwartrakk.description
 	Mobile:
 		Locomotor: tracked
 		Speed: 115
@@ -10672,7 +10691,7 @@ pscwh40kwartrakk1:
 		Prerequisites: wh40kpowero
 		BuildPaletteOrder: 10
 		Queue: Addon.wh40kwartrakk
-		Description: Replaces the Flamer with a Assault Bolter.\n Strong vs Infantry \n Weak vs Vehicles
+		Description: actor-pscwh40kwartrakk1.description
 	Valued:
 		Cost: 800
 	RenderSprites:
@@ -10701,7 +10720,7 @@ wh40korcleman:
 		BuildPaletteOrder: 60
 		Prerequisites: wh40kupvextraarmor
 		Queue: Vehicle.Orkz
-		Description: Looted Hevy tank from Oomans.\nCan atak Arkraft.\n  Strong vs Everything
+		Description: actor-wh40korcleman.description
 		BuildDuration: 2500
 		BuildDurationModifier: 100
 	Mobile:
@@ -10759,7 +10778,7 @@ wh40kkillakan:
 		BuildPaletteOrder: 65
 		Prerequisites: whaaag1
 		Queue: Vehicle.Orkz
-		Description: Da Ork Walkin Unit.\nCan atak Arkraft.\n  Strong vs Infantry \n  Upgradeable wit Rockit Launcha
+		Description: actor-wh40kkillakan.description
 	Mobile:
 		Speed: 85
 	Health:
@@ -10839,7 +10858,7 @@ pscwh40kkillakan1:
 		Prerequisites: wh40kpowero
 		BuildPaletteOrder: 10
 		Queue: Addon.wh40kkillakan
-		Description: Replaces the Flamer with a Assault Bolter.\n Strong vs Infantry \n Weak vs Vehicles
+		Description: actor-pscwh40kkillakan1.description
 	Valued:
 		Cost: 500
 	RenderSprites:
@@ -10868,7 +10887,7 @@ wh40ksquiggoth:
 		BuildPaletteOrder: 65
 		Prerequisites: whaaag4, wh40kupvextraarmor, !wh40ksquiggothc
 		Queue: Vehicle.Orkz
-		Description: This is da Squiggoth.\nCan Karry da Boyz.\n  Strong vs All.\n  Superweapon Unit
+		Description: actor-wh40ksquiggoth.description
 	Mobile:
 		Speed: 82
 	Health:
@@ -10963,7 +10982,7 @@ wh40kfightabomma:
 		BuildPaletteOrder: 90
 		Prerequisites: wh40kuporkyfort
 		Queue: Vehicle.Orkz
-		Description: Aircraft Gunship with las Guns and MGs.\n  Strong vs All
+		Description: actor-wh40kfightabomma.description
 	Aircraft:
 		Speed: 186
 		TurnSpeed: 80
@@ -11098,7 +11117,7 @@ wh40kmcvc:
 		BuildPaletteOrder: 210
 		Prerequisites: wh40kupmonastery, ~techlevel.medium, ~mmchaos
 		BuildDurationModifier: 40
-		Description: Deploys into another Field Command.\n  Unarmed
+		Description: actor-wh40kmcvc.description
 	Valued:
 		Cost: 2000
 	Tooltip:
@@ -11146,7 +11165,7 @@ wh40kharvc:
 		Prerequisites: wh40kprocc
 		Queue: Vehicle.Chaos
 		BuildDurationModifier: 40
-		Description: Collects Resources for processing.\n  Unarmed
+		Description: actor-wh40kharvc.description
 	Selectable:
 		DecorationBounds: 1536, 1536
 	Harvester:
@@ -11202,7 +11221,7 @@ wh40kchaospredator:
 		BuildPaletteOrder: 60
 		Prerequisites: wh40kmachinepit
 		Queue: Vehicle.Chaos
-		Description: Heavily armored Marines Tank.\nCan attack Aircraft\n  Strong vs Everything.\n  Upgradeable with Lascannon Addons
+		Description: actor-wh40kchaospredator.description
 		BuildDuration: 2500
 		BuildDurationModifier: 100
 	Mobile:
@@ -11327,7 +11346,7 @@ wh40kchaosrhino:
 		BuildPaletteOrder: 60
 		Prerequisites: wh40kmachinepit
 		Queue: Vehicle.Chaos
-		Description: Heavy Transport.\nCan attack Infantry with Smoke Launcher
+		Description: actor-wh40kchaosrhino.description
 	Mobile:
 		Locomotor: heavytracked
 		Speed: 100
@@ -11387,7 +11406,7 @@ wh40kdefiler:
 		BuildPaletteOrder: 65
 		Prerequisites: wh40kmachinepit
 		Queue: Vehicle.Chaos
-		Description: Heavy Marine Mech.\n Melee and Ground Targets.\n  Strong vs All.\n  Upgradeable with Addons
+		Description: actor-wh40kdefiler.description
 	Mobile:
 		Speed: 85
 	Health:
@@ -11462,7 +11481,7 @@ wh40khelltalon:
 		BuildPaletteOrder: 90
 		Prerequisites: wh40kmachinepit
 		Queue: Vehicle.Chaos
-		Description: Aircraft Gunship with las Guns and MGs.\n  Strong vs All
+		Description: actor-wh40khelltalon.description
 	Aircraft:
 		Speed: 195
 		TurnSpeed: 80
@@ -11606,7 +11625,7 @@ wh40kchaosmarine:
 		BuildPaletteOrder: 60
 		Prerequisites: barracks
 		Queue: Infantry.Chaos
-		Description: General-purpose Infantry \n  Strong vs Infantry\n  Weak vs Vehicles
+		Description: actor-wh40kchaosmarine.description
 	Mobile:
 		Speed: 70
 	Crushable:
@@ -11674,7 +11693,7 @@ wh40kchaosmarineplasma:
 		BuildPaletteOrder: 63
 		Prerequisites: barracks, wh40karmoryc
 		Queue: Infantry.Chaos
-		Description: Armed with Anti Personel Pistol.\n  Strong vs Heavy Infantry\n  Weak vs Vehicles
+		Description: actor-wh40kchaosmarineplasma.description
 	Armament@PRIMARY: ##########
 		Weapon: WH40KPlasmapistol
 	Armament@GARRISONED: ##########
@@ -11700,7 +11719,7 @@ wh40kboltchaosmarine:
 		BuildPaletteOrder: 64
 		Prerequisites: barracks, wh40karmoryc
 		Queue: Infantry.Chaos
-		Description: Armed with Anti Infantry Heavy gun.\n  Strong vs Infantry\n  Weak vs Vehicles
+		Description: actor-wh40kboltchaosmarine.description
 	Armament@PRIMARY: ##########
 		Weapon: WH40KHeavyBolterPortable
 	Armament@GARRISONED: ##########
@@ -11733,7 +11752,7 @@ wh40kcultist:
 		BuildPaletteOrder: 100
 		Prerequisites: ~mmchaos
 		Queue: Infantry.Chaos, Defence
-		Description: General-purpose cannon fodder.\n  Ztrong vs Infantry\n  Week vs Mekz
+		Description: actor-wh40kcultist.description
 	Mobile:
 		Speed: 70
 	Crushable:
@@ -11834,7 +11853,7 @@ wh40kcultistgrenadier:
 		BuildPaletteOrder: 64
 		Prerequisites: barracks, wh40karmoryc, ~mmchaos
 		Queue: Defence, RADefence
-		Description: Armed with Anti Tank Heavy gun.\n  Strong vs Vehicles\n  Weak vs Infantry
+		Description: actor-wh40kcultistgrenadier.description
 	Armament@SECONDARY: ##########
 		Weapon: WH40KGrenadeLauncher
 	Armament@GARRISONED: ##########
@@ -11860,7 +11879,7 @@ wh40kcultistplasma:
 		BuildPaletteOrder: 64
 		Prerequisites: barracks, wh40karmoryc, ~mmchaos
 		Queue: Defence, RADefence
-		Description: Armed with Anti Tank Heavy gun.\n  Strong vs Vehicles\n  Weak vs Infantry
+		Description: actor-wh40kcultistplasma.description
 	Armament@SECONDARY: ##########
 		Weapon: WH40KPlasmapistol
 	Armament@GARRISONED: ##########
@@ -11893,7 +11912,7 @@ wh40kdemon:
 		BuildPaletteOrder: 110
 		Prerequisites: wh40ksacrifical
 		Queue: Infantry2.Chaos
-		Description: Heavy Ranged Marine.\nCan Use Teleporter.\n  Strong vs Infantry\n  Weak vs Vehicles
+		Description: actor-wh40kdemon.description
 	Mobile:
 		Speed: 55
 	Crushable:
@@ -11950,7 +11969,7 @@ wh40kpossessed:
 	Buildable:
 		BuildPaletteOrder: 100
 		Queue: Infantry2.Chaos
-		Description: General-purpose Boyz.\n  Ztrong vs Infantry\n  Week vs Mekz
+		Description: actor-wh40kpossessed.description
 		Prerequisites: wh40ksacrifical
 	Mobile:
 		Speed: 100
@@ -12036,7 +12055,7 @@ wh40kheretic:
 		BuildPaletteOrder: 10
 		Prerequisites: ~mmchaos
 		Queue: Defence, RADefence
-		Description: Support-purpose Infantry \n  Can Repair Buildings, Vehicles
+		Description: actor-wh40kheretic.description
 	Mobile:
 		Speed: 60
 	Crushable:
@@ -12116,7 +12135,7 @@ wh40kraptor:
 	Buildable:
 		BuildPaletteOrder: 100
 		Queue: Infantry.Chaos
-		Description: General-purpose Boyz.\n  Ztrong vs Infantry\n  Week vs Mekz
+		Description: actor-wh40kraptor.description
 	Mobile:
 		Locomotor: jumpjet
 		Speed: 126
@@ -12197,7 +12216,7 @@ wh40kraptor2:
 		BuildPaletteOrder: 63
 		Prerequisites: barracks, wh40karmoryc
 		Queue: Infantry.Chaos
-		Description: Armed with Anti Personel Pistol.\n  Strong vs Heavy Infantry\n  Weak vs Vehicles
+		Description: actor-wh40kraptor2.description
 	-Armament@PRIMARY: ##########
 	-Armament@GARRISONED: ##########
 	Armament@1:
@@ -12256,7 +12275,7 @@ wh40koliberator:
 	Buildable:
 		BuildPaletteOrder: 100
 		Queue: Vehicle.Chaos
-		Description: Warped cybernetic walking arsenals.\n  Ztrong vs Infantry\n  Week vs Mekz
+		Description: actor-wh40koliberator.description
 		Prerequisites: wh40ksacrifical
 	Mobile:
 		Speed: 45
@@ -12334,7 +12353,7 @@ wh40kbloodthirster:
 	Buildable:
 		BuildPaletteOrder: 100
 		Queue: Vehicle2.Chaos
-		Description: Greater Demon of Khorne.\n  Ztrong vs Infantry\n  Week vs Mekz
+		Description: actor-wh40kbloodthirster.description
 		Prerequisites: wh40ksacrifical
 		BuildLimit: 1
 	Mobile:
@@ -12388,7 +12407,7 @@ wh40kprincedemon:
 	Buildable:
 		BuildPaletteOrder: 100
 		Queue: Vehicle2.Chaos
-		Description: Ascended Chaos Lord.\n  Ztrong vs Infantry\n  Week vs Mekz
+		Description: actor-wh40kprincedemon.description
 		Prerequisites: wh40ksacrifical
 		BuildLimit: 1
 	Mobile:
@@ -12446,7 +12465,7 @@ wh40ksorcerer:
 		BuildPaletteOrder: 60
 		Prerequisites: barracks, wh40ksacrifical
 		Queue: Vehicle2.Chaos
-		Description: Combat Commander.\n Melee Infantry \n  Strong vs Infantry\n  Weak vs Vehicle
+		Description: actor-wh40ksorcerer.description
 		BuildLimit: 1
 	Mobile:
 		Speed: 75
@@ -12495,7 +12514,7 @@ wh40kchaoslord:
 		BuildPaletteOrder: 60
 		Prerequisites: barracks, wh40karmoryc
 		Queue: Infantry.Chaos
-		Description: Combat Commander.\n Melee Infantry \n  Strong vs Infantry\n  Weak vs Vehicles
+		Description: actor-wh40kchaoslord.description
 		BuildLimit: 1
 	Mobile:
 		Speed: 75
@@ -12550,7 +12569,7 @@ wh40kberserk:
 		BuildPaletteOrder: 60
 		Prerequisites: barracks, wh40ksacrifical
 		Queue: Infantry.Chaos
-		Description: Elite Shock Infantry \n  Fast Melee Infantry \n  Strong vs Infantry\n  Weak vs Vehicles\n
+		Description: actor-wh40kberserk.description
 		BuildLimit: 10
 	Mobile:
 		Speed: 100
@@ -12601,7 +12620,7 @@ wh40kcultistsquad:
 	Buildable:
 		BuildPaletteOrder: 30
 		Queue: Defence, RADefence
-		Description: Basic Infantry Squad.\n  Equivalent to 8 guardsmens.\n Squad Nembers respawn after dead
+		Description: actor-wh40kcultistsquad.description
 		Prerequisites: wh40karmoryc, ~mmchaos
 	Tooltip:
 		Name: Cultists Squad
@@ -12696,7 +12715,7 @@ wh40kchaosmarinechamp:
 		BuildPaletteOrder: 100
 		Prerequisites: wh40karmoryc
 		BuildDurationModifier: 120
-		Description: Sargent unit for Marines
+		Description: actor-wh40kchaosmarinechamp.description
 		BuildLimit: 5
 	Armament@GRENADE: ##########
 		Weapon: Wh40kMarineGrenade
@@ -12735,7 +12754,7 @@ wh40kcultiststealth:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Enable the stealth to Cultists
+		Description: actor-wh40kcultiststealth.description
 		Prerequisites: ~!wh40kcultiststealth, ~mmchaos
 	Valued:
 		Cost: 1000
@@ -12751,7 +12770,7 @@ wh40kunholysight:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Cultist has more view range
+		Description: actor-wh40kunholysight.description
 		Prerequisites: ~!wh40kunholysight, ~mmchaos
 	Valued:
 		Cost: 500
@@ -12767,7 +12786,7 @@ wh40kchaosmarinestealth:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Enable the stealth to Cultists
+		Description: actor-wh40kchaosmarinestealth.description
 		Prerequisites: ~!wh40kchaosmarinestealth, ~mmchaos
 	Valued:
 		Cost: 2000
@@ -12783,7 +12802,7 @@ wh40kfuriuschargechaos:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Upgrades Speed and Attack of Cultists and Marines
+		Description: actor-wh40kfuriuschargechaos.description
 		Prerequisites: ~!wh40kfuriuschargechaos, ~mmchaos
 	Valued:
 		Cost: 1500
@@ -12799,7 +12818,7 @@ wh40kjetpackbooster:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Upgrades Speed of Raptors
+		Description: actor-wh40kjetpackbooster.description
 		Prerequisites: ~!wh40kjetpackbooster, ~mmchaos
 	Valued:
 		Cost: 1000
@@ -12815,7 +12834,7 @@ wh40kdaemonfire:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Upgrades Demons firepower /n Replaces Possessed Claws with Demon Fire
+		Description: actor-wh40kdaemonfire.description
 		Prerequisites: ~!wh40kdaemonfire, ~mmchaos
 	Valued:
 		Cost: 1000
@@ -12831,7 +12850,7 @@ wh40kupmonasteryc:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Defence, RADefence
-		Description: Increases Monastery to 25% of health, Unlock new Tech
+		Description: actor-wh40kupmonasteryc.description
 		Prerequisites: ~!wh40kupmonastery, barracks, ~mmchaos
 	Valued:
 		Cost: 3000
@@ -12847,7 +12866,7 @@ wh40kupmonastery2c:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Defence, RADefence
-		Description: Increases Monastery to 25% of health, Unlock new Tech
+		Description: actor-wh40kupmonastery2c.description
 		Prerequisites: ~!wh40kupmonastery2, wh40kupmonastery, vehicleproduction, ~mmchaos
 	Valued:
 		Cost: 3000
@@ -12863,7 +12882,7 @@ wh40kupcapincreasec:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Defence, RADefence
-		Description: Increase Marine Production
+		Description: actor-wh40kupcapincreasec.description
 		Prerequisites: ~!wh40kupcapincrease, barracks, ~mmchaos
 	Valued:
 		Cost: 1000
@@ -12879,7 +12898,7 @@ wh40kupcapincrease2c:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Defence, RADefence
-		Description: Increase Vehicle Production
+		Description: actor-wh40kupcapincrease2c.description
 		Prerequisites: ~!wh40kupcapincrease2, vehicleproduction, ~mmchaos
 	Valued:
 		Cost: 1500
@@ -12895,7 +12914,7 @@ wh40kchaosenergies:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Upgrades Vehicle Armor in 15%
+		Description: actor-wh40kchaosenergies.description
 		Prerequisites: ~!wh40kchaosenergies, wh40kupmonastery2, ~mmchaos
 	Valued:
 		Cost: 2500
@@ -12911,7 +12930,7 @@ wh40kfraggrenadesc:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Enable the use of Grenades to Sargents
+		Description: actor-wh40kfraggrenadesc.description
 		Prerequisites: ~!wh40kupfraggrenade, barracks, ~mmchaos
 	Valued:
 		Cost: 800
@@ -12927,7 +12946,7 @@ wh40kveteranupgrade1c:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Add +1 veteran rank to Leaders, and add more Health
+		Description: actor-wh40kveteranupgrade1c.description
 		Prerequisites: ~!wh40kveteranupgrade1, barracks, ~mmchaos
 	Valued:
 		Cost: 1500
@@ -12943,7 +12962,7 @@ wh40kveteranupgrade2c:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Add +1 veteran rank to Leaders, and add more Health
+		Description: actor-wh40kveteranupgrade2c.description
 		Prerequisites: ~!wh40kveteranupgrade2, wh40kveteranupgrade1, ~mmchaos
 	Valued:
 		Cost: 2000
@@ -12959,7 +12978,7 @@ wh40kdemonstrength:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Upgrades Chaos Lord Damage
+		Description: actor-wh40kdemonstrength.description
 		Prerequisites: ~!wh40kdemonstrength, ~mmchaos
 	Valued:
 		Cost: 1000
@@ -13060,7 +13079,7 @@ wh40kstrongholdc:
 	ProvidesPrerequisite@buildingname:
 		Prerequisite: wh30kcommand
 	Buildable:
-		Description: Builds structures
+		Description: actor-wh40kstrongholdc.description
 	ProvidesPrerequisite@factionallies:
 		Prerequisite: mmchaos
 	RallyPoint: ##########
@@ -13095,9 +13114,9 @@ wh40kstrongholdc:
 			1: 1
 		QuantizedFacings: 8
 		Names:
-			1: Hell Talon Toxins
+			1: Plague Strike
 		Descriptions:
-			1: Deploy an aerial toxin strike.\nExterminate infantry along a line.
+			1: power-helltalonplague.description
 		EndChargeSpeechNotification: AirstrikeReady
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
@@ -13132,7 +13151,7 @@ wh40kbarrc:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 20
 		Prerequisites: wh40kpowerc, ~mmchaos
-		Description: Trains infantry
+		Description: actor-wh40kbarrc.description
 	Power:
 		Amount: -25
 	Valued:
@@ -13196,7 +13215,7 @@ wh40ksacrifical:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 20
 		Prerequisites: barracks, ~mmchaos
-		Description: Trains infantry
+		Description: actor-wh40ksacrifical.description
 	Power:
 		Amount: -50
 	Valued:
@@ -13257,7 +13276,7 @@ wh40ksacrifical:
 			1: Horror Deep Strike
 		ActivationDelay: 25
 		Descriptions:
-			1: Teleport five Horror Demons anywhere on the map.
+			1: power-deepstrikehorror.description
 		Weapons:
 			1: WH40KTeleportHorrors
 		CameraActor: camera.placeholderhack
@@ -13282,7 +13301,7 @@ wh40karmoryc:
 		BuildPaletteOrder: 60
 		Prerequisites: barracks, ~mmchaos
 		Queue: Building, RABuilding
-		Description: Provides access to advanced American technologies.
+		Description: actor-wh40karmoryc.description
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -13314,7 +13333,7 @@ wh40kpowerc:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 10
 		Prerequisites: wh30kcommand, ~mmchaos
-		Description: Provides power for other structures.
+		Description: actor-wh40kpowerc.description
 	Valued:
 		Cost: 330 #300
 	Tooltip:
@@ -13368,7 +13387,7 @@ wh40kmachinepit:
 		BuildPaletteOrder: 50
 		Prerequisites: wh40kupmonastery, ~mmchaos
 		Queue: Building, RABuilding
-		Description: Produces vehicles
+		Description: actor-wh40kmachinepit.description
 	Building:
 		Footprint: xxxx x++x ====
 		Dimensions: 4,3
@@ -13433,7 +13452,7 @@ wh40kprocc:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 60
 		Prerequisites: wh40kpowerc, ~mmchaos
-		Description: Refines Ore and Gems\ninto credits.
+		Description: actor-wh40kprocc.description
 	Valued:
 		Cost: 1500 #1400
 	Tooltip:
@@ -13504,7 +13523,7 @@ wh40kbolterturretc:
 		Prerequisites: barracks, ~mmchaos
 		Queue: Defence, RADefence
 		BuildDurationModifier: 40
-		Description: All-purpose defensive structure.\n  Strong vs Aircraft, Infantry\n  Weak vs Vehicles
+		Description: actor-wh40kbolterturretc.description
 	Selectable:
 		Bounds: 1024, 1024
 	SelectionDecorations:
@@ -13563,7 +13582,7 @@ wh40kbolterturret2c:
 		Prerequisites: wh40kupmonastery, ~mmchaos
 		Queue: Defence, RADefence
 		BuildDurationModifier: 40
-		Description: All-purpose defensive structure.\n  Strong vs Aircraft, Infantry\n  Weak vs Vehicles
+		Description: actor-wh40kbolterturret2c.description
 	Selectable:
 		Bounds: 1024, 1024
 	SelectionDecorations:
@@ -13623,7 +13642,7 @@ wh40kdaemonpit:
 		BuildPaletteOrder: 50
 		Prerequisites: wh40kupmonastery2, ~mmchaos
 		Queue: Building, RABuilding
-		Description: Produces vehicles
+		Description: actor-wh40kdaemonpit.description
 		BuildLimit: 1
 	Building:
 		Footprint: xxxx x++x ====

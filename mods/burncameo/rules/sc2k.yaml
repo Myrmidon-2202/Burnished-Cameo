@@ -4,20 +4,20 @@ World:
 		InternalName: sc2k
 		Game: SimCity
 		Side: SimCity
-		Description: SimCity from PC\nFeatures:\n- Generates revenue through taxation of Residential Zones\n- Use disasters as units.
-	FactionCA@sc2ka:
-		Name: SimCity 2000 (Alt)
-		InternalName: sc2ka
-		Game: SimCity
-		Side: SimCity
-		Description: Alternative Simcity 2000\nCustom Rules by Commando\nFeatures:\n- Disasters arent controlled\n- All units are based on law or military\n- Deleted some limits
+		Description: faction-sc2000-sc2000.description
+	# FactionCA@sc2ka:
+	# 	Name: SimCity 2000 (Alt)
+	# 	InternalName: sc2ka
+	# 	Game: SimCity
+	# 	Side: SimCity
+	# 	Description: Alternative Simcity 2000\nCustom Rules by Commando\nFeatures:\n- Disasters arent controlled\n- All units are based on law or military\n- Deleted some limits
 	FactionCA@RandomCity:
 		Name: Any
 		InternalName: RandomCity
 		RandomFactionMembers: city, sc2k
 		Game: SimCity
 		Side: SimCity
-		Description: Random Faction\nA random faction from Simcity will be chosen when the game starts.
+		Description: faction-random-simcity.description
 
 	####################################################################################################
 	#		SC2K Starting Units
@@ -519,7 +519,7 @@ SC2KFACTORYSTRUCTURE:
 		BuildPaletteOrder: 30
 		Prerequisites: ~mmsimcity2k
 		Queue: Defence, RADefence
-		Description: Builds structures.
+		Description: actor-sc2kfactorystructure.description
 	Building:
 		Footprint: xxx xxx xxx
 		Dimensions: 3,3
@@ -622,7 +622,7 @@ SC2KPOWERCOAL:
 		Prerequisites: ~mmsimcity2k
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 10
-		Description: Generates power.
+		Description: actor-sc2kpowercoal.description
 	Building:
 		Footprint: xxxx xxxx ====
 		Dimensions: 4,3
@@ -660,7 +660,7 @@ SC2KWINDMILL:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 15
 		Prerequisites: Coal Power Plant, ~mmsimcity2k
-		Description: Generates cheap power.\nLimit 10.
+		Description: actor-sc2kwindmill.description
 		BuildLimit: 10
 	Building:
 		Footprint: x
@@ -697,7 +697,7 @@ SC2KPOWEROIL:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 55
 		Prerequisites: Coal Power Plant, ~mmsimcity2k
-		Description: Generates power cheaper than coal. \nLimit 5.
+		Description: actor-sc2kpoweroil.description
 		BuildLimit: 5
 	Building:
 		Footprint: xxxx xxxx ====
@@ -734,7 +734,7 @@ SC2KNATURALGAS:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 57
 		Prerequisites: Coal Power Plant, ~mmsimcity2k
-		Description: Generates a lot of power. \nLimit 5.
+		Description: actor-sc2knaturalgas.description
 		BuildLimit: 5
 	Building:
 		Footprint: xxxx xxxx ====
@@ -773,7 +773,7 @@ SC2KNUCLEAR:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 57
 		Prerequisites: Natural Gas Power Plant, ~mmsimcity2k
-		Description: Generates a ton of power.\nExplodes when razed.\nLimit 5.
+		Description: actor-sc2knuclear.description
 		BuildLimit: 5
 	Building:
 		Footprint: xxxx xxxx ====
@@ -812,7 +812,7 @@ SC2KPOWERSOLAR:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 58
 		Prerequisites: Natural Gas Power Plant, ~mmsimcity2k
-		Description: Generates some power.\nLimit 5.
+		Description: actor-sc2kpowersolar.description
 		BuildLimit: 5
 	Building:
 		Footprint: xxxx xxxx ====
@@ -849,7 +849,7 @@ SC2KPOWERMICROWAVE:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 150
 		Prerequisites: Natural Gas Power Plant, ~mmsimcity2k
-		Description: Generates clean power.\nLimit 2.
+		Description: actor-sc2kpowermicrowave.description
 		BuildLimit: 2
 	Building:
 		Footprint: xxxx xxxx ====
@@ -888,7 +888,7 @@ SC2KPOWERFUSION:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 160
 		Prerequisites: Microwave Power Plant, ~mmsimcity2k
-		Description: Generates extreme power.\nLimit 2.
+		Description: actor-sc2kpowerfusion.description
 		BuildLimit: 2
 	Building:
 		Footprint: xxxx xxxx ====
@@ -929,7 +929,7 @@ SC2KFACTORYDISASTER:
 		BuildPaletteOrder: 40
 		Prerequisites: Observatory, ~selectsimcity2000
 		BuildDuration: 500
-		Description: Produces disasters to use on enemy players.
+		Description: actor-sc2kfactorydisaster.description
 	Building:
 		Footprint: xxxxxx xxxxxx ======
 		Dimensions: 6,3
@@ -1015,7 +1015,7 @@ SC2K_CYCLONE_CENTER:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 45
 		Prerequisites: Disaster_Factory, ~mmsimcity2k
-		Description: Unlocks Ice Cyclones.\nLimit 1.
+		Description: actor-sc2k_cyclone_center.description
 		BuildLimit: 1
 	Building:
 		Footprint: xxxxxx xxxxxx ======
@@ -1055,7 +1055,7 @@ SC2K_AIRPORT:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 65
 		Prerequisites: Observatory, ~mmsimcity2k
-		Description: Unlocks Air Crash.\nLimit 1.
+		Description: actor-sc2k_airport.description
 		BuildLimit: 1
 	Building:
 		Footprint: xxxxxx xxxxxx ======
@@ -1093,7 +1093,7 @@ SC2K_TOY_FACTORY:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 67
 		Prerequisites: sc2krecyclingcenter, ~mmsimcity2k
-		Description: Gadget factory.\n Provides income.\nLimit 1.
+		Description: actor-sc2k_toy_factory.description
 		BuildLimit: 1
 	Building:
 		Footprint: xxxxxx xxxxxx xxxxxx xxxxxx
@@ -1136,7 +1136,7 @@ SC2KRECYCLINGCENTER:
 		Queue: Building, RABuilding
 		Prerequisites: Coal Power Plant, ~mmsimcity2k
 		BuildPaletteOrder: 50
-		Description: Refinery.
+		Description: actor-sc2krecyclingcenter.description
 	Building:
 		Footprint: xxx ===
 		Dimensions: 3,2
@@ -1200,7 +1200,7 @@ SC2KDOMICILE:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 55
 		Prerequisites: Coal Power Plant, ~mmsimcity2k
-		Description: Living quarters.\n Provides income.
+		Description: actor-sc2kdomicile.description
 	Building:
 		Footprint: xx ==
 		Dimensions: 2,2
@@ -1240,7 +1240,7 @@ SC2KCARDEALERSHIP:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 55
 		Prerequisites: Coal Power Plant, ~mmsimcity2k
-		Description: Sells vehicles
+		Description: actor-sc2kcardealership.description
 	Building:
 		Footprint: xxx xxx ===
 		Dimensions: 3,3
@@ -1305,7 +1305,7 @@ SC2KMARINA:
 		BuildPaletteOrder: 57
 		Prerequisites: sc2krecyclingcenter, ~mmsimcity2k
 		Queue: Building, RABuilding
-		Description: Produces, and\nrepairs boats
+		Description: actor-sc2kmarina.description
 	Building:
 		Footprint: =+= +++ =+=
 		Dimensions: 3,3
@@ -1393,7 +1393,7 @@ SC2KFACTORYFARM:
 		Queue: Building, RABuilding
 		Prerequisites: sc2krecyclingcenter, ~mmsimcity2k
 		BuildPaletteOrder: 60
-		Description: Increases Refinery income by 25%. \nLimit 1.
+		Description: actor-sc2kfactoryfarm.description
 		BuildLimit: 1
 	Building:
 		Footprint: xxx xxx xxx xxx xxx xxx xxx
@@ -1433,7 +1433,7 @@ SC2KOBSERVATORY:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 70
 		Prerequisites: sc2krecyclingcenter, ~mmsimcity2k
-		Description: Reveals the entire map and provides radar.\nLimit 1.
+		Description: actor-sc2kobservatory.description
 		BuildLimit: 1
 	Building:
 		Footprint: xx xx xx xx
@@ -1456,7 +1456,7 @@ SC2KOBSERVATORY:
 		Names:
 			1: GPS Satellite
 		Descriptions:
-			1: Reveals map terrain and provides tactical\ninformation. Requires power and active radar.
+			1: power-ra2psireveal.description
 		RevealDelay: 375
 		#LaunchSpeechNotification: SatelliteLaunched
 		DisplayTimerRelationships: Ally, Neutral, Enemy
@@ -1489,7 +1489,7 @@ SC2KTRADECENTER:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 80
 		Prerequisites: sc2krecyclingcenter, ~mmsimcity2k
-		Description: Unlocks the Super mall.\nLimit 1.
+		Description: actor-sc2ktradecenter.description
 		BuildLimit: 1
 	Building:
 		Footprint: xx xx
@@ -1529,7 +1529,7 @@ SC2KSUPERMALL:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 90
 		Prerequisites: Trade Center, ~mmsimcity2k
-		Description: Shrine of commercialism.\n Provides income.\nLimit 1.\nFragile, explodes when razed.
+		Description: actor-sc2ksupermall.description
 		BuildLimit: 1
 	Building:
 		Footprint: xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
@@ -1572,7 +1572,7 @@ SC2KUBERMALL:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 100
 		Prerequisites: Super Mall, ~mmsimcity2k
-		Description: Ultimate commercial firm.\nProvides major income.\nLimit 1.\nFragile, explodes when razed.
+		Description: actor-sc2kubermall.description
 		BuildLimit: 1
 	Building:
 		Footprint: xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
@@ -1603,7 +1603,7 @@ SC2KMISSILESILO:
 		Queue: Defence, RADefence
 		BuildPaletteOrder: 90
 		Prerequisites: Trade Center, ~selectsimcity2000
-		Description: Nuke silo.
+		Description: actor-sc2kmissilesilo.description
 	Building:
 		Footprint: xxxx xxxx
 		Dimensions: 4,2
@@ -1645,7 +1645,7 @@ SC2KMISSILESILO:
 		Names:
 			1: Atom Bomb
 		Descriptions:
-			1: Launches a devastating atomic bomb at a target location.
+			1: power-sc2000atom.description
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
 		EndChargeSpeechNotification: NuclearWeaponAvailable
@@ -1693,7 +1693,7 @@ SC2KPOLICEDEPT:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 50
 		Prerequisites: Observatory, ~selectsimcity2000
-		Description: Calls in Police Forces
+		Description: actor-sc2kpolicedept.description
 	Building:
 		Footprint: xxx xxx xxx
 		Dimensions: 3,3
@@ -1754,7 +1754,7 @@ SC2KFIREDEPT:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 50
 		Prerequisites: Observatory, ~selectsimcity2000
-		Description: Calls in Firefighters
+		Description: actor-sc2kfiredept.description
 	Building:
 		Footprint: xxx xxx xxx
 		Dimensions: 3,3
@@ -1814,7 +1814,7 @@ SC2KHOSPITAL:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 50
 		Prerequisites: Observatory, ~selectsimcity2000
-		Description: Heals nearby units
+		Description: actor-sc2khospital.description
 	Building:
 		Footprint: xxx xxx xxx
 		Dimensions: 3,3
@@ -1890,7 +1890,7 @@ SC2KFIRE:
 	Buildable:
 		Queue: Infantry.Sc2k
 		BuildPaletteOrder: 20
-		Description: Burning fire.
+		Description: actor-sc2kfire.description
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -1938,7 +1938,7 @@ SC2KTORNADO:
 	Buildable:
 		Queue: Infantry.Sc2k
 		BuildPaletteOrder: 20
-		Description: Sucks and eats everything in its way.
+		Description: actor-sc2ktornado.description
 	Valued:
 		Cost: 800
 	Tooltip:
@@ -1985,7 +1985,7 @@ ICE_CYCLONE:
 		Queue: Infantry.Sc2k
 		BuildPaletteOrder: 25
 		Prerequisites: Cyclone_Center
-		Description: Freezes everything in its way.
+		Description: actor-ice_cyclone.description
 	Valued:
 		Cost: 800
 	Tooltip:
@@ -2028,7 +2028,7 @@ SC2KMOB:
 	Buildable:
 		Queue: Infantry.Sc2k
 		BuildPaletteOrder: 20
-		Description: Rioting Citizen. Armed with molotovs.
+		Description: actor-sc2kmob.description
 	ChangesHealth:
 		PercentageStep: 5
 		Delay: 75
@@ -2080,7 +2080,7 @@ SC2K_THUNDERCLOUD_MAIN:
 	Buildable:
 		Queue: Infantry.Sc2k
 		BuildPaletteOrder: 20
-		Description: Mobile tesla coil
+		Description: actor-sc2k_thundercloud_main.description
 	Valued:
 		Cost: 1400
 	Tooltip:
@@ -2137,7 +2137,7 @@ SC2KBULLDOZER:
 	Buildable:
 		Queue: Vehicle.Sc2k
 		BuildPaletteOrder: 20
-		Description: Harvests Tiberium.
+		Description: actor-sc2kbulldozer.description
 	Harvester:
 		PipCount: 7
 		Capacity: 20
@@ -2190,7 +2190,7 @@ SC2K_BIG_BULLDOZER:
 		Queue: Vehicle.Sc2k
 		BuildPaletteOrder: 20
 		BuildLimit: 1
-		Description: Knocks down buildings.
+		Description: actor-sc2k_big_bulldozer.description
 	Valued:
 		Cost: 3000
 	Tooltip:
@@ -2236,7 +2236,7 @@ SC2KJETPLANE:
 	Buildable:
 		Queue: Infantry.Sc2k
 		BuildPaletteOrder: 20
-		Description: Crashes into ground targets.
+		Description: actor-sc2kjetplane.description
 		BuildDurationModifier: 100
 		BuildDuration: 750
 	Valued:
@@ -2326,7 +2326,7 @@ SC2KHELICOPTER:
 		Queue: Defence, RADefence
 		Prerequisites: ~mmsimcity2k
 		BuildPaletteOrder: 20
-		Description: Good for scouting.
+		Description: actor-sc2khelicopter.description
 	Valued:
 		Cost: 300
 	Tooltip:
@@ -2383,7 +2383,7 @@ SC2KCARGOSHIP:
 	Buildable:
 		BuildPaletteOrder: 20
 		Queue: Naval.Sc2k
-		Description: Cargo ship filled with explosives.
+		Description: actor-sc2kcargoship.description
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -2438,7 +2438,7 @@ SC2KPOLICECAR:
 		BuildPaletteOrder: 20
 		BuildDuration: 300
 		BuildDurationModifier: 100
-		Description: Light vehicle that drives police officers to their destination.\nCan carry up to 4 officers who can shoot from inside\nIncreases damage output of nearby allied units
+		Description: actor-sc2kpolicecar.description
 	Valued:
 		Cost: 600
 	Tooltip:
@@ -2511,7 +2511,7 @@ SC2KFIRETRUCK:
 	Buildable:
 		BuildPaletteOrder: 20
 		Queue: Vehicle.Sc2k
-		Description: Truck armed with a water cannon.\n Strong vs Infantry, Buildings\n Increases damage resistance of nearby allied units
+		Description: actor-sc2kfiretruck.description
 		BuildDuration: 425
 		BuildDurationModifier: 100
 	Mobile:
@@ -2568,7 +2568,7 @@ SC2KBEACONPOLICE:
 		Queue: Defence, RADefence
 		BuildPaletteOrder: 80
 		Prerequisites: Observatory, ~selectsimcity2000
-		Description: Advanced base defense.\nRequires power to operate.\nCan detect cloaked units.\n  Strong vs Vehicles, Infantry\n  Weak vs Aircraft
+		Description: actor-sc2kbeaconpolice.description
 	HitShape:
 		UseTargetableCellsOffsets: true
 		Type: Rectangle
@@ -2657,7 +2657,7 @@ SC2KBEACONFIRE:
 		Queue: Defence, RADefence
 		BuildPaletteOrder: 80
 		Prerequisites: Coal Power Plant, ~selectsimcity2000
-		Description: Advanced base defense.\nRequires power to operate.\nCan detect cloaked units.\n  Strong vs Vehicles, Infantry\n  Weak vs Aircraft
+		Description: actor-sc2kbeaconfire.description
 	HitShape:
 		UseTargetableCellsOffsets: true
 		Type: Rectangle
@@ -2728,7 +2728,7 @@ SC2KBEACONARMY:
 		Queue: Defence, RADefence
 		BuildPaletteOrder: 80
 		Prerequisites: sc2krecyclingcenter, ~selectsimcity2000
-		Description: AA defense.\nCan detect cloaked units.\n  Strong vs Aircraft
+		Description: actor-sc2kbeaconarmy.description
 	HitShape:
 		UseTargetableCellsOffsets: true
 		Type: Rectangle
@@ -3015,7 +3015,7 @@ SC2KDOMICILEA1:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 10
 		Prerequisites: Coal Power Plant, ~selectsimcity2000a
-		Description: Living quarters.\n Provides income.
+		Description: actor-sc2kdomicilea1.description
 	Building:
 		Footprint: x
 		Dimensions: 1,1
@@ -3118,7 +3118,7 @@ SC2KDOMICILEB1:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 10
 		Prerequisites: sc2kdomicilea1, Natural Gas Power Plant, ~selectsimcity2000a
-		Description: Living quarters.\n Provides income.
+		Description: actor-sc2kdomicileb1.description
 	Building:
 		Footprint: xx ==
 		Dimensions: 2,2
@@ -3213,7 +3213,7 @@ SC2KDOMICILEC1:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 10
 		Prerequisites: sc2kdomicileb1, Natural Gas Power Plant, ~selectsimcity2000a
-		Description: Living quarters.\n Provides income.
+		Description: actor-sc2kdomicilec1.description
 	Building:
 		Footprint: =x= xxx ===
 		Dimensions: 3,3
@@ -3292,7 +3292,7 @@ SC2KCOMMERCIALA1:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 20
 		Prerequisites: SC2KDOMICILEA1, ~selectsimcity2000a
-		Description: Living quarters.\n Provides income.
+		Description: actor-sc2kcommerciala1.description
 	Building:
 		Footprint: x
 		Dimensions: 1,1
@@ -3381,7 +3381,7 @@ SC2KCOMMERCIALB1:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 20
 		Prerequisites: SC2KCOMMERCIALA1, Natural Gas Power Plant, ~selectsimcity2000a
-		Description: Living quarters.\n Provides income.
+		Description: actor-sc2kcommercialb1.description
 	Building:
 		Footprint: xx ==
 		Dimensions: 2,2
@@ -3470,12 +3470,12 @@ SC2KDOMICILEC1:
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: Departament Domicile
+		Name: Department Domicile
 	Buildable:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 10
 		Prerequisites: sc2kdomicileb1, Natural Gas Power Plant, ~selectsimcity2000a
-		Description: Living quarters.\n Provides income.
+		Description: actor-sc2kdomicilec1.description
 	Building:
 		Footprint: =x= xxx ===
 		Dimensions: 3,3
@@ -3610,7 +3610,7 @@ SC2KPOLICEDEPTA:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 50
 		Prerequisites: Trade Center, ~selectsimcity2000a
-		Description: Calls in Police Forces
+		Description: actor-sc2kpolicedepta.description
 	RenderSprites:
 		Image: sc2kpolicedept
 
@@ -3620,7 +3620,7 @@ SC2KFIREDEPTA:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 50
 		Prerequisites: sc2krecyclingcenter, ~selectsimcity2000a
-		Description: Calls in Firefighters
+		Description: actor-sc2kfiredepta.description
 	RenderSprites:
 		Image: sc2kfiredept
 
@@ -3630,7 +3630,7 @@ SC2KHOSPITALA:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 50
 		Prerequisites: sc2kfiredepta, ~selectsimcity2000a
-		Description: Heals nearby units
+		Description: actor-sc2khospitala.description
 	RenderSprites:
 		Image: sc2khospital
 
@@ -3648,7 +3648,7 @@ sc2k_armyhq:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 50
 		Prerequisites: sc2kpolicedepta, ~selectsimcity2000a
-		Description: Calls Military
+		Description: actor-sc2k_armyhq.description
 	Building:
 		Footprint: xx ==
 		Dimensions: 2,2
@@ -3703,7 +3703,7 @@ sc2k_armyvehicle:
 		Queue: Defence, RADefence
 		BuildPaletteOrder: 50
 		Prerequisites: sc2k_armyhq, ~selectsimcity2000a
-		Description: Calls Military
+		Description: actor-sc2k_armyvehicle.description
 	Building:
 		Footprint: xx ==
 		Dimensions: 2,2
@@ -3755,7 +3755,7 @@ SC2KMISSILESILOA:
 		Queue: Defence, RADefence
 		BuildPaletteOrder: 90
 		Prerequisites: sc2k_armyhq, ~selectsimcity2000a
-		Description: Nuke silo.
+		Description: actor-sc2kmissilesiloa.description
 	RenderSprites:
 		Image: sc2kmissilesilo
 
@@ -3777,7 +3777,7 @@ sc2k_storage:
 		Queue: Defence, RADefence
 		BuildPaletteOrder: 10
 		Prerequisites: sc2krecyclingcenter, ~mmsimcity2k
-		Description: Stores excess refined\nOre and Gems.
+		Description: actor-sc2k_storage.description
 	Building:
 		Footprint: x
 		Dimensions: 1,1
@@ -3844,7 +3844,7 @@ SC2KFACTORYDISASTERA:
 		BuildPaletteOrder: 40
 		Prerequisites: Observatory, SC2KDOMICILEC1, ~selectsimcity2000a
 		BuildDuration: 2500
-		Description: Produces disasters to use on enemy players.
+		Description: actor-sc2kfactorydisastera.description
 		BuildLimit: 1
 	Building:
 		Footprint: xxxxxx xxxxxx ======
@@ -3886,7 +3886,7 @@ SC2KFACTORYDISASTERA:
 		Names:
 			1: Mob Disaster
 		Descriptions:
-			1: Deploys the fire disaster in enemies base
+			1: power-mobdisaster.description
 		TargetCircleRange:
 			1: 3000
 		DisplayRadarPing: True
@@ -3904,7 +3904,7 @@ SC2KFACTORYDISASTERA:
 		Names:
 			1: Fire Disaster
 		Descriptions:
-			1: Deploys the fire disaster in enemies base
+			1: power-firedisaster.description
 		TargetCircleRange:
 			1: 3000
 		DisplayRadarPing: True
@@ -3922,7 +3922,7 @@ SC2KFACTORYDISASTERA:
 		Names:
 			1: Tornado Disaster
 		Descriptions:
-			1: Deploys the tornado disaster with enemies aircraft
+			1: power-tornadodisaster.description
 		DisplayRadarPing: True
 		ChargeInterval: 4500
 		Weapons:
@@ -3940,7 +3940,7 @@ SC2KFACTORYDISASTERA:
 		Names:
 			1: Thundercloud Disaster
 		Descriptions:
-			1: Deploys the Thundercloud disaster in enemies base
+			1: power-thunderdisaster.description
 		TargetCircleRange:
 			1: 3000
 		DisplayRadarPing: True
@@ -3958,7 +3958,7 @@ SC2KFACTORYDISASTERA:
 		Names:
 			1: UFO Disaster
 		Descriptions:
-			1: Deploys the Thundercloud disaster in enemies base
+			1: power-ufodisaster.description
 		TargetCircleRange:
 			1: 3000
 		DisplayRadarPing: True
@@ -4038,7 +4038,7 @@ sc2kamtnk:
 		AddToArmyValue: true
 	Buildable:
 		Queue: Aircraft.Sc2k
-		Description: General-Purpose Tank.\n  Strong vs Tanks, Vehicles\n  Weak vs Infantry
+		Description: actor-sc2kamtnk.description
 		Prerequisites: sc2k_armyvehicle, ~selectsimcity2000a
 	RenderSprites:
 		Image: mtnk
@@ -4093,7 +4093,7 @@ sc2k_ufo:
 		BuildPaletteOrder: 20
 		Prerequisites: ~disabled, ~techlevel.medium
 		Queue: Infantry.Sc2k
-		Description: Helicopter Gunship with AG Missiles.\n  Strong vs Buildings, Tanks\n  Weak vs Infantry
+		Description: actor-sc2k_ufo.description
 	Aircraft:
 		TurnSpeed: 28
 		Speed: 75
@@ -4203,7 +4203,7 @@ sc2k_streetrat:
 		BuildLimit: 1
 		Prerequisites: Trade Center
 		Queue: Vehicle.Sc2k
-		Description: Fast car, armed and upgradable\nupgradable with rockets.\nupgradable with machineguns
+		Description: actor-sc2k_streetrat.description
 	Mobile:
 		TurnSpeed: 64
 		Speed: 213
@@ -4239,7 +4239,7 @@ sc2k_utilityvan:
 		BuildLimit: 1
 		Prerequisites: Trade Center
 		Queue: Vehicle.Sc2k
-		Description: Tanky Truck, armed and upgradable\nupgradable with rockets.\nupgradable with machineguns
+		Description: actor-sc2k_utilityvan.description
 	Mobile:
 		TurnSpeed: 32
 		Speed: 105
@@ -4275,7 +4275,7 @@ sc2k_j57:
 		BuildLimit: 1
 		Prerequisites: Trade Center
 		Queue: Vehicle.Sc2k
-		Description: Faster Classic car, armed and upgradable\nupgradable with rockets.\nupgradable with machineguns
+		Description: actor-sc2k_j57.description
 	Mobile:
 		TurnSpeed: 64
 		Speed: 240
@@ -4311,7 +4311,7 @@ sc2k_airhawk:
 		BuildLimit: 1
 		Prerequisites: Trade Center
 		Queue: Vehicle.Sc2k
-		Description: Faster Muscle car, armed and upgradable\nupgradable with rockets.\nupgradable with machineguns
+		Description: actor-sc2k_airhawk.description
 	Mobile:
 		TurnSpeed: 60
 		Speed: 220
@@ -4336,7 +4336,7 @@ chromesc2kengine1:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Vehicle.Sc2k
-		Description: Increases speed of simcity cars.
+		Description: actor-chromesc2kengine1.description
 		Prerequisites: Trade Center
 	Valued:
 		Cost: 500
@@ -4352,7 +4352,7 @@ chromesc2kengine2:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Vehicle.Sc2k
-		Description: Increases speed of simcity cars.
+		Description: actor-chromesc2kengine2.description
 		Prerequisites: chromesc2kengine1
 	Valued:
 		Cost: 750
@@ -4368,7 +4368,7 @@ chromesc2kengine3:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Vehicle.Sc2k
-		Description: Increases speed of simcity cars.
+		Description: actor-chromesc2kengine3.description
 		Prerequisites: chromesc2kengine2
 	Valued:
 		Cost: 1000
@@ -4384,7 +4384,7 @@ chromesc2karmor:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Vehicle.Sc2k
-		Description: Increases health of simcity cars.
+		Description: actor-chromesc2karmor.description
 		Prerequisites: Trade Center
 	Valued:
 		Cost: 1000
@@ -4400,7 +4400,7 @@ chromesc2kshield:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Vehicle.Sc2k
-		Description: Increases health of simcity cars.
+		Description: actor-chromesc2kshield.description
 		Prerequisites: Trade Center
 	Valued:
 		Cost: 2000
@@ -4416,7 +4416,7 @@ chromesc2kmachinegun:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Vehicle.Sc2k
-		Description: Adds a Machinegun to simcity cars.
+		Description: actor-chromesc2kmachinegun.description
 		Prerequisites: Trade Center
 	Valued:
 		Cost: 1000
@@ -4432,7 +4432,7 @@ chromesc2kmissile:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Vehicle.Sc2k
-		Description: Adds a Missile Launcher to simcity cars.
+		Description: actor-chromesc2kmissile.description
 		Prerequisites: Trade Center
 	Valued:
 		Cost: 2000

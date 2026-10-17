@@ -296,7 +296,7 @@ wc_h_townhall:
 		Names:
 			1: Far Seeing
 		Descriptions:
-			1: Reveals area
+			1: power-ra2psireveal.description
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
 		EndChargeSpeechNotification: SpyPlaneReady
@@ -397,7 +397,7 @@ wc_h_farm:
 		Queue: Building, RABuilding
 		BuildDuration: 160
 		BuildDurationModifier: 100
-		Description: Provides 100 Food (Power). Can be expanded to store twice as much Food. Can store up to 500 resources.
+		Description: actor-wc_h_farm.description
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -463,7 +463,7 @@ wc_h_guard_tower:
 		Queue: Defence, RADefence
 		BuildDuration: 750
 		BuildDurationModifier: 50
-		Description: Basic Anti-Ground and Anti-Air Defense building. Detector.
+		Description: actor-wc_h_guard_tower.description
 		IconPalette: windows256
 	Building:
 		Footprint: xx xx
@@ -526,7 +526,7 @@ wc_h_barracks:
 	Buildable:
 		BuildPaletteOrder: 12
 		Queue: Building, RABuilding
-		Description: Trains most human units
+		Description: actor-wc_h_barracks.description
 		BuildDuration: 200
 		BuildDurationModifier: 100
 		Prerequisites: ~wc_h_townhall, wc_h_farm
@@ -683,7 +683,7 @@ wc_h_blacksmith:
 		Queue: Building, RABuilding
 		BuildDuration: 400
 		BuildDurationModifier: 100
-		Description: Upgrades Units
+		Description: actor-wc_h_blacksmith.description
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -729,7 +729,7 @@ wc_h_church:
 		Queue: Building, RABuilding
 		BuildDuration: 300
 		BuildDurationModifier: 100
-		Description: Trains Clerics.
+		Description: actor-wc_h_church.description
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -804,7 +804,7 @@ wc_h_stable:
 		Queue: Building, RABuilding
 		BuildDuration: 400
 		BuildDurationModifier: 100
-		Description: Allows production of Knights. Provides upgrades for Knights
+		Description: actor-wc_h_stable.description
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -844,7 +844,7 @@ wc_h_tower:
 		Queue: Building, RABuilding
 		BuildDuration: 400
 		BuildDurationModifier: 100
-		Description: Trains Conjurers. Provides Radar.
+		Description: actor-wc_h_tower.description
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -918,7 +918,7 @@ wc_h_stormwind:
 		Queue: Building, RABuilding
 		BuildDuration: 900
 		BuildDurationModifier: 100
-		Description: Provides Superweapon
+		Description: actor-wc_h_stormwind.description
 	Building:
 		Footprint: xxx xxx xxx ===
 		Dimensions: 3,4
@@ -941,7 +941,7 @@ wc_h_stormwind:
 			1: rainoffire_icon
 		Names: 
 			1: Rain Of Fire
-		Descriptions: 
+		Descriptions:
 			1: warcraft-rainoffire-human.description
 		Prerequisites: 
 			1: ~techlevel.superweapons, swstormwind
@@ -1049,7 +1049,7 @@ wc_o_townhall:
 		Names:
 			1: Dark Vision
 		Descriptions:
-			1: Reveals area
+			1: power-ra2psireveal.description
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
 		EndChargeSpeechNotification: SpyPlaneReady
@@ -1097,7 +1097,7 @@ wc_o_barracks:
 	Inherits@wc_h_barracks: wc_h_barracks
 	Buildable:
 		Queue: Building, RABuilding
-		Description: Trains most orc units
+		Description: actor-wc_o_barracks.description
 		Prerequisites: ~wc_o_townhall, wc_o_farm
 	Production@NORMAL:
 		Produces: Infantry
@@ -1170,7 +1170,7 @@ wc_o_damnedtemple:
 	Buildable:
 		Prerequisites: ~wc_o_townhall, wc_o_barracks
 		Queue: Building, RABuilding
-		Description: Trains Necrolytes.
+		Description: actor-wc_o_damnedtemple.description
 	SpawnActorsOnSell:
 		ActorTypes: wc_o_grunt
 	Voiced:
@@ -1190,7 +1190,7 @@ wc_o_kennel:
 	Buildable:
 		Prerequisites: ~wc_o_townhall, wc_o_barracks
 		Queue: Building, RABuilding
-		Description: Allows production of Raiders
+		Description: actor-wc_o_kennel.description
 	SpawnActorsOnSell:
 		ActorTypes: wc_o_grunt
 	Voiced:
@@ -1201,7 +1201,7 @@ wc_o_tower:
 	Buildable:
 		Prerequisites: ~wc_o_townhall, wc_o_barracks
 		Queue: Building, RABuilding
-		Description: Trains Warlocks. Provides Radar.
+		Description: actor-wc_o_tower.description
 	Production@NORMAL:
 		Produces: Aircraft
 	Production@CLASSICPRODUCTIONQUEUES:
@@ -1234,7 +1234,7 @@ wc_o_blackrockspire:
 		IconPalette: windows256
 		Names: 
 			1: Poison Cloud
-		Descriptions: 
+		Descriptions:
 			1: warcraft-poisoncloud-orc.description
 		Prerequisites: 
 			1: ~techlevel.superweapons, swblackspire
@@ -1324,7 +1324,7 @@ wc_h_peasant:
 		BuildPaletteOrder: 5
 		Prerequisites: ~wc_h_townhall
 		Queue: Defence, RADefence
-		Description: Harvester.
+		Description: actor-wc_h_peasant.description
 		BuildDuration: 100
 		BuildDurationModifier: 100
 	Passenger:
@@ -1447,7 +1447,7 @@ wc_h_mcv:
 		Queue: Building, RABuilding
 		BuildDuration: 750
 		BuildDurationModifier: 100
-		Description: Transforms into another Town Hall
+		Description: actor-wc_h_mcv.description
 		Icon: townhall_icon
 		Prerequisites: ~wc_h_townhall
 	Tooltip:
@@ -1529,7 +1529,7 @@ wc_h_footman:
 		BuildPaletteOrder: 10
 		Prerequisites: ~wc_h_barracks
 		Queue: Infantry, RAInfantry
-		Description: Basic Melee Infantry. Slow but can take some damage.
+		Description: actor-wc_h_footman.description
 		BuildDuration: 150
 		BuildDurationModifier: 100
 	Mobile:
@@ -1589,7 +1589,7 @@ wc_h_archer:
 		BuildPaletteOrder: 10
 		Prerequisites: ~wc_h_lumbermill
 		Queue: Infantry, RAInfantry
-		Description: Basic Ranged Infantry. Not as durable as Footman. Can attack air
+		Description: actor-wc_h_archer.description
 		BuildDuration: 125
 		BuildDurationModifier: 100
 	Armor:
@@ -1641,7 +1641,7 @@ wc_h_knight:
 		BuildPaletteOrder: 10
 		Prerequisites: ~wc_h_stable
 		Queue: Infantry, RAInfantry
-		Description: Mounted Infantry. Fast and durable.
+		Description: actor-wc_h_knight.description
 		BuildDuration: 300
 		BuildDurationModifier: 100
 	RevealsShroud:
@@ -1697,7 +1697,7 @@ wc_h_catapult:
 		BuildPaletteOrder: 10
 		Prerequisites: ~wc_h_blacksmith
 		Queue: Infantry, RAInfantry
-		Description: Siege weapon. Powerful against static targets.
+		Description: actor-wc_h_catapult.description
 		BuildDuration: 400
 		BuildDurationModifier: 100
 	AttackFrontal:
@@ -1748,7 +1748,7 @@ wc_h_conjurer:
 		BuildPaletteOrder: 10
 		Prerequisites: ~wc_h_townhall, wc_h_tower
 		Queue: Aircraft, RAAircraft
-		Description: Spell Caster. Far seer. Can summon Scorpions and Water Elementals. Can attack Air. Detector
+		Description: actor-wc_h_conjurer.description
 		BuildDuration: 340
 		BuildDurationModifier: 100
 	Mobile:
@@ -1801,7 +1801,7 @@ wc_h_cleric:
 		BuildPaletteOrder: 10
 		Prerequisites: ~wc_h_townhall, wc_h_church
 		Queue: Vehicle, RAVehicle
-		Description: Support Caster. Heals nearby units.
+		Description: actor-wc_h_cleric.description
 		BuildDuration: 280
 		BuildDurationModifier: 100
 	Mobile:
@@ -1867,7 +1867,7 @@ wc_h_scorpion:
 		BuildPaletteOrder: 10
 		Prerequisites: ~wip-content
 		Queue: Aircraft, RAAircraft
-		Description: Lesser Spawn.
+		Description: actor-wc_h_scorpion.description
 	Mobile:
 		Speed: 56
 	DamageMultiplier@DamageReduction:
@@ -1904,7 +1904,7 @@ wc_h_scorpion:
 wc_n_scorpion:
 	Inherits: wc_h_scorpion
 	Buildable:
-		Description: Mighty Scorpion
+		Description: actor-wc_n_scorpion.description
 		# -Prerequisites:
 	Valued:
 		Cost: 500
@@ -1928,7 +1928,7 @@ wc_h_waterelemental:
 	Valued:
 		Cost: 250
 	Buildable:
-		Description: Will make you wet your pants. Literally cannot be hurt by fire.
+		Description: actor-wc_h_waterelemental.description
 	Tooltip:
 		Name: Water Elemental
 	UpdatesPlayerStatistics:
@@ -1973,7 +1973,7 @@ wc_n_waterelemental:
 	Buildable:
 		Prerequisites: ~wc_n_portal
 		Queue: Naval
-		Description: Will make you wet your pants. Literally cannot be hurt by fire.
+		Description: actor-wc_n_waterelemental.description
 	Valued:
 		Cost: 1600
 	DamageMultiplier@DamageReduction:
@@ -1996,7 +1996,7 @@ wc_n_fireelemental:
 		Name: Fire Elemental
 	Buildable:
 		Prerequisites: ~wc_n_portal
-		Description: Don't play with fire. Extremely vulnerable against Water. Cannot be hurt by fire
+		Description: actor-wc_n_fireelemental.description
 	DamageMultiplier@DamageReduction:
 		Modifier: 61
 	FirepowerMultiplier@FirepowerIncrease:
@@ -2038,7 +2038,7 @@ wc_n_portal:
 		Queue: Building, RABuilding
 		BuildDuration: 1125
 		BuildDurationModifier: 100
-		Description: Warps powerful units from elsewhere in Azeroth, or beyond. Ported Units does not require food. Can be only built once
+		Description: actor-wc_n_portal.description
 		Prerequisites: ~wc_superweapon
 		BuildLimit: 1
 		BuildPaletteOrder: 200
@@ -2092,7 +2092,7 @@ wc_goldmine:
 		Queue: Building, RABuilding
 		BuildDuration: 375
 		BuildDurationModifier: 100
-		Description: Send workers inside to provide passive income. Miners progressively get experience and work more efficiently.
+		Description: actor-wc_goldmine.description
 		Prerequisites: ~oldContent
 	Building:
 		Footprint: xxx xxx xxx
@@ -2301,7 +2301,7 @@ wc_o_peon:
 		BuildPaletteOrder: 5
 		Prerequisites: ~wc_o_townhall
 		Queue: Defence, RADefence
-		Description: Harvester.
+		Description: actor-wc_o_peon.description
 	Armament:
 		Weapon: footmanSlice
 	WithHarvesterSpriteBody:
@@ -2328,7 +2328,7 @@ wc_o_grunt:
 		BuildPaletteOrder: 10
 		Prerequisites: ~wc_o_barracks
 		Queue: Infantry, RAInfantry
-		Description: Basic Melee Infantry. Slow but can take some damage.
+		Description: actor-wc_o_grunt.description
 	Armament:
 		Weapon: footmanSlice
 	Voiced:
@@ -2341,7 +2341,7 @@ wc_o_spearman:
 	Buildable:
 		Prerequisites: ~wc_o_lumbermill
 		Queue: Infantry, RAInfantry
-		Description: Basic Ranged Infantry. Not as durable as Grunt. Can attack air.
+		Description: actor-wc_o_spearman.description
 	Armament:
 		Weapon: spearFire
 	Voiced:
@@ -2354,7 +2354,7 @@ wc_o_raider:
 	Buildable:
 		Prerequisites: ~wc_o_kennel
 		Queue: Infantry, RAInfantry
-		Description: Mounted Infantry. Fast and durable.
+		Description: actor-wc_o_raider.description
 	Armament:
 		Weapon: knightSlice
 	Voiced:
@@ -2377,7 +2377,7 @@ wc_o_warlock:
 	Buildable:
 		Prerequisites: ~wc_o_tower
 		Queue: Aircraft, RAAircraft
-		Description: Spell Caster. Farseer. Can summon Spiders and Demons. Can attack Air. Detector
+		Description: actor-wc_o_warlock.description
 	Armament:
 		Weapon: summon1_spider
 	Armament@1:
@@ -2397,7 +2397,7 @@ wc_o_necrolyte:
 	Buildable:
 		Prerequisites: ~wc_o_damnedtemple
 		Queue: Vehicle, RAVehicle
-		Description: Support Caster. Summons the Dead. Casts Unholy Armor.
+		Description: actor-wc_o_necrolyte.description
 	Armament@2:
 		Weapon: armorNecrolyte
 		TargetRelationships: Ally
@@ -2433,7 +2433,7 @@ wc_n_spider:
 		Name: Spider
 	Buildable:
 		Queue: Infantry
-		Description: May cause heart attack to Arachnophobes. Faster but more vulnerable than the Scorpion.
+		Description: actor-wc_n_spider.description
 	Valued:
 		Cost: 600
 	Mobile:
@@ -2456,7 +2456,7 @@ wc_o_skeleton_single:
 	Inherits@upgrade_swords: ^wc_h_str_sword
 	Inherits@MC: ^MCImmune
 	Buildable:
-		Description: Restless Dead
+		Description: actor-wc_o_skeleton_single.description
 	Tooltip:
 		Name: The Dead
 	Armament:
@@ -2525,7 +2525,7 @@ wc_o_demon:
 	Tooltip:
 		Name: Demon
 	Buildable:
-		Description: This beast comes from hell itself and therefore cannot be hurt by fire
+		Description: actor-wc_o_demon.description
 	Armament:
 		Weapon: demonSlice
 	AutoTarget:
@@ -2542,7 +2542,7 @@ wc_n_demon:
 	Inherits: wc_o_demon
 	Buildable:
 		Queue: Naval
-		Description: This beast comes from hell itself and therefore cannot be hurt by fire
+		Description: actor-wc_n_demon.description
 		BuildDuration: 1500
 		BuildDurationModifier: 100
 		Prerequisites: ~wc_n_portal
@@ -2575,7 +2575,7 @@ wc_o_skeleton_army:
 		Prerequisites: ~wc_n_portal
 		BuildPaletteOrder: 30
 		Queue: Naval
-		Description: Big group of skeletons. Regenerates fast. Weak against Siege and Toxins
+		Description: actor-wc_o_skeleton_army.description
 		BuildDuration: 1125
 		BuildDurationModifier: 100
 	Tooltip:
@@ -2645,7 +2645,7 @@ wc_n_brigand:
 		Prerequisites: ~wc_n_portal
 		BuildPaletteOrder: 10
 		Queue: Naval
-		Description: Deceitful bandit. Faster than Footman
+		Description: actor-wc_n_brigand.description
 		BuildDuration: 80
 		BuildDurationModifier: 100
 	Mobile:
@@ -2689,7 +2689,7 @@ wc_n_ogre:
 		Prerequisites: ~wc_n_portal
 		BuildPaletteOrder: 10
 		Queue: Naval
-		Description: Large, tanky and stupid. Powerful melee attack.
+		Description: actor-wc_n_ogre.description
 		BuildDuration: 120
 		BuildDurationModifier: 100
 	Mobile:
@@ -2734,7 +2734,7 @@ wc_n_slime:
 		BuildPaletteOrder: 10
 		Prerequisites: ~wc_n_portal
 		Queue: Naval
-		Description: Slow Booger-like creature with jump attack that splits into more upon death
+		Description: actor-wc_n_slime.description
 		BuildDuration: 400
 		BuildDurationModifier: 100
 	Mobile:
@@ -2829,7 +2829,7 @@ wc_h_str_arrow:
 		Queue: Upgrades
 		BuildDuration: 1500
 		BuildDurationModifier: 100
-		Description: Increases Arrow Damage dealt by Archers and Guard Towers by 40%
+		Description: actor-wc_h_str_arrow.description
 		Prerequisites: ~wc_h_lumbermill, ~!wc_h_str_arrow
 	Valued:
 		Cost: 2000
@@ -2846,7 +2846,7 @@ wc_h_str_arrow2:
 		Queue: Upgrades
 		BuildDuration: 1500
 		BuildDurationModifier: 100
-		Description: Increases Arrow Damage by Archers and Guard Towers by further 40%
+		Description: actor-wc_h_str_arrow2.description
 		Prerequisites: ~wc_h_lumbermill, ~!wc_h_str_arrow2, ~wc_h_str_arrow
 	Valued:
 		Cost: 2000
@@ -2863,7 +2863,7 @@ wc_h_str_sword:
 		Queue: Upgrades
 		BuildDuration: 1500
 		BuildDurationModifier: 100
-		Description: Increases Sword Damage by 30%
+		Description: actor-wc_h_str_sword.description
 		Prerequisites: ~wc_h_blacksmith, ~!wc_h_str_sword
 	Valued:
 		Cost: 2000
@@ -2880,7 +2880,7 @@ wc_h_str_sword2:
 		Queue: Upgrades
 		BuildDuration: 1500
 		BuildDurationModifier: 100
-		Description: Increases Sword Damage by further 30%
+		Description: actor-wc_h_str_sword2.description
 		Prerequisites: ~wc_h_blacksmith, ~!wc_h_str_sword2, ~wc_h_str_sword
 	Valued:
 		Cost: 2000
@@ -2897,7 +2897,7 @@ wc_h_str_shield:
 		Queue: Upgrades
 		BuildDuration: 1500
 		BuildDurationModifier: 100
-		Description: Increases Shield Resistance of all units by 25%
+		Description: actor-wc_h_str_shield.description
 		Prerequisites: ~wc_h_blacksmith, ~!wc_h_str_shield
 	Valued:
 		Cost: 2000
@@ -2914,7 +2914,7 @@ wc_h_str_shield2:
 		Queue: Upgrades
 		BuildDuration: 1500
 		BuildDurationModifier: 100
-		Description: Increases Shield Resistance of all units by further 25%
+		Description: actor-wc_h_str_shield2.description
 		Prerequisites: ~wc_h_blacksmith, ~!wc_h_str_shield2, ~wc_h_str_shield
 	Valued:
 		Cost: 2000
@@ -2931,7 +2931,7 @@ wc_h_horses:
 		Queue: Upgrades
 		BuildDuration: 1500
 		BuildDurationModifier: 100
-		Description: Increases Horses speed by 20%
+		Description: actor-wc_h_horses.description
 		Prerequisites: ~wc_h_stable, ~!wc_h_horses, wc_h_townhall
 	Valued:
 		Cost: 2000
@@ -2948,7 +2948,7 @@ wc_h_horses2:
 		Queue: Upgrades
 		BuildDuration: 1500
 		BuildDurationModifier: 100
-		Description: Increases Horses speed by further 20%
+		Description: actor-wc_h_horses2.description
 		Prerequisites: ~wc_h_stable, ~!wc_h_horses2, ~wc_h_horses
 	Valued:
 		Cost: 2000
@@ -2962,7 +2962,7 @@ wc_o_str_spear:
 		Name: Spear Strength
 	Buildable:
 		Queue: Upgrades
-		Description: Increases Spear Damage dealt by Spearmen and Guard Towers by 35%
+		Description: actor-wc_o_str_spear.description
 		Prerequisites: ~wc_o_lumbermill, ~!wc_o_str_spear
 	RenderSprites:
 		Image: wc_o_str_spear
@@ -2973,7 +2973,7 @@ wc_o_str_spear2:
 		Name: Spear Strength II
 	Buildable:
 		Queue: Upgrades
-		Description: Increases Spear Damage dealt by Spearmen and Guard Towers by further 35%
+		Description: actor-wc_o_str_spear2.description
 		Prerequisites: ~wc_o_lumbermill, ~!wc_o_str_spear2, ~wc_o_str_spear
 	RenderSprites:
 		Image: wc_o_str_spear2
@@ -2984,7 +2984,7 @@ wc_o_str_axe:
 		Name: Axe Strength
 	Buildable:
 		Queue: Upgrades
-		Description: Increases Axe Damage by 30%
+		Description: actor-wc_o_str_axe.description
 		Prerequisites: ~wc_o_blacksmith, ~!wc_o_str_axe2
 	Valued:
 		Cost: 1000
@@ -2997,7 +2997,7 @@ wc_o_str_axe2:
 		Name: Axe Strength II
 	Buildable:
 		Queue: Upgrades
-		Description: Increases Axe Damage by further 30%
+		Description: actor-wc_o_str_axe2.description
 		Prerequisites: ~wc_o_blacksmith, ~!wc_o_str_axe2, ~wc_o_str_axe
 	RenderSprites:
 		Image: wc_o_str_axe2
@@ -3025,7 +3025,7 @@ wc_o_wolves:
 	Buildable:
 		BuildPaletteOrder: 1
 		Queue: Upgrades
-		Description: Increases Wolves speed by 20%
+		Description: actor-wc_o_wolves.description
 		Prerequisites: ~wc_o_kennel, ~!wc_o_wolves
 	RenderSprites:
 		Image: wc_o_wolves
@@ -3037,7 +3037,7 @@ wc_o_wolves2:
 	Buildable:
 		BuildPaletteOrder: 1
 		Queue: Upgrades
-		Description: Increases Wolves speed by further 20%
+		Description: actor-wc_o_wolves2.description
 		Prerequisites: ~wc_o_kennel, ~!wc_o_wolves2, ~wc_o_wolves
 	RenderSprites:
 		Image: wc_o_wolves2
@@ -3051,7 +3051,7 @@ wc_h_upgradefarm:
 		BuildDuration: 1125
 		BuildDurationModifier: 100
 		Prerequisites: ~wc_h_farm
-		Description: Expands farm gaining 100 more food out of this farm
+		Description: actor-wc_h_upgradefarm.description
 		Icon: expand-icon
 	Valued:
 		Cost: 2000
