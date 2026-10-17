@@ -28,14 +28,14 @@ World:
 		InternalName: human2
 		Game: Warcraft
 		Side: Warcraft
-		Description: Human\nLeaders of the Alliance\nMighty and intelligent.\nSupport Powers: Holy Vision, Blizzard
+		Description: faction-warcraft2-human.description
 		Selectable: True
 	FactionCA@orc2:
 		Name: Orc WC2
 		InternalName: orc2
 		Game: Warcraft
 		Side: Warcraft
-		Description: Orc\nLeaders of the Horde\nBrutish and crafty.\nSupport Powers: Eye of Kilrogg, Death and Decay
+		Description: faction-warcraft2-orc.description
 		Selectable: True
 	FactionCA@RandomWC2:
 		Name: Any WC2
@@ -43,7 +43,7 @@ World:
 		RandomFactionMembers: human2, orc2
 		Game: Warcraft
 		Side: Random
-		Description: Random Faction\nA random faction from Warcraft 2 will be chosen when the game starts.
+		Description: faction-warcraft2-random.description
 	####################################################################################################
 	#	   Warcraft 2
 	####################################################################################################
@@ -420,7 +420,7 @@ Player:
 		BuildPaletteOrder: 99
 		Prerequisites: ~disabled
 		Queue: Infantry, RAInfantry
-		Description: Critter
+		Description: actor-critter.description
 	Mobile:
 		Speed: 56
 	Health:
@@ -2168,7 +2168,7 @@ wc2_human_keep:
 		BuildPaletteOrder: 80
 		Queue: Defence, RADefence
 		Prerequisites:  ~wc2_human_townhall, keepupgradeavailable
-		Description: Unlocks more advanced buildings.
+		Description: actor-wc2_human_keep.description
 	Plug:
 		Type: wc2_human_townhall
 
@@ -2182,7 +2182,7 @@ wc2_human_castle:
 		BuildPaletteOrder: 80
 		Queue: Defence, RADefence
 		Prerequisites: ~wc2_human_keep, castleupgradeavailable
-		Description: Unlocks more advanced buildings.
+		Description: actor-wc2_human_castle.description
 	Plug:
 		Type: wc2_human_keep
 
@@ -2275,7 +2275,7 @@ wc2_human_betterfarm:
 		BuildPaletteOrder: 10
 		Prerequisites: ~!wc2_human_betterfarm, ~wc2_human_farm, wc2_human_keep
 		Queue: Addons
-		Description: Farm Upgrade\n Gives +60 food (120 total)\n Gives +50% hp (150% total)
+		Description: actor-wc2_human_betterfarm.description
 		Icon: icon
 	RenderSprites:
 	ProvidesPrerequisite:
@@ -2290,7 +2290,7 @@ wc2_human_bestfarm:
 		BuildPaletteOrder: 10
 		Prerequisites: ~wc2_human_betterfarm, ~wc2_human_farm, wc2_human_castle
 		Queue: Addons
-		Description: Farm Upgrade\n Gives +120 food (240 total)\n Gives +50% hp (200% total)
+		Description: actor-wc2_human_bestfarm.description
 		Icon: icon
 	RenderSprites:
 	ProvidesPrerequisite:
@@ -2302,7 +2302,7 @@ wc2_human_barracks:
 		Name: Barracks
 	Buildable:
 		Queue: Building, RABuilding
-		Description: Warriors of the Alliance live and train here.\nProduces many Human units.
+		Description: actor-wc2_human_barracks.description
 		Prerequisites: ~wc2_human_farm
 
 	SpawnActorsOnSell:
@@ -2318,7 +2318,7 @@ wc2_human_elven_lumber_mill:
 	Buildable:
 		Prerequisites: ~wc2_human_farm
 		Queue: Building, RABuilding
-		Description: Dropoff point for gold. (Tiberium)\nCan store up to 1000 resources.\nProduces bows enabling Archers.\nProvides arrow upgrades for archers and guard towers.
+		Description: actor-wc2_human_elven_lumber_mill.description
 	FreeActor@1:
 		Actor: wc2_human_peasant
 	FreeActor@2:
@@ -2340,7 +2340,7 @@ wc2_human_blacksmith:
 	Buildable:
 		Prerequisites: ~wc2_human_barracks
 		Queue: Building, RABuilding
-		Description: Enables Ballista and upgrading Scout Towers to Cannon Towers.\nEnables upgrades to units.
+		Description: actor-wc2_human_blacksmith.description
 	SpawnActorsOnSell:
 		ActorTypes: wc2_human_footman
 	Voiced:
@@ -2354,7 +2354,7 @@ wc2_human_gnomish_inventor:
 	Buildable:
 		Prerequisites: ~wc2_human_keep
 		Queue: Building, RABuilding
-		Description: Here Dwarves and Gnomes invent marvels.\nProvides Radar.\nTrains Demo Squads and Gnomish Flying Machines.
+		Description: actor-wc2_human_gnomish_inventor.description
 	SpawnActorsOnSell:
 		ActorTypes: wc2_human_footman
 	Voiced:
@@ -2368,7 +2368,7 @@ wc2_human_stables:
 	Buildable:
 		Prerequisites: ~wc2_human_keep
 		Queue: Building, RABuilding
-		Description: Stables the horses for Knights, allowing their production in the Barracks.
+		Description: actor-wc2_human_stables.description
 	SpawnActorsOnSell:
 		ActorTypes: wc2_human_footman
 	Voiced:
@@ -2382,7 +2382,7 @@ wc2_human_church:
 	Buildable:
 		Prerequisites: ~wc2_human_castle
 		Queue: Building, RABuilding
-		Description: Allows Knights to upgrade to Paladins and trains them in holy magicks.
+		Description: actor-wc2_human_church.description
 	SpawnActorsOnSell:
 		ActorTypes: wc2_human_footman
 	Voiced:
@@ -2455,7 +2455,7 @@ wc2_human_mage_tower:
 	Buildable:
 		Prerequisites: ~wc2_human_castle
 		Queue: Building, RABuilding
-		Description: Teaches men in arcane magicks.\nTrains Mages.\nUnlocks Blizzard superweapon.
+		Description: actor-wc2_human_mage_tower.description
 	SpawnActorsOnSell:
 		ActorTypes: wc2_human_footman
 	Voiced:
@@ -2545,7 +2545,7 @@ wc2_human_mage_tower:
 		Names:
 			1: Blizzard
 		Descriptions:
-			1: Rain down icy death in a large area.
+			1: power-wc2-blizzard.description
 		BeginChargeSpeechNotification: IonCannonCharging
 		EndChargeSpeechNotification: IonCannonReady
 		EndChargeTextNotification: Ion Cannon ready.
@@ -2571,7 +2571,7 @@ wc2_human_gryphon_aviary:
 	Buildable:
 		Prerequisites: ~wc2_human_castle
 		Queue: Building, RABuilding
-		Description: A great Gryphon Matriarch lives here.\nTrains formidable Gryphon Riders.
+		Description: actor-wc2_human_gryphon_aviary.description
 	SpawnActorsOnSell:
 		ActorTypes: wc2_human_footman
 	Voiced:
@@ -2585,7 +2585,7 @@ wc2_human_shipyard:
 	Buildable:
 		Prerequisites: ~wc2_human_elven_lumber_mill
 		Queue: Building, RABuilding
-		Description: Produces and repairs ships.
+		Description: actor-wc2_human_shipyard.description
 	Voiced:
 		VoiceSet: wc2orcshipyardvoice
 
@@ -2597,7 +2597,7 @@ wc2_human_foundry:
 	Buildable:
 		Prerequisites: ~wc2_human_shipyard
 		Queue: Building, RABuilding
-		Description: Unlocks production of the Transport and the Battleship\nProvides upgrades for naval units.
+		Description: actor-wc2_human_foundry.description
 	Voiced:
 		VoiceSet: wc2orcoilfoundryvoice
 
@@ -2609,7 +2609,7 @@ wc2_human_oil_refinery:
 	Buildable:
 		Prerequisites: ~wc2_human_shipyard
 		Queue: Building, RABuilding
-		Description: Unlocks the construction of Oil Platforms for passive income.
+		Description: actor-wc2_human_oil_refinery.description
 	Voiced:
 		VoiceSet: wc2orcoilrefineryvoice
 
@@ -2621,7 +2621,7 @@ wc2_human_oil_platform:
 	Buildable:
 		Prerequisites: ~wc2_human_oil_refinery
 		Queue: Building, RABuilding
-		Description: Provides passive income.\nOil tankers can drill here for further income boost.
+		Description: actor-wc2_human_oil_platform.description
 	Voiced:
 		VoiceSet: wc2orcoilplatformvoice
 
@@ -2648,7 +2648,7 @@ wc2_human_scout_tower:
 		BuildPaletteOrder: 20
 		Prerequisites: ~wc2_human_barracks
 		Queue: Building, RABuilding
-		Description: Can be upgraded to Guard or Cannon Tower.
+		Description: actor-wc2_human_scout_tower.description
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -2734,7 +2734,7 @@ wchumancannontowerupgrade:
 	Buildable:
 		Queue: Defence, RADefence
 		Prerequisites: ~wc2_human_elven_lumber_mill, scouttowerupgradeavailable
-		Description: Ground base defense.
+		Description: actor-wchumancannontowerupgrade.description
 	Plug:
 		Type: wcscouttower
 	RenderSprites:
@@ -2749,7 +2749,7 @@ wchumanguardtowerupgrade:
 	Buildable:
 		Queue: Defence, RADefence
 		Prerequisites: ~wc2_human_blacksmith, scouttowerupgradeavailable
-		Description: Anti-aircraft base defense.
+		Description: actor-wchumanguardtowerupgrade.description
 	Plug:
 		Type: wcscouttower2
 	RenderSprites:
@@ -2863,7 +2863,7 @@ wc2_human_wall:
 		BuildPaletteOrder: 30
 		Prerequisites: ~wc2_human_townhall
 		Queue: Defence, RADefence
-		Description: Stops infantry and most tanks.\nBlocks some projectiles.
+		Description: actor-wc2_human_wall.description
 	Health:
 		HP: 25000
 	Armor:
@@ -2900,7 +2900,7 @@ wc2_human_goldmine:
 		Name: Gold Mine
 	Buildable:
 		Queue: Building, RABuilding
-		Description: Send workers inside to provide passive income.\nMiners progressively get experience and work more efficiently.
+		Description: actor-wc2_human_goldmine.description
 		Prerequisites: ~wc2_human_blacksmith, derricklimit
 	Voiced:
 		VoiceSet: neutralgoldminevoice
@@ -2926,7 +2926,7 @@ wc2_human_mcv:
 	Buildable:
 		Prerequisites: ~wc2_human_townhall
 		Queue: Building, RABuilding
-		Description: Transforms into a Town Hall.
+		Description: actor-wc2_human_mcv.description
 	Tooltip:
 		Name: Mobile Construction Vehicle (Human)
 	Transforms:
@@ -2955,7 +2955,7 @@ wc2_human_peasant:
 	Buildable:
 		Prerequisites: ~wc2_human_townhall
 		Queue: Defence, RADefence
-		Description: Harvester.
+		Description: actor-wc2_human_peasant.description
 	Armament:
 		Weapon: wc2peasantsmack
 		FireDelay: 7
@@ -2988,7 +2988,7 @@ wc2_human_footman:
 		BuildPaletteOrder: 10
 		Prerequisites: ~wc2_human_barracks
 		Queue: Infantry, RAInfantry
-		Description: Basic melee infantry. Slow but can take some damage.
+		Description: actor-wc2_human_footman.description
 	Armament:
 		Weapon: wc2footmanslice
 		FireDelay: 7
@@ -3023,7 +3023,7 @@ wc2_human_elven_archer:
 		BuildPaletteOrder: 20
 		Prerequisites: ~wc2_human_elven_lumber_mill, ~!wc2_h_rangerupg
 		Queue: Infantry, RAInfantry
-		Description: Basic ranged infantry. Not as durable as Footman.\nCan attack air.
+		Description: actor-wc2_human_elven_archer.description
 	Armament:
 		Weapon: wc2arrowFire
 		FireDelay: 7
@@ -3048,7 +3048,7 @@ wc2_human_elven_ranger:
 		Name: Elven Ranger
 	Buildable:
 		Prerequisites: ~wc2_h_rangerupg, wc2_human_elven_lumber_mill
-		Description: Elite ranged infantry. Not as durable as Footman.\nCan attack air.
+		Description: actor-wc2_human_elven_ranger.description
 	Selectable:
 		Class: wc2_human_elven_archer
 	-WithInfantryBody@Ranger:
@@ -3087,7 +3087,7 @@ wc2_human_knight:
 		BuildPaletteOrder: 30
 		Prerequisites: ~wc2_human_stables, ~!wc2_h_paladinupg
 		Queue: Infantry, RAInfantry
-		Description: Mounted infantry. Fast and durable.
+		Description: actor-wc2_human_knight.description
 	Voiced:
 		VoiceSet: wc2voicehumanknight
 	# Animation and upgrade stuff
@@ -3118,7 +3118,7 @@ wc2_human_paladin:
 		Name: Paladin
 	Buildable:
 		Prerequisites: ~wc2_h_paladinupg, wc2_human_church, wc2_human_stables
-		Description: Mounted holy infantry. Very fast and quite durable.\nCan cast healing magicks.
+		Description: actor-wc2_human_paladin.description
 	Voiced:
 		VoiceSet: wc2voicehumanpaladin
 	Selectable:
@@ -3271,7 +3271,7 @@ wc2_human_ballista:
 		BuildPaletteOrder: 40
 		Prerequisites: ~wc2_human_blacksmith
 		Queue: Infantry, RAInfantry
-		Description: Powerful long range siege unit.
+		Description: actor-wc2_human_ballista.description
 	AttackFrontal:
 		PauseOnCondition: disabled
 		FacingTolerance: 0
@@ -3300,7 +3300,7 @@ wc2_human_demolitionsquad:
 	Buildable:
 		Prerequisites: ~wc2_human_gnomish_inventor
 		Queue: Vehicle, RAVehicle
-		Description: Explosive suicide infantry. Can attack normally.
+		Description: actor-wc2_human_demolitionsquad.description
 	#Weapons and demolition
 	AttackFrontal:
 		Armaments: detonate, primary
@@ -3339,7 +3339,7 @@ wc2_human_mage:
 	Buildable:
 		Prerequisites: ~wc2_human_mage_tower
 		Queue: Infantry, RAInfantry
-		Description: Wise, old, grumpy spell caster.\nCan attack air.\nDetector.
+		Description: actor-wc2_human_mage.description
 	Voiced:
 		VoiceSet: wc2voicehumanmage
 	#Weapons
@@ -3492,7 +3492,7 @@ wc2_human_oil_tanker:
 	Buildable:
 		Prerequisites: ~wc2_human_oil_refinery
 		Queue: Naval, RANaval
-		Description: Drills inside Oil Platforms for income.
+		Description: actor-wc2_human_oil_tanker.description
 	Tooltip:
 		Name: Oil Tanker
 	Voiced:
@@ -3506,7 +3506,7 @@ wc2_human_elven_destroyer:
 	Buildable:
 		Prerequisites: ~wc2_human_shipyard
 		Queue: Naval, RANaval
-		Description: Light scout & support ship. Can attack air units.
+		Description: actor-wc2_human_elven_destroyer.description
 	Tooltip:
 		Name: Elven Destroyer
 	Turreted:
@@ -3529,7 +3529,7 @@ wc2_human_transport:
 	Buildable:
 		Prerequisites: ~wc2_human_foundry
 		Queue: Naval, RANaval
-		Description: Transport ship.
+		Description: actor-wc2_human_transport.description
 	Tooltip:
 		Name: Transport
 	Voiced:
@@ -3543,7 +3543,7 @@ wc2_human_battleship:
 	Buildable:
 		Prerequisites: ~wc2_human_foundry, ~wc2_human_blacksmith ##once keep/castle are fixed, prereq will be wc2_human_keep, wc2_human_foundry
 		Queue: Naval, RANaval
-		Description: Heavy artillery ship.
+		Description: actor-wc2_human_battleship.description
 	Tooltip:
 		Name: Battleship
 	Turreted:
@@ -3567,7 +3567,7 @@ wc2_human_gnomish_submarine:
 	Buildable:
 		Prerequisites: ~wc2_human_foundry, ~wc2_human_gnomish_inventor
 		Queue: Naval, RANaval
-		Description: Stealthed attack vessel.
+		Description: actor-wc2_human_gnomish_submarine.description
 	Tooltip:
 		Name: Gnomish Submarine
 	Armament@PRIMARY:
@@ -3598,7 +3598,7 @@ wc2_human_gnomish_flying_machine:
 	Buildable:
 		Prerequisites: ~wc2_human_gnomish_inventor
 		Queue: Vehicle, RAVehicle
-		Description: Flying scout unit. He's got a flying machine!\nDetector.
+		Description: actor-wc2_human_gnomish_flying_machine.description
 	Voiced:
 		VoiceSet: wc2voicehumanflyingmachine
 
@@ -3628,7 +3628,7 @@ wc2_human_gryphon_rider:
 		BuildPaletteOrder: 20
 		Prerequisites: ~wc2_human_gryphon_aviary
 		Queue: Aircraft, RAAircraft
-		Description: Flying attacker unit.\nMagical hammer can hit multiple targets in a line.\nStrong vs air units.
+		Description: actor-wc2_human_gryphon_rider.description
 	Armament@VISIBLE:
 		Weapon: wc2gryphonFireVisible
 		LocalOffset: 400,0,0
@@ -3918,7 +3918,7 @@ wc2_orc_stronghold:
 		BuildPaletteOrder: 80
 		Queue: Defence, RADefence
 		Prerequisites:  ~wc2_orc_greathall, strongholdupgradeavailable
-		Description: Unlocks more advanced buildings.
+		Description: actor-wc2_orc_stronghold.description
 	Plug:
 		Type: wc2_orc_greathall
 
@@ -3932,7 +3932,7 @@ wc2_orc_fortress:
 		BuildPaletteOrder: 80
 		Queue: Defence, RADefence
 		Prerequisites: ~wc2_orc_stronghold, fortressupgradeavailable
-		Description: Unlocks more advanced buildings.
+		Description: actor-wc2_orc_fortress.description
 	Plug:
 		Type: wc2_orc_stronghold
 
@@ -3995,7 +3995,7 @@ wc2_orc_betterfarm:
 		BuildPaletteOrder: 10
 		Prerequisites: ~!wc2_orc_betterfarm, ~wc2_orc_pigfarm, wc2_orc_stronghold
 		Queue: Addons
-		Description: Farm Upgrade\n Gives +60 food (120 total)\n Gives +50% hp (150% total)
+		Description: actor-wc2_orc_betterfarm.description
 		Icon: icon
 	RenderSprites:
 	ProvidesPrerequisite:
@@ -4010,7 +4010,7 @@ wc2_orc_bestfarm:
 		BuildPaletteOrder: 10
 		Prerequisites: ~wc2_orc_betterfarm, ~wc2_orc_pigfarm, wc2_orc_fortress
 		Queue: Addons
-		Description: Farm Upgrade\n Gives +120 food (240 total)\n Gives +50% hp (200% total)
+		Description: actor-wc2_orc_bestfarm.description
 		Icon: icon
 	RenderSprites:
 	ProvidesPrerequisite:
@@ -4022,7 +4022,7 @@ wc2_orc_barracks:
 		Name: Barracks
 	Buildable:
 		Queue: Building, RABuilding
-		Description: Warriors of the Horde live and train here.\nProduces many Orcish units.
+		Description: actor-wc2_orc_barracks.description
 		Prerequisites: ~wc2_orc_pigfarm
 	SpawnActorsOnSell:
 		ActorTypes: wc2_orc_grunt
@@ -4037,7 +4037,7 @@ wc2_orc_troll_lumber_mill:
 	Buildable:
 		Prerequisites: ~wc2_orc_pigfarm
 		Queue: Building, RABuilding
-		Description: Dropoff point for gold. (Tiberium)\nCan store up to 1000 resource\nProduces axes enabling Axethrowers.\nProvides upgrades for Axethrowers.\nUnlocks Guard Tower upgrade.
+		Description: actor-wc2_orc_troll_lumber_mill.description
 	Refinery:
 	DockHost:
 		DockAngle: 448
@@ -4059,7 +4059,7 @@ wc2_orc_blacksmith:
 	Buildable:
 		Prerequisites: ~wc2_orc_barracks
 		Queue: Building, RABuilding
-		Description: Enables Catapults and upgrading Scout Towers to Cannon Towers.\nEnables upgrades to units.
+		Description: actor-wc2_orc_blacksmith.description
 	SpawnActorsOnSell:
 		ActorTypes: wc2_orc_grunt
 	Voiced:
@@ -4073,7 +4073,7 @@ wc2_orc_goblin_alchemist:
 	Buildable:
 		Prerequisites: ~wc2_orc_stronghold
 		Queue: Building, RABuilding
-		Description: Ingenious goblins dabble in alchemy and invention.\nProvides Radar.\nTrains Sappers & Zeppelins.
+		Description: actor-wc2_orc_goblin_alchemist.description
 	SpawnActorsOnSell:
 		ActorTypes: wc2_orc_grunt
 	Voiced:
@@ -4087,7 +4087,7 @@ wc2_orc_ogre_mound:
 	Buildable:
 		Prerequisites: ~wc2_orc_stronghold
 		Queue: Building, RABuilding
-		Description: Unlocks production of Ogres.\nThis place smells bad!
+		Description: actor-wc2_orc_ogre_mound.description
 	SpawnActorsOnSell:
 		ActorTypes: wc2_orc_grunt
 	Voiced:
@@ -4101,7 +4101,7 @@ wc2_orc_altar_of_storms:
 	Buildable:
 		Prerequisites: ~wc2_orc_fortress
 		Queue: Building, RABuilding
-		Description: Teaches Ogres how to read and cast dark magicks.\nUnlocks Ogre Mage upgrade for Ogres.
+		Description: actor-wc2_orc_altar_of_storms.description
 	SpawnActorsOnSell:
 		ActorTypes: wc2_orc_grunt
 	Voiced:
@@ -4187,7 +4187,7 @@ wc2_orc_temple_of_the_damned:
 	Buildable:
 		Prerequisites: ~wc2_orc_fortress
 		Queue: Building, RABuilding
-		Description: Terrible rituals are performed here.\nTrains Death Knights and raise Skeletons.\nUnlocks Death & Decay superweapon.
+		Description: actor-wc2_orc_temple_of_the_damned.description
 	SpawnActorsOnSell:
 		ActorTypes: wc2_orc_grunt
 	Voiced:
@@ -4253,7 +4253,7 @@ wc2_orc_temple_of_the_damned:
 		Names:
 			1: Death and decay
 		Descriptions:
-			1: Rots and kills in a large area.
+			1: power-wc2-deathanddecay.description
 		BeginChargeSpeechNotification: IonCannonCharging
 		EndChargeSpeechNotification: IonCannonReady
 		EndChargeTextNotification: Ion Cannon ready.
@@ -4267,8 +4267,8 @@ wc2_orc_temple_of_the_damned:
 		CameraRemoveDelay: 125
 		CameraActor: CAMERA.small
 		SupportPowerPaletteOrder: 20
-	 	Effect: wc2_effect_death_and_decay
-	 	EffectSequence: idle
+		Effect: wc2_effect_death_and_decay
+		EffectSequence: idle
 	SupportPowerChargeBar:
 
 wc2_orc_dragon_roost:
@@ -4279,7 +4279,7 @@ wc2_orc_dragon_roost:
 	Buildable:
 		Prerequisites: ~wc2_orc_fortress
 		Queue: Building, RABuilding
-		Description: A captured dragon is forced to lay eggs for the Horde.\nTrains mighty Dragons.
+		Description: actor-wc2_orc_dragon_roost.description
 	SpawnActorsOnSell:
 		ActorTypes: wc2_orc_grunt
 	Voiced:
@@ -4293,7 +4293,7 @@ wc2_orc_shipyard:
 	Buildable:
 		Prerequisites: ~wc2_orc_troll_lumber_mill
 		Queue: Building, RABuilding
-		Description: Produces and repairs ships.
+		Description: actor-wc2_orc_shipyard.description
 	Voiced:
 		VoiceSet: wc2orcshipyardvoice
 
@@ -4305,7 +4305,7 @@ wc2_orc_foundry:
 	Buildable:
 		Prerequisites: ~wc2_orc_shipyard
 		Queue: Building, RABuilding
-		Description: Unlocks production of the Transport and the Juggernaught.\nProvides upgrades for naval units.
+		Description: actor-wc2_orc_foundry.description
 	Voiced:
 		VoiceSet: wc2orcoilfoundryvoice
 
@@ -4317,7 +4317,7 @@ wc2_orc_oil_refinery:
 	Buildable:
 		Prerequisites: ~wc2_orc_shipyard
 		Queue: Building, RABuilding
-		Description: Unlocks the construction of Oil Platforms for passive income.
+		Description: actor-wc2_orc_oil_refinery.description
 	Voiced:
 		VoiceSet: wc2orcoilrefineryvoice
 
@@ -4329,7 +4329,7 @@ wc2_orc_oil_platform:
 	Buildable:
 		Prerequisites: ~wc2_orc_oil_refinery
 		Queue: Building, RABuilding
-		Description: Provides passive income.\nOil tankers can drill here for further income boost.
+		Description: actor-wc2_orc_oil_platform.description
 	Voiced:
 		VoiceSet: wc2orcoilplatformvoice
 
@@ -4356,7 +4356,7 @@ wc2_orc_watch_tower:
 		BuildPaletteOrder: 20
 		Prerequisites: ~wc2_orc_barracks
 		Queue: Building, RABuilding
-		Description: Can be upgraded to Guard or Cannon Tower.
+		Description: actor-wc2_orc_watch_tower.description
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -4443,7 +4443,7 @@ wcorcguardtowerupgrade:
 	Buildable:
 		Queue: Defence, RADefence
 		Prerequisites: ~wc2_orc_troll_lumber_mill, scouttowerupgradeavailable
-		Description: Ground base defense.
+		Description: actor-wcorcguardtowerupgrade.description
 	Plug:
 		Type: wcscouttower
 	RenderSprites:
@@ -4458,7 +4458,7 @@ wcorccannontowerupgrade:
 	Buildable:
 		Queue: Defence, RADefence
 		Prerequisites: ~wc2_orc_blacksmith, scouttowerupgradeavailable
-		Description: Anti-aircraft base defense.
+		Description: actor-wcorccannontowerupgrade.description
 	Plug:
 		Type: wcscouttower2
 	RenderSprites:
@@ -4582,7 +4582,7 @@ wc2_orc_goldmine:
 		Name: Gold Mine
 	Buildable:
 		Queue: Building, RABuilding
-		Description: Send workers inside to provide passive income.\nMiners progressively get experience and work more efficiently.
+		Description: actor-wc2_orc_goldmine.description
 		Prerequisites: ~wc2_orc_blacksmith, derricklimit
 	Voiced:
 		VoiceSet: neutralgoldminevoice
@@ -4608,7 +4608,7 @@ wc2_orc_mcv:
 	Inherits@WC2Template: ^wc2_mcv
 	Buildable:
 		Prerequisites: ~wc2_orc_greathall
-		Description: Transforms into a Great Hall.
+		Description: actor-wc2_orc_mcv.description
 		Queue: Building, RABuilding
 	Tooltip:
 		Name: Mobile Construction Vehicle (Orc)
@@ -4638,7 +4638,7 @@ wc2_orc_peon:
 	Buildable:
 		Prerequisites: ~wc2_orc_greathall
 		Queue: Defence, RADefence
-		Description: Harvester. Zug zug!
+		Description: actor-wc2_orc_peon.description
 	Armament:
 		Weapon: wc2peasantsmack
 		FireDelay: 7
@@ -4671,7 +4671,7 @@ wc2_orc_grunt:
 		BuildPaletteOrder: 10
 		Prerequisites: ~wc2_orc_barracks
 		Queue: Infantry, RAInfantry
-		Description: Basic melee infantry. Slow but can take some damage. Lok'tar!
+		Description: actor-wc2_orc_grunt.description
 	Armament:
 		Weapon: wc2gruntslice
 		FireDelay: 7
@@ -4706,7 +4706,7 @@ wc2_orc_troll_axethrower:
 		BuildPaletteOrder: 20
 		Prerequisites: ~wc2_orc_troll_lumber_mill, ~!wc2_o_berserkerupg
 		Queue: Infantry, RAInfantry
-		Description: Basic ranged infantry.\nNot as durable as Grunt.\nCan attack air.
+		Description: actor-wc2_orc_troll_axethrower.description
 	Armament:
 		Weapon: wc2axeFire
 		FireDelay: 7
@@ -4731,7 +4731,7 @@ wc2_orc_troll_berserker:
 		Name: Troll Berserker
 	Buildable:
 		Prerequisites: ~wc2_orc_troll_lumber_mill, ~wc2_o_berserkerupg
-		Description: Elite ranged infantry.\nNot as durable as Grunt.\nCan attack air.
+		Description: actor-wc2_orc_troll_berserker.description
 	Selectable:
 		Class: wc2_orc_troll_axethrower
 	-WithInfantryBody@Berserker:
@@ -4770,7 +4770,7 @@ wc2_orc_ogre:
 		BuildPaletteOrder: 30
 		Prerequisites: ~wc2_orc_ogre_mound, ~!wc2_o_ogremageupg
 		Queue: Infantry, RAInfantry
-		Description: Improved melee infantry.\nStinky, fast, dumb and dangerous!
+		Description: actor-wc2_orc_ogre.description
 	Voiced:
 		VoiceSet: wc2voiceorcogre
 	# Animation and upgrade stuff
@@ -4808,7 +4808,7 @@ wc2_orc_ogremage:
 		Name: Ogre-Mage
 	Buildable:
 		Prerequisites: ~wc2_o_ogremageupg, wc2_orc_ogre_mound, wc2_orc_altar_of_storms
-		Description: Improved magickal melee infantry.\nStinky, very fast, smart, and dangerous!
+		Description: actor-wc2_orc_ogremage.description
 	Voiced:
 		VoiceSet: wc2voiceorcogremage
 	Selectable:
@@ -5001,7 +5001,7 @@ wc2_orc_catapult:
 		BuildPaletteOrder: 40
 		Prerequisites: ~wc2_orc_blacksmith
 		Queue: Infantry, RAInfantry
-		Description: Powerful long range siege unit.
+		Description: actor-wc2_orc_catapult.description
 	AttackFrontal:
 		PauseOnCondition: disabled
 		FacingTolerance: 0
@@ -5034,7 +5034,7 @@ wc2_orc_goblin_sappers:
 	Buildable:
 		Prerequisites: ~wc2_orc_goblin_alchemist
 		Queue: Vehicle, RAVehicle
-		Description: Explosive suicide infantry. Can attack normally.
+		Description: actor-wc2_orc_goblin_sappers.description
 	#Weapons and demolition
 	AttackFrontal:
 		Armaments: detonate, primary
@@ -5073,7 +5073,7 @@ wc2_orc_deathknight:
 	Buildable:
 		Prerequisites: ~wc2_orc_temple_of_the_damned
 		Queue: Infantry, RAInfantry
-		Description: Powerful undead spell caster.\nCan attack Air.\nDetector
+		Description: actor-wc2_orc_deathknight.description
 	Voiced:
 		VoiceSet: wc2voiceorcdeathknight
 	# Undead target type
@@ -5242,7 +5242,7 @@ wc2_orc_skeleton:
 		BuildPaletteOrder: 10
 		Prerequisites: ~disabled
 		Queue: Infantry, RAInfantry
-		Description: Undead melee infantry. Spooky!
+		Description: actor-wc2_orc_skeleton.description
 	Health:
 		HP: 9600
 	Armament:
@@ -5266,7 +5266,7 @@ wc2_orc_oil_tanker:
 	Buildable:
 		Prerequisites: ~wc2_orc_oil_refinery
 		Queue: Naval, RANaval
-		Description: Drills oil inside Oil Platforms for income.
+		Description: actor-wc2_orc_oil_tanker.description
 	Tooltip:
 		Name: Oil Tanker
 	Voiced:
@@ -5280,7 +5280,7 @@ wc2_orc_trolldestroyer:
 	Buildable:
 		Prerequisites: ~wc2_orc_shipyard
 		Queue: Naval, RANaval
-		Description: Light scout & support ship.
+		Description: actor-wc2_orc_trolldestroyer.description
 	Tooltip:
 		Name: Troll Destroyer
 	Turreted:
@@ -5303,7 +5303,7 @@ wc2_orc_transport:
 	Buildable:
 		Prerequisites: ~wc2_orc_foundry
 		Queue: Naval, RANaval
-		Description: Transport ship.
+		Description: actor-wc2_orc_transport.description
 	Tooltip:
 		Name: Transport
 	Voiced:
@@ -5317,7 +5317,7 @@ wc2_orc_ogre_juggernaught:
 	Buildable:
 		Prerequisites: ~wc2_orc_foundry, ~wc2_orc_blacksmith ##once stronghold/fortress are fixed, prereq will be wc2_orc_stronghold, wc2_orc_foundry
 		Queue: Naval, RANaval
-		Description: Heavy artillery ship.
+		Description: actor-wc2_orc_ogre_juggernaught.description
 	Tooltip:
 		Name: Ogre Juggernaught
 	Turreted:
@@ -5341,7 +5341,7 @@ wc2_orc_giant_turtle:
 	Buildable:
 		Prerequisites: ~wc2_orc_foundry, ~wc2_orc_goblin_alchemist
 		Queue: Naval, RANaval
-		Description: Turtle go grrr.\nStealthed attack submarine.
+		Description: actor-wc2_orc_giant_turtle.description
 	Tooltip:
 		Name: Giant Turtle
 	Armament@PRIMARY:
@@ -5372,7 +5372,7 @@ wc2_orc_goblin_zeppelin:
 	Buildable:
 		Prerequisites: ~wc2_orc_goblin_alchemist
 		Queue: Vehicle, RAVehicle
-		Description: Flying scout unit. He can see your house!\nDetector.
+		Description: actor-wc2_orc_goblin_zeppelin.description
 	Voiced:
 		VoiceSet: wc2voiceorcgoblinzeppelin
 
@@ -5402,7 +5402,7 @@ wc2_orc_dragon:
 		BuildPaletteOrder: 20
 		Prerequisites: ~wc2_orc_dragon_roost
 		Queue: Aircraft, RAAircraft
-		Description: Flying ranged attacker.\nFire breath can hit multiple targets in a line.\nStrong vs Aircraft
+		Description: actor-wc2_orc_dragon.description
 	Armament@VISIBLE:
 		Weapon: wc2dragonFireVisible
 		LocalOffset: 400,0,0
@@ -5453,7 +5453,7 @@ wc2_orc_eye_of_kilrogg:
 		BuildPaletteOrder: 20
 		Prerequisites: ~disabled
 		Queue: Infantry, RAInfantry
-		Description: Fast, weak scouting unit.
+		Description: actor-wc2_orc_eye_of_kilrogg.description
 	Aircraft:
 		InitialFacing: 896
 		TurnSpeed: 2048
@@ -5566,7 +5566,7 @@ wc2_neutral_daemon:
 		BuildPaletteOrder: 99
 		Prerequisites: ~disabled
 		Queue: Infantry, RAInfantry
-		Description: Daemonic flying attacker.
+		Description: actor-wc2_neutral_daemon.description
 	Aircraft:
 		InitialFacing: 896
 		TurnSpeed: 28
@@ -5623,7 +5623,7 @@ wc2_h_str_sword:
 		BuildPaletteOrder: 1
 		Queue: Addons
 		BuildDuration: 1500
-		Description: Increases melee damage by 20%.
+		Description: actor-wc2_h_str_sword.description
 		Prerequisites: ~!wc2_h_str_sword, ~wc2_human_blacksmith
 	Valued:
 		Cost: 2000
@@ -5638,7 +5638,7 @@ wc2_h_str_sword2:
 		BuildPaletteOrder: 1
 		Queue: Addons
 		BuildDuration: 1500
-		Description: Increases melee damage by further 20%.
+		Description: actor-wc2_h_str_sword2.description
 		Prerequisites: ~!wc2_h_str_sword2, ~wc2_h_str_sword, ~wc2_human_blacksmith
 	Valued:
 		Cost: 2000
@@ -5653,7 +5653,7 @@ wc2_h_str_shield:
 		BuildPaletteOrder: 2
 		Queue: Addons
 		BuildDuration: 1500
-		Description: Increases damage resistance of all land units by 10%.
+		Description: actor-wc2_h_str_shield.description
 		Prerequisites: ~!wc2_h_str_shield, ~wc2_human_blacksmith
 	Valued:
 		Cost: 2000
@@ -5668,7 +5668,7 @@ wc2_h_str_shield2:
 		BuildPaletteOrder: 2
 		Queue: Addons
 		BuildDuration: 1500
-		Description: Increases damage resistance of all land units by further 10%.
+		Description: actor-wc2_h_str_shield2.description
 		Prerequisites: ~!wc2_h_str_shield2, ~wc2_h_str_shield, ~wc2_human_blacksmith
 	Valued:
 		Cost: 2000
@@ -5683,7 +5683,7 @@ wc2_h_str_arrow:
 		BuildPaletteOrder: 1
 		Queue: Addons
 		BuildDuration: 1500
-		Description: Increases arrow damage dealt by Archers and Guard Towers by 20%.
+		Description: actor-wc2_h_str_arrow.description
 		Prerequisites: ~!wc2_h_str_arrow, ~wc2_human_blacksmith
 	Valued:
 		Cost: 2000
@@ -5698,7 +5698,7 @@ wc2_h_str_arrow2:
 		BuildPaletteOrder: 1
 		Queue: Addons
 		BuildDuration: 1500
-		Description: Increases arrow damage by Archers and Guard Towers by further 20%.
+		Description: actor-wc2_h_str_arrow2.description
 		Prerequisites: ~!wc2_h_str_arrow2, ~wc2_h_str_arrow, ~wc2_human_blacksmith
 	Valued:
 		Cost: 2000
@@ -5713,7 +5713,7 @@ wc2_h_rangerupg:
 		BuildPaletteOrder: 2
 		Queue: Addons
 		BuildDuration: 1500
-		Description: Intense training is given to Elven Archers.\nIncreases damage resistance by 10% and unlocks upgrades for the Ranger.
+		Description: actor-wc2_h_rangerupg.description
 		Prerequisites: ~!wc2_h_rangerupg, ~wc2_human_blacksmith ## when keep/castle are fixed, will require Castle
 	Valued:
 		Cost: 5000
@@ -5728,7 +5728,7 @@ wc2_h_ranger_longbow:
 		BuildPaletteOrder: 2
 		Queue: Addons
 		BuildDuration: 1500
-		Description: Increases range of Rangers by 20%.
+		Description: actor-wc2_h_ranger_longbow.description
 		Prerequisites: ~!wc2_h_ranger_longbow, ~wc2_h_rangerupg, ~wc2_human_blacksmith
 	Valued:
 		Cost: 4000
@@ -5743,7 +5743,7 @@ wc2_h_ranger_scouting:
 		BuildPaletteOrder: 3
 		Queue: Addons
 		BuildDuration: 1500
-		Description: Increases vision range of Rangers by 25%.
+		Description: actor-wc2_h_ranger_scouting.description
 		Prerequisites: ~!wc2_h_ranger_scouting, ~wc2_h_rangerupg, ~wc2_human_blacksmith
 	Valued:
 		Cost: 3000
@@ -5758,7 +5758,7 @@ wc2_h_ranger_marksman:
 		BuildPaletteOrder: 4
 		Queue: Addons
 		BuildDuration: 1500
-		Description: Increases arrow damage of Rangers by 20%.
+		Description: actor-wc2_h_ranger_marksman.description
 		Prerequisites: ~!wc2_h_ranger_marksman, ~wc2_h_rangerupg, ~wc2_human_blacksmith
 	Valued:
 		Cost: 4500
@@ -5773,7 +5773,7 @@ wc2_h_str_ballista:
 		BuildPaletteOrder: 3
 		Queue: Addons
 		BuildDuration: 1500
-		Description: Increases ballista damage dealt by Ballista by 20%
+		Description: actor-wc2_h_str_ballista.description
 		Prerequisites: ~!wc2_h_str_ballista, ~wc2_human_blacksmith
 	Valued:
 		Cost: 2000
@@ -5788,7 +5788,7 @@ wc2_h_str_ballista2:
 		BuildPaletteOrder: 3
 		Queue: Addons
 		BuildDuration: 1500
-		Description: Increases ballista damage dealt by Ballista by further 20%
+		Description: actor-wc2_h_str_ballista2.description
 		Prerequisites: ~!wc2_h_str_ballista2, ~wc2_h_str_ballista, ~wc2_human_blacksmith
 	Valued:
 		Cost: 2000
@@ -5803,7 +5803,7 @@ wc2_h_str_cannon:
 		BuildPaletteOrder: 4
 		Queue: Addons
 		BuildDuration: 1500
-		Description: Increases Cannon Damage dealt by Naval Vessels and Cannon Towers by 20%
+		Description: actor-wc2_h_str_cannon.description
 		Prerequisites: ~!wc2_h_str_cannon, ~wc2_human_blacksmith
 	Valued:
 		Cost: 2000
@@ -5818,7 +5818,7 @@ wc2_h_str_cannon2:
 		BuildPaletteOrder: 4
 		Queue: Addons
 		BuildDuration: 1500
-		Description: Increases Cannon Damage dealt by Naval Vessels and Cannon Towers by further 10%
+		Description: actor-wc2_h_str_cannon2.description
 		Prerequisites: ~!wc2_h_str_cannon2, ~wc2_h_str_cannon, ~wc2_human_blacksmith
 	Valued:
 		Cost: 2000
@@ -5833,7 +5833,7 @@ wc2_h_str_navyshield:
 		BuildPaletteOrder: 5
 		Queue: Addons
 		BuildDuration: 1500
-		Description: Increases damage resistance of all Naval Vessels by 10%
+		Description: actor-wc2_h_str_navyshield.description
 		Prerequisites: ~!wc2_h_str_navyshield, ~wc2_human_blacksmith
 	Valued:
 		Cost: 2000
@@ -5848,7 +5848,7 @@ wc2_h_str_navyshield2:
 		BuildPaletteOrder: 5
 		Queue: Addons
 		BuildDuration: 1500
-		Description: Increases damage resistance of all Naval Vessels by further 20%
+		Description: actor-wc2_h_str_navyshield2.description
 		Prerequisites: ~!wc2_h_str_navyshield2, ~wc2_h_str_navyshield, ~wc2_human_blacksmith
 	Valued:
 		Cost: 2000
@@ -5863,7 +5863,7 @@ wc2_h_paladinupg:
 		BuildPaletteOrder: 1
 		Queue: Addons
 		BuildDuration: 1500
-		Description: Perform holy rituals to turn your noble Knights into righteous Paladins!\nPaladins are more powerful and can cast Heal.\nIncreases damage resistance, melee damage and speed by 20%.
+		Description: actor-wc2_h_paladinupg.description
 		Prerequisites: ~!wc2_h_paladinupg, ~wc2_human_blacksmith
 	Valued:
 		Cost: 2000
@@ -5878,7 +5878,7 @@ wc2_h_healingupg:
 		BuildPaletteOrder: 1
 		Queue: Addons
 		BuildDuration: 1500
-		Description: Paladins can now heal.\nToggle Paladin's modes by deploying them.\nHealing uses mana.
+		Description: actor-wc2_h_healingupg.description
 		Prerequisites: ~wc2_h_paladinupg, ~!wc2_h_healingupg, ~wc2_human_blacksmith
 	Valued:
 		Cost: 2000
@@ -5893,7 +5893,7 @@ wc2_h_exorcismupg:
 		BuildPaletteOrder: 2
 		Queue: Addons
 		BuildDuration: 1500
-		Description: Paladins can now exorcise.\nToggle Paladin's modes by deploying them.\nExorcism only affects undead units.\nGood vs Orc Death Knight and Skeleton.
+		Description: actor-wc2_h_exorcismupg.description
 		Prerequisites: ~wc2_h_paladinupg, ~!wc2_h_exorcismupg, ~wc2_human_blacksmith
 	Valued:
 		Cost: 4000
@@ -5908,7 +5908,7 @@ wc2_h_slowupg:
 		BuildPaletteOrder: 20
 		Queue: Infantry, RAInfantry
 		BuildDuration: 1500
-		Description: Allows Mages to cast Slow.\nToggle Mage's modes by deploying them.\nSlows down affected target.\nAffects movement and attack speed.\nUses 50 mana.
+		Description: actor-wc2_h_slowupg.description
 		Prerequisites: ~!wc2_h_slowupg, ~wc2_human_blacksmith
 	Valued:
 		Cost: 1000
@@ -5923,7 +5923,7 @@ wc2_h_polymorphupg:
 		BuildPaletteOrder: 30
 		Queue: Infantry, RAInfantry
 		BuildDuration: 1500
-		Description: Allows Mages to cast Polymorph.\nToggle Mage's modes by deploying them.\nTurns target into a\nharmless critter.\nUses 200 mana.
+		Description: actor-wc2_h_polymorphupg.description
 		Prerequisites: ~!wc2_h_polymorphupg, ~wc2_human_blacksmith
 	Valued:
 		Cost: 4000
@@ -5938,7 +5938,7 @@ wc2_h_blizzardupg:
 		BuildPaletteOrder: 40
 		Queue: Infantry, RAInfantry
 		BuildDuration: 1500
-		Description: Allows Mages to cast Blizzard.\nToggle Mage's modes by deploying them.\nAOE damage spell.\nUses 25 mana.
+		Description: actor-wc2_h_blizzardupg.description
 		Prerequisites: ~!wc2_h_blizzardupg, ~wc2_human_blacksmith
 	Valued:
 		Cost: 4000
@@ -5959,7 +5959,7 @@ wc2_o_str_axe:
 		Queue: Addons
 		BuildDuration: 1500
 		BuildDurationModifier: 100
-		Description: Increases melee damage by 20%.
+		Description: actor-wc2_o_str_axe.description
 		Prerequisites: ~!wc2_o_str_axe, ~wc2_orc_blacksmith
 	Valued:
 		Cost: 2000
@@ -5974,7 +5974,7 @@ wc2_o_str_axe2:
 		BuildPaletteOrder: 1
 		Queue: Addons
 		BuildDuration: 1500
-		Description: Increases melee damage by further 20%.
+		Description: actor-wc2_o_str_axe2.description
 		Prerequisites: ~!wc2_o_str_axe2, ~wc2_o_str_axe, ~wc2_orc_blacksmith
 	Valued:
 		Cost: 2000
@@ -5989,7 +5989,7 @@ wc2_o_str_shield:
 		BuildPaletteOrder: 2
 		Queue: Addons
 		BuildDuration: 1500
-		Description: Increases damage resistance of all land units by 10%.
+		Description: actor-wc2_o_str_shield.description
 		Prerequisites: ~!wc2_o_str_shield, ~wc2_orc_blacksmith
 	Valued:
 		Cost: 2000
@@ -6004,7 +6004,7 @@ wc2_o_str_shield2:
 		BuildPaletteOrder: 2
 		Queue: Addons
 		BuildDuration: 1500
-		Description: Increases damage resistance of all land units by further 10%.
+		Description: actor-wc2_o_str_shield2.description
 		Prerequisites: ~!wc2_o_str_shield2, ~wc2_o_str_shield, ~wc2_orc_blacksmith
 	Valued:
 		Cost: 2000
@@ -6019,7 +6019,7 @@ wc2_o_str_throwaxe:
 		BuildPaletteOrder: 1
 		Queue: Addons
 		BuildDuration: 1500
-		Description: Increases ranged damage dealt by Axethrowers and Guard Towers by 20%.
+		Description: actor-wc2_o_str_throwaxe.description
 		Prerequisites: ~!wc2_o_str_throwaxe, ~wc2_orc_blacksmith
 	Valued:
 		Cost: 2000
@@ -6034,7 +6034,7 @@ wc2_o_str_throwaxe2:
 		BuildPaletteOrder: 1
 		Queue: Addons
 		BuildDuration: 1500
-		Description: Increases ranged damage by Axethrowers and Guard Towers by further 20%
+		Description: actor-wc2_o_str_throwaxe2.description
 		Prerequisites: ~!wc2_o_str_throwaxe2, ~wc2_o_str_throwaxe, ~wc2_orc_blacksmith
 	Valued:
 		Cost: 2000
@@ -6049,7 +6049,7 @@ wc2_o_berserkerupg:
 		BuildPaletteOrder: 2
 		Queue: Addons
 		BuildDuration: 1500
-		Description: Troll Axethrowers are driven into a mad frenzy.\nIncreases damage resistance by 10% and unlocks upgrades for the Berserker.
+		Description: actor-wc2_o_berserkerupg.description
 		Prerequisites: ~!wc2_o_berserkerupg, ~wc2_orc_blacksmith
 	Valued:
 		Cost: 5000
@@ -6064,7 +6064,7 @@ wc2_o_berserker_lighteraxes:
 		BuildPaletteOrder: 2
 		Queue: Addons
 		BuildDuration: 1500
-		Description: Increases throwing range of Berserker axes by 20%.
+		Description: actor-wc2_o_berserker_lighteraxes.description
 		Prerequisites: ~!wc2_o_berserker_lighteraxes, ~wc2_o_berserkerupg, ~wc2_orc_blacksmith
 	Valued:
 		Cost: 4000
@@ -6079,7 +6079,7 @@ wc2_o_berserker_scouting:
 		BuildPaletteOrder: 3
 		Queue: Addons
 		BuildDuration: 1500
-		Description: Increases vision range of Berserkers by 25%.
+		Description: actor-wc2_o_berserker_scouting.description
 		Prerequisites: ~!wc2_o_berserker_scouting, ~wc2_o_berserkerupg, ~wc2_orc_blacksmith
 	Valued:
 		Cost: 3000
@@ -6094,7 +6094,7 @@ wc2_o_berserker_regen:
 		BuildPaletteOrder: 4
 		Queue: Addons
 		BuildDuration: 1500
-		Description: Berserkers heal over time.
+		Description: actor-wc2_o_berserker_regen.description
 		Prerequisites: ~!wc2_o_berserker_regen, ~wc2_o_berserkerupg, ~wc2_orc_blacksmith
 	Valued:
 		Cost: 4500
@@ -6109,7 +6109,7 @@ wc2_o_str_catapult:
 		BuildPaletteOrder: 3
 		Queue: Addons
 		BuildDuration: 1500
-		Description: Increases Catapult damage by 25%
+		Description: actor-wc2_o_str_catapult.description
 		Prerequisites: ~!wc2_o_str_catapult, ~wc2_orc_blacksmith
 	Valued:
 		Cost: 2000
@@ -6124,7 +6124,7 @@ wc2_o_str_catapult2:
 		BuildPaletteOrder: 3
 		Queue: Addons
 		BuildDuration: 1500
-		Description: Increases Catapult damage by 20%
+		Description: actor-wc2_o_str_catapult2.description
 		Prerequisites: ~!wc2_o_str_catapult2, ~wc2_o_str_catapult, ~wc2_orc_blacksmith
 	Valued:
 		Cost: 2000
@@ -6141,7 +6141,7 @@ wc2_o_str_cannon:
 		Queue: Addons
 		BuildDuration: 1500
 		BuildDurationModifier: 100
-		Description: Increases cannon damage dealt by Naval Vessels and Cannon Towers by 20%
+		Description: actor-wc2_o_str_cannon.description
 		Prerequisites: ~!wc2_o_str_cannon, ~wc2_orc_blacksmith
 	Valued:
 		Cost: 2000
@@ -6156,7 +6156,7 @@ wc2_o_str_cannon2:
 		BuildPaletteOrder: 4
 		Queue: Addons
 		BuildDuration: 1500
-		Description: Increases cannon damage dealt by Naval Vessels and Cannon Towers by further 20%
+		Description: actor-wc2_o_str_cannon2.description
 		Prerequisites: ~!wc2_o_str_cannon2, ~wc2_o_str_cannon, ~wc2_orc_blacksmith
 	Valued:
 		Cost: 2000
@@ -6171,7 +6171,7 @@ wc2_o_str_navyshield:
 		BuildPaletteOrder: 5
 		Queue: Addons
 		BuildDuration: 1500
-		Description: Increases damage resistance of all Naval Vessels by 10%.
+		Description: actor-wc2_o_str_navyshield.description
 		Prerequisites: ~!wc2_o_str_navyshield, ~wc2_orc_blacksmith
 	Valued:
 		Cost: 2000
@@ -6186,7 +6186,7 @@ wc2_o_str_navyshield2:
 		BuildPaletteOrder: 5
 		Queue: Addons
 		BuildDuration: 1500
-		Description: Increases damage resistance of all Naval Vessels by further 10%.
+		Description: actor-wc2_o_str_navyshield2.description
 		Prerequisites: ~!wc2_o_str_navyshield2, ~wc2_o_str_navyshield, ~wc2_orc_blacksmith
 	Valued:
 		Cost: 2000
@@ -6201,7 +6201,7 @@ wc2_o_ogremageupg:
 		BuildPaletteOrder: 1
 		Queue: Addons
 		BuildDuration: 1500
-		Description: Perform mysterious rituals to transform your Ogres into Ogre-Magi!\nOgre-Magi are more powerful and can cast Bloodlust.\nBloodlust makes your units hit harder for a short time.\nIncreases damage resistance by 10%.\nIncreases melee damage by 20%.
+		Description: actor-wc2_o_ogremageupg.description
 		Prerequisites: ~!wc2_o_ogremageupg, ~wc2_orc_blacksmith
 	Valued:
 		Cost: 2000
@@ -6216,7 +6216,7 @@ wc2_o_bloodlustupg:
 		BuildPaletteOrder: 1
 		Queue: Addons
 		BuildDuration: 1500
-		Description: Allows Ogre-Magi to cast bloodlust.\nToggle Oger-Mage's modes by deploying them.\nTriples damage output of affected unit.\nUses 50 mana.
+		Description: actor-wc2_o_bloodlustupg.description
 		Prerequisites: ~wc2_o_ogremageupg, ~!wc2_o_bloodlustupg, ~wc2_orc_blacksmith
 	Valued:
 		Cost: 2000
@@ -6231,7 +6231,7 @@ wc2_o_runesupg:
 		BuildPaletteOrder: 1
 		Queue: Addons
 		BuildDuration: 1500
-		Description: Allows Ogre-Magi to cast runes.\nToggle Oger-Mage's modes by deploying them.\nDeploys five land mines in a + shape.\nUses 200 mana.
+		Description: actor-wc2_o_runesupg.description
 		Prerequisites: ~wc2_o_ogremageupg, ~!wc2_o_runesupg, ~wc2_orc_blacksmith
 	Valued:
 		Cost: 2000
@@ -6246,7 +6246,7 @@ wc2_o_hasteupg:
 		BuildPaletteOrder: 20
 		Queue: Infantry, RAInfantry
 		BuildDuration: 1500
-		Description: Allows Death Knights to cast haste.\nToggle Death Knight's modes by deploying them.\nSpeeds up affected target.\nAffects movement and attack speed.\nUses 50 mana.
+		Description: actor-wc2_o_hasteupg.description
 		Prerequisites: ~!wc2_o_hasteupg, ~wc2_orc_blacksmith
 	Valued:
 		Cost: 1000
@@ -6261,7 +6261,7 @@ wc2_o_deathanddecayupg:
 		BuildPaletteOrder: 30
 		Queue: Infantry, RAInfantry
 		BuildDuration: 1500
-		Description: Allows Death Knights to cast death and decay.\nToggle Death Knight's modes by deploying them.\nAOE damage spell.\nUses 25 mana.
+		Description: actor-wc2_o_deathanddecayupg.description
 		Prerequisites: ~!wc2_o_deathanddecayupg, ~wc2_orc_blacksmith
 	Valued:
 		Cost: 4000
@@ -6276,7 +6276,7 @@ wc2_o_raisedeadupg:
 		BuildPaletteOrder: 40
 		Queue: Infantry, RAInfantry
 		BuildDuration: 1500
-		Description: Allows Death Knights to cast raise dead.\nToggle Death Knight's modes by deploying them.\nSummons a skeleton.\nUses 50 mana.
+		Description: actor-wc2_o_raisedeadupg.description
 		Prerequisites: ~!wc2_o_raisedeadupg, ~wc2_orc_blacksmith
 	Valued:
 		Cost: 3000

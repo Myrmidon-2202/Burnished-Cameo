@@ -474,6 +474,8 @@ zombie.squad:
 		Amount: 500
 	MustBeDestroyed:
 		RequiredForShortGame: true
+	RenderSprites:
+		Image: zombiehorde
 	CashTricklerMultiplier@RANK-1:
 		Modifier: 125
 		RequiresCondition: city-veteran == 1 && !city-elite

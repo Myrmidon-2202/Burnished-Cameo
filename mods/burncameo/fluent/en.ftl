@@ -1,5 +1,5 @@
-mod-title = Cameo
-mod-windowtitle = OpenRA - Cameo
+mod-title = BurnCameo
+mod-windowtitle = OpenRA - BurnCameo
 
 button-tab-container-asengine = Attacque Supérior
 

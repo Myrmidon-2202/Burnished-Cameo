@@ -61,9 +61,15 @@
 	cheer:
 		Facings: 8
 		ShadowStart: 292
-	die7: electro
+	die7:
+		Filename: electro.shp
 		Length: *
-	die5: flameguy
+	die6:
+		Start: 134
+		Length: 15
+		ShadowStart: 426
+	die5:
+		Filename: flameguy.shp
 		Start: 44
 		Length: 104
 		Tick: 50
@@ -157,6 +163,10 @@ tsmedic:
 	die7:
 		Filename: electro.shp
 		Length: *
+	die6:
+		Start: 149
+		Length: 15
+		ShadowStart: 455
 	die5: e1
 		Start: 418
 		Length: 18

@@ -1,5 +1,5 @@
 ProducedUnitTypes = {
-	{ factory = SovietBarracks, types = { "ra2e2", "ra2flakt", "ra2ivan", "ra2shk" } },
+	{ factory = SovietBarracks, types = { "ra2e2", "ra2flakt", "ra2ivan"} },
 	{ factory = TerranBarracks, types = { "scmarine", "scfirebat" } },
 	{ factory = TerranBarracks2, types = { "scmarine", "scfirebat" } },
 	{ factory = NodBarracks, types = { "e1.nod", "e1.nod", "e4", "e5" } },
