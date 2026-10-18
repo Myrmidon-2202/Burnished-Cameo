@@ -84,3 +84,29 @@ Halloween_Garfield:
 		Burned: Gazorpazorpfield_yes_3
 		Zapped: Gazorpazorpfield_yes_3
 		Poisoned: Gazorpazorpfield_yes_3
+
+Halloween_Peter_Griffin:
+    DefaultVariant: .wav
+	Voices:
+		Select: halloween_pg_what_1, halloween_pg_what_2, halloween_pg_what_3, halloween_pg_what_4, halloween_pg_what_5, halloween_pg_what_6, halloween_pg_what_7, halloween_pg_what_8, halloween_pg_what_9, halloween_pg_what_10, halloween_pg_what_11, halloween_pg_what_12, halloween_pg_what_13, halloween_pg_what_14, halloween_pg_what_15
+		Attack: halloween_pg_yes_1, halloween_pg_yes_2, halloween_pg_yes_3, halloween_pg_yes_4, halloween_pg_yes_5, halloween_pg_yes_6, halloween_pg_yes_7, halloween_pg_yes_8, halloween_pg_yes_9, halloween_pg_yes_10, halloween_pg_yes_11, halloween_pg_yes_12, halloween_pg_yes_13
+		Action: halloween_pg_yes_1, halloween_pg_yes_2, halloween_pg_yes_3, halloween_pg_yes_4, halloween_pg_yes_5, halloween_pg_yes_6, halloween_pg_yes_7, halloween_pg_yes_8, halloween_pg_yes_9, halloween_pg_yes_10, halloween_pg_yes_11, halloween_pg_yes_12, halloween_pg_yes_13
+		Move: halloween_pg_yes_1, halloween_pg_yes_2, halloween_pg_yes_3, halloween_pg_yes_4, halloween_pg_yes_5, halloween_pg_yes_6, halloween_pg_yes_7, halloween_pg_yes_8, halloween_pg_yes_9, halloween_pg_yes_10, halloween_pg_yes_11, halloween_pg_yes_12, halloween_pg_yes_13
+		Die: halloween_pg_death
+		Build: halloween_pg_yes_1
+		Burned: halloween_pg_yes_1
+		Zapped: halloween_pg_yes_1
+		Poisoned: halloween_pg_yes_1
+
+Halloween_TimGhost:
+    DefaultVariant: .wav
+	Voices:
+		Select: pacman_siren
+		Attack: pacman_siren
+		Action: pacman_siren
+		Move: pacman_siren
+		Die: pacman_siren
+		Build: pacman_siren
+		Burned: pacman_siren
+		Zapped: pacman_siren
+		Poisoned: pacman_siren

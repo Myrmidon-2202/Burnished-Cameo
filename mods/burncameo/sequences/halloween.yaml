@@ -1346,6 +1346,7 @@ garfield_infantry:
 		Start: 15
 	icon: 
 		Filename: civilization_2_icons.png
+		Offset: 0, 0
 		Start: 34
 
 spooky_eye:
@@ -1395,3 +1396,111 @@ inflatable_spider:
 		Filename: halloween_cameos.shp
 		Start: 3
 		AddExtension: False
+
+halloween_peter:
+	Inherits: ^WCInfantry
+	Defaults: 
+		Filename: halloween_peter.png
+		Scale: 1.5
+		Tick: 100
+		Offset: 0, -8
+	idle:
+		Filename: invisibleitem.shp
+	stand:
+		Facings: 2
+		Length: 2
+		Tick: 1500
+		Combine:
+			peter3: 
+				Filename: halloween_peter.png
+				Frames: 0,1
+			peter4: 
+				Filename: halloween_peter.png
+				Frames: 0,1
+				FlipX: true
+	run:
+		Facings: 2
+		Length: 2
+		Combine:
+			peter5: 
+				Filename: halloween_peter.png
+				Start: 2
+				Frames: 2,3
+			peter6: 
+				Filename: halloween_peter.png
+				Frames: 3,2
+				FlipX: true
+	shoot:
+		Facings: 2
+		Length: 2
+		Combine:
+			peter7: 
+				Filename: halloween_peter.png
+				Start: 5
+				Frames: 4,5
+			peter8: 
+				Filename: halloween_peter.png
+				Frames: 5,4
+				FlipX: true
+	die:
+		Facings: 1
+		Length: 1
+		Start: 1
+	icon: 
+		Filename: civilization_2_icons.png
+		Offset: 0, 0
+		Start: 34
+
+halloween_tim:
+	Inherits: ^WCInfantry
+	Defaults: 
+		Filename: halloween_tim.png
+		Scale: 1.5
+		Tick: 100
+		Offset: 0, -8
+	idle:
+		Filename: invisibleitem.shp
+	stand:
+		Facings: 2
+		Length: 2
+		Tick: 1500
+		Combine:
+			tim3: 
+				Filename: halloween_tim.png
+				Frames: 0,1
+			tim4: 
+				Filename: halloween_tim.png
+				Frames: 0,1
+				FlipX: true
+	run:
+		Facings: 2
+		Length: 8
+		Combine:
+			tim5: 
+				Filename: halloween_tim.png
+				Start: 0
+				Frames: 0,1,2,3,4,5,6,7
+			tim6: 
+				Filename: halloween_tim.png
+				Frames: 7,6,5,4,3,2,1,0
+				FlipX: true
+	shoot:
+		Facings: 2
+		Length: 8
+		Combine:
+			tim7: 
+				Filename: halloween_tim.png
+				Start: 0
+				Frames: 0,1,2,3,4,5,6,7
+			tim8: 
+				Filename: halloween_tim.png
+				Frames: 7,6,5,4,3,2,1,0
+				FlipX: true
+	die:
+		Facings: 1
+		Length: 1
+		Start: 1
+	icon: 
+		Filename: civilization_2_icons.png
+		Offset: 0, 0
+		Start: 34
