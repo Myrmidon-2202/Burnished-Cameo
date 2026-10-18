@@ -4,7 +4,7 @@ World:
 		InternalName: halloween
 		Game: Special
 		Side: Factions
-		Description: Halloween
+		Description: faction-cameo-halloween.description
 	####################################################################################################
 	#		Halloween
 	####################################################################################################
@@ -79,7 +79,7 @@ Player:
 		ID: halloween
 		Label: Halloween
 		Enabled: False
-		Description: Every killed unit has Love
+		Description: actor-player.description
 		DisplayOrder: 24
 		Prerequisites: halloween-setting
 	ProvidesPrerequisite@faction_halloween:
@@ -99,7 +99,7 @@ PINKY_FI:
 		BuildAtProductionType: Vehicle
 		BuildPaletteOrder: 215
 		Prerequisites: fix, atek, ~vehicles.allies, ~techlevel.high, ~bio
-		Description: A Demon that shoots devastation fireballs\nclearing waves of infantry and buildings in its path.\nStrong vs Everything
+		Description: actor-pinky_fi.description
 	-WithDamageOverlay:
 	Valued:
 		Cost: 100
@@ -193,7 +193,7 @@ halloween_blackcitadel:
 	Buildable:
 		BuildPaletteOrder: 10
 		Queue: Building, RABuilding
-		Description: Enables buildings construction
+		Description: actor-halloween_blackcitadel.description
 		Prerequisites: ~disabled
 	Health:
 		HP: 250000
@@ -296,7 +296,7 @@ halloween_crypto:
 	Buildable:
 		BuildPaletteOrder: 30
 		Queue: Building, RABuilding
-		Description: Trains Undeads\nProvides energy to build more units
+		Description: actor-halloween_crypto.description
 		Prerequisites: ~halloween_blackcitadel
 	Building:
 		Footprint: xxx xxx ===
@@ -373,7 +373,7 @@ halloween_clowntent:
 	Buildable:
 		BuildPaletteOrder: 30
 		Queue: Building, RABuilding
-		Description: Trains Clowns
+		Description: actor-halloween_clowntent.description
 		Prerequisites: ~halloween_blackcitadel, halloween_crypto 
 	Building:
 		Footprint: xxx xxx ===
@@ -450,7 +450,7 @@ halloween_graveyard:
 		BuildPaletteOrder: 10
 		Prerequisites: ~halloween_blackcitadel
 		Queue: Building, RABuilding
-		Description: Generates soul power
+		Description: actor-halloween_graveyard.description
 	Building:
 		Footprint: xX xx ==
 		Dimensions: 2,3
@@ -497,7 +497,7 @@ halloween_graveyard.turbine:
 		Name: Tomb Expansion
 	Buildable:
 		Queue: Turbine.Halloween
-		Description: Increases power output
+		Description: actor-powergraveyard.description
 	Valued:
 		Cost: 300
 	RenderSprites:
@@ -523,7 +523,7 @@ halloween_daemonpit:
 		BuildPaletteOrder: 50
 		Prerequisites: ~halloween_blackcitadel, halloween_clowntent, halloween_crypto
 		Queue: Building, RABuilding
-		Description: Produces powerful demons, and monsters
+		Description: actor-halloween_daemonpit.description
 	Building:
 		Footprint: xxxx x++x ====
 		Dimensions: 4,3
@@ -591,7 +591,7 @@ halloween_tower:
 		Queue: Defence, RADefence
 		BuildPaletteOrder: 80
 		Prerequisites: ~halloween_blackcitadel, halloween_crypto
-		Description: Advanced base defense.\nRequires power to operate.\nCan detect cloaked units.\n  Strong vs Vehicles, Infantry\n  Weak vs Aircraft
+		Description: actor-halloween_tower.description
 	Valued:
 		Cost: 800
 	Tooltip:
@@ -659,7 +659,7 @@ halloween_spirittower:
 		Queue: Defence, RADefence
 		BuildPaletteOrder: 80
 		Prerequisites: ~halloween_blackcitadel, halloween_cauldron
-		Description: Advanced base defense.\nRequires power to operate.\nCan detect cloaked units.\n  Strong vs Vehicles, Infantry\n  Weak vs Aircraft
+		Description: actor-halloween_spirittower.description
 	Valued:
 		Cost: 1200
 	Tooltip:
@@ -722,7 +722,7 @@ halloween_carousel:
 	Buildable:
 		BuildPaletteOrder: 120
 		Queue: Building, RABuilding
-		Description: Provides Passive income
+		Description: actor-halloween_carousel.description
 		Prerequisites: ~halloween_blackcitadel, halloween_clowntent
 		BuildDuration: 1000
 		BuildDurationModifier: 100
@@ -867,7 +867,7 @@ halloween_cauldron:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 60
 		Prerequisites: ~halloween_blackcitadel, halloween_graveyard
-		Description: Refines Ore and Gems\ninto credits.
+		Description: actor-halloween_cauldron.description
 	Valued:
 		Cost: 1400 #1400
 	Tooltip:
@@ -951,7 +951,7 @@ halloween_dkghost_small:
 		BuildPaletteOrder: 10
 		Queue: Infantry, RAInfantry
 		Prerequisites: ~halloween_crypto
-		Description: A Ghost, with melee attack, can fly
+		Description: actor-halloween_dkghost_small.description
 	Mobile:
 		Locomotor: jumpjet
 		Speed: 70
@@ -1037,7 +1037,7 @@ halloween_bat:
 		BuildPaletteOrder: 10
 		Queue: Infantry, RAInfantry
 		Prerequisites: ~halloween_crypto
-		Description: Can fly, spits blood
+		Description: actor-halloween_bat.description
 	Mobile:
 		Locomotor: jumpjet
 		Speed: 70
@@ -1115,7 +1115,7 @@ halloween_skeleton:
 		BuildDurationModifier: 100
 		BuildDuration: 60
 		IconPalette: chrome
-		Description: Powewrful skeleton. Attacks in close combat. Regenerates health
+		Description: actor-halloween_skeleton.description
 	Tooltip:
 		Name: Skeleton
 	Armament:
@@ -1161,7 +1161,7 @@ halloween_demon:
 		BuildPaletteOrder: 60
 		BuildDurationModifier: 50
 		Prerequisites: ~halloween_daemonpit
-		Description: Slow powerful demon. Attacks in close combat.
+		Description: actor-halloween_demon.description
 	Armament:
 		Weapon: demonSlice
 	Valued:
@@ -1216,7 +1216,7 @@ halloween_pinky:
 		Prerequisites: ~halloween_daemonpit
 		BuildPaletteOrder: 20
 		BuildDurationModifier: 60
-		Description: This is PINKY
+		Description: actor-halloween_pinky.description
 	Selectable:
 		Bounds: 1536, 1536
 	Health:
@@ -1259,7 +1259,7 @@ halloween_cow:
 		BuildPaletteOrder: 60
 		BuildDurationModifier: 50
 		Prerequisites: ~halloween_crypto
-		Description: Slow powerful cow. Attacks in close combat.
+		Description: actor-halloween_cow.description
 	Selectable:
 		Bounds: 3072, 5120
 		DecorationBounds: 3072, 5120
@@ -1325,7 +1325,7 @@ halloween_rockgolem:
 		BuildPaletteOrder: 60
 		BuildDurationModifier: 50
 		Prerequisites: ~halloween_crypto
-		Description: A large Rock Golem, throws rocks.
+		Description: actor-halloween_rockgolem.description
 	Inherits@EXT: ^ExternalConditions ##########
 	SpawnActorOnDeath@death1:
 		Actor: halloween_rockgolem_small
@@ -1409,7 +1409,7 @@ halloween_spider:
 		BuildPaletteOrder: 20
 		BuildDurationModifier: 50
 		Prerequisites: ~halloween_crypto
-		Description: A evil Spider.
+		Description: actor-halloween_spider.description
 	Mobile:
 		Speed: 56
 	Health:
@@ -1487,7 +1487,7 @@ halloween_clown:
 		BuildPaletteOrder: 60
 		Queue: Infantry, RAInfantry
 		Prerequisites: ~halloween_clowntent
-		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles
+		Description: actor-halloween_clown.description
 	Mobile:
 		Speed: 70
 	Crushable:
@@ -1541,7 +1541,7 @@ halloween_clown2:
 		BuildPaletteOrder: 60
 		Queue: Infantry, RAInfantry
 		Prerequisites: ~halloween_clowntent
-		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles
+		Description: actor-halloween_clown2.description
 	Mobile:
 		Speed: 75
 	Crushable:
@@ -1599,7 +1599,7 @@ halloween_clown3:
 		BuildPaletteOrder: 60
 		Prerequisites: ~halloween_clowntent
 		Queue: Infantry, RAInfantry
-		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles
+		Description: actor-halloween_clown3.description
 	Mobile:
 		Speed: 88
 	Crushable:
@@ -1667,7 +1667,7 @@ halloween_sweettooth:
 		BuildPaletteOrder: 30
 		Prerequisites: ~halloween_clowntent
 		Queue: Infantry, RAInfantry
-		Description: Fast scout vehicle, armed with\nrockets.\nCan attack Aircraft.\n  Strong vs Vehicles, Tanks\n  Weak vs Infantry
+		Description: actor-halloween_sweettooth.description
 	Mobile:
 		TurnSpeed: 64
 		Speed: 213
@@ -1722,7 +1722,7 @@ halloween_clowncar:
 		BuildPaletteOrder: 30
 		Prerequisites: ~halloween_clowntent, ~!selectchinf
 		Queue: Infantry, RAInfantry
-		Description: Heavy infantry transport.\n Unarmed
+		Description: actor-halloween_clowncar.description
 	Mobile:
 		Speed: 110
 		PauseOnCondition: notmobile || disabled
@@ -1774,7 +1774,7 @@ halloween_pirateship:
 		BuildPaletteOrder: 99
 		Prerequisites: ~halloween_daemonpit
 		Queue: Infantry, RAInfantry
-		Description: Heavy bomber airship.\n  Strong vs Buildings, Infantry\n  Weak vs Aircraft
+		Description: actor-halloween_pirateship.description
 	Aircraft:
 		InitialFacing: 896
 		TurnSpeed: 20
@@ -1873,7 +1873,7 @@ halloween_skeleton_archer:
 		BuildPaletteOrder: 20
 		Prerequisites: ~halloween_crypto
 		Queue: Infantry, RAInfantry
-		Description: Anti-tank/Anti-aircraft infantry. \n  Strong vs Tanks, Aircraft\n  Weak vs Infantry
+		Description: actor-halloween_skeleton_archer.description
 	Mobile:
 		Speed: 56
 	Health:
@@ -2045,7 +2045,7 @@ halloween_upgrade.ghost:
 		BuildLimit: 1
 		BuildDuration: 750
 		BuildDurationModifier: 100
-		Description: Why a unit dies, respawn like a Ghost, also some ghost can respawn after dead
+		Description: actor-halloween_upgradeghost.description
 	Valued:
 		Cost: 2500
 	RenderSprites:
@@ -2065,7 +2065,7 @@ halloween_upgrade.boiling:
 		BuildLimit: 1
 		BuildDuration: 750
 		BuildDurationModifier: 100
-		Description: provides hot oil to towers, and kills melee infantry
+		Description: actor-halloween_upgradeboiling.description
 	Valued:
 		Cost: 500
 	RenderSprites:
@@ -2085,7 +2085,7 @@ halloween_upgrade.axe:
 		BuildLimit: 1
 		BuildDuration: 750
 		BuildDurationModifier: 100
-		Description: now cows carry more powerful axes, more damage
+		Description: actor-halloween_upgradeaxe.description
 	Valued:
 		Cost: 750
 	RenderSprites:
@@ -2105,7 +2105,7 @@ halloween_upgrade.sword:
 		BuildLimit: 1
 		BuildDuration: 750
 		BuildDurationModifier: 100
-		Description: Skeletons and Demons uses more powerful swords
+		Description: halloween_upgradesword.description
 	Valued:
 		Cost: 750
 	RenderSprites:
@@ -2125,7 +2125,7 @@ halloween_upgrade.bows:
 		BuildLimit: 1
 		BuildDuration: 750
 		BuildDurationModifier: 100
-		Description: Archer Skeletons and Towers are more powerful
+		Description: halloween_upgradesbows.description
 	Valued:
 		Cost: 750
 	RenderSprites:
@@ -2145,7 +2145,7 @@ halloween_upgrade.mana:
 		BuildLimit: 1
 		BuildDuration: 1000
 		BuildDurationModifier: 100
-		Description: Adds more hp and attack to magic creatures\n affects to Golems, Ghosts, Demons and Spirit Tower
+		Description: actor-halloween_upgrademana.description
 	Valued:
 		Cost: 1500
 	RenderSprites:
@@ -2166,7 +2166,7 @@ halloween_worm:
 		Prerequisites: ~halloween_cauldron
 		Queue: Infantry, RAInfantry
 		BuildDurationModifier: 40
-		Description: Collects Tiberium for processing.\n  Unarmed
+		Description: actor-halloween_worm.description
 	Selectable:
 		Bounds: 1536, 1536
 	Harvester:
@@ -2209,7 +2209,7 @@ halloween_mcv:
 		Prerequisites: ~halloween_daemonpit
 		Queue: Vehicle, RAVehicle
 		BuildDurationModifier: 40
-		Description: Deploys into another Construction Yard.\n  Unarmed
+		Description: actor-halloween_mcv.description
 	Selectable:
 		Priority: 4
 		DecorationBounds: 1536, 1536
@@ -2270,7 +2270,7 @@ GARFIELD_INFANTRY:
 		BuildPaletteOrder: 10
 		Prerequisites: ~INFLATABLE_SPIDER
 		Queue: Infantry, RAInfantry
-		Description: Basic Melee Infantry. Slow but can take some damage.
+		Description: actor-garfield_infantry.description
 		BuildDuration: 150
 		# BuildDurationModifier: 100
 	Selectable:
@@ -2313,7 +2313,7 @@ SPOOKY_EYE:
 		Queue: Infantry
 		BuildPaletteOrder: 20
 		Prerequisites: ~halloween_crypto
-		Description: Crashes into ground targets.
+		Description: actor-spooky_eye.description
 		BuildDurationModifier: 100
 		BuildDuration: 750
 	Valued:
@@ -2407,7 +2407,7 @@ INFLATABLE_SPIDER:
 	Buildable:
 		BuildPaletteOrder: 30
 		Queue: Building, RABuilding
-		Description: Trains Heroes
+		Description: actor-inflatable_spider.description
 		Prerequisites: ~halloween_blackcitadel, halloween_crypto 
 	Building:
 		Footprint: xxx xxx ===

@@ -4,7 +4,7 @@ World:
 		InternalName: win98
 		Game: Special
 		Side: Factions
-		Description: The OG Windows 98
+		Description: faction-cameo-win98.description
 		Selectable: True
 
 	StartingUnits@mcvonlywin98:
@@ -257,7 +257,7 @@ WIN98_POWERPLANT:
 		Queue: Building, RABuilding
 		BuildDuration: 160
 		BuildDurationModifier: 100
-		Description: Provides 100 Power
+		Description: actor-win98_powerplant.description
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -299,7 +299,7 @@ WIN98_BARRACKS:
 	Buildable:
 		BuildPaletteOrder: 12
 		Queue: Building, RABuilding
-		Description: Trains infantry Windows 98 units
+		Description: actor-win98_barracks.description
 		BuildDuration: 200
 		BuildDurationModifier: 100
 		Prerequisites: ~win98_mycomputer, WIN98_POWERPLANT
@@ -385,7 +385,7 @@ WIN98_RECYCLEBIN:
 		Queue: Building, RABuilding
 		BuildDuration: 160
 		BuildDurationModifier: 100
-		Description: Refinery
+		Description: actor-win98_recyclebin.description
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -431,7 +431,7 @@ WIN98_INPUT_DEVICES:
 	Buildable:
 		BuildPaletteOrder: 50
 		Queue: Building, RABuilding
-		Description: Trains vehicle Windows 98 units
+		Description: actor-win98_input_devices.description
 		BuildDuration: 200
 		BuildDurationModifier: 100
 		Prerequisites: ~win98_mycomputer, win98_recyclebin
@@ -505,7 +505,7 @@ WIN98_POWERPLANTADVANCED:
 		Queue: Building, RABuilding
 		BuildDuration: 160
 		BuildDurationModifier: 100
-		Description: Provides 200 Power
+		Description: actor-win98_powerplantadvanced.description
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -552,7 +552,7 @@ WIN98_AQUANET:
 		BuildPaletteOrder: 70
 		Prerequisites: ~win98_mycomputer, win98_recyclebin
 		Queue: Building, RABuilding
-		Description: Produces, and\nrepairs boats
+		Description: actor-win98_aquanet.description
 	Building:
 		Footprint: =+= +++ =+=
 		Dimensions: 3,3
@@ -634,7 +634,7 @@ WIN98_RADAR:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 90
 		Prerequisites: ~win98_mycomputer, win98_input_devices
-		Description: Provides an overview\nof the battlefield.\nCan detect cloaked units.\nRequires power to operate.\nProvides Sector Scan and Turbo Button support powers.
+		Description: actor-win98_radar.description
 	Valued:
 		Cost: 1800
 	Tooltip:
@@ -722,7 +722,7 @@ WIN98_AERIAL_UPLINK:
 	Buildable:
 		BuildPaletteOrder: 100
 		Queue: Building, RABuilding
-		Description: Trains air Windows 98 units
+		Description: actor-win98_aerial_uplink.description
 		BuildDuration: 200
 		BuildDurationModifier: 100
 		Prerequisites: ~win98_mycomputer, win98_radar
@@ -792,7 +792,7 @@ WIN98_CRT_WALL:
 		BuildPaletteOrder: 10
 		Prerequisites: ~win98_mycomputer, WIN98_BARRACKS
 		Queue: Defence, RADefence
-		Description: Stops infantry and light vehicles.\nCan be crushed by tanks.
+		Description: actor-win98_crt_wall.description
 	Health:
 		HP: 25000
 	Armor:
@@ -815,7 +815,7 @@ WIN98_SETTINGS_GEAR:
 		Queue: Defence, RADefence
 		BuildPaletteOrder: 35
 		Prerequisites: ~win98_mycomputer, WIN98_RECYCLEBIN
-		Description: Stores excess refined\nOre and Gems.
+		Description: actor-win98_settings_gear.description
 	Valued:
 		Cost: 150
 	Tooltip:
@@ -854,7 +854,7 @@ WIN98_PROCESSOR:
 		Queue: Defence, RADefence
 		BuildPaletteOrder: 40
 		Prerequisites: ~win98_mycomputer, WIN98_BARRACKS
-		Description: Static defense with a fireport for\na garrisoned soldier.\nCan detect cloaked units.\n  Strong vs Infantry, Light armor\n  Weak vs Tanks, Aircraft
+		Description: actor-win98_processor.description
 	Valued:
 		Cost: 600
 	CustomSellValue:
@@ -907,7 +907,7 @@ WIN98_JOYSTICK:
 		Queue: Defence, RADefence
 		BuildPaletteOrder: 40
 		Prerequisites: ~win98_mycomputer, win98_input_devices
-		Description: Telsa defense tower
+		Description: actor-win98_joystick.description
 	Armament:
 		Weapon: LaserObelisk
 		LocalOffset: 0,0,896
@@ -941,7 +941,7 @@ WIN98_PAINT:
 		Queue: Defence, RADefence
 		BuildPaletteOrder: 40
 		Prerequisites: ~win98_mycomputer, WIN98_BARRACKS
-		Description: Anti Air defense, shoots paintbrushes
+		Description: actor-win98_paint.description
 	Valued:
 		Cost: 900
 	CustomSellValue:
@@ -986,7 +986,7 @@ WIN98_DEFRAG:
 		Queue: Defence, RADefence
 		BuildPaletteOrder: 55
 		Prerequisites: ~win98_mycomputer, WIN98_RECYCLEBIN
-		Description: Produces Bits that can be harvested (wip).\nProvides income.
+		Description: actor-win98_defrag.description
 	Building:
 		Footprint: xx ==
 		Dimensions: 2,2
@@ -1026,7 +1026,7 @@ WIN98_HARDWARE:
 		BuildLimit: 1
 		BuildDuration: 900
 		BuildDurationModifier: 100
-		Description: Provides Demo Disk Strike support power.
+		Description: actor-win98_hardware.description
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -1043,13 +1043,13 @@ WIN98_HARDWARE:
 	SpawnActorPower:
 		AllowMultiple: True
 		OrderName: demodiskstrike
-		Icons: 
+		Icons:
 			1: demodiskstrike_icon
-		Names: 
+		Names:
 			1: Demo Disk Strike
-		Descriptions: 
+		Descriptions:
 			1: warcraft-rainoffire-human.description
-		Prerequisites: 
+		Prerequisites:
 			1: win98_hardware
 		ChargeInterval: 9000
 		LifeTime: -1
@@ -1140,7 +1140,7 @@ WIN98_XBOX:
 		Queue: Defence, RADefence
 		BuildLimit: 1
 		BuildDurationModifier: 100
-		Description: Provides Red Ring of Death Superweapon.
+		Description: actor-win98_xbox.description
 	Building:
 		Footprint: xxx xxx xxx ===
 		Dimensions: 3,4
@@ -1241,7 +1241,7 @@ WIN98_USER:
 		BuildPaletteOrder: 10
 		Prerequisites: ~WIN98_BARRACKS
 		Queue: Infantry, RAInfantry
-		Description: Basic Melee Infantry. Slow but can take some damage.
+		Description: actor-win98_user.description
 		BuildDuration: 80
 		BuildDurationModifier: 100
 	Mobile:
@@ -1286,7 +1286,7 @@ WIN98_ERASE:
 		BuildPaletteOrder: 20
 		Prerequisites: ~WIN98_BARRACKS
 		Queue: Infantry, RAInfantry
-		Description: Rocket soldier.
+		Description: actor-win98_erase.description
 	WithDeathAnimation:
 		UseDeathTypeSuffix: false
 	WithInfantryBody:
@@ -1346,7 +1346,7 @@ WIN98_HARVESTER:
 		BuildPaletteOrder: 25
 		Prerequisites: ~win98_mycomputer, win98_recyclebin
 		Queue: Infantry, RAInfantry
-		Description: Harvester.
+		Description: actor-win98_harvester.description
 		BuildDuration: 100
 		BuildDurationModifier: 100
 	Mobile:
@@ -1383,7 +1383,7 @@ WIN98_FREECELL:
 		BuildPaletteOrder: 30
 		Prerequisites: ~WIN98_BARRACKS
 		Queue: Infantry, RAInfantry
-		Description: Captures structures.
+		Description: actor-win98_freecell.description
 	WithDeathAnimation:
 		UseDeathTypeSuffix: false
 	WithInfantryBody:
@@ -1410,7 +1410,7 @@ WIN98_AGENT:
 		BuildPaletteOrder: 40
 		Prerequisites: ~win98_radar
 		Queue: Infantry, RAInfantry
-		Description: Hijacks vehicles.
+		Description: actor-win98_agent.description
 	Mobile:
 		Speed: 71
 	Health:
@@ -1461,7 +1461,7 @@ WIN98_SPIDER:
 		Queue: Infantry, RAInfantry
 		BuildPaletteOrder: 100
 		Prerequisites: ~win98_settings_gear
-		Description: Repairs nearby vehicles.\n  Unarmed
+		Description: actor-win98_spider.description
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -1509,7 +1509,7 @@ WIN98_CLIPPY:
 		BuildPaletteOrder: 120
 		Prerequisites: ~win98_hardware
 		BuildLimit: 1
-		Description: Elite commando infantry. Armed with\ndual pistols and C4.\nCan detect cloaked units.\nMaximum 1 can be trained.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles, Aircraft\n  Special Ability: Destroy Building with C4
+		Description: actor-win98_clippy.description
 	Valued:
 		Cost: 1200
 	Tooltip:
@@ -1574,7 +1574,7 @@ WIN98_MCV:
 		Queue: Building, RABuilding
 		BuildDuration: 750
 		BuildDurationModifier: 100
-		Description: Tramsforms into another My Computer
+		Description: actor-win98_mcv.description
 		Icon: mycomputer_icon
 	Tooltip:
 		Name: Mobile Construction Vehicle (Win98)
@@ -1616,7 +1616,7 @@ WIN98_MOUSE:
 		Queue: Vehicle, RAVehicle
 		BuildPaletteOrder: 50
 		Prerequisites: ~win98_input_devices
-		Description: Fast tank, good for scouting.\n  Strong vs Light armor\n  Weak vs Infantry, Tanks, Aircraft
+		Description: actor-win98_mouse.description
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -1666,7 +1666,7 @@ WIN98_MINE:
 		BuildPaletteOrder: 80
 		Prerequisites: ~win98_input_devices
 		Queue: Vehicle, RAVehicle
-		Description: Hovering mine that can deploy\ninto the ground.
+		Description: actor-win98_mine.description
 	Mobile:
 		Locomotor: hover
 		Speed: 166
@@ -1734,7 +1734,7 @@ WIN98_KEYBOARD:
 		BuildPaletteOrder: 110
 		Prerequisites: ~win98_radar
 		Queue: Vehicle, RAVehicle
-		Description: Artillery unit.
+		Description: actor-win98_keyboard.description
 	Voiced:
 		VoiceSet: win98mechanicalkeyboardvoice
 
@@ -1756,7 +1756,7 @@ WIN98_BITCOIN:
 		BuildPaletteOrder: 120
 		Prerequisites: ~win98_input_devices
 		Queue: Vehicle, RAVehicle
-		Description: Delivers 500 credits.
+		Description: actor-win98_bitcoin.description
 	Mobile:
 		Speed: 56
 	Health:
@@ -1794,7 +1794,7 @@ WIN98_MSN_BUTTERFLY:
 		Prerequisites: ~win98_aerial_uplink
 		Queue: Aircraft, RAAircraft
 		BuildPaletteOrder: 20
-		Description: Crashes into ground targets.
+		Description: actor-win98_msn_butterfly.description
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -1874,7 +1874,7 @@ WIN98_EXPLORER:
 		Prerequisites: ~win98_aerial_uplink
 		Queue: Aircraft, RAAircraft
 		BuildPaletteOrder: 30
-		Description: Fast Infantry Transport Helicopter.\n  Unarmed
+		Description: actor-win98_explorer.description
 	Valued:
 		Cost: 900
 	Tooltip:
@@ -1945,7 +1945,7 @@ WIN98_REGEDIT:
 		BuildPaletteOrder: 40
 		Prerequisites: ~win98_aerial_uplink
 		Queue: Aircraft, RAAircraft
-		Description: Heavy win98 warship, deploys\n5 interceptor craft.\n Strong vs Vehicles, Aircraft
+		Description: actor-win98_regedit.description
 	Aircraft:
 		InitialFacing: 896
 		TurnSpeed: 28
@@ -2076,7 +2076,7 @@ WIN98_EMAIL_RAFT:
 		BuildPaletteOrder: 20
 		Prerequisites: ~win98_aquanet
 		Queue: Naval, RANaval
-		Description: Light scout & support ship.\nHardly floats.\nCan detect submarines.
+		Description: actor-win98_email_raft.description
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -2132,7 +2132,7 @@ WIN98_BENCHY:
 		BuildPaletteOrder: 30
 		Prerequisites: ~win98_aquanet
 		Queue: Naval, RANaval
-		Description: Fast multi-role ship.\nCan detect submarines.\n  Strong vs Naval units, Vehicles, Aircraft
+		Description: actor-win98_benchy.description
 	Mobile:
 		Speed: 85
 	Health:

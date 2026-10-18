@@ -4,7 +4,7 @@ World:
 		InternalName: city
 		Game: SimCity
 		Side: SimCity
-		Description: SimCity from SNES\nFeatures:\n- Generates revenue through taxation of Residential Zones\n- Units gain massive bonuses near Mayor's House\n- Variety of support powers to assist teammates\n- Great Stun Powers\nSupport powers: Mininuke Parabomb, various others
+		Description: faction-snes-simcity.description
 	####################################################################################################
 	#		CITY
 	####################################################################################################
@@ -123,7 +123,7 @@ CITYMCV:
 		Queue: Defence, RADefence
 		BuildPaletteOrder: 30
 		Prerequisites: citycoal, ~mmsimcity
-		Description: Deploys into Mayor's house.\n\nMayor's house\nBuffs units and buildings.\nCan be upgraded with Architects
+		Description: actor-citymcv.description
 		Icon: cityicon
 	Valued:
 		Cost: 3500
@@ -175,7 +175,7 @@ CITYHARVESTER:
 	Buildable:
 		Queue: Vehicle.Simcity
 		BuildPaletteOrder: 60
-		Description: Collects resources for processing.\n  Unarmed
+		Description: actor-cityharvester.description
 		Icon: cityicon
 	Valued:
 		Cost: 600
@@ -265,7 +265,7 @@ CITYAMBULANCE:
 	Buildable:
 		Queue: Infantry.Simcity
 		BuildPaletteOrder: 30
-		Description: Heals units.\n Can transport 4 infantry
+		Description: actor-cityambulance.description
 	Valued:
 		Cost: 600
 	Tooltip:
@@ -321,7 +321,7 @@ CITYFIRETRUCK:
 		BuildPaletteOrder: 20
 		BuildDurationModifier: 50
 		Queue: Infantry.Simcity
-		Description: Truck armed with a water cannon.\n Strong vs Infantry, Buildings\n Increases damage resistance of nearby allied units\nResistant against fire
+		Description: actor-cityfiretruck.description
 	Mobile:
 		Locomotor: heavywheeled
 		Speed: 80
@@ -376,7 +376,7 @@ CITYPOLICECAR:
 		Queue: Vehicle.Simcity
 		BuildPaletteOrder: 20
 		BuildDurationModifier: 35
-		Description: Light vehicle that drives police officers to their destination.\nEquipped with Taser\nCan carry up to 2 units\nIncreases damage output of nearby allied units
+		Description: actor-citypolicecar.description
 	Valued:
 		Cost: 800
 	Tooltip:
@@ -421,7 +421,7 @@ CITYPOLICECAR:
 CITYSWATVAN:
 	Inherits: CITYPOLICECAR
 	Buildable:
-		Description: Heavy police vehicle driving S.W.A.T. to their destination\nEquipped with Taser.\nCan carry up to 4 units\nSWAT Units inside are equipped with tasers
+		Description: actor-cityswatvan.description
 		Prerequisites: citylibrary, citybank, ~techlevel.high
 		BuildDurationModifier: 25
 	Valued:
@@ -596,7 +596,7 @@ CITYR:
 		Prerequisites: citycoal, ~mmsimcity
 		Queue: Building, RABuilding
 		BuildDurationModifier: 25
-		Description: Generates tax revenue\nCan be upgraded with Architects\nAutomatically self-upgrades\n\n #Limit: 20
+		Description: actor-cityr.description
 		#BuildLimit: 20
 	Building:
 		Footprint: xx xx
@@ -639,7 +639,7 @@ CITYC:
 		Prerequisites: citycoal, ~mmsimcity
 		Queue: Building, RABuilding
 		BuildDurationModifier: 25
-		Description: Increases tax revenue from nearby Residentials\nCan be upgraded with Architects\nAutomatically self-upgrades\n\n #Limit: 5
+		Description: actor-cityc.description
 		#BuildLimit: 5
 	Building:
 		Footprint: xx xx
@@ -697,7 +697,7 @@ CITYI:
 		Prerequisites: citycoal, ~mmsimcity
 		Queue: Building, RABuilding
 		BuildDurationModifier: 25
-		Description: Increases speed of nearby units\nCan be upgraded with Architects\nAutomatically self-upgrades\n\n #Limit: 10
+		Description: actor-cityi.description
 		#BuildLimit: 10
 	Building:
 		Footprint: xx xx
@@ -754,7 +754,7 @@ CITYFD:
 		BuildPaletteOrder: 40
 		Prerequisites: MoneyIncome, ~mmsimcity
 		BuildDurationModifier: 50
-		Description: Produces fire department units, Architects, and Instructors.\nDefense structure, can attack aircraft\nRequires power to operate
+		Description: actor-cityfd.description
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -834,7 +834,7 @@ CITYPD:
 		BuildPaletteOrder: 50
 		Prerequisites: MoneyIncome, ~mmsimcity
 		BuildDurationModifier: 50
-		Description: Produces police units and dozers.\nDefense structure.\nRequires power to operate
+		Description: actor-citypd.description
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -917,7 +917,7 @@ CITYHARBOR:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 60
 		Prerequisites: citycoal, ~mmsimcity
-		Description: Refines resources\ninto credits.
+		Description: actor-cityharbor.description
 	Building:
 		Footprint: xxx xxx xxx ===
 		Dimensions: 3,4
@@ -975,7 +975,7 @@ CITYCOAL:
 		Queue: Building, RABuilding
 		Prerequisites: ~mmsimcity
 		BuildPaletteOrder: 70
-		Description: Generates power.\n\nUpgradeable:\n each upgrade increases power output by 25% up to 100%.
+		Description: actor-citycoal.description
 	Building:
 		Footprint: xxx xxx xxx
 		Dimensions: 3,3
@@ -1009,7 +1009,7 @@ CITYNUKE:
 		Queue: Building, RABuilding
 		Prerequisites: ~mmsimcity
 		BuildPaletteOrder: 80
-		Description: Provides triple the power of\na standard Power Plant.\n\nUpgradeable:\n each upgrade increases power output by 25% up to 100%.
+		Description: actor-citynuke.description
 	Building:
 		Footprint: xxx xxx xxx
 		Dimensions: 3,3
@@ -1043,7 +1043,7 @@ CITYAIRPORT:
 		BuildPaletteOrder: 90
 		Prerequisites: Fire Department, Police Department, ~techlevel.high, !cityair, ~mmsimcity
 		Queue: Building, RABuilding
-		Description: Provides airborne support powers.
+		Description: actor-cityairport.description
 	Building:
 		Footprint: xxxx xxxx xxxx xxxx
 		Dimensions: 4,4
@@ -1068,7 +1068,7 @@ CITYAIRPORT:
 		Names:
 			1: Spy Plane
 		Descriptions:
-			1: Reveals an area of the map\nand cloaked enemy units.
+			1: power-ra2psireveal.description
 		SelectTargetSpeechNotification: SelectTarget
 		EndChargeSpeechNotification: SpyPlaneReady
 		CameraActor: camera.spyplane
@@ -1098,7 +1098,7 @@ CITYAIRPORT:
 		Names:
 			1: Tiberium Seeds
 		Descriptions:
-			1: A cargo plane seeds Tiberium on your target.\n Does no damage
+			1: power-tibseed.description
 		SelectTargetSpeechNotification: SelectTarget
 		CameraActor: camera
 		CameraRemoveDelay: 150
@@ -1127,7 +1127,7 @@ CITYAIRPORT:
 		Names:
 			1: Blue Tiberium Seeds
 		Descriptions:
-			1: A cargo plane seeds Blue Tiberium on your target.\n Does no damage
+			1: power-bluetibseed.description
 		SelectTargetSpeechNotification: SelectTarget
 		CameraActor: racamera
 		CameraRemoveDelay: 150
@@ -1158,7 +1158,7 @@ CITYAIRPORT:
 		Names:
 			1: Mininuke Parabomb
 		Descriptions:
-			1: A cargo plane drops a parachuted mininuke on your target.\n Can be intercepted
+			1: power-mininukeparabomb.description
 		EndChargeSpeechNotification: NuclearWeaponAvailable
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
@@ -1191,7 +1191,7 @@ CITYAIRPORT:
 		Names:
 			1: Search Warrant
 		Descriptions:
-			1: A squad of cargo planes drops 5 Police Cars\nanywhere on the map.
+			1: power-searchwarrant.description
 		DropItems:
 			1: CITYPOLICECAR, CITYPOLICECAR, CITYPOLICECAR, CITYPOLICECAR, CITYPOLICECAR
 		ReinforcementsArrivedSpeechNotification: ReinforcementsArrived
@@ -1229,7 +1229,7 @@ CITYLIBRARY:
 		BuildPaletteOrder: 10
 		Prerequisites: Fire Department, ~mmsimcity
 		Queue: Defence, RADefence
-		Description: Unlocks Elite Architect & Elite Instructor.\n\n Limit: 1
+		Description: actor-citylibrary.description
 		BuildLimit: 1
 	Building:
 		Footprint: xx xx
@@ -1260,7 +1260,7 @@ CITYBANK:
 		BuildPaletteOrder: 20
 		Prerequisites: Police Department, ~mmsimcity
 		Queue: Defence, RADefence
-		Description: Unlocks Money Truck XXL and Casino.\n\n Limit: 1
+		Description: actor-citybank.description
 		BuildLimit: 1
 	Building:
 		Footprint: xx xx
@@ -1303,7 +1303,7 @@ CITYPARK:
 		BuildPaletteOrder: 40
 		Prerequisites: citylibrary, ~mmsimcity
 		Queue: Defence, RADefence
-		Description: Seeds Tiberium.\n\n Limit: 3
+		Description: actor-citypark.description
 		BuildLimit: 3
 	Building:
 		Footprint: xx xx
@@ -1334,7 +1334,7 @@ CITYFOUNTAIN:
 		BuildPaletteOrder: 50
 		Prerequisites: citybank, ~mmsimcity
 		Queue: Defence, RADefence
-		Description: Seeds Blue Tiberium.\n\n Limit: 1
+		Description: actor-cityfountain.description
 		BuildLimit: 1
 	Building:
 		Footprint: xx xx
@@ -1365,7 +1365,7 @@ CITYSTADIUM:
 	Buildable:
 		Queue: Defence, RADefence
 		BuildPaletteOrder: 80
-		Description: TBA
+		Description: actor-citystadium.description
 		Prerequisites: ~wip-content
 		BuildLimit: 1
 	Building:
@@ -1392,7 +1392,7 @@ CITYEXPO:
 	Buildable:
 		Queue: Defence, RADefence
 		BuildPaletteOrder: 80
-		Description: TBA
+		Description: actor-cityexpo.description
 		Prerequisites: ~wip-content
 		BuildLimit: 1
 	Building:
@@ -1420,7 +1420,7 @@ CITYSTATION:
 	Buildable:
 		Queue: Defence, RADefence
 		BuildPaletteOrder: 80
-		Description: Provides Railway Gun support power.
+		Description: actor-citystation.description
 		Prerequisites: Fire Department, Police Department, Industrial, cityharbor, ~techlevel.superweapons, ~mmsimcity
 	Building:
 		Footprint: xx xx
@@ -1453,7 +1453,7 @@ CITYSTATION:
 		Names:
 			1: Railway Gun
 		Descriptions:
-			1: An unseen underground bullet train\nfires heavy artillery at the target.
+			1: power-railwaygun.description
 		EndChargeSpeechNotification:
 		SelectTargetSpeechNotification:
 	RejectsOrders:
@@ -1466,33 +1466,33 @@ CITYSTATION:
 		Position: BottomLeft
 		RequiresSelection: True
 
-CITYMARIO:
-	Inherits: SimCityBuildingLevelUp
-	Inherits@EXPCITY: ^GainsExperienceCity
-	Inherits: ^BaseBuilding
-	Inherits@shape: ^2x2Shape
-	Selectable:
-		Bounds: 2048, 2048
-	Valued:
-		Cost: 1500
-	Tooltip:
-		Name: Monument
-	Buildable:
-		Queue: Defence, RADefence
-		BuildPaletteOrder: 80
-		Description: TBA
-		Prerequisites: ~wip-content, Fire Department, Police Department, Commercial, Library, Bank, ~techlevel.superweapons
-		BuildLimit: 1
-	Building:
-		Footprint: xx xx
-		Dimensions: 2,2
-		BuildSounds: citybuild.aud
-	Power:
-		Amount: -20
-	Health:
-		HP: 100000
-	RevealsShroud:
-		Range: 4c0
+# CITYMARIO:
+# 	Inherits: SimCityBuildingLevelUp
+# 	Inherits@EXPCITY: ^GainsExperienceCity
+# 	Inherits: ^BaseBuilding
+# 	Inherits@shape: ^2x2Shape
+# 	Selectable:
+# 		Bounds: 2048, 2048
+# 	Valued:
+# 		Cost: 1500
+# 	Tooltip:
+# 		Name: Monument
+# 	Buildable:
+# 		Queue: Defence, RADefence
+# 		BuildPaletteOrder: 80
+# 		Description: TBA
+# 		Prerequisites: ~wip-content, Fire Department, Police Department, Commercial, Library, Bank, ~techlevel.superweapons
+# 		BuildLimit: 1
+# 	Building:
+# 		Footprint: xx xx
+# 		Dimensions: 2,2
+# 		BuildSounds: citybuild.aud
+# 	Power:
+# 		Amount: -20
+# 	Health:
+# 		HP: 100000
+# 	RevealsShroud:
+# 		Range: 4c0
 	
 
 CITYCASINO:
@@ -1511,7 +1511,7 @@ CITYCASINO:
 	Buildable:
 		Queue: Defence, RADefence
 		BuildPaletteOrder: 80
-		Description: Generates revenue\nProvides Casino Crate support power
+		Description: actor-citycasino.description
 		Prerequisites: Library, Commercial, Bank, ~mmsimcity
 		BuildLimit: 1
 	Building:
@@ -1540,7 +1540,7 @@ CITYCASINO:
 		Names:
 			1: Casino Crates
 		Descriptions:
-			1: Drop 3 Casino Crates at target.\nCan provide massive benefits or penalties.
+			1: power-casinocrates.description
 		EndChargeSpeechNotification:
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
@@ -1577,7 +1577,7 @@ CITYWINDMILL:
 	Buildable:
 		Queue: Defence, RADefence
 		BuildPaletteOrder: 80
-		Description: TBA
+		Description: actor-citywindmill.description
 		Prerequisites: ~wip-content
 	Building:
 		Footprint: xx xx
@@ -1603,7 +1603,7 @@ CITYAMUSE:
 	Buildable:
 		Queue: Defence, RADefence
 		BuildPaletteOrder: 80
-		Description: TBA
+		Description: actor-cityamuse.description
 		Prerequisites: ~wip-content
 	Building:
 		Footprint: xx xx
@@ -1631,7 +1631,7 @@ CITYZOO:
 	Buildable:
 		Queue: Defence, RADefence
 		BuildPaletteOrder: 80
-		Description: Provides Dinosaur Drop support power.
+		Description: actor-cityzoo.description
 		Prerequisites: Library, Bank, citypark, ~techlevel.superweapons, ~mmsimcity
 		BuildLimit: 1
 	Building:
@@ -1654,7 +1654,7 @@ CITYZOO:
 		Names:
 			1: Dinosaur Drop
 		Descriptions:
-			1: A squad of cargo planes drops dinosaurs\nanywhere on the map.
+			1: power-dinodrop.description
 		DropItems:
 			1: steg.citydrop, trex.citydrop, tric.citydrop, rapt.citydrop, rapt.citydrop, rapt.citydrop, rapt.citydrop
 		ReinforcementsArrivedSpeechNotification: ReinforcementsArrived
@@ -1700,7 +1700,7 @@ CITYFIREFIGHTER:
 	Buildable:
 		BuildPaletteOrder: 10
 		Queue: Infantry.Simcity
-		Description: Emergency worker armed with a high pressure fire hose.\nStuns Vehicles and Cyborgs\nDeals bonus damage to cyborgs\nResistant against fire\n Strong vs Infantry, Buildings\n Weak vs Vehicles, Aircraft
+		Description: actor-cityfirefighter.description
 	Mobile:
 		Speed: 56
 	Health:
@@ -1746,7 +1746,7 @@ CITYPOLICEOFFICER:
 		BuildDuration: 55
 		BuildDurationModifier: 100
 		Queue: Vehicle.Simcity
-		Description: Law enforcement armed with a pistol.\nCan be upgraded to have pistol replaced with Submachine gun\n Strong vs Infantry\n Weak vs Vehicles, Aircraft
+		Description: actor-citypoliceofficer.description
 	Mobile:
 		Speed: 56
 	Health:
@@ -1795,7 +1795,7 @@ CITYARCHITECT:
 		BuildDurationModifier: 50
 		Queue: Infantry.Simcity
 		BuildPaletteOrder: 40
-		Description: Upgrades a small area of buildings by 1 rank.\n Limit: 1
+		Description: actor-cityarchitect.description
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -1822,7 +1822,7 @@ CITYARCHITECT:
 		Names:
 			1: Architect
 		Descriptions:
-			1: Upgrades a small area of buildings by 1 rank.\n Limit: 1
+			1: power-architect.description
 		SelectTargetSpeechNotification: SelectTarget
 		OnFireSound: text2.aud
 		ChargeInterval: 1500
@@ -1850,7 +1850,7 @@ CITYELITEARCHITECT:
 		Queue: Infantry.Simcity
 		BuildPaletteOrder: 70
 		Prerequisites: Library
-		Description: Upgrades a large area of buildings by 1 rank.\n Limit: 1
+		Description: actor-cityelitearchitect.description
 		Icon: eliteicon
 	Valued:
 		Cost: 3000
@@ -1880,7 +1880,7 @@ CITYELITEARCHITECT:
 		Names:
 			1: Elite Architect
 		Descriptions:
-			1: Upgrades a large area of buildings by 1 rank.\n Limit: 1
+			1: power-elitearchitect.description
 		SelectTargetSpeechNotification: SelectTarget
 		OnFireSound: text2.aud
 		ChargeInterval: 3000
@@ -1907,7 +1907,7 @@ CITYINSTRUCTOR:
 		BuildDurationModifier: 50
 		Queue: Infantry.Simcity
 		BuildPaletteOrder: 50
-		Description: Upgrades a small group of units by 1 rank.\n Limit: 1
+		Description: actor-cityinstructor.description
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -1938,7 +1938,7 @@ CITYINSTRUCTOR:
 		Names:
 			1: Instructor
 		Descriptions:
-			1: Upgrades a small group of units by 1 rank.\n Limit: 1
+			1: power-instructor.description
 		SelectTargetSpeechNotification: SelectTarget
 		OnFireSound: text2.aud
 		ChargeInterval: 1500
@@ -1966,7 +1966,7 @@ CITYELITEINSTRUCTOR:
 		Queue: Infantry.Simcity
 		BuildPaletteOrder: 80
 		Prerequisites: Library
-		Description: Upgrades a large group of units by 1 rank.\n Limit: 1
+		Description: actor-cityeliteinstructor.description
 		Icon: eliteicon
 	Valued:
 		Cost: 3000
@@ -1982,7 +1982,7 @@ CITYELITEINSTRUCTOR:
 		Names:
 			1: Elite Instructor
 		Descriptions:
-			1: Upgrades a large group of units by 1 rank.\n Limit: 1
+			1: power-eliteinstructor.description
 		SelectTargetSpeechNotification: SelectTarget
 		OnFireSound: text2.aud
 		ChargeInterval: 3000
@@ -2006,7 +2006,7 @@ CITYEXPERT:
 		BuildPaletteOrder: 50
 		Prerequisites: ~wip-content
 		BuildDuration: 160
-		Description: Upgrades a Vehicle by 1 Rank.
+		Description: actor-cityexpert.description
 	Valued:
 		Cost: 400
 	Tooltip:
@@ -2037,7 +2037,7 @@ CITYELITEEXPERT:
 		BuildPaletteOrder: 80
 		Prerequisites: ~wip-content #Bank
 		BuildDuration: 400
-		Description: Upgrades a Vehicle to Rank 4 (Elite).
+		Description: actor-cityeliteexpert.description
 		Icon: eliteicon
 	Valued:
 		Cost: 1400
@@ -2061,7 +2061,7 @@ CITYSWAT:
 		BuildPaletteOrder: 30
 		Prerequisites: citylibrary, citybank, ~techlevel.high, Police.sc2k, RAPolice.sc2k
 		Queue: Vehicle.Simcity
-		Description: Elite law enforcement Team armed with silenced\nsubmachine guns and EMP grenades.\n Strong vs ground targets\n Weak vs Aircraft
+		Description: actor-cityswat.description
 	Tooltip:
 		Name: S.W.A.T Team
 	UpdatesPlayerStatistics:
@@ -2192,7 +2192,7 @@ CITYSWATGL:
 		Prerequisites: citylibrary, citybank, cityairport, ~techlevel.high
 		BuildDurationModifier: 50
 		Queue: Vehicle.Simcity
-		Description: Stealth Elite law enforcement equipped with silenced Sniper Rifle\nCan he upgraded to get Grenade Launcher\nStrong vs Infantry, Air
+		Description: actor-cityswatgl.description
 		Icon: iconcomm
 	Tooltip:
 		Name: S.W.A.T. Specialist
@@ -2268,7 +2268,7 @@ simcity_smg:
 		Queue: Upgrades
 		BuildDuration: 3000
 		BuildDurationModifier: 100
-		Description: Law Enforcement gets Submachine Guns instead of Handguns\nIncreases damage against all targets
+		Description: actor-simcity_smg.description
 		Prerequisites: ~!simcity_smg, citylibrary, ~mmsimcity
 	Valued:
 		Cost: 3000
@@ -2285,7 +2285,7 @@ simcity_bpv:
 		Queue: Upgrades
 		BuildDuration: 1500
 		BuildDurationModifier: 100
-		Description: All units produced at Police Departments gets Bulletproof vests reducing damage taken
+		Description: actor-simcity_bpv.description
 		Prerequisites: ~!simcity_bpv, citybank, ~mmsimcity
 	Valued:
 		Cost: 3000
@@ -2302,7 +2302,7 @@ simcity_gl:
 		Queue: Upgrades
 		BuildDuration: 3000
 		BuildDurationModifier: 100
-		Description: S.W.A.T Specialists will get Grenade Launcher that can Siege Buildings and other static targets
+		Description: actor-simcity_gl.description
 		Prerequisites: ~!simcity_gl, citylibrary, citybank, cityairport, ~mmsimcity
 	Valued:
 		Cost: 3000
@@ -2319,7 +2319,7 @@ simcity_taser:
 		Queue: Upgrades
 		BuildDuration: 4500
 		BuildDurationModifier: 100
-		Description: Police Cars and SWAT Vans will shoot their tasers 50% faster
+		Description: actor-simcity_taser.description
 		Prerequisites: ~!simcity_taser, citylibrary, citybank, cityairport, ~mmsimcity
 	Valued:
 		Cost: 3000
@@ -2417,7 +2417,7 @@ STEG:
 		DeathSequencePalette: terrain
 		DeathPaletteIsPlayerPalette: false
 	Buildable:
-		Description: A large, heavily built, herbivorous quadruped
+		Description: actor-steg.description
 	Inherits@EXT: ^ExternalConditions ##########
 
 steg.citydrop:
@@ -2438,7 +2438,7 @@ TRIC:
 		Weapon: Horn2
 	SelectionDecorations:
 	Buildable:
-		Description: Quadruped with large bony frill and three horns
+		Description: actor-tric.description
 	Selectable:
 		DecorationBounds: 61866, 43690, 0, 3626
 	Inherits@EXT: ^ExternalConditions ##########
@@ -2460,7 +2460,7 @@ RAPT:
 	Armament:
 		Weapon: Claw2
 	Buildable:
-		Description: Bipedal with enlarged sickle-shaped claw on each hindfoot
+		Description: actor-rapt.description
 	Inherits@EXT: ^ExternalConditions ##########
 
 rapt.citydrop:
@@ -2480,10 +2480,10 @@ trex:
 	Buildable:
 		Queue: Biolab
 		BuildPaletteOrder: 40
-		Prerequisites: bio, upzombiemutate3
+		Prerequisites: bio, upzombiemutate3, ~wip-content
 		BuildDuration: 500
 		BuildDurationModifier: 100
-		Description: Giant dinosaur with powerful melee attack.\n  Strong vs Infantry, Buildings\n  Weak vs Aircraft
+		Description: actor-trex.description
 	Armament:
 		Weapon: Teeth2
 	Valued:
@@ -2500,7 +2500,7 @@ trex:
 		Bounds: 1536, 1536
 	SelectionDecorations:
 	Buildable:
-		Description: Bipedal carnivore with a massive skull
+		Description: actor-trex.description
 	Inherits@EXT: ^ExternalConditions ##########
 
 trex.citydrop:

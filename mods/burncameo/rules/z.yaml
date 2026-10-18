@@ -21,7 +21,7 @@ World:
 		InternalName: zrobots
 		Game: Z
 		Side: Z
-		Description: Z \nFeatures:\n- Mechanized infantry, not affects by tiberium\n- All Units, Structures are free\n- Buildings and defenses do not require power to operate\n- The units only has time production\n-Support powers: Nothing
+		Description: faction-z-z.description
 	####################################################################################################
 	#		RA
 	####################################################################################################
@@ -58,7 +58,7 @@ World:
 		BuildPaletteOrder: 10
 		Prerequisites: barracks
 		Queue: Infantry.Z
-		Description: General-purpose robot
+		Description: actor-zbot.description
 	Mobile:
 		Speed: 56
 	Health:
@@ -312,7 +312,7 @@ zjeep:
 		BuildDurationModifier: 100
 		BuildDuration: 250
 		Prerequisites: barracks
-		Description: Fast scout & anti-infantry vehicle.\nCan carry one infantry.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+		Description: actor-zjeep.description
 	Valued:
 		Cost: 250
 	Tooltip:
@@ -382,7 +382,7 @@ zltnk:
 		BuildPaletteOrder: 40
 		Queue: Vehicle.Z
 		BuildDurationModifier: 100
-		Description: Fast, light tank.\n  Strong vs Vehicles, Tanks\n  Weak vs Infantry
+		Description: actor-zltnk.description
 		BuildDuration: 500
 	Mobile:
 		Speed: 100
@@ -439,7 +439,7 @@ zmtnk:
 		BuildPaletteOrder: 40
 		Queue: Vehicle.Z
 		BuildDurationModifier: 100
-		Description: Fast, light tank.\n  Strong vs Vehicles, Tanks\n  Weak vs Infantry
+		Description: actor-zmtnk.description
 		BuildDuration: 750
 	Mobile:
 		Speed: 75
@@ -496,7 +496,7 @@ zhtnk:
 		BuildPaletteOrder: 40
 		Queue: Vehicle.Z
 		BuildDurationModifier: 100
-		Description: Fast, light tank.\n  Strong vs Vehicles, Tanks\n  Weak vs Infantry
+		Description: actor-zhtnk.description
 		BuildDuration: 1000
 		Prerequisites: zhq
 	Mobile:
@@ -557,7 +557,7 @@ zapc:
 		BuildPaletteOrder: 40
 		Queue: Vehicle.Z
 		BuildDurationModifier: 100
-		Description: Can Carry one Infantry, changes weapons depend on infantry
+		Description: actor-zapc.description
 		BuildDuration: 500
 	Mobile:
 		Speed: 100
@@ -656,7 +656,7 @@ zmlrs:
 		BuildPaletteOrder: 40
 		Queue: Vehicle.Z
 		BuildDurationModifier: 100
-		Description: Fast, light tank.\n  Strong vs Vehicles, Tanks\n  Weak vs Infantry
+		Description: actor-zmlrs.description
 		BuildDuration: 1250
 		Prerequisites: zhq
 	Mobile:
@@ -712,7 +712,7 @@ zgattlingcan:
 		BuildPaletteOrder: 45
 		Prerequisites: barracks, ~mmzrobots
 		Queue: Defence, RADefence
-		Description: Basic Defence.\n  Strong vs Infantry, Aircraft\n  Weak vs Vehicles
+		Description: actor-zgattlingcan.description
 		BuildDuration: 650
 	Building:
 	Health:
@@ -765,7 +765,7 @@ zguncan:
 		BuildPaletteOrder: 45
 		Prerequisites: barracks, ~mmzrobots
 		Queue: Defence, RADefence
-		Description: Basic Defence.\n  Strong vs Vehicles\n  Weak vs Infantry
+		Description: actor-zguncan.description
 		BuildDuration: 650
 	Building:
 	Health:
@@ -815,7 +815,7 @@ zhotwizer:
 		BuildPaletteOrder: 45
 		Prerequisites: barracks, zhq, ~mmzrobots
 		Queue: Defence, RADefence
-		Description: Long Range Defence.\n  Strong vs Ground\n  Weak vs Aircraft
+		Description: actor-zhotwizer.description
 		BuildDuration: 900
 	Building:
 	Health:
@@ -865,7 +865,7 @@ zmissilecan:
 		BuildPaletteOrder: 45
 		Prerequisites: barracks, zhq, ~mmzrobots
 		Queue: Defence, RADefence
-		Description: Anti Tank Defence.\n  Strong vs Vehicles, Aircraft\n  Weak vs Aircraft
+		Description: actor-zmissilecan.description
 		BuildDuration: 850
 	Building:
 	Health:
@@ -912,7 +912,7 @@ zgrenadebox:
 		Queue: Defence, RADefence
 		BuildPaletteOrder: 175
 		Prerequisites: zbarracks, ~mmzrobots
-		Description: Trains Attack Dogs.
+		Description: actor-zgrenadebox.description
 		BuildDuration: 400
 	Valued:
 		Cost: 400
@@ -959,7 +959,7 @@ zmcv:
 		Prerequisites: zweap, zfix, ~mmzrobots
 		Queue: Building, RABuilding
 		BuildDurationModifier: 100
-		Description: Deploys into another Construction Yard.\n  Unarmed
+		Description: actor-zmcv.description
 		BuildDuration: 4500
 	Selectable:
 		Priority: 4
@@ -1070,7 +1070,7 @@ zfort:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 1000
 		Prerequisites: ~wip-content
-		Description: Builds structures
+		Description: actor-zfort.description
 	ProvidesPrerequisite@buildingname:
 	ProvidesPrerequisite@factionZ:
 		Prerequisite: mmzrobots
@@ -1232,7 +1232,7 @@ zfort.zgattlingcan:
 		Prerequisites: barracks, ~mmzrobots
 		BuildPaletteOrder: 10
 		Queue: Addon.Zfort
-		Description: Adds Gattling Cannons to Fort
+		Description: actor-zgattlingcan.description
 		BuildDurationModifier: 100
 		BuildDuration: 1000
 	Valued:
@@ -1251,7 +1251,7 @@ zfort.zguncan:
 		Prerequisites: barracks, ~mmzrobots
 		BuildPaletteOrder: 10
 		Queue: Addon.Zfort
-		Description: Adds Gattling Gun to Fort
+		Description: actor-zguncan.description
 		BuildDurationModifier: 100
 		BuildDuration: 1000
 	Valued:
@@ -1270,7 +1270,7 @@ zfort.zhotwizer:
 		Prerequisites: barracks, ~mmzrobots
 		BuildPaletteOrder: 10
 		Queue: Addon.Zfort
-		Description: Adds Hotwizers to Fort
+		Description: actor-zhowitizer.description
 		BuildDurationModifier: 100
 		BuildDuration: 1500
 	Valued:
@@ -1289,7 +1289,7 @@ zfort.zmissilecan:
 		Prerequisites: barracks, ~mmzrobots
 		BuildPaletteOrder: 10
 		Queue: Addon.Zfort
-		Description: Adds Missiles Guns to Fort
+		Description: actor-zmissilecan.description
 		BuildDurationModifier: 100
 		BuildDuration: 1500
 	Valued:
@@ -1319,7 +1319,7 @@ zbarracks:
 		BuildPaletteOrder: 30
 		Prerequisites: zfort, ~mmzrobots
 		Queue: Building, RABuilding
-		Description: Trains infantry
+		Description: actor-zbarracks.description
 		BuildDurationModifier: 100
 		BuildDuration: 750
 	Building:
@@ -1379,7 +1379,7 @@ zweap:
 		BuildPaletteOrder: 30
 		Prerequisites: zbarracks, ~mmzrobots
 		Queue: Building, RABuilding
-		Description: Trains infantry
+		Description: actor-zweap.description
 		BuildDurationModifier: 100
 		BuildDuration: 1500
 	Building:
@@ -1436,7 +1436,7 @@ zhq:
 		BuildPaletteOrder: 70
 		Prerequisites: zweap, ~mmzrobots
 		Queue: Building, RABuilding
-		Description: Provides radar and Air Strike support power.\nUnlocks higher-tech units and buildings.\nRequires power to operate.
+		Description: actor-zhq.description
 		BuildDuration: 1500
 		BuildDurationModifier: 100
 	Building:
@@ -1478,7 +1478,7 @@ zfix:
 		BuildPaletteOrder: 60
 		Prerequisites: zweap, ~mmzrobots
 		Queue: Building, RABuilding
-		Description: Repairs vehicles
+		Description: actor-zfix.description
 		BuildDurationModifier: 100
 		BuildDuration: 1500
 	Building:

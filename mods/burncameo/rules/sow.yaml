@@ -4,7 +4,7 @@ World:
 		InternalName: sow
 		Game: State of War
 		Side: State of War
-		Description: United Federation of Seven Continents\nFeatures:\n- Generated Income\n- Use Advancer to Upgrade and Repair Buildings\nSupport Powers: Asteroids, Fighter, Bomber, Tripler
+		Description: faction-ufsc-sow.description
 	####################################################################################################
 	#		State of War
 	####################################################################################################  
@@ -382,7 +382,7 @@ sowlightfactory:
 		BuildPaletteOrder: 5
 		BuildDurationModifier: 25
 		Queue: Building, RABuilding
-		Description: Produces Light Tanks
+		Description: actor-sowlightfactory.description
 	Building:
 		Footprint: =xx= =xx=
 		Dimensions: 4,2
@@ -509,7 +509,7 @@ sowmediumfactory:
 		BuildPaletteOrder: 6
 		BuildDurationModifier: 25
 		Queue: Building, RABuilding
-		Description: Produces Light Tanks\nCan produce Medium Tanks after research
+		Description: actor-sowmediumfactory.description
 	-MustBeDestroyed:
 	Building:
 		Footprint: xxx= xxx= xxx=
@@ -620,7 +620,7 @@ sowheavyfactory:
 		BuildPaletteOrder: 7
 		BuildDurationModifier: 25
 		Queue: Building, RABuilding
-		Description: Produces Light Tanks\nCan produce Medium and Heavy Tanks after research
+		Description: actor-sowheavyfactory.description
 		Prerequisites: heavyunits, ~techlevel.low, ~mmsow
 		LowPowerModifier: 300
 	Armor:
@@ -736,7 +736,7 @@ sowabcfactory:
 		BuildDuration: 3000
 		BuildDurationModifier: 50
 		Queue: Building, RABuilding
-		Description: Produces Atomic Bomb Carriers
+		Description: actor-sowabcfactory.description
 		Prerequisites: stateofwar, ~mmsow
 	Building:
 		Footprint: xxx= xxx= xxx=
@@ -807,7 +807,7 @@ sowradar:
 		BuildDuration: 3000
 		BuildDurationModifier: 50
 		Queue: Building, RABuilding
-		Description: Provides radar and air supports\nProvides air support only once
+		Description: actor-sowradar.description
 		Prerequisites: sowresearch, sowlightfactory, ~techlevel.low, ~mmsow
 	Building:
 		Footprint: == xx x=
@@ -857,7 +857,7 @@ sowradar:
 		Names:
 			1: Fighter-Bomber
 		Descriptions:
-			1: Quick jet dropping bomb on its target
+			1: power-fighterbomber.description
 		EndChargeSpeechNotification: sowfighterready
 		SelectTargetSpeechNotification: SelectTarget
 		CameraActor: camera
@@ -889,7 +889,7 @@ sowradar:
 		Names:
 			1: Hercules
 		Descriptions:
-			1: Slow carpet bomber
+			1: power-hercules.description
 		EndChargeSpeechNotification: sowbomberready
 		SelectTargetSpeechNotification: SelectTarget
 		AllowMultiple: False
@@ -925,7 +925,7 @@ sowradar:
 		Names:
 			1: Tripler
 		Descriptions:
-			1: Drops 9 massive fire circles on its target\nSlow and Extremely vulnerable
+			1: power-tripler.description
 		EndChargeSpeechNotification: sowtriplerready
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
@@ -977,7 +977,7 @@ sowgoldmine:
 		BuildDuration: 500
 		BuildDurationModifier: 100
 		Queue: Building, RABuilding
-		Description: Provides Passive Income\nStores 1000 resources
+		Description: actor-sowgoldmine.description
 	Building:
 		Footprint: ==== xxxx =xx=
 		Dimensions: 4,3
@@ -1154,7 +1154,7 @@ sowpower:
 		BuildDuration: 750
 		BuildLimit: 1
 		Queue: Building, RABuilding
-		Description: Accelerates build times\Doubles all Research Points for each Research Center\nCan be only built once
+		Description: actor-sowpower.description
 	Building:
 		Footprint: xx= xx= xx=
 		Dimensions: 3,3
@@ -1233,7 +1233,7 @@ sowresearch:
 		BuildPaletteOrder: 4
 		BuildDurationModifier: 25
 		Queue: Building, RABuilding
-		Description: Provides Research Points (Power) that is used for Advanced Buildings and Upgrades\nUnlocks upgrades
+		Description: actor-sowresearch.description
 		Prerequisites: ~techlevel.low, ~mmsow
 	Building:
 		Footprint: =xx= =xx=
@@ -1344,7 +1344,7 @@ sowmechfactory:
 		BuildDurationModifier: 100
 		BuildDuration: 2250
 		Queue: Building, RABuilding
-		Description: Produces Powerful Walkers
+		Description: actor-sowmechfactory.description
 		Prerequisites: stateofwar, ~techlevel.high, ~mmsow
 	Building:
 		Footprint: =xx= =xx= =xx=
@@ -1415,7 +1415,7 @@ sowasteroidstation:
 		BuildDuration: 3000
 		Prerequisites: sowresearch, sowmechfactory, ~techlevel.superweapons, !swasteroid, ~mmsow
 		Queue: Building, RABuilding
-		Description: Provides superweapon\nProduces Walkers Mk.2\nUnlocks all vehicles\nStores 2000 resources\nIncreases all income by 25%
+		Description: actor-sowasteroidstation.description
 	Building:
 		Footprint: ==== ==== =xx= xxxx
 		Dimensions: 4,4
@@ -1470,7 +1470,7 @@ sowasteroidstation:
 		Names:
 			1: Asteroids
 		Descriptions:
-			1: Sends Asteroids out of sky to fall down. Due to it being sent out of sky It cannot be aimed precisely at selected target.
+			1: power-asteroids.description
 		Prerequisites:
 			1: ~techlevel.superweapons
 		ChargeInterval: 9000
@@ -1525,7 +1525,7 @@ sow_gun_tower:
 		BuildDurationModifier: 50
 		Prerequisites: sowlightfactory, ~mmsow
 		Queue: Defence, RADefence
-		Description: Basic defence against Light vehicles and infantry
+		Description: actor-sow_gun_tower.description
 	Building:
 		BuildSounds: sow_turret_place.aud
 	Health:
@@ -1580,7 +1580,7 @@ sow_antiair_tower:
 		BuildDurationModifier: 50
 		Prerequisites: sowlightfactory, factory_sowupgrade_3, ~techlevel.low, ~mmsow
 		Queue: Defence, RADefence
-		Description: Basic Air defence\nDetector
+		Description: actor-sow_antiair_tower.description
 	Building:
 		BuildSounds: sow_turret_place.aud
 	Health:
@@ -1637,7 +1637,7 @@ sow_plasma_tower:
 		Prerequisites: sowmediumfactory, ~techlevel.low, ~mmsow
 		BuildDurationModifier: 50
 		Queue: Defence, RADefence
-		Description: Advanced ground defence
+		Description: actor-sow_plasma_tower.description
 	Building:
 		BuildSounds: sow_turret_place.aud
 	Health:
@@ -1693,7 +1693,7 @@ sow_minigun_tower:
 		Prerequisites: sowheavyfactory, ~techlevel.medium, ~mmsow
 		Queue: Defence, RADefence
 		BuildDurationModifier: 50
-		Description: Advanced Long Range Ground defence
+		Description: actor-sow_minigun_tower.description
 	Building:
 		Footprint: x x
 		Dimensions: 1,2
@@ -1753,7 +1753,7 @@ sow_defragmenter_tower:
 		Prerequisites: sowheavyfactory, hta_unlock, ~techlevel.high, ~mmsow
 		Queue: Defence, RADefence
 		BuildDurationModifier: 50
-		Description: Advanced Long Range Ground defence
+		Description: actor-sow_defragmenter_tower.description
 	Building:
 		Footprint: x x
 		Dimensions: 1,2
@@ -1812,7 +1812,7 @@ sow_vulcano_tower:
 		BuildDurationModifier: 50
 		Prerequisites: sowheavyfactory, hte_unlock, ~techlevel.high, ~mmsow
 		Queue: Defence, RADefence
-		Description: Advanced Air Defence\nDetector
+		Description: actor-sow_vulcano_tower.description
 	Building:
 		Footprint: x x
 		Dimensions: 1,2
@@ -1870,7 +1870,7 @@ sow_lt_cannon:
 		BuildPaletteOrder: 1
 		Queue: Infantry.Sow
 		BuildDurationModifier: 100
-		Description: Light Main battle tank
+		Description: actor-sow_lt_cannon.description
 	Mobile:
 		Speed: 80
 		TurnSpeed: 40
@@ -1928,7 +1928,7 @@ sow_lt_flame:
 		BuildPaletteOrder: 2
 		Queue: Infantry.Sow
 		BuildDurationModifier: 100
-		Description: Light Anti-Infantry Vehicle
+		Description: actor-sow_lt_flame.description
 		Prerequisites: factory_sowupgrade
 	Mobile:
 		Speed: 80
@@ -1983,7 +1983,7 @@ sow_lt_siege:
 		BuildPaletteOrder: 3
 		Queue: Infantry.Sow
 		BuildDurationModifier: 100
-		Description: Light Long Range Vehicle
+		Description: actor-sow_lt_siege.description
 		Prerequisites: factory_sowupgrade_1
 	# Selectable:
 	# 	Bounds: 45482, 45482
@@ -2042,7 +2042,7 @@ sow_lt_special:
 		BuildPaletteOrder: 4
 		Queue: Infantry.Sow
 		BuildDurationModifier: 100
-		Description: Light Anti-Tank vehicle
+		Description: actor-sow_lt_special.description
 		Prerequisites: factory_sowupgrade_2
 	Mobile:
 		Speed: 80
@@ -2095,7 +2095,7 @@ sow_lt_antiair:
 		BuildPaletteOrder: 5
 		Queue: Infantry.Sow
 		BuildDurationModifier: 100
-		Description: Light Anti-Air vehicle\nDetector
+		Description: actor-sow_lt_antiair.description
 		Prerequisites: factory_sowupgrade_3
 #	Selectable:
 #		Bounds: 45482, 45482
@@ -2158,7 +2158,7 @@ sow_mt_cannon:
 		BuildPaletteOrder: 40
 		Queue: Vehicle.Sow
 		BuildDurationModifier: 75
-		Description: Main Battle tank
+		Description: actor-sow_mt_cannon.description
 		Prerequisites: mta_unlock
 	Mobile:
 		Speed: 60
@@ -2214,7 +2214,7 @@ sow_mt_flame:
 		BuildPaletteOrder: 40
 		Queue: Vehicle.Sow
 		BuildDurationModifier: 75
-		Description: Medium Anti-Infantry vehicle
+		Description: actor-sow_mt_flame.description
 		Prerequisites: factory_sowupgrade, mtb_unlock
 	Mobile:
 		Speed: 60
@@ -2270,7 +2270,7 @@ sow_mt_siege:
 		BuildPaletteOrder: 40
 		Queue: Vehicle.Sow
 		BuildDurationModifier: 75
-		Description: Medium Long Range vehicle
+		Description: actor-sow_mt_siege.description
 		Prerequisites: factory_sowupgrade_1, mtc_unlock
 	Mobile:
 		Speed: 60
@@ -2326,7 +2326,7 @@ sow_mt_special:
 		BuildPaletteOrder: 40
 		Queue: Vehicle.Sow
 		BuildDurationModifier: 75
-		Description: Medium Anti-Tank vehicle
+		Description: actor-sow_mt_special.description
 		Prerequisites: factory_sowupgrade_2, mtd_unlock
 	Mobile:
 		Speed: 60
@@ -2382,7 +2382,7 @@ sow_mt_antiair:
 		BuildPaletteOrder: 40
 		Queue: Vehicle.Sow
 		BuildDurationModifier: 75
-		Description: Medium Anti-Air vehicle\nDetector
+		Description: actor-sow_mt_antiair.description
 		Prerequisites: factory_sowupgrade_3, mte_unlock
 	Mobile:
 		Speed: 60
@@ -2443,7 +2443,7 @@ sow_ht_cannon:
 		BuildPaletteOrder: 40
 		Queue: Aircraft.Sow
 		BuildDurationModifier: 50
-		Description: Heavy Main Battle Tank
+		Description: actor-sow_ht_cannon.description
 		Prerequisites: hta_unlock
 	Mobile:
 		Speed: 40
@@ -2503,7 +2503,7 @@ sow_ht_flame:
 		BuildPaletteOrder: 40
 		Queue: Aircraft.Sow
 		BuildDurationModifier: 50
-		Description: Heavy Anti-Infantry vehicle
+		Description: actor-sow_ht_flame.description
 		Prerequisites: factory_sowupgrade, htb_unlock
 	Mobile:
 		Speed: 40
@@ -2563,7 +2563,7 @@ sow_ht_siege:
 		BuildPaletteOrder: 40
 		Queue: Aircraft.Sow
 		BuildDurationModifier: 50
-		Description: Heavy Long Range vehicle
+		Description: actor-sow_ht_siege.description
 		Prerequisites: factory_sowupgrade_1, htc_unlock
 	Mobile:
 		Speed: 40
@@ -2623,7 +2623,7 @@ sow_ht_special:
 		BuildPaletteOrder: 40
 		Queue: Aircraft.Sow
 		BuildDurationModifier: 50
-		Description: Heavy Anti-Tank vehicle
+		Description: actor-sow_ht_special.description
 		Prerequisites: factory_sowupgrade_2, htd_unlock
 	Mobile:
 		Speed: 40
@@ -2682,7 +2682,7 @@ sow_ht_antiair:
 		BuildPaletteOrder: 40
 		Queue: Aircraft.Sow
 		BuildDurationModifier: 50
-		Description: Heavy Anti-Air vehicle\nDetector
+		Description: actor-sow_ht_antiair.description
 		Prerequisites: factory_sowupgrade_3, hte_unlock
 	Mobile:
 		Speed: 40
@@ -2753,7 +2753,7 @@ sow_abc:
 		BuildPaletteOrder: 2
 		Queue: Aircraft.Sow
 		BuildDurationModifier: 50
-		Description: Suicidal Unit\nWon't explode if disabled
+		Description: actor-sow_abc.description
 	Mobile:
 		Speed: 80
 		TurnSpeed: 24
@@ -3057,7 +3057,7 @@ sow_mech_avenger:
 		Queue: Naval.Sow
 		BuildPaletteOrder: 20
 		BuildDurationModifier: 50
-		Description: Walker equipped with next generation of 8-Missile Ground-To-Air Missiles\nMissiles offering instant fire and reliable lock-on with decent accuracy\nStrong vs Air\nWeak vs Ground\nDetector
+		Description: actor-sow_mech_avenger.description
 	Mobile:
 		TurnSpeed: 28
 		Speed: 50
@@ -3116,7 +3116,7 @@ sow_mech_avenger_mk2:
 		Queue: wmk2.sow
 		BuildPaletteOrder: 1
 		BuildDurationModifier: 50
-		Description: Upgraded Avenger Walker equipped with third generation of Anti-Air offering constant firing\nmechanisms shooting up to 16 missiles before having to go through reload\n- Slightly Increased Speed\n- Increased Range\n- Can fire constantly without reload\n - Missiles Tracking is enormous\n- More vulnerable than regular Avenger\n- Repairs itself over time\n- Immune to Mind Control\nDetector
+		Description: actor-sow_mech_avenger_mk2.description
 		BuildLimit: 1
 	Health:
 		HP: 100000
@@ -3178,7 +3178,7 @@ sow_mech_kodiak:
 		Queue: Naval.Sow
 		BuildPaletteOrder: 19
 		BuildDurationModifier: 50
-		Description: Durable Multipurpose Walker with dual Heating Laser weapons\nOffers decent range and damage
+		Description: actor-sow_mech_kodiak.description
 	Mobile:
 		TurnSpeed: 28
 		Speed: 50
@@ -3232,7 +3232,7 @@ sow_mech_kodiak_mk2:
 		Queue: wmk2.sow
 		BuildPaletteOrder: 1
 		BuildDurationModifier: 50
-		Description: Upgraded Kodiak Walker offers massive armor plating making this Walker Ultimate Combat Unit with Overclocked Heating Lasers\n- Decreased Speed\n- Increased Range\n - Slower Rate of Fire\n - Overclocked Lasers causes Area Damage\n - Most Durable Unit of Overmind\n- Can be Repaired by Advancer
+		Description: actor-sow_mech_kodiak_mk2.description
 		BuildLimit: 1
 	Health:
 		HP: 500000
@@ -3288,7 +3288,7 @@ sow_mech_gatling:
 		Queue: Naval.Sow
 		BuildPaletteOrder: 18
 		BuildDurationModifier: 50
-		Description: Low-Mobility Walker with extreme long range outranging most units and turrets\nDual Minigun is used to damage turrets and buildings from long range\nWon't do much against heavily armored targets\nGroup of these can take down entire bases in a moment\nStrong vs Buildings\nWeak va Fast Units
+		Description: actor-sow_mech_gatling.description
 	Mobile:
 		TurnSpeed: 28
 		Speed: 60
@@ -3347,7 +3347,7 @@ sow_mech_gatling_mk2:
 		Queue: wmk2.sow
 		BuildPaletteOrder: 3
 		BuildDurationModifier: 50
-		Description: Upgraded Gatling Walker capable of running at incredible speeds\n- Massively Increased Speed\n- Increased Fire Rate\n- Increased Range\n- Can shoot down Air units effectively\n- Much more vulnerable than regular Gatling\n- Can be Repaired by Advancer\n- Immune to Mind Control\nDetector
+		Description: actor-sow_mech_gatling_mk2.description
 		BuildLimit: 1
 #	Selectable:
 #		Bounds: 101930, 87381
@@ -3415,7 +3415,7 @@ sow_mech_jaguar:
 		Queue: Naval.Sow
 		BuildPaletteOrder: 18
 		BuildDurationModifier: 50
-		Description: Short Ranged Walker with 4 Deadly Blasters deals massive damage up close.\nStrong vs Infantry, Light armor\nWeak vs Long Range, Air
+		Description: actor-sow_mech_jaguar.description
 	Mobile:
 		TurnSpeed: 28
 		Speed: 60
@@ -3467,7 +3467,7 @@ sow_mech_jaguar_mk2:
 		Queue: wmk2.sow
 		BuildPaletteOrder: 3
 		BuildDurationModifier: 50
-		Description: Upgraded Jaguar Walker utilizing Stealth Technology and massive damage against Structures\n- Increased Speed and manuevarability\n- Increased Damage against Structures\n - Cloaked\n - More vulnerable than regular Jaguar\n- Repairs itself over time\n- Immune to Mind Control
+		Description: actor-sow_mech_jaguar_mk2.description
 		BuildLimit: 1
 #	Selectable:
 #		Bounds: 101930, 87381
@@ -3542,7 +3542,7 @@ sow_mech_achilles:
 		Queue: Naval.Sow
 		BuildPaletteOrder: 18
 		BuildDurationModifier: 50
-		Description: Exceptionally Mobile Walker using Claws to deal massive damage on melee range\nDecimates almost any turret or ground unit on single touch\nShreds buildings on few hits too\nAutoproduction is very fast on this Walker\nStrong vs Ground\nWeak vs Air and Kiting
+		Description: actor-sow_mech_achilles.description
 	Mobile:
 		TurnSpeed: 40
 		Speed: 75
@@ -3592,7 +3592,7 @@ sow_mech_achilles_mk2:
 		Queue: wmk2.sow
 		BuildPaletteOrder: 3
 		BuildDurationModifier: 50
-		Description: Upgraded Achilles Walker is equipped with Atomic Bomb that will detonate upon its death\n Note: Detonation will happen even if unit is disabled\n- Massively Increased Speed and manuevarability\n- Can be Repaired by Advancer\n- Repairs itself over time\n- Immune to Mind Control\nDetector
+		Description: actor-sow_mech_achilles_mk2.description
 		BuildLimit: 1
 #	Selectable:
 #		Bounds: 101930, 87381
@@ -3646,7 +3646,7 @@ sow_mcv:
 		Queue: Building, RABuilding
 		BuildDuration: 1500
 		BuildDurationModifier: 100
-		Description: Mobile unit that deploys into Headquarters\nGrants 75 Research Points\nEach Headquarters provides One Advancer\nProvides some passive income\n\nAdvancer:\nFlying unit that can upgrade, repair and destroy buildings and units\nDetector
+		Description: actor-sow_mcv.description
 		Prerequisites: sowgoldmine, ~mmsow
 	Selectable:
 		DecorationBounds: 1536, 1536
@@ -3703,7 +3703,7 @@ satelliteprotection_mk1:
 		BuildDuration: 3000
 		BuildDurationModifier: 50
 		Prerequisites: sowresearch, ~!satelliteprotection_mk1, ~mmsow
-		Description: Protects non-defensive buildings from aerial attacks\nHigh damage output, long cooldown
+		Description: actor-satelliteprotection_mk1.description
 	Valued:
 		Cost: 2000
 	Power:
@@ -3723,7 +3723,7 @@ satelliteprotection_mk2:
 		BuildDuration: 3000
 		BuildDurationModifier: 50
 		Prerequisites: sowresearch, ~satelliteprotection_mk1, ~!satelliteprotection_mk2, stateofwar, ~mmsow
-		Description: Protects non-defensive buildings from aerial attacks\nModerate damage output, short cooldown
+		Description: actor-satelliteprotection_mk2.description
 	Power:
 		Amount: -300
 	Valued:
@@ -3742,7 +3742,7 @@ heavyunits:
 		Queue: Upgrades
 		BuildDuration: 1500
 		BuildDurationModifier: 50
-		Description: Unlocks Heavy Units to be researched inside Heavy Factories.
+		Description: actor-heavyunits.description
 		Prerequisites: sowresearch, ~!heavyunits, ~mmsow
 	Power:
 		Amount: -400
@@ -3762,7 +3762,7 @@ sow_invader:
 		Queue: Upgrades
 		BuildDuration: 1500
 		BuildDurationModifier: 50
-		Description: Upgrades Advancers into Invaders\nGives ability to attack buildings and units\nEnhances Durability and Speed
+		Description: actor-sow_invader.description
 		Prerequisites: sowresearch, ~!sow_invader, ~mmsow
 	Power:
 		Amount: -50
@@ -3782,7 +3782,7 @@ sow_invader_mk2:
 		Queue: Upgrades
 		BuildDuration: 1500
 		BuildDurationModifier: 50
-		Description: Upgrades Invaders into Mk.2 Invaders\nMakes these units an effective predators\nGreatly Enhances Durability and Speed
+		Description: actor-sow_invader_mk2.description
 		Prerequisites: sowresearch, ~sow_invader, ~!sow_invader_mk2, ~mmsow
 	Power:
 		Amount: -150
@@ -3803,7 +3803,7 @@ sowovercharge:
 		BuildDuration: 1500
 		BuildDurationModifier: 50
 		Prerequisites: ~!sowovercharge, sowpower, ~mmsow
-		Description: Overcharges Power Plant doubling its effectivity\nReveals its location to all players\nNukes after death
+		Description: actor-sowovercharge.description
 	Valued:
 		Cost: 2000
 	Power:
@@ -3822,7 +3822,7 @@ advancedairstrikes:
 		Queue: Upgrades
 		BuildDuration: 1500
 		BuildDurationModifier: 50
-		Description: Unlocks Bomber and Tripler support powers for Radar.
+		Description: actor-advancedairstrikes.description
 		Prerequisites: sowresearch, ~!advancedairstrikes, sowradar, ~mmsow
 	Power:
 		Amount: -150
@@ -3846,7 +3846,7 @@ goldmineupgrade:
 		Queue: Upgrades
 		BuildDuration: 1500
 		BuildDurationModifier: 50
-		Description: Increases the generated Income from all Gold Mines by 30%
+		Description: actor-goldmineupgrade.description
 		Prerequisites: sowresearch, sowgoldmine, ~!goldmineupgrade, ~mmsow
 	Power:
 		Amount: -100
@@ -3873,7 +3873,7 @@ goldmineupgrade2:
 		Queue: Upgrades
 		BuildDuration: 3000
 		BuildDurationModifier: 50
-		Description: Increases the generated Income from Maxed Gold Mines by 60%
+		Description: actor-goldmineupgrade2.description
 		Prerequisites: sowresearch, sowgoldmine, ~goldmineupgrade, ~!goldmineupgrade2, ~mmsow
 	Valued:
 		Cost: 2000
@@ -3894,7 +3894,7 @@ researchupgrade:
 		Queue: Upgrades
 		BuildDuration: 1500
 		BuildDurationModifier: 50
-		Description: Increases the Research points provided by all Research Centers by 20%
+		Description: actor-researchupgrade.description
 		Prerequisites: sowresearch, ~!researchupgrade, ~mmsow
 	Power:
 		Amount: -25
@@ -3914,7 +3914,7 @@ researchupgrade2:
 		Queue: Upgrades
 		BuildDuration: 3000
 		BuildDurationModifier: 50
-		Description: Increases the Research points provided by Maxed Research Centers by 35%
+		Description: actor-researchupgrade2.description
 		Prerequisites: sowresearch, ~researchupgrade, ~!researchupgrade2, ~mmsow
 	Power:
 		Amount: -50
@@ -3934,7 +3934,7 @@ stateofwar:
 		Queue: Upgrades
 		BuildDuration: 3000
 		BuildDurationModifier: 50
-		Description: Removes Build Time From Turrets but increases their cost by 50%\nUnlocks late game technologies
+		Description: actor-stateofwar.description
 		Prerequisites: sowresearch, ~!stateofwar, sowheavyfactory, ~mmsow
 	Power:
 		Amount: -500
@@ -3954,7 +3954,7 @@ mta_unlock:
 		Queue: Addons
 		BuildDuration: 2000
 		BuildDurationModifier: 50
-		Description: Research vehicle to be ready for production
+		Description: actor-mta_unlock.description
 		Prerequisites: sowmediumfactory, ~!mta_unlock, ~mmsow
 	Power:
 		Amount: -50

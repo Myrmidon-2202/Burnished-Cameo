@@ -4,44 +4,43 @@ World:
 		InternalName: imperium
 		Game: Dark Reign
 		Side: Dark Reign
-		Description: Imperium from DR TFoW\nSupport powers: Rift Generator, Teleportation\nVery technologically advanced faction, their army widely uses hovercraft technology,\n they also use quite sadistic weapons to eliminate their enemies,\n they can also create decoys to confuse the enemy\n Enemies: Freedom Guard, Xenites, Tograns
+		Description: faction-darkreign-imperium.description
 	FactionCA@freedomguard:
 		Name: Freedom Guard
 		InternalName: freedomguard
 		Game: Dark Reign
 		Side: Dark Reign
-		Description: Freedom Guard from DR TFoW\nSupport powers: Nothing\n\nSuperweapon unit: Shock Wave\nThe Freedom Guard uses a wide arsenal of units,\n among them it has camouflage technology,\n phase technology, and railgun weaponry, it has a wide tactical variety \n Enemies: Imperium, ShadowHand
+		Description: faction-darkreign-freedomguard.description
 	FactionCA@shadowhand:
 		Name: ShadowHand
 		InternalName: shadowhand
 		Game: Dark Reign
 		Side: Dark Reign
-		Description: ShadowHand from DR RoSH\nSupport powers: Rift Generator\nSuperweapon unit: EMP Device\nThe Elite of the Imperium, share some technologies with the Imperium,\n however Shadowhand's arsenal is cybernetic and heavier, most of their strong units require an AI called Osiris\n Enemies: Freedom Guard, Xenites
+		Description: faction-darkreign-shadowhand.description
 	FactionCA@xenite:
 		Name: Xenites
 		InternalName: xenite
 		Game: Dark Reign
 		Side: Dark Reign
-		Description: Xenite from DR RoSH\nSupport powers: Nothing\nSuperweapon unit: Shock Wave\n Originally from the planet Minevah and allies of the Freedom Guard, they share a lot of Freedom Guard technology, \n the faction uses Minevah creatures instead of heavy tanks, due to the lack of technology of the Railguns, they also use variants of Freedom Guard units somewhat more advanced.\n Enemies: Imperium, ShadowHand
+		Description: faction-darkreign-xenite.description
 	FactionCA@togran:
 		Name: Tograns
 		InternalName: togran
 		Game: Dark Reign
 		Side: Dark Reign
-		Description: Freedom Guard from Fanmade, Auran\nSupport powers: Nothing\nThe Arsenal comes from units not used by Auran, the game developer, so the units are not canon.\nThe Tograns are a very little militarized religion, they really were dedicated to developing the Togra project,\n they would not develop an army until the conflict between the Imperium and the Freedom Guard ended with the leader of the Tograns.\n Enemies: Imperium, Freedom Guard
+		Description: faction-darkreign-togran.description
 	FactionCA@aterrorist:
 		Name: Terrorists
 		InternalName: aterrorist
 		Game: Dark Reign
 		Side: Dark Reign
-		Description: Terrorists from Auran\nSupport powers: Nothing\nSpecial Faction, uses Guerrilla Tactics.\nUnits evolve when they rank up
-		Selectable: True
+		Description: faction-darkreign-terrorist.description
 	FactionCA@eodaliens:
 		Name: Aliens EOD
 		InternalName: eodaliens
 		Game: Dark Reign
 		Side: Dark Reign
-		Description: Aliens from DR EOD\nSupport powers: Nothing
+		Description: faction-darkreign-aliens.description
 		Selectable: True
 	# FactionCA@drdescendants:
 	# 	Name: Descendants
@@ -57,7 +56,7 @@ World:
 		RandomFactionMembers: imperium, freedomguard, shadowhand, xenite, togran, aterrorist, eodaliens, #drdescendants
 		Game: Dark Reign
 		Side: Random
-		Description: Random Faction\nA random faction from Dark Reign will be chosen when the game starts.
+		Description: faction-random-darkreign.description
 	####################################################################################################
 	#		MPSTARTUNITS
 	####################################################################################################
@@ -218,7 +217,7 @@ drpowr:
 	Buildable:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 10
-		Description: Provides power for other structures.\nRefines Ores and gems into credits
+		Description: actor-drpowr.description
 		Prerequisites: ~drhq
 	Valued:
 		Cost: 600 #300
@@ -301,7 +300,7 @@ drwaterl.imperium:
 		BuildPaletteOrder: 60
 		Prerequisites: drpowr, ~imperiumwater
 		Queue: Building, RABuilding
-		Description: Refines Ore and Gems\ninto credits.
+		Description: actor-drwater.description
 	Valued:
 		Cost: 1500 #1400
 	Tooltip:
@@ -379,7 +378,7 @@ drwaterl.freedom:
 		BuildPaletteOrder: 60
 		Prerequisites: drpowr, ~freedomwater
 		Queue: Building, RABuilding
-		Description: Refines Ore and Gems\ninto credits.
+		Description: actor-drwater.description
 	RenderSprites:
 		Image: drwaterl
 	FreeActor:
@@ -395,7 +394,7 @@ drwaterextract.freedomguard:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 120
 		Prerequisites: drfghq3, ~techlevel.medium, ~freedomwater
-		Description: Provides Passive income
+		Description: actor-drwaterextract.description
 	Valued:
 		Cost: 5000
 	HitShape:
@@ -435,7 +434,7 @@ drwaterextract.imperium:
 		BuildPaletteOrder: 120
 		Prerequisites: drihq3, ~techlevel.medium, ~imperiumwater
 		Queue: Building, RABuilding
-		Description: Provides Passive income
+		Description: actor-drwaterextract.description
 	RenderSprites:
 		Image: drwaterextract
 
@@ -516,7 +515,7 @@ drhoverfright.imperium:
 		BuildPaletteOrder: 15
 		Prerequisites: driweap2, drwaterl.imperium
 		Queue: Vehicle.Imperium, Vehicle.Shadowhand
-		Description: Collects Resources for processing.\n  Unarmed
+		Description: template-harvester.description
 	Mobile:
 		Locomotor: hover
 		TurnSpeed: 32
@@ -574,7 +573,7 @@ drspy.freedom:
 		Queue: Infantry.Freedom, Infantry.Xenite
 		BuildPaletteOrder: 25
 		Prerequisites: drfgbarr2
-		Description: Infiltrates enemy structures for intel or\nsabotage. Exact effect depends on the\nbuilding infiltrated.\nLoses disguise when attacking.\nCan detect spies.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft\n  Special Ability: Disguise
+		Description: actor-spy.description
 	Valued:
 		Cost: 1000
 	-Tooltip:
@@ -624,7 +623,7 @@ drspy.imperium:
 		Queue: Infantry.Imperium, Infantry.Shadowhand
 		BuildPaletteOrder: 25
 		Prerequisites: dribarr2
-		Description: Infiltrates enemy structures for intel or\nsabotage. Exact effect depends on the\nbuilding infiltrated.\nLoses disguise when attacking.\nCan detect spies.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft\n  Special Ability: Disguise
+		Description: actor-spy.description
 	Voiced:
 		VoiceSet: DRImperiumSpyVoice
 
@@ -642,7 +641,7 @@ drcamera:
 		Prerequisites: ~drpowr
 		Queue: Defence, RADefence
 		BuildDurationModifier: 40
-		Description: Detection purpose Turret
+		Description: actor-drcamera.description
 	RequiresBuildableArea:
 		AreaTypes: building
 		Adjacent: 8
@@ -991,7 +990,7 @@ drwall1:
 		BuildPaletteOrder: 10
 		Prerequisites: ~drpowr
 		Queue: Defence, RADefence
-		Description: Blocks Units
+		Description: actor-drwall1.description
 	Building:
 		Footprint: _x_ xx_
 		Dimensions: 3,2
@@ -1018,7 +1017,7 @@ drwall2:
 		BuildPaletteOrder: 10
 		Prerequisites: ~drpowr
 		Queue: Defence, RADefence
-		Description: Blocks Units
+		Description: actor-drwall2.description
 	Building:
 		Footprint: xx_ _x_
 		Dimensions: 3,2
@@ -1064,7 +1063,7 @@ mcv.imperium:
 		Prerequisites: drihq2, ~techlevel.medium, ~drpowr, ~mmimperium
 		Queue: Building, RABuilding
 		BuildDurationModifier: 40
-		Description: Deploys into another Construction Yard.\n  Unarmed
+		Description: actor-dre6.description
 	Selectable:
 		Priority: 4
 		DecorationBounds: 1536, 1536
@@ -1148,7 +1147,7 @@ drihq.imperium:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 1000
 		Prerequisites: ~wip-content
-		Description: Builds structures
+		Description: actor-drhq.description
 	ProvidesPrerequisite@factiongdi:
 		Prerequisite: mmimperium
 	ProvidesPrerequisite@Imperiumwater:
@@ -1165,7 +1164,7 @@ pscdrihq2:
 	Buildable:
 		BuildPaletteOrder: 10
 		Queue: drihq1.Imperium
-		Description: Upgrades the HQ for New Technology.
+		Description: actor-pscdrihq2.description
 		Prerequisites: ~imperiumtech, vehicleproduction, barracks
 	Valued:
 		Cost: 1000
@@ -1182,7 +1181,7 @@ pscdrihq3:
 	Buildable:
 		BuildPaletteOrder: 10
 		Queue: drihq2.Imperium
-		Description: Upgrades the HQ for New Technology.
+		Description: actor-pscdrihq3.description
 		Prerequisites: ~imperiumtech, dribarr2, driweap2
 	Valued:
 		Cost: 1500
@@ -1214,7 +1213,7 @@ dribarr.imperium:
 		BuildPaletteOrder: 40
 		Prerequisites: drhq, ~mmimperium
 		Queue: Building, RABuilding
-		Description: Produces infantry
+		Description: actor-drbarracks.description
 	Building:
 		Footprint: xxx x=x x==
 		Dimensions: 3,3
@@ -1279,7 +1278,7 @@ pscdribarr:
 	Buildable:
 		BuildPaletteOrder: 10
 		Queue: dribarr.Imperium
-		Description: Upgrades the Barracks for New Infantry.
+		Description: actor-pscdribarr.description
 		Prerequisites: drihq2
 	Valued:
 		Cost: 750
@@ -1312,7 +1311,7 @@ driweap.imperium:
 		BuildPaletteOrder: 40
 		Prerequisites: drwaterl.imperium, ~mmimperium
 		Queue: Building, RABuilding
-		Description: Produces vehicles
+		Description: actor-driweap.description
 	Building:
 		Footprint: xxx === ===
 		Dimensions: 3,3
@@ -1357,7 +1356,7 @@ pscdriweap:
 	Buildable:
 		BuildPaletteOrder: 10
 		Queue: driweap.Imperium
-		Description: Upgrades the Factory for New Vehicles.
+		Description: actor-pscdriweap.description
 		Prerequisites: ~imperiumtech, drihq2
 	Valued:
 		Cost: 1500
@@ -1388,7 +1387,7 @@ drihelipad.imperium:
 		BuildPaletteOrder: 50
 		Prerequisites: drihq3, ~imperiumtech
 		Queue: Building, RABuilding
-		Description: Rearms and\nrepairs Helicopters\nAllows for production of Helicopters
+		Description: template-airfield.description
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -1431,7 +1430,7 @@ driportal.imperium:
 		BuildPaletteOrder: 120
 		Prerequisites: drihq3, ~techlevel.superweapons, ~mmimperium
 		BuildLimit: 1
-		Description: Teleports a group of units across the\nmap for a short time.\nRequires power to operate.\nMaximum 1 can be built.\n  Special Ability: Chronoshift
+		Description: actor-driportal.description
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -1449,19 +1448,20 @@ driportal.imperium:
 	ChronoshiftPower@chronoshift:
 		OrderName: Chronoshift
 		PauseOnCondition: lowpower
-		Icons: 
+		Icons:
 			1: chrono
 		ChargeInterval: 3000
-		Names: 
-			1: Chronoshift
-		Descriptions: 
-			1: Teleports a group of units across\nthe map for 20 seconds.
+		Names:
+			1: Teleportation
+		Descriptions:
+			1: power-chronoshift.description
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
 		#BeginChargeSpeechNotification: ChronosphereCharging
 		#EndChargeSpeechNotification: ChronosphereReady
-		Duration: 400
-		KillCargo: true
+		Durations:
+			1: 400
+		KillCargo: false
 		DisplayRadarPing: True
 		SelectionCursor: ability
 		TargetCursor: ability
@@ -1504,7 +1504,7 @@ dririft.imperium:
 		BuildPaletteOrder: 100
 		Prerequisites: driportal.imperium, ~techlevel.high, ~!drriftlimit, ~mmimperium
 		Queue: Building, RABuilding
-		Description: Provides radar and Orbital Ion Cannon support power.\nRequires power to operate.
+		Description: actor-dririft.description
 	Building:
 		Footprint: X_ xx ==
 		Dimensions: 2,3
@@ -1531,7 +1531,7 @@ dririft.imperium:
 		Names:
 			1: Black Hole
 		Descriptions:
-			1: Initiate an Ion Cannon strike.\nApplies instant damage to a small area.
+			1: power-blackhole.description
 		BeginChargeSpeechNotification: IonCannonCharging
 		EndChargeSpeechNotification: IonCannonReady
 		SelectTargetSpeechNotification: SelectTarget
@@ -1573,7 +1573,7 @@ drplastur1:
 		Prerequisites: anypower, ~imperiumtech
 		Queue: Defence, RADefence
 		BuildDurationModifier: 40
-		Description: All-purpose defensive structure.\n  Strong vs Aircraft, Infantry\n  Weak vs Tanks
+		Description: actor-drplastur1.description
 	RequiresBuildableArea:
 		AreaTypes: building
 		Adjacent: 8
@@ -1617,7 +1617,7 @@ drneutronturret:
 		BuildPaletteOrder: 40
 		Prerequisites: drihq2, ~imperiumtech
 		Queue: Defence, RADefence
-		Description: Antiground defensive structure.\n  Strong vs Infantry, Tanks\n  Weak vs Aircraft
+		Description: actor-drneutronturret.description
 	RequiresBuildableArea:
 		AreaTypes: building
 		Adjacent: 8
@@ -1667,7 +1667,7 @@ driaaturret:
 		BuildPaletteOrder: 40
 		Prerequisites: ~drihq2
 		Queue: Defence, RADefence
-		Description: Antiground defensive structure.\n  Strong vs Infantry, Tanks\n  Weak vs Aircraft
+		Description: actor-driaaturret.description
 	RequiresBuildableArea:
 		AreaTypes: building
 		Adjacent: 8
@@ -1716,7 +1716,7 @@ drirep:
 		BuildPaletteOrder: 60
 		Prerequisites: vehicleproduction, ~imperiumtech
 		Queue: Building, RABuilding
-		Description: Repairs vehicles
+		Description: actor-drirep.description
 	Building:
 		Footprint: x+_ +++ _+x
 		Dimensions: 3,3
@@ -1759,7 +1759,7 @@ drihosp:
 		BuildPaletteOrder: 60
 		Prerequisites: barracks, ~imperiumtech
 		Queue: Building, RABuilding
-		Description: Repairs vehicles
+		Description: actor-drihosp.description
 	Building:
 		Footprint: x+_ +++ _+x
 		Dimensions: 3,3
@@ -1831,7 +1831,7 @@ drguardian:
 		BuildPaletteOrder: 10
 		Prerequisites: barracks
 		Queue: Infantry.Imperium
-		Description: Known as the Guardians of Order in the peaceful era\nbefore the Freedom Guard uprising, the basic\nImperium infantry unit is armed with a laser rifle\nand wears a powered armour suit.\n\nType: Walker\nSpeed: Slow\nWeapon: Laser Rifle\nRange: Short\nArmor: Light
+		Description: actor-drguardian.description
 		BuildDuration: 100
 		BuildDurationModifier: 100
 	Mobile:
@@ -1876,7 +1876,7 @@ drbion:
 		BuildPaletteOrder: 20
 		Prerequisites: barracks
 		Queue: Infantry.Imperium, Infantry.Shadowhand
-		Description: A fearless mechanical killer, the Bion is armoured like a walking tank.\nThis one-man cyborg death squad carries a massive plasma rifle,\nand can fire at both ground and air units.\n\nType: Walker\nSpeed: Slow\nWeapon: Plasma Rifle\nRange: Short\nArmor: Medium
+		Description: actor-drbion.description
 		BuildDuration: 300
 		BuildDurationModifier: 100
 	Mobile:
@@ -1928,7 +1928,7 @@ drext:
 		BuildPaletteOrder: 30
 		Prerequisites: barracks, dribarr2
 		Queue: Infantry.Imperium, Infantry.Shadowhand
-		Description: These infantry units are equipped with antigravity generators\nwhich allow them to hover over water.\nAs infantry, they can also move over steep gradients that are generally inaccessible to hover vehicles.\nExterminators are armed with chemical grenades that dissolve metal.\nThey are very effective at attacking armour.\n\nType: Hover/Walker\nSpeed: Medium\nWeapon: Chemical Grenade\nRange: Short\nArmor: Light
+		Description: actor-drext.description
 	Mobile:
 		Locomotor: hover
 		Speed: 126
@@ -1993,7 +1993,7 @@ drptnk:
 		Queue: Vehicle.Imperium
 		BuildDuration: 1020
 		BuildDurationModifier: 40
-		Description: Backbone of the Imperium war effort, the Plasma Tank\nis tough and packs a formidable plasma cannon. The Imperium overruns\nthe enemy with endless waves of these ruinous machines\n\nType: Hover\nSpeed: Medium\nWeapon: Plasma Canon\nRange: Medium\nArmor: Heavy
+		Description: actor-drptnk.description
 	Mobile:
 		Locomotor: hover
 		TurnSpeed: 32
@@ -2043,7 +2043,7 @@ drsctnk:
 		BuildPaletteOrder: 20
 		Prerequisites: vehicleproduction
 		Queue: Vehicle.Imperium, Vehicle.Shadowhand
-		Description: This fast moving hover vehicle is armed with a laser and\nis fairly effective against both infantry and armour. However, it is not very sturdy,\nand is used primarily for front line reconnaissance.\n\nType: Hover\nSpeed: Medium\nWeapon: Laser Canon\nRange: Medium\nArmor: Medium
+		Description: actor-drsctnk.description
 	Mobile:
 		Locomotor: hover
 		TurnSpeed: 44
@@ -2091,7 +2091,7 @@ drimpapc:
 		Queue: Vehicle.Imperium, Vehicle.Shadowhand
 		BuildDuration: 1020
 		BuildDurationModifier: 40
-		Description: Armed with a laser rifle, the Troop Transport can\ncarry up to five infantry units at a time.\n\nType: Hover\nSpeed: Medium\nWeapon: Laser Rifle\nRange: Short\nArmor: Medium
+		Description: actor-drimpapc.description
 	Mobile:
 		Locomotor: hover
 		TurnSpeed: 32
@@ -2145,7 +2145,7 @@ dramp:
 		BuildPaletteOrder: 40
 		Prerequisites: vehicleproduction, drihosp, ~techlevel.medium
 		Queue: Vehicle.Imperium
-		Description: The Imperium’s version of first aid, this lunatic\ncyborg fires darts into dying infantry units that boost the target’s\nhealth to full, but leave the unit poisoned so that its health will steadily decrease\nuntil the unit dies. The Amper can also be used as an offensive weapon,\nbringing slow death to enemy infantry.\n\nType: Walker\nSpeed: Slow\nWeapon: Serum\nRange: Short\nArmor: Light
+		Description: actor-dramp.description
 	Mobile:
 		Speed: 64
 		TurnSpeed: 40
@@ -2203,7 +2203,7 @@ drshreder:
 		BuildPaletteOrder: 40
 		Prerequisites: vehicleproduction, ~techlevel.medium
 		Queue: Vehicle.Imperium
-		Description: A huge, hovering nightmare, the Shredder tears through infantry like a runaway saw.\nAlthough it has no ranged attack, it is fast, heavily armoured, and inflicts severe damage on any\ninfantry units foolish enough to get near it.\n\nType: Hover\nSpeed: Medium\nWeapon: Blades\nRange: Contact\nArmor: Medium
+		Description: actor-drshreder.description
 		BuildDuration: 250
 		BuildDurationModifier: 100
 	Mobile:
@@ -2251,7 +2251,7 @@ drttnk:
 		Queue: Vehicle.Imperium
 		BuildDurationModifier: 100
 		BuildDuration: 1125
-		Description: The Tachion Tank is the largest, most heavily armed beast on the battlefield.\nIt’s a ponderous mountain of havoc that has the last word in any argument.\nWhen the enemy does manage to overpower one of these juggernaughts,\nit has the ability to selfdestruct and take any nearby units down with it.\n\nType: Hover\nSpeed: Medium\nWeapon: Tachion Cannon\nRange: Long\nArmor: Very Heavy
+		Description: actor-drttnk.description
 	Mobile:
 		Locomotor: hover
 		TurnSpeed: 32
@@ -2313,7 +2313,7 @@ drmad:
 		BuildPaletteOrder: 40
 		Prerequisites: driweap2, ~techlevel.medium
 		Queue: Vehicle.Imperium, Vehicle.Shadowhand
-		Description: The M.A.D. fires bladed orbs at enemy air units.\nLike the Freedom Guard Flak Jack, it cannot fire at ground units and\nshould be defended against land attack\n\nType: Hover\nSpeed: Medium\nWeapon: Bladed Orbs\nRange: Long\nArmor: Light
+		Description: actor-drmad.description
 	Mobile:
 		Locomotor: hover
 		TurnSpeed: 32
@@ -2361,7 +2361,7 @@ drscarab:
 		BuildPaletteOrder: 60
 		Prerequisites: driweap2, ~techlevel.medium
 		Queue: Vehicle.Imperium, Vehicle.Shadowhand
-		Description: This long range weapon fires a fragmenting projectile that breaks\ninto numerous burning particles over its target. This vehicle is slow and lightly\narmoured, but it can enclose itself in a retractable armoured exoskeleton when it gets in trouble.\nThe unit cannot fire while this armour is engaged, but can weather a considerable beating while waiting for reinforcements.\n\nType: Hover\nSpeed: Slow\nWeapon: Artillery\nRange: Extrme\nArmor: Medium
+		Description: actor-drscarab.description
 	Mobile:
 		Locomotor: hover
 		TurnSpeed: 20
@@ -2461,7 +2461,7 @@ drhostage:
 		Queue: Vehicle.Imperium
 		BuildDuration: 750
 		BuildDurationModifier: 100
-		Description: This diabolical Imperium vehicle snatches infantry units, lobotomises\nthem and converts them into Suicide Zombies. Shortly after the infantry unit is run over and captured,\nit is released, now under the player’s control and with a high-powered explosive strapped\nto its back. Enjoy.\n\nType: Wheeled\nSpeed: Medium\nWeapon: Vivisector\nRange: Contact\nArmor: Heavy
+		Description: actor-drhostage.description
 	Mobile:
 		Speed: 125
 		TurnSpeed: 48
@@ -2523,7 +2523,7 @@ drptnkfake:
 		Prerequisites: vehicleproduction, ~techlevel.medium
 		Queue: Vehicle.Imperium, Vehicle.Shadowhand
 		BuildDuration: 350
-		Description: Dummy unit that is used to immitate real one
+		Description: actor-drptnkfake.description
 		BuildDurationModifier: 40
 	Mobile:
 		Locomotor: hover
@@ -2573,7 +2573,7 @@ drimpapcfake:
 		Queue: Vehicle.Imperium, Vehicle.Shadowhand
 		BuildDuration: 300
 		BuildDurationModifier: 40
-		Description: Dummy unit that is used to immitate real one
+		Description: actor-drimpapcfake.description
 	Mobile:
 		Locomotor: hover
 		TurnSpeed: 32
@@ -2617,7 +2617,7 @@ drshrederfake:
 		BuildPaletteOrder: 1000
 		Prerequisites: vehicleproduction, ~techlevel.medium
 		Queue: Vehicle.Imperium, Vehicle.Shadowhand
-		Description: Dummy unit that is used to immitate real one
+		Description: actor-drshrederfake.description
 	Mobile:
 		Locomotor: hover
 		TurnSpeed: 60
@@ -2658,7 +2658,7 @@ drttnkfake:
 		Prerequisites: driweap2, ~techlevel.medium
 		Queue: Vehicle.Imperium, Vehicle.Shadowhand
 		BuildDurationModifier: 40
-		Description: Dummy unit that is used to immitate real one
+		Description: actor-drttnkfake.description
 	Mobile:
 		Locomotor: hover
 		TurnSpeed: 32
@@ -2703,7 +2703,7 @@ drmadfake:
 		BuildPaletteOrder: 1000
 		Prerequisites: driweap2, ~techlevel.medium
 		Queue: Vehicle.Imperium, Vehicle.Shadowhand
-		Description: Dummy unit that is used to immitate real one
+		Description: actor-drmadfake.description
 	Mobile:
 		Locomotor: hover
 		TurnSpeed: 32
@@ -2740,7 +2740,7 @@ drscarabfake:
 		BuildPaletteOrder: 1000
 		Prerequisites: driweap2, ~techlevel.medium
 		Queue: Vehicle.Imperium, Vehicle.Shadowhand
-		Description: Dummy unit that is used to immitate real one
+		Description: actor-drscarabfake.description
 	Mobile:
 		Locomotor: hover
 		TurnSpeed: 20
@@ -2781,7 +2781,7 @@ drcyclone:
 		BuildPaletteOrder: 120
 		Prerequisites: driweap2, drihelipad, ~techlevel.medium
 		Queue: Vehicle.Imperium, Vehicle.Shadowhand
-		Description: The Cyclone embodies the core of the Imperium aerial force.\nThe unit is fairly rugged and can engage both air and ground units.\nHowever, the Cyclone’s neutron cannon has a limited energy source and must\nrecharge at the Re-Arming Deck.\n\nType: Flyer\nSpeed: Fast\nWeapon: Neutron Cannon\nRange: Medium\nArmor: Medium
+		Description: actor-drcyclone.description
 	Aircraft:
 		TurnSpeed: 32
 		Speed: 170
@@ -2834,7 +2834,7 @@ drskyfort:
 		BuildPaletteOrder: 130
 		Prerequisites: driweap2, drihelipad, ~techlevel.medium
 		Queue: Vehicle.Imperium
-		Description: Death from above. This floating platform of wreckage houses the largest\nplasma cannon known to humanity. It’s slow to recharge but makes a lasting impact.\n\nType: Flyer\nSpeed: Slow\nWeapon: Pulse Plasma Cannon\nRange: Contact\nArmor: Heavy
+		Description: actor-drskyfort.description
 	Aircraft:
 		TurnSpeed: 32
 		Speed: 75
@@ -2890,7 +2890,7 @@ drdrone:
 		BuildPaletteOrder: 30
 		Prerequisites: drihq2, ~techlevel.medium
 		Queue: Vehicle.Imperium, Vehicle.Shadowhand
-		Description: This small unmanned drone is lightly armoured and has\nno offensive capability. It is used solely to scout enemy targets.\n\nType: Flyer\nSpeed: Medium\nWeapon: None\nRange: N/A\nArmor: Light
+		Description: actor-drdrone.description
 	Aircraft:
 		TurnSpeed: 20
 		Speed: 100
@@ -2948,7 +2948,7 @@ mcv.freedomguard:
 		Prerequisites: drfghq2, ~techlevel.medium, ~mmfreedomguard
 		Queue: Building, RABuilding
 		BuildDurationModifier: 40
-		Description: Deploys into another Construction Yard.\n  Unarmed
+		Description: actor-dre6.description
 	Selectable:
 		Priority: 4
 		DecorationBounds: 1536, 1536
@@ -3033,7 +3033,7 @@ drfghq.freedomguard:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 1000
 		Prerequisites: ~wip-content
-		Description: Builds structures
+		Description: actor-drhq.description
 	ProvidesPrerequisite@factiongdi:
 		Prerequisite: mmfreedomguard
 	RenderSprites:
@@ -3066,7 +3066,7 @@ pscdrfghq2:
 	Buildable:
 		BuildPaletteOrder: 10
 		Queue: drfghq1.FreedomGuard
-		Description: Upgrades the HQ for New Technology.
+		Description: actor-pscdrfghq2.description
 		Prerequisites: ~vehicleproduction, ~barracks, ~freedomtech
 	Valued:
 		Cost: 1200
@@ -3083,7 +3083,7 @@ pscdrfghq3:
 	Buildable:
 		BuildPaletteOrder: 10
 		Queue: drfghq2.FreedomGuard
-		Description: Upgrades the HQ for New Technology.
+		Description: actor-pscdrfghq3.description
 		Prerequisites: drfgbarr2, drfgweap2, ~freedomtech
 	Valued:
 		Cost: 1500
@@ -3115,7 +3115,7 @@ drfgbarr.freedomguard:
 		BuildPaletteOrder: 40
 		Prerequisites: drhq, ~mmfreedomguard
 		Queue: Building, RABuilding
-		Description: Produces infantry
+		Description: actor-drbarracks.description
 	Building:
 		Footprint: xxx x=x x==
 		Dimensions: 3,3
@@ -3192,7 +3192,7 @@ pscdrfgbarr:
 	Buildable:
 		BuildPaletteOrder: 10
 		Queue: drfgbarr.FreedomGuard
-		Description: Upgrades the Barracks for New Infantry.
+		Description: actor-pscdrfgbarr.description
 		Prerequisites: drfghq2, ~freedomtech
 	Valued:
 		Cost: 750
@@ -3224,7 +3224,7 @@ drfgweap.freedomguard:
 		BuildPaletteOrder: 40
 		Prerequisites: drwaterl.freedom, ~mmfreedomguard
 		Queue: Building, RABuilding
-		Description: Produces vehicles
+		Description: actor-driweap.description
 	Building:
 		Footprint: xxx === ===
 		Dimensions: 3,3
@@ -3282,7 +3282,7 @@ pscdrfgweap:
 	Buildable:
 		BuildPaletteOrder: 10
 		Queue: drfgweap.FreedomGuard
-		Description: Upgrades the Factory for New Vehicles.
+		Description: actor-pscdrfgweap.description
 		Prerequisites: drfghq2, ~freedomtech
 		# Prerequisites: ~freedomwater
 	Valued:
@@ -3312,7 +3312,7 @@ drfghelipad.freedomguard:
 		BuildPaletteOrder: 50
 		Prerequisites: drfghq3, ~freedomtech
 		Queue: Building, RABuilding
-		Description: Produces, rearms and\nrepairs helicopters
+		Description: template-airfield.description
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -3356,7 +3356,7 @@ drlastur1:
 		Prerequisites: anypower, ~freedomtech
 		Queue: Defence, RADefence
 		BuildDurationModifier: 40
-		Description: All-purpose defensive structure.\n  Strong vs Aircraft, Tanks\n  Weak vs Infantry
+		Description: actor-drlastur1.description
 	RequiresBuildableArea:
 		AreaTypes: building
 		Adjacent: 8
@@ -3400,7 +3400,7 @@ drrailtur1:
 		Prerequisites: anypower, drfghq2, ~freedomtech
 		Queue: Defence, RADefence
 		BuildDurationModifier: 40
-		Description: All-purpose defensive structure.\n  Strong vs Aircraft, Tanks\n  Weak vs Infantry
+		Description: actor-drrailtur1.description
 	RequiresBuildableArea:
 		AreaTypes: building
 		Adjacent: 8
@@ -3468,7 +3468,7 @@ draacannon1:
 		Prerequisites: anypower, drfghq2, ~mmfreedomguard
 		Queue: Defence, RADefence
 		BuildDurationModifier: 40
-		Description: All-purpose defensive structure.\n  Strong vs Aircraft, Tanks\n  Weak vs Infantry
+		Description: actor-draacannon1.description
 	RequiresBuildableArea:
 		AreaTypes: building
 		Adjacent: 8
@@ -3511,7 +3511,7 @@ drpplant1.freedomguard:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 120
 		Prerequisites: barracks, ~mmfreedomguard
-		Description: Enables Freedom Guard Phase Tecnology
+		Description: actor-drpplant.description
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -3583,7 +3583,7 @@ pscdrpplant2:
 	Buildable:
 		BuildPaletteOrder: 10
 		Queue: drpplant1.FreedomGuard
-		Description: Upgrades the Barracks for New Infantry.
+		Description: actor-pscdrpplant2.description
 		Prerequisites: drfghq3, ~mmfreedomguard
 	Valued:
 		Cost: 1200
@@ -3608,7 +3608,7 @@ drfgrep:
 		BuildPaletteOrder: 60
 		Prerequisites: vehicleproduction, ~freedomtech
 		Queue: Building, RABuilding
-		Description: Repairs vehicles
+		Description: actor-drfgrep.description
 	Building:
 		Footprint: x+_ +++ _+x
 		Dimensions: 3,3
@@ -3653,7 +3653,7 @@ drfghosp:
 		BuildPaletteOrder: 60
 		Prerequisites: barracks, ~freedomtech
 		Queue: Building, RABuilding
-		Description: Repairs vehicles
+		Description: actor-drfghosp.description
 	Building:
 		Footprint: _+x +++ x+_
 		Dimensions: 3,3
@@ -3705,7 +3705,7 @@ drnavyard.freedomguard:
 		BuildPaletteOrder: 50
 		Prerequisites: drwaterl.freedom, ~freedomtech
 		Queue: Building, RABuilding
-		Description: Produces and\nrepairs submarines
+		Description: template-shipyard.description
 	Building:
 		Footprint: =+= +++ =+=
 		Dimensions: 3,3
@@ -3816,7 +3816,7 @@ drraid:
 		BuildPaletteOrder: 10
 		Prerequisites: barracks
 		Queue: Infantry.Freedom, Infantry.Xenite
-		Description: Stalwart of the Freedom Guard cause, the Raider is armed with a laser rifle.\nOnce the Phasing Facility is constructed, the Raider gains the ability to phase underground.\n\nType: Walker\nSpeed: SLow\nWeapon: Laser Rifle\nRange: Short\nArmor: Light
+		Description: actor-drraid.description
 	Mobile:
 		Speed: 78
 	Health:
@@ -3870,7 +3870,7 @@ drscout:
 		BuildPaletteOrder: 20
 		Prerequisites: barracks
 		Queue: Infantry.Freedom, Infantry.Xenite
-		Description: Used mainly for front line surveillance, the Scout is able to morph into\ninanimate objects such as trees and rocks to conceal her position. The Scout is relatively fast but wears\nno body armour, so combat is not her specialty\n\nType: Walker\nSpeed: Medium\nWeapon: None\nRange: N/A\nArmor: Light
+		Description: actor-drscout.description
 	Mobile:
 		Speed: 128
 	Health:
@@ -3920,7 +3920,7 @@ drmercenary:
 		BuildPaletteOrder: 25
 		Prerequisites: barracks
 		Queue: Infantry.Freedom
-		Description: Recruited from outside the Freedom Guard ranks, these paid guns carry a massive shoulder mounted rail gun.\nHighly trained and ruthless, the Mercenary is tougher and deadlier than the Raider. The Mercenary can phase\nonce the Phasing Facility has been built\n\nType: Walker\nSpeed: SLow\nWeapon: Rail Gun\nRange: Short\nArmor: Medium
+		Description: actor-drmercenary.description
 		BuildDuration: 300
 		BuildDurationModifier: 100
 	Mobile:
@@ -3979,7 +3979,7 @@ drsnipe:
 		BuildPaletteOrder: 10
 		Prerequisites: drfgbarr2
 		Queue: Infantry.Freedom, Infantry.Xenite
-		Description: With a long range electro-magnetic needle gun, the Sniper is lethal against\ninfantry targets. Like the Scout, the Sniper can morph into objects for camouflage.\n\nType: Walker\nSpeed: Medium\nWeapon: Sniper Rail\nRange: Long\nArmor: Light
+		Description: actor-drsnipe.description
 	Mobile:
 		Speed: 80
 	Health:
@@ -4040,7 +4040,7 @@ drmartyr:
 		BuildPaletteOrder: 30
 		Prerequisites: barracks
 		Queue: Infantry.Freedom
-		Description: Freedom Guard soldiers who are approaching their 25th birthday, and therefore certain\ndeath, are outfitted with a high-powered explosive device and then sent screaming into the enemy to die for the cause.\nSometimes soldiers not popular with their commanding officers are “volunteered” for this service before their 25th birthday\n\nType: Walker\nSpeed: Medium\nWeapon: Plasma Bomb\nRange: None\nArmor: Light
+		Description: actor-drmartyr.description
 	Mobile:
 		Speed: 130
 	Health:
@@ -4087,7 +4087,7 @@ drsabot:
 		BuildPaletteOrder: 10
 		Prerequisites: drfgbarr2
 		Queue: Infantry.Freedom, Infantry.Xenite
-		Description: The Saboteur can damage any building to half its maximum health.\n\nType: Walker\nSpeed: Slow\nWeapon: None\nRange: N/A\nArmor: Light
+		Description: actor-drsabot.description
 	Mobile:
 		Speed: 70
 	Health:
@@ -4123,7 +4123,7 @@ drmech:
 		Queue: Infantry.Freedom, Infantry.Xenite
 		BuildPaletteOrder: 100
 		Prerequisites: drfgrep, ~techlevel.medium
-		Description: The Mechanic functions similarly to the Field Medic\nrepairing damaged vehicles in the field. The Mechanic has no attack capability\n\nType: Walker\nSpeed: Slow\nWeapon: None\nRange: N/A\nArmor: Light
+		Description: actor-drmech.description
 	Valued:
 		Cost: 300
 	Tooltip:
@@ -4174,7 +4174,7 @@ drmedi:
 		Queue: Infantry.Freedom, Infantry.Xenite
 		Prerequisites: drfghosp, ~techlevel.medium
 		BuildPaletteOrder: 110
-		Description: The Field Medic can restore the health of\nwounded infantry units and administer an antitoxin to\ncounteract the effects of the Amper. The Field Medic will\nautomatically heal damaged units that are nearby or can\nbe directed to heal a specific unit. The Field Medic has no\nattack capability and does not wear body armour.\n\nType: Walker\nSpeed: Slow\nWeapon: None\nRange: N/A\nArmor: Light
+		Description: actor-drmedi.description
 	Valued:
 		Cost: 300
 	Tooltip:
@@ -4228,7 +4228,7 @@ drjebradec:
 		BuildPaletteOrder: 100
 		Prerequisites: drfghq3
 		Queue: Infantry.Freedom
-		Description: Hero Infantry.\n  Strong vs Infantry, Vehicles\n  Weak vs Aircraft
+		Description: actor-drjebradec.description
 	Mobile:
 		Speed: 71
 	Health:
@@ -4270,7 +4270,7 @@ drspid:
 		Queue: Vehicle.Freedom, Vehicle.Xenite
 		BuildDuration: 1020
 		BuildDurationModifier: 40
-		Description: This all terrain vehicle is the cornerstone of\nthe Freedom Guard ground force. Fast and inexpensive, it\nis able to tackle all types of terrain. Armed with a double\nrail gun, it is fairly effective against armour but somewhat\nvulnerable to infantry\n\nType: Special Wheeled\nSpeed: Fast\nWeapon: Rail Gun\nRange: Medium\nArmor: Medium
+		Description: actor-drspid.description
 	Mobile:
 		Speed: 174
 		TurnSpeed: 48
@@ -4313,7 +4313,7 @@ drstnk:
 		BuildPaletteOrder: 40
 		Prerequisites: vehicleproduction
 		Queue: Vehicle.Freedom, Vehicle.Xenite
-		Description: The Skirmish Tank is the foundation upon\nwhich any successful military outfit is built. Properly\naccessorised, the Skirmish Tank can make a splash at an\nintimate midnight raid, a small summer skirmish, or even\na full-scale gala massacre.\n\nType: Tracked\nSpeed: Medium\nWeapon: Missile Launcher\nRange: Medium\nArmor: Medium
+		Description: actor-drstnk.description
 	Mobile:
 		Speed: 126
 		TurnSpeed: 40
@@ -4353,7 +4353,7 @@ drrat:
 		BuildPaletteOrder: 20
 		Prerequisites: vehicleproduction
 		Queue: Vehicle.Freedom
-		Description: The Freedom Guard\ntroop transport has the ability to camouflage itself to\nmatch the surrounding terrain. The R.A.T. is unarmed, but\nmove over water, although at a considerably reduced speed.\n\nType: Wheeled\nSpeed: Medium\nWeapon: None\nRange: N/A\nArmor: Medium
+		Description: actor-drrat.description
 	Mobile:
 		Locomotor: amphibius
 		TurnSpeed: 44
@@ -4416,7 +4416,7 @@ drrtnk:
 		Queue: Vehicle.Freedom
 		BuildDurationModifier: 100
 		BuildDuration: 1500
-		Description: The pinnacle of Freedom Guard\narmour, the Triple Rail uses hover technology stolen from\nthe Imperium to allow movement over a broader range\nof terrain types. Hauling three electro-magnetic projectile\naccelerator cannons, or rail guns, this tank is a savage\nconsumer of Imperium armour.\n\nType: Hover\nSpeed: Medium\nWeapon: Triple Rail Gun\nRange: Long\nArmor: Heavy
+		Description: actor-drrtnk.description
 	Mobile:
 		Locomotor: hover
 		TurnSpeed: 32
@@ -4464,7 +4464,7 @@ drarty:
 		BuildPaletteOrder: 60
 		Prerequisites: drfgweap2, ~techlevel.medium
 		Queue: Vehicle.Freedom, Vehicle.Xenite
-		Description: The Hellstorm Artillery fires a longrange, area-effect explosive. Its range is more than four\ntimes longer than any other unit. A battery of Artillery is\ncapable of single-handedly destroying an enemy base, but,\nthe vehicle is slow and lightly armoured, so undefended\nArtillery is fodder in close combat.\n\nType: Tracked\nSpeed: Slow\nWeapon: Artillery\nRange: Extreme\nArmor: Medium
+		Description: actor-drarty.description
 	Mobile:
 		TurnSpeed: 16
 		Speed: 64
@@ -4514,7 +4514,7 @@ drtnkh:
 		Queue: Vehicle.Freedom
 		BuildDuration: 1020
 		BuildDurationModifier: 40
-		Description: This quick, deadly vehicle emits a massive\nshort range electric discharge. The Tank Hunter is\ndevastating in close combat but has no ranged weapon\nand is vulnerable in situations where it cannot close on its prey\n\nType: Tracked\nSpeed: Medium\nWeapon: Electrical Discharge\nRange: Short\nArmor: Light
+		Description: actor-drtnkh.description
 	Mobile:
 		Speed: 138
 		TurnSpeed: 48
@@ -4558,7 +4558,7 @@ drphasetnk:
 		Queue: Vehicle.Freedom, Vehicle.Xenite
 		BuildDuration: 1020
 		BuildDurationModifier: 40
-		Description: Laser Twin Cannon Tank.\n  Powerful Firepower.\n  Strong vs Ground Units\n  Weak vs Aircraft\n Can Phase
+		Description: actor-drphasetnk.description
 	Mobile:
 		Speed: 102
 		TurnSpeed: 48
@@ -4719,7 +4719,7 @@ drjack:
 		BuildPaletteOrder: 30
 		Prerequisites: drfgweap2, ~techlevel.medium
 		Queue: Vehicle.Freedom, Vehicle.Xenite
-		Description: A revamped Construction Rig outfitted with two\nshoulder mounted particle launchers. The Flak Jack\nsalvages metal from the battlefield and converts it into\nmicroscopic metallic particles that it fires in clouds which\ncause sustained damage to air units. The unit has no\ndefensive capability against ground attack, and should be\nprotected at all times\n\nType: Walker\nSpeed: Slow\nWeapon: Chaff\nRange: Long\nArmor: Light
+		Description: actor-drjack.description
 	Mobile:
 		Speed: 85
 	Health:
@@ -4763,7 +4763,7 @@ drquake:
 		Queue: Vehicle.Freedom, Vehicle.Xenite
 		BuildDuration: 1500
 		BuildDurationModifier: 100
-		Description: A single-use unit that creates an immense\nearth wave that travels across the map, causing severe\ndamage to everything in its wake. The Shock Wave unit\n embeds in the ground and detonates, self-destructing\nin the discharge. The Shock Wave is expensive and slow to\nbuild but well worth the wait\nBuild Limit: 1\n\nType: Tracked\nSpeed: Slow\nWeapon: Seismic Wave\nRange: Special\nArmor: Medium
+		Description: actor-drquake.description
 		BuildLimit: 1
 	Mobile:
 		Speed: 48
@@ -4854,7 +4854,7 @@ drskybike:
 		BuildPaletteOrder: 20
 		Prerequisites: drfgweap2, drfghelipad, ~techlevel.medium
 		Queue: Vehicle.Freedom, Vehicle.Xenite
-		Description: Using a modified Spider Bike chassis, the\nFreedom Guard were able to produce cheap, fast aerial\nunits which could attack enemy ground troops and other\nflyers. Although quicker than the Imperium Cyclone, the\nSky Bike is not as heavily armoured and is outgunned in\neven combat. The speed of the Sky Bike, however, allows\nit to dictate the circumstance of conflict. This unit fires\nhigh-velocity mini-missiles and, like the Outrider, must rearm at the Re-Arming Deck\n\nType: Flyer\nSpeed: Fast\nWeapon: Mini Missiles\nRange: Short\nArmor: Light
+		Description: actor-drskybike.description
 	Aircraft:
 		TurnSpeed: 36
 		Speed: 210
@@ -4907,7 +4907,7 @@ droutrider:
 		BuildPaletteOrder: 20
 		Prerequisites: drfgweap2, drfghelipad, ~techlevel.medium
 		Queue: Vehicle.Freedom
-		Description: This ground attack aerial unit is slower and less\nmanoeuvrable than the Sky Bike, but considerably tougher\nand fires air to ground missiles. Deadly effective against\nImperium armour, it cannot engage other air units and\nshould be escorted by air defence units. The Outrider has\nlimited ammunition and must re-arm at the Re-Arming Deck\n\nType: Flyer\nSpeed: Fast\nWeapon: Guided Missile\nRange: Long\nArmor: Heavy
+		Description: actor-droutrider.description
 	Aircraft:
 		TurnSpeed: 36
 		Speed: 210
@@ -4960,7 +4960,7 @@ drfgmcv:
 		Prerequisites: anyhq, ~techlevel.medium, fix
 		Queue: Null
 		BuildDurationModifier: 40
-		Description: Deploys into another Construction Yard.\n  Unarmed
+		Description: actor-drfgmcv.description
 	Selectable:
 		Priority: 4
 		DecorationBounds: 1536, 1536
@@ -5058,7 +5058,7 @@ drfanboat:
 		BuildPaletteOrder: 20
 		Prerequisites: anypower
 		Queue: Naval.Freedom
-		Description: Light scout & support ship.\nCan detect submarines.
+		Description: actor-drfanboat.description
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -5122,7 +5122,7 @@ mcv.shadowhand:
 		Prerequisites: drihq2, ~techlevel.medium, ~mmshadowhand
 		Queue: Building, RABuilding
 		BuildDurationModifier: 40
-		Description: Deploys into another Construction Yard.\n  Unarmed
+		Description: actor-dre6.description
 	Selectable:
 		Priority: 4
 		DecorationBounds: 1536, 1536
@@ -5212,7 +5212,7 @@ drihq.shadowhand:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 1000
 		Prerequisites: ~wip-content
-		Description: Builds structures
+		Description: actor-drhq.description
 	ProvidesPrerequisite@factiongdi:
 		Prerequisite: mmshadowhand
 	ProvidesPrerequisite@Imperiumwater:
@@ -5244,7 +5244,7 @@ dribarr.shadowhand:
 		BuildPaletteOrder: 40
 		Prerequisites: drhq, ~mmshadowhand
 		Queue: Building, RABuilding
-		Description: Produces infantry
+		Description: actor-drbarracks.description
 	Building:
 		Footprint: xxx x=x x==
 		Dimensions: 3,3
@@ -5323,7 +5323,7 @@ driweap.shadowhand:
 		BuildPaletteOrder: 40
 		Prerequisites: drwaterl.imperium, ~mmshadowhand
 		Queue: Building, RABuilding
-		Description: Produces vehicles
+		Description: actor-driweap.description
 	Building:
 		Footprint: xxx === ===
 		Dimensions: 3,3
@@ -5374,7 +5374,7 @@ drmadrix.shadowhand:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 120
 		Prerequisites: barracks, ~mmshadowhand
-		Description: Enables Shadowhand Robotic Units
+		Description: actor-drmatrix.description
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -5449,7 +5449,7 @@ drreaper:
 		BuildPaletteOrder: 30
 		Prerequisites: barracks, drmadrix.shadowhand
 		Queue: Infantry.Shadowhand
-		Description: Shock Sniper Infantry.\n  Strong vs Light Vehicles and Creatures \n  Weak vs Infantry
+		Description: actor-drreaper.description
 	Mobile:
 		Speed: 50
 	Health:
@@ -5494,7 +5494,7 @@ drgemenis1:
 		BuildPaletteOrder: 40
 		Prerequisites: vehicleproduction, ~techlevel.medium, drmadrix.shadowhand
 		Queue: Vehicle.Shadowhand
-		Description: Fast, light tank.\n  Strong vs Vehicles, Tanks\n  Weak vs Infantry, Aircraft
+		Description: actor-drgemenis1.description
 	Mobile:
 		Locomotor: hover
 		TurnSpeed: 32
@@ -5568,7 +5568,7 @@ drfury:
 		BuildPaletteOrder: 61
 		Prerequisites: driweap2, ~techlevel.medium, drmadrix.shadowhand
 		Queue: Vehicle.Shadowhand
-		Description: Speedy, heavy mech.\n  Powerful Firepower.\n  Strong vs Ground Units\n  Weak vs Aircraft
+		Description: actor-drfury.description
 	Mobile:
 		Speed: 85
 	Health:
@@ -5630,7 +5630,7 @@ drshadowblade:
 		BuildPaletteOrder: 40
 		Prerequisites: vehicleproduction, ~techlevel.medium
 		Queue: Vehicle.Shadowhand
-		Description: Sadistic Anti Infantry, armed with\n Blades.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+		Description: actor-drshadowblade.description
 	Mobile:
 		Locomotor: hover
 		TurnSpeed: 60
@@ -5674,7 +5674,7 @@ drhades:
 		BuildPaletteOrder: 20
 		Prerequisites: driweap2, drihelipad, ~techlevel.medium
 		Queue: Vehicle.Shadowhand
-		Description: Helicopter Gunship with Chainguns.\n  Strong vs Infantry, Light Vehicles and\n  Aircraft\n  Weak vs Tanks
+		Description: actor-drhades.description
 	Aircraft:
 		TurnSpeed: 32
 		Speed: 150
@@ -5727,7 +5727,7 @@ drempdisable:
 		BuildPaletteOrder: 130
 		Prerequisites: driweap2, drihelipad, ~techlevel.medium
 		Queue: Vehicle.Shadowhand
-		Description: Base Disable Unit.\n  Place it in the enemy's central building\n  Weak vs AA
+		Description: actor-drempdisable.description
 	Aircraft:
 		TurnSpeed: 32
 		Speed: 75
@@ -5792,7 +5792,7 @@ mcv.xenite:
 		Prerequisites: drfghq2, ~techlevel.medium, ~mmxenite
 		Queue: Building, RABuilding
 		BuildDurationModifier: 40
-		Description: Deploys into another Construction Yard.\n  Unarmed
+		Description: actor-dre6.description
 	Selectable:
 		Priority: 4
 		DecorationBounds: 1536, 1536
@@ -5875,7 +5875,7 @@ drfghq.xenite:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 1000
 		Prerequisites: ~wip-content
-		Description: Builds structures
+		Description: actor-drhq.description
 	ProvidesPrerequisite@factiongdi:
 		Prerequisite: mmxenite
 	ProvidesPrerequisite@Freedomwater:
@@ -5907,7 +5907,7 @@ drbiocom.xenite:
 		BuildPaletteOrder: 40
 		Prerequisites: drhq, ~mmxenite
 		Queue: Building, RABuilding
-		Description: Produces infantry
+		Description: actor-drbarracks
 	Building:
 		Footprint: =xx xxx xxx
 		Dimensions: 3,3
@@ -5973,7 +5973,7 @@ pscbiocom2:
 	Buildable:
 		BuildPaletteOrder: 10
 		Queue: drbiocom.Xenite
-		Description: Upgrades the Barracks for New Infantry.
+		Description: actor-pscbiocom2.description
 		Prerequisites: drfghq2, ~mmxenite
 	Valued:
 		Cost: 750
@@ -6004,7 +6004,7 @@ drfgweap.xenite:
 		BuildPaletteOrder: 40
 		Prerequisites: drwaterl.freedom, ~mmxenite
 		Queue: Building, RABuilding
-		Description: Produces vehicles
+		Description: actor-driweap.description
 	Building:
 		Footprint: xxx === ===
 		Dimensions: 3,3
@@ -6087,7 +6087,7 @@ drtrainer:
 		BuildPaletteOrder: 20
 		Prerequisites: barracks
 		Queue: Infantry.Xenite
-		Description: Animal Control Infantry.\n  Strong vs Creatures\n  Weak vs Vehicles, Infantry\n Can Control Dinosaurs, Grendels, Gants and Other Creatures
+		Description: actor-drtrainer.description
 	Mobile:
 		Speed: 56
 	Health:
@@ -6132,7 +6132,7 @@ drgant:
 		BuildPaletteOrder: 20
 		Prerequisites: barracks
 		Queue: Infantry.Xenite
-		Description: Melee Attack Unit.\n  Strong vs Infantry\n  Weak vs Aircraft, Heavy Vehicles\n Requires Control
+		Description: actor-drgant.description
 	Mobile:
 		Speed: 120
 	Health:
@@ -6203,7 +6203,7 @@ drgrendel:
 		BuildPaletteOrder: 30
 		Prerequisites: drbiocom2
 		Queue: Vehicle.Xenite
-		Description: Electric Attack Unit.\n  Strong vs Infantry\n  Weak vs Aircraft, Heavy Vehicles\n Requires Control
+		Description: actor-drgrendel.description
 	Mobile:
 		Speed: 90
 	Health:
@@ -6274,7 +6274,7 @@ drgrider:
 		BuildPaletteOrder: 30
 		Prerequisites: drbiocom2
 		Queue: Vehicle.Xenite
-		Description: Animal Control Unit.\n Electric Attack Unit.\n  Strong vs Infantry\n  Weak vs Aircraft, Heavy Vehicles
+		Description: actor-drgrider.description
 	Mobile:
 		Speed: 90
 	Health:
@@ -6349,7 +6349,7 @@ drrat2:
 		BuildPaletteOrder: 20
 		Prerequisites: vehicleproduction
 		Queue: Vehicle.Xenite
-		Description: Fast scout vehicle, armed with\n Light Laser.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+		Description: actor-drrat2.description
 	Mobile:
 		Locomotor: amphibius
 		TurnSpeed: 44
@@ -6435,7 +6435,7 @@ dravenger:
 		BuildPaletteOrder: 20
 		Prerequisites: drfghelipad
 		Queue: Vehicle.Xenite
-		Description: Helicopter Gunship with Chainguns.\n  Strong vs Infantry, Light Vehicles and\n  Aircraft\n  Weak vs Tanks
+		Description: actor-dravenger.description
 	Aircraft:
 		TurnSpeed: 36
 		Speed: 190
@@ -6488,7 +6488,7 @@ drtpower:
 		Queue: Building, RABuilding
 		Prerequisites: ~drthq
 		BuildPaletteOrder: 10
-		Description: Provides power for other structures.
+		Description: actor-drtpower.description
 	Valued:
 		Cost: 100 #300
 	Tooltip:
@@ -6547,7 +6547,7 @@ mcv.togran:
 		Prerequisites: drihq2, ~techlevel.medium, ~drthq
 		Queue: Building, RABuilding
 		BuildDurationModifier: 40
-		Description: Deploys into another Construction Yard.\n  Unarmed
+		Description: actor-dre6.description
 	Selectable:
 		Priority: 4
 		DecorationBounds: 1536, 1536
@@ -6635,7 +6635,7 @@ drihq.togran:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 1000
 		Prerequisites: ~wip-content
-		Description: Builds structures
+		Description: actor-drhqt.description
 	ProvidesPrerequisite@factiongdi:
 		Prerequisite: mmtogran
 	ProvidesPrerequisite@Imperiumtech:
@@ -6666,7 +6666,7 @@ dribarr.togran:
 		BuildPaletteOrder: 40
 		Prerequisites: ~drthq
 		Queue: Building, RABuilding
-		Description: Produces infantry
+		Description: actor-drbarracks.description
 	Building:
 		Footprint: xxx x=x x==
 		Dimensions: 3,3
@@ -6726,7 +6726,7 @@ driweap.togran:
 		BuildPaletteOrder: 40
 		Prerequisites: drwaterl.freedom, ~drthq
 		Queue: Building, RABuilding
-		Description: Produces vehicles
+		Description: actor-driweap
 	Building:
 		Footprint: xxx === ===
 		Dimensions: 3,3
@@ -6783,7 +6783,7 @@ drihelipad.togran:
 		BuildPaletteOrder: 50
 		Prerequisites: drihq3, ~drthq
 		Queue: Building, RABuilding
-		Description: Rearms and\nrepairs Helicopters\nAllows for production of Helicopters
+		Description: template-airfield.description
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -6825,7 +6825,7 @@ driportal.togran:
 		BuildPaletteOrder: 120
 		Prerequisites: drihq3, ~techlevel.superweapons, ~drthq
 		BuildLimit: 1
-		Description: Teleports a group of units across the\nmap for a short time.\nRequires power to operate.\nMaximum 1 can be built.\n  Special Ability: Chronoshift
+		Description: actor-driportal.description
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -6843,13 +6843,13 @@ driportal.togran:
 	ChronoshiftPower@chronoshift:
 		OrderName: Chronoshift
 		PauseOnCondition: lowpower
-		Icons: 
+		Icons:
 			1: chrono
 		ChargeInterval: 3000
-		Names: 
-			1: Chronoshift
-		Descriptions: 
-			1: Teleports a group of units across\nthe map for 20 seconds.
+		Names:
+			1: Warp Rift
+		Descriptions:
+			1: power-chronoshift.description
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
 		#BeginChargeSpeechNotification: ChronosphereCharging
@@ -6893,7 +6893,7 @@ drtflamer:
 		Prerequisites: drpowr, ~drthq
 		Queue: Defence, RADefence
 		BuildDurationModifier: 40
-		Description: All-purpose defensive structure.\n  Strong vs Aircraft, Tanks\n  Weak vs Infantry
+		Description: actor-drtflamer.description
 	RequiresBuildableArea:
 		AreaTypes: building
 		Adjacent: 8
@@ -6936,7 +6936,7 @@ drtsentry:
 		Prerequisites: drpowr, ~drthq
 		Queue: Defence, RADefence
 		BuildDurationModifier: 40
-		Description: All-purpose defensive structure.\n  Strong vs Aircraft, Tanks\n  Weak vs Infantry
+		Description: actor-drtsentry.description
 	RequiresBuildableArea:
 		AreaTypes: building
 		Adjacent: 8
@@ -6981,7 +6981,7 @@ drtmissile:
 		BuildPaletteOrder: 40
 		Prerequisites: drihq2, ~drthq
 		Queue: Defence, RADefence
-		Description: Antiground defensive structure.\n  Strong vs Infantry, Tanks\n  Weak vs Aircraft
+		Description: actor-drtmissile.description
 		BuildDuration: 600
 		BuildDurationModifier: 100
 	RequiresBuildableArea:
@@ -7071,7 +7071,7 @@ drshok:
 		BuildPaletteOrder: 10
 		Prerequisites: barracks
 		Queue: Infantry.Togran
-		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles
+		Description: actor-drshok.description
 	Mobile:
 		Speed: 78
 	Health:
@@ -7114,7 +7114,7 @@ drbiocontrol:
 		BuildPaletteOrder: 20
 		Prerequisites: barracks
 		Queue: Infantry.Togran
-		Description: Anti-Ground infantry.\n  Strong vs Infantry, Light Vehicles\n  Weak vs Fast Units. \n Can Attack Aircraft
+		Description: actor-drbiocontrol.description
 	Mobile:
 		Speed: 66
 	Health:
@@ -7152,7 +7152,7 @@ drreaper2:
 		BuildPaletteOrder: 30
 		Prerequisites: barracks, dribarr2
 		Queue: Infantry.Togran
-		Description: Anti-Ground infantry.\n  Strong vs Infantry, Light Vehicles\n  Weak vs Fast Units. \n Can Attack Aircraft
+		Description: actor-drreaper2.description
 	Valued:
 		Cost: 500
 	Health:
@@ -7176,7 +7176,7 @@ drphasemine:
 		BuildPaletteOrder: 61
 		Prerequisites: vehicleproduction, ~techlevel.medium
 		Queue: Infantry.Togran
-		Description: Speedy, heavy mech.\n  Powerful Firepower.\n  Strong vs Ground Units\n  Weak vs Aircraft
+		Description: actor-drphasemine.description
 	Mobile:
 		Speed: 85
 	Health:
@@ -7231,7 +7231,7 @@ drntnk:
 		Queue: Vehicle.Togran
 		BuildDuration: 1020
 		BuildDurationModifier: 40
-		Description: Fast, light tank.\n  Strong vs Vehicles, Tanks\n  Weak vs Infantry, Aircraft
+		Description: actor-drntnk.description
 	Mobile:
 		Locomotor: hover
 		TurnSpeed: 40
@@ -7278,7 +7278,7 @@ drtscout:
 		BuildPaletteOrder: 40
 		Prerequisites: vehicleproduction
 		Queue: Vehicle.Togran
-		Description: Speedy, heavy mech.\n  Powerful Firepower.\n  Strong vs Ground Units\n  Weak vs Aircraft
+		Description: actor-drtscout.description
 	Mobile:
 		Speed: 140
 		TurnSpeed: 40
@@ -7347,7 +7347,7 @@ drticktank:
 		BuildPaletteOrder: 40
 		Prerequisites: vehicleproduction
 		Queue: Vehicle.Togran
-		Description: Speedy, heavy mech.\n  Powerful Firepower.\n  Strong vs Ground Units\n  Weak vs Aircraft
+		Description: actor-drticktank.description
 	Mobile:
 		Speed: 108
 		TurnSpeed: 40
@@ -7414,7 +7414,7 @@ drvortextank:
 		BuildPaletteOrder: 40
 		Prerequisites: driweap2
 		Queue: Vehicle.Togran
-		Description: Speedy, heavy tank.\n  Powerful Firepower.\n  Strong vs Ground Units\n  Weak vs Aircraft\n  When deploy can attack with a Black Hole
+		Description: actor-drvortextank.description
 		BuildDuration: 1050
 		BuildDurationModifier: 100
 	Mobile:
@@ -7481,7 +7481,7 @@ drflamedeath:
 		BuildPaletteOrder: 40
 		Prerequisites: driweap2
 		Queue: Vehicle.Togran
-		Description: Speedy, heavy mech.\n  Powerful Firepower.\n  Strong vs Ground Units\n  Weak vs Aircraft
+		Description: actor-drflamedeath.description
 		BuildDuration: 400
 		BuildDurationModifier: 100
 	Mobile:
@@ -7523,7 +7523,7 @@ drsonic:
 		Queue: Vehicle.Togran
 		BuildDuration: 1125
 		BuildDurationModifier: 100
-		Description: Speedy, heavy mech.\n  Powerful Firepower.\n  Strong vs Ground Units\n  Weak vs Aircraft
+		Description: actor-drsonic.description
 	Mobile:
 		Speed: 85
 	Health:
@@ -7661,7 +7661,7 @@ mcv.aterrorist:
 		Prerequisites: drfghq2, ~techlevel.medium, drterrep, ~mmterrorist
 		Queue: Vehicle.Terrorist
 		BuildDurationModifier: 40
-		Description: Deploys into another Construction Yard.\n  Armed With Lasers\n  Better than an Construction Biot\n Special for Large Travels
+		Description: actor-drterrep2.description
 	Selectable:
 		Priority: 4
 		DecorationBounds: 1536, 1536
@@ -7720,7 +7720,7 @@ mcv2.aterrorist:
 		Prerequisites: drterrep, ~techlevel.medium
 		Queue: Infantry.Terrorist
 		BuildDurationModifier: 40
-		Description: Deploys into another Construction Yard.\n  Unarmed.\n Are a Lite Construction Rig are\n Cheaper but Slower
+		Description: actor-dre6.description
 	Selectable:
 		Priority: 4
 		DecorationBounds: 1536, 1536
@@ -7759,7 +7759,7 @@ drterpower:
 		Queue: Building, RABuilding
 		Prerequisites: ~mmterrorist
 		BuildPaletteOrder: 10
-		Description: Provides power for other structures.
+		Description: actor-drterpower.description
 	ProvidesPrerequisite:
 		Prerequisite: anypower
 	Tooltip:
@@ -7832,7 +7832,7 @@ drterhq.terror:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 1000
 		Prerequisites: ~wip-content
-		Description: Builds structures
+		Description: actor-drhq.description
 	ProvidesPrerequisite@Darkreignfaction:
 		Prerequisite: mmterrorist
 	ProvidesPrerequisite@buildingname:
@@ -7852,7 +7852,7 @@ pscdrterhq2:
 	Buildable:
 		BuildPaletteOrder: 10
 		Queue: drterhq1.DRTerrorist
-		Description: Upgrades the HQ for New Technology.
+		Description: actor-pscdrterhq2.description
 		# Prerequisites: ~vehicleproduction, ~mmterrorist
 		Prerequisites: ~mmterrorist
 	Valued:
@@ -7870,7 +7870,7 @@ pscdrterhq3:
 	Buildable:
 		BuildPaletteOrder: 10
 		Queue: drterhq2.DRTerrorist
-		Description: Upgrades the HQ for New Technology.
+		Description: actor-pscdrterhq3.description
 		# Prerequisites: ~vehicleproduction, ~drfghq2, ~mmterrorist
 		Prerequisites: ~mmterrorist
 	Valued:
@@ -7902,7 +7902,7 @@ drterweap.terror:
 		BuildPaletteOrder: 40
 		Prerequisites: drterwaterl.terror, ~mmterrorist
 		Queue: Building, RABuilding
-		Description: Produces vehicles
+		Description: actor-driweap.description
 	Building:
 		Footprint: xxx === ===
 		Dimensions: 3,3
@@ -7955,7 +7955,7 @@ drwaterextract.terror:
 		BuildPaletteOrder: 120
 		Prerequisites: drfghq3, ~techlevel.medium, ~mmterrorist
 		Queue: Building, RABuilding
-		Description: Provides Passive income
+		Description: actor-drwaterextract.description
 	RenderSprites:
 		Image: drwaterextract
 
@@ -7965,7 +7965,7 @@ drterwaterl.terror:
 		BuildPaletteOrder: 60
 		Prerequisites: anypower, ~mmterrorist
 		Queue: Building, RABuilding
-		Description: Refines Ore and Gems\ninto credits.
+		Description: actor-drwaterl.description
 	RenderSprites:
 		Image: drterwaterl
 	FreeActor:
@@ -7985,7 +7985,7 @@ drterrep:
 		BuildPaletteOrder: 60
 		Prerequisites: drterweap.terror, ~mmterrorist
 		Queue: Building, RABuilding
-		Description: Repairs vehicles
+		Description: actor-drterrep.description
 	Building:
 		Footprint: +x+ x+x +x+
 		Dimensions: 3,3
@@ -8021,7 +8021,7 @@ pscdrterrep:
 	Buildable:
 		BuildPaletteOrder: 10
 		Queue: drterrep.DRTerrorist
-		Description: Upgrades the Repair Station for Support New Vehicles.
+		Description: actor-pscdrterrep.description
 		# Prerequisites: drfghq3, ~mmterrorist
 		Prerequisites: ~mmterrorist
 	Valued:
@@ -8047,7 +8047,7 @@ drterhosp:
 		BuildPaletteOrder: 60
 		Prerequisites: anypower, ~mmterrorist
 		Queue: Building, RABuilding
-		Description: Heals infantry
+		Description: actor-drterhosp.description
 	Building:
 		Footprint: xxx ++x ++x
 		Dimensions: 3,3
@@ -8099,7 +8099,7 @@ drnavyard.terror:
 		BuildPaletteOrder: 50
 		Prerequisites: drterwaterl.terror, ~mmterrorist
 		Queue: Building, RABuilding
-		Description: Produces and\nrepairs ships
+		Description: template-shipyard.description
 	Building:
 		Footprint: =+= +++ =+=
 		Dimensions: 3,3
@@ -8174,7 +8174,7 @@ drterrturret:
 		Prerequisites: anypower, ~mmterrorist
 		Queue: Defence, RADefence
 		BuildDurationModifier: 40
-		Description: All-purpose defensive structure.\n  Strong vs Aircraft, Infantry\n  Weak vs Tanks
+		Description: actor-drterrturret.description
 	RequiresBuildableArea:
 		AreaTypes: building
 		Adjacent: 8
@@ -8223,7 +8223,7 @@ drrasta:
 		BuildPaletteOrder: 10
 		Prerequisites: anypower
 		Queue: Infantry.Terrorist
-		Description: The Low Rank Infantry\nThe Second Veterancy adquire Grenade Launcher\nThe Next Veterancy adquire Better Laser Gun\nThe Ultimate Veterancy transform into Jail Breaker\nThe Jail Breaker with veterancy can sabotage and attach C4 in vehicles.\n\nType: Infantry\nSpeed: Slow\nWeapon: Small Laser, Gremades, C4s\nRange: Medium\nArmor: None
+		Description: actor-drrasta.description
 	Mobile:
 		Speed: 80
 	Health:
@@ -8278,7 +8278,7 @@ drjailbrk:
 		BuildPaletteOrder: 10
 		Prerequisites: anypower, ~testing
 		Queue: Infantry.Terrorist
-		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles
+		Description: actor-drjailbrk.description
 	Mobile:
 		Speed: 120
 	Health:
@@ -8329,7 +8329,7 @@ drfatso:
 		BuildPaletteOrder: 10
 		Prerequisites: drfghq2
 		Queue: Infantry.Terrorist
-		Description: A heavy guy, armed with rockets and machinegun\nYou can deploy it and convert it in a Artillery.\n\nType: Infantry\nSpeed: Slow\nWeapon: Machinegun Laser, Rocket Artillery\nRange: Long (deployed) Short (undeployed)\nArmor: Heavy (deployed) None (undeployed)
+		Description: actor-drfatso.description
 	Mobile:
 		Speed: 50
 	Health:
@@ -8419,7 +8419,7 @@ drskater:
 		BuildPaletteOrder: 40
 		Prerequisites: anypower
 		Queue: Infantry.Terrorist
-		Description: The Skater is a Scout Infantry\nThe Fist Veterancy adquires Camouflage \nThe Second Veterancy adquire Spy Habilities.\n\nType: Hover\nSpeed: Medium\nWeapon: Small Laser\nRange: Medium\nArmor: Light
+		Description: actor-drskater.description
 	Mobile:
 		Locomotor: hover
 		Speed: 132
@@ -8478,7 +8478,7 @@ drttransport:
 		BuildPaletteOrder: 20
 		Prerequisites: drterweap.terror
 		Queue: Vehicle.Terrorist
-		Description: Fast scout vehicle, armed with\n Light Laser.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+		Description: actor-drttransport.description
 	Mobile:
 		Locomotor: amphibius
 		TurnSpeed: 44
@@ -8567,7 +8567,7 @@ drtanker:
 		Prerequisites: drterwaterl.terror
 		Queue: Vehicle.Terrorist
 		BuildDurationModifier: 40
-		Description: Collects Tiberium for processing.\n  Unarmed
+		Description: actor-drtanker.description
 	Selectable:
 		DecorationBounds: 1536, 1536
 	Harvester:
@@ -8630,7 +8630,7 @@ drtarty:
 		BuildPaletteOrder: 60
 		Prerequisites: drfghq2, ~techlevel.medium
 		Queue: Vehicle.Terrorist
-		Description: Long-range artillery.\n  Strong vs Infantry, Vehicles and Buildings
+		Description: actor-drtarty.description
 	Mobile:
 		TurnSpeed: 16
 		Speed: 64
@@ -8690,7 +8690,7 @@ drmtnk:
 		BuildPaletteOrder: 40
 		Prerequisites: drfghq2
 		Queue: Vehicle.Terrorist
-		Description: Speedy, heavy mech.\n  Powerful Firepower.\n  Strong vs Ground Units\n  Weak vs Aircraft
+		Description: actor-drmtnk.description
 	Mobile:
 		Speed: 102
 		TurnSpeed: 40
@@ -8746,7 +8746,7 @@ drspiner:
 		BuildPaletteOrder: 20
 		Prerequisites: drterrep2, ~techlevel.medium
 		Queue: Vehicle.Terrorist
-		Description: Helicopter\n\nType: Flyer\nSpeed: Fast\nWeapon: Guided Missile\nRange: Long\nArmor: Heavy
+		Description: actor-drspiner.description
 	Aircraft:
 		TurnSpeed: 36
 		Speed: 210
@@ -8801,7 +8801,7 @@ drtertran:
 		BuildPaletteOrder: 10
 		Prerequisites: drterrep2, ~techlevel.medium
 		Queue: Vehicle.Terrorist
-		Description: Fast Infantry Transport Helicopter.\n  Unarmed
+		Description: actor-drtertran.description
 	Aircraft:
 		TurnSpeed: 20
 		Speed: 150
@@ -8845,7 +8845,7 @@ drghazi:
 		BuildPaletteOrder: 20
 		Prerequisites: anypower
 		Queue: Naval.Terrorist
-		Description: Light scout & support ship.\nCan detect submarines.
+		Description: actor-drghazi.description
 	Valued:
 		Cost: 600
 	Tooltip:
@@ -8899,7 +8899,7 @@ drphunisher:
 		BuildPaletteOrder: 20
 		Prerequisites: anypower
 		Queue: Naval.Terrorist
-		Description: Light scout & support ship.\nCan detect submarines.
+		Description: actor-drphunisher.description
 	Valued:
 		Cost: 700
 	Tooltip:
@@ -8959,7 +8959,7 @@ mcv.eodalien:
 		Prerequisites: drihq2, ~techlevel.medium, ~mmdralien
 		Queue: Building, RABuilding
 		BuildDurationModifier: 40
-		Description: Deploys into another Construction Yard.\n  Unarmed
+		Description: actor-dre6.description
 	Selectable:
 		Priority: 4
 		DecorationBounds: 1536, 1536
@@ -9007,7 +9007,7 @@ mcv2.eodalien:
 		Prerequisites: drihq2, ~techlevel.medium, ~mmdralien
 		Queue: Building, RABuilding
 		BuildDurationModifier: 40
-		Description: Deploys into another Construction Yard.\n  Unarmed
+		Description: actor-dre6.description
 	Selectable:
 		Priority: 4
 		DecorationBounds: 1536, 1536
@@ -9126,7 +9126,7 @@ drahq.eodalien:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 1000
 		Prerequisites: ~wip-content
-		Description: Builds structures
+		Description: actor-drhq.description
 	ProvidesPrerequisite@factiongdi:
 		Prerequisite: mmdralien
 	ProvidesPrerequisite@Imperiumtech:
@@ -9153,7 +9153,7 @@ drapower:
 		Queue: Building, RABuilding
 		Prerequisites: ~mmdralien
 		BuildPaletteOrder: 10
-		Description: Provides power for other structures.\nRefines Ores and gems into credits
+		Description: actor-drapower.description
 	Valued:
 		Cost: 600 #300
 	Tooltip:
@@ -9220,7 +9220,7 @@ draweap.eodalien:
 		BuildPaletteOrder: 40
 		Prerequisites: drlife.eodalien, ~mmdralien
 		Queue: Building, RABuilding
-		Description: Produces vehicles
+		Description: actor-driweap.description
 	Building:
 		Footprint: xxx === ===
 		Dimensions: 3,3
@@ -9283,7 +9283,7 @@ drabarr.eodalien:
 		BuildPaletteOrder: 40
 		Prerequisites: ~mmdralien
 		Queue: Building, RABuilding
-		Description: Produces infantry
+		Description: actor-drbarracks.description
 	Building:
 		Footprint: xxx xxx xx=
 		Dimensions: 3,3
@@ -9330,7 +9330,7 @@ drlife.eodalien:
 		BuildPaletteOrder: 60
 		Prerequisites: anypower, ~mmdralien
 		Queue: Building, RABuilding
-		Description: Refines Ore and Gems\ninto credits.
+		Description: actor-drwater.description
 	Valued:
 		Cost: 1500 #1400
 	Tooltip:
@@ -9408,7 +9408,7 @@ draplastur:
 		Prerequisites: anypower, ~mmdralien
 		Queue: Defence, RADefence
 		BuildDurationModifier: 40
-		Description: All-purpose defensive structure.\n  Strong vs Aircraft, Infantry\n  Weak vs Tanks
+		Description: actor-draplastur.description
 	RequiresBuildableArea:
 		AreaTypes: building
 		Adjacent: 8
@@ -9452,7 +9452,7 @@ drbattery:
 		BuildPaletteOrder: 40
 		Prerequisites: drihq2, ~mmdralien
 		Queue: Defence, RADefence
-		Description: Antiground defensive structure.\n  Strong vs Infantry, Tanks\n  Weak vs Aircraft
+		Description: actor-drbattery.description
 		BuildDuration: 600
 		BuildDurationModifier: 100
 	RequiresBuildableArea:
@@ -9513,7 +9513,7 @@ drhive.eodalien:
 		BuildPaletteOrder: 50
 		Prerequisites: drihq3, ~mmdralien
 		Queue: Building, RABuilding
-		Description: Produces, rearms and\nrepairs helicopters
+		Description: template-airfield.description
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -9643,7 +9643,7 @@ drramnoth:
 		BuildPaletteOrder: 10
 		Prerequisites: barracks
 		Queue: Infantry.Eodalien
-		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles
+		Description: actor-drramnoth.description
 	Mobile:
 		Speed: 78
 	Health:
@@ -9685,7 +9685,7 @@ drmamnoth:
 		BuildPaletteOrder: 20
 		Prerequisites: barracks
 		Queue: Infantry.Eodalien
-		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles
+		Description: actor-drmamnoth.description
 	Mobile:
 		Speed: 78
 	Health:
@@ -9727,7 +9727,7 @@ drrelmnoth:
 		BuildPaletteOrder: 30
 		Prerequisites: barracks, dribarr2
 		Queue: Infantry.Eodalien
-		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles
+		Description: actor-drrelmnoth.description
 	Mobile:
 		Locomotor: hover
 		Speed: 126
@@ -9769,7 +9769,7 @@ drsalamander:
 		BuildPaletteOrder: 20
 		Prerequisites: barracks
 		Queue: Infantry.Eodalien
-		Description: Melee Attack Unit.\n  Strong vs Infantry\n  Weak vs Aircraft, Heavy Vehicles
+		Description: actor-drsalamander.description
 	Mobile:
 		Speed: 120
 	Health:
@@ -9818,7 +9818,7 @@ drassimilator:
 		BuildPaletteOrder: 20
 		Prerequisites: barracks, dribarr2
 		Queue: Infantry.Eodalien
-		Description: Melee Attack Unit.\n  Strong vs Infantry\n  Weak vs Aircraft, Heavy Vehicles
+		Description: actor-drassimilator.description
 	Mobile:
 		Speed: 150
 	Health:
@@ -9870,7 +9870,7 @@ drgather:
 		Prerequisites: drterweap.terror, drlife.eodalien
 		Queue: Vehicle.Eodalien
 		BuildDurationModifier: 40
-		Description: Collects Tiberium for processing.\n  Unarmed
+		Description: actor-drgather.description
 	Selectable:
 		DecorationBounds: 1536, 1536
 	Harvester:
@@ -9927,7 +9927,7 @@ drdrednaut:
 		Queue: Vehicle.Eodalien
 		BuildDuration: 1020
 		BuildDurationModifier: 40
-		Description: Fast, light tank.\n  Strong vs Vehicles, Tanks\n  Weak vs Infantry, Aircraft
+		Description: actor-drdrednaut.description
 	Mobile:
 		Locomotor: hover
 		TurnSpeed: 32
@@ -9980,7 +9980,7 @@ drmole:
 		BuildPaletteOrder: 40
 		Prerequisites: draweap.eodalien
 		Queue: Vehicle.Eodalien
-		Description: Speedy, heavy mech.\n  Powerful Firepower.\n  Strong vs Ground Units\n  Weak vs Aircraft
+		Description: actor-drmole.description
 	Mobile:
 		Speed: 126
 		TurnSpeed: 40
@@ -10026,7 +10026,7 @@ drarunner:
 		BuildPaletteOrder: 40
 		Prerequisites: draweap.eodalien
 		Queue: Vehicle.Eodalien
-		Description: Speedy, heavy mech.\n  Powerful Firepower.\n  Strong vs Ground Units\n  Weak vs Aircraft
+		Description: actor-drarunner.description
 	Mobile:
 		Speed: 200
 		TurnSpeed: 12
@@ -10068,7 +10068,7 @@ drhealer:
 		Queue: Vehicle.Eodalien
 		BuildDuration: 1020
 		BuildDurationModifier: 40
-		Description: Fast, light tank.\n  Strong vs Vehicles, Tanks\n  Weak vs Infantry, Aircraft
+		Description: actor-drhealer.description
 	Mobile:
 		Locomotor: hover
 		TurnSpeed: 32
@@ -10121,7 +10121,7 @@ drrouter:
 		BuildPaletteOrder: 61
 		Prerequisites: draweap.eodalien
 		Queue: Vehicle.Eodalien
-		Description: Speedy, medium mech.\n  Powerful Firepower.\n  Strong vs Ground Units\n  Weak vs Aircraft
+		Description: actor-drrouter.description
 	Mobile:
 		Speed: 120
 	Health:
@@ -10163,7 +10163,7 @@ drmecha:
 		BuildPaletteOrder: 61
 		Prerequisites: draweap.eodalien, driweap2
 		Queue: Vehicle.Eodalien
-		Description: Speedy, medium mech.\n  Powerful Firepower.\n  Strong vs Ground Units\n  Weak vs Aircraft
+		Description: actor-drmecha.description
 	Mobile:
 		Speed: 100
 	Health:
@@ -10238,7 +10238,7 @@ drlynoth:
 		BuildPaletteOrder: 100
 		Prerequisites: draweap.eodalien, driweap2, drhive
 		Queue: Vehicle.Eodalien
-		Description: Helicopter Gunship with Chainguns.\n  Strong vs Infantry, Light Vehicles and\n  Aircraft\n  Weak vs Tanks
+		Description: actor-drlynoth.description
 	Aircraft:
 		TurnSpeed: 36
 		Speed: 210
@@ -10293,7 +10293,7 @@ drcarrier:
 		BuildPaletteOrder: 140
 		Prerequisites: draweap.eodalien, driweap2, drhive
 		Queue: Vehicle.Eodalien
-		Description: Heavy Bomber Aircraft.\n  Strong vs Ground Units and Buildings\n  Weak vs AA Aircraft
+		Description: actor-drcarrier.description
 	Aircraft:
 		InitialFacing: 896
 		TurnSpeed: 28
@@ -10418,7 +10418,7 @@ drblazer:
 		BuildPaletteOrder: 110
 		Prerequisites: draweap.eodalien, driweap2, drhive
 		Queue: Vehicle.Eodalien
-		Description: Helicopter Gunship with Chainguns.\n  Strong vs Infantry, Light Vehicles and\n  Aircraft\n  Weak vs Tanks
+		Description: actor-drblazer.description
 	Aircraft:
 		TurnSpeed: 36
 		Speed: 320
@@ -10474,7 +10474,7 @@ drbomber:
 		BuildPaletteOrder: 120
 		Prerequisites: draweap.eodalien, driweap2, drhive
 		Queue: Vehicle.Eodalien
-		Description: Helicopter Gunship with Missiles.\n  Strong vs Infantry, Light Vehicles and\n  Aircraft\n  Weak vs Tanks
+		Description: actor-drbomber.description
 	Aircraft:
 		TurnSpeed: 36
 		Speed: 210
@@ -10527,7 +10527,7 @@ drthunder:
 		BuildPaletteOrder: 150
 		Prerequisites: draweap.eodalien, driweap2, drhive
 		Queue: Vehicle.Eodalien
-		Description: Helicopter Gunship with Quake Weapons.\n  Strong vs Infantry, Light Vehicles and\n  Aircraft\n  Weak vs Tanks
+		Description: actor-drthunder.description
 	Aircraft:
 		TurnSpeed: 36
 		Speed: 60
@@ -10609,7 +10609,7 @@ drmissboat:
 		Queue: Naval.Eodalien
 		BuildDuration: 1020
 		BuildDurationModifier: 40
-		Description: Fast, light tank.\n  Strong vs Vehicles, Tanks\n  Weak vs Infantry, Aircraft
+		Description: actor-drmissboat.description
 	Mobile:
 		TurnSpeed: 32
 		Speed: 90
@@ -10662,7 +10662,7 @@ drpboat:
 		Queue: Naval.Eodalien
 		BuildDuration: 1020
 		BuildDurationModifier: 40
-		Description: Fast, light tank.\n  Strong vs Vehicles, Tanks\n  Weak vs Infantry, Aircraft
+		Description: actor-drpboat.description
 	Mobile:
 		TurnSpeed: 32
 		Speed: 100
@@ -11178,102 +11178,102 @@ drpboat:
 ##      Darkreign Civilians or Misc
 ##
 ##############################################################################
-drdissecator:
-	Inherits: ^TechBuilding
-	Inherits@shape: ^3x2Shape
-	OwnerLostAction:
-		Action: ChangeOwner
-	Building:
-		Footprint: xxx xxx ===
-		Dimensions: 3,3
-		LocalCenterOffset: 0,-512,0
-	Health:
-		HP: 400000
-	RevealsShroud:
-		Range: 4c0
-	CaptureManager:
-	Capturable:
-		Types: building
-	# EngineerRepairable:
-	Tooltip:
-		Name: Dissecator Facility
-	TooltipDescription@ally:
-		Description: Provides superweapon dissecator.
-		ValidRelationships: Ally
-	TooltipDescription@other:
-		Description: Capture to receive superweapon dissecator.
-		ValidRelationships: Neutral, Enemy
-	FireWarheadsOnDeath:
-		Weapon: BarrelExplode
-	GpsDot:
-		String: Oil
-	RenderSprites:
-	NukePower:
-		PauseOnCondition: lowpower
-		Prerequisites: ~techlevel.superweapons, !techlevel.unlimited
-		Icons: abomb
-		Cursor: nuke
-		ChargeInterval: 9000
-		Names: Nuclear Strike
-		Descriptions: Launch a tactical nuclear warhead.\nApplies heavy damage over a large area.
-		EndChargeSpeechNotification: NuclearWeaponAvailable
-		SelectTargetSpeechNotification: SelectTarget
-		InsufficientPowerSpeechNotification: InsufficientPower
-		LaunchSpeechNotification: NuclearWeaponLaunched
-		IncomingSpeechNotification: NuclearWarheadApproaching
-		MissileWeapons: DRDissecator
-		MissileDelay: 11
-		SpawnOffset: 3c0,0,-1c512
-		DisplayBeacon: True
-		BeaconPosters:
-			1: atomic
-		BeaconPosterPalette: beaconposter
-		DisplayRadarPing: True
-		CameraRange: 10c0
-		ArrowSequence: arrow
-		ClockSequence: clock
-		CircleSequence: circles
-		SupportPowerPaletteOrder: 30
-		MissileImage: DRDissecator
-	NukePower@unlimited:
-		AllowMultiple: True
-		Prerequisites: 
-			1: ~techlevel.unlimited
-		PauseOnCondition: lowpower
-		Icons: 
-			1: abomb
-		Cursor: nuke
-		ChargeInterval: 9000
-		Names: 
-			1: Dissicator Strike
-		Descriptions: 
-			1: Launch a tactical nuclear warhead.\nApplies heavy damage over a large area.
-		EndChargeSpeechNotification: NuclearWeaponAvailable
-		SelectTargetSpeechNotification: SelectTarget
-		InsufficientPowerSpeechNotification: InsufficientPower
-		LaunchSpeechNotification: NuclearWeaponLaunched
-		IncomingSpeechNotification: NuclearWarheadApproaching
-		MissileWeapons: 
-			1: DRDissecator
-		MissileDelay: 11
-		SpawnOffset: 3c0,0,-1c512
-		DisplayBeacon: True
-		BeaconPosters: 
-			1: atomic
-		BeaconPosterPalette: beaconposter
-		DisplayRadarPing: True
-		CameraRange: 10c0
-		ArrowSequence: arrow
-		ClockSequence: clock
-		CircleSequence: circles
-		SupportPowerPaletteOrder: 30
-		MissileImage: DRDissecator
-	WithSupportPowerActivationAnimation:
-		RequiresCondition: !build-incomplete
-	WithSupportPowerActivationOverlay:
-		RequiresCondition: !build-incomplete
-		Sequence: smoke
-	SupportPowerChargeBar:
+# drdissecator:
+# 	Inherits: ^TechBuilding
+# 	Inherits@shape: ^3x2Shape
+# 	OwnerLostAction:
+# 		Action: ChangeOwner
+# 	Building:
+# 		Footprint: xxx xxx ===
+# 		Dimensions: 3,3
+# 		LocalCenterOffset: 0,-512,0
+# 	Health:
+# 		HP: 400000
+# 	RevealsShroud:
+# 		Range: 4c0
+# 	CaptureManager:
+# 	Capturable:
+# 		Types: building
+# 	# EngineerRepairable:
+# 	Tooltip:
+# 		Name: Dissecator Facility
+# 	TooltipDescription@ally:
+# 		Description: Provides superweapon dissecator.
+# 		ValidRelationships: Ally
+# 	TooltipDescription@other:
+# 		Description: Capture to receive superweapon dissecator.
+# 		ValidRelationships: Neutral, Enemy
+# 	FireWarheadsOnDeath:
+# 		Weapon: BarrelExplode
+# 	GpsDot:
+# 		String: Oil
+# 	RenderSprites:
+# 	NukePower:
+# 		PauseOnCondition: lowpower
+# 		Prerequisites: ~techlevel.superweapons, !techlevel.unlimited
+# 		Icons: abomb
+# 		Cursor: nuke
+# 		ChargeInterval: 9000
+# 		Names: Nuclear Strike
+# 		Descriptions: Launch a tactical nuclear warhead.\nApplies heavy damage over a large area.
+# 		EndChargeSpeechNotification: NuclearWeaponAvailable
+# 		SelectTargetSpeechNotification: SelectTarget
+# 		InsufficientPowerSpeechNotification: InsufficientPower
+# 		LaunchSpeechNotification: NuclearWeaponLaunched
+# 		IncomingSpeechNotification: NuclearWarheadApproaching
+# 		MissileWeapons: DRDissecator
+# 		MissileDelay: 11
+# 		SpawnOffset: 3c0,0,-1c512
+# 		DisplayBeacon: True
+# 		BeaconPosters:
+# 			1: atomic
+# 		BeaconPosterPalette: beaconposter
+# 		DisplayRadarPing: True
+# 		CameraRange: 10c0
+# 		ArrowSequence: arrow
+# 		ClockSequence: clock
+# 		CircleSequence: circles
+# 		SupportPowerPaletteOrder: 30
+# 		MissileImage: DRDissecator
+# 	NukePower@unlimited:
+# 		AllowMultiple: True
+# 		Prerequisites: 
+# 			1: ~techlevel.unlimited
+# 		PauseOnCondition: lowpower
+# 		Icons: 
+# 			1: abomb
+# 		Cursor: nuke
+# 		ChargeInterval: 9000
+# 		Names: 
+# 			1: Dissicator Strike
+# 		Descriptions: 
+# 			1: Launch a tactical nuclear warhead.\nApplies heavy damage over a large area.
+# 		EndChargeSpeechNotification: NuclearWeaponAvailable
+# 		SelectTargetSpeechNotification: SelectTarget
+# 		InsufficientPowerSpeechNotification: InsufficientPower
+# 		LaunchSpeechNotification: NuclearWeaponLaunched
+# 		IncomingSpeechNotification: NuclearWarheadApproaching
+# 		MissileWeapons: 
+# 			1: DRDissecator
+# 		MissileDelay: 11
+# 		SpawnOffset: 3c0,0,-1c512
+# 		DisplayBeacon: True
+# 		BeaconPosters: 
+# 			1: atomic
+# 		BeaconPosterPalette: beaconposter
+# 		DisplayRadarPing: True
+# 		CameraRange: 10c0
+# 		ArrowSequence: arrow
+# 		ClockSequence: clock
+# 		CircleSequence: circles
+# 		SupportPowerPaletteOrder: 30
+# 		MissileImage: DRDissecator
+# 	WithSupportPowerActivationAnimation:
+# 		RequiresCondition: !build-incomplete
+# 	WithSupportPowerActivationOverlay:
+# 		RequiresCondition: !build-incomplete
+# 		Sequence: smoke
+# 	SupportPowerChargeBar:
 
 
 drwaterextract:
@@ -11296,10 +11296,10 @@ drwaterextract:
 	Tooltip:
 		Name: Water Extractor
 	TooltipDescription@ally:
-		Description: Provides additional funds.
+		Description: actor-drwaterextract.description
 		ValidRelationships: Ally
 	TooltipDescription@other:
-		Description: Capture to receive additional funds.
+		Description: actor-drwaterextract.description
 		ValidRelationships: Neutral, Enemy
 	FireWarheadsOnDeath:
 		Weapon: BarrelExplode
@@ -11334,10 +11334,10 @@ drcivplant:
 	Tooltip:
 		Name: Gas Power Plant
 	TooltipDescription@ally:
-		Description: Provides additional funds.
+		Description: actor-drcivplant.description
 		ValidRelationships: Ally
 	TooltipDescription@other:
-		Description: Capture to receive additional funds.
+		Description: actor-drcivplant.description
 		ValidRelationships: Neutral, Enemy
 	FireWarheadsOnDeath:
 		Weapon: BarrelExplode
@@ -11386,7 +11386,7 @@ drarmciv:
 		BuildPaletteOrder: 10
 		Prerequisites: barracks
 		Queue: Infantry
-		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles
+		Description: actor-drarmciv.description
 	Mobile:
 		Speed: 56
 	Health:
@@ -11429,7 +11429,7 @@ drzombie:
 		BuildPaletteOrder: 20
 		Prerequisites: barracks
 		Queue: Infantry
-		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles
+		Description: actor-drzombie.description
 	Mobile:
 		Speed: 85
 	Health:
@@ -11474,7 +11474,7 @@ drsatanclawz:
 		BuildPaletteOrder: 20
 		Prerequisites: barracks
 		Queue: Infantry
-		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles
+		Description: actor-drsatanclawz.description
 	Mobile:
 		Speed: 56
 	Health:

@@ -4,107 +4,107 @@ World:
 		InternalName: usa
 		Game: Generals
 		Side: USA
-		Description: USA\nUSA Utilizes High Tech Weaponry and skill to defeat its enemies\nSupport powers: Particle Cannon, General's Powers
+		Description: faction-usa-generals.description
 	FactionCA@usa-super:
 		Name: Alexander
 		InternalName: usasuper
 		Game: Generals
 		Side: USA
-		Description: USA Superweapons General\nGeneral Alexis Alexander prefers to build heavy Base Defenses and build superweapons to defeat her enemies\nSupport powers: Particle Cannon, General's Powers
+		Description: faction-superweapon-generals.description
 	FactionCA@usa-laser:
 		Name: Pinpoint
 		InternalName: usalsr
 		Game: Generals
 		Side: USA
-		Description: USA Laser General\nGeneral "Pinpoint" Townes prefers to utilize cutting edge laser technology to defeat his enemies\nSupport powers: Particle Cannon, General's Powers
+		Description: faction-laser-generals.description
 	FactionCA@usa-air:
 		Name: Granger
 		InternalName: usaair
 		Game: Generals
 		Side: USA
-		Description: USA Airforce General\nGeneral Malcolm Ace Granger prefers to utilize the maximum airpower available to defeat his enemies\nSupport powers: Particle Cannon, General's Powers
+		Description: faction-air-generals.description
 	FactionCA@china:
 		Name: China
 		InternalName: china
 		Game: Generals
 		Side: China
-		Description: China\nChina uses fire and overwhelming numbers to defeat its enemies\nSupport powers: Nuclear Missile, General's Powers
+		Description: faction-china-generals.description
 	FactionCA@china-inf:
 		Name: Anvil
 		InternalName: chinainf
 		Game: Generals
 		Side: China
-		Description: China Infantry General\nGeneral "Anvil" Shin Fai prefers to enlist highly trained soldiers to defeat his enemies\nSupport powers: Nuclear Missile, General's Powers
+		Description: faction-infantry-generals.description
 	FactionCA@china-tnk:
 		Name: Kwai
 		InternalName: chinatnk
 		Game: Generals
 		Side: China
-		Description: China Tank General\nGeneral Ta Hun Kwai prefers to construct well built Tanks to defeat his enemies\nSupport powers: Nuclear Missile, General's Powers
+		Description: faction-tank-generals.description
 	FactionCA@china-atom:
 		Name: Tao
 		InternalName: chinaatom
 		Game: Generals
 		Side: China
-		Description: China Nuke General\nGeneral Tsing Shi Tao prefers to utilize nuclear radiation to defeat his enemies\nSupport powers: Nuclear Missile, General's Powers
+		Description: faction-nuke-generals.description
 	FactionCA@gla:
 		Name: GLA
 		InternalName: gla
 		Game: Generals
 		Side: GLA
-		Description: GLA\nFeatures:\n -Buildings and defenses do not require power to operate\n- Destroyed buildings can rebuild\nSupport powers: Scud Storm, General's Powers
+		Description: faction-gla-generals.description
 	FactionCA@gla-toxin:
 		Name: Thrax
 		InternalName: glatoxin
 		Game: Generals
 		Side: GLA
-		Description: GLA Toxin General\nDr. Thrax prefers to mix deadly toxins to defeat his enemies\nSupport powers: Scud Storm, General's Powers
+		Description: faction-toxin-generals.description
 	FactionCA@gla-demo:
 		Name: Demo
 		InternalName: glademo
 		Game: Generals
 		Side: GLA
-		Description: GLA Demolition General\nGeneral Rodall "Demo" Juhziz prefers to wire up powerful explosives to defeat his enemies\nnSupport powers: Scud Storm, General's Powers
+		Description: faction-demo-generals.description
 	FactionCA@gla-camo:
 		Name: Kassad
 		InternalName: glacamo
 		Game: Generals
 		Side: GLA
-		Description: GLA Stealth General\nPrince Kassad prefers to use camouflage and covert ops to defeat his enemies\nSupport powers: Scud Storm, General's Powers
+		Description: faction-stealth-generals.description
 	# FactionCA@china-special:
 	# 	Name: Tigress GEN
 	# 	InternalName: leang
 	# 	Game: Boss
 	# 	Side: Boss Factions
-	# 	Description: China Special Weapons General\nGeneral "Tigress" Leiong Leang demands to use of advaned technology and heavy support weapons to defeat her enemies\nSupport powers: Scud Storm, Nuclear Missile, Particle Cannon, General's Powers
+	# 	Description: faction-boss-generals.description
 	FactionCA@RandomCNCGUSA:
 		Name: Any USA
 		InternalName: RandomUSA
 		RandomFactionMembers: usa, usasuper, usaair, usalsr
 		Game: Generals
 		Side: Random
-		Description: Random Faction\nA random USA faction from C&C Generals will be chosen when the game starts.
+		Description: faction-generals-usarandom.description
 	FactionCA@RandomCNCGCHINA:
 		Name: Any China
 		InternalName: RandomChina
 		RandomFactionMembers: china, chinainf, chinatnk, chinaatom
 		Game: Generals
 		Side: Random
-		Description: Random Faction\nA random China faction from C&C Generals will be chosen when the game starts.
+		Description: faction-generals-chinarandom.description
 	FactionCA@RandomCNCGGLA:
 		Name: Any GLA
 		InternalName: RandomGLA
 		RandomFactionMembers: gla, glatoxin, glademo, glacamo
 		Game: Generals
 		Side: Random
-		Description: Random Faction\nA random GLA faction from C&C Generals will be chosen when the game starts.
+		Description: faction-generals-glarandom.description
 	FactionCA@RandomCNCG:
 		Name: Any
 		InternalName: Randomcncg
 		RandomFactionMembers: usa, gla, china, usasuper, usaair, usalsr, chinainf, chinatnk, chinaatom, glatoxin, glademo, glacamo, leang
 		Game: Generals
 		Side: Random
-		Description: Random Faction\nA random faction from C&C Generals will be chosen when the game starts.
+		Description: faction-generals-random.description
 	####################################################################################################
 	#		C&C GENERALS
 	####################################################################################################
@@ -802,7 +802,7 @@ upgecapture:
 	Buildable:
 		BuildPaletteOrder: 30
 		Queue: Infantry.Usa, Infantry.China, Infantry.Gla
-		Description: Allow anti-personnel infantry to capture base buildings.\nAlt-click to capture enemy base buildings.
+		Description: actor-upgecapture.description
 		Prerequisites: barracks, ~!upgecapture, ~!susa_air, ~!susa_armor
 	Valued:
 		Cost: 1000
@@ -832,7 +832,7 @@ GENE6:
 		Names: 
 			1: Emergency Repair
 		Descriptions:
-			1: Provides repair for vehicles in the target area.
+			1: power-general-repair.description
 		Durations:
 			1: 100
 		SelectTargetSpeechNotification: SelectTarget
@@ -912,13 +912,13 @@ GENE6:
 	SpawnActorPower@spysat:
 		PauseOnCondition: lowpower
 		OrderName: SovietSpyPlane
-		Icons: 
+		Icons:
 			1: gps
 		ChargeInterval: 3000
-		Names: 
+		Names:
 			1: Spy Satellite Scan
-		Descriptions: 
-			1: Reveals an area of the map\nand cloaked enemy units.
+		Descriptions:
+			1: power-ra2psireveal.description
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
 		EndChargeSpeechNotification: SpyPlaneReady
@@ -935,19 +935,19 @@ GENE6:
 		EffectSequence: idle
 	SpawnActorPower@spydrone:
 		PauseOnCondition: lowpower
-		Icons: 
+		Icons:
 			1: usaspydrone
-		Names: 
+		Names:
 			1: Spy Drone
-		Descriptions: 
-			1: Spawns a spy drone.\nDetects cloaked units.
-		Prerequisites: 
+		Descriptions:
+			1: power-general-spydrone.description
+		Prerequisites:
 			1: upusaspydrone
 		ChargeInterval: 4500
 		LifeTime: -1
 		EndChargeSpeechNotification: SpyPlaneReady
 		SelectTargetSpeechNotification: SelectTarget
-		Actors: 
+		Actors:
 			1: usaspydronepower
 		SupportPowerPaletteOrder: 20
 		OrderName: SpydronePower
@@ -960,7 +960,7 @@ GENE6:
 	# 	Icons: 
 	# 		1: usaparadrop1
 	# 	ChargeInterval: 5000
-	# 	Descriptions: 
+	# 	Descriptions:
 	# 		1: USA Paratroopers
 	# 	LongDesc: Cargo planes drop a squad of infantry\nanywhere on the map.
 	# 	DropItems: usae1,usae1,usae1,usae1,usae1
@@ -987,7 +987,7 @@ GENE6:
 	# 	Icons: 
 	# 		1: usaparadrop2
 	# 	ChargeInterval: 5000
-	# 	Descriptions: 
+	# 	Descriptions:
 	# 		1: USA Paratroopers
 	# 	LongDesc: Cargo planes drop a squad of infantry\nanywhere on the map.
 	# 	DropItems: usae1,usae1,usae1,usae1,usae1,usae1,usae1,usae1,usae1,usae1
@@ -1011,13 +1011,13 @@ GENE6:
 		PauseOnCondition: lowpower
 		Prerequisites: upusaparadrop3
 		OrderName: USAParatroopers
-		Icons: 
+		Icons:
 			1: usaparadrop3
 		ChargeInterval: 5000
-		Names: 
+		Names:
 			1: USA Paratroopers
-		Descriptions: 
-			1: Cargo planes drop a squad of infantry\nanywhere on the map.
+		Descriptions:
+			1: power-general-paratroopers.description
 		DropItems: usae1,usae1,usae1,usae1,usae1,usae1,usae1,usae1,usae1,usae1,usae1,usae1,usae1,usae1,usae1,usae1,usae1,usae1,usae1,usae1
 		ReinforcementsArrivedSpeechNotification: ReinforcementsArrived
 		SelectTargetSpeechNotification: SelectTarget
@@ -1043,22 +1043,22 @@ GENE6:
 				SpawnOffset: -1536,1024,0
 				TargetOffset: -536,0,0
 		PauseOnCondition: lowpower
-		Prerequisites: 
+		Prerequisites:
 			1: ~techlevel.superweapons, upusagunship
-		Icons: 
+		Icons:
 			1: usagunshipicon
 		ChargeInterval: 6000
-		Names: 
+		Names:
 			1: Spectre Gunship
-		Descriptions: 
-			1: Deploys a Spectre Gunship to fire on the target.
+		Descriptions:
+			1: power-general-spectre.description
 		EndChargeSpeechNotification: AirstrikeReady
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
 		IncomingSpeechNotification: EnemyPlanesApproaching
 		QuantizedFacings: 8
 		DisplayBeacon: True
-		BeaconPosters: 
+		BeaconPosters:
 			1: airstrike
 		BeaconPosterPalette: beaconposter
 		DisplayRadarPing: True
@@ -1080,13 +1080,13 @@ GENE6:
 			1: 4
 	AirstrikePower@fuelbomb:
 		OrderName: USAFuelBomb
-		Icons: 
+		Icons:
 			1: usafuelbomb
 		ChargeInterval: 6000
-		Names: 
+		Names:
 			1: Fuel Air Bomb
-		Descriptions: 
-			1: Drops a thermobaric weapon on the target.
+		Descriptions:
+			1: power-general-fuelairbomb.description
 		SelectTargetSpeechNotification: SelectTarget
 		CameraActor: camera
 		CameraRemoveDelay: 150
@@ -1094,9 +1094,9 @@ GENE6:
 			1: usabomber.fuelbomb
 		QuantizedFacings: 8
 		DisplayBeacon: true
-		BeaconPosters: 
+		BeaconPosters:
 			1: airstrike
-		SquadSizes: 
+		SquadSizes:
 			1: 1
 		SquadOffset: 1792,1792,0
 		ArrowSequence: arrow
@@ -1105,18 +1105,18 @@ GENE6:
 		UseDirectionalTarget: True
 		DirectionArrowAnimation: airstrikedirection
 		SupportPowerPaletteOrder: 40
-		Prerequisites: 
+		Prerequisites:
 			1: upusafuelbomb
 		StartFullyCharged: true
 	AirstrikePower@motherbomb:
 		OrderName: USAMotherBomb
-		Icons: 
+		Icons:
 			1: usamotherbomb
 		ChargeInterval: 6200
-		Names: 
+		Names:
 			1: MOAB
-		Descriptions: 
-			1: Drops a thermobaric weapon on the target.
+		Descriptions:
+			1: power-general-moab.description
 		SelectTargetSpeechNotification: SelectTarget
 		CameraActor: camera
 		CameraRemoveDelay: 150
@@ -1124,9 +1124,9 @@ GENE6:
 			1: usabomber.motherbomb
 		QuantizedFacings: 8
 		DisplayBeacon: true
-		BeaconPosters: 
+		BeaconPosters:
 			1: airstrike
-		SquadSizes: 
+		SquadSizes:
 			1: 1
 		SquadOffset: 1792,1792,0
 		ArrowSequence: arrow
@@ -1135,18 +1135,18 @@ GENE6:
 		UseDirectionalTarget: false
 		DirectionArrowAnimation: airstrikedirection
 		SupportPowerPaletteOrder: 40
-		Prerequisites: 
+		Prerequisites:
 			1: upusafuelbomb, upusamotherbomb
 		StartFullyCharged: true
 	AirstrikePower@leaflet:
 		OrderName: USALeaflet
-		Icons: 
+		Icons:
 			1: usaleaflet
 		ChargeInterval: 6000
-		Names: 
+		Names:
 			1: Leaflet Drop
-		Descriptions: 
-			1: Drops leaflets onto enemy units, briefly\npreventing them from fighting.
+		Descriptions:
+			1: power-general-leaflet.description
 		SelectTargetSpeechNotification: SelectTarget
 		CameraActor: camera
 		CameraRemoveDelay: 150
@@ -1154,9 +1154,9 @@ GENE6:
 			1: usabomber.leaflet
 		QuantizedFacings: 8
 		DisplayBeacon: true
-		BeaconPosters: 
+		BeaconPosters:
 			1: airstrike
-		SquadSizes: 
+		SquadSizes:
 			1: 1
 		SquadOffset: 1792,1792,0
 		ArrowSequence: arrow
@@ -1173,10 +1173,10 @@ GENE6:
 		Icons: 
 			1: usaa101
 		ChargeInterval: 6000
-		Names: 
+		Names:
 			1: A10 Strike 1
-		Descriptions: 
-			1: A single A-10 attacks the target.
+		Descriptions:
+			1: power-general-a101.description
 		SelectTargetSpeechNotification: SelectTarget
 		CameraActor: camera
 		CameraRemoveDelay: 150
@@ -1203,10 +1203,10 @@ GENE6:
 		Icons: 
 			1: usaa102
 		ChargeInterval: 6000
-		Names: 
+		Names:
 			1: A10 Strike 2
-		Descriptions: 
-			1: 2 A-10 aircraft attack the target.
+		Descriptions:
+			1: power-general-a102.description
 		SelectTargetSpeechNotification: SelectTarget
 		CameraActor: camera
 		CameraRemoveDelay: 150
@@ -1214,7 +1214,7 @@ GENE6:
 			1: a10generals
 		QuantizedFacings: 8
 		DisplayBeacon: true
-		BeaconPosters: 
+		BeaconPosters:
 			1: airstrike
 		SquadSizes:
 			1: 2
@@ -1230,13 +1230,13 @@ GENE6:
 		StartFullyCharged: true
 	AirstrikePower@a103:
 		OrderName: USAA103
-		Icons: 
+		Icons:
 			1: usaa103
 		ChargeInterval: 6000
-		Names: 
+		Names:
 			1: A10 Strike
-		Descriptions: 
-			1: 3 A-10 aircraft attack the target.
+		Descriptions:
+			1: power-general-a103.description
 		SelectTargetSpeechNotification: SelectTarget
 		CameraActor: camera
 		CameraRemoveDelay: 150
@@ -1244,7 +1244,7 @@ GENE6:
 			1: a10generals
 		QuantizedFacings: 8
 		DisplayBeacon: true
-		BeaconPosters: 
+		BeaconPosters:
 			1: airstrike
 		SquadSizes: 
 			1: 3
@@ -1267,8 +1267,8 @@ GENE6:
 		ChargeInterval: 6000
 		Names: 
 			1: Anthrax Bomb
-		Descriptions: 
-			1: Drops a biochemical weapon on the target.
+		Descriptions:
+			1: power-general-anthrax.description
 		SelectTargetSpeechNotification: SelectTarget
 		CameraActor: camera
 		CameraRemoveDelay: 150
@@ -1337,16 +1337,16 @@ GENE6:
 		Cursor: ability
 		Icons: 
 			1: glambush3
-		Names: 
+		Names:
 			1: Ambush
-		Descriptions: 
-			1: Spawns a large Rebel squad.
+		Descriptions:
+			1: power-general-ambush.description
 		IncomingSpeechNotification: EnemyUnitsApproaching
 		SelectTargetSpeechNotification: SelectTarget
 		DisplayRadarPing: True
 		ChargeInterval: 8000
 		ActivationDelay: 50
-		Weapons: 
+		Weapons:
 			1: GLAmbush3
 		CameraActor: camera
 		CameraRemoveDelay: 240
@@ -1368,8 +1368,8 @@ GENE6:
 			1: glambush3
 		Names: 
 			1: Ambush
-		Descriptions: 
-			1: Spawns a large Rebel squad.
+		Descriptions:
+			1: power-general-toxinambush.description
 		IncomingSpeechNotification: EnemyUnitsApproaching
 		SelectTargetSpeechNotification: SelectTarget
 		DisplayRadarPing: True
@@ -1383,7 +1383,7 @@ GENE6:
 		ArrowSequence: arrow
 		ClockSequence: clock
 		CircleSequence: circles
-		BeaconPosters: 
+		BeaconPosters:
 			1: rapinficon
 		StartFullyCharged: true
 		TargetCircleRange:
@@ -1396,7 +1396,7 @@ GENE6:
 		Names:
 			1: GPS Scrambler
 		Descriptions:
-			1: Cloaks a large group of units.
+			1: power-general-scrambler.description
 		Durations:
 			1: 2000
 		SelectTargetSpeechNotification: SelectTarget
@@ -1446,8 +1446,8 @@ GENE6:
 		ChargeInterval: 3000
 		Names:
 			1: Cash Bounty
-		Descriptions: 
-			1: Makes selected targets grant 40% of value\nupon being killed or destroyed.
+		Descriptions:
+			1: power-general-bounty.description
 		Durations:
 			1: 1000
 		SelectTargetSpeechNotification: SelectTarget
@@ -1473,10 +1473,10 @@ GENE6:
 		Maximum: 2000
 		Prerequisites: 
 			1: upcashhack
-		Names: 
+		Names:
 			1: Cash Hack
-		Descriptions: 
-			1: Steal up to $2000 credits from a selected enemy refinery.
+		Descriptions:
+			1: power-general-cashhack.description
 		OnFireSound: scashhac.aud
 		Notification: CreditsStolen
 		DisplayTimerStances: Ally
@@ -1490,14 +1490,15 @@ GENE6:
 		Prerequisites: 
 			1: uptankdrop
 		OrderName: TankDrop
-		Icons: 
+		Icons:
 			1: usaparadrop1 #todo
 		ChargeInterval: 5000
-		Names: 
+		Names:
 			1: Tank Drop
-		Descriptions: 
-			1: Cargo planes drop Battlemaster tanks\nanywhere on the map.
-		DropItems: chbattle, chbattle, chbattle
+		Descriptions:
+			1: power-general-tankdrop.description
+		DropItems:
+			1: chbattle, chbattle, chbattle
 		ReinforcementsArrivedSpeechNotification: ReinforcementsArrived
 		IncomingSpeechNotification: EnemyUnitsApproaching
 		SelectTargetSpeechNotification: SelectTarget
@@ -1505,12 +1506,13 @@ GENE6:
 		QuantizedFacings: 8
 		CameraActor: camera.paradrop
 		DisplayBeacon: true
-		BeaconPosters: 
+		BeaconPosters:
 			1: pinficon
 		ArrowSequence: arrow
 		ClockSequence: clocklarge
 		UnitTypes: usabomber
-		SquadSizes: 1
+		SquadSizes: 
+			1: 1
 		CircleSequence: circles
 		UseDirectionalTarget: True
 		DirectionArrowAnimation: airstrikedirection
@@ -1520,14 +1522,15 @@ GENE6:
 		Prerequisites: 
 			1: upminigunnerdrop
 		OrderName: MinigunnerDrop
-		Icons: 
+		Icons:
 			1: usaparadrop1 #todo
 		ChargeInterval: 5000
-		Names: 
-			1: Infantry Paradrop
-		Descriptions: 
-			1: Cargo planes drop 15 minigunners\nanywhere on the map.
-		DropItems: che2,che2,che2,che2,che2,che2,che2,che2,che2,che2,che2,che2,che2,che2,che2
+		Names:
+			1: Minigunner Paradrop
+		Descriptions:
+			1: power-general-infdrop.description
+		DropItems:
+			1: che2,che2,che2,che2,che2,che2,che2,che2,che2,che2,che2,che2,che2,che2,che2
 		ReinforcementsArrivedSpeechNotification: ReinforcementsArrived
 		SelectTargetSpeechNotification: SelectTarget
 		IncomingSpeechNotification: EnemyUnitsApproaching
@@ -1535,13 +1538,13 @@ GENE6:
 		QuantizedFacings: 8
 		CameraActor: camera.paradrop
 		DisplayBeacon: true
-		BeaconPosters: 
+		BeaconPosters:
 			1: pinficon
 		ArrowSequence: arrow
 		ClockSequence: clocklarge
-		UnitTypes: 
+		UnitTypes:
 			1: usabomber
-		SquadSizes: 
+		SquadSizes:
 			1: 3
 		CircleSequence: circles
 		UseDirectionalTarget: True
@@ -1586,15 +1589,15 @@ GENE6:
 		PauseOnCondition: lowpower
 		Prerequisites: 
 			1: upartybarrage3
-		Icons: 
+		Icons:
 			1: chartybarr3
 		Cursor: attackmove
 		ChargeInterval: 6000
 		ActivationDelay: 50
-		Names: 
+		Names:
 			1: Artillery Barrage
-		Descriptions: 
-			1: Off-map guns fire at the target.\nApplies heavy damage over a large area.
+		Descriptions:
+			1: power-general-artillery.description
 		Weapons: CHBarrageSpawner3
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
@@ -1606,23 +1609,23 @@ GENE6:
 			1: 6000
 	AirstrikePower@carpet:
 		OrderName: CHCarpetBombing
-		Icons: 
+		Icons:
 			1: chcarpet
 		ChargeInterval: 6000
-		Names: 
+		Names:
 			1: Carpet Bombing
-		Descriptions: 
-			1: A bomber strikes targets along a line.
+		Descriptions:
+			1: power-general-carpetbomb.description
 		SelectTargetSpeechNotification: SelectTarget
 		CameraActor: camera
 		CameraRemoveDelay: 150
-		UnitTypes: 
+		UnitTypes:
 			1: usabomber.carpet
 		QuantizedFacings: 8
 		DisplayBeacon: true
-		BeaconPosters: 
+		BeaconPosters:
 			1: airstrike
-		SquadSizes: 
+		SquadSizes:
 			1: 1
 		SquadOffset: 1792,1792,0
 		ArrowSequence: arrow
@@ -1635,13 +1638,13 @@ GENE6:
 		StartFullyCharged: true
 	AirstrikePower@EMP:
 		OrderName: CHEMPBomb
-		Icons: 
+		Icons:
 			1: chemp
 		ChargeInterval: 6000
-		Names: 
+		Names:
 			1: EM Pulse
-		Descriptions: 
-			1: A bomber drops a EMP bomb on the target.\nDisables vehicles and defenses.\nInstant-kills most aircraft.
+		Descriptions:
+			1: power-general-empulse.description
 		SelectTargetSpeechNotification: SelectTarget
 		CameraActor: camera
 		CameraRemoveDelay: 150
@@ -1666,14 +1669,14 @@ GENE6:
 		Icons: 
 			1: chclustermines
 		ChargeInterval: 6000
-		Names: 
+		Names:
 			1: Cluster Mines
-		Descriptions: 
-			1: A bomber deploys cluster mines at the target.
+		Descriptions:
+			1: power-general-clustermines.description
 		SelectTargetSpeechNotification: SelectTarget
 		CameraActor: camera
 		CameraRemoveDelay: 150
-		UnitTypes: 
+		UnitTypes:
 			1: usabomber.minebomb
 		QuantizedFacings: 8
 		DisplayBeacon: true
@@ -1698,8 +1701,8 @@ GENE6:
 		ChargeInterval: 3000
 		Names:
 			1: Frenzy
-		Descriptions: 
-			1: Increases the firepower of selected vehicles.
+		Descriptions:
+			1: power-general-frenzy.description
 		Durations:
 			1: 750
 		SelectTargetSpeechNotification: SelectTarget
@@ -1756,7 +1759,7 @@ upemergencyrepair1:
 	Buildable:
 		BuildPaletteOrder: 220
 		Queue: Promotions
-		Description: Unlocks Emergency Repair.
+		Description: actor-upemergencyrepair1.description
 		Prerequisites: !upemergencyrepair1, ~canselectrepair, rank1
 	RenderSprites:
 		Image: upemergencyrepair1icon
@@ -1770,7 +1773,7 @@ upemergencyrepair2:
 	Buildable:
 		BuildPaletteOrder: 220
 		#Queue: Promotions
-		Description: Unlocks Emergency Repair Level 2.
+		Description: actor-upemergencyrepair2.description
 		Prerequisites: upemergencyrepair1, !upemergencyrepair2, rank3, rank1, ~canselectrepair
 	RenderSprites:
 		Image: upemergencyrepair2icon
@@ -1784,7 +1787,7 @@ upemergencyrepair3:
 	Buildable:
 		BuildPaletteOrder: 220
 		#Queue: Promotions
-		Description: Unlocks Emergency Repair Level 3.
+		Description: actor-upemergencyrepair3.description
 		Prerequisites: upemergencyrepair2, !upemergencyrepair3, rank3, rank1, ~canselectrepair
 	RenderSprites:
 		Image: upemergencyrepair3icon
@@ -2190,7 +2193,7 @@ glamcv:
 		BuildPaletteOrder: 200
 		Prerequisites: glpalace, ~techlevel.high, ~glaselected
 		Queue: Vehicle.Gla
-		Description: Builds structures and provides radar.
+		Description: actor-glamcv.description
 		BuildDuration: 1500
 		BuildDurationModifier: 100
 	Selectable:
@@ -2524,7 +2527,7 @@ glbarracks:
 		BuildPaletteOrder: 30
 		Prerequisites: glcommand, ~glaselected
 		Queue: Building, RABuilding
-		Description: Trains GLAs infantry
+		Description: actor-glbarracks.description
 	Building:
 		Footprint: xxx xxx ===
 		Dimensions: 3,3
@@ -2595,7 +2598,7 @@ glsupply:
 		BuildPaletteOrder: 20
 		Prerequisites: glcommand, ~glaselected
 		Queue: Building, RABuilding
-		Description: Manage collectible resources\ninto useable money
+		Description: actor-glsupply.description
 	Building:
 		Footprint: xxx ===
 		Dimensions: 3,2
@@ -2665,7 +2668,7 @@ glweap:
 		BuildPaletteOrder: 50
 		Prerequisites: glsupply, ~glaselected
 		Queue: Building, RABuilding
-		Description: Produces GLA vehicles
+		Description: actor-glweap.description
 	Building:
 		Footprint: xxxx x++x ====
 		Dimensions: 4,3
@@ -2750,7 +2753,7 @@ glpalace:
 		BuildPaletteOrder: 60
 		Prerequisites: glweap, ~glaselected
 		Queue: Building, RABuilding
-		Description: Provides access to advanced GLA technologies.\nCan be used as a defensive bunker
+		Description: actor-glpalace.description
 	Building:
 		Footprint: xxxx xxxx xxxx
 		Dimensions: 4,3
@@ -2825,7 +2828,7 @@ glstorm:
 		BuildPaletteOrder: 100
 		Prerequisites: glpalace, ~techlevel.high, !scudstorm, ~normalscudstorm
 		Queue: Building, RABuilding
-		Description: Provides Scud Storm support power.\nRequires power to operate.
+		Description: actor-glstorm.description
 	Building:
 		Footprint: xxxx xxxx xxxx
 		Dimensions: 4,3
@@ -2880,10 +2883,10 @@ glstorm:
 		Icons: 
 			1: glscudstorm
 		ChargeInterval: 9000
-		Names: 
+		Names:
 			1: Scud Storm
-		Descriptions: 
-			1: Fires 9 Scud Missiles at the target.
+		Descriptions:
+			1: power-general-scud.description
 		EndChargeSpeechNotification:
 		SelectTargetSpeechNotification:
 		DisplayTimerStances: Ally, Neutral, Enemy
@@ -2934,7 +2937,7 @@ glblackmarket:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 70
 		Prerequisites: glpalace, ~glaselected
-		Description: Unlock upgrades for GLA weaponry.\nProvides a cash supply.
+		Description: actor-glblackmarket.description
 	Valued:
 		Cost: 2500 #300
 	Tooltip:
@@ -3004,7 +3007,7 @@ glsite:
 		BuildPaletteOrder: 60
 		Prerequisites: glbarracks, ~techlevel.medium, ~glstingerprereq
 		Queue: Defence, RADefence
-		Description: All-purpose defensive structure.\n  Strong vs Aircraft, Tanks\n  Weak vs Infantry
+		Description: actor-glsite.description
 	Selectable:
 		Bounds: 2048, 2048
 		DecorationBounds: 2048, 2048, 0, -512
@@ -3142,7 +3145,7 @@ gltunnel:
 		BuildPaletteOrder: 60
 		Prerequisites: glbarracks, ~techlevel.low, ~glaselected, ~!selectglatoxin
 		Queue: Defence, RADefence
-		Description: Anti-Infantry defensive structure.\nCan protect and transport units.\n  Strong vs Infantry\n  Weak vs Tanks
+		Description: actor-gltunnel.description
 	Selectable:
 		Bounds: 2048, 2048
 	Health:
@@ -3230,7 +3233,7 @@ gltrap:
 		Queue: Defence, RADefence
 		BuildDurationModifier: 100
 		BuildDuration: 375
-		Description: Explosive defensive structure.
+		Description: actor-gltrap.description
 	Building:
 	Health:
 		HP: 10000
@@ -3303,7 +3306,7 @@ glamob:
 	Buildable:
 		BuildPaletteOrder: 30
 		Queue: Infantry.Gla
-		Description: Large armed crowd, armed with pistols and Molotovs.\n  Strong vs Buildings, Infantry\n  Weak vs Vehicles, Aircraft
+		Description: actor-glamob.description
 		Prerequisites: glpalace, ~techlevel.medium, ~!anysgla
 	Tooltip:
 		Name: Angry Mob
@@ -3462,7 +3465,7 @@ gle1:
 		BuildPaletteOrder: 20
 		Prerequisites: glbarracks, ~gle1prereq, ~!anysgla
 		Queue: Infantry.Gla
-		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles
+		Description: actor-gle1.description
 	Mobile:
 		Speed: 56
 	Health:
@@ -3524,7 +3527,7 @@ gle1toxin:
 		BuildPaletteOrder: 20
 		Prerequisites: glbarracks, ~gle1toxinprereq, ~!anysgla
 		Queue: Infantry.Gla
-		Description: Soldier armed with a toxin weapon.\n  Strong vs Infantry\n  Weak vs Vehicles
+		Description: actor-gle1toxin.description
 	Armament@PRIMARY: ##########
 		Weapon: GLRebelToxin
 		LocalOffset: 256,43,341
@@ -3562,7 +3565,7 @@ upglatrap:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Infantry.Gla
-		Description: Allows Rebels to plant explosives.\nFriendly and neutral buildings can\nbe trapped to prevent capture.
+		Description: actor-upglatrap.description
 		Prerequisites: ~!upglatrap, ~!selectglatoxin
 	Valued:
 		Cost: 1000
@@ -3585,7 +3588,7 @@ GLKELL:
 		BuildLimit: 1
 		BuildPaletteOrder: 125
 		Queue: Infantry.Gla
-		Description: Elite sniper.\nCan snipe enemy vehicles, allowing them to be captured.\n  Strong vs Infantry\n  Weak vs Vehicles
+		Description: actor-glkell.description
 		Prerequisites: glbarracks, glpalace, ~!anysgla
 	Valued:
 		Cost: 1500
@@ -3654,7 +3657,7 @@ gle3:
 		BuildPaletteOrder: 20
 		Prerequisites: glbarracks, ~!anysgla
 		Queue: Infantry.Gla
-		Description: Anti-tank/anti-aircraft infantry. \n  Strong vs Tanks, Aircraft\n  Weak vs Infantry
+		Description: actor-gle3.description
 	Armament@PRIMARY: ##########
 		Weapon: GLTrooperRPGMissile
 		LocalOffset: 256,43,341
@@ -3695,7 +3698,7 @@ glterror:
 		BuildPaletteOrder: 30
 		Prerequisites: glsupply, ~!anysgla
 		Queue: Infantry.Gla
-		Description: Suicide bomber infantry.
+		Description: actor-glterror.description
 	Voiced:
 		VoiceSet: GLATerroristVoice
 	GrantConditionOnPrerequisite@selectglademo:
@@ -3740,7 +3743,7 @@ glsabo:
 		Queue: Infantry.Gla
 		BuildPaletteOrder: 90
 		Prerequisites: glpalace, !selectglademo, !selectglatoxin
-		Description: Cloaked spy that can infiltrate structures.
+		Description: actor-glsabo.description
 	Valued:
 		Cost: 800
 	Tooltip:
@@ -3797,7 +3800,7 @@ glhijack:
 		BuildPaletteOrder: 30
 		Prerequisites: glpalacehijacker, uphijack, ~!anysgla
 		Queue: Infantry.Gla
-		Description: Hijacks vehicles.
+		Description: actor-glhijack.description
 	Mobile:
 		Speed: 71
 	Health:
@@ -3872,7 +3875,7 @@ glbiker:
 		BuildPaletteOrder: 20
 		Prerequisites: glweap, ~glbikeprereq
 		Queue: Vehicle.Gla
-		Description: Fast scout and multi-purpose vehicle.\n  Weak vs Tanks
+		Description: actor-glbiker.description
 	Mobile:
 		TurnSpeed: 80
 		Speed: 213
@@ -4012,7 +4015,7 @@ glbggy:
 		Queue: Vehicle.Gla
 		BuildDuration: 500
 		BuildDurationModifier: 100
-		Description: Fast, long-range artillery.\n  Strong vs Vehicles, Buildings\n  Weak vs Aircraft
+		Description: actor-glbggy.description
 	Mobile:
 		Speed: 175
 	Health:
@@ -4137,7 +4140,7 @@ glbbus:
 		BuildPaletteOrder: 60
 		Prerequisites: glweap, glpalace, ~glaselected
 		Queue: Vehicle.Gla
-		Description: Mobile bunker vehicle.\n  Passengers can fire from within\n  Immobilized on heavy damage
+		Description: actor-glbbus.description
 	Mobile:
 		Speed: 140
 		RequireForceMoveCondition: damagedslow
@@ -4253,7 +4256,7 @@ glscorpion:
 		BuildPaletteOrder: 30
 		Prerequisites: glweap, ~techlevel.medium, ~glscorpionprereq
 		Queue: Vehicle.Gla
-		Description: Fast, light tank.\nCan be upgraded with missiles.\n  Strong vs Vehicles\n  Weak vs Infantry
+		Description: actor-glscorpion.description
 	Mobile:
 		Speed: 125
 	Health:
@@ -4378,7 +4381,7 @@ glmaura:
 		BuildPaletteOrder: 30
 		Prerequisites: glweap, upmarauder, ~techlevel.medium, ~glmarauderprereq
 		Queue: Vehicle.Gla
-		Description: Medium tank.\n  Strong vs Vehicles\n  Weak vs Infantry
+		Description: actor-glmaura.description
 	Mobile:
 		Speed: 99
 	Health:
@@ -4507,7 +4510,7 @@ gltractor:
 		BuildPaletteOrder: 40
 		Prerequisites: glweap, ~techlevel.medium, ~gltractorprereq
 		Queue: Vehicle.Gla
-		Description: Vehicle armed with toxins.\nCan deploy to contaminate an area.\n  Strong vs Infantry\n  Weak vs Vehicles
+		Description: actor-gltractor.description
 	Mobile:
 		Speed: 95
 	Health:
@@ -4627,7 +4630,7 @@ glpickup:
 		Queue: Vehicle.Gla
 		BuildPaletteOrder: 20
 		Prerequisites: glweap, ~techlevel.low, ~gltechnicalprereq
-		Description: Fast scout & anti-infantry vehicle.\nCan carry infantry.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+		Description: actor-glpickup.description
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -4715,7 +4718,7 @@ glscrapcar:
 		Queue: Vehicle.Gla
 		BuildPaletteOrder: 40
 		Prerequisites: glweap, ~techlevel.low, ~glscrapcarprereq
-		Description: Suicide bomber vehicle.\nCloaked when stationary.
+		Description: actor-glscrapcar.description
 	Valued:
 		Cost: 400
 	Tooltip:
@@ -4801,7 +4804,7 @@ glvan:
 		Queue: Vehicle.Gla
 		BuildPaletteOrder: 25
 		Prerequisites: glweap, ~techlevel.low, ~!sgla, ~gltechnicalprereq
-		Description: Fast scout & anti-infantry vehicle.\nCan carry infantry.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+		Description: actor-glvan.description
 	Valued:
 		Cost: 550
 	Tooltip:
@@ -4890,7 +4893,7 @@ glradar:
 		Queue: Vehicle.Gla
 		BuildPaletteOrder: 30
 		Prerequisites: glweap, ~techlevel.low, ~glradarvanprereq
-		Description: Detects cloaked units and provides radar.\nJams enemy radars when close
+		Description: actor-glradar.description
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -4939,10 +4942,10 @@ glradar:
 		Icons: 
 			1: radarvan
 		ChargeInterval: 3000
-		Names: 
+		Names:
 			1: Radar Van Scan
 		Descriptions:
-			1: Reveals an area of the map\nand cloaked enemy units.
+			1: power-ra2psireveal.description
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
 		EndChargeSpeechNotification: SpyPlaneReady
@@ -4973,7 +4976,7 @@ glquad:
 		Queue: Vehicle.Gla
 		BuildPaletteOrder: 30
 		Prerequisites: glweap, ~techlevel.low, ~glquadprereq
-		Description: Anti-air and anti-infantry vehicle.\n  Strong vs Aircraft, Infantry\n  Weak vs Vehicles
+		Description: actor-glquad.description
 	Valued:
 		Cost: 800
 	Tooltip:
@@ -5062,7 +5065,7 @@ GLSCUD:
 		Queue: Vehicle.Gla
 		BuildPaletteOrder: 80
 		Prerequisites: upscudlauncher, glpalace, ~techlevel.medium, ~!selectglademo, ~!selectglatoxin, ~normalscudlauncher
-		Description: Long-range ballistic missile launcher.\n  Strong vs ground targets\n  Weak vs Aircraft
+		Description: actor-glscud.description
 	Valued:
 		Cost: 1200
 	Tooltip:
@@ -5232,7 +5235,7 @@ glbombtruck:
 		Queue: Vehicle.Gla
 		BuildPaletteOrder: 40
 		Prerequisites: glweap, ~techlevel.medium, ~!sgla_toxin, ~!sgla_demo
-		Description: Suicide vehicle.\nCan be upgraded with different explosives.\n  Strong vs Infantry, Vehicles\n  Weak vs Aircraft
+		Description: actor-glbombtruck.description
 	Health:
 		HP: 8000
 	Armor:
@@ -5333,7 +5336,7 @@ pscglbtruck2:
 	Buildable:
 		BuildPaletteOrder: 10
 		Queue: Bombtruck.GLA
-		Description: Toxin Explosive upgrade.\n  Strong vs Infantry
+		Description: actor-pscglbtruck2.description
 	Valued:
 		Cost: 300
 	RenderSprites:
@@ -5349,7 +5352,7 @@ pscglbtruck3:
 	Buildable:
 		BuildPaletteOrder: 10
 		Queue: Bombtruck.GLA
-		Description: High Damage Explosive.\n  Strong vs Vehicles, Buildings
+		Description: actor-pscglbtruck3.description
 		Prerequisites: !selectglatoxin
 	Valued:
 		Cost: 300
@@ -5377,7 +5380,7 @@ glworker:
 		BuildPaletteOrder: 10
 		Prerequisites: barracks, ~!anysgla
 		Queue: Infantry.Gla
-		Description: Resource collector.\nCan repair buildings\nCan deploy to neutralize mines and traps
+		Description: actor-glworker.description
 	Mobile:
 		Speed: 75
 	Health:
@@ -5466,7 +5469,7 @@ upscorpionrocket:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Vehicle.Gla
-		Description: Allows Scorpion Tanks to launch rockets.
+		Description: actor-upscorpionrocket.description
 		Prerequisites: ~!upscorpionrocket, ~!selectglacamo
 	Valued:
 		Cost: 1000
@@ -5482,7 +5485,7 @@ uparmthemob:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades.Generals1
-		Description: Arm Angry Mob members with assault rifles and molotovs.
+		Description: actor-uparmthemob.description
 		Prerequisites: ~!uparmthemob, ~glaselected
 	Valued:
 		Cost: 1000
@@ -5498,7 +5501,7 @@ uprebelcamo:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades.Generals1
-		Description: Allow Rebels to cloak when stationary.
+		Description: actor-uprebelcamo.description
 		Prerequisites: ~!uprebelcamo, ~!selectglatoxin, ~!selectglademo, ~!selectglacamo, ~!sgla, ~glaselected
 	Valued:
 		Cost: 2000
@@ -5514,7 +5517,7 @@ upcamonetting:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades.Generals1
-		Description: Cloaks defensive structures.
+		Description: actor-upcamonetting.description
 		Prerequisites: ~!upcamonetting, ~upcamonettingprereq, ~glaselected
 	Valued:
 		Cost: 2000
@@ -5530,7 +5533,7 @@ upcamonetting2:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades.Generals1
-		Description: Cloaks all structures.
+		Description: actor-upcamonetting2.description
 		Prerequisites: ~!upcamonetting2, ~selectglacamo, ~glaselected
 	Valued:
 		Cost: 2500
@@ -5548,7 +5551,7 @@ upglfort:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Increases durability of all buildings.
+		Description: actor-upglfort.description
 		Prerequisites: ~!upglfort, ~glaselected
 	Valued:
 		Cost: 1000
@@ -5564,7 +5567,7 @@ uparmorpiercingrocket:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades.Generals2
-		Description: All GLA rocket units attack with 25% more damage.
+		Description: actor-uparmorpiercingrocket.description
 		Prerequisites: ~!uparmorpiercingrocket, ~glaselected
 	Valued:
 		Cost: 2000
@@ -5580,7 +5583,7 @@ uparmorpiercingbullet:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades.Generals2
-		Description: All GLA MG units attack with 25% more damage.
+		Description: actor-uparmorpiercingbullet.description
 		Prerequisites: ~!uparmorpiercingbullet, ~glaselected
 	Valued:
 		Cost: 2000
@@ -5596,7 +5599,7 @@ upjunkrepair:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades.Generals2
-		Description: Allow all GLA vehicles to self-repair.
+		Description: actor-upjunkrepair.description
 		Prerequisites: ~!upjunkrepair, ~glaselected
 	Valued:
 		Cost: 2000
@@ -5612,7 +5615,7 @@ uptoxinshells:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades.Generals1
-		Description: Allow tanks to fire toxin shells.
+		Description: actor-uptoxinshells.description
 		Prerequisites: ~!uptoxinshells, ~!selectglacamo, ~!sgla_camo, ~!sgla_toxin, ~!sgla_demo, ~glaselected
 	Valued:
 		Cost: 2000
@@ -5628,7 +5631,7 @@ upantraxbeta:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades.Generals1
-		Description: Increases effectiveness of toxin weapons.
+		Description: actor-upantraxbeta.description
 		Prerequisites: ~!upantraxbeta, ~glaselected
 	Valued:
 		Cost: 2500
@@ -5644,7 +5647,7 @@ updemolition:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades.Generals1
-		Description: All GLA units and defenses explode on death.
+		Description: actor-updemolition.description
 		Prerequisites: ~!updemolition, ~selectglademo, ~glaselected
 	Valued:
 		Cost: 2000
@@ -5660,7 +5663,7 @@ upnewshoes:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades.Generals2
-		Description: Increases speed of Workers.
+		Description: actor-upnewshoes.description
 		Prerequisites: ~!upnewshoes, ~glaselected
 	Valued:
 		Cost: 1000
@@ -5676,7 +5679,7 @@ upbuggyammo:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades.Generals2
-		Description: Doubles rockets fired by Rocket Buggies.
+		Description: actor-upbuggyammo.description
 		Prerequisites: ~!upbuggyammo, ~glaselected
 	Valued:
 		Cost: 2000
@@ -5692,7 +5695,7 @@ upantraxgamma:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades.Generals1
-		Description: Increases effectiveness of toxin weapons.
+		Description: actor-upantraxgamma.description
 		Prerequisites: ~upantraxbeta, ~!upantraxgamma, ~selectglatoxin,, ~glaselected
 	Valued:
 		Cost: 2500
@@ -5708,7 +5711,7 @@ upradarvanscan:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades.Generals2
-		Description: Allow Radar Vans to reveal areas of the map.
+		Description: actor-upradarvanscan.description
 		Prerequisites: ~!upradarvanscan, ~glaselected
 		Icon: radarvan
 	Valued:
@@ -5725,7 +5728,7 @@ upmarauder:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Promotions
-		Description: Allows production of the Marauder Tank.
+		Description: actor-upmarauder.description
 		Prerequisites: !upmarauder, ~glmarauderprereq, rank1, ~glaselected
 	RenderSprites:
 		Image: glmaura
@@ -5739,7 +5742,7 @@ uptechnical:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Promotions
-		Description: Trains technicals as Rank 1.
+		Description: actor-uptechnical.description
 		Prerequisites: !uptechnical, rank1, ~glaselected, ~glaselected
 	RenderSprites:
 		Image: gltechnicaltraining
@@ -5753,7 +5756,7 @@ upscudlauncher:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Promotions
-		Description: Allows production of the Scud Launcher.
+		Description: actor-upscudlauncher.description
 		Prerequisites: !upscudlauncher, rank1, ~normalscudlauncher, ~glaselected
 	RenderSprites:
 		Image: glscud
@@ -5767,7 +5770,7 @@ uphijack:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Promotions
-		Description: Allows deployment of Hijackers.
+		Description: actor-uphijack.description
 		Prerequisites: !uphijack, ~selectglatoxin, rank3, rank1, ~glaselected
 	RenderSprites:
 		Image: glhijack
@@ -5781,7 +5784,7 @@ uprebelambush1:
 	Buildable:
 		BuildPaletteOrder: 220
 		#Queue: Promotions
-		Description: Enables Rebel Ambush Level 1.
+		Description: actor-uprebelambush1.description
 		Prerequisites: !uprebelambush1, rank3, rank1, ~glaselected
 	RenderSprites:
 		Image: uprebelambush1icon
@@ -5795,7 +5798,7 @@ uprebelambush2:
 	Buildable:
 		BuildPaletteOrder: 220
 		#Queue: Promotions
-		Description: Enables Rebel Ambush Level 2.
+		Description: actor-uprebelambush2.description
 		Prerequisites: uprebelambush1, !uprebelambush2, rank3, rank1, ~glaselected
 	RenderSprites:
 		Image: uprebelambush2icon
@@ -5809,7 +5812,7 @@ uprebelambush3:
 	Buildable:
 		BuildPaletteOrder: 220
 		Queue: Promotions
-		Description: Enables Rebel Ambush.
+		Description: actor-uprebelambush3.description
 		Prerequisites: !uprebelambush3, rank3, rank1, ~glaselected
 	RenderSprites:
 		Image: uprebelambush3icon
@@ -5823,7 +5826,7 @@ upglabounty1:
 	Buildable:
 		BuildPaletteOrder: 220
 		#Queue: Promotions
-		Description: Increases Black Market income.
+		Description: actor-upglabounty1.description
 		Prerequisites: !upglabounty1, rank3, rank1, ~glaselected
 	RenderSprites:
 		Image: upglabounty1icon
@@ -5837,7 +5840,7 @@ upglabounty2:
 	Buildable:
 		BuildPaletteOrder: 220
 		#Queue: Promotions
-		Description: Increases Black Market income.
+		Description: actor-upglabounty2.description
 		Prerequisites: upglabounty1, !upglabounty2, rank3, rank1, ~glaselected
 	RenderSprites:
 		Image: upglabounty2icon
@@ -5851,7 +5854,7 @@ upglabounty3:
 	Buildable:
 		BuildPaletteOrder: 220
 		Queue: Promotions
-		Description: Enables Cash Bounty power.
+		Description: actor-upglabounty3.description
 		Prerequisites: !upglabounty3, rank3, rank1, ~glaselected
 	RenderSprites:
 		Image: upglabounty3icon
@@ -5865,7 +5868,7 @@ upanthraxbomb:
 	Buildable:
 		BuildPaletteOrder: 250
 		Queue: Promotions
-		Description: Enables Anthrax Bomb strikes.
+		Description: actor-upanthraxbomb.description
 		Prerequisites: !upanthraxbomb, rank5, rank1, ~glaselected
 	RenderSprites:
 		Image: antraxgammaicon
@@ -5879,7 +5882,7 @@ upsneakattack:
 	Buildable:
 		BuildPaletteOrder: 250
 		Queue: Promotions
-		Description: Enables Sneak Attacks.
+		Description: actor-upsneakattack.description
 		Prerequisites: ~wip-content #glpalace, !upsneakattack, rank5, rank1
 	RenderSprites:
 		Image: upsneakattackicon
@@ -5893,7 +5896,7 @@ upgpscram:
 	Buildable:
 		BuildPaletteOrder: 250
 		Queue: Promotions
-		Description: Enables use of GPS Scrambling.
+		Description: actor-upgpscram.description
 		Prerequisites: !upgpscram, ~!selectglatoxin, ~!selectglademo, rank5, rank1, ~glaselected
 	RenderSprites:
 		Image: upgpscramicon
@@ -5951,7 +5954,7 @@ glgunboat:
 		BuildPaletteOrder: 20
 		Prerequisites: glsupply
 		Queue: Naval, RANaval
-		Description: Light scout & support ship.\nCan detect submarines.
+		Description: actor-glgunboat.description
 	Mobile:
 		Speed: 72
 	Health:
@@ -6032,7 +6035,7 @@ pscglgunboat1:
 	Buildable:
 		BuildPaletteOrder: 10
 		Queue: Gunboat.GLA
-		Description: Replaces MG gun.\n  Strong vs Infantry
+		Description: actor-pscglgunboat1.description
 		Prerequisites: glbarracks
 	Valued:
 		Cost: 150
@@ -6049,7 +6052,7 @@ pscglgunboat2:
 	Buildable:
 		BuildPaletteOrder: 10
 		Queue: Gunboat.GLA
-		Description: High Damage Explosive.\n  Strong vs Vehicles, Buildings
+		Description: actor-pscglgunboat2.description
 		Prerequisites: glpalace
 	Valued:
 		Cost: 400
@@ -6173,7 +6176,7 @@ chnmcv:
 		BuildPaletteOrder: 200
 		Prerequisites: chpropaganda, ~techlevel.high, ~chselected
 		Queue: Vehicle.China
-		Description: Builds structures and provides radar.
+		Description: actor-chnmcv.description
 		BuildDuration: 1500
 		BuildDurationModifier: 100
 	Selectable:
@@ -6333,7 +6336,7 @@ chpower:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 10
 		Prerequisites: chcommand, ~!selectchatomic, ~chselected
-		Description: Provides power.\nCan be deployed to overcharge at expense of damage to self.\nFireWarheadsOnDeath violently when destroyed
+		Description: actor-chpower.description
 	Valued:
 		Cost: 800 #500
 	Tooltip:
@@ -6425,7 +6428,7 @@ chbarracks:
 		BuildPaletteOrder: 30
 		Prerequisites: chpower, ~chselected
 		Queue: Building, RABuilding
-		Description: Trains infantry
+		Description: actor-chbarracks.description
 	Building:
 		Footprint: xxx xxx ===
 		Dimensions: 3,3
@@ -6499,7 +6502,7 @@ chgattling:
 		Prerequisites: chbarracks, ~techlevel.low, ~chselected
 		Queue: Defence, RADefence
 		BuildDurationModifier: 40
-		Description: All-purpose defensive structure.\n  Strong vs Aircraft, Infantry\n  Weak vs Vehicles
+		Description: actor-chgattling.description
 	Selectable:
 		Bounds: 1024, 1024
 	SelectionDecorations:
@@ -6567,7 +6570,7 @@ chbunker:
 		Prerequisites: chbarracks, ~techlevel.low, ~genchbunkerprereq
 		Queue: Defence, RADefence
 		BuildDurationModifier: 40
-		Description: Garrisonable defensive structure.\n  Strong vs ground targets\n  Weak vs Aircraft
+		Description: actor-chbunker.description
 	Valued:
 		Cost: 600
 	CustomSellValue:
@@ -6647,7 +6650,7 @@ chbunker2:
 		Prerequisites: chbarracks, ~techlevel.low, ~selectchinf
 		Queue: Defence, RADefence
 		BuildDurationModifier: 40
-		Description: All-purpose defensive structure.\n  Strong vs Aircraft, Tanks\n  Weak vs Infantry
+		Description: actor-chbunker2.description
 	Valued:
 		Cost: 700
 	Health:
@@ -6691,7 +6694,7 @@ chsupply:
 		BuildPaletteOrder: 20
 		Prerequisites: chpower, ~chselected
 		Queue: Building, RABuilding
-		Description: Processes raw Tiberium\ninto useable resources
+		Description: actor-chsupply.description
 	Building:
 		Footprint: xxx ===
 		Dimensions: 3,2
@@ -6747,7 +6750,7 @@ chweap:
 		BuildPaletteOrder: 50
 		Prerequisites: chsupply, ~chselected
 		Queue: Building, RABuilding
-		Description: Produces vehicles
+		Description: actor-chweap.description
 	Building:
 		Footprint: x++x =++= ====
 		Dimensions: 4,3
@@ -6823,7 +6826,7 @@ chpropaganda:
 		BuildPaletteOrder: 60
 		Prerequisites: chweap, ~chselected
 		Queue: Building, RABuilding
-		Description: Provides access to advanced Chinese technologies.
+		Description: actor-chpropaganda.description
 	Building:
 		Footprint: xxxx xxxx
 		Dimensions: 4,2
@@ -6864,7 +6867,7 @@ chpropagandatower:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 200
 		Prerequisites: chpropaganda, ~chselected
-		Description: Allows nearby units to self-heal.
+		Description: actor-chpropagandatower.description
 	Health:
 		HP: 50000
 	Armor:
@@ -6910,7 +6913,7 @@ chinternetcenter:
 		BuildDurationModifier: 100
 		BuildDuration: 1500
 		Prerequisites: chweap, ~chselected
-		Description: Can shelter Hackers.\nCan be upgraded with surveillance powers.
+		Description: actor-chinternetcenter.description
 	Building:
 		Footprint: ==== xxxx xxxx
 		Dimensions: 4,3
@@ -6947,8 +6950,8 @@ chinternetcenter:
 		ChargeInterval: 3000
 		Names:
 			1: Satellite Hack 1
-		Descriptions: 
-			1: Reveals command centers.
+		Descriptions:
+			1: power-general-sathack.description
 		LaunchSound: bintsela.wav
 		Prerequisites:
 			1: upsathack
@@ -6961,7 +6964,7 @@ chinternetcenter:
 		Names:
 			1: Satellite Hack 2
 		Descriptions:
-			1: Reveals map terrain and provides tactical\ninformation. Requires power.
+			1: power-general-sathack2.description
 		RevealDelay: 0
 		#LaunchSpeechNotification: SatelliteLaunched
 		DisplayTimerStances: Ally, Neutral, Enemy
@@ -7174,7 +7177,7 @@ chsilo:
 		BuildPaletteOrder: 135
 		Prerequisites: chpropaganda, ~techlevel.high, ~chselected, !chinanuke
 		Queue: Building, RABuilding
-		Description: Provides Nuclear Strike support power.\nRequires power to operate.
+		Description: actor-chsilo.description
 	Building:
 		Footprint: xxx xxx
 		Dimensions: 3,2
@@ -7198,14 +7201,14 @@ chsilo:
 		Prerequisitess: 
 			1: ~techlevel.superweapons
 		PauseOnCondition: lowpower
-		Icons: 
+		Icons:
 			1: chnuclear
 		Cursor: nuke
 		ChargeInterval: 9000
-		Names: 1
+		Names:
 			1: Nuclear Strike
-		Descriptions: 
-			1: Launch a tactical nuclear warhead.\nApplies heavy damage over a large area.
+		Descriptions:
+			1: power-general-chinanuke.description
 		EndChargeSpeechNotification: NuclearWeaponAvailable
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
@@ -7261,7 +7264,7 @@ chairport:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 130
 		Prerequisites: chsupply, ~techlevel.medium, ~chselected, chweap
-		Description: Produces and reloads aircraft
+		Description: actor-chairport.description
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -7328,7 +7331,7 @@ che1:
 	Buildable:
 		BuildPaletteOrder: 20
 		Queue: Infantry.China
-		Description: General-purpose infantry armed with a rifle.\n  Strong vs Infantry\n  Weak vs Vehicles
+		Description: actor-che1.description
 		Prerequisites: barracks, ~!anyschina
 	Valued:
 		Cost: 150
@@ -7375,7 +7378,7 @@ che2:
 	Inherits@chaingun: ^ChaingunUpgrade
 	Buildable:
 		BuildPaletteOrder: 20
-		Description: General-purpose infantry armed with a minigun.\nCan attack aircraft.\n  Strong vs Infantry, Light Vehicles\n  Weak vs Tanks
+		Description: actor-che2.description
 		Prerequisites: barracks, ~genminigunnerprereq
 	Valued:
 		Cost: 350
@@ -7423,7 +7426,7 @@ che3:
 		BuildPaletteOrder: 20
 		Prerequisites: barracks, ~!anyschina
 		Queue: Infantry.China
-		Description: Anti-tank/Anti-aircraft infantry.\nCan Plant explosives on vehicles and buildings \n  Strong vs Tanks, Aircraft\n  Weak vs Infantry
+		Description: actor-che3.description
 	Armament@PRIMARY: ##########
 		Weapon: CHTankHunterMissile
 		LocalOffset: 256,43,341
@@ -7492,7 +7495,7 @@ CHHACKER:
 		BuildPaletteOrder: 40
 		Prerequisites: barracks, chpropaganda, ~!selectchinf, ~!anyschina
 		Queue: Infantry.China
-		Description: Computer specialist.\n Can deploy to provide money\n Can disable buildings
+		Description: actor-chhacker.description
 	Mobile:
 		Speed: 65
 		PauseOnCondition: disabled || hacking
@@ -7611,7 +7614,7 @@ CHHACKER2:
 		BuildPaletteOrder: 40
 		Prerequisites: barracks, chpropaganda, ~selectchinf
 		Queue: Infantry.China
-		Description: Computer specialist.\n Can deploy to provide money\n Can disable buildings and vehicles
+		Description: actor-chhacker2.description
 	Armament@PRIMARYSUPER: ##########
 		Weapon: CHLotusDisable
 		RequiresCondition: undeployed
@@ -7656,7 +7659,7 @@ chlotus:
 		BuildPaletteOrder: 70
 		Prerequisites: barracks, chpropaganda, ~!anyschina
 		Queue: Infantry.China
-		Description: Elite hacker.\n Can take control of buildings\n Can disable vehicles
+		Description: actor-chlotus.description
 	Mobile:
 		Speed: 71
 	Health:
@@ -7779,7 +7782,7 @@ chbattle:
 		Queue: Vehicle.China
 		BuildDuration: 375
 		BuildDurationModifier: 100
-		Description: Chinese main battle tank.\n  Strong vs Vehicles\n  Weak vs Infantry
+		Description: actor-chbattle.description
 	Mobile:
 		Speed: 80
 	Health:
@@ -7902,7 +7905,7 @@ charty:
 		BuildPaletteOrder: 60
 		Prerequisites: chweap, ~!selectchtanks, ~techlevel.medium, ~!anyschina
 		Queue: Vehicle.China
-		Description: Long-range artillery.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles, Aircraft
+		Description: actor-charty.description
 	Mobile:
 		Speed: 75
 	Health:
@@ -7997,7 +8000,7 @@ choverlord:
 		BuildPaletteOrder: 60
 		Prerequisites: chpropaganda, ~techlevel.high, ~genoverlordprereq
 		Queue: Vehicle.China
-		Description: Heavy Chinese tank.\nCan be upgraded with addon towers.\n  Strong vs Vehicles
+		Description: actor-choverlord.description
 	Mobile:
 		Locomotor: heavytracked
 		Speed: 55
@@ -8223,7 +8226,7 @@ pscchoverlord1:
 	Buildable:
 		BuildPaletteOrder: 10
 		Queue: Overlord.CHINA, EOverlord.CHINA
-		Description: Installs an anti-aircraft Gattling gun.
+		Description: actor-pscchoverlord1.description
 	Valued:
 		Cost: 1200
 	RenderSprites:
@@ -8239,7 +8242,7 @@ pscchoverlord2:
 	Buildable:
 		BuildPaletteOrder: 10
 		Queue: Overlord.CHINA
-		Description: Installs a bunker for infantry.\nFirepower increases with loaded passengers.
+		Description: actor-pscchoverlord2.description
 		Prerequisites: ~!selectchtanks
 	Valued:
 		Cost: 1600
@@ -8256,7 +8259,7 @@ pscchoverlord3:
 	Buildable:
 		BuildPaletteOrder: 10
 		Queue: Overlord.CHINA, NukeOverlord.CHINA
-		Description: Installs a morale-improving propaganda speaker.
+		Description: actor-pscchoverlord3.description
 		Prerequisites: ~!selectchtanks
 	Valued:
 		Cost: 500
@@ -8294,7 +8297,7 @@ chdragon:
 		BuildPaletteOrder: 40
 		Prerequisites: ~techlevel.medium
 		Queue: Vehicle.China
-		Description: Flame tank.\nCan deploy to create a fire wall.\n  Strong vs Infantry\n  Weak vs Tanks
+		Description: actor-chdragon.description
 	Mobile:
 		Speed: 103
 		RequireForceMoveCondition: deployed
@@ -8426,7 +8429,7 @@ chgtnk:
 		BuildPaletteOrder: 40
 		Prerequisites: ~techlevel.low, ~gengattlingtankprereq
 		Queue: Vehicle.China
-		Description: Tank armed with Gattling guns.\n  Strong vs Infantry, Aircraft\n  Weak vs Tanks
+		Description: actor-chgtnk.description
 	Mobile:
 		Speed: 108
 	Health:
@@ -8498,7 +8501,7 @@ chharv:
 		Queue: Vehicle.China
 		BuildPaletteOrder: 10
 		Prerequisites: chsupply
-		Description: Collects Ore and Gems for processing.\n  Unarmed
+		Description: actor-chharv.description
 	Valued:
 		Cost: 600 #1100
 	Tooltip:
@@ -8552,7 +8555,7 @@ choutpost:
 		BuildPaletteOrder: 60
 		Prerequisites: chweap, chpropaganda, ~techlevel.medium, ~genlisteningoutpostprereq
 		Queue: Vehicle.China
-		Description: Detects cloaked units and buildings.\nGarrisoned by 2 Tank Hunters.
+		Description: actor-choutpost.description
 	Mobile:
 		Speed: 85
 	Health:
@@ -8615,7 +8618,7 @@ choutpost2:
 		BuildPaletteOrder: 60
 		Prerequisites: chweap, chpropaganda, ~techlevel.medium, ~genminigunnerprereq
 		Queue: Vehicle.China
-		Description: Detects cloaked units and buildings.\nMounted with a propaganda speaker.\nHas space for up to 8 garrisoned infantry.\nGarrisoned by 3 Tank Hunters.
+		Description: actor-choutpost2.description
 	Health:
 		HP: 35000
 	Cargo:
@@ -8656,7 +8659,7 @@ checm:
 		BuildPaletteOrder: 60
 		Prerequisites: chweap, chpropaganda, ~techlevel.medium, ~!schina_tank
 		Queue: Vehicle.China
-		Description: Disables vehicles and jams incoming missiles.
+		Description: actor-checm.description
 	Mobile:
 		Speed: 90
 	Health:
@@ -8729,7 +8732,7 @@ chcrawl:
 		BuildPaletteOrder: 30
 		Prerequisites: chweap, ~!selectchinf
 		Queue: Vehicle.China
-		Description: Heavy infantry transport.\n Unarmed
+		Description: actor-chcrawl.description
 	Mobile:
 		Speed: 110
 		PauseOnCondition: notmobile || disabled
@@ -8776,7 +8779,7 @@ chcrawl2:
 		BuildPaletteOrder: 60
 		Prerequisites: chweap, ~selectchinf
 		Queue: Vehicle.China
-		Description: Heavy infantry transport.\n Passengers can fire from within
+		Description: actor-chcrawl2.description
 	Mobile:
 		Speed: 125
 	Passenger:
@@ -8837,7 +8840,7 @@ chnukecann:
 		BuildPaletteOrder: 60
 		Prerequisites: chpropaganda, ~techlevel.high, upnukecann, ~!selectchtanks, ~!selectchinf
 		Queue: Vehicle.China
-		Description: Slow heavy artillery.\n Strong vs ground targets\n Weak vs Aircraft
+		Description: actor-chnukecann.description
 	Mobile:
 		Locomotor: tracked
 		TurnSpeed: 8
@@ -8937,7 +8940,7 @@ upredguard:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Promotions
-		Description: Trains Red Guard as Rank 1.
+		Description: actor-upredguard.description
 		Prerequisites: !upredguard, rank1, ~genredguardtrainingprereq, ~chselected
 	RenderSprites:
 		Image: chredtrainingicon
@@ -8951,7 +8954,7 @@ upcharty:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Promotions
-		Description: Trains artillery as Rank 1.
+		Description: actor-upcharty.description
 		Prerequisites: !upcharty, ~!selectchtanks, ~!selectchinf, ~!schina_tank, ~!schina_inf, rank1, ~chselected
 	RenderSprites:
 		Image: chartytrainingicon
@@ -8965,7 +8968,7 @@ upbattlemaster:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Promotions
-		Description: Trains Battlemasters as Rank 4.
+		Description: actor-upbattlemaster.description
 		Prerequisites: ~selectchtanks, !upbattlemaster, rank1, ~chselected
 	RenderSprites:
 		Image: chbattle
@@ -8979,7 +8982,7 @@ upnukecann:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Promotions
-		Description: Allows production of the Nuke Cannon.
+		Description: actor-upnukecann.description
 		Prerequisites: !upnukecann, ~techlevel.high, ~!selectchtanks, ~!selectchinf, rank1, ~chselected
 	RenderSprites:
 		Image: chnukecann
@@ -8993,7 +8996,7 @@ upcashhack:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Promotions
-		Description: Enables Cash Hacks.
+		Description: actor-upcashhack.description
 		Prerequisites: !upcashhack, ~!selectchtanks, rank3, rank1, ~chselected
 	RenderSprites:
 		Image: upcashhack
@@ -9007,7 +9010,7 @@ uptankdrop:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Promotions
-		Description: Enables Tank Drops.
+		Description: actor-uptankdrop.description
 		Prerequisites: !uptankdrop, ~selectchtanks, rank3, rank1, ~chselected
 	RenderSprites:
 		Image: chbattle #todo
@@ -9021,7 +9024,7 @@ upminigunnerdrop:
 	Buildable:
 		BuildPaletteOrder: 220
 		Queue: Promotions
-		Description: Enables Minigunner Drops.
+		Description: actor-upminigunnerdrop.description
 		Prerequisites: !upminigunnerdrop, ~selectchinf, rank3, rank1, ~chselected
 	RenderSprites:
 		Image: upusaparadrop1icon
@@ -9035,7 +9038,7 @@ upartybarrage1:
 	Buildable:
 		BuildPaletteOrder: 220
 		#Queue: Promotions
-		Description: Unlocks Artillery Barrage
+		Description: actor-upartybarrage1.description
 		Prerequisites: !upartybarrage1, rank3, rank1, ~chselected
 	RenderSprites:
 		Image: upartybarrage1icon
@@ -9049,7 +9052,7 @@ upartybarrage2:
 	Buildable:
 		BuildPaletteOrder: 220
 		#Queue: Promotions
-		Description: Unlocks Artillery Barrage
+		Description: actor-upartybarrage2.description
 		Prerequisites: upartybarrage1, !upartybarrage2, rank3, rank1, ~chselected
 	RenderSprites:
 		Image: upartybarrage2icon
@@ -9063,7 +9066,7 @@ upartybarrage3:
 	Buildable:
 		BuildPaletteOrder: 220
 		Queue: Promotions
-		Description: Unlocks Artillery Barrage
+		Description: actor-upartybarrage3.description
 		Prerequisites: !upartybarrage3, rank3, rank1, ~chselected
 	RenderSprites:
 		Image: upartybarrage3icon
@@ -9077,7 +9080,7 @@ upfrenzy1:
 	Buildable:
 		BuildPaletteOrder: 220
 		Queue: Promotions
-		Description: Enables Frenzy.
+		Description: actor-upfrenzy1.description
 		Prerequisites: !upfrenzy1, canselectfrenzy, rank1, ~chselected
 	RenderSprites:
 		Image: upfrenzy1icon
@@ -9091,7 +9094,7 @@ upfrenzy2:
 	Buildable:
 		BuildPaletteOrder: 220
 		#Queue: Promotions
-		Description: Unlocks Frenzy Level 2
+		Description: actor-upfrenzy2.description
 		Prerequisites: !upfrenzy2, upfrenzy1, rank3, rank1, ~chselected
 	RenderSprites:
 		Image: upfrenzy2icon
@@ -9105,7 +9108,7 @@ upfrenzy3:
 	Buildable:
 		BuildPaletteOrder: 220
 		#Queue: Promotions
-		Description: Unlocks Frenzy Level 3
+		Description: actor-upfrenzy3.description
 		Prerequisites: !upfrenzy3, upfrenzy2, upfrenzy1, rank3, rank1, ~chselected
 	RenderSprites:
 		Image: upfrenzy3icon
@@ -9119,7 +9122,7 @@ upchaingun:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Vehicle.China
-		Description: Increases firing rate of units using Gattling weapons.
+		Description: actor-upchaingun.description
 		Prerequisites: ~!upchaingun
 	Valued:
 		Cost: 1500
@@ -9138,7 +9141,7 @@ upnationalism:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades.generals1
-		Description: Increases effect of the Horde Bonus.
+		Description: actor-upnationalism.description
 		Prerequisites: ~!upnationalism, ~gennationalismprereq
 	Valued:
 		Cost: 2000
@@ -9157,7 +9160,7 @@ upuraniumshell:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades.generals2
-		Description: Increases Battlemaster and Overlord damage.
+		Description: actor-upuraniumshell.description
 		Prerequisites: ~!upuraniumshell, ~gennationalismprereq
 	Valued:
 		Cost: 2500
@@ -9173,7 +9176,7 @@ upatomictank:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades.generals2
-		Description: Increases Battlemaster and Overlord speed.
+		Description: actor-upatomictank.description
 		Prerequisites: ~!upatomictank, ~genatomictanksprereq
 	Valued:
 		Cost: 2000
@@ -9189,7 +9192,7 @@ upisotopestability:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades.generals1
-		Description: Nuclear tank explosions do not damage friendly units\nor leave radiation.
+		Description: actor-upisotopestability.description
 		Prerequisites: ~!upisotopestability, ~selectchatomic
 	Valued:
 		Cost: 2000
@@ -9205,7 +9208,7 @@ upbluefire:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Vehicle.China
-		Description: Increases effectiveness of incendiary weapons.
+		Description: actor-upbluefire.description
 		Prerequisites: ~!upbluefire
 	Valued:
 		Cost: 2000
@@ -9224,7 +9227,7 @@ upneutronshell:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades.generals2
-		Description: Gives Nuke Cannons neutron munitions.\nCan kill vehicle passengers and drivers, allowing them\nto be captured.
+		Description: actor-upneutronshell.description
 		Prerequisites: upnukecann, ~!upneutronshell, ~genneutronshellsprereq
 	Valued:
 		Cost: 2500
@@ -9240,7 +9243,7 @@ upmigarmor:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Aircraft.China
-		Description: Increases durability of MiGs.
+		Description: actor-upmigarmor.description
 		Prerequisites: ~!upmigarmor, ~!schina_tank, ~!schina_nuke
 	Valued:
 		Cost: 1000
@@ -9256,7 +9259,7 @@ upautoload:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades.generals1
-		Description: Increases firing rate of Battlemasters.
+		Description: actor-upautoload.description
 		Prerequisites: ~!upautoload, ~selectchtanks
 	Valued:
 		Cost: 2500
@@ -9272,7 +9275,7 @@ upsubliminal:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades.generals1
-		Description: Increases effectiveness of propaganda.
+		Description: actor-upsubliminal.description
 		Prerequisites: ~!upsubliminal
 	Valued:
 		Cost: 500
@@ -9292,7 +9295,7 @@ upmignuke:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades.generals2
-		Description: Allows MiGs to use nuclear missiles.
+		Description: actor-upmignuke.description
 		Prerequisites: ~!upmignuke, ~selectchatomic
 	Valued:
 		Cost: 2000
@@ -9308,7 +9311,7 @@ upsathack:
 	Buildable:
 		BuildPaletteOrder: 250
 		Queue: Upgrades
-		Description: Reveals all command centers.
+		Description: actor-upsathack.description
 		Prerequisites: ~!upsathack, ~chinternetcenter, ~chselected
 	Valued:
 		Cost: 1000
@@ -9324,7 +9327,7 @@ upsathack2:
 	Buildable:
 		BuildPaletteOrder: 250
 		Queue: Upgrades
-		Description: Reveals all buildings and troop movements.
+		Description: actor-upsathack2.description
 		Prerequisites: ~!upsathack2, upsathack, ~chselected
 	Valued:
 		Cost: 2000
@@ -9344,7 +9347,7 @@ CHMIG:
 		Queue: Aircraft.China
 		BuildPaletteOrder: 50
 		Prerequisites: chairport, ~techlevel.medium, ~genmigprereq
-		Description: Fighter armed with napalm missiles.\n  Strong vs Buildings, Vehicles\n  Weak vs Infantry, Aircraft
+		Description: actor-chmig.description
 	Valued:
 		Cost: 1200
 	Tooltip:
@@ -9454,7 +9457,7 @@ CHMIG2:
 		Queue: Aircraft.China
 		BuildPaletteOrder: 50
 		Prerequisites: chairport, ~techlevel.medium, ~selectchatomic
-		Description: Fighter jet, can be upgraded with nuclear missiles.\n  Strong vs ground targets\n  Weak vs Aircraft
+		Description: actor-chmig2.description
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -9571,7 +9574,7 @@ chhelix:
 		BuildPaletteOrder: 20
 		Prerequisites: chairport, ~techlevel.medium, ~genhelixprereq
 		Queue: Aircraft.China
-		Description: Helicopter gunship upgradeable with addons.\n  Strong vs Infantry\n  Weak vs Aircraft
+		Description: actor-chhelix.description
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -9766,7 +9769,7 @@ pscchhelix1:
 	Buildable:
 		BuildPaletteOrder: 10
 		Queue: Helix.CHINA, TransportHelix.CHINA
-		Description: Installs an anti-aircraft Gatling gun.
+		Description: actor-pscchhelix1.description
 		Icon: gatlingicon
 	Valued:
 		Cost: 1200
@@ -9783,7 +9786,7 @@ pscchhelix2:
 	Buildable:
 		BuildPaletteOrder: 10
 		Queue: Helix.CHINA
-		Description: Installs a bunker for infantry.\nFirepower increases with loaded passengers.
+		Description: actor-pscchhelix2.description
 		Icon: bunkericon
 	Valued:
 		Cost: 400
@@ -9800,7 +9803,7 @@ pscchhelix3:
 	Buildable:
 		BuildPaletteOrder: 10
 		Queue: Helix.CHINA, AssaultHelix.CHINA
-		Description: Allows dropping napalm bombs.
+		Description: actor-pscchhelix3.description
 		Icon: napalmicon
 	Valued:
 		Cost: 800
@@ -9817,7 +9820,7 @@ pscchhelix4:
 	Buildable:
 		BuildPaletteOrder: 10
 		Queue: Helix.CHINA, TransportHelix.CHINA, AssaultHelix.CHINA
-		Description: Allows nearby friendly units to self-heal.
+		Description: actor-pscchhelix4.description
 		Icon: speakericon
 	Valued:
 		Cost: 500
@@ -9897,7 +9900,7 @@ chflameboat:
 		BuildPaletteOrder: 20
 		Prerequisites: chpower
 		Queue: Naval.China
-		Description: Light scout & support ship.\nCan detect submarines.
+		Description: actor-chflameboat.description
 	Mobile:
 		Speed: 70
 	Health:
@@ -9955,7 +9958,7 @@ chasub:
 		BuildPaletteOrder: 50
 		Prerequisites: chsilo
 		Queue: Naval.China
-		Description: Submerged anti-ship unit\narmed with torpedoes.\nCan detect other submarines.\n  Strong vs Naval units\n  Weak vs Ground units, Aircraft
+		Description: actor-chasub.description
 	Mobile:
 		Speed: 50
 	Health:
@@ -10068,7 +10071,7 @@ uplandmines:
 	Buildable:
 		BuildPaletteOrder: 190
 		Queue: Upgrades
-		Description: Protects buildings with landmines.
+		Description: actor-uplandmines.description
 		Prerequisites: ~!uplandmines, ~chselected
 	Valued:
 		Cost: 1500
@@ -10084,7 +10087,7 @@ upneutronmines:
 	Buildable:
 		BuildPaletteOrder: 190
 		Queue: Upgrades
-		Description: Upgrades landmines to Neutron Mines.\nKills infantry and vehicle passengers.
+		Description: actor-upneutronmines.description
 		Prerequisites: uplandmines, ~!upneutronmines, chsilo, ~chselected
 	Valued:
 		Cost: 1500
@@ -10100,7 +10103,7 @@ upcarpetbomb:
 	Buildable:
 		BuildPaletteOrder: 250
 		Queue: Promotions
-		Description: Enables carpet bombing runs.
+		Description: actor-upcarpetbomb.description
 		Prerequisites: !upcarpetbomb, rank3, rank1, ~chselected
 	RenderSprites:
 		Image: chcarpetbombicon
@@ -10114,7 +10117,7 @@ upchemp:
 	Buildable:
 		BuildPaletteOrder: 250
 		Queue: Promotions
-		Description: Enables EMP Bomb strikes.
+		Description: actor-upchemp.description
 		Prerequisites: !upchemp, rank5, rank1, ~chselected
 	RenderSprites:
 		Image: chempicon
@@ -10128,7 +10131,7 @@ upchminebomb:
 	Buildable:
 		BuildPaletteOrder: 250
 		Queue: Promotions
-		Description: Enables deployment of Cluster Mines.
+		Description: actor-upchminebomb.description
 		Prerequisites: !upchminebomb, rank3, rank1, ~chselected
 	RenderSprites:
 		Image: chclusterminesicon
@@ -10255,7 +10258,7 @@ usae1:
 	Buildable:
 		BuildPaletteOrder: 20
 		Queue: Infantry.Usa
-		Description: Basic USA infantry.\n  Strong vs Infantry\n  Weak vs Vehicles
+		Description: actor-usae1.description
 		Prerequisites: usabarracks, ~!anysusa
 	Valued:
 		Cost: 225
@@ -10320,7 +10323,7 @@ usae3:
 		BuildPaletteOrder: 20
 		Prerequisites: usabarracks, ~!anysusa
 		Queue: Infantry.Usa
-		Description: Anti-tank/anti-aircraft infantry.\nHas to lock on to mobile targets before attacking.\n  Strong vs Tanks, Aircraft\n  Weak vs Infantry
+		Description: actor-usae3.description
 	Passenger:
 		CargoCondition: indoors
 	Armament@PRIMARY:
@@ -10382,7 +10385,7 @@ usapath:
 	Buildable:
 		BuildPaletteOrder: 20
 		Queue: Infantry.Usa
-		Description: Stealthed sniper infantry.\n  Strong vs Infantry\n  Weak vs Vehicles
+		Description: actor-usapath.description
 		Prerequisites: usabarracks, upusapath, ~!anysusa
 	Valued:
 		Cost: 600
@@ -10442,7 +10445,7 @@ usaburton:
 		BuildLimit: 1
 		Prerequisites: usastrategy, ~techlevel.high, ~!anysusa, ~!botplayer
 		Queue: Infantry.Usa
-		Description: Elite commando.\nCan switch between close and long range modes\n  Strong vs Infantry, Buildings, Vehicles\n  Weak vs Air
+		Description: actor-usaburton.description
 	Mobile:
 		Speed: 71
 		Voice: Move
@@ -10547,7 +10550,7 @@ usapilot:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
-		Description: Can deliver experience to US vehicles and aircraft.
+		Description: actor-usapilot.description
 	Mobile:
 		Speed: 80
 		Voice: Move
@@ -10619,7 +10622,7 @@ usajeep:
 		Prerequisites: usaweap, ~techlevel.low, ~!susa_super, ~!susa_armor
 		BuildDuration: 250
 		Queue: Vehicle.Usa
-		Description: Fast scout and transport vehicle.\n  Strong vs Infantry\n  Weak vs Tanks
+		Description: actor-usajeep.description
 	Mobile:
 		TurnSpeed: 10
 		Speed: 130
@@ -10801,7 +10804,7 @@ pscdrones1:
 	Buildable:
 		BuildPaletteOrder: 10
 		Queue: Drones.USA
-		Description: Deploys a drone armed with a machine-gun.
+		Description: actor-pscdrones1.description
 		Prerequisites:
 	Valued:
 		Cost: 300
@@ -10818,7 +10821,7 @@ pscdrones2:
 	Buildable:
 		BuildPaletteOrder: 10
 		Queue: Drones.USA
-		Description: Deploys a drone that fires anti-tank missiles.
+		Description: actor-pscdrones2.description
 		Prerequisites:
 	Valued:
 		Cost: 500
@@ -10835,7 +10838,7 @@ pscdrones3:
 	Buildable:
 		BuildPaletteOrder: 10
 		Queue: Drones.USA
-		Description: Deploys a drone that provides vision\nand detects cloaked units.
+		Description: actor-pscdrones3.description
 		Prerequisites:
 	Valued:
 		Cost: 500
@@ -10957,7 +10960,7 @@ usattnk:
 		BuildPaletteOrder: 40
 		Prerequisites: usaweap, usastrategy, ~techlevel.medium, ~!selectusalaser, ~!anysusa
 		Queue: Vehicle.Usa
-		Description: USA siege weapon.\n Strong vs Vehicles, Buildings\n Weak vs Aircraft
+		Description: actor-usattnk.description
 	Mobile:
 		Speed: 50
 	Health:
@@ -11042,7 +11045,7 @@ usacrusader:
 		Queue: Vehicle.Usa
 		BuildDuration: 250
 		BuildDurationModifier: 100
-		Description: General-purpose USA tank.\n  Strong vs Vehicles\n  Weak vs Infantry
+		Description: actor-usacrusader.description
 	Mobile:
 		Speed: 85
 	Health:
@@ -11087,7 +11090,7 @@ usacrusader2:
 		BuildPaletteOrder: 40
 		Prerequisites: usaweap, ~techlevel.medium, ~selectusalaser
 		Queue: Vehicle.Usa
-		Description: General-purpose USA tank.\nRequires power to operate.\n  Strong vs Vehicles and Infantry
+		Description: actor-usacrusader2.description
 	Mobile:
 		PauseOnCondition: disabled || lowpower
 	Armament@Normal:
@@ -11131,7 +11134,7 @@ usapala:
 		BuildPaletteOrder: 40
 		Prerequisites: usaweap, ~techlevel.medium, upusapala, ~!selectusalaser, ~!selectusaairforce, ~!selectusasuper, ~!anysusa
 		Queue: Vehicle.Usa
-		Description: Heavy USA tank.\n  Strong vs Vehicles\n  Weak vs Infantry
+		Description: actor-usapala.description
 	Mobile:
 		Speed: 60
 	Passenger:
@@ -11198,7 +11201,7 @@ usasentry:
 		BuildPaletteOrder: 40
 		Prerequisites: usaweap, ~techlevel.medium, ~!susa_armor
 		Queue: Vehicle.Usa
-		Description: Cloaked scout and detector robot.\nCan be upgraded with a machinegun\n Strong vs Infantry when upgraded
+		Description: actor-usasentry.description
 	Mobile:
 		Speed: 100
 	Health:
@@ -11292,7 +11295,7 @@ usaavenger:
 		BuildPaletteOrder: 70
 		Prerequisites: usaweap, ~techlevel.high, usastrategy, ~!susa_armor
 		Queue: Vehicle.Usa
-		Description: Laser-based air defense system.\nIncreases accuracy and firepower of nearby units.\nDazzles ground targets.\n Strong vs Aircraft
+		Description: actor-usaavenger.description
 	Mobile:
 		Speed: 90
 	Health:
@@ -11374,7 +11377,7 @@ usaambulan:
 		BuildPaletteOrder: 20
 		Prerequisites: usaweap, ~techlevel.low, ~!susa_super, ~!susa_air, ~!susa_armor
 		Queue: Vehicle.Usa
-		Description: Heals friendly units.\nCan carry 4 passengers.
+		Description: actor-usaambulan.description
 	Mobile:
 		TurnSpeed: 16
 		Speed: 146
@@ -11440,7 +11443,7 @@ usamicro:
 		BuildPaletteOrder: 40
 		Prerequisites: usaweap, ~techlevel.high, usastrategy, ~!susa_laser, ~!susa_armor
 		Queue: Vehicle.Usa
-		Description: Support vehicle able to disable buildings and fry infantry.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles
+		Description: actor-usamicro.description
 	Mobile:
 		Speed: 95
 	Health:
@@ -11501,7 +11504,7 @@ usamcv:
 		BuildPaletteOrder: 200
 		Prerequisites: usastrategy, ~techlevel.medium, ~usaselected
 		Queue: Vehicle.Usa
-		Description: Builds structures and provides radar.
+		Description: actor-usamcv.description
 		BuildDuration: 1500
 		BuildDurationModifier: 100
 	Selectable:
@@ -11672,7 +11675,7 @@ usapower:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 10
 		Prerequisites: usacommand, ~usaselected
-		Description: Provides power.\nCan be upgraded to increase output
+		Description: actor-usapower.description
 	Valued:
 		Cost: 500 #500
 	Tooltip:
@@ -11756,7 +11759,7 @@ pscusapower:
 	Buildable:
 		BuildPaletteOrder: 10
 		Queue: PowerPlant.USA
-		Description: Increases power output.
+		Description: actor-pscusapower.description
 		Prerequisites: usapower, ~!selectusasuper, ~!susa_laser, ~!susa_super
 	Valued:
 		Cost: 500
@@ -11773,7 +11776,7 @@ pscusapower2:
 	Buildable:
 		BuildPaletteOrder: 10
 		Queue: PowerPlant.USA
-		Description: Increases power output.
+		Description: actor-pscusapower2.description
 		Prerequisites: usapower, ~selectusasuper
 	Valued:
 		Cost: 500
@@ -11801,7 +11804,7 @@ usabarracks:
 		BuildPaletteOrder: 30
 		Prerequisites: usapower, ~usaselected
 		Queue: Building, RABuilding
-		Description: Trains infantry
+		Description: actor-usabarracks.description
 	Building:
 		Footprint: xxx xxx ===
 		Dimensions: 3,3
@@ -11862,7 +11865,7 @@ usapatriot:
 		Prerequisites: usabarracks, ~techlevel.low, ~!selectusalaser, ~!selectusasuper, ~usaselected
 		Queue: Defence, RADefence
 		BuildDurationModifier: 40
-		Description: All-purpose defensive structure.\nRequires power to operate.\nPasses one target to another with other nearby Patriot Defense Systems\n  Strong vs Aircraft, Tanks\n  Weak vs Infantry
+		Description: actor-usapatriot.description
 	Selectable:
 		Bounds: 1024, 1024
 	SelectionDecorations:
@@ -11952,7 +11955,7 @@ usalasertur:
 		Prerequisites: usabarracks, ~techlevel.low, ~selectusalaser, ~usaselected
 		Queue: Defence, RADefence
 		BuildDurationModifier: 40
-		Description: All-purpose defensive structure.\nRequires power to operate.\n  Strong vs Aircraft, Tanks\n  Weak vs Infantry
+		Description: actor-usalasertur.description
 	Selectable:
 		Bounds: 1024, 1024
 	SelectionDecorations:
@@ -12018,7 +12021,7 @@ usasupply:
 		BuildPaletteOrder: 20
 		Prerequisites: usapower, ~usaselected
 		Queue: Building, RABuilding
-		Description: Processes raw Tiberium\ninto useable resources
+		Description: actor-usasupply.description
 	Building:
 		Footprint: xxx ===
 		Dimensions: 3,2
@@ -12077,7 +12080,7 @@ usahook:
 		Queue: Aircraft.Usa
 		BuildPaletteOrder: 10
 		Prerequisites: usasupply, ~!susa_air, ~!susa_armor
-		Description: Resource collector and troop transport.\n  Unarmed
+		Description: actor-usahook.description
 	Valued:
 		Cost: 1200 #1100
 	Tooltip:
@@ -12219,7 +12222,7 @@ usacombathook:
 		Queue: Vehicle, RAVehicle
 		BuildPaletteOrder: 200
 		Prerequisites: usaweap, usastrategy, usaairport, ~selectusaairforce, ~!anysusa
-		Description: Combat helicopter that allows garrisoned soldiers to shoot out of it.\nCan load up to 8 soldiers\n  Unarmed
+		Description: actor-usacombathook.description
 		BuildDuration: 625
 		BuildDurationModifier: 100
 	-Harvester:
@@ -12281,7 +12284,7 @@ usaweap:
 		BuildPaletteOrder: 50
 		Prerequisites: usasupply, ~usaselected
 		Queue: Building, RABuilding
-		Description: Produces vehicles
+		Description: actor-usaweap.description
 	Building:
 		Footprint: xxxx x++x ====
 		Dimensions: 4,3
@@ -12353,7 +12356,7 @@ usastrategy:
 		BuildPaletteOrder: 60
 		Prerequisites: usaweap, !usastrategy, ~usaselected
 		Queue: Building, RABuilding
-		Description: Provides access to advanced American technologies.\nBuild Limit: 1
+		Description: actor-usastrategy.description
 		BuildLimit: 1
 	Building:
 		Footprint: xxxx x===
@@ -12378,10 +12381,10 @@ usastrategy:
 		Icons: 
 			1: usacarpet
 		ChargeInterval: 6000
-		Names: 
+		Names:
 			1: Carpet Bombing
 		Descriptions:
-			1: A stealth bomber strikes targets along a line.
+			1: power-general-usacarpetbomb.description
 		SelectTargetSpeechNotification: SelectTarget
 		CameraActor: camera
 		CameraRemoveDelay: 150
@@ -12389,7 +12392,7 @@ usastrategy:
 			1: usabomber.carpet2
 		QuantizedFacings: 8
 		DisplayBeacon: true
-		BeaconPosters: 
+		BeaconPosters:
 			1: airstrike
 		SquadSizes:
 			1: 1
@@ -12440,7 +12443,7 @@ usaairport:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 130
 		Prerequisites: usasupply, ~techlevel.medium, ~usaselected, usaweap
-		Description: Produces and reloads aircraft
+		Description: actor-usaairport.description
 		BuildDuration: 500
 		BuildDurationModifier: 100
 	Valued:
@@ -12513,7 +12516,7 @@ usadropzone:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 70
 		Prerequisites: usastrategy, ~usaselected
-		Description: Provides a cash supply.
+		Description: actor-usadropzone.description
 	Valued:
 		Cost: 2500 #300
 	Tooltip:
@@ -12569,7 +12572,7 @@ usacannon:
 		BuildPaletteOrder: 100
 		Prerequisites: usastrategy, ~techlevel.high, !particlecannon, ~usaselected
 		Queue: Building, RABuilding
-		Description: Provides Particle Cannon support power.\nRequires power to operate.
+		Description: actor-usacannon.description
 	Building:
 		Footprint: xxxx xxxx
 		Dimensions: 4,2
@@ -12587,13 +12590,13 @@ usacannon:
 		AllowMultiple: True
 		OrderName: ParticleCannon
 		PauseOnCondition: lowpower
-		Icons: 
+		Icons:
 			1: usaparticlecannon
-		Names: 
+		Names:
 			1: Particle Cannon
-		Descriptions: 
-			1: Fires a controllable particle beam.
-		Prerequisites: 
+		Descriptions:
+			1: power-general-particle.description
+		Prerequisites:
 			1: ~techlevel.superweapons
 		ChargeInterval: 6000
 		LifeTime: -1
@@ -12602,7 +12605,7 @@ usacannon:
 		SelectTargetSpeechNotification: SelectTarget
 		DisplayTimerStances: Ally, Neutral, Enemy
 		DisplayRadarPing: True
-		Actors: 
+		Actors:
 			1: usacannon.beam
 		SupportPowerPaletteOrder: 20
 		EffectSequence: idle
@@ -12911,7 +12914,7 @@ usaraptor:
 		Queue: Aircraft.Usa
 		BuildPaletteOrder: 50
 		Prerequisites: usaairport, ~techlevel.high, ~!selectusaairforce, ~!anysusa
-		Description: Multirole fighter.\n  Strong vs Aircraft, Vehicles
+		Description: actor-usaraptor.description
 	Valued:
 		Cost: 1400
 	Tooltip:
@@ -13063,7 +13066,7 @@ usastealth:
 		Queue: Aircraft.Usa
 		BuildPaletteOrder: 50
 		Prerequisites: usaairport, ~techlevel.high, upusastealth, ~!anysusa
-		Description: Cloaked bomber.\n  Strong vs Buildings, Vehicles\n  Weak vs Aircraft
+		Description: actor-usastealth.description
 	Valued:
 		Cost: 1600
 	Tooltip:
@@ -13194,7 +13197,7 @@ usaaurora:
 		Queue: Aircraft.Usa
 		BuildPaletteOrder: 50
 		Prerequisites: usaairport, usastrategy, ~!selectusasuper, ~!susa_laser, ~!susa_armor, ~!susa_super
-		Description: Heavy bomber.\n  Strong vs ground targets\n  Weak vs Aircraft
+		Description: actor-usaaurora.description
 	Valued:
 		Cost: 2500
 	Tooltip:
@@ -13362,7 +13365,7 @@ usacomanche:
 		BuildDuration: 375
 		BuildDurationModifier: 100
 		Prerequisites: usaairport, ~techlevel.high, ~!anysusa
-		Description: Helicopter gunship.\n  Strong vs Infantry, Light vehicles\n  Weak vs Aircraft
+		Description: actor-usacomanche.description
 	Aircraft:
 		TurnSpeed: 7
 		Speed: 164
@@ -13490,7 +13493,7 @@ usafirebase:
 		Prerequisites: usabarracks, ~techlevel.medium, ~usaselected, ~!susa_laser
 		Queue: Defence, RADefence
 		BuildDurationModifier: 40
-		Description: Garrisonable defensive structure.\n  Strong vs ground targets\n  Weak vs Aircraft
+		Description: actor-usafirebase.description
 	Valued:
 		Cost: 1000
 	CustomSellValue:
@@ -13609,7 +13612,7 @@ usaupgrenade:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Infantry.Usa
-		Description: Allow Rangers to use flashbangs.\nFlashbangs stuns infantry and damages garrisoned soldiers
+		Description: actor-usaupgrenade.description
 		Prerequisites: ~!usaupgrenade, ~!susa_armor
 	Valued:
 		Cost: 800
@@ -13625,7 +13628,7 @@ usauptowmiss:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Vehicle.Usa
-		Description: Equips Humvees with TOW missiles.
+		Description: actor-usauptowmiss.description
 		Prerequisites: ~!usauptowmiss, ~!susa_super, ~!susa_laser, ~!susa_armor
 	Valued:
 		Cost: 800
@@ -13641,7 +13644,7 @@ usaupdronegun:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Vehicle.Usa
-		Description: Arms the Sentry Drone with a machine gun.
+		Description: actor-usaupdronegun.description
 		Prerequisites: ~!usaupdronegun, ~!susa_armor
 	Valued:
 		Cost: 1000
@@ -13657,7 +13660,7 @@ usaupchemsuit:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades.Generals1
-		Description: Makes infantry immune to lingering toxin weapons.
+		Description: actor-usaupchemsuit.description
 		Prerequisites: ~!usaupchemsuit, ~usaselected
 	Valued:
 		Cost: 1000
@@ -13673,7 +13676,7 @@ usauparmor:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades.Generals1	
-		Description: Increases durability of all ground vehicles.
+		Description: actor-usauparmor.description
 		Prerequisites: ~!usauparmor, ~!susa_laser, ~!susa_air, ~usaselected
 	Valued:
 		Cost: 2000
@@ -13689,7 +13692,7 @@ usauplasmiss:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Aircraft.Usa
-		Description: Increases damage done by aircraft by 25%.
+		Description: actor-usauplasmiss.description
 		Prerequisites: ~!usauplasmiss, ~!susa_laser, ~usaselected
 	Valued:
 		Cost: 1500
@@ -13705,7 +13708,7 @@ usaupsupplylines:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades.Generals1
-		Description: Increases income from Supply Drops and Chinooks.
+		Description: actor-usaupsupplylines.description
 		Prerequisites: ~!usaupsupplylines, ~usaselected
 	Valued:
 		Cost: 800
@@ -13721,7 +13724,7 @@ usabombardament:
 	Buildable:
 		BuildPaletteOrder: 10
 		Queue: Upgrades.Generals1
-		Description: All units deal 25% more damage\nAllows Strategy Centers to use bombardment\n\nUpgrading this will disable other Battle Plans
+		Description: actor-usabombardament.description
 		Prerequisites: ~!usabombardmentc, ~!usasearchndestroyc, ~!usaholdthelinec, ~usaselected
 		BuildDuration: 250
 		BuildDurationModifier: 100
@@ -13739,7 +13742,7 @@ usasearchndestroy:
 		BuildDuration: 250
 		BuildDurationModifier: 100
 		Queue: Upgrades.Generals1
-		Description: All units have 25% more range\n\nUpgrading this will disable other Battle Plans
+		Description: actor-usasearchndestroy.description
 		Prerequisites: ~!usabombardmentc, ~!usasearchndestroyc, ~!usaholdthelinec, ~usaselected
 	RenderSprites:
 		Image: usasearchanddestroy
@@ -13755,7 +13758,7 @@ usaholdtheline:
 		Queue: Upgrades.Generals1
 		BuildDuration: 250
 		BuildDurationModifier: 100
-		Description: All units take 20% less damage\n\nUpgrading this will disable other Battle Plans
+		Description: actor-usaholdtheline.description
 		Prerequisites: ~!usabombardmentc, ~!usasearchndestroyc, ~!usaholdthelinec, ~usaselected
 	RenderSprites:
 		Image: usaholdtheline
@@ -13769,7 +13772,7 @@ usaupbunkerbuster:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Aircraft.Usa
-		Description: Allow Stealth Fighters to clear out garrisons.
+		Description: actor-usaupbunkerbuster.description
 		Prerequisites: ~!usaupbunkerbuster, ~usaselected
 	Valued:
 		Cost: 1000
@@ -13783,7 +13786,7 @@ usaupcounter:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Aircraft.Usa
-		Description: Increases durability of aircraft.
+		Description: actor-usaupcounter.description
 		Prerequisites: ~!usaupcounter, ~!susa_laser, !susa_air, ~usaselected
 	Valued:
 		Cost: 1000
@@ -13799,7 +13802,7 @@ usauptraining:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades.Generals1
-		Description: All ground units gain experience faster.
+		Description: actor-usauptraining.description
 		Prerequisites: ~!usauptraining, ~usaselected
 	Valued:
 		Cost: 1500
@@ -13815,7 +13818,7 @@ usaupdronearmor:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades.Generals1
-		Description: Increases durability of drones.
+		Description: actor-usaupdronearmor.description
 		Prerequisites: ~!usaupdronearmor, ~usaselected
 	Valued:
 		Cost: 2000
@@ -13834,7 +13837,7 @@ upstealthcomanche:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Aircraft.Usa
-		Description: Cloaks Comanches.
+		Description: actor-upstealthcomanche.description
 		Prerequisites: ~!upstealthcomanche, ~selectusaairforce, ~usaselected
 		BuildDuration: 1500
 		BuildDurationModifier: 100
@@ -13895,7 +13898,7 @@ usagunboat:
 		BuildPaletteOrder: 20
 		Prerequisites: usasupply
 		Queue: Naval.Usa
-		Description: Light scout & support ship.\nCan detect submarines.
+		Description: actor-usagunboat.description
 	Mobile:
 		Speed: 72
 	Health:
@@ -13958,7 +13961,7 @@ usabattleship:
 		BuildPaletteOrder: 50
 		Prerequisites: usapower, usastrategy
 		Queue: Naval.Usa
-		Description: Very slow long-range ship.\n  Strong vs Buildings, Ground units\n  Weak vs Naval units, Aircraft
+		Description: actor-usabattleship.description
 	Mobile:
 		TurnSpeed: 6
 		Speed: 48
@@ -14031,7 +14034,7 @@ usacarrier:
 		BuildPaletteOrder: 50
 		Prerequisites: usapower, usastrategy
 		Queue: Naval.Usa
-		Description: Very slow long-range ship.\n  Strong vs Buildings, Ground units\n  Weak vs Naval units, Aircraft
+		Description: actor-usacarrier.description
 	Mobile:
 		TurnSpeed: 8
 		Speed: 40
@@ -14158,7 +14161,7 @@ usauwusupply:
 		Queue: Vehicle, RAVehicle
 		Prerequisites: usasupply
 		BuildPaletteOrder: 120
-		Description: Transports cash other players.\n Armed with self-defense machine gun
+		Description: actor-usauwusupply.description
 	Turreted:
 		Offset: -10,0,150
 	Armament:
@@ -14188,7 +14191,7 @@ upusapath:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Promotions
-		Description: Allows training of Pathfinders.
+		Description: actor-upusapath.description
 		Prerequisites: !upusapath, ~techlevel.medium, ~!susa_armor, rank3, rank1, ~usaselected
 	RenderSprites:
 		Image: usapath
@@ -14203,7 +14206,7 @@ upusapala:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Promotions
-		Description: Allows production of the Paladin Tank.
+		Description: actor-upusapala.description
 		Prerequisites: !upusapala, ~techlevel.medium, ~!selectusalaser, ~!selectusaairforce, ~!selectusasuper, rank1, ~!susa_super, ~!susa_laser, ~!susa_air, ~!susa_armor, ~usaselected
 	RenderSprites:
 		Image: usapala
@@ -14218,7 +14221,7 @@ upusastealth:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Promotions
-		Description: Allows production of the Stealth Fighter.
+		Description: actor-upusastealth.description
 		Prerequisites: !upusastealth, ~techlevel.medium, rank1, ~!selectusaairforce, ~!anysusa, ~usaselected
 	RenderSprites:
 		Image: usastealth
@@ -14233,7 +14236,7 @@ upusaspydrone:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Promotions
-		Description: Enables the deployment of Spy Drones.
+		Description: actor-upusaspydrone.description
 		Prerequisites: !upusaspydrone, ~techlevel.medium, rank1, ~usaselected
 	RenderSprites:
 		Image: usaspydrone
@@ -14248,7 +14251,7 @@ upusaparadrop1:
 	Buildable:
 		BuildPaletteOrder: 220
 		#Queue: Promotions
-		Description: Unlocks Paradrop
+		Description: actor-upusaparadrop1.description
 		Prerequisites: !upusaparadrop1, rank3, rank1, ~!anysusa, ~usaselected
 	RenderSprites:
 		Image: upusaparadrop1icon
@@ -14263,7 +14266,7 @@ upusaparadrop2:
 	Buildable:
 		BuildPaletteOrder: 220
 		#Queue: Promotions
-		Description: Unlocks Paradrop
+		Description: actor-upusaparadrop2.description
 		Prerequisites: upusaparadrop1, !upusaparadrop2, rank3, rank1, ~!anysusa, ~usaselected
 	RenderSprites:
 		Image: upusaparadrop2icon
@@ -14278,7 +14281,7 @@ upusaparadrop3:
 	Buildable:
 		BuildPaletteOrder: 220
 		Queue: Promotions
-		Description: Unlocks Paradrop
+		Description: actor-upusaparadrop3.description
 		Prerequisites: !upusaparadrop3, rank3, rank1, ~!anysusa, ~usaselected
 	RenderSprites:
 		Image: upusaparadrop3icon
@@ -14293,7 +14296,7 @@ upusaa101:
 	Buildable:
 		BuildPaletteOrder: 220
 		Queue: Promotions
-		Description: Unlocks A10 Strike
+		Description: actor-upusaa101.description
 		Prerequisites: ~!upusaa101, rank3, rank1, ~!susa_super, ~usaselected
 	RenderSprites:
 		Image: usaa101
@@ -14308,7 +14311,7 @@ upusaa102:
 	Buildable:
 		BuildPaletteOrder: 220
 		Queue: Promotions
-		Description: Unlocks A10 Strike
+		Description: actor-upusaa102.description
 		Prerequisites: ~upusaa101, ~!upusaa102, rank3, rank1, ~!susa_super, ~usaselected
 	RenderSprites:
 		Image: usaa102
@@ -14323,7 +14326,7 @@ upusaa103:
 	Buildable:
 		BuildPaletteOrder: 220
 		Queue: Promotions
-		Description: Unlocks A10 Strike
+		Description: actor-upusaa103.description
 		Prerequisites: ~upusaa102, ~!upusaa103, rank3, rank1, ~!susa_super, ~usaselected
 	RenderSprites:
 		Image: usaa103
@@ -14338,7 +14341,7 @@ upusagunship:
 	Buildable:
 		BuildPaletteOrder: 250
 		Queue: Promotions
-		Description: Allows use of Spectre Gunship airstrikes.
+		Description: actor-upusagunship.description
 		Prerequisites: !upusagunship, rank5, rank1, ~!anysusa, ~usaselected
 	RenderSprites:
 		Image: usagunship
@@ -14353,7 +14356,7 @@ upusaleaflet:
 	Buildable:
 		BuildPaletteOrder: 250
 		Queue: Promotions
-		Description: Allows use of the Leaflet Drop.
+		Description: actor-upusaleaflet.description
 		Prerequisites: !upusaleaflet, rank5, rank1, ~!susa_super, ~!susa_air, ~usaselected
 	RenderSprites:
 		Image: usaleafleticon
@@ -14374,7 +14377,7 @@ upusafuelbomb:
 	Buildable:
 		BuildPaletteOrder: 250
 		Queue: Promotions
-		Description: Allows use of Fuel Air Bomb strikes.
+		Description: actor-upusafuelbomb.description
 		Prerequisites: !upusafuelbomb, rank5, rank1, ~usaselected
 	RenderSprites:
 		Image: usafuelbombicon
@@ -14388,7 +14391,7 @@ upusamotherbomb:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades.Generals1
-		Description: Allows use of MOAB strikes.
+		Description: actor-upusamotherbomb.description
 		Prerequisites: ~upusafuelbomb, ~!upusamotherbomb, ~usaselected
 	Valued:
 		Cost: 4000
@@ -14406,7 +14409,7 @@ usaupmisspod:
 		BuildDuration: 1125
 		BuildDurationModifier: 100
 		Queue: Aircraft.Usa
-		Description: Upgrades the Comanche with rocket pods strong against clustered targets.
+		Description: actor-usaupmisspod.description
 		Prerequisites: ~!usaupmisspod, usastrategy, ~!susa_regular, ~!susa_laser, ~!susa_armor, ~usaselected
 	Valued:
 		Cost: 1500
@@ -14432,7 +14435,7 @@ leangmcv:
 		BuildPaletteOrder: 200
 		Prerequisites: chpropaganda, ~techlevel.high, ~leangselected
 		Queue: Building, RABuilding
-		Description: Builds structures and provides radar.
+		Description: actor-leangmcv.description
 		BuildDuration: 1500
 		BuildDurationModifier: 100
 	Selectable:
@@ -14503,13 +14506,13 @@ leangcommand:
 		Prerequisite: mmleang
 	GrantExternalConditionPower@Bounty3:
 		OrderName: CashBounty3
-		Icons: 
+		Icons:
 			1: glabounty3
 		ChargeInterval: 3000
-		Names: 
+		Names:
 			1: Cash Bounty
 		Descriptions:
-			1: Makes selected targets grant 40% of value\nupon being killed or destroyed.
+			1: power-general-bounty.description
 		Durations:
 			1: 1000
 		SelectTargetSpeechNotification: SelectTarget
@@ -14538,7 +14541,7 @@ leangcommand:
 		Names:
 			1: Spectre Gunship
 		Descriptions:
-			1: Deploys a Spectre Gunship to fire on the target.
+			1: power-general-spectre.description
 		EndChargeSpeechNotification: AirstrikeReady
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower

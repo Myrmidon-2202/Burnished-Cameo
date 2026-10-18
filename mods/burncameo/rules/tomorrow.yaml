@@ -4,68 +4,68 @@ World:
 		InternalName: dtomorrow
 		Game: Dawn of Tomorrow
 		Side: Dawn of Tomorrow
-		Description: Forces of Tomorrow Support powers: Bacterial Missile Strike Special Unit: Classified
+		Description: faction-fot-tomorrow.description
 	FactionCA@dtanswer:
 		Name: Company of Answers
 		InternalName: dtanswer
 		Game: Dawn of Tomorrow
 		Side: Dawn of Tomorrow
-		Description: Company of Answers Support powers: A10 Strike Special Unit: Phoenix Gain extra cash from Refineries.
+		Description: faction-coa-tomorrow.description
 	FactionCA@dtusa:
 		Name: USA
 		InternalName: dtusa
 		Game: Dawn of Tomorrow
 		Side: Dawn of Tomorrow
-		Description: USA Support powers: Cruise Missile Strike Special Bonus: Vehicle Rank unlocking machine Shop
+		Description: faction-usa-tomorrow.description
 	FactionCA@dtrussia:
 		Name: Russia
 		InternalName: dtrussia
 		Game: Dawn of Tomorrow
 		Side: Dawn of Tomorrow
-		Description: Russia
+		Description: faction-russia-tomorrow.description
 	FactionCA@dtjapan:
 		Name: Japan
 		InternalName: dtjapan
 		Game: Dawn of Tomorrow
 		Side: Dawn of Tomorrow
-		Description: Japan
+		Description: faction-japan-tomorrow.description
 	FactionCA@dtargentina:
 		Name: Argentina
 		InternalName: dtargentina
 		Game: Dawn of Tomorrow
 		Side: Dawn of Tomorrow
-		Description: Argentina
+		Description: faction-argentina-tomorrow.description
 	FactionCA@dtbrazil:
 		Name: Brazil
 		InternalName: dtbrazil
 		Game: Dawn of Tomorrow
 		Side: Dawn of Tomorrow
-		Description: Brazil
+		Description: faction-brazil-tomorrow.description
 	FactionCA@dtcuba:
 		Name: Cuba
 		InternalName: dtcuba
 		Game: Dawn of Tomorrow
 		Side: Dawn of Tomorrow
-		Description: Cuba
+		Description: faction-cuba-tomorrow.description
 	FactionCA@dtaustralia:
 		Name: Australia
 		InternalName: dtaustralia
 		Game: Dawn of Tomorrow
 		Side: Dawn of Tomorrow
-		Description: Australia
+		Description: faction-australia-tomorrow.description
 	FactionCA@dtethiopia:
 		Name: Ethiopia
 		InternalName: dtethiopia
 		Game: Dawn of Tomorrow
 		Side: Dawn of Tomorrow
-		Description: Ethiopia
+		Description: faction-ethiopia-tomorrow.description
 	FactionCA@dtrandom:
 		Name: Random DOT
 		InternalName: RandomDT
 		RandomFactionMembers: dtomorrow, dtanswer, dtusa, dtrussia, dtjapan, dtargentina, dtbrazil, dtcuba, dtaustralia, dtethiopia
 		Game: Dawn of Tomorrow
 		Side: Random
-		Description: A random faction from Dawn of Tomorrow factions will be chosen when the game starts.
+		Description: faction-random-tomorrow.description
 
 
 #########################################################################
@@ -278,7 +278,7 @@ TRUCK:
 	RevealsShroud:
 		Range: 4c0
 	Encyclopedia:
-		Description: actor-truck.encyclopedia
+		Description: actor-truck.description
 		Order: 220
 		Category: Vehicles
 		Scale: 3
@@ -308,7 +308,7 @@ LCV:
 		Prerequisites: ~fact.dtbrazil
 		Queue: Vehicle.Dtbrazil
 		BuildDurationModifier: 40
-		Description: Deploys into a Flame Tower
+		Description: actor-lcv.description
 	Selectable:
 		Priority: 4
 		DecorationBounds: 1536, 1536
@@ -352,7 +352,7 @@ LCV.AUSTRALIA:
 		Prerequisites: ~fact.dtaustralia
 		Queue: Vehicle.Dtaustralia
 		BuildDurationModifier: 40
-		Description: Deploys into a Gun Turret
+		Description: actorgunlcv.description
 	Selectable:
 		Priority: 4
 		DecorationBounds: 1536, 1536
@@ -396,7 +396,7 @@ LCV.ETHIOPIA:
 		Prerequisites: ~fact.dtethiopia
 		Queue: Vehicle.Dtethiopia
 		BuildDurationModifier: 40
-		Description: Deploys into a Hideout
+		Description: actorhidelcv.description
 	Selectable:
 		Priority: 4
 		DecorationBounds: 1536, 1536
@@ -440,7 +440,7 @@ MCV.TOMORROW:
 		Prerequisites: ~anyhq, fix
 		Queue: Vehicle.Tomorrow
 		BuildDurationModifier: 40
-		Description: Deploys into another Construction Yard.
+		Description: template-mcv.description
 	Selectable:
 		Priority: 4
 		DecorationBounds: 1536, 1536
@@ -493,7 +493,7 @@ MCV.ANSWER:
 		Prerequisites: ~anyhq, fix
 		Queue: Vehicle.Anwer
 		BuildDurationModifier: 40
-		Description: Deploys into another Construction Yard.
+		Description: template-mcv.description
 	Selectable:
 		Priority: 4
 		DecorationBounds: 1536, 1536
@@ -544,7 +544,7 @@ MCV.DTUSA:
 		Prerequisites: ~anyhq, fix
 		Queue: Vehicle.Dtusa
 		BuildDurationModifier: 40
-		Description: Deploys into another Construction Yard.
+		Description: template-mcv.description
 	Selectable:
 		Priority: 4
 		DecorationBounds: 1536, 1536
@@ -594,7 +594,7 @@ MCV.DTRUSSIA:
 		BuildPaletteOrder: 210
 		Prerequisites: fix
 		BuildDurationModifier: 40
-		Description: Deploys into another Construction Yard.
+		Description: template-mcv.description
 	Valued:
 		Cost: 2000
 	Tooltip:
@@ -650,7 +650,7 @@ MCV.DTJAPAN:
 		Prerequisites: ~anyhq, fix
 		Queue: Vehicle.Dtjapan
 		BuildDurationModifier: 40
-		Description: Deploys into another Construction Yard.
+		Description: template-mcv.description
 	Selectable:
 		Priority: 4
 		DecorationBounds: 1536, 1536
@@ -698,7 +698,7 @@ MCV.DTARGENTINA:
 		Prerequisites: atek.argentina, fix
 		Queue: Vehicle.Dtargentina
 		BuildDurationModifier: 40
-		Description: Deploys into another Construction Yard.
+		Description: template-mcv.description
 	Selectable:
 		Priority: 4
 		DecorationBounds: 1536, 1536
@@ -747,7 +747,7 @@ MCV.DTBRAZIL:
 		Prerequisites: ~fact.dtbrazil, fix
 		Queue: Vehicle.Dtbrazil
 		BuildDurationModifier: 40
-		Description: Deploys into another Construction Yard.
+		Description: template-mcv.description
 	Selectable:
 		Priority: 4
 		DecorationBounds: 1536, 1536
@@ -798,7 +798,7 @@ MCV.DTCUBA:
 		BuildPaletteOrder: 210
 		Prerequisites: fix
 		BuildDurationModifier: 40
-		Description: Deploys into another Construction Yard.
+		Description: template-mcv.description
 	Valued:
 		Cost: 2000
 	Tooltip:
@@ -847,7 +847,7 @@ MCV.DTAUSTRALIA:
 		Prerequisites: ~anyhq, fix
 		Queue: Vehicle.Dtaustralia
 		BuildDurationModifier: 40
-		Description: Deploys into another Construction Yard.
+		Description: template-mcv.description
 	Selectable:
 		Priority: 4
 		DecorationBounds: 1536, 1536
@@ -893,7 +893,7 @@ MCV.DTETHIOPIA:
 		Prerequisites: atek.ethiopia, fix
 		Queue: Vehicle.Dtethiopia
 		BuildDurationModifier: 40
-		Description: Deploys into another Construction Yard.
+		Description: template-mcv.description
 	Selectable:
 		Priority: 4
 		DecorationBounds: 1536, 1536
@@ -1006,7 +1006,7 @@ FACT.DTRUSSIA:
 	ProvidesPrerequisite@buildingname:
 		Prerequisite: dtfact
 	Buildable:
-		Description: Builds structures
+		Description: template-conyard.description
 	ProvidesPrerequisite@factionsoviet:
 		Prerequisite: fact.dtrussia
 	ProvidesPrerequisite@wall:
@@ -1425,7 +1425,7 @@ FACT.DTJAPAN:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 1000
 		Prerequisites: ~wip-content
-		Description: Builds structures
+		Description: template-conyard.description
 	ProvidesPrerequisite@factionjap:
 		Prerequisite: fact.dtjapan
 	ProvidesPrerequisite@wall:
@@ -1500,7 +1500,7 @@ FACT.DTARGENTINA:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 1000
 		Prerequisites: ~wip-content
-		Description: Builds structures
+		Description: template-conyard.description
 	ProvidesPrerequisite@factionarg:
 		Prerequisite: fact.dtargentina
 	ProvidesPrerequisite@wall:
@@ -1652,7 +1652,7 @@ FACT.DTCUBA:
 	ProvidesPrerequisite@buildingname:
 		Prerequisite: dtfact
 	Buildable:
-		Description: Builds structures
+		Description: template-conyard.description
 	ProvidesPrerequisite@factionsoviet:
 		Prerequisite: fact.dtcuba
 	ProvidesPrerequisite@oilderrick:
@@ -1726,7 +1726,7 @@ FACT.DTAUSTRALIA:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 1000
 		Prerequisites: ~wip-content
-		Description: Builds structures
+		Description: template-conyard.description
 	ProvidesPrerequisite@factionarg:
 		Prerequisite: fact.dtaustralia
 	ProvidesPrerequisite@wall:
@@ -1814,7 +1814,7 @@ FACT.DTETHIOPIA:
 	ProvidesPrerequisite@buildingname:
 		Prerequisite: dtfact
 	Buildable:
-		Description: Builds structures
+		Description: template-conyard.description
 	ProvidesPrerequisite@factionsoviet:
 		Prerequisite: fact.dtethiopia
 	ProvidesPrerequisite@wall:
@@ -1848,7 +1848,7 @@ AFLD.ANSWER:
 		BuildPaletteOrder: 40
 		Prerequisites: ~fact.answer, dtproc
 		Queue: Building, RABuilding
-		Description: Provides a dropzone for vehicle reinforcements
+		Description: actor-afld.description
 	Building:
 		Footprint: XXX+ xxx+ ====
 		Dimensions: 4,3
@@ -1931,7 +1931,7 @@ WEAP.TOMORROW:
 		BuildPaletteOrder: 40
 		Prerequisites: ~fact.tomorrow, dtproc, dtpropaganda.tomorrow
 		Queue: Building, RABuilding
-		Description: Produces vehicles
+		Description: actor-vehicleproduction.description
 	Building:
 		Footprint: xxx === ===
 		Dimensions: 3,3
@@ -2007,7 +2007,7 @@ WEAP.DTUSA:
 		BuildPaletteOrder: 40
 		Prerequisites: ~fact.dtusa, dtproc
 		Queue: Building, RABuilding
-		Description: Produces vehicles
+		Description: template-factory.description
 	Building:
 		Footprint: xxx === ===
 		Dimensions: 3,3
@@ -2082,7 +2082,7 @@ WEAP.DTRUSSIA:
 		BuildPaletteOrder: 40
 		Prerequisites: ~fact.dtrussia, dtproc
 		Queue: Building, RABuilding
-		Description: Produces vehicles
+		Description: template-factory.description
 	Building:
 		Footprint: xxx === ===
 		Dimensions: 3,3
@@ -2142,7 +2142,7 @@ WEAP.DTARGENTINA:
 		BuildPaletteOrder: 40
 		Prerequisites: ~fact.dtargentina, dtproc, atek.argentina
 		Queue: Building, RABuilding
-		Description: Produces vehicles
+		Description: template-factory.description
 	Production@NORMAL:
 		Produces: Vehicle.Dtargentina
 		RequiresCondition: !classicproductionqueues
@@ -2184,7 +2184,7 @@ WEAP.DTJAPAN:
 		BuildPaletteOrder: 40
 		Prerequisites: ~fact.dtjapan, dtproc
 		Queue: Building, RABuilding
-		Description: Produces vehicles
+		Description: template-factory.description
 	Building:
 		Footprint: xxx === ===
 		Dimensions: 3,3
@@ -2259,7 +2259,7 @@ WEAP.DTBRAZIL:
 		BuildPaletteOrder: 40
 		Prerequisites: ~fact.dtbrazil, dtproc
 		Queue: Building, RABuilding
-		Description: Produces vehicles
+		Description: template-factory.description
 	Building:
 		Footprint: xxx === ===
 		Dimensions: 3,3
@@ -2335,7 +2335,7 @@ AFLD.CUBA:
 		BuildPaletteOrder: 40
 		Prerequisites: ~fact.dtcuba, dtproc
 		Queue: Building, RABuilding
-		Description: Provides a dropzone for vehicle reinforcements
+		Description: actor-afld.description
 	Building:
 		Footprint: XXX+ xxx+ ====
 		Dimensions: 4,3
@@ -2392,7 +2392,7 @@ AFLD.CUBA:
 		Names:
 			1: Medium Tank Airdrop
 		Descriptions:
-			1: Airdrops Medium Tanks for the Cuban war effort.
+			1: power-tomorrow-tankdrop.description
 		Icons:
 			1: icon
 		IconImage: paratroopers
@@ -2424,7 +2424,7 @@ WEAP.DTCUBA:
 		BuildPaletteOrder: 40
 		Prerequisites: ~fact.dtcuba, dtproc
 		Queue: Building, RABuilding
-		Description: Produces vehicles
+		Description: template-factory.description
 	Production@NORMAL:
 		Produces: Vehicle.Dtcuba
 		RequiresCondition: !classicproductionqueues
@@ -2465,7 +2465,7 @@ WEAP.DTAUSTRALIA:
 		BuildPaletteOrder: 40
 		Prerequisites: ~fact.dtaustralia, dtproc
 		Queue: Building, RABuilding
-		Description: Produces vehicles
+		Description: template-factory.description
 	Building:
 		Footprint: xxx === ===
 		Dimensions: 3,3
@@ -2534,7 +2534,7 @@ WEAP.DTETHIOPIA:
 		BuildPaletteOrder: 40
 		Prerequisites: ~fact.dtethiopia, dtpyle.dtethiopia
 		Queue: Building, RABuilding
-		Description: Produces vehicles
+		Description: template-factory.description
 	Building:
 		Footprint: xxx === ===
 		Dimensions: 3,3
@@ -2606,7 +2606,7 @@ DTHAND:
 		Queue: Building, RABuilding
 		BuildDuration: 1000
 		BuildDurationModifier: 100
-		Description: Produces Infantry Basic Anti-Tank base defense. Strong vs Tanks, vehicles Weak vs Infantry
+		Description: actor-dthand.description
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -2739,7 +2739,7 @@ HQ.TOMORROW:
 		BuildPaletteOrder: 70
 		Prerequisites: ~fact.tomorrow, dtpropaganda.tomorrow
 		Queue: Building, RABuilding
-		Description: Provides radar and Air Strike support power. Unlocks higher-tech units and buildings. Requires power to operate.
+		Description: actor-hq.description
 	RenderSprites:
 		Image: HQ
 	-AirstrikePower:
@@ -2757,7 +2757,7 @@ HQ.ANSWER:
 		BuildPaletteOrder: 70
 		Prerequisites: ~fact.answer, atek.answer
 		Queue: Building, RABuilding
-		Description: Unlocks higher-tech units and buildings. Requires power to operate.
+		Description: template-radar.description
 	RenderSprites:
 		Image: HQ
 	-AirstrikePower:
@@ -2777,7 +2777,7 @@ HQ.BRAZIL:
 		BuildPaletteOrder: 70
 		Prerequisites: ~fact.dtbrazil, atek.brazil
 		Queue: Building, RABuilding
-		Description: Unlocks higher-tech units and buildings. Requires power to operate.
+		Description: template-radar.description
 	RenderSprites:
 		Image: HQ
 	-AirstrikePower:
@@ -2797,7 +2797,7 @@ DOME.DTRUSSIA:
 		BuildPaletteOrder: 70
 		Prerequisites: ~fact.dtrussia, atek.russia
 		Queue: Building, RABuilding
-		Description: Unlocks higher-tech units and buildings. Requires power to operate.
+		Description: template-radar.description
 	RenderSprites:
 		Image: DOME
 
@@ -2815,7 +2815,7 @@ DOME.DTARGENTINA:
 		BuildPaletteOrder: 70
 		Prerequisites: ~fact.dtargentina, atek.argentina
 		Queue: Building, RABuilding
-		Description: Unlocks higher-tech units and buildings. Requires power to operate.
+		Description: template-radar.description
 	RenderSprites:
 		Image: DOME
 
@@ -2832,7 +2832,7 @@ FIX.TOMORROW:
 	Buildable:
 		Prerequisites: ~fact.tomorrow, dtpropaganda.tomorrow
 		Queue: Building, RABuilding
-		Description: Repairs damaged vehicles and aircraft. Requires power to operate.
+		Description: template-service-depot.description
 	Building:
 		Footprint: _+_ +++ _+_
 		Dimensions: 3,3
@@ -2857,7 +2857,6 @@ FIX.ANSWER:
 	Buildable:
 		Prerequisites: ~fact.answer, atek.answer
 		Queue: Building, RABuilding
-		Description: Repairs damaged vehicles and aircraft. Requires power to operate.
 	Tooltip:
 		Name: Repair Facility (Answer)
 	ProvidesPrerequisite:
@@ -2868,7 +2867,6 @@ FIX.JAPAN:
 	Buildable:
 		Prerequisites: ~fact.dtjapan, atek.japan
 		Queue: Building, RABuilding
-		Description: Repairs damaged vehicles and aircraft. Requires power to operate.
 	Tooltip:
 		Name: Repair Facility (Japan)
 	ProvidesPrerequisite:
@@ -2879,7 +2877,6 @@ FIX.RUSSIA:
 	Buildable:
 		Prerequisites: ~fact.dtrussia, atek.russia
 		Queue: Building, RABuilding
-		Description: Repairs damaged vehicles and aircraft. Requires power to operate.
 	Tooltip:
 		Name: Repair Facility (Russia)
 	ProvidesPrerequisite:
@@ -2890,7 +2887,6 @@ FIX.USA:
 	Buildable:
 		Prerequisites: ~fact.dtusa, dtpropaganda.dtusa
 		Queue: Building, RABuilding
-		Description: Repairs damaged vehicles and aircraft. Requires power to operate.
 	Tooltip:
 		Name: Repair Facility (USA)
 	ProvidesPrerequisite:
@@ -2901,7 +2897,6 @@ FIX.ARGENTINA:
 	Buildable:
 		Prerequisites: ~fact.dtargentina, atek.argentina
 		Queue: Building, RABuilding
-		Description: Repairs damaged vehicles and aircraft. Requires power to operate.
 	Tooltip:
 		Name: Repair Facility (Argentina)
 	ProvidesPrerequisite:
@@ -2912,7 +2907,6 @@ FIX.BRAZIL:
 	Buildable:
 		Prerequisites: ~fact.dtbrazil, atek.brazil
 		Queue: Building, RABuilding
-		Description: Repairs damaged vehicles and aircraft. Requires power to operate.
 	Tooltip:
 		Name: Repair Facility (Brazil)
 	ProvidesPrerequisite:
@@ -2923,7 +2917,6 @@ FIX.CUBA:
 	Buildable:
 		Prerequisites: ~fact.dtcuba, atek.cuba
 		Queue: Building, RABuilding
-		Description: Repairs damaged vehicles and aircraft. Requires power to operate.
 	Tooltip:
 		Name: Repair Facility (Cuba)
 	ProvidesPrerequisite:
@@ -2934,7 +2927,6 @@ FIX.AUSTRALIA:
 	Buildable:
 		Prerequisites: ~fact.dtaustralia, atek.australia
 		Queue: Building, RABuilding
-		Description: Repairs damaged vehicles and aircraft. Requires power to operate.
 	Tooltip:
 		Name: Repair Facility (Australia)
 	ProvidesPrerequisite:
@@ -2945,7 +2937,6 @@ FIX.ETHIOPIA:
 	Buildable:
 		Prerequisites: ~fact.dtethiopia, atek.ethiopia
 		Queue: Building, RABuilding
-		Description: Repairs damaged vehicles and aircraft. Requires power to operate.
 	Tooltip:
 		Name: Repair Facility (Ethiopia)
 	ProvidesPrerequisite:
@@ -2969,7 +2960,7 @@ DTSTRIKE:
 		BuildPaletteOrder: 70
 		Prerequisites: ~fact.answer, hq.answer, !a10strikec
 		Queue: Building, RABuilding
-		Description: Provides radar and Air Strike support power. Unlocks higher-tech units and buildings. Requires power to operate.
+		Description: actor-dtstrike.description
 	Building:
 		Footprint: __ xx ==
 		Dimensions: 2,3
@@ -3004,7 +2995,7 @@ DTSTRIKE:
 		Names:
 			1: Air Strike
 		Descriptions:
-			1: Deploy an aerial napalm strike. Burns buildings and infantry along a line.
+			1: power-napalmstrike.description
 		EndChargeSpeechNotification: AirstrikeReady
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
@@ -3054,7 +3045,7 @@ DTPROC:
 		BuildPaletteOrder: 20
 		Prerequisites: ~dtfact
 		Queue: Building, RABuilding
-		Description: Processes raw Tiberium into useable resources
+		Description: actor-dtproc.description
 	Building:
 		Footprint: _x_ xxx === ===
 		Dimensions: 3,4
@@ -3122,7 +3113,7 @@ DTPROPAGANDA:
 		BuildPaletteOrder: 100
 		Prerequisites: ~wipcontent
 		Queue: Building, RABuilding
-		Description: Provides some Technologies
+		Description: actor-dtpropaganda.description
 	Building:
 		Footprint: xxx xxx ===
 		Dimensions: 3,3
@@ -3259,7 +3250,7 @@ DTPOWER2:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 10
 		Prerequisites: ~fact.answer
-		Description: Provides double the power of a standard Power Plant.
+		Description: actor-dtpower2.description
 	Valued:
 		Cost: 800 #500
 	Tooltip:
@@ -3330,7 +3321,7 @@ DTBPOWER:
 		BuildPaletteOrder: 10
 		Prerequisites: ~fact.dtbrazil
 		Queue: Building, RABuilding
-		Description: Barracks and Power Plant. Trains infantry and provides power to operate buildings.
+		Description: actor-dtbpower.description
 	Building:
 		Footprint: xX xx ==
 		Dimensions: 2,3
@@ -3446,7 +3437,7 @@ DTPYLE:
 	Buildable:
 		BuildPaletteOrder: 30
 		Prerequisites: ~wipcontent
-		Description: Trains infantry
+		Description: actor-dtpyle.description
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -3501,7 +3492,7 @@ DTPYLE.DTUSA:
 		BuildPaletteOrder: 30
 		Prerequisites: ~fact.dtusa, dtnuke.dtusa
 		Queue: Building, RABuilding
-		Description: Trains infantry
+		Description: template-barracks.description
 	Production@NORMAL:
 		Produces: Infantry.Dtusa
 	# Production@CLASSICPRODUCTIONQUEUES:
@@ -3525,7 +3516,7 @@ DTPYLE.ARGENTINA:
 		BuildPaletteOrder: 30
 		Prerequisites: ~fact.dtargentina, dtpower
 		Queue: Building, RABuilding
-		Description: Trains infantry
+		Description: template-barracks.description
 	Production@NORMAL:
 		Produces: Infantry.Dtargentina
 	# Production@CLASSICPRODUCTIONQUEUES:
@@ -3547,7 +3538,7 @@ DTPYLE.ANSWER:
 		BuildPaletteOrder: 30
 		Prerequisites: ~fact.answer, dtpower
 		Queue: Building, RABuilding
-		Description: Trains infantry
+		Description: template-barracks.description
 	Production@NORMAL:
 		Produces: Infantry.Answer
 	# Production@CLASSICPRODUCTIONQUEUES:
@@ -3571,7 +3562,7 @@ DTPYLE.DTRUSSIA:
 		BuildPaletteOrder: 30
 		Prerequisites: ~fact.dtrussia, dtrpower
 		Queue: Building, RABuilding
-		Description: Trains infantry
+		Description: template-barracks.description
 	Production@NORMAL:
 		Produces: Infantry.Dtrussia
 	# Production@CLASSICPRODUCTIONQUEUES:
@@ -3595,7 +3586,7 @@ DTPYLE.DTJAPAN:
 		BuildPaletteOrder: 30
 		Prerequisites: ~fact.dtjapan, dtjpower
 		Queue: Building, RABuilding
-		Description: Trains infantry
+		Description: template-barracks.description
 	Production@NORMAL:
 		Produces: Infantry.Dtjapan
 	# Production@CLASSICPRODUCTIONQUEUES:
@@ -3617,7 +3608,7 @@ DTPYLE.DTCUBA:
 		BuildPaletteOrder: 30
 		Prerequisites: ~fact.dtcuba, dtcpower
 		Queue: Building, RABuilding
-		Description: Trains infantry
+		Description: template-barracks.description
 	Production@NORMAL:
 		Produces: Infantry.Dtcuba
 	# Production@CLASSICPRODUCTIONQUEUES:
@@ -3659,7 +3650,7 @@ AFLD.AUSTRALIA:
 		BuildPaletteOrder: 30
 		Prerequisites: ~fact.dtaustralia, dtproc
 		Queue: Building, RABuilding
-		Description: Provides a dropzone for vehicle reinforcements
+		Description: actor-afld.description
 	Building:
 		Footprint: XXX+ xxx+ ====
 		Dimensions: 4,3
@@ -3723,7 +3714,7 @@ DTPYLE.DTETHIOPIA:
 		BuildPaletteOrder: 30
 		Prerequisites: ~fact.dtethiopia, dtepower
 		Queue: Building, RABuilding
-		Description: Trains infantry
+		Description: template-barracks.description
 	Production@NORMAL:
 		Produces: Infantry.Dtethiopia
 	# Production@CLASSICPRODUCTIONQUEUES:
@@ -3759,7 +3750,7 @@ HPAD.TOMORROW:
 		BuildPaletteOrder: 50
 		Prerequisites: ~fact.tomorrow, dtproc
 		Queue: Building, RABuilding
-		Description: Produces, rearms and repairs helicopters
+		Description: template-airfield.description
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -3827,7 +3818,7 @@ HPAD.ANSWER:
 		BuildPaletteOrder: 50
 		Prerequisites: ~fact.answer, dtproc
 		Queue: Building, RABuilding
-		Description: Produces, rearms and repairs helicopters
+		Description: template-airfield.description
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -3895,7 +3886,7 @@ HPAD.DTUSA:
 		BuildPaletteOrder: 50
 		Prerequisites: ~fact.dtusa, dtproc
 		Queue: Building, RABuilding
-		Description: Produces, rearms and repairs helicopters
+		Description: template-airfield.description
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -3963,7 +3954,7 @@ HPAD.DTRUSSIA:
 		BuildPaletteOrder: 50
 		Prerequisites: ~fact.dtrussia, dtproc
 		Queue: Building, RABuilding
-		Description: Produces, rearms and repairs helicopters
+		Description: template-airfield.description
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -4031,7 +4022,7 @@ HPAD.DTJAPAN:
 		BuildPaletteOrder: 50
 		Prerequisites: ~fact.dtjapan, dtproc
 		Queue: Building, RABuilding
-		Description: Produces, rearms and repairs helicopters
+		Description: template-airfield.description
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -4087,7 +4078,7 @@ HPAD.DTARGENTINA:
 		BuildPaletteOrder: 50
 		Prerequisites: ~fact.dtargentina, dtproc
 		Queue: Building, RABuilding
-		Description: Produces, rearms and repairs helicopters
+		Description: template-airfield.description
 	Production@NORMAL:
 		Produces: Aircraft.Dtargentina
 		RequiresCondition: !classicproductionqueues
@@ -4122,7 +4113,7 @@ HPAD.DTCUBA:
 		BuildPaletteOrder: 50
 		Prerequisites: ~fact.dtcuba, dtproc
 		Queue: Building, RABuilding
-		Description: Produces, rearms and repairs helicopters
+		Description: template-airfield.description
 	Production@NORMAL:
 		Produces: Aircraft.Dtcuba
 		RequiresCondition: !classicproductionqueues
@@ -4157,7 +4148,7 @@ HPAD.DTAUSTRALIA:
 		BuildPaletteOrder: 50
 		Prerequisites: ~fact.dtaustralia, dtproc
 		Queue: Building, RABuilding
-		Description: Produces, rearms and repairs helicopters
+		Description: template-airfield.description
 	Production@NORMAL:
 		Produces: Aircraft.Dtaustralia
 		RequiresCondition: !classicproductionqueues
@@ -4500,7 +4491,7 @@ DTBIO:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 140
 		Prerequisites: ~fact.tomorrow, weap.tomorrow, hq.tomorrow
-		Description: Provides Tomorrow advanced technologies
+		Description: actor-dtbio.description
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -4533,7 +4524,7 @@ DTBIO:
 		Names: 
 			1: Bacterial Strike
 		Descriptions:
-			1: Launch a tactical bacterial warhead. Applies heavy damage over a large area.
+			1: power-tomorrow-bacterialstrike.description
 		EndChargeSpeechNotification: DTBacterialStrikeAv
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
@@ -4577,7 +4568,7 @@ ATEK.ANSWER:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 50
 		Prerequisites: ~fact.answer, dtproc
-		Description: Provides Allies advanced technologies.  Special Ability: GPS Satellite
+		Description: actor-atek.description
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -4622,7 +4613,7 @@ ATEK.JAPAN:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 50
 		Prerequisites: ~fact.dtjapan, dtproc, dtjpower
-		Description: Provides Japan advanced technologies.
+		Description: actor-gentek.description
 	-GpsPower:
 	ProvidesPrerequisite@techcenter:
 		Prerequisite: atek.japan
@@ -4637,7 +4628,7 @@ ATEK.RUSSIA:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 50
 		Prerequisites: ~fact.dtrussia, dtproc, dtrpower
-		Description: Provides Russia advanced technologies.
+		Description: actor-gentek.description
 	-GpsPower:
 	ProvidesPrerequisite@techcenter:
 		Prerequisite: atek.russia
@@ -4653,7 +4644,7 @@ ATEK.ARGENTINA:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 50
 		Prerequisites: ~fact.dtargentina, dtproc, dtpower
-		Description: Provides Argentina advanced technologies.
+		Description: actor-gentek.description
 	-GpsPower:
 	ProvidesPrerequisite@techcenter:
 		Prerequisite: atek.argentina
@@ -4671,7 +4662,7 @@ ATEK.BRAZIL:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 50
 		Prerequisites: ~fact.dtbrazil, dtproc, dtbpower
-		Description: Provides Brazil advanced technologies and a missile defense.
+		Description: actor-gentek.description
 	-GpsPower:
 	Turreted:
 		TurnSpeed: 2023
@@ -4698,7 +4689,7 @@ ATEK.CUBA:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 50
 		Prerequisites: ~fact.dtcuba, dtproc, dtcpower
-		Description: Provides Cuba advanced technologies.
+		Description: actor-gentek.description
 	-GpsPower:
 	ProvidesPrerequisite@techcenter:
 		Prerequisite: atek.cuba
@@ -4717,7 +4708,7 @@ ATEK.AUSTRALIA:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 50
 		Prerequisites: ~fact.dtaustralia, dtproc, dtapower
-		Description: Provides Australia advanced technologies.
+		Description: actor-gentek.description
 	-GpsPower:
 	ProvidesPrerequisite@techcenter:
 		Prerequisite: atek.australia
@@ -4736,7 +4727,7 @@ ATEK.ETHIOPIA:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 50
 		Prerequisites: ~fact.dtethiopia, dtproc, dtepower
-		Description: Provides Ethiopia advanced technologies.
+		Description: actor-gentek.description
 	-GpsPower:
 	ProvidesPrerequisite@techcenter:
 		Prerequisite: atek.ethiopia
@@ -4758,7 +4749,7 @@ DTWOOD:
 		BuildPaletteOrder: 20
 		Prerequisites: ~fact.answer
 		Queue: Defence, RADefence
-		Description: Stops infantry and light vehicles. Can be crushed by tanks.
+		Description: actor-dtwood.description
 	Armor:
 		Type: Light
 	LineBuild:
@@ -4781,7 +4772,7 @@ DTBARB:
 		BuildPaletteOrder: 20
 		Prerequisites: ~fact.tomorrow
 		Queue: Defence, RADefence
-		Description: Stops infantry and light vehicles. Can be crushed by tanks.
+		Description: actor-dtbarb.description
 	Armor:
 		Type: Light
 	LineBuild:
@@ -4804,7 +4795,7 @@ DTBARBE:
 		BuildPaletteOrder: 20
 		Prerequisites: ~fact.dtethiopia
 		Queue: Defence, RADefence
-		Description: Stops infantry and light vehicles. Can be crushed by tanks.
+		Description: actor-dtbarbe.description
 	Armor:
 		Type: Light
 	RenderSprites:
@@ -4829,7 +4820,7 @@ DTOBLI:
 		BuildPaletteOrder: 60
 		Prerequisites: ~fact.tomorrow, dtbio
 		Queue: Defence, RADefence
-		Description: Advanced base defense. Requires power to operate.   Strong vs all Ground units   Cannot target Aircraft
+		Description: actor-dtobli.description
 	Selectable:
 		Bounds: 1024, 1024
 		DecorationBounds: 1024, 1024
@@ -4896,7 +4887,7 @@ DTEYE:
 		BuildDuration: 1200
 		Prerequisites: ~fact.dtusa, dtpropaganda.dtusa, !cruisemissc
 		Queue: Building, RABuilding
-		Description: Provides radar and the Cruise Missile support power. Requires power to operate.
+		Description: actor-dteye.description
 	Building:
 		Footprint: X_ xx ==
 		Dimensions: 2,3
@@ -4930,7 +4921,7 @@ DTEYE:
 		Names: 
 			1: Cruise Missile
 		Descriptions: 
-			1: Initiate an Cruise Missile strike. Applies instant damage to a small area.
+			1: power-tomorrow-cruisemissile.description
 		Weapon: dtcruisemissile
 		BeginChargeSpeechNotification: IonCannonCharging
 		EndChargeSpeechNotification: IonCannonReady
@@ -4976,7 +4967,7 @@ DTHQ:
 		BuildDuration: 1200
 		Prerequisites: ~fact.dtjapan, atek.japan, !cruisemissc
 		Queue: Building, RABuilding
-		Description: Provides radar and the Cruise Missile support power. Requires power to operate.
+		Description: actor-dthq.description
 	Building:
 		Footprint: X_ xx ==
 		Dimensions: 2,3
@@ -5003,14 +4994,14 @@ DTHQ:
 		PauseOnCondition: lowpower
 		Prerequisites: 
 			1: ~techlevel.superweapons
-		Icons: 
+		Icons:
 			1: dtioncannon
 		Cursor: ioncannon
 		ChargeInterval: 6000
-		Names: 
+		Names:
 			1: Cruise Missile
-		Descriptions: 
-			1: Initiate an Cruise Missile strike. Applies instant damage to a small area.
+		Descriptions:
+			1: power-tomorrow-cruisemissile.description
 		Weapon: dtcruisemissile
 		BeginChargeSpeechNotification: IonCannonCharging
 		EndChargeSpeechNotification: IonCannonReady
@@ -5047,7 +5038,7 @@ DTSHOP:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 50
 		Prerequisites: ~fact.dtusa, weap.dtusa, dtpropaganda.dtusa
-		Description: Provides new Vehicles
+		Description: actor-dtshop.description
 	Valued:
 		Cost: 600 #300
 	Tooltip:
@@ -5082,7 +5073,7 @@ DTRKPOD:
 		BuildPaletteOrder: 45
 		Prerequisites: ~fact.dtjapan, DTPYLE.DTJAPAN
 		Queue: Defence, RADefence
-		Description: Basic Anti-Tank base defense.   Strong vs Tanks, vehicles   Weak vs Infantry
+		Description: actor-dtrkpod.description
 	Building:
 	Health:
 		HP: 65000
@@ -5125,7 +5116,7 @@ DTLWALL:
 		BuildPaletteOrder: 30
 		Prerequisites: ~fact.tomorrow, dtbio
 		Queue: Defence, RADefence
-		Description: Stops infantry and most tanks. Blocks some projectiles.
+		Description: actor-dtlwall.description
 	Health:
 		HP: 100000
 	Armor:
@@ -5165,7 +5156,7 @@ dtharv:
 		Prerequisites: dtproc
 		Queue: Vehicle.Tomorrow, Vehicle.Answer, Vehicle.Dtusa, Vehicle.Dtrussaia, Vehicle.Dtjapan, Vehicle.Dtbrazil, Vehicle.Dtargentina, Vehicle.Dtcuba, Vehicle.Dtaustralia, Vehicle.Ethiopia
 		BuildDurationModifier: 40
-		Description: Collects Resources for processing.
+		Description: actor-dtharv.description
 	StoresResources:
 		Capacity: 45
 	Mobile:
@@ -5204,7 +5195,7 @@ dtover:
 		BuildPaletteOrder: 10
 		Queue: Vehicle.Tomorrow, Vehicle.Dtusa
 		Prerequisites: vehicleproduction
-		Description: Fast scout and anti-infantry vehicle.   Strong vs Infantry   Weak vs Tanks
+		Description: actor-dtover.description
 	Mobile:
 		TurnSpeed: 64
 		Speed: 170
@@ -5590,7 +5581,7 @@ DTMEDI:
 	Buildable:
 		Queue: Infantry.Dtusa, Infantry.Answer
 		Prerequisites: Barracks
-		Description: Anti-tank/Anti-aircraft infantry.    Strong vs Tanks, Aircraft   Weak vs Infantry
+		Description: actor-dtmedi.description
 	RenderSprites:
 		Image: medi
 #############################################
@@ -5611,7 +5602,7 @@ DTE3:
 		BuildPaletteOrder: 20
 		Prerequisites: ~barracks
 		Queue: Infantry.Tomorrow
-		Description: Anti-tank/Anti-aircraft infantry.    Strong vs Tanks, Aircraft   Weak vs Infantry
+		Description: actor-dte3.description
 	Mobile:
 		Speed: 42
 	Health:
@@ -5649,7 +5640,7 @@ DTMUTANT:
 		BuildPaletteOrder: 70
 		Prerequisites: ~fact.tomorrow, dtbio
 		Queue: Infantry.Tomorrow
-		Description: Short ranged laser mutant.   Strong vs Everything   Weak vs long range artillery
+		Description: actor-dtmutant.description
 	Mobile:
 		Speed: 50
 	Health:
@@ -5698,7 +5689,7 @@ DTRMBO:
 		BuildPaletteOrder: 50
 		Prerequisites: hq.tomorrow, dtpropaganda.tomorrow
 		Queue: Infantry.Tomorrow
-		Description: Elite sniper infantry unit.   Strong vs Infantry, Buildings   Weak vs Vehicles
+		Description: actor-dtrmbo.description
 		BuildDuration: 375
 		BuildDurationModifier: 100
 		BuildLimit: 1
@@ -5759,7 +5750,7 @@ dtapc:
 		Queue: Vehicle.Tomorrow
 		BuildDuration: 500
 		BuildDurationModifier: 100
-		Description: Armed infantry transport. Can attack Aircraft.   Strong vs Vehicles   Weak vs Infantry
+		Description: actor-dtapc.description
 	Mobile:
 		Speed: 132
 		PauseOnCondition: notmobile || disabled
@@ -5846,7 +5837,7 @@ v2rl.tomorrow:
 		Queue: Vehicle.Tomorrow
 		BuildPaletteOrder: 80
 		Prerequisites: hq.tomorrow
-		Description: Long-range rocket artillery.   Strong vs Infantry, Buildings   Weak vs Vehicles, Aircraft
+		Description: actor-v2rl.description
 		BuildDurationModifier: 50
 	Valued:
 		Cost: 3000
@@ -6000,7 +5991,7 @@ DTE2:
 		BuildPaletteOrder: 100
 		Prerequisites:
 		Queue: Infantry.Answer
-		Description: General-purpose infantry.   Strong vs Infantry   Weak vs Vehicles
+		Description: actor-dte2.description
 	Mobile:
 		Speed: 60
 	Health:
@@ -6063,7 +6054,7 @@ dtorca:
 		BuildPaletteOrder: 20
 		Prerequisites: hpad.answer, dtstrike
 		Queue: Aircraft.Answer
-		Description: VTol Gunship with AG Missiles.   Strong vs Buildings, Infantry
+		Description: actor-dtorca.description
 	Aircraft:
 		TurnSpeed: 28
 		Speed: 186
@@ -6208,7 +6199,7 @@ DTE2.dtusa:
 		BuildPaletteOrder: 100
 		Prerequisites:
 		Queue: Infantry.Dtusa
-		Description: General-purpose infantry.   Strong vs Infantry   Weak vs Vehicles
+		Description: actor-e1.description
 	Inherits@EXT: ^ExternalConditions ##########
 	AcceptsDeliveredExperience: ##########
 		ValidTypes: infantry ##########
@@ -6231,7 +6222,7 @@ dtltnk2:
 		BuildPaletteOrder: 40
 		Queue: Vehicle.Dtusa
 		BuildDurationModifier: 40
-		Description: Fast, light tank. Strong vs Vehicles, Tanks Weak vs Infantry
+		Description: actor-dtltnk2.description
 		Prerequisites: dtshop
 	Armament@SECONDARY:
 		Name: secondary
@@ -6300,7 +6291,7 @@ arty.dtusa:
 	Buildable:
 		Queue: Vehicle.Dtusa
 		Prerequisites: dteye, dtshop
-		Description: Long-ranged Artillery. Keep it at a distance.
+		Description: actor-arty.description
 	-MapEditorData:
 	ProducibleWithLevel:
 		Prerequisites: dtshop
@@ -6413,7 +6404,7 @@ dtstnk:
 		Queue: Vehicle.Dtrussia
 		BuildDuration: 500
 		BuildDurationModifier: 100
-		Description: Armed infantry transport. Can attack Aircraft.   Strong vs Vehicles   Weak vs Infantry
+		Description: actor-dtstnk.description
 	Mobile:
 		Speed: 140
 		PauseOnCondition: notmobile || disabled
@@ -6493,7 +6484,7 @@ mssm.dtrussia:
 		BuildPaletteOrder: 100
 		Prerequisites: weap.dtrussia, dome.dtrussia
 		Queue: Vehicle.Dtrussia
-		Description: Long-range rocket artillery.   Strong vs Buildings   Weak vs Aircraft
+		Description: actor-mssm.description
 		Icon: icon
 	ProductionCostMultiplier:
 		Multiplier: 90
@@ -6511,7 +6502,7 @@ dthtnk:
 		BuildPaletteOrder: 60
 		Prerequisites: weap.dtrussia, fix.russia
 		Queue: Vehicle.Dtrussia
-		Description: Heavily armored Russian Tank. Can attack Aircraft.   Strong vs Everything
+		Description: actor-dthtnk.description
 		BuildDuration: 1500
 		BuildDurationModifier: 100
 	Valued:
@@ -6627,7 +6618,7 @@ dte5:
 		BuildPaletteOrder: 50
 		Prerequisites:
 		Queue: Infantry.Dtjapan
-		Description: Advanced general-purpose infantry.   Strong vs Infantry Units
+		Description: actor-dte5.description
 	Mobile:
 		Speed: 56
 		Locomotor: chem
@@ -6696,7 +6687,7 @@ dtapc2:
 		Queue: Vehicle.Dtjapan
 		BuildDuration: 175
 		BuildDurationModifier: 100
-		Description: Armed infantry transport. Can attack Aircraft.   Strong vs Vehicles   Weak vs Infantry
+		Description: actor-dtapc2.description
 	Mobile:
 		Speed: 132
 		PauseOnCondition: notmobile || disabled
@@ -6767,7 +6758,7 @@ dtltnk:
 		Prerequisites: weap.dtjapan
 		Queue: Vehicle.Dtjapan
 		BuildDurationModifier: 40
-		Description: Fast, light tank.   Strong vs Vehicles, Tanks   Weak vs Infantry
+		Description: actor-dtltnk.description
 	Armament:
 		Weapon: 105mm
 		Recoil: 85
@@ -6790,7 +6781,7 @@ msam.dtjapan:
 		BuildPaletteOrder: 50
 		Prerequisites: weap.dtjapan, DTHQ
 		Queue: Vehicle.Dtjapan
-		Description: Long range rocket artillery.   Strong vs all Ground units.
+		Description: actor-mlrs.description
 	Armament@PRIMARY:
 		Weapon: 227mmT
 		LocalOffset: 213,128,0, 213,-128,0
@@ -6888,7 +6879,7 @@ E7.DTA:
 		BuildPaletteOrder: 100
 		Prerequisites:
 		Queue: Infantry.Dtargentina
-		Description: General-purpose infantry.   Strong vs Infantry   Weak vs Vehicles
+		Description: actor-e1.description
 	Mobile:
 		Speed: 60
 	Health:
@@ -7021,7 +7012,7 @@ msam.argentina:
 		BuildPaletteOrder: 50
 		Prerequisites: weap.dtargentina, dome.dtargentina
 		Queue: Vehicle.Dtargentina
-		Description: Long range rocket artillery.   Strong vs all Ground units.
+		Description: actor-mlrs.description
 	Armament@PRIMARY:
 		Weapon: 227mmT
 		LocalOffset: 213,128,0, 213,-128,0
@@ -7076,7 +7067,7 @@ DTTECN:
 		BuildPaletteOrder: 50
 		Prerequisites: 
 		Queue: Infantry.Dtbrazil
-		Description: Weak Scout Infantry. Effective in swarms.
+		Description: actor-dttecn.description
 	RenderSprites:
 		Image: dtc1
 
@@ -7106,7 +7097,7 @@ dtfbik:
 		BuildPaletteOrder: 50
 		Prerequisites: weap.dtbrazil
 		Queue: Vehicle.Dtbrazil
-		Description: Rapid flame-throwing scout vehicle.   Strong vs Infantry, Buildings and Vehicles   Weak vs Tanks
+		Description: actor-dtfbik.description
 	Mobile:
 		TurnSpeed: 64
 		Speed: 170
@@ -7163,7 +7154,7 @@ empdisruptor:
 		BuildPaletteOrder: 50
 		Prerequisites: weap.dtbrazil, hq.brazil
 		Queue: Vehicle.Dtbrazil
-		Description: Long range pulse weapon. Strong vs vehicles and structures.
+		Description: actor-empdisruptor.description
 	Armament@PRIMARY:
 		Weapon: DTEmpBlast
 		-MuzzleSequence: muzzle
@@ -7352,7 +7343,7 @@ dtbtr:
 		Queue: Vehicle.Dtcuba
 		BuildDuration: 500
 		BuildDurationModifier: 100
-		Description: Armed infantry transport.  Strong vs Vehicles   Weak vs Infantry
+		Description: actor-dtbtr.description
 	Mobile:
 		Speed: 140
 		PauseOnCondition: notmobile || disabled
@@ -7676,7 +7667,7 @@ dtatv:
 		Queue: Vehicle.Dtaustralia
 		BuildDuration: 500
 		BuildDurationModifier: 100
-		Description: Armed infantry transport. Can attack Aircraft.   Strong vs Vehicles   Weak vs Infantry
+		Description: actor-dtatv.description
 	Mobile:
 		Speed: 60
 		PauseOnCondition: notmobile || disabled
@@ -7777,6 +7768,8 @@ E1.DTE:
 	Inherits: E1.DT
 	Buildable:
 		Queue: Infantry.Dtethiopia
+	Valued:
+		Cost: 90
 	Voiced:
 		VoiceSet: dtethVoice
 
@@ -7790,7 +7783,7 @@ DTE3.DTE:
 E4.DTE:
 	Inherits: E4.DT
 	Valued:
-		Cost: 200
+		Cost: 190
 	Tooltip:
 		Name: Flamethrower
 	UpdatesPlayerStatistics:
@@ -7863,7 +7856,7 @@ dtstnke:
 		Queue: Vehicle.Dtethiopia
 		BuildDuration: 500
 		BuildDurationModifier: 100
-		Description: Armed infantry transport. Can attack Aircraft.   Strong vs Vehicles   Weak vs Infantry
+		Description: actor-dtstnke.description
 	Voiced:
 		VoiceSet: dtethvehVoice
 
@@ -7983,7 +7976,7 @@ dtdtrk:
 		Queue: Vehicle, RAVehicle
 		BuildPaletteOrder: 160
 		Prerequisites: dtbio
-		Description: Truck with actively armed explosives. Has very weak armor.
+		Description: actor-dtdtrk.description
 	Valued:
 		Cost: 400
 	Tooltip:

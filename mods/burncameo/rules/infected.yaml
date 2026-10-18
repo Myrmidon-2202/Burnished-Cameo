@@ -4,7 +4,7 @@ World:
 		InternalName: infection
 		Side: Factions
 		Game: Special
-		Description: The Player starts with a group of zombies\nEnemies has to destroy all the zombies to defeat the zombie player\nThis faction has no economy, no buildings
+		Description: faction-cameo-infected.description
 	StartingUnits@mcvonlyinfection:
 		Class: none
 		ClassName: MCV Only
@@ -73,9 +73,9 @@ zbio:
 		Icons:
 			1: glanthraxbomb
 		Names:
-			1: Corona Virus
+			1: Corona Virus Mk2
 		Descriptions:
-			1: Spreads Covid-19 to turn humans into Zombies.
+			1: power-corona.description
 		IncomingSpeechNotification: EnemyUnitsApproaching
 		SelectTargetSpeechNotification: SelectTarget
 		DisplayRadarPing: True
@@ -106,7 +106,7 @@ zbio:
 		Names:
 			1: Aircraft Crash
 		Descriptions:
-			1: Spawns a large Zombie squad.
+			1: power-aircrash.description
 		IncomingSpeechNotification: EnemyUnitsApproaching
 		SelectTargetSpeechNotification: SelectTarget
 		DisplayRadarPing: True
@@ -137,7 +137,7 @@ zbio:
 		Names:
 			1: Zepplin Crash
 		Descriptions:
-			1: Spawns a large Zombie and Monster squad.
+			1: power-zepcrash.description
 		IncomingSpeechNotification: EnemyUnitsApproaching
 		SelectTargetSpeechNotification: SelectTarget
 		DisplayRadarPing: True
@@ -192,7 +192,7 @@ zbio:
 	Tooltip:
 		Name: Biological Lab
 	TooltipDescription@ally:
-		Description: Produces Bio-Lab units.
+		Description: actor-zbio.description
 		ValidRelationships: Ally
 	TooltipDescription@other:
 		Description: Capture to produce Bio-Lab units.
@@ -294,7 +294,7 @@ Zombie:
 		BuildAtProductionType: Soldier
 		BuildPaletteOrder: 200
 		Prerequisites: ~barracks, ~bio
-		Description: Basic Zombie
+		Description: actor-zombie.description
 	Health:
 		HP: 25000
 	Mobile:
@@ -710,7 +710,7 @@ upzombiemutate1:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: zombies have +20% more hp.
+		Description: actor-upzombiemutate1.description
 		Prerequisites: ~!upzombiemutate1, ~zbio
 		BuildDuration: 500
 		BuildDurationModifier: 100
@@ -728,7 +728,7 @@ upzombiemutate2:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: zombies have +20% more hp.
+		Description: actor-upzombiemutate2.description
 		Prerequisites: ~!upzombiemutate2, upzombiemutate1, ~zbio
 		BuildDuration: 1000
 		BuildDurationModifier: 100
@@ -746,7 +746,7 @@ upzombiemutate3:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: zombies have +20% more hp.
+		Description: actor-upzombiemutate3.description
 		Prerequisites: ~!upzombiemutate3, upzombiemutate2, ~zbio
 		BuildDuration: 1500
 		BuildDurationModifier: 100
@@ -764,7 +764,7 @@ upzombiemutate4:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: zombies have +10% more hp.
+		Description: actor-upzombiemutate4.description
 		Prerequisites: ~!upzombiemutate4, upzintelligence3, upzombiemutate3, ~zbio
 		BuildDuration: 2000
 		BuildDurationModifier: 100
@@ -782,7 +782,7 @@ upzombiemutate5:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: zombies have +10% more hp.
+		Description: actor-upzombiemutate5.description
 		Prerequisites: ~!upzombiemutate5, upzombiemutate4, ~zbio
 		BuildDuration: 2500
 		BuildDurationModifier: 100
@@ -800,7 +800,7 @@ upzombiemutate6:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: zombies have +10% more hp.
+		Description: actor-upzombiemutate6.description
 		Prerequisites: ~!upzombiemutate6, upzombiemutate5, ~zbio
 		BuildDuration: 3000
 		BuildDurationModifier: 100
@@ -818,7 +818,7 @@ upzintelligence1:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: zombies have +10% more speed.
+		Description: actor-upzintelligence1.description
 		Prerequisites: ~!upzintelligence1, upzombiemutate1, ~zbio
 		BuildDuration: 1500
 		BuildDurationModifier: 100
@@ -836,7 +836,7 @@ upzintelligence2:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: zombies have +10% more speed.
+		Description: actor-upzintelligence2.description
 		Prerequisites: ~!upzintelligence2, upzintelligence1, ~zbio
 		BuildDuration: 1500
 		BuildDurationModifier: 100
@@ -854,7 +854,7 @@ upzintelligence3:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: zombies have +10% more speed.
+		Description: actor-upzintelligence3.description
 		Prerequisites: ~!upzintelligence3, upzintelligence2, ~zbio
 		BuildDuration: 1500
 		BuildDurationModifier: 100
@@ -872,7 +872,7 @@ upzmsquad1:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Gain Squad Nembers.
+		Description: actor-upzmsquad1.description
 		Prerequisites: ~!upzmsquad1, upzintelligence1, upzombiemutate2, ~zbio
 		BuildDuration: 1500
 		BuildDurationModifier: 100
@@ -892,7 +892,7 @@ upzmsquad2:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Gain Squad Nembers.
+		Description: actor-upzmsquad2.description
 		Prerequisites: ~!upzmsquad2, upzmsquad1, upzintelligence2, upzombiemutate4, ~zbio
 		BuildDuration: 3000
 		BuildDurationModifier: 100
@@ -910,7 +910,7 @@ upzmsquad3:
 	Buildable:
 		BuildPaletteOrder: 200
 		Queue: Upgrades
-		Description: Gain Squad Nembers.
+		Description: actor-upzmsquad3.description
 		Prerequisites: ~!upzmsquad3, upzmsquad2, upzintelligence3, upzombiemutate6, ~zbio
 		BuildDuration: 4500
 		BuildDurationModifier: 100
@@ -939,7 +939,7 @@ tnkzombie.infect:
 		BuildDurationModifier: 100
 		Prerequisites: ~upzombiemutate2, ~wipcontent
 		Queue: Infantry
-		Description: Melee infantry.\n  Strong vs Infantry, Vehicles\n  Weak vs Aircraft
+		Description: actor-brute.description
 	Mobile:
 		Speed: 100
 	Crushable:
@@ -1117,7 +1117,7 @@ ZOMBIE2:
 		BuildDuration: 250
 		BuildDurationModifier: 100
 		Prerequisites: zbio
-		Description: Slow undead. Attacks in close combat.
+		Description: actor-zombie2.description
 	Health:
 		HP: 25000 #25000
 	Mobile:
@@ -1161,7 +1161,7 @@ spitter:
 		Prerequisites: zbio
 		BuildDuration: 250
 		BuildDurationModifier: 100
-		Description: Mutated abomination that spits liquid Tiberium.\n  Strong vs Infantry, Buildings\n  Weak vs Aircraft
+		Description: actor-spitter.description
 	Tooltip:
 		Name: Spitter
 	ActorLostNotification:
