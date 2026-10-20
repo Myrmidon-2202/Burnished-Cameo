@@ -1021,7 +1021,7 @@ halloween_skeleton_archer:
 	shoot:
 		Start: 200
 		Length: 11
-		Facings: 8
+		Facings: -8
 		Tick: 100
 	prone-stand:
 		Facings: 8
@@ -1354,7 +1354,7 @@ spooky_eye:
 		Scale: 1.5
 		Filename: spooky_eye.png
 	idle:
-		Facings: 2
+		Facings: -2
 		Length: 2
 		Tick: 200
 		Combine:
@@ -1366,7 +1366,7 @@ spooky_eye:
 				Frames: 1,0
 				FlipX: true
 	die:
-		Facings: 2
+		Facings: -2
 		Combine:
 			spookyeye3: 
 				Filename: spooky_eye.png
@@ -1504,3 +1504,34 @@ halloween_tim:
 		Filename: civilization_2_icons.png
 		Offset: 0, 0
 		Start: 34
+
+monster_mouth:
+	Defaults:
+		Scale: 1.5
+		Filename: monster_mouth.png
+	idle:
+		Facings: 2
+		Length: 8
+		Tick: 200
+		Combine:
+			horror1: 
+				Filename: monster_mouth.png
+				Frames: 0,1,2,3,4,5,6,7
+			horror2: 
+				Filename: monster_mouth.png
+				Frames: 7,6,5,4,3,2,1,0
+				FlipX: true
+	die:
+		Facings: 2
+		Length: 4
+		Combine:
+			horror3: 
+				Filename: monster_mouth.png
+				Frames: 8,9,10,11
+			horror4: 
+				Filename: monster_mouth.png
+				Frames: 11,10,9,8
+				FlipX: true
+	icon:
+		Filename: chromesc2kaircrash.png
+		AddExtension: False

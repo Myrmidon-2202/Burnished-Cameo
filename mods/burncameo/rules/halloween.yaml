@@ -319,15 +319,15 @@ halloween_crypto:
 		Condition: lowpower
 		ValidPowerStates: Low, Critical
 	Production@NORMAL:
-		Produces: Infantry
+		Produces: Infantry.crypt
 		RequiresCondition: !classicproductionqueues
 		PauseOnCondition: lowpower
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RAInfantry
-		RequiresCondition: classicproductionqueues
-		PauseOnCondition: lowpower
+	# Production@CLASSICPRODUCTIONQUEUES:
+	# 	Produces: RAInfantry.crypt
+	# 	RequiresCondition: classicproductionqueues
+	# 	PauseOnCondition: lowpower
 	ProductionQueue:
-		Type: Infantry
+		Type: Infantry.crypt
 		DisplayOrder: 2
 		Group: Infantry
 		LowPowerModifier: 300
@@ -338,11 +338,11 @@ halloween_crypto:
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
 	ProductionBar@INFANTRYGDI:
-		ProductionType: Infantry
+		ProductionType: Infantry.crypt
 		RequiresCondition: !classicproductionqueues
-	ProductionBar@RAINFANTRYGDI:
-		ProductionType: RAInfantry
-		RequiresCondition: classicproductionqueues
+	# ProductionBar@RAINFANTRYGDI:
+	# 	ProductionType: RAInfantry.crypt
+	# 	RequiresCondition: classicproductionqueues
 	Power:
 		Amount: -15
 	ProvidesPrerequisite@buildingname:
@@ -396,15 +396,15 @@ halloween_clowntent:
 		Condition: lowpower
 		ValidPowerStates: Low, Critical
 	Production@NORMAL:
-		Produces: Infantry
+		Produces: Infantry.tent
 		RequiresCondition: !classicproductionqueues
 		PauseOnCondition: lowpower
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RAInfantry
-		RequiresCondition: classicproductionqueues
-		PauseOnCondition: lowpower
+	# Production@CLASSICPRODUCTIONQUEUES:
+	# 	Produces: RAInfantry
+	# 	RequiresCondition: classicproductionqueues
+	# 	PauseOnCondition: lowpower
 	ProductionQueue:
-		Type: Infantry
+		Type: Infantry.tent
 		DisplayOrder: 2
 		Group: Infantry
 		LowPowerModifier: 300
@@ -415,11 +415,11 @@ halloween_clowntent:
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
 	ProductionBar@INFANTRYGDI:
-		ProductionType: Infantry
+		ProductionType: Infantry.tent
 		RequiresCondition: !classicproductionqueues
-	ProductionBar@RAINFANTRYGDI:
-		ProductionType: RAInfantry
-		RequiresCondition: classicproductionqueues
+	# ProductionBar@RAINFANTRYGDI:
+	# 	ProductionType: RAInfantry
+	# 	RequiresCondition: classicproductionqueues
 	Power:
 		Amount: -15
 	ProvidesPrerequisite@buildingname:
@@ -545,13 +545,13 @@ halloween_daemonpit:
 	#Production@Upgrades:
 	#	Produces: VehicleUpgrades.Chaos
 	Production@NORMAL:
-		Produces: Vehicle
+		Produces: Vehicle.daemonpit
 		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RAVehicle
-		RequiresCondition: classicproductionqueues
+	# Production@CLASSICPRODUCTIONQUEUES:
+	# 	Produces: RAVehicle
+	# 	RequiresCondition: classicproductionqueues
 	ProductionQueue:
-		Type: Vehicle
+		Type: Vehicle.daemonpit
 		DisplayOrder: 3
 		Group: Vehicle
 		LowPowerModifier: 200
@@ -562,11 +562,11 @@ halloween_daemonpit:
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
 	ProductionBar@VEHICLESCAVENGER:
-		ProductionType: Vehicle
+		ProductionType: Vehicle.daemonpit
 		RequiresCondition: !classicproductionqueues
-	ProductionBar@RAVEHICLESCAVENGER:
-		ProductionType: RAVehicle
-		RequiresCondition: classicproductionqueues
+	# ProductionBar@RAVEHICLESCAVENGER:
+	# 	ProductionType: RAVehicle
+	# 	RequiresCondition: classicproductionqueues
 	ProvidesPrerequisite@buildingname:
 	ProvidesPrerequisite@vehicleproduction:
 		Prerequisite: vehicleproduction
@@ -598,7 +598,7 @@ halloween_tower:
 		Name: Medieval Tower
 	Selectable:
 		Bounds: 1024, 1024
-		DecorationBounds: 43690, 72789, 0, -14549
+		DecorationBounds: 1024, 1024
 	SelectionDecorations:
 	Health:
 		HP: 70000
@@ -949,7 +949,7 @@ halloween_dkghost_small:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 10
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.crypt, RAInfantry.crypt
 		Prerequisites: ~halloween_crypto
 		Description: actor-halloween_dkghost_small.description
 	Mobile:
@@ -1035,7 +1035,7 @@ halloween_bat:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 10
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.crypt, RAInfantry.crypt
 		Prerequisites: ~halloween_crypto
 		Description: actor-halloween_bat.description
 	Mobile:
@@ -1109,7 +1109,7 @@ halloween_skeleton:
 	Inherits@upgrade_swords: ^wc_h_str_sword
 	Inherits@MC: ^MCImmune
 	Buildable:
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.crypt, RAInfantry.crypt
 		Prerequisites: ~halloween_crypto
 		BuildPaletteOrder: 5
 		BuildDurationModifier: 100
@@ -1157,7 +1157,7 @@ halloween_demon:
 	Tooltip:
 		Name: Demon
 	Buildable:
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.daemonpit, RAVehicle.daemonpit
 		BuildPaletteOrder: 60
 		BuildDurationModifier: 50
 		Prerequisites: ~halloween_daemonpit
@@ -1212,7 +1212,7 @@ halloween_pinky:
 	RenderSprites:
 		Image: halloween_pinky
 	Buildable:
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.daemonpit, RAVehicle.daemonpit
 		Prerequisites: ~halloween_daemonpit
 		BuildPaletteOrder: 20
 		BuildDurationModifier: 60
@@ -1255,7 +1255,7 @@ halloween_cow:
 	Tooltip:
 		Name: Giant Cow
 	Buildable:
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.crypt, RAInfantry.crypt
 		BuildPaletteOrder: 60
 		BuildDurationModifier: 50
 		Prerequisites: ~halloween_crypto
@@ -1321,7 +1321,7 @@ halloween_rockgolem:
 		DeathSequencePalette: terrain
 		DeathPaletteIsPlayerPalette: false
 	Buildable:
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.crypt, RAInfantry.crypt
 		BuildPaletteOrder: 60
 		BuildDurationModifier: 50
 		Prerequisites: ~halloween_crypto
@@ -1405,7 +1405,7 @@ halloween_spider:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.crypt, RAInfantry.crypt
 		BuildPaletteOrder: 20
 		BuildDurationModifier: 50
 		Prerequisites: ~halloween_crypto
@@ -1485,7 +1485,7 @@ halloween_clown:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 60
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.tent, RAInfantry.tent
 		Prerequisites: ~halloween_clowntent
 		Description: actor-halloween_clown.description
 	Mobile:
@@ -1539,7 +1539,7 @@ halloween_clown2:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 60
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.tent, RAInfantry.tent
 		Prerequisites: ~halloween_clowntent
 		Description: actor-halloween_clown2.description
 	Mobile:
@@ -1597,8 +1597,8 @@ halloween_clown3:
 		BuildDuration: 1500
 		BuildDurationModifier: 100
 		BuildPaletteOrder: 60
-		Prerequisites: ~halloween_clowntent
-		Queue: Infantry, RAInfantry
+		Prerequisites: ~inflatable_spider
+		Queue: Infantry.inflatable, RAInfantry.inflatable
 		Description: actor-halloween_clown3.description
 	Mobile:
 		Speed: 88
@@ -1666,7 +1666,7 @@ halloween_sweettooth:
 	Buildable:
 		BuildPaletteOrder: 30
 		Prerequisites: ~halloween_clowntent
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.tent, RAInfantry.tent
 		Description: actor-halloween_sweettooth.description
 	Mobile:
 		TurnSpeed: 64
@@ -1721,7 +1721,7 @@ halloween_clowncar:
 	Buildable:
 		BuildPaletteOrder: 30
 		Prerequisites: ~halloween_clowntent, ~!selectchinf
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.tent, RAInfantry.tent
 		Description: actor-halloween_clowncar.description
 	Mobile:
 		Speed: 110
@@ -1773,7 +1773,7 @@ halloween_pirateship:
 	Buildable:
 		BuildPaletteOrder: 99
 		Prerequisites: ~halloween_daemonpit
-		Queue: Infantry, RAInfantry
+		Queue: Vehicle.daemonpit, RAVehicle.daemonpit
 		Description: actor-halloween_pirateship.description
 	Aircraft:
 		InitialFacing: 896
@@ -1872,7 +1872,7 @@ halloween_skeleton_archer:
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: ~halloween_crypto
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.crypt, RAInfantry.crypt
 		Description: actor-halloween_skeleton_archer.description
 	Mobile:
 		Speed: 56
@@ -2041,7 +2041,7 @@ halloween_upgrade.ghost:
 	Buildable:
 		BuildPaletteOrder: 250
 		Prerequisites: halloween_daemonpit
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.daemonpit, RAVehicle.daemonpit
 		BuildLimit: 1
 		BuildDuration: 750
 		BuildDurationModifier: 100
@@ -2061,7 +2061,7 @@ halloween_upgrade.boiling:
 	Buildable:
 		BuildPaletteOrder: 250
 		Prerequisites: ~halloween_daemonpit
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.daemonpit, RAVehicle.daemonpit
 		BuildLimit: 1
 		BuildDuration: 750
 		BuildDurationModifier: 100
@@ -2081,7 +2081,7 @@ halloween_upgrade.axe:
 	Buildable:
 		BuildPaletteOrder: 250
 		Prerequisites: ~halloween_daemonpit
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.daemonpit, RAVehicle.daemonpit
 		BuildLimit: 1
 		BuildDuration: 750
 		BuildDurationModifier: 100
@@ -2101,7 +2101,7 @@ halloween_upgrade.sword:
 	Buildable:
 		BuildPaletteOrder: 250
 		Prerequisites: ~halloween_daemonpit
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.daemonpit, RAVehicle.daemonpit
 		BuildLimit: 1
 		BuildDuration: 750
 		BuildDurationModifier: 100
@@ -2121,7 +2121,7 @@ halloween_upgrade.bows:
 	Buildable:
 		BuildPaletteOrder: 250
 		Prerequisites: ~halloween_daemonpit
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.daemonpit, RAVehicle.daemonpit
 		BuildLimit: 1
 		BuildDuration: 750
 		BuildDurationModifier: 100
@@ -2141,7 +2141,7 @@ halloween_upgrade.mana:
 	Buildable:
 		BuildPaletteOrder: 250
 		Prerequisites: ~halloween_daemonpit
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.daemonpit, RAVehicle.daemonpit
 		BuildLimit: 1
 		BuildDuration: 1000
 		BuildDurationModifier: 100
@@ -2164,7 +2164,7 @@ halloween_worm:
 	Buildable:
 		BuildPaletteOrder: 10
 		Prerequisites: ~halloween_cauldron
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.crypt, RAInfantry.crypt
 		BuildDurationModifier: 40
 		Description: actor-halloween_worm.description
 	Selectable:
@@ -2207,7 +2207,7 @@ halloween_mcv:
 	Buildable:
 		BuildPaletteOrder: 100
 		Prerequisites: ~halloween_daemonpit
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.daemonpit, RAVehicle.daemonpit
 		BuildDurationModifier: 40
 		Description: actor-halloween_mcv.description
 	Selectable:
@@ -2269,7 +2269,7 @@ GARFIELD_INFANTRY:
 		BuildLimit: 1
 		BuildPaletteOrder: 10
 		Prerequisites: ~INFLATABLE_SPIDER
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.inflatable, RAInfantry.inflatable
 		Description: actor-garfield_infantry.description
 		BuildDuration: 150
 		# BuildDurationModifier: 100
@@ -2310,7 +2310,7 @@ SPOOKY_EYE:
 	Inherits@GAINSEXPERIENCE: ^GainsExperience
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Buildable:
-		Queue: Infantry
+		Queue: Infantry.crypt
 		BuildPaletteOrder: 20
 		Prerequisites: ~halloween_crypto
 		Description: actor-spooky_eye.description
@@ -2430,15 +2430,15 @@ INFLATABLE_SPIDER:
 		Condition: lowpower
 		ValidPowerStates: Low, Critical
 	Production@NORMAL:
-		Produces: Infantry
+		Produces: Infantry.inflatable
 		RequiresCondition: !classicproductionqueues
 		PauseOnCondition: lowpower
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RAInfantry
-		RequiresCondition: classicproductionqueues
-		PauseOnCondition: lowpower
+	# Production@CLASSICPRODUCTIONQUEUES:
+	# 	Produces: RAInfantry.inflatable
+	# 	RequiresCondition: classicproductionqueues
+	# 	PauseOnCondition: lowpower
 	ProductionQueue:
-		Type: Infantry
+		Type: Infantry.inflatable
 		DisplayOrder: 2
 		Group: Infantry
 		LowPowerModifier: 300
@@ -2449,11 +2449,11 @@ INFLATABLE_SPIDER:
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
 	ProductionBar@INFANTRYGDI:
-		ProductionType: Infantry
+		ProductionType: Infantry.inflatable
 		RequiresCondition: !classicproductionqueues
-	ProductionBar@RAINFANTRYGDI:
-		ProductionType: RAInfantry
-		RequiresCondition: classicproductionqueues
+	# ProductionBar@RAINFANTRYGDI:
+	# 	ProductionType: RAInfantry.inflatable
+	# 	RequiresCondition: classicproductionqueues
 	Power:
 		Amount: -15
 	ProvidesPrerequisite@buildingname:
@@ -2479,7 +2479,7 @@ HALLOWEEN_PETER:
 		BuildLimit: 1
 		BuildPaletteOrder: 10
 		Prerequisites: ~INFLATABLE_SPIDER
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.inflatable, RAInfantry.inflatable
 		Description: Basic Melee Infantry. Slow but can take some damage.
 		BuildDuration: 150
 		# BuildDurationModifier: 100
@@ -2530,7 +2530,7 @@ HALLOWEEN_TIM:
 		BuildLimit: 1
 		BuildPaletteOrder: 10
 		Prerequisites: ~INFLATABLE_SPIDER
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.inflatable, RAInfantry.inflatable
 		Description: Basic Melee Infantry. Slow but can take some damage.
 		BuildDuration: 150
 		# BuildDurationModifier: 100
@@ -2565,3 +2565,53 @@ HALLOWEEN_TIM:
 		VoiceSet: PinkVoices
 	Crushable:
 		CrushClasses: vehicle
+
+MONSTER_MOUTH:
+	Inherits: ^AirZerg
+	Inherits@Template: ^HelicopterTemplate
+	Inherits@EXP: ^GainsExperienceTD
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	Inherits@announce: ^AnnounceOnBuild
+	Inherits@weapon: ^ZergMeleeWeaponUpgrades
+	Inherits@armor: ^ZergFlyerArmorUpgrades
+	Tooltip:
+		Name: Horror
+	Valued:
+		Cost: 1000
+	Power:
+		Amount: -50
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Buildable:
+		BuildLimit: 1
+		BuildPaletteOrder: 10
+		Prerequisites: ~INFLATABLE_SPIDER
+		Queue: Infantry.inflatable, RAInfantry.inflatable
+		Description: actor-scmutalisk.description
+	Aircraft:
+		Speed: 160
+		TurnSpeed: 32
+		RepulsionSpeed: 32
+		IdealSeparation: 640
+	Health:
+		HP: 80000
+	ChangesHealth@SelfHealing:
+		Step: 32
+	Armament:
+		Weapon: MutaliskSpore
+		LocalOffset: 0,0,0
+	FirepowerMultiplier@MultiWeapon:
+		Modifier: 25
+	AttackAircraft:
+		FacingTolerance: 20
+		AttackType: Hover
+	-RenderRangeCircle:
+	-RenderDetectionCircle:
+	SelectionDecorations:
+	Selectable:
+		Bounds: 4096, 4096
+		DecorationBounds: 4096, 4096
+	Voiced:
+		VoiceSet: SCMutaliskVoice
+	# RenderSprites:
+	# 	PlayerPalette: player_rgba
