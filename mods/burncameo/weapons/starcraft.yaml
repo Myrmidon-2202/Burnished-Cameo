@@ -20,12 +20,12 @@ MarineMG:
 	Warhead@ChaingunPercentage: HealthPercentageDamage
 		ValidTargets: Ground, Water, Trees, Air
 		Damage: 1
-	Warhead@SmallArms: SpreadDamage
-		ValidTargets: Ground, Water, Trees, Air
-		Damage: 2000
-	Warhead@SmallArmsPercentage: HealthPercentageDamage
-		ValidTargets: Ground, Water, Trees, Air
-		Damage: 1
+	# Warhead@SmallArms: SpreadDamage
+	# 	ValidTargets: Ground, Water, Trees, Air
+	# 	Damage: 2000
+	# Warhead@SmallArmsPercentage: HealthPercentageDamage
+	# 	ValidTargets: Ground, Water, Trees, Air
+	# 	Damage: 1
 
 MadcapGun:
 	Inherits: ^HeavyCannon
@@ -2853,10 +2853,10 @@ Psi-blades:
 	Range: 1335
 	Warhead@SwordWeapon: SpreadDamage
 		Damage: 8000
-	Warhead@SwordWeaponFriendlyFire: SpreadDamage
-		Damage: 4000
+	# Warhead@SwordWeaponFriendlyFire: SpreadDamage
+	# 	Damage: 4000
 	Warhead@SwordWeaponPercentage: HealthPercentageDamage
-		Damage: 4
+		Damage: 2
 	Warhead@Effect: CreateEffect
 		ImpactSounds: zulhit00.aud,zulhit01.aud
 
@@ -2934,173 +2934,173 @@ PsiStorm:
 			Helicopter: 48
 			Bomber: 44
 			Fighter: 40
-	Warhead@3Dam: SpreadDamage
-		ValidTargets: Ground, Water, Air
-		Delay: 24
-		Falloff: 100, 90, 80, 70, 60, 50, 40, 30, 20, 10
-		Spread: 400
-		Damage: 8000
-		DamageTypes: Prone100Percent, TriggerProne, ElectricityDeath, Tesla
-		AffectsParent: True
-		ValidRelationships: Enemy, Neutral
-		Versus:
-			Shield: 150
-			Heroic: 100
-			Plate: 96
-			Flak: 92
-			None: 88
-			Superheavy: 84
-			Heavy: 80
-			Medium: 76
-			Light: 72
-			Scout: 68
-			Steel: 64
-			Concrete: 60
-			Wood: 56
-			Spaceship: 52
-			Helicopter: 48
-			Bomber: 44
-			Fighter: 40
-	Warhead@4Dam: SpreadDamage
-		ValidTargets: Ground, Water, Air
-		Delay: 32
-		Falloff: 100, 90, 80, 70, 60, 50, 40, 30, 20, 10
-		Spread: 400
-		Damage: 8000
-		DamageTypes: Prone100Percent, TriggerProne, ElectricityDeath, Tesla
-		AffectsParent: True
-		ValidRelationships: Enemy, Neutral
-		Versus:
-			Shield: 150
-			Heroic: 100
-			Plate: 96
-			Flak: 92
-			None: 88
-			Superheavy: 84
-			Heavy: 80
-			Medium: 76
-			Light: 72
-			Scout: 68
-			Steel: 64
-			Concrete: 60
-			Wood: 56
-			Spaceship: 52
-			Helicopter: 48
-			Bomber: 44
-			Fighter: 40
-	Warhead@5Dam: SpreadDamage
-		ValidTargets: Ground, Water, Air
-		Delay: 40
-		Falloff: 100, 90, 80, 70, 60, 50, 40, 30, 20, 10
-		Spread: 400
-		Damage: 8000
-		DamageTypes: Prone100Percent, TriggerProne, ElectricityDeath, Tesla
-		AffectsParent: True
-		ValidRelationships: Enemy, Neutral
-		Versus:
-			Shield: 150
-			Heroic: 100
-			Plate: 96
-			Flak: 92
-			None: 88
-			Superheavy: 84
-			Heavy: 80
-			Medium: 76
-			Light: 72
-			Scout: 68
-			Steel: 64
-			Concrete: 60
-			Wood: 56
-			Spaceship: 52
-			Helicopter: 48
-			Bomber: 44
-			Fighter: 40
-	Warhead@6Dam: SpreadDamage
-		ValidTargets: Ground, Water, Air
-		Delay: 48
-		Falloff: 100, 90, 80, 70, 60, 50, 40, 30, 20, 10
-		Spread: 400
-		Damage: 8000
-		DamageTypes: Prone100Percent, TriggerProne, ElectricityDeath, Tesla
-		AffectsParent: True
-		ValidRelationships: Enemy, Neutral
-		Versus:
-			Shield: 150
-			Heroic: 100
-			Plate: 96
-			Flak: 92
-			None: 88
-			Superheavy: 84
-			Heavy: 80
-			Medium: 76
-			Light: 72
-			Scout: 68
-			Steel: 64
-			Concrete: 60
-			Wood: 56
-			Spaceship: 52
-			Helicopter: 48
-			Bomber: 44
-			Fighter: 40
-	Warhead@7Dam: SpreadDamage
-		ValidTargets: Ground, Water, Air
-		Delay: 56
-		Falloff: 100, 90, 80, 70, 60, 50, 40, 30, 20, 10
-		Spread: 400
-		Damage: 8000
-		DamageTypes: Prone100Percent, TriggerProne, ElectricityDeath, Tesla
-		AffectsParent: True
-		ValidRelationships: Enemy, Neutral
-		Versus:
-			Shield: 150
-			Heroic: 100
-			Plate: 96
-			Flak: 92
-			None: 88
-			Superheavy: 84
-			Heavy: 80
-			Medium: 76
-			Light: 72
-			Scout: 68
-			Steel: 64
-			Concrete: 60
-			Wood: 56
-			Spaceship: 52
-			Helicopter: 48
-			Bomber: 44
-			Fighter: 40
-	Warhead@8Dam: SpreadDamage
-		ValidTargets: Ground, Water, Air
-		Delay: 64
-		Falloff: 100, 90, 80, 70, 60, 50, 40, 30, 20, 10
-		Spread: 400
-		Damage: 8000
-		DamageTypes: Prone100Percent, TriggerProne, ElectricityDeath, Tesla
-		AffectsParent: True
-		ValidRelationships: Enemy, Neutral
-		Versus:
-			Shield: 150
-			Heroic: 100
-			Plate: 96
-			Flak: 92
-			None: 88
-			Superheavy: 84
-			Heavy: 80
-			Medium: 76
-			Light: 72
-			Scout: 68
-			Steel: 64
-			Concrete: 60
-			Wood: 56
-			Spaceship: 52
-			Helicopter: 48
-			Bomber: 44
-			Fighter: 40
-	Warhead@3Eff: CreateEffect
-		Explosions: scpsistorm
-		ValidTargets: Ground, Air
-		ImpactActors: false
-		ImpactSounds: ptesto00.aud
+	# Warhead@3Dam: SpreadDamage
+	# 	ValidTargets: Ground, Water, Air
+	# 	Delay: 24
+	# 	Falloff: 100, 90, 80, 70, 60, 50, 40, 30, 20, 10
+	# 	Spread: 400
+	# 	Damage: 8000
+	# 	DamageTypes: Prone100Percent, TriggerProne, ElectricityDeath, Tesla
+	# 	AffectsParent: True
+	# 	ValidRelationships: Enemy, Neutral
+	# 	Versus:
+	# 		Shield: 150
+	# 		Heroic: 100
+	# 		Plate: 96
+	# 		Flak: 92
+	# 		None: 88
+	# 		Superheavy: 84
+	# 		Heavy: 80
+	# 		Medium: 76
+	# 		Light: 72
+	# 		Scout: 68
+	# 		Steel: 64
+	# 		Concrete: 60
+	# 		Wood: 56
+	# 		Spaceship: 52
+	# 		Helicopter: 48
+	# 		Bomber: 44
+	# 		Fighter: 40
+	# Warhead@4Dam: SpreadDamage
+	# 	ValidTargets: Ground, Water, Air
+	# 	Delay: 32
+	# 	Falloff: 100, 90, 80, 70, 60, 50, 40, 30, 20, 10
+	# 	Spread: 400
+	# 	Damage: 8000
+	# 	DamageTypes: Prone100Percent, TriggerProne, ElectricityDeath, Tesla
+	# 	AffectsParent: True
+	# 	ValidRelationships: Enemy, Neutral
+	# 	Versus:
+	# 		Shield: 150
+	# 		Heroic: 100
+	# 		Plate: 96
+	# 		Flak: 92
+	# 		None: 88
+	# 		Superheavy: 84
+	# 		Heavy: 80
+	# 		Medium: 76
+	# 		Light: 72
+	# 		Scout: 68
+	# 		Steel: 64
+	# 		Concrete: 60
+	# 		Wood: 56
+	# 		Spaceship: 52
+	# 		Helicopter: 48
+	# 		Bomber: 44
+	# 		Fighter: 40
+	# Warhead@5Dam: SpreadDamage
+	# 	ValidTargets: Ground, Water, Air
+	# 	Delay: 40
+	# 	Falloff: 100, 90, 80, 70, 60, 50, 40, 30, 20, 10
+	# 	Spread: 400
+	# 	Damage: 8000
+	# 	DamageTypes: Prone100Percent, TriggerProne, ElectricityDeath, Tesla
+	# 	AffectsParent: True
+	# 	ValidRelationships: Enemy, Neutral
+	# 	Versus:
+	# 		Shield: 150
+	# 		Heroic: 100
+	# 		Plate: 96
+	# 		Flak: 92
+	# 		None: 88
+	# 		Superheavy: 84
+	# 		Heavy: 80
+	# 		Medium: 76
+	# 		Light: 72
+	# 		Scout: 68
+	# 		Steel: 64
+	# 		Concrete: 60
+	# 		Wood: 56
+	# 		Spaceship: 52
+	# 		Helicopter: 48
+	# 		Bomber: 44
+	# 		Fighter: 40
+	# Warhead@6Dam: SpreadDamage
+	# 	ValidTargets: Ground, Water, Air
+	# 	Delay: 48
+	# 	Falloff: 100, 90, 80, 70, 60, 50, 40, 30, 20, 10
+	# 	Spread: 400
+	# 	Damage: 8000
+	# 	DamageTypes: Prone100Percent, TriggerProne, ElectricityDeath, Tesla
+	# 	AffectsParent: True
+	# 	ValidRelationships: Enemy, Neutral
+	# 	Versus:
+	# 		Shield: 150
+	# 		Heroic: 100
+	# 		Plate: 96
+	# 		Flak: 92
+	# 		None: 88
+	# 		Superheavy: 84
+	# 		Heavy: 80
+	# 		Medium: 76
+	# 		Light: 72
+	# 		Scout: 68
+	# 		Steel: 64
+	# 		Concrete: 60
+	# 		Wood: 56
+	# 		Spaceship: 52
+	# 		Helicopter: 48
+	# 		Bomber: 44
+	# 		Fighter: 40
+	# Warhead@7Dam: SpreadDamage
+	# 	ValidTargets: Ground, Water, Air
+	# 	Delay: 56
+	# 	Falloff: 100, 90, 80, 70, 60, 50, 40, 30, 20, 10
+	# 	Spread: 400
+	# 	Damage: 8000
+	# 	DamageTypes: Prone100Percent, TriggerProne, ElectricityDeath, Tesla
+	# 	AffectsParent: True
+	# 	ValidRelationships: Enemy, Neutral
+	# 	Versus:
+	# 		Shield: 150
+	# 		Heroic: 100
+	# 		Plate: 96
+	# 		Flak: 92
+	# 		None: 88
+	# 		Superheavy: 84
+	# 		Heavy: 80
+	# 		Medium: 76
+	# 		Light: 72
+	# 		Scout: 68
+	# 		Steel: 64
+	# 		Concrete: 60
+	# 		Wood: 56
+	# 		Spaceship: 52
+	# 		Helicopter: 48
+	# 		Bomber: 44
+	# 		Fighter: 40
+	# Warhead@8Dam: SpreadDamage
+	# 	ValidTargets: Ground, Water, Air
+	# 	Delay: 64
+	# 	Falloff: 100, 90, 80, 70, 60, 50, 40, 30, 20, 10
+	# 	Spread: 400
+	# 	Damage: 8000
+	# 	DamageTypes: Prone100Percent, TriggerProne, ElectricityDeath, Tesla
+	# 	AffectsParent: True
+	# 	ValidRelationships: Enemy, Neutral
+	# 	Versus:
+	# 		Shield: 150
+	# 		Heroic: 100
+	# 		Plate: 96
+	# 		Flak: 92
+	# 		None: 88
+	# 		Superheavy: 84
+	# 		Heavy: 80
+	# 		Medium: 76
+	# 		Light: 72
+	# 		Scout: 68
+	# 		Steel: 64
+	# 		Concrete: 60
+	# 		Wood: 56
+	# 		Spaceship: 52
+	# 		Helicopter: 48
+	# 		Bomber: 44
+	# 		Fighter: 40
+	# Warhead@3Eff: CreateEffect
+	# 	Explosions: scpsistorm
+	# 	ValidTargets: Ground, Air
+	# 	ImpactActors: false
+	# 	ImpactSounds: ptesto00.aud
 
 PsionicShockwave:
 	Inherits: ^TeslaChargedWeapon

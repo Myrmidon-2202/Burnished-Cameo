@@ -5911,7 +5911,7 @@ GLSYRD:
 		BuildPaletteOrder: 50
 		Prerequisites: glsupply, ~glaselected
 		Queue: Building, RABuilding
-	Production@NORMAL:
+	Production:
 		Produces: Naval.Gla
 		RequiresCondition: !classicproductionqueues
 	# Production@CLASSICPRODUCTIONQUEUES:
@@ -5921,7 +5921,7 @@ GLSYRD:
 		Type: Naval.Gla
 		Group: Naval
 		DisplayOrder: 5
-	ProductionBar@NAVALGDI:
+	ProductionBar:
 		ProductionType: Naval.Gla
 		RequiresCondition: !classicproductionqueues
 	# ProductionBar@RANAVALGDI:
@@ -9869,7 +9869,7 @@ CHSYRD:
 		Type: Naval.China
 		Group: Naval
 		DisplayOrder: 5
-	ProductionBar@NAVALGDI:
+	ProductionBar:
 		ProductionType: Naval.China
 		RequiresCondition: !classicproductionqueues
 	# ProductionBar@RANAVALGDI:
@@ -13856,7 +13856,7 @@ USASYRD:
 		BuildPaletteOrder: 50
 		Prerequisites: usasupply, ~usaselected
 		Queue: Building, RABuilding
-	Production@NORMAL:
+	Production:
 		Produces: Naval.Usa
 		RequiresCondition: !classicproductionqueues
 	# Production@CLASSICPRODUCTIONQUEUES:
@@ -13866,7 +13866,7 @@ USASYRD:
 		Type: Naval.Usa
 		Group: Naval
 		DisplayOrder: 5
-	ProductionBar@NAVALGDI:
+	ProductionBar:
 		ProductionType: Naval.Usa
 		RequiresCondition: !classicproductionqueues
 	# ProductionBar@RANAVALGDI:
@@ -15064,7 +15064,7 @@ leangsyrd:
 		BuildPaletteOrder: 50
 		Prerequisites: leangsupply, ~leangselected
 		Queue: Building, RABuilding
-	Production@NORMAL:
+	Production:
 		Produces: Naval.China
 		RequiresCondition: !classicproductionqueues
 	# Production@CLASSICPRODUCTIONQUEUES:
@@ -15074,7 +15074,7 @@ leangsyrd:
 		Type: Naval.China
 		Group: Naval
 		DisplayOrder: 5
-	ProductionBar@NAVALGDI:
+	ProductionBar:
 		ProductionType: Naval.China
 		RequiresCondition: !classicproductionqueues
 	# ProductionBar@RANAVALGDI:

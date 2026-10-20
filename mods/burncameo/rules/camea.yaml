@@ -96,6 +96,8 @@ camea_conyard:
 	ProvidesPrerequisite@buildingname:
 	ProvidesPrerequisite:
 		Prerequisite: conyard
+	Transforms:
+		IntoActor: mcv.camea
 	BaseBuilding:
 	Power:
 		Amount: 75
@@ -115,7 +117,7 @@ camea_conyard:
 		Names:
 			1: Spy Plane
 		Descriptions:
-			1: Reveals an area of the map\nand cloaked enemy units.
+			1: power-ra2psireveal.description
 		SelectTargetSpeechNotification: SelectTarget
 		EndChargeSpeechNotification: SpyPlaneReady
 		CameraActor: camera.spyplane
@@ -203,7 +205,7 @@ HAND.camea:
 		Image: HAND
 
 RAPROC.camea:
-	Inherits: RAPROC
+	Inherits: ^RAPROC
 	Buildable:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 60
@@ -290,10 +292,10 @@ RAWEAPA.camea:
 	Power:
 		Amount: -30
 	ProvidesPrerequisite@buildingname:
-	ProvidesPrerequisite:
-		Prerequisite: vehicleproductioncamea
+		Prerequisite: raweapa.camea
 	RenderSprites:
 		Image: raweap
+		PlayerPalette: raplayer
 
 HQ.camea:
 	Inherits: HQ
@@ -322,7 +324,7 @@ HQ.camea:
 		Names:
 			1: Paratroopers
 		Descriptions:
-			1: A squad of cargo planes drops soldiers\nanywhere on the map.
+			1: power-paratroopers.description
 		DropItems:
 			1: e1.para, e1.para, e1.para, e1.para, e1.para, e1.para, e1.para, e1.para, e1.para, e1.para
 		ReinforcementsArrivedSpeechNotification: ReinforcementsArrived
@@ -353,7 +355,7 @@ HQ.camea:
 		Names:
 			1: Air Strike
 		Descriptions:
-			1: Deploy an aerial napalm strike.\nBurns buildings and infantry along a line.
+			1: power-td-airstrike.description
 		EndChargeSpeechNotification: AirstrikeReady
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
@@ -381,11 +383,11 @@ HQ.camea:
 		Prerequisite: hq.camea
 
 RAFIX.camea:
-	Inherits: RAFIX
+	Inherits: ^RAFIX
 	Buildable:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 100
-		Prerequisites: vehicleproductioncamea, ~techlevel.medium, ~mmcamea
+		Prerequisites: raweapa.camea, ~techlevel.medium, ~mmcamea
 		Description: Repairs vehicles for credits.
 	Valued:
 		Cost: 1200
@@ -430,7 +432,7 @@ stek.camea:
 	Buildable:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 150
-		Prerequisites: vehicleproductioncamea, anyhq, ~techlevel.high, ~mmcamea
+		Prerequisites: raweapa.camea, anyhq, ~techlevel.high, ~mmcamea
 		Description: Provides Soviet advanced technologies.
 	Valued:
 		Cost: 1500
@@ -546,7 +548,6 @@ mslo.camea:
 		Type: Wood
 	RevealsShroud:
 		Range: 6c0
-		RequiresCondition: !lowpower
 		RequiresCondition: !lowpower
 	# NukePowerCA:
 	# 	AllowMultiple: True
@@ -696,7 +697,7 @@ ATWR.camea:
 	Inherits: ATWR
 	Buildable:
 		BuildPaletteOrder: 60
-		Prerequisites: vehicleproductioncamea, ~techlevel.high, ~mmcamea
+		Prerequisites: raweapa.camea, ~techlevel.high, ~mmcamea
 		Queue: Defence, RADefence
 	RenderSprites:
 		Image: ATWR
@@ -705,7 +706,7 @@ OBLI.camea:
 	Inherits: OBLI
 	Buildable:
 		BuildPaletteOrder: 60
-		Prerequisites: vehicleproductioncamea, ~techlevel.high, ~mmcamea
+		Prerequisites: raweapa.camea, ~techlevel.high, ~mmcamea
 		Queue: Defence, RADefence
 	RenderSprites:
 		Image: OBLI
@@ -714,7 +715,7 @@ TSLA.camea:
 	Inherits: TSLA
 	Buildable:
 		BuildPaletteOrder: 60
-		Prerequisites: vehicleproductioncamea, ~techlevel.high, ~mmcamea
+		Prerequisites: raweapa.camea, ~techlevel.high, ~mmcamea
 		Queue: Defence, RADefence
 	RenderSprites:
 		Image: TSLA
@@ -825,13 +826,34 @@ SHOK.camea:
 		Image: SHOK
 
 E1.para:
-	Inherits: E1
-	-Buildable:
+	Inherits: ^E1
+	Buildable:
+		Queue: Infantry.Camea
+		Prerequisites: hand.camea
 	GrantConditionOnPrerequisite@camea:
 		Prerequisites: faction.camea
 		Condition: faction.camea
 	RenderSprites:
 		Image: E1
+
+E3.GDI:
+	Inherits: ^E3
+	Tooltip:
+		Name: Camea Rocket Soldier
+	# Inherits@decoration: ^GDIRankDecoration
+	Buildable:
+		Queue: Infantry.Camea
+		Prerequisites: hand.camea
+	GrantConditionOnPrerequisite@camea:
+		Prerequisites: faction.camea
+		Condition: faction.camea
+	Armament@PRIMARY: ##########
+		Weapon: Rockets
+		LocalOffset: 256,43,341
+		FireDelay: 5
+	Armament@GARRISONED: ##########
+		Name: garrisoned
+		Weapon: Rockets
 
 RMBO.camea:
 	Inherits: RMBO
@@ -959,7 +981,7 @@ DTRK.camea:
 		Image: DTRK
 
 MSAM.camea:
-	Inherits: MSAM
+	Inherits: MLRS
 	Buildable:
 		Prerequisites: stek.camea
 		Queue: Vehicle.Camea
@@ -1048,7 +1070,7 @@ TRAN.camea:
 		Cost: 3000
 
 HARV.camea:
-	Inherits: HARV
+	Inherits: ^TDHARV
 	Buildable:
 		Prerequisites: raproc.camea
 		Queue: Vehicle.Camea

@@ -3537,7 +3537,7 @@ MODTYPEJ:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 40000
+		HP: 20000
 	Repairable:
 		HpPerStep: 5500
 #	ChangesHealth@SelfHealing:
@@ -4231,7 +4231,7 @@ japanspeedboat:
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: ~ra1jsyrd
-		Queue: Naval, RANaval
+		Queue: Naval.Japan
 		Description: actor-jpspeedboat.description
 	Valued:
 		Cost: 1200
@@ -4309,7 +4309,6 @@ yamatobattleship:
 	Inherits@exp: ^GainsExperienceRA
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
 	Inherits@EMP: ^TurretEMP
-
 	Valued:
 		Cost: 2200
 	Tooltip:
@@ -4319,7 +4318,7 @@ yamatobattleship:
 	Buildable:
 		BuildPaletteOrder: 50
 		Prerequisites: ~dome.japan
-		Queue: Naval, RANaval
+		Queue: Naval.Japan
 		Description: actor-yamatobattleship.description
 	Mobile:
 		Speed: 35
@@ -4651,7 +4650,7 @@ RALST:
 	Buildable:
 		BuildPaletteOrder: 10
 		Prerequisites: ~ranavaltransport
-		Queue: Naval, RANaval
+		Queue: Naval.Allies, Naval.Soviet
 	Mobile:
 		Speed: 100
 		Locomotor: lcraft
@@ -5965,9 +5964,8 @@ RAFIX.Japan:
 
 RA1SYRD:
 	Inherits: ^BaseBuilding
-	Inherits@shipyard: ^IsShipyard
+	Inherits@shipyard: ^IsShipyardOld
 	Inherits@shape: ^3x3Shape
-
 	Tooltip:
 		Name: Allied Naval Yard
 	Buildable:
@@ -5980,6 +5978,24 @@ RA1SYRD:
 	ProvidesPrerequisite@buildingname:
 	ProvidesPrerequisite:
 		Prerequisite: ranavaltransport
+	Production:
+		Produces: Naval.Allies
+	ProductionQueue:
+		Type: Naval.Allies
+		DisplayOrder: 2
+		Group: Naval
+		LowPowerModifier: 150
+		ReadyAudio: UnitReady
+		ReadyTextNotification: notification-unit-ready
+		BlockedAudio: NoBuild
+		BlockedTextNotification: notification-unable-to-build-more
+		LimitedAudio: BuildingInProgress
+		LimitedTextNotification: notification-unable-to-comply-building-in-progress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar:
+		ProductionType: Naval.Allies
 	GivesBuildableArea: ##########
 		AreaTypes: building, cityi
 	Targetable:
@@ -5991,9 +6007,9 @@ RA1SYRD:
 
 RA1JSYRD:
 	Inherits: ^BaseBuilding
-	Inherits@shipyard: ^IsShipyard
+	Inherits@shipyard: ^IsShipyardOld
 	Inherits@shape: ^3x3Shape
-		Tooltip:
+	Tooltip:
 		Name: Japanese Naval Yard
 	Buildable:
 		Prerequisites: ~rafact.japan, jproc, ~globalnaval
@@ -6005,6 +6021,24 @@ RA1JSYRD:
 	ProvidesPrerequisite@buildingname:
 	ProvidesPrerequisite:
 		Prerequisite: ranavaltransport
+	Production:
+		Produces: Naval.Japan
+	ProductionQueue:
+		Type: Naval.Japan
+		DisplayOrder: 2
+		Group: Naval
+		LowPowerModifier: 150
+		ReadyAudio: UnitReady
+		ReadyTextNotification: notification-unit-ready
+		BlockedAudio: NoBuild
+		BlockedTextNotification: notification-unable-to-build-more
+		LimitedAudio: BuildingInProgress
+		LimitedTextNotification: notification-unable-to-comply-building-in-progress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar:
+		ProductionType: Naval.Japan
 	GivesBuildableArea: ##########
 		AreaTypes: building, cityi
 	Targetable:
@@ -6017,7 +6051,7 @@ RA1JSYRD:
 
 RASPEN:
 	Inherits: ^BaseBuilding
-	Inherits@shipyard: ^IsShipyard
+	Inherits@shipyard: ^IsShipyardOld
 	Inherits@shape: ^3x3Shape
 	Valued:
 		Cost: 800
@@ -6035,6 +6069,24 @@ RASPEN:
 	ProvidesPrerequisite@buildingname:
 	ProvidesPrerequisite:
 		Prerequisite: ranavaltransport
+	Production:
+		Produces: Naval.Soviet
+	ProductionQueue:
+		Type: Naval.Soviet
+		DisplayOrder: 2
+		Group: Naval
+		LowPowerModifier: 150
+		ReadyAudio: UnitReady
+		ReadyTextNotification: notification-unit-ready
+		BlockedAudio: NoBuild
+		BlockedTextNotification: notification-unable-to-build-more
+		LimitedAudio: BuildingInProgress
+		LimitedTextNotification: notification-unable-to-comply-building-in-progress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar:
+		ProductionType: Naval.Soviet
 	GivesBuildableArea: ##########
 		AreaTypes: building, cityi
 	Targetable:
@@ -7603,7 +7655,7 @@ modartyturret:
 		RequiresCondition: !disabled && !lowpower
 	Armament:
 		Weapon: 155mmBastion
-		LocalOffset: 1000,0,900
+		LocalOffset: 1000,0,700
 		MuzzleSequence: muzzle
 		Turret: cannon
 		Name: cannon
@@ -9191,7 +9243,7 @@ MODHOVER:
 		DeployChance: 100
 		DeployTicks: 0
 	Health:
-		HP: 35000
+		HP: 30000
 	Repairable:
 		HpPerStep: 3250
 #	ChangesHealth@SelfHealing:
@@ -9588,7 +9640,7 @@ typechiha:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 80000
+		HP: 38000
 	Repairable:
 		HpPerStep: 6500
 #	ChangesHealth@SelfHealing:
@@ -9789,7 +9841,7 @@ MODBGGY:
 		Speed: 120
 		TurnSpeed: 24
 	Health:
-		HP: 60000
+		HP: 25000
 	Repairable:
 		HpPerStep: 3000
 #	ChangesHealth@SelfHealing:
