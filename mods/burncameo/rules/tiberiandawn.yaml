@@ -3148,9 +3148,27 @@ CNCSYRD:
 	ProvidesPrerequisite@buildingname:
 	GivesBuildableArea: ##########
 		AreaTypes: building, cityi
+	Production:
+		Produces: Naval.GDI
+	ProductionQueue:
+		Type: Naval.GDI
+		DisplayOrder: 2
+		Group: Naval
+		LowPowerModifier: 150
+		ReadyAudio: UnitReady
+		ReadyTextNotification: notification-unit-ready
+		BlockedAudio: NoBuild
+		BlockedTextNotification: notification-unable-to-build-more
+		LimitedAudio: BuildingInProgress
+		LimitedTextNotification: notification-unable-to-comply-building-in-progress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar:
+		ProductionType: Naval.GDI
 	RenderSprites:
-		Image: cncsyrd
-		PlayerPalette: player_rgba
+		Image: ra1syrd
+		PlayerPalette: raplayer
 
 CNCSPEN:
 	Inherits: RASPEN
@@ -3161,9 +3179,27 @@ CNCSPEN:
 	ProvidesPrerequisite@buildingname:
 	GivesBuildableArea: ##########
 		AreaTypes: building, cityi
+	Production:
+		Produces: Naval.Nod
+	ProductionQueue:
+		Type: Naval.Nod
+		DisplayOrder: 2
+		Group: Naval
+		LowPowerModifier: 150
+		ReadyAudio: UnitReady
+		ReadyTextNotification: notification-unit-ready
+		BlockedAudio: NoBuild
+		BlockedTextNotification: notification-unable-to-build-more
+		LimitedAudio: BuildingInProgress
+		LimitedTextNotification: notification-unable-to-comply-building-in-progress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar:
+		ProductionType: Naval.Nod
 	RenderSprites:
-		Image: cncspen
-		PlayerPalette: player_rgba
+		Image: raspen
+		PlayerPalette: raplayer
 
 CNCPT:
 	Inherits: ^BoatUnit
@@ -3181,7 +3217,7 @@ CNCPT:
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: ~cncsyrd
-		Queue: Naval, RANaval
+		Queue: Naval.GDI
 		Description: actor-pt.description
 	Mobile:
 		Speed: 100
@@ -3494,143 +3530,143 @@ CNCSS:
 		Image: cncss
 		PlayerPalette: player_rgba
 
-ssmsub:
-	Inherits: ^BoatUnit
-	Inherits@Template: ^ArtilleryShipTemplate
-	Inherits@exp: ^GainsExperienceTD
-	Inherits@EXPERIENCE: ^GainsExperience
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
-	Inherits@EMP: ^FrontalEMP
-	Inherits@sub: ^Submarine
-		Valued:
-		Cost: 2800
-	Tooltip:
-		Name: Ballistic Missile Submarine
-	UpdatesPlayerStatistics:
-		AddToArmyValue: true
-	Buildable:
-		BuildPaletteOrder: 50
-		Prerequisites: ~hq.nod
-		Queue: Naval, RANaval
-		Description: actor-msub.description
-	Mobile:
-		Speed: 60
-		TurnSpeed: 12
-	Health:
-		HP: 200000
-#	ChangesHealth@SelfHealing:
-#		Step: 80
-	Armor:
-		Type: Medium
-	Armament:
-		Weapon: HonestJohn
-		LocalOffset: 800,200,0, 800,-200,0
-		MuzzleSequence: muzzle
-	WithMuzzleOverlay:
-	Targetable:
-		TargetTypes: Ground, Water, Ship, Submarine
-	AttackFrontal:
-		FacingTolerance: 0
-	Selectable:
-		DecorationBounds: 1536, 1536
-	DeliversCash:
-		Payload: 1000
-	Cloak@underwater:
-		CloakDelay: 100
-	Voiced:
-		VoiceSet: VehicleVoice
-	FirepowerMultiplier@BallisticMissileSubBuff:
-		Modifier: 200
-	FireWarheadsOnDeath:
-		Weapon: ArtilleryShell
-	AmmoPool:
-		Ammo: 2
-		AmmoCondition: ammo
-	ReloadAmmoPool:
-		Delay: 125
-		Count: 1
-	WithFacingSpriteBody:
-		Sequence: idle
-		RequiresCondition: ammo == 2
-	WithFacingSpriteBody@OneMissile:
-		Sequence: idle-one
-		RequiresCondition: ammo == 1
-	WithFacingSpriteBody@NoMissiles:
-		Sequence: idle-empty
-		RequiresCondition: !ammo
-	RenderSprites:
-		Image: ssmsub
+# ssmsub:
+# 	Inherits: ^BoatUnit
+# 	Inherits@Template: ^ArtilleryShipTemplate
+# 	Inherits@exp: ^GainsExperienceTD
+# 	Inherits@EXPERIENCE: ^GainsExperience
+# 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+# 	Inherits@EMP: ^FrontalEMP
+# 	Inherits@sub: ^Submarine
+# 		Valued:
+# 		Cost: 2800
+# 	Tooltip:
+# 		Name: Ballistic Missile Submarine
+# 	UpdatesPlayerStatistics:
+# 		AddToArmyValue: true
+# 	Buildable:
+# 		BuildPaletteOrder: 50
+# 		Prerequisites: ~hq.nod
+# 		Queue: Naval, RANaval
+# 		Description: actor-msub.description
+# 	Mobile:
+# 		Speed: 60
+# 		TurnSpeed: 12
+# 	Health:
+# 		HP: 200000
+# #	ChangesHealth@SelfHealing:
+# #		Step: 80
+# 	Armor:
+# 		Type: Medium
+# 	Armament:
+# 		Weapon: HonestJohn
+# 		LocalOffset: 800,200,0, 800,-200,0
+# 		MuzzleSequence: muzzle
+# 	WithMuzzleOverlay:
+# 	Targetable:
+# 		TargetTypes: Ground, Water, Ship, Submarine
+# 	AttackFrontal:
+# 		FacingTolerance: 0
+# 	Selectable:
+# 		DecorationBounds: 1536, 1536
+# 	DeliversCash:
+# 		Payload: 1000
+# 	Cloak@underwater:
+# 		CloakDelay: 100
+# 	Voiced:
+# 		VoiceSet: VehicleVoice
+# 	FirepowerMultiplier@BallisticMissileSubBuff:
+# 		Modifier: 200
+# 	FireWarheadsOnDeath:
+# 		Weapon: ArtilleryShell
+# 	AmmoPool:
+# 		Ammo: 2
+# 		AmmoCondition: ammo
+# 	ReloadAmmoPool:
+# 		Delay: 125
+# 		Count: 1
+# 	WithFacingSpriteBody:
+# 		Sequence: idle
+# 		RequiresCondition: ammo == 2
+# 	WithFacingSpriteBody@OneMissile:
+# 		Sequence: idle-one
+# 		RequiresCondition: ammo == 1
+# 	WithFacingSpriteBody@NoMissiles:
+# 		Sequence: idle-empty
+# 		RequiresCondition: !ammo
+# 	RenderSprites:
+# 		Image: ssmsub
 
-nodlasercorvette:
-	Inherits: ^BoatUnit
-	Inherits@Template: ^BattleShipTemplate
-	Inherits@exp: ^GainsExperienceTD
-	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
-	Valued:
-		Cost: 2300
-	Tooltip:
-		Name: Nod Laser Corvette
-	UpdatesPlayerStatistics:
-		AddToArmyValue: true
-	Buildable:
-		BuildPaletteOrder: 50
-		Prerequisites: ~tmpl
-		Queue: Naval, RANaval
-		Description: actor-nodlasercorvette.description
-	Mobile:
-		Speed: 60
-		TurnSpeed: 12
-	Health:
-		HP: 150000
-#	ChangesHealth@SelfHealing:
-#		Step: 60
-	Armor:
-		Type: Medium
-	Turreted@PRIMARY:
-		Turret: primary
-		Offset: 0,0,0
-		TurnSpeed: 1000
-	Turreted@SECONDARY:
-		Turret: secondary
-		Offset: 900,0,200
-		TurnSpeed: 24
-	Armament@PRIMARY:
-		Turret: primary
-		Name: primary
-		Weapon: CorvetteLaserObelisk
-		LocalOffset: 0,0,800
-	Armament@SECONDARY:
-		Turret: secondary
-		Name: secondary
-		Weapon: CorvetteDragon
-		LocalOffset: 480,-100,40, 480,100,40
-		Recoil: 175
-		RecoilRecovery: 35
-		MuzzleSequence: muzzle
-	AttackTurreted:
-		Turrets: secondary
-		Armaments: secondary
-	AttackTurretedCharged:
-		Turrets: primary
-		Armaments: primary
-		PauseOnCondition: disabled
-		ChargeLevel: 50
-		ChargingCondition: charging
-	AmbientSound:
-		RequiresCondition: charging
-		SoundFiles: obelpowr.aud
-		Interval: 30, 40
-	RenderRangeCircle:
-	WithMuzzleOverlay:
-	Selectable:
-		DecorationBounds: 2048, 2048
-	WithSpriteTurret@SECONDARY:
-		Turret: secondary
-		Palette: ra_temperat
-	DeliversCash:
-		Payload: 500
-	RenderSprites:
-		PlayerPalette: player_rgba
+# nodlasercorvette:
+# 	Inherits: ^BoatUnit
+# 	Inherits@Template: ^BattleShipTemplate
+# 	Inherits@exp: ^GainsExperienceTD
+# 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+# 	Valued:
+# 		Cost: 2300
+# 	Tooltip:
+# 		Name: Nod Laser Corvette
+# 	UpdatesPlayerStatistics:
+# 		AddToArmyValue: true
+# 	Buildable:
+# 		BuildPaletteOrder: 50
+# 		Prerequisites: ~tmpl
+# 		Queue: Naval, RANaval
+# 		Description: actor-nodlasercorvette.description
+# 	Mobile:
+# 		Speed: 60
+# 		TurnSpeed: 12
+# 	Health:
+# 		HP: 150000
+# #	ChangesHealth@SelfHealing:
+# #		Step: 60
+# 	Armor:
+# 		Type: Medium
+# 	Turreted@PRIMARY:
+# 		Turret: primary
+# 		Offset: 0,0,0
+# 		TurnSpeed: 1000
+# 	Turreted@SECONDARY:
+# 		Turret: secondary
+# 		Offset: 900,0,200
+# 		TurnSpeed: 24
+# 	Armament@PRIMARY:
+# 		Turret: primary
+# 		Name: primary
+# 		Weapon: CorvetteLaserObelisk
+# 		LocalOffset: 0,0,800
+# 	Armament@SECONDARY:
+# 		Turret: secondary
+# 		Name: secondary
+# 		Weapon: CorvetteDragon
+# 		LocalOffset: 480,-100,40, 480,100,40
+# 		Recoil: 175
+# 		RecoilRecovery: 35
+# 		MuzzleSequence: muzzle
+# 	AttackTurreted:
+# 		Turrets: secondary
+# 		Armaments: secondary
+# 	AttackTurretedCharged:
+# 		Turrets: primary
+# 		Armaments: primary
+# 		PauseOnCondition: disabled
+# 		ChargeLevel: 50
+# 		ChargingCondition: charging
+# 	AmbientSound:
+# 		RequiresCondition: charging
+# 		SoundFiles: obelpowr.aud
+# 		Interval: 30, 40
+# 	RenderRangeCircle:
+# 	WithMuzzleOverlay:
+# 	Selectable:
+# 		DecorationBounds: 2048, 2048
+# 	WithSpriteTurret@SECONDARY:
+# 		Turret: secondary
+# 		Palette: ra_temperat
+# 	DeliversCash:
+# 		Payload: 500
+# 	RenderSprites:
+# 		PlayerPalette: player_rgba
 
 CNCRSS:
 	Inherits: ^BoatUnit
@@ -3645,7 +3681,7 @@ CNCRSS:
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: ~cncspen
-		Queue: Naval, RANaval
+		Queue: Naval.Nod
 	Mobile:
 		Speed: 150
 		RequiresCondition: !notmobile && !disabled
@@ -3688,7 +3724,7 @@ LST:
 	Buildable:
 		Prerequisites: ~cncsyrd
 		BuildPaletteOrder: 10
-		Queue: Naval, RANaval
+		Queue: Naval.GDI, Naval.Nod
 	Mobile:
 		Speed: 125
 		RequiresCondition: !notmobile && !disabled

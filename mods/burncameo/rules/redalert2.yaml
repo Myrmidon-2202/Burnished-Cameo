@@ -411,8 +411,8 @@ RA2Flameguy:
 	Inherits: ^RA2Building
 	Inherits: ^BasicDefense
 	Inherits@exp: ^GainsExperienceRA2
-	WithIdleOverlay@shrouded:
-		Image: shrouded_overlay
+	# WithIdleOverlay@shrouded:
+	# 	Image: shrouded_overlay
 	-GivesBuildableArea:
 	-CommandBarBlacklist:
 	-AcceptsDeliveredCash:

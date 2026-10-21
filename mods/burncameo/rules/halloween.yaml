@@ -75,13 +75,13 @@ Player:
 	ProvidesPrerequisite@numberofcarousels12:
 		Prerequisite: numberofcarousels12
 		RequiresCondition: (CarouselOwned >= 12)
-	LobbyPrerequisiteCheckbox@halloween:
-		ID: halloween
-		Label: Halloween
-		Enabled: False
-		Description: actor-player.description
-		DisplayOrder: 24
-		Prerequisites: halloween-setting
+	# LobbyPrerequisiteCheckbox@halloween:
+	# 	ID: halloween
+	# 	Label: Halloween
+	# 	Enabled: False
+	# 	Description: actor-player.description
+	# 	DisplayOrder: 24
+	# 	Prerequisites: halloween-setting
 	ProvidesPrerequisite@faction_halloween:
 		Prerequisite: faction_halloween
 		Factions: Halloween

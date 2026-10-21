@@ -150,7 +150,7 @@ actor-hq-gdi =
    .name = GDI Communications Center
 
 power-td-airstrike =
-   .description = A-10 planes strafe and bomb the target.
+   .description = Call A-10 planes to strafe and bomb the target.
    .name = Air Strike
 
 actor-eye =
@@ -11384,7 +11384,7 @@ faction-cameo-iok =
 faction-cameo-camea =
    .name = Camea
    .description = Camea from Cameo
-      An unaligned commander, possessing the older forces of GDI, NOD, Allies and Soviets at her disposal
+      An unaligned commander, with the older forces of GDI, NOD, Allies and Soviets at her disposal.
       Support powers: Spy Plane, Airstrike, Chronosphere, Paratroopers, Nuclear Strike
 
 faction-fot-tomorrow =
@@ -12059,7 +12059,7 @@ faction-legobattles-earth =
        Units cost power.
        Support powers: Hero Spells
 
-faction-legobattles-Alien =
+faction-legobattles-alien =
    .name = Alien
    .description = Alien from Lego Battles
        The desperate aliens, seeking to escape their interstellar stranding. Allied with the space criminals out of mutual interest.

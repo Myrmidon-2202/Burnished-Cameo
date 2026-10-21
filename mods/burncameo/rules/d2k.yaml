@@ -637,8 +637,8 @@ Player:
 		TargetTypes: Ground, C4, Structure, Defense
 	MapEditorData:
 		Categories: Defense
-	WithIdleOverlay@shrouded:
-		Image: shrouded_overlay
+	# WithIdleOverlay@shrouded:
+	# 	Image: shrouded_overlay
 	-CommandBarBlacklist:
 	-ActorPreviewPlaceBuildingPreview:
 	ActorStatValues:

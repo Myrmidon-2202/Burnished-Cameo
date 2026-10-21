@@ -6549,12 +6549,12 @@ RadarJammer:
 	Range: 10000
 	Projectile: InstantHit
 	Warhead@1Dum: Dummy
-	Warhead@2Spawn: SpawnActor
-		Actors: jamming.field
-		Range: 1
-		ForceGround: false
-		ValidTargets: Ground, Water
-		ImpactActors: false
+	# Warhead@2Spawn: SpawnActor
+	# 	Actors: jamming.field
+	# 	Range: 1
+	# 	ForceGround: false
+	# 	ValidTargets: Ground, Water
+	# 	ImpactActors: false
 
 ChronoVortexInit:
 	ValidTargets: Ground, Water

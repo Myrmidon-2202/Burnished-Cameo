@@ -1720,8 +1720,8 @@
 		StartSequence: shield-starts
 	WithIdleOverlay@shield_damage:
 		Sequence: shield-complete
-	WithIdleOverlay@shrouded:
-		Image: shrouded_overlay
+	# WithIdleOverlay@shrouded:
+	# 	Image: shrouded_overlay
 	ProductionCostMultiplier@scaledprices:
 		Multiplier: 200
 		Prerequisites: scaledproductionqueues
@@ -2599,8 +2599,8 @@
 	WithIdleOverlay@shield_damage:
 		Sequence: shield-complete-infantry
 		Palette: shield60
-	WithIdleOverlay@shrouded:
-		Image: shrouded_overlay_small
+	# WithIdleOverlay@shrouded:
+	# 	Image: shrouded_overlay_small
 
 ^AffectedByTiberium:
 	DamagedByTerrain:
@@ -3314,8 +3314,8 @@
 		StartSequence: shield-starts-big
 	WithIdleOverlay@shield_damage:
 		Sequence: shield-complete-big
-	WithIdleOverlay@shrouded:
-		Image: shrouded_overlay_big
+	# WithIdleOverlay@shrouded:
+	# 	Image: shrouded_overlay_big
 	DamagedByTerrain:
 		Damage: -200
 		DamageInterval: 1
@@ -3953,8 +3953,8 @@
 		StartSequence: shield-starts
 	WithIdleOverlay@shield_damage:
 		Sequence: shield-complete
-	WithIdleOverlay@shrouded:
-		Image: shrouded_overlay
+	# WithIdleOverlay@shrouded:
+	# 	Image: shrouded_overlay
 
 ^DisabledOverlay:
 	WithColoredOverlay@IDISABLE:
@@ -4180,12 +4180,12 @@
 	ReloadDelayMultiplier@shrouded:
 		Modifier: 125
 		RequiresCondition: shrouded
-	WithIdleOverlay@shrouded:
-		Image: shrouded_overlay
-		Sequence: idle
-		Palette: shield30
-		RequiresCondition: shrouded
-		IsDecoration: True
+	# WithIdleOverlay@shrouded:
+	# 	Image: shrouded_overlay
+	# 	Sequence: idle
+	# 	Palette: shield30
+	# 	RequiresCondition: shrouded
+	# 	IsDecoration: True
 
 ^LockOn:
 	ExternalCondition@lockon:
@@ -7178,30 +7178,26 @@ CPQDEBUGDUMMY:
 		PlayerExperience: 25
 		StartRepairingNotification: Repairing
 	RallyPoint:
-	Production@NORMAL:
-		Produces: Naval
-		RequiresCondition: !classicproductionqueues
-	Production@CLASSICPRODUCTIONQUEUES:
-		Produces: RANaval
-		RequiresCondition: classicproductionqueues
-	ProductionQueue@NAVAL:
-		Type: Naval
-		DisplayOrder: 5
-		Group: Ship
-		LowPowerModifier: 300
-		ReadyAudio: UnitReady
-		BlockedAudio: NoBuild
-		LimitedAudio: BuildingInProgress
-		QueuedAudio: Training
-		OnHoldAudio: OnHold
-		CancelledAudio: Cancelled
-		# InfiniteBuildLimit: 10
-	ProductionBar@NAVAL:
-		ProductionType: Naval
-		RequiresCondition: !classicproductionqueues
-	ProductionBar@RANAVAL:
-		ProductionType: RANaval
-		RequiresCondition: classicproductionqueues
+	# Production@NORMAL:
+	# 	Produces: Naval
+	# ProductionQueue@NAVAL:
+	# 	Type: Naval
+	# 	DisplayOrder: 5
+	# 	Group: Ship
+	# 	LowPowerModifier: 300
+	# 	ReadyAudio: UnitReady
+	# 	BlockedAudio: NoBuild
+	# 	LimitedAudio: BuildingInProgress
+	# 	QueuedAudio: Training
+	# 	OnHoldAudio: OnHold
+	# 	CancelledAudio: Cancelled
+	# 	# InfiniteBuildLimit: 10
+	# ProductionBar@NAVAL:
+	# 	ProductionType: Naval
+	# 	RequiresCondition: !classicproductionqueues
+	# ProductionBar@RANAVAL:
+	# 	ProductionType: RANaval
+	# 	RequiresCondition: classicproductionqueues
 	Exit@1:
 		SpawnOffset: -1024,1024,0
 		Facing: 640
