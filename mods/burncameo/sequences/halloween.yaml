@@ -1345,9 +1345,8 @@ garfield_infantry:
 		Length: 1
 		Start: 15
 	icon: 
-		Filename: civilization_2_icons.png
+		Filename: cameo_gazorp.shp
 		Offset: 0, 0
-		Start: 34
 
 spooky_eye:
 	Defaults:
@@ -1378,7 +1377,7 @@ spooky_eye:
 				Length: 2
 				FlipX: true
 	icon:
-		Filename: chromesc2kaircrash.png
+		Filename: cameo_spookyeye.shp
 		AddExtension: False
 
 inflatable_spider:
@@ -1393,8 +1392,7 @@ inflatable_spider:
 		Start: 0
 		Length: 4
 	icon: 
-		Filename: halloween_cameos.shp
-		Start: 3
+		Filename: cameo_InflatableSpider.shp
 		AddExtension: False
 
 halloween_peter:
@@ -1447,9 +1445,8 @@ halloween_peter:
 		Length: 1
 		Start: 1
 	icon: 
-		Filename: civilization_2_icons.png
+		Filename: cameo_petergriffin.shp
 		Offset: 0, 0
-		Start: 34
 
 halloween_tim:
 	Inherits: ^WCInfantry
@@ -1501,9 +1498,8 @@ halloween_tim:
 		Length: 1
 		Start: 1
 	icon: 
-		Filename: civilization_2_icons.png
+		Filename: cameo_Tim.shp
 		Offset: 0, 0
-		Start: 34
 
 monster_mouth:
 	Defaults:
@@ -1533,5 +1529,5 @@ monster_mouth:
 				Frames: 11,10,9,8
 				FlipX: true
 	icon:
-		Filename: chromesc2kaircrash.png
+		Filename: cameo_horror.shp
 		AddExtension: False
