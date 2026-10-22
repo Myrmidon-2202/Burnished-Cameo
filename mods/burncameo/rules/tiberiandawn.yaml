@@ -340,6 +340,7 @@ E3.GDI:
 	# Inherits@decoration: ^GDIRankDecoration
 	Buildable:
 		Prerequisites: ~pyle, ~!upgdimissilesoldier
+		Queue: Infantry.GDI
 	Armament@PRIMARY: ##########
 		Weapon: Rockets
 		LocalOffset: 256,43,341
@@ -362,6 +363,7 @@ E3.Nod:
 	# Inherits@decoration: ^NodRankDecoration
 	Buildable:
 		Prerequisites: ~hand, ~!upchemicalrocket
+		Queue: Infantry.Nod
 
 E4:
 	Inherits: ^Soldier

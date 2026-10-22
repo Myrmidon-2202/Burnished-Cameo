@@ -804,6 +804,7 @@ RAJE3:
 		Queue: Infantry.Japan
 		BuildAtProductionType: Soldier
 		BuildPaletteOrder: 80
+		BuildDurationModifier: 30
 		Prerequisites: modtentj
 		Description: actor-rasniper.description
 	Health:
@@ -1713,7 +1714,7 @@ V2RL:
 	Buildable:
 		Queue: Vehicle.Soviet
 		BuildPaletteOrder: 180
-		Prerequisites: stek
+		Prerequisites: stek, rafix.soviet
 		Description: actor-htnk.description
 	Valued:
 		Cost: 1000
@@ -3489,7 +3490,7 @@ MODKUBEL:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 25000
+		HP: 13000
 	Repairable:
 		HpPerStep: 1250
 #	ChangesHealth@SelfHealing:
