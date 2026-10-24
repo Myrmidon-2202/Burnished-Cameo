@@ -1026,7 +1026,7 @@ WC2 SPELL/STATUS EFFECT INHERITABLES
 		PipCount: 5
 
 ^wc2_barracks:
-	Inherits@barr: ^IsBarrack
+	Inherits@barr: ^IsBarrackOld
 	Inherits@shape: ^3x3Shape
 	Inherits@exits: ^WC2Exits_3x3
 	Inherits@wcprod: ^WCUnitProduction
@@ -1045,6 +1045,12 @@ WC2 SPELL/STATUS EFFECT INHERITABLES
 	ProvidesPrerequisite@buildingname:
 	ProvidesPrerequisite@barracks:
 		Prerequisite: barracks
+	Production@CLASSICPRODUCTIONQUEUES:
+		Produces: RAInfantry
+		RequiresCondition: classicproductionqueues
+	ProductionBar@CLASSICPRODUCTIONQUEUES:
+		ProductionType: RAInfantry
+		RequiresCondition: classicproductionqueues
 	# ParallelProductionQueue@INFANTRY:
 	# 	LowPowerModifier: 10000
 
@@ -2304,7 +2310,21 @@ wc2_human_barracks:
 		Queue: Building, RABuilding
 		Description: actor-wc2_human_barracks.description
 		Prerequisites: ~wc2_human_farm
-
+	Production@NORMAL:
+		Produces: Infantry.Human2
+	ProductionQueue:
+		Type: Infantry.Human2
+		DisplayOrder: 2
+		Group: Infantry
+		LowPowerModifier: 9999
+		ReadyAudio: UnitReady
+		BlockedAudio: NoBuild
+		LimitedAudio: BuildingInProgress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar@NORMAL:
+		ProductionType: Infantry.Human2
 	SpawnActorsOnSell:
 		ActorTypes: wc2_human_footman
 	Voiced:
@@ -2987,7 +3007,7 @@ wc2_human_footman:
 	Buildable:
 		BuildPaletteOrder: 10
 		Prerequisites: ~wc2_human_barracks
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Human2
 		Description: actor-wc2_human_footman.description
 	Armament:
 		Weapon: wc2footmanslice
@@ -3022,7 +3042,7 @@ wc2_human_elven_archer:
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: ~wc2_human_elven_lumber_mill, ~!wc2_h_rangerupg
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Human2
 		Description: actor-wc2_human_elven_archer.description
 	Armament:
 		Weapon: wc2arrowFire
@@ -3086,7 +3106,7 @@ wc2_human_knight:
 	Buildable:
 		BuildPaletteOrder: 30
 		Prerequisites: ~wc2_human_stables, ~!wc2_h_paladinupg
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Human2
 		Description: actor-wc2_human_knight.description
 	Voiced:
 		VoiceSet: wc2voicehumanknight
@@ -3270,7 +3290,7 @@ wc2_human_ballista:
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: ~wc2_human_blacksmith
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Human2
 		Description: actor-wc2_human_ballista.description
 	AttackFrontal:
 		PauseOnCondition: disabled
@@ -3338,7 +3358,7 @@ wc2_human_mage:
 		Name: Mage
 	Buildable:
 		Prerequisites: ~wc2_human_mage_tower
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Human2
 		Description: actor-wc2_human_mage.description
 	Voiced:
 		VoiceSet: wc2voicehumanmage
@@ -4024,6 +4044,21 @@ wc2_orc_barracks:
 		Queue: Building, RABuilding
 		Description: actor-wc2_orc_barracks.description
 		Prerequisites: ~wc2_orc_pigfarm
+	Production@NORMAL:
+		Produces: Infantry.Orc2
+	ProductionQueue:
+		Type: Infantry.Orc2
+		DisplayOrder: 2
+		Group: Infantry
+		LowPowerModifier: 9999
+		ReadyAudio: UnitReady
+		BlockedAudio: NoBuild
+		LimitedAudio: BuildingInProgress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar@NORMAL:
+		ProductionType: Infantry.Orc2
 	SpawnActorsOnSell:
 		ActorTypes: wc2_orc_grunt
 	Voiced:
@@ -4670,7 +4705,7 @@ wc2_orc_grunt:
 	Buildable:
 		BuildPaletteOrder: 10
 		Prerequisites: ~wc2_orc_barracks
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Orc2
 		Description: actor-wc2_orc_grunt.description
 	Armament:
 		Weapon: wc2gruntslice
@@ -4705,7 +4740,7 @@ wc2_orc_troll_axethrower:
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: ~wc2_orc_troll_lumber_mill, ~!wc2_o_berserkerupg
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Orc2
 		Description: actor-wc2_orc_troll_axethrower.description
 	Armament:
 		Weapon: wc2axeFire
@@ -4769,7 +4804,7 @@ wc2_orc_ogre:
 	Buildable:
 		BuildPaletteOrder: 30
 		Prerequisites: ~wc2_orc_ogre_mound, ~!wc2_o_ogremageupg
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Orc2
 		Description: actor-wc2_orc_ogre.description
 	Voiced:
 		VoiceSet: wc2voiceorcogre
@@ -5000,7 +5035,7 @@ wc2_orc_catapult:
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: ~wc2_orc_blacksmith
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Orc2
 		Description: actor-wc2_orc_catapult.description
 	AttackFrontal:
 		PauseOnCondition: disabled
@@ -5072,7 +5107,7 @@ wc2_orc_deathknight:
 		Name: Death Knight
 	Buildable:
 		Prerequisites: ~wc2_orc_temple_of_the_damned
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Orc2
 		Description: actor-wc2_orc_deathknight.description
 	Voiced:
 		VoiceSet: wc2voiceorcdeathknight
@@ -5241,7 +5276,7 @@ wc2_orc_skeleton:
 	Buildable:
 		BuildPaletteOrder: 10
 		Prerequisites: ~disabled
-		Queue: Infantry, RAInfantry
+		Queue: Infantry
 		Description: actor-wc2_orc_skeleton.description
 	Health:
 		HP: 9600
@@ -5906,7 +5941,7 @@ wc2_h_slowupg:
 		Name: Slow
 	Buildable:
 		BuildPaletteOrder: 20
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Human2
 		BuildDuration: 1500
 		Description: actor-wc2_h_slowupg.description
 		Prerequisites: ~!wc2_h_slowupg, ~wc2_human_blacksmith
@@ -5921,7 +5956,7 @@ wc2_h_polymorphupg:
 		Name: Polymorph
 	Buildable:
 		BuildPaletteOrder: 30
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Human2
 		BuildDuration: 1500
 		Description: actor-wc2_h_polymorphupg.description
 		Prerequisites: ~!wc2_h_polymorphupg, ~wc2_human_blacksmith
@@ -5936,7 +5971,7 @@ wc2_h_blizzardupg:
 		Name: Blizzard
 	Buildable:
 		BuildPaletteOrder: 40
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Human2
 		BuildDuration: 1500
 		Description: actor-wc2_h_blizzardupg.description
 		Prerequisites: ~!wc2_h_blizzardupg, ~wc2_human_blacksmith
@@ -6244,7 +6279,7 @@ wc2_o_hasteupg:
 		Name: Haste
 	Buildable:
 		BuildPaletteOrder: 20
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Orc2
 		BuildDuration: 1500
 		Description: actor-wc2_o_hasteupg.description
 		Prerequisites: ~!wc2_o_hasteupg, ~wc2_orc_blacksmith
@@ -6259,7 +6294,7 @@ wc2_o_deathanddecayupg:
 		Name: Death and Decay
 	Buildable:
 		BuildPaletteOrder: 30
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Orc2
 		BuildDuration: 1500
 		Description: actor-wc2_o_deathanddecayupg.description
 		Prerequisites: ~!wc2_o_deathanddecayupg, ~wc2_orc_blacksmith
@@ -6274,7 +6309,7 @@ wc2_o_raisedeadupg:
 		Name: Raise Dead
 	Buildable:
 		BuildPaletteOrder: 40
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Orc2
 		BuildDuration: 1500
 		Description: actor-wc2_o_raisedeadupg.description
 		Prerequisites: ~!wc2_o_raisedeadupg, ~wc2_orc_blacksmith

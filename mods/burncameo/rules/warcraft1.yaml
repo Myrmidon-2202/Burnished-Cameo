@@ -548,7 +548,7 @@ wc_h_barracks:
 		SpawnOffset: 298,298,0
 		ExitCell: 1,1
 	Production@NORMAL:
-		Produces: Infantry
+		Produces: Infantry.Human1
 		RequiresCondition: !classicproductionqueues
 	Production@CLASSICPRODUCTIONQUEUES:
 		Produces: RAInfantry
@@ -556,7 +556,7 @@ wc_h_barracks:
 	GrantExternalConditionToProduced:
 		Condition: produced
 	ProductionQueue:
-		Type: Infantry
+		Type: Infantry.Human1
 		DisplayOrder: 2
 		Group: Infantry
 		LowPowerModifier: 9999
@@ -567,7 +567,7 @@ wc_h_barracks:
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
 	ProductionBar@NORMAL:
-		ProductionType: Infantry
+		ProductionType: Infantry.Human1
 		RequiresCondition: !classicproductionqueues
 	ProductionBar@CLASSICPRODUCTIONQUEUES:
 		ProductionType: RAInfantry
@@ -748,7 +748,7 @@ wc_h_church:
 		SpawnOffset: 298,298,0
 		ExitCell: 1,1
 	Production@NORMAL:
-		Produces: Vehicle
+		Produces: Vehicle.Human1
 		RequiresCondition: !classicproductionqueues
 	Production@CLASSICPRODUCTIONQUEUES:
 		Produces: RAVehicle
@@ -756,7 +756,7 @@ wc_h_church:
 	GrantExternalConditionToProduced:
 		Condition: produced
 	ProductionQueue:
-		Type: Vehicle
+		Type: Vehicle.Human1
 		DisplayOrder: 2
 		Group: Vehicle
 		LowPowerModifier: 9999
@@ -767,7 +767,7 @@ wc_h_church:
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
 	ProductionBar@NORMAL:
-		ProductionType: Vehicle
+		ProductionType: Vehicle.Human1
 		RequiresCondition: !classicproductionqueues
 	ProductionBar@CLASSICPRODUCTIONQUEUES:
 		ProductionType: RAVehicle
@@ -865,7 +865,7 @@ wc_h_tower:
 		SpawnOffset: 298,298,0
 		ExitCell: 1,1
 	Production@NORMAL:
-		Produces: Aircraft
+		Produces: Aircraft.Human1
 		RequiresCondition: !classicproductionqueues
 	Production@CLASSICPRODUCTIONQUEUES:
 		Produces: RAAircraft
@@ -873,7 +873,7 @@ wc_h_tower:
 	GrantExternalConditionToProduced:
 		Condition: produced
 	ProductionQueue:
-		Type: Aircraft
+		Type: Aircraft.Human1
 		DisplayOrder: 2
 		Group: Aircraft
 		LowPowerModifier: 9999
@@ -884,7 +884,7 @@ wc_h_tower:
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
 	ProductionBar@NORMAL:
-		ProductionType: Aircraft
+		ProductionType: Aircraft.Human1
 		RequiresCondition: !classicproductionqueues
 	ProductionBar@CLASSICPRODUCTIONQUEUES:
 		ProductionType: RAAircraft
@@ -1100,13 +1100,13 @@ wc_o_barracks:
 		Description: actor-wc_o_barracks.description
 		Prerequisites: ~wc_o_townhall, wc_o_farm
 	Production@NORMAL:
-		Produces: Infantry
+		Produces: Infantry.Orc1
 	Production@CLASSICPRODUCTIONQUEUES:
 		Produces: RAInfantry
 	ProductionQueue:
-		Type: Infantry
+		Type: Infantry.Orc1
 	ProductionBar@NORMAL:
-		ProductionType: Infantry
+		ProductionType: Infantry.Orc1
 	ProductionBar@CLASSICPRODUCTIONQUEUES:
 		ProductionType: RAInfantry
 	SpawnActorsOnSell:
@@ -1156,15 +1156,15 @@ wc_o_damnedtemple:
 	Tooltip:
 		Name: Temple of the Damned
 	Production@NORMAL:
-		Produces: Vehicle
+		Produces: Vehicle.Orc1
 	Production@CLASSICPRODUCTIONQUEUES:
 		Produces: RAVehicle
 	GrantExternalConditionToProduced:
 		Condition: produced
 	ProductionQueue:
-		Type: Vehicle
+		Type: Vehicle.Orc1
 	ProductionBar@NORMAL:
-		ProductionType: Vehicle
+		ProductionType: Vehicle.Orc1
 	ProductionBar@CLASSICPRODUCTIONQUEUES:
 		ProductionType: RAVehicle
 	Buildable:
@@ -1203,13 +1203,13 @@ wc_o_tower:
 		Queue: Building, RABuilding
 		Description: actor-wc_o_tower.description
 	Production@NORMAL:
-		Produces: Aircraft
+		Produces: Aircraft.Orc1
 	Production@CLASSICPRODUCTIONQUEUES:
 		Produces: RAAircraft
 	ProductionQueue:
-		Type: Aircraft
+		Type: Aircraft.Orc1
 	ProductionBar@NORMAL:
-		ProductionType: Aircraft
+		ProductionType: Aircraft.Orc1
 	ProductionBar@CLASSICPRODUCTIONQUEUES:
 		ProductionType: RAAircraft
 	SpawnActorsOnSell:
@@ -1527,8 +1527,8 @@ wc_h_footman:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 10
-		Prerequisites: ~wc_h_barracks
-		Queue: Infantry, RAInfantry
+		Prerequisites: wc_h_barracks
+		Queue: Infantry.Human1
 		Description: actor-wc_h_footman.description
 		BuildDuration: 150
 		BuildDurationModifier: 100
@@ -1587,8 +1587,8 @@ wc_h_archer:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 10
-		Prerequisites: ~wc_h_lumbermill
-		Queue: Infantry, RAInfantry
+		Prerequisites: wc_h_lumbermill
+		Queue: Infantry.Human1
 		Description: actor-wc_h_archer.description
 		BuildDuration: 125
 		BuildDurationModifier: 100
@@ -1639,8 +1639,8 @@ wc_h_knight:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 10
-		Prerequisites: ~wc_h_stable
-		Queue: Infantry, RAInfantry
+		Prerequisites: wc_h_stable
+		Queue: Infantry.Human1
 		Description: actor-wc_h_knight.description
 		BuildDuration: 300
 		BuildDurationModifier: 100
@@ -1695,8 +1695,8 @@ wc_h_catapult:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 10
-		Prerequisites: ~wc_h_blacksmith
-		Queue: Infantry, RAInfantry
+		Prerequisites: wc_h_blacksmith
+		Queue: Infantry.Human1
 		Description: actor-wc_h_catapult.description
 		BuildDuration: 400
 		BuildDurationModifier: 100
@@ -1747,7 +1747,7 @@ wc_h_conjurer:
 	Buildable:
 		BuildPaletteOrder: 10
 		Prerequisites: ~wc_h_townhall, wc_h_tower
-		Queue: Aircraft, RAAircraft
+		Queue: Aircraft.Human1
 		Description: actor-wc_h_conjurer.description
 		BuildDuration: 340
 		BuildDurationModifier: 100
@@ -1800,7 +1800,7 @@ wc_h_cleric:
 	Buildable:
 		BuildPaletteOrder: 10
 		Prerequisites: ~wc_h_townhall, wc_h_church
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Human1
 		Description: actor-wc_h_cleric.description
 		BuildDuration: 280
 		BuildDurationModifier: 100
@@ -2043,7 +2043,7 @@ wc_n_portal:
 		BuildLimit: 1
 		BuildPaletteOrder: 200
 	Production@NORMAL:
-		Produces: Naval
+		Produces: Naval.Warcraft1
 		RequiresCondition: !classicproductionqueues
 	Production@CLASSICPRODUCTIONQUEUES:
 		Produces: RANaval
@@ -2051,7 +2051,7 @@ wc_n_portal:
 	GrantExternalConditionToProduced:
 		Condition: produced
 	ProductionQueue:
-		Type: Naval
+		Type: Naval.Warcraft1
 		DisplayOrder: 2
 		Group: Naval
 		LowPowerModifier: 9999
@@ -2062,7 +2062,7 @@ wc_n_portal:
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
 	ProductionBar@NORMAL:
-		ProductionType: Naval
+		ProductionType: Naval.Warcraft1
 		RequiresCondition: !classicproductionqueues
 	ProductionBar@CLASSICPRODUCTIONQUEUES:
 		ProductionType: RANaval
@@ -2326,8 +2326,8 @@ wc_o_grunt:
 		Name: Grunt
 	Buildable:
 		BuildPaletteOrder: 10
-		Prerequisites: ~wc_o_barracks
-		Queue: Infantry, RAInfantry
+		Prerequisites: wc_o_barracks
+		Queue: Infantry.Orc1
 		Description: actor-wc_o_grunt.description
 	Armament:
 		Weapon: footmanSlice
@@ -2339,8 +2339,8 @@ wc_o_spearman:
 	Tooltip:
 		Name: Spearman
 	Buildable:
-		Prerequisites: ~wc_o_lumbermill
-		Queue: Infantry, RAInfantry
+		Prerequisites: wc_o_lumbermill
+		Queue: Infantry.Orc1
 		Description: actor-wc_o_spearman.description
 	Armament:
 		Weapon: spearFire
@@ -2352,8 +2352,8 @@ wc_o_raider:
 	Tooltip:
 		Name: Raider
 	Buildable:
-		Prerequisites: ~wc_o_kennel
-		Queue: Infantry, RAInfantry
+		Prerequisites: wc_o_kennel
+		Queue: Infantry.Orc1
 		Description: actor-wc_o_raider.description
 	Armament:
 		Weapon: knightSlice
@@ -2363,8 +2363,8 @@ wc_o_raider:
 wc_o_catapult:
 	Inherits@wc_h_catapult: wc_h_catapult
 	Buildable:
-		Prerequisites: ~wc_o_blacksmith
-		Queue: Infantry, RAInfantry
+		Prerequisites: wc_o_blacksmith
+		Queue: Infantry.Orc1
 	Voiced:
 		VoiceSet: voiceorc
 
@@ -2375,8 +2375,8 @@ wc_o_warlock:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
-		Prerequisites: ~wc_o_tower
-		Queue: Aircraft, RAAircraft
+		Prerequisites: wc_o_tower
+		Queue: Aircraft.Orc1
 		Description: actor-wc_o_warlock.description
 	Armament:
 		Weapon: summon1_spider
@@ -2395,8 +2395,8 @@ wc_o_necrolyte:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
-		Prerequisites: ~wc_o_damnedtemple
-		Queue: Vehicle, RAVehicle
+		Prerequisites: wc_o_damnedtemple
+		Queue: Vehicle.Orc1
 		Description: actor-wc_o_necrolyte.description
 	Armament@2:
 		Weapon: armorNecrolyte
@@ -2541,7 +2541,7 @@ wc_o_demon:
 wc_n_demon:
 	Inherits: wc_o_demon
 	Buildable:
-		Queue: Naval
+		Queue: Naval.Warcraft1
 		Description: actor-wc_n_demon.description
 		BuildDuration: 1500
 		BuildDurationModifier: 100
@@ -2574,7 +2574,7 @@ wc_o_skeleton_army:
 	Buildable:
 		Prerequisites: ~wc_n_portal
 		BuildPaletteOrder: 30
-		Queue: Naval
+		Queue: Naval.Warcraft1
 		Description: actor-wc_o_skeleton_army.description
 		BuildDuration: 1125
 		BuildDurationModifier: 100
@@ -2636,26 +2636,26 @@ wc_n_brigand:
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Inherits@DECORATIONS: ^InfantryExperienceHospitalHazmatOverrides
 	Valued:
-		Cost: 240
+		Cost: 250
 	Tooltip:
 		Name: Brigand
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
-		Prerequisites: ~wc_n_portal
+		Prerequisites: wc_h_church
 		BuildPaletteOrder: 10
-		Queue: Naval
+		Queue: Infantry.Human1
 		Description: actor-wc_n_brigand.description
 		BuildDuration: 80
 		BuildDurationModifier: 100
 	Mobile:
 		Speed: 64
 	DamageMultiplier@DamageReduction:
-		Modifier: 61
+		Modifier: 51
 	FirepowerMultiplier@FirepowerIncrease:
 		Modifier: 115
 	Health:
-		HP: 20000
+		HP: 14500
 	Armor:
 		Type: None
 	#Food
@@ -2680,26 +2680,26 @@ wc_n_ogre:
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Inherits@DECORATIONS: ^InfantryExperienceHospitalHazmatOverrides
 	Valued:
-		Cost: 1600
+		Cost: 600
 	Tooltip:
 		Name: Ogre
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
-		Prerequisites: ~wc_n_portal
+		Prerequisites: wc_o_damnedtemple
 		BuildPaletteOrder: 10
-		Queue: Naval
+		Queue: Infantry.Orc1
 		Description: actor-wc_n_ogre.description
 		BuildDuration: 120
 		BuildDurationModifier: 100
 	Mobile:
 		Speed: 48
 	DamageMultiplier@DamageReduction:
-		Modifier: 61
+		Modifier: 51
 	FirepowerMultiplier@FirepowerIncrease:
 		Modifier: 115
 	Health:
-		HP: 180000
+		HP: 29000
 	Armor:
 		Type: None
 	#Food
@@ -2733,7 +2733,7 @@ wc_n_slime:
 	Buildable:
 		BuildPaletteOrder: 10
 		Prerequisites: ~wc_n_portal
-		Queue: Naval
+		Queue: Naval.Warcraft1
 		Description: actor-wc_n_slime.description
 		BuildDuration: 400
 		BuildDurationModifier: 100
