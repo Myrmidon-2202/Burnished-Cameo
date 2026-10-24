@@ -1003,7 +1003,7 @@ WC2 SPELL/STATUS EFFECT INHERITABLES
 		Capacity: 2500
 	Buildable:
 		BuildPaletteOrder: 11
-		Description: Provides 125 Food (Power)\nCan store up to 500 resources.
+		Description: Provides 125 Food (Power) Can store up to 500 resources.
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -2412,11 +2412,14 @@ wc2_human_church:
 	IonCannonPower@HOLYVISION:
 		OrderName: wc2_holyvision
 		PauseOnCondition: lowpower
-		Icon: holyvision
+		Icons:
+			1: holyvision
 		Cursor: ability
 		ChargeInterval: 3750
-		Name: Holy Vision
-		Description: Reveals an area of the map\nand cloaked enemy units.
+		Names:
+			1: Holy Vision
+		Descriptions:
+			1: Reveals an area of the map and cloaked enemy units.
 		EndChargeSpeechNotification: SpyPlaneReady
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
@@ -2434,11 +2437,14 @@ wc2_human_church:
 	IonCannonPower@HEALING:
 		OrderName: wc2_healing
 		PauseOnCondition: lowpower
-		Icon: healing
+		Icons:
+			1: healing
 		Cursor: ability
 		ChargeInterval: 3750
-		Name: Healing
-		Description: Heals a group of units.
+		Names:
+			1: Healing
+		Descriptions:
+			1: Heals a group of units.
 		EndChargeSpeechNotification: AirstrikeReady
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
@@ -2485,10 +2491,13 @@ wc2_human_mage_tower:
 	GrantExternalConditionPower@SLOW:
 		OrderName: wc2_slow
 		#PauseOnCondition: lowpower
-		Icon: slow
+		Icons:
+			1: slow
 		ChargeInterval: 3000
-		Name: Slow
-		Description: Decreases movement speed and attack rate.
+		Names:
+			1: Slow
+		Descriptions:
+			1: Decreases movement speed and attack rate.
 		Durations:
 			1: 500
 		SelectTargetSpeechNotification: SelectTarget
@@ -2509,10 +2518,13 @@ wc2_human_mage_tower:
 	GrantExternalConditionPower@INVISIBILITY:
 		OrderName: wc2_invisibility
 		#PauseOnCondition: lowpower
-		Icon: invisibility
+		Icons:
+			1: invisibility
 		ChargeInterval: 3000
-		Name: Invisibility
-		Description: Cloaks units.
+		Names:
+			1: Invisibility
+		Descriptions:
+			1: Cloaks units.
 		Durations:
 			1: 500
 		SelectTargetSpeechNotification: SelectTarget
@@ -2785,7 +2797,7 @@ wchumanguardtowerupgrade:
 # 	Buildable:
 # 		Prerequisites: ~wc2_human_barracks
 # 		Queue: Defence, RADefence
-# 		Description: Upgradable defense building\nDetector
+# 		Description: Upgradable defense building Detector
 # 	Voiced:
 # 		VoiceSet: humanguardtowervoice
 # 	Armament@guardtower:
@@ -4145,10 +4157,13 @@ wc2_orc_altar_of_storms:
 	# Spy of Kilrogg support power.
 	AirstrikePower@SPYOFKILROGG:
 		OrderName: wc2_spy_of_kilrogg
-		Icon: kilrogg
+		Icons:
+			1: kilrogg
 		ChargeInterval: 3750
-		Name: Spy of Kilrogg
-		Description: Reveals an area of the map\nand cloaked enemy units.
+		Names:
+			1: Spy of Kilrogg
+		Descriptions:
+			1: Reveals an area of the map and cloaked enemy units.
 		SelectTargetSpeechNotification: SelectTarget
 		EndChargeSpeechNotification: SpyPlaneReady
 		CameraActor: camera.spyplane
@@ -4160,7 +4175,8 @@ wc2_orc_altar_of_storms:
 		QuantizedFacings: 8
 		DisplayBeacon: true
 		BeaconImage: icon
-		BeaconPoster: kilrogg_beacon
+		BeaconPosters:
+			1: kilrogg_beacon
 		ArrowSequence: wc2_arrow
 		ClockSequence: clock
 		CircleSequence: circles
@@ -4171,10 +4187,13 @@ wc2_orc_altar_of_storms:
 	GrantExternalConditionPower@BLOODLUST:
 		OrderName: wc2_bloodlust
 		#PauseOnCondition: lowpower
-		Icon: bloodlust
+		Icons:
+			1: bloodlust
 		ChargeInterval: 3000
-		Name: Bloodlust
-		Description: Triples damage output of units.
+		Namess:
+			1: Bloodlust
+		Descriptions:
+			1: Triples damage output of units.
 		Durations:
 			1: 500
 		SelectTargetSpeechNotification: SelectTarget
@@ -4196,11 +4215,14 @@ wc2_orc_altar_of_storms:
 		OrderName: wc2_runes
 		PauseOnCondition: lowpower
 		Prerequisites: ~techlevel.superweapons
-		Icon: runes
+		Icons:
+			1: runes
 		Cursor: ability
 		ChargeInterval: 4500
-		Name: Runes
-		Description: Deploy OgreMage runes anywhere on the map.\nThese are land mines.\nUse with caution.\nDisappears after a while.
+		Names:
+			1: Runes
+		Descriptions:
+			1: Deploy OgreMage runes anywhere on the map. These are land mines. Use with caution. Disappears after a while.
 		EndChargeSpeechNotification: AirstrikeReady
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
@@ -4232,10 +4254,13 @@ wc2_orc_temple_of_the_damned:
 	GrantExternalConditionPower@HASTE:
 		OrderName: wc2_haste
 		#PauseOnCondition: lowpower
-		Icon: haste
+		Icons:
+			1: haste
 		ChargeInterval: 3000
-		Name: Haste
-		Description: Increases movement speed and attack rate.
+		Names:
+			1: Haste
+		Descriptions:
+			1: Increases movement speed and attack rate.
 		Durations:
 			1: 500
 		SelectTargetSpeechNotification: SelectTarget
@@ -4249,7 +4274,8 @@ wc2_orc_temple_of_the_damned:
 		#IncomingSound: ironcur9.aud
 		SupportPowerPaletteOrder: 30
 		ValidRelationships: Enemy, Neutral, Ally
-		Dimensions: 5, 5
+		Dimensions:
+			1: 5, 5
 		Footprints:
 			1: __x__ _xxx_ xxxxx _xxx_ __x__
 	# Death and decay super weapon
@@ -4509,7 +4535,7 @@ wcorccannontowerupgrade:
 # 	Buildable:
 # 		Prerequisites: ~wc2_orc_barracks
 # 		Queue: Defence, RADefence
-# 		Description: Upgradable defense building\nDetector
+# 		Description: Upgradable defense building Detector
 # 	Voiced:
 # 		VoiceSet: orcguardtowervoice
 # 	Armament@guardtower:

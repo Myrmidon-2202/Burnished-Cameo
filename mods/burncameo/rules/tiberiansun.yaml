@@ -3669,7 +3669,7 @@ TSE2:
 	Mobile:
 		Speed: 56
 	Health:
-		HP: 8000
+		HP: 17000
 #	ChangesHealth@selfhealing:
 #		Step: 8
 	AutoTarget:
@@ -3902,7 +3902,7 @@ TSE3:
 	Inherits@anim: ^TSInfantry
 	Inherits@vo: ^AttackFrontalVoice
 	Valued:
-		Cost: 200
+		Cost: 250
 	Tooltip:
 		Name: Rocket Infantry
 	UpdatesPlayerStatistics:
@@ -3915,7 +3915,7 @@ TSE3:
 	Mobile:
 		Speed: 56
 	Health:
-		HP: 12000
+		HP: 13000
 #	ChangesHealth@selfhealing:
 #		Step: 10
 	AutoTarget:
@@ -4069,7 +4069,7 @@ TSCYBORG:
 	Inherits@EMP: ^UnitDisable
 	Inherits@tibheal: ^TibHealable
 	Valued:
-		Cost: 300
+		Cost: 400
 	Tooltip:
 		Name: Cyborg Infantry
 	UpdatesPlayerStatistics:
@@ -4087,7 +4087,7 @@ TSCYBORG:
 	Armor:
 		Type: Light
 	Health:
-		HP: 25000
+		HP: 30000
 #	ChangesHealth@selfhealing:
 #		Step: 25
 	AutoTarget:
@@ -4159,14 +4159,14 @@ TSCHAMSPY:
 		Prerequisites: ~tsnthand, tsnttech
 		Description: actor-tschamspy.description
 	Valued:
-		Cost: 500
+		Cost: 700
 	Tooltip:
 		Name: Chameleon Spy
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	-Guard:
 	Health:
-		HP: 6000
+		HP: 12000
 	Mobile:
 		Speed: 69
 		Voice: Move
@@ -4218,7 +4218,7 @@ TSMHIJACK:
 	Mobile:
 		Speed: 71
 	Health:
-		HP: 6000
+		HP: 30000
 	Passenger:
 		CustomPipType: blue
 	Mirage:
@@ -4274,7 +4274,7 @@ TSREAPER:
 	Inherits@vo: ^AttackFrontalVoice
 	Inherits@snipe: ^DriverKillAndNeutronImmune
 	Health:
-		HP: 75000
+		HP: 60000
 	Armor:
 		Type: Medium #Wood
 	Valued:
@@ -4341,7 +4341,7 @@ TSCYC2:
 	Inherits: TSCYBORG
 	Inherits@tibheal: ^TibHealable
 	Valued:
-		Cost: 4000
+		Cost: 2000
 	Tooltip:
 		Name: Cyborg Commando
 	UpdatesPlayerStatistics:
@@ -4357,7 +4357,7 @@ TSCYC2:
 	Mobile:
 		Speed: 52
 	Health:
-		HP: 200000
+		HP: 50000
 	AutoTarget:
 		ScanRadius: 4
 	Armament@PRIMARY:
@@ -4493,7 +4493,7 @@ TSGHOST:
 	Inherits@vo: ^AttackFrontalVoice
 	Inherits@tibheal: ^TibHealable
 	Valued:
-		Cost: 4000
+		Cost: 1750
 	Tooltip:
 		Name: Ghost Stalker
 	UpdatesPlayerStatistics:
@@ -4509,7 +4509,7 @@ TSGHOST:
 	Armor:
 		Type: Light
 	Health:
-		HP: 32000
+		HP: 20000
 	AutoTarget:
 		ScanRadius: 4
 	Armament@PRIMARY:
@@ -4619,7 +4619,7 @@ TSMUTANT:
 	Mobile:
 		Speed: 71
 	Health:
-		HP: 15000
+		HP: 16000
 #	ChangesHealth@selfhealing:
 #		Step: 15
 	AutoTarget:
@@ -4747,7 +4747,7 @@ TSMUTANT3:
 	Mobile:
 		Speed: 56
 	Health:
-		HP: 32000
+		HP: 25000
 #	ChangesHealth@selfhealing:
 #		Step: 32
 	AutoTarget:
@@ -4810,7 +4810,7 @@ TSWEEDGUY:
 		Speed: 64
 		Locomotor: chem
 	Health:
-		HP: 52000
+		HP: 30000
 #	ChangesHealth@selfhealing:
 #		Step: 52
 	AutoTarget:
@@ -4858,11 +4858,11 @@ TSDOGGIE:
 	Inherits@autotarget: ^AutoTargetAllAssaultMove
 	Inherits@tibheal: ^TibHealable
 	Health:
-		HP: 52000
+		HP: 30000
 #	ChangesHealth@selfhealing:
 #		Step: 52
 	Valued:
-		Cost: 1000
+		Cost: 900
 	Armor:
 		Type: None
 	Armament:
@@ -5445,7 +5445,7 @@ TSMMCH:
 	Inherits@detect: ^EliteDetector
 	Inherits@vo: ^AttackTurretedVoice
 	Valued:
-		Cost: 600
+		Cost: 800
 	Tooltip:
 		Name: Titan
 	Buildable:
@@ -5459,7 +5459,7 @@ TSMMCH:
 		Locomotor: tracked
 		Speed: 75
 	Health:
-		HP: 120000
+		HP: 80000
 	Repairable:
 		HpPerStep: 2637
 	Armor:
@@ -5529,7 +5529,7 @@ TSJUGG:
 		Queue: Vehicle.Tsgdi
 		Description: actor-tsjugg.description
 	Health:
-		HP: 120000
+		HP: 70000
 	Mobile:
 		Locomotor: tracked
 		Speed: 71
@@ -5629,7 +5629,7 @@ TSHVR:
 	Inherits@EMP: ^TurretEMP
 	Inherits@vo: ^AttackTurretedVoice
 	Valued:
-		Cost: 600
+		Cost: 700
 	Tooltip:
 		Name: Hover MLRS
 	Buildable:
@@ -5643,7 +5643,7 @@ TSHVR:
 		Locomotor: hover
 		Speed: 99
 	Health:
-		HP: 60000
+		HP: 40000
 	Repairable:
 		HpPerStep: 2637
 	Armor:
@@ -5686,7 +5686,7 @@ TSSMECH:
 	Inherits@vo: ^AttackFrontalVoice
 	Inherits@EXT: ^ExternalConditions
 	Valued:
-		Cost: 450
+		Cost: 500
 	Tooltip:
 		Name: Wolverine
 	UpdatesPlayerStatistics:
@@ -5703,7 +5703,7 @@ TSSMECH:
 		Speed: 99
 		Locomotor: wheeled
 	Health:
-		HP: 60000
+		HP: 50000
 	Armor:
 		Type: Light
 	RevealsShroud:
@@ -5844,7 +5844,7 @@ TSSONIC:
 	Inherits@EMP: ^TurretEMP
 	Inherits@vo: ^AttackTurretedVoice
 	Valued:
-		Cost: 1500
+		Cost: 1300
 	Tooltip:
 		Name: Disruptor
 	Buildable:
@@ -5858,7 +5858,7 @@ TSSONIC:
 		TurnSpeed: 32
 		Speed: 56
 	Health:
-		HP: 62500
+		HP: 50000
 	Repairable:
 		HpPerStep: 2637
 	Armor:
@@ -6011,7 +6011,7 @@ TSBGGY:
 		TurnSpeed: 80
 		Speed: 142
 	Health:
-		HP: 22000
+		HP: 23000
 	Repairable:
 		HpPerStep: 2000
 	Armor:
@@ -6047,7 +6047,7 @@ TSBIKE:
 	Inherits@EMP: ^FrontalEMP
 	Inherits@vo: ^AttackFrontalVoice
 	Valued:
-		Cost: 550
+		Cost: 500
 	Tooltip:
 		Name: Attack Cycle
 	Buildable:
@@ -6060,7 +6060,7 @@ TSBIKE:
 		TurnSpeed: 80
 		Speed: 170
 	Health:
-		HP: 15000
+		HP: 18000
 	Repairable:
 		HpPerStep: 2000
 	Armor:
@@ -6380,7 +6380,7 @@ TSART2:
 	Inherits@EMP: ^TurretEMP
 	Inherits@vo: ^AttackTurretedVoice
 	Valued:
-		Cost: 975
+		Cost: 900
 	Tooltip:
 		Name: Artillery
 	Buildable:
@@ -7057,7 +7057,7 @@ TS2TNK:
 		Locomotor: tracked
 		Speed: 90
 	Health:
-		HP: 125000
+		HP: 42000
 	Repairable:
 		HpPerStep: 2637
 	Armor:
@@ -7112,7 +7112,7 @@ TS3TNK:
 		Locomotor: tracked
 		Speed: 71
 	Health:
-		HP: 150000
+		HP: 65000
 	Repairable:
 		HpPerStep: 2637
 	Armor:
@@ -7165,7 +7165,7 @@ TSFTNK:
 		Speed: 99
 		Locomotor: tracked
 	Health:
-		HP: 100000
+		HP: 35000
 	Repairable:
 		HpPerStep: 10000
 #	ChangesHealth@selfhealing:
@@ -7220,7 +7220,7 @@ TS4TNK:
 	Passenger:
 		Weight: 4
 	Health:
-		HP: 225000
+		HP: 91000
 	Repairable:
 		HpPerStep: 2637
 	Armor:
@@ -7464,7 +7464,7 @@ TST1000:
 		Bounds: 3072, 2560, 0, 0
 		DecorationBounds: 3072, 2560, 0, 0
 	Valued:
-		Cost: 5000
+		Cost: 3000
 	Tooltip:
 		Name: Eliminator Mk2
 	UpdatesPlayerStatistics:
@@ -7482,7 +7482,7 @@ TST1000:
 	Armor:
 		Type: Light
 	Health:
-		HP: 250000
+		HP: 90000
 	AutoTarget:
 		ScanRadius: 4
 	Armament@PRIMARY:
@@ -7673,7 +7673,7 @@ TSORCA:
 		CanSlide: false
 		TakeOffOnResupply: true
 	Health:
-		HP: 60000
+		HP: 30000
 	Armor:
 		Type: Light
 	RevealsShroud:
@@ -7758,7 +7758,7 @@ TSORCAB:
 		CanHover: false
 		CanSlide: false
 	Health:
-		HP: 75000
+		HP: 65000
 	Armor:
 		Type: Light
 	RevealsShroud:
@@ -7941,7 +7941,7 @@ TSSCRIN:
 	Inherits@Voxel: ^TSRenderVoxel
 	Inherits@reload: ^RearmableAircraft
 	Valued:
-		Cost: 1500
+		Cost: 1200
 	Tooltip:
 		Name: Banshee Fighter
 	UpdatesPlayerStatistics:
@@ -7961,7 +7961,7 @@ TSSCRIN:
 		CanHover: false
 		CanSlide: false
 	Health:
-		HP: 28000
+		HP: 35000
 	Armor:
 		Type: Light
 	RevealsShroud:
@@ -8039,7 +8039,7 @@ TSAPACHENOD:
 	Inherits@Voxel: ^TSRenderVoxel
 	Inherits@reload: ^RearmableAircraft
 	Valued:
-		Cost: 1000
+		Cost: 800
 	Tooltip:
 		Name: Harpy
 	UpdatesPlayerStatistics:
@@ -8053,7 +8053,7 @@ TSAPACHENOD:
 		TurnSpeed: 80
 		Speed: 150
 	Health:
-		HP: 60000
+		HP: 22500
 	Armor:
 		Type: Light
 	RevealsShroud:
@@ -8189,9 +8189,9 @@ TSAPACHECABAL:
 	Inherits@Voxel: ^TSRenderVoxel
 	Inherits@reload: ^RearmableAircraft
 	Valued:
-		Cost: 1000
+		Cost: 900
 	Tooltip:
-		Name: Harpy
+		Name: Cabal Harpy
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
@@ -8203,7 +8203,7 @@ TSAPACHECABAL:
 		TurnSpeed: 80
 		Speed: 150
 	Health:
-		HP: 22500
+		HP: 25000
 	Armor:
 		Type: Light
 	RevealsShroud:
@@ -8395,7 +8395,7 @@ TSHIND:
 		TurnSpeed: 80
 		Speed: 120
 	Health:
-		HP: 20000
+		HP: 22000
 	Armor:
 		Type: Light
 	RevealsShroud:

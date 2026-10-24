@@ -238,12 +238,12 @@ actor-brik =
       Blocks some projectiles.
 
 upgrade-upnodstealth =
-   .name = Unlock Stealth Technology
+   .name = Unlocks the Stealth Technology
    .description = Allows training of Stealth Soldiers
       and construction of Stealth Harvesters.
 
 upgrade-upnodvenom =
-   .name = Unlock Venom and Laser Commando
+   .name = Unlocks the Venom and Laser Commando
    .description = Allows construction of the Venom Gunship
       and training of Laser Commando.
 
@@ -670,7 +670,7 @@ actor-rapierjumpjet =
 upgrade-gapgen =
    .description = Allows construction of the Gap Generator
       and the Mobile Gap Generator and the Phase Transport.
-   .name = Unlock Gap Generator Technology
+   .name = Unlocks the Gap Generator Technology
 
 actor-mortarsoldier =
    .name = Mortar Soldier
@@ -1142,7 +1142,7 @@ actor-ioknuk2 =
       standard Power Plant.
 
 actor-iokblackmarket =
-   .description = Unlock upgrades for GLA weaponry.
+   .description = Unlocks the upgrades for GLA weaponry.
       Provides a cash supply.
 
 actor-iokpalace =
@@ -2003,7 +2003,7 @@ actor-tscore =
       Provides the Hunter-Seeker support power.
 
 actor-tsntmisl =
-   .description = Upgrade Center
+   .description = Upgrades the Center
       Provides the Ion Cannon support power with the respective plug.
       Provides the Hunter-Seeker support power with the respective plug.
       Provides the Drop Pods support power with the respective plug.
@@ -2032,11 +2032,11 @@ actor-tsobl2 =
       Strong vs Aircraft
 
 actor-tsgtplug2 =
-   .description = Upgrade Center
+   .description = Upgrades the Center
       Enables Ion Cannon strikes.
 
 actor-tsgtplug3 =
-   .description = Upgrade Center
+   .description = Upgrades the Center
       Enables deployment of Hunter-Seekers.
 
 power-ts-hunterseeker =
@@ -2113,7 +2113,7 @@ actor-glstorm =
       Requires power to operate.
 
 actor-glblackmarket =
-   .description = Unlock upgrades for GLA weaponry.
+   .description = Unlocks the upgrades for GLA weaponry.
       Provides a cash supply.
 
 actor-glsite =
@@ -2992,7 +2992,7 @@ power-general-infdrop =
 
 power-general-artillery =
    .description = Artillery Barrage
-      Off-map guns fire at the target.\nApplies heavy damage over a large area.
+      Off-map guns fire at the target. Applies heavy damage over a large area.
 
 power-general-carpetbomb =
    .description = Carpet Bombing
@@ -3021,7 +3021,7 @@ power-general-sathack2 =
 
 power-general-chinanuke =
    .description = Nuclear Strike
-      Launch a tactical nuclear warhead.\nApplies heavy damage over a large area.
+      Launch a tactical nuclear warhead. Applies heavy damage over a large area.
 
 power-general-scud =
    .description = Scud Storm
@@ -4978,10 +4978,10 @@ actor-scbehemoth =
       Strong vs Everything.
 
 actor-psclair =
-   .description = Upgrade to Lair.
+   .description = Upgrades the to Lair.
 
 actor-pschive =
-   .description = Upgrade to Hive.
+   .description = Upgrades the to Hive.
 
 actor-pscgreaterspire =
    .description = Unlocks Guardian.
@@ -5309,7 +5309,7 @@ promotions-flavor =
    .notification-02 = Congratulations on your field promotion! Purchase a Promotional upgrade to bolster your forces.
    .notification-03 = Your successes have granted you access to an exclusive field technology or ability of your choice.
    .notification-04 = You've been authorized to purchase a Promotional upgrade. Fight on to earn more points and expand your arsenal.
-   .notification-05 = A Promotional upgrade is now available to you. Unlock new units and powers or augment your existing ones.
+   .notification-05 = A Promotional upgrade is now available to you. Unlocks the new units and powers or augment your existing ones.
 
 actor-wc_h_farm =
    .description = Provides 100 Food (Power).
@@ -5554,12 +5554,12 @@ actor-wc2_human_castle =
    .description = Unlocks more advanced buildings.
 
 actor-wc2_human_betterfarm =
-   .description = Farm Upgrade.
+   .description = Farm Upgrades the.
       Gives +60 food (120 total).
       Gives +50% hp (150% total).
 
 actor-wc2_human_bestfarm =
-   .description = Farm Upgrade.
+   .description = Farm Upgrades the.
       Gives +120 food (240 total).
       Gives +50% hp (200% total).
 
@@ -5703,12 +5703,12 @@ actor-wc2_orc_fortress =
    .description = Unlocks more advanced buildings.
 
 actor-wc2_orc_betterfarm =
-   .description = Farm Upgrade.
+   .description = Farm Upgrades the.
       Gives +60 food (120 total).
       Gives +50% hp (150% total).
 
 actor-wc2_orc_bestfarm =
-   .description = Farm Upgrade.
+   .description = Farm Upgrades the.
       Gives +120 food (240 total).
       Gives +50% hp (200% total).
 
@@ -7088,34 +7088,34 @@ actor-wh40kuppoweredbayonets =
    .description = Increases Ogryn firepower by 15%.
 
 actor-wh40kupbattlecommand =
-   .description = Increases Field Command to 25% of health, Unlock new Tech.
+   .description = Increases Field Command to 25% of health, Unlocks the new Tech.
 
 actor-wh40kupregimentalcommand =
-   .description = Increases Field Command to 25% of health, Unlock new Tech.
+   .description = Increases Field Command to 25% of health, Unlocks the new Tech.
 
 actor-wh40kupogrynquarters =
-   .description = Unlock Ogryns.
+   .description = Unlocks the Ogryns.
 
 actor-wh40kupkasrkinquarters =
-   .description = Unlock Ogryns.
+   .description = Unlocks the Kasrkin.
 
 actor-wh40kupsentineldepot =
-   .description = Unlock Sentinels.
+   .description = Unlocks the Sentinels.
 
 actor-wh40kuphellhounddepot =
-   .description = Unlock Hellhounds.
+   .description = Unlocks the Hellhounds.
 
 actor-wh40kupbasiliskdepot =
-   .description = Unlock Basilisks.
+   .description = Unlocks the Basilisks.
 
 actor-wh40kupmarauderdepot =
-   .description = Unlock Marauder Bombers.
+   .description = Unlocks the Marauder Bombers.
 
 actor-wh40kuplemanrussdepot =
-   .description = Unlock Leman Russ.
+   .description = Unlocks the Leman Russ.
 
 actor-wh40kupfullscalewar =
-   .description = Unlock Leman Russ and Baneblade Tanks.
+   .description = Unlocks the Leman Russ and Baneblade Tanks.
 
 actor-wh40kupenergy1 =
    .description = Increases Energy of Generators.
@@ -7194,7 +7194,7 @@ actor-wh40kpriest =
    .description = Support Infantry.
       Strong vs Infantry.
       Weak vs Vehicles.
-      Can Upgrade Firepower of Nearby Infantry.
+      Can Upgrades the Firepower of Nearby Infantry.
 
 actor-wh40kcommandsquada =
    .description = Elite Infantry Squad.
@@ -7206,7 +7206,7 @@ actor-wh40kcommandsquad =
    .description = Support Infantry.
       Strong vs Infantry.
       Weak vs Vehicles.
-      Can Upgrade Firepower of Nearby Infantry.
+      Can Upgrades the Firepower of Nearby Infantry.
 
 actor-wh40kguardsquad =
    .description = Basic Infantry Squad.
@@ -7297,7 +7297,7 @@ actor-wh40karmorym =
 
 actor-wh40korbitalrelay =
    .description = Provides Deep Strike Support Powers.
-      Unlock Variants introduce the next units.
+      Unlocks the Variants introduce the next units.
       Rocket Marines = Adds Rocket Marines in the Strike.
       Flamer Marines = Adds Flamer Marines in the Strike.
       Bolter Marines = Adds Bolter Marines in the Strike.
@@ -7517,10 +7517,10 @@ actor-wh40kskullprobe =
       Weak vs Infantry.
 
 actor-wh40kupmonastery =
-   .description = Increases Field Command to 25% of health, Unlock new Tech.
+   .description = Increases Field Command to 25% of health, Unlocks the new Tech.
 
 actor-wh40kupmonastery2 =
-   .description = Increases Field Command to 25% of health, Unlock new Tech.
+   .description = Increases Field Command to 25% of health, Unlocks the new Tech.
 
 actor-wh40kupcapincrease =
    .description = Increase Marine Production.
@@ -7559,7 +7559,7 @@ actor-wh40kveteranupgrade2 =
    .description = Add +1 veteran rank to Leaders, and add more Health.
 
 actor-wh40kupmachineculticon =
-   .description = Increases Field Command to 25% of health, Unlock new Tech.
+   .description = Increases Field Command to 25% of health, Unlocks the new Tech.
 
 actor-wh40kupfraggrenade =
    .description = Enable the use of Grenades to Sargents.
@@ -7678,7 +7678,7 @@ actor-wh40knobleader =
 actor-wh40kmaddok =
    .description = Healer Boy.
       Can Hel Boyz.
-      Can be Upgrade wit Burna Boms.
+      Can be Upgrades the wit Burna Boms.
 
 actor-wh40kmeganobz =
    .description = Thicc Boyz.
@@ -7763,7 +7763,7 @@ actor-wh40kwartrakk =
    .description = Kustom Wartillery.
       Can atak Arkraft.
       Strong vs Mekz.
-      Can be Upgrade with Chukka Boms.
+      Can be Upgrades the with Chukka Boms.
 
 actor-pscwh40kwartrakk1 =
    .description = Replaces the Flamer with a Assault Bolter.
@@ -7936,13 +7936,14 @@ actor-wh40kjetpackbooster =
    .description = Upgrades Speed of Raptors.
 
 actor-wh40kdaemonfire =
-   .description = Upgrades Demons firepower /n Replaces Possessed Claws with Demon Fire.
+   .description = Upgrades the Possessed Maine 
+    Replaces Possessed Claws with Demon Fire.
 
 actor-wh40kupmonasteryc =
-   .description = Increases Monastery to 25% of health, Unlock new Tech.
+   .description = Increases Monastery to 25% of health, Unlocks new Tech.
 
 actor-wh40kupmonastery2c =
-   .description = Increases Monastery to 25% of health, Unlock new Tech.
+   .description = Increases Monastery to 25% of health, Unlocks new Tech.
 
 actor-wh40kupcapincreasec =
    .description = Increase Marine Production.
@@ -8915,49 +8916,49 @@ actor-2100polmav =
       Weak vs Tanks.
 
 actor-up2100uplmg1 =
-   .description = Unlock Machinegun Weapon.
+   .description = Unlocks the Machinegun Weapon.
 
 actor-up2100uptwinmg1 =
-   .description = Unlock Machinegun Weapon.
+   .description = Unlocks the Machinegun Weapon.
 
 actor-up2100uphurricane1 =
-   .description = Unlock Hurricane AA Weapon.
+   .description = Unlocks the Hurricane AA Weapon.
 
 actor-up2100upheavymg1 =
-   .description = Unlock Machinegun Weapon.
+   .description = Unlocks the Machinegun Weapon.
 
 actor-up2100upassaultmg1 =
-   .description = Unlock Machinegun Weapon.
+   .description = Unlocks the Machinegun Weapon.
 
 actor-up2100uptwinassaultmg1 =
-   .description = Unlock Machinegun Weapon.
+   .description = Unlocks the Machinegun Weapon.
 
 actor-up2100upflamer1 =
-   .description = Unlock Machinegun Weapon.
+   .description = Unlocks the Machinegun Weapon.
 
 actor-up2100upflamer2 =
-   .description = Unlock Machinegun Weapon.
+   .description = Unlocks the Machinegun Weapon.
 
 actor-up2100upflamer3 =
-   .description = Unlock Machinegun Weapon.
+   .description = Unlocks the Machinegun Weapon.
 
 actor-up2100upflamer4 =
-   .description = Unlock Machinegun Weapon.
+   .description = Unlocks the Machinegun Weapon.
 
 actor-up2100upflamer5 =
-   .description = Unlock Machinegun Weapon.
+   .description = Unlocks the Machinegun Weapon.
 
 actor-up2100upflamer6 =
-   .description = Unlock Machinegun Weapon.
+   .description = Unlocks the Machinegun Weapon.
 
 actor-up2100upinferno1 =
-   .description = Unlock Inferno Flamer Weapon.
+   .description = Unlocks the Inferno Flamer Weapon.
 
 actor-up2100upinferno2 =
-   .description = Unlock Machinegun Weapon.
+   .description = Unlocks the Machinegun Weapon.
 
 actor-up2100upinferno3 =
-   .description = Unlock Machinegun Weapon.
+   .description = Unlocks the Machinegun Weapon.
 
 actor-up2100uplmg2 =
    .description = MG Weapons make 20% more damage.
@@ -9005,7 +9006,7 @@ actor-up2100uplrk5 =
    .description = Upgrades the Target of Rockets.
 
 actor-up2100uplancer1 =
-   .description = Unlock Lancer Weapons.
+   .description = Unlocks the Lancer Weapons.
 
 actor-up2100uplancer2 =
    .description = Vehicles gains %5 more speed.
@@ -9020,13 +9021,13 @@ actor-up2100uplancer5 =
    .description = Vehicles gains %5 more speed.
 
 actor-up2100upbunkerbuster1 =
-   .description = Unlock Lancer Weapons.
+   .description = Unlocks the Lancer Weapons.
 
 actor-up2100uptankkiller1 =
-   .description = Tank Killer Unlock.
+   .description = Tank Killer Unlocks the.
 
 actor-up2100rkarray1 =
-   .description = Unlock Rockets Mini-Rockets Array.
+   .description = Unlocks the Rockets Mini-Rockets Array.
 
 actor-up2100uparmor1 =
    .description = Vehicles gains %10 more HP.
@@ -9056,7 +9057,7 @@ actor-up2100upengineer2 =
    .description = Upgrades Repairs Vehicles.
 
 actor-up2100upwall1 =
-   .description = Unlock Walls.
+   .description = Unlocks the Walls.
 
 actor-up2100upwall2 =
    .description = Defences gains %10 more HP.
@@ -9086,49 +9087,49 @@ actor-up2100upstructure3 =
    .description = Structures gains %10 more HP.
 
 actor-up2100uplcannon1 =
-   .description = Unlock Light Cannon Weapon.
+   .description = Unlocks the Light Cannon Weapon.
 
 actor-up2100uplcannon2 =
    .description = UUpgrade Cannons Weapons Firepower.
 
 actor-up2100uplcannon3 =
-   .description = Upgrade Cannons Weapons Firepower.
+   .description = Upgrades the Cannons Weapons Firepower.
 
 actor-up2100uplcannon4 =
-   .description = Upgrade Cannons Weapons Firepower.
+   .description = Upgrades the Cannons Weapons Firepower.
 
 actor-up2100uplcannon5 =
-   .description = Upgrade Cannons Weapons Firepower.
+   .description = Upgrades the Cannons Weapons Firepower.
 
 actor-up2100uplcannon6 =
-   .description = Upgrade Cannons Weapons Firepower.
+   .description = Upgrades the Cannons Weapons Firepower.
 
 actor-up2100uplcannon7 =
-   .description = Upgrade Cannons Weapons Firepower.
+   .description = Upgrades the Cannons Weapons Firepower.
 
 actor-up2100upmcannon1 =
-   .description = Unlock Medium Cannon Weapon.
+   .description = Unlocks the Medium Cannon Weapon.
 
 actor-up2100uphcannon1 =
-   .description = Unlock Heavy Cannon Weapon.
+   .description = Unlocks the Heavy Cannon Weapon.
 
 actor-up2100upacannon1 =
-   .description = Unlock Assault Cannon Weapon.
+   .description = Unlocks the Assault Cannon Weapon.
 
 actor-up2100uphycannon =
-   .description = Unlock Hyper Velocity Cannon Weapon.
+   .description = Unlocks the Hyper Velocity Cannon Weapon.
 
 actor-up2100upneedle =
-   .description = Unlock Needle Gun Weapon.
+   .description = Unlocks the Needle Gun Weapon.
 
 actor-up2100upflak1 =
-   .description = Unlock AA Flak Weapon.
+   .description = Unlocks the AA Flak Weapon.
 
 actor-up2100upa2cannon1 =
-   .description = Unlock Twin Assault Cannon Weapon.
+   .description = Unlocks the Twin Assault Cannon Weapon.
 
 actor-up2100upmortar1 =
-   .description = Unlock Mortar Weapon.
+   .description = Unlocks the Mortar Weapon.
 
 actor-up2100upmortar2 =
    .description = Upgrades Mortar Firepower.
@@ -9149,79 +9150,79 @@ actor-up2100upmortar7 =
    .description = Upgrades Mortar Firepower.
 
 actor-up2100upbombard1 =
-   .description = Unlock Bombard Weapon.
+   .description = Unlocks the Bombard Weapon.
 
 actor-up2100uppepper1 =
-   .description = Unlock Bombard Weapon.
+   .description = Unlocks the Bombard Weapon.
 
 actor-2100uphotwizer1 =
-   .description = Unlock Bombard Weapon.
+   .description = Unlocks the Bombard Weapon.
 
 actor-up2100uptracks1 =
-   .description = Unlock Heavy Tracked Vehicles.
+   .description = Unlocks the Heavy Tracked Vehicles.
 
 actor-up2100uphover1 =
-   .description = Unlock Hovercraft Vehicles.
+   .description = Unlocks the Hovercraft Vehicles.
 
 actor-up2100upvtols1 =
-   .description = Unlock Vtols Vehicles.
+   .description = Unlocks the Vtols Vehicles.
 
 actor-up2100upviper1 =
-   .description = Unlock Viper Vehicles.
+   .description = Unlocks the Viper Vehicles.
 
 actor-up2100upbug1 =
-   .description = Unlock Bug Vehicles.
+   .description = Unlocks the Bug Vehicles.
 
 actor-up2100upcobra1 =
-   .description = Unlock Cobra Vehicles.
+   .description = Unlocks the Cobra Vehicles.
 
 actor-up2100uppython1 =
-   .description = Unlock Python Vehicles.
+   .description = Unlocks the Python Vehicles.
 
 actor-up2100upscorpion1 =
-   .description = Unlock Scorpion Vehicles.
+   .description = Unlocks the Scorpion Vehicles.
 
 actor-up2100upmantis1 =
-   .description = Unlock Mantis Vehicles.
+   .description = Unlocks the Mantis Vehicles.
 
 actor-up2100upleopard1 =
-   .description = Unlock Leopard Vehicles.
+   .description = Unlocks the Leopard Vehicles.
 
 actor-up2100uppanther1 =
-   .description = Unlock Panther Vehicles.
+   .description = Unlocks the Panther Vehicles.
 
 actor-up2100uptiger1 =
-   .description = Unlock Tiger Vehicles.
+   .description = Unlocks the Tiger Vehicles.
 
 actor-up2100upretaliaton1 =
-   .description = Unlock Retaliation Vehicles.
+   .description = Unlocks the Retaliation Vehicles.
 
 actor-up2100upretribution1 =
-   .description = Unlock Panther Vehicles.
+   .description = Unlocks the Panther Vehicles.
 
 actor-up2100upvengeance1 =
-   .description = Unlock Tiger Vehicles.
+   .description = Unlocks the Tiger Vehicles.
 
 actor-up2100uppowermodule1 =
-   .description = Unlock Power Modules.
+   .description = Unlocks the Power Modules.
 
 actor-up2100upfactorymodule1 =
-   .description = Unlock Factory Modules.
+   .description = Unlocks the Factory Modules.
 
 actor-up2100upresearchmodule1 =
-   .description = Unlock Research Center Modules.
+   .description = Unlocks the Research Center Modules.
 
 actor-up2100upsypnaticdata1 =
-   .description = Upgrade Research Speed.
+   .description = Upgrades the Research Speed.
 
 actor-up2100upsypnaticdata2 =
-   .description = Upgrade Research Speed.
+   .description = Upgrades the Research Speed.
 
 actor-up2100upsypnaticdata3 =
-   .description = Upgrade Research Speed.
+   .description = Upgrades the Research Speed.
 
 actor-up2100upsypnaticdata4 =
-   .description = Upgrade Research Speed.
+   .description = Upgrades the Research Speed.
 
 power-lasersat =
    .description = Laser Satellite
@@ -9259,7 +9260,7 @@ actor-sowgoldmine =
       Stores 1000 resources.
 
 actor-sowpower =
-   .description = Accelerates build times\Doubles all Research Points for each Research Center.
+   .description = Accelerates build times. Doubles all Research Points for each Research Center.
       Can be only built once.
 
 actor-sowresearch =
@@ -11943,7 +11944,7 @@ faction-ufsc-sow =
    .description = UFSC from State of War
        United Federation of Seven Continents. The ultimate steamroller.
        Generates income via mines.
-       Uses an Advancer unit to Upgrade and Repair Buildings.
+       Uses an Advancer unit to Upgrades the and Repair Buildings.
        Support Powers: Asteroids, Fighter, Bomber, Tripler.
 
 faction-snes-simcity =
