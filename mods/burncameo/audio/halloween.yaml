@@ -60,7 +60,7 @@ Halloween_Tomb_Voice:
 ####################################################################################################
 
 Halloween_Cow:
-    DefaultVariant: .wav
+	DefaultVariant: .wav
 	Voices:
 		Select: d2_cow_what_1, d2_cow_what_2, d2_cow_what_3
 		Attack: d2_cow_yes_1, d2_cow_yes_2, d2_cow_yes_3, d2_cow_yes_4, d2_cow_yes_5
@@ -73,7 +73,7 @@ Halloween_Cow:
 		Poisoned: d2_cow_yes_1
 
 Halloween_Garfield:
-    DefaultVariant: .wav
+	DefaultVariant: .wav
 	Voices:
 		Select: Gazorpazorpfield_what_1, Gazorpazorpfield_what_2, Gazorpazorpfield_what_3, Gazorpazorpfield_what_4
 		Attack: Gazorpazorpfield_yes_1, Gazorpazorpfield_yes_2, Gazorpazorpfield_yes_3
@@ -86,7 +86,7 @@ Halloween_Garfield:
 		Poisoned: Gazorpazorpfield_yes_3
 
 Halloween_Peter_Griffin:
-    DefaultVariant: .wav
+	DefaultVariant: .wav
 	Voices:
 		Select: halloween_pg_what_1, halloween_pg_what_2, halloween_pg_what_3, halloween_pg_what_4, halloween_pg_what_5, halloween_pg_what_6, halloween_pg_what_7, halloween_pg_what_8, halloween_pg_what_9, halloween_pg_what_10, halloween_pg_what_11, halloween_pg_what_12, halloween_pg_what_13, halloween_pg_what_14, halloween_pg_what_15
 		Attack: halloween_pg_yes_1, halloween_pg_yes_2, halloween_pg_yes_3, halloween_pg_yes_4, halloween_pg_yes_5, halloween_pg_yes_6, halloween_pg_yes_7, halloween_pg_yes_8, halloween_pg_yes_9, halloween_pg_yes_10, halloween_pg_yes_11, halloween_pg_yes_12, halloween_pg_yes_13
@@ -98,8 +98,21 @@ Halloween_Peter_Griffin:
 		Zapped: halloween_pg_yes_1
 		Poisoned: halloween_pg_yes_1
 
+Halloween_SweetTooth_voice:
+	DefaultVariant: .wav
+	Voices:
+		Select: sweettooth_what_1, sweettooth_what_2, sweettooth_what_3, sweettooth_what_4, sweettooth_what_5
+		Attack: sweettooth_yes_1, sweettooth_yes_2, sweettooth_yes_3, sweettooth_yes_4
+		Action: sweettooth_yes_1, sweettooth_yes_2, sweettooth_yes_3, sweettooth_yes_4
+		Move: sweettooth_yes_1, sweettooth_yes_2, sweettooth_yes_3, sweettooth_yes_4
+		Die: sweettooth_yes_1
+		Build: sweettooth_yes_1
+		Burned: sweettooth_yes_1
+		Zapped: sweettooth_yes_1
+		Poisoned: sweettooth_yes_1
+
 Halloween_TimGhost:
-    DefaultVariant: .wav
+	DefaultVariant: .wav
 	Voices:
 		Select: pacman_siren
 		Attack: pacman_siren
@@ -110,3 +123,4 @@ Halloween_TimGhost:
 		Burned: pacman_siren
 		Zapped: pacman_siren
 		Poisoned: pacman_siren
+

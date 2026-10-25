@@ -867,10 +867,22 @@ halloween_tower:
 		Tick: 100
 		Offset: 0,-13
 	dead:
-	bib: 
+	bib:
 		Filename: mbTSLA.tem
+		TilesetFilenames:
+			DESERT: mbTSLA.des
+			WINTER: mbTSLA.win
+			SNOW: mbTSLA.sno
+			BARREN: mbTSLA.bar
+			JUNGLE: mbTSLA.jun
+			RA_SNOW: mbTSLA.sno
+			RA_DESERT: mbTSLA.des
+			RA_INTERIOR: mbTSLA.int
+			ARRAKIS: mbTSLA.des
+			ARRAKIS2: mbTSLA.des
 		Length: *
 		UseTilesetExtension: false
+		Offset: 0,0
 	icon: 
 		Filename: halloween_cameos.shp
 		Start: 6
@@ -898,10 +910,22 @@ halloween_spirittower:
 		Offset: 0,-13
 		Length: *
 	dead:
-	bib: 
+	bib:
 		Filename: mbTSLA.tem
+		TilesetFilenames:
+			DESERT: mbTSLA.des
+			WINTER: mbTSLA.win
+			SNOW: mbTSLA.sno
+			BARREN: mbTSLA.bar
+			JUNGLE: mbTSLA.jun
+			RA_SNOW: mbTSLA.sno
+			RA_DESERT: mbTSLA.des
+			RA_INTERIOR: mbTSLA.int
+			ARRAKIS: mbTSLA.des
+			ARRAKIS2: mbTSLA.des
 		Length: *
 		UseTilesetExtension: false
+		Offset: 0,0
 	icon: 
 		Filename: halloween_cameos.shp
 		Start: 7
