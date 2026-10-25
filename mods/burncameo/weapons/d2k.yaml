@@ -150,14 +150,14 @@ Debris4:
 		Damage: 10000
 	Warhead@TankDestroyerCannonPercentage: HealthPercentageDamage
 		Damage: 5
-	Warhead@MediumCannon: SpreadDamage
-		Damage: 10000
+	# Warhead@MediumCannon: SpreadDamage
+	# 	Damage: 10000
 	Warhead@MediumCannonPercentage: HealthPercentageDamage
 		Damage: 5
-	Warhead@HeavyCannon: SpreadDamage
-		Damage: 10000
-	Warhead@HeavyCannonPercentage: HealthPercentageDamage
-		Damage: 5
+	# Warhead@HeavyCannon: SpreadDamage
+	# 	Damage: 10000
+	# Warhead@HeavyCannonPercentage: HealthPercentageDamage
+	# 	Damage: 5
 
 80mm_A:
 	Inherits: ^D2K_Cannon
@@ -545,14 +545,14 @@ D2K_155mm:
 		Damage: 6
 	Warhead@ShrapnelWeapon: SpreadDamage
 		Damage: 1200
-	Warhead@ShrapnelWeaponFriendlyFire: SpreadDamage
-		Damage: 600
-	Warhead@ShrapnelWeaponPercentage: HealthPercentageDamage
-		Damage: 6
-	Warhead@HeavyBomb: SpreadDamage
-		Damage: 1200
-	Warhead@HeavyBombPercentage: HealthPercentageDamage
-		Damage: 6
+	# Warhead@ShrapnelWeaponFriendlyFire: SpreadDamage
+	# 	Damage: 600
+	# Warhead@ShrapnelWeaponPercentage: HealthPercentageDamage
+	# 	Damage: 6
+	# Warhead@HeavyBomb: SpreadDamage
+	# 	Damage: 1200
+	# Warhead@HeavyBombPercentage: HealthPercentageDamage
+	# 	Damage: 6
 	Warhead@4Concrete: DamagesConcrete
 		Damage: 5625
 	Warhead@Effect: CreateEffect
@@ -612,16 +612,16 @@ D2K_155mm2:
 		Damage: 6000
 	Warhead@MediumFlameWeaponPercentage: HealthPercentageDamage
 		Damage: 6
-	Warhead@ShrapnelWeapon: SpreadDamage
-		Damage: 12000
-	Warhead@ShrapnelWeaponFriendlyFire: SpreadDamage
-		Damage: 6000
-	Warhead@ShrapnelWeaponPercentage: HealthPercentageDamage
-		Damage: 6
-	Warhead@HeavyBomb: SpreadDamage
-		Damage: 12000
-	Warhead@HeavyBombPercentage: HealthPercentageDamage
-		Damage: 6
+	# Warhead@ShrapnelWeapon: SpreadDamage
+	# 	Damage: 12000
+	# Warhead@ShrapnelWeaponFriendlyFire: SpreadDamage
+	# 	Damage: 6000
+	# Warhead@ShrapnelWeaponPercentage: HealthPercentageDamage
+	# 	Damage: 6
+	# Warhead@HeavyBomb: SpreadDamage
+	# 	Damage: 12000
+	# Warhead@HeavyBombPercentage: HealthPercentageDamage
+	# 	Damage: 6
 	-Warhead@Effect1:
 	-Warhead@Effect2:
 	Warhead@Effect: CreateEffect
@@ -658,16 +658,16 @@ D2K_155mm3:
 		Damage: 4000
 	Warhead@GrenadePercentage: HealthPercentageDamage
 		Damage: 4
-	Warhead@ShrapnelWeapon: SpreadDamage
-		Damage: 8000
-	Warhead@ShrapnelWeaponFriendlyFire: SpreadDamage
-		Damage: 4000
-	Warhead@ShrapnelWeaponPercentage: HealthPercentageDamage
-		Damage: 4
-	Warhead@HeavyBomb: SpreadDamage
-		Damage: 8000
-	Warhead@HeavyBombPercentage: HealthPercentageDamage
-		Damage: 4
+	# Warhead@ShrapnelWeapon: SpreadDamage
+	# 	Damage: 8000
+	# Warhead@ShrapnelWeaponFriendlyFire: SpreadDamage
+	# 	Damage: 4000
+	# Warhead@ShrapnelWeaponPercentage: HealthPercentageDamage
+	# 	Damage: 4
+	# Warhead@HeavyBomb: SpreadDamage
+	# 	Damage: 8000
+	# Warhead@HeavyBombPercentage: HealthPercentageDamage
+	# 	Damage: 4
 	-Warhead@Effect1:
 	-Warhead@Effect2:
 	Warhead@Effect: CreateEffect
@@ -860,15 +860,15 @@ D2K_Rocket_Trooper:
 	Warhead@FlakWeapon: SpreadDamage
 		ValidTargets: Ground, Water, Trees, Air
 		Damage: 4000
-	Warhead@FlakWeaponPercentage: HealthPercentageDamage
-		ValidTargets: Ground, Water, Trees, Air
-		Damage: 4
-	Warhead@HeavyMissile: SpreadDamage
-		ValidTargets: Ground, Water, Trees, Air
-		Damage: 4000
-	Warhead@HeavyMissilePercentage: HealthPercentageDamage
-		ValidTargets: Ground, Water, Trees, Air
-		Damage: 4
+	# Warhead@FlakWeaponPercentage: HealthPercentageDamage
+	# 	ValidTargets: Ground, Water, Trees, Air
+	# 	Damage: 4
+	# Warhead@HeavyMissile: SpreadDamage
+	# 	ValidTargets: Ground, Water, Trees, Air
+	# 	Damage: 4000
+	# Warhead@HeavyMissilePercentage: HealthPercentageDamage
+	# 	ValidTargets: Ground, Water, Trees, Air
+	# 	Damage: 4
 
 D2K_Rocket_Trooper2:
 	Inherits: ^Grenade
@@ -900,15 +900,15 @@ D2K_Rocket_Trooper2:
 	Warhead@RailgunWeapon: SpreadDamage
 		ValidTargets: Ground, Water, Trees, Air
 		Damage: 4000
-	Warhead@RailgunWeaponPercentage: HealthPercentageDamage
-		ValidTargets: Ground, Water, Trees, Air
-		Damage: 4
-	Warhead@MediumCannon: SpreadDamage
-		ValidTargets: Ground, Water, Trees, Air
-		Damage: 4000
-	Warhead@MediumCannonPercentage: HealthPercentageDamage
-		ValidTargets: Ground, Water, Trees, Air
-		Damage: 4
+	# Warhead@RailgunWeaponPercentage: HealthPercentageDamage
+	# 	ValidTargets: Ground, Water, Trees, Air
+	# 	Damage: 4
+	# Warhead@MediumCannon: SpreadDamage
+	# 	ValidTargets: Ground, Water, Trees, Air
+	# 	Damage: 4000
+	# Warhead@MediumCannonPercentage: HealthPercentageDamage
+	# 	ValidTargets: Ground, Water, Trees, Air
+	# 	Damage: 4
 
 D2K_Combat_Fleet:
 	Inherits: D2K_Rocket
@@ -971,18 +971,18 @@ D2K_TowerMissile:
 	Warhead@MediumFlameWeaponPercentage: HealthPercentageDamage
 		ValidTargets: Ground, Water, Trees, Air
 		Damage: 2
-	Warhead@FlakWeapon: SpreadDamage
-		ValidTargets: Ground, Water, Trees, Air
-		Damage: 4000
-	Warhead@FlakWeaponPercentage: HealthPercentageDamage
-		ValidTargets: Ground, Water, Trees, Air
-		Damage: 2
-	Warhead@HeavyMissile: SpreadDamage
-		ValidTargets: Ground, Water, Trees, Air
-		Damage: 4000
-	Warhead@HeavyMissilePercentage: HealthPercentageDamage
-		ValidTargets: Ground, Water, Trees, Air
-		Damage: 2
+	# Warhead@FlakWeapon: SpreadDamage
+	# 	ValidTargets: Ground, Water, Trees, Air
+	# 	Damage: 4000
+	# Warhead@FlakWeaponPercentage: HealthPercentageDamage
+	# 	ValidTargets: Ground, Water, Trees, Air
+	# 	Damage: 2
+	# Warhead@HeavyMissile: SpreadDamage
+	# 	ValidTargets: Ground, Water, Trees, Air
+	# 	Damage: 4000
+	# Warhead@HeavyMissilePercentage: HealthPercentageDamage
+	# 	ValidTargets: Ground, Water, Trees, Air
+	# 	Damage: 2
 
 mtank_pri:
 	Inherits: ^D2KMissile
@@ -1027,21 +1027,21 @@ mtank_pri2:
 	Warhead@GrenadePercentage: HealthPercentageDamage
 		ValidTargets: Ground, Water, Trees, Air
 		Damage: 4
-	Warhead@MediumFlameWeapon: SpreadDamage
-		ValidTargets: Ground, Water, Trees, Air
-		Damage: 8000
-	Warhead@MediumFlameWeaponFriendlyFire: SpreadDamage
-		ValidTargets: Ground, Water, Trees, Air
-		Damage: 4000
-	Warhead@MediumFlameWeaponPercentage: HealthPercentageDamage
-		ValidTargets: Ground, Water, Trees, Air
-		Damage: 4
-	Warhead@HeavyMissile: SpreadDamage
-		ValidTargets: Ground, Water, Trees, Air
-		Damage: 8000
-	Warhead@HeavyMissilePercentage: HealthPercentageDamage
-		ValidTargets: Ground, Water, Trees, Air
-		Damage: 4
+	# Warhead@MediumFlameWeapon: SpreadDamage
+	# 	ValidTargets: Ground, Water, Trees, Air
+	# 	Damage: 8000
+	# Warhead@MediumFlameWeaponFriendlyFire: SpreadDamage
+	# 	ValidTargets: Ground, Water, Trees, Air
+	# 	Damage: 4000
+	# Warhead@MediumFlameWeaponPercentage: HealthPercentageDamage
+	# 	ValidTargets: Ground, Water, Trees, Air
+	# 	Damage: 4
+	# Warhead@HeavyMissile: SpreadDamage
+	# 	ValidTargets: Ground, Water, Trees, Air
+	# 	Damage: 8000
+	# Warhead@HeavyMissilePercentage: HealthPercentageDamage
+	# 	ValidTargets: Ground, Water, Trees, Air
+		# Damage: 4
 	Warhead@Effect: CreateEffect
 		Explosions: d2k_med_explosion
 
@@ -2141,7 +2141,7 @@ d2k_grenade:
 		Shadow: true
 	Warhead@Grenade: SpreadDamage
 		ValidTargets: Ground, Water, Trees, Air
-		Damage: 10000
+		Damage: 12000
 		DamageCalculationType: ClosestTargetablePosition
 	Warhead@GrenadeFriendlyFire: SpreadDamage
 		ValidTargets: Ground, Water, Trees, Air
@@ -2151,26 +2151,26 @@ d2k_grenade:
 		ValidTargets: Ground, Water, Trees, Air
 		Damage: 5
 		DamageCalculationType: ClosestTargetablePosition
-	Warhead@ShrapnelWeapon: SpreadDamage
-		ValidTargets: Ground, Water, Trees, Air
-		Damage: 10000
-		DamageCalculationType: ClosestTargetablePosition
-	Warhead@ShrapnelWeaponFriendlyFire: SpreadDamage
-		ValidTargets: Ground, Water, Trees, Air
-		Damage: 5000
-		DamageCalculationType: ClosestTargetablePosition
-	Warhead@ShrapnelWeaponPercentage: HealthPercentageDamage
-		ValidTargets: Ground, Water, Trees, Air
-		Damage: 5
-		DamageCalculationType: ClosestTargetablePosition
-	Warhead@HeavyCannon: SpreadDamage
-		ValidTargets: Ground, Water, Trees, Air
-		Damage: 10000
-		DamageCalculationType: ClosestTargetablePosition
-	Warhead@HeavyCannonPercentage: HealthPercentageDamage
-		ValidTargets: Ground, Water, Trees, Air
-		Damage: 5
-		DamageCalculationType: ClosestTargetablePosition
+	# Warhead@ShrapnelWeapon: SpreadDamage
+	# 	ValidTargets: Ground, Water, Trees, Air
+	# 	Damage: 10000
+	# 	DamageCalculationType: ClosestTargetablePosition
+	# Warhead@ShrapnelWeaponFriendlyFire: SpreadDamage
+	# 	ValidTargets: Ground, Water, Trees, Air
+	# 	Damage: 5000
+	# 	DamageCalculationType: ClosestTargetablePosition
+	# Warhead@ShrapnelWeaponPercentage: HealthPercentageDamage
+	# 	ValidTargets: Ground, Water, Trees, Air
+	# 	Damage: 5
+	# 	DamageCalculationType: ClosestTargetablePosition
+	# Warhead@HeavyCannon: SpreadDamage
+	# 	ValidTargets: Ground, Water, Trees, Air
+	# 	Damage: 10000
+	# 	DamageCalculationType: ClosestTargetablePosition
+	# Warhead@HeavyCannonPercentage: HealthPercentageDamage
+	# 	ValidTargets: Ground, Water, Trees, Air
+	# 	Damage: 5
+	# 	DamageCalculationType: ClosestTargetablePosition
 	Warhead@Smudge: LeaveSmudge
 		SmudgeType: SandCrater
 		InvalidTargets: Vehicle, Structure
@@ -2787,9 +2787,9 @@ HMG_turret:
 	Warhead@SmallArmsPercentage: HealthPercentageDamage
 		ValidTargets: Ground, Water, Trees
 		Damage: 1
-	Warhead@Chaingun: SpreadDamage
-		ValidTargets: Ground, Water, Trees
-		Damage: 1500
+	# Warhead@Chaingun: SpreadDamage
+	# 	ValidTargets: Ground, Water, Trees
+	# 	Damage: 1500
 	Warhead@ChaingunPercentage: HealthPercentageDamage
 		ValidTargets: Ground, Water, Trees
 		Damage: 1
@@ -2868,18 +2868,18 @@ HMG_Duelist:
 	Warhead@MediumMissilePercentage: HealthPercentageDamage
 		ValidTargets: Ground, Water, Trees, Air
 		Damage: 1
-	Warhead@FlakWeapon: SpreadDamage
-		ValidTargets: Ground, Water, Trees, Air
-		Damage: 2000
-	Warhead@FlakWeaponPercentage: HealthPercentageDamage
-		ValidTargets: Ground, Water, Trees, Air
-		Damage: 1
-	Warhead@Chaingun: SpreadDamage
-		ValidTargets: Ground, Water, Trees, Air
-		Damage: 2000
-	Warhead@ChaingunPercentage: HealthPercentageDamage
-		ValidTargets: Ground, Water, Trees, Air
-		Damage: 1
+	# Warhead@FlakWeapon: SpreadDamage
+	# 	ValidTargets: Ground, Water, Trees, Air
+	# 	Damage: 2000
+	# Warhead@FlakWeaponPercentage: HealthPercentageDamage
+	# 	ValidTargets: Ground, Water, Trees, Air
+	# 	Damage: 1
+	# Warhead@Chaingun: SpreadDamage
+	# 	ValidTargets: Ground, Water, Trees, Air
+	# 	Damage: 2000
+	# Warhead@ChaingunPercentage: HealthPercentageDamage
+	# 	ValidTargets: Ground, Water, Trees, Air
+	# 	Damage: 1
 
 HMG_Duelist_upgrade:
 	Inherits: ^LaserWeapon
@@ -3154,7 +3154,7 @@ D2KSniperRifle:
 		Inaccuracy: 0c384
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c128
-		Damage: 10000
+		Damage: 90000
 		Versus:
 			None: 100
 			Wood: 20
@@ -3732,51 +3732,51 @@ d2k_air_drone:
 		Damage: 1000
 		DamageTypes: Prone75Percent, TriggerProne, FireDeath, Incendiary
 		ValidRelationships: Neutral, Enemy
-	Warhead@LightChemicalWeaponPercentage: HealthPercentageDamage
-		ValidTargets: Ground, Water, Trees, Air
-		Damage: 1
-		DamageTypes: Prone75Percent, TriggerProne, FireDeath, Incendiary
-		ValidRelationships: Neutral, Enemy
-	Warhead@FlakWeapon: SpreadDamage
-		ValidTargets: Ground, Water, Trees, Air
-		Damage: 2000
-		DamageTypes: Prone75Percent, TriggerProne, FireDeath, Incendiary
-		ValidRelationships: Neutral, Enemy
-	Warhead@FlakWeaponPercentage: HealthPercentageDamage
-		ValidTargets: Ground, Water, Trees, Air
-		Damage: 1
-		DamageTypes: Prone75Percent, TriggerProne, FireDeath, Incendiary
-		ValidRelationships: Neutral, Enemy
-	Warhead@MediumMissile: SpreadDamage
-		ValidTargets: Ground, Water, Trees, Air
-		Damage: 2000
-		DamageTypes: Prone75Percent, TriggerProne, FireDeath, Incendiary
-		ValidRelationships: Neutral, Enemy
-	Warhead@MediumMissilePercentage: HealthPercentageDamage
-		ValidTargets: Ground, Water, Trees, Air
-		Damage: 1
-		DamageTypes: Prone75Percent, TriggerProne, FireDeath, Incendiary
-		ValidRelationships: Neutral, Enemy
-	Warhead@HeavyBomb: SpreadDamage
-		ValidTargets: Ground, Water, Trees, Air
-		Damage: 2000
-		DamageTypes: Prone75Percent, TriggerProne, FireDeath, Incendiary
-		ValidRelationships: Neutral, Enemy
-	Warhead@HeavyBombPercentage: HealthPercentageDamage
-		ValidTargets: Ground, Water, Trees, Air
-		Damage: 1
-		DamageTypes: Prone75Percent, TriggerProne, FireDeath, Incendiary
-		ValidRelationships: Neutral, Enemy
-	Warhead@HeavyMissile: SpreadDamage
-		ValidTargets: Ground, Water, Trees, Air
-		Damage: 2000
-		DamageTypes: Prone75Percent, TriggerProne, FireDeath, Incendiary
-		ValidRelationships: Neutral, Enemy
-	Warhead@HeavyMissilePercentage: HealthPercentageDamage
-		ValidTargets: Ground, Water, Trees, Air
-		Damage: 1
-		DamageTypes: Prone75Percent, TriggerProne, FireDeath, Incendiary
-		ValidRelationships: Neutral, Enemy
+	# Warhead@LightChemicalWeaponPercentage: HealthPercentageDamage
+	# 	ValidTargets: Ground, Water, Trees, Air
+	# 	Damage: 1
+	# 	DamageTypes: Prone75Percent, TriggerProne, FireDeath, Incendiary
+	# 	ValidRelationships: Neutral, Enemy
+	# Warhead@FlakWeapon: SpreadDamage
+	# 	ValidTargets: Ground, Water, Trees, Air
+	# 	Damage: 2000
+	# 	DamageTypes: Prone75Percent, TriggerProne, FireDeath, Incendiary
+	# 	ValidRelationships: Neutral, Enemy
+	# Warhead@FlakWeaponPercentage: HealthPercentageDamage
+	# 	ValidTargets: Ground, Water, Trees, Air
+	# 	Damage: 1
+	# 	DamageTypes: Prone75Percent, TriggerProne, FireDeath, Incendiary
+	# 	ValidRelationships: Neutral, Enemy
+	# Warhead@MediumMissile: SpreadDamage
+	# 	ValidTargets: Ground, Water, Trees, Air
+	# 	Damage: 2000
+	# 	DamageTypes: Prone75Percent, TriggerProne, FireDeath, Incendiary
+	# 	ValidRelationships: Neutral, Enemy
+	# Warhead@MediumMissilePercentage: HealthPercentageDamage
+	# 	ValidTargets: Ground, Water, Trees, Air
+	# 	Damage: 1
+	# 	DamageTypes: Prone75Percent, TriggerProne, FireDeath, Incendiary
+	# 	ValidRelationships: Neutral, Enemy
+	# Warhead@HeavyBomb: SpreadDamage
+	# 	ValidTargets: Ground, Water, Trees, Air
+	# 	Damage: 2000
+	# 	DamageTypes: Prone75Percent, TriggerProne, FireDeath, Incendiary
+	# 	ValidRelationships: Neutral, Enemy
+	# Warhead@HeavyBombPercentage: HealthPercentageDamage
+	# 	ValidTargets: Ground, Water, Trees, Air
+	# 	Damage: 1
+	# 	DamageTypes: Prone75Percent, TriggerProne, FireDeath, Incendiary
+	# 	ValidRelationships: Neutral, Enemy
+	# Warhead@HeavyMissile: SpreadDamage
+	# 	ValidTargets: Ground, Water, Trees, Air
+	# 	Damage: 2000
+	# 	DamageTypes: Prone75Percent, TriggerProne, FireDeath, Incendiary
+	# 	ValidRelationships: Neutral, Enemy
+	# Warhead@HeavyMissilePercentage: HealthPercentageDamage
+	# 	ValidTargets: Ground, Water, Trees, Air
+	# 	Damage: 1
+	# 	DamageTypes: Prone75Percent, TriggerProne, FireDeath, Incendiary
+	# 	ValidRelationships: Neutral, Enemy
 	Warhead@Shrapnel: FireShrapnel
 		ValidTargets: Ground, Water, Trees, Air
 		Weapon: PhoenixRocketShrapnel
@@ -3808,12 +3808,12 @@ d2k_air_drone_guns:
 	Warhead@SmallArmsPercentage: HealthPercentageDamage
 		ValidTargets: Ground, Water, Trees, Air
 		Damage: 2
-	Warhead@Chaingun: SpreadDamage
-		ValidTargets: Ground, Water, Trees, Air
-		Damage: 4000
-	Warhead@ChaingunPercentage: HealthPercentageDamage
-		ValidTargets: Ground, Water, Trees, Air
-		Damage: 2
+	# Warhead@Chaingun: SpreadDamage
+	# 	ValidTargets: Ground, Water, Trees, Air
+	# 	Damage: 4000
+	# Warhead@ChaingunPercentage: HealthPercentageDamage
+	# 	ValidTargets: Ground, Water, Trees, Air
+	# 	Damage: 2
 
 d2k_air_drone_guns_upgrade:
 	Inherits: ^HeavyCannon

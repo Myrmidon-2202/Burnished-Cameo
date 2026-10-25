@@ -7102,12 +7102,13 @@ SCARCHON:
 		TurnSpeed: 15
 		Locomotor: hover
 	Health:
-		HP: 500
+		HP: 10
 	Repairable:
 		HpPerStep: 17500
 	ChangesHealth@SelfHealing:
 		Step: 140
 	Shielded:
+		InitialStrength: 35000
 		RegenAmount: 280
 	Armor:
 		Type: Medium

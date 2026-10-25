@@ -559,12 +559,122 @@ xmas_santas_house:
 	SpawnActorOnDeath@Santa4:
 		Actor: EVILCRATE
 		Probability: 80
-		
+
 ^SpawnChristmasCrate:
 	SpawnActorOnDeath@Santa:
 		Actor: EVILCRATE
 		Probability: 75
-	
+
+# drsatanclawz:
+# 	Inherits: ^Soldier
+# 	Inherits@EXPERIENCE: ^GainsExperience
+# 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+# 	Inherits@DECORATIONS: ^InfantryExperienceHospitalHazmatOverrides
+# 	Inherits@DRShadow: ^InfantryShadows
+# 	Valued:
+# 		Cost: 400
+# 	Tooltip:
+# 		Name: Satan Clawz
+# 	UpdatesPlayerStatistics:
+# 		AddToArmyValue: true
+# 	Buildable:
+# 		BuildPaletteOrder: 20
+# 		Prerequisites: barracks
+# 		Queue: Infantry
+# 		Description: actor-drsatanclawz.description
+# 	Mobile:
+# 		Speed: 56
+# 	Health:
+# 		HP: 18000
+# 	AutoTarget:
+# 		ScanRadius: 4
+# 	Armament@PRIMARY: ##########
+# 		Weapon: DRSatanClawzMG
+# 	Armament@GARRISONED: ##########
+# 		Name: garrisoned
+# 		Weapon: RAVulcan
+# 	AttackFrontal:
+# 		FacingTolerance: 0
+# 	WithInfantryBody:
+# 		IdleSequences: idle1,idle2,idle3,idle4
+# 		DefaultAttackSequence: shoot
+# 	Parachutable:
+# 	Inherits@EXT: ^ExternalConditions ##########
+# 	AcceptsDeliveredExperience: ##########
+# 		ValidTypes: infantry ##########
+# 	RenderSprites:
+# 	Voiced:
+# 		VoiceSet: DRSantaVoice
+# 	ActorStatValues:
+# 		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience, MaxRange
+
+# drsatanclawzevent:
+# 	Inherits: drsatanclawz
+# 	RenderSprites:
+# 		Image: drsatanclawz
+# 	Mobile:
+# 		Speed: 60
+# 	Health:
+# 		HP: 18000
+# 	AutoTarget:
+# 		ScanRadius: 5
+# 	SpawnActorOnDeath@Santa:
+# 		Actor: SATANCLAWZCRATE
+# 		Probability: 75
+
+# satanclawzcrate:
+# 	Inherits: ^Crate
+# 	Crate:
+# 		Duration: 6000
+# 	GiveCashCrateAction:
+# 		Amount: 200
+# 		SelectionShares: 25
+# 	ExplodeCrateAction@fire:
+# 		Weapon: HeliCrash
+# 		SelectionShares: 5
+# 	GiveUnitCrateAction:
+# 		Units: drsatanglobievent
+# 		Owner: Creeps
+# 		SelectionShares: 5
+# 	GiveUnitCrateAction@yourdrone:
+# 		Units: techgdrone
+# 		SelectionShares: 5
+# 	GiveUnitCrateAction:
+# 		Units: techgdrone
+# 		Owner: Creeps
+# 		SelectionShares: 5
+# 	GiveUnitCrateAction@yourgoblin:
+# 		SelectionShares: 6
+# 		Units: drsatanglobievent
+# 	LevelUpCrateAction:
+# 		Levels: 1
+# 		SelectionShares: 12
+
+# drsatanglobi:
+# 	Inherits: drsatanclawz
+# 	Tooltip:
+# 		Name: Satan Goblin
+# 	Mobile:
+# 		Speed: 90
+# 	Health:
+# 		HP: 10000
+# 	AutoTarget:
+# 		ScanRadius: 10
+# 	Armament@PRIMARY: ##########
+# 		Weapon: M16
+# 	Valued:
+# 		Cost: 75
+# 	Voiced:
+# 		VoiceSet: AntVoice
+
+# drsatanglobievent:
+# 	Inherits: drsatanglobi
+# 	RenderSprites:
+# 		Image: drsatanglobi
+# 	SpawnActorOnDeath@Santa:
+# 		Actor: SATANGLOBCRATE
+# 		Probability: 25
+
 xmas_green_elf:
 	Inherits: ^Soldier
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -783,6 +893,7 @@ xmas_satanclawz:
 		Probability: 65
 	ProvidesPrerequisite@satan:
 		Prerequisite: xmas_satanclawz
+
 xmas_satangoblin:
 	Inherits: drsatanglobi
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
