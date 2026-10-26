@@ -367,36 +367,36 @@ wc2gryphonFireVisible:
 	Warhead@ChaingunPercentage: HealthPercentageDamage
 		ValidTargets: Ground, Water, Trees, Air
 		Damage: 1
-	Warhead@FlakWeapon: SpreadDamage
-		ValidTargets: Ground, Water, Trees, Air
-		Damage: 2000
-	Warhead@FlakWeaponPercentage: HealthPercentageDamage
-		ValidTargets: Ground, Water, Trees, Air
-		Damage: 1
-	Warhead@Grenade: SpreadDamage
-		ValidTargets: Ground, Water, Trees, Air
-		Damage: 2000
-	Warhead@GrenadeFriendlyFire: SpreadDamage
-		ValidTargets: Ground, Water, Trees, Air
-		Damage: 1000
-	Warhead@GrenadePercentage: HealthPercentageDamage
-		ValidTargets: Ground, Water, Trees, Air
-		Damage: 1
-	Warhead@ShrapnelWeapon: SpreadDamage
-		ValidTargets: Ground, Water, Trees, Air
-		Damage: 2000
-	Warhead@ShrapnelWeaponFriendlyFire: SpreadDamage
-		ValidTargets: Ground, Water, Trees, Air
-		Damage: 1000
-	Warhead@ShrapnelWeaponPercentage: HealthPercentageDamage
-		ValidTargets: Ground, Water, Trees, Air
-		Damage: 1
-	Warhead@HeavyBomb: SpreadDamage
-		ValidTargets: Ground, Water, Trees, Air
-		Damage: 2000
-	Warhead@HeavyBombPercentage: HealthPercentageDamage
-		ValidTargets: Ground, Water, Trees, Air
-		Damage: 1
+	# Warhead@FlakWeapon: SpreadDamage
+	# 	ValidTargets: Ground, Water, Trees, Air
+	# 	Damage: 2000
+	# Warhead@FlakWeaponPercentage: HealthPercentageDamage
+	# 	ValidTargets: Ground, Water, Trees, Air
+	# 	Damage: 1
+	# Warhead@Grenade: SpreadDamage
+	# 	ValidTargets: Ground, Water, Trees, Air
+	# 	Damage: 2000
+	# Warhead@GrenadeFriendlyFire: SpreadDamage
+	# 	ValidTargets: Ground, Water, Trees, Air
+	# 	Damage: 1000
+	# Warhead@GrenadePercentage: HealthPercentageDamage
+	# 	ValidTargets: Ground, Water, Trees, Air
+	# 	Damage: 1
+	# Warhead@ShrapnelWeapon: SpreadDamage
+	# 	ValidTargets: Ground, Water, Trees, Air
+	# 	Damage: 2000
+	# Warhead@ShrapnelWeaponFriendlyFire: SpreadDamage
+	# 	ValidTargets: Ground, Water, Trees, Air
+	# 	Damage: 1000
+	# Warhead@ShrapnelWeaponPercentage: HealthPercentageDamage
+	# 	ValidTargets: Ground, Water, Trees, Air
+	# 	Damage: 1
+	# Warhead@HeavyBomb: SpreadDamage
+	# 	ValidTargets: Ground, Water, Trees, Air
+	# 	Damage: 2000
+	# Warhead@HeavyBombPercentage: HealthPercentageDamage
+	# 	ValidTargets: Ground, Water, Trees, Air
+	# 	Damage: 1
 
 wc2gryphonFireExplosion:
 	Inherits: wc2gryphonFireVisible

@@ -741,7 +741,7 @@ astro_conyard:
 		Footprint: xx xx ==
 		Dimensions: 2,3
 		LocalCenterOffset: 0,-512,0
-		Description: Earth HQ unit./n Constructs buildings./n Hero units are healed by it.
+		Description: actor-astro_conyard.description
 	Transforms:
 		IntoActor: lego_astro_mcv
 		Offset: 1,1
@@ -839,7 +839,7 @@ astro_biodome:
 		BuildPaletteOrder: 10
 		BuildDuration: 160
 		BuildDurationModifier: 100
-		Description: Generator, build to keep producing units.
+		Description: actor-astro_biodome.description
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -871,7 +871,7 @@ astro_harvester:
 		BuildPaletteOrder: 30
 		BuildDuration: 160
 		BuildDurationModifier: 100
-		Description: Resource dropoff structure.
+		Description: actor-astro_harvester.description
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -917,7 +917,7 @@ astro_wellcap:
 		BuildPaletteOrder: 40
 		BuildDuration: 120
 		BuildDurationModifier: 100
-		Description: Generates income.
+		Description: actor-astro_wellcap.description
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -940,7 +940,7 @@ astro_barracks:
 		Cost: 800
 	Buildable:
 		Queue: Building, RABuilding
-		Description: Trains Astro infantry.
+		Description: actor-astro_barracks.description
 		Prerequisites: ~astro_conyard
 	SpawnActorsOnSell:
 		ActorTypes: astro_trooper
@@ -967,7 +967,7 @@ astro_vehiclefactory:
 		BuildPaletteOrder: 50
 		BuildDuration: 160
 		BuildDurationModifier: 100
-		Description: Trains Astro special units.
+		Description: actor-astro_vehiclefactory.description
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -1017,7 +1017,7 @@ astro_tower:
 	Buildable:
 		Prerequisites: ~astro_conyard
 		Queue: Defence, RADefence
-		Description: Upgradable defense building. Detector
+		Description: actor-astro_tower.description
 	Voiced:
 		VoiceSet: astrotowervoice
 	Armament@PRIMARY:
@@ -1111,7 +1111,7 @@ astro_tower2:
 		Queue: Towerupgrade
 		BuildDuration: 3500
 		BuildDurationModifier: 12
-		Description: Upgraded guard tower, attacks land, sea, and air.
+		Description: actor-astro_tower2.description
 	Valued:
 		Cost: 800
 	Interactable:
@@ -1132,7 +1132,7 @@ astro_tower3:
 		Queue: Towerupgrade2
 		BuildDuration: 3500
 		BuildDurationModifier: 12
-		Description: Further upgraded Guard tower, attacks land, sea, and air.
+		Description: actor-astro_tower3.description
 	Valued:
 		Cost: 800
 	Interactable:
@@ -1152,7 +1152,7 @@ lego_astro_mcv:
 	Inherits@LegoTemplate: ^lego_mcv
 	Buildable:
 		Queue: Defence, RADefence
-		Description: Transforms into an Eagle Command.
+		Description: actor-lego_astro_mcv.description
 		Prerequisites: ~astro_conyard
 	Tooltip:
 		Name: Mobile Construction Vehicle (Astro)
@@ -1186,7 +1186,7 @@ astro_builder:
 		Prerequisites: ~astro_conyard
 		BuildPaletteOrder: 5
 		BuildDuration: 250
-		Description: Basic Harvester. Can repair.
+		Description: actor-astro_builder.description
 	StoresResources:
 		Capacity: 5
 	Armament@repair:
@@ -1246,7 +1246,7 @@ astro_trooper:
 		BuildPaletteOrder: 1
 		BuildDuration: 100
 		Prerequisites: ~astro_barracks
-		Description: Basic Melee Infantry
+		Description: actor-astro_trooper.description
 	Armament:
 		Weapon: troopermelee
 	Valued:
@@ -1280,7 +1280,7 @@ astro_gripley:
 		BuildPaletteOrder: 4
 		BuildDuration: 300
 		Prerequisites: ~astro_barracks
-		Description: Heavy Melee Infantry
+		Description: actor-astro_gripley.description
 	Armament:
 		Weapon: cavalrymelee
 	Valued:
@@ -1314,7 +1314,7 @@ astro_commando:
 		BuildPaletteOrder: 2
 		BuildDuration: 250
 		Prerequisites: ~astro_barracks
-		Description: Basic Ranged Infantry
+		Description: actor-astro_commando.description
 	Armament:
 		Weapon: legoranged
 	Armament@aa:
@@ -1350,7 +1350,7 @@ astro_space_police:
 		BuildPaletteOrder: 3
 		BuildDuration: 350
 		Prerequisites: ~astro_barracks
-		Description: Harrying Ranged Infantry.
+		Description: actor-astro_space_police.description
 	Armament:
 		Weapon: legoranged
 	Armament@aa:
@@ -1386,7 +1386,7 @@ astro_gemma:
 		BuildPaletteOrder: 60
 		BuildDuration: 250
 		Prerequisites: ~astro_conyard
-		Description: Astro Girlboss Hero
+		Description: actor-astro_gemma.description
 		BuildLimit: 1
 	Valued:
 		Cost: 500
@@ -1578,7 +1578,7 @@ astro_space_police_captain:
 		BuildPaletteOrder: 60
 		BuildDuration: 250
 		Prerequisites: ~astro_conyard 
-		Description: Harrying Ranged Hero.
+		Description: actor-astro_space_police_captain.description
 		BuildLimit: 1
 	Valued:
 		Cost: 500
@@ -1788,7 +1788,7 @@ astro_biff:
 		BuildPaletteOrder: 60
 		BuildDuration: 250
 		Prerequisites: ~astro_conyard
-		Description: Stalwart Melee Hero.
+		Description: actor-astro_biff.description
 		BuildLimit: 1
 	Valued:
 		Cost: 500
@@ -1979,7 +1979,7 @@ legobattles_ghost:
 		BuildPaletteOrder: 60
 		BuildDurationModifier: 50
 		Prerequisites: ~wipcontent
-		Description: Spooky.
+		Description: actor-legobattles_ghost.description
 	Armament:
 		Weapon: heromelee
 	Valued:
@@ -2028,7 +2028,7 @@ astro_claw_tank:
 		BuildPaletteOrder: 60
 		BuildDurationModifier: 50
 		Prerequisites: ~astro_vehiclefactory
-		Description: Assault vehicle.
+		Description: actor-astro_claw_tank.description
 	Power:
 		Amount: -20
 	Health:
@@ -2087,7 +2087,7 @@ astro_transport:
 	Buildable:
 		Prerequisites: ~astro_vehiclefactory
 		Queue: Vehicle.Legobattles
-		Description: Flying transport unit. Detector.
+		Description: actor-astro_transport.description
 	Power:
 		Amount: -75
 	Selectable:
@@ -2121,7 +2121,7 @@ astro_special_starfighter:
 	Buildable:
 		Prerequisites: ~astro_vehiclefactory
 		Queue: Vehicle.Legobattles
-		Description: Medium Flying unit. Detector.
+		Description: actor-astro_special_starfighter.description
 	Power:
 		Amount: -75
 	Selectable:
@@ -2156,7 +2156,7 @@ astro_space_police_cruiser:
 	Buildable:
 		Prerequisites: ~astro_vehiclefactory
 		Queue: Vehicle
-		Description: Flying Patrol unit. Detector.
+		Description: actor-astro_space_police_cruiser.description
 	Power:
 		Amount: -75
 	DetectCloaked:
@@ -2197,7 +2197,7 @@ astro_starship2:
 	Buildable:
 		Prerequisites: ~astro_vehiclefactory
 		Queue: Vehicle.Legobattles
-		Description: Heavy Flying unit.
+		Description: actor-astro_starship2.description
 		BuildDuration: 1140
 	Power:
 		Amount: -75
@@ -2223,7 +2223,7 @@ lego_alien_conyard:
 		Footprint: xx xx ==
 		Dimensions: 2,3
 		LocalCenterOffset: 0,-512,0
-		Description: Alien HQ unit./n Constructs buildings./n Hero units are healed by it.
+		Description: actor-lego_alien_conyard.description
 	Transforms:
 		IntoActor: lego_alien_mcv
 		Offset: 1,1
@@ -2320,7 +2320,7 @@ lego_alien_mcv:
 	Inherits@LegoTemplate: ^lego_mcv
 	Buildable:
 		Queue: Defence, RADefence
-		Description: Transforms into an Crater Base.
+		Description: actor-lego_alien_mcv.description
 		Prerequisites: ~lego_alien_conyard
 	Tooltip:
 		Name: Mobile Construction Vehicle (Alien)
@@ -2345,7 +2345,7 @@ alien_barracks:
 		Cost: 800
 	Buildable:
 		Queue: Building, RABuilding
-		Description: Trains Alien infantry.
+		Description: actor-alien_barracks.description
 		Prerequisites: ~lego_alien_conyard
 	SpawnActorsOnSell:
 		ActorTypes: alien_drone
@@ -2373,7 +2373,7 @@ alien_hatchery:
 		BuildPaletteOrder: 10
 		BuildDuration: 160
 		BuildDurationModifier: 100
-		Description: Generator, build to keep producing units.
+		Description: actor-alien_hatchery.description
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -2406,7 +2406,7 @@ alien_harvester:
 		BuildPaletteOrder: 30
 		BuildDuration: 160
 		BuildDurationModifier: 100
-		Description: Resource dropoff structure.
+		Description: actor-alien_harvester.description
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -2452,7 +2452,7 @@ alien_wellcap:
 		BuildPaletteOrder: 40
 		BuildDuration: 120
 		BuildDurationModifier: 100
-		Description: Generates income.
+		Description: actor-alien_wellcap.description
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -2480,7 +2480,7 @@ alien_vehiclefactory:
 		BuildPaletteOrder: 50
 		BuildDuration: 160
 		BuildDurationModifier: 100
-		Description: Trains Alien special units.
+		Description: actor-alien_vehiclefactory.description
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -2508,7 +2508,7 @@ alien_tower:
 	Buildable:
 		Prerequisites: ~lego_alien_conyard
 		Queue: Defence, RADefence
-		Description: Upgradable defense building. Detector
+		Description: actor-alien_tower.description
 	Voiced:
 		VoiceSet: alientowervoice
 	RenderSprites: 
@@ -2604,7 +2604,7 @@ alien_tower2:
 		Queue: Towerupgrade
 		BuildDuration: 3500
 		BuildDurationModifier: 12
-		Description: Upgraded guard tower, attacks land, sea, and air.
+		Description: actor-alien_tower2.description
 	Valued:
 		Cost: 800
 	Interactable:
@@ -2625,7 +2625,7 @@ alien_tower3:
 		Queue: Towerupgrade2
 		BuildDuration: 3500
 		BuildDurationModifier: 12
-		Description: Further upgraded Guard tower, attacks land, sea, and air.
+		Description: actor-alien_tower3.description
 	Valued:
 		Cost: 800
 	Interactable:
@@ -2655,7 +2655,7 @@ alien_builder:
 		Prerequisites: ~lego_alien_conyard
 		BuildPaletteOrder: 5
 		BuildDuration: 250
-		Description: Basic Harvester. Can repair.
+		Description: actor-alien_builder.description
 	StoresResources:
 		Capacity: 5
 	Armament@repair:
@@ -2714,7 +2714,7 @@ alien_drone:
 		BuildPaletteOrder: 1
 		BuildDuration: 100
 		Prerequisites: ~alien_barracks
-		Description: Basic Melee Infantry
+		Description: actor-alien_drone.description
 	Armament:
 		Weapon: alienmelee
 	Valued:
@@ -2747,7 +2747,7 @@ alien_laser_trooper:
 		BuildPaletteOrder: 2
 		BuildDuration: 250
 		Prerequisites: ~alien_barracks
-		Description: Basic Ranged Infantry
+		Description: actor-alien_laser_trooper.description
 	Armament:
 		Weapon: alienlegoranged
 	Valued:
@@ -2780,7 +2780,7 @@ alien_grav_runner:
 		BuildPaletteOrder: 4
 		BuildDuration: 300
 		Prerequisites: ~alien_barracks
-		Description: Heavy Melee Infantry
+		Description: actor-alien_grav_runner.description
 	Armament:
 		Weapon: aliencavalrymelee
 	Valued:
@@ -2813,7 +2813,7 @@ alien_space_criminal:
 		BuildPaletteOrder: 3
 		BuildDuration: 350
 		Prerequisites: ~alien_barracks
-		Description: Harrying Ranged Infantry.
+		Description: actor-alien_space_criminal.description
 	Armament:
 		Weapon: alienlegoranged
 	Valued:
@@ -2846,7 +2846,7 @@ alien_commander:
 		BuildPaletteOrder: 60
 		BuildDuration: 250
 		Prerequisites: ~lego_alien_conyard
-		Description: Stalwart Melee Hero.
+		Description: actor-alien_commander.description
 		BuildLimit: 1
 	Valued:
 		Cost: 500
@@ -3037,7 +3037,7 @@ alien_queen:
 		BuildPaletteOrder: 60
 		BuildDuration: 250
 		Prerequisites: ~lego_alien_conyard
-		Description: Supportive Melee Hero.
+		Description: actor-alien_queen.description
 		BuildLimit: 1
 	Valued:
 		Cost: 500
@@ -3228,7 +3228,7 @@ space_criminal_leader:
 		BuildPaletteOrder: 60
 		BuildDuration: 250
 		Prerequisites: ~lego_alien_conyard 
-		Description: Chaotic Ranged Hero.
+		Description: actor-space_criminal_leader.description
 		BuildLimit: 1
 	Valued:
 		Cost: 500
@@ -3451,7 +3451,7 @@ alien_attack_ship:
 		BuildPaletteOrder: 60
 		BuildDurationModifier: 50
 		Prerequisites: ~alien_vehiclefactory
-		Description: Assault vehicle.
+		Description: actor-alien_attack_ship.description
 	Power:
 		Amount: -20
 	Health:
@@ -3505,7 +3505,7 @@ alien_transport_ship:
 	Buildable:
 		Prerequisites: ~alien_vehiclefactory
 		Queue: Vehicle.Legobattles
-		Description: Flying transport unit. Detector.
+		Description: actor-alien_transport_ship.description
 	Power:
 		Amount: -75
 	Selectable:
@@ -3541,7 +3541,7 @@ alien_strike_ship:
 	Buildable:
 		Prerequisites: ~alien_vehiclefactory
 		Queue: Vehicle.Legobattles
-		Description: Medium Flying unit. Detector.
+		Description: actor-alien_strike_ship.description
 	Power:
 		Amount: -75
 	Selectable:
@@ -3578,7 +3578,7 @@ alien_space_criminal_hotrod:
 	Buildable:
 		Prerequisites: ~alien_vehiclefactory
 		Queue: Vehicle.Legobattles
-		Description: Flying Patrol unit. Detector.
+		Description: actor-alien_space_criminal_hotrod.description
 	Power:
 		Amount: -75
 	DetectCloaked:
@@ -3620,7 +3620,7 @@ alien_assault_ship:
 	Buildable:
 		Prerequisites: ~alien_vehiclefactory
 		Queue: Vehicle.Legobattles
-		Description: Heavy Flying unit.
+		Description: actor-alien_assault_ship.description
 		BuildDuration: 1140
 	Power:
 		Amount: -75
@@ -3646,7 +3646,7 @@ lego_imperial_conyard:
 		Footprint: xx xx ==
 		Dimensions: 2,3
 		LocalCenterOffset: 0,-512,0
-		Description: Imperial HQ unit./n Constructs buildings./n Hero units are healed by it.
+		Description: actor-lego_imperial_conyard.description
 	Transforms:
 		IntoActor: lego_imperial_mcv
 		Offset: 1,1
@@ -3744,7 +3744,7 @@ imperial_barracks:
 		Cost: 800
 	Buildable:
 		Queue: Building, RABuilding
-		Description: Trains Imperial infantry.
+		Description: actor-imperial_barracks.description
 		Prerequisites: ~lego_imperial_conyard
 	SpawnActorsOnSell:
 		ActorTypes: imperial_swordsman
@@ -3772,7 +3772,7 @@ imperial_quarters:
 		BuildPaletteOrder: 10
 		BuildDuration: 160
 		BuildDurationModifier: 100
-		Description: Generator, build to keep producing units.
+		Description: actor-imperial_quarters.description
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -3805,7 +3805,7 @@ imperial_lumber_mill:
 		BuildPaletteOrder: 30
 		BuildDuration: 160
 		BuildDurationModifier: 100
-		Description: Resource dropoff structure.
+		Description: actor-imperial_lumber_mill.description
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -3851,7 +3851,7 @@ imperial_quarry:
 		BuildPaletteOrder: 40
 		BuildDuration: 120
 		BuildDurationModifier: 100
-		Description: Generates income.
+		Description: actor-imperial_quarry.description
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -3879,7 +3879,7 @@ imperial_vehiclefactory:
 		BuildPaletteOrder: 50
 		BuildDuration: 160
 		BuildDurationModifier: 100
-		Description: Trains Imperial special units.
+		Description: actor-imperial_vehiclefactory.description
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -3907,7 +3907,7 @@ imperial_tower:
 	Buildable:
 		Prerequisites: ~lego_imperial_conyard
 		Queue: Defence, RADefence
-		Description: Upgradable defense building. Detector
+		Description: actor-imperial_tower.description
 	Voiced:
 		VoiceSet: imperialtowervoice
 	Armament@PRIMARY:
@@ -4001,7 +4001,7 @@ imperial_tower2:
 		Queue: Towerupgrade
 		BuildDuration: 3500
 		BuildDurationModifier: 12
-		Description: Upgraded guard tower, attacks land, sea, and air.
+		Description: actor-imperial_tower2.description
 	Valued:
 		Cost: 800
 	Interactable:
@@ -4022,7 +4022,7 @@ imperial_tower3:
 		Queue: Towerupgrade2
 		BuildDuration: 3500
 		BuildDurationModifier: 12
-		Description: Further upgraded Guard tower, attacks land, sea, and air.
+		Description: actor-imperial_tower3.description
 	Valued:
 		Cost: 800
 	Interactable:
@@ -4042,7 +4042,7 @@ lego_imperial_mcv:
 	Inherits@LegoTemplate: ^lego_mcv
 	Buildable:
 		Queue: Defence, RADefence
-		Description: Transforms into an Fortress.
+		Description: actor-lego_imperial_mcv.description
 		Prerequisites: ~lego_imperial_conyard
 	Tooltip:
 		Name: Mobile Construction Vehicle (Imperial)
@@ -4077,7 +4077,7 @@ imperial_builder:
 		Prerequisites: ~lego_imperial_conyard
 		BuildPaletteOrder: 5
 		BuildDuration: 250
-		Description: Basic Harvester. Can repair.
+		Description: actor-imperial_builder.description
 	StoresResources:
 		Capacity: 5
 	Armament@repair:
@@ -4136,7 +4136,7 @@ imperial_swordsman:
 		BuildPaletteOrder: 1
 		BuildDuration: 100
 		Prerequisites: ~imperial_barracks
-		Description: Basic Melee Infantry
+		Description: actor-imperial_swordsman.description
 	Armament:
 		Weapon: swordsmanmelee
 	Valued:
@@ -4169,7 +4169,7 @@ imperial_rifleman:
 		BuildPaletteOrder: 2
 		BuildDuration: 250
 		Prerequisites: ~imperial_barracks
-		Description: Basic Ranged Infantry
+		Description: actor-imperial_rifleman.description
 	Armament:
 		Weapon: piratelegoranged
 	Armament@aa:
@@ -4204,7 +4204,7 @@ imperial_cavalry:
 		BuildPaletteOrder: 4
 		BuildDuration: 300
 		Prerequisites: ~imperial_barracks
-		Description: Heavy Melee Infantry
+		Description: actor-imperial_cavalry.description
 	Armament:
 		Weapon: cavalrymelee
 	Valued:
@@ -4237,7 +4237,7 @@ imperial_ninja:
 		BuildPaletteOrder: 3
 		BuildDuration: 350
 		Prerequisites: ~imperial_barracks
-		Description: Harrying Ranged Infantry.
+		Description: actor-imperial_ninja.description
 	Armament:
 		Weapon: piratelegorangedshuriken
 	Armament@aa:
@@ -4285,7 +4285,7 @@ imperial_culverin:
 		BuildPaletteOrder: 60
 		BuildDurationModifier: 50
 		Prerequisites: ~imperial_vehiclefactory
-		Description: Assault vehicle.
+		Description: actor-imperial_culverin.description
 	Power:
 		Amount: -20
 	Health:
@@ -4342,7 +4342,7 @@ imperial_flying_ship:
 	Buildable:
 		Prerequisites: ~imperial_vehiclefactory
 		Queue: Vehicle.Legobattles
-		Description: Flying Patrol unit. Detector.
+		Description: actor-imperial_flying_ship.description
 	Power:
 		Amount: -75
 	DetectCloaked:
@@ -4369,7 +4369,7 @@ imperial_governor_broadside:
 		BuildPaletteOrder: 60
 		BuildDuration: 250
 		Prerequisites: ~lego_imperial_conyard
-		Description: Stalwart Melee Hero.
+		Description: actor-imperial_governor_broadside.description
 		BuildLimit: 1
 	Valued:
 		Cost: 500
@@ -4560,7 +4560,7 @@ imperial_camilla:
 		BuildPaletteOrder: 60
 		BuildDuration: 250
 		Prerequisites: ~lego_imperial_conyard
-		Description: Stalwart Melee Hero.
+		Description: actor-imperial_camilla.description
 		BuildLimit: 1
 	Valued:
 		Cost: 500
@@ -4751,7 +4751,7 @@ imperial_ninja_master:
 		BuildPaletteOrder: 60
 		BuildDuration: 250
 		Prerequisites: ~lego_imperial_conyard
-		Description: Stalwart Melee Hero.
+		Description: actor-imperial_ninja_master.description
 		BuildLimit: 1
 	Valued:
 		Cost: 500
@@ -4951,7 +4951,7 @@ lego_pirate_conyard:
 		Footprint: xx xx ==
 		Dimensions: 2,3
 		LocalCenterOffset: 0,-512,0
-		Description: pirate HQ unit./n Constructs buildings./n Hero units are healed by it.
+		Description: actor-lego_pirate_conyard.description
 	Transforms:
 		IntoActor: lego_pirate_mcv
 		Offset: 1,1
@@ -5048,7 +5048,7 @@ pirate_barracks:
 		Cost: 800
 	Buildable:
 		Queue: Building, RABuilding
-		Description: Trains pirate infantry.
+		Description: actor-pirate_barracks.description
 		Prerequisites: ~lego_pirate_conyard
 	SpawnActorsOnSell:
 		ActorTypes: pirate_oarsman
@@ -5076,7 +5076,7 @@ pirate_plantation:
 		BuildPaletteOrder: 10
 		BuildDuration: 160
 		BuildDurationModifier: 100
-		Description: Generator, build to keep producing units.
+		Description: actor-pirate_plantation.description
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -5109,7 +5109,7 @@ pirate_lumber_mill:
 		BuildPaletteOrder: 30
 		BuildDuration: 160
 		BuildDurationModifier: 100
-		Description: Resource dropoff structure.
+		Description: actor-pirate_lumber_mill.description
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -5155,7 +5155,7 @@ pirate_quarry:
 		BuildPaletteOrder: 40
 		BuildDuration: 120
 		BuildDurationModifier: 100
-		Description: Generates income.
+		Description: actor-pirate_quarry.description
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -5183,7 +5183,7 @@ pirate_vehiclefactory:
 		BuildPaletteOrder: 50
 		BuildDuration: 160
 		BuildDurationModifier: 100
-		Description: Trains pirate special units.
+		Description: actor-pirate_vehiclefactory.description
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -5211,7 +5211,7 @@ pirate_tower:
 	Buildable:
 		Prerequisites: ~lego_pirate_conyard
 		Queue: Defence, RADefence
-		Description: Upgradable defense building. Detector
+		Description: actor-pirate_tower.description
 	Voiced:
 		VoiceSet: imperialtowervoice
 	Armament@PRIMARY:
@@ -5305,7 +5305,7 @@ pirate_tower2:
 		Queue: Towerupgrade
 		BuildDuration: 3500
 		BuildDurationModifier: 12
-		Description: Upgraded guard tower, attacks land, sea, and air.
+		Description: actor-pirate_tower2.description
 	Valued:
 		Cost: 800
 	Interactable:
@@ -5326,7 +5326,7 @@ pirate_tower3:
 		Queue: Towerupgrade2
 		BuildDuration: 3500
 		BuildDurationModifier: 12
-		Description: Further upgraded Guard tower, attacks land, sea, and air.
+		Description: actor-pirate_tower3.description
 	Valued:
 		Cost: 800
 	Interactable:
@@ -5346,7 +5346,7 @@ lego_pirate_mcv:
 	Inherits@LegoTemplate: ^lego_mcv
 	Buildable:
 		Queue: Defence, RADefence
-		Description: Transforms into an Fortress.
+		Description: actor-lego_pirate_mcv.description
 		Prerequisites: ~lego_pirate_conyard
 	Tooltip:
 		Name: Mobile Construction Vehicle (Pirate)
@@ -5381,7 +5381,7 @@ pirate_builder:
 		Prerequisites: ~lego_pirate_conyard
 		BuildPaletteOrder: 5
 		BuildDuration: 250
-		Description: Basic Harvester. Can repair.
+		Description: actor-pirate_builder.description
 	StoresResources:
 		Capacity: 5
 	Armament@repair:
@@ -5440,7 +5440,7 @@ pirate_oarsman:
 		BuildPaletteOrder: 1
 		BuildDuration: 100
 		Prerequisites: ~pirate_barracks
-		Description: Basic Melee Infantry
+		Description: actor-pirate_oarsman.description
 	Armament:
 		Weapon: oarsmanmelee
 	Valued:
@@ -5473,7 +5473,7 @@ pirate_gunman:
 		BuildPaletteOrder: 2
 		BuildDuration: 250
 		Prerequisites: ~pirate_barracks
-		Description: Basic Ranged Infantry
+		Description: actor-pirate_gunman.description
 	Armament:
 		Weapon: piratelegoranged
 	Armament@aa:
@@ -5508,7 +5508,7 @@ pirate_horseman:
 		BuildPaletteOrder: 4
 		BuildDuration: 300
 		Prerequisites: ~pirate_barracks
-		Description: Heavy Melee Infantry
+		Description: actor-pirate_horseman.description
 	Armament:
 		Weapon: cavalrymelee
 	Valued:
@@ -5541,7 +5541,7 @@ pirate_islander:
 		BuildPaletteOrder: 3
 		BuildDuration: 350
 		Prerequisites: ~pirate_barracks
-		Description: Harrying Ranged Infantry.
+		Description: actor-pirate_islander.description
 	Armament:
 		Weapon: piratelegorangedarrow
 	Armament@aa:
@@ -5589,7 +5589,7 @@ pirate_cannon:
 		BuildPaletteOrder: 60
 		BuildDurationModifier: 50
 		Prerequisites: ~pirate_vehiclefactory
-		Description: Assault vehicle.
+		Description: actor-pirate_cannon.description
 	Power:
 		Amount: -20
 	Health:
@@ -5642,7 +5642,7 @@ pirate_tiki_golem:
 		BuildPaletteOrder: 60
 		BuildDurationModifier: 50
 		Prerequisites: ~pirate_vehiclefactory
-		Description: Assault vehicle.
+		Description: actor-pirate_tiki_golem.description
 	Power:
 		Amount: -20
 	Health:
@@ -5684,7 +5684,7 @@ pirate_captain_brickbeard:
 		BuildPaletteOrder: 60
 		BuildDuration: 250
 		Prerequisites: ~lego_pirate_conyard
-		Description: Stalwart Melee Hero.
+		Description: actor-pirate_captain_brickbeard.description
 		BuildLimit: 1
 	Valued:
 		Cost: 500
@@ -5875,7 +5875,7 @@ pirate_lady_pirate:
 		BuildPaletteOrder: 60
 		BuildDuration: 250
 		Prerequisites: ~lego_pirate_conyard
-		Description: Stalwart Melee Hero.
+		Description: actor-pirate_lady_pirate.description
 		BuildLimit: 1
 	Valued:
 		Cost: 500
@@ -6066,7 +6066,7 @@ pirate_king_kahuka:
 		BuildPaletteOrder: 60
 		BuildDuration: 250
 		Prerequisites: ~lego_pirate_conyard
-		Description: Stalwart Melee Hero.
+		Description: actor-pirate_king_kahuka.description
 		BuildLimit: 1
 	Valued:
 		Cost: 500
@@ -6262,7 +6262,7 @@ pirate_monkey:
 		BuildPaletteOrder: 1
 		BuildDuration: 100
 		Prerequisites: ~None
-		Description: A monkey, for scouting or sabotage.
+		Description: actor-pirate_monkey.description
 	Armament:
 		Weapon: oarsmanmelee
 	Valued:
@@ -6293,7 +6293,7 @@ pirate_crab:
 		BuildPaletteOrder: 1
 		BuildDuration: 100
 		Prerequisites: ~pirate_barracks
-		Description: Crabs mateys!
+		Description: actor-pirate_crab.description
 	Armament:
 		Weapon: oarsmanmelee
 	Mobile:
@@ -6324,7 +6324,7 @@ lego_king_conyard:
 		Footprint: xx xx ==
 		Dimensions: 2,3
 		LocalCenterOffset: 0,-512,0
-		Description: King HQ unit./n Constructs buildings./n Hero units are healed by it.
+		Description: actor-lego_king_conyard.description
 	Transforms:
 		IntoActor: lego_king_mcv
 		Offset: 1,1
@@ -6421,7 +6421,7 @@ king_barracks:
 		Cost: 800
 	Buildable:
 		Queue: Building, RABuilding
-		Description: Trains king infantry.
+		Description: actor-king_barracks.description
 		Prerequisites: ~lego_king_conyard
 	SpawnActorsOnSell:
 		ActorTypes: king_guardsman
@@ -6449,7 +6449,7 @@ king_farm:
 		BuildPaletteOrder: 10
 		BuildDuration: 160
 		BuildDurationModifier: 100
-		Description: Generator, build to keep producing units.
+		Description: actor-king_farm.description
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -6482,7 +6482,7 @@ king_lumber_mill:
 		BuildPaletteOrder: 30
 		BuildDuration: 160
 		BuildDurationModifier: 100
-		Description: Resource dropoff structure.
+		Description: actor-king_lumber_mill.description
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -6528,7 +6528,7 @@ king_mine:
 		BuildPaletteOrder: 40
 		BuildDuration: 120
 		BuildDurationModifier: 100
-		Description: Generates income.
+		Description: actor-king_mine.description
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -6556,7 +6556,7 @@ king_vehiclefactory:
 		BuildPaletteOrder: 50
 		BuildDuration: 160
 		BuildDurationModifier: 100
-		Description: Trains king special units.
+		Description: actor-king_vehiclefactory.description
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -6584,7 +6584,7 @@ king_tower:
 	Buildable:
 		Prerequisites: ~lego_king_conyard
 		Queue: Defence, RADefence
-		Description: Upgradable defense building. Detector
+		Description: actor-king_tower.description
 	Voiced:
 		VoiceSet: kingtowervoice
 	Armament@PRIMARY:
@@ -6678,7 +6678,7 @@ king_tower2:
 		Queue: Towerupgrade
 		BuildDuration: 3500
 		BuildDurationModifier: 12
-		Description: Upgraded guard tower, attacks land, sea, and air.
+		Description: actor-king_tower2.description
 	Valued:
 		Cost: 800
 	Interactable:
@@ -6699,7 +6699,7 @@ king_tower3:
 		Queue: Towerupgrade2
 		BuildDuration: 3500
 		BuildDurationModifier: 12
-		Description: Further upgraded Guard tower, attacks land, sea, and air.
+		Description: actor-king_tower3.description
 	Valued:
 		Cost: 800
 	Interactable:
@@ -6719,7 +6719,7 @@ lego_king_mcv:
 	Inherits@LegoTemplate: ^lego_mcv
 	Buildable:
 		Queue: Defence, RADefence
-		Description: Transforms into an Fortress.
+		Description: actor-lego_king_mcv.description
 		Prerequisites: ~lego_king_conyard
 	Tooltip:
 		Name: Mobile Construction Vehicle (King)
@@ -6754,7 +6754,7 @@ king_builder:
 		Prerequisites: ~lego_king_conyard
 		BuildPaletteOrder: 5
 		BuildDuration: 250
-		Description: Basic Harvester. Can repair.
+		Description: actor-king_builder.description
 	StoresResources:
 		Capacity: 5
 	Armament@repair:
@@ -6813,7 +6813,7 @@ king_guardsman:
 		BuildPaletteOrder: 1
 		BuildDuration: 100
 		Prerequisites: ~king_barracks
-		Description: Basic Melee Infantry
+		Description: actor-king_guardsman.description
 	Armament:
 		Weapon: guardsmanmelee
 	Valued:
@@ -6846,7 +6846,7 @@ king_archer:
 		BuildPaletteOrder: 2
 		BuildDuration: 250
 		Prerequisites: ~king_barracks
-		Description: Basic Ranged Infantry
+		Description: actor-king_archer.description
 	Armament:
 		Weapon: piratelegorangedarrow
 	Armament@aa:
@@ -6881,7 +6881,7 @@ king_knight:
 		BuildPaletteOrder: 4
 		BuildDuration: 300
 		Prerequisites: ~king_barracks
-		Description: Heavy Melee Infantry
+		Description: actor-king_knight.description
 	Armament:
 		Weapon: cavalrymelee
 	Valued:
@@ -6914,7 +6914,7 @@ king_dwarf:
 		BuildPaletteOrder: 3
 		BuildDuration: 350
 		Prerequisites: ~king_barracks
-		Description: Harrying Ranged Infantry.
+		Description: actor-king_dwarf.description
 	Armament:
 		Weapon: guardsmanmelee
 	Valued:
@@ -6960,7 +6960,7 @@ king_ballista:
 		BuildPaletteOrder: 60
 		BuildDurationModifier: 50
 		Prerequisites: ~king_vehiclefactory
-		Description: Assault vehicle.
+		Description: actor-king_ballista.description
 	Power:
 		Amount: -20
 	Health:
@@ -7013,7 +7013,7 @@ king_catapult:
 		BuildPaletteOrder: 60
 		BuildDurationModifier: 50
 		Prerequisites: ~king_vehiclefactory
-		Description: Assault vehicle.
+		Description: actor-king_catapult.description
 	Power:
 		Amount: -20
 	Health:
@@ -7070,7 +7070,7 @@ king_dwarf_glider:
 	Buildable:
 		Prerequisites: ~king_vehiclefactory
 		Queue: Vehicle.Legobattles
-		Description: Flying Patrol unit. Detector.
+		Description: actor-king_dwarf_glider.description
 	Power:
 		Amount: -75
 	DetectCloaked:
@@ -7113,7 +7113,7 @@ king_dragon:
 	Buildable:
 		Prerequisites: ~king_vehiclefactory
 		Queue: Vehicle.Legobattles
-		Description: Flying Assault unit. Detector.
+		Description: actor-king_dragon.description
 		BuildDuration: 1140
 	Power:
 		Amount: -75
@@ -7148,7 +7148,7 @@ king_king:
 		BuildPaletteOrder: 60
 		BuildDuration: 250
 		Prerequisites: ~lego_king_conyard
-		Description: Stalwart Melee Hero.
+		Description: actor-king_king.description
 		BuildLimit: 1
 	Valued:
 		Cost: 500
@@ -7339,7 +7339,7 @@ king_queen:
 		BuildPaletteOrder: 60
 		BuildDuration: 250
 		Prerequisites: ~lego_king_conyard
-		Description: Stalwart Melee Hero.
+		Description: actor-king_queen.description
 		BuildLimit: 1
 	Valued:
 		Cost: 500
@@ -7530,7 +7530,7 @@ king_dwarf_king:
 		BuildPaletteOrder: 60
 		BuildDuration: 250
 		Prerequisites: ~lego_king_conyard
-		Description: Stalwart Melee Hero.
+		Description: actor-king_dwarf_king.description
 		BuildLimit: 1
 	Valued:
 		Cost: 500
@@ -7727,7 +7727,7 @@ lego_wizard_conyard:
 		Footprint: xx xx ==
 		Dimensions: 2,3
 		LocalCenterOffset: 0,-512,0
-		Description: Wizard HQ unit./n Constructs buildings./n Hero units are healed by it.
+		Description: actor-lego_wizard_conyard.description
 	Transforms:
 		IntoActor: lego_wizard_mcv
 		Offset: 1,1
@@ -7824,7 +7824,7 @@ wizard_barracks:
 		Cost: 800
 	Buildable:
 		Queue: Building, RABuilding
-		Description: Trains wizard infantry.
+		Description: actor-wizard_barracks.description
 		Prerequisites: ~lego_wizard_conyard
 	SpawnActorsOnSell:
 		ActorTypes: wizard_skeleton
@@ -7852,7 +7852,7 @@ wizard_graveyard:
 		BuildPaletteOrder: 10
 		BuildDuration: 160
 		BuildDurationModifier: 100
-		Description: Generator, build to keep producing units.
+		Description: actor-wizard_graveyard.description
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -7885,7 +7885,7 @@ wizard_lumber_mill:
 		BuildPaletteOrder: 30
 		BuildDuration: 160
 		BuildDurationModifier: 100
-		Description: Resource dropoff structure.
+		Description: actor-wizard_lumber_mill.description
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -7931,7 +7931,7 @@ wizard_mine:
 		BuildPaletteOrder: 40
 		BuildDuration: 120
 		BuildDurationModifier: 100
-		Description: Generates income.
+		Description: actor-wizard_mine.description
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -7959,7 +7959,7 @@ wizard_vehiclefactory:
 		BuildPaletteOrder: 50
 		BuildDuration: 160
 		BuildDurationModifier: 100
-		Description: Trains wizard special units.
+		Description: actor-wizard_vehiclefactory.description
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -7987,7 +7987,7 @@ wizard_tower:
 	Buildable:
 		Prerequisites: ~lego_wizard_conyard
 		Queue: Defence, RADefence
-		Description: Upgradable defense building. Detector
+		Description: actor-wizard_tower.description
 	Voiced:
 		VoiceSet: kingtowervoice
 	Armament@PRIMARY:
@@ -8081,7 +8081,7 @@ wizard_tower2:
 		Queue: Towerupgrade
 		BuildDuration: 3500
 		BuildDurationModifier: 12
-		Description: Upgraded guard tower, attacks land, sea, and air.
+		Description: actor-wizard_tower2.description
 	Valued:
 		Cost: 800
 	Interactable:
@@ -8102,7 +8102,7 @@ wizard_tower3:
 		Queue: Towerupgrade2
 		BuildDuration: 3500
 		BuildDurationModifier: 12
-		Description: Further upgraded Guard tower, attacks land, sea, and air.
+		Description: actor-wizard_tower3.description
 	Valued:
 		Cost: 800
 	Interactable:
@@ -8122,7 +8122,7 @@ lego_wizard_mcv:
 	Inherits@LegoTemplate: ^lego_mcv
 	Buildable:
 		Queue: Defence, RADefence
-		Description: Transforms into an Fortress.
+		Description: actor-lego_wizard_mcv.description
 		Prerequisites: ~lego_wizard_conyard
 	Tooltip:
 		Name: Mobile Construction Vehicle (Wizard)
@@ -8157,7 +8157,7 @@ wizard_builder:
 		Prerequisites: ~lego_wizard_conyard
 		BuildPaletteOrder: 5
 		BuildDuration: 250
-		Description: Basic Harvester. Can repair.
+		Description: actor-wizard_builder.description
 	StoresResources:
 		Capacity: 5
 	Armament@repair:
@@ -8216,7 +8216,7 @@ wizard_skeleton:
 		BuildPaletteOrder: 1
 		BuildDuration: 100
 		Prerequisites: ~wizard_barracks
-		Description: Basic Melee Infantry
+		Description: actor-wizard_skeleton.description
 	Armament:
 		Weapon: skeletonmelee
 	Valued:
@@ -8249,7 +8249,7 @@ wizard_crossbowman:
 		BuildPaletteOrder: 2
 		BuildDuration: 250
 		Prerequisites: ~wizard_barracks
-		Description: Basic Ranged Infantry
+		Description: actor-wizard_crossbowman.description
 	Armament:
 		Weapon: piratelegorangedarrow
 	Armament@aa:
@@ -8284,7 +8284,7 @@ wizard_knight:
 		BuildPaletteOrder: 4
 		BuildDuration: 300
 		Prerequisites: ~wizard_barracks
-		Description: Heavy Melee Infantry
+		Description: actor-wizard_knight.description
 	Armament:
 		Weapon: cavalrymelee
 	Valued:
@@ -8317,7 +8317,7 @@ wizard_troll:
 		BuildPaletteOrder: 3
 		BuildDuration: 350
 		Prerequisites: ~wizard_barracks
-		Description: Harrying Ranged Infantry.
+		Description: actor-wizard_troll.description
 	Armament:
 		Weapon: trollmelee
 	Armament@aa:
@@ -8365,7 +8365,7 @@ wizard_siege_tower:
 		BuildPaletteOrder: 60
 		BuildDurationModifier: 50
 		Prerequisites: ~wizard_vehiclefactory
-		Description: Assault vehicle.
+		Description: actor-wizard_siege_tower.description
 	Power:
 		Amount: -20
 	Health:
@@ -8418,7 +8418,7 @@ wizard_troll_giant:
 		BuildPaletteOrder: 60
 		BuildDurationModifier: 50
 		Prerequisites: ~wizard_vehiclefactory
-		Description: Assault vehicle.
+		Description: actor-wizard_troll_giant.description
 	Power:
 		Amount: -20
 	Health:
@@ -8475,7 +8475,7 @@ wizard_troll_blimp:
 	Buildable:
 		Prerequisites: ~wizard_vehiclefactory
 		Queue: Vehicle.Legobattles
-		Description: Flying Patrol unit. Detector.
+		Description: actor-wizard_troll_blimp.description
 	Power:
 		Amount: -75
 	DetectCloaked:
@@ -8517,7 +8517,7 @@ wizard_dragon:
 	Buildable:
 		Prerequisites: ~wizard_vehiclefactory
 		Queue: Vehicle.Legobattles
-		Description: Flying Assault unit. Detector.
+		Description: actor-wizard_dragon.description
 		BuildDuration: 1140
 	Power:
 		Amount: -75
@@ -8552,7 +8552,7 @@ wizard_wizard:
 		BuildPaletteOrder: 60
 		BuildDuration: 250
 		Prerequisites: ~lego_wizard_conyard
-		Description: Stalwart Melee Hero.
+		Description: actor-wizard_wizard.description
 		BuildLimit: 1
 	Valued:
 		Cost: 500
@@ -8743,7 +8743,7 @@ wizard_sorceress:
 		BuildPaletteOrder: 60
 		BuildDuration: 250
 		Prerequisites: ~lego_wizard_conyard
-		Description: Stalwart Melee Hero.
+		Description: actor-wizard_sorceress.description
 		BuildLimit: 1
 	Valued:
 		Cost: 500
@@ -8934,7 +8934,7 @@ wizard_troll_king:
 		BuildPaletteOrder: 60
 		BuildDuration: 250
 		Prerequisites: ~lego_wizard_conyard
-		Description: Stalwart Melee Hero.
+		Description: actor-wizard_troll_king.description
 		BuildLimit: 1
 	Valued:
 		Cost: 500
