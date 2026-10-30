@@ -11819,7 +11819,6 @@ faction-darkreign-togran =
    .description = Tograns from Dark Reign.
        The inventive Tograns, a science cult devoted to their visionary founder. Only recently militarized.
        Unconventional flexible forces, composed of light yet mobile of experimental craft.
-       Possess beast units, which require a nearby tamer unit to fully control.
 
 faction-darkreign-terrorist =
    .name = Dark Reign Terrorist

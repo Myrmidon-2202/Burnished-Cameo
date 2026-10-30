@@ -1233,7 +1233,8 @@ swstarport:
 	ProductionAirdropCA@NORMAL:
 		Produces: Vehicle.Empire
 		RequiresCondition: !classicproductionqueues
-		ActorType: swstardc17
+		# ActorType: swstardc17
+		ActorType: swtran
 		EntryType: DropSiteClosestEdge
 		ExitType: StraightAhead
 		LandingFacing: 64
@@ -6309,7 +6310,7 @@ swspider:
 	Valued:
 		Cost: 600
 	Tooltip:
-		Name: Spider Tank
+		Name: Dwarf Spider Droid
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
@@ -7233,7 +7234,7 @@ swtrifighter:
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: hpad, anyhq, ~techlevel.medium
-		Queue: Aircraft.Empire
+		Queue: Aircraft.Separatist
 		Description: actor-swtrifighter.description
 		BuildDurationModifier: 50
 	Aircraft:
