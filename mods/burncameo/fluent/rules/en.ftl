@@ -2,7 +2,7 @@ actor-e1 =
    .description = General-purpose infantry.
         Strong vs Infantry
         Weak vs Vehicles, Aircraft
-   .description-jp = JGSDF infantryman from Gate armed
+   .description-jp = Imperial infantryman armed
       with a battle rifle.
         Strong vs Infantry
         Weak vs Vehicles, Aircraft
@@ -11385,7 +11385,8 @@ faction-cameo-iok =
 faction-cameo-camea =
    .name = Camea
    .description = Camea from Cameo
-      An unaligned commander, with the older forces of GDI, NOD, Allies and Soviets at her disposal.
+      An unaligned commander, with the older forces of GDI, NOD, Allies and the Soviet Empire at her disposal.
+      Boss faction. For fair games, it is advised you only play this as a crutch for yourself.
       Support powers: Spy Plane, Airstrike, Chronosphere, Paratroopers, Nuclear Strike
 
 faction-fot-tomorrow =

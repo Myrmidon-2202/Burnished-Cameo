@@ -48,16 +48,16 @@ mcv.camea:
 		BuildPaletteOrder: 10
 		Description: Transforms into a Construction Yard
 		Queue: Vehicle.Camea
-		Prerequisites: RAFIX.camea
+		Prerequisites: rafix.camea
 	RenderSprites:
 		Image: MCV
 
-mcv.camea.bot:
-	Inherits: mcv.camea
-	Buildable:
-		BuildPaletteOrder: 100
-		BuildLimit: 1
-		Prerequisites: RAFIX.camea, ~botplayer, allowsMCV
+# mcv.camea.bot:
+# 	Inherits: mcv.camea
+# 	Buildable:
+# 		BuildPaletteOrder: 100
+# 		BuildLimit: 1
+# 		Prerequisites: RAFIX.camea, ~botplayer, allowsMCV
 
 camea_conyard:
 	GrantExternalConditionToOwner@BuildingsOwned:
@@ -235,6 +235,7 @@ RAPROC.camea:
 	RenderSprites:
 		Image: RAPROC
 	ProvidesPrerequisite@buildingname:
+		Prerequisite: raproc.camea
 	WithResourceStoragePipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: true
@@ -410,8 +411,7 @@ RAFIX.camea:
 	RenderSprites:
 		Image: RAFIX
 	ProvidesPrerequisite@buildingname:
-	ProvidesPrerequisite@rafix:
-		Prerequisite: RAFIX.camea
+		Prerequisite: rafix.camea
 
 NUK2.camea:
 	Inherits: NUK2
@@ -421,7 +421,7 @@ NUK2.camea:
 		Name: Advanced Power Plant
 	Buildable:
 		BuildPaletteOrder: 80
-		Prerequisites: anyhq, ~techlevel.medium, ~mmcamea
+		Prerequisites: hq.camea, ~techlevel.medium, ~mmcamea
 		Queue: Building, RABuilding
 		Description: Provides more power, cheaper than the\nstandard Power Plant
 	RenderSprites:
@@ -432,7 +432,7 @@ stek.camea:
 	Buildable:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 150
-		Prerequisites: raweapa.camea, anyhq, ~techlevel.high, ~mmcamea
+		Prerequisites: raweapa.camea, hq.camea, ~mmcamea
 		Description: Provides Soviet advanced technologies.
 	Valued:
 		Cost: 1500
@@ -590,82 +590,82 @@ mslo.camea:
 		Image: MSLO
 	ProvidesPrerequisite@buildingname:
 
-PDOX.camea:
-	Inherits: PDOX
-	Buildable:
-		Queue: Defence, RADefence
-		BuildPaletteOrder: 120
-		Prerequisites: stek.camea, ~techlevel.superweapons, ~mmcamea
-		BuildLimit: 1
-	Valued:
-		Cost: 1500
-	Tooltip:
-		Name: Chronosphere
-	Health:
-		HP: 100000
-	Armor:
-		Type: Wood
-	RevealsShroud:
-		Range: 6c0
-		RequiresCondition: !lowpower
-	# ChronoshiftPower@chronoshift:
-	# 	OrderName: Chronoshift
-	# 	Prerequisites:
-	# 		1: !botplayer
-	# 	PauseOnCondition: lowpower
-	# 	Icons:
-	# 		1: chrono
-	# 	ChargeInterval: 3000
-	# 	Names:
-	# 		1: Chronoshift
-	# 	Descriptions:
-	# 		1: Teleports a large group of units\nacross the map.
-	# 	SelectTargetSpeechNotification: SelectTarget
-	# 	InsufficientPowerSpeechNotification: InsufficientPower
-	# 	#BeginChargeSpeechNotification: ChronosphereCharging
-	# 	#EndChargeSpeechNotification: ChronosphereReady
-	# 	Durations:
-	# 		1: 0
-	# 	KillCargo: False
-	# 	DisplayRadarPing: True
-	# 	SelectionCursor: ability
-	# 	TargetCursor: ability
-	# 	SupportPowerPaletteOrder: 20
-	# 	LaunchSound: chrono2.aud
-	# 	IncomingSound: chrono2.aud
-	# 	Dimensions:
-	# 		1: 5, 5
-	# 	Footprints:
-	# 		1:  __x__ _xxx_ xxxxx _xxx_ __x__
-	# DetonateWeaponPower@aichrono:
-	# 	OrderName: ChronoshiftAI
-	# 	Prerequisites:
-	# 		1: botplayer
-	# 	PauseOnCondition: lowpower
-	# 	Icons:
-	# 		1: chrono
-	# 	Cursor: ability
-	# 	ChargeInterval: 3000
-	# 	Names:
-	# 		1: Chronoshift
-	# 	Descriptions:
-	# 		1: Teleports a large group of units\nacross the map.
-	# 	ActivationDelay: 25
-	# 	Descriptions:
-	# 		1: Teleports a large group of units\nacross the map.
-	# 	Weapons:
-	# 		1: ChronoAI
-	# 	CameraActor: camera.placeholderhack
-	# 	CameraRemoveDelay: 0
-	# 	SelectTargetSpeechNotification: SelectTarget
-	# 	InsufficientPowerSpeechNotification: InsufficientPower
-	# 	DisplayRadarPing: True
-	# 	LaunchSound: chrono2.aud
-	# 	IncomingSound: chrono2.aud
-	Power:
-		Amount: -200
-	RenderSprites:
-		Image: PDOX
+# PDOX.camea:
+# 	Inherits: PDOX
+# 	Buildable:
+# 		Queue: Defence, RADefence
+# 		BuildPaletteOrder: 120
+# 		Prerequisites: stek.camea, ~techlevel.superweapons, ~mmcamea
+# 		BuildLimit: 1
+# 	Valued:
+# 		Cost: 1500
+# 	Tooltip:
+# 		Name: Chronosphere
+# 	Health:
+# 		HP: 100000
+# 	Armor:
+# 		Type: Wood
+# 	RevealsShroud:
+# 		Range: 6c0
+# 		RequiresCondition: !lowpower
+# 	# ChronoshiftPower@chronoshift:
+# 	# 	OrderName: Chronoshift
+# 	# 	Prerequisites:
+# 	# 		1: !botplayer
+# 	# 	PauseOnCondition: lowpower
+# 	# 	Icons:
+# 	# 		1: chrono
+# 	# 	ChargeInterval: 3000
+# 	# 	Names:
+# 	# 		1: Chronoshift
+# 	# 	Descriptions:
+# 	# 		1: Teleports a large group of units\nacross the map.
+# 	# 	SelectTargetSpeechNotification: SelectTarget
+# 	# 	InsufficientPowerSpeechNotification: InsufficientPower
+# 	# 	#BeginChargeSpeechNotification: ChronosphereCharging
+# 	# 	#EndChargeSpeechNotification: ChronosphereReady
+# 	# 	Durations:
+# 	# 		1: 0
+# 	# 	KillCargo: False
+# 	# 	DisplayRadarPing: True
+# 	# 	SelectionCursor: ability
+# 	# 	TargetCursor: ability
+# 	# 	SupportPowerPaletteOrder: 20
+# 	# 	LaunchSound: chrono2.aud
+# 	# 	IncomingSound: chrono2.aud
+# 	# 	Dimensions:
+# 	# 		1: 5, 5
+# 	# 	Footprints:
+# 	# 		1:  __x__ _xxx_ xxxxx _xxx_ __x__
+# 	# DetonateWeaponPower@aichrono:
+# 	# 	OrderName: ChronoshiftAI
+# 	# 	Prerequisites:
+# 	# 		1: botplayer
+# 	# 	PauseOnCondition: lowpower
+# 	# 	Icons:
+# 	# 		1: chrono
+# 	# 	Cursor: ability
+# 	# 	ChargeInterval: 3000
+# 	# 	Names:
+# 	# 		1: Chronoshift
+# 	# 	Descriptions:
+# 	# 		1: Teleports a large group of units\nacross the map.
+# 	# 	ActivationDelay: 25
+# 	# 	Descriptions:
+# 	# 		1: Teleports a large group of units\nacross the map.
+# 	# 	Weapons:
+# 	# 		1: ChronoAI
+# 	# 	CameraActor: camera.placeholderhack
+# 	# 	CameraRemoveDelay: 0
+# 	# 	SelectTargetSpeechNotification: SelectTarget
+# 	# 	InsufficientPowerSpeechNotification: InsufficientPower
+# 	# 	DisplayRadarPing: True
+# 	# 	LaunchSound: chrono2.aud
+# 	# 	IncomingSound: chrono2.aud
+# 	Power:
+# 		Amount: -200
+# 	RenderSprites:
+# 		Image: PDOX
 
 HOSP.camea:
 	Inherits: ^BaseBuilding
@@ -691,6 +691,8 @@ HOSP.camea:
 		Prerequisite: hosp
 	RenderSprites:
 		Image: HOSP
+	RenderSprites:
+		PlayerPalette: raplayer
 	-WithDeathAnimation:
 
 ATWR.camea:
@@ -802,6 +804,7 @@ MAMMOTHBUNKER.camea:
 		Modifier: 120
 	RenderSprites:
 		Image: MAMMOTHBUNKER
+		PlayerPalette: raplayer
 	-WithMakeAnimation:
 	-WithDeathAnimation:
 
@@ -992,6 +995,7 @@ RAARTY.camea:
 	Inherits: RAARTY
 	Buildable:
 		Queue: Vehicle.Camea
+		Prerequisites: hq.camea
 	RenderSprites:
 		Image: RAARTY
 
