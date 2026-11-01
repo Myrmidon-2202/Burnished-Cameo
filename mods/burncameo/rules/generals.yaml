@@ -5082,16 +5082,18 @@ GLSCUD:
 		Range: 5c0
 	Armament:
 		Weapon: GLAScudLaunch
-	MissileSpawnerMaster@1:
+	MissileSpawnerMasterCA@1:
 		Actors: glscud.missile
 		RespawnTicks: 250
 		LoadedCondition: expammo
 		RequiresCondition: undeployed
-	MissileSpawnerMaster@2:
+		SpawnOffset: 0,640,300
+	MissileSpawnerMasterCA@2:
 		Actors: glscud.missiletox
 		RespawnTicks: 250
 		LoadedCondition: toxammo
 		RequiresCondition: deployed
+		SpawnOffset: 0,640,300
 	AutoTarget:
 		ScanRadius: 10
 	AttackFrontal:
@@ -5149,9 +5151,9 @@ glscud.exp:
 	Inherits: GLSCUD
 	Buildable:
 		Prerequisites: upscudlauncher, glpalace, ~techlevel.medium, ~selectglademo, ~!selectglatoxin, ~normalscudlauncher
-	MissileSpawnerMaster@1:
+	MissileSpawnerMasterCA@1:
 		-RequiresCondition:
-	-MissileSpawnerMaster@2:
+	# -MissileSpawnerMasterCA@2:
 	WithFacingSpriteBody:
 		RequiresCondition: expammo
 	WithFacingSpriteBody@EMPTY:
@@ -5165,9 +5167,9 @@ glscud.tox:
 	Inherits: GLSCUD
 	Buildable:
 		Prerequisites: upscudlauncher, glpalace, ~techlevel.medium, ~!selectglademo, ~selectglatoxin, ~normalscudlauncher
-	MissileSpawnerMaster@2:
+	MissileSpawnerMasterCA@2:
 		-RequiresCondition:
-	-MissileSpawnerMaster@1:
+	# -MissileSpawnerMasterCA@1:
 	WithFacingSpriteBody:
 		RequiresCondition: toxammo
 	WithFacingSpriteBody@EMPTY:
@@ -5186,8 +5188,11 @@ glscud.missile:
 		HP: 18000
 	RenderSprites:
 		Image: glscudmiss
-	BallisticMissile:
+	BallisticMissileCA:
 		LaunchAngle: 75
+		Speed: 100
+		AirborneCondition: airborne
+		LaunchSounds: vv3latta.wav, vv3lattb.wav
 	LeavesTrails:
 		Image: laserfire
 		MovingInterval: 5
@@ -5197,15 +5202,17 @@ glscud.missile:
 		ZOffset: -129
 	WithFacingSpriteBody:
 	MissileSpawnerSlave:
-	FireWarheadsOnDeath:
+	SpawnedExplodes:
 		Weapon: GLASCUD
 		EmptyWeapon: GLASCUD
+		RequiresCondition: !airborne
 
 glscud.missiletox:
 	Inherits: glscud.missile
-	FireWarheadsOnDeath:
+	SpawnedExplodes:
 		Weapon: GLASCUDTOXIN
 		EmptyWeapon: GLASCUDTOXIN
+		RequiresCondition: !airborne
 
 GLSCUD.Husk:
 	Inherits: ^LightHusk
@@ -6474,7 +6481,7 @@ chbarracks:
 		Actors: che1
 		Condition: produceredguard
 		Duration: 1
-	FreeActor@sczergling:
+	FreeActor@chzergling:
 		Actor: che1
 		SpawnOffset: 0,0
 		Facing: 256
@@ -10980,7 +10987,7 @@ usattnk:
 		RecoilRecovery: 26
 		LocalOffset: 768,0,90
 		ReloadingCondition: reloading
-	#MissileSpawnerMaster:
+	#MissileSpawnerMasterCA:
 	#	Actors: usatomamiss
 	#	RespawnTicks: 150
 	#	LoadedCondition: ammo
@@ -11008,7 +11015,7 @@ usattnk:
 
 usatomamiss:
 	Inherits: ra2v3rocket
-	BallisticMissile:
+	BallisticMissileCA:
 		LaunchAngle: 120
 		Speed: 120
 		#LaunchSounds: vbooat1a.wav

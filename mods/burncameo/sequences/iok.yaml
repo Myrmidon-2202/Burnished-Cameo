@@ -389,18 +389,18 @@ iokscudtemple:
 		Filename: glstorm.shp
 		Offset: 0,-4
 	idle:
-		Scale: 0.92
+		Scale: 2.0
 	damaged-idle:
 		Start: 2
-		Scale: 0.92
+		Scale: 2.0
 	active: invisibleitem
 	smoke: invisibleitem
 	damaged-active: invisibleitem
 	dead:
-		Scale: 0.92
+		Scale: 2.0
 	make:
 		Length: *
-		Scale: 0.92
+		Scale: 2.0
 		Filename: glbuildingmakebig.shp
 	bib:
 		Scale: 1
@@ -423,33 +423,33 @@ iokscudtemple:
 		Length: 42
 		Offset: -17, -9
 		Tick: 175
-		Scale: 0.92
+		Scale: 2.0
 		Filename: glstructuresmoke.shp
 	damaged-idle-anim2:
 		Start: 49
 		Length: 42
 		Offset: -17, -9
 		Tick: 175
-		Scale: 0.92
+		Scale: 2.0
 		Filename: glstructuresmoke.shp
 	idle-anim3:
 		Start: 49
 		Length: 42
 		Offset: 17, -9
 		Tick: 175
-		Scale: 0.92
+		Scale: 2.0
 		Filename: glstructuresmoke.shp
 	damaged-idle-anim3:
 		Start: 49
 		Length: 42
 		Offset: 17, -9
 		Tick: 175
-		Scale: 0.92
+		Scale: 2.0
 		Filename: glstructuresmoke.shp
 	temple-overlay:
 		Offset: 0,0
 		AddExtension: False
-		Scale: 0.92
+		Scale: 2.0
 		Filename: tmpl.shp
 
 ####################################################################################################
@@ -462,20 +462,20 @@ iokrocketbggy:
 	idle:
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.85
+		Scale: 2.0
 	turret:
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.85
+		Scale: 2.0
 		Filename: glbggytur1.shp
 	turret2:
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.85
+		Scale: 2.0
 		Filename: glbggytur2.shp
 	muzzle:
 		Length: *
-		Scale: 0.85
+		Scale: 2.0
 		Filename: gunfire2.shp
 	icon:
 		Filename: glbggyicon.shp
@@ -486,22 +486,22 @@ iokscorpion:
 	idle:
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.50
+		Scale: 2.0
 	turret:
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.50
+		Scale: 2.0
 		Filename: iokscorpiontur.shp
 	muzzle:
 		Length: *
-		Scale: 0.50
+		Scale: 2.0
 		Filename: gunfire2.shp
 	icon:
 		Filename: glscorpionicon.shp
 	turret2:
 		Facings: 32
 		ZOffset: 256
-		Scale: 0.50
+		Scale: 2.0
 		Filename: missile.shp
 
 iokquad:
@@ -549,10 +549,10 @@ iokradar:
 	idle:
 		Facings: 32
 		UseClassicFacings: True
-		Scale: 0.92
+		Scale: 2.0
 	spinner:
 		Length: *
-		Scale: 0.92
+		Scale: 2.0
 		Filename: glradarspin.shp
 	icon:
 		Filename: glradaricon.shp

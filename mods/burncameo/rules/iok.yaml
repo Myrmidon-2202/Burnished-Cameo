@@ -801,7 +801,7 @@ iokblackmarket:
 		Actor: iokhole.iokblackmarket
 	RenderSprites:
 		Image: iokblackmarket
-		PlayerPalette: raplayer
+		-PlayerPalette: playerra
 
 iokpalace:
 	Inherits: ^Defense
@@ -1592,21 +1592,23 @@ IOKSCUD:
 		Speed: 50
 	RevealsShroud:
 		Range: 5c0
-		RevealGeneratedShroud: False
-	RevealsShroud@GAPGEN:
-		Range: 4c0
+	# 	RevealGeneratedShroud: False
+	# RevealsShroud@GAPGEN:
+	# 	Range: 4c0
 	Armament:
 		Weapon: GLAScudLaunch
-	MissileSpawnerMaster@1:
+	MissileSpawnerMasterCA@1:
 		Actors: glscud.missile
 		RespawnTicks: 250
 		LoadedCondition: expammo
 		RequiresCondition: undeployed
-	MissileSpawnerMaster@2:
+		SpawnOffset: 0,640,300
+	MissileSpawnerMasterCA@2:
 		Actors: glscud.missiletox
 		RespawnTicks: 250
 		LoadedCondition: toxammo
 		RequiresCondition: deployed
+		SpawnOffset: 0,640,300
 	AutoTarget:
 		ScanRadius: 10
 	AttackFrontal:
@@ -1622,7 +1624,7 @@ IOKSCUD:
 	FireWarheadsOnDeath:
 		Weapon: GLV2Explode
 	Selectable:
-		DecorationBounds: 28,28
+		DecorationBounds: 1280, 1280
 		Class: glscud
 	Inherits@EXT: ^ExternalConditions
 	AcceptsDeliveredExperience:
@@ -1631,9 +1633,6 @@ IOKSCUD:
 		Scale: 0.92
 	Voiced:
 		VoiceSet: GLSCUDLauncherVoice
-	ProducibleWithLevel:
-		Prerequisites: selectglademo
-		InitialLevels: 2
 	WithTextDecoration@TOX:
 		Text: TOXIN
 		ReferencePoint: Bottom, Center
