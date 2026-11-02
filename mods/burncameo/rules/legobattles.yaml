@@ -702,7 +702,7 @@ World:
 		Cost: 4000
 	Buildable:
 		BuildPaletteOrder: 10
-		BuildDuration: 750
+		BuildDuration: 850
 		BuildDurationModifier: 100
 	Mobile:
 		Speed: 95
@@ -1384,7 +1384,7 @@ astro_gemma:
 	Buildable:
 		Queue: InfantryHero.Legobattles
 		BuildPaletteOrder: 60
-		BuildDuration: 750
+		BuildDuration: 1500
 		Prerequisites: ~astro_conyard
 		Description: actor-astro_gemma.description
 		BuildLimit: 1
@@ -1576,7 +1576,7 @@ astro_space_police_captain:
 	Buildable:
 		Queue: InfantryHero.Legobattles
 		BuildPaletteOrder: 60
-		BuildDuration: 750
+		BuildDuration: 1500
 		Prerequisites: ~astro_conyard 
 		Description: actor-astro_space_police_captain.description
 		BuildLimit: 1
@@ -1786,7 +1786,7 @@ astro_biff:
 	Buildable:
 		Queue: InfantryHero.Legobattles
 		BuildPaletteOrder: 60
-		BuildDuration: 750
+		BuildDuration: 1500
 		Prerequisites: ~astro_conyard
 		Description: actor-astro_biff.description
 		BuildLimit: 1
@@ -2844,7 +2844,7 @@ alien_commander:
 	Buildable:
 		Queue: InfantryHero.Legobattles
 		BuildPaletteOrder: 60
-		BuildDuration: 750
+		BuildDuration: 1500
 		Prerequisites: ~lego_alien_conyard
 		Description: actor-alien_commander.description
 		BuildLimit: 1
@@ -3035,7 +3035,7 @@ alien_queen:
 	Buildable:
 		Queue: InfantryHero.Legobattles
 		BuildPaletteOrder: 60
-		BuildDuration: 750
+		BuildDuration: 1500
 		Prerequisites: ~lego_alien_conyard
 		Description: actor-alien_queen.description
 		BuildLimit: 1
@@ -3226,7 +3226,7 @@ space_criminal_leader:
 	Buildable:
 		Queue: InfantryHero.Legobattles
 		BuildPaletteOrder: 60
-		BuildDuration: 750
+		BuildDuration: 1500
 		Prerequisites: ~lego_alien_conyard
 		Description: actor-space_criminal_leader.description
 		BuildLimit: 1
@@ -4367,7 +4367,7 @@ imperial_governor_broadside:
 	Buildable:
 		Queue: InfantryHero.Legobattles
 		BuildPaletteOrder: 60
-		BuildDuration: 750
+		BuildDuration: 1500
 		Prerequisites: ~lego_imperial_conyard
 		Description: actor-imperial_governor_broadside.description
 		BuildLimit: 1
@@ -4392,7 +4392,7 @@ imperial_governor_broadside:
 		Type: propaganda
 		RequiresCondition: !disabled
 	WithInfantryBody:
-		-IdleSequences: idle1,idle2,idle3,idle4
+		-IdleSequences: idle1, idle2, idle3, idle4
 	WithDeathAnimation:
 		UseDeathTypeSuffix: false
 	#Buff Spells
@@ -4558,7 +4558,7 @@ imperial_camilla:
 	Buildable:
 		Queue: InfantryHero.Legobattles
 		BuildPaletteOrder: 60
-		BuildDuration: 750
+		BuildDuration: 1500
 		Prerequisites: ~lego_imperial_conyard
 		Description: actor-imperial_camilla.description
 		BuildLimit: 1
@@ -4749,7 +4749,7 @@ imperial_ninja_master:
 	Buildable:
 		Queue: InfantryHero.Legobattles
 		BuildPaletteOrder: 60
-		BuildDuration: 750
+		BuildDuration: 1500
 		Prerequisites: ~lego_imperial_conyard
 		Description: actor-imperial_ninja_master.description
 		BuildLimit: 1
@@ -5682,7 +5682,7 @@ pirate_captain_brickbeard:
 	Buildable:
 		Queue: InfantryHero.Legobattles
 		BuildPaletteOrder: 60
-		BuildDuration: 750
+		BuildDuration: 1500
 		Prerequisites: ~lego_pirate_conyard
 		Description: actor-pirate_captain_brickbeard.description
 		BuildLimit: 1
@@ -5873,7 +5873,7 @@ pirate_lady_pirate:
 	Buildable:
 		Queue: InfantryHero.Legobattles
 		BuildPaletteOrder: 60
-		BuildDuration: 750
+		BuildDuration: 1500
 		Prerequisites: ~lego_pirate_conyard
 		Description: actor-pirate_lady_pirate.description
 		BuildLimit: 1
@@ -6064,7 +6064,7 @@ pirate_king_kahuka:
 	Buildable:
 		Queue: InfantryHero.Legobattles
 		BuildPaletteOrder: 60
-		BuildDuration: 750
+		BuildDuration: 1500
 		Prerequisites: ~lego_pirate_conyard
 		Description: actor-pirate_king_kahuka.description
 		BuildLimit: 1
@@ -7146,7 +7146,7 @@ king_king:
 	Buildable:
 		Queue: InfantryHero.Legobattles
 		BuildPaletteOrder: 60
-		BuildDuration: 750
+		BuildDuration: 1500
 		Prerequisites: ~lego_king_conyard
 		Description: actor-king_king.description
 		BuildLimit: 1
@@ -7337,7 +7337,7 @@ king_queen:
 	Buildable:
 		Queue: InfantryHero.Legobattles
 		BuildPaletteOrder: 60
-		BuildDuration: 750
+		BuildDuration: 1500
 		Prerequisites: ~lego_king_conyard
 		Description: actor-king_queen.description
 		BuildLimit: 1
@@ -7528,7 +7528,7 @@ king_dwarf_king:
 	Buildable:
 		Queue: InfantryHero.Legobattles
 		BuildPaletteOrder: 60
-		BuildDuration: 750
+		BuildDuration: 1500
 		Prerequisites: ~lego_king_conyard
 		Description: actor-king_dwarf_king.description
 		BuildLimit: 1
@@ -8550,7 +8550,7 @@ wizard_wizard:
 	Buildable:
 		Queue: InfantryHero.Legobattles
 		BuildPaletteOrder: 60
-		BuildDuration: 750
+		BuildDuration: 1500
 		Prerequisites: ~lego_wizard_conyard
 		Description: actor-wizard_wizard.description
 		BuildLimit: 1
@@ -8741,7 +8741,7 @@ wizard_sorceress:
 	Buildable:
 		Queue: InfantryHero.Legobattles
 		BuildPaletteOrder: 60
-		BuildDuration: 750
+		BuildDuration: 1500
 		Prerequisites: ~lego_wizard_conyard
 		Description: actor-wizard_sorceress.description
 		BuildLimit: 1
@@ -8932,7 +8932,7 @@ wizard_troll_king:
 	Buildable:
 		Queue: InfantryHero.Legobattles
 		BuildPaletteOrder: 60
-		BuildDuration: 750
+		BuildDuration: 1500
 		Prerequisites: ~lego_wizard_conyard
 		Description: actor-wizard_troll_king.description
 		BuildLimit: 1

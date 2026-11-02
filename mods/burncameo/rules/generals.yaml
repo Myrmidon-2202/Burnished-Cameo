@@ -3516,6 +3516,8 @@ gle1:
 		InitialLevels: 1
 	GainsExperience:
 		LevelUpNotification: LevelUpRA2
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience
 
 gle1toxin:
 	Inherits: gle1
@@ -3642,6 +3644,8 @@ GLKELL:
 		Modifier: 250
 	GainsExperience:
 		LevelUpNotification: LevelUpRA2
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience
 
 gle3:
 	Inherits: E3
@@ -3686,6 +3690,8 @@ gle3:
 	RenderSprites:
 		Image: sglrpgtrooper
 		PlayerPalette: ra2infantry
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience
 
 glterror:
 	Inherits: RA2TERROR
@@ -3730,6 +3736,8 @@ glterror:
 	RenderSprites:
 		Image: sglterrorist
 		PlayerPalette: ra2infantry
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage
 
 glsabo:
 	Inherits: ^Soldier
@@ -3957,6 +3965,8 @@ glbiker:
 	WithCargoPipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: true
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience
 
 glbiker.toxin:
 	Inherits: glbiker
@@ -4119,6 +4129,8 @@ glbggy:
 		RequiresCondition: selectglatoxin || selectglademo
 	RenderSprites:
 		Image: sglbggy
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience
 
 glbbus:
 	Inherits: ^Vehicle
@@ -4201,6 +4213,8 @@ glbbus:
 	WithCargoPipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: true
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience
 
 # glbbus.e1:
 # 	Inherits: glbbus
@@ -4350,6 +4364,8 @@ glscorpion:
 		Modifier: 75
 	GainsExperience:
 		LevelUpNotification: LevelUpRA2
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience
 
 glscorpion.Husk:
 	Inherits: ^LightHusk
@@ -4480,6 +4496,8 @@ glmaura:
 		TotalCap: 2
 	GainsExperience:
 		LevelUpNotification: LevelUpRA2
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience
 
 glmaura.Husk:
 	Inherits: ^LightHusk
@@ -4604,6 +4622,8 @@ gltractor:
 		TotalCap: 2
 	GainsExperience:
 		LevelUpNotification: LevelUpRA2
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience
 
 gltractor.Husk:
 	Inherits: ^LightHusk
@@ -4705,6 +4725,8 @@ glpickup:
 	WithCargoPipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: true
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience
 
 glscrapcar:
 	Inherits: ^Vehicle
@@ -4787,6 +4809,8 @@ glscrapcar:
 		Condition: triggered
 	KillsSelf:
 		RequiresCondition: triggered && !disabled
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage
 
 glvan:
 	Inherits: ^Vehicle
@@ -4880,6 +4904,8 @@ glvan:
 	WithCargoPipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: true
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience
 
 glradar:
 	Inherits: ^Vehicle
@@ -5041,6 +5067,8 @@ glquad:
 		TotalCap: 2
 	GainsExperience:
 		LevelUpNotification: LevelUpRA2
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience
 
 glquad.Husk:
 	Inherits: ^LightHusk
@@ -5146,6 +5174,8 @@ GLSCUD:
 		RequiresCondition: scrap_create_bonus >= 2
 	GainsExperience:
 		LevelUpNotification: LevelUpRA2
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience
 
 glscud.exp:
 	Inherits: GLSCUD
@@ -5336,6 +5366,8 @@ glbombtruck:
 		Sequence: idle2
 		RequiresCondition: selectglademo
 		Name: body3
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage
 
 pscglbtruck2:
 	Tooltip:
@@ -6035,6 +6067,8 @@ glgunboat:
 	#	LoadedCondition: Passenger
 	GainsExperience:
 		LevelUpNotification: LevelUpRA2
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience
 
 pscglgunboat1:
 	Tooltip:
@@ -6483,7 +6517,7 @@ chbarracks:
 		Duration: 1
 	FreeActor@chzergling:
 		Actor: che1
-		SpawnOffset: 0,0
+		SpawnOffset: 0,1
 		Facing: 256
 		AllowRespawn: True
 		RequiresCondition: produceredguard
@@ -6885,8 +6919,8 @@ chpropagandatower:
 		Amount: -20
 	MustBeDestroyed:
 		RequiredForShortGame: false
-	WithBuildingBib:
-		HasMinibib: true
+	# WithBuildingBib:
+	# 	HasMinibib: true
 	Selectable:
 		Bounds: 1024, 1024
 		DecorationBounds: 1024, 2048, 0, -512
@@ -7379,6 +7413,8 @@ che1:
 		Queue: Infantry.China
 	GainsExperience:
 		LevelUpNotification: LevelUpRA2
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience
 
 che2:
 	Inherits: che1
@@ -7418,6 +7454,8 @@ che2:
 		Modifier: 75
 	GainsExperience:
 		LevelUpNotification: LevelUpRA2
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience
 
 che3:
 	Inherits: E3
@@ -7483,6 +7521,8 @@ che3:
 		Sequence: ammo_c4
 		RequiresCondition: deployed
 		RequiresSelection: true
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience
 
 CHHACKER:
 	Inherits: ^Soldier
@@ -7612,6 +7652,8 @@ CHHACKER:
 	RenderSprites:
 		Image: schhacker
 		PlayerPalette: ra2infantry
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Experience
 
 CHHACKER2:
 	Inherits: CHHACKER
@@ -7643,6 +7685,8 @@ CHHACKER2:
 		Image: chhacker
 	Voiced:
 		VoiceSet: SuperHackerVoice
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Experience
 
 chlotus:
 	Inherits: ^Soldier
@@ -7764,6 +7808,8 @@ chlotus:
 	RenderSprites:
 		Image: schlotus
 		PlayerPalette: ra2infantry
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Experience
 
 chbattle:
 	Inherits: ^Tank
@@ -7894,6 +7940,9 @@ chbattle:
 	GrantConditionOnPrerequisite@upschadvancedautoloader:
 		Condition: upschadvancedautoloader
 		Prerequisites: upschadvancedautoloader
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience
+
 charty:
 	Inherits: ^Tank
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -7964,6 +8013,8 @@ charty:
 		Queue: Vehicle.China
 	GainsExperience:
 		LevelUpNotification: LevelUpRA2
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience
 
 charty.Husk:
 	Inherits: ^LightHusk
@@ -8171,6 +8222,8 @@ choverlord:
 	WithCargoPipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: true
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience
 
 choverlord2:
 	Inherits: choverlord
@@ -8225,6 +8278,8 @@ choverlord2:
 	WithSpriteTurret:
 		RequiresCondition: !addonpropaganda && !addonbunker
 	-WithCargoPipsDecoration:
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience
 
 
 pscchoverlord1:
@@ -8407,6 +8462,9 @@ chdragon:
 	GainsExperience:
 		LevelUpNotification: LevelUpRA2
 	RenderSprites:
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience
+
 chdragon.Husk:
 	Inherits: ^LightHusk
 	Tooltip:
@@ -8488,6 +8546,8 @@ chgtnk:
 		Queue: Vehicle.China
 	GainsExperience:
 		LevelUpNotification: LevelUpRA2
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience
 
 chgtnk.Husk:
 	Inherits: ^LightHusk
@@ -8534,6 +8594,8 @@ chharv:
 		DockLoopSequence: idle
 	Voiced:
 		VoiceSet: CHSupplyTruckVoice
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience
 
 chharv.Husk:
 	Inherits: ^LightHusk
@@ -8614,6 +8676,8 @@ choutpost:
 	WithCargoPipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: true
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience
 
 choutpost2:
 	Inherits: choutpost
@@ -8712,6 +8776,8 @@ checm:
 		VoiceSet: ECMTankVoice
 	GainsExperience:
 		LevelUpNotification: LevelUpRA2
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience
 
 CHTRUK:
 	Inherits: TRUCK
@@ -8774,6 +8840,8 @@ chcrawl:
 	WithCargoPipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: true
+	ActorStatValues:
+		Stats: Armor, Sight, Speed
 
 chcrawl2:
 	Inherits: chcrawl
@@ -8821,6 +8889,8 @@ chcrawl2:
 	WithCargoPipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: true
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience
 
 chcrawl.Husk:
 	Inherits: ^LightHusk
@@ -8930,6 +9000,8 @@ chnukecann:
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: True
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience
 
 chnukecann.Husk:
 	Inherits: ^LightHusk
@@ -9453,6 +9525,8 @@ CHMIG:
 		PipCount: 4
 	GrantConditionOnDamageState@SmokeTrail:
 		Condition: enable-smoke
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience
 
 CHMIG2:
 	Inherits: ^RANeutralPlane
@@ -9547,6 +9621,8 @@ CHMIG2:
 		RequiresSelection: True
 	GrantConditionOnDamageState@SmokeTrail:
 		Condition: enable-smoke
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience
 
 chmig.husk:
 	Inherits: ^PlaneHusk
@@ -9769,6 +9845,8 @@ chhelix:
 		RequiresSelection: true
 	GrantConditionOnDamageState@SmokeTrail:
 		Condition: enable-smoke
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience
 
 pscchhelix1:
 	Tooltip:
@@ -9948,6 +10026,8 @@ chflameboat:
 		Prerequisites: upbluefire
 	GainsExperience:
 		LevelUpNotification: LevelUpRA2
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience
 
 chasub:
 	Inherits: ^BoatUnit
@@ -10014,6 +10094,8 @@ chasub:
 	RenderSprites:
 	GainsExperience:
 		LevelUpNotification: LevelUpRA2
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience
 
 chmnly:
 	Inherits: MNLY
@@ -10314,6 +10396,8 @@ usae1:
 	GainsExperience:
 		LevelUpNotification: LevelUpRA2
 	-TakeCover:
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience
 
 usae3:
 	Inherits: E3
@@ -10379,6 +10463,8 @@ usae3:
 		PlayerPalette: ra2infantry
 		Image: usamissiledefender
 	-TakeCover:
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience
 
 usapath:
 	Inherits: ^Soldier
@@ -10429,6 +10515,8 @@ usapath:
 		Range: 5c0
 	GainsExperience:
 		LevelUpNotification: LevelUpRA2
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience
 
 usaburton:
 	Inherits: ^Soldier
@@ -10528,6 +10616,8 @@ usaburton:
 		PlayerPalette: ra2infantry
 		Image: susaburton
 	-TakeCover:
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience
 
 # usaburton.bot:
 # 	Inherits: usaburton
@@ -10725,6 +10815,8 @@ usajeep:
 	WithCargoPipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: true
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience
 
 # usajeep.bot1:
 # 	Inherits: usajeep
@@ -11012,6 +11104,8 @@ usattnk:
 	ProductionCostMultiplier@selectusaairforce:
 		Multiplier: 125
 		Prerequisites: selectusaairforce
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience
 
 usatomamiss:
 	Inherits: ra2v3rocket
@@ -11084,6 +11178,8 @@ usacrusader:
 	Voiced:
 		VoiceSet: USACrusaderTankVoice
 	Inherits@ProducesDrones: ^ProducesDrones
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience
 
 usacrusader2:
 	Inherits: usacrusader
@@ -11186,6 +11282,8 @@ usapala:
 		Delay: 1
 		HealIfBelow: 100
 		DamageCooldown: 1
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience
 
 usasentry:
 	Inherits: ^Vehicle
@@ -11275,6 +11373,8 @@ usasentry:
 	ProductionCostMultiplier@selectusaairforce:
 		Multiplier: 60
 		Prerequisites: selectusaairforce
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience
 
 usaavenger:
 	Inherits: ^Vehicle
@@ -11363,6 +11463,8 @@ usaavenger:
 	ProductionCostMultiplier@selectusaairforce:
 		Multiplier: 125
 		Prerequisites: selectusaairforce
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience
 
 usaambulan:
 	Inherits: ^Vehicle
@@ -11428,6 +11530,8 @@ usaambulan:
 	WithCargoPipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: true
+	ActorStatValues:
+		Stats: Armor, Sight, Speed
 
 usamicro:
 	Inherits: ^Tank
@@ -11495,6 +11599,8 @@ usamicro:
 		Multiplier: 125
 		Prerequisites: selectusaairforce
 	RenderSprites:
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience
 
 usamcv:
 	Inherits: ^Vehicle
@@ -12014,6 +12120,8 @@ usalasertur:
 		VoiceSet: CHGatlingCannonVoice
 	RenderSprites:
 		Image: usalasertur
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills
 
 usasupply:
 	Inherits: ^BaseBuilding
@@ -12180,10 +12288,10 @@ usahook:
 		Multiplier: 90
 		Prerequisites: selectusaairforce
 		Queue: Aircraft, RAAircraft
-
 	WithCargoPipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: true
+
 usahook.husk:
 	Inherits: ^HelicopterHusk
 	Tooltip:
@@ -12252,6 +12360,7 @@ usacombathook:
 		Bounds: 2133, 2133
 	AutoDeployer:
 		DeployChance: 100
+
 usacombathook.husk:
 	Inherits: usahook.husk
 	Tooltip:
@@ -12999,6 +13108,8 @@ usaraptor:
 		RequiresSelection: True
 	GrantConditionOnDamageState@SmokeTrail:
 		Condition: enable-smoke
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience
 
 usaraptor2:
 	Inherits: usaraptor
@@ -13150,7 +13261,7 @@ usastealth:
 	ProductionCostMultiplier@selectusaairforce:
 		Multiplier: 68
 		Prerequisites: selectusaairforce
-		Queue: Aircraft, RAAircraft
+		Queue: Aircraft.Usa
 	GrantConditionOnPrerequisite@selectusaairforce:
 		Condition: haspointdefense
 		Prerequisites: selectusaairforce
@@ -13167,6 +13278,8 @@ usastealth:
 		RequiresSelection: True
 	GrantConditionOnDamageState@SmokeTrail:
 		Condition: enable-smoke
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience
 
 usastealth.husk:
 	Inherits: ^PlaneHusk
@@ -13284,7 +13397,7 @@ usaaurora:
 	ProductionCostMultiplier@selectusaairforce:
 		Multiplier: 68
 		Prerequisites: selectusaairforce
-		Queue: Aircraft, RAAircraft
+		Queue: Aircraft.Usa
 	GrantConditionOnPrerequisite@selectusaairforce:
 		Condition: haspointdefense
 		Prerequisites: selectusaairforce
@@ -13300,6 +13413,8 @@ usaaurora:
 		RequiresSelection: True
 	GrantConditionOnDamageState@SmokeTrail:
 		Condition: enable-smoke
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience
 
 usaaurora2:
 	Inherits: usaaurora
@@ -13451,12 +13566,14 @@ usacomanche:
 	ProductionCostMultiplier@selectusaairforce:
 		Multiplier: 90
 		Prerequisites: selectusaairforce
-		Queue: Aircraft, RAAircraft
+		Queue: Aircraft.Usa
 	GainsExperience:
 		LevelUpNotification: LevelUpRA2
 	ProductionCostMultiplier@selectusaairforce:
 		Multiplier: 60
 		Prerequisites: selectusaairforce
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience
 
 usacomanche.husk:
 	Inherits: ^HelicopterHusk
@@ -13593,6 +13710,8 @@ usafirebase:
 	WithCargoPipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: true
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience
 
 usafirebase.e1:
 	Inherits: usafirebase

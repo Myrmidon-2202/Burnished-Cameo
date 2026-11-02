@@ -2517,13 +2517,13 @@ USAComancheMG:
 	Projectile: InstantHit
 		Blockable: false
 	Warhead@1Dam: SpreadDamage
-		Damage: 600
+		Damage: 1200
 		Versus:
 			Light: 50
-			Medium: 35
+			Medium: 45
 			Heavy: 25
 			Wood: 50
-			Concrete: 6
+			Concrete: 16
 
 USAComancheMissile:
 	Inherits: ^AntiGroundMissile
@@ -2671,7 +2671,7 @@ USATomahawk:
 	Inherits: ^AntiGroundMissile
 	MinRange: 4c0
 	ReloadDelay: 250
-	Range: 10c0
+	Range: 11c0
 	Report: vtomweaa.wav
 	TargetActorCenter: true
 	Projectile: Missile
@@ -2687,7 +2687,7 @@ USATomahawk:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c640
 		Falloff: 100, 100
-		Damage: 15000
+		Damage: 14000
 		Versus:
 			None: 40
 			Wood: 50
@@ -2768,7 +2768,7 @@ USAParticleCannonDamage2:
 	Inherits: USAParticleCannonDamage
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c0
-		Damage: 7500
+		Damage: 8500
 
 USAAmbulanceHeal:
 	ReloadDelay: 120

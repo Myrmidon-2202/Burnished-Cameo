@@ -2257,12 +2257,12 @@ Hellfire:
 	Warhead@ShrapnelWeaponPercentage: HealthPercentageDamage
 		ValidTargets: Ground, Water, Trees, Air
 		Damage: 4
-	Warhead@HeavyMissile: SpreadDamage
-		ValidTargets: Ground, Water, Trees, Air
-		Damage: 8000
-	Warhead@HeavyMissilePercentage: HealthPercentageDamage
-		ValidTargets: Ground, Water, Trees, Air
-		Damage: 4
+	# Warhead@HeavyMissile: SpreadDamage
+	# 	ValidTargets: Ground, Water, Trees, Air
+	# 	Damage: 8000
+	# Warhead@HeavyMissilePercentage: HealthPercentageDamage
+	# 	ValidTargets: Ground, Water, Trees, Air
+	# 	Damage: 4
 
 HellfireCryo:
 	Inherits: Hellfire
@@ -4261,12 +4261,12 @@ ra120mm:
 		Damage: 6000
 	Warhead@ShrapnelWeaponFriendlyFire: SpreadDamage
 		Damage: 3000
-	Warhead@ShrapnelWeaponPercentage: HealthPercentageDamage
-		Damage: 3
-	Warhead@TankDestroyerCannon: SpreadDamage
-		Damage: 6000
-	Warhead@TankDestroyerCannonPercentage: HealthPercentageDamage
-		Damage: 3
+	# Warhead@ShrapnelWeaponPercentage: HealthPercentageDamage
+	# 	Damage: 3
+	# Warhead@TankDestroyerCannon: SpreadDamage
+	# 	Damage: 6000
+	# Warhead@TankDestroyerCannonPercentage: HealthPercentageDamage
+	# 	Damage: 3
 	Warhead@Effect: CreateEffect
 		Explosions: small_building
 		ImpactSounds: kaboom15.aud
@@ -4328,18 +4328,18 @@ MammothTusk:
 	Warhead@FlakWeaponPercentage: HealthPercentageDamage
 		ValidTargets: Ground, Water, Trees, Air
 		Damage: 3
-	Warhead@MediumMissile: SpreadDamage
-		ValidTargets: Ground, Water, Trees, Air
-		Damage: 6000
-	Warhead@MediumMissilePercentage: HealthPercentageDamage
-		ValidTargets: Ground, Water, Trees, Air
-		Damage: 3
-	Warhead@HeavyMissile: SpreadDamage
-		ValidTargets: Ground, Water, Trees, Air
-		Damage: 6000
-	Warhead@HeavyMissilePercentage: HealthPercentageDamage
-		ValidTargets: Ground, Water, Trees, Air
-		Damage: 3
+	# Warhead@MediumMissile: SpreadDamage
+	# 	ValidTargets: Ground, Water, Trees, Air
+	# 	Damage: 6000
+	# Warhead@MediumMissilePercentage: HealthPercentageDamage
+	# 	ValidTargets: Ground, Water, Trees, Air
+	# 	Damage: 3
+	# Warhead@HeavyMissile: SpreadDamage
+	# 	ValidTargets: Ground, Water, Trees, Air
+	# 	Damage: 6000
+	# Warhead@HeavyMissilePercentage: HealthPercentageDamage
+	# 	ValidTargets: Ground, Water, Trees, Air
+	# 	Damage: 3
 	Warhead@Effect: CreateEffect
 		Explosions: artillery_explosion
 		ImpactSounds: kaboom12.aud

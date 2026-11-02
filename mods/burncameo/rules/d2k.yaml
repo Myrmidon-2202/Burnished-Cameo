@@ -6401,6 +6401,8 @@ fedaykin:
 		PauseOnCondition: cloak-force-disabled || base-reveal
 	Passenger:
 		CargoType: Fremen
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience
 
 # emperor_fedaykin:
 # 	Inherits: fedaykin
@@ -10415,7 +10417,7 @@ sonic_tank:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 100000
+		HP: 60000
 	Armor:
 		Type: Heavy
 	Mobile:
@@ -10441,6 +10443,8 @@ sonic_tank:
 		Palette: d2kcloak
 	Voiced:
 		VoiceSet: D2KSonicTank
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience
 
 # emperor_sonic_tank:
 # 	Inherits: sonic_tank
@@ -11253,7 +11257,7 @@ deviator:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 100000
+		HP: 60000
 	Armor:
 		Type: Medium
 	Mobile:

@@ -217,6 +217,10 @@
 	GainsExperience:
 		LevelUpImage: crate-effects
 		Conditions:
+			200: rank-veteran
+			400: rank-veteran
+			600: rank-veteran
+			800: rank-veteran
 	ExternalCondition@rankveteran:
 		Condition: rank-veteran
 		TotalCap: 4
@@ -5601,7 +5605,7 @@ CPQDEBUGDUMMY:
 
 ^RearmableAircraft:
 	Rearmable:
-		RearmActors: dummy_dock,hpad.gdi,hpad.nod,rahpad,raafld,modraafld,ixian_launchpad,ra2gaairc,ra2naairf,aa_cgairf,steel_conpad,latin_cgair,nax_airfield, drihelipad.imperium, drfghelipad.freedomguard, drihelipad.togran
+		RearmActors: dummy_dock,hpad.gdi,hpad.nod,rahpad,raafld,modraafld,ixian_launchpad,ra2gaairc,ra2naairf,aa_cgairf,steel_conpad,latin_cgair,nax_airfield, drihelipad.imperium, drfghelipad.freedomguard, drihelipad.togran, chairport, usaairport
 	AutoTarget:
 		InitialStance: HoldFire
 	DamageMultiplier@RearmableAircraft:
@@ -5621,11 +5625,11 @@ CPQDEBUGDUMMY:
 
 ^Repairable:
 	Repairable:
-		RepairActors: fix.gdi, fix.nod, rafix.allies, rafix.soviet, rafix.japan, ra2nadept, ra2gadept, aa_cgdept, latin_cgdept, repair_pad.ixian, ra2_ctoutp, tsgtdeptgdi, tsgtdeptnod, tsgtdeptmutant, tsgtdeptcabal, plymouth_garage, eden_garage
+		RepairActors: fix.gdi, fix.nod, rafix.allies, rafix.soviet, rafix.japan, ra2nadept, ra2gadept, aa_cgdept, latin_cgdept, repair_pad.ixian, ra2_ctoutp, tsgtdeptgdi, tsgtdeptnod, tsgtdeptmutant, tsgtdeptcabal, plymouth_garage, eden_garage, chweap, usaweap, glweap
 
 ^RearmAtServiceDepot:
 	Rearmable:
-		RearmActors: fix.gdi, fix.nod, rafix.allies, rafix.soviet, rafix.japan, ra2nadept, ra2gadept, aa_cgdept, latin_cgdept, repair_pad.ixian, ra2_ctoutp, tsgtdeptgdi, tsgtdeptnod, tsgtdeptmutant, tsgtdeptcabal,  plymouth_garage, eden_garage
+		RearmActors: fix.gdi, fix.nod, rafix.allies, rafix.soviet, rafix.japan, ra2nadept, ra2gadept, aa_cgdept, latin_cgdept, repair_pad.ixian, ra2_ctoutp, tsgtdeptgdi, tsgtdeptnod, tsgtdeptmutant, tsgtdeptcabal,  plymouth_garage, eden_garage, chairport, usaairport
 
 ^ShootableMissile:
 	Inherits@1: ^ExistsInWorld
