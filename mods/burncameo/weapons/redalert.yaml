@@ -722,12 +722,12 @@ SiegeMortar:
 		Damage: 2000
 	Warhead@MediumFlameWeaponPercentage: HealthPercentageDamage
 		Damage: 2
-	Warhead@LightFlameWeapon: SpreadDamage
-		Damage: 4000
-	Warhead@LightFlameWeaponFriendlyFire: SpreadDamage
-		Damage: 2000
-	Warhead@LightFlameWeaponPercentage: HealthPercentageDamage
-		Damage: 2
+	# Warhead@LightFlameWeapon: SpreadDamage
+	# 	Damage: 4000
+	# Warhead@LightFlameWeaponFriendlyFire: SpreadDamage
+	# 	Damage: 2000
+	# Warhead@LightFlameWeaponPercentage: HealthPercentageDamage
+	# 	Damage: 2
 
 SiegeMortarThermobaric:
 	Inherits: ^HeavyCannon

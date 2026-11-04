@@ -88,6 +88,7 @@ FileSystem: DefaultFileSystem
 		~burncameo|bits/legobattles
 		~burncameo|bits/halloween
 		~burncameo|bits/z
+		~burncameo|bits/xmas
 		# ~burncameo|bits/tkm
 		#~burncameo|bits/mindustry
 		~common|/mods/cnc/bits
@@ -154,7 +155,7 @@ Rules:
 	burncameo|rules/infected.yaml
 	# burncameo|rules/monsters.yaml
 	# burncameo|rules/keeper.yaml
-	# burncameo|rules/xmas.yaml
+	burncameo|rules/xmas.yaml
 	# burncameo|rules/valentine.yaml
 	burncameo|rules/halloween.yaml
 	burncameo|rules/legobattles.yaml
@@ -197,7 +198,7 @@ Sequences:
 	burncameo|sequences/infected.yaml
 	burncameo|sequences/sc2k.yaml
 	burncameo|sequences/civilization2.yaml
-	# burncameo|sequences/xmas.yaml
+	burncameo|sequences/xmas.yaml
 	burncameo|sequences/halloween.yaml
 	burncameo|sequences/tomorrow.yaml
 	# burncameo|sequences/keeper.yaml
@@ -261,7 +262,7 @@ Weapons:
 	burncameo|weapons/starwars.yaml
 	burncameo|weapons/sc2k.yaml
 	burncameo|weapons/civilization2.yaml
-	# burncameo|weapons/xmas.yaml
+	burncameo|weapons/xmas.yaml
 	burncameo|weapons/tomorrow.yaml
 	# burncameo|weapons/valentine.yaml
 	burncameo|weapons/halloween.yaml
@@ -395,7 +396,7 @@ Hotkeys:
 	burncameo|hotkeys.yaml
 
 LoadScreen: FitImageLoadScreen
-	Image: burncameo|uibits/loadscreen2.png,burncameo|uibits/loadscreen3.png,burncameo|uibits/loadscreen4.png,burncameo|uibits/loadscreen5.png,burncameo|uibits/loadscreen6.png,burncameo|uibits/loadscreen7.png,burncameo|uibits/loadscreen8.png,burncameo|uibits/loadscreen9.png,burncameo|uibits/loadscreen10.png,burncameo|uibits/loadscreen11.png,burncameo|uibits/loadscreen12.png,burncameo|uibits/loadscreen15.png,burncameo|uibits/loadscreen16.png,burncameo|uibits/loadscreen17.png,burncameo|uibits/loadscreen18.png,burncameo|uibits/loadscreen19.png,burncameo|uibits/loadscreen20.png,burncameo|uibits/loadscreen21.png
+	Image: burncameo|uibits/loadscreen2.png,burncameo|uibits/loadscreen3.png,burncameo|uibits/loadscreen4.png,burncameo|uibits/loadscreen5.png,burncameo|uibits/loadscreen6.png,burncameo|uibits/loadscreen10.png,burncameo|uibits/loadscreen11.png,burncameo|uibits/loadscreen12.png,burncameo|uibits/loadscreen15.png,burncameo|uibits/loadscreen17.png,burncameo|uibits/loadscreen18.png,burncameo|uibits/loadscreen19.png,burncameo|uibits/loadscreen20.png,burncameo|uibits/loadscreen21.png
 
 ServerTraits:
 	LobbyCommands

@@ -1369,10 +1369,10 @@ RA2120xmm:
 		Damage: 2000
 	Warhead@ShrapnelWeaponPercentage: HealthPercentageDamage
 		Damage: 2
-	Warhead@HeavyCannon: SpreadDamage
-		Damage: 4000
-	Warhead@HeavyCannonPercentage: HealthPercentageDamage
-		Damage: 2
+	# Warhead@HeavyCannon: SpreadDamage
+	# 	Damage: 4000
+	# Warhead@HeavyCannonPercentage: HealthPercentageDamage
+	# 	Damage: 2
 	Warhead@Effect: CreateEffect
 		Explosions: ra2_apoc_explosion
 		ImpactSounds: gexpapoa.wav
