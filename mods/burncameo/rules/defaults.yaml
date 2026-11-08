@@ -171,6 +171,15 @@
 		Offset: 128, 128, 0
 		ZOffset: -512
 
+^Xmas_setting:
+	GrantConditionOnPrerequisite@xmas-setting:
+		Condition: xmas-setting
+		Prerequisites: xmas-setting
+	SpawnActorOnDeath@xmas-setting:
+		Actor: XMASCRATE
+		Probability: 5
+		RequiresCondition: xmas-setting
+
 ^Xmas_Decorations:
 	WithIdleOverlay@xmas_gift_red:
 		Image: xmas_presents

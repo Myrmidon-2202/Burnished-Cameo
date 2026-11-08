@@ -89,6 +89,7 @@ FileSystem: DefaultFileSystem
 		~burncameo|bits/halloween
 		~burncameo|bits/z
 		~burncameo|bits/xmas
+		~burncameo|bits/valentine
 		# ~burncameo|bits/tkm
 		#~burncameo|bits/mindustry
 		~common|/mods/cnc/bits
@@ -156,7 +157,7 @@ Rules:
 	# burncameo|rules/monsters.yaml
 	# burncameo|rules/keeper.yaml
 	burncameo|rules/xmas.yaml
-	# burncameo|rules/valentine.yaml
+	burncameo|rules/valentine.yaml
 	burncameo|rules/halloween.yaml
 	burncameo|rules/legobattles.yaml
 	burncameo|rules/outpost2.yaml
@@ -194,7 +195,7 @@ Sequences:
 	burncameo|sequences/wz2100.yaml
 	# burncameo|sequences/shockwave.yaml
 	# burncameo|sequences/315custom.yaml
-	# burncameo|sequences/valentine.yaml
+	burncameo|sequences/valentine.yaml
 	burncameo|sequences/infected.yaml
 	burncameo|sequences/sc2k.yaml
 	burncameo|sequences/civilization2.yaml
@@ -264,7 +265,7 @@ Weapons:
 	burncameo|weapons/civilization2.yaml
 	burncameo|weapons/xmas.yaml
 	burncameo|weapons/tomorrow.yaml
-	# burncameo|weapons/valentine.yaml
+	burncameo|weapons/valentine.yaml
 	burncameo|weapons/halloween.yaml
 	# burncameo|weapons/keeper.yaml
 	burncameo|weapons/outpost2.yaml

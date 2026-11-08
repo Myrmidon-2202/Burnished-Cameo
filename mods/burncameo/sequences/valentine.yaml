@@ -1,193 +1,283 @@
-
-xmas_presents:
-	red:
-	green:
-		Start: 1
-	orange:
-		Start: 2
-
 explosion:
 	Defaults:
 		Length: *
 		ZOffset: 2047
-	lovepiff: lovepiff
-	loveex1: loveex1
+	lovepiff:
+		Filename: lovepiff.shp
+	loveex1:
+		Filename: loveex1.shp
 
 icon:
 	Defaults:
+		Filename: icon.shp
 		AddExtension: false
-	swcupidoicon: cupidoicon.shp
+	swcupidoicon:
+		Filename: cupidoicon.shp
 
 valentines_sweethearts_projectile:
+	Defaults:
+		Filename: valentines_sweethearts_projectile.shp
 	idle:
-	
+
 valentines_skull:
+	Defaults:
+		Filename: valentines_skull.shp
 	idle:
 		Facings: -64
 	####################################################################################################
 	#		Structures
 	####################################################################################################
 
-
 valentine_base:
-	idle: valentine_base
-	icon: valentine_base_icon
+	Defaults:
+		Filename: valentine_base.shp
+		Scale: 2.0
+	idle:
+		Filename: valentine_base.shp
+	icon:
+		Filename: valentine_base_icon.shp
 
 valentine_power:
-	idle: valentine_power
-	icon: valentines_cameos.png
+	Defaults:
+		Filename: valentine_power.shp
+		Scale: 2.0
+
+	idle:
+		Filename: valentine_power.shp
+	icon:
+		Filename: valentines_cameos.png
 		Start: 5
 		AddExtension: False
 
 valentine_ladies_house:
-	idle: valentine_ladies_house
-	icon: valentine_ladies_house_icon
+	Defaults:
+		Filename: valentine_ladies_house.shp
+		Scale: 2.0
+	idle:
+		Filename: valentine_ladies_house.shp
+	icon:
+		Filename: valentine_ladies_house_icon.shp
 
 valentines_bed:
-	idle: valentines_bed
-		Scale: 0.75
-	icon: valentines_bed_icon
+	Defaults:
+		Filename: valentines_bed.shp
+		Scale: 2.0
+	idle:
+		Filename: valentines_bed.shp
+	active:
+	icon:
+		Filename: valentines_bed_icon.shp
 
 valentine_church_workshop:
-	idle: v01.tem
+	Defaults:
+		Filename: valentine_church_workshop.shp
+	idle:
+		Filename: v01.tem
 		AddExtension: False
-	icon: valentine_church_workshop_icon
+	icon:
+		Filename: valentine_church_workshop_icon.shp
+
 valentine_chocolate_refinery:
-	idle: valentine_chocolate_refinery
-	icon: valentine_chocolate_refinery_icon
+	Defaults:
+		Filename: valentine_chocolate_refinery.shp
+		Scale: 2.0
+	idle:
+		Filename: valentine_chocolate_refinery.shp
+	icon:
+		Filename: valentine_chocolate_refinery_icon.shp
 
 valentine_airfield:
-	idle: valentine_airfield
+	Defaults:
+		Filename: valentine_airfield.shp
+		Scale: 2.0
+	idle:
+		Filename: valentine_airfield.shp
 		ZOffset: -1023
 		Offset: 0,-4
 	damaged-idle:
 		ZOffset: -1023
 		Offset: 0,-4
-	active: invisibleitem
-	damaged-active: invisibleitem
-	make: invisibleitem
+	active:
+		Filename: invisibleitem.shp
+	damaged-active:
+		Filename: invisibleitem.shp
+	make:
+		Filename: invisibleitem.shp
 	dead:
-	icon: valentine_airfield_icon
+	icon:
+		Filename: valentine_airfield_icon.shp
 		Offset: 0,0
 
 valentines_sc2kmarina:
+	Defaults:
+		Filename: valentines_sc2kmarina.shp
 	idle:
 	dead:
 	make:
-	icon: chromesc2kmarina.png
+	icon:
+		Filename: chromesc2kmarina.png
 		AddExtension: False
 	####################################################################################################
 	#		Defenses
 	####################################################################################################
 
 valentines_netflix_n_chill:
+	Inherits: ^WithBuildingBib2
+	Defaults:
+		Filename: valentines_netflix_n_chill.shp
+		Scale: 2.0
 	idle:
 		Start: 0
-		Scale: 0.80
 	dead:
 		Start: 0
-		Scale: 0.80
 	make:
 		Start: 0
-		Scale: 0.80
-	bib: bib3
-		UseTilesetExtension: true
-		Length: *
-	icon: valentines_cameos.png
+	bib:
+		# Filename: bib3.shp
+		# UseTilesetExtension: true
+		# Length: *
+	icon:
+		Filename: valentines_cameos.png
 		Start: 3
 		AddExtension: False
 
 valentines_silo:
-	idle: valentines_silo
+	Inherits: ^WithBuildingBib2
+	Defaults:
+		Filename: valentines_silo.shp
+	idle:
+		Filename: valentines_silo.shp
 		Start: 0
-	dead: valentines_silo
+	dead:
+		Filename: valentines_silo.shp
 		Start: 0
-	make: valentines_silo
+	make:
+		Filename: valentines_silo.shp
 		Start: 0
-	bib: bib3
-		UseTilesetExtension: true
-		Length: *
-	icon: valentines_cameos.png
+	bib:
+		# Filename: bib3.shp
+		# UseTilesetExtension: true
+		# Length: *
+	icon:
+		Filename: valentines_cameos.png
 		Start: 4
 		AddExtension: False
 
 val_pbox:
-	idle: valentines_sweethearts
-		Scale: 0.5
-	damaged-idle: valentines_sweethearts
-		Scale: 0.5
-	make: valentines_sweethearts
-		Scale: 0.5
-	dead: valentines_sweethearts
-		Scale: 0.5
-	bib: mbPBOX
-		Length: *
-		UseTilesetExtension: false
+	Defaults:
+		Filename: val_pbox.shp
+	idle:
+		Filename: valentines_sweethearts.shp
+	damaged-idle:
+		Filename: valentines_sweethearts.shp
+	make:
+		Filename: valentines_sweethearts.shp
+	dead:
+		Filename: valentines_sweethearts.shp
+	bib:
+		Filename: mbPBOX.tem
+		TilesetFilenames:
+			DESERT: mbPBOX.des
+			WINTER: mbPBOX.win
+			SNOW: mbPBOX.sno
+			BARREN: mbPBOX.bar
+			JUNGLE: mbPBOX.jun
+			RA_SNOW: mbPBOX.sno
+			RA_DESERT: mbPBOX.des
+			RA_INTERIOR: mbPBOX.int
+			ARRAKIS: mbPBOX.des
+			ARRAKIS2: mbPBOX.des
 		Offset: 0,-2
-	icon: valentines_cameos.png
+	icon:
+		Filename: valentines_cameos.png
 		Start: 1
 		AddExtension: False
 
 val_agun:
-	idle: valentines_plan_b
-		Scale: 0.5
-	damaged-idle: valentines_plan_b
-		Scale: 0.5
-	make: valentines_plan_b
-		Scale: 0.5
-	dead: valentines_plan_b
-		Scale: 0.5
-	bib: mbPBOX
-		Length: *
-		UseTilesetExtension: false
+	Defaults:
+		Filename: val_agun.shp
+	idle:
+		Filename: valentines_plan_b.shp
+	damaged-idle:
+		Filename: valentines_plan_b.shp
+	make:
+		Filename: valentines_plan_b.shp
+	dead:
+		Filename: valentines_plan_b.shp
+	bib:
+		Filename: mbPBOX.tem
+		TilesetFilenames:
+			DESERT: mbPBOX.des
+			WINTER: mbPBOX.win
+			SNOW: mbPBOX.sno
+			BARREN: mbPBOX.bar
+			JUNGLE: mbPBOX.jun
+			RA_SNOW: mbPBOX.sno
+			RA_DESERT: mbPBOX.des
+			RA_INTERIOR: mbPBOX.int
+			ARRAKIS: mbPBOX.des
+			ARRAKIS2: mbPBOX.des
 		Offset: 0,-2
-	icon: valentines_cameos.png
+	icon:
+		Filename: valentines_cameos.png
 		Start: 2
 		AddExtension: False
 
 valentine_tower_ballista:
-	Defaults: valentine_tower_module
+	Defaults:
+		Filename: valentine_tower_module.shp
 		Offset: 0,-12
 	idle:
-	turret: valentine_tower_ballista
+	turret:
+		Filename: valentine_tower_ballista.shp
 		Facings: -32
 		UseClassicFacings: True
 		Offset: 0,0
 	make:
-	muzzle: gunfire2
+	muzzle:
+		Filename: gunfire2.shp
 		Tick: 80
 		Length: *
-	icon: valentine_tower_ballista_icon.shp
+	icon:
+		Filename: valentine_tower_ballista_icon.shp
 		AddExtension: False
 		Offset: 0,0
 
 valentine_tower_double:
-	Defaults: valentine_tower_module
+	Defaults:
+		Filename: valentine_tower_module.shp
 		Offset: 0,-12
 	idle:
-	turret: valentine_tower_double
+	turret:
+		Filename: valentine_tower_double.shp
 		Facings: -32
 		UseClassicFacings: True
 		Offset: 0,0
 	make:
-	muzzle: gunfire2
+	muzzle:
+		Filename: gunfire2.shp
 		Tick: 80
 		Length: *
-	icon: valentine_tower_double_icon.shp
+	icon:
+		Filename: valentine_tower_double_icon.shp
 		AddExtension: False
 		Offset: 0,0
 	####################################################################################################
 	#		Units
 	####################################################################################################
 
-
 valentines_mcv:
-	idle: valentines_mcv
+	Defaults:
+		Filename: valentines_mcv.shp
+	idle:
+		Filename: valentines_mcv.shp
 		Facings: -32
 		UseClassicFacings: True
-	icon: valentines_mcv_icon.shp
+	icon:
+		Filename: valentines_mcv_icon.shp
 		AddExtension: False
-	idle-overlay: customoverlay
+	idle-overlay:
+		Filename: customoverlay.shp
 
 valentines_mcv_bot:
 	Inherits: valentines_mcv
@@ -195,22 +285,27 @@ valentines_mcv_bot:
 valentine_ra2tany:
 	Inherits: ra2tany
 	Defaults: ra2tany
-	icon: waifutanyaiiicon.shp
+	icon:
+		Filename: waifutanyaiiicon.shp
 		AddExtension: False
 
 valentine_e7:
 	Inherits: e7
 	Defaults: e7
-	icon: waifutanyaicon.shp
+	icon:
+		Filename: waifutanyaicon.shp
 		AddExtension: False
 
 valentine_chlotus:
 	Inherits: chlotus
 	Defaults: chlotus
-	icon: waifulotusicon.shp
+	icon:
+		Filename: waifulotusicon.shp
 		AddExtension: False
 
 lovebaby:
+	Defaults:
+		Filename: lovebaby.shp
 	Inherits: ^InfantryOverlays
 	stand:
 		Facings: 4
@@ -270,73 +365,103 @@ lovebaby:
 		Length: 2
 		Tick: 90
 	# Shot
-	die1: e1
+	die1:
+		Filename: e1.shp
 		Start: 381
 		Length: 9
 		Tick: 80
 	# Explode
-	die2: e1
+	die2:
+		Filename: e1.shp
 		Start: 390
 		Length: 8
 		Tick: 80
 	# Fly and explode in air
-	die3: e1
+	die3:
+		Filename: e1.shp
 		Start: 398
 		Length: 8
 		Tick: 80
 	# Fly through air squish on ground
-	die4: e1
+	die4:
+		Filename: e1.shp
 		Start: 406
 		Length: 12
 		Tick: 80
 	# Burn
-	die5: e1
+	die5:
+		Filename: e1.shp
 		Start: 418
 		Length: 18
 		Tick: 80
 	# Tib
-	die6: e1
+	die6:
+		Filename: e1.shp
 		Start: 366
 		Length: 11
 		Tick: 80
 	# Electro
 	die7: electro ##########
 		Length: *
-	die-crushed: e1rot
+	die-crushed:
+		Filename: e1rot.shp
 		Start: 16
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-	garrison-muzzle: minigun
+	garrison-muzzle:
+		Filename: minigun.shp
 		Length: 3
 		Stride: 6
 		Facings: 8
-	icon: lovebabyicon
+	icon:
+		Filename: lovebabyicon.shp
 
 lovebaby2:
+	Defaults:
+		Filename: lovebaby2.shp
 	Inherits: lovebaby
-	Defaults: lovebaby2
-	icon: lovebaby2icon
+	icon:
+		Filename: lovebaby2icon.shp
+
 valovecraft:
+	Defaults:
+		Filename: valovecraft.shp
 	idle:
 		Facings: -32
-	icon: loveaircrafticon
+	icon:
+		Filename: loveaircrafticon.shp
+
 loveletter:
+	Defaults:
+		Filename: loveletter.shp
 	idle:
 		Facings: -32
 	die:
 		Facings: -32
-	icon: lovelettericon
+	icon:
+		Filename: lovelettericon.shp
+
 loveballista:
+	Defaults:
+		Filename: loveballista.shp
 	idle:
 		Facings: -32
 		UseClassicFacings: True
-	icon: loveballistaicon
+	icon:
+		Filename: loveballistaicon.shp
+
 giantcupido:
+	Defaults:
+		Filename: giantcupido.shp
 	idle:
 		Facings: -32
-	icon: cupidoicon
+	icon:
+		Filename: cupidoicon.shp
+
 svsmalien1:
+	Defaults:
+		Filename: svsmalien1.shp
 	Inherits: ^InfantryOverlays
 	idle:
 		Facings: -32
@@ -394,47 +519,73 @@ svsmalien1:
 	# Electro
 	die7: electro ##########
 		Length: *
-	die-crushed: e1rot
+	die-crushed:
+		Filename: e1rot.shp
 		Start: 16
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-	garrison-muzzle: minigun
+	garrison-muzzle:
+		Filename: minigun.shp
 		Length: 3
 		Stride: 6
 		Facings: 8
-	icon: svsmalienicon
-	dot: invisibleitem
+	icon:
+		Filename: svsmalienicon.shp
+	dot:
+		Filename: invisibleitem.shp
+
 svsmalien2:
+	Defaults:
+		Filename: svsmalien2.shp
 	Inherits: svsmalien1
-	Defaults: svsmalien2
-	icon: svsmalien2
+	icon:
+		Filename: svsmalien2.shp
+
 svsmalien3:
+	Defaults:
+		Filename: svsmalien3.shp
 	Inherits: svsmalien1
-	Defaults: svsmalien3
-	icon: svsmalien3
+	icon:
+		Filename: svsmalien3.shp
+
 svsmalien4:
+	Defaults:
+		Filename: svsmalien4.shp
 	Inherits: svsmalien1
-	Defaults: svsmalien4
-	icon: svsmalien4
+	icon:
+		Filename: svsmalien4.shp
+
 svsmalien5:
+	Defaults:
+		Filename: svsmalien5.shp
 	Inherits: svsmalien1
-	Defaults: svsmalien5
-	icon: svsmalien5
+	icon:
+		Filename: svsmalien5.shp
+
 svsgreen:
+	Defaults:
+		Filename: svsgreen.shp
 	idle:
 		Facings: -32
 		UseClassicFacings: True
-	icon: svsgreenicon
+	icon:
+		Filename: svsgreenicon.shp
 
 cute_kirov:
-	idle: cute_kirov
+	Defaults:
+		Filename: cute_kirov.shp
+	idle:
+		Filename: cute_kirov.shp
 		Facings: 32
 		UseClassicFacings: True
 		Scale: 1.5
-	icon: cute_kirov_icon
+	icon:
+		Filename: cute_kirov_icon.shp
 
 valentines_teletubby_po:
+	Defaults:
+		Filename: valentines_teletubby_po.shp
 	stand:
 		Frames: 0,8,16,24,32,40,48,56
 		Length: 1
@@ -452,102 +603,128 @@ valentines_teletubby_po:
 	die-crushed:
 		Start: 63
 		Length: 1
-	icon: valentines_cameos.png
+	icon:
+		Filename: valentines_cameos.png
 		Start: 0
 		AddExtension: False
 
 valentines_white_knight:
+	Defaults:
+		Filename: valentines_white_knight.shp
 	Inherits: ^WCInfantry
-	idle: valentines_white_knight.shp
+	idle:
+		Filename: valentines_white_knight.shp
 		Start: 0
 		Facings: -8
 		AddExtension: False
-	run: valentines_white_knight.shp
+	run:
+		Filename: valentines_white_knight.shp
 		Start: 8
 		Length: 5
 		Facings: -8
 		Tick: 100
 		AddExtension: False
-	shoot: valentines_white_knight.shp
+	shoot:
+		Filename: valentines_white_knight.shp
 		Start: 48
 		Length: 5
 		Facings: -8
 		Tick: 100
 		AddExtension: False
-	die: valentines_white_knight.shp
+	die:
+		Filename: valentines_white_knight.shp
 		Start: 88
 		Length: 3
 		Tick: 80
 		AddExtension: False
-	die-crushed: valentines_white_knight.shp
+	die-crushed:
+		Filename: valentines_white_knight.shp
 		Start: 88
 		Length: 3
 		Tick: 80
 		AddExtension: False
-	icon: wc_chrome
+	icon:
+		Filename: wc_chrome.shp
 		Start: 15
 		AddExtension: true
 
 valentines_giga_chad:
-	Inherits: ^WCInfantry
-	idle: 
-		Start: 0	
-		Facings: 4
-		Length: 4
-		Tick: 200
-	run: 
-		Start: 16
-		Length: 6
-		Facings: 4
-		Tick: 200
-	shoot: 
-		Start: 40
-		Length: 3
-		Facings: 4
-		Tick: 100
-	die: 
-		Frames: 52,53,54,55,56,55,56,55,56,55,56,55,56,55,56,55,56,55,56
-		Length: 18
-		Tick: 160
-	die-crushed: 
-		Start: 0
-		Length: 1
-		Tick: 80
-	icon: valentines_cameos.png
-        Start: 8
+	# Inherits: ^WCInfantry
+	# idle:
+	# 	Start: 0
+	# 	Facings: 4
+	# 	Length: 4
+	# 	Tick: 200
+	# run: 
+	# 	Start: 16
+	# 	Length: 6
+	# 	Facings: 4
+	# 	Tick: 200
+	# shoot: 
+	# 	Start: 40
+	# 	Length: 3
+	# 	Facings: 4
+	# 	Tick: 100
+	# die: 
+	# 	Frames: 52,53,54,55,56,55,56,55,56,55,56,55,56,55,56,55,56,55,56
+	# 	Length: 18
+	# 	Tick: 160
+	# die-crushed:
+	# 	Start: 0
+	# 	Length: 1
+	# 	Tick: 80
+	Inherits: wc2_human_footman
+	icon:
+		Filename: valentines_cameos.png
+			Start: 8
 		AddExtension: False
-		
+
 	####################################################################################################
 	#		Naval
 	####################################################################################################
 
-
 valentines_dd:
+	Defaults:
+		Filename: valentines_dd.shp
 	idle:
 		Facings: 16
-	turret: rassam
+	turret:
+		Filename: rassam.shp
 		Facings: 32
-	icon: raddicon
+	icon:
+		Filename: raddicon.shp
 
 valentines_ca:
+	Defaults:
+		Filename: valentines_ca.shp
 	idle:
 		Facings: 16
-	turret: raturr
+	turret:
+		Filename: raturr.shp
 		Facings: 32
-	muzzle: gunfire2
+	muzzle:
+		Filename: gunfire2.shp
 		Length: *
-	icon: racaicon
+	icon:
+		Filename: racaicon.shp
 
 valentines_pt:
+	Defaults:
+		Filename: valentines_pt.shp
 	idle:
 		Facings: 16
-	turret: ra1mgun
+	turret:
+		Filename: ra1mgun.shp
 		Facings: 32
-	muzzle: gunfire2
+	muzzle:
+		Filename: gunfire2.shp
 		Length: *
-	icon: ra1pticon
+	icon:
+		Filename: ra1pticon.shp
 
 valentines_lst:
+	Defaults:
+		Filename: valentines_lst.shp
 	idle:
 	open:
 		Start: 1
@@ -560,11 +737,15 @@ valentines_lst:
 	unload:
 		Start: 4
 		ZOffset: -511
-	icon: ralsticon
-		
+	icon:
+		Filename: ralsticon.shp
+
 valentines_swan:
+	Defaults:
+		Filename: valentines_swan.shp
 	idle:
 		Facings: -16
-	icon: valentines_cameos.png
+	icon:
+		Filename: valentines_cameos.png
 		Start: 6
 		AddExtension: False

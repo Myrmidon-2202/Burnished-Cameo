@@ -2682,20 +2682,22 @@ explosion:
 		Tick: 50
 	ra2_emp_fx:
 		Filename: ra2_emp_fx01.shp
-		Scale: 2
 		Length: *
 		BlendMode: Additive
 		Offset: 0, 0
 		ZOffset: 2048
+		Scale: 1.0
 	tsring:
 		Filename: tsring.shp
 		Length: *
+		Scale: 1.0
 	repair_weld:
 		Filename: repair_weld.shp
 		Scale: 0.4
 	scsiegetanksiegeexplosion:
 		Filename: scsiegetanksiegeexplosion.png
 		Frames: 0, 1, 2, 3, 4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7, 8, 8, 8, 9, 9, 10, 10, 11, 11
+		Scale: 1.0
 	scblueexplosion:
 		Filename: scblueexplosion.png
 		Length: *
