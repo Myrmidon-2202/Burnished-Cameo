@@ -21,7 +21,7 @@ lovebowFire:
 		Image: spearfire
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 1000
+		Damage: 1500
 		ValidTargets: Ground
 		Versus:
 			None: 300
@@ -127,6 +127,19 @@ LovebowFireB:
 			Heavy: 48
 			Concrete: 24
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+	Warhead@2Eff: CreateEffect
+		ImpactSounds: bowhit.aud
+		Explosions: loveex1
+
+CupidRockets:
+	Inherits: ^LightMissile
+	ReloadDelay: 63
+	Range: 6368
+	Report: bazook1.aud
+	Warhead@LightMissile: SpreadDamage
+		Damage: 18000
+	Warhead@LightMissilePercentage: HealthPercentageDamage
+		Damage: 9
 	Warhead@2Eff: CreateEffect
 		ImpactSounds: bowhit.aud
 		Explosions: loveex1

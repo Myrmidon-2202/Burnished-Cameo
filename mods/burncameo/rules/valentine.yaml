@@ -511,15 +511,15 @@ valentine_church_workshop:
 		SpawnOffset: 298,298,0
 		ExitCell: 1,1
 	Production@NORMAL:
-		Produces: Infantry.Valentine
+		Produces: Vehicle.Valentine
 		RequiresCondition: !classicproductionqueues
 	Production@CLASSICPRODUCTIONQUEUES:
 		Produces: RAInfantry
 		RequiresCondition: classicproductionqueues
 	ProductionQueue:
-		Type: Infantry.Valentine
+		Type: Vehicle.Valentine
 		DisplayOrder: 2
-		Group: Infantry
+		Group: Vehicle
 		LowPowerModifier: 200
 		ReadyAudio: UnitReady
 		BlockedAudio: NoBuild
@@ -528,7 +528,7 @@ valentine_church_workshop:
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
 	ProductionBar@INFANTRYGDI:
-		ProductionType: Infantry.Valentine
+		ProductionType: Vehicle.Valentine
 		RequiresCondition: !classicproductionqueues
 	ProductionBar@RAINFANTRYGDI:
 		ProductionType: RAInfantry
@@ -608,7 +608,7 @@ valentine_airfield:
 	ProductionQueue:
 		Type: Aircraft.Valentine
 		DisplayOrder: 4
-		Group: Vehicle
+		Group: Aircraft
 		LowPowerModifier: 300
 		ReadyAudio: UnitReady
 		BlockedAudio: NoBuild
@@ -623,6 +623,7 @@ valentine_airfield:
 		ProductionType: RAVehicle
 		RequiresCondition: classicproductionqueues
 	ProvidesPrerequisite@buildingname:
+		Prerequisite: valentine_airfield
 	Voiced:
 		VoiceSet: PRCAirfieldVoice
 
@@ -1467,10 +1468,10 @@ lovebaby2:
 	Health:
 		HP: 25000
 	Armament@PRIMARY: ##########
-		Weapon: 2100Rockets
+		Weapon: CupidRockets
 	Armament@GARRISONED: ##########
 		Name: garrisoned
-		Weapon: 2100Rockets
+		Weapon: CupidRockets
 		MuzzleSequence: garrison-muzzle
 	WithInfantryBody:
 		IdleSequences: idle1,idle2,idle3,idle4
@@ -1498,7 +1499,7 @@ loveballista:
 		InitialStanceAI: AttackAnything
 		ScanRadius: 25
 	Tooltip:
-		Name: Ballista Gattling Tank
+		Name: Love Ballista Tank
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
@@ -1535,7 +1536,7 @@ loveballista:
 	Voiced:
 		VoiceSet: GattlingTankVoice
 	AmmoPool:
-		Ammo: 8
+		Ammo: 10
 		AmmoCondition: ammo
 	ReloadAmmoPool:
 		Delay: 50
@@ -1895,9 +1896,9 @@ cute_kirov:
 		Bounds: 8192, 8192
 		DecorationBounds: 8192, 8192
 	Buildable:
-		Queue: Vehicle.Valentine
+		Queue: Aircraft.Valentine
 		BuildPaletteOrder: 50
-		Prerequisites: valentine_airfield, ~techlevel.high
+		Prerequisites: valentine_airfield
 		Description: From Russia with love!
 		BuildDuration: 4500
 		BuildDurationModifier: 100
@@ -1924,7 +1925,7 @@ cute_kirov:
 		DamageCooldown: 33
 	RenderSprites:
 		Image: cute_kirov
-		PlayerPalette: playerra2
+		-PlayerPalette: playerra2
 	FireWarheadsOnDeath@bomb:
 		Weapon: CuteKirovBomb
 		EmptyWeapon: CuteKirovBomb
@@ -2273,7 +2274,7 @@ mod4tnkgirl:
 	AmbientSound:
 		SoundFiles: mammothgm2.wav
 		RequiresCondition: moving
-		Interval: 5
+		Interval: 40
 	ProducibleWithLevel:
 		Prerequisites: vehicles.upgraded
 

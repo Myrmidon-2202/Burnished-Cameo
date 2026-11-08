@@ -61,12 +61,12 @@ valentine_ladies_house:
 valentines_bed:
 	Defaults:
 		Filename: valentines_bed.shp
-		Scale: 2.0
+		Scale: 1.0
 	idle:
 		Filename: valentines_bed.shp
 	active:
 	icon:
-		Filename: valentines_bed_icon.shp
+		Filename: valentine_bed_icon.png
 
 valentine_church_workshop:
 	Defaults:
@@ -445,6 +445,7 @@ loveletter:
 loveballista:
 	Defaults:
 		Filename: loveballista.shp
+		Scale: 1.5
 	idle:
 		Facings: -32
 		UseClassicFacings: True
