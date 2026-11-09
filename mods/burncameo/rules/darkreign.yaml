@@ -204,6 +204,44 @@ World:
 ##
 ##############################################################################
 
+^DRARV:
+	Inherits: ^Tank
+	Inherits@Template: ^HarvesterTemplate
+	Inherits@selection: ^SelectableEconomicUnit
+	Inherits@harv: ^Harvester
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: template-harvester.tdname
+	Harvester:
+		BaleLoadDelay: 4
+		BaleUnloadDelay: 1
+		EmptyCondition: no-tiberium
+	StoresResources:
+		Capacity: 45
+	Mobile:
+		Speed: 60
+		TurnSpeed: 12
+	Health:
+		HP: 150000
+	Repairable:
+		HpPerStep: 7500
+#	ChangesHealth@SelfHealing:
+#		Step: 60
+	Armor:
+		Type: Heavy
+	WithHarvestAnimation:
+	WithDockingAnimation:
+	FireWarheadsOnDeath:
+		RequiresCondition: !no-tiberium
+		Weapon: TiberiumExplosion
+	FireWarheadsOnDeath@empty:
+		RequiresCondition: no-tiberium
+		Weapon: UnitExplodeHarvEmpty
+	SelectionDecorations:
+	RenderSprites:
+		Image: harv
+
 drpowr:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^2x2Shape
@@ -217,6 +255,7 @@ drpowr:
 	Buildable:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 10
+		BuildDuration: 300
 		Description: actor-drpowr.description
 		Prerequisites: ~drhq
 	Valued:
@@ -439,7 +478,7 @@ drwaterextract.imperium:
 		Image: drwaterextract
 
 drfrigth.imperium:
-	# Inherits: HARV
+	Inherits@Harvbase: ^DRARV
 	Inherits@Tank: ^Tank
 	Inherits@selection: ^SelectableEconomicUnit
 	Inherits@Harv: ^Harvester
@@ -470,7 +509,7 @@ drfrigth.imperium:
 		VoiceSet: DRImperiumVoice
 
 drfrigth.freedom:
-	# Inherits: HARV
+	Inherits@Harvbase: ^DRARV
 	Inherits@Tank: ^Tank
 	Inherits@selection: ^SelectableEconomicUnit
 	Inherits@Harv: ^Harvester

@@ -2006,6 +2006,7 @@ sczealot:
 		Offset: 0,0
 
 scdragoon:
+	Inherits: ^SCSmallShadow
 	Defaults:
 		Filename: scdragoonidle.png
 	idle:
@@ -2110,6 +2111,7 @@ scshuttle:
 		Filename: scshuttleicon.png
 
 screaver:
+	Inherits: ^SCSmallShadow
 	Defaults:
 		Filename: screaveridle.png
 	idle:

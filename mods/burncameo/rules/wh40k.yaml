@@ -7328,7 +7328,7 @@ wh40kdreadh:
 	Valued:
 		Cost: 2500
 	Tooltip:
-		Name: Dreadnought Hellfire
+		Name: Hellfire Dreadnought
 	Buildable:
 		BuildPaletteOrder: 65
 		Prerequisites: wh40kmachinecult
@@ -7500,7 +7500,7 @@ wh40klandraider:
 		LocalOffset: 427,-32,32, 427,32,32
 		Turret: secondary
 	Armament@SECONDARY:
-		Weapon: WH40KHeavyBolterMG4
+		Weapon: WH40KPredatorLasgun
 		LocalOffset: 427,-32,32, 427,32,32
 		Turret: secondary
 	Armament@PRIMARY2:
@@ -7508,7 +7508,7 @@ wh40klandraider:
 		LocalOffset: 427,-32,32, 427,32,32
 		Turret: tiertary
 	Armament@SECONDARY2:
-		Weapon: WH40KHeavyBolterMG4
+		Weapon: WH40KPredatorLasgun
 		LocalOffset: 427,-32,32, 427,32,32
 		Turret: tiertary
 	Armament:

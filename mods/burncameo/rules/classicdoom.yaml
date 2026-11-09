@@ -51,7 +51,7 @@ RAMCV.WOLF:
 	Inherits@mcv: ^MCV
 	Inherits@conyard: ^Conyard
 	Buildable:
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Wolfenstein
 		BuildPaletteOrder: 210
 		Prerequisites: anyhq, ~techlevel.medium
 		BuildDurationModifier: 40
@@ -206,13 +206,13 @@ WOLFBARR:
 		SpawnOffset: -725,640,0
 		ExitCell: 0,2
 	Production@NORMAL:
-		Produces: Infantry
+		Produces: Infantry.Wolfenstein
 		RequiresCondition: !classicproductionqueues
 	Production@CLASSICPRODUCTIONQUEUES:
 		Produces: RAInfantry
 		RequiresCondition: classicproductionqueues
 	ProductionQueue:
-		Type: Infantry
+		Type: Infantry.Wolfenstein
 		DisplayOrder: 2
 		Group: Infantry
 		ReadyAudio: UnitReady
@@ -222,7 +222,7 @@ WOLFBARR:
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
 	ProductionBar@INFANTRYSOVIET:
-		ProductionType: Infantry
+		ProductionType: Infantry.Wolfenstein
 		RequiresCondition: !classicproductionqueues
 	ProductionBar@RAINFANTRYSOVIET:
 		ProductionType: RAInfantry
@@ -571,13 +571,13 @@ WOLFWEAP:
 		SpawnOffset: 213,-128,0
 		ExitCell: 1,2
 	Production@NORMAL:
-		Produces: Vehicle
+		Produces: Vehicle.Wolfenstein
 		RequiresCondition: !classicproductionqueues
 	Production@CLASSICPRODUCTIONQUEUES:
 		Produces: RAVehicle
 		RequiresCondition: classicproductionqueues
 	ProductionQueue:
-		Type: Vehicle
+		Type: Vehicle.Wolfenstein
 		DisplayOrder: 3
 		Group: Vehicle
 		ReadyAudio: UnitReady
@@ -587,7 +587,7 @@ WOLFWEAP:
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
 	ProductionBar@VEHICLESOVIET:
-		ProductionType: Vehicle
+		ProductionType: Vehicle.Wolfenstein
 		RequiresCondition: !classicproductionqueues
 	ProductionBar@RAVEHICLESOVIET:
 		ProductionType: RAVehicle
@@ -754,7 +754,7 @@ WOLFSPEAR:
 		Description: Advanced base defense.\nRequires power to operate.\nCan detect cloaked units.\n  Strong vs Vehicles, Infantry\n  Weak vs Aircraft
 		BuildLimit: 1
 	Valued:
-		Cost: 2500
+		Cost: 3500
 	Tooltip:
 		Name: Spear of Destiny
 	Selectable:
@@ -813,6 +813,7 @@ WOLFSPEAR:
 	ReloadDelayMultiplier@wolfupmonition:
 		RequiresCondition: wolfupmonition
 		Modifier: 80
+
 wolfe1:
 	Inherits: ^Soldier
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -829,7 +830,7 @@ wolfe1:
 	Buildable:
 		BuildPaletteOrder: 10
 		Prerequisites: wolfbarr
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Wolfenstein
 		Description: Basic Guard Infantry.\n Effective vs Infantry
 	Mobile:
 		Speed: 56
@@ -853,6 +854,7 @@ wolfe1:
 	RenderSprites:
 	Voiced:
 		VoiceSet: WolfGuardVoice
+
 wolfe2:
 	Inherits: ^Soldier
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -870,7 +872,7 @@ wolfe2:
 		BuildPaletteOrder: 20
 		Description: Second Tier Infantry.\n Effective vs Infantry.\n Can Shoots air
 		Prerequisites: wolfbarr
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Wolfenstein
 	Mobile:
 		Speed: 56
 	Health:
@@ -893,6 +895,7 @@ wolfe2:
 	RenderSprites:
 	Voiced:
 		VoiceSet: WolfSSVoice
+
 wolfe3:
 	Inherits: ^Soldier
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -910,7 +913,7 @@ wolfe3:
 		BuildPaletteOrder: 30
 		Description: Mutated Infantry.\n Effective vs Infantry
 		Prerequisites: anyhq
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Wolfenstein
 	Mobile:
 		Speed: 56
 	Health:
@@ -951,7 +954,7 @@ wolfe4:
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: anyhq
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Wolfenstein
 		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles
 	Mobile:
 		Speed: 68
@@ -982,7 +985,7 @@ wolfe6:
 	Buildable:
 		BuildPaletteOrder: 30
 		Prerequisites: barracks
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Wolfenstein
 	Voiced:
 		VoiceSet: WolfGuardVoice
 	RenderSprites:
@@ -1004,7 +1007,7 @@ wolffake:
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: wolfstek
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Wolfenstein
 		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles
 	Mobile:
 		Locomotor: hover
@@ -1030,13 +1033,14 @@ wolffake:
 	RenderSprites:
 	Voiced:
 		VoiceSet: WolfOfficialVoice
+
 wolfdog:
 	Inherits: ^Soldier
 	Inherits@EXPERIENCE: ^GainsExperience
 	Inherits@EXT: ^ExternalConditions
 	Inherits@MC: ^MCImmune
 	Buildable:
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Wolfenstein
 		BuildPaletteOrder: 29
 		Prerequisites: kenn
 		Description: Anti-infantry unit.\nCan detect cloaked units and spies.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
@@ -1113,6 +1117,7 @@ wolfdog:
 	DamageMultiplier@wolfupdogfood:
 		RequiresCondition: wolfupdogfood
 		Modifier: 75
+
 wolfgroose:
 	Inherits: ^Soldier
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -1129,7 +1134,7 @@ wolfgroose:
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: anyhq
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Wolfenstein
 		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles
 		BuildLimit: 1
 	Mobile:
@@ -1157,6 +1162,7 @@ wolfgroose:
 	-TakeCover:
 	Crushable:
 		CrushClasses: vehicle
+
 wolfgretel:
 	Inherits: ^Soldier
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -1173,7 +1179,7 @@ wolfgretel:
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: anyhq
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Wolfenstein
 		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles
 		BuildLimit: 1
 	Mobile:
@@ -1218,7 +1224,7 @@ wolfotto:
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: wolfstek
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Wolfenstein
 		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles
 		BuildLimit: 1
 	Mobile:
@@ -1263,7 +1269,7 @@ wolfgasps:
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: wolfstek
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Wolfenstein
 		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles
 		BuildLimit: 1
 	Mobile:
@@ -1314,7 +1320,7 @@ wolfhetler1:
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: wolfstek, !wolfhetler
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Wolfenstein
 		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles
 		BuildLimit: 1
 	Mobile:
@@ -1362,7 +1368,7 @@ wolfhetler2:
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: ~disabled
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Wolfenstein
 		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles
 		BuildLimit: 1
 	Mobile:
@@ -1408,7 +1414,7 @@ wolfschabbs:
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: wolfstek
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Wolfenstein
 		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles
 		BuildLimit: 1
 	Mobile:
@@ -1453,7 +1459,7 @@ wolftrans:
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: wolfstatue
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Wolfenstein
 		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles
 		BuildLimit: 1
 	Mobile:
@@ -1498,7 +1504,7 @@ wolfuber:
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: wolfstatue
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Wolfenstein
 		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles
 		BuildLimit: 1
 	Mobile:
@@ -1526,6 +1532,7 @@ wolfuber:
 	-TakeCover:
 	Crushable:
 		CrushClasses: vehicle
+
 wolfknight:
 	Inherits: ^Soldier
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -1542,7 +1549,7 @@ wolfknight:
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: wolfstatue
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Wolfenstein
 		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles
 		BuildLimit: 1
 	Mobile:
@@ -1585,7 +1592,7 @@ wolfdemon:
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: ~disabled
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Wolfenstein
 		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles
 		BuildLimit: 1
 	Mobile:
@@ -1621,7 +1628,7 @@ wolfmtnk:
 	Inherits@upgradex: ^WolfInfantryUpgrade
 	Buildable:
 		Prerequisites: anyhq
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Wolfenstein
 		BuildPaletteOrder: 110
 		Description: Allies Main Battle Tank.\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft
 	Valued:
@@ -1670,7 +1677,7 @@ wolfflak:
 	Inherits@upgradex: ^WolfInfantryUpgrade
 	Buildable:
 		Prerequisites: anyhq
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Wolfenstein
 		BuildPaletteOrder: 60
 		Description: Mobile unit with mounted Flak cannon.\n  Strong vs Infantry, Light armor, Aircraft\n  Weak vs Tanks
 	Valued:
@@ -1726,7 +1733,7 @@ wolfftrk:
 	Inherits@upgradex: ^WolfInfantryUpgrade
 	Buildable:
 		Prerequisites: wolfbarr
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Wolfenstein
 		BuildPaletteOrder: 60
 		Description: Mobile unit with mounted Flak cannon.\n  Strong vs Infantry, Light armor, Aircraft\n  Weak vs Tanks
 	Valued:
@@ -1782,7 +1789,7 @@ wolfharv:
 	Inherits@harv: ^Harvester
 	Inherits@compositearmorusa: ^usa_composite_armor_upgrade
 	Buildable:
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Wolfenstein
 		BuildPaletteOrder: 10
 		Prerequisites: wolfproc
 		Description: Collects Ore and Gems for processing.\n  Unarmed
@@ -1847,7 +1854,7 @@ wolfrobot:
 	Buildable:
 		BuildPaletteOrder: 200
 		Prerequisites: wolfstek
-		Queue: Vehicle, RAVehicle
+		Queue: Vehicle.Wolfenstein
 		Description: Fast scout vehicle, armed with\nrockets.\nCan attack Aircraft.\n  Strong vs Vehicles, Tanks\n  Weak vs Infantry
 	Mobile:
 		TurnSpeed: 64
@@ -2147,7 +2154,7 @@ IMP:
 	Inherits@3: ^SpriteActor
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Buildable:
-		Queue: Vehicle
+		Queue: Vehicle.Wolfenstein
 		BuildAtProductionType: Vehicle
 		BuildPaletteOrder: 210
 		Prerequisites: fix, atek, ~vehicles.allies, ~techlevel.high, ~bio
@@ -2198,7 +2205,7 @@ RA2IMP:
 		Type: Light
 	RenderSprites:
 	Buildable:
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.Wolfenstein
 		BuildPaletteOrder: 5
 		BuildDurationModifier: 40
 		Prerequisites: ~RA2DOOM

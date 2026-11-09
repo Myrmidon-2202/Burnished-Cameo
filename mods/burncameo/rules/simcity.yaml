@@ -903,7 +903,7 @@ CITYHARBOR:
 	Inherits: ^BaseBuilding
 	Inherits@ref: ^Refinery
 	Selectable:
-		Bounds: 131072, 131072
+		Bounds: 2048, 2048
 	HitShape:
 		UseTargetableCellsOffsets: true
 		Type: Rectangle
@@ -942,7 +942,7 @@ CITYHARBOR:
 		Actor: CITYHARVESTER
 		SpawnOffset: 0,3
 		Facing: 256
-	WithBuildingBib:
+	# WithBuildingBib:
 	ProvidesPrerequisite@buildingname:
 	ProvidesPrerequisite@2:
 		Prerequisite: MoneyIncome
@@ -1029,7 +1029,7 @@ CITYAIRPORT:
 #	Inherits@IDISABLE: ^DisabledOverlay
 	Inherits@SW: ^PrimarySuperweapon
 	Selectable:
-		Bounds: 174762, 174762
+		Bounds: 2048, 2048
 	HitShape:
 		UseTargetableCellsOffsets: true
 		Type: Rectangle

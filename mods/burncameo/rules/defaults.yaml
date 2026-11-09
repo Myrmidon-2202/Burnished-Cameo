@@ -171,6 +171,15 @@
 		Offset: 128, 128, 0
 		ZOffset: -512
 
+^Xmas_setting:
+	GrantConditionOnPrerequisite@xmas-setting:
+		Condition: xmas-setting
+		Prerequisites: xmas-setting
+	SpawnActorOnDeath@xmas-setting:
+		Actor: XMASCRATE
+		Probability: 5
+		RequiresCondition: xmas-setting
+
 ^Xmas_Decorations:
 	WithIdleOverlay@xmas_gift_red:
 		Image: xmas_presents
@@ -217,6 +226,10 @@
 	GainsExperience:
 		LevelUpImage: crate-effects
 		Conditions:
+			200: rank-veteran
+			400: rank-veteran
+			600: rank-veteran
+			800: rank-veteran
 	ExternalCondition@rankveteran:
 		Condition: rank-veteran
 		TotalCap: 4
@@ -1945,7 +1958,7 @@
 		RequiresCondition: !chronobeamed
 	-Repairable:
 	RepairableNear:
-		RepairActors: yrygyard, ra2nayard, ra2gayard, ra1syrd, cncsyrd, raspen, cncspen, tsntyard, tsntyard2, tsgtyard, tsgtyard2, cra2gayard, cra2nayard, craspen, ccncspen, cra1syrd, ccncsyrd
+		RepairActors: yrygyard, ra2nayard, ra2gayard, ra1syrd, cncsyrd, raspen, cncspen, tsntyard, tsntyard2, tsgtyard, tsgtyard2, cra2gayard, cra2nayard, craspen, ccncspen, cra1syrd, ccncsyrd, chweap, usaweap, glweap
 	GpsDot:
 		String: Ship
 	RangedGpsDot:
@@ -5601,7 +5614,7 @@ CPQDEBUGDUMMY:
 
 ^RearmableAircraft:
 	Rearmable:
-		RearmActors: dummy_dock,hpad.gdi,hpad.nod,rahpad,raafld,modraafld,ixian_launchpad,ra2gaairc,ra2naairf,aa_cgairf,steel_conpad,latin_cgair,nax_airfield, drihelipad.imperium, drfghelipad.freedomguard, drihelipad.togran
+		RearmActors: dummy_dock,hpad.gdi,hpad.nod,rahpad,raafld,modraafld,ixian_launchpad,ra2gaairc,ra2naairf,aa_cgairf,steel_conpad,latin_cgair,nax_airfield, drihelipad.imperium, drfghelipad.freedomguard, drihelipad.togran, chairport, usaairport
 	AutoTarget:
 		InitialStance: HoldFire
 	DamageMultiplier@RearmableAircraft:
@@ -5621,11 +5634,11 @@ CPQDEBUGDUMMY:
 
 ^Repairable:
 	Repairable:
-		RepairActors: fix.gdi, fix.nod, rafix.allies, rafix.soviet, rafix.japan, ra2nadept, ra2gadept, aa_cgdept, latin_cgdept, repair_pad.ixian, ra2_ctoutp, tsgtdeptgdi, tsgtdeptnod, tsgtdeptmutant, tsgtdeptcabal, plymouth_garage, eden_garage
+		RepairActors: fix.gdi, fix.nod, rafix.allies, rafix.soviet, rafix.japan, ra2nadept, ra2gadept, aa_cgdept, latin_cgdept, repair_pad.ixian, ra2_ctoutp, tsgtdeptgdi, tsgtdeptnod, tsgtdeptmutant, tsgtdeptcabal, plymouth_garage, eden_garage, chweap, usaweap, glweap
 
 ^RearmAtServiceDepot:
 	Rearmable:
-		RearmActors: fix.gdi, fix.nod, rafix.allies, rafix.soviet, rafix.japan, ra2nadept, ra2gadept, aa_cgdept, latin_cgdept, repair_pad.ixian, ra2_ctoutp, tsgtdeptgdi, tsgtdeptnod, tsgtdeptmutant, tsgtdeptcabal,  plymouth_garage, eden_garage
+		RearmActors: fix.gdi, fix.nod, rafix.allies, rafix.soviet, rafix.japan, ra2nadept, ra2gadept, aa_cgdept, latin_cgdept, repair_pad.ixian, ra2_ctoutp, tsgtdeptgdi, tsgtdeptnod, tsgtdeptmutant, tsgtdeptcabal,  plymouth_garage, eden_garage, chairport, usaairport
 
 ^ShootableMissile:
 	Inherits@1: ^ExistsInWorld

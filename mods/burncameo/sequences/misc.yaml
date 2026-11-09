@@ -18,7 +18,7 @@
 			CARIBIC: bib1.jun
 			WC2SUNSET: bib1.tem
 			WC2SUMMER: bib1.tem
-			OUTPOST2: bib1.tem
+			OUTPOST2: bib1.png
 		Length: *
 
 ^WithBuildingBib2:
@@ -41,7 +41,7 @@
 			CARIBIC: bib2.jun
 			WC2SUNSET: bib2.tem
 			WC2SUMMER: bib2.tem
-			OUTPOST2: bib2.tem
+			OUTPOST2: bib2.png
 		Length: *
 
 ^WithBuildingBib3:
@@ -64,7 +64,7 @@
 			CARIBIC: bib3.jun
 			WC2SUNSET: bib3.tem
 			WC2SUMMER: bib3.tem
-			OUTPOST2: bib3.tem
+			OUTPOST2: bib3.png
 		Length: *
 
 resources:
@@ -2682,20 +2682,22 @@ explosion:
 		Tick: 50
 	ra2_emp_fx:
 		Filename: ra2_emp_fx01.shp
-		Scale: 2
 		Length: *
 		BlendMode: Additive
 		Offset: 0, 0
 		ZOffset: 2048
+		Scale: 1.0
 	tsring:
 		Filename: tsring.shp
 		Length: *
+		Scale: 1.0
 	repair_weld:
 		Filename: repair_weld.shp
 		Scale: 0.4
 	scsiegetanksiegeexplosion:
 		Filename: scsiegetanksiegeexplosion.png
 		Frames: 0, 1, 2, 3, 4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7, 8, 8, 8, 9, 9, 10, 10, 11, 11
+		Scale: 1.0
 	scblueexplosion:
 		Filename: scblueexplosion.png
 		Length: *
@@ -3371,14 +3373,14 @@ icon:
 		Filename: sathack1icon.shp
 	sathack2:
 		Filename: sathack2icon.shp
-	conssupp1:
-		Filename: steel_cougar_icon.shp
-	conssupp2:
-		Filename: steel_hummer_icon.shp
-	conssupp3:
-		Filename: steel_oldqtnk_icon.shp
-	conssupp4:
-		Filename: steel_cobra_icon.shp
+	# conssupp1:
+	# 	Filename: steel_cougar_icon.shp
+	# conssupp2:
+	# 	Filename: steel_hummer_icon.shp
+	# conssupp3:
+	# 	Filename: steel_oldqtnk_icon.shp
+	# conssupp4:
+	# 	Filename: steel_cobra_icon.shp
 	emptyicon:
 		Filename: invisibleitem.shp
 	xxicon:

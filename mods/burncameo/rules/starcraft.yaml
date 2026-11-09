@@ -6406,7 +6406,7 @@ SCPROBE:
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Inherits@AutoRepair: ^PrioritizeRepair
 	Inherits@announce: ^AnnounceOnBuild
-	Inherits@SHADOWS: ^Shadows
+	# Inherits@SHADOWS: ^Shadows
 	Inherits@shieldgenerator: ^ProtossPersonalShield
 	Tooltip:
 		Name: Probe
@@ -6433,9 +6433,9 @@ SCPROBE:
 	WithHarvesterSpriteBody:
 		ImageByFullness: scprobe, scprobefull
 	-WithFacingSpriteBody:
-	WithShadow:
-		Offset: 128, 128, 0
-		ZOffset: -512
+	# WithShadow:
+	# 	Offset: 128, 128, 0
+	# 	ZOffset: -512
 	RenderSprites:
 		PlayerPalette: player_rgba
 
@@ -7102,13 +7102,14 @@ SCARCHON:
 		TurnSpeed: 15
 		Locomotor: hover
 	Health:
-		HP: 10
+		HP: 1000
 	Repairable:
 		HpPerStep: 17500
 	ChangesHealth@SelfHealing:
 		Step: 140
 	Shielded:
-		InitialStrength: 35000
+		InitialStrength: 350000
+		MaxStrength: 350000
 		RegenAmount: 280
 	Armor:
 		Type: Medium

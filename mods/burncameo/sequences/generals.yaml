@@ -979,6 +979,7 @@ glcommand:
 		Filename: glbuildingmakebig.shp
 		Length: *
 	bib:
+		Scale: 1.0
 		# Filename: bib2
 		# UseTilesetExtension: true
 		# Length: *
@@ -1020,6 +1021,7 @@ glbarracks:
 		Filename: glbuildingmakebig.shp
 		Length: *
 	bib:
+		Scale: 1.0
 		# Filename: bib2
 		# UseTilesetExtension: true
 		# Length: *
@@ -1080,6 +1082,7 @@ glweap:
 		Filename: glbuildingmakebig.shp
 		Length: *
 	bib:
+		Scale: 1.0
 		# Filename: bib1
 		# UseTilesetExtension: true
 		# Length: *
@@ -1128,6 +1131,7 @@ glpalace:
 		Filename: glbuildingmakebig.shp
 		Length: *
 	bib:
+		Scale: 1.0
 		# Filename: bib1
 		# UseTilesetExtension: true
 		# Length: *
@@ -1167,6 +1171,7 @@ glstorm:
 		Filename: glbuildingmakebig.shp
 		Length: *
 	bib:
+		Scale: 1.0
 		# Filename: bib2
 		# UseTilesetExtension: true
 		# Length: *
@@ -1212,6 +1217,7 @@ glblackmarket:
 		Length: *
 	dead:
 	bib:
+		Scale: 1.0
 		# Filename: bib3.shp
 		# Length: *
 		# UseTilesetExtension: true
@@ -1244,6 +1250,7 @@ glhole2:
 	dead:
 	make:
 	bib:
+		Scale: 1.0
 		# Filename: bib1.shp
 		# UseTilesetExtension: true
 		# Length: *
@@ -1262,6 +1269,7 @@ glhole:
 	make:
 	dead:
 	bib:
+		Scale: 1.0
 		# Filename: bib3
 		# Length: *
 		# UseTilesetExtension: true
@@ -1297,6 +1305,7 @@ glsite:
 		Start: 8
 		Facings: 8
 	bib:
+		Scale: 1.0
 		Filename: mbGUN.tem
 		UseTilesetExtension: true
 		TilesetOverrides:
@@ -1327,6 +1336,7 @@ gltunnel:
 		Filename: gunfire2.shp
 		Length: *
 	bib:
+		Scale: 1.0
 		Filename: mbGUN.tem
 		UseTilesetExtension: true
 		TilesetOverrides:
@@ -1357,7 +1367,8 @@ gltrap:
 		Filename: minigun.shp
 		Length: 6
 		Facings: 8
-	bib: 
+	bib:
+		Scale: 1.0 
 		Filename: mbGUN.tem
 		UseTilesetExtension: true
 		TilesetOverrides:
@@ -1909,7 +1920,7 @@ chmcv:
 		Filename: chmcvicon.shp
 
 chcommand:
-	Inherits: ^WithBuildingBib3
+	Inherits: ^WithBuildingBib2
 	Defaults:
 		Scale: 2.0
 		Offset: 0,-5
@@ -1921,6 +1932,7 @@ chcommand:
 		Filename: chbuildingmakebig.shp
 		Length: *
 	bib:
+		Scale: 1.0
 		# Filename: bib2
 		# UseTilesetExtension: true
 		# Length: *
@@ -1946,6 +1958,7 @@ chpower:
 		Tick: 800
 		Offset: 0,-10
 	bib:
+		Scale: 1.0
 		# Filename: bib3
 		# UseTilesetExtension: true
 		# Length: *
@@ -1983,6 +1996,7 @@ chpower2:
 		Tick: 800
 		Offset: 0,-10
 	bib:
+		Scale: 1.0
 		# Filename: bib3
 		# UseTilesetExtension: true
 		# Length: *
@@ -2017,6 +2031,7 @@ chbarracks:
 		Filename: chbuildingmakebig.shp
 		Length: *
 	bib:
+		Scale: 1.0
 		# Filename: bib2
 		# UseTilesetExtension: true
 		# Length: *
@@ -2053,6 +2068,7 @@ chweap:
 		Filename: chbuildingmakebig.shp
 		Length: *
 	bib:
+		Scale: 1.0
 		# Filename: bib1
 		# UseTilesetExtension: true
 		# Length: *
@@ -2083,6 +2099,7 @@ chpropaganda:
 		Filename: chbuildingmakebig.shp
 		Length: *
 	bib:
+		Scale: 1.0
 		# Filename: bib1
 		# UseTilesetExtension: true
 		# Length: *
@@ -2104,6 +2121,7 @@ chpropagandatower:
 		Filename: chbuildingmake1x1.shp
 		Length: *
 	bib:
+		Scale: 1.0
 		Filename: mbGAP.tem
 		Length: *
 		UseTilesetExtension: false
@@ -2125,6 +2143,7 @@ chinternetcenter:
 		Filename: chbuildingmakebig.shp
 		Length: *
 	bib:
+		Scale: 1.0
 		# Filename: bib1
 		# UseTilesetExtension: true
 		# Length: *
@@ -2153,6 +2172,7 @@ chsilo:
 		Filename: chbuildingmakebig.shp
 		Length: *
 	bib:
+		Scale: 1.0
 		# Filename: bib2
 		# UseTilesetExtension: true
 		# Length: *
@@ -3246,6 +3266,7 @@ usacommand:
 		Filename: chbuildingmakebig.shp
 		Length: *
 	bib:
+		Scale: 1.0
 		# Filename: bib2.shp
 		# UseTilesetExtension: true
 		# Length: *
@@ -3271,6 +3292,7 @@ usapower:
 		Tick: 800
 		Offset: 0,-10
 	bib:
+		Scale: 1.0
 		# Filename: bib3
 		# UseTilesetExtension: true
 		# Length: *
@@ -3306,6 +3328,7 @@ usabarracks:
 		Filename: chbuildingmakebig.shp
 		Length: *
 	bib:
+		Scale: 1.0
 		# Filename: bib2
 		# UseTilesetExtension: true
 		# Length: *
@@ -3326,6 +3349,7 @@ usaweap:
 		Filename: chbuildingmakebig.shp
 		Length: *
 	bib:
+		Scale: 1.0
 		# Filename: bib1
 		# UseTilesetExtension: true
 		# Length: *
@@ -3347,7 +3371,8 @@ usastrategy:
 	make: 
 		Filename: chbuildingmakebig.shp
 		Length: *
-	bib: 
+	bib:
+		Scale: 1.0 
 		# Filename: bib1
 		# UseTilesetExtension: true
 		# Length: *
@@ -3385,6 +3410,7 @@ usacannon:
 	laser-up:
 		Filename: usacannon_laserup.shp
 	bib:
+		Scale: 1.0
 		# Filename: bib1
 		# UseTilesetExtension: true
 		# Length: *
@@ -3412,7 +3438,8 @@ usacannon2:
 	make: 
 		Filename: chbuildingmakebig.shp
 		Length: *
-	bib: 
+	bib:
+		Scale: 1.0 
 		# Filename: bib2
 		# UseTilesetExtension: true
 		# Length: *
@@ -3455,6 +3482,7 @@ usadropzone:
 		Length: *
 	dead:
 	bib:
+		Scale: 1.0
 		# Filename: bib3
 		# Length: *
 		# UseTilesetExtension: true

@@ -5535,7 +5535,7 @@ heavy_trooper:
 
 chem_troop:
 	Inherits: light_inf
-	Inherits@Chemical: ^D2K_BiologicalWarfare
+#	Inherits@Chemical: ^D2K_BiologicalWarfare
 	AutoTargetPriority@INFANTRY:
 		InvalidTargets: Vehicle
 	Valued:
@@ -5866,7 +5866,7 @@ contaminator:
 	Inherits@bot: ^BotMicromanageable
 	Inherits@anim: ^RA2Infantry
 	Inherits@AntiInf: ^PrioritizeInfantry
-	Inherits@Chemical: ^D2K_BiologicalWarfare
+#	Inherits@Chemical: ^D2K_BiologicalWarfare
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -6401,6 +6401,8 @@ fedaykin:
 		PauseOnCondition: cloak-force-disabled || base-reveal
 	Passenger:
 		CargoType: Fremen
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience
 
 # emperor_fedaykin:
 # 	Inherits: fedaykin
@@ -6415,7 +6417,7 @@ d2k_leech:
 	Inherits@EXPERIENCE: ^GainsExperience
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Inherits@AntiVeh: ^PrioritizeVehicle
-	Inherits@Chemical: ^D2K_BiologicalWarfare
+#	Inherits@Chemical: ^D2K_BiologicalWarfare
 	Buildable:
 		Queue: Vehicle, RAVehicle
 		BuildPaletteOrder: 130
@@ -7667,7 +7669,7 @@ tleilax_labcrawl:
 	Inherits@EXT: ^ExternalConditions
 	Inherits@IXEMP: ^D2K_Ix_Frontal_EMP
 	Inherits@cargo: ^CargoVehicle
-	Inherits@Chemical: ^D2K_BiologicalWarfare
+#	Inherits@Chemical: ^D2K_BiologicalWarfare
 	Buildable:
 		Queue: Vehicle, RAVehicle
 		BuildPaletteOrder: 100
@@ -8066,7 +8068,7 @@ ordos_banshee:
 	Inherits@GAINSEXPERIENCE: ^GainsExperience
 	Inherits@AntiVeh: ^PrioritizeVehicle
 	Inherits@AntiInf: ^PrioritizeInfantry
-	Inherits@Chemical: ^D2K_BiologicalWarfare
+#	Inherits@Chemical: ^D2K_BiologicalWarfare
 	AutoTarget:
 		InitialStance: ReturnFire
 	Valued:
@@ -8145,7 +8147,7 @@ ordos_wraith:
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
 	Inherits@detect: ^GenericAirDetector
 	Inherits@AntiAir: ^PrioritizeAir
-	Inherits@Chemical: ^D2K_BiologicalWarfare
+#	Inherits@Chemical: ^D2K_BiologicalWarfare
 	Valued:
 		Cost: 15000
 	Tooltip:
@@ -10415,7 +10417,7 @@ sonic_tank:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 100000
+		HP: 60000
 	Armor:
 		Type: Heavy
 	Mobile:
@@ -10441,6 +10443,8 @@ sonic_tank:
 		Palette: d2kcloak
 	Voiced:
 		VoiceSet: D2KSonicTank
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Kills, Experience
 
 # emperor_sonic_tank:
 # 	Inherits: sonic_tank
@@ -10530,7 +10534,7 @@ d2k_laser_tank:
 # 	Inherits@EXT: ^ExternalConditions
 # 	Inherits@IXEMP: ^D2K_Ix_Turret_EMP
 # 	Inherits@SHADOWS: ^Shadows
-# 	Inherits@Chemical: ^D2K_BiologicalWarfare
+# #	Inherits@Chemical: ^D2K_BiologicalWarfare
 # 	Inherits@Shield: ^D2K_Ordos_Shields
 # 	Buildable:
 # 		Queue: Vehicle, RAVehicle
@@ -11191,7 +11195,7 @@ deviator:
 	Inherits@EXT: ^ExternalConditions
 	Inherits@IXEMP: ^D2K_Ix_Frontal_EMP
 	Inherits@AntiInf: ^PrioritizeVehicle
-	Inherits@Chemical: ^D2K_BiologicalWarfare
+#	Inherits@Chemical: ^D2K_BiologicalWarfare
 	Valued:
 		Cost: 1200
 	Tooltip:
@@ -11253,7 +11257,7 @@ deviator:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 100000
+		HP: 60000
 	Armor:
 		Type: Medium
 	Mobile:

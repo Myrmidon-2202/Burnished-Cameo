@@ -965,12 +965,12 @@ D2K_TowerMissile:
 	Warhead@MediumFlameWeapon: SpreadDamage
 		ValidTargets: Ground, Water, Trees, Air
 		Damage: 4000
-	Warhead@MediumFlameWeaponFriendlyFire: SpreadDamage
-		ValidTargets: Ground, Water, Trees, Air
-		Damage: 2000
-	Warhead@MediumFlameWeaponPercentage: HealthPercentageDamage
-		ValidTargets: Ground, Water, Trees, Air
-		Damage: 2
+	# Warhead@MediumFlameWeaponFriendlyFire: SpreadDamage
+	# 	ValidTargets: Ground, Water, Trees, Air
+	# 	Damage: 2000
+	# Warhead@MediumFlameWeaponPercentage: HealthPercentageDamage
+	# 	ValidTargets: Ground, Water, Trees, Air
+	# 	Damage: 2
 	# Warhead@FlakWeapon: SpreadDamage
 	# 	ValidTargets: Ground, Water, Trees, Air
 	# 	Damage: 4000

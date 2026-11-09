@@ -21,7 +21,7 @@ lovebowFire:
 		Image: spearfire
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 1000
+		Damage: 1500
 		ValidTargets: Ground
 		Versus:
 			None: 300
@@ -36,13 +36,39 @@ lovebowFire:
 		Explosions: lovepiff
 
 LoveHeliAGGun:
-	Inherits: HeliAGGun
+	Inherits: ^Chaingun
+	ValidTargets: Ground, Water, Trees, Air
+	ReloadDelay: 16
+	Burst: 4
+	BurstDelays: 2
+	Range: 4501
+	MinRange: 450
+	Report: gun5.aud
+	Warhead@Chaingun: SpreadDamage
+		ValidTargets: Ground, Water, Trees, Air
+		Damage: 4000
+	Warhead@ChaingunPercentage: HealthPercentageDamage
+		ValidTargets: Ground, Water, Trees, Air
+		Damage: 2
 	Warhead@2Eff: CreateEffect
 		ImpactSounds: bowhit.aud
 		Explosions: loveex1
 
 LoveHeliAAGun:
-	Inherits: HeliAAGun
+	Inherits: ^Chaingun
+	ValidTargets: Ground, Water, Trees, Air
+	ReloadDelay: 16
+	Burst: 4
+	BurstDelays: 2
+	Range: 4501
+	MinRange: 450
+	Report: gun5.aud
+	Warhead@Chaingun: SpreadDamage
+		ValidTargets: Ground, Water, Trees, Air
+		Damage: 4000
+	Warhead@ChaingunPercentage: HealthPercentageDamage
+		ValidTargets: Ground, Water, Trees, Air
+		Damage: 2
 	Warhead@2Eff: CreateEffect
 		ImpactSounds: bowhit.aud
 		Explosions: loveex1
@@ -101,6 +127,19 @@ LovebowFireB:
 			Heavy: 48
 			Concrete: 24
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+	Warhead@2Eff: CreateEffect
+		ImpactSounds: bowhit.aud
+		Explosions: loveex1
+
+CupidRockets:
+	Inherits: ^LightMissile
+	ReloadDelay: 63
+	Range: 6368
+	Report: bazook1.aud
+	Warhead@LightMissile: SpreadDamage
+		Damage: 18000
+	Warhead@LightMissilePercentage: HealthPercentageDamage
+		Damage: 9
 	Warhead@2Eff: CreateEffect
 		ImpactSounds: bowhit.aud
 		Explosions: loveex1
@@ -250,7 +289,7 @@ planBFire:
 	Range: 7c512
 	Report: vpalwe2d.aud
 	ValidTargets: Air
-	Projectile: MissileCA
+	Projectile: Missile
 		Speed: 333
 		Image: valentines_skull
 		HorizontalRateOfTurn: 33
@@ -282,7 +321,7 @@ valentine_bullethell:
 	Range: 7c512
 	ValidTargets: Ground
 	InvalidTargets: Ally
-	Projectile: MissileCA
+	Projectile: Missile
 		Speed: 60
 		Acceleration: 6
 		RangeLimit: 25c0
@@ -323,7 +362,7 @@ valentine_bullethell2:
 	Range: 7c512
 	ValidTargets: Ground
 	InvalidTargets: Ally
-	Projectile: MissileCA
+	Projectile: Missile
 		Speed: 70
 		Acceleration: 7
 		RangeLimit: 25c0
@@ -361,7 +400,7 @@ valentine_bullethell3:
 	Range: 7c512
 	ValidTargets: Ground
 	InvalidTargets: Ally
-	Projectile: MissileCA
+	Projectile: Missile
 		Speed: 80
 		Acceleration: 8
 		RangeLimit: 25c0
@@ -402,7 +441,7 @@ valentine_bullethell4:
 	Range: 7c512
 	ValidTargets: Ground
 	InvalidTargets: Ally
-	Projectile: MissileCA
+	Projectile: Missile
 		Speed: 90
 		Acceleration: 9
 		RangeLimit: 25c0

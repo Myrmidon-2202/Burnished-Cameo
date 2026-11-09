@@ -1,4 +1,18 @@
+xmas_presents:
+	Defaults:
+		Scale: 2.0
+		Filename: xmas_presents.shp
+	red:
+		Start: 0
+	green:
+		Start: 1
+	orange:
+		Start: 2
+
 xmas_red_elf:
+	Defaults:
+		Scale: 2.0
+		Filename: xmas_red_elf.shp
 	idle:
 		Facings: -8
 	stand:
@@ -11,18 +25,26 @@ xmas_red_elf:
 	die:
 		Start: 72
 		Length: 9
-	die-crushed: e1rot
+	die-crushed:
+		Filename: e1rot.shp
 		Start: 16
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-	icon: xmas_red_elf_icon
-	
+	icon:
+		Filename: xmas_red_elf_icon.shp
+
 xmas_green_elf:
 	Inherits: xmas_red_elf
-	empty-harvest: invisibleitem
-	half-harvest: invisibleitem
-	full-harvest: invisibleitem
+	Defaults:
+		Scale: 2.0
+		Filename: xmas_green_elf.shp
+	empty-harvest:
+		Filename: invisibleitem.shp
+	half-harvest:
+		Filename: invisibleitem.shp
+	full-harvest:
+		Filename: invisibleitem.shp
 	dock:
 		Start: 72
 		Length: 3
@@ -44,47 +66,77 @@ xmas_green_elf:
 	die:
 		Start: 120
 		Length: 6
-	die-crushed: e1rot
+	die-crushed:
+		Filename: e1rot.shp
 		Start: 16
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-	icon: xmas_green_elf_icon
-	
+	icon:
+		Filename: xmas_green_elf_icon.shp
+
 xmas_tree:
+	Defaults:
+		Scale: 2.0
+		Filename: xmas_tree.shp
 	idle:
 	damaged-idle:
 		Start: 1
-	icon: xmas_tree_icon
-	
+	icon:
+		Filename: xmas_tree_icon.shp
+
 xmas_elves_refinery:
+	Defaults:
+		Scale: 2.0
+		Filename: xmas_elves_refinery.shp
 	idle:
 	damaged-idle:
 		Start: 1
-	icon: xmas_elves_refinery_icon
-	
+	icon:
+		Filename: xmas_elves_refinery_icon.shp
+
 xmas_elves_house:
+	Defaults:
+		Scale: 2.0
+		Filename: xmas_elves_house.shp
 	idle:
 	damaged-idle:
 		Start: 1
-	icon: xmas_elves_house_icon
-	
+	icon:
+		Filename: xmas_elves_house_icon.shp
+
 xmas_santas_house:
+	Defaults:
+		Scale: 2.0
+		Filename: xmas_santas_house.shp
 	idle:
 	damaged-idle:
 		Start: 1
-	icon: xmas_santas_house_icon
-	
+	active:
+		Start: 1
+	icon:
+		Filename: xmas_santas_house_icon.shp
+
 xmas_elf_workshop:
+	Defaults:
+		Scale: 2.0
+		Filename: xmas_elf_workshop.shp
 	idle:
 	damaged-idle:
 		Start: 1
-	icon: xmas_elf_workshop_icon
-	
+	icon:
+		Filename: xmas_elf_workshop_icon.shp
+
 xmas_grenade:
+	Defaults:
+		Scale: 2.0
+		Filename: xmas_grenade.shp
 	idle:
 
 xmas_reindeer:
+	Defaults:
+		Scale: 2.0
+		Filename: xmas_reindeer.shp
 	idle:
 		Facings: -32
 	idle-empty:
@@ -105,26 +157,32 @@ xmas_reindeer:
 		Facings: -32
 		Length: 6
 		Ticks: 140
-	icon_red: xmas_reindeer_red_icon
-	icon_green: xmas_reindeer_green_icon
+	icon_red:
+		Filename: xmas_reindeer_red_icon.shp
+	icon_green:
+		Filename: xmas_reindeer_green_icon.shp
 
 xmas_satan_clawz_ride:
+	Defaults:
+		Scale: 2.0
+		Filename: xmas_satan_clawz_ride.shp
 	idle-empty:
 		Facings: -32
-    Scale: 1.2
 	idle:
 		Start: 32
 		Facings: -32
-    Scale: 1.2
 	run:
 		Start: 64
 		Facings: -32
 		Length: 6
 		Ticks: 130
-    Scale: 1.2
-	icon: xmas_satan_clawz_ride_icon
-	
+	icon:
+		Filename: xmas_satan_clawz_ride_icon.shp
+
 xmas_presents:
+	Defaults:
+		Scale: 2.0
+		Filename: xmas_presents.shp
 	red:
 	green:
 		Start: 1
@@ -132,80 +190,143 @@ xmas_presents:
 		Start: 2
 
 xmas_cameo_tree:
+	Defaults:
+		Scale: 2.0
+		Filename: xmas_cameo_tree.shp
 	idle:
 		Length: *
+
 xmas_artillery:
+	Defaults:
+		Scale: 2.0
+		Filename: xmas_artillery.shp
 	idle:
 		Facings: -32
-	icon: xmas_artillery_icon
-		
+	icon:
+		Filename: xmas_artillery_icon.shp
+
 xmas_rocket_sledge:
+	Defaults:
+		Scale: 2.0
+		Filename: xmas_rocket_sledge.shp
 	idle:
 		Facings: -32
-	icon: xmas_rocket_sledge_icon
-		
+	icon:
+		Filename: xmas_rocket_sledge_icon.shp
+
 xmas_main_battle_sledge:
+	Defaults:
+		Scale: 2.0
+		Filename: xmas_main_battle_sledge.shp
 	idle:
 		Facings: -32
-	icon: xmas_main_battle_sledge_icon
-	
+	icon:
+		Filename: xmas_main_battle_sledge_icon.shp
+
 xmas_snowball:
-	idle: xmas_snowball.png
+	Defaults:
+		Scale: 2.0
+		Filename: xmas_snowball.png
+		AddExtension: false
+	idle:
+		Filename: xmas_snowball.png
 		AddExtension: false
 
 xmas_snowball_small:
-	idle: xmas_snowball_small.png
+	Defaults:
+		Scale: 2.0
+	idle:
+		Filename: xmas_snowball_small.png
 		AddExtension: false
-		
+
 xmas_icespike:
-	idle: xmas_icespike.png
+	Defaults:
+		Scale: 2.0
+	idle:
+		Filename: xmas_icespike.png
 		Facings: 8
 		AddExtension: false
 
 xmas_snowman_snowball:
-	idle: xmas_snowman
-	turret: xmas_snowman
+	Defaults:
+		Scale: 2.0
+	idle:
+		Filename: xmas_snowman.shp
+	turret:
+		Filename: xmas_snowman.shp
 		Start: 1
 		Facings: -32
-	icon: xmas_snowman_icon
+	icon:
+		Filename: xmas_snowman_icon.shp
 
 xmas_snowman_cannon:
-	idle: xmas_snowman
-	turret: xmas_snowman
+	Defaults:
+		Scale: 2.0
+	idle:
+		Filename: xmas_snowman.shp
+	turret:
+		Filename: xmas_snowman.shp
 		Start: 33
 		Facings: -32
-	icon: xmas_snowman_cannon_icon
+	icon:
+		Filename: xmas_snowman_cannon_icon.shp
 
 xmas_snowman_elite:
-	idle: xmas_snowman
-	turret: xmas_snowman
+	Defaults:
+		Scale: 2.0
+	idle:
+		Filename: xmas_snowman.shp
+	turret:
+		Filename: xmas_snowman.shp
+		Start: 33
+		Facings: -32
+	icon:
+		Filename: xmas_snowman_cannon_icon.shp
+
+xmas_snowman_elite:
+	Defaults:
+		Scale: 2.0
+	idle:
+		Filename: xmas_snowman.shp
+	turret:
+		Filename: xmas_snowman.shp
 		Start: 65
 		Facings: -32
-	turretaa: xmas_snowman
+	turretaa:
+		Filename: xmas_snowman.shp
 		Start: 97
 		Facings: -32
-	icon: xmas_snowman_elite_icon
-	
+	icon:
+		Filename: xmas_snowman_elite_icon.shp
+
 explosion:
 	Defaults:
+		Scale: 2.0
 		Length: *
 		ZOffset: 2047
-	xmas_snowball: xmas_snowball.png
+	xmas_snowball:
+		Filename: xmas_snowball.png
 		Start: 1
 		Length: *
 		AddExtension: false
-	xmas_snowball_small: xmas_snowball_small.png
+	xmas_snowball_small:
+		Filename: xmas_snowball_small.png
 		Start: 1
 		Length: *
 		AddExtension: false
-	xmas_icespike: xmas_icespike.png
+	xmas_icespike:
+		Filename: xmas_icespike.png
 		Start: 8
 		Length: *
 		AddExtension: false
-	xmas_snowball_big: snowball-big-explosion.png
+	xmas_snowball_big:
+		Filename: snowball-big-explosion.png
 		Length: *
 		AddExtension: false
+
 icon:
 	Defaults:
+		Scale: 2.0
 		AddExtension: false
-	xmas_satan_clawz_ride_icon: xmas_satan_clawz_ride_icon.shp
+	xmas_satan_clawz_ride_icon:
+		Filename: xmas_satan_clawz_ride_icon.shp
