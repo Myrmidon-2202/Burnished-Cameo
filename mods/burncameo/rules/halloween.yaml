@@ -608,17 +608,17 @@ halloween_tower:
 		Range: 7c0
 	WithBuildingBib:
 		HasMinibib: true
-	WithTeslaChargeAnimation:
+	# WithTeslaChargeAnimation:
 	Armament:
 		Weapon: wc_tower_fire
 		LocalOffset: 0,0,896
-	Armament@aa:
-		Weapon: wc_tower_fire_aa
-		LocalOffset: 0,0,896
-	Armament@boiling:
-		Weapon: Flamethrower
-		LocalOffset: 0,0,896
-		RequiresCondition: halloween_upgrade.boiling
+	# Armament@aa:
+	# 	Weapon: wc_tower_fire_aa
+	# 	LocalOffset: 0,0,896
+	# Armament@boiling:
+	# 	Weapon: Flamethrower
+	# 	LocalOffset: 0,0,896
+	# 	RequiresCondition: halloween_upgrade.boiling
 	AttackTesla:
 		RequiresCondition: !build-incomplete
 		PauseOnCondition: lowpower || disabled

@@ -330,7 +330,7 @@ CIV2_DISTRICT_RESOURCE_BRONZE:
 	CustomSellValue:
 		Value: 500
 	FreeActor:
-		Actor: WHARV
+		Actor: civ2_minecart
 		SpawnOffset: 1,2
 		Facing: 256
 	WithBuildingBib:
@@ -399,7 +399,7 @@ CIV2_DISTRICT_PRODUCTION_BRONZE:
 	Inherits@exits: ^WC2Exits_3x3
 	Inherits@CPQWP: ^CPQConditionWithPrimary
 	Inherits@prod: ^ProducesUnits
-	Inherits@barr: ^IsBarrack
+	Inherits@barr: ^IsBarrackOld
 	HitShape:
 		UseTargetableCellsOffsets: false
 		TargetableOffsets: 0,0,0, 630,-512,0, 355,512,0, -281,-512,0, -630,512,0
@@ -415,7 +415,7 @@ CIV2_DISTRICT_PRODUCTION_BRONZE:
 		Queue: Building, RABuilding
 		Description: Trains infantry
 	Building:
-		Footprint: xx xx ==
+		Footprint: xX xx ==
 		Dimensions: 2,3
 		LocalCenterOffset: 0,-512,0
 	Health:
@@ -425,35 +425,32 @@ CIV2_DISTRICT_PRODUCTION_BRONZE:
 	WithBuildingBib:
 		Palette: ra_temperat
 	RallyPoint:
+	Production:
+		Produces: Infantry.CIV2
+	GrantExternalConditionToProduced:
+		Condition: produced
+	ProductionQueue:
+		Type: Infantry.CIV2
+		DisplayOrder: 2
+		Group: Infantry
+		LowPowerModifier: 150
+		ReadyAudio: UnitReady
+		ReadyTextNotification: notification-unit-ready
+		BlockedAudio: NoBuild
+		BlockedTextNotification: notification-unable-to-build-more
+		LimitedAudio: BuildingInProgress
+		LimitedTextNotification: notification-unable-to-comply-building-in-progress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar:
+		ProductionType: Infantry.CIV2
 	Exit@1:
 		SpawnOffset: 512,1024,0
 		ExitCell: 1,2
-	# Production:
-	# 	Produces: Infantry.CIV2
-	# GrantExternalConditionToProduced:
-	# 	Condition: produced
-	# ProductionQueue:
-	# 	Type: Infantry.CIV2
-	# 	DisplayOrder: 2
-	# 	Group: Infantry
-	# 	LowPowerModifier: 150
-	# 	ReadyAudio: UnitReady
-	# 	ReadyTextNotification: notification-unit-ready
-	# 	BlockedAudio: NoBuild
-	# 	BlockedTextNotification: notification-unable-to-build-more
-	# 	LimitedAudio: BuildingInProgress
-	# 	LimitedTextNotification: notification-unable-to-comply-building-in-progress
-	# 	QueuedAudio: Training
-	# 	OnHoldAudio: OnHold
-	# 	CancelledAudio: Cancelled
-	# ProductionBar:
-	# 	ProductionType: Infantry.CIV2
-	# Exit@1:
-	# 	SpawnOffset: 512,1024,0
-	# 	ExitCell: 1,2
-	# Exit@2:
-	# 	SpawnOffset: 1500,1500,0
-	# 	ExitCell: 3,3
+	Exit@2:
+		SpawnOffset: 1500,1500,0
+		ExitCell: 3,3
 	Power:
 		Amount: -20
 	ProvidesPrerequisite@buildingname:
@@ -556,6 +553,49 @@ CIV2_MCV:
 	ProvidesPrerequisite@factiongdi:
 		Prerequisite: mmworms
 
+civ2_minecart:
+	Inherits: ^Tank
+	Inherits@selection: ^SelectableEconomicUnit
+	Inherits@harv: ^Harvester
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Minecart
+		GenericName: Minecart
+	Buildable:
+		BuildPaletteOrder: 10
+		Prerequisites: ~wref
+		Queue: Vehicle, RAVehicle
+		BuildDuration: 1680
+		BuildDurationModifier: 40
+		Description: actor-wharv.description
+	Selectable:
+		DecorationBounds: 1536, 1536
+	Harvester:
+		BaleLoadDelay: 4
+		BaleUnloadDelay: 1
+		EmptyCondition: no-tiberium
+	StoresResources:
+		Capacity: 45
+	Mobile:
+		Speed: 85
+	Health:
+		HP: 62500
+	Repairable:
+		HpPerStep: 2537
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 4c0
+	WithHarvestAnimation:
+	WithDockingAnimation:
+	FireWarheadsOnDeath:
+		RequiresCondition: !no-tiberium
+		Weapon: TiberiumExplosion
+	SelectionDecorations:
+	Voiced:
+		VoiceSet: voiceWorm
+
 civ2_warrior:
 	Inherits: ^Soldier
 	Inherits@flag: ^CIV2UnitFlag
@@ -574,7 +614,7 @@ civ2_warrior:
 	Buildable:
 		BuildPaletteOrder: 10
 		Prerequisites: ~civ2_district_production_bronze
-		Queue: Infantry, RAInfantry
+		Queue: Infantry.CIV2
 		Description: Basic Melee Infantry. Slow but can take some damage.
 		BuildDuration: 150
 		# BuildDurationModifier: 100
@@ -607,6 +647,41 @@ civ2_warrior:
 		VoiceSet: voicehuman
 	Crushable:
 		CrushClasses: vehicle
+
+civ2_phalanx:
+	Inherits: civ2_warrior
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Phalanx
+
+civ2_archer:
+	Inherits: civ2_warrior
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Archer
+
+civ2_legion:
+	Inherits: civ2_warrior
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Legion
+
+civ2_pikeman:
+	Inherits: civ2_warrior
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Pikeman
+
+civ2_musketeers:
+	Inherits: civ2_warrior
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Musketeers
 
 ####################################################################################################
 #		UPGRADES
