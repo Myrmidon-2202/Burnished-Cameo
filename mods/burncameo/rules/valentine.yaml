@@ -134,7 +134,7 @@ valentine_base:
 		BuildPaletteOrder: 10
 		Queue: Building, RABuilding
 		Description: Enables buildings construction
-		Prerequisites: valentine_church_workshop
+		Prerequisites: valentine_church_workshop, ~valentine_base
 	Health:
 		HP: 250000
 	Power:
@@ -295,7 +295,7 @@ valentine_chocolate_refinery:
 		BuildPaletteOrder: 20
 		Queue: Building, RABuilding
 		Prerequisites: ~valentine_base
-		Description: Processes gifts into actually useful resources
+		Description: Processes resources into raw love.
 	Building:
 		Footprint: xxx ===
 		Dimensions: 3,2
@@ -383,7 +383,7 @@ valentine_power:
 		BuildPaletteOrder: 30
 		Queue: Building, RABuilding
 		Prerequisites: ~valentine_base
-		Description: Provides energy to build more units
+		Description: Provides the power of love to your base.
 	Building:
 		Footprint: === xxx ===
 		Dimensions: 3,3
@@ -423,7 +423,7 @@ valentine_ladies_house:
 		BuildPaletteOrder: 30
 		Prerequisites: ~valentine_base
 		Queue: Building, RABuilding
-		Description: Trains Elves
+		Description: Trains the legions of love.
 	Building:
 		Footprint: =x= xxx ===
 		Dimensions: 3,3
@@ -1499,7 +1499,7 @@ loveballista:
 		InitialStanceAI: AttackAnything
 		ScanRadius: 25
 	Tooltip:
-		Name: Love Ballista Tank
+		Name: Ballista Gatling Tank
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
@@ -1561,7 +1561,7 @@ valovecraft:
 		BuildDuration: 500
 		BuildDurationModifier: 100
 		Prerequisites: valentine_airfield, ~techlevel.high
-		Description: Aircraft that shoots powerful love arrows.\n
+		Description: Aircraft that shoots powerful love arrows.
 	Valued:
 		Cost: 1500
 	Tooltip:

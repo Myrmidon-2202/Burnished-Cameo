@@ -916,6 +916,7 @@ hq:
 		AddExtension: False
 
 nuk2:
+	Inherits: ^WithBuildingBib3
 	Defaults:
 		Filename: nuk2.shp
 	idle:
@@ -933,31 +934,32 @@ nuk2:
 		Length: *
 		Tick: 80
 	bib:
-		Filename: bib3.tem
-		TilesetFilenames:
-			DESERT: bib3.des
-			WINTER: bib3.win
-			SNOW: bib3.sno
-			TEMPERAT: bib3.tem
-			JUNGLE: bib3.jun
-			BARREN: bib3.bar
-			RA_SNOW: bib3.sno
-			RA_TEMPERAT: bib3.tem
-			RA_DESERT: bib3.des
-			RA_INTERIOR: bib3.int
-			ARRAKIS: bib3.des
-			ARRAKIS2: bib3.des
-			CARIBIC: bib3.jun
-			WC2SUNSET: bib3.tem
-			WC2SUMMER: bib3.tem
-			OUTPOST2: bib3.tem
-		UseTilesetExtension: true
-		Length: *
+		# Filename: bib3.tem
+		# TilesetFilenames:
+		# 	DESERT: bib3.des
+		# 	WINTER: bib3.win
+		# 	SNOW: bib3.sno
+		# 	TEMPERAT: bib3.tem
+		# 	JUNGLE: bib3.jun
+		# 	BARREN: bib3.bar
+		# 	RA_SNOW: bib3.sno
+		# 	RA_TEMPERAT: bib3.tem
+		# 	RA_DESERT: bib3.des
+		# 	RA_INTERIOR: bib3.int
+		# 	ARRAKIS: bib3.des
+		# 	ARRAKIS2: bib3.des
+		# 	CARIBIC: bib3.jun
+		# 	WC2SUNSET: bib3.tem
+		# 	WC2SUMMER: bib3.tem
+		# 	OUTPOST2: bib3.tem
+		# UseTilesetExtension: true
+		# Length: *
 	icon:
 		Filename: nuk2icnh.shp
 		AddExtension: False
 
 hpad:
+	Inherits: ^WithBuildingBib3
 	Defaults:
 		Filename: hpad.shp
 	idle:
@@ -984,26 +986,26 @@ hpad:
 		Length: *
 		Tick: 80
 	bib:
-		Filename: bib3.tem
-		TilesetFilenames:
-			DESERT: bib3.des
-			WINTER: bib3.win
-			SNOW: bib3.sno
-			TEMPERAT: bib3.tem
-			JUNGLE: bib3.jun
-			BARREN: bib3.bar
-			RA_SNOW: bib3.sno
-			RA_TEMPERAT: bib3.tem
-			RA_DESERT: bib3.des
-			RA_INTERIOR: bib3.int
-			ARRAKIS: bib3.des
-			ARRAKIS2: bib3.des
-			CARIBIC: bib3.jun
-			WC2SUNSET: bib3.tem
-			WC2SUMMER: bib3.tem
-			OUTPOST2: bib3.tem
-		UseTilesetExtension: true
-		Length: *
+		# Filename: bib3.tem
+		# TilesetFilenames:
+		# 	DESERT: bib3.des
+		# 	WINTER: bib3.win
+		# 	SNOW: bib3.sno
+		# 	TEMPERAT: bib3.tem
+		# 	JUNGLE: bib3.jun
+		# 	BARREN: bib3.bar
+		# 	RA_SNOW: bib3.sno
+		# 	RA_TEMPERAT: bib3.tem
+		# 	RA_DESERT: bib3.des
+		# 	RA_INTERIOR: bib3.int
+		# 	ARRAKIS: bib3.des
+		# 	ARRAKIS2: bib3.des
+		# 	CARIBIC: bib3.jun
+		# 	WC2SUNSET: bib3.tem
+		# 	WC2SUMMER: bib3.tem
+		# 	OUTPOST2: bib3.tem
+		# UseTilesetExtension: true
+		# Length: *
 	icon:
 		Filename: hpadicnh.shp
 		AddExtension: False

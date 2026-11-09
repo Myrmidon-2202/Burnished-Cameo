@@ -2606,6 +2606,8 @@ swhqs:
 		Footprint: xxx xxx ===
 		Dimensions: 3,3
 		LocalCenterOffset: 0,-512,0
+	ProvidesPrerequisite@droid:
+		Prerequisite: swhqs
 	RenderSprites:
 		Image: swdhq
 	AirstrikePower:
@@ -3148,6 +3150,7 @@ swpyleh:
 		Bounds: 2048, 2048
 	RenderSprites:
 		Image: barr
+		PlayerPalette: raplayer
 
 swnurseh:
 	Inherits: swnurse
@@ -3811,7 +3814,7 @@ swgun.empire:
 		Name: Turbolaser Turret
 	Buildable:
 		BuildPaletteOrder: 45
-		Prerequisites: barracks, anyhq, ~swfact, ~!mmswhutt
+		Prerequisites: barracks, anyhq, ~swfact, ~mmswempire
 		Queue: Defence, RADefence
 		Description: actor-gun.description
 	Building:
@@ -3855,7 +3858,7 @@ swgun.rebels:
 		Name: Turbolaser Turret
 	Buildable:
 		BuildPaletteOrder: 45
-		Prerequisites: barracks, anyhq, ~swfact, ~!mmswrebels
+		Prerequisites: barracks, anyhq, ~swfact, ~mmswrebels
 		Queue: Defence, RADefence
 		Description: actor-gun.description
 	Building:
@@ -5270,7 +5273,7 @@ swe1inf:
 	Inherits@laserup: ^SWLaserUpgrades
 	Inherits@infup: ^SWInfantryUpgrades
 	Valued:
-		Cost: 150
+		Cost: 90
 	Tooltip:
 		Name: Imperial Army Trooper
 	Buildable:
@@ -5285,7 +5288,7 @@ swe1inf:
 		Weapon: SWLaserG
 		MuzzleSequence: garrison-muzzle
 	Health:
-		HP: 7500
+		HP: 10000
 	Voiced:
 		VoiceSet: SWTrooperVoice
 	GrantConditionOnPrerequisite@upe1troop:
@@ -5303,7 +5306,7 @@ swe1troop:
 	Inherits@laserup: ^SWLaserUpgrades
 	Inherits@infup: ^SWInfantryUpgrades
 	Valued:
-		Cost: 150
+		Cost: 160
 	Tooltip:
 		Name: Stormtrooper
 	Buildable:
@@ -5318,7 +5321,7 @@ swe1troop:
 		Weapon: SWLaserG
 		MuzzleSequence: garrison-muzzle
 	Health:
-		HP: 9500
+		HP: 19500
 	Voiced:
 		VoiceSet: SWTrooperVoice
 	GrantConditionOnPrerequisite@upe1troop:
@@ -5355,7 +5358,7 @@ swe1dark:
 	Mobile:
 		Speed: 75
 	Health:
-		HP: 15000
+		HP: 27000
 	RenderSprites:
 		Image: swe1dark
 
@@ -5417,11 +5420,11 @@ swe1clone:
 	Inherits@laserup: ^SWLaserUpgrades
 	Inherits@infup: ^SWInfantryUpgrades
 	Valued:
-		Cost: 100
+		Cost: 180
 	Tooltip:
 		Name: Clone Trooper
 	Health:
-		HP: 9500
+		HP: 20000
 	Buildable:
 		BuildPaletteOrder: 10
 		Prerequisites: barracks
@@ -5477,7 +5480,7 @@ swe1droid:
 	Inherits@laserup: ^SWLaserUpgrades
 	Inherits@infup: ^SWDroidUpgrades
 	Valued:
-		Cost: 50
+		Cost: 75
 	Tooltip:
 		Name: Battle Droid B1
 	Buildable:
@@ -5486,7 +5489,7 @@ swe1droid:
 		Queue: Infantry.Separatist
 		Description: actor-swe1droid.description
 	Health:
-		HP: 2500
+		HP: 7500
 	Armor:
 		Type: Light
 	Armament@PRIMARY: ##########
@@ -5554,6 +5557,7 @@ swddroid:
 	Mobile:
 		TurnSpeed: 8
 		Speed: 125
+	Shielded:
 	Crushable:
 		CrushClasses: vehicle
 	Armor:
@@ -5595,9 +5599,9 @@ swdroidb2:
 	Inherits@laserup: ^SWLaserUpgrades
 	Inherits@infup: ^SWDroidUpgrades
 	Valued:
-		Cost: 400
+		Cost: 500
 	Health:
-		HP: 20000
+		HP: 30000
 	Armor:
 		Type: Heavy
 	Tooltip:
@@ -5830,6 +5834,7 @@ swe2:
 		Name: Energy Grenadier
 	Buildable:
 		BuildPaletteOrder: 40
+		Prerequisites: barracks
 		Queue: Infantry.Empire, Infantry.Rebel, Infantry.Hutt
 		Description: actor-swe2.description
 	Armament:
@@ -5859,7 +5864,7 @@ swe3:
 	Mobile:
 		Speed: 42
 	Health:
-		HP: 4500
+		HP: 14500
 	AutoTarget:
 		ScanRadius: 6
 	Armament@PRIMARY: ##########
@@ -5902,7 +5907,7 @@ swe3troop:
 	Mobile:
 		Speed: 42
 	Health:
-		HP: 6000
+		HP: 18000
 	AutoTarget:
 		ScanRadius: 6
 	Armament@PRIMARY: ##########
@@ -6857,6 +6862,7 @@ swxwing:
 		CanSlide: false
 	Health:
 		HP: 25000
+	Shielded:
 	Armor:
 		Type: Medium
 	RevealsShroud:
@@ -6930,6 +6936,7 @@ swstarfighter:
 		CanSlide: false
 	Health:
 		HP: 20000
+	Shielded:
 	Armor:
 		Type: Medium
 	RevealsShroud:
@@ -7168,7 +7175,7 @@ sworca:
 	Aircraft:
 		CruiseAltitude: 2560
 		TurnSpeed: 24
-		Speed: 230
+		Speed: 270
 		CruisingCondition: cruising
 		TakeoffSounds: orcaup1.aud
 		LandingSounds: orcadwn1.aud
@@ -9357,11 +9364,11 @@ swexecc17:
 swrmbo.hutt:
 	Inherits: swrmbo
 	Valued:
-		Cost: 350
+		Cost: 450
 	Tooltip:
 		Name: Scab Mercenary
 	Health:
-		HP: 2500
+		HP: 20000
 	Buildable:
 		BuildPaletteOrder: 10
 		Prerequisites: ~techlevel.low
