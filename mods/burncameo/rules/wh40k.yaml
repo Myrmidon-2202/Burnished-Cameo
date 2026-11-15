@@ -47,7 +47,7 @@ World:
 	FactionCA@RandomDOW:
 		Name: Any
 		InternalName: RandomDOW
-		RandomFactionMembers: imperialguard, spacemarines, orkz, chaos #, tau, eldar, necron
+		RandomFactionMembers: imperialguard, spacemarines, orkz, chaos #, tau, eldar, necron, sistersofbattle, darkeldar, tyranids
 		Game: Dawn of War
 		Side: Random
 		Description: faction-random-wh40k.description
@@ -768,7 +768,7 @@ wh40kstrategym:
 	Buildable:
 		Queue: Building, RABuilding
 		BuildPaletteOrder: 120
-		Prerequisites: wh40kpower, ~techlevel.medium, ~mmspacemarines
+		Prerequisites: wh40kpowerm, ~mmspacemarines
 		Description: actor-wh40kstrategym.description
 		BuildLimit: 5
 	Valued:
@@ -1720,7 +1720,7 @@ wh40kpower:
 	PowerMultiplier@wh40kupenergy2:
 		Modifier: 150
 		RequiresCondition: wh40kupenergy2
-	ProvidesPrerequisite:
+	ProvidesPrerequisite@Power:
 		Prerequisite: wh40kpower
 
 wh40kbarr:
@@ -8407,7 +8407,7 @@ wh40kpowero:
 	PowerMultiplier@wh40kupenergy2:
 		Modifier: 150
 		RequiresCondition: wh40kupenergy2
-	ProvidesPrerequisite:
+	ProvidesPrerequisite@Power:
 		Prerequisite: wh40kpowero
 	Voiced:
 		VoiceSet: WH40KOrkGeneratorVoice
@@ -13368,7 +13368,7 @@ wh40kpowerc:
 	PowerMultiplier@wh40kupenergy2:
 		Modifier: 150
 		RequiresCondition: wh40kupenergy2
-	ProvidesPrerequisite:
+	ProvidesPrerequisite@Power:
 		Prerequisite: wh40kpowerc
 
 wh40kmachinepit:
