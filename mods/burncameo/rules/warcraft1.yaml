@@ -173,6 +173,108 @@ Player:
 	StoresResources:
 		Capacity: 6
 
+^WC1Ship:
+	Inherits: ^BoatUnit
+	Inherits@ANNOUNCE: ^AnnounceOnBuild
+	Inherits@EXT: ^ExternalConditions
+	DeathSounds:
+	-FireWarheadsOnDeath:
+	WithDeathAnimation:
+		UseDeathTypeSuffix: false
+	WithDeathAnimation@Bubbles:
+		UseDeathTypeSuffix: false
+		DeathSequence: bubbles
+		Delay: 80
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	RenderSprites:
+
+^wc1_arrowship:
+	Inherits@Template: ^ScoutShipTemplate
+	Inherits@EXP: ^GainsExperienceTD
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@EMP: ^TurretEMP
+	Buildable:
+		BuildPaletteOrder: 20
+	Valued:
+		Cost: 1400
+	Health:
+		HP: 32000
+	Armor:
+		Type: Heavy
+	Mobile:
+		Speed: 128
+	RevealsShroud:
+		Range: 7c0
+	#Food
+	Power:
+		Amount: -20
+	DetectCloaked:
+		DetectionTypes: Underwater
+		Range: 4c0
+	RenderDetectionCircle:
+	Selectable:
+		DecorationBounds: 1536, 1536
+
+^wc1_transport:
+	Inherits@EXP: ^GainsExperienceTD
+	Buildable:
+		BuildPaletteOrder: 30
+	Valued:
+		Cost: 1000
+	Health:
+		HP: 30000
+	Armor:
+		Type: None
+	Mobile:
+		Speed: 128
+	RevealsShroud:
+		Range: 7c0
+	#Food
+	Power:
+		Amount: -10
+	DetectCloaked:
+		DetectionTypes: Underwater
+		Range: 4c0
+	RenderDetectionCircle:
+	Selectable:
+		DecorationBounds: 1536, 1536
+	Cargo:
+		Types: Infantry, Hacker, Fremen, Vehicle
+		MaxWeight: 12
+		PassengerFacing: 0
+		LoadingCondition: notmobile
+	WithCargoPipsDecoration:
+		Position: BottomLeft
+		RequiresSelection: true
+
+^wc1_siegeship:
+	Inherits@Template: ^BattleShipTemplate
+	Inherits@EXP: ^GainsExperienceTD
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@EMP: ^TurretEMP
+	Buildable:
+		BuildPaletteOrder: 40
+	Valued:
+		Cost: 2000
+	Health:
+		HP: 48000
+	Armor:
+		Type: Heavy
+	Mobile:
+		Speed: 77
+	RevealsShroud:
+		Range: 7c0
+	#Food
+	Power:
+		Amount: -40
+	DetectCloaked:
+		DetectionTypes: Underwater
+		Range: 4c0
+	RenderDetectionCircle:
+	Selectable:
+		DecorationBounds: 1536, 1536
+
 ^WCUnitProduction:
 	Inherits@prod: ^ProducesUnits
 	GrantConditionOnPowerState@supply:
@@ -899,81 +1001,83 @@ wc_h_tower:
 	Voiced:
 		VoiceSet: humantowervoice
 
-# wc_h_dock:
-# 	Inherits: ^BaseBuilding
-# 	Inherits@BURNABLE: ^WC1Building
-# 	Inherits@shape: ^2x2Shape
-# 	Inherits@wcprod: ^WCUnitProduction
-# 	Inherits@CPQWP: ^CPQConditionWithPrimary
-# 	HitShape:
-# 		UseTargetableCellsOffsets: false
-# 		TargetableOffsets: 0,0,0, 840,-256,0, 840,512,0, 210,-512,0, -71,512,0
-# 		Type: Rectangle
-# 			TopLeft: -1024, -1024
-# 			BottomRight: 1024, 640
-# 	Valued:
-# 		Cost: 1000
-# 	Tooltip:
-# 		Name: Dock
-# 	ProvidesPrerequisite:
-# 	Buildable:
-# 		BuildPaletteOrder: 12
-# 		Queue: Building, RABuilding
-# 		Description: actor-wc_h_barracks.description
-# 		BuildDuration: 200
-# 		BuildDurationModifier: 100
-# 		Prerequisites: ~wc_h_townhall, wc_h_farm, wc_h_lumbermill
-# 	Building:
-# 		Footprint: xx xx ==
-# 		Dimensions: 2,3
-# 		LocalCenterOffset: 0,-512,0
-# 	DamageMultiplier@DamageReduction:
-# 		Modifier: 61
-# 	Health:
-# 		HP: 80000
-# 	RevealsShroud:
-# 		Range: 5c0
-# 	RallyPoint:
-# 	Exit@1:
-# 		SpawnOffset: -426,61,0
-# 		ExitCell: 0,1
-# 	Exit@2:
-# 		SpawnOffset: 298,298,0
-# 		ExitCell: 1,1
-# 	Production@NORMAL:
-# 		Produces: Addons.Human1
-# 		RequiresCondition: !classicproductionqueues
-# 	Production@CLASSICPRODUCTIONQUEUES:
-# 		Produces: RAInfantry
-# 		RequiresCondition: classicproductionqueues
-# 	GrantExternalConditionToProduced:
-# 		Condition: produced
-# 	ProductionQueue:
-# 		Type: Addons.Human1
-# 		DisplayOrder: 2
-# 		Group: Addons
-# 		LowPowerModifier: 9999
-# 		ReadyAudio: UnitReady
-# 		BlockedAudio: NoBuild
-# 		LimitedAudio: BuildingInProgress
-# 		QueuedAudio: Training
-# 		OnHoldAudio: OnHold
-# 		CancelledAudio: Cancelled
-# 	ProductionBar@NORMAL:
-# 		ProductionType: Addons.Human1
-# 		RequiresCondition: !classicproductionqueues
-# 	ProductionBar@CLASSICPRODUCTIONQUEUES:
-# 		ProductionType: RAInfantry
-# 		RequiresCondition: classicproductionqueues
-# 	Power:
-# 		Amount: 0
-# 	ProvidesPrerequisite@buildingname:
-# 	ProvidesPrerequisite@dock:
-# 		Prerequisite: dock
-# 	Selectable:
-# 		Bounds: 2048,2048
-# 	Voiced:
-# 		VoiceSet: humanbarracksvoice
+wc_h_dock:
+	Inherits: ^BaseBuilding
+	Inherits@Shipyard: ^IsShipyardOld
+	Inherits@BURNABLE: ^WC1Building
+	Inherits@shape: ^2x2Shape
+	Inherits@wcprod: ^WCUnitProduction
+	Inherits@CPQWP: ^CPQConditionWithPrimary
+	HitShape:
+		UseTargetableCellsOffsets: false
+		TargetableOffsets: 0,0,0, 840,-256,0, 840,512,0, 210,-512,0, -71,512,0
+		Type: Rectangle
+			TopLeft: -1024, -1024
+			BottomRight: 1024, 640
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Dock
+	ProvidesPrerequisite:
+	Buildable:
+		BuildPaletteOrder: 12
+		Queue: Building, RABuilding
+		Description: actor-wc_h_barracks.description
+		BuildDuration: 200
+		BuildDurationModifier: 100
+		Prerequisites: ~wc_h_townhall, wc_h_farm, wc_h_lumbermill
+	Building:
+		Footprint: xx xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+		TerrainTypes: Water
+	DamageMultiplier@DamageReduction:
+		Modifier: 61
+	Health:
+		HP: 80000
+	RevealsShroud:
+		Range: 5c0
+	RallyPoint:
+	Exit@1:
+		SpawnOffset: -426,61,0
+		ExitCell: 0,1
+	Exit@2:
+		SpawnOffset: 298,298,0
+		ExitCell: 1,1
+	Production@NORMAL:
+		Produces: Addons.Human1
+		RequiresCondition: !classicproductionqueues
+	Production@CLASSICPRODUCTIONQUEUES:
+		Produces: RAInfantry
+		RequiresCondition: classicproductionqueues
+	GrantExternalConditionToProduced:
+		Condition: produced
+	ProductionQueue:
+		Type: Addons.Human1
+		DisplayOrder: 2
+		Group: Addons
+		LowPowerModifier: 9999
+		ReadyAudio: UnitReady
+		BlockedAudio: NoBuild
+		LimitedAudio: BuildingInProgress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar@NORMAL:
+		ProductionType: Addons.Human1
+		RequiresCondition: !classicproductionqueues
+	ProductionBar@CLASSICPRODUCTIONQUEUES:
+		ProductionType: RAInfantry
+		RequiresCondition: classicproductionqueues
+	Power:
+		Amount: 0
+	ProvidesPrerequisite@buildingname:
+	ProvidesPrerequisite@dock:
+		Prerequisite: dock
+	Selectable:
+		Bounds: 2048,2048
+	Voiced:
+		VoiceSet: humanbarracksvoice
 
 wc_h_stormwind:
 	Inherits: ^BaseBuilding
@@ -1293,27 +1397,27 @@ wc_o_tower:
 	Voiced:
 		VoiceSet: orctowervoice
 
-# wc_o_dock:
-# 	Inherits: wc_h_dock
-# 	Valued:
-# 		Cost: 1000
-# 	Tooltip:
-# 		Name: Dock
-# 	Buildable:
-# 		Queue: Building, RABuilding
-# 		Description: actor-wc_h_barracks.description
-# 		Prerequisites: ~wc_o_townhall, wc_o_farm, wc_o_lumbermill
-# 	Production@NORMAL:
-# 		Produces: Addons.Orc1
-# 		RequiresCondition: !classicproductionqueues
-# 	ProductionQueue:
-# 		Type: Addons.Orc1
-# 	ProductionBar@NORMAL:
-# 		ProductionType: Addons.Orc1
-# 	ProvidesPrerequisite@dock:
-# 		Prerequisite: dock
-# 	Voiced:
-# 		VoiceSet: humanbarracksvoice
+wc_o_dock:
+	Inherits@dock: wc_h_dock
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Dock
+	Buildable:
+		Queue: Building, RABuilding
+		Description: actor-wc_h_barracks.description
+		Prerequisites: ~wc_o_townhall, wc_o_farm, wc_o_lumbermill
+	Production@NORMAL:
+		Produces: Addons.Orc1
+		RequiresCondition: !classicproductionqueues
+	ProductionQueue:
+		Type: Addons.Orc1
+	ProductionBar@NORMAL:
+		ProductionType: Addons.Orc1
+	ProvidesPrerequisite@dock:
+		Prerequisite: dock
+	Voiced:
+		VoiceSet: humanbarracksvoice
 
 wc_o_blackrockspire:
 	Inherits@wc_h_stormwind: wc_h_stormwind
@@ -3168,3 +3272,97 @@ wc_o_upgradefarm:
 		Queue: Farmupgrade.orc
 	RenderSprites:
 		Image: wc_o_farm
+
+####################################################################################################
+#		UNIT Naval
+####################################################################################################
+
+wc_h_transport:
+	Inherits@WC2Ship: ^WC1Ship
+	Inherits@Transport: ^wc1_transport
+	Inherits@Shield: ^wc_h_str_shield
+	Buildable:
+		Prerequisites: ~wc_h_lumbermill
+		Queue: Addons.Human1
+		Description: actor-wc2_human_transport.description
+	Tooltip:
+		Name: Transport Ship
+	Voiced:
+		VoiceSet: wc2voicehumanship
+	RenderSprites:
+		PlayerPalette: player_rgba
+
+wc_h_arrowship:
+	Inherits@WC2SHIP: ^WC1Ship
+	Inherits@Arrow: ^wc1_arrowship
+	Inherits@upgrade_arrows: ^wc_h_str_arrow
+	Inherits@Shield: ^wc_h_str_shield
+	Buildable:
+		Prerequisites: ~wc_h_lumbermill
+		Queue: Addons.Human1
+		Description: actor-wc2_human_elven_destroyer.description
+	Tooltip:
+		Name: Arrow Ship
+	Turreted:
+		TurnSpeed: 28
+		Offset: 512,0,0
+	Armament:
+		Weapon: bowFire
+	Armament@aa:
+		Weapon: bowFireAA
+	AttackTurreted:
+	WithMuzzleOverlay:
+	# WithSpriteTurret:
+	Voiced:
+		VoiceSet: wc2voicehumanship
+	RenderSprites:
+		PlayerPalette: player_rgba
+
+wc_h_scorpianship:
+	Inherits@WC2Ship: ^WC1Ship
+	Inherits@Siege: ^wc1_siegeship
+	Inherits@upgrade_arrows: ^wc_h_str_arrow
+	Inherits@Shield: ^wc_h_str_shield
+	Buildable:
+		Prerequisites: ~wc_h_lumbermill
+		Queue: Addons.Human1
+		Description: actor-wc2_human_battleship.description
+	Tooltip:
+		Name: Siege Vessel
+	Turreted:
+		TurnSpeed: 28
+		Offset: 512,0,0
+	Armament@PRIMARY:
+		Weapon: wc2heavyshipFire
+		LocalOffset: 208,0,48
+	AttackTurreted:
+	WithMuzzleOverlay:
+	AttackFrontal:
+		FacingTolerance: 10
+	# WithSpriteTurret:
+	Voiced:
+		VoiceSet: wc2voicehumanship
+	RenderSprites:
+		PlayerPalette: player_rgba
+
+wc_o_transport:
+	Inherits@Transport: wc_h_transport
+	Buildable:
+		Prerequisites: ~wc_o_lumbermill
+		Queue: Addons.Orc1
+
+wc_o_arrowship:
+	Inherits@Arrow: wc_h_arrowship
+	Buildable:
+		Prerequisites: ~wc_o_lumbermill
+		Queue: Addons.Orc1
+
+wc_o_catapultship:
+	Inherits@Siege: wc_h_scorpianship
+	Buildable:
+		Prerequisites: ~wc_o_lumbermill
+		Queue: Addons.Orc1
+	Armament@PRIMARY:
+		Weapon: catapultfire
+		LocalOffset: 208,0,48
+		MuzzleSequence: muzzle

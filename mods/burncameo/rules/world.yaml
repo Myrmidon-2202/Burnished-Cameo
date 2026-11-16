@@ -751,35 +751,35 @@
 				Name: Veins
 			GESupplies:
 				Sequences: gencrate1,gencrate2,gencrate3,gencrate4,gencrate5,gencrate6,gencrate7,gencrate8,gencrate9,gencrate10,gencrate11,gencrate12,gencrate13,gencrate14,gencrate15,gencrate16,gencrate17,gencrate18
-				Palette: terrain #player
+				Palette: player #terrain
 				Name: Supply Crates
 			SWPCarbon:
 				Sequences: swpcarbon1,swpcarbon2,swpcarbon3,swpcarbon4,swpcarbon5,swpcarbon6,swpcarbon7
-				Palette: terrain #player
+				Palette: player #terrain
 				Name: Stacked Carbon
 			SWRCarbon:
 				Sequences: swrcarbon1,swrcarbon2,swrcarbon3,swrcarbon4,swrcarbon5,swrcarbon6,swrcarbon7,swrcarbon8,swrcarbon9,swrcarbon10,swrcarbon11, swrcarbon12
-				Palette: greyscale #player
+				Palette: player #terrain
 				Name: Rock Carbon
 			SWDCarbon:
 				Sequences: swdcarbon1,swdcarbon2,swdcarbon3,swdcarbon4,swdcarbon5,swdcarbon6,swdcarbon7,swdcarbon8,swdcarbon9,swdcarbon10,swdcarbon11,swdcarbon12
-				Palette: greyscale #player
+				Palette: player #terrain
 				Name: Rock Carbon
 			SWPNova:
 				Sequences: swpnova1,swpnova2,swpnova3,swpnova4,swpnova5,swpnova6,swpnova7,swpnova8,swpnova9,swpnova10
-				Palette: terrain #player
+				Palette: player #terrain
 				Name: Stacked Nova Crystals
 			SWCNova:
 				Sequences: swcnova1,swcnova2,swcnova3,swcnova4,swcnova5,swcnova6,swcnova7,swcnova8,swcnova9,swcnova10
-				Palette: terrain #player
+				Palette: player #terrain
 				Name: Nova Crystals
 			SWPMin:
 				Sequences: swpmin1,swpmin2,swpmin3,swpmin4,swpmin5,swpmin6,swpmin7,swpmin8,swpmin9,swpmin10,swpmin11,swpmin12
-				Palette: greyscale
+				Palette: player #terrain
 				Name: Mineral Pile
 			SWCMin:
 				Sequences: swmin1,swmin2,swmin3,swmin4,swmin5,swmin6,swmin7,swmin8,swmin9,swmin10
-				Palette: greyscale
+				Palette: player #terrain
 				Name: Minerals
 			Spice:
 				Sequences: spicea, spiceb, spicec, spiced

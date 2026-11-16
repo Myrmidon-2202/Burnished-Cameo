@@ -5526,6 +5526,18 @@ SWLaser:
 	Projectile: Bullet
 		Image: swredlaser
 		Speed: 900
+	Warhead@1Dam: SpreadDamage
+		Spread: 150
+		Damage: 3000
+		Versus:
+			None: 100
+			Wood: 20
+			Light: 50
+			Medium: 40
+			Heavy: 30
+			Concrete: 10
+		InvalidTargets: Wall, BulletImmune
+		DamageTypes: Prone75Percent, TriggerProne, BulletDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: drlaserexp
 
