@@ -504,6 +504,224 @@ CIV2_DISTRICT_PRODUCTION_MEDIEVAL:
 		Prerequisites: ~civ2_era_medieval
 		Description: Trains infantry
 
+CIV2_NAVAL_DISTRICT:
+	Inherits: ^Civ2Building
+	Inherits@flag: ^CIV2BuildingFlag
+	Inherits@shipyard: ^IsShipyardOld
+	Inherits@shape: ^3x3Shape
+	Tooltip:
+		Name: Naval District
+	Buildable:
+		Prerequisites: ~civ2_district_capital_bronze
+		Queue: Building, RABuilding
+	Building:
+		Footprint: =+= +++ =+=
+		Dimensions: 3,3
+		TerrainTypes: Water
+	-GivesBuildableArea:
+	ProvidesPrerequisite@buildingname:
+	ProvidesPrerequisite:
+		Prerequisite: ranavaltransport
+	Production:
+		Produces: Naval.CIV2
+	ProductionQueue:
+		Type: Naval.CIV2
+		DisplayOrder: 2
+		Group: Naval
+		LowPowerModifier: 150
+		ReadyAudio: UnitReady
+		ReadyTextNotification: notification-unit-ready
+		BlockedAudio: NoBuild
+		BlockedTextNotification: notification-unable-to-build-more
+		LimitedAudio: BuildingInProgress
+		LimitedTextNotification: notification-unable-to-comply-building-in-progress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar:
+		ProductionType: Naval.CIV2
+	GivesBuildableArea: ##########
+		AreaTypes: building, cityi
+	Targetable:
+		TargetTypes: Ground, Water, C4, Structure
+	RenderSprites:
+		# PlayerPalette: raplayer
+	WithDeathAnimation:
+		# DeathSequencePalette: raplayer
+
+CIV2_AIR_DISTRICT:
+	Inherits: ^Civ2Building
+	Inherits@flag: ^CIV2BuildingFlag
+	Inherits@shape: ^2x2Shape
+	Inherits@CPQWP: ^CPQConditionWithPrimary
+	Inherits@sell: ^RASpawnActorsOnSell
+	Inherits@hpad: ^IsAircraftFactoryOld
+	Buildable:
+		Prerequisites: ~civ2_district_capital_bronze
+		Queue: Building, RABuilding
+	Tooltip:
+		Name: Air District
+	Building:
+		Footprint: xx xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	WithBuildingBib:
+	Production:
+		Produces: Aircraft.CIV2
+	ProductionQueue:
+		Type: Aircraft.CIV2
+		DisplayOrder: 4
+		Group: Aircraft
+		LowPowerModifier: 150
+		ReadyAudio: UnitReady
+		ReadyTextNotification: notification-unit-ready
+		BlockedAudio: NoBuild
+		BlockedTextNotification: notification-unable-to-build-more
+		LimitedAudio: BuildingInProgress
+		LimitedTextNotification: notification-unable-to-comply-building-in-progress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar:
+		ProductionType: Aircraft.CIV2
+	Exit@1:
+		SpawnOffset: 0,-256,0
+	Reservable:
+	RenderSprites:
+		# PlayerPalette: raplayer
+	WithDeathAnimation:
+		# DeathSequencePalette: raplayer
+
+####################################################################################################
+#		DEFENSE CIV2
+####################################################################################################
+
+CIV2_GUARD_DISTRICT:
+	Inherits: ^Civ2Building
+	Inherits@flag: ^CIV2BuildingFlag
+	Inherits@AUTOTARGET: ^AutoTargetAll
+	Inherits@shape: ^2x2Shape
+	Inherits@upgrade_arrows: ^wc_h_str_arrow
+	Selectable:
+		Bounds: 2048,2048
+	Valued:
+		Cost: 1200
+	Tooltip:
+		Name: Guard District
+	Buildable:
+		BuildPaletteOrder: 5
+		Prerequisites: ~civ2_district_capital_bronze
+		Queue: Defence, RADefence
+		BuildDuration: 750
+		BuildDurationModifier: 50
+		Description: actor-wc_h_guard_tower.description
+		IconPalette: windows256
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	RenderDetectionCircle:
+	AutoTarget:
+		InitialStance: AttackAnything
+		ScanRadius: 15
+	DamageMultiplier@DamageReduction:
+		Modifier: 61
+	FirepowerMultiplier@FirepowerIncrease:
+		Modifier: 115
+	Health:
+		HP: 60000
+	Armor:
+		Type: Wood
+	DamageMultiplier:
+		Modifier: 80
+	DetectCloaked:
+		Range: 5c0
+	RevealsShroud:
+		Range: 10c0
+	Turreted:
+		TurnSpeed: 24
+		InitialFacing: 224
+	# WithSpriteBody:
+	# 	Scale: 0.6
+	-MustBeDestroyed:
+	Armament:
+		Weapon: wc_tower_fire
+	Armament@aa:
+		Weapon: wc_tower_fire_aa
+	AttackTurreted:
+		Voice:
+	WithMuzzleOverlay:
+	WithDeathAnimation:
+	Power:
+		Amount: 0
+	WithMakeAnimation:
+	Voiced:
+		VoiceSet: humanguardtowervoice
+	RenderSprites:
+
+CIV2_AA_DISTRICT:
+	Inherits: ^Civ2Building
+	Inherits@flag: ^CIV2BuildingFlag
+	Inherits@AUTOTARGET: ^AutoTargetAll
+	Inherits@shape: ^2x2Shape
+	# Inherits@BURNABLE: ^WC1Building
+	Inherits@upgrade_arrows: ^wc_h_str_arrow
+	Selectable:
+		Bounds: 2048,2048
+	Valued:
+		Cost: 1200
+	Tooltip:
+		Name: AA District
+	Buildable:
+		BuildPaletteOrder: 5
+		Prerequisites: ~civ2_district_capital_bronze
+		Queue: Defence, RADefence
+		BuildDuration: 750
+		BuildDurationModifier: 50
+		Description: actor-wc_h_guard_tower.description
+		IconPalette: windows256
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	RenderDetectionCircle:
+	AutoTarget:
+		InitialStance: AttackAnything
+		ScanRadius: 15
+	DamageMultiplier@DamageReduction:
+		Modifier: 61
+	FirepowerMultiplier@FirepowerIncrease:
+		Modifier: 115
+	Health:
+		HP: 60000
+	Armor:
+		Type: Wood
+	DamageMultiplier:
+		Modifier: 80
+	DetectCloaked:
+		Range: 5c0
+	RevealsShroud:
+		Range: 10c0
+	Turreted:
+		TurnSpeed: 24
+		InitialFacing: 224
+	# WithSpriteBody:
+	# 	Scale: 0.6
+	-MustBeDestroyed:
+	Armament:
+		Weapon: wc_tower_fire
+	Armament@aa:
+		Weapon: wc_tower_fire_aa
+	AttackTurreted:
+		Voice:
+	WithMuzzleOverlay:
+	WithDeathAnimation:
+	Power:
+		Amount: 0
+	WithMakeAnimation:
+	Voiced:
+		VoiceSet: humanguardtowervoice
+	RenderSprites:
+
+
 ####################################################################################################
 #		UNIT CIV2
 ####################################################################################################
@@ -683,6 +901,483 @@ civ2_musketeers:
 	Tooltip:
 		Name: Musketeers
 
+civ2_fanatics:
+	Inherits: civ2_warrior
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Fanatics
+
+civ2_partisans:
+	Inherits: civ2_warrior
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Partisans
+
+civ2_alpinetroops:
+	Inherits: civ2_warrior
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Alpine Troops
+
+civ2_riflemen:
+	Inherits: civ2_warrior
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Riflemen
+
+civ2_marines:
+	Inherits: civ2_warrior
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Marines
+
+civ2_paratroopers:
+	Inherits: civ2_warrior
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Paratroopers
+
+civ2_mechinf:
+	Inherits: civ2_warrior
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Mechanized Infantry
+
+civ2_horsemen:
+	Inherits: civ2_warrior
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Horsemen
+
+civ2_chariot:
+	Inherits: civ2_warrior
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Chariot
+
+civ2_elephant:
+	Inherits: civ2_warrior
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Elephant
+
+civ2_crusaders:
+	Inherits: civ2_warrior
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Crusaders
+
+civ2_knights:
+	Inherits: civ2_warrior
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Knights
+
+####################################################################################################
+#		AIRCRAFT
+####################################################################################################
+civ2_fighter:
+	Inherits: ^RANeutralPlane
+	Inherits@flag: ^CIV2UnitFlag
+	Inherits@Template: ^FighterTemplate
+	Inherits@exp: ^GainsExperienceRA
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	Inherits@AntiInf: ^PrioritizeInfantry
+	Inherits@AntiAir: ^PrioritizeAir
+	Inherits@eject: ^AircraftEjectOnDeath
+	Buildable:
+		Queue: Aircraft.CIV2
+		BuildPaletteOrder: 30
+		Prerequisites: 
+		Description: actor-yak.description
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Fighter
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 15000
+	Repairable:
+		HpPerStep: 750
+#	ChangesHealth@SelfHealing:
+#		Step: 6
+	Armament@BOMBS:
+		Weapon: YakNapalm
+		LocalOffset: 0,-256,-32, 0,256,-32
+	Armament@PRIMARY:
+		Weapon: YakChainGun
+		LocalOffset: 256,-213,0
+		MuzzleSequence: muzzle
+		PauseOnCondition: !ammo
+	Armament@SECONDARY:
+		Name: secondary
+		Weapon: YakChainGun
+		LocalOffset: 256,213,0
+		MuzzleSequence: muzzle
+		PauseOnCondition: !ammo
+	FirepowerMultiplier@doublecannonsandbombs:
+		Modifier: 25
+	AttackAircraft:
+		FacingTolerance: 100
+	Aircraft:
+		TurnSpeed: 11
+		Speed: 170
+	SelectionDecorations:
+	WithMuzzleOverlay:
+	Contrail:
+		Offset: -853,0,0
+	SpawnActorOnDeath:
+		Actor: YAK.Husk
+	EjectOnDeath:
+		PilotActor: RAE2
+	LeavesTrails:
+		Offsets: -853,0,0
+		MovingInterval: 2
+		Image: smokey
+		StationaryInterval: 2
+		SpawnAtLastPosition: False
+		TrailWhileStationary: True
+		Type: CenterPosition
+		RequiresCondition: enable-smoke
+	Selectable:
+		DecorationBounds: 1280, 1280, 0, 128
+	Voiced:
+		VoiceSet: RussianVehicleVoice
+	AmmoPool:
+		Ammo: 12
+		AmmoCondition: ammo
+	ReloadAmmoPool:
+		Delay: 8
+		Count: 1
+	WithAmmoPipsDecoration:
+		Position: BottomLeft
+		RequiresSelection: True
+		PipCount: 6
+	GrantConditionOnDamageState@SmokeTrail:
+		Condition: enable-smoke
+	# RenderSprites:
+	# 	PlayerPalette: raplayer
+
+civ2_bomber:
+	Inherits: ^RANeutralPlane
+	Inherits@flag: ^CIV2UnitFlag
+	Inherits@reload: ^RearmableAircraft
+	Inherits@Template: ^BomberTemplate
+	Inherits@exp: ^GainsExperienceRA
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	Inherits@AntiVeh: ^PrioritizeVehicle
+	Inherits@AntiTank: ^PrioritizeTank
+	Inherits@AntiAir: ^PrioritizeAir
+	Inherits@AntiDef: ^PrioritizeDefence
+	Inherits@eject: ^AircraftEjectOnDeath
+	Buildable:
+		Queue: Aircraft.CIV2
+		BuildPaletteOrder: 50
+		Prerequisites: 
+		Description: actor-mig.description
+	Valued:
+		Cost: 1300
+	Tooltip:
+		Name: Bomber
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 30000
+	Repairable:
+		HpPerStep: 2000
+#	ChangesHealth@SelfHealing:
+#		Step: 16
+	Armament@Rockets1:
+		Weapon: Maverick
+		LocalOffset: 0,-480,0, 0,640,0
+		LocalYaw: 48, -64
+		MuzzleSequence: muzzle
+		PauseOnCondition: !ammo
+	AttackAircraft:
+		FacingTolerance: 40
+		StrafeRunLength: 2500
+	Aircraft:
+		TurnSpeed: 12
+		Speed: 200
+		IdleTurnSpeed: 8
+		IdleSpeed: 150
+	Selectable:
+		Bounds: 1280, 1280, 0, 64
+	SelectionDecorations:
+	WithMuzzleOverlay:
+	Contrail@1:
+		Offset: -598,-683,0
+	Contrail@2:
+		Offset: -598,683,0
+	SpawnActorOnDeath:
+		Actor: MIG.Husk
+	EjectOnDeath:
+		PilotActor: RAE4
+	LeavesTrails:
+		Offsets: -853,0,171
+		MovingInterval: 2
+		Image: smokey
+		StationaryInterval: 2
+		SpawnAtLastPosition: False
+		TrailWhileStationary: True
+		Type: CenterPosition
+		RequiresCondition: enable-smoke
+	Voiced:
+		VoiceSet: RussianVehicleVoice
+	AmmoPool:
+		Ammo: 8
+		ReloadDelay: 25
+		AmmoCondition: ammo
+	WithAmmoPipsDecoration:
+		Position: BottomLeft
+		RequiresSelection: True
+		PipCount: 8
+	GrantConditionOnDamageState@SmokeTrail:
+		Condition: enable-smoke
+	# RenderSprites:
+	# 	PlayerPalette: raplayer
+
+civ2_helicopter:
+	Inherits: ^Helicopter
+	Inherits@flag: ^CIV2UnitFlag
+	Inherits@Template: ^HelicopterTemplate
+	Inherits@exp: ^GainsExperienceRA
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	Inherits@AntiVeh: ^PrioritizeVehicle
+	Inherits@AntiTank: ^PrioritizeTank
+	Inherits@AntiAir: ^PrioritizeAir
+	Inherits@AntiDef: ^PrioritizeDefence
+	Inherits@eject: ^AircraftEjectOnDeath
+	Buildable:
+		BuildPaletteOrder: 40
+		Prerequisites:
+		Queue: Aircraft.CIV2
+		Description: actor-raheli.description
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Helicopter
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 36000
+	Repairable:
+		HpPerStep: 1750
+#	ChangesHealth@SelfHealing:
+#		Step: 14
+	Armament:
+		Weapon: Hellfire
+		LocalOffset: 50,250,-100, 50,-250,-100
+		LocalYaw: -75, 75
+		MuzzleSequence: muzzle
+		PauseOnCondition: !ammo
+		RequiresCondition: !up_cryomissiles
+	AttackAircraft:
+		FacingTolerance: 20
+		AttackType: Hover
+	Aircraft:
+		Speed: 150
+		TurnSpeed: 30
+	# WithIdleOverlay@ROTORAIR:
+	# 	Offset: 0,0,85
+	# 	Sequence: rotor
+	# 	RequiresCondition: airborne
+	# 	PauseOnCondition: disabled
+	# WithIdleOverlay@ROTORGROUND:
+	# 	Offset: 0,0,85
+	# 	Sequence: slow-rotor
+	# 	RequiresCondition: !airborne
+	# 	PauseOnCondition: disabled
+	SelectionDecorations:
+	WithMuzzleOverlay:
+	SpawnActorOnDeath:
+		Actor: HELI.Husk
+	EjectOnDeath:
+		PilotActor: RAE3
+	LeavesTrails:
+		Offsets: -427,0,0
+		Image: smokey
+		MovingInterval: 3
+		StationaryInterval: 3
+		SpawnAtLastPosition: False
+		TrailWhileStationary: True
+		Type: CenterPosition
+		RequiresCondition: enable-smoke
+	Selectable:
+		DecorationBounds: 1280, 1280
+	Voiced:
+		VoiceSet: RAVehicleVoice
+	Parachutable: ##########
+		FallRate: 20
+		KilledOnImpassableTerrain: true
+		GroundCorpseSequence:
+		GroundCorpsePalette:
+		WaterImpactSound: splash9.aud
+		WaterCorpseSequence: small_splash
+		ParachutingCondition: parachute
+	WithParachute: ##########
+		ShadowImage: parach-shadow
+		ShadowSequence: idle
+		Image: parach
+		Sequence: idle
+		OpeningSequence: open
+		Offset: 0,0,427
+		RequiresCondition: parachute
+	AmmoPool:
+		Ammo: 3
+		AmmoCondition: ammo
+	ReloadAmmoPool:
+		Delay: 32
+		Count: 1
+	WithAmmoPipsDecoration:
+		Position: BottomLeft
+		RequiresSelection: True
+		PipCount: 3
+	GrantConditionOnDamageState@SmokeTrail:
+		Condition: enable-smoke
+	FireWarheadsOnDeath:
+		Weapon: LargeHeliExplode
+	# RenderSprites:
+	# 	PlayerPalette: raplayer
+
+civ2_stealthfighter:
+	Inherits: civ2_bomber
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Stealth Fighter
+
+civ2_stealthbomber:
+	Inherits: civ2_bomber
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Stealth Bomber
+####################################################################################################
+#		NAVAL
+####################################################################################################
+
+civ2_trireme:
+	Inherits@WC2SHIP: ^WC2Ship
+	Inherits@flag: ^CIV2UnitFlag
+	Inherits@WC2Template: ^wc2_destroyer
+	Inherits@HCannonUpg: ^wc2_h_str_cannon
+	Inherits@HNavySUpg: ^wc2_h_str_navyshield
+	Buildable:
+		Prerequisites: ~civ2_naval_district
+		Queue: Naval.CIV2
+		Description: actor-wc2_human_elven_destroyer.description
+	Tooltip:
+		Name: Trireme
+	Turreted:
+		TurnSpeed: 28
+		Offset: 512,0,0
+	Armament@PRIMARY:
+		Weapon: wc2lightshipFire
+		LocalOffset: 208,0,48
+		MuzzleSequence: muzzle
+	AttackTurreted:
+	WithMuzzleOverlay:
+	WithSpriteTurret:
+	Voiced:
+		VoiceSet: wc2voicehumanship
+
+civ2_caravel:
+	Inherits: civ2_trireme
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Caravel
+
+civ2_galleon:
+	Inherits: civ2_trireme
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Galleon
+
+civ2_frigate:
+	Inherits: civ2_trireme
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Frigate
+
+civ2_ironclad:
+	Inherits: civ2_trireme
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Iron Clad
+
+civ2_destroyer:
+	Inherits: civ2_trireme
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Destroyer
+
+civ2_cruiser:
+	Inherits: civ2_trireme
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Cruiser
+
+civ2_aegiscruiser:
+	Inherits: civ2_trireme
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Aegis Cruiser
+
+civ2_battleship:
+	Inherits: civ2_trireme
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Battleship
+
+civ2_submarine:
+	Inherits: civ2_trireme
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Submarine
+
+civ2_carrier:
+	Inherits: civ2_trireme
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Carrier
+
+civ2_transport:
+	Inherits: civ2_trireme
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Transport
+
+civ2_cruisemsl:
+	Inherits: civ2_trireme
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Cruise Missile
 ####################################################################################################
 #		UPGRADES
 ####################################################################################################
