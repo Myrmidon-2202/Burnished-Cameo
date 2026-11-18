@@ -210,6 +210,25 @@ wc_h_tower:
 	icon:
 		Start: 10
 		Filename: wc_chrome.shp
+wc_h_dock:
+	Defaults:
+		Filename: wc_humandock.shp
+	Inherits: ^WC1DamagedFire
+	idle:
+		Start: 1
+	damaged-idle:
+		Start: 2
+	dead:
+		Start: 0
+		Length: 13
+		Tick: 80
+		Filename: wc_explosion.shp
+	make:
+		Frames: 0,1
+		Length: 2
+		Tick: 320
+	icon:
+		Filename: wc_h_dockyard_cameo.shp
 wc_h_stormwind:
 	Defaults:
 		Filename: wc_superweapons.shp
@@ -230,7 +249,6 @@ wc_h_stormwind:
 	icon:
 		Start: 11
 		Filename: wc_chrome.shp
-		
 wc_h_guard_tower:
 	Defaults:
 		Filename: wc_h_guard_tower.shp
@@ -442,6 +460,26 @@ wc_o_tower:
 	icon:
 		Start: 30
 		Filename: wc_chrome.shp
+
+wc_o_dock:
+	Defaults:
+		Filename: wc_orcdock.shp
+	Inherits: ^WC1DamagedFire
+	idle:
+		Start: 1
+	damaged-idle:
+		Start: 2
+	dead:
+		Start: 0
+		Length: 13
+		Tick: 80
+		Filename: wc_explosion.shp
+	make:
+		Frames: 0,1
+		Length: 2
+		Tick: 320
+	icon:
+		Filename: wc_o_dockyard_cameo.shp
 
 wc_o_blackrockspire:
 	Defaults:
@@ -873,6 +911,39 @@ wc_h_waterelemental:
 		AddExtension: true
 		Filename: wc1_creature_cameos.png
 
+wc_h_transport:
+	Defaults:
+		Filename: wc_h_transportship.png
+		Scale: 2.0
+	idle:
+		Start: 0
+		Facings: 8
+	icon:
+
+wc_h_arrowship:
+	Defaults:
+		Filename: wc_h_arrowship.png
+		Scale: 2.0
+	idle:
+		Start: 0
+		Facings: 8
+	muzzle:
+		Filename: wc2_cannonfire.shp
+		Length: 4
+	icon:
+
+wc_h_scorpianship:
+	Defaults:
+		Filename: wc_h_scorpianship.png
+		Scale: 2.0
+	idle:
+		Start: 0
+		Facings: 8
+	muzzle:
+		Filename: wc2_cannonfire.shp
+		Length: 4
+	icon:
+
 wc_n_fireelemental:
 	Defaults:
 		Filename: wc_n_fireelemental.shp
@@ -1182,7 +1253,40 @@ wc_o_necrolyte:
 		Start: 38
 		AddExtension: true
 		Filename: wc_chrome.shp
-		
+
+wc_o_transport:
+	Defaults:
+		Filename: wc_o_transportship.png
+		Scale: 2.0
+	idle:
+		Start: 0
+		Facings: 8
+	icon:
+
+wc_o_arrowship:
+	Defaults:
+		Filename: wc_o_arrowship.png
+		Scale: 2.0
+	idle:
+		Start: 0
+		Facings: 8
+	muzzle:
+		Filename: wc2_cannonfire.shp
+		Length: 4
+	icon:
+
+wc_o_catapultship:
+	Defaults:
+		Filename: wc_o_catapultship.png
+		Scale: 2.0
+	idle:
+		Start: 0
+		Facings: 8
+	muzzle:
+		Filename: wc2_cannonfire.shp
+		Length: 4
+	icon:
+
 wc_o_spider:
 	Defaults:
 		Filename: wc_n_spider.shp
@@ -1396,23 +1500,23 @@ wc_n_portal:
 wc_h_str_arrow:
 	icon:
 		Filename: wc_h_str_arrow.shp
-		
+
 wc_h_str_arrow2:
 	icon:
 		Filename: wc_h_str_arrow2.shp
-	
+
 wc_h_str_sword:
 	icon:
 		Filename: wc_h_str_sword.shp
-		
+
 wc_h_str_sword2:
 	icon:
 		Filename: wc_h_str_sword2.shp
-		
+
 wc_h_str_shield:
 	icon:
 		Filename: wc_h_str_shield.shp
-		
+
 wc_h_str_shield2:
 	icon:
 		Filename: wc_h_str_shield2.shp
@@ -1420,7 +1524,7 @@ wc_h_str_shield2:
 wc_h_horses:
 	icon:
 		Filename: wc_h_horses.shp
-		
+
 wc_h_horses2:
 	icon:
 		Filename: wc_h_horses2.shp
@@ -1428,23 +1532,23 @@ wc_h_horses2:
 wc_o_str_spear:
 	icon:
 		Filename: wc_o_str_spear.shp
-		
+
 wc_o_str_spear2:
 	icon:
 		Filename: wc_o_str_spear2.shp
-	
+
 wc_o_str_axe:
 	icon:
 		Filename: wc_o_str_axe.shp
-		
+
 wc_o_str_axe2:
 	icon:
 		Filename: wc_o_str_axe2.shp
-		
+
 wc_o_str_shield:
 	icon:
 		Filename: wc_o_str_shield.shp
-		
+
 wc_o_str_shield2:
 	icon:
 		Filename: wc_o_str_shield2.shp
@@ -1452,35 +1556,35 @@ wc_o_str_shield2:
 wc_o_wolves:
 	icon:
 		Filename: wc_o_wolves.shp
-		
+
 wc_o_wolves2:
 	icon:
 		Filename: wc_o_wolves2.shp
-	
+
 fireballcleric:
 	idle:
 		Start: 0
 		Facings: -8
 		Filename: wc1projectiles.shp
-		
+
 fireballconjurer:
 	idle:
 		Start: 16
 		Facings: -8
 		Filename: wc1projectiles.shp
-		
+
 waterelementalfire:
 	idle:
 		Start: 24
 		Facings: -8
 		Filename: wc1projectiles.shp
-		
+
 catapultfire:
 	idle:
 		Start: 32
 		Facings: -8
 		Filename: wc1projectiles.shp
-	
+
 rainoffire:
 	idle:
 		Start: 36
@@ -1490,7 +1594,7 @@ poisoncloud:
 	idle:
 		Length: 4
 		Filename: wc_o_poisoncloud.shp
-	
+
 spearfire:
 	idle:
 		Start: 40

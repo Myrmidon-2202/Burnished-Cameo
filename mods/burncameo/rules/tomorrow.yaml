@@ -2394,8 +2394,7 @@ AFLD.CUBA:
 		Descriptions:
 			1: power-tomorrow-tankdrop.description
 		Icons:
-			1: icon
-		IconImage: paratroopers
+			1: paratroopers
 		AllowMultiple: True
 		PauseOnCondition: disabled
 		Prerequisites:
@@ -7271,7 +7270,7 @@ DTCUBASPY:
 	Armament:
 		Weapon: SilencedPPK
 	AttackMove:
-		Voice: Move
+		Voice: Action
 	Voiced:
 		VoiceSet: dthisVoice
 	GrantExternalConditionToTransport:

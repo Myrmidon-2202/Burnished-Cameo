@@ -9215,7 +9215,7 @@ MODTNKD:
 	FireWarheadsOnDeath:
 		Weapon: UnitExplode
 	RenderSprites:
-		Image: modtnkd2
+		Image: modjtnkd
 		PlayerPalette: player_rgba
 
 MODHOVER:
@@ -9652,7 +9652,7 @@ typechiha:
 		Speed: 100
 		TurnSpeed: 17
 	Turreted:
-		Offset: 64,0,0
+		Offset: 64,0,-10
 		TurnSpeed: 17
 	Armament:
 		Weapon: Type97Cannon

@@ -2508,6 +2508,7 @@ glscrapcrate:
 		Prerequisites: starwarsscrapvehicles
 	RenderSprites:
 		Image: glscrapbox
+		Palette: player
 
 glbarracks:
 	Inherits: ^BaseBuilding

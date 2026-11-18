@@ -2045,6 +2045,19 @@ modtnkd2:
 		AddExtension: False
 		Filename: Ra1TankDestroyerIcon.shp
 
+modjtnkd:
+	Defaults:
+		Filename: HoriSpritesheet.png
+		Scale: 2.0
+	idle:
+		Facings: 32
+	muzzle:
+		Filename: gunfire2.shp
+		Length: *
+	icon:
+		AddExtension: False
+		Filename: Ra1TankDestroyerIcon.shp
+
 modflak88:
 	idle:
 		Filename: ramgg.shp
