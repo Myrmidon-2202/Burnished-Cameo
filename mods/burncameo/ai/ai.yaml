@@ -3372,7 +3372,13 @@ Player:
 			fcom: All
 			astro_transport: All
 			alien_transport: All
+			imperial_transport: All
+			pirate_transport: All
+			king_transport: All
+			wizard_transport: All
 			imperial_flying_ship: All
+			wc_h_transport: All
+			wc_o_transport: All
 			chcrawl: All
 			chcrawl2: All
 			glbbus: All
@@ -3444,7 +3450,7 @@ Player:
 		BarracksTypes: pyle, hand, tent, barr, hand.camea, ra2gapile, ra2nahand, yryabrck, scbarracks, scgateway, schatchery, sclair, schive, tsgtpile, tsgtpile2, tsnthand, tsnthand2, glbarracks, chbarracks, usabarracks, d2k_barracks, d2k_barracks.ixian, d2k_barracks.ordos, d2k_barracks.atreides, d2k_barracks.harkonnen, d2k_barracks.corrino, wc2_human_barracks, wc2_orc_barracks, aa_cgbrck, steel_qabarr, latin_cgpile, nax_barr, nax2_barr, astro_barracks, astro_conyard, alien_barracks, lego_alien_conyard, imperial_barracks, lego_imperial_conyard, pirate_barracks, lego_pirate_conyard, king_barracks, lego_king_conyard, wizard_barracks, lego_wizard_conyard, wc_h_barracks, wc_o_barracks, wc_h_tower, wc_o_tower, whand, win98_barracks, plymouth_factory_arachnid, dthand, dtpyle.dtusa, dtpyle.argentina, dtpyle.answer, dtpyle.dtrussia, dtpyle.dtjapan, dtpyle.dtargentina, dtbpower, dtpyle.dtcuba, afld.australia, dtpyle.dtethiopia, usabarracks, chbarracks, glbarracks, dribarr.imperium, drfgbarr.freedomguard, dribarr.shadowhand, drbiocom.xenite, dribarr.togran, drabarr.eodalien, drterhq.terror, 2100cf, 2100chopshop, 2100cchopshop, swpyle, swhand, swpyler, swbarrdroid, swpyleh, wh40kstronghold, wh40kfieldcommand, wh40kstrongholdc, wh40ksettlement, wh40kbarr, wh40kbarrm, wh40ksacredart, wh40kbarro, wh40kbarrc, wh40ksacrifical, sowlightfactory, cityfd, qnest, zbarracks, iokbarracks, zbio, xmas_elves_house, valentine_ladies_house
 		VehiclesFactoryTypes: weap, afld, raweapa, raweap, raweapa.camea, ra2gaweap, ra2naweap, yrygweap, scfactory, scroboticsfacility, schatchery, sclair, schive, tsgtweap, tsgtweapmutant, tsntweap, tsntweapcabal, glweap, chweap, usaweap, heavy_factory.ixian, starport.ixian, heavy_factory.ordos, starport.ordos, light_factory.ordos, heavy_factory.harkonnen, starport.harkonnen, light_factory.harkonnen, heavy_factory.atreides, starport.atreides, light_factory.atreides, starport.corrino, wc2_human_gnomish_inventor, wc2_orc_goblin_alchemist, aa_cgweap, steel_qaweap, latin_cgweap, nax_weap, nax2_weap, tsntweap, tsntweapcabal, tsgtweapmutant, astro_vehiclefactory, alien_vehiclefactory, imperial_vehiclefactory, pirate_vehiclefactory, king_vehiclefactory, wizard_vehiclefactory, wc_h_tower, wc_o_tower, wc_o_damnedtemple, wc_h_church, wweap, win98_input_devices, eden_factory_vehicle, plymouth_factory_vehicle, afld.answer, weap.tomorrow, weap.dtusa, weap.dtrussia, weap.dtjapan, weap.dtargentina, weap.dtbrazil, weap.dtcuba, weap.dtaustralia, weap.dtethiopia, usaweap, chweap, glweap, driweap.imperium, drfgweap.freedomguard, driweap.shadowhand, drfgweap.xenite, driweap.togran, drterweap.terror, draweap.eodalien, 2100fy1, 2100chopshop, 2100cchopshop, swweap, swweapre, swweapr, swweapd, swafldh, swafld, wh40kmachinecult, wh40kweap, wh40kweapo, wh40kmachinepit, wh40kmars, wh40kdaemonpit, sowmediumfactory, citypd, qnest, zweap, iokafld, valentine_church_workshop
 		productiontypes: pyle, hand, tent, barr, hand.camea, raweapa.camea, hpad.camea, ra2gapile, ra2nahand, yryabrck, scbarracks, scgateway, scspawningpool, tsgtpile, tsgtpile2, tsnthand, tsnthand2, glbarracks, chbarracks, usabarracks, d2k_barracks, d2k_barracks.ixian, d2k_barracks.atreides, d2k_barracks.harkonnen, d2k_barracks.corrino, wc2_human_barracks, wc2_orc_barracks, aa_cgbrck, steel_qabarr, latin_cgpile, nax_barr, nax2_barr, weap, afld, raweapa, raweap, ra2gaweap, ra2naweap, yrygweap, scfactory, scroboticsfacility, schatchery, sclair, schive, tsgtweap, tsgtweapmutant, tsntweap, tsntweapcabal, glweap, chweap, usaweap, heavy_factory.ixian, starport.ixian, wc2_human_gnomish_inventor, wc2_orc_goblin_alchemist, aa_cgweap, steel_qaweap, latin_cgweap, nax_weap, nax2_weap, hpad.gdi, tsnthpad, tsnthpad, tsgthpadmutant, tsgthpad, hpad.nod, rahpad, raafld, modraafld, ra2gaairc, ra2naairf, high_tech_factory.ixian, aa_cgairf, latin_cgair, nax_airfield, nax2_airfield, heavy_factory.ordos, starport.ordos, light_factory.ordos, d2k_barracks.ordos, d2k_barracks.ordos, light_factory.ordos, heavy_factory.harkonnen, starport.harkonnen, light_factory.harkonnen, heavy_factory.atreides, starport.atreides, light_factory.atreides, starport.corrino, high_tech_factory.atreides, high_tech_factory.harkonnen, high_tech_factory.corrino, astro_barracks, astro_vehiclefactory, astro_conyard, alien_barracks, alien_vehiclefactory, lego_alien_conyard, imperial_barracks, imperial_vehiclefactory, lego_imperial_conyard, pirate_barracks, pirate_vehiclefactory, lego_pirate_conyard, king_barracks, king_vehiclefactory, lego_king_conyard, wizard_barracks, wizard_vehiclefactory, lego_wizard_conyard, wc2_human_townhall, wc2_orc_greathall, wc_h_barracks, wc_o_barracks, wc_h_tower, wc_o_tower, wc_o_damnedtemple, wc_h_church, whand, wweap, worms_wormpad, win98_barracks, win98_input_devices, win98_aerial_uplink, eden_factory_vehicle, eden_factory_consumer, plymouth_factory_vehicle, dthand, dtpyle.dtusa, dtpyle.argentina, dtpyle.answer, dtpyle.dtrussia, dtpyle.dtjapan, dtpyle.dtargentina, dtbpower, dtpyle.dtcuba, afld.australia, dtpyle.dtethiopia, afld.answer, weap.tomorrow, weap.dtusa, weap.dtrussia, weap.dtjapan, weap.dtargentina, weap.dtbrazil, weap.dtcuba, weap.dtaustralia, weap.dtethiopia, hpad.tomorrow, hpad.answer, hpad.dtusa, hpad.dtrussia, hpad.dtjapan, hpad.dtargentina, hpad.dtcuba, hpad.dtaustralia, usabarracks, chbarracks, glbarracks, usaweap, chweap, glweap, usaairport, chairport, dribarr.imperium, drfgbarr.freedomguard, dribarr.shadowhand, drbiocom.xenite, dribarr.togran, drterhq.terror, drabarr.eodalien, driweap.imperium, drfgweap.freedomguard, driweap.shadowhand, drfgweap.xenite, driweap.togran, drterweap.terror, draweap.eodalien, 2100cf, 2100chopshop, 2100cchopshop, 2100fy1, 2100chopshop, 2100cchopshop, 2100chopshopadv, 2100vfy1, 2100scavhangar, swpyle, swhand, swpyler, swbarrdroid, swpyleh, swweap, swweapre, swweapr, swweapd, swafldh, swafld, swhpad.empire, swhpad.rebels, swhpad.republic, swhpad.swseparatist, swhpad.hutt, wh40kstronghold, wh40kfieldcommand, wh40kstrongholdc, wh40ksettlement, wh40kbarr, wh40kbarrm, wh40ksacredart, wh40kbarro, wh40kbarrc, wh40ksacrifical, wh40kmachinecult, wh40kweap, wh40kweapo, wh40kmachinepit, wh40kmars, wh40kdaemonpit, sowlightfactory, sowmediumfactory, sowheavyfactory, sowabcfactory, sowmechfactory, sowasteroidstation, sowresearch, cityfd, citypd, qnest, zbarracks, zweap, iokbarracks, iokafld, zbio, xmas_elves_house, xmas_elf_workshop, valentine_ladies_house, valentine_church_workshop, valentine_airfield, valentines_sc2kmarina
-		NavalProductionTypes: cncsyrd, cncspen, raspen, ra1syrd, ra1jsyrd, yrygyard, ra2gayard, ra2nayard, aa_cgyard, latin_cgyard, nax_naval, USASYRD, CHSYRD, GLSYRD,valentines_sc2kmarina
+		NavalProductionTypes: cncsyrd, cncspen, raspen, ra1syrd, ra1jsyrd, yrygyard, ra2gayard, ra2nayard, aa_cgyard, latin_cgyard, nax_naval, USASYRD, CHSYRD, GLSYRD,valentines_sc2kmarina, wc_h_dock, wc_o_dock, imperial_shipyard, pirate_shipyard, king_shipyard, wizard_shipyard
 		SiloTypes: silo, rasilo, scsupplydepot, scpylon, scoverlord, d2k_silo, wc2_human_elven_lumber_mill, wc2_orc_troll_lumber_mill, wsilo, win98_settings_gear, eden_storage_common, plymouth_storage_common
 		AntiAirTypes: sam, atwr, agun, rasam, hbox, jmgnest, ra2nasam, ra2naflak, yrygggun, yrngbnkr.bot, large_gun_turret, aa_cgpuls, aa_cghype, steel_fedaa, latin_sml, latin_aatur, nax_flak88, nax2_twr, scmissileturret, sccreepcolony, worms_aasite, win98_paint, eden_gp_railgun, plymouth_gp_rpg, sow_antiair_tower
 		DefenseTypes: gtwr, atwr, gun, nodlaserturret, obli, pbox, hbox, ragun, gap, modartyturret, ftur, tsla, modpillboxfort, ra2gapill, ra2atesla, ra2gtgcan, yrngbnkr, ra2nalasr, ra2naflak, ra2tesla, yrygggun, yrngtbnk, aa_cgflam, aa_cgpnch, aa_cgrail, aa_cgchtw, aa_cgplas, machine_gun_turret, medium_gun_turret, large_gun_turret, storm_lasher, steel_fedturret, steel_qcannon, steel_bfg10k, latin_ngdshktur, latin_ngbunk2, latin_cgup, latin_sml, nax_twr, nax_flak88, nax2_twr, nax2_sturmcann, scbunker, sccreepcolony, wc_h_guard_tower, wc_o_guard_tower, worms_aasite, worms_candle, laspy, win98_paint, win98_joystick, win98_processor, eden_gp_laser, eden_gp_emp, eden_gp_railgun, plymouth_gp_microwave, plymouth_gp_stickyfoam, plymouth_gp_rpg, usapatriot, usalasertur, usafirebase, chbunker, chgattling, glsite, gltunnel, wc2_human_scout_tower, wc2_orc_scout_tower, swaatower.empire, swaatower.rebels, swaatower.republic, swaatower.separatist, iokobli
@@ -5303,6 +5309,7 @@ Player:
 			wc_h_stable: 5
 			wc_h_tower: 5
 			wc_h_stormwind: 5
+			wc_h_dock: 5
 			wc_h_guard_tower: 20
 			wc_o_townhall: 1
 			wc_o_farm: 30
@@ -5313,6 +5320,7 @@ Player:
 			wc_o_kennel: 5
 			wc_o_tower: 5
 			wc_o_blackrockspire: 5
+			wc_o_dock: 5
 			wc_o_guard_tower: 20
 			wc_goldmine.bot: 10
 			wc_n_portal: 1
@@ -5358,59 +5366,64 @@ Player:
 			wc2_orc_cannon_tower: 10
 			wc2_orc_goldmine.bot: 10
 			#################### BuildingFractions Lego Battles
+			## Earth
 			astro_biodome: 20
 			astro_harvester: 20
 			astro_barracks: 20
-			astro_vehiclefactory: 20
+			astro_vehiclefactory: 10
 			astro_tower: 10
 			astro_tower2: 10
 			astro_tower3: 10
 			Towerupgrade: 10
 			Towerupgrade2: 10
 			astro_wellcap: 10
-
+			## Alien
 			alien_hatchery: 20
 			alien_harvester: 20
 			alien_barracks: 20
-			alien_vehiclefactory: 20
+			alien_vehiclefactory: 10
 			alien_tower: 10
 			alien_tower2: 10
 			alien_tower3: 10
 			alien_wellcap: 10
-
+			## Imperial
 			imperial_quarters: 20
 			imperial_lumber_mill: 20
 			imperial_barracks: 20
-			imperial_vehiclefactory: 20
+			imperial_vehiclefactory: 10
+			imperial_shipyard: 10
 			imperial_tower: 10
 			imperial_tower2: 10
 			imperial_tower3: 10
 			imperial_mine: 10
-
+			## Pirate
 			pirate_plantation: 20
 			pirate_barracks: 20
 			pirate_lumber_mill: 20
-			pirate_vehiclefactory: 20
+			pirate_vehiclefactory: 10
+			pirate_shipyard: 10
 			pirate_tower: 10
 			pirate_tower2: 10
 			pirate_tower3: 10
 			pirate_quarry: 10
-
+			## King
 			lego_king_conyard: 20
 			king_farm: 20
 			king_barracks: 20
 			king_lumber_mill: 20
-			king_vehiclefactory: 20
+			king_vehiclefactory: 10
+			king_shipyard: 10
 			king_tower: 10
 			king_tower2: 10
 			king_tower3: 10
 			king_mine: 10
-
+			## Wizard
 			lego_wizard_conyard: 20
 			wizard_graveyard: 20
 			wizard_barracks: 20
 			wizard_lumber_mill: 20
-			wizard_vehiclefactory: 20
+			wizard_vehiclefactory: 10
+			wizard_shipyard: 10
 			wizard_tower: 10
 			wizard_tower2: 10
 			wizard_tower3: 10
@@ -5552,7 +5565,7 @@ Player:
 		AirToAirUnits: heli, orca, nodvenom, gdifirehawk, yak, mig, su57, raheli, rapierjumpjet, modkami, ra2falc, yrschp, yrbpln1, ra2hind, yrdisk, ra2shad, d2k_air_drone, d2k_heavy_air_drone, d2k_farasha, astro_transport, astro_starfighter, astro_starship, alien_transport, alien_strike_ship, alien_assault_ship, imperial_flying_ship, wizard_troll_blimp
 		AirThreatUnits: heli, orca, nodvenom, gdifirehawk, tran.gdi, tran.nod, yak, mig, su57, mignuke, hind, raheli, MH60, rapierjumpjet, modkami, modbomber, modhip, ratran, ra2falc, ra2beag, yrschp, yrbpln1, ra2hind, ra2zep, yrdisk, ra2shad, d2k_air_drone, d2k_heavy_air_drone, d2k_farasha, astro_transport, astro_starfighter, astro_starship, alien_transport, alien_strike_ship, alien_assault_ship, alien_assault_ship, imperial_flying_ship, king_dwarf_glider, king_dragon, wizard_troll_blimp wizard_dragon
 		#UnitBuilderMinCredits: 0
-		UnitQueues: Infantry, Defense, Defence, RAInfantry, Vehicle, RAVehicle, Aircraft, RAAircraft, Naval, RANaval, Addons, Upgrades, Promotions, Infantry.GDI, Infantry.Nod, Vehicle.GDI, Vehicle.Nod, Aircraft.GDI, Aircraft.Nod, Naval.GDI, Naval.Nod, Infantry.Allies, Infantry.Soviet, Infantry.Japan, Vehicle.Allies, Vehicle.Soviet, Vehicle.Japan, Aircraft.Allies, Aircraft.Soviet, Aircraft.Japan, Naval.Allies, Naval.Soviet, Naval.Japan, Infantry.Camea, Vehicle.Camea, Aircraft.Camea, Infantry.Atreides, Infantry.Harkonnen, Infantry.Ordos, Infantry.Corrino, VehicleLight.Atreides, VehicleLight.Harkonnen, VehicleLight.Ordos, VehicleHeavy.Atreides, VehicleHeavy.Harkonnen, VehicleHeavy.Ordos, VehicleStarport.Atreides, VehicleStarport.Harkonnen, VehicleStarport.Ordos, VehicleStarport.Corrino, Aircraft.Atreides, Aircraft.Harkonnen, Aircraft.Ordos, Aircraft.Corrino, Infantry.Legobattles, Vehicle.Legobattles, InfantryHero.Legobattles, Towerupgrade, Towerupgrade2, Infantry.Answer, Infantry.Tomorrow, Infantry.Dtusa, Infantry.Dtrussia, Infantry.Dtjapan, Infantry.Dtargentina, Infantry.Dtbrazil, Infantry.Dtcuba, Infantry.Dtaustralia, Infantry.Dtethiopia, Vehicle.Answer, Vehicle.Tomorrow, Vehicle.Dtusa, Vehicle.Dtrussia, Vehicle.Dtjapan, Vehicle.Dtargentina, Vehicle.Dtbrazil, Vehicle.Dtcuba, Vehicle.Dtaustralia, Vehicle.Dtethiopia, Aircraft.Answer, Aircraft.Tomorrow, Aircraft.Dtusa, Aircraft.Dtrussia, Aircraft.Dtjapan, Aircraft.Dtargentina, Aircraft.Dtbrazil, Aircraft.Dtcuba, Aircraft.Dtaustralia, Infantry.Allies2, Infantry.Soviet2, Infantry.Yuri, Vehicle.Allies2, Vehicle.Soviet2, Vehicle.Yuri, Aircraft.Allies2, Aircraft.Soviet2, Aircraft.Yuri, Infantry.Terran, Infantry.Protoss, Infantry.Zerg, Vehicle.Terran, Vehicle.Protoss, Aircraft.Terran, Aircraft.Protoss, Infantry.Tsgdi, Infantry.Tsnod, Infantry.Tscabal, Infantry.Tsmutant, Vehicle.Tsgdi, Vehicle.Tsnod, Vehicle.Tscabal, Vehicle.Tsmutant, Aircraft.Tsgdi, Aircraft.Tsnod, Aircraft.Tscabal, Aircraft.Tsmutant, Infantry.Usa, Infantry.China, Infantry.Gla, Vehicle.Usa, Vehicle.China, Vehicle.Gla, Aircraft.Usa, Aircraft.China, Naval.Usa, Naval.China, Naval.Gla, Upgrades.Generals1, Upgrades.Generals2, Infantry.Freedom, Infantry.Imperium, Infantry.Xenite, Infantry.Shadowhand, Infantry.Togran, Infantry.Terrorist, Infantry.Eodalien, Vehicle.Freedom, Vehicle.Imperium, Vehicle.Xenite, Vehicle.Shadowhand, Vehicle.Togran, Vehicle.Terrorist, Vehicle.Eodalien, drihq1.Imperium, drihq2.Imperium, dribarr.Imperium, driweap.Imperium, drfghq1.FreedomGuard, drfghq2.FreedomGuard, drfgbarr.FreedomGuard, drfgweap.FreedomGuard, drbiocom.Xenite, drterhq1.DRTerrorist, drterhq2.DRTerrorist, drterrep.DRTerrorist, Infantry.Warzone, Vehicle.Warzone ,Vehicle.Wzscavenger, Aircraft.Warzone, Aircraft.Wzscavenger, Scavs.Paradigm, PowerPlant.Alpha,FactoryUpgrade1.Alpha, FactoryUpgrade2.Alpha, FactoryUpgrade1.Scavenger,FactoryUpgrade2.Scavenger, Infantry.Empire, Infantry.Rebel, Infantry.Republic, Infantry.Separatist, Infantry.Hutt, Vehicle.Empire, Vehicle.Rebel, Vehicle.Republic, Vehicle.Separatist, Vehicle.Hutt, Aircraft.Empire, Aircraft.Rebel, Aircraft.Republic, Aircraft.Separatist, Aircraft.Hutt, Infantry.Marine, Infantry2.Marine , Infantry.Guard, Infantry.Orkz, Infantry.Chaos, Vehicle.Marine, Vehicle.Guard, Vehicle2.Guard, Vehicle.Orkz, Vehicle.Chaos, 2Vehicle.Chaos, Infantry.Sow, Vehicle.Sow, Aircraft.Sow, Naval.Sow, wmk2.sow, Infantry.Simcity, Vehicle.Simcity, Infantry.Ant, Vehicle.Ant, Infantry.Z, Vehicle.Z, Addon.Zfort, Infantry.Iok, Vehicle.Iok, Infantry.Infected, Infantry.inflatable, Infantry.crypt, Infantry.tent, Vehicle.daemonpit, Infantry.Human1, Infantry.Orc1, Vehicle.Human1, Vehicle.Orc1, Aircraft.Human1, Aircraft.Orc1, Naval.Warcraft1, Infantry.Human2, Infantry.Orc2, Infantry.Xmas, Infantry.Valentine, Vehicle.Valentine, Aircraft.Valentine, Naval.Valentine
+		UnitQueues: Infantry, Defense, Defence, RAInfantry, Vehicle, RAVehicle, Aircraft, RAAircraft, Naval, RANaval, Addons, Upgrades, Promotions, Infantry.GDI, Infantry.Nod, Vehicle.GDI, Vehicle.Nod, Aircraft.GDI, Aircraft.Nod, Naval.GDI, Naval.Nod, Infantry.Allies, Infantry.Soviet, Infantry.Japan, Vehicle.Allies, Vehicle.Soviet, Vehicle.Japan, Aircraft.Allies, Aircraft.Soviet, Aircraft.Japan, Naval.Allies, Naval.Soviet, Naval.Japan, Infantry.Camea, Vehicle.Camea, Aircraft.Camea, Infantry.Atreides, Infantry.Harkonnen, Infantry.Ordos, Infantry.Corrino, VehicleLight.Atreides, VehicleLight.Harkonnen, VehicleLight.Ordos, VehicleHeavy.Atreides, VehicleHeavy.Harkonnen, VehicleHeavy.Ordos, VehicleStarport.Atreides, VehicleStarport.Harkonnen, VehicleStarport.Ordos, VehicleStarport.Corrino, Aircraft.Atreides, Aircraft.Harkonnen, Aircraft.Ordos, Aircraft.Corrino, Infantry.Legobattles, Vehicle.Legobattles, InfantryHero.Legobattles, Naval.Legobattles, Towerupgrade, Towerupgrade2, Infantry.Answer, Infantry.Tomorrow, Infantry.Dtusa, Infantry.Dtrussia, Infantry.Dtjapan, Infantry.Dtargentina, Infantry.Dtbrazil, Infantry.Dtcuba, Infantry.Dtaustralia, Infantry.Dtethiopia, Vehicle.Answer, Vehicle.Tomorrow, Vehicle.Dtusa, Vehicle.Dtrussia, Vehicle.Dtjapan, Vehicle.Dtargentina, Vehicle.Dtbrazil, Vehicle.Dtcuba, Vehicle.Dtaustralia, Vehicle.Dtethiopia, Aircraft.Answer, Aircraft.Tomorrow, Aircraft.Dtusa, Aircraft.Dtrussia, Aircraft.Dtjapan, Aircraft.Dtargentina, Aircraft.Dtbrazil, Aircraft.Dtcuba, Aircraft.Dtaustralia, Infantry.Allies2, Infantry.Soviet2, Infantry.Yuri, Vehicle.Allies2, Vehicle.Soviet2, Vehicle.Yuri, Aircraft.Allies2, Aircraft.Soviet2, Aircraft.Yuri, Infantry.Terran, Infantry.Protoss, Infantry.Zerg, Vehicle.Terran, Vehicle.Protoss, Aircraft.Terran, Aircraft.Protoss, Infantry.Tsgdi, Infantry.Tsnod, Infantry.Tscabal, Infantry.Tsmutant, Vehicle.Tsgdi, Vehicle.Tsnod, Vehicle.Tscabal, Vehicle.Tsmutant, Aircraft.Tsgdi, Aircraft.Tsnod, Aircraft.Tscabal, Aircraft.Tsmutant, Infantry.Usa, Infantry.China, Infantry.Gla, Vehicle.Usa, Vehicle.China, Vehicle.Gla, Aircraft.Usa, Aircraft.China, Naval.Usa, Naval.China, Naval.Gla, Upgrades.Generals1, Upgrades.Generals2, Infantry.Freedom, Infantry.Imperium, Infantry.Xenite, Infantry.Shadowhand, Infantry.Togran, Infantry.Terrorist, Infantry.Eodalien, Vehicle.Freedom, Vehicle.Imperium, Vehicle.Xenite, Vehicle.Shadowhand, Vehicle.Togran, Vehicle.Terrorist, Vehicle.Eodalien, drihq1.Imperium, drihq2.Imperium, dribarr.Imperium, driweap.Imperium, drfghq1.FreedomGuard, drfghq2.FreedomGuard, drfgbarr.FreedomGuard, drfgweap.FreedomGuard, drbiocom.Xenite, drterhq1.DRTerrorist, drterhq2.DRTerrorist, drterrep.DRTerrorist, Infantry.Warzone, Vehicle.Warzone ,Vehicle.Wzscavenger, Aircraft.Warzone, Aircraft.Wzscavenger, Scavs.Paradigm, PowerPlant.Alpha,FactoryUpgrade1.Alpha, FactoryUpgrade2.Alpha, FactoryUpgrade1.Scavenger,FactoryUpgrade2.Scavenger, Infantry.Empire, Infantry.Rebel, Infantry.Republic, Infantry.Separatist, Infantry.Hutt, Vehicle.Empire, Vehicle.Rebel, Vehicle.Republic, Vehicle.Separatist, Vehicle.Hutt, Aircraft.Empire, Aircraft.Rebel, Aircraft.Republic, Aircraft.Separatist, Aircraft.Hutt, Infantry.Marine, Infantry2.Marine , Infantry.Guard, Infantry.Orkz, Infantry.Chaos, Vehicle.Marine, Vehicle.Guard, Vehicle2.Guard, Vehicle.Orkz, Vehicle.Chaos, 2Vehicle.Chaos, Infantry.Sow, Vehicle.Sow, Aircraft.Sow, Naval.Sow, wmk2.sow, Infantry.Simcity, Vehicle.Simcity, Infantry.Ant, Vehicle.Ant, Infantry.Z, Vehicle.Z, Addon.Zfort, Infantry.Iok, Vehicle.Iok, Infantry.Infected, Infantry.inflatable, Infantry.crypt, Infantry.tent, Vehicle.daemonpit, Infantry.Human1, Infantry.Orc1, Vehicle.Human1, Vehicle.Orc1, Aircraft.Human1, Aircraft.Orc1, Naval.Warcraft1, Addons.Human1,Addons.Orc1, Infantry.Human2, Infantry.Orc2, Infantry.Xmas, Infantry.Valentine, Vehicle.Valentine, Aircraft.Valentine, Naval.Valentine
 		UnitDelays:
 			mcv.gdi: 5000
 			mcv.nod: 5000
@@ -7788,6 +7801,12 @@ Player:
 			wc_n_brigand: 10
 			wc_n_slime: 10
 			wc_n_ogre: 10
+			wc_h_transport: 5
+			wc_h_arrowship: 10
+			wc_h_scorpianship: 10
+			wc_o_transport: 5
+			wc_o_arrowship: 10
+			wc_o_catapultship: 10
 			##################### UnitsToBuild Warcraft 2
 			wc2_human_peasant: 15
 			wc2_human_footman: 10
@@ -7923,6 +7942,10 @@ Player:
 			imperial_ninja_master: 50
 			imperial_flying_ship: 1
 			imperial_culverin: 1
+			imperial_transport: 1
+			imperial_clipper: 1
+			imperial_battleship: 1
+			imperial_flagship: 1
 			imperial_tower2: 1
 			imperial_tower3: 1
 
@@ -7937,6 +7960,10 @@ Player:
 			pirate_king_kahuka: 50
 			pirate_tiki_golem: 1
 			pirate_cannon: 1
+			pirate_transport: 1
+			pirate_barracuda: 1
+			pirate_battleship: 1
+			pirate_brick_bounty: 1
 			pirate_tower2: 1
 			pirate_tower3: 1
 
@@ -7953,6 +7980,7 @@ Player:
 			king_catapult: 1
 			king_dwarf_glider: 1
 			king_dragon: 1
+			king_transport: 1
 			king_cannon: 1
 			king_tower2: 1
 			king_tower3: 1
@@ -7970,6 +7998,7 @@ Player:
 			wizard_troll_giant: 1
 			wizard_troll_blimp: 1
 			wizard_dragon: 1
+			wizard_transport: 1
 			wizard_tower2: 1
 			wizard_tower3: 1
 			######################## UnitsToBuild Worms
@@ -8314,6 +8343,7 @@ Player:
 			imperial_ninja_master: 1
 			imperial_flying_ship: 10
 			imperial_culverin: 10
+			imperial_transport: 5
 			imperial_tower2: 10
 			imperial_tower3: 10
 
@@ -8327,6 +8357,7 @@ Player:
 			pirate_lady_pirate: 50
 			pirate_king_kahuka: 50
 			pirate_tiki_golem: 10
+			pirate_transport: 5
 			pirate_cannon: 10
 			pirate_tower2: 10
 			pirate_tower3: 10
@@ -8344,6 +8375,7 @@ Player:
 			king_catapult: 10
 			king_dwarf_glider: 10
 			king_dragon: 10
+			king_transport: 5
 			king_cannon: 10
 			king_tower2: 10
 			king_tower3: 10
@@ -8360,6 +8392,7 @@ Player:
 			wizard_siege_tower: 10
 			wizard_troll_giant: 10
 			wizard_troll_blimp: 10
+			wizard_transport: 5
 			wizard_dragon: 10
 			wizard_tower2: 10
 			wizard_tower3: 10

@@ -3356,6 +3356,10 @@ wc_o_arrowship:
 	Buildable:
 		Prerequisites: ~wc_o_lumbermill
 		Queue: Addons.Orc1
+	Tooltip:
+		Name: Spear Ship
+	Armament:
+		Weapon: spearFire
 
 wc_o_catapultship:
 	Inherits@Siege: wc_h_scorpianship

@@ -2036,7 +2036,8 @@ RAMCV.ALLIES:
 	Tooltip:
 		Name: Allied Mobile Construction Vehicle
 	Buildable:
-		Prerequisites: ~rafix.allies
+		Prerequisites: rafix.allies
+		Queue: Vehicle.Allies
 	Transforms:
 		IntoActor: rafact.allies
 	Voiced:
@@ -2047,7 +2048,8 @@ RAMCV.SOVIET:
 	Tooltip:
 		Name: Soviet Mobile Construction Vehicle
 	Buildable:
-		Prerequisites: ~rafix.soviet
+		Prerequisites: rafix.soviet
+		Queue: Vehicle.Soviet
 	Transforms:
 		IntoActor: rafact.soviet
 	Voiced:
@@ -2058,7 +2060,8 @@ RAMCV.JAPAN:
 	Tooltip:
 		Name: Japanese Mobile Construction Vehicle
 	Buildable:
-		Prerequisites: ~rafix.japan
+		Prerequisites: rafix.japan
+		Queue: Vehicle.Japan
 	Transforms:
 		IntoActor: rafact.japan
 	Voiced:

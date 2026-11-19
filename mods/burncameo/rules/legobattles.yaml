@@ -440,6 +440,108 @@ World:
 	Mobile:
 		PauseOnCondition: cond_catapult_cooldown || disabled || stickyfoam
 
+^legoship:
+	Inherits: ^BoatUnit
+	Inherits@ANNOUNCE: ^AnnounceOnBuild
+	Inherits@EXT: ^ExternalConditions
+	DeathSounds:
+	-FireWarheadsOnDeath:
+	WithDeathAnimation:
+		UseDeathTypeSuffix: false
+	# WithDeathAnimation@Bubbles:
+	# 	UseDeathTypeSuffix: false
+	# 	DeathSequence: bubbles
+	# 	Delay: 80
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	RenderSprites:
+
+^lego_lightship:
+	Inherits@Template: ^ScoutShipTemplate
+	Inherits@EXP: ^GainsExperienceTD
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@EMP: ^TurretEMP
+	Buildable:
+		BuildPaletteOrder: 20
+	Valued:
+		Cost: 1400
+	Health:
+		HP: 32000
+	Armor:
+		Type: Heavy
+	Mobile:
+		Speed: 128
+	RevealsShroud:
+		Range: 7c0
+	#Food
+	Power:
+		Amount: -20
+	DetectCloaked:
+		DetectionTypes: Underwater
+		Range: 4c0
+	RenderDetectionCircle:
+	Selectable:
+		DecorationBounds: 1536, 1536
+
+^lego_shiptransport:
+	Inherits@EXP: ^GainsExperienceTD
+	Buildable:
+		BuildPaletteOrder: 30
+	Valued:
+		Cost: 1000
+	Health:
+		HP: 30000
+	Armor:
+		Type: None
+	Mobile:
+		Speed: 128
+	RevealsShroud:
+		Range: 7c0
+	#Food
+	Power:
+		Amount: -10
+	DetectCloaked:
+		DetectionTypes: Underwater
+		Range: 4c0
+	RenderDetectionCircle:
+	Selectable:
+		DecorationBounds: 1536, 1536
+	Cargo:
+		Types: Infantry, Hacker, Fremen, Vehicle
+		MaxWeight: 12
+		PassengerFacing: 0
+		LoadingCondition: notmobile
+	WithCargoPipsDecoration:
+		Position: BottomLeft
+		RequiresSelection: true
+
+^lego_heavyship:
+	Inherits@Template: ^BattleShipTemplate
+	Inherits@EXP: ^GainsExperienceTD
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@EMP: ^TurretEMP
+	Buildable:
+		BuildPaletteOrder: 40
+	Valued:
+		Cost: 2000
+	Health:
+		HP: 48000
+	Armor:
+		Type: Heavy
+	Mobile:
+		Speed: 77
+	RevealsShroud:
+		Range: 7c0
+	#Food
+	Power:
+		Amount: -40
+	DetectCloaked:
+		DetectionTypes: Underwater
+		Range: 4c0
+	RenderDetectionCircle:
+	Selectable:
+		DecorationBounds: 1536, 1536
+
 ^lego_building:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^2x2Shape
@@ -608,6 +710,67 @@ World:
 		CancelledAudio: Cancelled
 	ProductionBar:
 		ProductionType: Vehicle.Legobattles
+
+^lego_shipyard:
+	Inherits@shape: ^3x3Shape
+	Inherits: ^BaseBuilding
+	Valued:
+		Cost: 800
+	Buildable:
+		BuildPaletteOrder: 20
+		BuildDuration: 200
+		BuildDurationModifier: 100
+	Building:
+		Footprint: xxx xxx xxx
+		Dimensions: 2,2
+		LocalCenterOffset: -32,-32,0
+	DamageMultiplier@DamageReduction:
+		Modifier: 88
+	Health:
+		HP: 80000
+	RevealsShroud:
+		Range: 5c0
+	RallyPoint:
+	Exit@1:
+		SpawnOffset: -2048,-1024,0
+		ExitCell: -1,0
+	Exit@2:
+		SpawnOffset: -2048,0,0
+		ExitCell: -1,1
+	Exit@3:
+		SpawnOffset: -2048,1024,0
+		ExitCell: -1,2
+	GrantExternalConditionToProduced:
+		Condition: produced
+	Power:
+		Amount: 0
+	ProvidesPrerequisite@buildingname:
+	ProvidesPrerequisite@vehiclefactory:
+		Prerequisite: vehiclefactory
+	Production:
+		Produces: Naval.Legobattles
+	ProductionQueue:
+		Type: Naval.Legobattles
+		DisplayOrder: 3
+		Group: Naval
+		LowPowerModifier: 150
+		ReadyAudio: UnitReady
+		ReadyTextNotification: notification-unit-ready
+		BlockedAudio: NoBuild
+		BlockedTextNotification: notification-unable-to-build-more
+		LimitedAudio: BuildingInProgress
+		LimitedTextNotification: notification-unable-to-comply-building-in-progress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar:
+		ProductionType: Naval.Legobattles
+	WithProductionOverlay@LegospecialN:
+		RequiresCondition: !build-incomplete
+		Queues: Naval.Legobattles
+		Sequence: lego_production_overlay_brick
+		Palette: player
+		IsPlayerPalette: True
 
 ^lego_tower:
 	Inherits@shape: ^2x2Shape
@@ -3897,6 +4060,52 @@ imperial_vehiclefactory:
 	Voiced:
 		VoiceSet: drydockvoice
 
+imperial_shipyard:
+	Inherits@templatedock: ^lego_shipyard
+	Inherits@template: ^lego_building
+	HitShape:
+		UseTargetableCellsOffsets: false
+		TargetableOffsets: 0,0,0, 840,-256,0, 840,512,0, 210,-512,0, -71,512,0
+		Type: Rectangle
+			TopLeft: -1024, -1024
+			BottomRight: 1024, 640
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Imperial Shipyard
+	ProvidesPrerequisite:
+	Buildable:
+		BuildPaletteOrder: 12
+		Queue: Building, RABuilding
+		Description: actor-imperial_vehiclefactory.description
+		BuildDuration: 200
+		BuildDurationModifier: 100
+		Prerequisites: ~lego_imperial_conyard, imperial_quarters, imperial_barracks
+	Building:
+		Footprint: xx xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+		TerrainTypes: Water
+	Health:
+		HP: 70000
+	RevealsShroud:
+		Range: 5c0
+	RallyPoint:
+	Exit@1:
+		SpawnOffset: -426,61,0
+		ExitCell: 0,1
+	Exit@2:
+		SpawnOffset: 298,298,0
+		ExitCell: 1,1
+	Power:
+		Amount: 0
+	ProvidesPrerequisite@buildingname:
+		Prerequisite: imperial_shipyard
+	Selectable:
+		Bounds: 2048,2048
+	Voiced:
+		VoiceSet: drydockvoice
+
 imperial_tower:
 	Inherits: ^Defense
 	Inherits@lego_tower: ^lego_tower
@@ -4355,6 +4564,91 @@ imperial_flying_ship:
 		DecorationBounds: 1280, 1280, 0, 0
 	RenderSprites:
 		Scale: 0.7
+
+imperial_transport:
+	Inherits@WC2Ship: ^legoship
+	Inherits@Transport: ^lego_shiptransport
+	Buildable:
+		Prerequisites: ~imperial_shipyard
+		Queue: Naval.Legobattles
+		Description: actor-wc2_human_transport.description
+	Tooltip:
+		Name: Transport Ship
+	Voiced:
+		VoiceSet: wc2voicehumanship
+	RenderSprites:
+		Scale: 0.7
+
+imperial_clipper:
+	Inherits@WC2SHIP: ^legoship
+	Inherits@Arrow: ^lego_lightship
+	Buildable:
+		Prerequisites: ~imperial_shipyard
+		Queue: Naval.Legobattles
+		Description: actor-wc2_human_elven_destroyer.description
+	Tooltip:
+		Name: Clipper
+	Turreted:
+		TurnSpeed: 28
+		Offset: 512,0,0
+	Armament:
+		Weapon: piratelegoranged
+	Armament@aa:
+		Weapon: piratelegoranged
+	AttackTurreted:
+	# WithSpriteTurret:
+	Voiced:
+		VoiceSet: wc2voicehumanship
+	RenderSprites:
+		Scale: 0.6
+
+imperial_battleship:
+	Inherits@WC2Ship: ^legoship
+	Inherits@Siege: ^lego_heavyship
+	Buildable:
+		Prerequisites: ~imperial_shipyard
+		Queue: Naval.Legobattles
+		Description: actor-wc2_human_battleship.description
+	Tooltip:
+		Name: Imperial Battleship
+	Turreted:
+		TurnSpeed: 28
+		Offset: 512,0,0
+	Armament@PRIMARY:
+		Weapon: piratespecialrangedballimp
+		LocalOffset: 208,0,48
+	AttackTurreted:
+	AttackFrontal:
+		FacingTolerance: 180
+	# WithSpriteTurret:
+	Voiced:
+		VoiceSet: wc2voicehumanship
+	RenderSprites:
+
+imperial_flagship:
+	Inherits@WC2Ship: ^legoship
+	Inherits@Siege: ^lego_heavyship
+	Buildable:
+		Prerequisites: ~imperial_shipyard
+		Queue: Naval.Legobattles
+		Description: actor-wc2_human_battleship.description
+	Tooltip:
+		Name: Flagship
+	Health:
+		HP: 60000
+	Turreted:
+		TurnSpeed: 28
+		Offset: 512,0,0
+	Armament@PRIMARY:
+		Weapon: piratespecialrangedballimp
+		LocalOffset: 208,0,48
+	AttackTurreted:
+	AttackFrontal:
+		FacingTolerance: 180
+	# WithSpriteTurret:
+	Voiced:
+		VoiceSet: wc2voicehumanship
+	RenderSprites:
 
 imperial_governor_broadside:
 	Inherits@Soldier: ^Soldier
@@ -5201,6 +5495,52 @@ pirate_vehiclefactory:
 	Voiced:
 		VoiceSet: drydockvoice
 
+pirate_shipyard:
+	Inherits@templatedock: ^lego_shipyard
+	Inherits@template: ^lego_building
+	HitShape:
+		UseTargetableCellsOffsets: false
+		TargetableOffsets: 0,0,0, 840,-256,0, 840,512,0, 210,-512,0, -71,512,0
+		Type: Rectangle
+			TopLeft: -1024, -1024
+			BottomRight: 1024, 640
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Pirate Shipyard
+	ProvidesPrerequisite:
+	Buildable:
+		BuildPaletteOrder: 12
+		Queue: Building, RABuilding
+		Description: actor-pirate_vehiclefactory.description
+		BuildDuration: 200
+		BuildDurationModifier: 100
+		Prerequisites: ~lego_pirate_conyard, pirate_plantation, pirate_barracks
+	Building:
+		Footprint: xx xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+		TerrainTypes: Water
+	Health:
+		HP: 70000
+	RevealsShroud:
+		Range: 5c0
+	RallyPoint:
+	Exit@1:
+		SpawnOffset: -426,61,0
+		ExitCell: 0,1
+	Exit@2:
+		SpawnOffset: 298,298,0
+		ExitCell: 1,1
+	Power:
+		Amount: 0
+	ProvidesPrerequisite@buildingname:
+		Prerequisite: pirate_shipyard
+	Selectable:
+		Bounds: 2048,2048
+	Voiced:
+		VoiceSet: drydockvoice
+
 pirate_tower:
 	Inherits: ^Defense
 	Inherits@lego_tower: ^lego_tower
@@ -5670,6 +6010,93 @@ pirate_tiki_golem:
 		DefaultAttackSequence: shoot
 	WithDeathAnimation:
 		UseDeathTypeSuffix: false
+
+pirate_transport:
+	Inherits@WC2Ship: ^legoship
+	Inherits@Transport: ^lego_shiptransport
+	Buildable:
+		Prerequisites: ~pirate_shipyard
+		Queue: Naval.Legobattles
+		Description: actor-wc2_human_transport.description
+	Tooltip:
+		Name: Transport Ship
+	Voiced:
+		VoiceSet: wc2voicehumanship
+	RenderSprites:
+		Scale: 0.7
+
+pirate_barracuda:
+	Inherits@WC2SHIP: ^legoship
+	Inherits@Arrow: ^lego_lightship
+	Buildable:
+		Prerequisites: ~pirate_shipyard
+		Queue: Naval.Legobattles
+		Description: actor-wc2_human_elven_destroyer.description
+	Tooltip:
+		Name: Barracuda
+	Turreted:
+		TurnSpeed: 28
+		Offset: 512,0,0
+	Armament:
+		Weapon: piratelegoranged
+	Armament@aa:
+		Weapon: piratelegoranged
+	AttackTurreted:
+	# WithSpriteTurret:
+	Voiced:
+		VoiceSet: wc2voicehumanship
+	RenderSprites:
+		Scale: 0.6
+
+pirate_battleship:
+	Inherits@WC2Ship: ^legoship
+	Inherits@Siege: ^lego_heavyship
+	Buildable:
+		Prerequisites: ~pirate_shipyard
+		Queue: Naval.Legobattles
+		Description: actor-wc2_human_battleship.description
+	Tooltip:
+		Name: Pirate Battleship
+	Health:
+		HP: 56000
+	Turreted:
+		TurnSpeed: 28
+		Offset: 512,0,0
+	Armament@PRIMARY:
+		Weapon: piratespecialrangedballimp
+		LocalOffset: 208,0,48
+	AttackTurreted:
+	AttackFrontal:
+		FacingTolerance: 180
+	# WithSpriteTurret:
+	Voiced:
+		VoiceSet: wc2voicehumanship
+	RenderSprites:
+
+pirate_brick_bounty:
+	Inherits@WC2Ship: ^legoship
+	Inherits@Siege: ^lego_heavyship
+	Buildable:
+		Prerequisites: ~pirate_shipyard
+		Queue: Naval.Legobattles
+		Description: actor-wc2_human_battleship.description
+	Tooltip:
+		Name: Brickbeard's Bounty
+	Health:
+		HP: 58000
+	Turreted:
+		TurnSpeed: 28
+		Offset: 512,0,0
+	Armament@PRIMARY:
+		Weapon: piratespecialrangedballimp
+		LocalOffset: 208,0,48
+	AttackTurreted:
+	AttackFrontal:
+		FacingTolerance: 180
+	# WithSpriteTurret:
+	Voiced:
+		VoiceSet: wc2voicehumanship
+	RenderSprites:
 
 pirate_captain_brickbeard:
 	Inherits@Soldier: ^Soldier
@@ -6574,6 +7001,52 @@ king_vehiclefactory:
 	Voiced:
 		VoiceSet: specialfactoryvoice
 
+king_shipyard:
+	Inherits@templatedock: ^lego_shipyard
+	Inherits@template: ^lego_building
+	HitShape:
+		UseTargetableCellsOffsets: false
+		TargetableOffsets: 0,0,0, 840,-256,0, 840,512,0, 210,-512,0, -71,512,0
+		Type: Rectangle
+			TopLeft: -1024, -1024
+			BottomRight: 1024, 640
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: King's Shipyard
+	ProvidesPrerequisite:
+	Buildable:
+		BuildPaletteOrder: 12
+		Queue: Building, RABuilding
+		Description: actor-king_vehiclefactory.description
+		BuildDuration: 200
+		BuildDurationModifier: 100
+		Prerequisites: ~lego_king_conyard, king_farm, king_barracks
+	Building:
+		Footprint: xx xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+		TerrainTypes: Water
+	Health:
+		HP: 70000
+	RevealsShroud:
+		Range: 5c0
+	RallyPoint:
+	Exit@1:
+		SpawnOffset: -426,61,0
+		ExitCell: 0,1
+	Exit@2:
+		SpawnOffset: 298,298,0
+		ExitCell: 1,1
+	Power:
+		Amount: 0
+	ProvidesPrerequisite@buildingname:
+		Prerequisite: king_shipyard
+	Selectable:
+		Bounds: 2048,2048
+	Voiced:
+		VoiceSet: specialfactoryvoice
+
 king_tower:
 	Inherits: ^Defense
 	Inherits@lego_tower: ^lego_tower
@@ -7049,7 +7522,7 @@ king_dwarf_glider:
 	Inherits@AUTOTARGET: ^AutoTargetAll
 	Inherits: ^PropagandaSelfHeallego
 	Tooltip:
-		Name: Dwarven Glider
+		Name: Dwarf Glider
 	Valued:
 		Cost: 700
 	Health:
@@ -7132,6 +7605,20 @@ king_dragon:
 		MoveSequence: run
 	Selectable:
 		DecorationBounds: 2560, 2560, 0, 0
+	RenderSprites:
+		Scale: 0.7
+
+king_transport:
+	Inherits@WC2Ship: ^legoship
+	Inherits@Transport: ^lego_shiptransport
+	Buildable:
+		Prerequisites: ~king_shipyard
+		Queue: Naval.Legobattles
+		Description: actor-wc2_human_transport.description
+	Tooltip:
+		Name: Transport Ship
+	Voiced:
+		VoiceSet: wc2voicehumanship
 	RenderSprites:
 		Scale: 0.7
 
@@ -7977,6 +8464,52 @@ wizard_vehiclefactory:
 	Voiced:
 		VoiceSet: specialfactoryvoice
 
+wizard_shipyard:
+	Inherits@templatedock: ^lego_shipyard
+	Inherits@template: ^lego_building
+	HitShape:
+		UseTargetableCellsOffsets: false
+		TargetableOffsets: 0,0,0, 840,-256,0, 840,512,0, 210,-512,0, -71,512,0
+		Type: Rectangle
+			TopLeft: -1024, -1024
+			BottomRight: 1024, 640
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Wizard's Shipyard
+	ProvidesPrerequisite:
+	Buildable:
+		BuildPaletteOrder: 12
+		Queue: Building, RABuilding
+		Description: actor-wizard_vehiclefactory.description
+		BuildDuration: 200
+		BuildDurationModifier: 100
+		Prerequisites: ~lego_wizard_conyard, wizard_graveyard, wizard_barracks
+	Building:
+		Footprint: xx xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+		TerrainTypes: Water
+	Health:
+		HP: 70000
+	RevealsShroud:
+		Range: 5c0
+	RallyPoint:
+	Exit@1:
+		SpawnOffset: -426,61,0
+		ExitCell: 0,1
+	Exit@2:
+		SpawnOffset: 298,298,0
+		ExitCell: 1,1
+	Power:
+		Amount: 0
+	ProvidesPrerequisite@buildingname:
+		Prerequisite: wizard_shipyard
+	Selectable:
+		Bounds: 2048,2048
+	Voiced:
+		VoiceSet: specialfactoryvoice
+
 wizard_tower:
 	Inherits: ^Defense
 	Inherits@lego_tower: ^lego_tower
@@ -8536,6 +9069,20 @@ wizard_dragon:
 		Sequence: shoot
 	Selectable:
 		DecorationBounds: 2560, 2560, 0, 0
+	RenderSprites:
+		Scale: 0.7
+
+wizard_transport:
+	Inherits@WC2Ship: ^legoship
+	Inherits@Transport: ^lego_shiptransport
+	Buildable:
+		Prerequisites: ~wizard_shipyard
+		Queue: Naval.Legobattles
+		Description: actor-wc2_human_transport.description
+	Tooltip:
+		Name: Transport Ship
+	Voiced:
+		VoiceSet: wc2voicehumanship
 	RenderSprites:
 		Scale: 0.7
 

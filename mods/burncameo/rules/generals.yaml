@@ -2659,6 +2659,8 @@ glweap:
 	Inherits@camo: ^BuildingCamoLevel2
 	Inherits@fort: ^GLAFortifiable
 	Inherits@weap: ^IsWeaponFactoryOld
+	Inherits@repair: ^RepairsUnits
+	Inherits@repair: ^RepairFacility
 	Valued:
 		Cost: 2000
 	Tooltip:
@@ -6782,6 +6784,8 @@ chweap:
 	Inherits@prod: ^ProducesUnits
 	Inherits@mines: ^MinefieldUpgrade
 	Inherits@weap: ^IsWeaponFactoryOld
+	Inherits@repair: ^RepairsUnits
+	Inherits@repair: ^RepairFacility
 	Valued:
 		Cost: 2000
 	Tooltip:

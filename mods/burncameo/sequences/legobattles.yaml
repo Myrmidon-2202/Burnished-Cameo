@@ -2173,6 +2173,27 @@ imperial_vehiclefactory:
 		Start: 5
 		AddExtension: False
 
+imperial_shipyard:
+	Defaults:
+		Filename: imperial_buildings.shp
+		Scale: 2.0
+	idle:
+		Start: 4
+	damaged-idle:
+		Start: 4
+	make:
+		Start: 4
+	dead:
+		Start: 4
+	lego_production_overlay_brick: 
+		Filename: lego_production_overlay_brick.shp
+		Length: 10
+		Offset: 7,6,0
+	icon:
+		Filename: imperial_cameos.png
+		Start: 6
+		AddExtension: False
+
 imperial_tower:
 	Defaults:
 		Filename: imperial_buildings.shp
@@ -2810,6 +2831,58 @@ imperial_flying_ship:
 		Start: 36
 		AddExtension: False
 
+imperial_transport:
+	idle:
+		Filename: imperial_transport.shp
+		Facings: 16
+	die:
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon:
+		Filename: imperial_cameos.png
+		Start: 35
+		AddExtension: False
+
+imperial_clipper:
+	idle:
+		Filename: imperial_clipper.shp
+		Facings: 16
+	die:
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon:
+		Filename: imperial_cameos.png
+		Start: 33
+		AddExtension: False
+
+imperial_battleship:
+	idle:
+		Filename: imperial_battleship.shp
+		Facings: 16
+	die:
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon:
+		Filename: imperial_cameos.png
+		Start: 32
+		AddExtension: False
+
+imperial_flagship:
+	idle:
+		Filename: imperial_flagship.shp
+		Facings: 16
+	die:
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon:
+		Filename: imperial_cameos.png
+		Start: 34
+		AddExtension: False
+
 ####################################################################################################
 #		Pirate - Projectiles
 ####################################################################################################
@@ -2997,6 +3070,27 @@ pirate_vehiclefactory:
 	icon: pirate_cameos.png
 		Filename: pirate_cameos.png
 		Start: 5
+		AddExtension: False
+
+pirate_shipyard:
+	Defaults:
+		Filename: pirate_buildings.shp
+		Scale: 2.0
+	idle:
+		Start: 4
+	damaged-idle:
+		Start: 4
+	make:
+		Start: 4
+	dead:
+		Start: 4
+	lego_production_overlay_brick: 
+		Filename: lego_production_overlay_brick.shp
+		Length: 10
+		Offset: 7,6,0
+	icon:
+		Filename: pirate_cameos.png
+		Start: 6
 		AddExtension: False
 
 pirate_tower:
@@ -3683,11 +3777,13 @@ pirate_tiki_golem:
 		Start: 16
 		Facings: 16
 		Length: 9
+		Tick: 200
 	shoot:
 		Filename: pirate_tiki_golem.shp
 		Start: 160
 		Facings: 16
 		Length: 9
+		Tick: 200
 	muzzle: gunfire2
 		Filename: gunfire2.shp
 		Length: 2
@@ -3734,6 +3830,58 @@ pirate_crab:
 		Length: 7
 	icon: CrabIcon.png
 		Filename: CrabIcon.png
+		AddExtension: False
+
+pirate_transport:
+	idle:
+		Filename: pirate_transport.shp
+		Facings: 16
+	die:
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon:
+		Filename: pirate_cameos.png
+		Start: 35
+		AddExtension: False
+
+pirate_barracuda:
+	idle:
+		Filename: pirate_barracuda.shp
+		Facings: 16
+	die:
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon:
+		Filename: pirate_cameos.png
+		Start: 33
+		AddExtension: False
+
+pirate_battleship:
+	idle:
+		Filename: pirate_battleship.shp
+		Facings: 16
+	die:
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon:
+		Filename: pirate_cameos.png
+		Start: 32
+		AddExtension: False
+
+pirate_brick_bounty:
+	idle:
+		Filename: pirate_brick_bounty.shp
+		Facings: 16
+	die:
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon:
+		Filename: pirate_cameos.png
+		Start: 34
 		AddExtension: False
 
 ####################################################################################################
@@ -3856,6 +4004,27 @@ king_vehiclefactory:
 	icon: king_cameos.png
 		Filename: king_cameos.png
 		Start: 5
+		AddExtension: False
+
+king_shipyard:
+	Defaults:
+		Filename: king_buildings.shp
+		Scale: 2.0
+	idle:
+		Start: 4
+	damaged-idle:
+		Start: 4
+	make:
+		Start: 4
+	dead:
+		Start: 4
+	lego_production_overlay_brick: 
+		Filename: lego_production_overlay_brick.shp
+		Length: 10
+		Offset: 7,6,0
+	icon:
+		Filename: king_cameos.png
+		Start: 6
 		AddExtension: False
 
 king_tower:
@@ -4601,6 +4770,18 @@ king_dragon:
 		Start: 33
 		AddExtension: False
 
+king_transport:
+	idle:
+		Filename: king_transport.shp
+		Facings: 16
+	die:
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon:
+		Filename: king_cameos.png
+		Start: 34
+		AddExtension: False
 
 ####################################################################################################
 #		Wizard - Structures
@@ -4722,6 +4903,27 @@ wizard_vehiclefactory:
 	icon: wizard_cameos.png
 		Filename: wizard_cameos.png
 		Start: 5
+		AddExtension: False
+
+wizard_shipyard:
+	Defaults:
+		Filename: wizard_buildings.shp
+		Scale: 2.0
+	idle:
+		Start: 4
+	damaged-idle:
+		Start: 4
+	make:
+		Start: 4
+	dead:
+		Start: 4
+	lego_production_overlay_brick:
+		Filename: lego_production_overlay_brick.shp
+		Length: 10
+		Offset: 7,6,0
+	icon:
+		Filename: wizard_cameos.png
+		Start: 6
 		AddExtension: False
 
 wizard_tower:
@@ -5112,7 +5314,7 @@ wizard_troll:
 	run:
 		Facings: -8
 		Length: 5
-		Tick: 100
+		Tick: 200
 		Combine:
 			wizard_trollrun1:
 				Filename: wizard_troll.shp
@@ -5466,6 +5668,19 @@ wizard_dragon:
 	icon: wizard_cameos
 		Filename: wizard_cameos.png
 		Start: 33
+		AddExtension: False
+
+wizard_transport:
+	idle:
+		Filename: wizard_transport.shp
+		Facings: 16
+	die:
+		Filename: lego_explosion.shp
+		Start: 0
+		Length: 7
+	icon:
+		Filename: wizard_cameos.png
+		Start: 34
 		AddExtension: False
 
 ####################################################################################################
