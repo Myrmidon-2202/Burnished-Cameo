@@ -726,8 +726,7 @@ MCV.DTARGENTINA:
 	SelectionDecorations:
 	Inherits@EXT: ^ExternalConditions
 	RenderSprites:
-		Image: ramcv
-		PlayerPalette: raplayer
+		Image: mcv
 	ProvidesPrerequisite@wall:
 		Prerequisite: concretebarrier
 	Voiced:
@@ -1466,7 +1465,7 @@ FACT.DTARGENTINA:
 	Transforms:
 		RequiresCondition: factundeploy
 		PauseOnCondition: being-demolished || build-incomplete
-		IntoActor: mcv.dtjapan
+		IntoActor: mcv.dtargentina
 		Offset: 1,1
 		Facing: 432
 	TransformsIntoMobile:
@@ -7532,6 +7531,10 @@ digger:
 		HP: 38000
 	ChangesHealth@SelfHealing:
 		Step: 16
+	DamageMultiplier@HeroBuff:
+		Modifier: 50
+	FirepowerMultiplier@HeroBuff:
+		Modifier: 125
 	Armament@PRIMARY: ##########
 		Weapon: diggerifle
 		LocalOffset: 128,0,256
@@ -7573,6 +7576,8 @@ dingo:
 	SelectionDecorations:
 	Health:
 		HP: 20000
+	DamageMultiplier@HeroBuff:
+		Modifier: 50
 	ChangesHealth@SelfHealing:
 		Step: 5
 	Armor:

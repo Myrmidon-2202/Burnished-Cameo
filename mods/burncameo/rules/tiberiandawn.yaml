@@ -671,7 +671,8 @@ MCV.GDI:
 	Tooltip:
 		Name: GDI Mobile Construction Vehicle
 	Buildable:
-		Prerequisites: ~fix.gdi
+		Prerequisites: fix.gdi
+		Queue: Vehicle.GDI
 	Transforms:
 		IntoActor: fact.gdi
 	RenderSprites:
@@ -682,7 +683,8 @@ MCV.NOD:
 		Tooltip:
 		Name: Nod Mobile Construction Vehicle
 	Buildable:
-		Prerequisites: ~fix.nod
+		Prerequisites: fix.nod
+		Queue: Vehicle.Nod
 	Transforms:
 		IntoActor: fact.nod
 	RenderSprites:

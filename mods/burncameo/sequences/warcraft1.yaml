@@ -918,6 +918,11 @@ wc_h_transport:
 	idle:
 		Start: 0
 		Facings: 8
+	die:
+	bubbles:
+		Filename: wc2_shipdeath.shp
+		Length: *
+		Tick: 800
 	icon:
 
 wc_h_arrowship:
@@ -927,6 +932,11 @@ wc_h_arrowship:
 	idle:
 		Start: 0
 		Facings: 8
+	die:
+	bubbles:
+		Filename: wc2_shipdeath.shp
+		Length: *
+		Tick: 800
 	muzzle:
 		Filename: wc2_cannonfire.shp
 		Length: 4
@@ -939,6 +949,11 @@ wc_h_scorpianship:
 	idle:
 		Start: 0
 		Facings: 8
+	die:
+	bubbles:
+		Filename: wc2_shipdeath.shp
+		Length: *
+		Tick: 800
 	muzzle:
 		Filename: wc2_cannonfire.shp
 		Length: 4
@@ -1261,6 +1276,11 @@ wc_o_transport:
 	idle:
 		Start: 0
 		Facings: 8
+	die:
+	bubbles:
+		Filename: wc2_shipdeath.shp
+		Length: *
+		Tick: 800
 	icon:
 
 wc_o_arrowship:
@@ -1270,6 +1290,11 @@ wc_o_arrowship:
 	idle:
 		Start: 0
 		Facings: 8
+	die:
+	bubbles:
+		Filename: wc2_shipdeath.shp
+		Length: *
+		Tick: 800
 	muzzle:
 		Filename: wc2_cannonfire.shp
 		Length: 4
@@ -1282,6 +1307,11 @@ wc_o_catapultship:
 	idle:
 		Start: 0
 		Facings: 8
+	die:
+	bubbles:
+		Filename: wc2_shipdeath.shp
+		Length: *
+		Tick: 800
 	muzzle:
 		Filename: wc2_cannonfire.shp
 		Length: 4

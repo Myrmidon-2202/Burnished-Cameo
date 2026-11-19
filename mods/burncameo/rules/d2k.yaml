@@ -6997,7 +6997,7 @@ d2k_light_tank:
 	Inherits@EMP: ^TurretEMP
 	Inherits@AntiVeh: ^PrioritizeVehicle
 	Buildable:
-		Queue: Vehicle.Corrino
+		Queue: VehicleStarport.Corrino
 		BuildPaletteOrder: 80
 		BuildDuration: 325
 		BuildDurationModifier: 100
@@ -7747,8 +7747,9 @@ d2k_mcv.ordos:
 	Inherits@D2KSprite: ^D2KPaletteRender
 	Inherits@mcv: ^MCV
 	Buildable:
-		Prerequisites: ~repair_pad.ordos
+		Prerequisites: repair_pad.ordos
 		IconPalette: d2kunit
+		Queue: VehicleHeavy.Ordos
 	Tooltip:
 		Name: Ordos Mobile Construction Vehicle
 	FireWarheadsOnDeath:
@@ -7773,8 +7774,9 @@ d2k_mcv.atreides:
 	Inherits@D2KSprite: ^D2KPaletteRender
 	Inherits@mcv: ^MCV
 	Buildable:
-		Prerequisites: ~repair_pad.atreides
+		Prerequisites: repair_pad.atreides
 		IconPalette: d2kunit
+		Queue: VehicleHeavy.Atreides
 	Tooltip:
 		Name: Atreides Mobile Construction Vehicle
 	FireWarheadsOnDeath:
@@ -7799,8 +7801,9 @@ d2k_mcv.harkonnen:
 	Inherits@D2KSprite: ^D2KPaletteRender
 	Inherits@mcv: ^MCV
 	Buildable:
-		Prerequisites: ~repair_pad.harkonnen
+		Prerequisites: repair_pad.harkonnen
 		IconPalette: d2kunit
+		Queue: VehicleHeavy.Harkonnen
 	Tooltip:
 		Name: Harkonnen Mobile Construction Vehicle
 	FireWarheadsOnDeath:
@@ -7825,8 +7828,9 @@ d2k_mcv.corrino:
 	Inherits@D2KSprite: ^D2KPaletteRender
 	Inherits@mcv: ^MCV
 	Buildable:
-		Prerequisites: ~repair_pad.corrino
+		Prerequisites: repair_pad.corrino
 		IconPalette: d2kunit
+		Queue: VehicleStarport.Corrino
 	Tooltip:
 		Name: Corrino Mobile Construction Vehicle
 	FireWarheadsOnDeath:
