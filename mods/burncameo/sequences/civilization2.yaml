@@ -37,7 +37,7 @@
 ####################################################################################################
 civ2_district_capital_bronze:
 	Inherits: ^CIV2BuildingFlag
-	# Inherits@bib: ^WithBuildingBib3
+	Inherits@bib: ^WithBuildingBib3
 	bigflag:
 		Offset: -12, -12
 	Defaults:
@@ -49,9 +49,9 @@ civ2_district_capital_bronze:
 	dead: 
 	make: 
 	bib: 
-		Filename: bib3.tem
-		UseTilesetExtension: true
-		Length: *
+		# Filename: bib3.tem
+		# UseTilesetExtension: true
+		# Length: *
 		Scale: 1.0
 	icon: 
 		Filename: civilization_2_icons.png
@@ -191,6 +191,88 @@ civ2_district_production_medieval:
 	icon: 
 		Filename: civilization_2_icons.png
 		Start: 10
+
+civ2_naval_district:
+	Inherits: ^CIV2BuildingFlag
+	Defaults:
+		Filename: civ2_naval_district.shp
+		Scale: 2.0
+	bigflag:
+		Offset: 0, -10
+	idle:
+	damaged-idle:
+	make:
+		Filename: syrdmake.shp
+		Length: *
+		Scale: 1.0
+	dead:
+	icon:
+		Filename: civilization_2_icons.png
+		Start: 20
+
+civ2_air_district:
+	Inherits: ^WithBuildingBib3
+	Inherits@flag: ^CIV2BuildingFlag
+	Defaults:
+		Filename: civ2_air_district.shp
+	bigflag:
+		Offset: 0, -50
+	idle:
+		ZOffset: -1023
+	damaged-idle:
+	active:
+	damaged-active:
+	make:
+		Filename: rahpadmake.shp
+		Length: *
+	dead:
+	bib:
+		TilesetOverrides:
+			INTERIOR: TEMPERAT
+	icon:
+		Filename: civilization_2_icons.png
+		Start: 21
+####################################################################################################
+#		DEFENSE CIV2
+####################################################################################################
+
+civ2_guard_district:
+	Inherits: ^CIV2BuildingFlag
+	Defaults:
+		Filename: civilization2_buildings.shp
+		Start: 21
+		Scale: 2.0
+	bigflag:
+		Filename: civilization2_flags.shp
+		Start: 0
+		ZOffset: 512
+		Offset: 0, -5
+	idle:
+	make:
+	icon:
+		Filename: civilization_2_icons.png
+		Start: 22
+	dead:
+
+civ2_aa_district:
+	Inherits: ^CIV2BuildingFlag
+	Defaults:
+		Filename: civilization2_buildings.shp
+		Start: 59
+		Scale: 2.0
+	bigflag:
+		Filename: civilization2_flags.shp
+		Start: 0
+		ZOffset: 512
+		Offset: 0, -10
+	idle:
+	make:
+	icon:
+		Filename: civilization_2_icons.png
+		Start: 23
+	dead:
+
+
 
 ####################################################################################################
 #		UNIT CIV2
@@ -648,6 +730,1491 @@ civ2_musketeers:
 		Filename: civilization_2_icons.png
 		Start: 39
 
+civ2_fanatics:
+	Inherits: ^WCInfantry
+	Inherits@flag: ^CIV2UnitFlag
+	smallflag:
+		Offset: -10, -10
+	Defaults: 
+		Filename: civilization2_units.shp
+		Scale: 1.0
+	idle: invisibleitem
+	stand:
+		Facings: 2
+		Combine:
+			fanatics1: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 8
+			fanatics2: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 8
+				FlipX: true
+	run:
+		Facings: 2
+		Combine:
+			fanatics3: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 8
+			fanatics4: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 8
+				FlipX: true
+	shoot:
+		Facings: 2
+		Combine:
+			fanatics5: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 8
+			fanatics6: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 8
+				FlipX: true
+	die:
+		Facings: 2
+		Combine:
+			fanatics7: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 8
+			fanatics8: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 8
+				FlipX: true
+	icon: 
+		Filename: civilization_2_icons.png
+		Start: 40
+
+civ2_partisans:
+	Inherits: ^WCInfantry
+	Inherits@flag: ^CIV2UnitFlag
+	smallflag:
+		Offset: -10, -10
+	Defaults: 
+		Filename: civilization2_units.shp
+		Scale: 1.0
+	idle: invisibleitem
+	stand:
+		Facings: 2
+		Combine:
+			partisans1: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 9
+			partisans2: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 9
+				FlipX: true
+	run:
+		Facings: 2
+		Combine:
+			partisans3: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 9
+			partisans4: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 9
+				FlipX: true
+	shoot:
+		Facings: 2
+		Combine:
+			partisans5: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 9
+			partisans6: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 9
+				FlipX: true
+	die:
+		Facings: 2
+		Combine:
+			partisans7: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 9
+			partisans8: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 9
+				FlipX: true
+	icon: 
+		Filename: civilization_2_icons.png
+		Start: 41
+
+civ2_alpinetroops:
+	Inherits: ^WCInfantry
+	Inherits@flag: ^CIV2UnitFlag
+	smallflag:
+		Offset: -10, -10
+	Defaults: 
+		Filename: civilization2_units.shp
+		Scale: 1.0
+	idle: invisibleitem
+	stand:
+		Facings: 2
+		Combine:
+			alpinetroops1: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 10
+			alpinetroops2: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 10
+				FlipX: true
+	run:
+		Facings: 2
+		Combine:
+			alpinetroops3: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 10
+			alpinetroops4: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 10
+				FlipX: true
+	shoot:
+		Facings: 2
+		Combine:
+			alpinetroops5: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 10
+			alpinetroops6: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 10
+				FlipX: true
+	die:
+		Facings: 2
+		Combine:
+			alpinetroops7: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 10
+			alpinetroops8: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 10
+				FlipX: true
+	icon: 
+		Filename: civilization_2_icons.png
+		Start: 42
+
+civ2_riflemen:
+	Inherits: ^WCInfantry
+	Inherits@flag: ^CIV2UnitFlag
+	smallflag:
+		Offset: -10, -10
+	Defaults: 
+		Filename: civilization2_units.shp
+		Scale: 1.0
+	idle: invisibleitem
+	stand:
+		Facings: 2
+		Combine:
+			riflemen1: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 11
+			riflemen2: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 11
+				FlipX: true
+	run:
+		Facings: 2
+		Combine:
+			riflemen3: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 11
+			riflemen4: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 11
+				FlipX: true
+	shoot:
+		Facings: 2
+		Combine:
+			riflemen5: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 11
+			riflemen6: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 11
+				FlipX: true
+	die:
+		Facings: 2
+		Combine:
+			riflemen7: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 11
+			riflemen8: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 11
+				FlipX: true
+	icon: 
+		Filename: civilization_2_icons.png
+		Start: 43
+
+civ2_marines:
+	Inherits: ^WCInfantry
+	Inherits@flag: ^CIV2UnitFlag
+	smallflag:
+		Offset: -10, -10
+	Defaults: 
+		Filename: civilization2_units.shp
+		Scale: 1.0
+	idle: invisibleitem
+	stand:
+		Facings: 2
+		Combine:
+			marines1: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 12
+			marines2: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 12
+				FlipX: true
+	run:
+		Facings: 2
+		Combine:
+			marines3: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 12
+			marines4: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 12
+				FlipX: true
+	shoot:
+		Facings: 2
+		Combine:
+			marines5: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 12
+			marines6: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 12
+				FlipX: true
+	die:
+		Facings: 2
+		Combine:
+			marines7: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 12
+			marines8: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 12
+				FlipX: true
+	icon: 
+		Filename: civilization_2_icons.png
+		Start: 44
+
+civ2_paratroopers:
+	Inherits: ^WCInfantry
+	Inherits@flag: ^CIV2UnitFlag
+	smallflag:
+		Offset: -10, -10
+	Defaults: 
+		Filename: civilization2_units.shp
+		Scale: 1.0
+	idle: invisibleitem
+	stand:
+		Facings: 2
+		Combine:
+			paratroopers1: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 13
+			paratroopers2: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 13
+				FlipX: true
+	run:
+		Facings: 2
+		Combine:
+			paratroopers3: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 13
+			paratroopers4: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 13
+				FlipX: true
+	shoot:
+		Facings: 2
+		Combine:
+			paratroopers5: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 13
+			paratroopers6: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 13
+				FlipX: true
+	die:
+		Facings: 2
+		Combine:
+			paratroopers7: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 13
+			paratroopers8: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 13
+				FlipX: true
+	icon: 
+		Filename: civilization_2_icons.png
+		Start: 45
+
+civ2_mechinf:
+	Inherits: ^WCInfantry
+	Inherits@flag: ^CIV2UnitFlag
+	smallflag:
+		Offset: -10, -10
+	Defaults: 
+		Filename: civilization2_units.shp
+		Scale: 1.0
+	idle: invisibleitem
+	stand:
+		Facings: 2
+		Combine:
+			mechinf1: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 14
+			mechinf2: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 14
+				FlipX: true
+	run:
+		Facings: 2
+		Combine:
+			mechinf3: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 14
+			mechinf4: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 14
+				FlipX: true
+	shoot:
+		Facings: 2
+		Combine:
+			mechinf5: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 14
+			mechinf6: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 14
+				FlipX: true
+	die:
+		Facings: 2
+		Combine:
+			mechinf7: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 14
+			mechinf8: 
+				Filename: civilization2_units.shp
+				Length: 14
+				FlipX: true
+	icon: 
+		Filename: civilization_2_icons.png
+		Start: 46
+
+civ2_horsemen:
+	Inherits: ^WCInfantry
+	Inherits@flag: ^CIV2UnitFlag
+	smallflag:
+		Offset: -10, -10
+	Defaults: 
+		Filename: civilization2_units.shp
+		Scale: 1.0
+	idle: invisibleitem
+	stand:
+		Facings: 2
+		Combine:
+			horsemen1: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 15
+			horsemen2: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 15
+				FlipX: true
+	run:
+		Facings: 2
+		Combine:
+			horsemen3: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 15
+			horsemen4: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 15
+				FlipX: true
+	shoot:
+		Facings: 2
+		Combine:
+			horsemen5: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 15
+			horsemen6: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 15
+				FlipX: true
+	die:
+		Facings: 2
+		Combine:
+			horsemen7: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 15
+			horsemen8: 
+				Filename: civilization2_units.shp
+				Length: 15
+				FlipX: true
+	icon: 
+		Filename: civilization_2_icons.png
+		Start: 47
+
+civ2_chariot:
+	Inherits: ^WCInfantry
+	Inherits@flag: ^CIV2UnitFlag
+	smallflag:
+		Offset: -10, -10
+	Defaults: 
+		Filename: civilization2_units.shp
+		Scale: 1.0
+	idle: invisibleitem
+	stand:
+		Facings: 2
+		Combine:
+			chariot1: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 16
+				FlipX: true
+			chariot2: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 16
+	run:
+		Facings: 2
+		Combine:
+			chariot3: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 16
+				FlipX: true
+			chariot4: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 16
+	shoot:
+		Facings: 2
+		Combine:
+			chariot5: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 16
+				FlipX: true
+			chariot6: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 16
+	die:
+		Facings: 2
+		Combine:
+			chariot7: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 16
+				FlipX: true
+			chariot8: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 16
+	icon: 
+		Filename: civilization_2_icons.png
+		Start: 48
+
+civ2_elephant:
+	Inherits: ^WCInfantry
+	Inherits@flag: ^CIV2UnitFlag
+	smallflag:
+		Offset: -10, -10
+	Defaults: 
+		Filename: civilization2_units.shp
+		Scale: 1.0
+	idle: invisibleitem
+	stand:
+		Facings: 2
+		Combine:
+			elephant1: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 17
+				FlipX: true
+			elephant2: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 17
+	run:
+		Facings: 2
+		Combine:
+			elephant3: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 17
+				FlipX: true
+			elephant4: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 17
+	shoot:
+		Facings: 2
+		Combine:
+			elephant5: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 17
+				FlipX: true
+			elephant6: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 17
+	die:
+		Facings: 2
+		Combine:
+			elephant7: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 17
+				FlipX: true
+			elephant8: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Length: 17
+	icon: 
+		Filename: civilization_2_icons.png
+		Start: 49
+
+civ2_chariot:
+	Inherits: ^WCInfantry
+	Inherits@flag: ^CIV2UnitFlag
+	smallflag:
+		Offset: -10, -10
+	Defaults: 
+		Filename: civilization2_units.shp
+		Scale: 1.0
+	idle: invisibleitem
+	stand:
+		Facings: 2
+		Combine:
+			chariot1: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 16
+				FlipX: true
+			chariot2: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 16
+	run:
+		Facings: 2
+		Combine:
+			chariot3: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 16
+				FlipX: true
+			chariot4: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 16
+	shoot:
+		Facings: 2
+		Combine:
+			chariot5: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 16
+				FlipX: true
+			chariot6: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 16
+	die:
+		Facings: 2
+		Combine:
+			chariot7: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 16
+				FlipX: true
+			chariot8: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Length: 16
+	icon: 
+		Filename: civilization_2_icons.png
+		Start: 48
+
+civ2_crusaders:
+	Inherits: ^WCInfantry
+	Inherits@flag: ^CIV2UnitFlag
+	smallflag:
+		Offset: -10, -10
+	Defaults: 
+		Filename: civilization2_units.shp
+		Scale: 1.0
+	idle: invisibleitem
+	stand:
+		Facings: 2
+		Combine:
+			crusaders1: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 18
+				FlipX: true
+			crusaders2: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 18
+	run:
+		Facings: 2
+		Combine:
+			crusaders3: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 18
+				FlipX: true
+			crusaders4: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 18
+	shoot:
+		Facings: 2
+		Combine:
+			crusaders5: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 18
+				FlipX: true
+			crusaders6: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 18
+	die:
+		Facings: 2
+		Combine:
+			crusaders7: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 18
+				FlipX: true
+			crusaders8: 
+				Filename: civilization2_units.shp
+				Length: 18
+	icon: 
+		Filename: civilization_2_icons.png
+		Start: 50
+
+civ2_knights:
+	Inherits: ^WCInfantry
+	Inherits@flag: ^CIV2UnitFlag
+	smallflag:
+		Offset: -10, -10
+	Defaults: 
+		Filename: civilization2_units.shp
+		Scale: 1.0
+	idle: invisibleitem
+	stand:
+		Facings: 2
+		Combine:
+			knights1: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 19
+				FlipX: true
+			knights2: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 19
+	run:
+		Facings: 2
+		Combine:
+			knights3: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 19
+				FlipX: true
+			knights4: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 19
+	shoot:
+		Facings: 2
+		Combine:
+			knights5: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 19
+				FlipX: true
+			knights6: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 19
+	die:
+		Facings: 2
+		Combine:
+			knights7: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 19
+				FlipX: true
+			knights8: 
+				Filename: civilization2_units.shp
+				Length: 19
+	icon: 
+		Filename: civilization_2_icons.png
+		Start: 51
+
+
+####################################################################################################
+#		AIRCRAFT
+####################################################################################################
+civ2_fighter:
+	Inherits@flag: ^CIV2UnitFlag
+	Defaults:
+		Filename: civilization2_units.shp
+		Scale: 2.0
+	idle:
+		Facings: 2
+		Combine:
+			fighter1: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 27
+				FlipX: true
+			fighter2: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 27
+	muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	icon: 
+		Filename: civilization_2_icons.png
+		Start: 59
+
+civ2_bomber:
+	Inherits@flag: ^CIV2UnitFlag
+	Defaults:
+		Filename: civilization2_units.shp
+		Scale: 2.0
+	idle:
+		Facings: 2
+		Combine:
+			bomber1: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 28
+				FlipX: true
+			bomber2: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 28
+	muzzle:
+		Filename: gunfire2.shp
+		Length: *
+	icon: 
+		Filename: civilization_2_icons.png
+		Start: 60
+
+civ2_helicopter:
+	Inherits@flag: ^CIV2UnitFlag
+	Defaults:
+		Filename: civilization2_units.shp
+		Scale: 2.0
+	idle:
+		Facings: 2
+		Combine:
+			helicopter1: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 29
+				FlipX: true
+			helicopter2: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 29
+	# rotor:
+	# 	Filename: lrotor.shp
+	# 	Scale: 1.5
+	# 	Length: 4
+	# slow-rotor:
+	# 	Filename: lrotor.shp
+	# 	Scale: 1.5
+	# 	Start: 4
+	# 	Length: 8
+	muzzle:
+		Filename: gunfire2.shp
+		Length: *
+	icon: 
+		Filename: civilization_2_icons.png
+		Start: 61
+
+civ2_stealthfighter:
+	Inherits@flag: ^CIV2UnitFlag
+	Defaults:
+		Filename: civilization2_units.shp
+		Scale: 2.0
+	idle:
+		Facings: 2
+		Combine:
+			bomber1: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 30
+				FlipX: true
+			bomber2: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 30
+	muzzle:
+		Filename: gunfire2.shp
+		Length: *
+	icon: 
+		Filename: civilization_2_icons.png
+		Start: 62
+
+civ2_stealthbomber:
+	Inherits@flag: ^CIV2UnitFlag
+	Defaults:
+		Filename: civilization2_units.shp
+		Scale: 2.0
+	idle:
+		Facings: 2
+		Combine:
+			bomber1: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 31
+				FlipX: true
+			bomber2: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 31
+	muzzle:
+		Filename: gunfire2.shp
+		Length: *
+	icon: 
+		Filename: civilization_2_icons.png
+		Start: 63
+####################################################################################################
+#		NAVAL
+####################################################################################################
+
+civ2_trireme:
+	Defaults:
+		Filename: civilization2_units.shp
+		Scale: 2.0
+	Inherits@flag: ^CIV2UnitFlag
+	idle:
+		Facings: 2
+		Combine:
+			trireme1: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 32
+				FlipX: true
+			trireme2: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 32
+	die:
+		Facings: 2
+		Combine:
+			trireme3: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 32
+				FlipX: true
+			trireme4: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 32
+	bubbles:
+		Filename: wc2_shipdeath.shp
+		Length: *
+		Tick: 800
+	turret:
+		Filename: mgun.shp
+		Facings: 32
+	muzzle:
+		Filename: wc2_cannonfire.shp
+		Length: 4
+	icon: 
+		Filename: civilization_2_icons.png
+		Start: 64
+
+civ2_caravel:
+	Defaults:
+		Filename: civilization2_units.shp
+		Scale: 2.0
+	Inherits@flag: ^CIV2UnitFlag
+	idle:
+		Facings: 2
+		Combine:
+			caravel1: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 33
+				FlipX: true
+			caravel2: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 33
+	die:
+		Facings: 2
+		Combine:
+			caravel3: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 33
+				FlipX: true
+			caravel4: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 33
+	bubbles:
+		Filename: wc2_shipdeath.shp
+		Length: *
+		Tick: 800
+	turret:
+		Filename: mgun.shp
+		Facings: 32
+	muzzle:
+		Filename: wc2_cannonfire.shp
+		Length: 4
+	icon: 
+		Filename: civilization_2_icons.png
+		Start: 65
+
+civ2_galleon:
+	Defaults:
+		Filename: civilization2_units.shp
+		Scale: 2.0
+	Inherits@flag: ^CIV2UnitFlag
+	idle:
+		Facings: 2
+		Combine:
+			galleon1: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 34
+				FlipX: true
+			galleon2: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 34
+	die:
+		Facings: 2
+		Combine:
+			galleon3: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 34
+				FlipX: true
+			galleon4: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 34
+	bubbles:
+		Filename: wc2_shipdeath.shp
+		Length: *
+		Tick: 800
+	turret:
+		Filename: mgun.shp
+		Facings: 32
+	muzzle:
+		Filename: wc2_cannonfire.shp
+		Length: 4
+	icon: 
+		Filename: civilization_2_icons.png
+		Start: 66
+
+civ2_frigate:
+	Defaults:
+		Filename: civilization2_units.shp
+		Scale: 2.0
+	Inherits@flag: ^CIV2UnitFlag
+	idle:
+		Facings: 2
+		Combine:
+			frigate1: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 35
+				FlipX: true
+			frigate2: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 35
+	die:
+		Facings: 2
+		Combine:
+			frigate3: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 35
+				FlipX: true
+			frigate4: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 35
+	bubbles:
+		Filename: wc2_shipdeath.shp
+		Length: *
+		Tick: 800
+	turret:
+		Filename: mgun.shp
+		Facings: 32
+	muzzle:
+		Filename: wc2_cannonfire.shp
+		Length: 4
+	icon: 
+		Filename: civilization_2_icons.png
+		Start: 67
+
+civ2_ironclad:
+	Defaults:
+		Filename: civilization2_units.shp
+		Scale: 2.0
+	Inherits@flag: ^CIV2UnitFlag
+	idle:
+		Facings: 2
+		Combine:
+			ironclad1: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 36
+				FlipX: true
+			ironclad2: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 36
+	die:
+		Facings: 2
+		Combine:
+			ironclad3: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 36
+				FlipX: true
+			ironclad4: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 36
+	bubbles:
+		Filename: wc2_shipdeath.shp
+		Length: *
+		Tick: 800
+	turret:
+		Filename: mgun.shp
+		Facings: 32
+	muzzle:
+		Filename: wc2_cannonfire.shp
+		Length: 4
+	icon: 
+		Filename: civilization_2_icons.png
+		Start: 68
+
+civ2_destroyer:
+	Defaults:
+		Filename: civilization2_units.shp
+		Scale: 2.0
+	Inherits@flag: ^CIV2UnitFlag
+	idle:
+		Facings: 2
+		Combine:
+			destroyer1: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 37
+				FlipX: true
+			destroyer2: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 37
+	die:
+		Facings: 2
+		Combine:
+			destroyer3: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 37
+				FlipX: true
+			destroyer4: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 37
+	bubbles:
+		Filename: wc2_shipdeath.shp
+		Length: *
+		Tick: 800
+	turret:
+		Filename: mgun.shp
+		Facings: 32
+	muzzle:
+		Filename: wc2_cannonfire.shp
+		Length: 4
+	icon: 
+		Filename: civilization_2_icons.png
+		Start: 69
+
+civ2_cruiser:
+	Defaults:
+		Filename: civilization2_units.shp
+		Scale: 2.0
+	Inherits@flag: ^CIV2UnitFlag
+	idle:
+		Facings: 2
+		Combine:
+			cruiser1: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 38
+				FlipX: true
+			cruiser2: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 38
+	die:
+		Facings: 2
+		Combine:
+			cruiser3: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 38
+				FlipX: true
+			cruiser4: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 38
+	bubbles:
+		Filename: wc2_shipdeath.shp
+		Length: *
+		Tick: 800
+	turret:
+		Filename: mgun.shp
+		Facings: 32
+	muzzle:
+		Filename: wc2_cannonfire.shp
+		Length: 4
+	icon: 
+		Filename: civilization_2_icons.png
+		Start: 70
+
+civ2_aegiscruiser:
+	Defaults:
+		Filename: civilization2_units.shp
+		Scale: 2.0
+	Inherits@flag: ^CIV2UnitFlag
+	idle:
+		Facings: 2
+		Combine:
+			aegiscruiser1: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 39
+				FlipX: true
+			aegiscruiser2: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 39
+	die:
+		Facings: 2
+		Combine:
+			aegiscruiser3: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 39
+				FlipX: true
+			aegiscruiser4: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 39
+	bubbles:
+		Filename: wc2_shipdeath.shp
+		Length: *
+		Tick: 800
+	turret:
+		Filename: mgun.shp
+		Facings: 32
+	muzzle:
+		Filename: wc2_cannonfire.shp
+		Length: 4
+	icon: 
+		Filename: civilization_2_icons.png
+		Start: 71
+
+civ2_battleship:
+	Defaults:
+		Filename: civilization2_units.shp
+		Scale: 2.0
+	Inherits@flag: ^CIV2UnitFlag
+	idle:
+		Facings: 2
+		Combine:
+			battleship1: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 40
+				FlipX: true
+			battleship2: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 40
+	die:
+		Facings: 2
+		Combine:
+			battleship3: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 40
+				FlipX: true
+			battleship4: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 40
+	bubbles:
+		Filename: wc2_shipdeath.shp
+		Length: *
+		Tick: 800
+	turret:
+		Filename: mgun.shp
+		Facings: 32
+	muzzle:
+		Filename: wc2_cannonfire.shp
+		Length: 4
+	icon: 
+		Filename: civilization_2_icons.png
+		Start: 72
+
+civ2_submarine:
+	Defaults:
+		Filename: civilization2_units.shp
+		Scale: 2.0
+	Inherits@flag: ^CIV2UnitFlag
+	idle:
+		Facings: 2
+		Combine:
+			submarine1: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 41
+				FlipX: true
+			submarine2: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 41
+	die:
+		Facings: 2
+		Combine:
+			submarine3: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 41
+				FlipX: true
+			submarine4: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 41
+	bubbles:
+		Filename: wc2_shipdeath.shp
+		Length: *
+		Tick: 800
+	turret:
+		Filename: mgun.shp
+		Facings: 32
+	muzzle:
+		Filename: wc2_cannonfire.shp
+		Length: 4
+	icon: 
+		Filename: civilization_2_icons.png
+		Start: 73
+
+civ2_carrier:
+	Defaults:
+		Filename: civilization2_units.shp
+		Scale: 2.0
+	Inherits@flag: ^CIV2UnitFlag
+	idle:
+		Facings: 2
+		Combine:
+			carrier1: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 42
+				FlipX: true
+			carrier2: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 42
+	die:
+		Facings: 2
+		Combine:
+			carrier3: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 42
+				FlipX: true
+			carrier4: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 42
+	bubbles:
+		Filename: wc2_shipdeath.shp
+		Length: *
+		Tick: 800
+	turret:
+		Filename: mgun.shp
+		Facings: 32
+	muzzle:
+		Filename: wc2_cannonfire.shp
+		Length: 4
+	icon: 
+		Filename: civilization_2_icons.png
+		Start: 74
+
+civ2_transport:
+	Defaults:
+		Filename: civilization2_units.shp
+		Scale: 2.0
+	Inherits@flag: ^CIV2UnitFlag
+	idle:
+		Facings: 2
+		Combine:
+			transport1: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 43
+				FlipX: true
+			transport2: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 43
+	die:
+		Facings: 2
+		Combine:
+			transport3: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 43
+				FlipX: true
+			transport4: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 43
+	bubbles:
+		Filename: wc2_shipdeath.shp
+		Length: *
+		Tick: 800
+	turret:
+		Filename: mgun.shp
+		Facings: 32
+	muzzle:
+		Filename: wc2_cannonfire.shp
+		Length: 4
+	icon: 
+		Filename: civilization_2_icons.png
+		Start: 75
+
+civ2_cruisemsl:
+	Defaults:
+		Filename: civilization2_units.shp
+		Scale: 2.0
+	Inherits@flag: ^CIV2UnitFlag
+	idle:
+		Facings: 2
+		Combine:
+			cruisemsl1: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 44
+				FlipX: true
+			cruisemsl2: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 44
+	die:
+		Facings: 2
+		Combine:
+			cruisemsl3: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 44
+				FlipX: true
+			cruisemsl4: 
+				Filename: civilization2_units.shp
+				Length: 1
+				Frames: 44
+	bubbles:
+		Filename: wc2_shipdeath.shp
+		Length: *
+		Tick: 800
+	turret:
+		Filename: mgun.shp
+		Facings: 32
+	muzzle:
+		Filename: wc2_cannonfire.shp
+		Length: 4
+	icon: 
+		Filename: civilization_2_icons.png
+		Start: 76
+
 ####################################################################################################
 #		UPGRADES
 ####################################################################################################
@@ -708,7 +2275,7 @@ civ2_advance_navigation:
 civ2_era_medieval:
 	icon:
 		Filename: civilization_2_advances.png
-		Start: 2
+		Start: 4
 
 
 	####################################################################################################
