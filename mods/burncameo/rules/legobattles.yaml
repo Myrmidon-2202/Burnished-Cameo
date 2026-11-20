@@ -3101,7 +3101,7 @@ alien_commander:
 	# "Mana" (AmmoPool)
 	GrantConditionOnAttack@DEFENSE:
 		Condition: cond_defense_drain
-		ArmamentNames: deathcoil
+		ArmamentNames: defense
 		MaximumInstances: 1
 		RevokeDelay: 2
 	GrantConditionOnAttack@SPEED:
@@ -3502,7 +3502,7 @@ space_criminal_leader:
 	# "Mana" (AmmoPool)
 	GrantConditionOnAttack@DEFENSE:
 		Condition: cond_defense_drain
-		ArmamentNames: deathcoil
+		ArmamentNames: defense
 		MaximumInstances: 1
 		RevokeDelay: 2
 	GrantConditionOnAttack@SPEED:
@@ -4640,7 +4640,7 @@ imperial_flagship:
 		TurnSpeed: 28
 		Offset: 512,0,0
 	Armament@PRIMARY:
-		Weapon: piratespecialrangedballimp
+		Weapon: piratespecialrangedballimp2
 		LocalOffset: 208,0,48
 	AttackTurreted:
 	AttackFrontal:
@@ -5074,7 +5074,7 @@ imperial_ninja_master:
 	PortableChronoCA:
 		ChargeDelay: 20
 		HasDistanceLimit: true
-		MaxDistance: 30
+		MaxDistance: 20
 		FlashScreen: false
 		ChronoshiftSound: teleport.wav
 		RequiresCondition: FSD_cond_3
@@ -6088,7 +6088,7 @@ pirate_brick_bounty:
 		TurnSpeed: 28
 		Offset: 512,0,0
 	Armament@PRIMARY:
-		Weapon: piratespecialrangedballimp
+		Weapon: piratespecialrangedballimp2
 		LocalOffset: 208,0,48
 	AttackTurreted:
 	AttackFrontal:
@@ -6519,12 +6519,12 @@ pirate_king_kahuka:
 		-IdleSequences: idle1,idle2,idle3,idle4
 	WithDeathAnimation:
 		UseDeathTypeSuffix: false
-	PortableChronoCA:
-		ChargeDelay: 20
-		HasDistanceLimit: false
-		FlashScreen: false
-		ChronoshiftSound: crystalcache.wav
-		RequiresCondition: FSD_cond_3
+	# PortableChronoCA:
+	# 	ChargeDelay: 20
+	# 	HasDistanceLimit: false
+	# 	FlashScreen: false
+	# 	ChronoshiftSound: crystalcache.wav
+	# 	RequiresCondition: FSD_cond_3
 	#Buff Spells
 	GrantCondition@SPEEDBUFFSELF:
 		Condition: speedbuff
