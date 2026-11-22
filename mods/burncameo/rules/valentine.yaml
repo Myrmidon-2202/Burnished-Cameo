@@ -2516,7 +2516,7 @@ valentines_dd:
 	Buildable:
 		BuildPaletteOrder: 2
 		Prerequisites: valentines_sc2kmarina
-		Queue: Naval, RANaval
+		Queue: Naval.Valentine
 		Description: Destroys the hearts of those in love.
 		BuildDuration: 750
 		BuildDurationModifier: 100
@@ -2580,7 +2580,7 @@ valentines_ca:
 	Buildable:
 		BuildPaletteOrder: 3
 		Prerequisites: valentines_sc2kmarina
-		Queue: Naval, RANaval
+		Queue: Naval.Valentine
 		Description: Fires Hearts and Poison Pills at the same time.
 		BuildDuration: 1000
 		BuildDurationModifier: 100
@@ -2657,7 +2657,7 @@ valentines_pt:
 	Buildable:
 		BuildPaletteOrder: 1
 		Prerequisites: valentines_sc2kmarina
-		Queue: Naval, RANaval
+		Queue: Naval.Valentine
 		Description: Fires a powerful lovelaser.
 		BuildDuration: 500
 		BuildDurationModifier: 100
@@ -2684,7 +2684,7 @@ valentines_lst:
 	Buildable:
 		BuildPaletteOrder: 10
 		Prerequisites: valentines_sc2kmarina
-		Queue: Naval, RANaval
+		Queue: Naval.Valentine
 		Description: Valentines Transport.
 		BuildDurationModifier: 50
 	RenderSprites:
@@ -2699,7 +2699,7 @@ valentines_swan:
 	Buildable:
 		BuildPaletteOrder: 4
 		Prerequisites:
-		Queue: Naval, RANaval
+		Queue: Naval.Valentine
 		Description: Swan filled with explosives.
 		BuildDuration: 1250
 		BuildDurationModifier: 100

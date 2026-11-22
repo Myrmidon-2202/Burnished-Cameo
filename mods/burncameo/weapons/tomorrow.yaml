@@ -193,8 +193,22 @@ diggerifle:
 	Inherits: ^IncendiaryBulletProjectile
 	ValidTargets: Ground, Water, Trees, Air
 	ReloadDelay: 40
+	Burst: 3
 	Range: 5528
 	Report: gun13.aud
+	Warhead@Chaingun: SpreadDamage
+		ValidTargets: Ground, Water, Trees, Air
+		Damage: 3000
+		Versus:
+			none: 110
+			wall: 10
+			building: 60
+			wood: 75
+			light: 70
+			heavy: 60
+			invulnerable: 0
+			cy: 20
+			harvester: 40
 	Warhead@Chaingun: SpreadDamage
 		ValidTargets: Ground, Water, Trees, Air
 		Damage: 2000
@@ -297,7 +311,7 @@ DTEmpBlast:
 	Projectile: InstantHit
 	ValidTargets: Vehicle, Cyborg, Structure
 	Warhead@1Dam: SpreadDamage
-		Damage: 8000
+		Damage: 10000
 		Spread: 480
 		Falloff: 100, 0
 		Versus:
@@ -339,9 +353,9 @@ dtPistol:
 	Inherits: ^MediumMissile
 	ValidTargets: Ground, Water, Trees, Air
 	ReloadDelay: 111
-	Range: 9920
-	MinRange: 2480
-	Burst: 6
+	Range: 7920
+	# MinRange: 2480
+	Burst: 4
 	BurstDelays: 5
 	TargetActorCenter: true
 	Report: rocket1.aud
@@ -368,18 +382,18 @@ dtPistol:
 	Warhead@FlakWeaponPercentage: HealthPercentageDamage
 		ValidTargets: Ground, Water, Trees, Air
 		Damage: 1
-	Warhead@HeavyMissile: SpreadDamage
-		ValidTargets: Ground, Water, Trees, Air
-		Damage: 2000
-	Warhead@HeavyMissilePercentage: HealthPercentageDamage
-		ValidTargets: Ground, Water, Trees, Air
-		Damage: 1
-	Warhead@MediumMissile: SpreadDamage
-		ValidTargets: Ground, Water, Trees, Air
-		Damage: 2000
-	Warhead@MediumMissilePercentage: HealthPercentageDamage
-		ValidTargets: Ground, Water, Trees, Air
-		Damage: 1
+	# Warhead@HeavyMissile: SpreadDamage
+	# 	ValidTargets: Ground, Water, Trees, Air
+	# 	Damage: 2000
+	# Warhead@HeavyMissilePercentage: HealthPercentageDamage
+	# 	ValidTargets: Ground, Water, Trees, Air
+	# 	Damage: 1
+	# Warhead@MediumMissile: SpreadDamage
+	# 	ValidTargets: Ground, Water, Trees, Air
+	# 	Damage: 2000
+	# Warhead@MediumMissilePercentage: HealthPercentageDamage
+	# 	ValidTargets: Ground, Water, Trees, Air
+	# 	Damage: 1
 	Warhead@Effect: CreateEffect
 		Explosions: med_frag
 		ImpactSounds: kaboom25.aud
@@ -429,16 +443,16 @@ OverseerGrenade:
 		ContrailStartWidth: 99
 		ContrailEndWidth: 33
 	Warhead@Grenade: SpreadDamage
-		Damage: 20000
+		Damage: 18000
 	Warhead@GrenadeFriendlyFire: SpreadDamage
-		Damage: 10000
+		Damage: 9000
 	# Warhead@GrenadePercentage: HealthPercentageDamage
 	# 	Damage: 20
 
 BehemothGrenade:
 	Inherits: ^Grenade
 	ReloadDelay: 20
-	Range: 5184
+	Range: 4184
 	Report: M203.aud
 	Projectile: Bullet
 		Speed: 333

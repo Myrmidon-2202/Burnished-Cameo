@@ -483,6 +483,14 @@ drydockvoice:
 		Die: lego_struc_break
 		Action: blank
 
+imperialshipyardvoice:
+	VolumeModifier: 1.0
+	DefaultVariant: .wav
+	Voices:
+		Select: pirates_shipyard
+		Die: lego_struc_break
+		Action: blank
+
 imperialtowervoice:
 	VolumeModifier: 1.0
 	DefaultVariant: .wav
@@ -1157,6 +1165,62 @@ trollkingvoice:
 		Action: lego_move
 		Die: lego_unit_death
 		Build: troll_king
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank
+
+#######################
+# Ship Specials
+#######################
+
+transportspecialvoice:
+	VolumeModifier: 1.0
+	DefaultVariant: .wav
+		Select: kings_wizards_transport_ship_select_tier1
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: kings_wizards_transport_ship_select_tier1
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank
+
+tier1boatspecialvoice:
+	VolumeModifier: 1.0
+	DefaultVariant: .wav
+		Select: transport_ship_select_imp
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: transport_ship_select_imp
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank
+
+tier2boatspecialvoice:
+	VolumeModifier: 1.0
+	DefaultVariant: .wav
+		Select: ship_tier 3_select
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: ship_tier 3_select
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank
+
+tier3boatspecialvoice:
+	VolumeModifier: 1.0
+	DefaultVariant: .wav
+		Select: flagship_select_imp
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: flagship_select_imp
 		Burned: blank
 		Zapped: blank
 		Poisoned: blank

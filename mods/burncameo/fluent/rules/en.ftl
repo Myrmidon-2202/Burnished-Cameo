@@ -11846,7 +11846,7 @@ faction-darkreign-shadowhand =
 faction-darkreign-xenite =
    .name = Dark Reign Xenites
    .description = Xenites from Dark Reign.
-       The adaptable Xenites, an alliance of stranded Freedom Guard and the local population of Minevah.
+       The adaptable Xenites, a union of stranded Freedom Guard and the local population of Minevah.
        Supplemented flexible forces, with a focus on combined arms.
        Possess beast units, which require a nearby tamer unit to fully control.
        Superweapon unit: Shock Wave
@@ -11860,14 +11860,7 @@ faction-darkreign-togran =
 faction-darkreign-terrorist =
    .name = Dark Reign Terrorist
    .description = Terrorists from Dark Reign.
-       The unhinged Terrorists, an ecclectic mix of rouges seeking to take advantage of war's chaos.
-       Light flexible forces, with a focus on Guerrilla Tactics.
-       Certain units evolve when veterancy is achieved.
-
-faction-darkreign-terrorist =
-   .name = Dark Reign Terrorist
-   .description = Terrorists from Dark Reign.
-       The unhinged Terrorists, an ecclectic mix of rouges seeking to take advantage of war's chaos.
+       The unhinged Terrorists, an ecclectic mix of rogues seeking to take advantage of war's chaos.
        Light flexible forces, with a focus on Guerrilla Tactics.
        Certain units evolve when veterancy is achieved.
 

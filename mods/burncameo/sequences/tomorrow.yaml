@@ -858,7 +858,7 @@ dtprison:
 	Inherits: ^WithBuildingBib3
 	Defaults:
 		Filename: prison.shp
-		Scale: 2.0
+		Scale: 1.8
 	idle:
 		Tick: 100
 	damaged-idle:
@@ -1279,6 +1279,14 @@ dte7:
 		Tick: 120
 	idle2:
 		Start: 248
+		Length: 14
+		Tick: 120
+	idle3:
+		Start: 233
+		Length: 14
+		Tick: 120
+	idle4:
+		Start: 233
 		Length: 14
 		Tick: 120
 	die1:
@@ -2220,6 +2228,9 @@ digger:
 		Start: 176
 		Length: 1
 	die7:
+		Start: 176
+		Length: 1
+	die-crushed:
 		Start: 176
 		Length: 1
 	shoot:

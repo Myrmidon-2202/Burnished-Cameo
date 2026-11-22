@@ -4104,7 +4104,7 @@ imperial_shipyard:
 	Selectable:
 		Bounds: 2048,2048
 	Voiced:
-		VoiceSet: drydockvoice
+		VoiceSet: imperialshipyardvoice
 
 imperial_tower:
 	Inherits: ^Defense
@@ -4575,7 +4575,7 @@ imperial_transport:
 	Tooltip:
 		Name: Transport Ship
 	Voiced:
-		VoiceSet: wc2voicehumanship
+		VoiceSet: transportspecialvoice
 	RenderSprites:
 		Scale: 0.7
 
@@ -4598,7 +4598,7 @@ imperial_clipper:
 	AttackTurreted:
 	# WithSpriteTurret:
 	Voiced:
-		VoiceSet: wc2voicehumanship
+		VoiceSet: tier1boatspecialvoice
 	RenderSprites:
 		Scale: 0.6
 
@@ -4622,7 +4622,7 @@ imperial_battleship:
 		FacingTolerance: 180
 	# WithSpriteTurret:
 	Voiced:
-		VoiceSet: wc2voicehumanship
+		VoiceSet: tier2boatspecialvoice
 	RenderSprites:
 
 imperial_flagship:
@@ -4647,7 +4647,7 @@ imperial_flagship:
 		FacingTolerance: 180
 	# WithSpriteTurret:
 	Voiced:
-		VoiceSet: wc2voicehumanship
+		VoiceSet: tier3boatspecialvoice
 	RenderSprites:
 
 imperial_governor_broadside:
@@ -5539,7 +5539,7 @@ pirate_shipyard:
 	Selectable:
 		Bounds: 2048,2048
 	Voiced:
-		VoiceSet: drydockvoice
+		VoiceSet: imperialshipyardvoice
 
 pirate_tower:
 	Inherits: ^Defense
@@ -6021,7 +6021,7 @@ pirate_transport:
 	Tooltip:
 		Name: Transport Ship
 	Voiced:
-		VoiceSet: wc2voicehumanship
+		VoiceSet: transportspecialvoice
 	RenderSprites:
 		Scale: 0.7
 
@@ -6044,7 +6044,7 @@ pirate_barracuda:
 	AttackTurreted:
 	# WithSpriteTurret:
 	Voiced:
-		VoiceSet: wc2voicehumanship
+		VoiceSet: tier1boatspecialvoice
 	RenderSprites:
 		Scale: 0.6
 
@@ -6070,7 +6070,7 @@ pirate_battleship:
 		FacingTolerance: 180
 	# WithSpriteTurret:
 	Voiced:
-		VoiceSet: wc2voicehumanship
+		VoiceSet: tier2boatspecialvoice
 	RenderSprites:
 
 pirate_brick_bounty:
@@ -6095,7 +6095,7 @@ pirate_brick_bounty:
 		FacingTolerance: 180
 	# WithSpriteTurret:
 	Voiced:
-		VoiceSet: wc2voicehumanship
+		VoiceSet: tier3boatspecialvoice
 	RenderSprites:
 
 pirate_captain_brickbeard:
@@ -7618,7 +7618,7 @@ king_transport:
 	Tooltip:
 		Name: Transport Ship
 	Voiced:
-		VoiceSet: wc2voicehumanship
+		VoiceSet: transportspecialvoice
 	RenderSprites:
 		Scale: 0.7
 
@@ -9082,7 +9082,7 @@ wizard_transport:
 	Tooltip:
 		Name: Transport Ship
 	Voiced:
-		VoiceSet: wc2voicehumanship
+		VoiceSet: transportspecialvoice
 	RenderSprites:
 		Scale: 0.7
 

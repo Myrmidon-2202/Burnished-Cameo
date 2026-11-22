@@ -3117,8 +3117,8 @@ DTPROPAGANDA:
 		Dimensions: 3,3
 		LocalCenterOffset: 0,-512,0
 	Selectable:
-		Bounds: 1024, 1024
-		DecorationBounds: 1024, 1024
+		Bounds: 2048, 2048
+		DecorationBounds: 2048, 2048
 	SelectionDecorations:
 	Health:
 		HP: 210000
@@ -3314,7 +3314,7 @@ DTBPOWER:
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: Power Plant
+		Name: Power Station
 	Buildable:
 		BuildPaletteOrder: 10
 		Prerequisites: ~fact.dtbrazil
@@ -3404,6 +3404,8 @@ DTAPOWER:
 
 DTEPOWER:
 	Inherits: DTPOWER
+	Tooltip:
+		Name: Power Shed
 	RenderSprites:
 		Image: dtepower
 	Buildable:
@@ -3556,6 +3558,7 @@ DTPYLE.ANSWER:
 
 DTPYLE.DTRUSSIA:
 	Inherits: DTPYLE
+	Inherits@shape: ^2x2Shape
 	Buildable:
 		BuildPaletteOrder: 30
 		Prerequisites: ~fact.dtrussia, dtrpower
@@ -3602,6 +3605,7 @@ DTPYLE.DTJAPAN:
 
 DTPYLE.DTCUBA:
 	Inherits: DTPYLE
+	Inherits@shape: ^2x2Shape
 	Buildable:
 		BuildPaletteOrder: 30
 		Prerequisites: ~fact.dtcuba, dtcpower
@@ -3639,13 +3643,14 @@ AFLD.AUSTRALIA:
 		# 	TopLeft: -2048, -1024
 		# 	BottomRight: 2048, 1024
 	Valued:
-		Cost: 2000
+		Cost: 1500
 	Tooltip:
 		Name: Airstrip
 	ProvidesPrerequisite:
 		Prerequisite: vehicleproduction
 	Buildable:
 		BuildPaletteOrder: 30
+		BuildDuration: 300
 		Prerequisites: ~fact.dtaustralia, dtproc
 		Queue: Building, RABuilding
 		Description: actor-afld.description
@@ -5152,7 +5157,7 @@ dtharv:
 	Buildable:
 		BuildPaletteOrder: 10
 		Prerequisites: dtproc
-		Queue: Vehicle.Tomorrow, Vehicle.Answer, Vehicle.Dtusa, Vehicle.Dtrussaia, Vehicle.Dtjapan, Vehicle.Dtbrazil, Vehicle.Dtargentina, Vehicle.Dtcuba, Vehicle.Dtaustralia, Vehicle.Ethiopia
+		Queue: Vehicle.Tomorrow, Vehicle.Answer, Vehicle.Dtusa, Vehicle.Dtrussia, Vehicle.Dtjapan, Vehicle.Dtbrazil, Vehicle.Dtargentina, Vehicle.Dtcuba, Vehicle.Dtaustralia, Vehicle.Ethiopia
 		BuildDurationModifier: 40
 		Description: actor-dtharv.description
 	StoresResources:
@@ -5304,7 +5309,7 @@ E3.DT:
 	Mobile:
 		Speed: 50
 	Health:
-		HP: 9000
+		HP: 11000
 	ChangesHealth@SelfHealing:
 		Step: 9
 	Armament@PRIMARY: ##########
@@ -5604,7 +5609,7 @@ DTE3:
 	Mobile:
 		Speed: 42
 	Health:
-		HP: 4500
+		HP: 14500
 	AutoTarget:
 		ScanRadius: 6
 	Armament@PRIMARY: ##########
@@ -7487,6 +7492,7 @@ dtbmth:
 	Armament@PRIMARY:
 		Weapon: BehemothGrenade
 		MuzzleSequence: muzzle
+		LocalOffset: 128,0,256
 	AttackFrontal:
 		FacingTolerance: 0
 	WithMuzzleOverlay:
@@ -7529,6 +7535,8 @@ digger:
 		Speed: 60
 	Health:
 		HP: 38000
+	Selectable:
+		DecorationBounds: 512, 512
 	ChangesHealth@SelfHealing:
 		Step: 16
 	DamageMultiplier@HeroBuff:
