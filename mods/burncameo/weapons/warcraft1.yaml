@@ -134,6 +134,23 @@ spearFire:
 	Warhead@2Eff: CreateEffect
 		ImpactSounds: bowhit.aud
 
+scorpianFire:
+	Inherits: bowFire
+	ReloadDelay: 60
+	Range: 9c0
+	Report: bowfire.aud
+	ValidTargets: Ground
+	Projectile: Missile
+		Speed: 0c440
+		RangeLimit: 9c0
+	Warhead@1Dam: SpreadDamage
+		Spread: 200
+		Damage: 6000
+		ValidTargets: Ground
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+	Warhead@2Eff: CreateEffect
+		ImpactSounds: bowhit.aud
+
 wc_tower_fire_aa:
 	Inherits: bowFireAA
 	Range: 9c512

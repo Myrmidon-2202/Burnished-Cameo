@@ -538,6 +538,9 @@ SWGrenade:
 	Inherits: Grenade
 	Projectile: Bullet
 		Image: 2100rocket
+	-Warhead@Grenade: SpreadDamage
+	-Warhead@GrenadeFriendlyFire: SpreadDamage
+	-Warhead@GrenadePercentage: HealthPercentageDamage
 	Warhead@3Eff: CreateEffect
 		ImpactSounds: swgrenade.aud
 	Warhead@2Con: GrantExternalCondition

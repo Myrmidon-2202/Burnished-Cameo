@@ -5001,6 +5001,7 @@ Repair:
 		Range: 5000
 	Warhead@Defuse3: DetachDelayedWeapon
 		Range: 5000
+	-Warhead@EffectWeld:
 
 MADTankThump:
 	InvalidTargets: MADTank, Infantry
@@ -6520,10 +6521,10 @@ YamatoCannon:
 		Damage: 20000
 	Warhead@HeavyBombPercentage: HealthPercentageDamage
 		Damage: 10
-	Warhead@HeavyCannon: SpreadDamage
-		Damage: 20000
-	Warhead@HeavyCannonPercentage: HealthPercentageDamage
-		Damage: 10
+	# Warhead@HeavyCannon: SpreadDamage
+	# 	Damage: 20000
+	# Warhead@HeavyCannonPercentage: HealthPercentageDamage
+	# 	Damage: 10
 	-Warhead@Effect2:
 	Warhead@Effect: CreateEffect
 		Explosions: building

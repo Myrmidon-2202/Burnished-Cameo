@@ -415,9 +415,38 @@ piratespecialrangedball:
 	Warhead@3Eff: CreateEffect
 		ImpactSounds: dunepoff.aud, dune2splash.aud, dune2cannon.aud
 
+piratespecialrangedball2:
+	Inherits: ArtilleryShell
+	Report: gov_capt_3ship_attack.wav
+	Range: 10c512
+	Projectile: Missile
+		Damage: 950
+		HorizontalRateOfTurn: 100
+		VerticalRateOfTurn: 100
+		Speed: 200
+		Image: lego_cannonball
+		Jammable: False
+		AllowSnapping: True
+	Warhead@3Eff: CreateEffect
+		ImpactSounds: dunepoff.aud, dune2splash.aud, dune2cannon.aud
+
 piratespecialrangedballimp:
 	Inherits: ArtilleryShell
 	Range: 9c512
+	Report: gov_capt_3ship_attack.wav
+	Projectile: Missile
+		HorizontalRateOfTurn: 100
+		VerticalRateOfTurn: 100
+		Speed: 200
+		Image: lego_cannonball
+		Jammable: False
+		AllowSnapping: True
+	Warhead@3Eff: CreateEffect
+		ImpactSounds: dunepoff.aud, dune2splash.aud, dune2cannon.aud
+
+piratespecialrangedballimp2:
+	Inherits: ArtilleryShell
+	Range: 10c512
 	Report: gov_capt_3ship_attack.wav
 	Projectile: Missile
 		HorizontalRateOfTurn: 100

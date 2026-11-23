@@ -3101,7 +3101,7 @@ alien_commander:
 	# "Mana" (AmmoPool)
 	GrantConditionOnAttack@DEFENSE:
 		Condition: cond_defense_drain
-		ArmamentNames: deathcoil
+		ArmamentNames: defense
 		MaximumInstances: 1
 		RevokeDelay: 2
 	GrantConditionOnAttack@SPEED:
@@ -3502,7 +3502,7 @@ space_criminal_leader:
 	# "Mana" (AmmoPool)
 	GrantConditionOnAttack@DEFENSE:
 		Condition: cond_defense_drain
-		ArmamentNames: deathcoil
+		ArmamentNames: defense
 		MaximumInstances: 1
 		RevokeDelay: 2
 	GrantConditionOnAttack@SPEED:
@@ -4104,7 +4104,7 @@ imperial_shipyard:
 	Selectable:
 		Bounds: 2048,2048
 	Voiced:
-		VoiceSet: drydockvoice
+		VoiceSet: imperialshipyardvoice
 
 imperial_tower:
 	Inherits: ^Defense
@@ -4575,7 +4575,7 @@ imperial_transport:
 	Tooltip:
 		Name: Transport Ship
 	Voiced:
-		VoiceSet: wc2voicehumanship
+		VoiceSet: transportspecialvoice
 	RenderSprites:
 		Scale: 0.7
 
@@ -4598,7 +4598,7 @@ imperial_clipper:
 	AttackTurreted:
 	# WithSpriteTurret:
 	Voiced:
-		VoiceSet: wc2voicehumanship
+		VoiceSet: tier1boatspecialvoice
 	RenderSprites:
 		Scale: 0.6
 
@@ -4622,7 +4622,7 @@ imperial_battleship:
 		FacingTolerance: 180
 	# WithSpriteTurret:
 	Voiced:
-		VoiceSet: wc2voicehumanship
+		VoiceSet: tier2boatspecialvoice
 	RenderSprites:
 
 imperial_flagship:
@@ -4640,14 +4640,14 @@ imperial_flagship:
 		TurnSpeed: 28
 		Offset: 512,0,0
 	Armament@PRIMARY:
-		Weapon: piratespecialrangedballimp
+		Weapon: piratespecialrangedballimp2
 		LocalOffset: 208,0,48
 	AttackTurreted:
 	AttackFrontal:
 		FacingTolerance: 180
 	# WithSpriteTurret:
 	Voiced:
-		VoiceSet: wc2voicehumanship
+		VoiceSet: tier3boatspecialvoice
 	RenderSprites:
 
 imperial_governor_broadside:
@@ -5074,7 +5074,7 @@ imperial_ninja_master:
 	PortableChronoCA:
 		ChargeDelay: 20
 		HasDistanceLimit: true
-		MaxDistance: 30
+		MaxDistance: 20
 		FlashScreen: false
 		ChronoshiftSound: teleport.wav
 		RequiresCondition: FSD_cond_3
@@ -5539,7 +5539,7 @@ pirate_shipyard:
 	Selectable:
 		Bounds: 2048,2048
 	Voiced:
-		VoiceSet: drydockvoice
+		VoiceSet: imperialshipyardvoice
 
 pirate_tower:
 	Inherits: ^Defense
@@ -6021,7 +6021,7 @@ pirate_transport:
 	Tooltip:
 		Name: Transport Ship
 	Voiced:
-		VoiceSet: wc2voicehumanship
+		VoiceSet: transportspecialvoice
 	RenderSprites:
 		Scale: 0.7
 
@@ -6044,7 +6044,7 @@ pirate_barracuda:
 	AttackTurreted:
 	# WithSpriteTurret:
 	Voiced:
-		VoiceSet: wc2voicehumanship
+		VoiceSet: tier1boatspecialvoice
 	RenderSprites:
 		Scale: 0.6
 
@@ -6070,7 +6070,7 @@ pirate_battleship:
 		FacingTolerance: 180
 	# WithSpriteTurret:
 	Voiced:
-		VoiceSet: wc2voicehumanship
+		VoiceSet: tier2boatspecialvoice
 	RenderSprites:
 
 pirate_brick_bounty:
@@ -6088,14 +6088,14 @@ pirate_brick_bounty:
 		TurnSpeed: 28
 		Offset: 512,0,0
 	Armament@PRIMARY:
-		Weapon: piratespecialrangedballimp
+		Weapon: piratespecialrangedballimp2
 		LocalOffset: 208,0,48
 	AttackTurreted:
 	AttackFrontal:
 		FacingTolerance: 180
 	# WithSpriteTurret:
 	Voiced:
-		VoiceSet: wc2voicehumanship
+		VoiceSet: tier3boatspecialvoice
 	RenderSprites:
 
 pirate_captain_brickbeard:
@@ -6519,12 +6519,12 @@ pirate_king_kahuka:
 		-IdleSequences: idle1,idle2,idle3,idle4
 	WithDeathAnimation:
 		UseDeathTypeSuffix: false
-	PortableChronoCA:
-		ChargeDelay: 20
-		HasDistanceLimit: false
-		FlashScreen: false
-		ChronoshiftSound: crystalcache.wav
-		RequiresCondition: FSD_cond_3
+	# PortableChronoCA:
+	# 	ChargeDelay: 20
+	# 	HasDistanceLimit: false
+	# 	FlashScreen: false
+	# 	ChronoshiftSound: crystalcache.wav
+	# 	RequiresCondition: FSD_cond_3
 	#Buff Spells
 	GrantCondition@SPEEDBUFFSELF:
 		Condition: speedbuff
@@ -7618,7 +7618,7 @@ king_transport:
 	Tooltip:
 		Name: Transport Ship
 	Voiced:
-		VoiceSet: wc2voicehumanship
+		VoiceSet: transportspecialvoice
 	RenderSprites:
 		Scale: 0.7
 
@@ -9082,7 +9082,7 @@ wizard_transport:
 	Tooltip:
 		Name: Transport Ship
 	Voiced:
-		VoiceSet: wc2voicehumanship
+		VoiceSet: transportspecialvoice
 	RenderSprites:
 		Scale: 0.7
 

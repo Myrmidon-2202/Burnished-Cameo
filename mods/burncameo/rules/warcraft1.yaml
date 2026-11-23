@@ -2663,10 +2663,10 @@ wc_o_skeleton_single:
 		Name: The Dead
 	Armament:
 		Weapon: skeletonSlice
-	DamageMultiplier@DamageReduction:
-		Modifier: 61
-	FirepowerMultiplier@FirepowerIncrease:
-		Modifier: 115
+	# DamageMultiplier@DamageReduction:
+	# 	Modifier: 61
+	# FirepowerMultiplier@FirepowerIncrease:
+	# 	Modifier: 115
 	Health:
 		HP: 5400
 	Mobile:
@@ -2696,10 +2696,10 @@ wc_o_skeleton:
 		Name: Horde of the Dead
 	Armament:
 		Weapon: skeletonSlice
-	DamageMultiplier@DamageReduction:
-		Modifier: 61
-	FirepowerMultiplier@FirepowerIncrease:
-		Modifier: 115
+		# DamageMultiplier@DamageReduction:
+		# 	Modifier: 61
+		# FirepowerMultiplier@FirepowerIncrease:
+		# 	Modifier: 115
 	Health:
 		HP: 5400
 	Mobile:
@@ -3288,7 +3288,7 @@ wc_h_transport:
 	Tooltip:
 		Name: Transport Ship
 	Voiced:
-		VoiceSet: wc2voicehumanship
+		VoiceSet: voicehuman
 	RenderSprites:
 		PlayerPalette: player_rgba
 
@@ -3308,13 +3308,17 @@ wc_h_arrowship:
 		Offset: 512,0,0
 	Armament:
 		Weapon: bowFire
+	Armament@2:
+		Weapon: bowFire
 	Armament@aa:
+		Weapon: bowFireAA
+	Armament@aa2:
 		Weapon: bowFireAA
 	AttackTurreted:
 	WithMuzzleOverlay:
 	# WithSpriteTurret:
 	Voiced:
-		VoiceSet: wc2voicehumanship
+		VoiceSet: voicehuman
 	RenderSprites:
 		PlayerPalette: player_rgba
 
@@ -3333,7 +3337,7 @@ wc_h_scorpianship:
 		TurnSpeed: 28
 		Offset: 512,0,0
 	Armament@PRIMARY:
-		Weapon: wc2heavyshipFire
+		Weapon: scorpianFire
 		LocalOffset: 208,0,48
 	AttackTurreted:
 	WithMuzzleOverlay:
@@ -3341,7 +3345,7 @@ wc_h_scorpianship:
 		FacingTolerance: 10
 	# WithSpriteTurret:
 	Voiced:
-		VoiceSet: wc2voicehumanship
+		VoiceSet: voicehuman
 	RenderSprites:
 		PlayerPalette: player_rgba
 
@@ -3350,6 +3354,8 @@ wc_o_transport:
 	Buildable:
 		Prerequisites: ~wc_o_lumbermill
 		Queue: Addons.Orc1
+	Voiced:
+		VoiceSet: voiceorc
 
 wc_o_arrowship:
 	Inherits@Arrow: wc_h_arrowship
@@ -3360,6 +3366,10 @@ wc_o_arrowship:
 		Name: Spear Ship
 	Armament:
 		Weapon: spearFire
+	Armament@2:
+		Weapon: spearFire
+	Voiced:
+		VoiceSet: voiceorc
 
 wc_o_catapultship:
 	Inherits@Siege: wc_h_scorpianship
@@ -3370,3 +3380,5 @@ wc_o_catapultship:
 		Weapon: catapultfire
 		LocalOffset: 208,0,48
 		MuzzleSequence: muzzle
+	Voiced:
+		VoiceSet: voiceorc

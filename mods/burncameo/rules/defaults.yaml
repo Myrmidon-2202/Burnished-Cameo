@@ -3918,7 +3918,7 @@
 		Categories: System
 
 ^BasicDefense:
-	Inherits@EXPERIENCE: ^GainsExperienceBuildings
+	# Inherits@EXPERIENCE: ^GainsExperienceBuildings
 	Inherits@selection: ^SelectableCombatBuilding
 	Inherits@LockOn: ^LockOn
 	RenderRangeCircle:

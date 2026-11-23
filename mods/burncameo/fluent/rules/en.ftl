@@ -10945,13 +10945,19 @@ actor-astro_space_police =
    .description = Harrying Ranged Infantry.
 
 actor-astro_gemma =
-   .description = Astro Girlboss Hero.
+   .description = Astro Girlboss Hero. Heals friendly units, and casts spells for beneficial effects.
+    Spells: Defense Boost, Speed Boost, Emp, Spacelaser
+    Deploy to switch spells.
 
 actor-astro_space_police_captain =
-   .description = Harrying Ranged Hero.
+   .description = Harrying Ranged Hero. Heals friendly units, and casts spells for beneficial effects.
+    Spells: Defense Boost, Damage Boost, Tracking, Spacelaser
+    Deploy to switch spells.
 
 actor-astro_biff =
-   .description = Stalwart Melee Hero.
+   .description = Stalwart Melee Hero. Heals friendly units, and casts spells for beneficial effects.
+    Spells: Defense Boost, Speed Boost, Emp, Spacelaser
+    Deploy to switch spells.
 
 actor-legobattles_ghost =
    .description = Spooky.
@@ -11024,13 +11030,19 @@ actor-alien_space_criminal =
    .description = Harrying Ranged Infantry.
 
 actor-alien_commander =
-   .description = Stalwart Melee Hero.
+   .description = Stalwart Melee Hero. Heals friendly units, and casts spells for beneficial effects.
+    Spells: Defense Boost, Speed Boost, ESP, Crystal Cache
+    Deploy to switch spells.
 
 actor-alien_queen =
-   .description = Supportive Melee Hero.
+   .description = Supportive Melee Hero. Heals friendly units, and casts spells for beneficial effects.
+    Spells: Defense Boost, Speed Boost, ESP, Crystal Cache
+    Deploy to switch spells.
 
 actor-space_criminal_leader =
-   .description = Chaotic Ranged Hero.
+   .description = Chaotic Ranged Hero. Heals friendly units, and casts spells for beneficial effects.
+    Spells: Defense Boost, Damage Boost, Clusterbomb, Hotwire
+    Deploy to switch spells.
 
 actor-alien_attack_ship =
    .description = Assault vehicle.
@@ -11107,13 +11119,19 @@ actor-imperial_flying_ship =
       Detector.
 
 actor-imperial_governor_broadside =
-   .description = Stalwart Melee Hero.
+   .description = Stalwart Melee Hero. Heals friendly units, and casts spells for beneficial effects.
+    Spells: Defense Boost, Damage Boost, Jungle Growth, Artillery
+    Deploy to switch spells.
 
 actor-imperial_camilla =
-   .description = Stalwart Melee Hero.
+   .description = Supportive Melee Hero. Heals friendly units, and casts spells for beneficial effects.
+    Spells: Defense Boost, Damage Boost, Jungle Growth, Artillery
+    Deploy to switch spells.
 
 actor-imperial_ninja_master =
-   .description = Stalwart Melee Hero.
+   .description = Guerilla Melee Hero. Heals friendly units, and casts spells for beneficial effects.
+    Spells: Speed Boost, Damage Boost, Teleport, Arrow Rain
+    Deploy to switch spells.
 
 actor-lego_pirate_conyard =
    .description = pirate HQ unit.
@@ -11171,19 +11189,25 @@ actor-pirate_tiki_golem =
    .description = Assault vehicle.
 
 actor-pirate_captain_brickbeard =
-   .description = Stalwart Melee Hero.
+   .description = Stalwart Melee Hero. Heals friendly units, and casts spells for beneficial effects.
+    Spells: Defense Boost, Speed Boost, Monkey Swarm, Crab Swarm
+    Deploy to switch spells.
 
 actor-pirate_lady_pirate =
-   .description = Stalwart Melee Hero.
+   .description = Supportive Melee Hero. Heals friendly units, and casts spells for beneficial effects.
+    Spells: Defense Boost, Speed Boost, Monkey Swarm, Crab Swarm
+    Deploy to switch spells.
 
 actor-pirate_king_kahuka =
-   .description = Stalwart Melee Hero.
+   .description = Skirmishing Melee Hero. Heals friendly units, and casts spells for beneficial effects.
+    Spells: Speed Boost, Damage Boost, Jungle Growth, Coconut Storm
+    Deploy to switch spells.
 
 actor-pirate_monkey =
-   .description = A monkey, for scouting or sabotage.
+   .description = A monkey! For scouting or sabotage.
 
 actor-pirate_crab =
-   .description = Crabs mateys!
+   .description = Crabs afield mateys!
 
 actor-lego_king_conyard =
    .description = King HQ unit.
@@ -11249,13 +11273,19 @@ actor-king_dragon =
       Detector.
 
 actor-king_king =
-   .description = Stalwart Melee Hero.
+   .description = Stalwart Melee Hero. Heals friendly units, and casts spells for beneficial effects.
+    Spells: Defense Boost, Speed Boost, Forest Growth, Earthquake
+    Deploy to switch spells.
 
 actor-king_queen =
-   .description = Stalwart Melee Hero.
+   .description = Supportive Melee Hero. Heals friendly units, and casts spells for beneficial effects.
+    Spells: Defense Boost, Speed Boost, Forest Growth, Earthquake
+    Deploy to switch spells.
 
 actor-king_dwarf_king =
-   .description = Stalwart Melee Hero.
+   .description = Steady Melee Hero. Heals friendly units, and casts spells for beneficial effects.
+    Spells: Defense Boost, Damage Boost, Mine Buff, Hammer Throw
+    Deploy to switch spells.
 
 actor-lego_wizard_conyard =
    .description = Wizard HQ unit.
@@ -11321,13 +11351,19 @@ actor-wizard_dragon =
       Detector.
 
 actor-wizard_wizard =
-   .description = Stalwart Melee Hero.
+   .description = Stalwart Melee Hero. Heals friendly units, and casts spells for beneficial effects.
+    Spells: Speed Boost, Damage Boost, Fireball, Lightning Blast
+    Deploy to switch spells.
 
 actor-wizard_sorceress =
-   .description = Stalwart Melee Hero.
+   .description = Supportive Melee Hero. Heals friendly units, and casts spells for beneficial effects.
+    Spells: Speed Boost, Damage Boost, Fireball, Lightning Blast
+    Deploy to switch spells.
 
 actor-wizard_troll_king =
-   .description = Stalwart Melee Hero.
+   .description = Steady Melee Hero. Heals friendly units, and casts spells for beneficial effects.
+    Spells: Speed Boost, Damage Boost, Log Buff, Roar
+    Deploy to switch spells.
 
 faction-random =
    .name = Any
@@ -11810,7 +11846,7 @@ faction-darkreign-shadowhand =
 faction-darkreign-xenite =
    .name = Dark Reign Xenites
    .description = Xenites from Dark Reign.
-       The adaptable Xenites, an alliance of stranded Freedom Guard and the local population of Minevah.
+       The adaptable Xenites, a union of stranded Freedom Guard and the local population of Minevah.
        Supplemented flexible forces, with a focus on combined arms.
        Possess beast units, which require a nearby tamer unit to fully control.
        Superweapon unit: Shock Wave
@@ -11824,14 +11860,7 @@ faction-darkreign-togran =
 faction-darkreign-terrorist =
    .name = Dark Reign Terrorist
    .description = Terrorists from Dark Reign.
-       The unhinged Terrorists, an ecclectic mix of rouges seeking to take advantage of war's chaos.
-       Light flexible forces, with a focus on Guerrilla Tactics.
-       Certain units evolve when veterancy is achieved.
-
-faction-darkreign-terrorist =
-   .name = Dark Reign Terrorist
-   .description = Terrorists from Dark Reign.
-       The unhinged Terrorists, an ecclectic mix of rouges seeking to take advantage of war's chaos.
+       The unhinged Terrorists, an ecclectic mix of rogues seeking to take advantage of war's chaos.
        Light flexible forces, with a focus on Guerrilla Tactics.
        Certain units evolve when veterancy is achieved.
 

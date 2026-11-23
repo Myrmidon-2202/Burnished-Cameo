@@ -3781,6 +3781,7 @@ swpalace:
 	ProvidesPrerequisite@2:
 		Prerequisite: tek
 	ProvidesPrerequisite@buildingname:
+		Prerequisite: swpalace
 	Cargo:
 		Types: Infantry, Hacker, Fremen
 		MaxWeight: 5
@@ -9522,7 +9523,7 @@ swjabbaparty:
 		OverrideActor: glbbus
 	Buildable:
 		BuildPaletteOrder: 60
-		Prerequisites: tek
+		Prerequisites: swpalace
 		Queue: Vehicle.Hutt
 		Description: actor-swjabbaparty.description
 	Cargo:
