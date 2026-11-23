@@ -86,6 +86,58 @@ World:
 		Sequence: smallflag
 	RenderSprites:
 
+^civ2_base_unit:
+	Inherits: ^Soldier
+	Inherits@flag: ^CIV2UnitFlag
+	Inherits@CIV2Infantry: ^CIV2Infantry
+	Inherits@EXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMoveMelee
+	Inherits@DECORATIONS: ^InfantryExperienceHospitalHazmatOverrides
+	# Inherits@upgrade_swords: ^wc_h_str_sword
+	# Inherits@upgrade_shields: ^wc_h_str_shield
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Warrior
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Buildable:
+		BuildPaletteOrder: 10
+		Prerequisites: ~civ2_district_production_bronze
+		Queue: Infantry.CIV2
+		Description: Basic Melee Infantry. Slow but can take some damage.
+		BuildDuration: 150
+		# BuildDurationModifier: 100
+	Mobile:
+		Speed: 56
+	DamageMultiplier@DamageReduction:
+		Modifier: 85
+	FirepowerMultiplier@FirepowerIncrease:
+		Modifier: 115
+	Health:
+		HP: 14400
+	DamageMultiplier@armor:
+		Modifier: 60
+	Armor:
+		Type: None
+	#Food
+	Power:
+		Amount: -5
+	AutoTarget:
+		ScanRadius: 6
+		InitialStance: AttackAnything
+	Armament:
+		Weapon: footmanSlice
+	WithDeathAnimation:
+		UseDeathTypeSuffix: false
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+		-IdleSequences: idle1,idle2,idle3,idle4
+	Voiced:
+		VoiceSet: voicehuman
+	Crushable:
+		CrushClasses: vehicle
+
 ####################################################################################################
 #		BUILDING CIV2
 ####################################################################################################
@@ -163,7 +215,6 @@ CIV2_DISTRICT_CAPITAL_BRONZE:
 	DamageMultiplier@classic:
 		Modifier: 66
 		RequiresCondition: civ2_era_classic && !civ2_era_medieval
-		# RequiresCondition: wc2_human_betterfarm && !wc2_human_bestfarm
 
 	# Medieval Capital Upgrade
 	GrantConditionOnPrerequisite@medieval:
@@ -171,14 +222,41 @@ CIV2_DISTRICT_CAPITAL_BRONZE:
 		Prerequisites: civ2_era_medieval
 	WithSpriteBody@medieval:
 		Sequence: civ2_district_capital_medieval
-		RequiresCondition: civ2_era_medieval
+		RequiresCondition: civ2_era_medieval && !civ2_era_industrial
 	PowerMultiplier@medieval:
 		Modifier: 200
-		RequiresCondition: civ2_era_medieval
+		RequiresCondition: civ2_era_medieval && !civ2_era_industrial
 	DamageMultiplier@medieval:
 		Modifier: 66
-		RequiresCondition: civ2_era_medieval
-		# RequiresCondition: wc2_human_betterfarm && !wc2_human_bestfarm
+		RequiresCondition: civ2_era_medieval && !civ2_era_industrial
+
+	# Industrial Capital Upgrade
+	GrantConditionOnPrerequisite@industrial:
+		Condition: civ2_era_industrial
+		Prerequisites: civ2_era_industrial
+	WithSpriteBody@industrial:
+		Sequence: civ2_district_capital_industrial
+		RequiresCondition: civ2_era_industrial && !civ2_era_modern
+	PowerMultiplier@industrial:
+		Modifier: 200
+		RequiresCondition: civ2_era_industrial && !civ2_era_modern
+	DamageMultiplier@industrial:
+		Modifier: 66
+		RequiresCondition: civ2_era_industrial && !civ2_era_modern
+
+	# Modern Capital Upgrade
+	GrantConditionOnPrerequisite@modern:
+		Condition: civ2_era_modern
+		Prerequisites: civ2_era_modern
+	WithSpriteBody@modern:
+		Sequence: civ2_district_capital_modern
+		RequiresCondition: civ2_era_modern
+	PowerMultiplier@modern:
+		Modifier: 200
+		RequiresCondition: civ2_era_modern
+	DamageMultiplier@modern:
+		Modifier: 66
+		RequiresCondition: civ2_era_modern
 
 CIV2_DISTRICT_CAPITAL_CLASSIC:
 	Inherits@CIV2_DISTRICT_CAPITAL_BRONZE: CIV2_DISTRICT_CAPITAL_BRONZE
@@ -195,6 +273,22 @@ CIV2_DISTRICT_CAPITAL_MEDIEVAL:
 	# Buildable:
 	# 	Prerequisites: ~civ2_district_capital_bronze, ~civ2_era_classic
 	# 	Description: Main district, produces districts and research.
+
+CIV2_DISTRICT_CAPITAL_INDUSTRIAL:
+	Inherits@CIV2_DISTRICT_CAPITAL_MEDIEVAL: CIV2_DISTRICT_CAPITAL_MEDIEVAL
+	Tooltip:
+		Name: Capital District [Industrial]
+	# Buildable:
+	# 	Prerequisites: ~civ2_era_industrial, ~!civ2_era_modern
+	# 	Description: Provides housing (power)
+
+CIV2_DISTRICT_CAPTIAL_MODERN:
+	Inherits@CIV2_DISTRICT_CAPITAL_INDUSTRIAL: CIV2_DISTRICT_CAPITAL_INDUSTRIAL
+	Tooltip:
+		Name: Capital District [Modern]
+	# Buildable:
+	# 	Prerequisites: ~civ2_era_modern
+	# 	Description: Provides housing (power)
 
 CIV2_DISTRICT_HOUSING_BRONZE:
 	Inherits: ^Civ2Building
@@ -261,13 +355,41 @@ CIV2_DISTRICT_HOUSING_BRONZE:
 		Prerequisites: civ2_era_medieval
 	WithSpriteBody@medieval:
 		Sequence: civ2_district_housing_medieval
-		RequiresCondition: civ2_era_medieval
+		RequiresCondition: civ2_era_medieval && !civ2_era_industrial
 	PowerMultiplier@medieval:
 		Modifier: 200
-		RequiresCondition: civ2_era_medieval
+		RequiresCondition: civ2_era_medieval && !civ2_era_industrial
 	DamageMultiplier@medieval:
 		Modifier: 66
-		RequiresCondition: civ2_era_medieval
+		RequiresCondition: civ2_era_medieval && !civ2_era_industrial
+
+	# Industrial Housing Upgrade
+	GrantConditionOnPrerequisite@industrial:
+		Condition: civ2_era_industrial
+		Prerequisites: civ2_era_industrial
+	WithSpriteBody@industrial:
+		Sequence: civ2_district_housing_industrial
+		RequiresCondition: civ2_era_industrial && !civ2_era_modern
+	PowerMultiplier@industrial:
+		Modifier: 200
+		RequiresCondition: civ2_era_industrial && !civ2_era_modern
+	DamageMultiplier@industrial:
+		Modifier: 66
+		RequiresCondition: civ2_era_industrial && !civ2_era_modern
+
+	# Modern Housing Upgrade
+	GrantConditionOnPrerequisite@modern:
+		Condition: civ2_era_modern
+		Prerequisites: civ2_era_modern
+	WithSpriteBody@modern:
+		Sequence: civ2_district_housing_modern
+		RequiresCondition: civ2_era_modern
+	PowerMultiplier@modern:
+		Modifier: 200
+		RequiresCondition: civ2_era_modern
+	DamageMultiplier@modern:
+		Modifier: 66
+		RequiresCondition: civ2_era_modern
 
 CIV2_DISTRICT_HOUSING_CLASSIC:
 	Inherits@CIV2_DISTRICT_HOUSING_BRONZE: CIV2_DISTRICT_HOUSING_BRONZE
@@ -282,7 +404,23 @@ CIV2_DISTRICT_HOUSING_MEDIEVAL:
 	Tooltip:
 		Name: Housing District [Medieval]
 	Buildable:
-		Prerequisites: ~civ2_era_medieval
+		Prerequisites: ~civ2_era_medieval, ~!civ2_era_industrial
+		Description: Provides housing (power)
+
+CIV2_DISTRICT_HOUSING_INDUSTRIAL:
+	Inherits@CIV2_DISTRICT_HOUSING_MEDIEVAL: CIV2_DISTRICT_HOUSING_MEDIEVAL
+	Tooltip:
+		Name: Housing District [Industrial]
+	Buildable:
+		Prerequisites: ~civ2_era_industrial, ~!civ2_era_modern
+		Description: Provides housing (power)
+
+CIV2_DISTRICT_HOUSING_MODERN:
+	Inherits@CIV2_DISTRICT_HOUSING_INDUSTRIAL: CIV2_DISTRICT_HOUSING_INDUSTRIAL
+	Tooltip:
+		Name: Housing District [Modern]
+	Buildable:
+		Prerequisites: ~civ2_era_modern
 		Description: Provides housing (power)
 
 CIV2_DISTRICT_RESOURCE_BRONZE:
@@ -368,13 +506,41 @@ CIV2_DISTRICT_RESOURCE_BRONZE:
 		Prerequisites: civ2_era_medieval
 	WithSpriteBody@medieval:
 		Sequence: civ2_district_resource_medieval
-		RequiresCondition: civ2_era_medieval
+		RequiresCondition: civ2_era_medieval && !civ2_era_industrial
 	PowerMultiplier@medieval:
 		Modifier: 200
-		RequiresCondition: civ2_era_medieval
+		RequiresCondition: civ2_era_medieval && !civ2_era_industrial
 	DamageMultiplier@medieval:
 		Modifier: 66
-		RequiresCondition: civ2_era_medieval
+		RequiresCondition: civ2_era_medieval && !civ2_era_industrial
+
+	# Industrial Resource Upgrade
+	GrantConditionOnPrerequisite@industrial:
+		Condition: civ2_era_industrial
+		Prerequisites: civ2_era_industrial
+	WithSpriteBody@industrial:
+		Sequence: civ2_district_resource_industrial
+		RequiresCondition: civ2_era_industrial && !civ2_era_modern
+	PowerMultiplier@industrial:
+		Modifier: 200
+		RequiresCondition: civ2_era_industrial && !civ2_era_modern
+	DamageMultiplier@industrial:
+		Modifier: 66
+		RequiresCondition: civ2_era_industrial && !civ2_era_modern
+
+	# Modern Resource Upgrade
+	GrantConditionOnPrerequisite@modern:
+		Condition: civ2_era_modern
+		Prerequisites: civ2_era_modern
+	WithSpriteBody@modern:
+		Sequence: civ2_district_resource_modern
+		RequiresCondition: civ2_era_modern
+	PowerMultiplier@modern:
+		Modifier: 200
+		RequiresCondition: civ2_era_modern
+	DamageMultiplier@modern:
+		Modifier: 66
+		RequiresCondition: civ2_era_modern
 
 CIV2_DISTRICT_RESOURCE_CLASSIC:
 	Inherits@CIV2_DISTRICT_RESOURCE_BRONZE: CIV2_DISTRICT_RESOURCE_BRONZE
@@ -389,8 +555,24 @@ CIV2_DISTRICT_RESOURCE_MEDIEVAL:
 	Tooltip:
 		Name: Resource District [Medieval]
 	Buildable:
-		Prerequisites: ~civ2_era_medieval
+		Prerequisites: ~civ2_era_medieval, ~!civ2_era_industrial
 		Description: Processes raw Tiberium\ninto useable resources
+
+CIV2_DISTRICT_RESOURCE_INDUSTRIAL:
+	Inherits@CIV2_DISTRICT_RESOURCE_MEDIEVAL: CIV2_DISTRICT_RESOURCE_MEDIEVAL
+	Tooltip:
+		Name: Resource District [Industrial]
+	Buildable:
+		Prerequisites: ~civ2_era_industrial, ~!civ2_era_modern
+		Description: Provides housing (power)
+
+CIV2_DISTRICT_RESOURCE_MODERN:
+	Inherits@CIV2_DISTRICT_RESOURCE_INDUSTRIAL: CIV2_DISTRICT_RESOURCE_INDUSTRIAL
+	Tooltip:
+		Name: Resource District [Modern]
+	Buildable:
+		Prerequisites: ~civ2_era_modern
+		Description: Provides housing (power)
 
 CIV2_DISTRICT_PRODUCTION_BRONZE:
 	Inherits: ^Civ2Building
@@ -460,33 +642,61 @@ CIV2_DISTRICT_PRODUCTION_BRONZE:
 	WithSpriteBody:
 		RequiresCondition: !civ2_era_classic
 
-	# Classic Production Upgrade
+	# Classic Resource Upgrade
 	GrantConditionOnPrerequisite@classic:
 		Condition: civ2_era_classic
 		Prerequisites: civ2_era_classic
 	WithSpriteBody@classic:
 		Sequence: civ2_district_production_classic
-		RequiresCondition: civ2_era_classic
+		RequiresCondition: civ2_era_classic && !civ2_era_medieval
 	PowerMultiplier@classic:
 		Modifier: 200
-		RequiresCondition: civ2_era_classic
+		RequiresCondition: civ2_era_classic && !civ2_era_medieval
 	DamageMultiplier@classic:
 		Modifier: 66
-		RequiresCondition: civ2_era_classic
+		RequiresCondition: civ2_era_classic && !civ2_era_medieval
 
-	# Medieval Production Upgrade
+	# Medieval Resource Upgrade
 	GrantConditionOnPrerequisite@medieval:
 		Condition: civ2_era_medieval
 		Prerequisites: civ2_era_medieval
 	WithSpriteBody@medieval:
 		Sequence: civ2_district_production_medieval
-		RequiresCondition: civ2_era_medieval
+		RequiresCondition: civ2_era_medieval && !civ2_era_industrial
 	PowerMultiplier@medieval:
 		Modifier: 200
-		RequiresCondition: civ2_era_medieval
+		RequiresCondition: civ2_era_medieval && !civ2_era_industrial
 	DamageMultiplier@medieval:
 		Modifier: 66
-		RequiresCondition: civ2_era_medieval
+		RequiresCondition: civ2_era_medieval && !civ2_era_industrial
+
+	# Industrial Resource Upgrade
+	GrantConditionOnPrerequisite@industrial:
+		Condition: civ2_era_industrial
+		Prerequisites: civ2_era_industrial
+	WithSpriteBody@industrial:
+		Sequence: civ2_district_production_industrial
+		RequiresCondition: civ2_era_industrial && !civ2_era_modern
+	PowerMultiplier@industrial:
+		Modifier: 200
+		RequiresCondition: civ2_era_industrial && !civ2_era_modern
+	DamageMultiplier@industrial:
+		Modifier: 66
+		RequiresCondition: civ2_era_industrial && !civ2_era_modern
+
+	# Modern Resource Upgrade
+	GrantConditionOnPrerequisite@modern:
+		Condition: civ2_era_modern
+		Prerequisites: civ2_era_modern
+	WithSpriteBody@modern:
+		Sequence: civ2_district_production_modern
+		RequiresCondition: civ2_era_modern
+	PowerMultiplier@modern:
+		Modifier: 200
+		RequiresCondition: civ2_era_modern
+	DamageMultiplier@modern:
+		Modifier: 66
+		RequiresCondition: civ2_era_modern
 
 CIV2_DISTRICT_PRODUCTION_CLASSIC:
 	Inherits@CIV2_DISTRICT_PRODUCTION_BRONZE: CIV2_DISTRICT_PRODUCTION_BRONZE
@@ -501,8 +711,24 @@ CIV2_DISTRICT_PRODUCTION_MEDIEVAL:
 	Tooltip:
 		Name: Production District [Medieval]
 	Buildable:
-		Prerequisites: ~civ2_era_medieval
+		Prerequisites: ~civ2_era_medieval, ~!civ2_era_industrial
 		Description: Trains infantry
+
+CIV2_DISTRICT_PRODUCTION_INDUSTRIAL:
+	Inherits@CIV2_DISTRICT_PRODUCTION_MEDIEVAL: CIV2_DISTRICT_PRODUCTION_MEDIEVAL
+	Tooltip:
+		Name: Production District [Industrial]
+	Buildable:
+		Prerequisites: ~civ2_era_industrial, ~!civ2_era_modern
+		Description: Provides housing (power)
+
+CIV2_DISTRICT_PRODUCTION_MODERN:
+	Inherits@CIV2_DISTRICT_PRODUCTION_INDUSTRIAL: CIV2_DISTRICT_PRODUCTION_INDUSTRIAL
+	Tooltip:
+		Name: Production District [Modern]
+	Buildable:
+		Prerequisites: ~civ2_era_modern
+		Description: Provides housing (power)
 
 CIV2_NAVAL_DISTRICT:
 	Inherits: ^Civ2Building
@@ -814,256 +1040,244 @@ civ2_minecart:
 	Voiced:
 		VoiceSet: voiceWorm
 
+
 civ2_warrior:
-	Inherits: ^Soldier
-	Inherits@flag: ^CIV2UnitFlag
-	Inherits@CIV2Infantry: ^CIV2Infantry
-	Inherits@EXPERIENCE: ^GainsExperience
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMoveMelee
-	Inherits@DECORATIONS: ^InfantryExperienceHospitalHazmatOverrides
-	# Inherits@upgrade_swords: ^wc_h_str_sword
-	# Inherits@upgrade_shields: ^wc_h_str_shield
+	Inherits: ^civ2_base_unit
 	Valued:
 		Cost: 300
 	Tooltip:
 		Name: Warrior
-	UpdatesPlayerStatistics:
-		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 10
-		Prerequisites: ~civ2_district_production_bronze
+		Prerequisites: ~civ2_district_production_bronze, ~!civ2_era_classic
 		Queue: Infantry.CIV2
 		Description: Basic Melee Infantry. Slow but can take some damage.
 		BuildDuration: 150
 		# BuildDurationModifier: 100
-	Mobile:
-		Speed: 56
-	DamageMultiplier@DamageReduction:
-		Modifier: 85
-	FirepowerMultiplier@FirepowerIncrease:
-		Modifier: 115
-	Health:
-		HP: 14400
-	DamageMultiplier@armor:
-		Modifier: 60
-	Armor:
-		Type: None
-	#Food
-	Power:
-		Amount: -5
-	AutoTarget:
-		ScanRadius: 6
-		InitialStance: AttackAnything
-	Armament:
-		Weapon: footmanSlice
-	WithDeathAnimation:
-		UseDeathTypeSuffix: false
-	WithInfantryBody:
-		DefaultAttackSequence: shoot
-		-IdleSequences: idle1,idle2,idle3,idle4
-	Voiced:
-		VoiceSet: voicehuman
-	Crushable:
-		CrushClasses: vehicle
 
 civ2_phalanx:
-	Inherits: civ2_warrior
+	Inherits: ^civ2_base_unit
+	Buildable:
+		Prerequisites: ~civ2_district_production_bronze, ~civ2_era_classic
 	Valued:
 		Cost: 500
 	Tooltip:
 		Name: Phalanx
 
 civ2_archer:
-	Inherits: civ2_warrior
+	Inherits: ^civ2_base_unit
 	Valued:
 		Cost: 500
 	Tooltip:
 		Name: Archer
+	Buildable:
+		Prerequisites: ~civ2_district_production_bronze, ~!civ2_era_classic
+	Armament:
+		Weapon: wc2arrowFire
+		FireDelay: 7
+	Voiced:
+		VoiceSet: wc2voicehumanelvenarcher
 
 civ2_legion:
-	Inherits: civ2_warrior
+	Inherits: ^civ2_base_unit
+	Buildable:
+		Prerequisites: ~civ2_district_production_bronze, ~civ2_era_classic
 	Valued:
 		Cost: 500
 	Tooltip:
 		Name: Legion
 
 civ2_pikeman:
-	Inherits: civ2_warrior
+	Inherits: ^civ2_base_unit
+	Buildable:
+		Prerequisites: ~civ2_district_production_bronze, ~!civ2_era_medieval
 	Valued:
 		Cost: 500
 	Tooltip:
 		Name: Pikeman
 
 civ2_musketeers:
-	Inherits: civ2_warrior
+	Inherits: ^civ2_base_unit
+	Buildable:
+		Prerequisites: ~civ2_district_production_bronze, ~civ2_era_classic
 	Valued:
 		Cost: 500
 	Tooltip:
 		Name: Musketeers
 
 civ2_fanatics:
-	Inherits: civ2_warrior
+	Inherits: ^civ2_base_unit
 	Valued:
 		Cost: 500
 	Tooltip:
 		Name: Fanatics
 
 civ2_partisans:
-	Inherits: civ2_warrior
+	Inherits: ^civ2_base_unit
 	Valued:
 		Cost: 500
 	Tooltip:
 		Name: Partisans
 
 civ2_alpinetroops:
-	Inherits: civ2_warrior
+	Inherits: ^civ2_base_unit
 	Valued:
 		Cost: 500
 	Tooltip:
 		Name: Alpine Troops
 
 civ2_riflemen:
-	Inherits: civ2_warrior
+	Inherits: ^civ2_base_unit
 	Valued:
 		Cost: 500
 	Tooltip:
 		Name: Riflemen
 
 civ2_marines:
-	Inherits: civ2_warrior
+	Inherits: ^civ2_base_unit
 	Valued:
 		Cost: 500
 	Tooltip:
 		Name: Marines
 
 civ2_paratroopers:
-	Inherits: civ2_warrior
+	Inherits: ^civ2_base_unit
 	Valued:
 		Cost: 500
 	Tooltip:
 		Name: Paratroopers
 
 civ2_mechinf:
-	Inherits: civ2_warrior
+	Inherits: ^civ2_base_unit
+	Buildable:
+		Prerequisites: ~civ2_district_production_bronze, ~civ2_era_modern
 	Valued:
 		Cost: 500
 	Tooltip:
 		Name: Mechanized Infantry
 
 civ2_horsemen:
-	Inherits: civ2_warrior
+	Inherits: ^civ2_base_unit
 	Valued:
 		Cost: 500
 	Tooltip:
 		Name: Horsemen
 
 civ2_chariot:
-	Inherits: civ2_warrior
+	Inherits: ^civ2_base_unit
 	Valued:
 		Cost: 500
 	Tooltip:
 		Name: Chariot
 
 civ2_elephant:
-	Inherits: civ2_warrior
+	Inherits: ^civ2_base_unit
 	Valued:
 		Cost: 500
 	Tooltip:
 		Name: Elephant
 
 civ2_crusaders:
-	Inherits: civ2_warrior
+	Inherits: ^civ2_base_unit
 	Valued:
 		Cost: 500
 	Tooltip:
 		Name: Crusaders
 
 civ2_knights:
-	Inherits: civ2_warrior
+	Inherits: ^civ2_base_unit
 	Valued:
 		Cost: 500
 	Tooltip:
 		Name: Knights
 
 civ2_dragoons:
-	Inherits: civ2_warrior
+	Inherits: ^civ2_base_unit
 	Valued:
 		Cost: 500
 	Tooltip:
 		Name: Dragoons
 
 civ2_calvary:
-	Inherits: civ2_warrior
+	Inherits: ^civ2_base_unit
+	Buildable:
+		Prerequisites: ~civ2_district_production_bronze, ~civ2_era_industrial
 	Valued:
 		Cost: 500
 	Tooltip:
 		Name: Calvary
 
 civ2_armor:
-	Inherits: civ2_warrior
+	Inherits: ^civ2_base_unit
+	Buildable:
+		Prerequisites: ~civ2_district_production_bronze, ~civ2_era_modern
 	Valued:
 		Cost: 500
 	Tooltip:
 		Name: Armor
 
 civ2_catapult:
-	Inherits: civ2_warrior
+	Inherits: ^civ2_base_unit
 	Valued:
 		Cost: 500
 	Tooltip:
 		Name: Catapult
 
 civ2_cannon:
-	Inherits: civ2_warrior
+	Inherits: ^civ2_base_unit
 	Valued:
 		Cost: 500
 	Tooltip:
 		Name: Cannon
 
 civ2_artillery:
-	Inherits: civ2_warrior
+	Inherits: ^civ2_base_unit
 	Valued:
 		Cost: 500
 	Tooltip:
 		Name: Artillery
 
 civ2_howitzer:
-	Inherits: civ2_warrior
+	Inherits: ^civ2_base_unit
+	Buildable:
+		Prerequisites: ~civ2_district_production_bronze, ~civ2_era_modern
 	Valued:
 		Cost: 500
 	Tooltip:
 		Name: Howitzer
 
 civ2_nuclearmissile:
-	Inherits: civ2_warrior
+	Inherits: ^civ2_base_unit
+	Buildable:
+		Prerequisites: ~civ2_district_production_bronze, ~civ2_era_modern
 	Valued:
 		Cost: 500
 	Tooltip:
 		Name: Nuclear Missile
 
 civ2_diplomat:
-	Inherits: civ2_warrior
+	Inherits: ^civ2_base_unit
 	Valued:
 		Cost: 500
 	Tooltip:
 		Name: Diplomat
 
 civ2_spy:
-	Inherits: civ2_warrior
+	Inherits: ^civ2_base_unit
 	Valued:
 		Cost: 500
 	Tooltip:
 		Name: Spy
 
 civ2_caravan:
-	Inherits: civ2_warrior
+	Inherits: ^civ2_base_unit
 	Valued:
 		Cost: 500
 	Tooltip:
 		Name: Caravan
 
 civ2_explorer:
-	Inherits: civ2_warrior
+	Inherits: ^civ2_base_unit
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -1596,10 +1810,138 @@ CIV2_ERA_MEDIEVAL:
 	Valued:
 		Cost: 5000
 	Buildable:
-		BuildPaletteOrder: 80
+		BuildPaletteOrder: 55
 		Prerequisites: ~civ2_era_classic, civ2_advance_invention, civ2_advance_metallurgy, civ2_advance_navigation
 		Queue: Addons
 		Description: Moves your Civilization into the Medieval era.
+		Icon: icon
+	RenderSprites:
+	ProvidesPrerequisite:
+
+##############################
+#		INDUSTRIAL
+##############################
+
+CIV2_ADVANCE_ELECTRICITY:
+	Inherits: ^Upgrade
+	Tooltip:
+		Name: Electricity
+	Buildable:
+		BuildPaletteOrder: 71
+		Queue: Addons
+		BuildDuration: 1500
+		Description: Advances your Civilization in the knowledge of Electricity.
+		Prerequisites: ~civ2_era_medieval
+	Valued:
+		Cost: 2000
+	RenderSprites:
+		Image: civ2_advance_electricity
+
+CIV2_ADVANCE_STEAMENGINE:
+	Inherits: ^Upgrade
+	Tooltip:
+		Name: Steam Engine
+	Buildable:
+		BuildPaletteOrder: 80
+		Queue: Addons
+		BuildDuration: 1500
+		Description: Advances your Civilization in the knowledge of Steam Engines.
+		Prerequisites: ~civ2_era_medieval
+	Valued:
+		Cost: 2000
+	RenderSprites:
+		Image: civ2_advance_steamengine
+
+CIV2_ADVANCE_STEEL:
+	Inherits: ^Upgrade
+	Tooltip:
+		Name: Steel
+	Buildable:
+		BuildPaletteOrder: 81
+		Queue: Addons
+		BuildDuration: 1500
+		Description: Advances your Civilization in the knowledge of Steel.
+		Prerequisites: ~civ2_era_medieval
+	Valued:
+		Cost: 2000
+	RenderSprites:
+		Image: civ2_advance_steel
+
+CIV2_ERA_INDUSTRIAL:
+	Inherits: ^researched_upgrade.template
+	Tooltip:
+		Name: Industrial Era
+	Valued:
+		Cost: 5000
+	Buildable:
+		BuildPaletteOrder: 90
+		Prerequisites: ~civ2_era_medieval, civ2_advance_electricity, civ2_advance_steamengine, civ2_advance_steel
+		Queue: Addons
+		Description: Moves your Civilization into the Industrial era.
+		Icon: icon
+	RenderSprites:
+	ProvidesPrerequisite:
+
+##############################
+#		MODERN
+##############################
+
+CIV2_ADVANCE_ELECTRONICS:
+	Inherits: ^Upgrade
+	Tooltip:
+		Name: Electronics
+	Buildable:
+		BuildPaletteOrder: 93
+		Queue: Addons
+		BuildDuration: 1500
+		Description: Advances your Civilization in the knowledge of Electronics.
+		Prerequisites: ~civ2_era_industrial
+	Valued:
+		Cost: 2000
+	RenderSprites:
+		Image: civ2_advance_electronics
+
+CIV2_ADVANCE_PLASTICS:
+	Inherits: ^Upgrade
+	Tooltip:
+		Name: Plastics
+	Buildable:
+		BuildPaletteOrder: 108
+		Queue: Addons
+		BuildDuration: 1500
+		Description: Advances your Civilization in the knowledge of Plastics.
+		Prerequisites: ~civ2_era_industrial
+	Valued:
+		Cost: 2000
+	RenderSprites:
+		Image: civ2_advance_plastics
+
+CIV2_ADVANCE_ROBOTICS:
+	Inherits: ^Upgrade
+	Tooltip:
+		Name: Robotics
+	Buildable:
+		BuildPaletteOrder: 112
+		Queue: Addons
+		BuildDuration: 1500
+		Description: Advances your Civilization in the knowledge of Robotics.
+		Prerequisites: ~civ2_era_industrial
+	Valued:
+		Cost: 2000
+	RenderSprites:
+		Image: civ2_advance_robotics
+
+CIV2_ERA_MODERN:
+	Inherits: ^researched_upgrade.template
+	Tooltip:
+		Name: Modern Era
+	Valued:
+		Cost: 5000
+	Buildable:
+		BuildPaletteOrder: 120
+		Prerequisites: ~civ2_era_industrial, civ2_advance_electronics, civ2_advance_plastics, civ2_advance_robotics
+		Queue: Addons
+		Description: Moves your Civilization into the Modern era.
 		Icon: icon
 	RenderSprites:
 	ProvidesPrerequisite:

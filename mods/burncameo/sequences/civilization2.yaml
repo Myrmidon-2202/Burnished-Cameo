@@ -60,6 +60,10 @@ civ2_district_capital_bronze:
 		Start: 11
 	civ2_district_capital_medieval:
 		Start: 27
+	civ2_district_capital_industrial:
+		Start: 35
+	civ2_district_capital_modern:
+		Start: 43
 
 civ2_district_capital_classic:
 	Inherits: civ2_district_capital_bronze
@@ -74,6 +78,20 @@ civ2_district_capital_medieval:
 	icon: 
 		Filename: civilization_2_icons.png
 		Start: 11
+
+civ2_district_capital_industrial:
+	Inherits: civ2_district_capital_medieval
+	Inherits@bib: ^WithBuildingBib3
+	icon: 
+		Filename: civilization_2_icons.png
+		Start: 15
+
+civ2_district_capital_modern:
+	Inherits: civ2_district_capital_industrial
+	Inherits@bib: ^WithBuildingBib3
+	icon: 
+		Filename: civilization_2_icons.png
+		Start: 19
 
 civ2_district_housing_bronze:
 	Inherits: ^CIV2BuildingFlag
@@ -99,6 +117,10 @@ civ2_district_housing_bronze:
 		Start: 8
 	civ2_district_housing_medieval:
 		Start: 24
+	civ2_district_housing_industrial:
+		Start: 32
+	civ2_district_housing_modern:
+		Start: 40
 
 civ2_district_housing_classic:
 	Inherits: civ2_district_housing_bronze
@@ -111,6 +133,18 @@ civ2_district_housing_medieval:
 	icon: 
 		Filename: civilization_2_icons.png
 		Start: 8
+
+civ2_district_housing_industrial:
+	Inherits: civ2_district_housing_medieval
+	icon: 
+		Filename: civilization_2_icons.png
+		Start: 12
+
+civ2_district_housing_modern:
+	Inherits: civ2_district_housing_industrial
+	icon: 
+		Filename: civilization_2_icons.png
+		Start: 16
 
 civ2_district_resource_bronze:
 	Inherits: ^CIV2BuildingFlag
@@ -144,6 +178,10 @@ civ2_district_resource_bronze:
 		Start: 9
 	civ2_district_resource_medieval:
 		Start: 25
+	civ2_district_resource_industrial:
+		Start: 33
+	civ2_district_resource_modern:
+		Start: 41
 
 civ2_district_resource_classic:
 	Inherits: civ2_district_resource_bronze
@@ -156,6 +194,18 @@ civ2_district_resource_medieval:
 	icon: 
 		Filename: civilization_2_icons.png
 		Start: 9
+
+civ2_district_resource_industrial:
+	Inherits: civ2_district_resource_medieval
+	icon: 
+		Filename: civilization_2_icons.png
+		Start: 13
+
+civ2_district_resource_modern:
+	Inherits: civ2_district_resource_industrial
+	icon: 
+		Filename: civilization_2_icons.png
+		Start: 17
 
 civ2_district_production_bronze:
 	Inherits: ^CIV2BuildingFlag
@@ -179,6 +229,10 @@ civ2_district_production_bronze:
 		Start: 10
 	civ2_district_production_medieval:
 		Start: 26
+	civ2_district_production_industrial:
+		Start: 34
+	civ2_district_production_modern:
+		Start: 42
 
 civ2_district_production_classic:
 	Inherits: civ2_district_production_bronze
@@ -191,6 +245,18 @@ civ2_district_production_medieval:
 	icon: 
 		Filename: civilization_2_icons.png
 		Start: 10
+
+civ2_district_production_industrial:
+	Inherits: civ2_district_production_medieval
+	icon: 
+		Filename: civilization_2_icons.png
+		Start: 14
+
+civ2_district_production_modern:
+	Inherits: civ2_district_production_industrial
+	icon: 
+		Filename: civilization_2_icons.png
+		Start: 18
 
 civ2_naval_district:
 	Inherits: ^CIV2BuildingFlag
@@ -1112,11 +1178,11 @@ civ2_mechinf:
 				Filename: civilization2_units.shp
 				Length: 1
 				Frames: 14
+				FlipX: true
 			mechinf2: 
 				Filename: civilization2_units.shp
 				Length: 1
 				Frames: 14
-				FlipX: true
 	run:
 		Facings: 2
 		Combine:
@@ -1124,11 +1190,11 @@ civ2_mechinf:
 				Filename: civilization2_units.shp
 				Length: 1
 				Frames: 14
+				FlipX: true
 			mechinf4: 
 				Filename: civilization2_units.shp
 				Length: 1
 				Frames: 14
-				FlipX: true
 	shoot:
 		Facings: 2
 		Combine:
@@ -1136,11 +1202,11 @@ civ2_mechinf:
 				Filename: civilization2_units.shp
 				Length: 1
 				Frames: 14
+				FlipX: true
 			mechinf6: 
 				Filename: civilization2_units.shp
 				Length: 1
 				Frames: 14
-				FlipX: true
 	die:
 		Facings: 2
 		Combine:
@@ -1148,10 +1214,10 @@ civ2_mechinf:
 				Filename: civilization2_units.shp
 				Length: 1
 				Frames: 14
+				FlipX: true
 			mechinf8: 
 				Filename: civilization2_units.shp
 				Frames: 14
-				FlipX: true
 	icon: 
 		Filename: civilization_2_icons.png
 		Start: 46
@@ -2993,6 +3059,54 @@ civ2_advance_navigation:
 		Start: 51
 
 civ2_era_medieval:
+	icon:
+		Filename: civilization_2_advances.png
+		Start: 2
+
+##############################
+#		INDUSTRIAL
+##############################
+
+civ2_advance_electricity:
+	icon:
+		Filename: civilization_2_advances.png
+		Start: 71
+
+civ2_advance_steamengine:
+	icon:
+		Filename: civilization_2_advances.png
+		Start: 80
+
+civ2_advance_steel:
+	icon:
+		Filename: civilization_2_advances.png
+		Start: 81
+
+civ2_era_industrial:
+	icon:
+		Filename: civilization_2_advances.png
+		Start: 3
+
+##############################
+#		MODERN
+##############################
+
+civ2_advance_electronics:
+	icon:
+		Filename: civilization_2_advances.png
+		Start: 93
+
+civ2_advance_plastics:
+	icon:
+		Filename: civilization_2_advances.png
+		Start: 108
+
+civ2_advance_robotics:
+	icon:
+		Filename: civilization_2_advances.png
+		Start: 112
+
+civ2_era_modern:
 	icon:
 		Filename: civilization_2_advances.png
 		Start: 4
