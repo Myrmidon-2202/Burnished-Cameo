@@ -2964,8 +2964,8 @@ DTSTRIKE:
 		Dimensions: 2,3
 		LocalCenterOffset: 0,-512,0
 	Selectable:
-		Bounds: 87381, 72789, 0, 16384
-		DecorationBounds: 87381, 96469, 0, -7253
+		Bounds: 2048, 2048
+		DecorationBounds: 2048, 2048
 	SelectionDecorations:
 	WithSpriteBody:
 		PauseOnCondition: lowpower
@@ -4177,6 +4177,221 @@ HPAD.DTAUSTRALIA:
 	# 	RequiresCondition: classicproductionqueues
 	ProvidesPrerequisite@buildingname:
 		Prerequisite: hpad.dtaustralia
+
+DTSYRD.TOMORROW:
+	Inherits: ^BaseBuilding
+	Inherits@shipyard: ^IsShipyardOld
+	Inherits@shape: ^3x3Shape
+	Tooltip:
+		Name: Naval Yard (Tomorrow)
+	Buildable:
+		Prerequisites: ~fact.tomorrow, dtproc, ~globalnaval
+	Building:
+		Footprint: =+= +++ =+=
+		Dimensions: 3,3
+		TerrainTypes: Water
+	-GivesBuildableArea:
+	ProvidesPrerequisite@buildingname:
+	ProvidesPrerequisite:
+		Prerequisite: ranavaltransport
+	Production:
+		Produces: Naval.Tomorrow
+	ProductionQueue:
+		Type: Naval.Tomorrow
+		DisplayOrder: 2
+		Group: Naval
+		LowPowerModifier: 150
+		ReadyAudio: UnitReady
+		ReadyTextNotification: notification-unit-ready
+		BlockedAudio: NoBuild
+		BlockedTextNotification: notification-unable-to-build-more
+		LimitedAudio: BuildingInProgress
+		LimitedTextNotification: notification-unable-to-comply-building-in-progress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionBar:
+		ProductionType: Naval.Tomorrow
+	GivesBuildableArea: ##########
+		AreaTypes: building, cityi
+	Targetable:
+		TargetTypes: Ground, Water, C4, Structure
+	RenderSprites:
+		Image: RA1SYRD
+		PlayerPalette: raplayer
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+
+DTSYRD.ANSWER:
+	Inherits: DTSYRD.TOMORROW
+	Tooltip:
+		Name: Naval Yard (Answer)
+	Buildable:
+		BuildPaletteOrder: 50
+		Prerequisites: ~fact.answer, dtproc
+		Queue: Building, RABuilding
+	Production:
+		Produces: Naval.Answer
+		RequiresCondition: !classicproductionqueues
+	ProductionQueue:
+		Type: Naval.Answer
+	ProductionBar:
+		ProductionType: Naval.Answer
+		RequiresCondition: !classicproductionqueues
+	ProvidesPrerequisite@buildingname:
+		Prerequisite: dtsyrd.answer
+
+DTSYRD.DTUSA:
+	Inherits: DTSYRD.TOMORROW
+	Tooltip:
+		Name: Naval Yard (Usa)
+	Buildable:
+		BuildPaletteOrder: 50
+		Prerequisites: ~fact.dtusa, dtproc
+		Queue: Building, RABuilding
+	Production:
+		Produces: Naval.Dtusa
+		RequiresCondition: !classicproductionqueues
+	ProductionQueue:
+		Type: Naval.Dtusa
+	ProductionBar:
+		ProductionType: Naval.Dtusa
+		RequiresCondition: !classicproductionqueues
+	ProvidesPrerequisite@buildingname:
+		Prerequisite: dtsyrd.dtusa
+
+DTSYRD.DTRUSSIA:
+	Inherits: DTSYRD.TOMORROW
+	Tooltip:
+		Name: Naval Yard (Russia)
+	Buildable:
+		BuildPaletteOrder: 50
+		Prerequisites: ~fact.dtrussia, dtproc
+		Queue: Building, RABuilding
+	Production:
+		Produces: Naval.Dtrussia
+		RequiresCondition: !classicproductionqueues
+	ProductionQueue:
+		Type: Naval.Dtrussia
+	ProductionBar:
+		ProductionType: Naval.Dtrussia
+		RequiresCondition: !classicproductionqueues
+	ProvidesPrerequisite@buildingname:
+		Prerequisite: dtsyrd.dtrussia
+
+DTSYRD.DTJAPAN:
+	Inherits: DTSYRD.TOMORROW
+	Tooltip:
+		Name: Naval Yard (Japan)
+	Buildable:
+		BuildPaletteOrder: 50
+		Prerequisites: ~fact.dtjapan, dtproc
+		Queue: Building, RABuilding
+	Production:
+		Produces: Naval.Dtjapan
+		RequiresCondition: !classicproductionqueues
+	ProductionQueue:
+		Type: Naval.Dtjapan
+	ProductionBar:
+		ProductionType: Naval.Dtjapan
+		RequiresCondition: !classicproductionqueues
+	ProvidesPrerequisite@buildingname:
+		Prerequisite: dtsyrd.dtjapan
+
+DTSYRD.DTARGENTINA:
+	Inherits: DTSYRD.TOMORROW
+	Tooltip:
+		Name: Naval Yard (Argentina)
+	Buildable:
+		BuildPaletteOrder: 50
+		Prerequisites: ~fact.dtargentina, dtproc
+		Queue: Building, RABuilding
+	Production:
+		Produces: Naval.Dtargentina
+		RequiresCondition: !classicproductionqueues
+	ProductionQueue:
+		Type: Naval.Dtargentina
+	ProductionBar:
+		ProductionType: Naval.Dtargentina
+		RequiresCondition: !classicproductionqueues
+	ProvidesPrerequisite@buildingname:
+		Prerequisite: dtsyrd.dtargentina
+
+DTSYRD.DTBRAZIL:
+	Inherits: DTSYRD.TOMORROW
+	Tooltip:
+		Name: Naval Yard (Brazil)
+	Buildable:
+		BuildPaletteOrder: 50
+		Prerequisites: ~fact.dtbrazil, dtproc
+		Queue: Building, RABuilding
+	Production:
+		Produces: Naval.Dtbrazil
+		RequiresCondition: !classicproductionqueues
+	ProductionQueue:
+		Type: Naval.Dtbrazil
+	ProductionBar:
+		ProductionType: Naval.Dtbrazil
+		RequiresCondition: !classicproductionqueues
+	ProvidesPrerequisite@buildingname:
+		Prerequisite: dtsyrd.dtbrazil
+
+DTSYRD.DTCUBA:
+	Inherits: DTSYRD.TOMORROW
+	Tooltip:
+		Name: Naval Yard (Cuba)
+	Buildable:
+		BuildPaletteOrder: 50
+		Prerequisites: ~fact.dtcuba, dtproc
+		Queue: Building, RABuilding
+	Production:
+		Produces: Naval.Dtcuba
+		RequiresCondition: !classicproductionqueues
+	ProductionQueue:
+		Type: Naval.Dtcuba
+	ProductionBar:
+		ProductionType: Naval.Dtcuba
+		RequiresCondition: !classicproductionqueues
+	ProvidesPrerequisite@buildingname:
+		Prerequisite: dtsyrd.dtcuba
+
+DTSYRD.DTAUSTRALIA:
+	Inherits: DTSYRD.TOMORROW
+	Tooltip:
+		Name: Naval Yard (Australia)
+	Buildable:
+		BuildPaletteOrder: 50
+		Prerequisites: ~fact.dtaustralia, dtproc
+		Queue: Building, RABuilding
+	Production:
+		Produces: Naval.Dtaustralia
+		RequiresCondition: !classicproductionqueues
+	ProductionQueue:
+		Type: Naval.Dtaustralia
+	ProductionBar:
+		ProductionType: Naval.Dtaustralia
+		RequiresCondition: !classicproductionqueues
+	ProvidesPrerequisite@buildingname:
+		Prerequisite: dtsyrd.dtaustralia
+
+DTSYRD.DTETHIOPIA:
+	Inherits: DTSYRD.TOMORROW
+	Tooltip:
+		Name: Naval Yard (Ethiopia)
+	Buildable:
+		BuildPaletteOrder: 50
+		Prerequisites: ~fact.dtethiopia, dtproc
+		Queue: Building, RABuilding
+	Production:
+		Produces: Naval.Dtethiopia
+		RequiresCondition: !classicproductionqueues
+	ProductionQueue:
+		Type: Naval.Dtethiopia
+	ProductionBar:
+		ProductionType: Naval.Dtethiopia
+		RequiresCondition: !classicproductionqueues
+	ProvidesPrerequisite@buildingname:
+		Prerequisite: dtsyrd.dtethiopia
 
 SAM.TOMORROW:
 	Inherits: SAM
@@ -6091,7 +6306,7 @@ dtorca:
 		Delay: 100
 		Count: 2
 	Selectable:
-		DecorationBounds: 1280, 1024	
+		DecorationBounds: 1280, 1024
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: True
@@ -7975,6 +8190,209 @@ katy:
 	RenderSprites:
 		Image: dtkaty
 
+###############################################
+#                   UNITS DOT NAVAL
+###############################################
+
+dtreconboat:
+	Inherits: ^BoatUnit
+	Inherits@Template: ^ScoutShipTemplate
+	Inherits@EXP: ^GainsExperienceTD
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	Inherits@EMP: ^FrontalEMP
+	Inherits@AntiVeh: ^PrioritizeVehicle
+	Inherits@AntiTank: ^PrioritizeTank
+	Inherits@AntiAir: ^PrioritizeAir
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Recon Boat
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Buildable:
+		BuildPaletteOrder: 30
+		Prerequisites: dtsyrd.dtargentina
+		Queue: Naval.Dtargentina
+		Description: actor-bike.description
+	Mobile:
+		Speed: 200
+		TurnSpeed: 40
+	Health:
+		HP: 16000
+	Armor:
+		Type: Light
+	Armament:
+		Weapon: BikeRockets
+		LocalOffset: -128, -170, 170, -128, 170, 170
+		LocalYaw: 100, -100
+		MuzzleSequence: muzzle
+	AttackFrontal:
+		FacingTolerance: 45
+	WithMuzzleOverlay:
+	# Voiced:
+	# 	VoiceSet: dthisvehVoice
+	FireWarheadsOnDeath:
+		Weapon: UnitExplodeSmall
+	RenderSprites:
+		Image: dtreconboat
+
+dtswarmhost:
+	Inherits: ^BoatUnit
+	Inherits@Template: ^ScoutShipTemplate
+	Inherits@EXP: ^GainsExperienceTD
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	Inherits@EMP: ^FrontalEMP
+	Inherits@AntiVeh: ^PrioritizeVehicle
+	Inherits@AntiTank: ^PrioritizeTank
+	Inherits@AntiAir: ^PrioritizeAir
+	Valued:
+		Cost: 700
+	Tooltip:
+		Name: Spit
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Buildable:
+		BuildPaletteOrder: 30
+		Prerequisites: dtsyrd.tomorrow, dtbio
+		Queue: Naval.Tomorrow
+		Description: actor-bike.description
+	Mobile:
+		Speed: 200
+		TurnSpeed: 40
+	Health:
+		HP: 50000
+	ChangesHealth@SelfHealing:
+		Step: 16
+	Armor:
+		Type: Light
+	Armament:
+		Weapon: BikeRockets
+		LocalOffset: -128, -170, 170, -128, 170, 170
+		LocalYaw: 100, -100
+		MuzzleSequence: muzzle
+	AttackFrontal:
+		FacingTolerance: 45
+	WithMuzzleOverlay:
+	Voiced:
+		VoiceSet: AntVoice
+	FireWarheadsOnDeath:
+		Weapon: UnitExplodeSmall
+
+dtsub:
+	Inherits: SS
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Escort Submarine
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Buildable:
+		BuildPaletteOrder: 20
+		Prerequisites: raspen
+		Queue: dtsyrd.dtargentina
+		Description: actor-ss.description
+	Mobile:
+		Speed: 75
+		TurnSpeed: 15
+	Health:
+		HP: 100000
+	Armor:
+		Type: Heavy
+	Turreted:
+		TurnSpeed: 15
+		Offset: 512,0,0
+	Armament@PRIMARY:
+		Weapon: TorpTube
+		LocalOffset: 256,0,0
+	Armament@Upgrade:
+		Weapon: TorpTubeThermobaric
+		LocalOffset: 256,0,0
+	RenderRangeCircle:
+	Targetable:
+		TargetTypes: Ground, Water, Ship, Submarine
+	AttackFrontal:
+		FacingTolerance: 0
+	Selectable:
+		DecorationBounds: 1536, 1536
+	DeliversCash:
+		Payload: 475
+	Voiced:
+		VoiceSet: RussianVehicleVoice
+	Cloak@underwater:
+	RenderSprites:
+		Image: rass
+		PlayerPalette: raplayer
+
+dtmissub:
+	Inherits: SS
+	Inherits@Template: ^ArtilleryShipTemplate
+	Inherits@exp: ^GainsExperienceRA
+	Inherits@EXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	Inherits@EMP: ^FrontalEMP
+	Inherits@sub: ^Submarine
+	Inherits@AntiAir: ^PrioritizeAir
+	Valued:
+		Cost: 3000
+	Tooltip:
+		Name: Missile Submarine
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Buildable:
+		BuildPaletteOrder: 50
+		Prerequisites: dtpropaganda.tomorrow
+		Queue: Naval.Tomorrow
+		Description: actor-msub.description
+	Mobile:
+		Speed: 60
+		TurnSpeed: 12
+	Health:
+		HP: 70000
+	Armor:
+		Type: Medium
+	Armament@PRIMARY:
+		Weapon: 227mm
+		LocalOffset: 208,128,48, 208,-128,48
+		MuzzleSequence: muzzle
+	WithMuzzleOverlay:
+	Targetable:
+		TargetTypes: Ground, Water, Ship, Submarine
+	AttackFrontal:
+		FacingTolerance: 0
+	Selectable:
+		DecorationBounds: 1536, 1536
+	DeliversCash:
+		Payload: 1000
+	Cloak@underwater:
+		CloakDelay: 100
+	Voiced:
+		VoiceSet: RussianVehicleVoice
+	RenderSprites:
+		Image: ramsub
+		#PlayerPalette: raplayer
+
+dtcarrier:
+	Inherits@Boat: gdicarrier
+	Inherits: ^BoatUnit
+	Inherits@Template: ^ArtilleryShipTemplate
+	Inherits@exp: ^GainsExperienceTD
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	Inherits@EMP: ^FrontalEMP
+	# Inherits@decoration: ^GDIRankDecoration
+	Valued:
+		Cost: 4000
+	Tooltip:
+		Name: Aircraft Carrier
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Buildable:
+		BuildPaletteOrder: 30
+		Prerequisites: atek.answer
+		Queue: Naval.Answer
+		Description: actor-japancarrier.description
+	RenderSprites:
+		Image: gdicarrier
+		PlayerPalette: player
 
 ###############################################
 #                   UNITS UNUSED FACTIONS

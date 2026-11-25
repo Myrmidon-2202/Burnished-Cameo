@@ -3350,135 +3350,134 @@ CNCPT:
 # 	RenderSprites:
 # 		PlayerPalette: player_rgba
 
-# gdicarrier:
-# 	Inherits: ^BoatUnit
-# 	Inherits@Template: ^ArtilleryShipTemplate
-# 	Inherits@exp: ^GainsExperienceTD
-# 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
-# 	Inherits@EMP: ^FrontalEMP
-# 	# Inherits@decoration: ^GDIRankDecoration
-# 	Valued:
-# 		Cost: 4000
-# 	Tooltip:
-# 		Name: GDI Super Carrier
-# 	UpdatesPlayerStatistics:
-# 		AddToArmyValue: true
-# 	Buildable:
-# 		BuildPaletteOrder: 30
-# 		Prerequisites: ~eye
-# 		Queue: Naval, RANaval
-# 		Description: actor-japancarrier.description
-# 	Selectable:
-# 		DecorationBounds: 2048, 2048
-# 	Mobile:
-# 		Speed: 50
-# 		TurnSpeed: 10
-# 	Health:
-# 		HP: 300000
-# 	ChangesHealth@SelfHealing:
-# 		Step: 120
-# 	Armor:
-# 		Type: Superheavy
-# 	AttackFollowFrontal:
-# 		PauseOnCondition: disabled
-# 	DeliversCash:
-# 		Payload: 450
-# 	CarrierMaster:
-# 		Actors: A10Carrier, A10Carrier, A10Carrier
-# 		RearmTicks: 125
-# 		RespawnTicks: 250
-# 		InstaRepair: true
-# 		SlaveDisposalOnKill: KillSlaves
-# 		SpawnAllAtOnce: false
-# 	Armament@PRIMARY:
-# 		Weapon: JapanCarrierTarget
-# 		Damage: 1500
-# 		ReloadDelay: 125
-# 	Voiced:
-# 		VoiceSet: VehicleVoice
-# 	RenderSprites:
-# 		PlayerPalette: player
+gdicarrier:
+	Inherits: ^BoatUnit
+	Inherits@Template: ^ArtilleryShipTemplate
+	Inherits@exp: ^GainsExperienceTD
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	Inherits@EMP: ^FrontalEMP
+	# Inherits@decoration: ^GDIRankDecoration
+	Valued:
+		Cost: 4000
+	Tooltip:
+		Name: GDI Carrier
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Buildable:
+		BuildPaletteOrder: 30
+		Prerequisites: ~eye
+		Queue: Naval.GDI
+		Description: actor-japancarrier.description
+	Selectable:
+		DecorationBounds: 2048, 2048
+	Mobile:
+		Speed: 50
+		TurnSpeed: 10
+	Health:
+		HP: 300000
+	ChangesHealth@SelfHealing:
+		Step: 120
+	Armor:
+		Type: Superheavy
+	AttackFollowFrontal:
+		PauseOnCondition: disabled
+	DeliversCash:
+		Payload: 450
+	CarrierMaster:
+		Actors: A10Carrier
+		RearmTicks: 150
+		RespawnTicks: 250
+		InstaRepair: true
+		SlaveDisposalOnKill: KillSlaves
+		SpawnAllAtOnce: false
+	Armament@PRIMARY:
+		Weapon: JapanCarrierTarget
+		Damage: 1500
+		ReloadDelay: 125
+	Voiced:
+		VoiceSet: VehicleVoice
+	RenderSprites:
+		PlayerPalette: player
 
-# A10Carrier:
-# 	Inherits: ^RANeutralPlane
-# 	Inherits@Template: ^BomberTemplate
-# 	Inherits@exp: ^GainsExperienceTD
-	
-# 	Valued:
-# 		Cost: 2000
-# 	Tooltip:
-# 		Name: A10 Bomber
-# 	Aircraft:
-# 		AltitudeVelocity: 120
-# 		InitialFacing: 768
-# 		TurnSpeed: 12
-# 		Speed: 200
-# 		Repulsable: false
-# 		TakeoffSounds: vhortaka.wav, vhortakb.wav
-# 		LandingSounds: vhorlana.wav, vhorlanb.wav
-# 		TakeUpCellWhenLand: false
-# 	Health:
-# 		HP: 10000
-# 	ChangesHealth@SelfHealing:
-# 		Step: 4
-# 	Armament@GUNS:
-# 		Name: primary
-# 		Weapon: VulcanA10Carrier
-# 		LocalOffset: 1024,0,-85
-# 	Armament@BOMBS:
-# 		Name: secondary
-# 		Weapon: NapalmA10Carrier
-# 		LocalOffset: 0,-256,-43, 0,256,-43
-# 	Armament@AA:
-# 		Name: secondary
-# 		Weapon: A10CarrierMissiles
-# 		LocalOffset: 0,-300,0, 0,300,0
-# 	AmmoPool:
-# 		Ammo: 16
-# 		AmmoCondition: ammo
-# 	WithAmmoPipsDecoration:
-# 		Position: BottomLeft
-# 		RequiresSelection: true
-# 		PipCount: 6
-# 	Voiced:
-# 		VoiceSet: VehicleVoice
-# 	AttackAircraft:
-# 		# FacingTolerance: 40
-# 		RequiresCondition: ammo
-# 	CarrierSlave:
-# 		LandingDistance: 8000
-# 	AutoTarget:
-# 		InitialStanceAI: AttackAnything
-# 		InitialStance: AttackAnything
-# 	HasParent:
-# 	-UpdatesPlayerStatistics:
-# 	-ActorLostNotification:
-# 	-WithShadow:
-# 	-MapEditorData:
-# 	RejectsOrders:
-# 	WithMuzzleOverlay:
-# 	Contrail@1:
-# 		Offset: -640,171,0
-# 		TrailLength: 15
-# 	Contrail@2:
-# 		Offset: -640,-171,0
-# 		TrailLength: 15
-# 	SpawnActorOnDeath:
-# 		Actor: A10Carrier.Husk
-# 	LeavesTrails:
-# 		Offsets: -500,0,125
-# 		MovingInterval: 2
-# 		Image: smokey
-# 		StationaryInterval: 2
-# 		SpawnAtLastPosition: False
-# 		TrailWhileStationary: True
-# 		Type: CenterPosition
-# 		RequiresCondition: enable-smoke
-# 	GrantConditionOnDamageState@SmokeTrail:
-# 		Condition: enable-smoke
-# 	RenderSprites:
-# 		PlayerPalette: player
-# 		Image: a10carrier
+A10Carrier:
+	Inherits: ^RANeutralPlane
+	Inherits@Template: ^BomberTemplate
+	Inherits@exp: ^GainsExperienceTD
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: A10 Bomber
+	Aircraft:
+		AltitudeVelocity: 120
+		InitialFacing: 768
+		TurnSpeed: 12
+		Speed: 200
+		Repulsable: false
+		TakeoffSounds: vhortaka.wav, vhortakb.wav
+		LandingSounds: vhorlana.wav, vhorlanb.wav
+		TakeUpCellWhenLand: false
+	Health:
+		HP: 10000
+	ChangesHealth@SelfHealing:
+		Step: 4
+	Armament@GUNS:
+		Name: primary
+		Weapon: VulcanA10Carrier
+		LocalOffset: 1024,0,-85
+	Armament@BOMBS:
+		Name: secondary
+		Weapon: NapalmA10Carrier
+		LocalOffset: 0,-256,-43, 0,256,-43
+	Armament@AA:
+		Name: secondary
+		Weapon: A10CarrierMissiles
+		LocalOffset: 0,-300,0, 0,300,0
+	AmmoPool:
+		Ammo: 16
+		AmmoCondition: ammo
+	WithAmmoPipsDecoration:
+		Position: BottomLeft
+		RequiresSelection: true
+		PipCount: 6
+	Voiced:
+		VoiceSet: VehicleVoice
+	AttackAircraft:
+		# FacingTolerance: 40
+		RequiresCondition: ammo
+	CarrierSlave:
+		LandingDistance: 8000
+	AutoTarget:
+		InitialStanceAI: AttackAnything
+		InitialStance: AttackAnything
+	HasParent:
+	-UpdatesPlayerStatistics:
+	-ActorLostNotification:
+	-WithShadow:
+	-MapEditorData:
+	RejectsOrders:
+	WithMuzzleOverlay:
+	Contrail@1:
+		Offset: -640,171,0
+		TrailLength: 15
+	Contrail@2:
+		Offset: -640,-171,0
+		TrailLength: 15
+	SpawnActorOnDeath:
+		Actor: A10Carrier.Husk
+	LeavesTrails:
+		Offsets: -500,0,125
+		MovingInterval: 2
+		Image: smokey
+		StationaryInterval: 2
+		SpawnAtLastPosition: False
+		TrailWhileStationary: True
+		Type: CenterPosition
+		RequiresCondition: enable-smoke
+	GrantConditionOnDamageState@SmokeTrail:
+		Condition: enable-smoke
+	RenderSprites:
+		PlayerPalette: player
+		Image: a10carrier
 
 CNCSS:
 	Inherits: ^BoatUnit

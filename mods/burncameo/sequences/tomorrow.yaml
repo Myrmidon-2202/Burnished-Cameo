@@ -128,7 +128,8 @@ dtstrike:
 	dead:
 		Start: 10
 		Tick: 800
-	make: 
+	make:
+		Scale: 1.0
 		Filename: atwrmake.shp
 		Length: *
 		Tick: 80
@@ -2938,6 +2939,35 @@ jeep.dtusa:
 		Filename: jeepicnh.tem
 		AddExtension: False
 
+dtreconboat:
+	Defaults:
+		Filename: mtrb.shp
+		Scale: 2.0
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+	muzzle: 
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	icon: 
+		Filename: motrbrcameo.shp
+		AddExtension: False
+
+dtswarmhost:
+	Defaults:
+		Filename: spore.shp
+		Scale: 2.0
+	idle:
+		Facings: 1
+	muzzle: 
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	icon: 
+		Filename: sporecameo.shp
+		AddExtension: False
+
 explosion:
 	Defaults:
 		Filename: explosion.shp
@@ -2955,7 +2985,6 @@ explosion:
 	dtchaff:
 		Filename: empchaff.shp
 		Scale: 2.0
-
 
 icon:
 	Defaults:

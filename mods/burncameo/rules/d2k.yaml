@@ -201,45 +201,45 @@ Player:
 		RequiresCondition: d2k_rearm >= 5
 
 ^D2KPersonalShield:
-	Shielded:
-		MaxStrength: 400
-		DamageRegenDelay: 125
-		RegenInterval: 1
-		ShieldsUpCondition: shielded
-		RequiresCondition: !disabled && (d2k_personal_shield || shieldgen)
-		SelectionBarColor: 8888FFFF
-	GrantCondition@shieldpermanent:
-		Condition: shieldpermanent
-		RequiresCondition: d2k_personal_shield
-	ChangesShield@personal_shield:
-		Step: 40
-		Delay: 1
-		StartIfBelow: 100
-		DamageCooldown: 125
-		RequiresCondition: d2k_personal_shield
-	Armor:
-		RequiresCondition: !shielded
-	Armor@shielded:
-		Type: Shield
-		RequiresCondition: shielded
-	Targetable@PersonalShielded:
-		TargetTypes: PersonalShielded
-		RequiresCondition: shielded
-	DamageMultiplier@d2k_advanced_ixian_technology:
-		Modifier: 50
-		RequiresCondition: d2k_personal_shield && d2k_advanced_ixian_technology && shielded
-	GrantConditionOnPrerequisite@d2k_advanced_ixian_technology:
-		Condition: d2k_advanced_ixian_technology
-		Prerequisites: d2k_advanced_ixian_technology
-	DamageMultiplier@d2k_personal_shield:
-		Modifier: 80
-		RequiresCondition: d2k_personal_shield && !shielded
-	SpeedMultiplier@d2k_personal_shield:
-		Modifier: 125
-		RequiresCondition: d2k_personal_shield && shielded
-	GrantConditionOnPrerequisite@d2k_personal_shield:
-		Condition: d2k_personal_shield
-		Prerequisites: d2k_personal_shield
+	# Shielded:
+	# 	MaxStrength: 400
+	# 	DamageRegenDelay: 125
+	# 	RegenInterval: 1
+	# 	ShieldsUpCondition: shielded
+	# 	RequiresCondition: !disabled && (d2k_personal_shield || shieldgen)
+	# 	SelectionBarColor: 8888FFFF
+	# GrantCondition@shieldpermanent:
+	# 	Condition: shieldpermanent
+	# 	RequiresCondition: d2k_personal_shield
+	# ChangesShield@personal_shield:
+	# 	Step: 40
+	# 	Delay: 1
+	# 	StartIfBelow: 100
+	# 	DamageCooldown: 125
+	# 	RequiresCondition: d2k_personal_shield
+	# Armor:
+	# 	RequiresCondition: !shielded
+	# Armor@shielded:
+	# 	Type: Shield
+	# 	RequiresCondition: shielded
+	# Targetable@PersonalShielded:
+	# 	TargetTypes: PersonalShielded
+	# 	RequiresCondition: shielded
+	# DamageMultiplier@d2k_advanced_ixian_technology:
+	# 	Modifier: 50
+	# 	RequiresCondition: d2k_personal_shield && d2k_advanced_ixian_technology && shielded
+	# GrantConditionOnPrerequisite@d2k_advanced_ixian_technology:
+	# 	Condition: d2k_advanced_ixian_technology
+	# 	Prerequisites: d2k_advanced_ixian_technology
+	# DamageMultiplier@d2k_personal_shield:
+	# 	Modifier: 80
+	# 	RequiresCondition: d2k_personal_shield && !shielded
+	# SpeedMultiplier@d2k_personal_shield:
+	# 	Modifier: 125
+	# 	RequiresCondition: d2k_personal_shield && shielded
+	# GrantConditionOnPrerequisite@d2k_personal_shield:
+	# 	Condition: d2k_personal_shield
+	# 	Prerequisites: d2k_personal_shield
 
 # ^D2K_HeavyMissilesUpgrade:
 # 	RangeMultiplier@d2k_heavy_missile_upgrade:

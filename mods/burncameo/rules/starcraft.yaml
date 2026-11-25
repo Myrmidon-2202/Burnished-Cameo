@@ -1357,8 +1357,8 @@ SCSCIENCEFACILITY:
 		Bounds: 3072, 2048
 		DecorationBounds: 3300, 2448, 0, 0
 	SelectionDecorations:
-	WithBuildingBib:
-		Sequence: smoke
+	# WithBuildingBib:
+	# 	Sequence: smoke
 	SupportPowerChargeBar:
 	Transforms:
 		IntoActor: scsciencefacilitym
@@ -5775,6 +5775,7 @@ SCSCIENCEVESSEL:
 		Weapon: ScienceVesselEMP
 		LocalOffset: 1,0,11
 		TargetRelationships: Enemy
+		ForceTargetRelationships: Enemy
 		PauseOnCondition: !deployed
 	GrantConditionOnDeploy:
 		DeployedCondition: deployed
@@ -10152,6 +10153,8 @@ SCZMCV:
 	Selectable:
 		Priority: 4
 		DecorationBounds: 1536, 1536
+	Valued:
+		Cost: 4000
 	Transforms:
 		IntoActor: schatchery
 		Offset: -1,-1

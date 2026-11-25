@@ -14323,7 +14323,7 @@ upusapath:
 		BuildPaletteOrder: 200
 		Queue: Promotions
 		Description: actor-upusapath.description
-		Prerequisites: !upusapath, ~techlevel.medium, ~!susa_armor, rank3, rank1, ~usaselected
+		Prerequisites: !upusapath, ~techlevel.medium, rank3, ~usaselected
 	RenderSprites:
 		Image: usapath
 	ProvidesPrerequisite:

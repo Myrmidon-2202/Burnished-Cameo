@@ -670,7 +670,7 @@ SiegeTankCannon:
 	ReloadDelay: 37
 	Range: 6114
 	Report: TTaFir00.aud
-	Projectile: Bullet
+	Projectile: InstantHit
 		Speed: 611
 	Warhead@HeavyCannon: SpreadDamage
 		Damage: 10000
@@ -3769,11 +3769,11 @@ UnitExplodeSmallProtoss:
 		ImpactSounds: xplobig4.aud
 
 CreepRemover:
-	Inherits: ^LightFlameWeapon
-	Inherits: ^LightChemicalWeapon
-	Inherits: ^LightMissile
-	Inherits: ^SmallArms
-	Inherits: ^ArrowWeapon
+	# Inherits: ^LightFlameWeapon
+	# Inherits: ^LightChemicalWeapon
+	# Inherits: ^LightMissile
+	# Inherits: ^SmallArms
+	# Inherits: ^ArrowWeapon
 	ReloadDelay: 15
 	Range: 5313
 	Report: zhyfir00.aud
@@ -3874,11 +3874,11 @@ CreepRemover:
 		Spread: 1c0
 
 CreepRemover2:
-	Inherits: ^LightFlameWeapon
-	Inherits: ^LightChemicalWeapon
-	Inherits: ^LightMissile
-	Inherits: ^SmallArms
-	Inherits: ^ArrowWeapon
+	# Inherits: ^LightFlameWeapon
+	# Inherits: ^LightChemicalWeapon
+	# Inherits: ^LightMissile
+	# Inherits: ^SmallArms
+	# Inherits: ^ArrowWeapon
 	ReloadDelay: 15
 	Range: 5313
 	Report: zhyfir00.aud
@@ -3892,60 +3892,60 @@ CreepRemover2:
 		Speed: 2500
 		Width: 25
 		TrailImage: sczhsplash
-	Warhead@LightFlameWeapon: SpreadDamage
-		InvalidTargets: Broodling
-		ValidTargets: Ground, Water, Air
-		Damage: 2000
-	Warhead@LightFlameWeaponFriendlyFire: SpreadDamage
-		InvalidTargets: Broodling
-		ValidTargets: Ground, Water, Air
-		Damage: 1000
-	Warhead@LightFlameWeaponPercentage: HealthPercentageDamage
-		InvalidTargets: Broodling
-		ValidTargets: Ground, Water, Air
-		Damage: 1
-	Warhead@LightChemicalWeapon: SpreadDamage
-		InvalidTargets: Broodling
-		ValidTargets: Ground, Water, Air
-		Damage: 2000
-	Warhead@LightChemicalWeaponFriendlyFire: SpreadDamage
-		InvalidTargets: Broodling
-		ValidTargets: Ground, Water, Air
-		Damage: 1000
-	Warhead@LightChemicalWeaponPercentage: HealthPercentageDamage
-		InvalidTargets: Broodling
-		ValidTargets: Ground, Water, Air
-		Damage: 1
-	Warhead@LightMissile: SpreadDamage
-		InvalidTargets: Broodling
-		ValidTargets: Ground, Water, Air
-		Damage: 2000
-	Warhead@LightMissilePercentage: HealthPercentageDamage
-		InvalidTargets: Broodling
-		ValidTargets: Ground, Water, Air
-		Damage: 1
-	Warhead@SmallArms: SpreadDamage
-		InvalidTargets: Broodling
-		ValidTargets: Ground, Water, Air
-		Damage: 2000
-	Warhead@SmallArmsPercentage: HealthPercentageDamage
-		InvalidTargets: Broodling
-		ValidTargets: Ground, Water, Air
-		Damage: 1
-	Warhead@ArrowWeapon: SpreadDamage
-		InvalidTargets: Broodling
-		ValidTargets: Ground, Water, Air
-		Damage: 2000
-	Warhead@ArrowWeaponPercentage: HealthPercentageDamage
-		InvalidTargets: Broodling
-		ValidTargets: Ground, Water, Air
-		Damage: 1
-	Warhead@Effect: CreateEffect
-		Explosions: sczhsplash
-	Warhead@EffectAir: CreateEffect
-		Explosions: sczhsplash
-	Warhead@2Eff: CreateEffect
-		Explosions: scscourgeexplosion
+	# Warhead@LightFlameWeapon: SpreadDamage
+	# 	InvalidTargets: Broodling
+	# 	ValidTargets: Ground, Water, Air
+	# 	Damage: 2000
+	# Warhead@LightFlameWeaponFriendlyFire: SpreadDamage
+	# 	InvalidTargets: Broodling
+	# 	ValidTargets: Ground, Water, Air
+	# 	Damage: 1000
+	# Warhead@LightFlameWeaponPercentage: HealthPercentageDamage
+	# 	InvalidTargets: Broodling
+	# 	ValidTargets: Ground, Water, Air
+	# 	Damage: 1
+	# Warhead@LightChemicalWeapon: SpreadDamage
+	# 	InvalidTargets: Broodling
+	# 	ValidTargets: Ground, Water, Air
+	# 	Damage: 2000
+	# Warhead@LightChemicalWeaponFriendlyFire: SpreadDamage
+	# 	InvalidTargets: Broodling
+	# 	ValidTargets: Ground, Water, Air
+	# 	Damage: 1000
+	# Warhead@LightChemicalWeaponPercentage: HealthPercentageDamage
+	# 	InvalidTargets: Broodling
+	# 	ValidTargets: Ground, Water, Air
+	# 	Damage: 1
+	# Warhead@LightMissile: SpreadDamage
+	# 	InvalidTargets: Broodling
+	# 	ValidTargets: Ground, Water, Air
+	# 	Damage: 2000
+	# Warhead@LightMissilePercentage: HealthPercentageDamage
+	# 	InvalidTargets: Broodling
+	# 	ValidTargets: Ground, Water, Air
+	# 	Damage: 1
+	# Warhead@SmallArms: SpreadDamage
+	# 	InvalidTargets: Broodling
+	# 	ValidTargets: Ground, Water, Air
+	# 	Damage: 2000
+	# Warhead@SmallArmsPercentage: HealthPercentageDamage
+	# 	InvalidTargets: Broodling
+	# 	ValidTargets: Ground, Water, Air
+	# 	Damage: 1
+	# Warhead@ArrowWeapon: SpreadDamage
+	# 	InvalidTargets: Broodling
+	# 	ValidTargets: Ground, Water, Air
+	# 	Damage: 2000
+	# Warhead@ArrowWeaponPercentage: HealthPercentageDamage
+	# 	InvalidTargets: Broodling
+	# 	ValidTargets: Ground, Water, Air
+	# 	Damage: 1
+	# Warhead@Effect: CreateEffect
+	# 	Explosions: sczhsplash
+	# Warhead@EffectAir: CreateEffect
+	# 	Explosions: sczhsplash
+	# Warhead@2Eff: CreateEffect
+	# 	Explosions: scscourgeexplosion
 	Warhead@4Concrete: DamagesConcrete
 		Damage: 12345
 		Spread: 1234

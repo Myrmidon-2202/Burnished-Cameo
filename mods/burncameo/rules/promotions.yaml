@@ -2,14 +2,14 @@
 Player:
 	PlayerPromotions:
 		Conditions:
-			0:
-			5000:
-			15000:
-			30000:
-			50000:
-			75000:
-			115000:
-			140000:
+			0: rank1
+			5000: rank2
+			15000: rank3
+			30000: rank4
+			50000: rank5
+			75000: rank6
+			115000: rank7
+			140000: rank8
 		HasPointsCondition: haspoints
 		PointsPerRank:
 			default: 0, 1, 1, 1, 1, 1, 1, 1
@@ -32,6 +32,18 @@ Player:
 	ProvidesPrerequisite@has_points:
 		Prerequisite: rank1
 		RequiresCondition: haspoints
+	ProvidesPrerequisite@rank3:
+		Prerequisite: rank3
+		RequiresCondition: rank3
+	ProvidesPrerequisite@frenzy:
+		Prerequisite: canselectfrenzy
+		RequiresCondition: rank3
+	ProvidesPrerequisite@repair:
+		Prerequisite: canselectrepair
+		RequiresCondition: rank3
+	ProvidesPrerequisite@rank5:
+		Prerequisite: rank5
+		RequiresCondition: rank5
 	ClassicProductionQueue@PROMOTIONS:
 		Type: Promotions
 		DisplayOrder: 10

@@ -2139,6 +2139,7 @@ actor-gle1 =
    .description = General-purpose infantry.
       Strong vs Infantry.
       Weak vs Vehicles.
+      Hold "Alt" to capture structures.
 
 actor-gle1toxin =
    .description = Soldier armed with a toxin weapon.
@@ -2403,6 +2404,7 @@ actor-che1 =
    .description = General-purpose infantry armed with a rifle.
       Strong vs Infantry.
       Weak vs Vehicles.
+      Hold "Alt" to capture structures.
 
 actor-che2 =
    .description = General-purpose infantry armed with a minigun.
@@ -2637,6 +2639,7 @@ actor-usae1 =
    .description = Basic USA infantry.
       Strong vs Infantry.
       Weak vs Vehicles.
+      Hold "Alt" to capture structures.
 
 actor-usae3 =
    .description = Anti-tank/anti-aircraft infantry.

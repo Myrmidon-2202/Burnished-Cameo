@@ -124,10 +124,10 @@ cityfd:
 		Tick: 400
 	dead:
 	bib:
-		Filename: bib3.tem
-		UseTilesetExtension: true
-		Length: *
-		Offset: 0,0
+		# Filename: bib3.tem
+		# UseTilesetExtension: true
+		# Length: *
+		# Offset: 0,0
 	icon:
 		Filename: cityfdicon.shp
 		Offset: 0,0
@@ -148,10 +148,10 @@ citypd:
 		Tick: 400
 	dead:
 	bib:
-		Filename: bib3.shp
-		UseTilesetExtension: true
-		Length: *
-		Offset: 0,0
+		# Filename: bib3.tem
+		# UseTilesetExtension: true
+		# Length: *
+		# Offset: 0,0
 	icon:
 		Filename: citypdicon.shp
 		AddExtension: False
@@ -215,7 +215,7 @@ cityharbor:
 		ZOffset: -2048
 	dead:
 	make:
-	# bib:
+	bib:
 	# 	Filename: bib2.shp
 	# 	UseTilesetExtension: true
 	# 	Length: *
